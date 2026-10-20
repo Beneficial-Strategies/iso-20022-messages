@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BeneficialStrategies.Iso20022.Primitives\BeneficialStrategies.Iso20022.Primitives.csproj" />
+    <ProjectReference Include="..\Primitives\BeneficialStrategies.Iso20022.Primitives.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
