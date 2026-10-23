@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData3Choice;
 /// <summary>
 /// Direct Debit Mandate.
 /// </summary>
+[IsoDisplayName(@"Direct Debit Mandate")]
 public interface IDirectDebitMandate : IMandateRelatedData3Choice, IIsoChoiceVariant
 {
     /// <summary>

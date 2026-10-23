@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemovalProcessing2Choice;
 /// </summary>
 [IsoId("__ioAQRIoEeyZaPkaPAzTvQ")]
 [IsoXmlTag("FinInstrmId")]
+[IsoDisplayName(@"Financial Instrument Identification")]
 public interface IFinancialInstrumentIdentification : IRemovalProcessing2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IFinancialInstrumentIdentification : IRemovalProcessing2Choice,
     [IsoId("_iDjE24lXEeWPSZi0kAOXhg")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? ISIN { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IFinancialInstrumentIdentification : IRemovalProcessing2Choice,
     [IsoId("_iDjE3YlXEeWPSZi0kAOXhg")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherIdentification1> OtherIdentification { get; }
 
     /// <summary>
@@ -34,5 +37,7 @@ public interface IFinancialInstrumentIdentification : IRemovalProcessing2Choice,
     [IsoId("_iDjE34lXEeWPSZi0kAOXhg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

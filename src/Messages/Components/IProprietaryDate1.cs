@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Proprietary date information.
 /// </summary>
 [IsoId("_T6OX4Np-Ed-ak6NoX_4Aeg_325670124")]
+[IsoDisplayName(@"Proprietary Date")]
 public interface IProprietaryDate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProprietaryDate1 : IIsoComponent
     [IsoId("_T6OX4dp-Ed-ak6NoX_4Aeg_325670142")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IProprietaryDate1 : IIsoComponent
     [IsoId("_T6OX4tp-Ed-ak6NoX_4Aeg_325670167")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Date { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IProprietaryDate1 : IIsoComponent
     [IsoId("_T6OX49p-Ed-ak6NoX_4Aeg_597188315")]
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime DateTime { get; }
 }

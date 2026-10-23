@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Business report on collateral value or business error.
 /// </summary>
 [IsoId("_EFF_UTpyEemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Collateral Value Report Or Error 6 Choice")]
 public interface ICollateralValueReportOrError6Choice : IIsoChoice { }

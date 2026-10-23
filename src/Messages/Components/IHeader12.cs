@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics related to the transfer of transactions.
 /// </summary>
 [IsoId("_-uGCQWmEEeS7iYydEtv3Ug")]
+[IsoDisplayName(@"Header")]
 public interface IHeader12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IHeader12 : IIsoComponent
     [IsoId("_-89ksWmEEeS7iYydEtv3Ug")]
     [DisplayName("Download Transfer")]
     [IsoXmlTag("DwnldTrf")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator DownloadTransfer { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IHeader12 : IIsoComponent
     [IsoId("_-89ks2mEEeS7iYydEtv3Ug")]
     [DisplayName("Format Version")]
     [IsoXmlTag("FrmtVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text FormatVersion { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IHeader12 : IIsoComponent
     [IsoId("_-89ktWmEEeS7iYydEtv3Ug")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText ExchangeIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IHeader12 : IIsoComponent
     [IsoId("_-89kt2mEEeS7iYydEtv3Ug")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>

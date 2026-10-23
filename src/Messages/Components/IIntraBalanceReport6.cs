@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the report.
 /// </summary>
 [IsoId("_h4rQ8Tp_EemwKdP955WBJQ")]
+[IsoDisplayName(@"Intra Balance Report")]
 public interface IIntraBalanceReport6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IIntraBalanceReport6 : IIsoComponent
     [IsoId("_iEJhKzp_EemwKdP955WBJQ")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryReference { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IIntraBalanceReport6 : IIsoComponent
     [IsoId("_iEJhMzp_EemwKdP955WBJQ")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReportIdentification { get; }
 
     /// <summary>
@@ -73,5 +78,6 @@ public interface IIntraBalanceReport6 : IIsoComponent
     [IsoId("_iEJhVTp_EemwKdP955WBJQ")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 }

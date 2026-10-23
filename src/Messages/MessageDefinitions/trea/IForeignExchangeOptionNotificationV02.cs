@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// </summary>
 [IsoId("_QCIK6NE8Ed-BzquC8wXy7w_-2045814163")]
 [IsoMessage("trea.012.001.02", "FXOptnNtfctnV02", "urn:iso:std:iso:20022:tech:xsd:trea.012.001.02")]
+[Description(@"Scope|The ForeignExchangeOptionNotification message is sent by a central system to a participant to provide details of a foreign exchange option trade.|Usage|The notification is sent by the central settlement system to the two trading parties after it has received Create, Amend or Cancel messages from both. The message may also contain information on the settlement of the trade and/or premium.")]
+[IsoDisplayName(@"Foreign Exchange Option Notification V")]
 public interface IForeignExchangeOptionNotificationV02 : IOuterRecord
 {
     /// <summary>

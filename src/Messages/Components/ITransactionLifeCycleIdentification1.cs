@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ISO 8583:2003 bit 21
 /// </summary>
 [IsoId("_5kV_sER7Eeeb1MmUPTrSMw")]
+[IsoDisplayName(@"Transaction Life Cycle Identification")]
 public interface ITransactionLifeCycleIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -20,6 +21,7 @@ public interface ITransactionLifeCycleIdentification1 : IIsoComponent
     [IsoId("_URUEoKdZEeiva6IOmhpVHw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Exact15Text)]
     Exact15Text Identification { get; }
 
     /// <summary>
@@ -28,6 +30,7 @@ public interface ITransactionLifeCycleIdentification1 : IIsoComponent
     [IsoId("_uA1W0KdZEeiva6IOmhpVHw")]
     [DisplayName("Authorisation Sequence Number")]
     [IsoXmlTag("AuthstnSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
     Exact2NumericText? AuthorisationSequenceNumber { get; }
 
     /// <summary>
@@ -37,6 +40,7 @@ public interface ITransactionLifeCycleIdentification1 : IIsoComponent
     [IsoId("_27MCsKdZEeiva6IOmhpVHw")]
     [DisplayName("Presentment Sequence Number")]
     [IsoXmlTag("PresntmntSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
     Exact2NumericText? PresentmentSequenceNumber { get; }
 
     /// <summary>
@@ -45,6 +49,7 @@ public interface ITransactionLifeCycleIdentification1 : IIsoComponent
     [IsoId("_8vlqQKdZEeiva6IOmhpVHw")]
     [DisplayName("Presentment Sequence Count")]
     [IsoXmlTag("PresntmntSeqCnt")]
+    [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
     Exact2NumericText? PresentmentSequenceCount { get; }
 
     /// <summary>
@@ -54,5 +59,7 @@ public interface ITransactionLifeCycleIdentification1 : IIsoComponent
     [IsoId("_A0fqIKdaEeiva6IOmhpVHw")]
     [DisplayName("Authentication Token")]
     [IsoXmlTag("AuthntcnTkn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AuthenticationToken { get; }
 }

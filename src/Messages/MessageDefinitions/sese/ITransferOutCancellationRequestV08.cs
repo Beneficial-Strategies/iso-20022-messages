@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_k4R0kYZLEeemXK0UETsSiA")]
 [IsoMessage("sese.002.001.08", "TrfOutCxlReq", "urn:iso:std:iso:20022:tech:xsd:sese.002.001.08")]
+[Description(@"Scope|The TransferOutCancellationRequest message is sent by, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to request the cancellation of a previously sent transfer out instruction.|Usage|The TransferOutCancellationRequest message is used to request the cancellation of one or more transfer out instructions.|There is no amendment, but a cancellation and re-instruct policy.|To request the cancellation of one or more transfer out instructions, the transfer reference of the transfer, as specified in the original TransferOutInstruction message, is specified in the transfer reference element.|The message identification of the original TransferOutInstruction message may also be quoted in PreviousReference but this is not recommended.|The deadline and acceptance of a cancellation request is subject to a service level agreement (SLA). This cancellation message is a cancellation request. There is no automatic acceptance of the cancellation.|The rejection or acceptance of a TransferOutCancellationRequest is made using an TransferCancellationStatusReport message.")]
+[IsoDisplayName(@"Transfer Out Cancellation Request V")]
 public interface ITransferOutCancellationRequestV08 : IOuterRecord
 {
     /// <summary>
@@ -60,6 +62,8 @@ public interface ITransferOutCancellationRequestV08 : IOuterRecord
     [IsoId("_FzFNQYizEeefvMoXmllHqg")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -68,6 +72,7 @@ public interface ITransferOutCancellationRequestV08 : IOuterRecord
     [IsoId("_jg5WcYiyEeefvMoXmllHqg")]
     [DisplayName("Transfer References")]
     [IsoXmlTag("TrfRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransferReference11> TransferReferences { get; }
 
     /// <summary>

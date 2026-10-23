@@ -10,12 +10,15 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification4Choice;
 /// </summary>
 [IsoId("_74w4oaMgEeCJ6YNENx4h-w_1971308205")]
 [IsoXmlTag("QId")]
+[IsoDisplayName(@"Queue Identification")]
 public interface IQueueIdentification : IPaymentIdentification4Choice, IIsoChoiceVariant
 {
     /// <summary>
     /// Identification of the payment queue where the payment instruction resides.
     /// </summary>
     [IsoXmlTag("QId")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text Value { get; }
 
     /// <summary>
@@ -24,5 +27,7 @@ public interface IQueueIdentification : IPaymentIdentification4Choice, IIsoChoic
     [IsoId("_Rb1C1dp-Ed-ak6NoX_4Aeg_1491461464")]
     [DisplayName("Position In Queue")]
     [IsoXmlTag("PosInQ")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text PositionInQueue { get; }
 }

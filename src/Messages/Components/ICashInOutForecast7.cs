@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash movements into or out of a fund as a result of investment funds transactions, for example, subscriptions, redemptions or switches.
 /// </summary>
 [IsoId("_SMGqAV-IEeS7xuKaq75oiQ")]
+[IsoDisplayName(@"Cash In Out Forecast")]
 public interface ICashInOutForecast7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICashInOutForecast7 : IIsoComponent
     [IsoId("_SnzHg1-IEeS7xuKaq75oiQ")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CashSettlementDate { get; }
 
     /// <summary>

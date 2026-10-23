@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.reda;
     "ReqToPayCdtrEnrlmntCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:reda.068.001.02"
 )]
+[IsoDisplayName(@"Request To Pay Creditor Enrolment Cancellation Request V02")]
 public interface IRequestToPayCreditorEnrolmentCancellationRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface IRequestToPayCreditorEnrolmentCancellationRequestV02 : IOuterRe
     /// </summary>
     [DisplayName("Cancellation Data")]
     [IsoXmlTag("CxlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICreditorEnrolmentCancellation3> CancellationData { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface IRequestToPayCreditorEnrolmentCancellationRequestV02 : IOuterRe
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

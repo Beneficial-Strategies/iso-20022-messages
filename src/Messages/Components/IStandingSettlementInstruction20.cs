@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Standing Settlement Instruction20.
 /// </summary>
 [IsoId("_s-Iro4otEe-efPejSUAtLw")]
+[IsoDisplayName(@"Standing Settlement Instruction20")]
 public interface IStandingSettlementInstruction20 : IIsoComponent
 {
     /// <summary>

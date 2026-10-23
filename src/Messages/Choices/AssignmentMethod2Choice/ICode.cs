@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssignmentMethod2Choice;
 /// Assignment method expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_hT0ZceLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAssignmentMethod2Choice, IIsoChoiceVariant
 {
     /// <summary>

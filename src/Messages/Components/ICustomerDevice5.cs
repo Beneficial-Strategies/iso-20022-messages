@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Customer Device5.
 /// </summary>
 [IsoId("_WHiKsW9sEe6DxcrvCrq6hQ")]
+[IsoDisplayName(@"Customer Device5")]
 public interface ICustomerDevice5 : IIsoComponent
 {
     /// <summary>
@@ -100,6 +101,7 @@ public interface ICustomerDevice5 : IIsoComponent
     /// </summary>
     [DisplayName("Device Identification")]
     [IsoXmlTag("DvcId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDeviceIdentification1> DeviceIdentification { get; }
 
     /// <summary>
@@ -149,5 +151,6 @@ public interface ICustomerDevice5 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

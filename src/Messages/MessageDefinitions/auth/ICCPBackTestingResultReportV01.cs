@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPBckTstgRsltRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.066.001.01"
 )]
+[Description(@"The CCPBackTestingResultReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority of the results of the back test carried out by the central counterparty.")]
+[IsoDisplayName(@"CCP Back Testing Result Report V")]
 public interface ICCPBackTestingResultReportV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface ICCPBackTestingResultReportV01 : IOuterRecord
     [IsoId("_mLRn2eUTEem3X-64-NKdqg")]
     [DisplayName("Monthly Result")]
     [IsoXmlTag("MnthlyRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMonthlyResult1> MonthlyResult { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface ICCPBackTestingResultReportV01 : IOuterRecord
     [IsoId("_mLRn2-UTEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

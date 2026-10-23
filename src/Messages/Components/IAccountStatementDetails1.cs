@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statement information of an account.
 /// </summary>
 [IsoId("_RPqrKPGgEeiGNursv3uE_g")]
+[IsoDisplayName(@"Account Statement Details")]
 public interface IAccountStatementDetails1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAccountStatementDetails1 : IIsoComponent
     [IsoId("_RPqrLPGgEeiGNursv3uE_g")]
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TransactionDate { get; }
 
     /// <summary>
@@ -27,6 +29,7 @@ public interface IAccountStatementDetails1 : IIsoComponent
     [IsoId("_RPqrLvGgEeiGNursv3uE_g")]
     [DisplayName("Pending Indicator")]
     [IsoXmlTag("PdgInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PendingIndicator { get; }
 
     /// <summary>
@@ -35,6 +38,7 @@ public interface IAccountStatementDetails1 : IIsoComponent
     [IsoId("_RPqrKvGgEeiGNursv3uE_g")]
     [DisplayName("Transaction Posting Date")]
     [IsoXmlTag("TxPstngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TransactionPostingDate { get; }
 
     /// <summary>
@@ -61,6 +65,7 @@ public interface IAccountStatementDetails1 : IIsoComponent
     [IsoId("_RPqrKfGgEeiGNursv3uE_g")]
     [DisplayName("Credit Indicator")]
     [IsoXmlTag("CdtInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CreditIndicator { get; }
 
     /// <summary>
@@ -69,6 +74,8 @@ public interface IAccountStatementDetails1 : IIsoComponent
     [IsoId("_RPqrL_GgEeiGNursv3uE_g")]
     [DisplayName("Acceptor Name And Location")]
     [IsoXmlTag("AccptrNmAndLctn")]
+    [IsoSimpleType(IsoSimpleType.Max99Text)]
+    [StringLength(99, MinimumLength = 1)]
     Max99Text? AcceptorNameAndLocation { get; }
 
     /// <summary>
@@ -77,6 +84,8 @@ public interface IAccountStatementDetails1 : IIsoComponent
     [IsoId("_RPqrK_GgEeiGNursv3uE_g")]
     [DisplayName("Short Transaction Description")]
     [IsoXmlTag("ShrtTxDesc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ShortTransactionDescription { get; }
 
     /// <summary>
@@ -85,5 +94,7 @@ public interface IAccountStatementDetails1 : IIsoComponent
     [IsoId("_JGBjIfGjEeiGNursv3uE_g")]
     [DisplayName("Long Transaction Description")]
     [IsoXmlTag("LngTxDesc")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? LongTransactionDescription { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action details price details.
 /// </summary>
 [IsoId("_1TODEzL3EeKU9IrkkToqcw_-1032866259")]
+[IsoDisplayName(@"Corporate Action Price SD")]
 public interface ICorporateActionPriceSD3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionPriceSD3 : IIsoComponent
     [IsoId("_1TODFDL3EeKU9IrkkToqcw_-1747812436")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>

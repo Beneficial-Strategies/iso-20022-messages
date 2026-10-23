@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instrument Leg7.
 /// </summary>
 [IsoId("_pUzXoe3uEe6nAu63uIo75Q")]
+[IsoDisplayName(@"Instrument Leg7")]
 public interface IInstrumentLeg7 : IIsoComponent
 {
     /// <summary>

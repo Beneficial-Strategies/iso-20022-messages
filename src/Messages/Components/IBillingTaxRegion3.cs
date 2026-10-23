@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Billing Tax Region3.
 /// </summary>
 [IsoId("_YdfXJTE_Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Billing Tax Region3")]
 public interface IBillingTaxRegion3 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional indicators on the transaction.
 /// </summary>
 [IsoId("_ZVa-kGhoEeaqBY_HJicULw")]
+[IsoDisplayName(@"Securities Transaction Indicator")]
 public interface ISecuritiesTransactionIndicator2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecuritiesTransactionIndicator2 : IIsoComponent
     [IsoId("_ZmkY8WhoEeaqBY_HJicULw")]
     [DisplayName("Waiver Indicator")]
     [IsoXmlTag("WvrInd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ReportingWaiverType1Code> WaiverIndicator { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ISecuritiesTransactionIndicator2 : IIsoComponent
     [IsoId("_ZmkY9WhoEeaqBY_HJicULw")]
     [DisplayName("OTC Post Trade Indicator")]
     [IsoXmlTag("OTCPstTradInd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ReportingWaiverType3Code> OTCPostTradeIndicator { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ISecuritiesTransactionIndicator2 : IIsoComponent
     [IsoId("_ZmkY92hoEeaqBY_HJicULw")]
     [DisplayName("Risk Reducing Transaction")]
     [IsoXmlTag("RskRdcgTx")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RiskReducingTransaction { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface ISecuritiesTransactionIndicator2 : IIsoComponent
     [IsoId("_ZmkY-WhoEeaqBY_HJicULw")]
     [DisplayName("Securities Financing Transaction Indicator")]
     [IsoXmlTag("SctiesFincgTxInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator SecuritiesFinancingTransactionIndicator { get; }
 }

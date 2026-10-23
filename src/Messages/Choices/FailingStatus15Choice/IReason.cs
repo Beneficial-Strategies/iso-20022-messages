@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingStatus15Choice;
 /// <summary>
 /// Reason.
 /// </summary>
+[IsoDisplayName(@"Reason")]
 public interface IReason : IFailingStatus15Choice, IIsoChoiceVariant
 {
     /// <summary>

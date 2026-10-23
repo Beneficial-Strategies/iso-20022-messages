@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification82Choice;
 
 /// <summary>Digital account where digital assets or digital tokens can be stored and where an entry is made.</summary>
 [IsoId("a0cc3248-ac50-4dfb-bba0-516982d58ef2")]
+[IsoDisplayName(@"Block Chain Cash Wallet")]
 public interface IBlockChainCashWallet : IAccountIdentification82Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

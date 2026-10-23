@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the identification of the issuer CSD (central securities depository).
 /// </summary>
 [IsoId("_C0Xzk-3rEeaWjpoyrnG6Rw")]
+[IsoDisplayName(@"Issuer CSD Identification")]
 public interface IIssuerCSDIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IIssuerCSDIdentification1 : IIsoComponent
     [IsoId("_mHn68G5BEeeOy4DIG9NBSQ")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IIssuerCSDIdentification1 : IIsoComponent
     [IsoId("_NkUachJnEeiE15g1wPm3UA")]
     [DisplayName("First Two Characters Instrument Identification")]
     [IsoXmlTag("FrstTwoCharsInstrmId")]
+    [IsoSimpleType(IsoSimpleType.Exact2UpperCaseAlphaText)]
     Exact2UpperCaseAlphaText FirstTwoCharactersInstrumentIdentification { get; }
 
     /// <summary>

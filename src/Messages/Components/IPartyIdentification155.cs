@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about identification of the party.
 /// </summary>
 [IsoId("_8GkE5_fREeiNZp_PtLohLw")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification155 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPartyIdentification155 : IIsoComponent
     [IsoId("_8GkE9ffREeiNZp_PtLohLw")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ProcessingIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IPartyIdentification155 : IIsoComponent
     [IsoId("_8GkE_ffREeiNZp_PtLohLw")]
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAlternatePartyIdentification9> AlternateIdentification { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the settlement status.
 /// </summary>
 [IsoId("_f99L9Ti8Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Settlement Status 31 Choice")]
 public interface ISettlementStatus31Choice : IIsoChoice { }

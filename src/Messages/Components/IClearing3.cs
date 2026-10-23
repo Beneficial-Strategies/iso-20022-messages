@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the clearing details.
 /// </summary>
 [IsoId("_A3gsQNokEeC60axPepSq7g_556617430")]
+[IsoDisplayName(@"Clearing")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IClearing3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IClearing3 : IIsoComponent
     [IsoId("_A3qdQNokEeC60axPepSq7g_428053950")]
     [DisplayName("Clearing Member")]
     [IsoXmlTag("ClrMmb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentificationAndAccount78> ClearingMember { get; }
 
     /// <summary>

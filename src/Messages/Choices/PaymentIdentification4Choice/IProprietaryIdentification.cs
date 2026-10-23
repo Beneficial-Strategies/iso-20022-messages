@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification4Choice;
 /// Unique reference of the underlying payment instruction assigned by Target2 SSP.
 /// </summary>
 [IsoId("_74w4pKMgEeCJ6YNENx4h-w_-1056852190")]
+[IsoDisplayName(@"Proprietary Identification")]
 public interface IProprietaryIdentification : IPaymentIdentification4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietaryIdentification : IPaymentIdentification4Choice, IIs
     /// Specifies a character string with a maximum length of 70characters.
     /// </summary>
     [IsoXmlTag("PrtryId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Compares information related to both sides of a loan.
 /// </summary>
 [IsoId("_98YaQcgxEeuGrNSsxk3B0A")]
+[IsoDisplayName(@"Loan Matching Criteria")]
 public interface ILoanMatchingCriteria9 : IIsoComponent
 {
     /// <summary>
@@ -241,6 +242,7 @@ public interface ILoanMatchingCriteria9 : IIsoComponent
     [IsoId("_sFf5MM3MEeuiU4QSC_BouQ")]
     [DisplayName("Margin Loan Attribute")]
     [IsoXmlTag("MrgnLnAttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareInterestRate1> MarginLoanAttribute { get; }
 
     /// <summary>
@@ -353,6 +355,7 @@ public interface ILoanMatchingCriteria9 : IIsoComponent
     [IsoId("_9-J8N8gxEeuGrNSsxk3B0A")]
     [DisplayName("Floating Rate Adjustment")]
     [IsoXmlTag("FltgRateAdjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IComparePercentageRate3> FloatingRateAdjustment { get; }
 
     /// <summary>
@@ -361,6 +364,7 @@ public interface ILoanMatchingCriteria9 : IIsoComponent
     [IsoId("_9-J8OcgxEeuGrNSsxk3B0A")]
     [DisplayName("Floating Rate Adjustment Date")]
     [IsoXmlTag("FltgRateAdjstmntDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> FloatingRateAdjustmentDate { get; }
 
     /// <summary>

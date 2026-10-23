@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CryptographicKey1Choice;
 /// <summary>
 /// Signature.
 /// </summary>
+[IsoDisplayName(@"Signature")]
 public interface ISignature : ICryptographicKey1Choice, IIsoChoiceVariant
 {
     /// <summary>

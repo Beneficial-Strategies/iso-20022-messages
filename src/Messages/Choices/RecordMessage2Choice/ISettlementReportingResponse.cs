@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the settlement reporting response message.</summary>
 [IsoId("_kNBj127-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Settlement Reporting Response")]
 public interface ISettlementReportingResponse : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

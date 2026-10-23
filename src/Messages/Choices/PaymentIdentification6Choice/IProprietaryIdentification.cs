@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification6Choice;
 /// Unique proprietary reference of the underlying payment instruction assigned by the system.
 /// </summary>
 [IsoId("_AghbmW4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Proprietary Identification")]
 public interface IProprietaryIdentification : IPaymentIdentification6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietaryIdentification : IPaymentIdentification6Choice, IIs
     /// Specifies a character string with a maximum length of 70characters.
     /// </summary>
     [IsoXmlTag("PrtryId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Value { get; }
 }

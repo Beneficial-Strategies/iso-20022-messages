@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information needed due to regulatory and statutory requirements.
 /// </summary>
 [IsoId("_SnhZ4tp-Ed-ak6NoX_4Aeg_797411932")]
+[IsoDisplayName(@"Structured Regulatory Reporting")]
 public interface IStructuredRegulatoryReporting3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStructuredRegulatoryReporting3 : IIsoComponent
     [IsoId("_SnhZ49p-Ed-ak6NoX_4Aeg_-237266117")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IStructuredRegulatoryReporting3 : IIsoComponent
     [IsoId("_SnhZ5Np-Ed-ak6NoX_4Aeg_63801781")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface IStructuredRegulatoryReporting3 : IIsoComponent
     [IsoId("_SnhZ5tp-Ed-ak6NoX_4Aeg_797412241")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? Code { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface IStructuredRegulatoryReporting3 : IIsoComponent
     [IsoId("_SnhZ6Np-Ed-ak6NoX_4Aeg_797412333")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> Information { get; }
 }

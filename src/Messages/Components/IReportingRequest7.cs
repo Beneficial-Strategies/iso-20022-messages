@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reporting Request7.
 /// </summary>
 [IsoId("_7GI5ETEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Reporting Request7")]
 public interface IReportingRequest7 : IIsoComponent
 {
     /// <summary>
@@ -72,5 +73,6 @@ public interface IReportingRequest7 : IIsoComponent
     /// </summary>
     [DisplayName("Requested Balance Type")]
     [IsoXmlTag("ReqdBalTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceType13> RequestedBalanceType { get; }
 }

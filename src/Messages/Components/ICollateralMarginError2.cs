@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies details of the collateral margin data.
 /// </summary>
 [IsoId("_HSTiUa4aEemB_csI4yyKLA")]
+[IsoDisplayName(@"Collateral Margin Error")]
 public interface ICollateralMarginError2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICollateralMarginError2 : IIsoComponent
     [IsoId("_HWeQoa4aEemB_csI4yyKLA")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICollateralMarginError2 : IIsoComponent
     [IsoId("_HWeQo64aEemB_csI4yyKLA")]
     [DisplayName("Reporting Date Time")]
     [IsoXmlTag("RptgDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ReportingDateTime { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface ICollateralMarginError2 : IIsoComponent
     [IsoId("_HWeQp64aEemB_csI4yyKLA")]
     [DisplayName("Collateral Portfolio Identification")]
     [IsoXmlTag("CollPrtflId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text CollateralPortfolioIdentification { get; }
 
     /// <summary>
@@ -49,5 +55,6 @@ public interface ICollateralMarginError2 : IIsoComponent
     [IsoId("_HWeQqa4aEemB_csI4yyKLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

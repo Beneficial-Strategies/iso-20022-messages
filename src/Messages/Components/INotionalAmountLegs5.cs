@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the monetary or converted amount for the derivatives transaction.
 /// </summary>
 [IsoId("_k1n04WEfEe2P-L9DBerEgA")]
+[IsoDisplayName(@"Notional Amount Legs")]
 public interface INotionalAmountLegs5 : IIsoComponent
 {
     /// <summary>

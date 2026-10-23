@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reconciliation transaction between an acceptor and an acquirer.
 /// </summary>
 [IsoId("_OsbaYS4_EeunNvJlR_vCbg")]
+[IsoDisplayName(@"Transaction Reconciliation")]
 public interface ITransactionReconciliation5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransactionReconciliation5 : IIsoComponent
     [IsoId("_O4DbkS4_EeunNvJlR_vCbg")]
     [DisplayName("Close Period")]
     [IsoXmlTag("ClsPrd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ClosePeriod { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface ITransactionReconciliation5 : IIsoComponent
     [IsoId("_O4DblS4_EeunNvJlR_vCbg")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ReconciliationIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ITransactionReconciliation5 : IIsoComponent
     [IsoId("_O4Dbly4_EeunNvJlR_vCbg")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotals12> TransactionTotals { get; }
 
     /// <summary>
@@ -49,5 +54,7 @@ public interface ITransactionReconciliation5 : IIsoComponent
     [IsoId("_O4DbmS4_EeunNvJlR_vCbg")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalTransactionData { get; }
 }

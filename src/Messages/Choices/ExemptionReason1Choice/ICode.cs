@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExemptionReason1Choice;
 /// Exemption reason expressed as a code.
 /// </summary>
 [IsoId("_loHfEBuJEeOqSdXzJ0oydA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IExemptionReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

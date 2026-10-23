@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_RHEuodkcEeizh_fAW7LywQ")]
 [IsoMessage("cain.025.001.01", "AdddmInitn", "urn:iso:std:iso:20022:tech:xsd:cain.025.001.01")]
+[Description(@"The AddendumInitiation message is sent by an acquirer or an agent to an issuer to provide supplemental data in addition to that which is required to complete an authorization initiation or financial initiation. ||The supplemental data is associated with an authorization or financial message.")]
+[IsoDisplayName(@"Addendum Initiation V")]
 public interface IAddendumInitiationV01 : IOuterRecord
 {
     /// <summary>

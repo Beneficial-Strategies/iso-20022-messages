@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the accepted with warning status of the notification advice.
 /// </summary>
 [IsoId("__uhZAaUdEfCnE_wCEfCqTA")]
+[IsoDisplayName(@"AcceptedWithWarningStatus1Format1Choice")]
 public interface IAcceptedWithWarningStatus1Format1Choice : IIsoChoice { }

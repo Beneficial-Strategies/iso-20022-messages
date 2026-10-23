@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreementType2Choice;
 /// Name of the identification scheme, in a coded form as published in an external list.
 /// </summary>
 [IsoId("_OI9M0S4yEeuxhbw_aW6haw")]
+[IsoDisplayName(@"Type")]
 public interface IType : IAgreementType2Choice, IIsoChoiceVariant
 {
     /// <summary>

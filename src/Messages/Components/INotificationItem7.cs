@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further means of referencing a payment transaction.
 /// </summary>
 [IsoId("_QgGTU249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Notification Item")]
 public interface INotificationItem7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INotificationItem7 : IIsoComponent
     [IsoId("_Qpe4pW49EeiU9cctagi5ow")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface INotificationItem7 : IIsoComponent
     [IsoId("_Qpe4p249EeiU9cctagi5ow")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface INotificationItem7 : IIsoComponent
     [IsoId("_Omx-4YkJEei-69PNFxn_Ew")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? UETR { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface INotificationItem7 : IIsoComponent
     [IsoId("_Qpe4s249EeiU9cctagi5ow")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedValueDate { get; }
 
     /// <summary>

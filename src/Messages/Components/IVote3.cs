@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Decision of the voting party for one resolution.
 /// </summary>
 [IsoId("_TK_TVtp-Ed-ak6NoX_4Aeg_696615532")]
+[IsoDisplayName(@"Vote")]
 public interface IVote3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVote3 : IIsoComponent
     [IsoId("_TK_TV9p-Ed-ak6NoX_4Aeg_696615862")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>

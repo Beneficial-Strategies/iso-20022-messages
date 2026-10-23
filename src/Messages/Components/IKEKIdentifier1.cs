@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a key encryption key (KEK), using previously distributed symmetric key.
 /// </summary>
 [IsoId("_Sw1NuwEcEeCQm6a_G2yO_w_607012210")]
+[IsoDisplayName(@"KEK Identifier")]
 public interface IKEKIdentifier1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IKEKIdentifier1 : IIsoComponent
     [IsoId("_Sw1NvAEcEeCQm6a_G2yO_w_-1402944648")]
     [DisplayName("Key Identification")]
     [IsoXmlTag("KeyId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text KeyIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IKEKIdentifier1 : IIsoComponent
     [IsoId("_Sw1NvQEcEeCQm6a_G2yO_w_-792542720")]
     [DisplayName("Key Version")]
     [IsoXmlTag("KeyVrsn")]
+    [IsoSimpleType(IsoSimpleType.Exact10Text)]
     Exact10Text KeyVersion { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IKEKIdentifier1 : IIsoComponent
     [IsoId("_Sw1NvgEcEeCQm6a_G2yO_w_-1001700130")]
     [DisplayName("Derivation Identification")]
     [IsoXmlTag("DerivtnId")]
+    [IsoSimpleType(IsoSimpleType.Min5Max16Binary)]
     Min5Max16Binary? DerivationIdentification { get; }
 }

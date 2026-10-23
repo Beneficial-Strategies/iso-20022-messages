@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the priority.
 /// </summary>
 [IsoId("_5Pg0WJNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Priority Numeric 5 Choice")]
 public interface IPriorityNumeric5Choice : IIsoChoice { }

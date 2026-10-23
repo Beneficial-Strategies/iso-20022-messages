@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement Agent2.
 /// </summary>
 [IsoId("_9uI_4TzUEe6P1b-XWVSh4g")]
+[IsoDisplayName(@"Settlement Agent2")]
 public interface ISettlementAgent2 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface ISettlementAgent2 : IIsoComponent
     /// </summary>
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentAccount4> Account { get; }
 }

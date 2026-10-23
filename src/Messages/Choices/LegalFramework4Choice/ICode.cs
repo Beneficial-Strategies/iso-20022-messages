@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegalFramework4Choice;
 /// Legal framework expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_5mxdwJNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ILegalFramework4Choice, IIsoChoiceVariant
 {
     /// <summary>

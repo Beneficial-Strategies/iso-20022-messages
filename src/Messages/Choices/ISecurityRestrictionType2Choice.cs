@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the type of restriction.
 /// </summary>
 [IsoId("_c8LMVeLxEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Security Restriction Type 2 Choice")]
 public interface ISecurityRestrictionType2Choice : IIsoChoice { }

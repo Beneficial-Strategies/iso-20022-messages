@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contact details of a business.
 /// </summary>
 [IsoId("_YKYSUVN5EfC0lMwgjvMClw")]
+[IsoDisplayName(@"Contact Business2")]
 public interface IContactBusiness2 : IIsoComponent
 {
     /// <summary>

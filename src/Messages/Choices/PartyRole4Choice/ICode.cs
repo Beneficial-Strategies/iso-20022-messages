@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyRole4Choice;
 /// Role expressed as a code.
 /// </summary>
 [IsoId("_XzOvwV92EeS7xuKaq75oiQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPartyRole4Choice, IIsoChoiceVariant
 {
     /// <summary>

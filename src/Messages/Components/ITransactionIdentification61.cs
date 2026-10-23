@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the transaction for network management.
 /// </summary>
 [IsoId("_7u_QAWPwEfCX7uJiAWHfoQ")]
+[IsoDisplayName(@"Transaction Identification61")]
 public interface ITransactionIdentification61 : IIsoComponent
 {
     /// <summary>
@@ -89,6 +90,7 @@ public interface ITransactionIdentification61 : IIsoComponent
     [IsoId("_-UcPUmPwEfCX7uJiAWHfoQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -97,5 +99,6 @@ public interface ITransactionIdentification61 : IIsoComponent
     [IsoId("_-UcPU2PwEfCX7uJiAWHfoQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

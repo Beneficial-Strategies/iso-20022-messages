@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References3Choice;
 /// Unambiguous identification of the confirmation to be cancelled.
 /// </summary>
 [IsoId("_USz3Atp-Ed-ak6NoX_4Aeg_-1717183315")]
+[IsoDisplayName(@"Securities Financing Confirmation Identification")]
 public interface ISecuritiesFinancingConfirmationIdentification
     : IReferences3Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ISecuritiesFinancingConfirmationIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("SctiesFincgConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

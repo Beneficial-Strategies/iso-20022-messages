@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio8Choice;
 /// </summary>
 [IsoId("_YVtxRelqEeuvhrZwLF0fDg")]
 [IsoXmlTag("Pnsn")]
+[IsoDisplayName(@"Pension")]
 public interface IPension : IFundPortfolio8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -42,6 +43,7 @@ public interface IPension : IFundPortfolio8Choice, IIsoChoiceVariant
     [IsoId("_YsEbx-lqEeuvhrZwLF0fDg")]
     [DisplayName("Tax Reference")]
     [IsoXmlTag("TaxRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxReference1> TaxReference { get; }
 
     /// <summary>
@@ -50,6 +52,8 @@ public interface IPension : IFundPortfolio8Choice, IIsoChoiceVariant
     [IsoId("_YsEbyelqEeuvhrZwLF0fDg")]
     [DisplayName("Drawdown Tranche Identification")]
     [IsoXmlTag("DrwdwnTrchId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DrawdownTrancheIdentification { get; }
 
     /// <summary>
@@ -58,6 +62,7 @@ public interface IPension : IFundPortfolio8Choice, IIsoChoiceVariant
     [IsoId("_cyN8UOlrEeuvhrZwLF0fDg")]
     [DisplayName("Non Wrapper Transfer")]
     [IsoXmlTag("NonWrpprTrf")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NonWrapperTransfer { get; }
 
     /// <summary>
@@ -66,5 +71,6 @@ public interface IPension : IFundPortfolio8Choice, IIsoChoiceVariant
     [IsoId("_YsEby-lqEeuvhrZwLF0fDg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

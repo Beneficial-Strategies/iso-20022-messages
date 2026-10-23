@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "AgtCANtfctnStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.011.001.04"
 )]
+[IsoDisplayName(@"Agent CA Notification Status Advice V04")]
 public interface IAgentCANotificationStatusAdviceV04 : IOuterRecord
 {
     /// <summary>

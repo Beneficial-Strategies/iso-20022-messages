@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Independent amount could be defined at a trade level or portfolio level. It is assumed that their treatment will be based on the exposure convention that is whether netted together or treated on a gross basis.
 /// </summary>
 [IsoId("_UlI9I9p-Ed-ak6NoX_4Aeg_1735271850")]
+[IsoDisplayName(@"Aggregated Independent Amount")]
 public interface IAggregatedIndependentAmount1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IAggregatedIndependentAmount1 : IIsoComponent
     [IsoId("_UlI9J9p-Ed-ak6NoX_4Aeg_-928458678")]
     [DisplayName("Other Amount")]
     [IsoXmlTag("OthrAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndependentAmount2> OtherAmount { get; }
 }

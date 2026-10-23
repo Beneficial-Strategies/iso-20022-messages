@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the participants with the highest volume and value ranking for settlement fails.
 /// </summary>
 [IsoId("_VEBnQI0UEemUAO64Q252gQ")]
+[IsoDisplayName(@"Settlement Fails Participant Range")]
 public interface ISettlementFailsParticipantRange1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementFailsParticipantRange1 : IIsoComponent
     [IsoId("_acReUI0UEemUAO64Q252gQ")]
     [DisplayName("Highest In Volume")]
     [IsoXmlTag("HghstInVol")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementFailsParticipant1> HighestInVolume { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ISettlementFailsParticipantRange1 : IIsoComponent
     [IsoId("_cDRRUI0UEemUAO64Q252gQ")]
     [DisplayName("Highest In Value")]
     [IsoXmlTag("HghstInVal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementFailsParticipant1> HighestInValue { get; }
 }

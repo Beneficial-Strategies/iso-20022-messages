@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Total Charges8.
 /// </summary>
 [IsoId("_vxQ40bK9Ee2BYd2ScWif6A")]
+[IsoDisplayName(@"Total Charges8")]
 public interface ITotalCharges8 : IIsoComponent
 {
     /// <summary>

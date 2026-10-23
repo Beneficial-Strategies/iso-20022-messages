@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency36Choice;
 /// Specifies a frequency in terms of a specified period type.
 /// </summary>
 [IsoId("_seR6MWk2Eeanu6HLe77Rkg")]
+[IsoDisplayName(@"Type")]
 public interface IType : IFrequency36Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the original payment transaction, to which the investigation message refers.
 /// </summary>
 [IsoId("_MPNpcbvHEfCYYbmqNrQFSg")]
+[IsoDisplayName(@"Underlying Payment Transaction11")]
 public interface IUnderlyingPaymentTransaction11 : IIsoComponent
 {
     /// <summary>

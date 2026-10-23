@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes of a pension.
 /// </summary>
 [IsoId("_YVtxR-lqEeuvhrZwLF0fDg")]
+[IsoDisplayName(@"Pension")]
 public interface IPension6 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IPension6 : IIsoComponent
     [IsoId("_YsEbx-lqEeuvhrZwLF0fDg")]
     [DisplayName("Tax Reference")]
     [IsoXmlTag("TaxRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxReference1> TaxReference { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface IPension6 : IIsoComponent
     [IsoId("_YsEbyelqEeuvhrZwLF0fDg")]
     [DisplayName("Drawdown Tranche Identification")]
     [IsoXmlTag("DrwdwnTrchId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DrawdownTrancheIdentification { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IPension6 : IIsoComponent
     [IsoId("_cyN8UOlrEeuvhrZwLF0fDg")]
     [DisplayName("Non Wrapper Transfer")]
     [IsoXmlTag("NonWrpprTrf")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NonWrapperTransfer { get; }
 
     /// <summary>
@@ -65,5 +70,6 @@ public interface IPension6 : IIsoComponent
     [IsoId("_YsEby-lqEeuvhrZwLF0fDg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

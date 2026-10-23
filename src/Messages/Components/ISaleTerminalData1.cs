@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the software and hardware feature of the Sale Terminal.
 /// </summary>
 [IsoId("_PfggMN6IEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Sale Terminal Data")]
 public interface ISaleTerminalData1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ISaleTerminalData1 : IIsoComponent
     [IsoId("_buPG4N6IEeiwsev40qZGEQ")]
     [DisplayName("Sale Reconciliation Identification")]
     [IsoXmlTag("SaleRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReconciliationIdentification { get; }
 }

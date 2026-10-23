@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action general information details.
 /// </summary>
 [IsoId("_M1H-YV2nEeOb__BffbPEig")]
+[IsoDisplayName(@"Corporate Action General Information SD")]
 public interface ICorporateActionGeneralInformationSD12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionGeneralInformationSD12 : IIsoComponent
     [IsoId("_NOuKI12nEeOb__BffbPEig")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICorporateActionGeneralInformationSD12 : IIsoComponent
     [IsoId("_NOuKPV2nEeOb__BffbPEig")]
     [DisplayName("EDS Messaging Eligibility Flag")]
     [IsoXmlTag("EDSMsggElgbltyFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EDSMessagingEligibilityFlag { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ICorporateActionGeneralInformationSD12 : IIsoComponent
     [IsoId("_jFqBMF2nEeOb__BffbPEig")]
     [DisplayName("Redemption Identification")]
     [IsoXmlTag("RedId")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? RedemptionIdentification { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ICorporateActionGeneralInformationSD12 : IIsoComponent
     [IsoId("_5Uu2AF2oEeOb__BffbPEig")]
     [DisplayName("DTCFCP Election Flag")]
     [IsoXmlTag("DTCFCPElctnFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DTCFCPElectionFlag { get; }
 
     /// <summary>
@@ -73,5 +79,6 @@ public interface ICorporateActionGeneralInformationSD12 : IIsoComponent
     [IsoId("_IZPXAF2pEeOb__BffbPEig")]
     [DisplayName("Asset Servicer Processing Flag")]
     [IsoXmlTag("AsstSvcrPrcgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AssetServicerProcessingFlag { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Retailer Event6.
 /// </summary>
 [IsoId("_z5FKcZHzEe6qwqnYOGEReg")]
+[IsoDisplayName(@"Retailer Event6")]
 public interface IRetailerEvent6 : IIsoComponent
 {
     /// <summary>

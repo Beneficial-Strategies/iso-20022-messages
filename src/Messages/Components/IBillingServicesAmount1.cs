@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Taxable service charge amount conversions to host currency.
 /// </summary>
 [IsoId("_6QP-pJqlEeGSON8vddiWzQ_1984361507")]
+[IsoDisplayName(@"Billing Services Amount")]
 public interface IBillingServicesAmount1 : IIsoComponent
 {
     /// <summary>

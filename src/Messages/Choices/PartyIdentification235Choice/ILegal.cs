@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification235Choice;
 /// The party is a legal person.
 /// </summary>
 [IsoId("_2CSAgO9KEemVGdgB8P8uQQ")]
+[IsoDisplayName(@"Legal")]
 public interface ILegal : IPartyIdentification235Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

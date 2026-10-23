@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax related to an investment fund order.
 /// </summary>
 [IsoId("_EzMu4ZELEem-9Y6mq5ZH3Q")]
+[IsoDisplayName(@"Tax")]
 public interface ITax38 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ITax38 : IIsoComponent
     [IsoId("_FGYwq5ELEem-9Y6mq5ZH3Q")]
     [DisplayName("Exemption Indicator")]
     [IsoXmlTag("XmptnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ExemptionIndicator { get; }
 
     /// <summary>

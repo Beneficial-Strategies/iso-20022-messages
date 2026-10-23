@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics that apply to the credit side of the payment transactions included in the direct debit initiation.
 /// </summary>
 [IsoId("_PkUHqtp-Ed-ak6NoX_4Aeg_1196042811")]
+[IsoDisplayName(@"Payment Instruction Information")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-08-07.")]
 public interface IPaymentInstructionInformation4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IPaymentInstructionInformation4 : IIsoComponent
     [IsoId("_PkUHq9p-Ed-ak6NoX_4Aeg_1196043143")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IPaymentInstructionInformation4 : IIsoComponent
     [IsoId("_Pkd4kdp-Ed-ak6NoX_4Aeg_235313902")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
+    [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
     BatchBookingIndicator? BatchBooking { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IPaymentInstructionInformation4 : IIsoComponent
     [IsoId("_Pkd4ktp-Ed-ak6NoX_4Aeg_1038777743")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? NumberOfTransactions { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IPaymentInstructionInformation4 : IIsoComponent
     [IsoId("_Pkd4k9p-Ed-ak6NoX_4Aeg_1038777866")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IPaymentInstructionInformation4 : IIsoComponent
     [IsoId("_Pkd4ldp-Ed-ak6NoX_4Aeg_1196042841")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate RequestedCollectionDate { get; }
 
     /// <summary>
@@ -145,5 +153,6 @@ public interface IPaymentInstructionInformation4 : IIsoComponent
     [IsoId("_Pkwzgdp-Ed-ak6NoX_4Aeg_1196963822")]
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDirectDebitTransactionInformation9> DirectDebitTransactionInformation { get; }
 }

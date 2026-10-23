@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("df0ea45a-4f50-4036-9283-70365f059c0d")]
 [IsoMessage("camt.053.001.14", "BkToCstmrStmt", "urn:iso:std:iso:20022:tech:xsd:camt.053.001.14")]
+[IsoDisplayName(@"Bank To Customer Statement V14")]
 public interface IBankToCustomerStatementV14 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IBankToCustomerStatementV14 : IOuterRecord
     /// </summary>
     [DisplayName("Statement")]
     [IsoXmlTag("Stmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountStatement15> Statement { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IBankToCustomerStatementV14 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOfMeasure3Choice;
 /// Identifies the unit of measure not present in the code list.
 /// </summary>
 [IsoId("_ZrCckBraEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Other Unit Of Measure")]
 public interface IOtherUnitOfMeasure : IUnitOfMeasure3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOtherUnitOfMeasure : IUnitOfMeasure3Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("OthrUnitOfMeasr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

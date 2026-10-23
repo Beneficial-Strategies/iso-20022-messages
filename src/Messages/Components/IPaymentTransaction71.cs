@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment processes required to transfer cash from the debtor to the creditor.
 /// </summary>
 [IsoId("_3CmvvzbsEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Payment Transaction")]
 public interface IPaymentTransaction71 : IIsoComponent
 {
     /// <summary>

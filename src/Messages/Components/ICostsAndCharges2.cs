@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Costs and charges associated with the distribution or selling of a financial instrument. These may be one-off or recurring charges. These may be intended (ex ante) or actual (ex post).
 /// </summary>
 [IsoId("_peMCcZ9BEeqxTNfi5y7ywQ")]
+[IsoDisplayName(@"Costs And Charges")]
 public interface ICostsAndCharges2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICostsAndCharges2 : IIsoComponent
     [IsoId("_-J7n4cpmEeqy06E9zwBYlQ")]
     [DisplayName("Ex Ante Reference Date")]
     [IsoXmlTag("ExAnteRefDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExAnteReferenceDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICostsAndCharges2 : IIsoComponent
     [IsoId("_p37YLZ9BEeqxTNfi5y7ywQ")]
     [DisplayName("Individual Cost Or Charge")]
     [IsoXmlTag("IndvCostOrChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualCostOrCharge2> IndividualCostOrCharge { get; }
 
     /// <summary>

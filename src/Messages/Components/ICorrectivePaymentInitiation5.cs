@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the corrective payment initiation transaction, to which the resolution message refers.
 /// </summary>
 [IsoId("_vJr5QdizEeq5MfBBxQig1Q")]
+[IsoDisplayName(@"Corrective Payment Initiation")]
 public interface ICorrectivePaymentInitiation5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICorrectivePaymentInitiation5 : IIsoComponent
     [IsoId("_vLWGJ9izEeq5MfBBxQig1Q")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICorrectivePaymentInitiation5 : IIsoComponent
     [IsoId("_vLWGKdizEeq5MfBBxQig1Q")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ICorrectivePaymentInitiation5 : IIsoComponent
     [IsoId("_vLWGK9izEeq5MfBBxQig1Q")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface ICorrectivePaymentInitiation5 : IIsoComponent
     [IsoId("_vLWGLdizEeq5MfBBxQig1Q")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? UETR { get; }
 
     /// <summary>
@@ -74,5 +82,6 @@ public interface ICorrectivePaymentInitiation5 : IIsoComponent
     [IsoId("_vLWGM9izEeq5MfBBxQig1Q")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 }

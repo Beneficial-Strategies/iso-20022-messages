@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the CA entitlement.
 /// </summary>
 [IsoId("_UJIWmdp-Ed-ak6NoX_4Aeg_1024355345")]
+[IsoDisplayName(@"Entitlement Advice")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IEntitlementAdvice1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface IEntitlementAdvice1 : IIsoComponent
     [IsoId("_UJIWm9p-Ed-ak6NoX_4Aeg_1854599377")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText OptionNumber { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IEntitlementAdvice1 : IIsoComponent
     [IsoId("_UJRggdp-Ed-ak6NoX_4Aeg_-1335835024")]
     [DisplayName("Account And Distribution Details")]
     [IsoXmlTag("AcctAndDstrbtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEntitlement1> AccountAndDistributionDetails { get; }
 }

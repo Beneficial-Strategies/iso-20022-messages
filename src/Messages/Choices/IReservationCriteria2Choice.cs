@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.
 /// </summary>
 [IsoId("_keMrp5laEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Reservation Criteria 2 Choice")]
 public interface IReservationCriteria2Choice : IIsoChoice { }

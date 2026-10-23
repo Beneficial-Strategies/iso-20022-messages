@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an amount and percentage.
 /// </summary>
 [IsoId("_986x5nltEeG7BsjMvd1mEw_930379145")]
+[IsoDisplayName(@"Amount Or Percentage 1 Choice")]
 public interface IAmountOrPercentage1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the attributes of a report and its content.
 /// </summary>
 [IsoId("_7yb4AXFWEfC68Y4jZPNEug")]
+[IsoDisplayName(@"Report Data8")]
 public interface IReportData8 : IIsoComponent
 {
     /// <summary>
@@ -97,6 +98,7 @@ public interface IReportData8 : IIsoComponent
     [IsoId("__CiW0nFWEfC68Y4jZPNEug")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -105,5 +107,6 @@ public interface IReportData8 : IIsoComponent
     [IsoId("__CiW03FWEfC68Y4jZPNEug")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

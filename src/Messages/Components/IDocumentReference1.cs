@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// customer site.
 /// </summary>
 [IsoId("__ljNE_QAEeihCvvpsmGI2w")]
+[IsoDisplayName(@"Document Reference")]
 public interface IDocumentReference1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IDocumentReference1 : IIsoComponent
     [IsoId("__ljNFfQAEeihCvvpsmGI2w")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IDocumentReference1 : IIsoComponent
     [IsoId("__ljNFPQAEeihCvvpsmGI2w")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Reference { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the classification of a financial institution.
 /// </summary>
 [IsoId("_IH7-oSI4Ee2zWP9pqvmqdw")]
+[IsoDisplayName(@"Financial Party Classification 2 Choice")]
 public interface IFinancialPartyClassification2Choice : IIsoChoice { }

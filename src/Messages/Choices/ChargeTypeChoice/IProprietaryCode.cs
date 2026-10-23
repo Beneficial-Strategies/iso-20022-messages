@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeTypeChoice;
 /// Type of charge is a bilaterally agreed code.
 /// </summary>
 [IsoId("_RIcz1tp-Ed-ak6NoX_4Aeg_-1267403815")]
+[IsoDisplayName(@"Proprietary Code")]
 public interface IProprietaryCode : IChargeTypeChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietaryCode : IChargeTypeChoice, IIsoChoiceVariant
     /// Specifies an alphanumeric string with a maximum length of 4 characters.
     /// </summary>
     [IsoXmlTag("PrtryCd")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText Value { get; }
 }

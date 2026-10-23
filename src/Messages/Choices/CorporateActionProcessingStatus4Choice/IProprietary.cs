@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus4
 /// </summary>
 [IsoId("_tNku8yXZEeOFIcNWlDEvdQ")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICorporateActionProcessingStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IProprietary : ICorporateActionProcessingStatus4Choice, IIsoCho
     [IsoId("_WecBFtp-Ed-ak6NoX_4Aeg_1043701620")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText Identification { get; }
 
     /// <summary>
@@ -26,6 +28,8 @@ public interface IProprietary : ICorporateActionProcessingStatus4Choice, IIsoCho
     [IsoId("_WecBF9p-Ed-ak6NoX_4Aeg_-950443086")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText Issuer { get; }
 
     /// <summary>
@@ -34,5 +38,7 @@ public interface IProprietary : ICorporateActionProcessingStatus4Choice, IIsoCho
     [IsoId("_WecBGNp-Ed-ak6NoX_4Aeg_1350379504")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText? SchemeName { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of the transaction given in a response to a request.
 /// </summary>
 [IsoId("_JxSu8QvWEeKzJ69IWwzB9Q")]
+[IsoDisplayName(@"Card Payment Environment")]
 public interface ICardPaymentEnvironment11 : IIsoComponent
 {
     /// <summary>

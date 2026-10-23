@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action option.
 /// </summary>
 [IsoId("_xWboVTq3EeWQ1Y7f8kds2A")]
+[IsoDisplayName(@"Corporate Action Option")]
 public interface ICorporateActionOption116 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ICorporateActionOption116 : IIsoComponent
     [IsoId("_xiegPzq3EeWQ1Y7f8kds2A")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SafekeepingAccount { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_Yqs6gfsnEeCFH_HrG1Cfjg")]
+[IsoDisplayName(@"Receive Information")]
 public interface IReceiveInformation7 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IReceiveInformation7 : IIsoComponent
     [IsoId("_Yqs6o_snEeCFH_HrG1Cfjg")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge20> ChargeDetails { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IReceiveInformation7 : IIsoComponent
     [IsoId("_Yqs6p_snEeCFH_HrG1Cfjg")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission12> CommissionDetails { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IReceiveInformation7 : IIsoComponent
     [IsoId("_Yqs6q_snEeCFH_HrG1Cfjg")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax15> TaxDetails { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Breakdown of cash movements into a fund as a result of investment funds transactions, eg, subscriptions or switch-in.
 /// </summary>
 [IsoId("_KIxN_QatEeS3lpTattq7hg")]
+[IsoDisplayName(@"Fund Cash In Breakdown")]
 public interface IFundCashInBreakdown3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IFundCashInBreakdown3 : IIsoComponent
     [IsoId("_KigjqwatEeS3lpTattq7hg")]
     [DisplayName("New Amount Indicator")]
     [IsoXmlTag("NewAmtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NewAmountIndicator { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IFundCashInBreakdown3 : IIsoComponent
     [IsoId("_KigjtQatEeS3lpTattq7hg")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge26> ChargeDetails { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IFundCashInBreakdown3 : IIsoComponent
     [IsoId("_KigjtwatEeS3lpTattq7hg")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission21> CommissionDetails { get; }
 
     /// <summary>

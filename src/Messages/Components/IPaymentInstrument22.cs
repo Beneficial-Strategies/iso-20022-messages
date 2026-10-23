@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment parties for the transfer of cash from the debtor to the creditor.
 /// </summary>
 [IsoId("f90cf436-8a1f-43d7-9f4d-64c45f52f61c")]
+[IsoDisplayName(@"Payment Instrument22")]
 public interface IPaymentInstrument22 : IIsoComponent
 {
     /// <summary>

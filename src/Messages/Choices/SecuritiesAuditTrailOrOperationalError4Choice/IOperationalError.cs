@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAuditTrailOrOperationa
 /// </summary>
 [IsoId("_Ptf-M5JKEeuAlLVx8pyt3w")]
 [IsoXmlTag("OprlErr")]
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError
     : ISecuritiesAuditTrailOrOperationalError4Choice,
         IIsoChoiceVariant
@@ -28,5 +29,7 @@ public interface IOperationalError
     [IsoId("_RA_783hdEeidzqjNEfehPg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

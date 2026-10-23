@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Deposit taking institution with which a central counterparty has accounts used to concentrate cash funds before or after investment.
 /// </summary>
 [IsoId("_ph5wQBXrEeejf-cbr8l5qw")]
+[IsoDisplayName(@"Concentration Agent")]
 public interface IConcentrationAgent1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IConcentrationAgent1 : IIsoComponent
     [IsoId("_7oHHsBXrEeejf-cbr8l5qw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Identification { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IConcentrationAgent1 : IIsoComponent
     [IsoId("_2W_MUBXrEeejf-cbr8l5qw")]
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IConcentrationAccount1> Account { get; }
 }

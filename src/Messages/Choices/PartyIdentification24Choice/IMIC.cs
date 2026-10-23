@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification24Choice;
 /// Market Identifier Code. Identification of a financial market, as stipulated in the norm ISO 10383 &quot;Codes for exchanges and market identifications&quot;.
 /// </summary>
 [IsoId("_QReIhtp-Ed-ak6NoX_4Aeg_246882827")]
+[IsoDisplayName(@"MIC")]
 public interface IMIC : IPartyIdentification24Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IMIC : IPartyIdentification24Choice, IIsoChoiceVariant
     /// Market Identifier Code. The identification of a financial market, as stipulated in the norm ISO 10383 &apos;Codes for exchanges and market identifications&apos;.
     /// </summary>
     [IsoXmlTag("MIC")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier Value { get; }
 }

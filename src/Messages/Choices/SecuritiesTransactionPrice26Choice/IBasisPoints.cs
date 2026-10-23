@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice26Choi
 
 /// <summary>Price expressed as basis points.</summary>
 [IsoId("_HT_WF62kEfCfRtNoJv1jFQ")]
+[IsoDisplayName(@"Basis Points")]
 public interface IBasisPoints : ISecuritiesTransactionPrice26Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

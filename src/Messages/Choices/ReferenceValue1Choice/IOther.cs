@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferenceValue1Choice;
 /// </summary>
 [IsoId("_rIqsMMeQEeysUoBKYz1Ytw")]
 [IsoXmlTag("Othr")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IReferenceValue1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IOther : IReferenceValue1Choice, IIsoChoiceVariant
     [IsoId("_LuoKYMeUEeysUoBKYz1Ytw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Value { get; }
 }

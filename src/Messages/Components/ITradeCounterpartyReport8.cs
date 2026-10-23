@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the trade counterparties in the contract.
 /// </summary>
 [IsoId("_B0JdkZQEEeiILOjNP8ro1w")]
+[IsoDisplayName(@"Trade Counterparty Report")]
 public interface ITradeCounterpartyReport8 : IIsoComponent
 {
     /// <summary>

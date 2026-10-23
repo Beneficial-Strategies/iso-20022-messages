@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Quantity expressed as a number and its details.
 /// </summary>
 [IsoId("_72Uo4xgKEeKqWJINzXcn5g")]
+[IsoDisplayName(@"Unit")]
 public interface IUnit4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,8 @@ public interface IUnit4 : IIsoComponent
     [IsoId("_swUdoBgLEeKqWJINzXcn5g")]
     [DisplayName("Unit Details")]
     [IsoXmlTag("UnitDtls")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit5> UnitDetails { get; }
 }

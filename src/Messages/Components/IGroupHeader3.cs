@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics shared by all individual transactions included in the message.
 /// </summary>
 [IsoId("_Puv189p-Ed-ak6NoX_4Aeg_1445763661")]
+[IsoDisplayName(@"Group Header")]
 public interface IGroupHeader3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGroupHeader3 : IIsoComponent
     [IsoId("_Puv19Np-Ed-ak6NoX_4Aeg_1445763680")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IGroupHeader3 : IIsoComponent
     [IsoId("_Puv19dp-Ed-ak6NoX_4Aeg_1445763799")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,10 @@ public interface IGroupHeader3 : IIsoComponent
     [IsoId("_Puv19tp-Ed-ak6NoX_4Aeg_1445764082")]
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
+    [IsoSimpleType(IsoSimpleType.Max128Text)]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Authorisation { get; }
 
     /// <summary>
@@ -41,6 +49,7 @@ public interface IGroupHeader3 : IIsoComponent
     [IsoId("_Puv199p-Ed-ak6NoX_4Aeg_1445764124")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
+    [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
     BatchBookingIndicator? BatchBooking { get; }
 
     /// <summary>
@@ -49,6 +58,7 @@ public interface IGroupHeader3 : IIsoComponent
     [IsoId("_Puv1-Np-Ed-ak6NoX_4Aeg_1445764159")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfTransactions { get; }
 
     /// <summary>
@@ -57,6 +67,7 @@ public interface IGroupHeader3 : IIsoComponent
     [IsoId("_Puv1-dp-Ed-ak6NoX_4Aeg_-1932144351")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -73,6 +84,7 @@ public interface IGroupHeader3 : IIsoComponent
     [IsoId("_Pu5m8Np-Ed-ak6NoX_4Aeg_1445764262")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>

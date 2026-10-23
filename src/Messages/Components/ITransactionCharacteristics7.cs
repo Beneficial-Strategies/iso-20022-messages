@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains transaction details.
 /// </summary>
 [IsoId("__j2rMV5-EfCoP_h9uwd39Q")]
+[IsoDisplayName(@"Transaction Characteristics7")]
 public interface ITransactionCharacteristics7 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ITransactionCharacteristics7 : IIsoComponent
     [IsoId("__j2rQV5-EfCoP_h9uwd39Q")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ITransactionCharacteristics7 : IIsoComponent
     [IsoId("__j2rRV5-EfCoP_h9uwd39Q")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ITransactionCharacteristics7 : IIsoComponent
     [IsoId("__j2rUV5-EfCoP_h9uwd39Q")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface ITransactionCharacteristics7 : IIsoComponent
     [IsoId("__j2rVV5-EfCoP_h9uwd39Q")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>
@@ -89,5 +94,6 @@ public interface ITransactionCharacteristics7 : IIsoComponent
     [IsoId("__j2rWV5-EfCoP_h9uwd39Q")]
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData22> LocalData { get; }
 }

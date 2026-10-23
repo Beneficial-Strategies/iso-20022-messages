@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the level of control.
 /// </summary>
 [IsoId("_KcNhUCDDEeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Level Of Control 1 Choice")]
 public interface ILevelOfControl1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Entity who has signed the data and its digital signature.
 /// </summary>
 [IsoId("_gThY8dtbEee9e6xduATmQg")]
+[IsoDisplayName(@"Signer")]
 public interface ISigner4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISigner4 : IIsoComponent
     [IsoId("_gc2UEdtbEee9e6xduATmQg")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ISigner4 : IIsoComponent
     [IsoId("_T-zv0N9dEeeNt9bWIs54cw")]
     [DisplayName("Signed Attributes")]
     [IsoXmlTag("SgndAttrbts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericInformation1> SignedAttributes { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface ISigner4 : IIsoComponent
     [IsoId("_gc2UGdtbEee9e6xduATmQg")]
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
+    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
     Max3000Binary Signature { get; }
 }

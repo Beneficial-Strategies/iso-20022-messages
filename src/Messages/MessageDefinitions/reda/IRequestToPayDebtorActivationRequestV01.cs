@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "ReqToPayDbtrActvtnReq",
     "urn:iso:std:iso:20022:tech:xsd:reda.070.001.01"
 )]
+[Description(@"The RequestToPayDebtorActivationRequest message is sent by the debtor RTP (Request To Pay) provider to the creditor RTP provider and optionally from the debtor to its RTP provider and from the creditor RTP provider to the creditor to request the debtor activation of the RTP service with that specific creditor.")]
+[IsoDisplayName(@"Request To Pay Debtor Activation Request V")]
 public interface IRequestToPayDebtorActivationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IRequestToPayDebtorActivationRequestV01 : IOuterRecord
     [IsoId("_rNNB0eHzEeqbls7Gk4-ckA")]
     [DisplayName("Debtor Activation")]
     [IsoXmlTag("DbtrActvtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDebtorActivation3> DebtorActivation { get; }
 
     /// <summary>
@@ -48,5 +51,6 @@ public interface IRequestToPayDebtorActivationRequestV01 : IOuterRecord
     [IsoId("_rNNB1eHzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

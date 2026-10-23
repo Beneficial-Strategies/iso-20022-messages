@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMSignature2Choice;
 /// </summary>
 [IsoId("_iFHDY7TwEeeQy4o2AayYHg")]
 [IsoXmlTag("TRRltdData")]
+[IsoDisplayName(@"TR Related Data")]
 public interface ITRRelatedData : IATMSignature2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface ITRRelatedData : IATMSignature2Choice, IIsoChoiceVariant
     [IsoId("_PZ0GE7TpEeeQy4o2AayYHg")]
     [DisplayName("TR Block")]
     [IsoXmlTag("TRBlck")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary? TRBlock { get; }
 }

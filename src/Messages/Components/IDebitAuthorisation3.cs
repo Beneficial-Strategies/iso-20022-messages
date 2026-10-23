@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Debit Authorisation3.
 /// </summary>
 [IsoId("_2wXxsRZiEe6d6Ip1Ob2kaQ")]
+[IsoDisplayName(@"Debit Authorisation3")]
 public interface IDebitAuthorisation3 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IDebitAuthorisation3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Cancellation Reason Information")]
     [IsoXmlTag("AddtlCxlRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max140Text> AdditionalCancellationReasonInformation { get; }
 }

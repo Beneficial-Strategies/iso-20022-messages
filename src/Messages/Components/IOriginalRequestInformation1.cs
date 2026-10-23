@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics that unambiguously identify the original global invoice financing request.
 /// </summary>
 [IsoId("_TiOuodp-Ed-ak6NoX_4Aeg_1502660608")]
+[IsoDisplayName(@"Original Request Information")]
 public interface IOriginalRequestInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalRequestInformation1 : IIsoComponent
     [IsoId("_TiOuotp-Ed-ak6NoX_4Aeg_1331216430")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IOriginalRequestInformation1 : IIsoComponent
     [IsoId("_TiOuo9p-Ed-ak6NoX_4Aeg_822273349")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>

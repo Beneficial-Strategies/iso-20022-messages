@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Debtor Activation Amendment5.
 /// </summary>
 [IsoId("_wa3CITEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Debtor Activation Amendment5")]
 public interface IDebtorActivationAmendment5 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IDebtorActivationAmendment5 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax applicable to a transaction.
 /// </summary>
 [IsoId("_s2I_cVXZEfC0lMwgjvMClw")]
+[IsoDisplayName(@"Tax44")]
 public interface ITax44 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the valuation details per counterparty aggregation.
 /// </summary>
 [IsoId("_SZLjaSs_EeySlt9bF77XfA")]
+[IsoDisplayName(@"Counterparty Aggregation")]
 public interface ICounterpartyAggregation3 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ICounterpartyAggregation3 : IIsoComponent
     [IsoId("_SwlWzSs_EeySlt9bF77XfA")]
     [DisplayName("Valuation Amounts")]
     [IsoXmlTag("ValtnAmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralAmount16> ValuationAmounts { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ICounterpartyAggregation3 : IIsoComponent
     [IsoId("_SwlWzys_EeySlt9bF77XfA")]
     [DisplayName("Margin Rate")]
     [IsoXmlTag("MrgnRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? MarginRate { get; }
 
     /// <summary>

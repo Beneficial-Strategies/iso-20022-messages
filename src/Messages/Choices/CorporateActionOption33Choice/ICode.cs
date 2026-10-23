@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionOption33Choice;
 /// Option type expressed as a code.
 /// </summary>
 [IsoId("_xPNmgeasEemtTOaHuc_63w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionOption33Choice, IIsoChoiceVariant
 {
     /// <summary>

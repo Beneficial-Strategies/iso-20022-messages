@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Charges5Choice;
 /// <summary>
 /// Per Type.
 /// </summary>
+[IsoDisplayName(@"Per Type")]
 public interface IPerType : ICharges5Choice, IIsoChoiceVariant
 {
     /// <summary>

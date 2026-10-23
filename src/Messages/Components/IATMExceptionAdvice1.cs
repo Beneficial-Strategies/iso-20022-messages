@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to exceptions occurring on the ATM.
 /// </summary>
 [IsoId("_92OQAK5CEeWCgYcWSNgX5g")]
+[IsoDisplayName(@"ATM Exception Advice")]
 public interface IATMExceptionAdvice1 : IIsoComponent
 {
     /// <summary>

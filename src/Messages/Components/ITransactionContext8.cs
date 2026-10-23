@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the card payment transaction
 /// </summary>
 [IsoId("_2gRB4cVbEeuips4fuphvoQ")]
+[IsoDisplayName(@"Transaction Context")]
 public interface ITransactionContext8 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITransactionContext8 : IIsoComponent
     [IsoId("_2mGx4cpCEeuuJ571wNLKkA")]
     [DisplayName("Merchant Category Specific Data")]
     [IsoXmlTag("MrchntCtgySpcfcData")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MerchantCategorySpecificData { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ITransactionContext8 : IIsoComponent
     [IsoId("_1KSc0THMEeyTT91yHXSlSQ")]
     [DisplayName("Partial Shipment Indicator")]
     [IsoXmlTag("PrtlShipmntInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PartialShipmentIndicator { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ITransactionContext8 : IIsoComponent
     [IsoId("_9f9-MTKkEeyTT91yHXSlSQ")]
     [DisplayName("Delayed Charges Indicator")]
     [IsoXmlTag("DelydChrgsInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DelayedChargesIndicator { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ITransactionContext8 : IIsoComponent
     [IsoId("_-1bVQTKkEeyTT91yHXSlSQ")]
     [DisplayName("No Show Indicator")]
     [IsoXmlTag("NoShowInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NoShowIndicator { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface ITransactionContext8 : IIsoComponent
     [IsoId("__yT0QTKkEeyTT91yHXSlSQ")]
     [DisplayName("Reauthorisation Indicator")]
     [IsoXmlTag("ReauthstnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReauthorisationIndicator { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface ITransactionContext8 : IIsoComponent
     [IsoId("_B6QYMTKlEeyTT91yHXSlSQ")]
     [DisplayName("Re Submission Indicator")]
     [IsoXmlTag("ReSubmissnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReSubmissionIndicator { get; }
 
     /// <summary>
@@ -122,5 +130,6 @@ public interface ITransactionContext8 : IIsoComponent
     [IsoId("_rLiF0cV9Eeua2vd9tJAtHg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

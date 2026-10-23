@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to search for a member.
 /// </summary>
 [IsoId("_i_EmMXSbEeiH1ZOt2UD8vQ")]
+[IsoDisplayName(@"Member Search Criteria")]
 public interface IMemberSearchCriteria4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMemberSearchCriteria4 : IIsoComponent
     [IsoId("_jUYH0XSbEeiH1ZOt2UD8vQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMemberIdentification3Choice> Identification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IMemberSearchCriteria4 : IIsoComponent
     [IsoId("_jUYH03SbEeiH1ZOt2UD8vQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemMemberType1Choice> Type { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IMemberSearchCriteria4 : IIsoComponent
     [IsoId("_jUYH1XSbEeiH1ZOt2UD8vQ")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemMemberStatus1Choice> Status { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference Data1.
 /// </summary>
 [IsoId("_e_ODIbMbEe-OHY85tcOC5w")]
+[IsoDisplayName(@"Reference Data1")]
 public interface IReferenceData1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements providing information on the original amount and currency information.
 /// </summary>
 [IsoId("_SVf1xNp-Ed-ak6NoX_4Aeg_1205555994")]
+[IsoDisplayName(@"Amount And Currency Exchange")]
 public interface IAmountAndCurrencyExchange2 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IAmountAndCurrencyExchange2 : IIsoComponent
     [IsoId("_SVo_sNp-Ed-ak6NoX_4Aeg_1205556409")]
     [DisplayName("Proprietary Amount")]
     [IsoXmlTag("PrtryAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountAndCurrencyExchangeDetails2> ProprietaryAmount { get; }
 }

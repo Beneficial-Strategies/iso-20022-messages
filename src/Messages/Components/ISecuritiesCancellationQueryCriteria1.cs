@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria based on which information is included.
 /// </summary>
 [IsoId("_YaxgVWdnEemMLeaDfmIfIA")]
+[IsoDisplayName(@"Securities Cancellation Query Criteria1")]
 public interface ISecuritiesCancellationQueryCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecuritiesCancellationQueryCriteria1 : IIsoComponent
     [IsoId("_YpFpIWdnEemMLeaDfmIfIA")]
     [DisplayName("Cancellation Request Identification")]
     [IsoXmlTag("CxlReqId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CancellationRequestIdentification { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ISecuritiesCancellationQueryCriteria1 : IIsoComponent
     [IsoId("_YpFpK2dnEemMLeaDfmIfIA")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICancellationProcessingStatus9Choice> ProcessingStatus { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ISecuritiesCancellationQueryCriteria1 : IIsoComponent
     [IsoId("_YpFpLWdnEemMLeaDfmIfIA")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesAccount19> SafekeepingAccount { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ISecuritiesCancellationQueryCriteria1 : IIsoComponent
     [IsoId("_YpFpL2dnEemMLeaDfmIfIA")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> AccountOwner { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ISecuritiesCancellationQueryCriteria1 : IIsoComponent
     [IsoId("_YpFpMWdnEemMLeaDfmIfIA")]
     [DisplayName("Message Originator")]
     [IsoXmlTag("MsgOrgtr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> MessageOriginator { get; }
 
     /// <summary>

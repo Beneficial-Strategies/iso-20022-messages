@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the acceptor.
 /// </summary>
 [IsoId("_KXEPwXRwEfC68Y4jZPNEug")]
+[IsoDisplayName(@"Acceptor Data3")]
 public interface IAcceptorData3 : IIsoComponent
 {
     /// <summary>
@@ -217,6 +218,7 @@ public interface IAcceptorData3 : IIsoComponent
     [IsoId("_mmPbQnRwEfC68Y4jZPNEug")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -225,5 +227,6 @@ public interface IAcceptorData3 : IIsoComponent
     [IsoId("_mmPbQ3RwEfC68Y4jZPNEug")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> NationalData { get; }
 }

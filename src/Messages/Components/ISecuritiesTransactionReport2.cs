@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities transaction report.
 /// </summary>
 [IsoId("_CVjMkCrlEeWiy6-TnRWhpA")]
+[IsoDisplayName(@"Securities Transaction Report")]
 public interface ISecuritiesTransactionReport2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesTransactionReport2 : IIsoComponent
     [IsoId("_CVjMkyrlEeWiy6-TnRWhpA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text TransactionIdentification { get; }
 
     /// <summary>
@@ -27,6 +30,7 @@ public interface ISecuritiesTransactionReport2 : IIsoComponent
     [IsoId("_CVjMmSrlEeWiy6-TnRWhpA")]
     [DisplayName("Executing Party")]
     [IsoXmlTag("ExctgPty")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier ExecutingParty { get; }
 
     /// <summary>
@@ -35,6 +39,7 @@ public interface ISecuritiesTransactionReport2 : IIsoComponent
     [IsoId("_QrvSQFymEeWe9sWf-OA_kA")]
     [DisplayName("Submitting Party")]
     [IsoXmlTag("SubmitgPty")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier SubmittingParty { get; }
 
     /// <summary>
@@ -51,5 +56,6 @@ public interface ISecuritiesTransactionReport2 : IIsoComponent
     [IsoId("_WLYxoMpeEeW3lKrJLTgxRg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

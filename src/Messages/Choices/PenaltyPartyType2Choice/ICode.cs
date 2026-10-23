@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PenaltyPartyType2Choice;
 
 /// <summary>Penalty party type, in a coded form.</summary>
 [IsoId("_-JKIAQAUEeqOHNEXayM0Mg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPenaltyPartyType2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

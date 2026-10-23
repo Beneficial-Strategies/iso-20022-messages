@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementOrCorporateActionEvent
 /// Specifies the type of corporate event.
 /// </summary>
 [IsoId("_--hMKTqDEeWVrPy0StzzSg")]
+[IsoDisplayName(@"Corporate Action Event Type")]
 public interface ICorporateActionEventType
     : ISettlementOrCorporateActionEvent14Choice,
         IIsoChoiceVariant

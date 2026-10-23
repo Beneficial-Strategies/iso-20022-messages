@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError8C
 /// </summary>
 [IsoId("_Z496kTneEem7JZMuWtwtsg")]
 [IsoXmlTag("Mods")]
+[IsoDisplayName(@"Modifications")]
 public interface IModifications : IIntraBalanceOrOperationalError8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -50,5 +51,6 @@ public interface IModifications : IIntraBalanceOrOperationalError8Choice, IIsoCh
     [IsoId("_aD2U7TneEem7JZMuWtwtsg")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalanceModification6> Modification { get; }
 }

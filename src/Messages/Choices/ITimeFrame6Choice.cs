@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Qualitative expression of a time frame.
 /// </summary>
 [IsoId("_yjGN0DcbEeidBoT_PugKiA")]
+[IsoDisplayName(@"Time Frame 6 Choice")]
 public interface ITimeFrame6Choice : IIsoChoice { }

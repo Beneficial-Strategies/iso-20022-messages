@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References80Choice;
 /// <summary>
 /// Pool Identification.
 /// </summary>
+[IsoDisplayName(@"Pool Identification")]
 public interface IPoolIdentification : IReferences80Choice, IIsoChoiceVariant
 {
     /// <summary>

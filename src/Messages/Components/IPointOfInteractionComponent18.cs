@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to a component of the POI (Point Of Interaction) performing the transaction.
 /// </summary>
 [IsoId("_jlw1YbZyEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Point Of Interaction Component18")]
 public interface IPointOfInteractionComponent18 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IPointOfInteractionComponent18 : IIsoComponent
     [IsoId("_jmq0bbZyEfCUZfsQO4rYeA")]
     [DisplayName("Standard Compliance")]
     [IsoXmlTag("StdCmplc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification48> StandardCompliance { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface IPointOfInteractionComponent18 : IIsoComponent
     [IsoId("_jmq0ebZyEfCUZfsQO4rYeA")]
     [DisplayName("Assessment")]
     [IsoXmlTag("Assmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponentAssessment1> Assessment { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface IPointOfInteractionComponent18 : IIsoComponent
     [IsoId("_jmq0f7ZyEfCUZfsQO4rYeA")]
     [DisplayName("Package")]
     [IsoXmlTag("Packg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPackageType5> Package { get; }
 
     /// <summary>

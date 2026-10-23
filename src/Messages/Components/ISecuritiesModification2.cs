@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the transactions in the report.
 /// </summary>
 [IsoId("_EdmRceSmEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Securities Modification2")]
 public interface ISecuritiesModification2 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,7 @@ public interface ISecuritiesModification2 : IIsoComponent
     [IsoId("_EmOB9-SmEe-qVZLXW4RRBw")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesModificationTransaction2> Modification { get; }
 }

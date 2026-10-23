@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_NesJgdx9EeqKxsvOxFQHKA")]
 [IsoMessage("sese.011.001.09", "TrfInstrStsRpt", "urn:iso:std:iso:20022:tech:xsd:sese.011.001.09")]
+[Description(@"Scope|The TransferInstructionStatusReport message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received request for holdings information, portfolio transfer or transfer instruction.| It may also be used to report the status of an event related to the asset being transferred or provide additional information.|The TransferInstructionStatusReport message may also be sent by any party in the transfer transaction to another party in the transfer transaction chain to provide information relevant for the settlement of a transfer transaction. |Usage|The TransferInstructionStatusReport message is used to provide the status of a previously received request for holdings information, portfolio transfer or transfer instruction, or in response to a RequestForTransferStatus message. It may also be used to report the status of an event related to the asset being transferred or provide additional information.")]
+[IsoDisplayName(@"Transfer Instruction Status Report V")]
 public interface ITransferInstructionStatusReportV09 : IOuterRecord
 {
     /// <summary>
@@ -65,5 +67,6 @@ public interface ITransferInstructionStatusReportV09 : IOuterRecord
     [IsoId("_NesJldx9EeqKxsvOxFQHKA")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

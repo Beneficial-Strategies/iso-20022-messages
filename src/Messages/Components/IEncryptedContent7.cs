@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Encrypted Content7.
 /// </summary>
 [IsoId("_Teq7UY-HEe6oobnCtR50kw")]
+[IsoDisplayName(@"Encrypted Content7")]
 public interface IEncryptedContent7 : IIsoComponent
 {
     /// <summary>

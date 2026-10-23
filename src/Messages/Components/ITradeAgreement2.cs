@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date and identification of a trade together with references to previous events in its life.
 /// </summary>
 [IsoId("_TJ8xhdp-Ed-ak6NoX_4Aeg_-401775147")]
+[IsoDisplayName(@"Trade Agreement")]
 public interface ITradeAgreement2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeAgreement2 : IIsoComponent
     [IsoId("_TJ8xhtp-Ed-ak6NoX_4Aeg_-362065219")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITradeAgreement2 : IIsoComponent
     [IsoId("_TJ8xh9p-Ed-ak6NoX_4Aeg_1654091950")]
     [DisplayName("Notification Identification")]
     [IsoXmlTag("NtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text NotificationIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface ITradeAgreement2 : IIsoComponent
     [IsoId("_TJ8xiNp-Ed-ak6NoX_4Aeg_-362065176")]
     [DisplayName("Common Reference")]
     [IsoXmlTag("CmonRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonReference { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface ITradeAgreement2 : IIsoComponent
     [IsoId("_TKF7cNp-Ed-ak6NoX_4Aeg_-1351420444")]
     [DisplayName("Amend Or Cancel Reason")]
     [IsoXmlTag("AmdOrCclRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AmendOrCancelReason { get; }
 
     /// <summary>
@@ -49,5 +57,7 @@ public interface ITradeAgreement2 : IIsoComponent
     [IsoId("_TKF7cdp-Ed-ak6NoX_4Aeg_2091136378")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RelatedReference { get; }
 }

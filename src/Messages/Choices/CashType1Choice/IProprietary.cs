@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashType1Choice;
 
 /// <summary>Cash type, in a proprietary form.</summary>
 [IsoId("_R9pcZFDeEfCRhs5qxCujTw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICashType1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

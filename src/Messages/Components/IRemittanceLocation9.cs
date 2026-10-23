@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Remittance Location9.
 /// </summary>
 [IsoId("_060mUTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Remittance Location9")]
 public interface IRemittanceLocation9 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementConditionModificationS
 /// Provides the status of the securities settlement condition modification request.
 /// </summary>
 [IsoId("_8QcPy5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlementConditionModificationStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>

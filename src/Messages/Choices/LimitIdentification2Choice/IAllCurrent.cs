@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitIdentification2Choice;
 /// </summary>
 [IsoId("_BIwgRW4-EeiU9cctagi5ow")]
 [IsoXmlTag("AllCur")]
+[IsoDisplayName(@"All Current")]
 public interface IAllCurrent : ILimitIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for a conditionally accepted status.
 /// </summary>
 [IsoId("_2I_zAEHZEeamVPoS58KxXA")]
+[IsoDisplayName(@"Conditionally Accepted Status Reason")]
 public interface IConditionallyAcceptedStatusReason3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IConditionallyAcceptedStatusReason3 : IIsoComponent
     [IsoId("_BL11YEHaEeamVPoS58KxXA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

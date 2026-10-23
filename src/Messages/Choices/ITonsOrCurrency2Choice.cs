@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the commodity quantity in tons or the amount and currency used (for example carbone dioxide).
 /// </summary>
 [IsoId("_Z5jxEWlSEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Tons Or Currency 2 Choice")]
 public interface ITonsOrCurrency2Choice : IIsoChoice { }

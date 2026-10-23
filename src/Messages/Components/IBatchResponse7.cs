@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Batch Response7.
 /// </summary>
 [IsoId("_aRYAkaErEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Batch Response7")]
 public interface IBatchResponse7 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IBatchResponse7 : IIsoComponent
     /// </summary>
     [DisplayName("Performed Transaction")]
     [IsoXmlTag("PrfrmdTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPerformedTransaction7> PerformedTransaction { get; }
 }

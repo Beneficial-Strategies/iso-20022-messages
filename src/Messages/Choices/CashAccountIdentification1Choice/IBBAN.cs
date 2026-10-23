@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification1Choice
 /// Basic Bank Account Number (BBAN) - identifier used nationally by financial institutions, ie, in individual countries, generally as part of a National Account Numbering Scheme(s), to uniquely identify the account of a customer.
 /// </summary>
 [IsoId("_Pdwzptp-Ed-ak6NoX_4Aeg_2060839091")]
+[IsoDisplayName(@"BBAN")]
 public interface IBBAN : ICashAccountIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBBAN : ICashAccountIdentification1Choice, IIsoChoiceVariant
     /// Basic Bank Account Number (BBAN). Identifier used nationally by financial institutions, ie, in individual countries, generally as part of a National Account Numbering Scheme(s), which uniquely identifies the account of a customer.
     /// </summary>
     [IsoXmlTag("BBAN")]
+    [IsoSimpleType(IsoSimpleType.BBANIdentifier)]
     BBANIdentifier Value { get; }
 }

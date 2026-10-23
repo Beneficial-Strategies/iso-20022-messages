@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the reference of the statment by a unique identifier and the date (and time).
 /// </summary>
 [IsoId("_VFEXo04jEeSGlfauTkCKIA")]
+[IsoDisplayName(@"Statement Reference")]
 public interface IStatementReference1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStatementReference1 : IIsoComponent
     [IsoId("_o3lf4k4jEeSGlfauTkCKIA")]
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text StatementIdentification { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Wrapper structure for encapsulating individual business messages within a file structure, together with a manifest describing the enclosed items.
 /// </summary>
 [IsoId("_XT0h88PAEfCvjKJD91zEUA")]
+[IsoDisplayName(@"Business Payload1")]
 public interface IBusinessPayload1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IBusinessPayload1 : IIsoComponent
     [IsoId("_XT0h9MPAEfCvjKJD91zEUA")]
     [DisplayName("Manifest Data")]
     [IsoXmlTag("MnfstData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IManifestData4> ManifestData { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface IBusinessPayload1 : IIsoComponent
     [IsoId("_XT0h9cPAEfCvjKJD91zEUA")]
     [DisplayName("Business Content")]
     [IsoXmlTag("BizCntt")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<LaxPayload> BusinessContent { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provide processing status information for a notification advice.
 /// </summary>
 [IsoId("_RkLGgNp-Ed-ak6NoX_4Aeg_32536059")]
+[IsoDisplayName(@"Notification Processing Status")]
 public interface INotificationProcessingStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface INotificationProcessingStatus1 : IIsoComponent
     [IsoId("_RkLGgtp-Ed-ak6NoX_4Aeg_364081652")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

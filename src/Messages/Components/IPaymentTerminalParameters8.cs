@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Manufacturer configuration parameters of the point of interaction (POI).
 /// </summary>
 [IsoId("_clS40TAaEeugIJ3Gvoevmg")]
+[IsoDisplayName(@"Payment Terminal Parameters")]
 public interface IPaymentTerminalParameters8 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPaymentTerminalParameters8 : IIsoComponent
     [IsoId("_cwnYAzAaEeugIJ3Gvoevmg")]
     [DisplayName("Vendor Identification")]
     [IsoXmlTag("VndrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? VendorIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPaymentTerminalParameters8 : IIsoComponent
     [IsoId("_cwnYBTAaEeugIJ3Gvoevmg")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Version { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPaymentTerminalParameters8 : IIsoComponent
     [IsoId("_cwnYBzAaEeugIJ3Gvoevmg")]
     [DisplayName("Parameter Format Identifier")]
     [IsoXmlTag("ParamFrmtIdr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? ParameterFormatIdentifier { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IPaymentTerminalParameters8 : IIsoComponent
     [IsoId("_cwnYCzAaEeugIJ3Gvoevmg")]
     [DisplayName("Time Zone Line")]
     [IsoXmlTag("TmZoneLine")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> TimeZoneLine { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IPaymentTerminalParameters8 : IIsoComponent
     [IsoId("_cwnYDTAaEeugIJ3Gvoevmg")]
     [DisplayName("Local Date Time")]
     [IsoXmlTag("LclDtTm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalDateTime1> LocalDateTime { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface IPaymentTerminalParameters8 : IIsoComponent
     [IsoId("_vJGyQzAaEeugIJ3Gvoevmg")]
     [DisplayName("Other Parameters Length")]
     [IsoXmlTag("OthrParamsLngth")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? OtherParametersLength { get; }
 
     /// <summary>
@@ -81,6 +91,7 @@ public interface IPaymentTerminalParameters8 : IIsoComponent
     [IsoId("_vJGyRDAaEeugIJ3Gvoevmg")]
     [DisplayName("Offset Start")]
     [IsoXmlTag("OffsetStart")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? OffsetStart { get; }
 
     /// <summary>
@@ -89,6 +100,7 @@ public interface IPaymentTerminalParameters8 : IIsoComponent
     [IsoId("_vJGyRTAaEeugIJ3Gvoevmg")]
     [DisplayName("Offset End")]
     [IsoXmlTag("OffsetEnd")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? OffsetEnd { get; }
 
     /// <summary>
@@ -97,5 +109,6 @@ public interface IPaymentTerminalParameters8 : IIsoComponent
     [IsoId("_cwnYDzAaEeugIJ3Gvoevmg")]
     [DisplayName("Other Parameters")]
     [IsoXmlTag("OthrParams")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? OtherParameters { get; }
 }

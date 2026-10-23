@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard index code or proprietary code to specify a rate Index type.
 /// </summary>
 [IsoId("_g9r0ERIkEeyLzJfz3xPQNA")]
+[IsoDisplayName(@"Benchmark Curve Name 13 Choice")]
 public interface IBenchmarkCurveName13Choice : IIsoChoice { }

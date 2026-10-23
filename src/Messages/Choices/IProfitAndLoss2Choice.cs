@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between profit and loss.
 /// </summary>
 [IsoId("_NDhRoWYDEeaJx-BUPcSWQA")]
+[IsoDisplayName(@"Profit And Loss 2 Choice")]
 public interface IProfitAndLoss2Choice : IIsoChoice { }

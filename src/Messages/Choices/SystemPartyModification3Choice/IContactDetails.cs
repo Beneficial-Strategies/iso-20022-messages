@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice;
 /// <summary>
 /// Contact Details.
 /// </summary>
+[IsoDisplayName(@"Contact Details")]
 public interface IContactDetails : ISystemPartyModification3Choice, IIsoChoiceVariant
 {
     /// <summary>

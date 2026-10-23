@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the details of the package
 /// </summary>
 [IsoId("_vJ2p4_clEeiW-auGnDPZIw")]
+[IsoDisplayName(@"Shipping Package")]
 public interface IShippingPackage1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IShippingPackage1 : IIsoComponent
     [IsoId("_B3DI0fcmEeiW-auGnDPZIw")]
     [DisplayName("Tracking Number")]
     [IsoXmlTag("TrckgNb")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? TrackingNumber { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IShippingPackage1 : IIsoComponent
     [IsoId("_blS9wPcoEeiW-auGnDPZIw")]
     [DisplayName("Pickup Time")]
     [IsoXmlTag("PckpTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? PickupTime { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IShippingPackage1 : IIsoComponent
     [IsoId("_knVpMPcsEeiW-auGnDPZIw")]
     [DisplayName("Product")]
     [IsoXmlTag("Pdct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProduct7> Product { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IShippingPackage1 : IIsoComponent
     [IsoId("_pA2AEvcsEeiW-auGnDPZIw")]
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? InsuranceIndicator { get; }
 
     /// <summary>

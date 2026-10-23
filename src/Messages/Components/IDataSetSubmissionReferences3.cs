@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides references to the submitted data set both for the matching application and for the user.
 /// </summary>
 [IsoId("_RaCTE9p-Ed-ak6NoX_4Aeg_204942196")]
+[IsoDisplayName(@"Data Set Submission References")]
 public interface IDataSetSubmissionReferences3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDataSetSubmissionReferences3 : IIsoComponent
     [IsoId("_RaCTFNp-Ed-ak6NoX_4Aeg_204942206")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IDataSetSubmissionReferences3 : IIsoComponent
     [IsoId("_RaCTFtp-Ed-ak6NoX_4Aeg_204942227")]
     [DisplayName("Submitter Transaction Reference")]
     [IsoXmlTag("SubmitrTxRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubmitterTransactionReference { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface IDataSetSubmissionReferences3 : IIsoComponent
     [IsoId("_RaCTF9p-Ed-ak6NoX_4Aeg_-109669347")]
     [DisplayName("Forced Match")]
     [IsoXmlTag("ForcdMtch")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ForcedMatch { get; }
 }

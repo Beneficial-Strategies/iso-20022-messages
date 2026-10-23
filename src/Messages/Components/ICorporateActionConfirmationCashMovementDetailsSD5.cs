@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action confirmation cash movement details.
 /// </summary>
 [IsoId("_tUaykb-zEeeb2ZBoAlSG1Q")]
+[IsoDisplayName(@"Corporate Action Confirmation Cash Movement Details SD")]
 public interface ICorporateActionConfirmationCashMovementDetailsSD5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionConfirmationCashMovementDetailsSD5 : IIsoCompon
     [IsoId("_tjl3Ab-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -65,6 +68,8 @@ public interface ICorporateActionConfirmationCashMovementDetailsSD5 : IIsoCompon
     [IsoId("_tjl3H7-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Contra Participant Number")]
     [IsoXmlTag("ContraPtcptNb")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? ContraParticipantNumber { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface ICorporateActionConfirmationCashMovementDetailsSD5 : IIsoCompon
     [IsoId("_tjl3L7-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Tax Adjustment Rate")]
     [IsoXmlTag("TaxAdjstmntRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TaxAdjustmentRate { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface ICorporateActionConfirmationCashMovementDetailsSD5 : IIsoCompon
     [IsoId("_tjl3Mb-zEeeb2ZBoAlSG1Q")]
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
     Exact32AlphaNumericText? RDPReferenceNumber { get; }
 
     /// <summary>

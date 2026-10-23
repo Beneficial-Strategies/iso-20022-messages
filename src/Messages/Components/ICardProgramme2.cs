@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card programme or brand related to the transaction.
 /// </summary>
 [IsoId("_h6JQ4SuBEeyg-aG5nXcnfg")]
+[IsoDisplayName(@"Card Programme")]
 public interface ICardProgramme2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardProgramme2 : IIsoComponent
     [IsoId("_h_TdsSuBEeyg-aG5nXcnfg")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardProgrammeMode2> CardProgrammeProposed { get; }
 
     /// <summary>

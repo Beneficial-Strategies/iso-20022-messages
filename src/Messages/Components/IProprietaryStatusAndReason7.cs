@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the proprietary status and reason of an instruction or an instruction cancellation.
 /// </summary>
 [IsoId("_cemew5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Proprietary Status And Reason")]
 public interface IProprietaryStatusAndReason7 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IProprietaryStatusAndReason7 : IIsoComponent
     [IsoId("_cemex5KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary Reason")]
     [IsoXmlTag("PrtryRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryReason5> ProprietaryReason { get; }
 }

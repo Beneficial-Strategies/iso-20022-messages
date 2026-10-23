@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the payment terms of the underlying transaction.
 /// </summary>
 [IsoId("_T6ZIUVm_EeOQYsoJizpkVw")]
+[IsoDisplayName(@"Early Payment")]
 public interface IEarlyPayment1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IEarlyPayment1 : IIsoComponent
     [IsoId("_eUAngFm_EeOQYsoJizpkVw")]
     [DisplayName("Early Payment Date")]
     [IsoXmlTag("EarlyPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EarlyPaymentDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IEarlyPayment1 : IIsoComponent
     [IsoId("_UGcnaVm_EeOQYsoJizpkVw")]
     [DisplayName("Discount Percent")]
     [IsoXmlTag("DscntPct")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate DiscountPercent { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IEarlyPayment1 : IIsoComponent
     [IsoId("_EkXkEFnAEeOQYsoJizpkVw")]
     [DisplayName("Early Payment Tax Specification")]
     [IsoXmlTag("EarlyPmtTaxSpcfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEarlyPaymentsVAT1> EarlyPaymentTaxSpecification { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of a buy-in.
 /// </summary>
 [IsoId("_fGNv0ZwREeqtp-LOti013g")]
+[IsoDisplayName(@"Buy In Advice Details")]
 public interface IBuyInAdviceDetails1 : IIsoComponent
 {
     /// <summary>

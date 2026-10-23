@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the index used to define the rate and the basis point spread.
 /// </summary>
 [IsoId("_Z-UhYcg6Eeu4ecZgAYuz5w")]
+[IsoDisplayName(@"Floating Interest Rate")]
 public interface IFloatingInterestRate22 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IFloatingInterestRate22 : IIsoComponent
     [IsoId("_Z_09Tcg6Eeu4ecZgAYuz5w")]
     [DisplayName("Rate Adjustment")]
     [IsoXmlTag("RateAdjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAdjustment1> RateAdjustment { get; }
 
     /// <summary>

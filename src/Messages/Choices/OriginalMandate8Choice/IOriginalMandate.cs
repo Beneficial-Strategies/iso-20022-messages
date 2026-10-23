@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate8Choice;
 /// </summary>
 [IsoId("_bQuQE9cZEeqRFcf2R4bPBw")]
 [IsoXmlTag("OrgnlMndt")]
+[IsoDisplayName(@"Original Mandate")]
 public interface IOriginalMandate : IOriginalMandate8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOriginalMandate : IOriginalMandate8Choice, IIsoChoiceVariant
     [IsoId("_bSCetdcZEeqRFcf2R4bPBw")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IOriginalMandate : IOriginalMandate8Choice, IIsoChoiceVariant
     [IsoId("_bSCet9cZEeqRFcf2R4bPBw")]
     [DisplayName("Mandate Request Identification")]
     [IsoXmlTag("MndtReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateRequestIdentification { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface IOriginalMandate : IOriginalMandate8Choice, IIsoChoiceVariant
     [IsoId("_bSCev9cZEeqRFcf2R4bPBw")]
     [DisplayName("Tracking Indicator")]
     [IsoXmlTag("TrckgInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator TrackingIndicator { get; }
 
     /// <summary>
@@ -178,6 +184,8 @@ public interface IOriginalMandate : IOriginalMandate8Choice, IIsoChoiceVariant
     [IsoId("_bSCe3dcZEeqRFcf2R4bPBw")]
     [DisplayName("Mandate Reference")]
     [IsoXmlTag("MndtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateReference { get; }
 
     /// <summary>
@@ -186,5 +194,6 @@ public interface IOriginalMandate : IOriginalMandate8Choice, IIsoChoiceVariant
     [IsoId("_bSCe39cZEeqRFcf2R4bPBw")]
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferredMandateDocument1> ReferredDocument { get; }
 }

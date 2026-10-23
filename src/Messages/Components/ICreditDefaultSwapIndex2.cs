@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Credit default swap derivative specific for reporting derivatives on a credit default swap index.
 /// </summary>
 [IsoId("_xfbL2X5eEea2k7EBUopqxw")]
+[IsoDisplayName(@"Credit Default Swap Index")]
 public interface ICreditDefaultSwapIndex2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICreditDefaultSwapIndex2 : IIsoComponent
     [IsoId("_xtQzgX5eEea2k7EBUopqxw")]
     [DisplayName("Series")]
     [IsoXmlTag("Srs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Series { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICreditDefaultSwapIndex2 : IIsoComponent
     [IsoId("_xtQzg35eEea2k7EBUopqxw")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -33,6 +36,10 @@ public interface ICreditDefaultSwapIndex2 : IIsoComponent
     [IsoId("_xtQzhX5eEea2k7EBUopqxw")]
     [DisplayName("Roll Month")]
     [IsoXmlTag("RollMnth")]
+    [IsoSimpleType(IsoSimpleType.RestrictedMonthExact2Number)]
+    [MinLength(0)]
+    [MaxLength(12)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ulong> RollMonth { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface ICreditDefaultSwapIndex2 : IIsoComponent
     [IsoId("_xtQzh35eEea2k7EBUopqxw")]
     [DisplayName("Next Roll Date")]
     [IsoXmlTag("NxtRollDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NextRollDate { get; }
 
     /// <summary>

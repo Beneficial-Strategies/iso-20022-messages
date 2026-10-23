@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemMemberType1Choice;
 /// System member type, in a coded form.
 /// </summary>
 [IsoId("_cFGbMHhgEeidzqjNEfehPg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISystemMemberType1Choice, IIsoChoiceVariant
 {
     /// <summary>

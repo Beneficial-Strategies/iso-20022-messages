@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash Parties44.
 /// </summary>
 [IsoId("_kv-POZt3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Cash Parties44")]
 public interface ICashParties44 : IIsoComponent
 {
     /// <summary>

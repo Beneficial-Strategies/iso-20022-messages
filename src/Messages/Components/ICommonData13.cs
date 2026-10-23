@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Common Data13.
 /// </summary>
 [IsoId("_RpP9EZJAEe6RsYhlPIxpVw")]
+[IsoDisplayName(@"Common Data13")]
 public interface ICommonData13 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface ICommonData13 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CardPaymentServiceType9Code> AdditionalService { get; }
 
     /// <summary>

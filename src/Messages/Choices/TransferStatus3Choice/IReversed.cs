@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus3Choice;
 /// Status of the transfer is reversed.
 /// </summary>
 [IsoId("_aeWNX1NUEeijdq8ilaxyOA")]
+[IsoDisplayName(@"Reversed")]
 public interface IReversed : ITransferStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

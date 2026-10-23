@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Margin Collateral Report5.
 /// </summary>
 [IsoId("_TH2kh8EkEe66laxnCpxfpw")]
+[IsoDisplayName(@"Margin Collateral Report5")]
 public interface IMarginCollateralReport5 : IIsoComponent
 {
     /// <summary>

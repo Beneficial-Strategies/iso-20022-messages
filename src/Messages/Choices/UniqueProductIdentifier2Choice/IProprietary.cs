@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueProductIdentifier2Choice;
 /// </summary>
 [IsoId("__0j-A2ETEe2P-L9DBerEgA")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IUniqueProductIdentifier2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IProprietary : IUniqueProductIdentifier2Choice, IIsoChoiceVaria
     [IsoId("_XQzmAWEUEe2P-L9DBerEgA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max100Text)]
+    [StringLength(100, MinimumLength = 1)]
     Max100Text Identification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IProprietary : IUniqueProductIdentifier2Choice, IIsoChoiceVaria
     [IsoId("_XQzmA2EUEe2P-L9DBerEgA")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SchemeName { get; }
 
     /// <summary>
@@ -34,5 +39,7 @@ public interface IProprietary : IUniqueProductIdentifier2Choice, IIsoChoiceVaria
     [IsoId("_XQzmBWEUEe2P-L9DBerEgA")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

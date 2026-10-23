@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the underlying business area/type of trade causing the exposure.
 /// </summary>
 [IsoId("_LIZvcSs9EeySlt9bF77XfA")]
+[IsoDisplayName(@"Exposure Type 23 Choice")]
 public interface IExposureType23Choice : IIsoChoice { }

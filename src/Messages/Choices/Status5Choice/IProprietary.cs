@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status5Choice;
 /// Status expressed as a proprietary form.
 /// </summary>
 [IsoId("_Su5UDQEcEeCQm6a_G2yO_w_670281119")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IStatus5Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus6Choice;
 
 /// <summary>Status of the individual order is in repair.</summary>
 [IsoId("fd658f49-e8ab-442d-85b9-8b474ecc179f")]
+[IsoDisplayName(@"In Repair")]
 public interface IInRepair : IOrderStatus6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

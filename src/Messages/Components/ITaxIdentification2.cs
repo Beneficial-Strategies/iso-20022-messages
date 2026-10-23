@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax identification information.
 /// </summary>
 [IsoId("_ZEtY8QhGEeSUPbC7DbLJpQ")]
+[IsoDisplayName(@"Tax Identification")]
 public interface ITaxIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITaxIdentification2 : IIsoComponent
     [IsoId("_hD6rMQhGEeSUPbC7DbLJpQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ITaxIdentification2 : IIsoComponent
     [IsoId("_BpuDRAhIEeSUPbC7DbLJpQ")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ITaxIdentification2 : IIsoComponent
     [IsoId("_BpuDRQhIEeSUPbC7DbLJpQ")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IssueDate { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ITaxIdentification2 : IIsoComponent
     [IsoId("_BpuDRghIEeSUPbC7DbLJpQ")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpiryDate { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Risk tolerance target market.
 /// </summary>
 [IsoId("_FBVAgDcYEeidBoT_PugKiA")]
+[IsoDisplayName(@"Other Target Market Risk Tolerance")]
 public interface IOtherTargetMarketRiskTolerance1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherTargetMarketRiskTolerance1 : IIsoComponent
     [IsoId("_LouyUDcYEeidBoT_PugKiA")]
     [DisplayName("Risk Tolerance Type")]
     [IsoXmlTag("RskTlrnceTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RiskToleranceType { get; }
 
     /// <summary>

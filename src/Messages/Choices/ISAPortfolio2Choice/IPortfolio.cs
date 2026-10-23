@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ISAPortfolio2Choice;
 /// </summary>
 [IsoId("_3fxScEXfEeGY6MkiuzuPOA_1749849393")]
 [IsoXmlTag("Prtfl")]
+[IsoDisplayName(@"Portfolio")]
 public interface IPortfolio : IISAPortfolio2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,10 @@ public interface IPortfolio : IISAPortfolio2Choice, IIsoChoiceVariant
     [IsoId("_TU0kwNp-Ed-ak6NoX_4Aeg_501703515")]
     [DisplayName("Portfolio Information")]
     [IsoXmlTag("PrtflInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [StringLength(350, MinimumLength = 1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> PortfolioInformation { get; }
 }

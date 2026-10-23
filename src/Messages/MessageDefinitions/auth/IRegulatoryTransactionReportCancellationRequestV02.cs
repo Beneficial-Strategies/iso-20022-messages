@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "RgltryTxRptCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:auth.009.001.02"
 )]
+[Description(@"Scope|A reporting institution, eg, an investment bank, sends the RegulatoryTransactionReportCancellationRequest to a regulator or to an intermediary (eg a reporting agent), to request a cancellation of a previously sent RegulatoryTransactionReport.|Usage|The message definition can be used to cancel an entire RegulatoryTransactionReport or to cancel one or more individual transactions in a previously sent RegulatoryTransactionReport.")]
+[IsoDisplayName(@"Regulatory Transaction Report Cancellation Request V")]
 public interface IRegulatoryTransactionReportCancellationRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -51,6 +53,7 @@ public interface IRegulatoryTransactionReportCancellationRequestV02 : IOuterReco
     [IsoId("_gJYVE8IFEeGllrOKQRUTYA_-2116922081")]
     [DisplayName("Cancellation By Transaction Details")]
     [IsoXmlTag("CxlByTxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionDetails3> CancellationByTransactionDetails { get; }
 
     /// <summary>
@@ -67,5 +70,6 @@ public interface IRegulatoryTransactionReportCancellationRequestV02 : IOuterReco
     [IsoId("_gJiGEMIFEeGllrOKQRUTYA_-2116922038")]
     [DisplayName("Cancellation By Trade Reference")]
     [IsoXmlTag("CxlByTradRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionDetails2> CancellationByTradeReference { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the transaction at the point of service.
 /// </summary>
 [IsoId("_AFupAahMEeuOaMA1YOy5YQ")]
+[IsoDisplayName(@"Point Of Service Context")]
 public interface IPointOfServiceContext3 : IIsoComponent
 {
     /// <summary>
@@ -20,6 +21,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfUahMEeuOaMA1YOy5YQ")]
     [DisplayName("Card Present")]
     [IsoXmlTag("CardPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardPresent { get; }
 
     /// <summary>
@@ -31,6 +33,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfU6hMEeuOaMA1YOy5YQ")]
     [DisplayName("Cardholder Present")]
     [IsoXmlTag("CrdhldrPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardholderPresent { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfVahMEeuOaMA1YOy5YQ")]
     [DisplayName("Cardholder Activated")]
     [IsoXmlTag("CrdhldrActvtd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardholderActivated { get; }
 
     /// <summary>
@@ -52,6 +56,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfV6hMEeuOaMA1YOy5YQ")]
     [DisplayName("Transponder Initiated")]
     [IsoXmlTag("TrnspndrInittd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TransponderInitiated { get; }
 
     /// <summary>
@@ -64,6 +69,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfWahMEeuOaMA1YOy5YQ")]
     [DisplayName("Attended Indicator")]
     [IsoXmlTag("AttnddInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AttendedIndicator { get; }
 
     /// <summary>
@@ -72,6 +78,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfW6hMEeuOaMA1YOy5YQ")]
     [DisplayName("Unattended Level Category")]
     [IsoXmlTag("UattnddLvlCtgy")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? UnattendedLevelCategory { get; }
 
     /// <summary>
@@ -84,6 +91,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfXahMEeuOaMA1YOy5YQ")]
     [DisplayName("E Commerce Indicator")]
     [IsoXmlTag("EComrcInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ECommerceIndicator { get; }
 
     /// <summary>
@@ -92,6 +100,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfX6hMEeuOaMA1YOy5YQ")]
     [DisplayName("E Commerce Data")]
     [IsoXmlTag("EComrcData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IECommerceData1> ECommerceData { get; }
 
     /// <summary>
@@ -108,6 +117,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_6Pu9kDHVEeyTT91yHXSlSQ")]
     [DisplayName("Transit Indicator")]
     [IsoXmlTag("TrnstInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TransitIndicator { get; }
 
     /// <summary>
@@ -118,6 +128,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfY6hMEeuOaMA1YOy5YQ")]
     [DisplayName("Partial Approval Supported")]
     [IsoXmlTag("PrtlApprvlSpprtd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PartialApprovalSupported { get; }
 
     /// <summary>
@@ -128,6 +139,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfZahMEeuOaMA1YOy5YQ")]
     [DisplayName("Delayed Authorisation Indicator")]
     [IsoXmlTag("DelydAuthstnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DelayedAuthorisationIndicator { get; }
 
     /// <summary>
@@ -137,6 +149,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfZ6hMEeuOaMA1YOy5YQ")]
     [DisplayName("Security Characteristics")]
     [IsoXmlTag("SctyChrtcs")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<SecurityCharacteristics1Code> SecurityCharacteristics { get; }
 
     /// <summary>
@@ -145,6 +158,8 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfaahMEeuOaMA1YOy5YQ")]
     [DisplayName("Other Security Characteristics")]
     [IsoXmlTag("OthrSctyChrtcs")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherSecurityCharacteristics { get; }
 
     /// <summary>
@@ -162,6 +177,8 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfbahMEeuOaMA1YOy5YQ")]
     [DisplayName("Other Card Data Entry Mode")]
     [IsoXmlTag("OthrCardDataNtryMd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherCardDataEntryMode { get; }
 
     /// <summary>
@@ -178,6 +195,8 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_kZNPsMV4Eeua2vd9tJAtHg")]
     [DisplayName("Other QR Code Presentment Mode")]
     [IsoXmlTag("OthrQRCdPresntmntMd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherQRCodePresentmentMode { get; }
 
     /// <summary>
@@ -186,6 +205,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ONHacKhMEeuOaMA1YOy5YQ")]
     [DisplayName("Temporary Secure Card Data Reused")]
     [IsoXmlTag("TempScrCardDataReusd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TemporarySecureCardDataReused { get; }
 
     /// <summary>
@@ -194,6 +214,8 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALHfb6hMEeuOaMA1YOy5YQ")]
     [DisplayName("Storage Location")]
     [IsoXmlTag("StorgLctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StorageLocation { get; }
 
     /// <summary>
@@ -202,6 +224,7 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_ALIGYahMEeuOaMA1YOy5YQ")]
     [DisplayName("Special Conditions")]
     [IsoXmlTag("SpclConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialConditions1> SpecialConditions { get; }
 
     /// <summary>
@@ -210,5 +233,6 @@ public interface IPointOfServiceContext3 : IIsoComponent
     [IsoId("_Y4FnMMXLEeumGdYElfgmbw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

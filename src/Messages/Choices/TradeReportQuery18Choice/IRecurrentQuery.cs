@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery18Choice;
 /// <summary>
 /// Recurrent Query.
 /// </summary>
+[IsoDisplayName(@"Recurrent Query")]
 public interface IRecurrentQuery : ITradeReportQuery18Choice, IIsoChoiceVariant
 {
     /// <summary>

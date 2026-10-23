@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError7Cho
 /// <summary>
 /// Business Report.
 /// </summary>
+[IsoDisplayName(@"Business Report")]
 public interface IBusinessReport : ICollateralValueReportOrError7Choice, IIsoChoiceVariant
 {
     /// <summary>

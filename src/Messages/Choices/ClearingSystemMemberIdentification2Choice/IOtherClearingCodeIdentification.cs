@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Identification Code for a clearing system, that has not yet been identified in the list of clearing systems.
 /// </summary>
 [IsoId("_TDPFhdp-Ed-ak6NoX_4Aeg_-1854348245")]
+[IsoDisplayName(@"Other Clearing Code Identification")]
 public interface IOtherClearingCodeIdentification
     : IClearingSystemMemberIdentification2Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface IOtherClearingCodeIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("OthrClrCdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

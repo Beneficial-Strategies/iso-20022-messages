@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Select the type(s) of information to be retrieved about a registered investment account.
 /// </summary>
 [IsoId("_RR2AZNp-Ed-ak6NoX_4Aeg_1677189755")]
+[IsoDisplayName(@"Investment Account Information Type")]
 public interface IInvestmentAccountInformationType1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInvestmentAccountInformationType1 : IIsoComponent
     [IsoId("_RR2AZdp-Ed-ak6NoX_4Aeg_1677190067")]
     [DisplayName("Investment Account")]
     [IsoXmlTag("InvstmtAcct")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator InvestmentAccount { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IInvestmentAccountInformationType1 : IIsoComponent
     [IsoId("_RR2AZtp-Ed-ak6NoX_4Aeg_1677190092")]
     [DisplayName("Account Parties")]
     [IsoXmlTag("AcctPties")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AccountParties { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IInvestmentAccountInformationType1 : IIsoComponent
     [IsoId("_RR2AZ9p-Ed-ak6NoX_4Aeg_1677190127")]
     [DisplayName("Intermediaries")]
     [IsoXmlTag("Intrmies")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Intermediaries { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IInvestmentAccountInformationType1 : IIsoComponent
     [IsoId("_RR2AaNp-Ed-ak6NoX_4Aeg_1677190169")]
     [DisplayName("Investment Plan")]
     [IsoXmlTag("InvstmtPlan")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator InvestmentPlan { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IInvestmentAccountInformationType1 : IIsoComponent
     [IsoId("_RR2Aadp-Ed-ak6NoX_4Aeg_1677190470")]
     [DisplayName("Cash Settlement")]
     [IsoXmlTag("CshSttlm")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CashSettlement { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface IInvestmentAccountInformationType1 : IIsoComponent
     [IsoId("_RR2Aatp-Ed-ak6NoX_4Aeg_1908994765")]
     [DisplayName("Service Level Agreement")]
     [IsoXmlTag("SvcLvlAgrmt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ServiceLevelAgreement { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalendarOrBusinessError1Choice;
 /// </summary>
 [IsoId("_dVcQ2Ym7Eeipw6hHPgB4Sw")]
 [IsoXmlTag("CalData")]
+[IsoDisplayName(@"Calendar Data")]
 public interface ICalendarData : ICalendarOrBusinessError1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICalendarData : ICalendarOrBusinessError1Choice, IIsoChoiceVari
     [IsoId("_-zQEYom7Eeipw6hHPgB4Sw")]
     [DisplayName("System Date")]
     [IsoXmlTag("SysDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate SystemDate { get; }
 
     /// <summary>

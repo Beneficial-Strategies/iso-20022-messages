@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transaction in the cancellation response.
 /// </summary>
 [IsoId("_TEDrvQEcEeCQm6a_G2yO_w_-370572216")]
+[IsoDisplayName(@"Card Payment Transaction Details")]
 public interface ICardPaymentTransactionDetails6 : IIsoComponent
 {
     /// <summary>

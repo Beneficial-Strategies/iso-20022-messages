@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the management plan.
 /// </summary>
 [IsoId("_K7wrYXJsEe299ZbWCkdR_w")]
+[IsoDisplayName(@"Management Plan Content")]
 public interface IManagementPlanContent11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IManagementPlanContent11 : IIsoComponent
     [IsoId("_LC_70XJsEe299ZbWCkdR_w")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? TMChallenge { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IManagementPlanContent11 : IIsoComponent
     [IsoId("_LC_703JsEe299ZbWCkdR_w")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10KBinary> KeyEnciphermentCertificate { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IManagementPlanContent11 : IIsoComponent
     [IsoId("_LC_71XJsEe299ZbWCkdR_w")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITMSAction11> Action { get; }
 }

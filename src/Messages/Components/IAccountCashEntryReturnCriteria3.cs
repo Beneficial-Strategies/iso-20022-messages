@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to report on the cash entry.
 /// </summary>
 [IsoId("_hUXR--0gEeWGZ8O9Moj6Zw")]
+[IsoDisplayName(@"Account Cash Entry Return Criteria")]
 public interface IAccountCashEntryReturnCriteria3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAccountCashEntryReturnCriteria3 : IIsoComponent
     [IsoId("_heVtUe0gEeWGZ8O9Moj6Zw")]
     [DisplayName("Entry Reference Indicator")]
     [IsoXmlTag("NtryRefInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? EntryReferenceIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAccountCashEntryReturnCriteria3 : IIsoComponent
     [IsoId("_heVtU-0gEeWGZ8O9Moj6Zw")]
     [DisplayName("Account Type Indicator")]
     [IsoXmlTag("AcctTpInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? AccountTypeIndicator { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IAccountCashEntryReturnCriteria3 : IIsoComponent
     [IsoId("_heVtVe0gEeWGZ8O9Moj6Zw")]
     [DisplayName("Entry Amount Indicator")]
     [IsoXmlTag("NtryAmtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? EntryAmountIndicator { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IAccountCashEntryReturnCriteria3 : IIsoComponent
     [IsoId("_heVtV-0gEeWGZ8O9Moj6Zw")]
     [DisplayName("Account Currency Indicator")]
     [IsoXmlTag("AcctCcyInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? AccountCurrencyIndicator { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IAccountCashEntryReturnCriteria3 : IIsoComponent
     [IsoId("_heVtWe0gEeWGZ8O9Moj6Zw")]
     [DisplayName("Entry Status Indicator")]
     [IsoXmlTag("NtryStsInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? EntryStatusIndicator { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IAccountCashEntryReturnCriteria3 : IIsoComponent
     [IsoId("_heVtW-0gEeWGZ8O9Moj6Zw")]
     [DisplayName("Entry Date Indicator")]
     [IsoXmlTag("NtryDtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? EntryDateIndicator { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IAccountCashEntryReturnCriteria3 : IIsoComponent
     [IsoId("_heVtXe0gEeWGZ8O9Moj6Zw")]
     [DisplayName("Account Servicer Indicator")]
     [IsoXmlTag("AcctSvcrInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? AccountServicerIndicator { get; }
 
     /// <summary>
@@ -73,5 +81,6 @@ public interface IAccountCashEntryReturnCriteria3 : IIsoComponent
     [IsoId("_heVtX-0gEeWGZ8O9Moj6Zw")]
     [DisplayName("Account Owner Indicator")]
     [IsoXmlTag("AcctOwnrInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? AccountOwnerIndicator { get; }
 }

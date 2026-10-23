@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Transaction53.
 /// </summary>
 [IsoId("_eEG_caE4Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Transaction53")]
 public interface IATMTransaction53 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IATMTransaction53 : IIsoComponent
     /// </summary>
     [DisplayName("Bundle Presented Amount")]
     [IsoXmlTag("BndlPresntdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ImpliedCurrencyAndAmount> BundlePresentedAmount { get; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public interface IATMTransaction53 : IIsoComponent
     /// </summary>
     [DisplayName("Incident")]
     [IsoXmlTag("Incdnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<FailureReason9Code> Incident { get; }
 
     /// <summary>
@@ -58,6 +61,7 @@ public interface IATMTransaction53 : IIsoComponent
     /// </summary>
     [DisplayName("Incident Detail")]
     [IsoXmlTag("IncdntDtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max70Text> IncidentDetail { get; }
 
     /// <summary>
@@ -121,6 +125,7 @@ public interface IATMTransaction53 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount13> AdditionalCharge { get; }
 
     /// <summary>
@@ -170,6 +175,7 @@ public interface IATMTransaction53 : IIsoComponent
     /// </summary>
     [DisplayName("ATM Totals")]
     [IsoXmlTag("ATMTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMTotals4> ATMTotals { get; }
 
     /// <summary>
@@ -177,5 +183,6 @@ public interface IATMTransaction53 : IIsoComponent
     /// </summary>
     [DisplayName("Cassette")]
     [IsoXmlTag("Csstt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCassette3> Cassette { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the tax voucher.
 /// </summary>
 [IsoId("_UB00vtp-Ed-ak6NoX_4Aeg_2027853243")]
+[IsoDisplayName(@"Tax Voucher")]
 public interface ITaxVoucher1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITaxVoucher1 : IIsoComponent
     [IsoId("_UB-lsNp-Ed-ak6NoX_4Aeg_-2044813732")]
     [DisplayName("Tax Voucher Rate")]
     [IsoXmlTag("TaxVchrRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate TaxVoucherRate { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface ITaxVoucher1 : IIsoComponent
     [IsoId("_UB-lttp-Ed-ak6NoX_4Aeg_-1126831006")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TaxCreditRate { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface ITaxVoucher1 : IIsoComponent
     [IsoId("_UB-luNp-Ed-ak6NoX_4Aeg_-713094105")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? WithholdingTaxRate { get; }
 
     /// <summary>
@@ -137,6 +141,7 @@ public interface ITaxVoucher1 : IIsoComponent
     [IsoId("_UCHvpdp-Ed-ak6NoX_4Aeg_1300836961")]
     [DisplayName("Bargain Date")]
     [IsoXmlTag("BrgnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BargainDate { get; }
 
     /// <summary>
@@ -145,6 +150,7 @@ public interface ITaxVoucher1 : IIsoComponent
     [IsoId("_UCHvptp-Ed-ak6NoX_4Aeg_1320230438")]
     [DisplayName("Bargain Settlement Date")]
     [IsoXmlTag("BrgnSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BargainSettlementDate { get; }
 
     /// <summary>

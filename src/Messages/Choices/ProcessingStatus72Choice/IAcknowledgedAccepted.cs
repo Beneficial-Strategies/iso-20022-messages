@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus72Choice;
 /// </summary>
 [IsoId("_a2nK0eLtEeWOD7aAy2fAcA")]
 [IsoXmlTag("AckdAccptd")]
+[IsoDisplayName(@"Acknowledged Accepted")]
 public interface IAcknowledgedAccepted : IProcessingStatus72Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,6 @@ public interface IAcknowledgedAccepted : IProcessingStatus72Choice, IIsoChoiceVa
     [IsoId("_qTYa0eLtEeWOD7aAy2fAcA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryReason4> Reason { get; }
 }

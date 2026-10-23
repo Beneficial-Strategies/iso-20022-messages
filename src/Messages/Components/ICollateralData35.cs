@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the collateral used in the transaction.
 /// </summary>
 [IsoId("_pzQL4c6fEeuUrZNOIIJRog")]
+[IsoDisplayName(@"Collateral Data")]
 public interface ICollateralData35 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICollateralData35 : IIsoComponent
     [IsoId("_p1RlI86fEeuUrZNOIIJRog")]
     [DisplayName("Net Exposure Collateralisation Indicator")]
     [IsoXmlTag("NetXpsrCollstnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NetExposureCollateralisationIndicator { get; }
 
     /// <summary>

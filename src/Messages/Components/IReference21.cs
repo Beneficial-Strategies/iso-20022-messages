@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference to the collateral management transaction (exposure) or the contract identification of  the sender (collateral taker) or the receiver (triparty agent)
 /// </summary>
 [IsoId("_dOIDYPkCEeicy5Zn42b9bg")]
+[IsoDisplayName(@"Reference")]
 public interface IReference21 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReference21 : IIsoComponent
     [IsoId("_Z6qcoPkEEeicy5Zn42b9bg")]
     [DisplayName("Sender Collateral Transaction Identification")]
     [IsoXmlTag("SndrCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SenderCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IReference21 : IIsoComponent
     [IsoId("_o8Z9gPkEEeicy5Zn42b9bg")]
     [DisplayName("Receiver Collateral Transaction Identification")]
     [IsoXmlTag("RcvrCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReceiverCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IReference21 : IIsoComponent
     [IsoId("_eQJZsPkFEeicy5Zn42b9bg")]
     [DisplayName("Sender Collateral Contract Identification")]
     [IsoXmlTag("SndrCollCtrctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SenderCollateralContractIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IReference21 : IIsoComponent
     [IsoId("_ihJU0PkFEeicy5Zn42b9bg")]
     [DisplayName("Receiver Collateral Contract Identification")]
     [IsoXmlTag("RcvrCollCtrctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReceiverCollateralContractIdentification { get; }
 
     /// <summary>
@@ -49,5 +58,7 @@ public interface IReference21 : IIsoComponent
     [IsoId("_NZbooPogEeiAfJEqh4xF_Q")]
     [DisplayName("Common Transaction Identification")]
     [IsoXmlTag("CmonTxId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? CommonTransactionIdentification { get; }
 }

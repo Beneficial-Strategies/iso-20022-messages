@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// The status of an instruction, advice or request.
 /// </summary>
 [IsoId("_A4QTItokEeC60axPepSq7g_582343091")]
+[IsoDisplayName(@"Awaiting Cancellation Reason")]
 public interface IAwaitingCancellationReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IAwaitingCancellationReason1 : IIsoComponent
     [IsoId("_A4QTJNokEeC60axPepSq7g_-414729262")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

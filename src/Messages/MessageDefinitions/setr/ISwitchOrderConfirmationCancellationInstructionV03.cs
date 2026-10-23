@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "SwtchOrdrConfCxlInstr",
     "urn:iso:std:iso:20022:tech:xsd:setr.055.001.03"
 )]
+[Description(@"Scope|The SwitchOrderConfirmationCancellationInstruction message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent SwitchOrderConfirmation.|Usage|To request the cancellation of one or more individual order executions, the order reference and deal reference of each individual order execution in the original SwitchOrderConfirmation are specified in the order reference and deal reference elements respectively. The message identification of the SwitchOrderConfirmation message in which the individual order execution was conveyed may also be quoted in PreviousReference but this is not recommended. The AmendmentIndicator is used to specify whether the switch order confirmation cancellation is to be followed by an amendment An amendment of a switch order confirmation is carried out by sending a SwitchOrderConfirmation message in which the AmendmentIndicator contains the value ‘true’.")]
+[IsoDisplayName(@"Switch Order Confirmation Cancellation Instruction V03")]
 public interface ISwitchOrderConfirmationCancellationInstructionV03 : IOuterRecord
 {
     /// <summary>
@@ -40,6 +42,7 @@ public interface ISwitchOrderConfirmationCancellationInstructionV03 : IOuterReco
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference10> PreviousReference { get; }
 
     /// <summary>
@@ -54,6 +57,7 @@ public interface ISwitchOrderConfirmationCancellationInstructionV03 : IOuterReco
     /// </summary>
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AmendmentIndicator { get; }
 
     /// <summary>
@@ -61,6 +65,8 @@ public interface ISwitchOrderConfirmationCancellationInstructionV03 : IOuterReco
     /// </summary>
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -68,6 +74,7 @@ public interface ISwitchOrderConfirmationCancellationInstructionV03 : IOuterReco
     /// </summary>
     [DisplayName("Order References")]
     [IsoXmlTag("OrdrRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundOrder14> OrderReferences { get; }
 
     /// <summary>

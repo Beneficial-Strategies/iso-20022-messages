@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context in which the card payment transaction is performed.
 /// </summary>
 [IsoId("_xS2U8SduEfCJ9IDAfAjwLA")]
+[IsoDisplayName(@"Context26")]
 public interface IContext26 : IIsoComponent
 {
     /// <summary>
@@ -281,6 +282,7 @@ public interface IContext26 : IIsoComponent
     [IsoId("_xVmHiyduEfCJ9IDAfAjwLA")]
     [DisplayName("Security Characteristics")]
     [IsoXmlTag("SctyChrtcs")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<SecurityCharacteristics2Code> SecurityCharacteristics { get; }
 
     /// <summary>
@@ -489,6 +491,7 @@ public interface IContext26 : IIsoComponent
     [IsoId("_xVmH3yduEfCJ9IDAfAjwLA")]
     [DisplayName("Receipt Type")]
     [IsoXmlTag("RctTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ReceiptType1Code> ReceiptType { get; }
 
     /// <summary>
@@ -505,6 +508,7 @@ public interface IContext26 : IIsoComponent
     [IsoId("_nfpKskVYEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -513,5 +517,6 @@ public interface IContext26 : IIsoComponent
     [IsoId("_nfpKs0VYEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> NationalData { get; }
 }

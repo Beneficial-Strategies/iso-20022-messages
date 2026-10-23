@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the status of a transfer instruction and its reason.
 /// </summary>
 [IsoId("_FjDpwYfuEeevKP8c-ilVhA")]
+[IsoDisplayName(@"Transfer Status And Reason")]
 public interface ITransferStatusAndReason5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransferStatusAndReason5 : IIsoComponent
     [IsoId("_Fzt784fuEeevKP8c-ilVhA")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransferStatusAndReason5 : IIsoComponent
     [IsoId("_Fzt79YfuEeevKP8c-ilVhA")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ITransferStatusAndReason5 : IIsoComponent
     [IsoId("_Fzt7-YfuEeevKP8c-ilVhA")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface ITransferStatusAndReason5 : IIsoComponent
     [IsoId("_Fzt7_YfuEeevKP8c-ilVhA")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TradeDate { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface ITransferStatusAndReason5 : IIsoComponent
     [IsoId("_Fzt7_4fuEeevKP8c-ilVhA")]
     [DisplayName("Send Out Date")]
     [IsoXmlTag("SndOutDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SendOutDate { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface ITransferStatusAndReason5 : IIsoComponent
     [IsoId("_2k8swYmPEeeJpL7HBafurA")]
     [DisplayName("Total Units Number")]
     [IsoXmlTag("TtlUnitsNb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? TotalUnitsNumber { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface ITransferStatusAndReason5 : IIsoComponent
     [IsoId("_B1vy8ImNEeeJpL7HBafurA")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit8> UnitsDetails { get; }
 
     /// <summary>

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification335Choice;
 
 /// <summary>Party identification.</summary>
 [IsoId("_YdfbsanVEfC5VNwixU6YfQ")]
+[IsoDisplayName(@"Party")]
 public interface IParty : IPartyIdentification335Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

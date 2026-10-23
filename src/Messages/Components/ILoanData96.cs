@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the loan data details in case of a buy sell back transaction.
 /// </summary>
 [IsoId("_CLGCkbOZEemDE9K-I5TT8Q")]
+[IsoDisplayName(@"Loan Data")]
 public interface ILoanData96 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ILoanData96 : IIsoComponent
     [IsoId("_CQanc7OZEemDE9K-I5TT8Q")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface ILoanData96 : IIsoComponent
     [IsoId("_CQandbOZEemDE9K-I5TT8Q")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text UniqueTradeIdentifier { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ILoanData96 : IIsoComponent
     [IsoId("_CQand7OZEemDE9K-I5TT8Q")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDate { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ILoanData96 : IIsoComponent
     [IsoId("_CQane7OZEemDE9K-I5TT8Q")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier TradingVenue { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface ILoanData96 : IIsoComponent
     [IsoId("_CQanf7OZEemDE9K-I5TT8Q")]
     [DisplayName("Execution Date Time")]
     [IsoXmlTag("ExctnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ExecutionDateTime { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface ILoanData96 : IIsoComponent
     [IsoId("_CQangbOZEemDE9K-I5TT8Q")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValueDate { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface ILoanData96 : IIsoComponent
     [IsoId("_CQang7OZEemDE9K-I5TT8Q")]
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TerminationDate { get; }
 
     /// <summary>

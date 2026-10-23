@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the document entry amendment.
 /// </summary>
 [IsoId("_rOYIcLP4Eeud-ZmjZVm7MA")]
+[IsoDisplayName(@"Document Entry Amendment")]
 public interface IDocumentEntryAmendment1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDocumentEntryAmendment1 : IIsoComponent
     [IsoId("_DlxxILP5Eeud-ZmjZVm7MA")]
     [DisplayName("Correcting Entry Number")]
     [IsoXmlTag("CrrctgNtryNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number CorrectingEntryNumber { get; }
 
     /// <summary>

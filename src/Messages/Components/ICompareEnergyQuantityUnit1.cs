@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for an energy quantity unit.
 /// </summary>
 [IsoId("_wwuNQE6kEeyEpI66tm807w")]
+[IsoDisplayName(@"Compare Energy Quantity Unit")]
 public interface ICompareEnergyQuantityUnit1 : IIsoComponent
 {
     /// <summary>

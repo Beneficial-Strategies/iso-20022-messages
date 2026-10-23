@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Physical packaging of goods for transport.
 /// </summary>
 [IsoId("_Tms--9p-Ed-ak6NoX_4Aeg_-1622845025")]
+[IsoDisplayName(@"Consignment")]
 public interface IConsignment1 : IIsoComponent
 {
     /// <summary>

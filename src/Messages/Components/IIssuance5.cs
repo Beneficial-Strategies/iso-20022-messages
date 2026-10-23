@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Preparation/bringing to market of a security (also known as primary market or Initial Public Offering (IPO) issuance).
 /// </summary>
 [IsoId("_rszksWf2Eembv_9KtOEw8g")]
+[IsoDisplayName(@"Issuance")]
 public interface IIssuance5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IIssuance5 : IIsoComponent
     [IsoId("_r6OVoWf2Eembv_9KtOEw8g")]
     [DisplayName("Issue Place")]
     [IsoXmlTag("IssePlc")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? IssuePlace { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IIssuance5 : IIsoComponent
     [IsoId("_r6OVt2f2Eembv_9KtOEw8g")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IssueDate { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IIssuance5 : IIsoComponent
     [IsoId("_r6OVv2f2Eembv_9KtOEw8g")]
     [DisplayName("Announcement Date")]
     [IsoXmlTag("AnncmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AnnouncementDate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IIssuance5 : IIsoComponent
     [IsoId("_r6OVwWf2Eembv_9KtOEw8g")]
     [DisplayName("ISIN Valid From")]
     [IsoXmlTag("ISINVldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ISINValidFrom { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IIssuance5 : IIsoComponent
     [IsoId("_r6OVyWf2Eembv_9KtOEw8g")]
     [DisplayName("Issue Size")]
     [IsoXmlTag("IsseSz")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? IssueSize { get; }
 
     /// <summary>
@@ -105,5 +111,6 @@ public interface IIssuance5 : IIsoComponent
     [IsoId("_r6OVz2f2Eembv_9KtOEw8g")]
     [DisplayName("Governing Law")]
     [IsoXmlTag("GovngLaw")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IJurisdiction1> GoverningLaw { get; }
 }

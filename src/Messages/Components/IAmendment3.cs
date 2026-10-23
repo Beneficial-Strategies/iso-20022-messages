@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the amendent request.
 /// </summary>
 [IsoId("_999TsHltEeG7BsjMvd1mEw_-1184372634")]
+[IsoDisplayName(@"Amendment")]
 public interface IAmendment3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAmendment3 : IIsoComponent
     [IsoId("_999TsXltEeG7BsjMvd1mEw_-1391454126")]
     [DisplayName("Applicant Request Number")]
     [IsoXmlTag("ApplcntReqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ApplicantRequestNumber { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface IAmendment3 : IIsoComponent
     [IsoId("_9-HEtHltEeG7BsjMvd1mEw_-2101190221")]
     [DisplayName("New Undertaking Terms And Conditions")]
     [IsoXmlTag("NewUdrtkgTermsAndConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INarrative1> NewUndertakingTermsAndConditions { get; }
 
     /// <summary>
@@ -97,6 +101,7 @@ public interface IAmendment3 : IIsoComponent
     [IsoId("_9-Q1sHltEeG7BsjMvd1mEw_1278799241")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument9> EnclosedFile { get; }
 
     /// <summary>
@@ -105,5 +110,9 @@ public interface IAmendment3 : IIsoComponent
     [IsoId("_9-Q1sXltEeG7BsjMvd1mEw_-1410697911")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

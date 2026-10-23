@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("__d4GQS1yEeuZtpnZJ4v-5Q")]
 [IsoMessage("caaa.021.001.02", "TxAdvcRspn", "urn:iso:std:iso:20022:tech:xsd:caaa.021.001.02")]
+[Description(@"The TransactionAdviceResponse message is sent by the POI to acknowledge the Acquirer (or its agent) about the notification of the transaction advice.")]
+[IsoDisplayName(@"Transaction Advice Response V")]
 public interface ITransactionAdviceResponseV02 : IOuterRecord
 {
     /// <summary>

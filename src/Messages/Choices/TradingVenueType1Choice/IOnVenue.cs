@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingVenueType1Choice;
 /// Whether the Securities Financing Transaction was concluded on a domestic trading venue or a foregin trading venue.
 /// </summary>
 [IsoId("_upJw4Hy7Eeu1BeE84IrnAQ")]
+[IsoDisplayName(@"On Venue")]
 public interface IOnVenue : ITradingVenueType1Choice, IIsoChoiceVariant
 {
     /// <summary>

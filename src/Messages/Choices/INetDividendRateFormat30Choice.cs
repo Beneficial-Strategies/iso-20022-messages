@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an amount or an unspecified rate.
 /// </summary>
 [IsoId("_AUTxtZb8Eee8S7xwGG7Veg")]
+[IsoDisplayName(@"Net Dividend Rate Format 30 Choice")]
 public interface INetDividendRateFormat30Choice : IIsoChoice { }

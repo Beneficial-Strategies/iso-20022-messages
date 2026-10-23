@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specific Collateral3.
 /// </summary>
 [IsoId("_0j25sZh8EeyJwbhKOp9Ehg")]
+[IsoDisplayName(@"Specific Collateral3")]
 public interface ISpecificCollateral3 : IIsoComponent
 {
     /// <summary>

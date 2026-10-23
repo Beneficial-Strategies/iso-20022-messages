@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Receipt6.
 /// </summary>
 [IsoId("_PPvBIJEFEe6Un9Rms6YuCg")]
+[IsoDisplayName(@"Payment Receipt6")]
 public interface IPaymentReceipt6 : IIsoComponent
 {
     /// <summary>

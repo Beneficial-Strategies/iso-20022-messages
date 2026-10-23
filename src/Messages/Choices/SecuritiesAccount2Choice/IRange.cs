@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccount2Choice;
 
 /// <summary>One or more securities accounts identified by a range.</summary>
 [IsoId("_4H1_oeGBEeWCAvUNsZ5u6g")]
+[IsoDisplayName(@"Range")]
 public interface IRange : ISecuritiesAccount2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

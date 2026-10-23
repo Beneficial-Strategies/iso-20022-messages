@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification38Choice;
 /// <summary>
 /// Common.
 /// </summary>
+[IsoDisplayName(@"Common")]
 public interface ICommon : ISecurityIdentification38Choice, IIsoChoiceVariant
 {
     /// <summary>

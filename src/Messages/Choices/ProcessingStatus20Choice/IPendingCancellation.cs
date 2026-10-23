@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus20Choice;
 /// The cancellation is pending processing.
 /// </summary>
 [IsoId("_Mx8yWf4xEeClUvPNHKL9Zw")]
+[IsoDisplayName(@"Pending Cancellation")]
 public interface IPendingCancellation : IProcessingStatus20Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

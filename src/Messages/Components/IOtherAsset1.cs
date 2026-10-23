@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of an asset.
 /// </summary>
 [IsoId("_5Ah0cEyJEeir2sRRVd9XhA")]
+[IsoDisplayName(@"Other Asset")]
 public interface IOtherAsset1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IOtherAsset1 : IIsoComponent
     [IsoId("_F_4m0EyKEeir2sRRVd9XhA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IOtherAsset1 : IIsoComponent
     [IsoId("_IkIFMEyKEeir2sRRVd9XhA")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -41,6 +46,10 @@ public interface IOtherAsset1 : IIsoComponent
     [IsoId("_Ly68cEyKEeir2sRRVd9XhA")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> OtherIdentification { get; }
 
     /// <summary>
@@ -49,5 +58,6 @@ public interface IOtherAsset1 : IIsoComponent
     [IsoId("_OAtCoEyKEeir2sRRVd9XhA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

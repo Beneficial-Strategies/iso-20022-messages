@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the amount for a digital token identifier.
 /// </summary>
 [IsoId("_c10zYZivEe2f7NHvXATP5g")]
+[IsoDisplayName(@"Digital Token Amount")]
 public interface IDigitalTokenAmount2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDigitalTokenAmount2 : IIsoComponent
     [IsoId("_c4uWY5ivEe2f7NHvXATP5g")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
+    [IsoSimpleType(IsoSimpleType.DTI2021Identifier)]
     DTI2021Identifier Identifier { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IDigitalTokenAmount2 : IIsoComponent
     [IsoId("_c4uWZZivEe2f7NHvXATP5g")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.Max30DecimalNumber)]
     Max30DecimalNumber? Unit { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IDigitalTokenAmount2 : IIsoComponent
     [IsoId("_c4uWZ5ivEe2f7NHvXATP5g")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? Description { get; }
 }

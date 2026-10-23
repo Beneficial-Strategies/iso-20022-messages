@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the market for a type of investor expressed as a code.
 /// </summary>
 [IsoId("_QM-3EDcMEeiIxKQErQxblg")]
+[IsoDisplayName(@"Target Market 1 Choice")]
 public interface ITargetMarket1Choice : IIsoChoice { }

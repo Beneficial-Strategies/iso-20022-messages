@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information on the collateral account of the party delivering/receiving the collateral.
 /// </summary>
 [IsoId("_0esxkK_8EeaE9YROwd69hA")]
+[IsoDisplayName(@"Collateral Account")]
 public interface ICollateralAccount4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICollateralAccount4 : IIsoComponent
     [IsoId("_BBT9la_9EeaE9YROwd69hA")]
     [DisplayName("Asset Holding")]
     [IsoXmlTag("AsstHldg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAssetHolding1> AssetHolding { get; }
 }

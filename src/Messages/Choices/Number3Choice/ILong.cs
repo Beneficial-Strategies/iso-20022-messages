@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number3Choice;
 /// Number of maximum 5 numeric text. Is only to be used in a delta statement.
 /// </summary>
 [IsoId("_QrP6dtp-Ed-ak6NoX_4Aeg_1752980794")]
+[IsoDisplayName(@"Long")]
 public interface ILong : INumber3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ILong : INumber3Choice, IIsoChoiceVariant
     /// Specifies a numeric string with an exact length of 5 digits.
     /// </summary>
     [IsoXmlTag("Lng")]
+    [IsoSimpleType(IsoSimpleType.Exact5NumericText)]
     Exact5NumericText Value { get; }
 }

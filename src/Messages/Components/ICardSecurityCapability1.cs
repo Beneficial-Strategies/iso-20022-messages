@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ISO 8583:87 bit 22-3, ISO 8583;93 bit 22-2, ISO 8583:2003 bit 27-2
 /// </summary>
 [IsoId("_XRvwk2zqEemD24gVaMSpeA")]
+[IsoDisplayName(@"Card Security Capability")]
 public interface ICardSecurityCapability1 : IIsoComponent
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface ICardSecurityCapability1 : IIsoComponent
     [IsoId("_XRvwlGzqEemD24gVaMSpeA")]
     [DisplayName("Other Capability")]
     [IsoXmlTag("OthrCpblty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherCapability { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of requested data set.
 /// </summary>
 [IsoId("_LBawUVEKEeyApZmLzm74zA")]
+[IsoDisplayName(@"Data Set Request")]
 public interface IDataSetRequest3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IDataSetRequest3 : IIsoComponent
     [IsoId("_LHfjI1EKEeyApZmLzm74zA")]
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? POIChallenge { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IDataSetRequest3 : IIsoComponent
     [IsoId("_LHfjJVEKEeyApZmLzm74zA")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? TMChallenge { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IDataSetRequest3 : IIsoComponent
     [IsoId("_LHfjKVEKEeyApZmLzm74zA")]
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary? DelegationProof { get; }
 
     /// <summary>

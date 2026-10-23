@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement service for specific settlement types of requirements.
 /// </summary>
 [IsoId("_hKP4BWp_EemXfKijhrqa-Q")]
+[IsoDisplayName(@"Settlement Service Mode")]
 public interface ISettlementServiceMode1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISettlementServiceMode1 : IIsoComponent
     [IsoId("_hKP4B2p_EemXfKijhrqa-Q")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISettlementServiceMode1 : IIsoComponent
     [IsoId("_hKP4CGp_EemXfKijhrqa-Q")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISettlementServiceMode1 : IIsoComponent
     [IsoId("_hKP4CWp_EemXfKijhrqa-Q")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>

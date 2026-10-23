@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor Configuration Data Set6.
 /// </summary>
 [IsoId("_WJc5AaEXEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Acceptor Configuration Data Set6")]
 public interface IAcceptorConfigurationDataSet6 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IAcceptorConfigurationDataSet6 : IIsoComponent
     /// </summary>
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification176> POIIdentification { get; }
 
     /// <summary>

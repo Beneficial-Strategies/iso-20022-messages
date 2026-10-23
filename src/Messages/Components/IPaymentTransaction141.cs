@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment transaction invoiced to customer.
 /// </summary>
 [IsoId("_RHVJkSCBEey8XKHwKquEQw")]
+[IsoDisplayName(@"Payment Transaction")]
 public interface IPaymentTransaction141 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPaymentTransaction141 : IIsoComponent
     [IsoId("_RMU-UyCBEey8XKHwKquEQw")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SummaryCommodityIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IPaymentTransaction141 : IIsoComponent
     [IsoId("_RMU-VyCBEey8XKHwKquEQw")]
     [DisplayName("Tax Total")]
     [IsoXmlTag("TaxTtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax39> TaxTotal { get; }
 
     /// <summary>

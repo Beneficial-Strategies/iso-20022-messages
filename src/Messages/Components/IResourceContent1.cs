@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Features of a media resource.
 /// </summary>
 [IsoId("_wkqgEC8DEeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Resource Content")]
 public interface IResourceContent1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,7 @@ public interface IResourceContent1 : IIsoComponent
     [IsoId("_bzU3wS8GEeu125Ip9zFcsQ")]
     [DisplayName("Resource Reference")]
     [IsoXmlTag("RsrcRef")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? ResourceReference { get; }
 }

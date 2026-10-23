@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party38Choice;
 /// </summary>
 [IsoId("_6VWvRW48EeiU9cctagi5ow")]
 [IsoXmlTag("PrvtId")]
+[IsoDisplayName(@"Private Identification")]
 public interface IPrivateIdentification : IParty38Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IPrivateIdentification : IParty38Choice, IIsoChoiceVariant
     [IsoId("_jU7hBa9UEeeJJK1oRb-jTw")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericPersonIdentification1> Other { get; }
 }

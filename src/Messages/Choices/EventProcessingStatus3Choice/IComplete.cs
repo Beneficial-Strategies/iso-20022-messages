@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus3Choice;
 /// </summary>
 [IsoId("_tDTUoUGSEeWqy4niLuXETA")]
 [IsoXmlTag("Cmplt")]
+[IsoDisplayName(@"Complete")]
 public interface IComplete : IEventProcessingStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

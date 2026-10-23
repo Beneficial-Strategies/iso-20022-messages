@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity14Choice;
 /// </summary>
 [IsoId("_QYSGhRgKEeKqWJINzXcn5g")]
 [IsoXmlTag("Unit")]
+[IsoDisplayName(@"Unit")]
 public interface IUnit : IQuantity14Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,8 @@ public interface IUnit : IQuantity14Choice, IIsoChoiceVariant
     [IsoId("_swUdoBgLEeKqWJINzXcn5g")]
     [DisplayName("Unit Details")]
     [IsoXmlTag("UnitDtls")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit5> UnitDetails { get; }
 }

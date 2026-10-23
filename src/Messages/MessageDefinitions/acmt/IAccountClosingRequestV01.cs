@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_oA-7SNE9Ed-BzquC8wXy7w_-1394534356")]
 [IsoMessage("acmt.019.001.01", "AcctClsgReq", "urn:iso:std:iso:20022:tech:xsd:acmt.019.001.01")]
+[Description(@"Scope|The AccountClosingRequest message is sent from an organisation to a financial institution as part of the account closing process. It is the initial request message to close an account.|Usage|This message is the initial request message to close an account.|It could be sent together with other related documents.")]
+[IsoDisplayName(@"Account Closing Request V")]
 public interface IAccountClosingRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -48,6 +50,7 @@ public interface IAccountClosingRequestV01 : IOuterRecord
     [IsoId("_oBIFM9E9Ed-BzquC8wXy7w_1506082651")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisationIdentification6> OrganisationIdentification { get; }
 
     /// <summary>
@@ -80,5 +83,6 @@ public interface IAccountClosingRequestV01 : IOuterRecord
     [IsoId("_oBIFN9E9Ed-BzquC8wXy7w_-258963288")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature1> DigitalSignature { get; }
 }

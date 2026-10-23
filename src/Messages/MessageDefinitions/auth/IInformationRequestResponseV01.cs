@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_6iqtkDzdEeGl7N0Cd54dlw")]
 [IsoMessage("auth.002.001.01", "InfReqRspn", "urn:iso:std:iso:20022:tech:xsd:auth.002.001.01")]
+[Description(@"This message is sent by the financial institution to the authorities (police, customs, tax authorities, enforcement authorities) to provide a part or all of the requested information.|The financial institution previously received a request for financial information in the scope of a financial investigation.||Depending on whether the response can be provided STP within the authorities financial investigations messages, the requested information may be |•	provided in part or in full within the response message itself, or |•	only referred to in the response message.")]
+[IsoDisplayName(@"Information Request Response V")]
 public interface IInformationRequestResponseV01 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +27,8 @@ public interface IInformationRequestResponseV01 : IOuterRecord
     [IsoId("_DSEUezzjEeGl7N0Cd54dlw")]
     [DisplayName("Response Identification")]
     [IsoXmlTag("RspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ResponseIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IInformationRequestResponseV01 : IOuterRecord
     [IsoId("_gF8WOzzoEeGl7N0Cd54dlw")]
     [DisplayName("Investigation Identification")]
     [IsoXmlTag("InvstgtnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InvestigationIdentification { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IInformationRequestResponseV01 : IOuterRecord
     [IsoId("_UbboITzuEeGl7N0Cd54dlw")]
     [DisplayName("Return Indicator")]
     [IsoXmlTag("RtrInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReturnIndicator1> ReturnIndicator { get; }
 
     /// <summary>
@@ -65,5 +72,6 @@ public interface IInformationRequestResponseV01 : IOuterRecord
     [IsoId("_ICHsnzzvEeGl7N0Cd54dlw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

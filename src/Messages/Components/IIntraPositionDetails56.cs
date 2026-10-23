@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the intra-position movement.
 /// </summary>
 [IsoId("_jJWibiAZEeu4a6pNulzZ4Q")]
+[IsoDisplayName(@"Intra Position Details")]
 public interface IIntraPositionDetails56 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,7 @@ public interface IIntraPositionDetails56 : IIsoComponent
     [IsoId("_jJWioCAZEeu4a6pNulzZ4Q")]
     [DisplayName("Instruction Processing Additional Details")]
     [IsoXmlTag("InstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text? InstructionProcessingAdditionalDetails { get; }
 }

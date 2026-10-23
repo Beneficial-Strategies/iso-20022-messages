@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement transaction numbering information.
 /// </summary>
 [IsoId("_Qr_hWNp-Ed-ak6NoX_4Aeg_-606322098")]
+[IsoDisplayName(@"Total Number")]
 public interface ITotalNumber1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITotalNumber1 : IIsoComponent
     [IsoId("_Qr_hWdp-Ed-ak6NoX_4Aeg_-2082263388")]
     [DisplayName("Current Instruction Number")]
     [IsoXmlTag("CurInstrNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText CurrentInstructionNumber { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ITotalNumber1 : IIsoComponent
     [IsoId("_Qr_hWtp-Ed-ak6NoX_4Aeg_-1935589206")]
     [DisplayName("Total Of Linked Instructions")]
     [IsoXmlTag("TtlOfLkdInstrs")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText TotalOfLinkedInstructions { get; }
 }

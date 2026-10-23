@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_4eXSYaoxEfCG2_q2WT-90w")]
 [IsoMessage("secl.003.001.05", "TradLegStmt", "urn:iso:std:iso:20022:tech:xsd:secl.003.001.05")]
+[IsoDisplayName(@"Trade Leg Statement V05")]
 public interface ITradeLegStatementV05 : IOuterRecord
 {
     /// <summary>
@@ -46,6 +47,7 @@ public interface ITradeLegStatementV05 : IOuterRecord
     /// </summary>
     [DisplayName("Statement Details")]
     [IsoXmlTag("StmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeLegStatement5> StatementDetails { get; }
 
     /// <summary>
@@ -53,5 +55,6 @@ public interface ITradeLegStatementV05 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

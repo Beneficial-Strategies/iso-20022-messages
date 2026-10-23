@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a capped drawdown.
 /// </summary>
 [IsoId("_56qUIFNdEeijdq8ilaxyOA")]
+[IsoDisplayName(@"Capped")]
 public interface ICapped1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICapped1 : IIsoComponent
     [IsoId("_EkpKkFNeEeijdq8ilaxyOA")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface ICapped1 : IIsoComponent
     [IsoId("_LqU3YZC1EeiQvr1XXv37hw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

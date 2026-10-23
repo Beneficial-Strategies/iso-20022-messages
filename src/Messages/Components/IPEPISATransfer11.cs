@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a transfer instruction.
 /// </summary>
 [IsoId("_XE7zcfpfEeCLMa5EIHtDrg")]
+[IsoDisplayName(@"PEPISA Transfer")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IPEPISATransfer11 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface IPEPISATransfer11 : IIsoComponent
     [IsoId("_XE7zk_pfEeCLMa5EIHtDrg")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson8> OtherIndividualInvestor { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IPEPISATransfer11 : IIsoComponent
     [IsoId("_XE7zn_pfEeCLMa5EIHtDrg")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation4> OtherCorporateInvestor { get; }
 
     /// <summary>
@@ -97,6 +101,7 @@ public interface IPEPISATransfer11 : IIsoComponent
     [IsoId("_XE7zs_pfEeCLMa5EIHtDrg")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IISATransfer3> ProductTransfer { get; }
 
     /// <summary>
@@ -105,5 +110,6 @@ public interface IPEPISATransfer11 : IIsoComponent
     [IsoId("_XE7zt_pfEeCLMa5EIHtDrg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

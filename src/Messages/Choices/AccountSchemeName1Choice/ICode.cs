@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSchemeName1Choice;
 /// Name of the identification scheme, in a coded form as published in an external list.
 /// </summary>
 [IsoId("_P_4pQdp-Ed-ak6NoX_4Aeg_191053818")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAccountSchemeName1Choice, IIsoChoiceVariant
 {
     /// <summary>

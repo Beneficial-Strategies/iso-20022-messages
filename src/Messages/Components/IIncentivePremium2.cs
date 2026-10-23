@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash premium made available if the securities holder consents or participates to an event.
 /// </summary>
 [IsoId("_TjIGjtp-Ed-ak6NoX_4Aeg_-593608139")]
+[IsoDisplayName(@"Incentive Premium")]
 public interface IIncentivePremium2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IIncentivePremium2 : IIsoComponent
     [IsoId("_TjR3gNp-Ed-ak6NoX_4Aeg_-593607912")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Description { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IIncentivePremium2 : IIsoComponent
     [IsoId("_TjR3gtp-Ed-ak6NoX_4Aeg_-593607879")]
     [DisplayName("Per Security")]
     [IsoXmlTag("PerScty")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number PerSecurity { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IIncentivePremium2 : IIsoComponent
     [IsoId("_TjR3g9p-Ed-ak6NoX_4Aeg_-593607844")]
     [DisplayName("Per Vote")]
     [IsoXmlTag("PerVote")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number PerVote { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IIncentivePremium2 : IIsoComponent
     [IsoId("_TjR3hNp-Ed-ak6NoX_4Aeg_-593607819")]
     [DisplayName("Per Attendee")]
     [IsoXmlTag("PerAttndee")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PerAttendee { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date related to the settlement of the transaction.
 /// </summary>
 [IsoId("_7tOX8SuCEeyg-aG5nXcnfg")]
+[IsoDisplayName(@"Settlement Service Date")]
 public interface ISettlementServiceDate2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementServiceDate2 : IIsoComponent
     [IsoId("_7zILoSuCEeyg-aG5nXcnfg")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISettlementServiceDate2 : IIsoComponent
     [IsoId("_JK2asCuDEeyg-aG5nXcnfg")]
     [DisplayName("Deferred Settlement Indicator")]
     [IsoXmlTag("DfrrdSttlmInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DeferredSettlementIndicator { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISettlementServiceDate2 : IIsoComponent
     [IsoId("_7zILoyuCEeyg-aG5nXcnfg")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SettlementDate { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ISettlementServiceDate2 : IIsoComponent
     [IsoId("_7zILpSuCEeyg-aG5nXcnfg")]
     [DisplayName("Settlement Time")]
     [IsoXmlTag("SttlmTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? SettlementTime { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface ISettlementServiceDate2 : IIsoComponent
     [IsoId("_7zILpyuCEeyg-aG5nXcnfg")]
     [DisplayName("Settlement Period")]
     [IsoXmlTag("SttlmPrd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SettlementPeriod { get; }
 
     /// <summary>
@@ -57,5 +64,6 @@ public interface ISettlementServiceDate2 : IIsoComponent
     [IsoId("_7zILqSuCEeyg-aG5nXcnfg")]
     [DisplayName("Settlement Cut Off Time")]
     [IsoXmlTag("SttlmCutOffTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? SettlementCutOffTime { get; }
 }

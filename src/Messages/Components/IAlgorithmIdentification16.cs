@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cryptographic algorithm and parameters of digests.
 /// </summary>
 [IsoId("_BHYz4WmQEeS7iYydEtv3Ug")]
+[IsoDisplayName(@"Algorithm Identification")]
 public interface IAlgorithmIdentification16 : IIsoComponent
 {
     /// <summary>

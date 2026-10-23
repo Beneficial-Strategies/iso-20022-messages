@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference and status information concerning the original transactions, included in the original instruction, to which the return message applies.
 /// </summary>
 [IsoId("_PsXQU9p-Ed-ak6NoX_4Aeg_-1190214356")]
+[IsoDisplayName(@"Payment Transaction Information")]
 public interface IPaymentTransactionInformation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentTransactionInformation2 : IIsoComponent
     [IsoId("_PsXQVNp-Ed-ak6NoX_4Aeg_-1190213875")]
     [DisplayName("Return Identification")]
     [IsoXmlTag("RtrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReturnIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPaymentTransactionInformation2 : IIsoComponent
     [IsoId("_PsXQVtp-Ed-ak6NoX_4Aeg_-1551043273")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPaymentTransactionInformation2 : IIsoComponent
     [IsoId("_PsXQV9p-Ed-ak6NoX_4Aeg_-1190213970")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IPaymentTransactionInformation2 : IIsoComponent
     [IsoId("_PsXQWNp-Ed-ak6NoX_4Aeg_511775997")]
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalTransactionIdentification { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface IPaymentTransactionInformation2 : IIsoComponent
     [IsoId("_PshBUtp-Ed-ak6NoX_4Aeg_-1190213763")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface IPaymentTransactionInformation2 : IIsoComponent
     [IsoId("_PshBVNp-Ed-ak6NoX_4Aeg_-1190213443")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ExchangeRate { get; }
 
     /// <summary>
@@ -113,6 +124,7 @@ public interface IPaymentTransactionInformation2 : IIsoComponent
     [IsoId("_PshBV9p-Ed-ak6NoX_4Aeg_-2132608256")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChargesInformation1> ChargesInformation { get; }
 
     /// <summary>
@@ -137,6 +149,7 @@ public interface IPaymentTransactionInformation2 : IIsoComponent
     [IsoId("_PsqLQNp-Ed-ak6NoX_4Aeg_-1111192957")]
     [DisplayName("Return Reason Information")]
     [IsoXmlTag("RtrRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReturnReasonInformation1> ReturnReasonInformation { get; }
 
     /// <summary>

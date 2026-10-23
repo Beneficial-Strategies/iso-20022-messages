@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_2G_jUYZLEeemXK0UETsSiA")]
 [IsoMessage("sese.008.001.08", "RvslOfTrfInConf", "urn:iso:std:iso:20022:tech:xsd:sese.008.001.08")]
+[Description(@"Scope|The ReversalOfTransferInConfirmation message is sent by the executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent transfer in confirmation.|Usage|The ReversalOfTransferInConfirmation message is used to reverse a previously sent transfer in confirmation.|To request the reversal of a transfer in confirmation, the transfer reference of the transfer in instruction, as specified in the original TransferInInstruction message, is specified in the transfer reference element. The executing party’s reference for the execution of the transfer may also be specified in the TransferConfirmationReference element.|The message identification of the original TransferInConfirmation message may also be quoted in PreviousReference but this is not recommended.")]
+[IsoDisplayName(@"Reversal Of Transfer In Confirmation V")]
 public interface IReversalOfTransferInConfirmationV08 : IOuterRecord
 {
     /// <summary>
@@ -57,6 +59,8 @@ public interface IReversalOfTransferInConfirmationV08 : IOuterRecord
     [IsoId("_yjJGQYi1EeefvMoXmllHqg")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>

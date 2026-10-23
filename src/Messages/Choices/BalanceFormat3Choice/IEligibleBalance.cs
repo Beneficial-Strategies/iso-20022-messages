@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat3Choice;
 /// </summary>
 [IsoId("_2-A6KhFPEeKp2ZN13DI_pA")]
 [IsoXmlTag("ElgblBal")]
+[IsoDisplayName(@"Eligible Balance")]
 public interface IEligibleBalance : IBalanceFormat3Choice, IIsoChoiceVariant
 {
     /// <summary>

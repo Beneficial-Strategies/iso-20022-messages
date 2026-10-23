@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies corporate action dates.
 /// </summary>
 [IsoId("_qpF07zQKEe2o-K1dwNg8Gg")]
+[IsoDisplayName(@"Corporate Action Date")]
 public interface ICorporateActionDate87 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionDate87 : IIsoComponent
     [IsoId("_rA7s0TQKEe2o-K1dwNg8Gg")]
     [DisplayName("Posting Date")]
     [IsoXmlTag("PstngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate PostingDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICorporateActionDate87 : IIsoComponent
     [IsoId("_rA7s2TQKEe2o-K1dwNg8Gg")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValueDate { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICorporateActionDate87 : IIsoComponent
     [IsoId("_rA7s6TQKEe2o-K1dwNg8Gg")]
     [DisplayName("Earliest Payment Date")]
     [IsoXmlTag("EarlstPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EarliestPaymentDate { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface ICorporateActionDate87 : IIsoComponent
     [IsoId("_rA7s8TQKEe2o-K1dwNg8Gg")]
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PaymentDate { get; }
 }

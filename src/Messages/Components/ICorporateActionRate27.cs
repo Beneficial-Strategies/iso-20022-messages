@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies rates of a corporate action.
 /// </summary>
 [IsoId("_gOJQMfmaEeCgTOP8zvX1cw")]
+[IsoDisplayName(@"Corporate Action Rate")]
 public interface ICorporateActionRate27 : IIsoComponent
 {
     /// <summary>

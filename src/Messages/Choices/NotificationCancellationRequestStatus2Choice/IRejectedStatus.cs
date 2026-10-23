@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationCancellationRequestS
 /// <summary>
 /// Rejected Status.
 /// </summary>
+[IsoDisplayName(@"Rejected Status")]
 public interface IRejectedStatus : INotificationCancellationRequestStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

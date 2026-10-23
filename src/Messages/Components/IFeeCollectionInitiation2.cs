@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to a fee collection initiation message.
 /// </summary>
 [IsoId("_EXWGMYaBEeuSbct6WWD-Ng")]
+[IsoDisplayName(@"Fee Collection Initiation")]
 public interface IFeeCollectionInitiation2 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IFeeCollectionInitiation2 : IIsoComponent
     [IsoId("_Ecx_2YaBEeuSbct6WWD-Ng")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IFeeCollectionInitiation2 : IIsoComponent
     [IsoId("_Ecx_24aBEeuSbct6WWD-Ng")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

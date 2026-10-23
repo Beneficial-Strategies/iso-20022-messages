@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action option details.
 /// </summary>
 [IsoId("_ZhDAoaFaEeSK_vfd3NHBGg")]
+[IsoDisplayName(@"Corporate Action Option SD")]
 public interface ICorporateActionOptionSD10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionOptionSD10 : IIsoComponent
     [IsoId("_ZrA08aFaEeSK_vfd3NHBGg")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICorporateActionOptionSD10 : IIsoComponent
     [IsoId("_ZrA0-6FaEeSK_vfd3NHBGg")]
     [DisplayName("Default Option Flag")]
     [IsoXmlTag("DfltOptnFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DefaultOptionFlag { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICorporateActionOptionSD10 : IIsoComponent
     [IsoId("_ZrA1CaFaEeSK_vfd3NHBGg")]
     [DisplayName("Optional Dividend Supplementary Data Required Flag")]
     [IsoXmlTag("OptnlDvddSplmtryDataReqrdFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OptionalDividendSupplementaryDataRequiredFlag { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface ICorporateActionOptionSD10 : IIsoComponent
     [IsoId("_ZrA1C6FaEeSK_vfd3NHBGg")]
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
     Exact32AlphaNumericText? RDPReferenceNumber { get; }
 }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_ZfdOUYrYEe-RMan1tLkKgA")]
 [IsoMessage("auth.061.001.02", "CCPInvstmtsRpt", "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02")]
+[IsoDisplayName(@"CCP Investments Report V02")]
 public interface ICCPInvestmentsReportV02 : IOuterRecord
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICCPInvestmentsReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Investment")]
     [IsoXmlTag("Invstmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestment2Choice> Investment { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICCPInvestmentsReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

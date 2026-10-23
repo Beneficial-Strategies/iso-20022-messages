@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError9Choice;
 /// <summary>
 /// Operational Error.
 /// </summary>
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : IStandingOrderOrError9Choice, IIsoChoiceVariant
 {
     /// <summary>

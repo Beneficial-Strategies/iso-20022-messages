@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the intra-position movement.
 /// </summary>
 [IsoId("_ccpBEzi8Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Intra Position Details")]
 public interface IIntraPositionDetails63 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IIntraPositionDetails63 : IIsoComponent
     [IsoId("_ccpBGzi8Eeydid5dcNPKvg")]
     [DisplayName("Intra Position Movement")]
     [IsoXmlTag("IntraPosMvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraPositionMovementDetails20> IntraPositionMovement { get; }
 }

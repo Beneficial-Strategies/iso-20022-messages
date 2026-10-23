@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
     "FXTradCaptrRptReq",
     "urn:iso:std:iso:20022:tech:xsd:fxtr.032.001.02"
 )]
+[IsoDisplayName(@"Foreign Exchange Trade Capture Report Request V02")]
 public interface IForeignExchangeTradeCaptureReportRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -92,5 +93,6 @@ public interface IForeignExchangeTradeCaptureReportRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

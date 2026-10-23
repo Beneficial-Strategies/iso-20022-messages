@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice;
 /// Value of the data expressed in text form.
 /// </summary>
 [IsoId("_4EhKqZaNEemfCcEf5rVTyg")]
+[IsoDisplayName(@"Text Value")]
 public interface ITextValue : IVerificationValue1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ITextValue : IVerificationValue1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 2048 characters.
     /// </summary>
     [IsoXmlTag("TxtVal")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text Value { get; }
 }

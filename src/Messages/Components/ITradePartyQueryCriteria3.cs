@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details on the queried trade parties.
 /// </summary>
 [IsoId("_QAVRoZQTEeiok48Eh9lW9Q")]
+[IsoDisplayName(@"Trade Party Query Criteria")]
 public interface ITradePartyQueryCriteria3 : IIsoComponent
 {
     /// <summary>

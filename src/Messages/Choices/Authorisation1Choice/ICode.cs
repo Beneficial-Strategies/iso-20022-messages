@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Authorisation1Choice;
 /// Specifies the authorisation, in a coded form.
 /// </summary>
 [IsoId("_RD1Zl9p-Ed-ak6NoX_4Aeg_-955120142")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAuthorisation1Choice, IIsoChoiceVariant
 {
     /// <summary>

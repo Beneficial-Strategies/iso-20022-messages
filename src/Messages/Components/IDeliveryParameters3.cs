@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters of a physical delivery.
 /// </summary>
 [IsoId("_T6YI7tp-Ed-ak6NoX_4Aeg_152223563")]
+[IsoDisplayName(@"Delivery Parameters")]
 public interface IDeliveryParameters3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IDeliveryParameters3 : IIsoComponent
     [IsoId("_T6hS0dp-Ed-ak6NoX_4Aeg_152223605")]
     [DisplayName("Issued Certificate Number")]
     [IsoXmlTag("IssdCertNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? IssuedCertificateNumber { get; }
 }

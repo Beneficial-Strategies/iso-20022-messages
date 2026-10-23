@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Counterparty13Choice;
 /// </summary>
 [IsoId("_9jKag9LCEeiN28wlpBQScw")]
 [IsoXmlTag("Sellr")]
+[IsoDisplayName(@"Seller")]
 public interface ISeller : ICounterparty13Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface ISeller : ICounterparty13Choice, IIsoChoiceVariant
     [IsoId("_7pKzC9LCEeiN28wlpBQScw")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 
     /// <summary>
@@ -58,6 +60,8 @@ public interface ISeller : ICounterparty13Choice, IIsoChoiceVariant
     [IsoId("_7pKzJdLCEeiN28wlpBQScw")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessingIdentification { get; }
 
     /// <summary>

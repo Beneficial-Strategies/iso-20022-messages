@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason why the instruction or request has a failing settlement status.
 /// </summary>
 [IsoId("_3jTW0TqOEeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Failing Reason")]
 public interface IFailingReason8 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IFailingReason8 : IIsoComponent
     [IsoId("_4D4USTqOEeWyoP0PbocV1Q")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

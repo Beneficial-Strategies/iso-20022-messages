@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus106Choice;
 
 /// <summary>Specifies the completed status.</summary>
 [IsoId("_lrsGXaogEfCG2_q2WT-90w")]
+[IsoDisplayName(@"Completed")]
 public interface ICompleted : IProcessingStatus106Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderReport2Choice;
 /// <summary>
 /// Cancellation.
 /// </summary>
+[IsoDisplayName(@"Cancellation")]
 public interface ICancellation : IOrderReport2Choice, IIsoChoiceVariant
 {
     /// <summary>

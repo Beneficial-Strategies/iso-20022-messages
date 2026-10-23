@@ -24,6 +24,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "TtlPrtflValtnRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.024.001.01"
 )]
+[Description(@"Scope|An account servicer sends a TotalPortfolioValuationReport to an account owner to provide detailed valuation information for a portfolio.|Usage|The TotalPortfolioValuationReport will be sent by the account servicer to the account owner on an agreed basis. The report may also be requested using a SecuritiesStatementQuery.|The TotalPortfolioValuationReport is used to report on a portfolio without Investment Funds; or to report on a portfolio when an investment fund is regarded as a portfolio containing, only one or multiple investment funds|The TotalPortfolioValuationReport may also be used to:|- re-send a message previously sent (the CopyDuplicate value is DUPL),|- provide a third party with a copy of a message for information (the CopyDuplicate value is COPY),|- re-send to a third party a copy of a message for information (the CopyDuplicate value is CODU).")]
+[IsoDisplayName(@"Total Portfolio Valuation Report V")]
 public interface ITotalPortfolioValuationReportV01 : IOuterRecord
 {
     /// <summary>

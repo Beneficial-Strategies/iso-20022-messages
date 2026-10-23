@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProrationBelowMinimumQuantity2Ch
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IProrationBelowMinimumQuantity2Choice, IIsoChoiceVariant
 {
     /// <summary>

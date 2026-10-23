@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionActivity3Choice;
 /// Transaction type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_ilsVYTqDEeWVrPy0StzzSg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITransactionActivity3Choice, IIsoChoiceVariant
 {
     /// <summary>

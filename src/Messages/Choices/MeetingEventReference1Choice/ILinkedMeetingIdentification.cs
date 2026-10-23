@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MeetingEventReference1Choice;
 /// Reference assigned by the account servicer to unambiguously identify a related meeting event.
 /// </summary>
 [IsoId("__b3CGq7rEemG7MmivSuE5g")]
+[IsoDisplayName(@"Linked Meeting Identification")]
 public interface ILinkedMeetingIdentification : IMeetingEventReference1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ILinkedMeetingIdentification : IMeetingEventReference1Choice, I
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("LkdMtgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

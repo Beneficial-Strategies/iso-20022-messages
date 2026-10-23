@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details on the regulatory notification.
 /// </summary>
 [IsoId("_c-VXQDmyEeWDb47rJ6ki4Q")]
+[IsoDisplayName(@"Regulatory Reporting Notification")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IRegulatoryReportingNotification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IRegulatoryReportingNotification1 : IIsoComponent
     [IsoId("_sv4yMTm3EeWDb47rJ6ki4Q")]
     [DisplayName("Transaction Notification Identification")]
     [IsoXmlTag("TxNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionNotificationIdentification { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IRegulatoryReportingNotification1 : IIsoComponent
     [IsoId("_YGMKUTm3EeWDb47rJ6ki4Q")]
     [DisplayName("Transaction Certificate")]
     [IsoXmlTag("TxCert")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionCertificate1> TransactionCertificate { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementOrIntraPosition3Choice
 
 /// <summary>Intra-position movement details.</summary>
 [IsoId("_TgJxcWp9EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Intra Position Movement")]
 public interface IIntraPositionMovement : ISettlementOrIntraPosition3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

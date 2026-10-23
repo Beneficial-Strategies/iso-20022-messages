@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provide information about the type of request or instruction which triggered this confirmation.
 /// </summary>
 [IsoId("_RESFhNp-Ed-ak6NoX_4Aeg_190539014")]
+[IsoDisplayName(@"Account Management Confirmation")]
 public interface IAccountManagementConfirmation1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IAccountManagementConfirmation1 : IIsoComponent
     [IsoId("_REb2gNp-Ed-ak6NoX_4Aeg_190539109")]
     [DisplayName("Account Application Identification")]
     [IsoXmlTag("AcctApplId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountApplicationIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of financial instruments that are initially recorded or centrally maintained in CSDs (central securities depositories) as defined in the relevant regulation.
 /// </summary>
 [IsoId("_Gj3jgTOnEeqX8uoQQ3KffQ")]
+[IsoDisplayName(@"Settlement Fails Daily Instrument")]
 public interface ISettlementFailsDailyInstrument3 : IIsoComponent
 {
     /// <summary>

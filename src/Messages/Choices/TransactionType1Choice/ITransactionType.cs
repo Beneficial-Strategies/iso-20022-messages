@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionType1Choice;
 /// Type of investment fund transaction.
 /// </summary>
 [IsoId("_OAv0gAf_EeSaceXTzyiZRg")]
+[IsoDisplayName(@"Transaction Type")]
 public interface ITransactionType : ITransactionType1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

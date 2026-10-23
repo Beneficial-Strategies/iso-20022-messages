@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Common Reporting Standard (CRS) status information.
 /// </summary>
 [IsoId("_uRVacUNeEeamLdeYEZm56w")]
+[IsoDisplayName(@"CRS Status")]
 public interface ICRSStatus4 : IIsoComponent
 {
     /// <summary>

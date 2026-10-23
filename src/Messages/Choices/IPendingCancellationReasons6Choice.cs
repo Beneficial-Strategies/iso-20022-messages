@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of format for the pending cancellation reason.</summary>
 [IsoId("_2YhbgaoWEfCG2_q2WT-90w")]
+[IsoDisplayName(@"Pending Cancellation Reasons 6 Choice")]
 public interface IPendingCancellationReasons6Choice : IIsoChoice { }

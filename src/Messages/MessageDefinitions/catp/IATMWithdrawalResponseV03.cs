@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_3YYCkaFEEe-MRKYsaX6JDg")]
 [IsoMessage("catp.002.001.03", "ATMWdrwlRspn", "urn:iso:std:iso:20022:tech:xsd:catp.002.001.03")]
+[IsoDisplayName(@"ATM Withdrawal Response V03")]
 public interface IATMWithdrawalResponseV03 : IOuterRecord
 {
     /// <summary>

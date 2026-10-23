@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus5Choice;
 /// </summary>
 [IsoId("_UUmmyNp-Ed-ak6NoX_4Aeg_1629287829")]
 [IsoXmlTag("Cmpltd")]
+[IsoDisplayName(@"Completed")]
 public interface ICompleted : IProcessingStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

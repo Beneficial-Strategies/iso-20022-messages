@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice22Choi
 /// </summary>
 [IsoId("_i7Unc5iuEe2f7NHvXATP5g")]
 [IsoXmlTag("NoPric")]
+[IsoDisplayName(@"No Price")]
 public interface INoPrice : ISecuritiesTransactionPrice22Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,5 +35,6 @@ public interface INoPrice : ISecuritiesTransactionPrice22Choice, IIsoChoiceVaria
     [IsoId("_NPG9MpivEe2f7NHvXATP5g")]
     [DisplayName("Digital Token")]
     [IsoXmlTag("DgtlTkn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDigitalTokenAmount2> DigitalToken { get; }
 }

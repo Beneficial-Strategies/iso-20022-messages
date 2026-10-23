@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Deposited media put in the safe.
 /// </summary>
 [IsoId("_jeG9UK4BEeWL1uap3dNhCQ")]
+[IsoDisplayName(@"ATM Deposited Media")]
 public interface IATMDepositedMedia1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IATMDepositedMedia1 : IIsoComponent
     [IsoId("_tkpvgK4BEeWL1uap3dNhCQ")]
     [DisplayName("Account Sequence Number")]
     [IsoXmlTag("AcctSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? AccountSequenceNumber { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IATMDepositedMedia1 : IIsoComponent
     [IsoId("_l3I_UK4DEeWL1uap3dNhCQ")]
     [DisplayName("Media Items")]
     [IsoXmlTag("MdiaItms")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMDepositedMedia2> MediaItems { get; }
 }

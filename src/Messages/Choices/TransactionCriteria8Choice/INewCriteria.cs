@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCriteria8Choice;
 /// <summary>
 /// New Criteria.
 /// </summary>
+[IsoDisplayName(@"New Criteria")]
 public interface INewCriteria : ITransactionCriteria8Choice, IIsoChoiceVariant
 {
     /// <summary>

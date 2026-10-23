@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the source of the cash.
 /// </summary>
 [IsoId("_jxZG4DlEEealR6-8aQ15BA")]
+[IsoDisplayName(@"Source Of Cash 1 Choice")]
 public interface ISourceOfCash1Choice : IIsoChoice { }

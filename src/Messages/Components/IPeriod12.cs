@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Period12.
 /// </summary>
 [IsoId("_1d5nse3_Ee6nAu63uIo75Q")]
+[IsoDisplayName(@"Period12")]
 public interface IPeriod12 : IIsoComponent
 {
     /// <summary>

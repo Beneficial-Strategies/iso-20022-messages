@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice for payment schedule type.
 /// </summary>
 [IsoId("_TXFdkbb1Eeu9Cp6InX88Vw")]
+[IsoDisplayName(@"Payment Schedule Type 2 Choice")]
 public interface IPaymentScheduleType2Choice : IIsoChoice { }

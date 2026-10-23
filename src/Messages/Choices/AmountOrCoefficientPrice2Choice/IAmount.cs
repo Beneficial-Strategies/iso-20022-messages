@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountOrCoefficientPrice2Choice;
 
 /// <summary>Provides details of the price when expressed with an amount and implied currency.</summary>
 [IsoId("_NGNiAWejEeqY_MU7lK4HCA")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount : IAmountOrCoefficientPrice2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

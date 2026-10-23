@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money associated with a service.
 /// </summary>
 [IsoId("dc9e6b08-8884-4c4d-a910-abcaf5dab61e")]
+[IsoDisplayName(@"Total Fees And Taxes45")]
 public interface ITotalFeesAndTaxes45 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ITotalFeesAndTaxes45 : IIsoComponent
     [IsoId("0a040089-6796-4a3b-8303-2f425a5aed8a")]
     [DisplayName("Individual Fee")]
     [IsoXmlTag("IndvFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFee11> IndividualFee { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ITotalFeesAndTaxes45 : IIsoComponent
     [IsoId("1221f8fb-eff5-478e-8655-98d7d9c0e00d")]
     [DisplayName("Individual Tax")]
     [IsoXmlTag("IndvTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax35> IndividualTax { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface ITotalFeesAndTaxes45 : IIsoComponent
     [IsoId("3f196001-64f8-41d2-8622-76c265b31467")]
     [DisplayName("Digital Network Fee")]
     [IsoXmlTag("DgtlNtwkFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDigitalPaymentSettlement3> DigitalNetworkFee { get; }
 }

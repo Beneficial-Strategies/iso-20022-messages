@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to an identification of an organisation.
 /// </summary>
 [IsoId("_QACaRdp-Ed-ak6NoX_4Aeg_-322320404")]
+[IsoDisplayName(@"Generic Organisation Identification")]
 public interface IGenericOrganisationIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGenericOrganisationIdentification1 : IIsoComponent
     [IsoId("_QACaRtp-Ed-ak6NoX_4Aeg_-322320394")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IGenericOrganisationIdentification1 : IIsoComponent
     [IsoId("_QACaSNp-Ed-ak6NoX_4Aeg_-322320342")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

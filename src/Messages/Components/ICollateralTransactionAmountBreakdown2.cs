@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of breakdown of a market value.
 /// </summary>
 [IsoId("_kK-5sRIoEeyZaPkaPAzTvQ")]
+[IsoDisplayName(@"Collateral Transaction Amount Breakdown")]
 public interface ICollateralTransactionAmountBreakdown2 : IIsoComponent
 {
     /// <summary>

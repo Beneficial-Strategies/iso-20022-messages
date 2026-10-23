@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("94d317c4-9d3e-437f-b76c-5cb52917d23e")]
 [IsoMessage("sese.009.001.09", "ReqForTrfStsRpt", "urn:iso:std:iso:20022:tech:xsd:sese.009.001.09")]
+[Description(@"Scope|The RequestForTransferStatusReport is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent to request the status of a previously instructed transfer.|The RequestForTransferStatusReport may also be sent by any party in the transfer transaction to another party in the transfer transaction chain to request information relevant for the settlement of a transfer transaction.|Usage|The RequestForTransferStatusReport is used to request either:|- the status of one or several information requests or transfer instructions or,|- the status of one or several transfer cancellation instructions, or|- information relevant to one or more transfer instructions.")]
+[IsoDisplayName(@"Request For Transfer Status Report V09")]
 public interface IRequestForTransferStatusReportV09 : IOuterRecord
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface IRequestForTransferStatusReportV09 : IOuterRecord
     /// </summary>
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageAndBusinessReference14> RequestDetails { get; }
 
     /// <summary>
@@ -47,5 +50,6 @@ public interface IRequestForTransferStatusReportV09 : IOuterRecord
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

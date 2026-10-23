@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of entitlement calculation method.
 /// </summary>
 [IsoId("_RDroltp-Ed-ak6NoX_4Aeg_278431032")]
+[IsoDisplayName(@"Entitlement 1 Choice")]
 public interface IEntitlement1Choice : IIsoChoice { }

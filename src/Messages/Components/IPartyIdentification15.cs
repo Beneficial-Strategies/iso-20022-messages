@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.
 /// </summary>
 [IsoId("_QO7x6tp-Ed-ak6NoX_4Aeg_-789866808")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification15 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IPartyIdentification15 : IIsoComponent
     [IsoId("_QO7x7Np-Ed-ak6NoX_4Aeg_-447243502")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

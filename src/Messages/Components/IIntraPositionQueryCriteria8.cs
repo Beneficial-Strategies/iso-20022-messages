@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria based on which information is included.
 /// </summary>
 [IsoId("_4CLSkeSlEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Intra Position Query Criteria8")]
 public interface IIntraPositionQueryCriteria8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IIntraPositionQueryCriteria8 : IIsoComponent
     [IsoId("_4KLYAeSlEe-qVZLXW4RRBw")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferences82Choice> References { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IIntraPositionQueryCriteria8 : IIsoComponent
     [IsoId("_4KLYC-SlEe-qVZLXW4RRBw")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification19> FinancialInstrumentIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IIntraPositionQueryCriteria8 : IIsoComponent
     [IsoId("_4KLYE-SlEe-qVZLXW4RRBw")]
     [DisplayName("Safekeeping Account Owner")]
     [IsoXmlTag("SfkpgAcctOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> SafekeepingAccountOwner { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IIntraPositionQueryCriteria8 : IIsoComponent
     [IsoId("_4KLYFeSlEe-qVZLXW4RRBw")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesAccount19> SafekeepingAccount { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IIntraPositionQueryCriteria8 : IIsoComponent
     [IsoId("_4KLYF-SlEe-qVZLXW4RRBw")]
     [DisplayName("Balance Type")]
     [IsoXmlTag("BalTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraPositionType2> BalanceType { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IIntraPositionQueryCriteria8 : IIsoComponent
     [IsoId("_4KLYH-SlEe-qVZLXW4RRBw")]
     [DisplayName("Securities Sub Balance Identification")]
     [IsoXmlTag("SctiesSubBalId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification37> SecuritiesSubBalanceIdentification { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface IIntraPositionQueryCriteria8 : IIsoComponent
     [IsoId("_4KLYQeSlEe-qVZLXW4RRBw")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriorityNumeric4Choice> Priority { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface IIntraPositionQueryCriteria8 : IIsoComponent
     [IsoId("_4KLYSeSlEe-qVZLXW4RRBw")]
     [DisplayName("Country Of Issue")]
     [IsoXmlTag("CtryOfIsse")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> CountryOfIssue { get; }
 
     /// <summary>
@@ -121,6 +130,7 @@ public interface IIntraPositionQueryCriteria8 : IIsoComponent
     [IsoId("_4KLYUeSlEe-qVZLXW4RRBw")]
     [DisplayName("Message Originator")]
     [IsoXmlTag("MsgOrgtr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> MessageOriginator { get; }
 
     /// <summary>

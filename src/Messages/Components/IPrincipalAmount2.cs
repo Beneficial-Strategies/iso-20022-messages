@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indication of the cash values to be settled as of the start and maturity date of the transaction.
 /// </summary>
 [IsoId("_xJW_4bOYEemDE9K-I5TT8Q")]
+[IsoDisplayName(@"Principal Amount")]
 public interface IPrincipalAmount2 : IIsoComponent
 {
     /// <summary>

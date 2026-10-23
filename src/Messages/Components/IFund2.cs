@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about an investment fund.
 /// </summary>
 [IsoId("_gBHmkQc3EeSyIPzOZ6VzBQ")]
+[IsoDisplayName(@"Fund")]
 public interface IFund2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFund2 : IIsoComponent
     [IsoId("_q2spl1-KEeS7xuKaq75oiQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IFund2 : IIsoComponent
     [IsoId("_q2spmF-KEeS7xuKaq75oiQ")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 
     /// <summary>
@@ -97,6 +101,7 @@ public interface IFund2 : IIsoComponent
     [IsoId("_gcNAHwc3EeSyIPzOZ6VzBQ")]
     [DisplayName("Percentage Of Fund Total NAV")]
     [IsoXmlTag("PctgOfFndTtlNAV")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfFundTotalNAV { get; }
 
     /// <summary>
@@ -105,6 +110,7 @@ public interface IFund2 : IIsoComponent
     [IsoId("_benuE2ATEeSkSfzdpzkxXg")]
     [DisplayName("Cash In Forecast Details")]
     [IsoXmlTag("CshInFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashInOutForecast7> CashInForecastDetails { get; }
 
     /// <summary>
@@ -113,6 +119,7 @@ public interface IFund2 : IIsoComponent
     [IsoId("_benuFGATEeSkSfzdpzkxXg")]
     [DisplayName("Cash Out Forecast Details")]
     [IsoXmlTag("CshOutFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashInOutForecast7> CashOutForecastDetails { get; }
 
     /// <summary>
@@ -121,5 +128,6 @@ public interface IFund2 : IIsoComponent
     [IsoId("_benuFWATEeSkSfzdpzkxXg")]
     [DisplayName("Net Cash Forecast Details")]
     [IsoXmlTag("NetCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetCashForecast5> NetCashForecastDetails { get; }
 }

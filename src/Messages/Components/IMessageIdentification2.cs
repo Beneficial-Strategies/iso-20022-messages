@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements providing the identification of a message.
 /// </summary>
 [IsoId("_RUE1Bdp-Ed-ak6NoX_4Aeg_-806411710")]
+[IsoDisplayName(@"Message Identification")]
 public interface IMessageIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMessageIdentification2 : IIsoComponent
     [IsoId("_RUE1Btp-Ed-ak6NoX_4Aeg_-705747842")]
     [DisplayName("Message Name Identification")]
     [IsoXmlTag("MsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageNameIdentification { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IMessageIdentification2 : IIsoComponent
     [IsoId("_RUE1B9p-Ed-ak6NoX_4Aeg_-705747860")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageIdentification { get; }
 }

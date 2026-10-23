@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Long Payment Identification4.
 /// </summary>
 [IsoId("_2AnwzTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Long Payment Identification4")]
 public interface ILongPaymentIdentification4 : IIsoComponent
 {
     /// <summary>

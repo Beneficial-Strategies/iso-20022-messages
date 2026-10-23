@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information concerning non financial counterparties.
 /// </summary>
 [IsoId("_LLI50IOdEeW2EdhfKzeL1w")]
+[IsoDisplayName(@"Non Financial Institution Sector")]
 public interface INonFinancialInstitutionSector1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INonFinancialInstitutionSector1 : IIsoComponent
     [IsoId("_oNJQcIOdEeW2EdhfKzeL1w")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<NACEDomainIdentifier> Sector { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface INonFinancialInstitutionSector1 : IIsoComponent
     [IsoId("_88jHAfP7EeS_qLctCs2aRQa")]
     [DisplayName("Clearing Threshold")]
     [IsoXmlTag("ClrThrshld")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator ClearingThreshold { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface INonFinancialInstitutionSector1 : IIsoComponent
     [IsoId("_HsMfAIOjEeWqmeP8QNJBew")]
     [DisplayName("Directly Linked Activity")]
     [IsoXmlTag("DrctlyLkdActvty")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator DirectlyLinkedActivity { get; }
 }

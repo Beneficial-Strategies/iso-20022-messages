@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a trade clearing obligation.
 /// </summary>
 [IsoId("_X5DbMExWEeywvc16MwOPfw")]
+[IsoDisplayName(@"Compare Trade Clearing Obligation")]
 public interface ICompareTradeClearingObligation1 : IIsoComponent
 {
     /// <summary>

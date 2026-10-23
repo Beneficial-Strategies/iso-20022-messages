@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the risk level.
 /// </summary>
 [IsoId("_BQa7kSGREeWO8_xZKx-MFg")]
+[IsoDisplayName(@"Risk Level 2 Choice")]
 public interface IRiskLevel2Choice : IIsoChoice { }

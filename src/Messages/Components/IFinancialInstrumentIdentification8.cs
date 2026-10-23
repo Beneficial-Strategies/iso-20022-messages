@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security.
 /// </summary>
 [IsoId("55352a29-aa1a-467b-8ab8-43ee5a0afa99")]
+[IsoDisplayName(@"Financial Instrument Identification8")]
 public interface IFinancialInstrumentIdentification8 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IFinancialInstrumentIdentification8 : IIsoComponent
     [IsoId("df9edcbe-aa96-4588-b1b8-a26c9ab1f1f8")]
     [DisplayName("Alternate Security")]
     [IsoXmlTag("AltrnScty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentIdentification9> AlternateSecurity { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DatePeriod2Choice;
 /// </summary>
 [IsoId("_jVCsNZlPEee-Zps0fZQaFQ")]
 [IsoXmlTag("FrToDt")]
+[IsoDisplayName(@"From To Date")]
 public interface IFromToDate : IDatePeriod2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IFromToDate : IDatePeriod2Choice, IIsoChoiceVariant
     [IsoId("_lhvG0YaDEee8r9VKRbnJSg")]
     [DisplayName("From Date")]
     [IsoXmlTag("FrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate FromDate { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface IFromToDate : IDatePeriod2Choice, IIsoChoiceVariant
     [IsoId("_lhvG04aDEee8r9VKRbnJSg")]
     [DisplayName("To Date")]
     [IsoXmlTag("ToDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ToDate { get; }
 }

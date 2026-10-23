@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeCounterpartyRelationship1Ch
 /// Classification of the party relationship via a pre-determined code list.
 /// </summary>
 [IsoId("_uWGXECb_Ee2BYL6XeAmCWw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITradeCounterpartyRelationship1Choice, IIsoChoiceVariant
 {
     /// <summary>

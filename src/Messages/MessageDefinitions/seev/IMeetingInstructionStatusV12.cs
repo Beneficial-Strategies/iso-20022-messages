@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_9MhSoajIEfCzuLlmLrhIvA")]
 [IsoMessage("seev.006.001.12", "MtgInstrSts", "urn:iso:std:iso:20022:tech:xsd:seev.006.001.12")]
+[IsoDisplayName(@"Meeting Instruction Status V12")]
 public interface IMeetingInstructionStatusV12 : IOuterRecord
 {
     /// <summary>
@@ -67,6 +68,7 @@ public interface IMeetingInstructionStatusV12 : IOuterRecord
     /// </summary>
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification246Choice> RightsHolder { get; }
 
     /// <summary>
@@ -74,5 +76,6 @@ public interface IMeetingInstructionStatusV12 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

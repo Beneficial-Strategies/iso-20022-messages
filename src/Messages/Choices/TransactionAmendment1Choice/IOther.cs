@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice;
 /// <summary>
 /// Other.
 /// </summary>
+[IsoDisplayName(@"Other")]
 public interface IOther : ITransactionAmendment1Choice, IIsoChoiceVariant
 {
     /// <summary>

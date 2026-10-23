@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account balances shared with issuer agent.
 /// </summary>
 [IsoId("_gC4scaNWEfC9id413JK-Ig")]
+[IsoDisplayName(@"Corporate Action Balance Details48")]
 public interface ICorporateActionBalanceDetails48 : IIsoComponent
 {
     /// <summary>

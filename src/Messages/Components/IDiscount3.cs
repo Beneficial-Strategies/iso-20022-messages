@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the details of a discount applied to the transaction.
 /// </summary>
 [IsoId("_B66xo_S0Eeife6veM7daYw")]
+[IsoDisplayName(@"Discount")]
 public interface IDiscount3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDiscount3 : IIsoComponent
     [IsoId("_B67YsPS0Eeife6veM7daYw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IDiscount3 : IIsoComponent
     [IsoId("_B66xpPS0Eeife6veM7daYw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

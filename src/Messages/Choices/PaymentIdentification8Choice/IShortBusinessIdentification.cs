@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification8Choice;
 /// <summary>
 /// Short Business Identification.
 /// </summary>
+[IsoDisplayName(@"Short Business Identification")]
 public interface IShortBusinessIdentification : IPaymentIdentification8Choice, IIsoChoiceVariant
 {
     /// <summary>

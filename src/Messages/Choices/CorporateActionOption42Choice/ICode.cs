@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionOption42Choice;
 /// Specifies the corporate action options available to the account owner.
 /// </summary>
 [IsoId("_BHW2ax9QEeuFz_FaCzCLgQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionOption42Choice, IIsoChoiceVariant
 {
     /// <summary>

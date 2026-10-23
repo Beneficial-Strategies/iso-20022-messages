@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for the failed settlement status.
 /// </summary>
 [IsoId("_RR_KV9p-Ed-ak6NoX_4Aeg_1532242447")]
+[IsoDisplayName(@"Failed Settlement Status")]
 public interface IFailedSettlementStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFailedSettlementStatus1 : IIsoComponent
     [IsoId("_RR_KWNp-Ed-ak6NoX_4Aeg_1532242482")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Reason { get; }
 
     /// <summary>

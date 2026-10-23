@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of generated status.
 /// </summary>
 [IsoId("_8VJvzZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Generated Status 8 Choice")]
 public interface IGeneratedStatus8Choice : IIsoChoice { }

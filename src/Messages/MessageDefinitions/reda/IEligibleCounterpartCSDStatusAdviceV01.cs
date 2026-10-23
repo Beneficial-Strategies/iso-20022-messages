@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.reda;
     "ElgblCntrptCSDStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:reda.044.001.01"
 )]
+[IsoDisplayName(@"Eligible Counterpart CSD Status Advice V01")]
 public interface IEligibleCounterpartCSDStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -36,5 +37,6 @@ public interface IEligibleCounterpartCSDStatusAdviceV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

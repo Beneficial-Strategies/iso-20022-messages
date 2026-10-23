@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money due to a party as compensation for a service.
 /// </summary>
 [IsoId("_VPdsitp-Ed-ak6NoX_4Aeg_-1738143487")]
+[IsoDisplayName(@"Commission")]
 public interface ICommission7 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICommission7 : IIsoComponent
     [IsoId("_VPm2cdp-Ed-ak6NoX_4Aeg_-1738143410")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Rate { get; }
 
     /// <summary>

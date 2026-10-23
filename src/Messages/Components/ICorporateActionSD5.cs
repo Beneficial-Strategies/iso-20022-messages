@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains details about called certificates.
 /// </summary>
 [IsoId("_1VdexDL3EeKU9IrkkToqcw_-1325892976")]
+[IsoDisplayName(@"Corporate Action SD")]
 public interface ICorporateActionSD5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionSD5 : IIsoComponent
     [IsoId("_1VdexTL3EeKU9IrkkToqcw_1892750447")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText CertificateNumber { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICorporateActionSD5 : IIsoComponent
     [IsoId("_1VmosDL3EeKU9IrkkToqcw_1945798532")]
     [DisplayName("Certificate Called Amount")]
     [IsoXmlTag("CertClldAmt")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber CertificateCalledAmount { get; }
 }

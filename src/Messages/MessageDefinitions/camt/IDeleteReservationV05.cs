@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_jwlbVxbvEeiyVv5j1vf1VQ")]
 [IsoMessage("camt.049.001.05", "DelRsvatn", "urn:iso:std:iso:20022:tech:xsd:camt.049.001.05")]
+[Description(@"Scope|The DeleteReservation message is used to request the deletion of one particular reservation by the member and managed by the transaction administrator.|Usage|The deletion of a reservation in the system, will not only reset the reserved liquidity to zero, but also delete the reservation itself from the system: only the default reservation for the current business day remains in the system.")]
+[IsoDisplayName(@"Delete Reservation V")]
 public interface IDeleteReservationV05 : IOuterRecord
 {
     /// <summary>
@@ -36,5 +38,6 @@ public interface IDeleteReservationV05 : IOuterRecord
     [IsoId("_jwlbXRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

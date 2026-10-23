@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport3Choice;
 /// </summary>
 [IsoId("_0mq3s64bEemB_csI4yyKLA")]
 [IsoXmlTag("Err")]
+[IsoDisplayName(@"Error")]
 public interface IError : IReuseDataReport3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IError : IReuseDataReport3Choice, IIsoChoiceVariant
     [IsoId("_4Uz9Ya4bEemB_csI4yyKLA")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IError : IReuseDataReport3Choice, IIsoChoiceVariant
     [IsoId("_4Uz9Y64bEemB_csI4yyKLA")]
     [DisplayName("Reporting Date Time")]
     [IsoXmlTag("RptgDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ReportingDateTime { get; }
 
     /// <summary>
@@ -42,5 +46,6 @@ public interface IError : IReuseDataReport3Choice, IIsoChoiceVariant
     [IsoId("_4Uz9Z64bEemB_csI4yyKLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

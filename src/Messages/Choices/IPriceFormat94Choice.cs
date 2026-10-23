@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Price Format94Choice.
 /// </summary>
 [IsoId("_nLmjw5t3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Price Format94Choice")]
 public interface IPriceFormat94Choice : IIsoChoice { }

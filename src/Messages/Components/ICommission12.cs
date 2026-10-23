@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money due to a party as compensation for a service.
 /// </summary>
 [IsoId("_RsEeQ9p-Ed-ak6NoX_4Aeg_356134401")]
+[IsoDisplayName(@"Commission")]
 public interface ICommission12 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICommission12 : IIsoComponent
     [IsoId("_RsEeRdp-Ed-ak6NoX_4Aeg_356134444")]
     [DisplayName("Extended Type")]
     [IsoXmlTag("XtndedTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedType { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ICommission12 : IIsoComponent
     [IsoId("_RsEeR9p-Ed-ak6NoX_4Aeg_356134504")]
     [DisplayName("Extended Basis")]
     [IsoXmlTag("XtndedBsis")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedBasis { get; }
 
     /// <summary>
@@ -65,5 +70,7 @@ public interface ICommission12 : IIsoComponent
     [IsoId("_RsNoMNp-Ed-ak6NoX_4Aeg_356134616")]
     [DisplayName("Commercial Agreement Reference")]
     [IsoXmlTag("ComrclAgrmtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommercialAgreementReference { get; }
 }

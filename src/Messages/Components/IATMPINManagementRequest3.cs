@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATMPIN Management Request3.
 /// </summary>
 [IsoId("_Q_LxkaEtEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATMPIN Management Request3")]
 public interface IATMPINManagementRequest3 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the statement.
 /// </summary>
 [IsoId("_Qp52ptp-Ed-ak6NoX_4Aeg_400350199")]
+[IsoDisplayName(@"Statement")]
 public interface IStatement20 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IStatement20 : IIsoComponent
     [IsoId("_Qp52qNp-Ed-ak6NoX_4Aeg_286511133")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryReference { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IStatement20 : IIsoComponent
     [IsoId("_Qp52qdp-Ed-ak6NoX_4Aeg_-1707633573")]
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StatementIdentification { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface IStatement20 : IIsoComponent
     [IsoId("_QqDnpNp-Ed-ak6NoX_4Aeg_1475938173")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface IStatement20 : IIsoComponent
     [IsoId("_QqDnpdp-Ed-ak6NoX_4Aeg_478865820")]
     [DisplayName("Audited Indicator")]
     [IsoXmlTag("AudtdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AuditedIndicator { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface IStatement20 : IIsoComponent
     [IsoId("_QqDnptp-Ed-ak6NoX_4Aeg_-582425320")]
     [DisplayName("Sub Account Indicator")]
     [IsoXmlTag("SubAcctInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SubAccountIndicator { get; }
 
     /// <summary>
@@ -97,5 +105,6 @@ public interface IStatement20 : IIsoComponent
     [IsoId("_QqDnp9p-Ed-ak6NoX_4Aeg_365026754")]
     [DisplayName("Tax Lot Indicator")]
     [IsoXmlTag("TaxLotInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TaxLotIndicator { get; }
 }

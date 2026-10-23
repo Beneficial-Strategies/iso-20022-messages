@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType4Choice;
 /// Ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument.
 /// </summary>
 [IsoId("_Rp-zktp-Ed-ak6NoX_4Aeg_-171033889")]
+[IsoDisplayName(@"Percentage")]
 public interface IPercentage : IRateType4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPercentage : IRateType4Choice, IIsoChoiceVariant
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("Pctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

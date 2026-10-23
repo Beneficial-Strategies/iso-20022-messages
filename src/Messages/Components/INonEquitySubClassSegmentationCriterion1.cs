@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the sub-class according to one of the segmentation criteria defined as per local regulation.
 /// </summary>
 [IsoId("_HcjrYGkjEeq2H8ygpnTfYw")]
+[IsoDisplayName(@"Non Equity Sub Class Segmentation Criterion")]
 public interface INonEquitySubClassSegmentationCriterion1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface INonEquitySubClassSegmentationCriterion1 : IIsoComponent
     [IsoId("_uW3j4GkjEeq2H8ygpnTfYw")]
     [DisplayName("Criteria Value")]
     [IsoXmlTag("CritVal")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text CriteriaValue { get; }
 }

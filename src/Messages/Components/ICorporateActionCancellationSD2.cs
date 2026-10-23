@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding additional comments.
 /// </summary>
 [IsoId("_1g7u9DL3EeKU9IrkkToqcw_1580284349")]
+[IsoDisplayName(@"Corporate Action Cancellation SD")]
 public interface ICorporateActionCancellationSD2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionCancellationSD2 : IIsoComponent
     [IsoId("_1g7u9TL3EeKU9IrkkToqcw_987664006")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ICorporateActionCancellationSD2 : IIsoComponent
     [IsoId("_1g7u9jL3EeKU9IrkkToqcw_-1900812764")]
     [DisplayName("External Comments")]
     [IsoXmlTag("XtrnlCmnts")]
+    [IsoSimpleType(IsoSimpleType.Max8000Text)]
+    [StringLength(8000, MinimumLength = 1)]
     Max8000Text? ExternalComments { get; }
 }

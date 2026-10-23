@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrTxLgRptRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.025.001.02"
 )]
+[Description(@"This AcceptorTransactionLogReportResponse message is sent by an Acquirer or its IntermediaryAgent to provide the report previously expected by a POI.")]
+[IsoDisplayName(@"Acceptor Transaction Log Report Response V")]
 public interface IAcceptorTransactionLogReportResponseV02 : IOuterRecord
 {
     /// <summary>

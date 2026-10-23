@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice;
 /// <summary>
 /// Technical Address.
 /// </summary>
+[IsoDisplayName(@"Technical Address")]
 public interface ITechnicalAddress : ISystemPartyModification3Choice, IIsoChoiceVariant
 {
     /// <summary>

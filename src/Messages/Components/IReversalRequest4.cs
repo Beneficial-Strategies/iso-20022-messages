@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to request a Reversal.
 /// </summary>
 [IsoId("_uVlPgU3_Eey_VecAUE-C9Q")]
+[IsoDisplayName(@"Reversal Request")]
 public interface IReversalRequest4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IReversalRequest4 : IIsoComponent
     [IsoId("_ubzMQ03_Eey_VecAUE-C9Q")]
     [DisplayName("Loyalty Data")]
     [IsoXmlTag("LltyData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyRequestData3> LoyaltyData { get; }
 
     /// <summary>

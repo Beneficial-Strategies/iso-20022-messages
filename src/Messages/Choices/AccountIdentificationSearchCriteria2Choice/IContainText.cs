@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationSearchCrite
 /// Search for one or more accounts based on partial identification of the account(s).
 /// </summary>
 [IsoId("_g7QEumliEeGaMcKyqKNRfQ_-1833344609")]
+[IsoDisplayName(@"Contain Text")]
 public interface IContainText : IAccountIdentificationSearchCriteria2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IContainText : IAccountIdentificationSearchCriteria2Choice, IIs
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("CTTxt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

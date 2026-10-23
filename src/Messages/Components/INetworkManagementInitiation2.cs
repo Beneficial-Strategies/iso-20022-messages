@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to network management services.
 /// </summary>
 [IsoId("_9m_bMYv7EeumSPwlS1PkxQ")]
+[IsoDisplayName(@"Network Management Initiation")]
 public interface INetworkManagementInitiation2 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface INetworkManagementInitiation2 : IIsoComponent
     [IsoId("_9sMER4v7EeumSPwlS1PkxQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
 /// <summary>
 /// Amount.
 /// </summary>
+[IsoDisplayName(@"Amount")]
 public interface IAmount : IInterestRateUsedForPaymentFormat11Choice, IIsoChoiceVariant
 {
     /// <summary>

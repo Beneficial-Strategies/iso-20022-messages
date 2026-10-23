@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionCondition11
 /// Settlement conditions expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_AbMjsNokEeC60axPepSq7g_-2022735726")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlementTransactionCondition11Choice, IIsoChoiceVariant
 {
     /// <summary>

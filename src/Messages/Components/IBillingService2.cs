@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the values used for every line item service in the statement.
 /// </summary>
 [IsoId("_aySiUDq2EeWZFYSPlduMhw")]
+[IsoDisplayName(@"Billing Service")]
 public interface IBillingService2 : IIsoComponent
 {
     /// <summary>

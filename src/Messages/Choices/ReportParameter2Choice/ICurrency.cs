@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportParameter2Choice;
 /// Currency for which the estimated cash flow is being reported.
 /// </summary>
 [IsoId("_U1-1gtp-Ed-ak6NoX_4Aeg_-922147042")]
+[IsoDisplayName(@"Currency")]
 public interface ICurrency : IReportParameter2Choice, IIsoChoiceVariant
 {
     /// <summary>

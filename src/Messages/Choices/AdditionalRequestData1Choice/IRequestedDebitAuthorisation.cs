@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRequestData1Choice;
 /// <summary>
 /// Requested Debit Authorisation.
 /// </summary>
+[IsoDisplayName(@"Requested Debit Authorisation")]
 public interface IRequestedDebitAuthorisation : IAdditionalRequestData1Choice, IIsoChoiceVariant
 {
     /// <summary>

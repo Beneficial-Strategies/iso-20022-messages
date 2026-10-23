@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status advising on the rejection of the cancellation request.
 /// </summary>
 [IsoId("_RVa42Np-Ed-ak6NoX_4Aeg_-1616407173")]
+[IsoDisplayName(@"Cancellation Rejection Status")]
 public interface ICancellationRejectionStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICancellationRejectionStatus1 : IIsoComponent
     [IsoId("_RVkCwdp-Ed-ak6NoX_4Aeg_1990577179")]
     [DisplayName("Extended Reason")]
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedReason { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface ICancellationRejectionStatus1 : IIsoComponent
     [IsoId("_RVkCwtp-Ed-ak6NoX_4Aeg_218041376")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

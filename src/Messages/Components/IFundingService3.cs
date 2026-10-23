@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Funding Service3.
 /// </summary>
 [IsoId("_LlFl0XHAEe60F8I8TAMKmg")]
+[IsoDisplayName(@"Funding Service3")]
 public interface IFundingService3 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface IFundingService3 : IIsoComponent
     /// </summary>
     [DisplayName("Funding Source")]
     [IsoXmlTag("FndgSrc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundingSource4> FundingSource { get; }
 
     /// <summary>

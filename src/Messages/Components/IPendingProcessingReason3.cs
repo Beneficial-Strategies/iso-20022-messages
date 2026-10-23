@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// The status of an instruction, advice or request.
 /// </summary>
 [IsoId("_sJQsMf8dEeCrw_OT0uBMXQ")]
+[IsoDisplayName(@"Pending Processing Reason")]
 public interface IPendingProcessingReason3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IPendingProcessingReason3 : IIsoComponent
     [IsoId("_sJQsPf8dEeCrw_OT0uBMXQ")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

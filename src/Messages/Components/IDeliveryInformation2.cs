@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Delivery information for the purpose of a retrieval fulfilment.
 /// </summary>
 [IsoId("_Acm7UVaAEeeFltjJxERUxw")]
+[IsoDisplayName(@"Delivery Information")]
 public interface IDeliveryInformation2 : IIsoComponent
 {
     /// <summary>

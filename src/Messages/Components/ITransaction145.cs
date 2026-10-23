@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains transaction details.
 /// </summary>
 [IsoId("_QOxOMYKyEeu4svNQ5N-l6w")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction145 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17c4KyEeu4svNQ5N-l6w")]
     [DisplayName("Transaction Sub Type")]
     [IsoXmlTag("TxSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionSubType { get; }
 
     /// <summary>
@@ -44,6 +47,8 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17eYKyEeu4svNQ5N-l6w")]
     [DisplayName("Other Transaction Attribute")]
     [IsoXmlTag("OthrTxAttr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherTransactionAttribute { get; }
 
     /// <summary>
@@ -53,6 +58,7 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17e4KyEeu4svNQ5N-l6w")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -61,6 +67,7 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17fYKyEeu4svNQ5N-l6w")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -70,6 +77,7 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17f4KyEeu4svNQ5N-l6w")]
     [DisplayName("Pre Authorisation Time Limit")]
     [IsoXmlTag("PreAuthstnTmLmt")]
+    [IsoSimpleType(IsoSimpleType.Max6NumericText)]
     Max6NumericText? PreAuthorisationTimeLimit { get; }
 
     /// <summary>
@@ -78,6 +86,7 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17dYKyEeu4svNQ5N-l6w")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalService2> AdditionalService { get; }
 
     /// <summary>
@@ -86,6 +95,7 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17gYKyEeu4svNQ5N-l6w")]
     [DisplayName("Associated Data Indicator")]
     [IsoXmlTag("AssoctdDataInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AssociatedDataIndicator { get; }
 
     /// <summary>
@@ -94,6 +104,8 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17g4KyEeu4svNQ5N-l6w")]
     [DisplayName("Associated Data Reference")]
     [IsoXmlTag("AssoctdDataRef")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AssociatedDataReference { get; }
 
     /// <summary>
@@ -102,6 +114,8 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17hYKyEeu4svNQ5N-l6w")]
     [DisplayName("Associated Data Destination")]
     [IsoXmlTag("AssoctdDataDstn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AssociatedDataDestination { get; }
 
     /// <summary>
@@ -110,6 +124,7 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17h4KyEeu4svNQ5N-l6w")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialProgrammeQualification1> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -126,6 +141,7 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17i4KyEeu4svNQ5N-l6w")]
     [DisplayName("Dispute Data")]
     [IsoXmlTag("DsptData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeData3> DisputeData { get; }
 
     /// <summary>
@@ -142,6 +158,7 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17j4KyEeu4svNQ5N-l6w")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAmounts3> AdditionalAmount { get; }
 
     /// <summary>
@@ -150,6 +167,7 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17kYKyEeu4svNQ5N-l6w")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee2> AdditionalFee { get; }
 
     /// <summary>
@@ -158,6 +176,7 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17k4KyEeu4svNQ5N-l6w")]
     [DisplayName("Original Additional Fee")]
     [IsoXmlTag("OrgnlAddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee2> OriginalAdditionalFee { get; }
 
     /// <summary>
@@ -166,6 +185,7 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17lYKyEeu4svNQ5N-l6w")]
     [DisplayName("Deposit Details")]
     [IsoXmlTag("DpstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDepositDetails2> DepositDetails { get; }
 
     /// <summary>
@@ -200,6 +220,8 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17nYKyEeu4svNQ5N-l6w")]
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? TransactionDescription { get; }
 
     /// <summary>
@@ -208,6 +230,7 @@ public interface ITransaction145 : IIsoComponent
     [IsoId("_QT17n4KyEeu4svNQ5N-l6w")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 
     /// <summary>

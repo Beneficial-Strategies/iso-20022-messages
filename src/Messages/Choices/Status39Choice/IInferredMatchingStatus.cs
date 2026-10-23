@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status39Choice;
 /// Provides the matching status of an instruction as known by the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).
 /// </summary>
 [IsoId("_gEIFeDi8Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Inferred Matching Status")]
 public interface IInferredMatchingStatus : IStatus39Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

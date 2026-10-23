@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of creditor reference.
 /// </summary>
 [IsoId("_T4ItMtp-Ed-ak6NoX_4Aeg_604337645")]
+[IsoDisplayName(@"Creditor Reference Type")]
 public interface ICreditorReferenceType2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICreditorReferenceType2 : IIsoComponent
     [IsoId("_T4ItNNp-Ed-ak6NoX_4Aeg_604337984")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

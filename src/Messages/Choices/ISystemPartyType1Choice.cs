@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the system party type.
 /// </summary>
 [IsoId("_DZrOc1hPEeih3fUfzR38Ig")]
+[IsoDisplayName(@"System Party Type 1 Choice")]
 public interface ISystemPartyType1Choice : IIsoChoice { }

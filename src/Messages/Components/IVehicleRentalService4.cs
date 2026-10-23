@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vehicle rental service provides detailed vehicle rental information.
 /// </summary>
 [IsoId("_MKCHYUhsEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Vehicle Rental Service4")]
 public interface IVehicleRentalService4 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IVehicleRentalService4 : IIsoComponent
     [IsoId("_IlQ3x0h6EfCMZJtj4J7UGQ")]
     [DisplayName("Company Local Data")]
     [IsoXmlTag("CpnyLclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData20> CompanyLocalData { get; }
 
     /// <summary>
@@ -121,6 +123,7 @@ public interface IVehicleRentalService4 : IIsoComponent
     [IsoId("_MM6cV0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Additional Driver")]
     [IsoXmlTag("AddtlDrvr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDriverInParty4> AdditionalDriver { get; }
 
     /// <summary>
@@ -129,6 +132,7 @@ public interface IVehicleRentalService4 : IIsoComponent
     [IsoId("_MM6cWUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Loyalty Programme")]
     [IsoXmlTag("LltyPrgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyProgramme4> LoyaltyProgramme { get; }
 
     /// <summary>
@@ -177,6 +181,7 @@ public interface IVehicleRentalService4 : IIsoComponent
     [IsoId("_HfRt00h_EfCMZJtj4J7UGQ")]
     [DisplayName("Pickup Location")]
     [IsoXmlTag("PckpLctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAddress4> PickupLocation { get; }
 
     /// <summary>
@@ -345,6 +350,7 @@ public interface IVehicleRentalService4 : IIsoComponent
     [IsoId("_sQu5EUh-EfCMZJtj4J7UGQ")]
     [DisplayName("Rental Rate")]
     [IsoXmlTag("RntlRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRentalRate3> RentalRate { get; }
 
     /// <summary>
@@ -361,6 +367,7 @@ public interface IVehicleRentalService4 : IIsoComponent
     [IsoId("_sQu5FEh-EfCMZJtj4J7UGQ")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVehicleRentalAdditionalAmount1> AdditionalAmount { get; }
 
     /// <summary>
@@ -369,6 +376,7 @@ public interface IVehicleRentalService4 : IIsoComponent
     [IsoId("_sQu5FUh-EfCMZJtj4J7UGQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> Tax { get; }
 
     /// <summary>
@@ -377,6 +385,7 @@ public interface IVehicleRentalService4 : IIsoComponent
     [IsoId("_GAPeokhsEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -385,5 +394,6 @@ public interface IVehicleRentalService4 : IIsoComponent
     [IsoId("_GAPeo0hsEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

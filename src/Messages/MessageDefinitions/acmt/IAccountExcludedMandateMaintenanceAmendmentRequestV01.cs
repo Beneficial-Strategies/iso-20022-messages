@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctExcldMndtMntncAmdmntReq",
     "urn:iso:std:iso:20022:tech:xsd:acmt.016.001.01"
 )]
+[Description(@"Scope|The AccountExcludedMandateMaintenanceAmendmentRequest message is sent from an organisation to a financial institution as part of the account maintenance process. It is sent in response to a request from the financial institution to send additional information.|Usage|This update is about account details excluding any mandate information. The organisation will specify under the Account and Organisation tags the complete information as it should be in the financial institutions records after processing the update request.")]
+[IsoDisplayName(@"Account Excluded Mandate Maintenance Amendment Request V")]
 public interface IAccountExcludedMandateMaintenanceAmendmentRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -67,6 +69,7 @@ public interface IAccountExcludedMandateMaintenanceAmendmentRequestV01 : IOuterR
     [IsoId("_pW9PttE9Ed-BzquC8wXy7w_705170154")]
     [DisplayName("Organisation")]
     [IsoXmlTag("Org")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation6> Organisation { get; }
 
     /// <summary>
@@ -75,5 +78,6 @@ public interface IAccountExcludedMandateMaintenanceAmendmentRequestV01 : IOuterR
     [IsoId("_pW9Pt9E9Ed-BzquC8wXy7w_173839057")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature1> DigitalSignature { get; }
 }

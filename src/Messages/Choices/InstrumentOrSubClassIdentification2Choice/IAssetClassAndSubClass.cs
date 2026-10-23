@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentOrSubClassIdentificati
 /// </summary>
 [IsoId("_BSnWY6aUEeqZmriXpMtonA")]
 [IsoXmlTag("AsstClssAndSubClss")]
+[IsoDisplayName(@"Asset Class And Sub Class")]
 public interface IAssetClassAndSubClass
     : IInstrumentOrSubClassIdentification2Choice,
         IIsoChoiceVariant

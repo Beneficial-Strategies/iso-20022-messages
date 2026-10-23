@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EquityDerivative3Choice;
 /// Populated when sub asset class is either swaps or portfolio swaps and the underlying type is a single name.
 /// </summary>
 [IsoId("_hW-FPGlPEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Single Name")]
 public interface ISingleName : IEquityDerivative3Choice, IIsoChoiceVariant
 {
     /// <summary>

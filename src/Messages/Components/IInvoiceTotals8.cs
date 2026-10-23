@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies totals related to the invoice.
 /// </summary>
 [IsoId("_xQ9M3Uw0EfCpsI1b9uv5FQ")]
+[IsoDisplayName(@"Invoice Totals8")]
 public interface IInvoiceTotals8 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IInvoiceTotals8 : IIsoComponent
     [IsoId("_xSwjpUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Service Category Totals")]
     [IsoXmlTag("SvcCtgyTtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IServiceCategoryTotals7> ServiceCategoryTotals { get; }
 }

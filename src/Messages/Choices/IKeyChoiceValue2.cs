@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Element containing the key information.
 /// </summary>
 [IsoId("_Fav_cbTqEeeQy4o2AayYHg")]
+[IsoDisplayName(@"Key Choice Value")]
 public interface IKeyChoiceValue2 : IIsoChoice { }

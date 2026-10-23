@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource5Choice;
 /// Country of the proprietary identification scheme.
 /// </summary>
 [IsoId("_n7S8IV9NEeS7xuKaq75oiQ")]
+[IsoDisplayName(@"Domestic Identification Source")]
 public interface IDomesticIdentificationSource : IIdentificationSource5Choice, IIsoChoiceVariant
 {
     /// <summary>

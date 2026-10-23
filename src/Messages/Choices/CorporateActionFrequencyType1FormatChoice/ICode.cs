@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionFrequencyType1For
 /// Standard code to specify the frequency of a CA event.
 /// </summary>
 [IsoId("_RmZ7INp-Ed-ak6NoX_4Aeg_1510389883")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionFrequencyType1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

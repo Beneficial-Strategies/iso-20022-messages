@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Subscription leg, or switch-in, of a switch order.
 /// </summary>
 [IsoId("_4MizGzbsEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Switch Subscription Leg Order")]
 public interface ISwitchSubscriptionLegOrder6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISwitchSubscriptionLegOrder6 : IIsoComponent
     [IsoId("_4kpxFTbsEead9bDRE_1DAQ")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -89,6 +92,7 @@ public interface ISwitchSubscriptionLegOrder6 : IIsoComponent
     [IsoId("_4kpxKTbsEead9bDRE_1DAQ")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>
@@ -105,6 +109,8 @@ public interface ISwitchSubscriptionLegOrder6 : IIsoComponent
     [IsoId("_4kpxLTbsEead9bDRE_1DAQ")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>

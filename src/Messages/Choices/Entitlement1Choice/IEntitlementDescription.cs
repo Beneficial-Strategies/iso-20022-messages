@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Entitlement1Choice;
 /// Specifies the calculation method of the number of votes assigned to one security. This element should be used when the entitlement calculation rule is complex.
 /// </summary>
 [IsoId("_RDromNp-Ed-ak6NoX_4Aeg_362471815")]
+[IsoDisplayName(@"Entitlement Description")]
 public interface IEntitlementDescription : IEntitlement1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IEntitlementDescription : IEntitlement1Choice, IIsoChoiceVarian
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("EntitlmntDesc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

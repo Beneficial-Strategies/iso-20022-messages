@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes how time to maturity is reported.
 /// </summary>
 [IsoId("_USvwUMVbEeiYpLQka876sg")]
+[IsoDisplayName(@"Maturity Term")]
 public interface IMaturityTerm2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IMaturityTerm2 : IIsoComponent
     [IsoId("_USvwUcVbEeiYpLQka876sg")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number Value { get; }
 }

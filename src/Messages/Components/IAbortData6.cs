@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Abort Data6.
 /// </summary>
 [IsoId("_Bpy0cZFIEe6reqfAp4CunQ")]
+[IsoDisplayName(@"Abort Data6")]
 public interface IAbortData6 : IIsoComponent
 {
     /// <summary>

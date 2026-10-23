@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Option Multiple Barrier Levels1.
 /// </summary>
 [IsoId("_ttTVodyaEe6BHYBNhkieQQ")]
+[IsoDisplayName(@"Option Multiple Barrier Levels1")]
 public interface IOptionMultipleBarrierLevels1 : IIsoComponent
 {
     /// <summary>

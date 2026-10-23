@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the request of certificate management.
 /// </summary>
 [IsoId("_9xqf4XIvEe299ZbWCkdR_w")]
+[IsoDisplayName(@"Certificate Management Request")]
 public interface ICertificateManagementRequest3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ICertificateManagementRequest3 : IIsoComponent
     [IsoId("_94jLB3IvEe299ZbWCkdR_w")]
     [DisplayName("Security Domain")]
     [IsoXmlTag("SctyDomn")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SecurityDomain { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICertificateManagementRequest3 : IIsoComponent
     [IsoId("_4c7aYHIwEe299ZbWCkdR_w")]
     [DisplayName("Key Function")]
     [IsoXmlTag("KeyFctn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<KeyUsage1Code> KeyFunction { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ICertificateManagementRequest3 : IIsoComponent
     [IsoId("_nO-EIHIxEe299ZbWCkdR_w")]
     [DisplayName("POI Challenge Value")]
     [IsoXmlTag("POIChllngVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary POIChallengeValue { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ICertificateManagementRequest3 : IIsoComponent
     [IsoId("_JNvPsHIyEe299ZbWCkdR_w")]
     [DisplayName("POI Date Time")]
     [IsoXmlTag("POIDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime POIDateTime { get; }
 
     /// <summary>
@@ -73,6 +79,8 @@ public interface ICertificateManagementRequest3 : IIsoComponent
     [IsoId("_94jLCXIvEe299ZbWCkdR_w")]
     [DisplayName("Binary Certification Request")]
     [IsoXmlTag("BinryCertfctnReq")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text? BinaryCertificationRequest { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface ICertificateManagementRequest3 : IIsoComponent
     [IsoId("_94jLDXIvEe299ZbWCkdR_w")]
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
+    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
     Max10KBinary? ClientCertificate { get; }
 
     /// <summary>

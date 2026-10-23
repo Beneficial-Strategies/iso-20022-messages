@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Digital account where digital assets or digital tokens can be stored and where an entry is made.
 /// </summary>
 [IsoId("_SRLpsUY1EeyIDL5Gtobnyw")]
+[IsoDisplayName(@"Block Chain Address Wallet")]
 public interface IBlockChainAddressWallet8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBlockChainAddressWallet8 : IIsoComponent
     [IsoId("_ShIKMUY1EeyIDL5Gtobnyw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text Identification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IBlockChainAddressWallet8 : IIsoComponent
     [IsoId("_ShIKWUY1EeyIDL5Gtobnyw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax70Text)]
+    [StringLength(70, MinimumLength = 1)]
     RestrictedFINXMax70Text? Name { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface IBlockChainAddressWallet8 : IIsoComponent
     [IsoId("_ShIKYUY1EeyIDL5Gtobnyw")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? Designation { get; }
 }

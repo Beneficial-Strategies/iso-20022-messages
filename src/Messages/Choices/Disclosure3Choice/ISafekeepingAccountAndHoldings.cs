@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Disclosure3Choice;
 /// <summary>
 /// Safekeeping Account And Holdings.
 /// </summary>
+[IsoDisplayName(@"Safekeeping Account And Holdings")]
 public interface ISafekeepingAccountAndHoldings : IDisclosure3Choice, IIsoChoiceVariant
 {
     /// <summary>

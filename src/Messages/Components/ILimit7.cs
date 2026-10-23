@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details on the limits.
 /// </summary>
 [IsoId("_Rf2uJZlhEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Limit")]
 public interface ILimit7 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ILimit7 : IIsoComponent
     [IsoId("_Rt38DZlhEeeE1Ya-LgRsuQ")]
     [DisplayName("Used Percentage")]
     [IsoXmlTag("UsdPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? UsedPercentage { get; }
 
     /// <summary>

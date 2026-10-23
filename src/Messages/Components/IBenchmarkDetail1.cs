@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies further details of the benchmark.
 /// </summary>
 [IsoId("_ZCkIIPKNEeaz_YGUGLjP6A")]
+[IsoDisplayName(@"Benchmark Detail")]
 public interface IBenchmarkDetail1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBenchmarkDetail1 : IIsoComponent
     [IsoId("_D5BoIBnVEee-a6ThOKLTug")]
     [DisplayName("Full Name")]
     [IsoXmlTag("FullNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text FullName { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IBenchmarkDetail1 : IIsoComponent
     [IsoId("_-cTTsDrkEeedCZZ8dIPp6g")]
     [DisplayName("Comment")]
     [IsoXmlTag("Cmnt")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text? Comment { get; }
 }

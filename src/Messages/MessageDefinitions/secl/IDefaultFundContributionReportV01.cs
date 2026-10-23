@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.secl;
     "DfltFndCntrbtnRpt",
     "urn:iso:std:iso:20022:tech:xsd:secl.006.001.01"
 )]
+[IsoDisplayName(@"Default Fund Contribution Report V01")]
 public interface IDefaultFundContributionReportV01 : IOuterRecord
 {
     /// <summary>
@@ -43,6 +44,7 @@ public interface IDefaultFundContributionReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Default Fund Details")]
     [IsoXmlTag("DfltFndDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDefaultFund1> DefaultFundDetails { get; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public interface IDefaultFundContributionReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Collateral Details")]
     [IsoXmlTag("CollDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateral3> CollateralDetails { get; }
 
     /// <summary>
@@ -64,5 +67,6 @@ public interface IDefaultFundContributionReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

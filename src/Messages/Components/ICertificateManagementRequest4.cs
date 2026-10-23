@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the request of certificate management.
 /// </summary>
 [IsoId("_HLB6kZ__EfC4Q_xhaK1hdQ")]
+[IsoDisplayName(@"Certificate Management Request4")]
 public interface ICertificateManagementRequest4 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ICertificateManagementRequest4 : IIsoComponent
     [IsoId("_HMZMnZ__EfC4Q_xhaK1hdQ")]
     [DisplayName("Key Function")]
     [IsoXmlTag("KeyFctn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<KeyUsage1Code> KeyFunction { get; }
 
     /// <summary>

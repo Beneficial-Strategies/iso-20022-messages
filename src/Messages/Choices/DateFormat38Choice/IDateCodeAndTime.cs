@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat38Choice;
 /// </summary>
 [IsoId("_ctcM15KQEeWHWpTQn1FFVg")]
 [IsoXmlTag("DtCdAndTm")]
+[IsoDisplayName(@"Date Code And Time")]
 public interface IDateCodeAndTime : IDateFormat38Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IDateCodeAndTime : IDateFormat38Choice, IIsoChoiceVariant
     [IsoId("_ctczEZKQEeWHWpTQn1FFVg")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime Time { get; }
 }

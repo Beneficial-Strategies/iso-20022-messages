@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditorReferenceType2Choice;
 /// <summary>
 /// Type of creditor reference, in a proprietary form.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICreditorReferenceType2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of the redemption part, in a switch between investment funds or investment fund classes.
 /// </summary>
 [IsoId("_VWBAgtp-Ed-ak6NoX_4Aeg_-733728591")]
+[IsoDisplayName(@"Switch Redemption Leg Execution")]
 public interface ISwitchRedemptionLegExecution2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISwitchRedemptionLegExecution2 : IIsoComponent
     [IsoId("_VWBAg9p-Ed-ak6NoX_4Aeg_-733727652")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISwitchRedemptionLegExecution2 : IIsoComponent
     [IsoId("_VWKxcNp-Ed-ak6NoX_4Aeg_-733727635")]
     [DisplayName("Leg Execution Identification")]
     [IsoXmlTag("LegExctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegExecutionIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ISwitchRedemptionLegExecution2 : IIsoComponent
     [IsoId("_VWKxc9p-Ed-ak6NoX_4Aeg_-733728265")]
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? HoldingsRedemptionRate { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface ISwitchRedemptionLegExecution2 : IIsoComponent
     [IsoId("_VWKxeNp-Ed-ak6NoX_4Aeg_-733728144")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -169,6 +176,7 @@ public interface ISwitchRedemptionLegExecution2 : IIsoComponent
     [IsoId("_VWT7aNp-Ed-ak6NoX_4Aeg_-733727677")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>

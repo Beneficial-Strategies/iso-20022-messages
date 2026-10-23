@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus8Choice;
 
 /// <summary>Status of the order is cancelled.</summary>
 [IsoId("4c52b330-d93d-4688-8d84-a247ffa15233")]
+[IsoDisplayName(@"Cancelled")]
 public interface ICancelled : IOrderStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

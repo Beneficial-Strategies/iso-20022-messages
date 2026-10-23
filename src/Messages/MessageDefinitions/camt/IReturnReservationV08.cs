@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3UJoTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.047.001.08", "RtrRsvatn", "urn:iso:std:iso:20022:tech:xsd:camt.047.001.08")]
+[IsoDisplayName(@"Return Reservation V08")]
 public interface IReturnReservationV08 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +33,6 @@ public interface IReturnReservationV08 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

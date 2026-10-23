@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitCriteria7Choice;
 /// <summary>
 /// New Criteria.
 /// </summary>
+[IsoDisplayName(@"New Criteria")]
 public interface INewCriteria : ILimitCriteria7Choice, IIsoChoiceVariant
 {
     /// <summary>

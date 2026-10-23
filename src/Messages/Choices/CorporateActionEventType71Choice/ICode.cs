@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType71Choice
 /// Corporate action event type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_pAgP3ZwxEeazcsnODTksnQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionEventType71Choice, IIsoChoiceVariant
 {
     /// <summary>

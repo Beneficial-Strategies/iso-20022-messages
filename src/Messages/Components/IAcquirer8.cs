@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Institution in charge of managing the ATM.
 /// </summary>
 [IsoId("_zpnMMYp1EeS3NqNpgnMh2w")]
+[IsoDisplayName(@"Acquirer")]
 public interface IAcquirer8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAcquirer8 : IIsoComponent
     [IsoId("_z3nL8Yp1EeS3NqNpgnMh2w")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IAcquirer8 : IIsoComponent
     [IsoId("_z3nL84p1EeS3NqNpgnMh2w")]
     [DisplayName("Application Version")]
     [IsoXmlTag("ApplVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ApplicationVersion { get; }
 }

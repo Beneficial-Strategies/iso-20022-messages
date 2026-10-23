@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference11Choice;
 /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
 /// </summary>
 [IsoId("_Ad4rUtokEeC60axPepSq7g_-1440510389")]
+[IsoDisplayName(@"Collateral Transaction Identification")]
 public interface ICollateralTransactionIdentification
     : IIdentificationReference11Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ICollateralTransactionIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("CollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

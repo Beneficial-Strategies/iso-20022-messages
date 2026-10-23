@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FXAmountType1Choice;
 /// Specifies a commission or fee type.
 /// </summary>
 [IsoId("_Z-9lhQN2Ee2-vqzwMUAewg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IFXAmountType1Choice, IIsoChoiceVariant
 {
     /// <summary>

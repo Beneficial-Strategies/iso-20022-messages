@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus22Cho
 /// </summary>
 [IsoId("_hlFozTnuEeWfSKvvZlhRKg")]
 [IsoXmlTag("ModReqd")]
+[IsoDisplayName(@"Modification Requested")]
 public interface IModificationRequested : IInstructionProcessingStatus22Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IModificationRequested : IInstructionProcessingStatus22Choice, 
     [IsoId("_RA3_Wzp5EeWVrPy0StzzSg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

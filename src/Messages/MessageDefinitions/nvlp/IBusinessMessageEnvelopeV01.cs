@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.nvlp;
     "urn:iso:std:iso:20022:tech:xsd:nvlp.001.001.01",
     DocumentElementName = "BizMsgEnvlp"
 )]
+[Description(@"The BusinessMessageEnvelope is a technical message container used to bundle a business application header with a message definition, typically to support processing or transport. It may contain and define additional data elements that apply to the message instance container.")]
+[IsoDisplayName(@"Business Message Envelope V")]
 public interface IBusinessMessageEnvelopeV01 : IOuterRecord
 {
     /// <summary>
@@ -43,6 +45,7 @@ public interface IBusinessMessageEnvelopeV01 : IOuterRecord
     [IsoId("_vln_FgJ9Ee2o0-v8T2Svrw")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReference22> Reference { get; }
 
     /// <summary>
@@ -51,5 +54,6 @@ public interface IBusinessMessageEnvelopeV01 : IOuterRecord
     [IsoId("_vln_FwJ9Ee2o0-v8T2Svrw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

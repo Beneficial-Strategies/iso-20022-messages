@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response to a secure input request.
 /// </summary>
 [IsoId("_n95jEN7HEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Device Secure Input Response")]
 public interface IDeviceSecureInputResponse1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the status report of a point of interaction (POI).
 /// </summary>
 [IsoId("_qqtU8XJiEe299ZbWCkdR_w")]
+[IsoDisplayName(@"Status Report Data Set Request")]
 public interface IStatusReportDataSetRequest4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IStatusReportDataSetRequest4 : IIsoComponent
     [IsoId("_qxJ7M3JiEe299ZbWCkdR_w")]
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Max9NumericText)]
     Max9NumericText? SequenceCounter { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IStatusReportDataSetRequest4 : IIsoComponent
     [IsoId("_qxJ7NXJiEe299ZbWCkdR_w")]
     [DisplayName("Last Sequence")]
     [IsoXmlTag("LastSeq")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? LastSequence { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the details of the currency exchange.
 /// </summary>
 [IsoId("_M5wl0IW7EeiDBOVr6AJAFA")]
+[IsoDisplayName(@"Currency Exchange")]
 public interface ICurrencyExchange13 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICurrencyExchange13 : IIsoComponent
     [IsoId("_NF4WRYW7EeiDBOVr6AJAFA")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate ExchangeRate { get; }
 
     /// <summary>

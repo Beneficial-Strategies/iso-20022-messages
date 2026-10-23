@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Travel agency component provides details of travel agency, airline, or railway transactions.
 /// </summary>
 [IsoId("_670H4UhrEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Travel Agency5")]
 public interface ITravelAgency5 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface ITravelAgency5 : IIsoComponent
     [IsoId("_6-irz0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Travel Package")]
     [IsoXmlTag("TrvlPackg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITravelAgencyPackage2> TravelPackage { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface ITravelAgency5 : IIsoComponent
     [IsoId("_tETlgkhrEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -89,5 +92,6 @@ public interface ITravelAgency5 : IIsoComponent
     [IsoId("_tETlg0hrEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

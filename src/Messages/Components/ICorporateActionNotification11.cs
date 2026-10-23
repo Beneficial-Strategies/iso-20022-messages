@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Notification11.
 /// </summary>
 [IsoId("_8NBPYXTPEe6_FuzYWj2GYQ")]
+[IsoDisplayName(@"Corporate Action Notification11")]
 public interface ICorporateActionNotification11 : IIsoComponent
 {
     /// <summary>

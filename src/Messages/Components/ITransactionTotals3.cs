@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction totals during the reconciliation period, for a certain type of transaction.
 /// </summary>
 [IsoId("_B-9vYWmAEeSxgrJ0GX4SQQ")]
+[IsoDisplayName(@"Transaction Totals")]
 public interface ITransactionTotals3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionTotals3 : IIsoComponent
     [IsoId("_CMRyoWmAEeSxgrJ0GX4SQQ")]
     [DisplayName("POI Group Identification")]
     [IsoXmlTag("POIGrpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? POIGroupIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransactionTotals3 : IIsoComponent
     [IsoId("_CMRyo2mAEeSxgrJ0GX4SQQ")]
     [DisplayName("Card Product Profile")]
     [IsoXmlTag("CardPdctPrfl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardProductProfile { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ITransactionTotals3 : IIsoComponent
     [IsoId("_CMRyqWmAEeSxgrJ0GX4SQQ")]
     [DisplayName("Total Number")]
     [IsoXmlTag("TtlNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number TotalNumber { get; }
 
     /// <summary>

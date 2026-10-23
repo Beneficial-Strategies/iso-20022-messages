@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("20a60248-b1e9-4597-be26-f96ed1b9f64d")]
 [IsoMessage("acmt.027.001.06", "AcctSwtchInfReq", "urn:iso:std:iso:20022:tech:xsd:acmt.027.001.06")]
+[IsoDisplayName(@"Account Switch Information Request V06")]
 public interface IAccountSwitchInformationRequestV06 : IOuterRecord
 {
     /// <summary>
@@ -46,6 +47,7 @@ public interface IAccountSwitchInformationRequestV06 : IOuterRecord
     /// </summary>
     [DisplayName("Balance Transfer")]
     [IsoXmlTag("BalTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceTransfer7> BalanceTransfer { get; }
 
     /// <summary>
@@ -53,5 +55,6 @@ public interface IAccountSwitchInformationRequestV06 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

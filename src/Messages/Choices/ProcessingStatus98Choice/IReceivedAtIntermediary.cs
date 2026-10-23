@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice;
 /// </summary>
 [IsoId("_x4XDmQarEe2phaVG0lYKTw")]
 [IsoXmlTag("RcvdAtIntrmy")]
+[IsoDisplayName(@"Received At Intermediary")]
 public interface IReceivedAtIntermediary : IProcessingStatus98Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IReceivedAtIntermediary : IProcessingStatus98Choice, IIsoChoice
     [IsoId("_RA3_Wzp5EeWVrPy0StzzSg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

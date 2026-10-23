@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketTypeFormat1Choice;
 /// Standard code to specify the type of market in which transactions take place, for example, primary or secondary.
 /// </summary>
 [IsoId("_Q4XJYtp-Ed-ak6NoX_4Aeg_1331206916")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMarketTypeFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

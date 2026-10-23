@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.canm;
 /// </summary>
 [IsoId("_NYnwlVWVEeeiG_nL4vgKnQ")]
 [IsoMessage("canm.002.001.02", "NtwkMgmtRspn", "urn:iso:std:iso:20022:tech:xsd:canm.002.001.02")]
+[Description(@"The NetworkManagementResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a NetworkManagementlInitiation message.||")]
+[IsoDisplayName(@"Network Management Response V")]
 public interface INetworkManagementResponseV02 : IOuterRecord
 {
     /// <summary>

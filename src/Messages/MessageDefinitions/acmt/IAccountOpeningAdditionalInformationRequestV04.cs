@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctOpngAddtlInfReq",
     "urn:iso:std:iso:20022:tech:xsd:acmt.009.001.04"
 )]
+[IsoDisplayName(@"Account Opening Additional Information Request V04")]
 public interface IAccountOpeningAdditionalInformationRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -64,6 +65,7 @@ public interface IAccountOpeningAdditionalInformationRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature4> DigitalSignature { get; }
 
     /// <summary>
@@ -71,5 +73,6 @@ public interface IAccountOpeningAdditionalInformationRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Role2Choice;
 /// Role of the party in the activity.
 /// </summary>
 [IsoId("_Qwm7ltp-Ed-ak6NoX_4Aeg_409012393")]
+[IsoDisplayName(@"Text")]
 public interface IText : IRole2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IText : IRole2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 350 characters.
     /// </summary>
     [IsoXmlTag("Txt")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Value { get; }
 }

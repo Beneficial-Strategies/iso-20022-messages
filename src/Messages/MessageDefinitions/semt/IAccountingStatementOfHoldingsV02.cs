@@ -26,6 +26,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "AcctgStmtOfHldgsV02",
     "urn:iso:std:iso:20022:tech:xsd:semt.003.001.02"
 )]
+[Description(@"Scope|An account servicer, for example, a transfer agent sends the AccountStatementOfHoldings message to the account owner, for example, a fund manager or an account owner's designated agent to provide detailed holdings of the portfolio at a specified moment in time.|The message provides, at a moment in time, valuations of the portfolio together with details of each financial instrument holding.|The message can be sent either audited or un-audited and may be provided on a trade date or settlement date basis.|Usage|The AccountingStatementOfHoldings message is used to provide valuation detail for each financial instrument held in a portfolio. The message should be sent at a frequency agreed bi-laterally between the account servicer and the account owner.|This message can only be used to list the holdings of a single (master) account. However, it is possible to break down these holdings into one or several sub-accounts. Therefore, the message can be used to either specify holdings at|- the main account level, or,|- the sub-account level.|This message can be used to report where the financial instruments are safe-kept, physically or notionally. If a security is held in more than one safekeeping place, this can also be indicated.|The AccountingStatementOfHoldings message should not be used for trading purposes.")]
+[IsoDisplayName(@"Accounting Statement Of Holdings V")]
 public interface IAccountingStatementOfHoldingsV02 : IOuterRecord
 {
     /// <summary>
@@ -42,6 +44,7 @@ public interface IAccountingStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_MbQI2tFSEd-BzquC8wXy7w_1168130789")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference2> PreviousReference { get; }
 
     /// <summary>
@@ -50,6 +53,7 @@ public interface IAccountingStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_MbQI29FSEd-BzquC8wXy7w_1168130832")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference2> RelatedReference { get; }
 
     /// <summary>
@@ -82,6 +86,7 @@ public interface IAccountingStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_MbZSwtFSEd-BzquC8wXy7w_1168131109")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateBalanceInformation3> BalanceForAccount { get; }
 
     /// <summary>
@@ -90,6 +95,7 @@ public interface IAccountingStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_MbZSw9FSEd-BzquC8wXy7w_1168131144")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubAccountIdentification3> SubAccountDetails { get; }
 
     /// <summary>
@@ -106,5 +112,6 @@ public interface IAccountingStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_MbZSxdFSEd-BzquC8wXy7w_1168131264")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

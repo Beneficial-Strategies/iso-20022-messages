@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party2Choice;
 /// </summary>
 [IsoId("_RCDQ4dp-Ed-ak6NoX_4Aeg_-1691234013")]
 [IsoXmlTag("OrgId")]
+[IsoDisplayName(@"Organisation Identification")]
 public interface IOrganisationIdentification : IParty2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IOrganisationIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QQa_pdp-Ed-ak6NoX_4Aeg_-916094981")]
     [DisplayName("BIC")]
     [IsoXmlTag("BIC")]
+    [IsoSimpleType(IsoSimpleType.BICIdentifier)]
     BICIdentifier? BIC { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IOrganisationIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QQa_ptp-Ed-ak6NoX_4Aeg_-857912325")]
     [DisplayName("IBEI")]
     [IsoXmlTag("IBEI")]
+    [IsoSimpleType(IsoSimpleType.IBEIIdentifier)]
     IBEIIdentifier? IBEI { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IOrganisationIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QQa_p9p-Ed-ak6NoX_4Aeg_-987206748")]
     [DisplayName("BEI")]
     [IsoXmlTag("BEI")]
+    [IsoSimpleType(IsoSimpleType.BEIIdentifier)]
     BEIIdentifier? BEI { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface IOrganisationIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QQa_qNp-Ed-ak6NoX_4Aeg_-987206671")]
     [DisplayName("EANGLN")]
     [IsoXmlTag("EANGLN")]
+    [IsoSimpleType(IsoSimpleType.EANGLNIdentifier)]
     EANGLNIdentifier? EANGLN { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface IOrganisationIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QQkwoNp-Ed-ak6NoX_4Aeg_-987206611")]
     [DisplayName("CHIPS Universal Identification")]
     [IsoXmlTag("USCHU")]
+    [IsoSimpleType(IsoSimpleType.CHIPSUniversalIdentifier)]
     CHIPSUniversalIdentifier? CHIPSUniversalIdentification { get; }
 
     /// <summary>
@@ -58,6 +64,7 @@ public interface IOrganisationIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QQkwodp-Ed-ak6NoX_4Aeg_-987206285")]
     [DisplayName("DUNS")]
     [IsoXmlTag("DUNS")]
+    [IsoSimpleType(IsoSimpleType.DunsIdentifier)]
     DunsIdentifier? DUNS { get; }
 
     /// <summary>
@@ -66,6 +73,8 @@ public interface IOrganisationIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QQkwotp-Ed-ak6NoX_4Aeg_-987206225")]
     [DisplayName("Bank Party Identification")]
     [IsoXmlTag("BkPtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BankPartyIdentification { get; }
 
     /// <summary>
@@ -74,6 +83,8 @@ public interface IOrganisationIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QQkwo9p-Ed-ak6NoX_4Aeg_-987206148")]
     [DisplayName("Tax Identification Number")]
     [IsoXmlTag("TaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxIdentificationNumber { get; }
 
     /// <summary>

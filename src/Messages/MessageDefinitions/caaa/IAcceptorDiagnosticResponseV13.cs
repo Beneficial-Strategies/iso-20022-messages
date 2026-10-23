@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrDgnstcRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.014.001.13"
 )]
+[IsoDisplayName(@"Acceptor Diagnostic Response V13")]
 public interface IAcceptorDiagnosticResponseV13 : IOuterRecord
 {
     /// <summary>

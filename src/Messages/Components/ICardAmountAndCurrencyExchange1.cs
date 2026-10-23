@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the detailed or original amount and currency.
 /// </summary>
 [IsoId("_Y95TJ_wLEeGHDMP28rpT3g_903585548")]
+[IsoDisplayName(@"Card Amount And Currency Exchange")]
 public interface ICardAmountAndCurrencyExchange1 : IIsoComponent
 {
     /// <summary>

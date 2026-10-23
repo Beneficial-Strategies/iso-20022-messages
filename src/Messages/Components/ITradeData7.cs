@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the status of a trade.
 /// </summary>
 [IsoId("_0HqjAew3EeGdCpA_VUPR-w")]
+[IsoDisplayName(@"Trade Data")]
 public interface ITradeData7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeData7 : IIsoComponent
     [IsoId("__4wN1TqLEeKXK8qRvydwAw")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITradeData7 : IIsoComponent
     [IsoId("_MGRwFTqLEeKXK8qRvydwAw")]
     [DisplayName("Originator Reference")]
     [IsoXmlTag("OrgtrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginatorReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITradeData7 : IIsoComponent
     [IsoId("_0UPmeew3EeGdCpA_VUPR-w")]
     [DisplayName("Matching System Unique Reference")]
     [IsoXmlTag("MtchgSysUnqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MatchingSystemUniqueReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITradeData7 : IIsoComponent
     [IsoId("_0UPmfew3EeGdCpA_VUPR-w")]
     [DisplayName("Matching System Matching Reference")]
     [IsoXmlTag("MtchgSysMtchgRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MatchingSystemMatchingReference { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface ITradeData7 : IIsoComponent
     [IsoId("_DOtAs5UHEeKShbaq9ixROw")]
     [DisplayName("Matching System Matched Side Reference")]
     [IsoXmlTag("MtchgSysMtchdSdRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MatchingSystemMatchedSideReference { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface ITradeData7 : IIsoComponent
     [IsoId("_0UPmgew3EeGdCpA_VUPR-w")]
     [DisplayName("Status Originator")]
     [IsoXmlTag("StsOrgtr")]
+    [IsoSimpleType(IsoSimpleType.Max20Text)]
+    [StringLength(20, MinimumLength = 1)]
     Max20Text? StatusOriginator { get; }
 
     /// <summary>
@@ -81,6 +94,7 @@ public interface ITradeData7 : IIsoComponent
     [IsoId("_0UPmjew3EeGdCpA_VUPR-w")]
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CurrentStatusDateTime { get; }
 
     /// <summary>
@@ -105,6 +119,7 @@ public interface ITradeData7 : IIsoComponent
     [IsoId("_0UPmmew3EeGdCpA_VUPR-w")]
     [DisplayName("Previous Status Date Time")]
     [IsoXmlTag("PrvsStsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? PreviousStatusDateTime { get; }
 
     /// <summary>
@@ -113,6 +128,8 @@ public interface ITradeData7 : IIsoComponent
     [IsoId("_0UPmnew3EeGdCpA_VUPR-w")]
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProductType { get; }
 
     /// <summary>
@@ -121,6 +138,7 @@ public interface ITradeData7 : IIsoComponent
     [IsoId("_VUB-UBn4EeKKXqHkeUjBbw")]
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SettlementSessionIdentifier { get; }
 
     /// <summary>
@@ -129,5 +147,6 @@ public interface ITradeData7 : IIsoComponent
     [IsoId("_KG0khTqxEeKqTf3MbquCbA")]
     [DisplayName("Split Trade Indicator")]
     [IsoXmlTag("SpltTradInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SplitTradeIndicator { get; }
 }

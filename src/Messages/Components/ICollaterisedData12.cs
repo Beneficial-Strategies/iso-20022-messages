@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the collateralised securities.
 /// </summary>
 [IsoId("_J_aqJcg5Eeu4ecZgAYuz5w")]
+[IsoDisplayName(@"Collaterised Data")]
 public interface ICollaterisedData12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICollaterisedData12 : IIsoComponent
     [IsoId("_KA3bo8g5Eeu4ecZgAYuz5w")]
     [DisplayName("Collateral Value Date")]
     [IsoXmlTag("CollValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CollateralValueDate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICollaterisedData12 : IIsoComponent
     [IsoId("_KA3bp8g5Eeu4ecZgAYuz5w")]
     [DisplayName("Net Exposure Collateralisation Indicator")]
     [IsoXmlTag("NetXpsrCollstnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NetExposureCollateralisationIndicator { get; }
 
     /// <summary>

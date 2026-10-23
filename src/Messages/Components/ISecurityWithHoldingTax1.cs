@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements of a cash distribution that will be withheld by a tax authority.
 /// </summary>
 [IsoId("_haio02liEeGaMcKyqKNRfQ_-1955007741")]
+[IsoDisplayName(@"Security With Holding Tax")]
 public interface ISecurityWithHoldingTax1 : IIsoComponent
 {
     /// <summary>

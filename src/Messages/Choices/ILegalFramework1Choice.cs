@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the legal framework.
 /// </summary>
 [IsoId("_QuYG9tp-Ed-ak6NoX_4Aeg_-359745650")]
+[IsoDisplayName(@"Legal Framework 1 Choice")]
 public interface ILegalFramework1Choice : IIsoChoice { }

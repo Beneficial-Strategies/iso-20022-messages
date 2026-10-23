@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "AgtCAStgInstrReq",
     "urn:iso:std:iso:20022:tech:xsd:seev.025.001.01"
 )]
+[Description(@"Scope|This message is sent by a CSD to the issuer (or its agent) to provide the issuer (or its agent) with the CSD's client details for the distribution of the proceeds of a corporate action event:|- Gross or net payments.|- Delivery details for securities that have to be delivered outside of the CSD.|- Delivery details for cash amounts that have to be delivered outside of the CSD.|Usage|This message is used to request the issuer (or its agent) to put a standing instruction in place for proceeds.|The amendment of a standing instruction is done through a cancel-and-replace mechanism. First a standing instruction cancellation request is sent followed by a new standing instruction request.")]
+[IsoDisplayName(@"Agent CA Standing Instruction Request V")]
 public interface IAgentCAStandingInstructionRequestV01 : IOuterRecord
 {
     /// <summary>

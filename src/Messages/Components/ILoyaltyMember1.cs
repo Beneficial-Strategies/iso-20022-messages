@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details about a member of a loyalty programme.
 /// </summary>
 [IsoId("_qmMYMF_AEee_oqB7UglxLw")]
+[IsoDisplayName(@"Loyalty Member")]
 public interface ILoyaltyMember1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILoyaltyMember1 : IIsoComponent
     [IsoId("_2vYXkF_AEee_oqB7UglxLw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ILoyaltyMember1 : IIsoComponent
     [IsoId("_F2jyEF_BEee_oqB7UglxLw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ILoyaltyMember1 : IIsoComponent
     [IsoId("_ObYS0F_BEee_oqB7UglxLw")]
     [DisplayName("Member Status")]
     [IsoXmlTag("MmbSts")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MemberStatus { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface ILoyaltyMember1 : IIsoComponent
     [IsoId("_Vb7kcF_BEee_oqB7UglxLw")]
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpirationDate { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface ILoyaltyMember1 : IIsoComponent
     [IsoId("_hebtAF_BEee_oqB7UglxLw")]
     [DisplayName("Loyalty Value")]
     [IsoXmlTag("LltyVal")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? LoyaltyValue { get; }
 
     /// <summary>
@@ -73,6 +82,8 @@ public interface ILoyaltyMember1 : IIsoComponent
     [IsoId("_eHCd8F_CEee_oqB7UglxLw")]
     [DisplayName("Other Loyalty Value Type")]
     [IsoXmlTag("OthrLltyValTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherLoyaltyValueType { get; }
 
     /// <summary>
@@ -81,6 +92,7 @@ public interface ILoyaltyMember1 : IIsoComponent
     [IsoId("_wFzJkF_CEee_oqB7UglxLw")]
     [DisplayName("Value To Credit")]
     [IsoXmlTag("ValToCdt")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? ValueToCredit { get; }
 
     /// <summary>
@@ -89,6 +101,7 @@ public interface ILoyaltyMember1 : IIsoComponent
     [IsoId("_6tZaYF_CEee_oqB7UglxLw")]
     [DisplayName("Value To Debit")]
     [IsoXmlTag("ValToDbt")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? ValueToDebit { get; }
 
     /// <summary>
@@ -97,5 +110,6 @@ public interface ILoyaltyMember1 : IIsoComponent
     [IsoId("_K1ebwF_EEee_oqB7UglxLw")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? Balance { get; }
 }

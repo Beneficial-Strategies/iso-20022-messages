@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Consideration, such as amount of money, paid or received in exchange for an amount of money that has been invested, loaned or borrowed for a certain period.
 /// </summary>
 [IsoId("_SQuqh9p-Ed-ak6NoX_4Aeg_1199217791")]
+[IsoDisplayName(@"Interest Result")]
 public interface IInterestResult1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IInterestResult1 : IIsoComponent
     [IsoId("_SQ30cNp-Ed-ak6NoX_4Aeg_-608633204")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValueDate { get; }
 
     /// <summary>

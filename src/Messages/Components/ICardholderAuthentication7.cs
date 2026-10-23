@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the authentication of the cardholder.
 /// </summary>
 [IsoId("_uzlg0YIDEeS7UOLM47txvA")]
+[IsoDisplayName(@"Cardholder Authentication")]
 public interface ICardholderAuthentication7 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardholderAuthentication7 : IIsoComponent
     [IsoId("_vAjl04IDEeS7UOLM47txvA")]
     [DisplayName("Authentication Value")]
     [IsoXmlTag("AuthntcnVal")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary? AuthenticationValue { get; }
 
     /// <summary>

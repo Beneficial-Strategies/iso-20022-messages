@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an agricultural derivative of type potato.
 /// </summary>
 [IsoId("_6sUHIU8SEe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Agricultural Commodity Potato")]
 public interface IAgriculturalCommodityPotato2 : IIsoComponent
 {
     /// <summary>

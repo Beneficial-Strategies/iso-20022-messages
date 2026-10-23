@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction from an investor to sell investment fund units back to the fund.
 /// </summary>
 [IsoId("_6fPOdzbsEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Redemption Order")]
 public interface IRedemptionOrder15 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRedemptionOrder15 : IIsoComponent
     [IsoId("_63pHaTbsEead9bDRE_1DAQ")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IRedemptionOrder15 : IIsoComponent
     [IsoId("_63pHazbsEead9bDRE_1DAQ")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -41,6 +46,9 @@ public interface IRedemptionOrder15 : IIsoComponent
     [IsoId("_63pHbzbsEead9bDRE_1DAQ")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType4Choice> OrderType { get; }
 
     /// <summary>
@@ -49,6 +57,7 @@ public interface IRedemptionOrder15 : IIsoComponent
     [IsoId("_63pHcTbsEead9bDRE_1DAQ")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson32> BeneficiaryDetails { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface IRedemptionOrder15 : IIsoComponent
     [IsoId("_63pHfzbsEead9bDRE_1DAQ")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CashSettlementDate { get; }
 
     /// <summary>
@@ -146,6 +156,7 @@ public interface IRedemptionOrder15 : IIsoComponent
     [IsoId("_63pHkTbsEead9bDRE_1DAQ")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>
@@ -170,6 +181,8 @@ public interface IRedemptionOrder15 : IIsoComponent
     [IsoId("_63pHlzbsEead9bDRE_1DAQ")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>
@@ -178,6 +191,9 @@ public interface IRedemptionOrder15 : IIsoComponent
     [IsoId("_63pHmTbsEead9bDRE_1DAQ")]
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
+    [MinLength(0)]
+    [MaxLength(4)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; }
 
     /// <summary>
@@ -202,6 +218,9 @@ public interface IRedemptionOrder15 : IIsoComponent
     [IsoId("_63pHnzbsEead9bDRE_1DAQ")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary40> RelatedPartyDetails { get; }
 
     /// <summary>

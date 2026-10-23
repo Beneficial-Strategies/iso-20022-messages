@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication device number or electronic address used for communication.
 /// </summary>
 [IsoId("_QJt6wNp-Ed-ak6NoX_4Aeg_1489374809")]
+[IsoDisplayName(@"Contact Attributes")]
 public interface IContactAttributes1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContactAttributes1 : IIsoComponent
     [IsoId("_QJt6wdp-Ed-ak6NoX_4Aeg_1489374811")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IContactAttributes1 : IIsoComponent
     [IsoId("_QJt6w9p-Ed-ak6NoX_4Aeg_1490294902")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber PhoneNumber { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IContactAttributes1 : IIsoComponent
     [IsoId("_QJ3rsNp-Ed-ak6NoX_4Aeg_1490294964")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IContactAttributes1 : IIsoComponent
     [IsoId("_QJ3rsdp-Ed-ak6NoX_4Aeg_1490294872")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface IContactAttributes1 : IIsoComponent
     [IsoId("_QJ3rstp-Ed-ak6NoX_4Aeg_-1675029450")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? URLAddress { get; }
 
     /// <summary>
@@ -65,5 +74,6 @@ public interface IContactAttributes1 : IIsoComponent
     [IsoId("_QJ3rs9p-Ed-ak6NoX_4Aeg_1489374870")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.BICIdentifier)]
     BICIdentifier? Identification { get; }
 }

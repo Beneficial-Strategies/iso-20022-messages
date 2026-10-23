@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus2Choice;
 /// </summary>
 [IsoId("_T-P8R9p-Ed-ak6NoX_4Aeg_523813131")]
 [IsoXmlTag("DplctOf")]
+[IsoDisplayName(@"Duplicate Of")]
 public interface IDuplicateOf : IInvestigationStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IDuplicateOf : IInvestigationStatus2Choice, IIsoChoiceVariant
     [IsoId("_SpAnp9p-Ed-ak6NoX_4Aeg_-1565053102")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface IDuplicateOf : IInvestigationStatus2Choice, IIsoChoiceVariant
     [IsoId("_SpAnqdp-Ed-ak6NoX_4Aeg_-1565052762")]
     [DisplayName("Reopen Case Indication")]
     [IsoXmlTag("ReopCaseIndctn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ReopenCaseIndication { get; }
 }

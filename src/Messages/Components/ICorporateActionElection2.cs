@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about a corporate action election amendment request.
 /// </summary>
 [IsoId("_UJ39ctp-Ed-ak6NoX_4Aeg_-1290336513")]
+[IsoDisplayName(@"Corporate Action Election")]
 public interface ICorporateActionElection2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICorporateActionElection2 : IIsoComponent
     [IsoId("_UJ39dNp-Ed-ak6NoX_4Aeg_-1233077544")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText OptionNumber { get; }
 
     /// <summary>
@@ -41,5 +43,7 @@ public interface ICorporateActionElection2 : IIsoComponent
     [IsoId("_UJ39dtp-Ed-ak6NoX_4Aeg_-1222919883")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Reason { get; }
 }

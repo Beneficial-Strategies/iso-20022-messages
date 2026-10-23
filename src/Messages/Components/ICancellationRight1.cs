@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the cancellation right.
 /// </summary>
 [IsoId("_VMLvDtp-Ed-ak6NoX_4Aeg_396360179")]
+[IsoDisplayName(@"Cancellation Right")]
 public interface ICancellationRight1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICancellationRight1 : IIsoComponent
     [IsoId("_VMLvENp-Ed-ak6NoX_4Aeg_450848826")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

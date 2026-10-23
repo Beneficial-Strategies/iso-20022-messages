@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExecutingParty2Choice;
 /// <summary>
 /// Client.
 /// </summary>
+[IsoDisplayName(@"Client")]
 public interface IClient : IExecutingParty2Choice, IIsoChoiceVariant
 {
     /// <summary>

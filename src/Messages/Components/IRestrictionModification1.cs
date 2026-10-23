@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of change to a restriction.
 /// </summary>
 [IsoId("_OmFkYA4rEeK3IMoVvcTkkg")]
+[IsoDisplayName(@"Restriction Modification")]
 public interface IRestrictionModification1 : IIsoComponent
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_f1grEROIEfC1ZfCQz0xB3g")]
 [IsoMessage("caad.006.001.05", "RcncltnRspn", "urn:iso:std:iso:20022:tech:xsd:caad.006.001.05")]
+[IsoDisplayName(@"Reconciliation Response V05")]
 public interface IReconciliationResponseV05 : IOuterRecord
 {
     /// <summary>
@@ -46,6 +47,7 @@ public interface IReconciliationResponseV05 : IOuterRecord
     /// </summary>
     [DisplayName("Requested Currency")]
     [IsoXmlTag("ReqdCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Exact3NumericText> RequestedCurrency { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface IReconciliationResponseV05 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode6> Programme { get; }
 
     /// <summary>
@@ -116,6 +119,7 @@ public interface IReconciliationResponseV05 : IOuterRecord
     /// </summary>
     [DisplayName("Reconciliation Totals")]
     [IsoXmlTag("RcncltnTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotals15> ReconciliationTotals { get; }
 
     /// <summary>
@@ -137,6 +141,7 @@ public interface IReconciliationResponseV05 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -165,6 +170,7 @@ public interface IReconciliationResponseV05 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -172,6 +178,7 @@ public interface IReconciliationResponseV05 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -179,6 +186,7 @@ public interface IReconciliationResponseV05 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

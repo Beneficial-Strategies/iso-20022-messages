@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Key that must be created and sent in the response, or that must be verified.
 /// </summary>
 [IsoId("_MXlzwXvOEeSCJdwgzb6SFw")]
+[IsoDisplayName(@"KEK Identifier")]
 public interface IKEKIdentifier3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IKEKIdentifier3 : IIsoComponent
     [IsoId("_eHEtQHvOEeSCJdwgzb6SFw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IKEKIdentifier3 : IIsoComponent
     [IsoId("_MkjRsXvOEeSCJdwgzb6SFw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Identification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IKEKIdentifier3 : IIsoComponent
     [IsoId("_MkjRs3vOEeSCJdwgzb6SFw")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Version { get; }
 
     /// <summary>
@@ -41,5 +48,6 @@ public interface IKEKIdentifier3 : IIsoComponent
     [IsoId("_k7IbAHvOEeSCJdwgzb6SFw")]
     [DisplayName("Key Check Value")]
     [IsoXmlTag("KeyChckVal")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary? KeyCheckValue { get; }
 }

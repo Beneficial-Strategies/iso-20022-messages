@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the identification and the creation date of a notification.
 /// </summary>
 [IsoId("_Q1YG3Np-Ed-ak6NoX_4Aeg_-1876431609")]
+[IsoDisplayName(@"Notification Identification")]
 public interface INotificationIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INotificationIdentification1 : IIsoComponent
     [IsoId("_Q1h30Np-Ed-ak6NoX_4Aeg_-1718511350")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

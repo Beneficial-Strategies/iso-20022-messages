@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.
 /// </summary>
 [IsoId("_SdFrh9p-Ed-ak6NoX_4Aeg_2092063055")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument13 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IFinancialInstrument13 : IIsoComponent
     [IsoId("_SdFridp-Ed-ak6NoX_4Aeg_2092063090")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IFinancialInstrument13 : IIsoComponent
     [IsoId("_SdFritp-Ed-ak6NoX_4Aeg_2092063125")]
     [DisplayName("Supplementary Identification")]
     [IsoXmlTag("SplmtryId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SupplementaryIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IFinancialInstrument13 : IIsoComponent
     [IsoId("_SdFri9p-Ed-ak6NoX_4Aeg_2092063167")]
     [DisplayName("Class Type")]
     [IsoXmlTag("ClssTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClassType { get; }
 
     /// <summary>

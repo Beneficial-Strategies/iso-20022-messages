@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statistical data related to the price change of a security.
 /// </summary>
 [IsoId("_SfCMQtp-Ed-ak6NoX_4Aeg_664619223")]
+[IsoDisplayName(@"Statistics By Predefined Time Periods")]
 public interface IStatisticsByPredefinedTimePeriods2 : IIsoComponent
 {
     /// <summary>

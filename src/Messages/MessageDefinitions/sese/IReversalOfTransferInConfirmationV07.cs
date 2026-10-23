@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_BL8wcR8OEeWpZde3LQh6dg")]
 [IsoMessage("sese.008.001.07", "RvslOfTrfInConf", "urn:iso:std:iso:20022:tech:xsd:sese.008.001.07")]
+[Description(@"Scope|An executing party, for example, a transfer agent, sends the ReversalOfTransferInConfirmation message to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent TransferInConfirmation message.|Usage|The ReversalOfTransferInConfirmation message is used to reverse a previously sent TransferInConfirmation.|There are two ways to specify the reversal of the transfer in confirmation. Either:|- the business references, for example, TransferReference, TransferConfirmationIdentification, of the transfer confirmation are quoted, or,|- all the details of the transfer confirmation (this includes TransferReference and TransferConfirmationIdentification) are quoted but this is not recommended.|The message identification of the TransferInConfirmation message in which the transfer confirmation was conveyed may also be quoted in PreviousReference.|The message reference (MessageIdentification) of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.|")]
+[IsoDisplayName(@"Reversal Of Transfer In Confirmation V")]
 public interface IReversalOfTransferInConfirmationV07 : IOuterRecord
 {
     /// <summary>
@@ -37,6 +39,7 @@ public interface IReversalOfTransferInConfirmationV07 : IOuterRecord
     [IsoId("_BL8wdR8OEeWpZde3LQh6dg")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferences20> References { get; }
 
     /// <summary>

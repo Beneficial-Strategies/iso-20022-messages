@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TemporaryFinancialInstrumentIndi
 /// Temporary financial instrument identification used for processing reasons.
 /// </summary>
 [IsoId("_Q08B9Np-Ed-ak6NoX_4Aeg_-953773850")]
+[IsoDisplayName(@"Temporary Indicator")]
 public interface ITemporaryIndicator
     : ITemporaryFinancialInstrumentIndicator1Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface ITemporaryIndicator
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("TempInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Message TransactionStatus Request message.
 /// </summary>
 [IsoId("_QFd_4Q03EeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Message Status Request Data")]
 public interface IMessageStatusRequestData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMessageStatusRequestData2 : IIsoComponent
     [IsoId("_QRlwUQ03EeqUVL7sB4m7NA")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ExchangeIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IMessageStatusRequestData2 : IIsoComponent
     [IsoId("_QRlwVQ03EeqUVL7sB4m7NA")]
     [DisplayName("Receipt Reprint Flag")]
     [IsoXmlTag("RctRprntFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReceiptReprintFlag { get; }
 
     /// <summary>
@@ -41,5 +45,8 @@ public interface IMessageStatusRequestData2 : IIsoComponent
     [IsoId("_QRlwVw03EeqUVL7sB4m7NA")]
     [DisplayName("Document Qualifier")]
     [IsoXmlTag("DocQlfr")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<DocumentType7Code> DocumentQualifier { get; }
 }

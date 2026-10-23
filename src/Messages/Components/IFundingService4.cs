@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Funds related service such as a payment or a transfer related to the transaction.
 /// </summary>
 [IsoId("_0OZqoT_ZEfCQAqQ9lolFUg")]
+[IsoDisplayName(@"Funding Service4")]
 public interface IFundingService4 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IFundingService4 : IIsoComponent
     [IsoId("_0Q49-z_ZEfCQAqQ9lolFUg")]
     [DisplayName("Funding Source")]
     [IsoXmlTag("FndgSrc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundingSource5> FundingSource { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details for the tax calculation method A.
 /// </summary>
 [IsoId("_6PzStJqlEeGSON8vddiWzQ_1375424478")]
+[IsoDisplayName(@"Billing Method")]
 public interface IBillingMethod1 : IIsoComponent
 {
     /// <summary>
@@ -42,5 +43,8 @@ public interface IBillingMethod1 : IIsoComponent
     [IsoId("_6P9DsJqlEeGSON8vddiWzQ_-1164327431")]
     [DisplayName("Tax Identification")]
     [IsoXmlTag("TaxId")]
+    [MinLength(1)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingServicesTax1> TaxIdentification { get; }
 }

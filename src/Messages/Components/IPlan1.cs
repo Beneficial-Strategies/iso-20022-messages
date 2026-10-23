@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes of the instalment plan.
 /// </summary>
 [IsoId("_gbtqIEVGEeea-M6VZkEPUw")]
+[IsoDisplayName(@"Plan")]
 public interface IPlan1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPlan1 : IIsoComponent
     [IsoId("_ytQu4EVGEeea-M6VZkEPUw")]
     [DisplayName("Plan Identification")]
     [IsoXmlTag("PlanId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PlanIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPlan1 : IIsoComponent
     [IsoId("_uuKPoduKEei2qvU6FBLZYA")]
     [DisplayName("Other Plan Owner")]
     [IsoXmlTag("OthrPlanOwnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherPlanOwner { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPlan1 : IIsoComponent
     [IsoId("_PYbrkOkYEemeDPHh-U9b6w")]
     [DisplayName("Instalment Payment Type")]
     [IsoXmlTag("InstlmtPmtTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstalmentPaymentType { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IPlan1 : IIsoComponent
     [IsoId("_Arj1wEVHEeea-M6VZkEPUw")]
     [DisplayName("Number Of Periods")]
     [IsoXmlTag("NbOfPrds")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfPeriods { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IPlan1 : IIsoComponent
     [IsoId("_M7qVwdubEei2qvU6FBLZYA")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateDetails1> InterestRate { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface IPlan1 : IIsoComponent
     [IsoId("_P33n4EVHEeea-M6VZkEPUw")]
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FirstPaymentDate { get; }
 
     /// <summary>
@@ -98,6 +108,7 @@ public interface IPlan1 : IIsoComponent
     [IsoId("_zLtwAEVHEeea-M6VZkEPUw")]
     [DisplayName("Total Number Of Payments")]
     [IsoXmlTag("TtlNbOfPmts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberOfPayments { get; }
 
     /// <summary>
@@ -122,6 +133,7 @@ public interface IPlan1 : IIsoComponent
     [IsoId("_3FE5cduZEei2qvU6FBLZYA")]
     [DisplayName("Amount Details")]
     [IsoXmlTag("AmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalmentAmountDetails1> AmountDetails { get; }
 
     /// <summary>

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementReason25Choice;
 
 /// <summary>Specifies additional information about the processed instruction.</summary>
 [IsoId("_XNInUY5bEfC_4ZEXsY0Xyg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAcknowledgementReason25Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

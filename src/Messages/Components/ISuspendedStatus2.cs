@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status is suspended.
 /// </summary>
 [IsoId("_RGqrINp-Ed-ak6NoX_4Aeg_1793071793")]
+[IsoDisplayName(@"Suspended Status")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISuspendedStatus2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +27,8 @@ public interface ISuspendedStatus2 : IIsoComponent
     [IsoId("_RGqrItp-Ed-ak6NoX_4Aeg_-550374008")]
     [DisplayName("Reason Details")]
     [IsoXmlTag("RsnDtls")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISuspendedStatusReason2> ReasonDetails { get; }
 }

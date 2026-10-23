@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous identifier of the group of transactions as assigned by the original instructing party.
 /// </summary>
 [IsoId("cbf73edd-b654-4c5f-88c4-856c0c41d474")]
+[IsoDisplayName(@"Original Group Information33")]
 public interface IOriginalGroupInformation33 : IIsoComponent
 {
     /// <summary>

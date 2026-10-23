@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a time horizon.
 /// </summary>
 [IsoId("_t5CX0DcuEeidBoT_PugKiA")]
+[IsoDisplayName(@"Time Horizon 1 Choice")]
 public interface ITimeHorizon1Choice : IIsoChoice { }

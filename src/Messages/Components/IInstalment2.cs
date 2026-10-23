@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reconciliation information is used to indicate the amount to be allocated to a particular instalment of a financial document.
 /// </summary>
 [IsoId("_OTgzMzM5-AOSNFX-8224500")]
+[IsoDisplayName(@"Instalment")]
 public interface IInstalment2 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IInstalment2 : IIsoComponent
     [IsoId("_OTgzMzYy-AOSNFX-8224501")]
     [DisplayName("Sequence Identification")]
     [IsoXmlTag("SeqId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text SequenceIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IInstalment2 : IIsoComponent
     [IsoId("_OTgzMzYz-AOSNFX-8224501")]
     [DisplayName("Payment Due Date")]
     [IsoXmlTag("PmtDueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate PaymentDueDate { get; }
 
     /// <summary>

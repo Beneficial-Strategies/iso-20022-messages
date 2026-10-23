@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat66Choice;
 /// <summary>
 /// Date Code.
 /// </summary>
+[IsoDisplayName(@"Date Code")]
 public interface IDateCode : IDateFormat66Choice, IIsoChoiceVariant
 {
     /// <summary>

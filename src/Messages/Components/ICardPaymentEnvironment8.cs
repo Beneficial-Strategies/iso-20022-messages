@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of the diagnostic exchange.
 /// </summary>
 [IsoId("_TDwwxwEcEeCQm6a_G2yO_w_-51855289")]
+[IsoDisplayName(@"Card Payment Environment")]
 public interface ICardPaymentEnvironment8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardPaymentEnvironment8 : IIsoComponent
     [IsoId("_TDwwyAEcEeCQm6a_G2yO_w_-1444736902")]
     [DisplayName("Acquirer Parameters Version")]
     [IsoXmlTag("AcqrrParamsVrsn")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime AcquirerParametersVersion { get; }
 
     /// <summary>

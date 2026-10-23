@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that serves as a basis to debit an account.
 /// </summary>
 [IsoId("_yR4OUTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Mandate21")]
 public interface IMandate21 : IIsoComponent
 {
     /// <summary>
@@ -163,5 +164,6 @@ public interface IMandate21 : IIsoComponent
     /// </summary>
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferredMandateDocument2> ReferredDocument { get; }
 }

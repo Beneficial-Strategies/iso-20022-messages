@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the undertaking termination reason.
 /// </summary>
 [IsoId("_932rsXltEeG7BsjMvd1mEw_1357060754")]
+[IsoDisplayName(@"Termination Reason 1 Choice")]
 public interface ITerminationReason1Choice : IIsoChoice { }

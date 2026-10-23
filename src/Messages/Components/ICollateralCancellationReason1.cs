@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for which the collateral message has been cancelled.
 /// </summary>
 [IsoId("_UnhiwNp-Ed-ak6NoX_4Aeg_-540863751")]
+[IsoDisplayName(@"Collateral Cancellation Reason")]
 public interface ICollateralCancellationReason1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICollateralCancellationReason1 : IIsoComponent
     [IsoId("_Unhiwdp-Ed-ak6NoX_4Aeg_-1001218572")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalInformation { get; }
 
     /// <summary>

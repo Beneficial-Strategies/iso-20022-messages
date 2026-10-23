@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status of a case resulting from a case assignment.
 /// </summary>
 [IsoId("_T-ZtQtp-Ed-ak6NoX_4Aeg_-1114775558")]
+[IsoDisplayName(@"Case Forwarding Notification")]
 public interface ICaseForwardingNotification3 : IIsoComponent
 {
     /// <summary>

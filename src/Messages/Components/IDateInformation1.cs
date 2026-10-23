@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date parameters.
 /// </summary>
 [IsoId("_98LLAnltEeG7BsjMvd1mEw_1203331503")]
+[IsoDisplayName(@"Date Information")]
 public interface IDateInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDateInformation1 : IIsoComponent
     [IsoId("_98LLA3ltEeG7BsjMvd1mEw_-900960723")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate StartDate { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IDateInformation1 : IIsoComponent
     [IsoId("_98LLBXltEeG7BsjMvd1mEw_-1181408529")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Number { get; }
 }

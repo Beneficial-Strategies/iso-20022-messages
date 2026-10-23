@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an agricultural derivative of type forestry.
 /// </summary>
 [IsoId("_D54C4U8TEe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Agricultural Commodity Forestry")]
 public interface IAgriculturalCommodityForestry2 : IIsoComponent
 {
     /// <summary>

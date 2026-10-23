@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
 /// Provides status information related to an instruction cancellation request that is completed.
 /// </summary>
 [IsoId("_1TcqbNx4EeqESbVR5AloZQ")]
+[IsoDisplayName(@"Cancellation Completed")]
 public interface ICancellationCompleted
     : IMarketClaimCancellationRequestStatus1Choice,
         IIsoChoiceVariant

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further information on the cancellation reason of the transaction.
 /// </summary>
 [IsoId("_TO3Gttp-Ed-ak6NoX_4Aeg_-436227161")]
+[IsoDisplayName(@"Cancellation Reason Information")]
 public interface ICancellationReasonInformation1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ICancellationReasonInformation1 : IIsoComponent
     [IsoId("_TPA3sdp-Ed-ak6NoX_4Aeg_-436227125")]
     [DisplayName("Additional Cancellation Reason Information")]
     [IsoXmlTag("AddtlCxlRsnInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalCancellationReasonInformation { get; }
 }

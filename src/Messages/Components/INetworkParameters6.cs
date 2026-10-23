@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters to communicate with a host.
 /// </summary>
 [IsoId("_OsB4UY3-EeWRwov1g9WL_A")]
+[IsoDisplayName(@"Network Parameters")]
 public interface INetworkParameters6 : IIsoComponent
 {
     /// <summary>

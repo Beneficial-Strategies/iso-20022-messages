@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides for reporting calculation results of equity instruments as part of transparency.
 /// </summary>
 [IsoId("_ZC9Igfp2Ee-b4ekxD4W-5g")]
+[IsoDisplayName(@"Transparency Data Report22")]
 public interface ITransparencyDataReport22 : IIsoComponent
 {
     /// <summary>

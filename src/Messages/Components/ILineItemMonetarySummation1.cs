@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade settlement monetary summation specified for this supply chain trade settlement.
 /// </summary>
 [IsoId("_SucoHAEcEeCQm6a_G2yO_w_1990739481")]
+[IsoDisplayName(@"Line Item Monetary Summation")]
 public interface ILineItemMonetarySummation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILineItemMonetarySummation1 : IIsoComponent
     [IsoId("_SucoHQEcEeCQm6a_G2yO_w_203579898")]
     [DisplayName("Line Total Amount")]
     [IsoXmlTag("LineTtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> LineTotalAmount { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ILineItemMonetarySummation1 : IIsoComponent
     [IsoId("_SucoHgEcEeCQm6a_G2yO_w_-156792154")]
     [DisplayName("Allowance Total Amount")]
     [IsoXmlTag("AllwncTtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> AllowanceTotalAmount { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ILineItemMonetarySummation1 : IIsoComponent
     [IsoId("_SucoHwEcEeCQm6a_G2yO_w_197422641")]
     [DisplayName("Charge Total Amount")]
     [IsoXmlTag("ChrgTtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> ChargeTotalAmount { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ILineItemMonetarySummation1 : IIsoComponent
     [IsoId("_SucoIAEcEeCQm6a_G2yO_w_1261442565")]
     [DisplayName("Tax Total Amount")]
     [IsoXmlTag("TaxTtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> TaxTotalAmount { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ILineItemMonetarySummation1 : IIsoComponent
     [IsoId("_SumZEAEcEeCQm6a_G2yO_w_-860871799")]
     [DisplayName("Tax Basis Total Amount")]
     [IsoXmlTag("TaxBsisTtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> TaxBasisTotalAmount { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface ILineItemMonetarySummation1 : IIsoComponent
     [IsoId("_SumZEQEcEeCQm6a_G2yO_w_1109201490")]
     [DisplayName("Information Amount")]
     [IsoXmlTag("InfAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> InformationAmount { get; }
 }

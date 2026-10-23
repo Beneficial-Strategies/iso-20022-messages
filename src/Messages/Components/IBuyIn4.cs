@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies elements related to the notification (or warn) sent by the central counterparty to the clearing member in the context of the buy in process.
 /// </summary>
 [IsoId("_7xh9US9WEeS94oXWDaBauA")]
+[IsoDisplayName(@"Buy In")]
 public interface IBuyIn4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IBuyIn4 : IIsoComponent
     [IsoId("_8D9KES9WEeS94oXWDaBauA")]
     [DisplayName("Warning Indicator")]
     [IsoXmlTag("WrngInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? WarningIndicator { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IBuyIn4 : IIsoComponent
     [IsoId("_VXBUUC9YEeS94oXWDaBauA")]
     [DisplayName("Cancellation Limit Date")]
     [IsoXmlTag("CxlLmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CancellationLimitDate { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IBuyIn4 : IIsoComponent
     [IsoId("_T7O2UC9ZEeS94oXWDaBauA")]
     [DisplayName("Buy In Reversion Date")]
     [IsoXmlTag("BuyInRvrsnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BuyInReversionDate { get; }
 }

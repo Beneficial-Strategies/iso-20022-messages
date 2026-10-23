@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides supplementary data for corporate action events.
 /// </summary>
 [IsoId("_r_kK8aOEEfCHhuKwuscqyg")]
+[IsoDisplayName(@"Corporate Action SD27")]
 public interface ICorporateActionSD27 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH3yY6OEEfCHhuKwuscqyg")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH3ye6OEEfCHhuKwuscqyg")]
     [DisplayName("Number Of Shares To Be Issued")]
     [IsoXmlTag("NbOfShrsToBeIssd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? NumberOfSharesToBeIssued { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH3yg6OEEfCHhuKwuscqyg")]
     [DisplayName("Total Number Of Shares Offered")]
     [IsoXmlTag("TtlNbOfShrsOfferd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? TotalNumberOfSharesOffered { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH4Zn6OEEfCHhuKwuscqyg")]
     [DisplayName("Conditional Payment Applicable Flag")]
     [IsoXmlTag("CondlPmtAplblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ConditionalPaymentApplicableFlag { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH4Zp6OEEfCHhuKwuscqyg")]
     [DisplayName("Solicitation Dealer Fee Flag")]
     [IsoXmlTag("SlctnDealrFeeFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SolicitationDealerFeeFlag { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH4Zr6OEEfCHhuKwuscqyg")]
     [DisplayName("DTC Custody Eligible Flag")]
     [IsoXmlTag("DTCCtdyElgblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DTCCustodyEligibleFlag { get; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH4Zt6OEEfCHhuKwuscqyg")]
     [DisplayName("DTC Reorganisation Custody Eligible Flag")]
     [IsoXmlTag("DTCReorgCtdyElgblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DTCReorganisationCustodyEligibleFlag { get; }
 
     /// <summary>
@@ -129,6 +138,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH4Zv6OEEfCHhuKwuscqyg")]
     [DisplayName("DTC Reorganisation Deposit Eligible Flag")]
     [IsoXmlTag("DTCReorgDpstElgblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DTCReorganisationDepositEligibleFlag { get; }
 
     /// <summary>
@@ -137,6 +147,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH5AgaOEEfCHhuKwuscqyg")]
     [DisplayName("Surrender Shares To Agent Flag")]
     [IsoXmlTag("SrrndrShrsToAgtFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SurrenderSharesToAgentFlag { get; }
 
     /// <summary>
@@ -145,6 +156,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH5AiaOEEfCHhuKwuscqyg")]
     [DisplayName("Step Up Privilege Flag")]
     [IsoXmlTag("StepUpPrvlgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? StepUpPrivilegeFlag { get; }
 
     /// <summary>
@@ -153,6 +165,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH5AkaOEEfCHhuKwuscqyg")]
     [DisplayName("Rights Oversubscription Flag")]
     [IsoXmlTag("RghtsOvrsbcptFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RightsOversubscriptionFlag { get; }
 
     /// <summary>
@@ -161,6 +174,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH5AmaOEEfCHhuKwuscqyg")]
     [DisplayName("Rights Round Up Privilege Flag")]
     [IsoXmlTag("RghtsRndUpPrvlgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RightsRoundUpPrivilegeFlag { get; }
 
     /// <summary>
@@ -169,6 +183,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH5AoaOEEfCHhuKwuscqyg")]
     [DisplayName("Rights Transferable Flag")]
     [IsoXmlTag("RghtsTrfblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RightsTransferableFlag { get; }
 
     /// <summary>
@@ -177,6 +192,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH5AqaOEEfCHhuKwuscqyg")]
     [DisplayName("Dissenter Rights Applicable Flag")]
     [IsoXmlTag("DsstrRghtsAplblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DissenterRightsApplicableFlag { get; }
 
     /// <summary>
@@ -185,6 +201,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH5Aq6OEEfCHhuKwuscqyg")]
     [DisplayName("Non Exempt Allowed Indicator")]
     [IsoXmlTag("NonXmptAllwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NonExemptAllowedIndicator { get; }
 
     /// <summary>
@@ -201,6 +218,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH5Ar6OEEfCHhuKwuscqyg")]
     [DisplayName("Certificate Details")]
     [IsoXmlTag("CertDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionSD26> CertificateDetails { get; }
 
     /// <summary>
@@ -217,6 +235,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH5AuaOEEfCHhuKwuscqyg")]
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
     Exact32AlphaNumericText? RDPReferenceNumber { get; }
 
     /// <summary>
@@ -225,6 +244,7 @@ public interface ICorporateActionSD27 : IIsoComponent
     [IsoId("_sH5Au6OEEfCHhuKwuscqyg")]
     [DisplayName("DTC Foreign Tax Election Flag")]
     [IsoXmlTag("DTCFrgnTaxElctnFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DTCForeignTaxElectionFlag { get; }
 
     /// <summary>

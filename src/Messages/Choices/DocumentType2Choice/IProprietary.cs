@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentType2Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IDocumentType2Choice, IIsoChoiceVariant
 {
     /// <summary>

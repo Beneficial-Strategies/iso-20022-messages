@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// </summary>
 [IsoId("_8nOCwC_7EeOKib24wnHaFg")]
 [IsoMessage("supl.027.001.01", "InfRspnSD1", "urn:iso:std:iso:20022:tech:xsd:supl.027.001.01")]
+[Description(@"This extends the message InformationRequestResponse.")]
+[IsoDisplayName(@"Information Response SD 1 V")]
 public interface IInformationResponseSD1V01 : IOuterRecord
 {
     /// <summary>
@@ -20,6 +22,8 @@ public interface IInformationResponseSD1V01 : IOuterRecord
     [IsoId("_hWzaoJirEeO4o528ngEXuw")]
     [DisplayName("Investigation Identification")]
     [IsoXmlTag("InvstgtnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InvestigationIdentification { get; }
 
     /// <summary>
@@ -28,6 +32,7 @@ public interface IInformationResponseSD1V01 : IOuterRecord
     [IsoId("_pfuCgJirEeO4o528ngEXuw")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -44,5 +49,6 @@ public interface IInformationResponseSD1V01 : IOuterRecord
     [IsoId("_jqrv4C__EeOKib24wnHaFg")]
     [DisplayName("Account And Parties")]
     [IsoXmlTag("AcctAndPties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountAndParties2> AccountAndParties { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Maintenance command which has requested the device report.
 /// </summary>
 [IsoId("_bfXL4V_UEeeD0NpJQPACzA")]
+[IsoDisplayName(@"ATM Command")]
 public interface IATMCommand12 : IIsoComponent
 {
     /// <summary>

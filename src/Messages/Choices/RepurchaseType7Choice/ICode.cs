@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseType7Choice;
 /// Type of securities financing transaction process expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_WNdtg9uJEd-RF5yaMAVhAw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRepurchaseType7Choice, IIsoChoiceVariant
 {
     /// <summary>

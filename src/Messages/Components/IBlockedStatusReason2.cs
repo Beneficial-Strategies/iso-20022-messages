@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for a blocked status.
 /// </summary>
 [IsoId("__e0zUV1LEeagR5I1rq5oaw")]
+[IsoDisplayName(@"Blocked Status Reason")]
 public interface IBlockedStatusReason2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IBlockedStatusReason2 : IIsoComponent
     [IsoId("_E6gY4V1MEeagR5I1rq5oaw")]
     [DisplayName("Blocked")]
     [IsoXmlTag("Blckd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Blocked { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IBlockedStatusReason2 : IIsoComponent
     [IsoId("__4jh811LEeagR5I1rq5oaw")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBlockedReason2Choice> Reason { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IBlockedStatusReason2 : IIsoComponent
     [IsoId("__4jh9V1LEeagR5I1rq5oaw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text AdditionalInformation { get; }
 }

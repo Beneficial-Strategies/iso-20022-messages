@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a day count.
 /// </summary>
 [IsoId("_RiiO4E0jEeyQkYR0RbXyEg")]
+[IsoDisplayName(@"Compare Day Count")]
 public interface ICompareDayCount1 : IIsoComponent
 {
     /// <summary>

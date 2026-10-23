@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Autorisation of the mandate holder.
 /// </summary>
 [IsoId("_xZZNIw3wEeKGXqvMN6jpiw")]
+[IsoDisplayName(@"Authorisation")]
 public interface IAuthorisation2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IAuthorisation2 : IIsoComponent
     [IsoId("_xujkyQ3wEeKGXqvMN6jpiw")]
     [DisplayName("Maximum Amount By Period")]
     [IsoXmlTag("MaxAmtByPrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMaximumAmountByPeriod1> MaximumAmountByPeriod { get; }
 
     /// <summary>

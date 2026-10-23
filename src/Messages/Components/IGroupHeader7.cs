@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics shared by all individual transactions included in the message.
 /// </summary>
 [IsoId("_Pt2eGtp-Ed-ak6NoX_4Aeg_1753379922")]
+[IsoDisplayName(@"Group Header")]
 public interface IGroupHeader7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGroupHeader7 : IIsoComponent
     [IsoId("_Pt2eG9p-Ed-ak6NoX_4Aeg_1753379964")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IGroupHeader7 : IIsoComponent
     [IsoId("_Pt2eHNp-Ed-ak6NoX_4Aeg_1753379999")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IGroupHeader7 : IIsoComponent
     [IsoId("_Pt2eHdp-Ed-ak6NoX_4Aeg_1753380319")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfTransactions { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IGroupHeader7 : IIsoComponent
     [IsoId("_PuAPENp-Ed-ak6NoX_4Aeg_1753380354")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IGroupHeader7 : IIsoComponent
     [IsoId("_PuAPEdp-Ed-ak6NoX_4Aeg_-1720577362")]
     [DisplayName("Group Cancellation")]
     [IsoXmlTag("GrpCxl")]
+    [IsoSimpleType(IsoSimpleType.GroupingIndicator)]
     GroupingIndicator? GroupCancellation { get; }
 
     /// <summary>

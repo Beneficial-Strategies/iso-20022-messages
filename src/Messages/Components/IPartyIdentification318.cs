@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party Identification318.
 /// </summary>
 [IsoId("_kv8aNZt3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Party Identification318")]
 public interface IPartyIdentification318 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IPartyIdentification318 : IIsoComponent
     /// </summary>
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAlternatePartyIdentification9> AlternateIdentification { get; }
 }

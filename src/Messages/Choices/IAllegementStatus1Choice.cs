@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the allegement status.
 /// </summary>
 [IsoId("_UakE0dp-Ed-ak6NoX_4Aeg_618404541")]
+[IsoDisplayName(@"Allegement Status 1 Choice")]
 public interface IAllegementStatus1Choice : IIsoChoice { }

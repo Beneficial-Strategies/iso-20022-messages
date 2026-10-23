@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the reason of the amendment of the mandate.
 /// </summary>
 [IsoId("_TOt8wdp-Ed-ak6NoX_4Aeg_-588729591")]
+[IsoDisplayName(@"Amendment Reason Information")]
 public interface IAmendmentReasonInformation1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IAmendmentReasonInformation1 : IIsoComponent
     [IsoId("_TOt8xNp-Ed-ak6NoX_4Aeg_-1877900838")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

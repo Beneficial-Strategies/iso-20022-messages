@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("_8JIAINE7Ed-BzquC8wXy7w_-1831529909")]
 [IsoMessage("setr.013.001.02", "setr.013.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.013.001.02")]
+[Description(@"Scope|The SwitchOrder message is sent by an instructing party, eg, an investment manager or its authorised representative, to an executing party, eg, a transfer agent. There may be one or more intermediary parties between the instructing party and the executing party. The intermediary party is, for example, an intermediary or a concentrator.|This message is used to instruct the executing party to switch from a specified amount/quantity of specified financial instruments to a specified amount/quantity of different financial instruments.|Usage|The SwitchOrder message is used when the instructing party, ie, an investor, wants to change its investments within the same fund family, according to the terms of the prospectus.")]
+[IsoDisplayName(@"Switch Order V")]
 public interface ISwitchOrderV02 : IOuterRecord
 {
     /// <summary>
@@ -40,6 +42,7 @@ public interface ISwitchOrderV02 : IOuterRecord
     [IsoId("_8JIAI9E7Ed-BzquC8wXy7w_-61918547")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -56,6 +59,9 @@ public interface ISwitchOrderV02 : IOuterRecord
     [IsoId("_8JIAJdE7Ed-BzquC8wXy7w_383217301")]
     [DisplayName("Intermediary Details")]
     [IsoXmlTag("IntrmyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary4> IntermediaryDetails { get; }
 
     /// <summary>
@@ -72,5 +78,6 @@ public interface ISwitchOrderV02 : IOuterRecord
     [IsoId("_8JRKEdE7Ed-BzquC8wXy7w_72236090")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

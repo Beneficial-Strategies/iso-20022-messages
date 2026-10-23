@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity4Choice;
 /// </summary>
 [IsoId("_Qz45FNp-Ed-ak6NoX_4Aeg_-1271029432")]
 [IsoXmlTag("SgndQty")]
+[IsoDisplayName(@"Signed Quantity")]
 public interface ISignedQuantity : IQuantity4Choice, IIsoChoiceVariant
 {
     /// <summary>

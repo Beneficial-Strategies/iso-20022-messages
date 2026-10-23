@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies a customer identification as the search criteria for the financial institution to do the investigation.
 /// </summary>
 [IsoId("_cgxhY0yuEeGcV5yVhSZuNw")]
+[IsoDisplayName(@"Customer Identification")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface ICustomerIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICustomerIdentification1 : IIsoComponent
     [IsoId("_jP3PoUyuEeGcV5yVhSZuNw")]
     [DisplayName("Authority Request")]
     [IsoXmlTag("AuthrtyReq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorityInvestigation2> AuthorityRequest { get; }
 }

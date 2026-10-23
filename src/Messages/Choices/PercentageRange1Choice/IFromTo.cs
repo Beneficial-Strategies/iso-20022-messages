@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice;
 /// </summary>
 [IsoId("_7_LCoKMgEeCJ6YNENx4h-w_-1139827354")]
 [IsoXmlTag("FrTo")]
+[IsoDisplayName(@"From To")]
 public interface IFromTo : IPercentageRange1Choice, IIsoChoiceVariant
 {
     /// <summary>

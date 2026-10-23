@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the account within a system to or from which a securities entry is made. It holds information generic or market specific attributes such as opening or closing date, and defines the default setting for the  holding of settlement instructions involving positions related to the account.
 /// </summary>
 [IsoId("_yNtKNTp1Eemk2e6qGBk8IQ")]
+[IsoDisplayName(@"System Securities Account")]
 public interface ISystemSecuritiesAccount6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISystemSecuritiesAccount6 : IIsoComponent
     [IsoId("_yX_HkTp1Eemk2e6qGBk8IQ")]
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OpeningDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISystemSecuritiesAccount6 : IIsoComponent
     [IsoId("_yX_Hkzp1Eemk2e6qGBk8IQ")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClosingDate { get; }
 
     /// <summary>
@@ -36,6 +39,7 @@ public interface ISystemSecuritiesAccount6 : IIsoComponent
     [IsoId("_yX_HlTp1Eemk2e6qGBk8IQ")]
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? HoldIndicator { get; }
 
     /// <summary>
@@ -44,6 +48,7 @@ public interface ISystemSecuritiesAccount6 : IIsoComponent
     [IsoId("_yX_Hlzp1Eemk2e6qGBk8IQ")]
     [DisplayName("Negative Position")]
     [IsoXmlTag("NegPos")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NegativePosition { get; }
 
     /// <summary>
@@ -76,6 +81,7 @@ public interface ISystemSecuritiesAccount6 : IIsoComponent
     [IsoId("_yX_Hnzp1Eemk2e6qGBk8IQ")]
     [DisplayName("Market Specific Attribute")]
     [IsoXmlTag("MktSpcfcAttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMarketSpecificAttribute1> MarketSpecificAttribute { get; }
 
     /// <summary>
@@ -84,6 +90,7 @@ public interface ISystemSecuritiesAccount6 : IIsoComponent
     [IsoId("_yX_HoTp1Eemk2e6qGBk8IQ")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemRestriction1> Restriction { get; }
 
     /// <summary>
@@ -92,6 +99,7 @@ public interface ISystemSecuritiesAccount6 : IIsoComponent
     [IsoId("_yX_Hozp1Eemk2e6qGBk8IQ")]
     [DisplayName("End Investor Flag")]
     [IsoXmlTag("EndInvstrFlg")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? EndInvestorFlag { get; }
 
     /// <summary>
@@ -100,5 +108,6 @@ public interface ISystemSecuritiesAccount6 : IIsoComponent
     [IsoId("_yX_HpTp1Eemk2e6qGBk8IQ")]
     [DisplayName("Pricing Scheme")]
     [IsoXmlTag("PricgSchme")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? PricingScheme { get; }
 }

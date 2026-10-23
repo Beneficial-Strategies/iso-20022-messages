@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party which has requested the reconciliation.
 /// </summary>
 [IsoId("_4eQxAa47EeWRfYPBaeOY8w")]
+[IsoDisplayName(@"ATM Command")]
 public interface IATMCommand9 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organisation Identification40.
 /// </summary>
 [IsoId("_Hv1tFTFKEe651u5xu3f5iw")]
+[IsoDisplayName(@"Organisation Identification40")]
 public interface IOrganisationIdentification40 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IOrganisationIdentification40 : IIsoComponent
     /// </summary>
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericOrganisationIdentification3> Other { get; }
 }

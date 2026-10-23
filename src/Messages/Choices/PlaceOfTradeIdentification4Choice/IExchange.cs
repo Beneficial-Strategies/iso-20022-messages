@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification4Choic
 /// <summary>
 /// Exchange.
 /// </summary>
+[IsoDisplayName(@"Exchange")]
 public interface IExchange : IPlaceOfTradeIdentification4Choice, IIsoChoiceVariant
 {
     /// <summary>

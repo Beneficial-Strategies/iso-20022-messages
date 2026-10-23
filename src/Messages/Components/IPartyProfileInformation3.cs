@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information to support the Know Your Customer (KYC) processes.
 /// </summary>
 [IsoId("_wt9lwRRwEeOKWo1NF21OVw")]
+[IsoDisplayName(@"Party Profile Information")]
 public interface IPartyProfileInformation3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPartyProfileInformation3 : IIsoComponent
     [IsoId("_xFxo0RRwEeOKWo1NF21OVw")]
     [DisplayName("Certification Indicator")]
     [IsoXmlTag("CertfctnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CertificationIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IPartyProfileInformation3 : IIsoComponent
     [IsoId("_xFxo0xRwEeOKWo1NF21OVw")]
     [DisplayName("Validating Party")]
     [IsoXmlTag("VldtngPty")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? ValidatingParty { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IPartyProfileInformation3 : IIsoComponent
     [IsoId("_xFxo1RRwEeOKWo1NF21OVw")]
     [DisplayName("Checking Party")]
     [IsoXmlTag("ChckngPty")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? CheckingParty { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface IPartyProfileInformation3 : IIsoComponent
     [IsoId("_xFxo1xRwEeOKWo1NF21OVw")]
     [DisplayName("Responsible Party")]
     [IsoXmlTag("RspnsblPty")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? ResponsibleParty { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IPartyProfileInformation3 : IIsoComponent
     [IsoId("_xFxo2xRwEeOKWo1NF21OVw")]
     [DisplayName("Checking Date")]
     [IsoXmlTag("ChckngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CheckingDate { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface IPartyProfileInformation3 : IIsoComponent
     [IsoId("_xFxo3xRwEeOKWo1NF21OVw")]
     [DisplayName("Next Revision Date")]
     [IsoXmlTag("NxtRvsnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NextRevisionDate { get; }
 
     /// <summary>
@@ -81,6 +91,8 @@ public interface IPartyProfileInformation3 : IIsoComponent
     [IsoId("_xFxo4RRwEeOKWo1NF21OVw")]
     [DisplayName("Salary Range")]
     [IsoXmlTag("SlryRg")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SalaryRange { get; }
 
     /// <summary>
@@ -89,6 +101,8 @@ public interface IPartyProfileInformation3 : IIsoComponent
     [IsoId("_xFxo4xRwEeOKWo1NF21OVw")]
     [DisplayName("Source Of Wealth")]
     [IsoXmlTag("SrcOfWlth")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SourceOfWealth { get; }
 
     /// <summary>

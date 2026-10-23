@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Used to report between the securities reference data or an operational error.
 /// </summary>
 [IsoId("_PrBR8ZJKEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Securities Audit Trail Or Operational Error 4 Choice")]
 public interface ISecuritiesAuditTrailOrOperationalError4Choice : IIsoChoice { }

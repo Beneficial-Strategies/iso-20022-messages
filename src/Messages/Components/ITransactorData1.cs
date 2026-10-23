@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the transactor who provides technical payment solutions for acceptor and originator to conduct transactions.
 /// </summary>
 [IsoId("_PssmMSq6EfCD0_iZ8tw-zA")]
+[IsoDisplayName(@"Transactor Data1")]
 public interface ITransactorData1 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ITransactorData1 : IIsoComponent
     [IsoId("__ZD_YlwsEfCoP_h9uwd39Q")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface ITransactorData1 : IIsoComponent
     [IsoId("__ZD_Y1wsEfCoP_h9uwd39Q")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface ITransactorData1 : IIsoComponent
     [IsoId("_PvJdYSq6EfCD0_iZ8tw-zA")]
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData20> LocalData { get; }
 
     /// <summary>
@@ -89,5 +93,6 @@ public interface ITransactorData1 : IIsoComponent
     [IsoId("_pYOzUa2rEfCKbLfqFyM0kg")]
     [DisplayName("Sub Merchant")]
     [IsoXmlTag("SubMrchnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubMerchant1> SubMerchant { get; }
 }

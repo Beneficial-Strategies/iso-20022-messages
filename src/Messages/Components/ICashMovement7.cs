@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Movements of cash.
 /// </summary>
 [IsoId("_qliBoRIwEeydmIVkS03esw")]
+[IsoDisplayName(@"Cash Movement")]
 public interface ICashMovement7 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ICashMovement7 : IIsoComponent
     [IsoId("_q7lKKRIwEeydmIVkS03esw")]
     [DisplayName("Collateral Movement")]
     [IsoXmlTag("CollMvmnt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CollateralMovement { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ICashMovement7 : IIsoComponent
     [IsoId("_q7lKKxIwEeydmIVkS03esw")]
     [DisplayName("Cash Movement Approved")]
     [IsoXmlTag("CshMvmntApprvd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CashMovementApproved { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ICashMovement7 : IIsoComponent
     [IsoId("_q7lKLRIwEeydmIVkS03esw")]
     [DisplayName("Position Type")]
     [IsoXmlTag("PosTp")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PositionType { get; }
 
     /// <summary>
@@ -73,6 +77,8 @@ public interface ICashMovement7 : IIsoComponent
     [IsoId("_q7lKLxIwEeydmIVkS03esw")]
     [DisplayName("Client Cash Movement Identification")]
     [IsoXmlTag("ClntCshMvmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientCashMovementIdentification { get; }
 
     /// <summary>
@@ -81,5 +87,7 @@ public interface ICashMovement7 : IIsoComponent
     [IsoId("_q7lKMRIwEeydmIVkS03esw")]
     [DisplayName("Triparty Agent Service Provider Cash Movement Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCshMvmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripartyAgentServiceProviderCashMovementIdentification { get; }
 }

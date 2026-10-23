@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification205Choice;
 /// </summary>
 [IsoId("_osYgE46XEemzmeK8_tPygg")]
 [IsoXmlTag("NtrlPrsn")]
+[IsoDisplayName(@"Natural Person")]
 public interface INaturalPerson : IPartyIdentification205Choice, IIsoChoiceVariant
 {
     /// <summary>

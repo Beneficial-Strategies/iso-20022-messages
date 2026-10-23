@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the statement basis.
 /// </summary>
 [IsoId("_KhZx8MRyEeij-rSPpvD-Tw")]
+[IsoDisplayName(@"Statement Basis 14 Choice")]
 public interface IStatementBasis14Choice : IIsoChoice { }

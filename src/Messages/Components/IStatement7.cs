@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General characteristics related to a statement which reports information for a precise date.
 /// </summary>
 [IsoId("_ROaR4tp-Ed-ak6NoX_4Aeg_2093891418")]
+[IsoDisplayName(@"Statement")]
 public interface IStatement7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStatement7 : IIsoComponent
     [IsoId("_ROaR49p-Ed-ak6NoX_4Aeg_2093891420")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Reference { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IStatement7 : IIsoComponent
     [IsoId("_ROaR6Np-Ed-ak6NoX_4Aeg_2093891748")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 
     /// <summary>
@@ -73,5 +77,6 @@ public interface IStatement7 : IIsoComponent
     [IsoId("_ROkC4dp-Ed-ak6NoX_4Aeg_2094811762")]
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? ReportNumber { get; }
 }

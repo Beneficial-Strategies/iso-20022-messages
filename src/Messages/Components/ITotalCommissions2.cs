@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Total amount of commissions related to a specific order.
 /// </summary>
 [IsoId("_VPm2dtp-Ed-ak6NoX_4Aeg_668714663")]
+[IsoDisplayName(@"Total Commissions")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ITotalCommissions2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +27,6 @@ public interface ITotalCommissions2 : IIsoComponent
     [IsoId("_VPm2eNp-Ed-ak6NoX_4Aeg_-1105185977")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission6> CommissionDetails { get; }
 }

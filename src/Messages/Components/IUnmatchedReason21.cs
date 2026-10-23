@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason of the unmatched status.
 /// </summary>
 [IsoId("_fginYOCXEei2UYJ62ws-Fw")]
+[IsoDisplayName(@"Unmatched Reason")]
 public interface IUnmatchedReason21 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IUnmatchedReason21 : IIsoComponent
     [IsoId("_1c9bYOCXEei2UYJ62ws-Fw")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

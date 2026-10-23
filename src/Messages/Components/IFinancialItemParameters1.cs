@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Regroups identification parameters for trade items.
 /// </summary>
 [IsoId("_OTgzMjk0-AOSNFX-8224497")]
+[IsoDisplayName(@"Financial Item Parameters")]
 public interface IFinancialItemParameters1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialItemParameters1 : IIsoComponent
     [IsoId("_OTMxOTcx-AOSNFX-0262741")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identifier { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IFinancialItemParameters1 : IIsoComponent
     [IsoId("_OTgzMjk1-AOSNFX-8224497")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate IssueDate { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IFinancialItemParameters1 : IIsoComponent
     [IsoId("_OTgzMjk2-AOSNFX-8224497")]
     [DisplayName("Related Item")]
     [IsoXmlTag("RltdItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> RelatedItem { get; }
 
     /// <summary>
@@ -105,6 +110,7 @@ public interface IFinancialItemParameters1 : IIsoComponent
     [IsoId("_OTgzMzA2-AOSNFX-8224498")]
     [DisplayName("Governing Contract")]
     [IsoXmlTag("GovngCtrct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> GoverningContract { get; }
 
     /// <summary>

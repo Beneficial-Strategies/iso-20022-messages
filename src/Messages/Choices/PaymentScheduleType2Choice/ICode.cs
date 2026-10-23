@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentScheduleType2Choice;
 /// Payment schedule type defined in a coded form.
 /// </summary>
 [IsoId("_TYa6Ubb1Eeu9Cp6InX88Vw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPaymentScheduleType2Choice, IIsoChoiceVariant
 {
     /// <summary>

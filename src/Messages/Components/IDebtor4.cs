@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the debtor.
 /// </summary>
 [IsoId("_m_eQEdgxEeipBO1pkKK6zg")]
+[IsoDisplayName(@"Debtor")]
 public interface IDebtor4 : IIsoComponent
 {
     /// <summary>

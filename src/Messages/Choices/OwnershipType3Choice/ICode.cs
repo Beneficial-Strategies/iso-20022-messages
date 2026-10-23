@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OwnershipType3Choice;
 /// Owner type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_pl-wkIzhEemXJvzC2Wyt1g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOwnershipType3Choice, IIsoChoiceVariant
 {
     /// <summary>

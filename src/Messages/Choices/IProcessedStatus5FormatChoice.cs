@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the processing status of a request.
 /// </summary>
 [IsoId("_RnmN8tp-Ed-ak6NoX_4Aeg_-1411191918")]
+[IsoDisplayName(@"Processed Status 5 Format Choice")]
 public interface IProcessedStatus5FormatChoice : IIsoChoice { }

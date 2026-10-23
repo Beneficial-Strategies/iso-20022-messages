@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosurePendingStatusReason2Choic
 /// Reason for the closure pending status expressed as a code.
 /// </summary>
 [IsoId("_9J7XcWCLEeabZtzjEVWYCQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IClosurePendingStatusReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

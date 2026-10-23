@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security that is a securitised right for entitlement, eg, equity or bond or a sub-set of an investment fund.
 /// </summary>
 [IsoId("_VG9309p-Ed-ak6NoX_4Aeg_-2072359987")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IFinancialInstrument4 : IIsoComponent
     [IsoId("_VG931dp-Ed-ak6NoX_4Aeg_-2030798764")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IFinancialInstrument4 : IIsoComponent
     [IsoId("_VG931tp-Ed-ak6NoX_4Aeg_-1898243721")]
     [DisplayName("Supplementary Identification")]
     [IsoXmlTag("SplmtryId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SupplementaryIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IFinancialInstrument4 : IIsoComponent
     [IsoId("_VG932Np-Ed-ak6NoX_4Aeg_-1898243488")]
     [DisplayName("Class Type")]
     [IsoXmlTag("ClssTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClassType { get; }
 
     /// <summary>

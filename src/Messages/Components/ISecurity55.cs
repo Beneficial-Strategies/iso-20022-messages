@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data specific to securities being subject to the transaction.
 /// </summary>
 [IsoId("_Nqo-scg5Eeu4ecZgAYuz5w")]
+[IsoDisplayName(@"Security")]
 public interface ISecurity55 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurity55 : IIsoComponent
     [IsoId("_NsTyo8g5Eeu4ecZgAYuz5w")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? Identification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecurity55 : IIsoComponent
     [IsoId("_NsTypcg5Eeu4ecZgAYuz5w")]
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier? ClassificationType { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ISecurity55 : IIsoComponent
     [IsoId("_NsTyr8g5Eeu4ecZgAYuz5w")]
     [DisplayName("Maturity")]
     [IsoXmlTag("Mtrty")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Maturity { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface ISecurity55 : IIsoComponent
     [IsoId("_NsTys8g5Eeu4ecZgAYuz5w")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesLendingType3Choice> Type { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface ISecurity55 : IIsoComponent
     [IsoId("_NsTytcg5Eeu4ecZgAYuz5w")]
     [DisplayName("Exclusive Arrangement")]
     [IsoXmlTag("ExclsvArrgmnt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ExclusiveArrangement { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface ISecurity55 : IIsoComponent
     [IsoId("_NsTyt8g5Eeu4ecZgAYuz5w")]
     [DisplayName("Available For Collateral Reuse")]
     [IsoXmlTag("AvlblForCollReuse")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AvailableForCollateralReuse { get; }
 
     /// <summary>
@@ -107,5 +114,6 @@ public interface ISecurity55 : IIsoComponent
     [IsoId("_NsTyucg5Eeu4ecZgAYuz5w")]
     [DisplayName("Haircut Or Margin")]
     [IsoXmlTag("HrcutOrMrgn")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? HaircutOrMargin { get; }
 }

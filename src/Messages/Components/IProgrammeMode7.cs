@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Proposed or applied programme, network, or brand processes the transaction.
 /// </summary>
 [IsoId("_JwPJwSHxEfCkq6-p7S3J1Q")]
+[IsoDisplayName(@"Programme Mode7")]
 public interface IProgrammeMode7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IProgrammeMode7 : IIsoComponent
     [IsoId("_Jy0jsSHxEfCkq6-p7S3J1Q")]
     [DisplayName("Proposed Identification")]
     [IsoXmlTag("PropsdId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ProposedIdentification { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IProgrammeMode7 : IIsoComponent
     [IsoId("_Ty4sMkVYEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IProgrammeMode7 : IIsoComponent
     [IsoId("_Ty4sM0VYEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

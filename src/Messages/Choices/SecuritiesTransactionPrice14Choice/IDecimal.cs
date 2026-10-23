@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice14Choi
 /// <summary>
 /// </summary>
 [IsoId("_M_bfdwVJEequL9Y8-ASIxA")]
+[IsoDisplayName(@"Decimal")]
 public interface IDecimal : ISecuritiesTransactionPrice14Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -15,5 +16,6 @@ public interface IDecimal : ISecuritiesTransactionPrice14Choice, IIsoChoiceVaria
     /// Rate expressed as a decimal, for example, 0.7 is 7/10 and 70%.
     /// </summary>
     [IsoXmlTag("Dcml")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate Value { get; }
 }

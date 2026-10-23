@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the card payment transaction.
 /// </summary>
 [IsoId("_4Dwf0YNuEeuHqfO1LgkE9Q")]
+[IsoDisplayName(@"Transaction Context")]
 public interface ITransactionContext7 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_4Igc84NuEeuHqfO1LgkE9Q")]
     [DisplayName("Merchant Category Specific Data")]
     [IsoXmlTag("MrchntCtgySpcfcData")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MerchantCategorySpecificData { get; }
 
     /// <summary>
@@ -35,6 +38,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_4Igc9YNuEeuHqfO1LgkE9Q")]
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CustomerConsent { get; }
 
     /// <summary>
@@ -45,6 +49,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_9x-gkbXnEeusf7oR9YukCg")]
     [DisplayName("PIN Pad Inoperative")]
     [IsoXmlTag("PINPadInprtv")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PINPadInoperative { get; }
 
     /// <summary>
@@ -53,6 +58,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_wiS60DHIEeyTT91yHXSlSQ")]
     [DisplayName("PIN Entry Bypass Indicator")]
     [IsoXmlTag("PINNtryBpssInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PINEntryBypassIndicator { get; }
 
     /// <summary>
@@ -61,6 +67,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_4Igc94NuEeuHqfO1LgkE9Q")]
     [DisplayName("ICC Fallback Indicator")]
     [IsoXmlTag("ICCFllbckInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ICCFallbackIndicator { get; }
 
     /// <summary>
@@ -77,6 +84,8 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_U5lAcDHKEeyTT91yHXSlSQ")]
     [DisplayName("Other ICC Fallback Reason Code")]
     [IsoXmlTag("OthrICCFllbckRsnCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherICCFallbackReasonCode { get; }
 
     /// <summary>
@@ -88,6 +97,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_4Igc-YNuEeuHqfO1LgkE9Q")]
     [DisplayName("Magnetic Stripe Fallback Indicator")]
     [IsoXmlTag("MgntcStrpFllbckInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MagneticStripeFallbackIndicator { get; }
 
     /// <summary>
@@ -99,6 +109,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_4Igc-4NuEeuHqfO1LgkE9Q")]
     [DisplayName("Late Presentment Indicator")]
     [IsoXmlTag("LatePresntmntInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? LatePresentmentIndicator { get; }
 
     /// <summary>
@@ -107,6 +118,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_4Igc_YNuEeuHqfO1LgkE9Q")]
     [DisplayName("Final Authorisation Indicator")]
     [IsoXmlTag("FnlAuthstnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? FinalAuthorisationIndicator { get; }
 
     /// <summary>
@@ -118,6 +130,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_4Igc_4NuEeuHqfO1LgkE9Q")]
     [DisplayName("Deferred Delivery Indicator")]
     [IsoXmlTag("DfrrdDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DeferredDeliveryIndicator { get; }
 
     /// <summary>
@@ -126,6 +139,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_kpZdYDHMEeyTT91yHXSlSQ")]
     [DisplayName("Partial Shipment Indicator")]
     [IsoXmlTag("PrtlShipmntInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PartialShipmentIndicator { get; }
 
     /// <summary>
@@ -134,6 +148,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_RbDCADKkEeyTT91yHXSlSQ")]
     [DisplayName("Delayed Charges Indicator")]
     [IsoXmlTag("DelydChrgsInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DelayedChargesIndicator { get; }
 
     /// <summary>
@@ -142,6 +157,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_aEHwoTKkEeyTT91yHXSlSQ")]
     [DisplayName("No Show Indicator")]
     [IsoXmlTag("NoShowInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NoShowIndicator { get; }
 
     /// <summary>
@@ -150,6 +166,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_lvbhMDKkEeyTT91yHXSlSQ")]
     [DisplayName("Reauthorisation Indicator")]
     [IsoXmlTag("ReauthstnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReauthorisationIndicator { get; }
 
     /// <summary>
@@ -158,6 +175,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_zLT3gDKkEeyTT91yHXSlSQ")]
     [DisplayName("Re Submission Indicator")]
     [IsoXmlTag("ReSubmissnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReSubmissionIndicator { get; }
 
     /// <summary>
@@ -174,6 +192,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_zUMEQMVXEeuips4fuphvoQ")]
     [DisplayName("Authentication Outage Indicator")]
     [IsoXmlTag("AuthntcnOutgInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AuthenticationOutageIndicator { get; }
 
     /// <summary>
@@ -214,6 +233,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_OieIkINvEeuHqfO1LgkE9Q")]
     [DisplayName("Exchange Rate Information")]
     [IsoXmlTag("XchgRateInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExchangeRateInformation2> ExchangeRateInformation { get; }
 
     /// <summary>
@@ -223,6 +243,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_4IgdCYNuEeuHqfO1LgkE9Q")]
     [DisplayName("Capture Date")]
     [IsoXmlTag("CaptrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CaptureDate { get; }
 
     /// <summary>
@@ -231,6 +252,7 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_XMWaYMVYEeuips4fuphvoQ")]
     [DisplayName("Date Anticipated")]
     [IsoXmlTag("DtAntcptd")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateAnticipated { get; }
 
     /// <summary>
@@ -239,5 +261,6 @@ public interface ITransactionContext7 : IIsoComponent
     [IsoId("_dHP2EMVZEeuips4fuphvoQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

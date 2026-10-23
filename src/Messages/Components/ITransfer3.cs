@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_VOajpdp-Ed-ak6NoX_4Aeg_-1021622577")]
+[IsoDisplayName(@"Transfer")]
 public interface ITransfer3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransfer3 : IIsoComponent
     [IsoId("_VOajptp-Ed-ak6NoX_4Aeg_172416714")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ITransfer3 : IIsoComponent
     [IsoId("_VOajqdp-Ed-ak6NoX_4Aeg_-443498289")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator OwnAccountTransferIndicator { get; }
 }

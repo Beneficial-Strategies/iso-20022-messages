@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Search10.
 /// </summary>
 [IsoId("_3T9n8TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Payment Search10")]
 public interface IPaymentSearch10 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> MessageIdentification { get; }
 
     /// <summary>
@@ -23,6 +25,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDateAndDateTimeSearch3Choice> RequestedExecutionDate { get; }
 
     /// <summary>
@@ -30,6 +33,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Payment Identification")]
     [IsoXmlTag("PmtId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentIdentification8Choice> PaymentIdentification { get; }
 
     /// <summary>
@@ -37,6 +41,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionStatusSearch5> Status { get; }
 
     /// <summary>
@@ -44,6 +49,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Instructed Amount")]
     [IsoXmlTag("InstdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActiveOrHistoricAmountRange2Choice> InstructedAmount { get; }
 
     /// <summary>
@@ -51,6 +57,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Instructed Amount Currency")]
     [IsoXmlTag("InstdAmtCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyCode> InstructedAmountCurrency { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Interbank Settlement Amount")]
     [IsoXmlTag("IntrBkSttlmAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActiveAmountRange3Choice> InterbankSettlementAmount { get; }
 
     /// <summary>
@@ -72,6 +80,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Interbank Settlement Amount Currency")]
     [IsoXmlTag("IntrBkSttlmAmtCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveCurrencyCode> InterbankSettlementAmountCurrency { get; }
 
     /// <summary>
@@ -79,6 +88,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Payment Method")]
     [IsoXmlTag("PmtMtd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentOrigin1Choice> PaymentMethod { get; }
 
     /// <summary>
@@ -86,6 +96,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Payment Type")]
     [IsoXmlTag("PmtTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentType4Choice> PaymentType { get; }
 
     /// <summary>
@@ -93,6 +104,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriority1Choice> Priority { get; }
 
     /// <summary>
@@ -100,6 +112,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Processing Validity Time")]
     [IsoXmlTag("PrcgVldtyTm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDateTimePeriod1Choice> ProcessingValidityTime { get; }
 
     /// <summary>
@@ -107,6 +120,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction")]
     [IsoXmlTag("Instr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Instruction1Code> Instruction { get; }
 
     /// <summary>
@@ -114,6 +128,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> TransactionIdentification { get; }
 
     /// <summary>
@@ -121,6 +136,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<UUIDv4Identifier> UETR { get; }
 
     /// <summary>
@@ -128,6 +144,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISODate> InterbankSettlementDate { get; }
 
     /// <summary>
@@ -135,6 +152,7 @@ public interface IPaymentSearch10 : IIsoComponent
     /// </summary>
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> EndToEndIdentification { get; }
 
     /// <summary>

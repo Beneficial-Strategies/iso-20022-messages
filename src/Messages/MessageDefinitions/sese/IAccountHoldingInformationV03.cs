@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_ZgpvURgBEeKqWJINzXcn5g")]
 [IsoMessage("sese.018.001.03", "AcctHldgInf", "urn:iso:std:iso:20022:tech:xsd:sese.018.001.03")]
+[Description(@"Scope|An executing party, for example, a (old) plan manager (Transferor), sends the AccountHoldingInformation message to the instructing party, for example, a (new) plan manager (Transferee), to provide information about financial instruments held on behalf of a client.|Usage|The AccountHoldingInformation message is used to provide information about one or more ISA or portfolio products held in a client's account.")]
+[IsoDisplayName(@"Account Holding Information V")]
 public interface IAccountHoldingInformationV03 : IOuterRecord
 {
     /// <summary>
@@ -79,6 +81,7 @@ public interface IAccountHoldingInformationV03 : IOuterRecord
     [IsoId("_ZgpvfxgBEeKqWJINzXcn5g")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson8> OtherIndividualInvestor { get; }
 
     /// <summary>
@@ -103,6 +106,7 @@ public interface IAccountHoldingInformationV03 : IOuterRecord
     [IsoId("_ZgpvixgBEeKqWJINzXcn5g")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation4> OtherCorporateInvestor { get; }
 
     /// <summary>
@@ -135,6 +139,7 @@ public interface IAccountHoldingInformationV03 : IOuterRecord
     [IsoId("_ZgpvmxgBEeKqWJINzXcn5g")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IISATransfer6> ProductTransfer { get; }
 
     /// <summary>
@@ -143,5 +148,6 @@ public interface IAccountHoldingInformationV03 : IOuterRecord
     [IsoId("_ZgpvnxgBEeKqWJINzXcn5g")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

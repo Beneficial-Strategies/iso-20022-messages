@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalActivation3Choice;
 /// <summary>
 /// Original Activation Data.
 /// </summary>
+[IsoDisplayName(@"Original Activation Data")]
 public interface IOriginalActivationData : IOriginalActivation3Choice, IIsoChoiceVariant
 {
     /// <summary>

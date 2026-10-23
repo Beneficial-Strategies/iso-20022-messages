@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status of the acceptor system containing the identification of the POI (Point Of Interaction), its components and their installed versions.
 /// </summary>
 [IsoId("_r0Z0wbYEEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Status Report15")]
 public interface IStatusReport15 : IIsoComponent
 {
     /// <summary>

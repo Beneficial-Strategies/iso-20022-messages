@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of format for the pending reason.</summary>
 [IsoId("_vBCzjaodEfCG2_q2WT-90w")]
+[IsoDisplayName(@"Pending Reason 79 Choice")]
 public interface IPendingReason79Choice : IIsoChoice { }

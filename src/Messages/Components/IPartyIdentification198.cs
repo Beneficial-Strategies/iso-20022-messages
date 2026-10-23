@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_LaBAcUrBEeenp6hmNprBHg")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification198 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyIdentification198 : IIsoComponent
     [IsoId("_LkAC4UrBEeenp6hmNprBHg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IPartyIdentification198 : IIsoComponent
     [IsoId("_LkAC50rBEeenp6hmNprBHg")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 }

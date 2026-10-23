@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an indicator or a proprietary code to specify whether the security is a temporary security.
 /// </summary>
 [IsoId("_cj_8O5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Temporary Financial Instrument Indicator 4 Choice")]
 public interface ITemporaryFinancialInstrumentIndicator4Choice : IIsoChoice { }

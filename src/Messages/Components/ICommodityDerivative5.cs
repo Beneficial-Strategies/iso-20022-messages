@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transparency calculation specific details for a freight commodity.
 /// </summary>
 [IsoId("_njM5VU-nEeiVsYLJl6hleg")]
+[IsoDisplayName(@"Commodity Derivative")]
 public interface ICommodityDerivative5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICommodityDerivative5 : IIsoComponent
     [IsoId("_nsafsU-nEeiVsYLJl6hleg")]
     [DisplayName("Size")]
     [IsoXmlTag("Sz")]
+    [IsoSimpleType(IsoSimpleType.Max25Text)]
+    [StringLength(25, MinimumLength = 1)]
     Max25Text Size { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ICommodityDerivative5 : IIsoComponent
     [IsoId("_nsafs0-nEeiVsYLJl6hleg")]
     [DisplayName("Average Time Charter")]
     [IsoXmlTag("AvrgTmChrtr")]
+    [IsoSimpleType(IsoSimpleType.Max25Text)]
+    [StringLength(25, MinimumLength = 1)]
     Max25Text AverageTimeCharter { get; }
 }

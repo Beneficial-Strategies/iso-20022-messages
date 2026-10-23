@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the clearing details.
 /// </summary>
 [IsoId("_tv6MUWpUEeSgo9vJrfSF_Q")]
+[IsoDisplayName(@"Clearing")]
 public interface IClearing4 : IIsoComponent
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface IClearing4 : IIsoComponent
     [IsoId("_uM64d2pUEeSgo9vJrfSF_Q")]
     [DisplayName("Guaranteed Trade")]
     [IsoXmlTag("GrntedTrad")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? GuaranteedTrade { get; }
 
     /// <summary>

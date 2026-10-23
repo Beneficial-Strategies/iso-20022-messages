@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status and reason of an instructed order.
 /// </summary>
 [IsoId("_UaaT1tp-Ed-ak6NoX_4Aeg_-595941310")]
+[IsoDisplayName(@"Status And Reason")]
 public interface IStatusAndReason2 : IIsoComponent
 {
     /// <summary>

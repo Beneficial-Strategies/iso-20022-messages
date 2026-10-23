@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment related to the reconciliation of the transaction.
 /// </summary>
 [IsoId("_CCe7QYHZEeu02oZZRFgg6A")]
+[IsoDisplayName(@"Environment")]
 public interface IEnvironment22 : IIsoComponent
 {
     /// <summary>

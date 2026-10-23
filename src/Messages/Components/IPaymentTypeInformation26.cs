@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details of the type of payment.
 /// </summary>
 [IsoId("_YPH8YXR0EeiH1ZOt2UD8vQ")]
+[IsoDisplayName(@"Payment Type Information")]
 public interface IPaymentTypeInformation26 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPaymentTypeInformation26 : IIsoComponent
     [IsoId("_YaAWtXR0EeiH1ZOt2UD8vQ")]
     [DisplayName("Service Level")]
     [IsoXmlTag("SvcLvl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IServiceLevel8Choice> ServiceLevel { get; }
 
     /// <summary>

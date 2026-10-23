@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status21Choice;
 /// </summary>
 [IsoId("_MHhOUyYuEeW_ZNn8gbfY7Q")]
 [IsoXmlTag("Pdg")]
+[IsoDisplayName(@"Pending")]
 public interface IPending : IStatus21Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,7 @@ public interface IPending : IStatus21Choice, IIsoChoiceVariant
     [IsoId("_RQf8mNp-Ed-ak6NoX_4Aeg_1012324216")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Reason { get; }
 }

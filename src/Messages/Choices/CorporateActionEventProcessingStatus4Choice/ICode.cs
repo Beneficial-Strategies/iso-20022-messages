@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventProcessingSt
 /// Status of a corporate action or the status of a payment expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_8Qbor5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionEventProcessingStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>

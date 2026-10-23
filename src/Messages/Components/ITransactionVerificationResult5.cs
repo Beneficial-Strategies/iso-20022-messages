@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of performed verifications for the transaction.
 /// </summary>
 [IsoId("_9soGsYocEeSirOZJBRz_nA")]
+[IsoDisplayName(@"Transaction Verification Result")]
 public interface ITransactionVerificationResult5 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ITransactionVerificationResult5 : IIsoComponent
     [IsoId("_95gsJ4ocEeSirOZJBRz_nA")]
     [DisplayName("Additional Result")]
     [IsoXmlTag("AddtlRslt")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalResult { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface ITransactionVerificationResult5 : IIsoComponent
     [IsoId("_YIjy8IodEeSirOZJBRz_nA")]
     [DisplayName("Authentication Token")]
     [IsoXmlTag("AuthntcnTkn")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? AuthenticationToken { get; }
 }

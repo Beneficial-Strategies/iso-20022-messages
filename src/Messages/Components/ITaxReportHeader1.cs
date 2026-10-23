@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines message level identification, number of individual tax reports and tax authority.
 /// </summary>
 [IsoId("_xtcK0WnzEea5EcY2TpG1mw")]
+[IsoDisplayName(@"Tax Report Header")]
 public interface ITaxReportHeader1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITaxReportHeader1 : IIsoComponent
     [IsoId("_L3NwEGn0Eea5EcY2TpG1mw")]
     [DisplayName("Number Of Tax Reports")]
     [IsoXmlTag("NbOfTaxRpts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfTaxReports { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ITaxReportHeader1 : IIsoComponent
     [IsoId("_VbSuYGn0Eea5EcY2TpG1mw")]
     [DisplayName("Tax Authority")]
     [IsoXmlTag("TaxAuthrty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxOrganisationIdentification1> TaxAuthority { get; }
 }

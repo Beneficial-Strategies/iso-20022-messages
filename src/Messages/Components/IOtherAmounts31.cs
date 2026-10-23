@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies other amounts pertaining to the transaction.
 /// </summary>
 [IsoId("_ugYp8Tp8EeWVrPy0StzzSg")]
+[IsoDisplayName(@"Other Amounts")]
 public interface IOtherAmounts31 : IIsoComponent
 {
     /// <summary>

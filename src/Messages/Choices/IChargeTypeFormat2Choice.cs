@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Type of charge expressed either in free format or in structured or free form.
 /// </summary>
 [IsoId("_UyQMF9p-Ed-ak6NoX_4Aeg_1822769667")]
+[IsoDisplayName(@"Charge Type Format 2 Choice")]
 public interface IChargeTypeFormat2Choice : IIsoChoice { }

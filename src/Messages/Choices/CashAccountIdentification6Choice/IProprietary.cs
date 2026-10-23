@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification6Choice
 /// Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme.
 /// </summary>
 [IsoId("_WO8MjNp-Ed-ak6NoX_4Aeg_-834802137")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICashAccountIdentification6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : ICashAccountIdentification6Choice, IIsoChoiceVar
     /// Specifies a character string with a maximum length of 34 characters limited to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + .
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINX2Max34Text)]
+    [StringLength(34, MinimumLength = 1)]
     RestrictedFINX2Max34Text Value { get; }
 }

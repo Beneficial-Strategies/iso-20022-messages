@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes each adjustment made to the original price.
 /// </summary>
 [IsoId("_aZH-NvS6Eeife6veM7daYw")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount9 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAmount9 : IIsoComponent
     [IsoId("_aZH-O_S6Eeife6veM7daYw")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IAmount9 : IIsoComponent
     [IsoId("_aZH-OvS6Eeife6veM7daYw")]
     [DisplayName("Credit Indicator")]
     [IsoXmlTag("CdtInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CreditIndicator { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IAmount9 : IIsoComponent
     [IsoId("_aZH-N_S6Eeife6veM7daYw")]
     [DisplayName("Customer Notified Indicator")]
     [IsoXmlTag("CstmrNtfdInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CustomerNotifiedIndicator { get; }
 }

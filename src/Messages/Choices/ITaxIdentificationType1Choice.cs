@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the type of tax identification.
 /// </summary>
 [IsoId("_yWmpEAhIEeSUPbC7DbLJpQ")]
+[IsoDisplayName(@"Tax Identification Type 1 Choice")]
 public interface ITaxIdentificationType1Choice : IIsoChoice { }

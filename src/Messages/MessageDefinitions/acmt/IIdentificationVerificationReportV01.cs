@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_sR7vSWtdEeCY4-KZ9JEyUQ_-1219419046")]
 [IsoMessage("acmt.024.001.01", "IdVrfctnRpt", "urn:iso:std:iso:20022:tech:xsd:acmt.024.001.01")]
+[Description(@"Scope|The IdentificationVerificationReport message is sent by an assigner to an assignee. It is used to confirm whether or not the presented party and/or account identification information is correct.|Usage|The IdentificationVerificationReport message is sent as a response to an IdentificationVerificationRequest message.|The IdentificationVerificationReport message can contain one or more reports.|The IdentificationVerificationReport message may include a reason if the presented party and/or account identification information is confirmed to be incorrect.|The IdentificationVerificationReport message may include the correct party and/or account identification information.")]
+[IsoDisplayName(@"Identification Verification Report V")]
 public interface IIdentificationVerificationReportV01 : IOuterRecord
 {
     /// <summary>
@@ -42,5 +44,6 @@ public interface IIdentificationVerificationReportV01 : IOuterRecord
     [IsoId("_sSFgQmtdEeCY4-KZ9JEyUQ_-1601120034")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerificationReport1> Report { get; }
 }

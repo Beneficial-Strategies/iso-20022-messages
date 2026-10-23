@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionTypeStatus4Choice;
 /// </summary>
 [IsoId("_bGDXMfNfEeqRfth943bvEA")]
 [IsoXmlTag("InstrSts")]
+[IsoDisplayName(@"Instruction Status")]
 public interface IInstructionStatus : IInstructionTypeStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IInstructionStatus : IInstructionTypeStatus4Choice, IIsoChoiceV
     [IsoId("_btxehfNfEeqRfth943bvEA")]
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SingleInstructionIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IInstructionStatus : IInstructionTypeStatus4Choice, IIsoChoiceV
     [IsoId("_btxeh_NfEeqRfth943bvEA")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface IInstructionStatus : IInstructionTypeStatus4Choice, IIsoChoiceV
     [IsoId("_btxeifNfEeqRfth943bvEA")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubAccountIdentification { get; }
 
     /// <summary>

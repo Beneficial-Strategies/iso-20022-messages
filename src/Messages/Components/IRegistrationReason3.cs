@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason of registration.
 /// </summary>
 [IsoId("_zxI48RXZEeGmOJpfhCvx_g")]
+[IsoDisplayName(@"Registration Reason")]
 public interface IRegistrationReason3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IRegistrationReason3 : IIsoComponent
     [IsoId("_zxSp9RXZEeGmOJpfhCvx_g")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalInformation { get; }
 }

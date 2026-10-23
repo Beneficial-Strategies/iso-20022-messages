@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Funds transfer service
 /// </summary>
 [IsoId("_-jYl8R1OEey8XKHwKquEQw")]
+[IsoDisplayName(@"Transfer Service")]
 public interface ITransferService2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransferService2 : IIsoComponent
     [IsoId("_-wAssR1OEey8XKHwKquEQw")]
     [DisplayName("Service Provider")]
     [IsoXmlTag("SvcPrvdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ServiceProvider { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransferService2 : IIsoComponent
     [IsoId("_-wAssx1OEey8XKHwKquEQw")]
     [DisplayName("Service Name")]
     [IsoXmlTag("SvcNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ServiceName { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransferService2 : IIsoComponent
     [IsoId("_-wAstR1OEey8XKHwKquEQw")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITransferService2 : IIsoComponent
     [IsoId("_-wAstx1OEey8XKHwKquEQw")]
     [DisplayName("Business Purpose")]
     [IsoXmlTag("BizPurp")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? BusinessPurpose { get; }
 
     /// <summary>
@@ -49,5 +58,7 @@ public interface ITransferService2 : IIsoComponent
     [IsoId("_-wAsuR1OEey8XKHwKquEQw")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Description { get; }
 }

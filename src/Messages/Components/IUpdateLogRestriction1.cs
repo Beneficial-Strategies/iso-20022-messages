@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the old and new values for a restriction.
 /// </summary>
 [IsoId("_rhJnc2jTEeiRg5NzP0jkQg")]
+[IsoDisplayName(@"Update Log Restriction")]
 public interface IUpdateLogRestriction1 : IIsoComponent
 {
     /// <summary>

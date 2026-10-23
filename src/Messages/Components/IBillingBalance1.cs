@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the balance for the billing services.
 /// </summary>
 [IsoId("_6SL4XZqlEeGSON8vddiWzQ_313331951")]
+[IsoDisplayName(@"Billing Balance")]
 public interface IBillingBalance1 : IIsoComponent
 {
     /// <summary>

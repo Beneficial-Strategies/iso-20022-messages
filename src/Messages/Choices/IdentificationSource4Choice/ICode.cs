@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource4Choice;
 /// Unique and unambiguous identification source, as assigned via a pre-determined code list.
 /// </summary>
 [IsoId("_uPv-YggWEeCVlvYcV4HKqQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IIdentificationSource4Choice, IIsoChoiceVariant
 {
     /// <summary>

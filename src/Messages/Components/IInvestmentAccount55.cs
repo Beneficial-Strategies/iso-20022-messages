@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
 /// </summary>
 [IsoId("_1_oToSSMEeWdoOFYMt-Lzw")]
+[IsoDisplayName(@"Investment Account")]
 public interface IInvestmentAccount55 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInvestmentAccount55 : IIsoComponent
     [IsoId("_2b5Y5ySMEeWdoOFYMt-Lzw")]
     [DisplayName("Owner Identification")]
     [IsoXmlTag("OwnrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification70Choice> OwnerIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IInvestmentAccount55 : IIsoComponent
     [IsoId("_2b5Y6SSMEeWdoOFYMt-Lzw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IInvestmentAccount55 : IIsoComponent
     [IsoId("_2b5Y6ySMEeWdoOFYMt-Lzw")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountName { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface IInvestmentAccount55 : IIsoComponent
     [IsoId("_2b5Y7SSMEeWdoOFYMt-Lzw")]
     [DisplayName("Account Designation")]
     [IsoXmlTag("AcctDsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountDesignation { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IInvestmentAccount55 : IIsoComponent
     [IsoId("_2b5Y8ySMEeWdoOFYMt-Lzw")]
     [DisplayName("Dematerialised Indicator")]
     [IsoXmlTag("DmtrlsdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DematerialisedIndicator { get; }
 
     /// <summary>

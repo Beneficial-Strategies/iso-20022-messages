@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification262Choice;
 
 /// <summary>Unique and unambiguous identifier, as assigned to the party using a proprietary identification scheme.</summary>
 [IsoId("50e6169a-09e0-4d41-b67b-79c8b4d1c5dc")]
+[IsoDisplayName(@"Proprietary Identification")]
 public interface IProprietaryIdentification : IPartyIdentification262Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

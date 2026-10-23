@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status32Choice;
 /// Provides the status of an instruction.
 /// </summary>
 [IsoId("_BH0PlQpIEeup4r-PFG2T5Q")]
+[IsoDisplayName(@"Instruction Processing Status")]
 public interface IInstructionProcessingStatus : IStatus32Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus27Choice;
 /// </summary>
 [IsoId("_GQGGQMT2Eem9aZlimxVUIw")]
 [IsoXmlTag("DtldCxlSts")]
+[IsoDisplayName(@"Detailed Cancellation Status")]
 public interface IDetailedCancellationStatus : ICancellationStatus27Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IDetailedCancellationStatus : ICancellationStatus27Choice, IIso
     [IsoId("_Wrd3E8T3Eem9aZlimxVUIw")]
     [DisplayName("Single Instruction Cancellation Identification")]
     [IsoXmlTag("SnglInstrCxlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SingleInstructionCancellationIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IDetailedCancellationStatus : ICancellationStatus27Choice, IIso
     [IsoId("_Wrd3FMT3Eem9aZlimxVUIw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface IDetailedCancellationStatus : ICancellationStatus27Choice, IIso
     [IsoId("_Wrd3EMT3Eem9aZlimxVUIw")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubAccountIdentification { get; }
 
     /// <summary>

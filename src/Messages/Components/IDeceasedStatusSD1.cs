@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Deceased beneficial owner information details.
 /// </summary>
 [IsoId("_JuPnQcX8EeexPc-mfUU5zQ")]
+[IsoDisplayName(@"Deceased Status SD")]
 public interface IDeceasedStatusSD1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDeceasedStatusSD1 : IIsoComponent
     [IsoId("_5C1u8cX9EeexPc-mfUU5zQ")]
     [DisplayName("Beneficial Owner Name")]
     [IsoXmlTag("BnfclOwnrNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text BeneficialOwnerName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IDeceasedStatusSD1 : IIsoComponent
     [IsoId("_JuPnQ8X8EeexPc-mfUU5zQ")]
     [DisplayName("Death Date")]
     [IsoXmlTag("DthDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DeathDate { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IDeceasedStatusSD1 : IIsoComponent
     [IsoId("_JuPnRMX8EeexPc-mfUU5zQ")]
     [DisplayName("Death Certificate Serial Number")]
     [IsoXmlTag("DthCertSrlNb")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? DeathCertificateSerialNumber { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface IDeceasedStatusSD1 : IIsoComponent
     [IsoId("_JuPnQsX8EeexPc-mfUU5zQ")]
     [DisplayName("Issuing Jurisdiction")]
     [IsoXmlTag("IssgJursdctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? IssuingJurisdiction { get; }
 }

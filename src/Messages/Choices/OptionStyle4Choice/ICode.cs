@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionStyle4Choice;
 /// Option style expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_Q4NYY9p-Ed-ak6NoX_4Aeg_1189669056")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOptionStyle4Choice, IIsoChoiceVariant
 {
     /// <summary>

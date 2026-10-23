@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueCriteriaDefinitio
 /// <summary>
 /// Query Name.
 /// </summary>
+[IsoDisplayName(@"Query Name")]
 public interface IQueryName : ICollateralValueCriteriaDefinition4Choice, IIsoChoiceVariant
 {
     /// <summary>

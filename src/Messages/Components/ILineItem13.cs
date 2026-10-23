@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Commercial details of a trade transaction between a buyer and a seller.
 /// </summary>
 [IsoId("_KK1ZcQgHEeSeS5xdjFfOTw")]
+[IsoDisplayName(@"Line Item")]
 public interface ILineItem13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILineItem13 : IIsoComponent
     [IsoId("_KiCYWQgHEeSeS5xdjFfOTw")]
     [DisplayName("Goods And Or Services Description")]
     [IsoXmlTag("GoodsAndOrSvcsDesc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? GoodsAndOrServicesDescription { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ILineItem13 : IIsoComponent
     [IsoId("_KiCYWwgHEeSeS5xdjFfOTw")]
     [DisplayName("Partial Shipment")]
     [IsoXmlTag("PrtlShipmnt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PartialShipment { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ILineItem13 : IIsoComponent
     [IsoId("_KiCYXQgHEeSeS5xdjFfOTw")]
     [DisplayName("Trans Shipment")]
     [IsoXmlTag("TrnsShipmnt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TransShipment { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ILineItem13 : IIsoComponent
     [IsoId("_KiCYYQgHEeSeS5xdjFfOTw")]
     [DisplayName("Line Item Details")]
     [IsoXmlTag("LineItmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItemDetails13> LineItemDetails { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface ILineItem13 : IIsoComponent
     [IsoId("_KiCYaQgHEeSeS5xdjFfOTw")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment7> Adjustment { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface ILineItem13 : IIsoComponent
     [IsoId("_KiCYbQgHEeSeS5xdjFfOTw")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax23> Tax { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface ILineItem13 : IIsoComponent
     [IsoId("_KiCYcQgHEeSeS5xdjFfOTw")]
     [DisplayName("Buyer Defined Information")]
     [IsoXmlTag("BuyrDfndInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUserDefinedInformation1> BuyerDefinedInformation { get; }
 
     /// <summary>
@@ -121,5 +130,6 @@ public interface ILineItem13 : IIsoComponent
     [IsoId("_KiCYcwgHEeSeS5xdjFfOTw")]
     [DisplayName("Seller Defined Information")]
     [IsoXmlTag("SellrDfndInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUserDefinedInformation1> SellerDefinedInformation { get; }
 }

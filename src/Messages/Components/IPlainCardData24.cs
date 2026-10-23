@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Plain Card Data24.
 /// </summary>
 [IsoId("_0a7UYaayEe-s1ZClExRjdw")]
+[IsoDisplayName(@"Plain Card Data24")]
 public interface IPlainCardData24 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References2Choice;
 /// Reference to the intra-position movement transaction requested to be cancelled as known by the account owner (or instructing party acting on its behalf).
 /// </summary>
 [IsoId("_US9oDNp-Ed-ak6NoX_4Aeg_-1870319963")]
+[IsoDisplayName(@"Intra Position Movement Identification")]
 public interface IIntraPositionMovementIdentification : IReferences2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IIntraPositionMovementIdentification : IReferences2Choice, IIso
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("IntraPosMvmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

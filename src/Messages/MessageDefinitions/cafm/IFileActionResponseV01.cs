@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.cafm;
 /// </summary>
 [IsoId("_LzUbFFZjEeen1vB4iz5SyA")]
 [IsoMessage("cafm.002.001.01", "FileActnRspn", "urn:iso:std:iso:20022:tech:xsd:cafm.002.001.01")]
+[Description(@"A FileActionResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a FileActionInitiation message.")]
+[IsoDisplayName(@"File Action Response V")]
 public interface IFileActionResponseV01 : IOuterRecord
 {
     /// <summary>

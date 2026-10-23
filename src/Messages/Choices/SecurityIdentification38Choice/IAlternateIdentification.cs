@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification38Choice;
 /// <summary>
 /// Alternate Identification.
 /// </summary>
+[IsoDisplayName(@"Alternate Identification")]
 public interface IAlternateIdentification : ISecurityIdentification38Choice, IIsoChoiceVariant
 {
     /// <summary>

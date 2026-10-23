@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "BuyrPrtcnInstrCxlReqStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.063.001.01"
 )]
+[IsoDisplayName(@"Buyer Protection Instruction Cancellation Request Status Advice V01")]
 public interface IBuyerProtectionInstructionCancellationRequestStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,8 @@ public interface IBuyerProtectionInstructionCancellationRequestStatusAdviceV01 :
     /// </summary>
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -43,6 +46,7 @@ public interface IBuyerProtectionInstructionCancellationRequestStatusAdviceV01 :
     /// </summary>
     [DisplayName("Instruction Cancellation Request Status")]
     [IsoXmlTag("InstrCxlReqSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionCancellationRequestStatus20Choice> InstructionCancellationRequestStatus { get; }
 
     /// <summary>
@@ -71,5 +75,6 @@ public interface IBuyerProtectionInstructionCancellationRequestStatusAdviceV01 :
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

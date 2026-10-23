@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionOrRepairStatus18Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_4Yi_R_7rEeCvPoRGOxRobQ")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IRejectionOrRepairStatus18Choice, IIsoChoiceVariant
 {
     /// <summary>

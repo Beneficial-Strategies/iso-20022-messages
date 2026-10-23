@@ -28,6 +28,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesTxPstngRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.017.002.11"
 )]
+[Description(@"Scope|SecuritiesTransactionPostingReport is sent by an account servicer to an account owner to provide the details of increases and decreases of holdings which occurred during a specified period, for all or selected securities in the specified safekeeping account or sub-safekeeping account which the account servicer holds for the account owner. |The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of its participants|- an agent (sub-custodian) acting on behalf of its global custodian customer, or |- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|This message may be used as a trade date based or a settlement date based statement.|The message may also be used to: |- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Transaction Posting Report 002 V")]
 public interface ISecuritiesTransactionPostingReport002V11 : IOuterRecord
 {
     /// <summary>
@@ -68,6 +70,9 @@ public interface ISecuritiesTransactionPostingReport002V11 : IOuterRecord
     [IsoId("_2xkF5SAeEeuyDZ-ukt4YRg")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary45> IntermediaryInformation { get; }
 
     /// <summary>
@@ -76,6 +81,7 @@ public interface ISecuritiesTransactionPostingReport002V11 : IOuterRecord
     [IsoId("_2xkF5yAeEeuyDZ-ukt4YRg")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentDetails39> FinancialInstrumentDetails { get; }
 
     /// <summary>
@@ -84,5 +90,6 @@ public interface ISecuritiesTransactionPostingReport002V11 : IOuterRecord
     [IsoId("_2xkF6SAeEeuyDZ-ukt4YRg")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubAccountIdentification63> SubAccountDetails { get; }
 }

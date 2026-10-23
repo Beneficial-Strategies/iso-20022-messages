@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// New instrument related data report.
 /// </summary>
 [IsoId("_iaQV0GFSEfC91ZUW7iS7ww")]
+[IsoDisplayName(@"Instrument Report1")]
 public interface IInstrumentReport1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IInstrumentReport1 : IIsoComponent
     [IsoId("_uIthAGFSEfC91ZUW7iS7ww")]
     [DisplayName("Instrument")]
     [IsoXmlTag("Instrm")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstrumentData1> Instrument { get; }
 }

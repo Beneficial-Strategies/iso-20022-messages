@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the classification of a financial institution.
 /// </summary>
 [IsoId("_0lQ2EbHXEemRPNDOvJwndA")]
+[IsoDisplayName(@"Financial Party Classification")]
 public interface IFinancialPartyClassification2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialPartyClassification2 : IIsoComponent
     [IsoId("_0uXHsbHXEemRPNDOvJwndA")]
     [DisplayName("Classification")]
     [IsoXmlTag("Clssfctn")]
+    [IsoSimpleType(IsoSimpleType.NACEDomainIdentifier)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Classification { get; }
 
     /// <summary>

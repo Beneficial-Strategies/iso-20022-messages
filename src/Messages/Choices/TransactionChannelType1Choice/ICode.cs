@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionChannelType1Choice;
 /// Type of transaction channel expressed as a code.
 /// </summary>
 [IsoId("_aT1UIBRGEeOKWo1NF21OVw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITransactionChannelType1Choice, IIsoChoiceVariant
 {
     /// <summary>

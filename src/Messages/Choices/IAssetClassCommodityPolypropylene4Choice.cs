@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines commodity attributes of a derivative where the type is polypropylene.
 /// </summary>
 [IsoId("_yRdvERZZEe2QNcZTDeoKnQ")]
+[IsoDisplayName(@"Asset Class Commodity Polypropylene 4 Choice")]
 public interface IAssetClassCommodityPolypropylene4Choice : IIsoChoice { }

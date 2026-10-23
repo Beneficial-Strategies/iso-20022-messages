@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason77Choice;
 
 /// <summary>Specifies the reason why a cancellation request sent for the related instruction is pending, in proprietary form.</summary>
 [IsoId("30a69507-11bf-4e1b-b005-1ef4e1315c81")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPendingReason77Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

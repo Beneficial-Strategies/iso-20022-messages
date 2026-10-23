@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Get Totals Request message.
 /// </summary>
 [IsoId("_mY7jcN6SEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Report Get Totals Request")]
 public interface IReportGetTotalsRequest1 : IIsoComponent
 {
     /// <summary>

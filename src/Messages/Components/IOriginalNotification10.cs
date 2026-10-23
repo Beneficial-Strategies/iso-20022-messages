@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the original notification, to which the cancellation advice refers.
 /// </summary>
 [IsoId("_2K8qoTq4EeWZFYSPlduMhw")]
+[IsoDisplayName(@"Original Notification")]
 public interface IOriginalNotification10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalNotification10 : IIsoComponent
     [IsoId("_2R6OQzq4EeWZFYSPlduMhw")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IOriginalNotification10 : IIsoComponent
     [IsoId("_2R6ORTq4EeWZFYSPlduMhw")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IOriginalNotification10 : IIsoComponent
     [IsoId("_2R6ORzq4EeWZFYSPlduMhw")]
     [DisplayName("Original Notification Identification")]
     [IsoXmlTag("OrgnlNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalNotificationIdentification { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IOriginalNotification10 : IIsoComponent
     [IsoId("_2R6OSTq4EeWZFYSPlduMhw")]
     [DisplayName("Notification Cancellation")]
     [IsoXmlTag("NtfctnCxl")]
+    [IsoSimpleType(IsoSimpleType.GroupCancellationIndicator)]
     GroupCancellationIndicator? NotificationCancellation { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface IOriginalNotification10 : IIsoComponent
     [IsoId("_2R6OSzq4EeWZFYSPlduMhw")]
     [DisplayName("Original Notification Reference")]
     [IsoXmlTag("OrgnlNtfctnRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalNotificationReference8> OriginalNotificationReference { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about cash entitlements.
 /// </summary>
 [IsoId("_UJbRgdp-Ed-ak6NoX_4Aeg_1924787885")]
+[IsoDisplayName(@"Cash Entitlement")]
 public interface ICashEntitlement1 : IIsoComponent
 {
     /// <summary>

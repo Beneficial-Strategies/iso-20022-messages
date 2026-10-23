@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of failing status.
 /// </summary>
 [IsoId("_17QAYTp5EeWVrPy0StzzSg")]
+[IsoDisplayName(@"Failing Status 9 Choice")]
 public interface IFailingStatus9Choice : IIsoChoice { }

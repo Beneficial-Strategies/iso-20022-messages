@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor parameters dedicated to the acquirer protocol.
 /// </summary>
 [IsoId("_45i7wWprEeSMqvBfBY1c9A")]
+[IsoDisplayName(@"Acquirer Protocol Parameters")]
 public interface IAcquirerProtocolParameters7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_5GqxwWprEeSMqvBfBY1c9A")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification53> AcquirerIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_IcN_cGpsEeSMqvBfBY1c9A")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Version { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_5Gqxw2prEeSMqvBfBY1c9A")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ApplicationIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_5GqxxWprEeSMqvBfBY1c9A")]
     [DisplayName("Host")]
     [IsoXmlTag("Hst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcquirerHostConfiguration3> Host { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_5GqxzWprEeSMqvBfBY1c9A")]
     [DisplayName("Reconciliation By Acquirer")]
     [IsoXmlTag("RcncltnByAcqrr")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReconciliationByAcquirer { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_5Gqxz2prEeSMqvBfBY1c9A")]
     [DisplayName("Totals Per Currency")]
     [IsoXmlTag("TtlsPerCcy")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TotalsPerCurrency { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_5Gqx0WprEeSMqvBfBY1c9A")]
     [DisplayName("Split Totals")]
     [IsoXmlTag("SpltTtls")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? SplitTotals { get; }
 
     /// <summary>
@@ -97,6 +106,7 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_5Gqx02prEeSMqvBfBY1c9A")]
     [DisplayName("Card Data Verification")]
     [IsoXmlTag("CardDataVrfctn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardDataVerification { get; }
 
     /// <summary>
@@ -105,6 +115,7 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_5Gqx1WprEeSMqvBfBY1c9A")]
     [DisplayName("Notify Off Line Cancellation")]
     [IsoXmlTag("NtfyOffLineCxl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NotifyOffLineCancellation { get; }
 
     /// <summary>
@@ -113,6 +124,7 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_5Gqx12prEeSMqvBfBY1c9A")]
     [DisplayName("Batch Transfer Content")]
     [IsoXmlTag("BtchTrfCntt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<BatchTransactionType1Code> BatchTransferContent { get; }
 
     /// <summary>
@@ -121,6 +133,7 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_QvBGoGptEeSMqvBfBY1c9A")]
     [DisplayName("File Transfer Batch")]
     [IsoXmlTag("FileTrfBtch")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? FileTransferBatch { get; }
 
     /// <summary>
@@ -129,6 +142,7 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_Ya6bUGptEeSMqvBfBY1c9A")]
     [DisplayName("Batch Digital Signature")]
     [IsoXmlTag("BtchDgtlSgntr")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? BatchDigitalSignature { get; }
 
     /// <summary>
@@ -137,6 +151,7 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_5Gqx2WprEeSMqvBfBY1c9A")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageItemCondition1> MessageItem { get; }
 
     /// <summary>
@@ -145,5 +160,6 @@ public interface IAcquirerProtocolParameters7 : IIsoComponent
     [IsoId("_5Gqx22prEeSMqvBfBY1c9A")]
     [DisplayName("Protect Card Data")]
     [IsoXmlTag("PrtctCardData")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator ProtectCardData { get; }
 }

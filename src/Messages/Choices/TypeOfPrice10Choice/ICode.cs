@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TypeOfPrice10Choice;
 /// Type of price expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_Ac_TcNokEeC60axPepSq7g_1048035822")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITypeOfPrice10Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// </summary>
 [IsoId("_Vk6qUzDmEey2N-DB7H7A5A")]
 [IsoMessage("supl.008.001.07", "DTCCCAINSD1", "urn:iso:std:iso:20022:tech:xsd:supl.008.001.07")]
+[Description(@"The DTCCCAINSD1 message extends ISO corporate action instruction message with DTCC corporate action elements not covered in the standard message.")]
+[IsoDisplayName(@"DTCCCAINSD 1 V")]
 public interface IDTCCCAINSD1V07 : IOuterRecord
 {
     /// <summary>
@@ -20,6 +22,7 @@ public interface IDTCCCAINSD1V07 : IOuterRecord
     [IsoId("_Vk6qVTDmEey2N-DB7H7A5A")]
     [DisplayName("Optional Dividend")]
     [IsoXmlTag("OptnlDvdd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOptionalDividendAccountQuantitySD3> OptionalDividend { get; }
 
     /// <summary>
@@ -28,6 +31,7 @@ public interface IDTCCCAINSD1V07 : IOuterRecord
     [IsoId("_Vk6qXTDmEey2N-DB7H7A5A")]
     [DisplayName("Tax Exempt")]
     [IsoXmlTag("TaxXmpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxExemptQuantitySD2> TaxExempt { get; }
 
     /// <summary>
@@ -36,6 +40,9 @@ public interface IDTCCCAINSD1V07 : IOuterRecord
     [IsoId("_Vk6qZTDmEey2N-DB7H7A5A")]
     [DisplayName("Tax Category")]
     [IsoXmlTag("TaxCtgy")]
+    [MinLength(0)]
+    [MaxLength(99)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCategory2> TaxCategory { get; }
 
     /// <summary>
@@ -44,6 +51,7 @@ public interface IDTCCCAINSD1V07 : IOuterRecord
     [IsoId("_Vk6qZzDmEey2N-DB7H7A5A")]
     [DisplayName("Wire Instruction")]
     [IsoXmlTag("WireInstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IWireInstructionSD3> WireInstruction { get; }
 
     /// <summary>

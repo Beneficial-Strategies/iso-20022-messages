@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus6Choice;
 /// Specifies that a corporate action event processing has not been fully completed and is therefore pending.
 /// </summary>
 [IsoId("_Szi6TAVREeqjd8n6wD9JVw")]
+[IsoDisplayName(@"Pending")]
 public interface IPending : IEventProcessingStatus6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

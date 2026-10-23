@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on a CA option.
 /// </summary>
 [IsoId("_UGJUBtp-Ed-ak6NoX_4Aeg_-746417772")]
+[IsoDisplayName(@"Corporate Action Option")]
 public interface ICorporateActionOption2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICorporateActionOption2 : IIsoComponent
     [IsoId("_UGJUCNp-Ed-ak6NoX_4Aeg_-742724055")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText OptionNumber { get; }
 }

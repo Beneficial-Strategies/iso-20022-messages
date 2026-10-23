@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference information provided by the creditor to allow the identification of the underlying documents.
 /// </summary>
 [IsoId("_T3_jR9p-Ed-ak6NoX_4Aeg_252475969")]
+[IsoDisplayName(@"Creditor Reference Information")]
 public interface ICreditorReferenceInformation2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICreditorReferenceInformation2 : IIsoComponent
     [IsoId("_T3_jSdp-Ed-ak6NoX_4Aeg_252476000")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reference { get; }
 }

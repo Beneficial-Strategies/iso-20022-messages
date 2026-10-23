@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cancelled Status5.
 /// </summary>
 [IsoId("_aeMLEYWAEe-ufOxNNkEXmg")]
+[IsoDisplayName(@"Cancelled Status5")]
 public interface ICancelledStatus5 : IIsoComponent
 {
     /// <summary>

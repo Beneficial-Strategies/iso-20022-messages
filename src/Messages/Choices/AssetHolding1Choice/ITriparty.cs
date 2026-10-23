@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 /// </summary>
 [IsoId("_0kAaQK_6EeaE9YROwd69hA")]
 [IsoXmlTag("Trpty")]
+[IsoDisplayName(@"Triparty")]
 public interface ITriparty : IAssetHolding1Choice, IIsoChoiceVariant
 {
     /// <summary>

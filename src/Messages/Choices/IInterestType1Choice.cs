@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Interest type is expressed as a code or a text.
 /// </summary>
 [IsoId("_SRnbVtp-Ed-ak6NoX_4Aeg_-822918144")]
+[IsoDisplayName(@"Interest Type 1 Choice")]
 public interface IInterestType1Choice : IIsoChoice { }

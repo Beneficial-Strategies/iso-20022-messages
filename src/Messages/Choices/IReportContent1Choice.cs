@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of the report content format.
 /// </summary>
 [IsoId("_HsTagMlWEeuJ35KoBRZFOg")]
+[IsoDisplayName(@"Report Content 1 Choice")]
 public interface IReportContent1Choice : IIsoChoice { }

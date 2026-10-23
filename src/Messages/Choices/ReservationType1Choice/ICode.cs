@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationType1Choice;
 /// Liquidity transfer request type, in a coded form.
 /// </summary>
 [IsoId("_8JKFEaMgEeCJ6YNENx4h-w_799887441")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IReservationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the quantity of a product in a trade transaction.
 /// </summary>
 [IsoId("_qLqWUTAPEeOKib24wnHaFg")]
+[IsoDisplayName(@"Quantity")]
 public interface IQuantity10 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IQuantity10 : IIsoComponent
     [IsoId("_qrwLpzAPEeOKib24wnHaFg")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference16Choice;
 /// <summary>
 /// Unique Transaction Identifier.
 /// </summary>
+[IsoDisplayName(@"Unique Transaction Identifier")]
 public interface IUniqueTransactionIdentifier : IIdentificationReference16Choice, IIsoChoiceVariant
 {
     /// <summary>

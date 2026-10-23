@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that locates and identifies a specific address, as defined by postal services.
 /// </summary>
 [IsoId("_WNJcz9p-Ed-ak6NoX_4Aeg_-1885159655")]
+[IsoDisplayName(@"Postal Address")]
 public interface IPostalAddress7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,10 @@ public interface IPostalAddress7 : IIsoComponent
     [IsoId("_WNJc0Np-Ed-ak6NoX_4Aeg_-1885159532")]
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax35Text)]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AddressLine { get; }
 
     /// <summary>
@@ -25,6 +30,8 @@ public interface IPostalAddress7 : IIsoComponent
     [IsoId("_WNTNwNp-Ed-ak6NoX_4Aeg_-1885159162")]
     [DisplayName("Post Code")]
     [IsoXmlTag("PstCd")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax8Text)]
+    [StringLength(8, MinimumLength = 1)]
     RestrictedFINMax8Text? PostCode { get; }
 
     /// <summary>
@@ -33,6 +40,8 @@ public interface IPostalAddress7 : IIsoComponent
     [IsoId("_WNTNwdp-Ed-ak6NoX_4Aeg_-1885159101")]
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax23Text)]
+    [StringLength(23, MinimumLength = 1)]
     RestrictedFINMax23Text? TownName { get; }
 
     /// <summary>

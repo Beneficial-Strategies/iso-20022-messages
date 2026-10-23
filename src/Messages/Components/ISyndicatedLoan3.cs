@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Syndicated Loan3.
 /// </summary>
 [IsoId("_2Vi35zEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Syndicated Loan3")]
 public interface ISyndicatedLoan3 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Authorisation Result20.
 /// </summary>
 [IsoId("_JKTUkZ-vEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Authorisation Result20")]
 public interface IAuthorisationResult20 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface IAuthorisationResult20 : IIsoComponent
     /// </summary>
     [DisplayName("Response Trace")]
     [IsoXmlTag("RspnTrac")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IResponseType8> ResponseTrace { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface IAuthorisationResult20 : IIsoComponent
     /// </summary>
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction7> Action { get; }
 
     /// <summary>
@@ -51,5 +54,6 @@ public interface IAuthorisationResult20 : IIsoComponent
     /// </summary>
     [DisplayName("Fee To Add")]
     [IsoXmlTag("FeeToAdd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMFeeComponent1> FeeToAdd { get; }
 }

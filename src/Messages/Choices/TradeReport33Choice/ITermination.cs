@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice;
 /// <summary>
 /// Termination.
 /// </summary>
+[IsoDisplayName(@"Termination")]
 public interface ITermination : ITradeReport33Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further detailed information on the exchange rate that has been used in or is related to the transaction.
 /// </summary>
 [IsoId("_fbVncSH1EfCkq6-p7S3J1Q")]
+[IsoDisplayName(@"Card Exchange Rate1")]
 public interface ICardExchangeRate1 : IIsoComponent
 {
     /// <summary>

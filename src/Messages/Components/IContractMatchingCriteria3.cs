@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Compares information related to both sides of a contract.
 /// </summary>
 [IsoId("_cL1LmVovEe23K4GXSpBSeg")]
+[IsoDisplayName(@"Contract Matching Criteria")]
 public interface IContractMatchingCriteria3 : IIsoComponent
 {
     /// <summary>

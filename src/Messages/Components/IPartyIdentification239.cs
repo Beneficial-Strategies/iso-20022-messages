@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to identify a person or an organisation.
 /// </summary>
 [IsoId("_psOtp_Q0EeqAradXpAelDQ")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification239 : IIsoComponent
 {
     /// <summary>

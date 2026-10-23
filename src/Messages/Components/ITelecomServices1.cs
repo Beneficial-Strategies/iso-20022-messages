@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Telecom services carries telephony billing data.
 /// </summary>
 [IsoId("_2uCds_fNEei89sMSHxl1ew")]
+[IsoDisplayName(@"Telecom Services")]
 public interface ITelecomServices1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ITelecomServices1 : IIsoComponent
     [IsoId("_2uCdtffNEei89sMSHxl1ew")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITelecomServicesLineItem1> LineItem { get; }
 }

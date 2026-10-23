@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Mask generator function cryptographic algorithm and parameters.
 /// </summary>
 [IsoId("_t4S58aRPEeeWXKXf3KjtmQ")]
+[IsoDisplayName(@"Algorithm Identification")]
 public interface IAlgorithmIdentification26 : IIsoComponent
 {
     /// <summary>

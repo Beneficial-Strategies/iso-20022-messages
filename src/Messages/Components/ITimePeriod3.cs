@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Particular time span specified between a start time and an end time. The time period cannot exceed 24 hours.
 /// </summary>
 [IsoId("_r8aHYVo6Ee23K4GXSpBSeg")]
+[IsoDisplayName(@"Time Period")]
 public interface ITimePeriod3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITimePeriod3 : IIsoComponent
     [IsoId("_r90coVo6Ee23K4GXSpBSeg")]
     [DisplayName("From Time")]
     [IsoXmlTag("FrTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? FromTime { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ITimePeriod3 : IIsoComponent
     [IsoId("_r90co1o6Ee23K4GXSpBSeg")]
     [DisplayName("To Time")]
     [IsoXmlTag("ToTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? ToTime { get; }
 }

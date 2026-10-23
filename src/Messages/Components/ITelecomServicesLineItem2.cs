@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Telecom services line item carries detail level telephony billing data.
 /// </summary>
 [IsoId("_BPv8AR1DEey8XKHwKquEQw")]
+[IsoDisplayName(@"Telecom Services Line Item")]
 public interface ITelecomServicesLineItem2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITelecomServicesLineItem2 : IIsoComponent
     [IsoId("_BVmFUR1DEey8XKHwKquEQw")]
     [DisplayName("Start Date Time")]
     [IsoXmlTag("StartDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDateTime { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITelecomServicesLineItem2 : IIsoComponent
     [IsoId("_BVmFUx1DEey8XKHwKquEQw")]
     [DisplayName("Time Period")]
     [IsoXmlTag("TmPrd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TimePeriod { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ITelecomServicesLineItem2 : IIsoComponent
     [IsoId("_BVmFVR1DEey8XKHwKquEQw")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? Duration { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ITelecomServicesLineItem2 : IIsoComponent
     [IsoId("_BVmFWx1DEey8XKHwKquEQw")]
     [DisplayName("Charge")]
     [IsoXmlTag("Chrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount20> Charge { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface ITelecomServicesLineItem2 : IIsoComponent
     [IsoId("_BVmFXR1DEey8XKHwKquEQw")]
     [DisplayName("Total Tax")]
     [IsoXmlTag("TtlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax39> TotalTax { get; }
 
     /// <summary>
@@ -81,6 +88,8 @@ public interface ITelecomServicesLineItem2 : IIsoComponent
     [IsoId("_BVmFYR1DEey8XKHwKquEQw")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Description { get; }
 
     /// <summary>
@@ -89,5 +98,7 @@ public interface ITelecomServicesLineItem2 : IIsoComponent
     [IsoId("_BVmFYx1DEey8XKHwKquEQw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trace of response by the entities in the path from the issuer to the ATM.
 /// </summary>
 [IsoId("_QBsiAa1_EeWMg5rOByfExw")]
+[IsoDisplayName(@"Response Type")]
 public interface IResponseType8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IResponseType8 : IIsoComponent
     [IsoId("_QNdtIa1_EeWMg5rOByfExw")]
     [DisplayName("Responder Identification")]
     [IsoXmlTag("RspndrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ResponderIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IResponseType8 : IIsoComponent
     [IsoId("_QNdtI61_EeWMg5rOByfExw")]
     [DisplayName("Codification")]
     [IsoXmlTag("Cdfctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Codification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IResponseType8 : IIsoComponent
     [IsoId("_QNdtJa1_EeWMg5rOByfExw")]
     [DisplayName("Response")]
     [IsoXmlTag("Rspn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Response { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IResponseType8 : IIsoComponent
     [IsoId("_QNdtJ61_EeWMg5rOByfExw")]
     [DisplayName("Response Reason")]
     [IsoXmlTag("RspnRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ResponseReason { get; }
 
     /// <summary>
@@ -49,5 +58,7 @@ public interface IResponseType8 : IIsoComponent
     [IsoId("_QNdtKa1_EeWMg5rOByfExw")]
     [DisplayName("Additional Response Information")]
     [IsoXmlTag("AddtlRspnInf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalResponseInformation { get; }
 }

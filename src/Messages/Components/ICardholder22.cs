@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cardholder22.
 /// </summary>
 [IsoId("_B1kYEXG2Ee60F8I8TAMKmg")]
+[IsoDisplayName(@"Cardholder22")]
 public interface ICardholder22 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ICardholder22 : IIsoComponent
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICredentials3> Identification { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface ICardholder22 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 
     /// <summary>

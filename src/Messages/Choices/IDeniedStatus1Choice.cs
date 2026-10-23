@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies whether the status is provided with a reason or not.
 /// </summary>
 [IsoId("_UWPlgtp-Ed-ak6NoX_4Aeg_309427241")]
+[IsoDisplayName(@"Denied Status 1 Choice")]
 public interface IDeniedStatus1Choice : IIsoChoice { }

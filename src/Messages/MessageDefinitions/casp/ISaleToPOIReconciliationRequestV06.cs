@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.casp;
     "SaleToPOIRcncltnReq",
     "urn:iso:std:iso:20022:tech:xsd:casp.003.001.06"
 )]
+[IsoDisplayName(@"Sale To POI Reconciliation Request V06")]
 public interface ISaleToPOIReconciliationRequestV06 : IOuterRecord
 {
     /// <summary>

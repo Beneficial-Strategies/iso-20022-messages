@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Industry Sector3Choice.
 /// </summary>
 [IsoId("_ZFrYoeJJEe-5wchdE0oJYw")]
+[IsoDisplayName(@"Industry Sector3Choice")]
 public interface IIndustrySector3Choice : IIsoChoice { }

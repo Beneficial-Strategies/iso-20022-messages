@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice;
 /// </summary>
 [IsoId("_X-C5JelfEeu9cf4XM82AQQ")]
 [IsoXmlTag("Pnsn")]
+[IsoDisplayName(@"Pension")]
 public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -42,6 +43,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEHyelmEeuvhrZwLF0fDg")]
     [DisplayName("Tax Reference")]
     [IsoXmlTag("TaxRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxReference1> TaxReference { get; }
 
     /// <summary>
@@ -50,6 +52,8 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEHy-lmEeuvhrZwLF0fDg")]
     [DisplayName("Drawdown Tranche Identification")]
     [IsoXmlTag("DrwdwnTrchId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DrawdownTrancheIdentification { get; }
 
     /// <summary>
@@ -74,6 +78,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("__IHAsOlmEeuvhrZwLF0fDg")]
     [DisplayName("Number Of Drawdown Tranches")]
     [IsoXmlTag("NbOfDrwdwnTrnchs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfDrawdownTranches { get; }
 
     /// <summary>
@@ -90,6 +95,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH0-lmEeuvhrZwLF0fDg")]
     [DisplayName("Block Transfer")]
     [IsoXmlTag("BlckTrf")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BlockTransfer { get; }
 
     /// <summary>
@@ -98,6 +104,8 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH1elmEeuvhrZwLF0fDg")]
     [DisplayName("Block Transfer Reference")]
     [IsoXmlTag("BlckTrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BlockTransferReference { get; }
 
     /// <summary>
@@ -106,6 +114,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH1-lmEeuvhrZwLF0fDg")]
     [DisplayName("Tax Free Cash Protection")]
     [IsoXmlTag("TaxFreeCshPrtcn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TaxFreeCashProtection { get; }
 
     /// <summary>
@@ -130,6 +139,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH3elmEeuvhrZwLF0fDg")]
     [DisplayName("Retirement Age Protection")]
     [IsoXmlTag("RtrmntAgePrtcn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RetirementAgeProtection { get; }
 
     /// <summary>
@@ -138,6 +148,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH3-lmEeuvhrZwLF0fDg")]
     [DisplayName("Retirement Age")]
     [IsoXmlTag("RtrmntAge")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? RetirementAge { get; }
 
     /// <summary>
@@ -146,6 +157,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH4elmEeuvhrZwLF0fDg")]
     [DisplayName("Sharing")]
     [IsoXmlTag("Shrg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Sharing { get; }
 
     /// <summary>
@@ -154,6 +166,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH4-lmEeuvhrZwLF0fDg")]
     [DisplayName("Lump Sum Type")]
     [IsoXmlTag("LumpSumTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILumpSumType1Choice> LumpSumType { get; }
 
     /// <summary>
@@ -162,6 +175,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH5elmEeuvhrZwLF0fDg")]
     [DisplayName("Pension Order")]
     [IsoXmlTag("PnsnOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPensionOrder1> PensionOrder { get; }
 
     /// <summary>
@@ -170,6 +184,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH5-lmEeuvhrZwLF0fDg")]
     [DisplayName("Ring Fenced Drawdown Assets")]
     [IsoXmlTag("RingFncdDrwdwnAssts")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RingFencedDrawdownAssets { get; }
 
     /// <summary>
@@ -186,6 +201,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH6-lmEeuvhrZwLF0fDg")]
     [DisplayName("Safeguard Benefit")]
     [IsoXmlTag("SfgrdBnft")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SafeguardBenefit { get; }
 
     /// <summary>
@@ -194,6 +210,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH7elmEeuvhrZwLF0fDg")]
     [DisplayName("Non Safeguarded Guaranteed Benefits")]
     [IsoXmlTag("NonSfgrddGrntedBnfts")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NonSafeguardedGuaranteedBenefits { get; }
 
     /// <summary>
@@ -202,6 +219,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH7-lmEeuvhrZwLF0fDg")]
     [DisplayName("Lifetime Allowance Protection")]
     [IsoXmlTag("LftmAllwncPrtcn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LifetimeAllowanceProtection { get; }
 
     /// <summary>
@@ -210,6 +228,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH8elmEeuvhrZwLF0fDg")]
     [DisplayName("Client Lifetime Allowance Protection")]
     [IsoXmlTag("ClntLftmAllwncPrtcn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ClientLifetimeAllowanceProtection { get; }
 
     /// <summary>
@@ -218,6 +237,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH8-lmEeuvhrZwLF0fDg")]
     [DisplayName("Benefit Crystallisation Event Occurred")]
     [IsoXmlTag("BnftCrstllstnEvtOcrd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BenefitCrystallisationEventOccurred { get; }
 
     /// <summary>
@@ -226,6 +246,7 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_Bg110OlrEeuvhrZwLF0fDg")]
     [DisplayName("Non Wrapper Transfer")]
     [IsoXmlTag("NonWrpprTrf")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NonWrapperTransfer { get; }
 
     /// <summary>
@@ -234,5 +255,6 @@ public interface IPension : IFundPortfolio7Choice, IIsoChoiceVariant
     [IsoId("_xOEH9elmEeuvhrZwLF0fDg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

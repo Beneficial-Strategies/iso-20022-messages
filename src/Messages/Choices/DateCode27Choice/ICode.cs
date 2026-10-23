@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateCode27Choice;
 /// Standard code to indicate the date is unknown.
 /// </summary>
 [IsoId("_ctmkP5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDateCode27Choice, IIsoChoiceVariant
 {
     /// <summary>

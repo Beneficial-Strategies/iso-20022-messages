@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the chargeback initiation transaction.
 /// </summary>
 [IsoId("_qz-mEFDZEee94_dUz-hvgw")]
+[IsoDisplayName(@"Charge Back Initiation")]
 public interface IChargeBackInitiation1 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IChargeBackInitiation1 : IIsoComponent
     [IsoId("_PBl8YdXwEee5XtaG1wqDfQ")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -65,5 +67,6 @@ public interface IChargeBackInitiation1 : IIsoComponent
     [IsoId("_4W3IgaK4EeeQobSgLcPRvA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

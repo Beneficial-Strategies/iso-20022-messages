@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a benchmark code.
 /// </summary>
 [IsoId("_IaYPcTIQEe2fXedS_ucFOA")]
+[IsoDisplayName(@"Compare Benchmark Code")]
 public interface ICompareBenchmarkCode1 : IIsoComponent
 {
     /// <summary>

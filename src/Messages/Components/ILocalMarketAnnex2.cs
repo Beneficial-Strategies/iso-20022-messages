@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.
 /// </summary>
 [IsoId("_Q5QhRdp-Ed-ak6NoX_4Aeg_-1175095471")]
+[IsoDisplayName(@"Local Market Annex")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ILocalMarketAnnex2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface ILocalMarketAnnex2 : IIsoComponent
     [IsoId("_Q5QhRtp-Ed-ak6NoX_4Aeg_-1288934537")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Country { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface ILocalMarketAnnex2 : IIsoComponent
     [IsoId("_Q5ZrMdp-Ed-ak6NoX_4Aeg_-653648231")]
     [DisplayName("Settlement Details")]
     [IsoXmlTag("SttlmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount22> SettlementDetails { get; }
 }

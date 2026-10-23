@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice between ISIN and an alternative format for the identification of a financial instrument. ISIN is the preferred format.
 /// </summary>
 [IsoId("_t3aoASyGEe2xAdY9t5fB3g")]
+[IsoDisplayName(@"Basket Constituents")]
 public interface IBasketConstituents3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IBasketConstituents3 : IIsoComponent
     [IsoId("_t4Q8kyyGEe2xAdY9t5fB3g")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
+    [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
     LongFraction19DecimalNumber? Quantity { get; }
 
     /// <summary>

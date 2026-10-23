@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod5Choice;
 /// <summary>
 /// Debit.
 /// </summary>
+[IsoDisplayName(@"Debit")]
 public interface IDebit : ISettlementMethod5Choice, IIsoChoiceVariant
 {
     /// <summary>

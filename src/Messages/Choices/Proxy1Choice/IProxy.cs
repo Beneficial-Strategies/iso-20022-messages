@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Proxy1Choice;
 /// </summary>
 [IsoId("_RD1Zkdp-Ed-ak6NoX_4Aeg_2099927655")]
 [IsoXmlTag("Prxy")]
+[IsoDisplayName(@"Proxy")]
 public interface IProxy : IProxy1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IProxy : IProxy1Choice, IIsoChoiceVariant
     [IsoId("_T4vKKtp-Ed-ak6NoX_4Aeg_-1494745964")]
     [DisplayName("Registration Method")]
     [IsoXmlTag("RegnMtd")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? RegistrationMethod { get; }
 
     /// <summary>
@@ -50,5 +53,8 @@ public interface IProxy : IProxy1Choice, IIsoChoiceVariant
     [IsoId("_T44UENp-Ed-ak6NoX_4Aeg_2026044451")]
     [DisplayName("Authorised Proxy")]
     [IsoXmlTag("AuthrsdPrxy")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProxy3> AuthorisedProxy { get; }
 }

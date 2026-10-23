@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action date details.
 /// </summary>
 [IsoId("_bmP1AeaKEei5aPS232E3Mw")]
+[IsoDisplayName(@"Corporate Action Date SD")]
 public interface ICorporateActionDateSD10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionDateSD10 : IIsoComponent
     [IsoId("_cOHGQeaKEei5aPS232E3Mw")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICorporateActionDateSD10 : IIsoComponent
     [IsoId("_cOHGQ-aKEei5aPS232E3Mw")]
     [DisplayName("DTC Last Day For Early Redemption")]
     [IsoXmlTag("DTCLastDayForEarlyRed")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DTCLastDayForEarlyRedemption { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ICorporateActionDateSD10 : IIsoComponent
     [IsoId("_cOHGS-aKEei5aPS232E3Mw")]
     [DisplayName("DTC Position Capture Date")]
     [IsoXmlTag("DTCPosCaptrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DTCPositionCaptureDate { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ICorporateActionDateSD10 : IIsoComponent
     [IsoId("_cOHGU-aKEei5aPS232E3Mw")]
     [DisplayName("New York Cut Off Date")]
     [IsoXmlTag("NewYorkCutOffDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NewYorkCutOffDate { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ICorporateActionDateSD10 : IIsoComponent
     [IsoId("_cOHGW-aKEei5aPS232E3Mw")]
     [DisplayName("DTC Extended Cut Off Date")]
     [IsoXmlTag("DTCXtndedCutOffDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DTCExtendedCutOffDate { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface ICorporateActionDateSD10 : IIsoComponent
     [IsoId("_cOHGY-aKEei5aPS232E3Mw")]
     [DisplayName("Effective Date By Exchange")]
     [IsoXmlTag("FctvDtByXchg")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EffectiveDateByExchange { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface ICorporateActionDateSD10 : IIsoComponent
     [IsoId("_cOHGa-aKEei5aPS232E3Mw")]
     [DisplayName("Date Declared Worthless")]
     [IsoXmlTag("DtDclrdWrthls")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateDeclaredWorthless { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface ICorporateActionDateSD10 : IIsoComponent
     [IsoId("_cOHGc-aKEei5aPS232E3Mw")]
     [DisplayName("Delete Worthless Security Date")]
     [IsoXmlTag("DelWrthlsSctyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DeleteWorthlessSecurityDate { get; }
 
     /// <summary>
@@ -81,6 +91,7 @@ public interface ICorporateActionDateSD10 : IIsoComponent
     [IsoId("_cOHGe-aKEei5aPS232E3Mw")]
     [DisplayName("DTC Exit Date")]
     [IsoXmlTag("DTCExitDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DTCExitDate { get; }
 
     /// <summary>
@@ -89,6 +100,7 @@ public interface ICorporateActionDateSD10 : IIsoComponent
     [IsoId("_cOHGg-aKEei5aPS232E3Mw")]
     [DisplayName("Subscription Begin Date")]
     [IsoXmlTag("SbcptBegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SubscriptionBeginDate { get; }
 
     /// <summary>
@@ -97,6 +109,7 @@ public interface ICorporateActionDateSD10 : IIsoComponent
     [IsoId("_cOHGi-aKEei5aPS232E3Mw")]
     [DisplayName("Rights Distribution As Of Date")]
     [IsoXmlTag("RghtsDstrbtnAsOfDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RightsDistributionAsOfDate { get; }
 
     /// <summary>
@@ -105,6 +118,7 @@ public interface ICorporateActionDateSD10 : IIsoComponent
     [IsoId("_cOHGjeaKEei5aPS232E3Mw")]
     [DisplayName("Rights Distribution Date")]
     [IsoXmlTag("RghtsDstrbtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RightsDistributionDate { get; }
 
     /// <summary>
@@ -113,5 +127,6 @@ public interface ICorporateActionDateSD10 : IIsoComponent
     [IsoId("_mT8t0OaKEei5aPS232E3Mw")]
     [DisplayName("Timing Date")]
     [IsoXmlTag("TmgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TimingDate { get; }
 }

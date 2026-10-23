@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the frequency of the trade query execution.
 /// </summary>
 [IsoId("_ZjhR4NGYEeaQk737TH1Fzw")]
+[IsoDisplayName(@"Trade Query Execution Frequency 1 Choice")]
 public interface ITradeQueryExecutionFrequency1Choice : IIsoChoice { }

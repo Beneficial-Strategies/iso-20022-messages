@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a meeting, participation requirements and voting procedures.
 /// </summary>
 [IsoId("_WHsWwajJEfCzuLlmLrhIvA")]
+[IsoDisplayName(@"Meeting Notice10")]
 public interface IMeetingNotice10 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IMeetingNotice10 : IIsoComponent
     [IsoId("_WPfn7ajJEfCzuLlmLrhIvA")]
     [DisplayName("Participation")]
     [IsoXmlTag("Prtcptn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IParticipationMethod3> Participation { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface IMeetingNotice10 : IIsoComponent
     [IsoId("_WPfn8ajJEfCzuLlmLrhIvA")]
     [DisplayName("Additional Documentation URL Address")]
     [IsoXmlTag("AddtlDcmnttnURLAdr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max2048Text> AdditionalDocumentationURLAddress { get; }
 
     /// <summary>
@@ -97,6 +100,7 @@ public interface IMeetingNotice10 : IIsoComponent
     [IsoId("_WPfn9ajJEfCzuLlmLrhIvA")]
     [DisplayName("Additional Procedure Details")]
     [IsoXmlTag("AddtlPrcdrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalRights4> AdditionalProcedureDetails { get; }
 
     /// <summary>
@@ -137,6 +141,7 @@ public interface IMeetingNotice10 : IIsoComponent
     [IsoId("_WPfn_6jJEfCzuLlmLrhIvA")]
     [DisplayName("Contact Person Details")]
     [IsoXmlTag("CtctPrsnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingContactPerson3> ContactPersonDetails { get; }
 
     /// <summary>

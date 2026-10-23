@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason6Choice;
 /// Specifies the reason why the transaction was generated.
 /// </summary>
 [IsoId("_itAn50AAEeCaq78Ig8ATcA")]
+[IsoDisplayName(@"Generated Reason")]
 public interface IGeneratedReason : IReason6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

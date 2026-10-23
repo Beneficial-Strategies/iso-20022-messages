@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_hJ9OiNE8Ed-BzquC8wXy7w_-2019493432")]
 [IsoMessage("tsmt.001.001.03", "Ack", "urn:iso:std:iso:20022:tech:xsd:tsmt.001.001.03")]
+[Description(@"Scope|The Acknowledgement message is sent by the matching application to the party from which it received a message.|This message is used to acknowledge the receipt of a message by the matching application.|Usage|The Acknowledgement message can be sent to a party from which the matching application received a message to acknowledge the receipt of that message. The message is sent when the matching application does not send any other message in response to a received message.")]
+[IsoDisplayName(@"Acknowledgement V")]
 public interface IAcknowledgementV03 : IOuterRecord
 {
     /// <summary>
@@ -56,6 +58,9 @@ public interface IAcknowledgementV03 : IOuterRecord
     [IsoId("_hKG_g9E8Ed-BzquC8wXy7w_-2019492381")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

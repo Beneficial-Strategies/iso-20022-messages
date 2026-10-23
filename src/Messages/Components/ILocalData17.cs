@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Local Data17.
 /// </summary>
 [IsoId("_9Y3joZkPEe6Qpd-x8YgzaA")]
+[IsoDisplayName(@"Local Data17")]
 public interface ILocalData17 : IIsoComponent
 {
     /// <summary>

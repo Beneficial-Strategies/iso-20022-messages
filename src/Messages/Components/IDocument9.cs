@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a document.
 /// </summary>
 [IsoId("_96r9QXltEeG7BsjMvd1mEw_1701053345")]
+[IsoDisplayName(@"Document")]
 public interface IDocument9 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDocument9 : IIsoComponent
     [IsoId("_96r9Q3ltEeG7BsjMvd1mEw_1198711334")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IDocument9 : IIsoComponent
     [IsoId("_961HMHltEeG7BsjMvd1mEw_-1712866325")]
     [DisplayName("Enclosure")]
     [IsoXmlTag("Nclsr")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Enclosure { get; }
 
     /// <summary>

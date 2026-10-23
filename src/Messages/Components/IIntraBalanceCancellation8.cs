@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Intra Balance Cancellation8.
 /// </summary>
 [IsoId("_3hWjwzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Intra Balance Cancellation8")]
 public interface IIntraBalanceCancellation8 : IIsoComponent
 {
     /// <summary>

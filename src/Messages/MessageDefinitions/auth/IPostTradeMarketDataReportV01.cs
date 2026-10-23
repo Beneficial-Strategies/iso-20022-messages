@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "PstTradMktDataRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.124.001.01"
 )]
+[Description(@"The PostTradeMarketDataReport message is sent by the Trading Venue and the Approved Publication Arrangement to the Consolidated Tape Provider, which disseminates it to their users in accordance with local regulations. The PostTradeMarketDataReport message contains post-trade transparency data, including key information such as the instrument identifier, transaction price, quantity, execution timestamp, and publication time.")]
+[IsoDisplayName(@"Post Trade Market Data Report V01")]
 public interface IPostTradeMarketDataReportV01 : IOuterRecord
 {
     /// <summary>
@@ -31,6 +33,8 @@ public interface IPostTradeMarketDataReportV01 : IOuterRecord
     [IsoId("_X8PTMGIgEfCeoPFCHQnhvA")]
     [DisplayName("Post Trade Report")]
     [IsoXmlTag("PstTradRpt")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostTradeReport1Choice> PostTradeReport { get; }
 
     /// <summary>
@@ -39,5 +43,6 @@ public interface IPostTradeMarketDataReportV01 : IOuterRecord
     [IsoId("_H6g8AGIgEfCeoPFCHQnhvA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

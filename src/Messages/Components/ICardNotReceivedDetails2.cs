@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of a non-received card.
 /// </summary>
 [IsoId("_zw4wQcW4EeuhguwJmlgagQ")]
+[IsoDisplayName(@"Card Not Received Details")]
 public interface ICardNotReceivedDetails2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardNotReceivedDetails2 : IIsoComponent
     [IsoId("_z1398cW4EeuhguwJmlgagQ")]
     [DisplayName("Date Of Card Mailed")]
     [IsoXmlTag("DtOfCardMld")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate DateOfCardMailed { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface ICardNotReceivedDetails2 : IIsoComponent
     [IsoId("_z1399cW4EeuhguwJmlgagQ")]
     [DisplayName("Mailing Address Unstructured")]
     [IsoXmlTag("MlngAdrUstrd")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? MailingAddressUnstructured { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface ICardNotReceivedDetails2 : IIsoComponent
     [IsoId("_z13998W4EeuhguwJmlgagQ")]
     [DisplayName("Mailed From Postal Code")]
     [IsoXmlTag("MldFrPstlCd")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text MailedFromPostalCode { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ICardNotReceivedDetails2 : IIsoComponent
     [IsoId("_z139-cW4EeuhguwJmlgagQ")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidFrom { get; }
 
     /// <summary>
@@ -59,6 +66,7 @@ public interface ICardNotReceivedDetails2 : IIsoComponent
     [IsoId("_z139-8W4EeuhguwJmlgagQ")]
     [DisplayName("Card Security Code Indicator")]
     [IsoXmlTag("CardSctyCdInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardSecurityCodeIndicator { get; }
 
     /// <summary>
@@ -67,5 +75,6 @@ public interface ICardNotReceivedDetails2 : IIsoComponent
     [IsoId("_z139_cW4EeuhguwJmlgagQ")]
     [DisplayName("Card Security Capability")]
     [IsoXmlTag("CardSctyCpblty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardSecurityCapability1> CardSecurityCapability { get; }
 }

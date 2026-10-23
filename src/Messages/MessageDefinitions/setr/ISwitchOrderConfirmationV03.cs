@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "SwtchOrdrConfV03",
     "urn:iso:std:iso:20022:tech:xsd:setr.015.001.03"
 )]
+[Description(@"Scope|An executing party, for example, a transfer agent, sends the SwitchOrderConfirmation message to the instructing party, for example, an investment manager or its authorised representative to confirm the details of the execution of a previously received SwitchOrder instruction.|Usage|The SwitchOrderConfirmation message is used to confirm that all the legs of the previously instructed switch order have been executed. The reference of the switch order confirmation is identified in DealReference.|The reference of the original switch order is specified in OrderReference. The message identification of the SwitchOrder message in which the switch order was conveyed may also be quoted in RelatedReference.|If the SwitchOrderConfirmation Details sequence is present more than once, then the redemption leg details and subscription leg details sequences may only be present once.|If Switch Confirmation Order Details\Investment Account is used, then the Investment Account Details sequences in Subscription Leg Details and Redemption Leg Details are not allowed.|If the SwitchOrderConfirmation Details sequence is present more than once, then the redemption leg details and subscription leg details sequences may only be present once.|If SwitchOrderConfirmationDetails\InvestmentAccount is used, then the InvestmentAccountDetails sequences in SubscriptionLegDetails and RedemptionLegDetails are not allowed. This functionality is to be used by institutions that set up two accounts per investor, rather than one investment account.|.")]
+[IsoDisplayName(@"Switch Order Confirmation V")]
 public interface ISwitchOrderConfirmationV03 : IOuterRecord
 {
     /// <summary>
@@ -46,6 +48,7 @@ public interface ISwitchOrderConfirmationV03 : IOuterRecord
     [IsoId("_7t2ZY9E7Ed-BzquC8wXy7w_1364526959")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -62,6 +65,7 @@ public interface ISwitchOrderConfirmationV03 : IOuterRecord
     [IsoId("_7t2ZZdE7Ed-BzquC8wXy7w_-1882952026")]
     [DisplayName("Switch Execution Details")]
     [IsoXmlTag("SwtchExctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchExecution4> SwitchExecutionDetails { get; }
 
     /// <summary>
@@ -78,5 +82,6 @@ public interface ISwitchOrderConfirmationV03 : IOuterRecord
     [IsoId("_7uAKYdE7Ed-BzquC8wXy7w_746903959")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

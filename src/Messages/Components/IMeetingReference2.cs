@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Elements which allow to identify a meeting.
 /// </summary>
 [IsoId("_TlqdItp-Ed-ak6NoX_4Aeg_-1779095008")]
+[IsoDisplayName(@"Meeting Reference")]
 public interface IMeetingReference2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMeetingReference2 : IIsoComponent
     [IsoId("_TlqdI9p-Ed-ak6NoX_4Aeg_-1779094991")]
     [DisplayName("Meeting Identification")]
     [IsoXmlTag("MtgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MeetingIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IMeetingReference2 : IIsoComponent
     [IsoId("_TlqdJNp-Ed-ak6NoX_4Aeg_-1779094973")]
     [DisplayName("Issuer Meeting Identification")]
     [IsoXmlTag("IssrMtgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? IssuerMeetingIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IMeetingReference2 : IIsoComponent
     [IsoId("_TlqdJdp-Ed-ak6NoX_4Aeg_-1779094948")]
     [DisplayName("Meeting Date And Time")]
     [IsoXmlTag("MtgDtAndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? MeetingDateAndTime { get; }
 
     /// <summary>
@@ -57,6 +63,8 @@ public interface IMeetingReference2 : IIsoComponent
     [IsoId("_TlqdKNp-Ed-ak6NoX_4Aeg_1116862835")]
     [DisplayName("Extended Classification")]
     [IsoXmlTag("XtndedClssfctn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedClassification { get; }
 
     /// <summary>
@@ -65,5 +73,8 @@ public interface IMeetingReference2 : IIsoComponent
     [IsoId("_TlqdKdp-Ed-ak6NoX_4Aeg_-1778174910")]
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress1> Location { get; }
 }

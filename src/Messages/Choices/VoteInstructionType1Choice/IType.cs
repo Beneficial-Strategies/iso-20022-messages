@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionType1Choice;
 /// Vote option expressed as a code.
 /// </summary>
 [IsoId("_U7ERUK4KEemG7MmivSuE5g")]
+[IsoDisplayName(@"Type")]
 public interface IType : IVoteInstructionType1Choice, IIsoChoiceVariant
 {
     /// <summary>

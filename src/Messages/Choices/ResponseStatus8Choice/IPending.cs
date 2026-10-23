@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus8Choice;
 /// Pending status of an instruction, advice or request.
 /// </summary>
 [IsoId("_Vl2wK5NSEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Pending")]
 public interface IPending : IResponseStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

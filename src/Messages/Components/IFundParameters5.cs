@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters required to request a fund reference data report.
 /// </summary>
 [IsoId("_KQMXEWomEeipaMTLlhaKMQ")]
+[IsoDisplayName(@"Fund Parameters")]
 public interface IFundParameters5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFundParameters5 : IIsoComponent
     [IsoId("_Kf9RY2omEeipaMTLlhaKMQ")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument71> FinancialInstrumentDetails { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IFundParameters5 : IIsoComponent
     [IsoId("_Kf9RZWomEeipaMTLlhaKMQ")]
     [DisplayName("Fund Management Company")]
     [IsoXmlTag("FndMgmtCpny")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification139> FundManagementCompany { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IFundParameters5 : IIsoComponent
     [IsoId("_Kf9RZ2omEeipaMTLlhaKMQ")]
     [DisplayName("Date From")]
     [IsoXmlTag("DtFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateFrom { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IFundParameters5 : IIsoComponent
     [IsoId("_Kf9Ra2omEeipaMTLlhaKMQ")]
     [DisplayName("Registered Distribution Country")]
     [IsoXmlTag("RegdDstrbtnCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> RegisteredDistributionCountry { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Account12Choice;
 /// <summary>
 /// Charges Account.
 /// </summary>
+[IsoDisplayName(@"Charges Account")]
 public interface IChargesAccount : IAccount12Choice, IIsoChoiceVariant
 {
     /// <summary>

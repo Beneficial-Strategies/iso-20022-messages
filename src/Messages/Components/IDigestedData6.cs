@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Digested Data6.
 /// </summary>
 [IsoId("_LN0U4Y-GEe6oobnCtR50kw")]
+[IsoDisplayName(@"Digested Data6")]
 public interface IDigestedData6 : IIsoComponent
 {
     /// <summary>

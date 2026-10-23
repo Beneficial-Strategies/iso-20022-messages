@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctOpngInstrV02",
     "urn:iso:std:iso:20022:tech:xsd:acmt.001.001.02"
 )]
+[Description(@"Scope|An account owner, for example, an investor or its designated agent sends the AccountOpeningInstruction message to an account servicer, for example, a registrar, transfer agent or custodian to instruct the opening of an account or the opening of an account and establishing an investment plan.|Usage|The AccountOpeningInstruction is used to open an account directly or indirectly with the account servicer or an intermediary.|In some markets, for example, Australia, and for some products in the United Kingdom, a first order (also known as a deposit instruction) is placed at the same time as the account opening. To cater for this scenario, an order message can be linked (via references in the message) to the AccountOpeningInstruction message when needed.|Execution of the AccountOpeningInstruction is confirmed via an AccountDetailsConfirmation message.")]
+[IsoDisplayName(@"Account Opening Instruction V")]
 public interface IAccountOpeningInstructionV02 : IOuterRecord
 {
     /// <summary>
@@ -77,6 +79,9 @@ public interface IAccountOpeningInstructionV02 : IOuterRecord
     [IsoId("_uPSQk9E9Ed-BzquC8wXy7w_374980359")]
     [DisplayName("Intermediaries")]
     [IsoXmlTag("Intrmies")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary12> Intermediaries { get; }
 
     /// <summary>
@@ -101,6 +106,9 @@ public interface IAccountOpeningInstructionV02 : IOuterRecord
     [IsoId("_uPSQltE9Ed-BzquC8wXy7w_374979849")]
     [DisplayName("Savings Investment Plan")]
     [IsoXmlTag("SvgsInvstmtPlan")]
+    [MinLength(0)]
+    [MaxLength(50)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentPlan4> SavingsInvestmentPlan { get; }
 
     /// <summary>
@@ -109,6 +117,9 @@ public interface IAccountOpeningInstructionV02 : IOuterRecord
     [IsoId("_uPSQl9E9Ed-BzquC8wXy7w_374979909")]
     [DisplayName("Withdrawal Investment Plan")]
     [IsoXmlTag("WdrwlInvstmtPlan")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentPlan4> WithdrawalInvestmentPlan { get; }
 
     /// <summary>
@@ -125,6 +136,9 @@ public interface IAccountOpeningInstructionV02 : IOuterRecord
     [IsoId("_uPcBkNE9Ed-BzquC8wXy7w_374980454")]
     [DisplayName("Service Level Agreement")]
     [IsoXmlTag("SvcLvlAgrmt")]
+    [MinLength(0)]
+    [MaxLength(30)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentToSend1> ServiceLevelAgreement { get; }
 
     /// <summary>
@@ -133,5 +147,6 @@ public interface IAccountOpeningInstructionV02 : IOuterRecord
     [IsoId("_uPcBkdE9Ed-BzquC8wXy7w_374980797")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

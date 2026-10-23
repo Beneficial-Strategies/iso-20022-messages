@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_DRJNKFuDEe29lKnE5APnfA")]
 [IsoMessage("reda.064.001.02", "CalQry", "urn:iso:std:iso:20022:tech:xsd:reda.064.001.02")]
+[Description(@"The CalendarQuery message is sent by the system member to the system administrator to request information on the the system status for specific calendar days.")]
+[IsoDisplayName(@"Calendar Query V")]
 public interface ICalendarQueryV02 : IOuterRecord
 {
     /// <summary>
@@ -28,6 +30,7 @@ public interface ICalendarQueryV02 : IOuterRecord
     [IsoId("_DRJNKluDEe29lKnE5APnfA")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICalendarSearchCriteria1> SearchCriteria { get; }
 
     /// <summary>
@@ -36,5 +39,6 @@ public interface ICalendarQueryV02 : IOuterRecord
     [IsoId("_DRJNK1uDEe29lKnE5APnfA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

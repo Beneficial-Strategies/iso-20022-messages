@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional references linked to the updated interest request such the original InterestRequest identification, and optionaly the InterestResponse identification.
 /// </summary>
 [IsoId("_Qkr_cNp-Ed-ak6NoX_4Aeg_2036685643")]
+[IsoDisplayName(@"Reference")]
 public interface IReference20 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReference20 : IIsoComponent
     [IsoId("_Qkr_cdp-Ed-ak6NoX_4Aeg_-1576527728")]
     [DisplayName("Interest Payment Request Identification")]
     [IsoXmlTag("IntrstPmtReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InterestPaymentRequestIdentification { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IReference20 : IIsoComponent
     [IsoId("_Qkr_ctp-Ed-ak6NoX_4Aeg_-1163077636")]
     [DisplayName("Interest Payment Response Identification")]
     [IsoXmlTag("IntrstPmtRspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InterestPaymentResponseIdentification { get; }
 }

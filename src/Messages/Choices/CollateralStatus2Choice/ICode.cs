@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralStatus2Choice;
 /// Provides the status after comparing the total collateral required and the total collateral value of all transactions covered in the message as a code.
 /// </summary>
 [IsoId("_hztsoMX4EeiSF9q-coWegA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICollateralStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

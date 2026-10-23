@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient15Choice;
 /// <summary>
 /// Key Transport.
 /// </summary>
+[IsoDisplayName(@"Key Transport")]
 public interface IKeyTransport : IRecipient15Choice, IIsoChoiceVariant
 {
     /// <summary>

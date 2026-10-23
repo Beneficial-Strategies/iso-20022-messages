@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Description of tax.
 /// </summary>
 [IsoId("_T-i_sERSEeeb1MmUPTrSMw")]
+[IsoDisplayName(@"Tax")]
 public interface ITax33 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITax33 : IIsoComponent
     [IsoId("_suAC8PJ5EeiJn9rM2Znz2w")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ITax33 : IIsoComponent
     [IsoId("_RkBeCERSEeeb1MmUPTrSMw")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Description { get; }
 
     /// <summary>
@@ -43,6 +48,7 @@ public interface ITax33 : IIsoComponent
     [IsoId("_0R7ngERSEeeb1MmUPTrSMw")]
     [DisplayName("Tax Exemption")]
     [IsoXmlTag("TaxXmptn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TaxExemption { get; }
 
     /// <summary>
@@ -51,6 +57,8 @@ public interface ITax33 : IIsoComponent
     [IsoId("_K-F9UfJ6EeiJn9rM2Znz2w")]
     [DisplayName("Tax Exempt Reason")]
     [IsoXmlTag("TaxXmptRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxExemptReason { get; }
 
     /// <summary>
@@ -67,5 +75,6 @@ public interface ITax33 : IIsoComponent
     [IsoId("_RkKn8ERSEeeb1MmUPTrSMw")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 }

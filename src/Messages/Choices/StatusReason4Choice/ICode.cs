@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusReason4Choice;
 /// Reason for the status in a coded form.
 /// </summary>
 [IsoId("_TPdjptp-Ed-ak6NoX_4Aeg_46429953")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IStatusReason4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// </summary>
 [IsoId("_viE_0bTlEeeQy4o2AayYHg")]
 [IsoMessage("caam.001.001.03", "ATMDvcRpt", "urn:iso:std:iso:20022:tech:xsd:caam.001.001.03")]
+[Description(@"The ATMDeviceReport message is sent to an acquirer by an ATM, or forwarded by an agent, to report:|- The result of maintenance commands performed by the ATM,|- The components of the ATM,|- The status of the ATM components.")]
+[IsoDisplayName(@"ATM Device Report V")]
 public interface IATMDeviceReportV03 : IOuterRecord
 {
     /// <summary>

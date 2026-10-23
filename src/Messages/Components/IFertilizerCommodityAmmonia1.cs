@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a fertilizer derivative of type ammonia.
 /// </summary>
 [IsoId("_RxdEcFr2EeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Fertilizer Commodity Ammonia")]
 public interface IFertilizerCommodityAmmonia1 : IIsoComponent
 {
     /// <summary>

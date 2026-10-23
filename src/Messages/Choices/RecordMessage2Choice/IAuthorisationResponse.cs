@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the authorisation response message.</summary>
 [IsoId("_kNBjmW7-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Authorisation Response")]
 public interface IAuthorisationResponse : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

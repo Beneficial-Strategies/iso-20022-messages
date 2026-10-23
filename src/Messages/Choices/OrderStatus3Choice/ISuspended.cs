@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus3Choice;
 /// Status of all the orders in the order message is suspended.
 /// </summary>
 [IsoId("_vIDnaUH7EeaV3ab_pHzFIQ")]
+[IsoDisplayName(@"Suspended")]
 public interface ISuspended : IOrderStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

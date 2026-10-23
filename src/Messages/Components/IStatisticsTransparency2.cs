@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statistics for a financial instrument generated as part of transparency calculations.
 /// </summary>
 [IsoId("_D34tONSzEeWG96DaYzntbg")]
+[IsoDisplayName(@"Statistics Transparency")]
 public interface IStatisticsTransparency2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IStatisticsTransparency2 : IIsoComponent
     [IsoId("_D35UQ9SzEeWG96DaYzntbg")]
     [DisplayName("Total Number Of Transactions Executed")]
     [IsoXmlTag("TtlNbOfTxsExctd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number TotalNumberOfTransactionsExecuted { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IStatisticsTransparency2 : IIsoComponent
     [IsoId("_D35URdSzEeWG96DaYzntbg")]
     [DisplayName("Total Volume Of Transactions Executed")]
     [IsoXmlTag("TtlVolOfTxsExctd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber TotalVolumeOfTransactionsExecuted { get; }
 }

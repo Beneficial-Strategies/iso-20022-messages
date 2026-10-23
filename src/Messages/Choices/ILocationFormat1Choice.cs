@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the formats to indicate the location of the meeting.
 /// </summary>
 [IsoId("_RXD3l9p-Ed-ak6NoX_4Aeg_-341096000")]
+[IsoDisplayName(@"Location Format 1 Choice")]
 public interface ILocationFormat1Choice : IIsoChoice { }

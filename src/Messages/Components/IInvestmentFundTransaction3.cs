@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Creation/cancellation of investment units on the books of the fund or its designated agent, as a result of executing an investment fund order.
 /// </summary>
 [IsoId("_R6YAANp-Ed-ak6NoX_4Aeg_-1110016344")]
+[IsoDisplayName(@"Investment Fund Transaction")]
 public interface IInvestmentFundTransaction3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6YAAtp-Ed-ak6NoX_4Aeg_-1995999534")]
     [DisplayName("Extended Transaction Type")]
     [IsoXmlTag("XtndedTxTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedTransactionType { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6YABNp-Ed-ak6NoX_4Aeg_-2098509833")]
     [DisplayName("Extended Corporate Action Event Type")]
     [IsoXmlTag("XtndedCorpActnEvtTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedCorporateActionEventType { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6YABtp-Ed-ak6NoX_4Aeg_-1109096270")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6hJ8Np-Ed-ak6NoX_4Aeg_-1109096218")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OrderReference { get; }
 
     /// <summary>
@@ -73,6 +82,8 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6hJ8dp-Ed-ak6NoX_4Aeg_1168308444")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -81,6 +92,8 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6hJ8tp-Ed-ak6NoX_4Aeg_-1109096140")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DealReference { get; }
 
     /// <summary>
@@ -89,6 +102,8 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6hJ89p-Ed-ak6NoX_4Aeg_-1109096098")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -97,6 +112,8 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6hJ9Np-Ed-ak6NoX_4Aeg_-1109095588")]
     [DisplayName("Leg Execution Identification")]
     [IsoXmlTag("LegExctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegExecutionIdentification { get; }
 
     /// <summary>
@@ -105,6 +122,7 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6hJ9dp-Ed-ak6NoX_4Aeg_-1109096080")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -113,6 +131,7 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6hJ9tp-Ed-ak6NoX_4Aeg_-1109096045")]
     [DisplayName("Settled Transaction Indicator")]
     [IsoXmlTag("SttldTxInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SettledTransactionIndicator { get; }
 
     /// <summary>
@@ -121,6 +140,7 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6hJ99p-Ed-ak6NoX_4Aeg_-1109096020")]
     [DisplayName("Registered Transaction Indicator")]
     [IsoXmlTag("RegdTxInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator RegisteredTransactionIndicator { get; }
 
     /// <summary>
@@ -161,6 +181,7 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6q68tp-Ed-ak6NoX_4Aeg_-1109095691")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SettlementDate { get; }
 
     /// <summary>
@@ -177,6 +198,7 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6q69Np-Ed-ak6NoX_4Aeg_-1109095631")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -185,6 +207,7 @@ public interface IInvestmentFundTransaction3 : IIsoComponent
     [IsoId("_R6q69dp-Ed-ak6NoX_4Aeg_-1109095613")]
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PartiallyExecutedIndicator { get; }
 
     /// <summary>

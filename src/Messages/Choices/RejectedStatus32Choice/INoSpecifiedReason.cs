@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus32Choice;
 /// Reason not specified.
 /// </summary>
 [IsoId("_l8fJkeXyEemEj48jhmlA0Q")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IRejectedStatus32Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionReversalReason3Ch
 /// Standard code to specify the reason for the reversal.
 /// </summary>
 [IsoId("_cPy00UGKEeWqy4niLuXETA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionReversalReason3Choice, IIsoChoiceVariant
 {
     /// <summary>

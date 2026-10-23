@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditorReferenceType2Choice;
 /// <summary>
 /// Type of creditor reference, as published in an external creditor reference type code set.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : ICreditorReferenceType2Choice, IIsoChoiceVariant
 {
     /// <summary>

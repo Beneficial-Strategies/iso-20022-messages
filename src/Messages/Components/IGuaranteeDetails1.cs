@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the details of a guarantee.
 /// </summary>
 [IsoId("_OTgzMzc0-AOSNFX-8224501")]
+[IsoDisplayName(@"Guarantee Details")]
 public interface IGuaranteeDetails1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IGuaranteeDetails1 : IIsoComponent
     [IsoId("_OTgzMzg5-AOSNFX-8224502")]
     [DisplayName("Position")]
     [IsoXmlTag("Pos")]
+    [IsoSimpleType(IsoSimpleType.positiveInteger)]
     XsdPositiveInteger? Position { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IGuaranteeDetails1 : IIsoComponent
     [IsoId("_OTgzMzkw-AOSNFX-8224502")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [StringLength(2000, MinimumLength = 1)]
     Max2000Text? Description { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IGuaranteeDetails1 : IIsoComponent
     [IsoId("_OTgzMzkx-AOSNFX-8224502")]
     [DisplayName("Guaranteed Amount")]
     [IsoXmlTag("GrntedAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountAndPeriod1> GuaranteedAmount { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IGuaranteeDetails1 : IIsoComponent
     [IsoId("_OTgzMzky-AOSNFX-8224502")]
     [DisplayName("Excess")]
     [IsoXmlTag("Xcss")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountAndPeriod1> Excess { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IGuaranteeDetails1 : IIsoComponent
     [IsoId("_OTgzMzkz-AOSNFX-8224502")]
     [DisplayName("Covered Percentage")]
     [IsoXmlTag("CvrdPctg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPercentageAndPeriod1> CoveredPercentage { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IGuaranteeDetails1 : IIsoComponent
     [IsoId("_OTgzMzk0-AOSNFX-8224502")]
     [DisplayName("Associated Document")]
     [IsoXmlTag("AssoctdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> AssociatedDocument { get; }
 
     /// <summary>
@@ -73,5 +81,9 @@ public interface IGuaranteeDetails1 : IIsoComponent
     [IsoId("_OTgzMzk1-AOSNFX-8224503")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

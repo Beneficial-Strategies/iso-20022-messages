@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status advising on the processing of the cancellation request.
 /// </summary>
 [IsoId("_VSSIMbLQEemDyeh7tbvg1w")]
+[IsoDisplayName(@"Cancellation Processing Status")]
 public interface ICancellationProcessingStatus2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICancellationProcessingStatus2 : IIsoComponent
     [IsoId("_VqsBI7LQEemDyeh7tbvg1w")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

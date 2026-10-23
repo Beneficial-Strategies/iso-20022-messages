@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sensitive data associated with a payment card.
 /// </summary>
 [IsoId("_VZbFQSFPEey8XKHwKquEQw")]
+[IsoDisplayName(@"Plain Card Data")]
 public interface IPlainCardData21 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPlainCardData21 : IIsoComponent
     [IsoId("_VfOyUSFPEey8XKHwKquEQw")]
     [DisplayName("Driver Or Vehicle Identification")]
     [IsoXmlTag("DrvrOrVhclId")]
+    [IsoSimpleType(IsoSimpleType.Max20Text)]
+    [StringLength(20, MinimumLength = 1)]
     Max20Text? DriverOrVehicleIdentification { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IPlainCardData21 : IIsoComponent
     [IsoId("_VfOyUyFPEey8XKHwKquEQw")]
     [DisplayName("Additional Card Data")]
     [IsoXmlTag("AddtlCardData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalCardData { get; }
 }

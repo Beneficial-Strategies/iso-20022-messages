@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepairStatus3Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_UVpIl9p-Ed-ak6NoX_4Aeg_1205923577")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IRepairStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

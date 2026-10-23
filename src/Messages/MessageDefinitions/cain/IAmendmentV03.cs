@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_hV5l8YV4Ee6odei_lsRKtw")]
 [IsoMessage("cain.020.001.03", "Amdmnt", "urn:iso:std:iso:20022:tech:xsd:cain.020.001.03")]
+[IsoDisplayName(@"Amendment V03")]
 public interface IAmendmentV03 : IOuterRecord
 {
     /// <summary>
@@ -53,6 +54,7 @@ public interface IAmendmentV03 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode5> Programme { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface IAmendmentV03 : IOuterRecord
     /// </summary>
     [DisplayName("Amended Data")]
     [IsoXmlTag("AmddData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedError1> AmendedData { get; }
 
     /// <summary>
@@ -109,6 +112,7 @@ public interface IAmendmentV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -116,6 +120,7 @@ public interface IAmendmentV03 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -123,6 +128,7 @@ public interface IAmendmentV03 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

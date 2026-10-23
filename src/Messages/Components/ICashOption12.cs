@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the cash option.
 /// </summary>
 [IsoId("_BfjKUfL-Ed-3lpUMQaXLjQ")]
+[IsoDisplayName(@"Cash Option")]
 public interface ICashOption12 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DrawdownStatus1Choice;
 /// Status expressed as a code.
 /// </summary>
 [IsoId("_kMkhAFKiEeiSDqv62fL07g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDrawdownStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

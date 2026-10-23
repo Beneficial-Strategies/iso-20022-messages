@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party with the type related to penalties.
 /// </summary>
 [IsoId("_9_oYmQAUEeqOHNEXayM0Mg")]
+[IsoDisplayName(@"Penalty Party Identification1")]
 public interface IPenaltyPartyIdentification1 : IIsoComponent
 {
     /// <summary>

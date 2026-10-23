@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "RvslOfTrfOutConf",
     "urn:iso:std:iso:20022:tech:xsd:sese.004.001.09"
 )]
+[Description(@"Scope|The ReversalOfTransferOutConfirmation message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent transfer out confirmation.|Usage|The ReversalOfTransferOutConfirmation message is used to reverse a previously sent transfer out confirmation.|To request the reversal of a transfer out confirmation, the transfer reference of the transfer out instruction, as specified in the original TransferOutInstruction message, is specified in the transfer reference element. The executing party’s reference for the execution of the transfer may also be specified in the TransferConfirmationReference element.|The message identification of the original TransferOutConfirmation message may also be quoted in PreviousReference but this is not recommended.")]
+[IsoDisplayName(@"Reversal Of Transfer Out Confirmation V")]
 public interface IReversalOfTransferOutConfirmationV09 : IOuterRecord
 {
     /// <summary>
@@ -61,6 +63,8 @@ public interface IReversalOfTransferOutConfirmationV09 : IOuterRecord
     [IsoId("_yFMdwZGxEem-9Y6mq5ZH3Q")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -69,6 +73,7 @@ public interface IReversalOfTransferOutConfirmationV09 : IOuterRecord
     [IsoId("_TKCqu5DhEem7fvtoGpNpow")]
     [DisplayName("Reversal References")]
     [IsoXmlTag("RvslRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransferReference16> ReversalReferences { get; }
 
     /// <summary>

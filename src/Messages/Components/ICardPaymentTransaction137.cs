@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card Payment Transaction137.
 /// </summary>
 [IsoId("_w8rA0ZL9Ee6GkefOR4Wjuw")]
+[IsoDisplayName(@"Card Payment Transaction137")]
 public interface ICardPaymentTransaction137 : IIsoComponent
 {
     /// <summary>

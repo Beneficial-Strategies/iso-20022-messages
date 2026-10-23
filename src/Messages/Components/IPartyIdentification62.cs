@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_tclvZToyEeOr__K5A0LSog")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification62 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPartyIdentification62 : IIsoComponent
     [IsoId("_tclvaToyEeOr__K5A0LSog")]
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
+    [IsoSimpleType(IsoSimpleType.BICFIIdentifier)]
     BICFIIdentifier? BICFI { get; }
 
     /// <summary>

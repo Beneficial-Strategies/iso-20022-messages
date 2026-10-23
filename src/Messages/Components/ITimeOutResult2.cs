@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the time-out consequences.
 /// </summary>
 [IsoId("_RbFb8tp-Ed-ak6NoX_4Aeg_-1237479550")]
+[IsoDisplayName(@"Time Out Result")]
 public interface ITimeOutResult2 : IIsoComponent
 {
     /// <summary>

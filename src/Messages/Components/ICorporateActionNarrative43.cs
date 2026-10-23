@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information such as the taxation conditions.
 /// </summary>
 [IsoId("_00j-twVTEeqjd8n6wD9JVw")]
+[IsoDisplayName(@"Corporate Action Narrative")]
 public interface ICorporateActionNarrative43 : IIsoComponent
 {
     /// <summary>
@@ -97,5 +98,6 @@ public interface ICorporateActionNarrative43 : IIsoComponent
     [IsoId("_00j_BQVTEeqjd8n6wD9JVw")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINZMax2048Text> URLAddress { get; }
 }

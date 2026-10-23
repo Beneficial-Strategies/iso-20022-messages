@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information used with financial types of messages when third-party clearing is involved.
 /// </summary>
 [IsoId("_U9pdIFBDEeedyPuM0kK2EQ")]
+[IsoDisplayName(@"Clearing Record Data")]
 public interface IClearingRecordData1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface IClearingRecordData1 : IIsoComponent
     [IsoId("_b1KSEFBEEeedyPuM0kK2EQ")]
     [DisplayName("Other Clearing Method")]
     [IsoXmlTag("OthrClrMtd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherClearingMethod { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IClearingRecordData1 : IIsoComponent
     [IsoId("_hN3cIFBEEeedyPuM0kK2EQ")]
     [DisplayName("Clearing Priority")]
     [IsoXmlTag("ClrPrty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClearingPriority { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IClearingRecordData1 : IIsoComponent
     [IsoId("_mnnIAFBEEeedyPuM0kK2EQ")]
     [DisplayName("Clearing Date")]
     [IsoXmlTag("ClrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClearingDate { get; }
 
     /// <summary>

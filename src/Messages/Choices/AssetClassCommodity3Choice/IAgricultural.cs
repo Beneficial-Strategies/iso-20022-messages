@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity3Choice;
 /// Agricultural commodities.
 /// </summary>
 [IsoId("_lThdYXvyEeanCNPcMT7sSg")]
+[IsoDisplayName(@"Agricultural")]
 public interface IAgricultural : IAssetClassCommodity3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

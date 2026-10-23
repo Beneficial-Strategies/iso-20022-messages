@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Definition of absolute price move of a financial instrument.
 /// </summary>
 [IsoId("_oHfs8MBmEeak3I7j2hsibw")]
+[IsoDisplayName(@"Absolute")]
 public interface IAbsolute1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAbsolute1 : IIsoComponent
     [IsoId("_wwCQEMBmEeak3I7j2hsibw")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Unit { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IAbsolute1 : IIsoComponent
     [IsoId("_12l6MMBmEeak3I7j2hsibw")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Quantity { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the value of a price.
 /// </summary>
 [IsoId("_RnAYFtp-Ed-ak6NoX_4Aeg_-475448184")]
+[IsoDisplayName(@"Price Value Type 5 Format Choice")]
 public interface IPriceValueType5FormatChoice : IIsoChoice { }

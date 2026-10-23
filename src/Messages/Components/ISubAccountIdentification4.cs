@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.
 /// </summary>
 [IsoId("_VBAZy9p-Ed-ak6NoX_4Aeg_-1432964190")]
+[IsoDisplayName(@"Sub Account Identification")]
 public interface ISubAccountIdentification4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISubAccountIdentification4 : IIsoComponent
     [IsoId("_VBKKwNp-Ed-ak6NoX_4Aeg_-956428284")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ISubAccountIdentification4 : IIsoComponent
     [IsoId("_VBKKwdp-Ed-ak6NoX_4Aeg_-1106685568")]
     [DisplayName("Transaction On Sub Account")]
     [IsoXmlTag("TxOnSubAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundTransactionsByFund1> TransactionOnSubAccount { get; }
 }

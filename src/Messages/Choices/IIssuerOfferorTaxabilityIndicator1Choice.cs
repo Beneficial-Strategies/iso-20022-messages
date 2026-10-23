@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the issuer / offeror taxability status.
 /// </summary>
 [IsoId("_DUEMcIlzEeavwKddCbm3hg")]
+[IsoDisplayName(@"Issuer Offeror Taxability Indicator 1 Choice")]
 public interface IIssuerOfferorTaxabilityIndicator1Choice : IIsoChoice { }

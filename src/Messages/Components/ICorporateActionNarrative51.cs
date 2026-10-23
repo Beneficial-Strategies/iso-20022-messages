@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information such as the taxation conditions.
 /// </summary>
 [IsoId("_9zlaoRcBEeyroI8qKgB7Mg")]
+[IsoDisplayName(@"Corporate Action Narrative")]
 public interface ICorporateActionNarrative51 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionNarrative51 : IIsoComponent
     [IsoId("_-J7eExcBEeyroI8qKgB7Mg")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation13> AdditionalText { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICorporateActionNarrative51 : IIsoComponent
     [IsoId("_-J7eGxcBEeyroI8qKgB7Mg")]
     [DisplayName("Narrative Version")]
     [IsoXmlTag("NrrtvVrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation13> NarrativeVersion { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICorporateActionNarrative51 : IIsoComponent
     [IsoId("_-J7eIxcBEeyroI8qKgB7Mg")]
     [DisplayName("Information Conditions")]
     [IsoXmlTag("InfConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation13> InformationConditions { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICorporateActionNarrative51 : IIsoComponent
     [IsoId("_-J7eKxcBEeyroI8qKgB7Mg")]
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation13> InformationToComplyWith { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ICorporateActionNarrative51 : IIsoComponent
     [IsoId("_-J7eMxcBEeyroI8qKgB7Mg")]
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation13> TaxationConditions { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ICorporateActionNarrative51 : IIsoComponent
     [IsoId("_-J7eOxcBEeyroI8qKgB7Mg")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation13> Disclaimer { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ICorporateActionNarrative51 : IIsoComponent
     [IsoId("_-J7eQxcBEeyroI8qKgB7Mg")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation13> PartyContactNarrative { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface ICorporateActionNarrative51 : IIsoComponent
     [IsoId("_-J7eSxcBEeyroI8qKgB7Mg")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation13> RegistrationDetails { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface ICorporateActionNarrative51 : IIsoComponent
     [IsoId("_-J7eUxcBEeyroI8qKgB7Mg")]
     [DisplayName("Basket Or Index Information")]
     [IsoXmlTag("BsktOrIndxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation13> BasketOrIndexInformation { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface ICorporateActionNarrative51 : IIsoComponent
     [IsoId("_-J7eWxcBEeyroI8qKgB7Mg")]
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation13> CertificationBreakdown { get; }
 
     /// <summary>
@@ -97,6 +108,7 @@ public interface ICorporateActionNarrative51 : IIsoComponent
     [IsoId("_-J7eXRcBEeyroI8qKgB7Mg")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedURLlnformation4> URLAddress { get; }
 
     /// <summary>
@@ -105,5 +117,6 @@ public interface ICorporateActionNarrative51 : IIsoComponent
     [IsoId("_-lpwwhcBEeyroI8qKgB7Mg")]
     [DisplayName("Processing Text For Next Intermediary")]
     [IsoXmlTag("PrcgTxtForNxtIntrmy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation13> ProcessingTextForNextIntermediary { get; }
 }

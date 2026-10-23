@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account to or from which a cash entry is made.
 /// </summary>
 [IsoId("_SN5Y9Np-Ed-ak6NoX_4Aeg_1820239688")]
+[IsoDisplayName(@"Account For Action")]
 public interface IAccountForAction1 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code or a data source scheme to determine the closing of the securities lending contract.
 /// </summary>
 [IsoId("_PFD-kZEkEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Reversible 2 Choice")]
 public interface IReversible2Choice : IIsoChoice { }

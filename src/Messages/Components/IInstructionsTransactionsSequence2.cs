@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides input capability for multiple instructions on elective corporate action events via a single instruction message through using Transaction Sequence Number.
 /// </summary>
 [IsoId("_ocESMzDtEey2N-DB7H7A5A")]
+[IsoDisplayName(@"Instructions Transactions Sequence")]
 public interface IInstructionsTransactionsSequence2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInstructionsTransactionsSequence2 : IIsoComponent
     [IsoId("_oxhksTDtEey2N-DB7H7A5A")]
     [DisplayName("Transaction Sequence Number")]
     [IsoXmlTag("TxSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? TransactionSequenceNumber { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IInstructionsTransactionsSequence2 : IIsoComponent
     [IsoId("_oxhktzDtEey2N-DB7H7A5A")]
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? CustomerReferenceIdentification { get; }
 }

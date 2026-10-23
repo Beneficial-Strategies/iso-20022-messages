@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies security rate details.
 /// </summary>
 [IsoId("_XoEAYfo4EeCVCIR-Uq3c5A")]
+[IsoDisplayName(@"Corporate Action Rate")]
 public interface ICorporateActionRate28 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICorporateActionRate28 : IIsoComponent
     [IsoId("_XoEAhfo4EeCVCIR-Uq3c5A")]
     [DisplayName("Transformation Rate")]
     [IsoXmlTag("TrfrmatnRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TransformationRate { get; }
 
     /// <summary>
@@ -73,5 +75,6 @@ public interface ICorporateActionRate28 : IIsoComponent
     [IsoId("_Ai4_Nfo5EeCVCIR-Uq3c5A")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCreditRateFormat5Choice> TaxCreditRate { get; }
 }

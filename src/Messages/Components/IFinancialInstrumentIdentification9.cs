@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security.
 /// </summary>
 [IsoId("e8f784ab-6296-4a7b-bf3b-f82500c36f0c")]
+[IsoDisplayName(@"Financial Instrument Identification9")]
 public interface IFinancialInstrumentIdentification9 : IIsoComponent
 {
     /// <summary>

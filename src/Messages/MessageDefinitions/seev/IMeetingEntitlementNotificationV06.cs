@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "MtgEntitlmntNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:seev.003.001.06"
 )]
+[Description(@"Scope|The MeetingEntitlementNotification is sent by an account servicer to the account owner to advise the entitlement in relation to a meeting.|Usage|This message is sent to advise the quantity of securities held by an account owner. The balance is specified for the securities for which the meeting is taking place. The message is also used to amend a previously sent MeetingEntitlementNotification. |The MeetingEntitlementNotification message may be sent either before receiving a voting instruction to confirm the entitlement; or after having received a voting instruction to confirm details of the person attending the meeting. |The message may also be used in place of an attendance card or to confirm entitlements in case of bearer shares.|This message definition is intended for use with the Business Application Header.")]
+[IsoDisplayName(@"Meeting Entitlement Notification V")]
 public interface IMeetingEntitlementNotificationV06 : IOuterRecord
 {
     /// <summary>
@@ -38,6 +40,8 @@ public interface IMeetingEntitlementNotificationV06 : IOuterRecord
     [IsoId("_yXBbX6yREemMosWmlQ33EA")]
     [DisplayName("Previous Entitlement Notification Identification")]
     [IsoXmlTag("PrvsEntitlmntNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PreviousEntitlementNotificationIdentification { get; }
 
     /// <summary>
@@ -62,6 +66,9 @@ public interface IMeetingEntitlementNotificationV06 : IOuterRecord
     [IsoId("_yXBbY6yREemMosWmlQ33EA")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition11> Security { get; }
 
     /// <summary>
@@ -94,5 +101,6 @@ public interface IMeetingEntitlementNotificationV06 : IOuterRecord
     [IsoId("_yXBbZ6yREemMosWmlQ33EA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

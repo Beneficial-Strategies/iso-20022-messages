@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Customer7.
 /// </summary>
 [IsoId("_wODsIajzEe--FqfI7l8ySw")]
+[IsoDisplayName(@"ATM Customer7")]
 public interface IATMCustomer7 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IATMCustomer7 : IIsoComponent
     /// </summary>
     [DisplayName("Authentication Result")]
     [IsoXmlTag("AuthntcnRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionVerificationResult5> AuthenticationResult { get; }
 }

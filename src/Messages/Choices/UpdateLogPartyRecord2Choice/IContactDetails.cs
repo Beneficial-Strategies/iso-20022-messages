@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice;
 /// <summary>
 /// Contact Details.
 /// </summary>
+[IsoDisplayName(@"Contact Details")]
 public interface IContactDetails : IUpdateLogPartyRecord2Choice, IIsoChoiceVariant
 {
     /// <summary>

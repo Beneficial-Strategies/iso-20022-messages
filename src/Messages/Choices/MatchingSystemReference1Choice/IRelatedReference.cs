@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingSystemReference1Choice;
 /// Refers to the identification of a previous event in the life of a trade which is amended or cancelled.
 /// </summary>
 [IsoId("_2ajeg4ufEeKYr_965Eh8aQ")]
+[IsoDisplayName(@"Related Reference")]
 public interface IRelatedReference : IMatchingSystemReference1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IRelatedReference : IMatchingSystemReference1Choice, IIsoChoice
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("RltdRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

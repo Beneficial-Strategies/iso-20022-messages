@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information which describes the organisation.
 /// </summary>
 [IsoId("_PMqLQQ4iEeK3IMoVvcTkkg")]
+[IsoDisplayName(@"Organisation Modification")]
 public interface IOrganisationModification1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IOrganisationModification1 : IIsoComponent
     [IsoId("_Ph-UCg4iEeK3IMoVvcTkkg")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 
     /// <summary>
@@ -89,6 +91,7 @@ public interface IOrganisationModification1 : IIsoComponent
     [IsoId("_Ph-UNA4iEeK3IMoVvcTkkg")]
     [DisplayName("Representative Officer")]
     [IsoXmlTag("RprtvOffcr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyModification1> RepresentativeOfficer { get; }
 
     /// <summary>
@@ -105,6 +108,7 @@ public interface IOrganisationModification1 : IIsoComponent
     [IsoId("_Ph-UQg4iEeK3IMoVvcTkkg")]
     [DisplayName("Main Mandate Holder")]
     [IsoXmlTag("MainMndtHldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyModification1> MainMandateHolder { get; }
 
     /// <summary>
@@ -113,6 +117,7 @@ public interface IOrganisationModification1 : IIsoComponent
     [IsoId("_Ph-USQ4iEeK3IMoVvcTkkg")]
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyModification1> Sender { get; }
 
     /// <summary>
@@ -121,5 +126,6 @@ public interface IOrganisationModification1 : IIsoComponent
     [IsoId("_Ph-UUA4iEeK3IMoVvcTkkg")]
     [DisplayName("Legal Representative")]
     [IsoXmlTag("LglRprtv")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyModification1> LegalRepresentative { get; }
 }

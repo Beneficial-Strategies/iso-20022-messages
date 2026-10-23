@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationType6Choice;
 /// Type of identification is defined using an ISO 20022 code.
 /// </summary>
 [IsoId("_QmCDQ9p-Ed-ak6NoX_4Aeg_-1872712499")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IIdentificationType6Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Asset class specific details of a derivative.
 /// </summary>
 [IsoId("_Hx9E0cnYEeWpf-ImB_F2gQ")]
+[IsoDisplayName(@"Asset Class Attributes")]
 public interface IAssetClassAttributes1 : IIsoComponent
 {
     /// <summary>

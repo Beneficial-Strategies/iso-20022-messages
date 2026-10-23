@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Geographic location specified by geographic or UTM coordinates.
 /// </summary>
 [IsoId("_4ORaINj8EeiojJsa6FYyew")]
+[IsoDisplayName(@"Geolocation")]
 public interface IGeolocation1 : IIsoComponent
 {
     /// <summary>

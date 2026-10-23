@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statistical information on the processing of records included in the original report.
 /// </summary>
 [IsoId("_4h_4QdHEEeaokquJJ-K6uA")]
+[IsoDisplayName(@"Original Report Statistics")]
 public interface IOriginalReportStatistics3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IOriginalReportStatistics3 : IIsoComponent
     [IsoId("_4rGw8dHEEeaokquJJ-K6uA")]
     [DisplayName("Total Number Of Records")]
     [IsoXmlTag("TtlNbOfRcrds")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfRecords { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IOriginalReportStatistics3 : IIsoComponent
     [IsoId("_4rGw89HEEeaokquJJ-K6uA")]
     [DisplayName("Number Of Records Per Status")]
     [IsoXmlTag("NbOfRcrdsPerSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfRecordsPerStatus1> NumberOfRecordsPerStatus { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference of an order, order cancellation and master reference.
 /// </summary>
 [IsoId("_TSlwKNp-Ed-ak6NoX_4Aeg_-337332402")]
+[IsoDisplayName(@"Investment Fund Order")]
 public interface IInvestmentFundOrder1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentFundOrder1 : IIsoComponent
     [IsoId("_TSu6ENp-Ed-ak6NoX_4Aeg_-2008589874")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IInvestmentFundOrder1 : IIsoComponent
     [IsoId("_TSu6Edp-Ed-ak6NoX_4Aeg_1448063042")]
     [DisplayName("Order References")]
     [IsoXmlTag("OrdrRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundOrder5> OrderReferences { get; }
 }

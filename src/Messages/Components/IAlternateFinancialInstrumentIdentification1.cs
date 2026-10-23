@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// A proprietary or domestic identification scheme that uniquely identifies a financial instrument.
 /// </summary>
 [IsoId("_SlI0Stp-Ed-ak6NoX_4Aeg_-1692049135")]
+[IsoDisplayName(@"Alternate Financial Instrument Identification")]
 public interface IAlternateFinancialInstrumentIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAlternateFinancialInstrumentIdentification1 : IIsoComponent
     [IsoId("_SlSlQNp-Ed-ak6NoX_4Aeg_273812165")]
     [DisplayName("Proprietary Identification Source")]
     [IsoXmlTag("PrtryIdSrc")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text ProprietaryIdentificationSource { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IAlternateFinancialInstrumentIdentification1 : IIsoComponent
     [IsoId("_SlSlQdp-Ed-ak6NoX_4Aeg_-1692049134")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Encrypted personal identification number (PIN) and related information.
 /// </summary>
 [IsoId("_SqIIwQEcEeCQm6a_G2yO_w_-1593466438")]
+[IsoDisplayName(@"On Line PIN")]
 public interface IOnLinePIN1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IOnLinePIN1 : IIsoComponent
     [IsoId("_SqIIxAEcEeCQm6a_G2yO_w_1043641581")]
     [DisplayName("Additional Input")]
     [IsoXmlTag("AddtlInpt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalInput { get; }
 }

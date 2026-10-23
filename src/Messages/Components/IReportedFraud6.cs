@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fraud reporting type information.
 /// </summary>
 [IsoId("_Wwrm0RODEfC1ZfCQz0xB3g")]
+[IsoDisplayName(@"Reported Fraud6")]
 public interface IReportedFraud6 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IReportedFraud6 : IIsoComponent
     [IsoId("_W31XvRODEfC1ZfCQz0xB3g")]
     [DisplayName("Compromised Credential")]
     [IsoXmlTag("CmprmsdCrdntl")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<AuthenticationMethod13Code> CompromisedCredential { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card payment completion advice response from the acquirer.
 /// </summary>
 [IsoId("_SwFm1QEcEeCQm6a_G2yO_w_-1200741519")]
+[IsoDisplayName(@"Card Payment Transaction Advice Response")]
 public interface ICardPaymentTransactionAdviceResponse1 : IIsoComponent
 {
     /// <summary>

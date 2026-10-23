@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the interest statement.
 /// </summary>
 [IsoId("_h8DYIYF0EeWtPe6Crjmeug")]
+[IsoDisplayName(@"Interest Statement")]
 public interface IInterestStatement4 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IInterestStatement4 : IIsoComponent
     [IsoId("_iSErd4F0EeWtPe6Crjmeug")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValueDate { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface IInterestStatement4 : IIsoComponent
     [IsoId("_iSEreYF0EeWtPe6Crjmeug")]
     [DisplayName("Interest Payment Request Identification")]
     [IsoXmlTag("IntrstPmtReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InterestPaymentRequestIdentification { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface IInterestStatement4 : IIsoComponent
     [IsoId("_iSEre4F0EeWtPe6Crjmeug")]
     [DisplayName("Interest Calculation")]
     [IsoXmlTag("IntrstClctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestCalculation4> InterestCalculation { get; }
 }

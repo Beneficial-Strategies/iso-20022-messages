@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria to extract the message(s) which should be resent.
 /// </summary>
 [IsoId("_Q6TwEZb7Eee4htziCyV8eA")]
+[IsoDisplayName(@"Resend Search Criteria")]
 public interface IResendSearchCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IResendSearchCriteria2 : IIsoComponent
     [IsoId("_RDPCkZb7Eee4htziCyV8eA")]
     [DisplayName("Business Date")]
     [IsoXmlTag("BizDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BusinessDate { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IResendSearchCriteria2 : IIsoComponent
     [IsoId("_RDPCk5b7Eee4htziCyV8eA")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SequenceNumber { get; }
 
     /// <summary>
@@ -42,6 +46,8 @@ public interface IResendSearchCriteria2 : IIsoComponent
     [IsoId("_RDPClZb7Eee4htziCyV8eA")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalMessageNameIdentification { get; }
 
     /// <summary>
@@ -50,6 +56,8 @@ public interface IResendSearchCriteria2 : IIsoComponent
     [IsoId("_RDPCl5b7Eee4htziCyV8eA")]
     [DisplayName("File Reference")]
     [IsoXmlTag("FileRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FileReference { get; }
 
     /// <summary>

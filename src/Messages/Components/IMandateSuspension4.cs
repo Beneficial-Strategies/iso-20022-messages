@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Mandate Suspension4.
 /// </summary>
 [IsoId("_4Q5KQTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Mandate Suspension4")]
 public interface IMandateSuspension4 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IMandateSuspension4 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

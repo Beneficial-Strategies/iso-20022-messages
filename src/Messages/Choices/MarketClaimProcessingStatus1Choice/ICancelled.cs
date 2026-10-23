@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus1Choi
 /// Provides status information related to an instruction request cancelled.
 /// </summary>
 [IsoId("_YGaIf9x4EeqESbVR5AloZQ")]
+[IsoDisplayName(@"Cancelled")]
 public interface ICancelled : IMarketClaimProcessingStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

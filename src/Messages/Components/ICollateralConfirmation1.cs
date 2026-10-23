@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the status details about the collateral substitution.
 /// </summary>
 [IsoId("_UnrTxNp-Ed-ak6NoX_4Aeg_-2119738374")]
+[IsoDisplayName(@"Collateral Confirmation")]
 public interface ICollateralConfirmation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICollateralConfirmation1 : IIsoComponent
     [IsoId("_UnrTxdp-Ed-ak6NoX_4Aeg_-2130532228")]
     [DisplayName("Collateral Substitution Request Identification")]
     [IsoXmlTag("CollSbstitnReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CollateralSubstitutionRequestIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICollateralConfirmation1 : IIsoComponent
     [IsoId("_UnrTxtp-Ed-ak6NoX_4Aeg_2051423832")]
     [DisplayName("Collateral Substitution Response Identification")]
     [IsoXmlTag("CollSbstitnRspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CollateralSubstitutionResponseIdentification { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface ICollateralConfirmation1 : IIsoComponent
     [IsoId("_UnrTyNp-Ed-ak6NoX_4Aeg_1518492847")]
     [DisplayName("Comment")]
     [IsoXmlTag("Cmnt")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Comment { get; }
 }

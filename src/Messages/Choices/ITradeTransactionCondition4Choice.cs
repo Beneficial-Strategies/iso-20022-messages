@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the trade transaction condition.
 /// </summary>
 [IsoId("_AcY2h9okEeC60axPepSq7g_-1144479083")]
+[IsoDisplayName(@"Trade Transaction Condition 4 Choice")]
 public interface ITradeTransactionCondition4Choice : IIsoChoice { }

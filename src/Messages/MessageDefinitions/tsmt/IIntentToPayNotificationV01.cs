@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_qS03gtE8Ed-BzquC8wXy7w_-674719643")]
 [IsoMessage("tsmt.044.001.01", "InttToPayNtfctn", "urn:iso:std:iso:20022:tech:xsd:tsmt.044.001.01")]
+[Description(@"Scope|The IntentToPayNotification message is sent by a party to the matching application in order to provide details about a future payment.|This message contains details about an intention to pay a certain amount, on a certain date, in relation to one or several transactions known to the matching application.|Usage|The IntentToPayNotification message can be sent by a party to the transaction at any time as long as the transaction is established and not yet closed.|The message is unsolicited, that is, it is not sent in response to another message.")]
+[IsoDisplayName(@"Intent To Pay Notification V")]
 public interface IIntentToPayNotificationV01 : IOuterRecord
 {
     /// <summary>

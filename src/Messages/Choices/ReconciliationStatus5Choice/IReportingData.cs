@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReconciliationStatus5Choice;
 /// Data to be reconciled.
 /// </summary>
 [IsoId("_C1J2g__oEemm3skPVSMJQg")]
+[IsoDisplayName(@"Reporting Data")]
 public interface IReportingData : IReconciliationStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

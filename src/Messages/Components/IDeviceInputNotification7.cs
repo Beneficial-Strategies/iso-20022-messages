@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the content of the input notification message.
 /// </summary>
 [IsoId("_g2_5IbZeEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Device Input Notification7")]
 public interface IDeviceInputNotification7 : IIsoComponent
 {
     /// <summary>

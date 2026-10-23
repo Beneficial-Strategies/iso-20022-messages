@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Regulatory Reporting Notification4.
 /// </summary>
 [IsoId("_5zPGwTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Regulatory Reporting Notification4")]
 public interface IRegulatoryReportingNotification4 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IRegulatoryReportingNotification4 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Certificate")]
     [IsoXmlTag("TxCert")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionCertificate4> TransactionCertificate { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PremiumQuote1Choice;
 /// Premium calculation is based on a percentage of the call amount.
 /// </summary>
 [IsoId("_TMLmINp-Ed-ak6NoX_4Aeg_-1664649532")]
+[IsoDisplayName(@"Percentage Of Call Amount")]
 public interface IPercentageOfCallAmount : IPremiumQuote1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPercentageOfCallAmount : IPremiumQuote1Choice, IIsoChoiceVaria
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("PctgOfCallAmt")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

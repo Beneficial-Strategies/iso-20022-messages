@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError11
 /// <summary>
 /// Movements.
 /// </summary>
+[IsoDisplayName(@"Movements")]
 public interface IMovements : IIntraBalanceOrOperationalError11Choice, IIsoChoiceVariant
 {
     /// <summary>

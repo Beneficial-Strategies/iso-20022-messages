@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Shipping or Courier Service delivery.
 /// </summary>
 [IsoId("_f77kkUhsEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Shipping Data4")]
 public interface IShippingData4 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IShippingData4 : IIsoComponent
     [IsoId("_f_E_QUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> Tax { get; }
 
     /// <summary>
@@ -105,6 +107,7 @@ public interface IShippingData4 : IIsoComponent
     [IsoId("_f_E_R0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Package")]
     [IsoXmlTag("Packg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IShippingPackage4> Package { get; }
 
     /// <summary>
@@ -113,6 +116,7 @@ public interface IShippingData4 : IIsoComponent
     [IsoId("_U-p-skhsEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -121,5 +125,6 @@ public interface IShippingData4 : IIsoComponent
     [IsoId("_U-p-s0hsEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

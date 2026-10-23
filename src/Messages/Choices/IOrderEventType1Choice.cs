@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Order Event Type1Choice.
 /// </summary>
 [IsoId("_7ag5EGveEe2Re-GccwOX8g")]
+[IsoDisplayName(@"Order Event Type1Choice")]
 public interface IOrderEventType1Choice : IIsoChoice { }

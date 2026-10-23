@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sensitive data associated with a payment card.
 /// </summary>
 [IsoId("_GIIq4ZbhEeW6aPG6p-lhQQ")]
+[IsoDisplayName(@"Plain Card Data")]
 public interface IPlainCardData17 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPlainCardData17 : IIsoComponent
     [IsoId("_GUNYAZbhEeW6aPG6p-lhQQ")]
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
+    [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
     Min8Max28NumericText? PAN { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IPlainCardData17 : IIsoComponent
     [IsoId("_GUNYC5bhEeW6aPG6p-lhQQ")]
     [DisplayName("Track")]
     [IsoXmlTag("Trck1")]
+    [IsoSimpleType(IsoSimpleType.Max76Text)]
+    [StringLength(76, MinimumLength = 1)]
     Max76Text? Track1 { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IPlainCardData17 : IIsoComponent
     [IsoId("_GUNYDZbhEeW6aPG6p-lhQQ")]
     [DisplayName("Track")]
     [IsoXmlTag("Trck2")]
+    [IsoSimpleType(IsoSimpleType.Max37Text)]
+    [StringLength(37, MinimumLength = 1)]
     Max37Text? Track2 { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface IPlainCardData17 : IIsoComponent
     [IsoId("_GUNYD5bhEeW6aPG6p-lhQQ")]
     [DisplayName("Track")]
     [IsoXmlTag("Trck3")]
+    [IsoSimpleType(IsoSimpleType.Max104Text)]
+    [StringLength(104, MinimumLength = 1)]
     Max104Text? Track3 { get; }
 
     /// <summary>
@@ -49,6 +57,7 @@ public interface IPlainCardData17 : IIsoComponent
     [IsoId("_TnrZMJbhEeW6aPG6p-lhQQ")]
     [DisplayName("Additional Card Data")]
     [IsoXmlTag("AddtlCardData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> AdditionalCardData { get; }
 
     /// <summary>

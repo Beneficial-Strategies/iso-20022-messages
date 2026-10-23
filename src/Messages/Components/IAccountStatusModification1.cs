@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of change to the status of the account.
 /// </summary>
 [IsoId("_5CsP8BFBEeK3w4cPHH9eMA")]
+[IsoDisplayName(@"Account Status Modification")]
 public interface IAccountStatusModification1 : IIsoComponent
 {
     /// <summary>

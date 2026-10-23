@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that locates and identifies a party.
 /// </summary>
 [IsoId("_PZvPQNp-Ed-ak6NoX_4Aeg_-611452366")]
+[IsoDisplayName(@"Name And Address")]
 public interface INameAndAddress8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INameAndAddress8 : IIsoComponent
     [IsoId("_PZvPQdp-Ed-ak6NoX_4Aeg_-611452364")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -33,5 +36,9 @@ public interface INameAndAddress8 : IIsoComponent
     [IsoId("_PZvPQ9p-Ed-ak6NoX_4Aeg_-106286787")]
     [DisplayName("Alternative Identifier")]
     [IsoXmlTag("AltrntvIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AlternativeIdentifier { get; }
 }

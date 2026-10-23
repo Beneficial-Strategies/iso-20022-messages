@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to contract attributes.
 /// </summary>
 [IsoId("_Zj1khQ1HEeqV4s5SpzR1dQ")]
+[IsoDisplayName(@"Contract Type")]
 public interface IContractType8 : IIsoComponent
 {
     /// <summary>

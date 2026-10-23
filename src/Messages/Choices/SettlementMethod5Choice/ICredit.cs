@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod5Choice;
 /// <summary>
 /// Credit.
 /// </summary>
+[IsoDisplayName(@"Credit")]
 public interface ICredit : ISettlementMethod5Choice, IIsoChoiceVariant
 {
     /// <summary>

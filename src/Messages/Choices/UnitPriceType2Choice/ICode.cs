@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitPriceType2Choice;
 ///  Type of price expressed as a code.
 /// </summary>
 [IsoId("_ORWfkQc_EeSyIPzOZ6VzBQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IUnitPriceType2Choice, IIsoChoiceVariant
 {
     /// <summary>

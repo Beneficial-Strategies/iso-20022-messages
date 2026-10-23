@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acquirer Host Configuration10.
 /// </summary>
 [IsoId("_7TgNYZ9tEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Acquirer Host Configuration10")]
 public interface IAcquirerHostConfiguration10 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IAcquirerHostConfiguration10 : IIsoComponent
     /// </summary>
     [DisplayName("Message To Send")]
     [IsoXmlTag("MsgToSnd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<MessageFunction47Code> MessageToSend { get; }
 
     /// <summary>
@@ -37,5 +39,6 @@ public interface IAcquirerHostConfiguration10 : IIsoComponent
     /// </summary>
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max1025Text> ExternallyTypeSupported { get; }
 }

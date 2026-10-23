@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Descriptive fields capturing where no strike price is known.
 /// </summary>
 [IsoId("_M5QB8ZivEe2f7NHvXATP5g")]
+[IsoDisplayName(@"Securities Transaction Price")]
 public interface ISecuritiesTransactionPrice6 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ISecuritiesTransactionPrice6 : IIsoComponent
     [IsoId("_NPG9MpivEe2f7NHvXATP5g")]
     [DisplayName("Digital Token")]
     [IsoXmlTag("DgtlTkn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDigitalTokenAmount2> DigitalToken { get; }
 }

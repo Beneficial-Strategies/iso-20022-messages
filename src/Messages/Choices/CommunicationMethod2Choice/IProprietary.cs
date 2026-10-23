@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommunicationMethod2Choice;
 /// Unique and unambiguous identification of communication method using a bilaterally or multilaterally agreed description.
 /// </summary>
 [IsoId("_41lwwA1fEeKGXqvMN6jpiw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICommunicationMethod2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : ICommunicationMethod2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

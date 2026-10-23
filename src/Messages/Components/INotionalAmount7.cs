@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Notional Amount7.
 /// </summary>
 [IsoId("_NO2ntRT0Ee61h9tfoUrWyw")]
+[IsoDisplayName(@"Notional Amount7")]
 public interface INotionalAmount7 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface INotionalAmount7 : IIsoComponent
     /// </summary>
     [DisplayName("Amount In Effect")]
     [IsoXmlTag("AmtInFct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyAnd19DecimalAmount> AmountInEffect { get; }
 
     /// <summary>

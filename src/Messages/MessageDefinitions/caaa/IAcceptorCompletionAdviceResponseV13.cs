@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrCmpltnAdvcRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.004.001.13"
 )]
+[IsoDisplayName(@"Acceptor Completion Advice Response V13")]
 public interface IAcceptorCompletionAdviceResponseV13 : IOuterRecord
 {
     /// <summary>

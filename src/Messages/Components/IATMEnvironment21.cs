@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Environment21.
 /// </summary>
 [IsoId("_ePAPUaazEe-s1ZClExRjdw")]
+[IsoDisplayName(@"ATM Environment21")]
 public interface IATMEnvironment21 : IIsoComponent
 {
     /// <summary>

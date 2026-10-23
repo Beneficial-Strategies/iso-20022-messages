@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies a natural person through identification number, name and domicile.
 /// </summary>
 [IsoId("_izPYoS40Eeuxhbw_aW6haw")]
+[IsoDisplayName(@"Natural Person Identification")]
 public interface INaturalPersonIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface INaturalPersonIdentification2 : IIsoComponent
     [IsoId("_jJtX4y40Eeuxhbw_aW6haw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? Name { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface INaturalPersonIdentification2 : IIsoComponent
     [IsoId("_jJtX5S40Eeuxhbw_aW6haw")]
     [DisplayName("Domicile")]
     [IsoXmlTag("Dmcl")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? Domicile { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceQuantity1Choice;
 /// </summary>
 [IsoId("_RCMa0Np-Ed-ak6NoX_4Aeg_1824828268")]
 [IsoXmlTag("QtyAsDSS")]
+[IsoDisplayName(@"Quantity As DSS")]
 public interface IQuantityAsDSS : IBalanceQuantity1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IQuantityAsDSS : IBalanceQuantity1Choice, IIsoChoiceVariant
     [IsoId("_P_luUtp-Ed-ak6NoX_4Aeg_-1713450015")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text Issuer { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IQuantityAsDSS : IBalanceQuantity1Choice, IIsoChoiceVariant
     [IsoId("_P_luU9p-Ed-ak6NoX_4Aeg_-1801508836")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText Information { get; }
 
     /// <summary>
@@ -34,5 +38,6 @@ public interface IQuantityAsDSS : IBalanceQuantity1Choice, IIsoChoiceVariant
     [IsoId("_P_luVNp-Ed-ak6NoX_4Aeg_-1695902189")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Balance { get; }
 }

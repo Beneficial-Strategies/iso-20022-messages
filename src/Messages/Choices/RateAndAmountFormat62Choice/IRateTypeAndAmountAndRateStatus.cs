@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat62Choice;
 /// <summary>
 /// Rate Type And Amount And Rate Status.
 /// </summary>
+[IsoDisplayName(@"Rate Type And Amount And Rate Status")]
 public interface IRateTypeAndAmountAndRateStatus : IRateAndAmountFormat62Choice, IIsoChoiceVariant
 {
     /// <summary>

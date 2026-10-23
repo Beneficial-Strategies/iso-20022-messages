@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to parties in the contract.
 /// </summary>
 [IsoId("_ne8ZGXg-Eeu3kecHd7QKUQ")]
+[IsoDisplayName(@"Trade Counterparty Report")]
 public interface ITradeCounterpartyReport14 : IIsoComponent
 {
     /// <summary>
@@ -58,5 +59,8 @@ public interface ITradeCounterpartyReport14 : IIsoComponent
     [IsoId("_ntOsu3g-Eeu3kecHd7QKUQ")]
     [DisplayName("Beneficiary")]
     [IsoXmlTag("Bnfcry")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification235Choice> Beneficiary { get; }
 }

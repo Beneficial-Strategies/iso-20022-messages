@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of an individual terminal management action performed by the point of interaction.
 /// </summary>
 [IsoId("_7K5rcWpMEeSR-ZWLvO-1dg")]
+[IsoDisplayName(@"TMS Event")]
 public interface ITMSEvent3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITMSEvent3 : IIsoComponent
     [IsoId("_7XRTgWpMEeSR-ZWLvO-1dg")]
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TimeStamp { get; }
 
     /// <summary>
@@ -41,5 +43,7 @@ public interface ITMSEvent3 : IIsoComponent
     [IsoId("_7XRTh2pMEeSR-ZWLvO-1dg")]
     [DisplayName("Additional Error Information")]
     [IsoXmlTag("AddtlErrInf")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalErrorInformation { get; }
 }

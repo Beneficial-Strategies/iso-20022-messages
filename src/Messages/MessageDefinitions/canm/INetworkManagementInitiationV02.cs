@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.canm;
 /// </summary>
 [IsoId("_8PlKRVULEeetiruPyDPo0Q")]
 [IsoMessage("canm.001.001.02", "NtwkMgmtInitn", "urn:iso:std:iso:20022:tech:xsd:canm.001.001.02")]
+[Description(@"The NetworkManagementlInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer) connected to a network. It covers the range of activities that control the operating conditions of the network.|||")]
+[IsoDisplayName(@"Network Management Initiation V")]
 public interface INetworkManagementInitiationV02 : IOuterRecord
 {
     /// <summary>

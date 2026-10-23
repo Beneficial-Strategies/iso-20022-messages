@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData4Choice;
 
 /// <summary>Specific credit transfer mandate data.</summary>
 [IsoId("_MPNCY7vHEfCYYbmqNrQFSg")]
+[IsoDisplayName(@"Credit Transfer Mandate")]
 public interface ICreditTransferMandate : IMandateRelatedData4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

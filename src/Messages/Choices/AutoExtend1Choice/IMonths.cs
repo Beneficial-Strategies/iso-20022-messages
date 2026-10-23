@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AutoExtend1Choice;
 /// Number of months.
 /// </summary>
 [IsoId("_95fqcXltEeG7BsjMvd1mEw_-1160957517")]
+[IsoDisplayName(@"Months")]
 public interface IMonths : IAutoExtend1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IMonths : IAutoExtend1Choice, IIsoChoiceVariant
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("Mnths")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

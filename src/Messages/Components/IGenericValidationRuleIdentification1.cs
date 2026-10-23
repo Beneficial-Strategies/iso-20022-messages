@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information for the identification of a validation rule.
 /// </summary>
 [IsoId("_BWCfJdjGEeSD0e0ybx5L5Q")]
+[IsoDisplayName(@"Generic Validation Rule Identification")]
 public interface IGenericValidationRuleIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGenericValidationRuleIdentification1 : IIsoComponent
     [IsoId("_BWCfKNjGEeSD0e0ybx5L5Q")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IGenericValidationRuleIdentification1 : IIsoComponent
     [IsoId("_RNyLgN7HEeSaBeqd_btViQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Description { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface IGenericValidationRuleIdentification1 : IIsoComponent
     [IsoId("_BWCfJtjGEeSD0e0ybx5L5Q")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrBusinessError3Choice;
 /// </summary>
 [IsoId("_0NEVY4wXEei289CGNqs21g")]
 [IsoXmlTag("SysPty")]
+[IsoDisplayName(@"System Party")]
 public interface ISystemParty : IPartyOrBusinessError3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface ISystemParty : IPartyOrBusinessError3Choice, IIsoChoiceVariant
     [IsoId("_CiEaI4waEei289CGNqs21g")]
     [DisplayName("Contact Details")]
     [IsoXmlTag("CtctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContact5> ContactDetails { get; }
 
     /// <summary>
@@ -42,6 +44,7 @@ public interface ISystemParty : IPartyOrBusinessError3Choice, IIsoChoiceVariant
     [IsoId("_0XDX0YwXEei289CGNqs21g")]
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OpeningDate { get; }
 
     /// <summary>
@@ -50,6 +53,7 @@ public interface ISystemParty : IPartyOrBusinessError3Choice, IIsoChoiceVariant
     [IsoId("_0XDX04wXEei289CGNqs21g")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClosingDate { get; }
 
     /// <summary>
@@ -66,6 +70,7 @@ public interface ISystemParty : IPartyOrBusinessError3Choice, IIsoChoiceVariant
     [IsoId("_0XDX14wXEei289CGNqs21g")]
     [DisplayName("Technical Address")]
     [IsoXmlTag("TechAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITechnicalIdentification2Choice> TechnicalAddress { get; }
 
     /// <summary>
@@ -74,6 +79,7 @@ public interface ISystemParty : IPartyOrBusinessError3Choice, IIsoChoiceVariant
     [IsoId("_0XDX2YwXEei289CGNqs21g")]
     [DisplayName("Market Specific Attribute")]
     [IsoXmlTag("MktSpcfcAttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMarketSpecificAttribute1> MarketSpecificAttribute { get; }
 
     /// <summary>
@@ -106,5 +112,6 @@ public interface ISystemParty : IPartyOrBusinessError3Choice, IIsoChoiceVariant
     [IsoId("_0XDX4YwXEei289CGNqs21g")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemRestriction1> Restriction { get; }
 }

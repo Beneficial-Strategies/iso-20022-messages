@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource6Choice;
 
 /// <summary>Unique and unambiguous identification source, as assigned via a pre-determined code list.</summary>
 [IsoId("89198044-a9a9-4533-97f0-a96aa633ec3f")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IIdentificationSource6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

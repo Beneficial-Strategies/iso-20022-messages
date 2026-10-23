@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to report on reservation.
 /// </summary>
 [IsoId("_kuH-C5laEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Reservation Return Criteria")]
 public interface IReservationReturnCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IReservationReturnCriteria1 : IIsoComponent
     [IsoId("_k2a-YZlaEeeE1Ya-LgRsuQ")]
     [DisplayName("Start Date Time Indicator")]
     [IsoXmlTag("StartDtTmInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? StartDateTimeIndicator { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IReservationReturnCriteria1 : IIsoComponent
     [IsoId("_k2a-Y5laEeeE1Ya-LgRsuQ")]
     [DisplayName("Status Indicator")]
     [IsoXmlTag("StsInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? StatusIndicator { get; }
 }

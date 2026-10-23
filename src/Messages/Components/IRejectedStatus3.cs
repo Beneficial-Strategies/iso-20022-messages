@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status is rejected.
 /// </summary>
 [IsoId("_U23mVNp-Ed-ak6NoX_4Aeg_-2053158623")]
+[IsoDisplayName(@"Rejected Status")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IRejectedStatus3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,9 @@ public interface IRejectedStatus3 : IIsoComponent
     [IsoId("_U23mVdp-Ed-ak6NoX_4Aeg_96799303")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [MinLength(1)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectedStatusReason6> Reason { get; }
 
     /// <summary>
@@ -25,5 +30,8 @@ public interface IRejectedStatus3 : IIsoComponent
     [IsoId("_U23mVtp-Ed-ak6NoX_4Aeg_-2053158562")]
     [DisplayName("Data Source Scheme")]
     [IsoXmlTag("DataSrcSchme")]
+    [MinLength(1)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification1> DataSourceScheme { get; }
 }

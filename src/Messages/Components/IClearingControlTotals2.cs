@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Gross clearing control totals.
 /// </summary>
 [IsoId("_M0vWkZM1EeuleeHpFMMhmQ")]
+[IsoDisplayName(@"Clearing Control Totals")]
 public interface IClearingControlTotals2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IClearingControlTotals2 : IIsoComponent
     [IsoId("_M5Z0IZM1EeuleeHpFMMhmQ")]
     [DisplayName("Clearing Control Count")]
     [IsoXmlTag("ClrCtrlCnt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number ClearingControlCount { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxReferenceType1Choice;
 /// Type of tax reference expressed as a code.
 /// </summary>
 [IsoId("_SaQSIE4REeiQHa-q1Uephw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITaxReferenceType1Choice, IIsoChoiceVariant
 {
     /// <summary>

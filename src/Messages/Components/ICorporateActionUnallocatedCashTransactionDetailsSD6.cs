@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Breakdown of unallocated cash transactions.
 /// </summary>
 [IsoId("_O8s7cMMPEee-Vv_OVx0uAQ")]
+[IsoDisplayName(@"Corporate Action Unallocated Cash Transaction Details SD")]
 public interface ICorporateActionUnallocatedCashTransactionDetailsSD6 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,8 @@ public interface ICorporateActionUnallocatedCashTransactionDetailsSD6 : IIsoComp
     [IsoId("_PMd12cMPEee-Vv_OVx0uAQ")]
     [DisplayName("Contra Participant Number")]
     [IsoXmlTag("ContraPtcptNb")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? ContraParticipantNumber { get; }
 
     /// <summary>

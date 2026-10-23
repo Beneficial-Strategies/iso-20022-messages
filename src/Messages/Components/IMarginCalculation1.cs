@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the total margin amount, the collateral amount on deposit and the total minimum requirement that used to calculate the margin result, either an excess or a deficit.
 /// </summary>
 [IsoId("_-dwqLKMOEeCojJW5vEuTEQ_1443454160")]
+[IsoDisplayName(@"Margin Calculation")]
 public interface IMarginCalculation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IMarginCalculation1 : IIsoComponent
     [IsoId("_-d50EaMOEeCojJW5vEuTEQ_-1508761602")]
     [DisplayName("Collateral On Deposit")]
     [IsoXmlTag("CollOnDpst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateral6> CollateralOnDeposit { get; }
 
     /// <summary>

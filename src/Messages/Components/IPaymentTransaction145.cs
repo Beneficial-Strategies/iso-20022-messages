@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the original transactions, to which the status report message refers.
 /// </summary>
 [IsoId("_OTaGxxlWEe2Do_UtrNmb2g")]
+[IsoDisplayName(@"Payment Transaction")]
 public interface IPaymentTransaction145 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentTransaction145 : IIsoComponent
     [IsoId("_OdEZARlWEe2Do_UtrNmb2g")]
     [DisplayName("Status Identification")]
     [IsoXmlTag("StsId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StatusIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPaymentTransaction145 : IIsoComponent
     [IsoId("_OdEZAxlWEe2Do_UtrNmb2g")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPaymentTransaction145 : IIsoComponent
     [IsoId("_OdEZBRlWEe2Do_UtrNmb2g")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface IPaymentTransaction145 : IIsoComponent
     [IsoId("_OdEZBxlWEe2Do_UtrNmb2g")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? OriginalUETR { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IPaymentTransaction145 : IIsoComponent
     [IsoId("_OdEZCxlWEe2Do_UtrNmb2g")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation12> StatusReasonInformation { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface IPaymentTransaction145 : IIsoComponent
     [IsoId("_OdEZDxlWEe2Do_UtrNmb2g")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges12> ChargesInformation { get; }
 
     /// <summary>
@@ -81,6 +91,7 @@ public interface IPaymentTransaction145 : IIsoComponent
     [IsoId("_OdEZERlWEe2Do_UtrNmb2g")]
     [DisplayName("Debtor Decision Date Time")]
     [IsoXmlTag("DbtrDcsnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DebtorDecisionDateTime { get; }
 
     /// <summary>
@@ -89,6 +100,7 @@ public interface IPaymentTransaction145 : IIsoComponent
     [IsoId("_OdEZExlWEe2Do_UtrNmb2g")]
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AcceptanceDateTime { get; }
 
     /// <summary>
@@ -97,6 +109,8 @@ public interface IPaymentTransaction145 : IIsoComponent
     [IsoId("_OdEZFRlWEe2Do_UtrNmb2g")]
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerReference { get; }
 
     /// <summary>
@@ -105,6 +119,8 @@ public interface IPaymentTransaction145 : IIsoComponent
     [IsoId("_OdEZFxlWEe2Do_UtrNmb2g")]
     [DisplayName("Clearing System Reference")]
     [IsoXmlTag("ClrSysRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClearingSystemReference { get; }
 
     /// <summary>
@@ -122,6 +138,7 @@ public interface IPaymentTransaction145 : IIsoComponent
     [IsoId("_OdEZGxlWEe2Do_UtrNmb2g")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument12> EnclosedFile { get; }
 
     /// <summary>
@@ -130,5 +147,6 @@ public interface IPaymentTransaction145 : IIsoComponent
     [IsoId("_OdEZHRlWEe2Do_UtrNmb2g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

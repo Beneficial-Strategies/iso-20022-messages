@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxAmountType1Choice;
 /// Specifies the amount type, in a free-text form.
 /// </summary>
 [IsoId("_ts1L0FkyEeGeoaLUQk__nA_281564711")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ITaxAmountType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : ITaxAmountType1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

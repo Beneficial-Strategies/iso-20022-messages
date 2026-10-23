@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the creditor.
 /// </summary>
 [IsoId("_3roEUdgxEeipBO1pkKK6zg")]
+[IsoDisplayName(@"Creditor")]
 public interface ICreditor4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICreditor4 : IIsoComponent
     [IsoId("_32WGk9gxEeipBO1pkKK6zg")]
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegistrationIdentification { get; }
 }

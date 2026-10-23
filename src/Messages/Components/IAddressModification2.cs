@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of change to the address.
 /// </summary>
 [IsoId("_-fsW0W4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Address Modification")]
 public interface IAddressModification2 : IIsoComponent
 {
     /// <summary>

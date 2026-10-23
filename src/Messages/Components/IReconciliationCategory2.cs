@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies categories of statuses of a derivative when there is no reporting requirement for both counterparties.
 /// </summary>
 [IsoId("_yeZ-MT6CEe2Z1_pdMHu4SA")]
+[IsoDisplayName(@"Reconciliation Category")]
 public interface IReconciliationCategory2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IReconciliationCategory2 : IIsoComponent
     [IsoId("_yfOdmT6CEe2Z1_pdMHu4SA")]
     [DisplayName("Revived")]
     [IsoXmlTag("Rvvd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Revived { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IReconciliationCategory2 : IIsoComponent
     [IsoId("_yfOdmz6CEe2Z1_pdMHu4SA")]
     [DisplayName("Further Modification")]
     [IsoXmlTag("FrthrMod")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator FurtherModification { get; }
 }

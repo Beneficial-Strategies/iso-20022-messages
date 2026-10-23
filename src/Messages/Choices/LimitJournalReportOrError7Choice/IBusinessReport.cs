@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitJournalReportOrError7Choice
 /// <summary>
 /// Business Report.
 /// </summary>
+[IsoDisplayName(@"Business Report")]
 public interface IBusinessReport : ILimitJournalReportOrError7Choice, IIsoChoiceVariant
 {
     /// <summary>

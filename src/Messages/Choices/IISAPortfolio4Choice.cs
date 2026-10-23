@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between individual savings account information or additional portfolio information.
 /// </summary>
 [IsoId("_0xR5cbNBEeewUI7-Tnew9A")]
+[IsoDisplayName(@"ISA Portfolio 4 Choice")]
 public interface IISAPortfolio4Choice : IIsoChoice { }

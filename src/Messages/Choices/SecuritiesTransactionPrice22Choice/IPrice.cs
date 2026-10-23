@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice22Choi
 /// Predetermined price at which the holder will have to buy or sell the underlying instrument.
 /// </summary>
 [IsoId("_i7UncZiuEe2f7NHvXATP5g")]
+[IsoDisplayName(@"Price")]
 public interface IPrice : ISecuritiesTransactionPrice22Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

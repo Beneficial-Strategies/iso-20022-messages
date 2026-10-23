@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Query based on ISIN or an alternative format for the identification of a financial instrument.
 /// </summary>
 [IsoId("_2unO9BvYEeWeg9zOuV6DZQ")]
+[IsoDisplayName(@"Security Identification Query Criteria")]
 public interface ISecurityIdentificationQueryCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityIdentificationQueryCriteria1 : IIsoComponent
     [IsoId("_2unO9xvYEeWeg9zOuV6DZQ")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISINOct2015Identifier> ISIN { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ISecurityIdentificationQueryCriteria1 : IIsoComponent
     [IsoId("_2unO9hvYEeWeg9zOuV6DZQ")]
     [DisplayName("Alternative Instrument Identification")]
     [IsoXmlTag("AltrntvInstrmId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max52Text> AlternativeInstrumentIdentification { get; }
 }

@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// </summary>
 [IsoId("_V5V16NE8Ed-BzquC8wXy7w_-1324281")]
 [IsoMessage("trea.013.001.01", "WdrwlNtfctnV01", "urn:iso:std:iso:20022:tech:xsd:trea.013.001.01")]
+[Description(@"Scope|The WithdrawalNotification message is sent by a central system to notify the withdrawal of a trade which was previously notified to the receiver as an alleged trade.|Usage|The message is used to confirm the cancellation of a previously notified trade.||This message is obsolete please use WithdrawalNotificationV02 - fxtr.013.001.02")]
+[IsoDisplayName(@"Withdrawal Notification V")]
 public interface IWithdrawalNotificationV01 : IOuterRecord
 {
     /// <summary>

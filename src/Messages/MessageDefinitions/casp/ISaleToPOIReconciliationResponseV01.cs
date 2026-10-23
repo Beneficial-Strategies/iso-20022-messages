@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.casp;
     "SaleToPOIRcncltnRspn",
     "urn:iso:std:iso:20022:tech:xsd:casp.004.001.01"
 )]
+[Description(@"This message is a Financial response for reconciliation process between Sale and POI Systems.")]
+[IsoDisplayName(@"Sale To POI Reconciliation Response V")]
 public interface ISaleToPOIReconciliationResponseV01 : IOuterRecord
 {
     /// <summary>

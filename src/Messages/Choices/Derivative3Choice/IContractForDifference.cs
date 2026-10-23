@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative3Choice;
 /// </summary>
 [IsoId("_xH-zaSe0Eei12pGEsJIAeQ")]
 [IsoXmlTag("CtrctForDiff")]
+[IsoDisplayName(@"Contract For Difference")]
 public interface IContractForDifference : IDerivative3Choice, IIsoChoiceVariant
 {
     /// <summary>

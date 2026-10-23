@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the index used to define the rate and optionally the basis point spread.
 /// </summary>
 [IsoId("_reYmMepnEeSsk6KxwbYJ9w")]
+[IsoDisplayName(@"Floating Interest Rate")]
 public interface IFloatingInterestRate4 : IIsoComponent
 {
     /// <summary>
@@ -36,5 +37,6 @@ public interface IFloatingInterestRate4 : IIsoComponent
     [IsoId("_r4PXcSSNEeW2Xf4A_zKwwg")]
     [DisplayName("Basis Point Spread")]
     [IsoXmlTag("BsisPtSprd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number BasisPointSpread { get; }
 }

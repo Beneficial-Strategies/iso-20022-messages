@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tangible items of value to a business.
 /// </summary>
 [IsoId("_QAKbh5JKEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Common Financial Instrument Attributes")]
 public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8SZJKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Name")]
     [IsoXmlTag("FinInstrmNm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentName2> FinancialInstrumentName { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8U5JKEeuAlLVx8pyt3w")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CertificateNumber { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8VZJKEeuAlLVx8pyt3w")]
     [DisplayName("Contract Version Number")]
     [IsoXmlTag("CtrctVrsnNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ContractVersionNumber { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8V5JKEeuAlLVx8pyt3w")]
     [DisplayName("Coupon Attached Number")]
     [IsoXmlTag("CpnAttchdNb")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? CouponAttachedNumber { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8WZJKEeuAlLVx8pyt3w")]
     [DisplayName("Tax Lot Number")]
     [IsoXmlTag("TaxLotNb")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? TaxLotNumber { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8W5JKEeuAlLVx8pyt3w")]
     [DisplayName("Pool Number")]
     [IsoXmlTag("PoolNb")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? PoolNumber { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8Y5JKEeuAlLVx8pyt3w")]
     [DisplayName("Covered Indicator")]
     [IsoXmlTag("CvrdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CoveredIndicator { get; }
 
     /// <summary>
@@ -113,6 +122,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8d5JKEeuAlLVx8pyt3w")]
     [DisplayName("Listing Date")]
     [IsoXmlTag("ListgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ListingDate { get; }
 
     /// <summary>
@@ -121,6 +131,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8eZJKEeuAlLVx8pyt3w")]
     [DisplayName("Record Date")]
     [IsoXmlTag("RcrdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? RecordDate { get; }
 
     /// <summary>
@@ -129,6 +140,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8e5JKEeuAlLVx8pyt3w")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpiryDate { get; }
 
     /// <summary>
@@ -137,6 +149,8 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8fZJKEeuAlLVx8pyt3w")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Purpose { get; }
 
     /// <summary>
@@ -161,6 +175,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8g5JKEeuAlLVx8pyt3w")]
     [DisplayName("Trading Market")]
     [IsoXmlTag("TradgMkt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradingParameters2> TradingMarket { get; }
 
     /// <summary>
@@ -169,6 +184,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8hZJKEeuAlLVx8pyt3w")]
     [DisplayName("Spread And Benchmark Curve")]
     [IsoXmlTag("SprdAndBchmkCrv")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBenchmarkCurve6> SpreadAndBenchmarkCurve { get; }
 
     /// <summary>
@@ -193,6 +209,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8i5JKEeuAlLVx8pyt3w")]
     [DisplayName("Fungible Indicator")]
     [IsoXmlTag("FngbInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FungibleIndicator { get; }
 
     /// <summary>
@@ -201,6 +218,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8jZJKEeuAlLVx8pyt3w")]
     [DisplayName("Confidential")]
     [IsoXmlTag("Cnfdtl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Confidential { get; }
 
     /// <summary>
@@ -209,6 +227,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8j5JKEeuAlLVx8pyt3w")]
     [DisplayName("Private Placement")]
     [IsoXmlTag("PrvtPlcmnt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PrivatePlacement { get; }
 
     /// <summary>
@@ -217,6 +236,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8kZJKEeuAlLVx8pyt3w")]
     [DisplayName("Convertible Indicator")]
     [IsoXmlTag("ConvtblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ConvertibleIndicator { get; }
 
     /// <summary>
@@ -273,6 +293,8 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8n5JKEeuAlLVx8pyt3w")]
     [DisplayName("Serie Number")]
     [IsoXmlTag("SrNb")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? SerieNumber { get; }
 
     /// <summary>
@@ -281,6 +303,8 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8oZJKEeuAlLVx8pyt3w")]
     [DisplayName("Class")]
     [IsoXmlTag("Clss")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? Class { get; }
 
     /// <summary>
@@ -289,6 +313,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8o5JKEeuAlLVx8pyt3w")]
     [DisplayName("Withholding Tax Regime")]
     [IsoXmlTag("WhldgTaxRgm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityWithHoldingTax1> WithholdingTaxRegime { get; }
 
     /// <summary>
@@ -345,6 +370,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8sZJKEeuAlLVx8pyt3w")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityRestriction3> Restriction { get; }
 
     /// <summary>
@@ -353,6 +379,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8s5JKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Identification Validity")]
     [IsoXmlTag("FinInstrmIdVldty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentIdentificationValidity3> FinancialInstrumentIdentificationValidity { get; }
 
     /// <summary>
@@ -361,6 +388,7 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8tZJKEeuAlLVx8pyt3w")]
     [DisplayName("Settlement Information")]
     [IsoXmlTag("SttlmInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementInformation17> SettlementInformation { get; }
 
     /// <summary>
@@ -425,5 +453,6 @@ public interface ICommonFinancialInstrumentAttributes11 : IIsoComponent
     [IsoId("_QCG8xZJKEeuAlLVx8pyt3w")]
     [DisplayName("Security CSD Link")]
     [IsoXmlTag("SctyCSDLk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityCSDLink7> SecurityCSDLink { get; }
 }

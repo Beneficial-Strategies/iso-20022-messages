@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnMvmntPrlimryAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.035.001.10"
 )]
+[Description(@"Scope|The CorporateActionMovementPreliminaryAdvice message is sent by an account servicer to an account owner or its designated agent to pre-advise upcoming posting or reversal of securities and/or cash postings.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).")]
+[IsoDisplayName(@"Corporate Action Movement Preliminary Advice V")]
 public interface ICorporateActionMovementPreliminaryAdviceV10 : IOuterRecord
 {
     /// <summary>
@@ -78,6 +80,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV10 : IOuterRecord
     [IsoId("_BBQdI7T-EeiTob_PrFFUxA")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification32> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -86,6 +89,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV10 : IOuterRecord
     [IsoId("_BBQdJbT-EeiTob_PrFFUxA")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventReference3> EventsLinkage { get; }
 
     /// <summary>
@@ -126,6 +130,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV10 : IOuterRecord
     [IsoId("_BBQdL7T-EeiTob_PrFFUxA")]
     [DisplayName("Corporate Action Movement Details")]
     [IsoXmlTag("CorpActnMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionOption153> CorporateActionMovementDetails { get; }
 
     /// <summary>
@@ -142,6 +147,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV10 : IOuterRecord
     [IsoId("_BBQdM7T-EeiTob_PrFFUxA")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification129Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -150,6 +156,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV10 : IOuterRecord
     [IsoId("_BBQdNbT-EeiTob_PrFFUxA")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification120Choice> PayingAgent { get; }
 
     /// <summary>
@@ -158,6 +165,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV10 : IOuterRecord
     [IsoId("_BBQdN7T-EeiTob_PrFFUxA")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification120Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -174,6 +182,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV10 : IOuterRecord
     [IsoId("_BBQdO7T-EeiTob_PrFFUxA")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification120Choice> ResellingAgent { get; }
 
     /// <summary>
@@ -198,6 +207,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV10 : IOuterRecord
     [IsoId("_BBQdQbT-EeiTob_PrFFUxA")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification120Choice> SolicitationAgent { get; }
 
     /// <summary>
@@ -214,6 +224,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV10 : IOuterRecord
     [IsoId("_BBQdRbT-EeiTob_PrFFUxA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>
@@ -230,6 +241,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV10 : IOuterRecord
     [IsoId("_5W0VRLXLEeiTob_PrFFUxA")]
     [DisplayName("Offeror")]
     [IsoXmlTag("Offerr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification129Choice> Offeror { get; }
 
     /// <summary>

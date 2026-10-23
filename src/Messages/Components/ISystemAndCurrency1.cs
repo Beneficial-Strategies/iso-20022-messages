@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the identification of the system and its currency.
 /// </summary>
 [IsoId("_HcKF0Im6Eeipw6hHPgB4Sw")]
+[IsoDisplayName(@"System And Currency")]
 public interface ISystemAndCurrency1 : IIsoComponent
 {
     /// <summary>

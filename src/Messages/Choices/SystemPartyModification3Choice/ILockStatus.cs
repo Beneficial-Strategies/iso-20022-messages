@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice;
 /// <summary>
 /// Lock Status.
 /// </summary>
+[IsoDisplayName(@"Lock Status")]
 public interface ILockStatus : ISystemPartyModification3Choice, IIsoChoiceVariant
 {
     /// <summary>

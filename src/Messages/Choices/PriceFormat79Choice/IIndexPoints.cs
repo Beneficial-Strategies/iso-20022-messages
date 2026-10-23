@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat79Choice;
 /// <summary>
 /// Index Points.
 /// </summary>
+[IsoDisplayName(@"Index Points")]
 public interface IIndexPoints : IPriceFormat79Choice, IIsoChoiceVariant
 {
     /// <summary>

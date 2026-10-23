@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus2Choi
 
 /// <summary>Instruction is accepted for further processing.</summary>
 [IsoId("_G1D_KbMaEfCEXew4g5B5oA")]
+[IsoDisplayName(@"Accepted For Further Processing")]
 public interface IAcceptedForFurtherProcessing
     : IMarketClaimProcessingStatus2Choice,
         IIsoChoiceVariant

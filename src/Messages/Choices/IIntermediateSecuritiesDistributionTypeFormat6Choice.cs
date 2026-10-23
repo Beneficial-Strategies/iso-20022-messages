@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of intermediate securities distribution.
 /// </summary>
 [IsoId("_x8LwkeAZEd-D2OAFXdoRmA")]
+[IsoDisplayName(@"Intermediate Securities Distribution Type Format 6 Choice")]
 public interface IIntermediateSecuritiesDistributionTypeFormat6Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content Information Type41.
 /// </summary>
 [IsoId("_4XBJoX5QEe6YlIMyoxWMJA")]
+[IsoDisplayName(@"Content Information Type41")]
 public interface IContentInformationType41 : IIsoComponent
 {
     /// <summary>

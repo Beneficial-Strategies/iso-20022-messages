@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceSubType1Choice;
 /// Balance sub-type, as published in an external balance sub-type code list.
 /// </summary>
 [IsoId("_SYoCRNp-Ed-ak6NoX_4Aeg_771530952")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBalanceSubType1Choice, IIsoChoiceVariant
 {
     /// <summary>

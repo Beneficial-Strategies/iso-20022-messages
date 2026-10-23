@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the reason of a rejection of a global movement authorisation request.
 /// </summary>
 [IsoId("_RoV01tp-Ed-ak6NoX_4Aeg_1504278545")]
+[IsoDisplayName(@"Rejection Reason 19 Format Choice")]
 public interface IRejectionReason19FormatChoice : IIsoChoice { }

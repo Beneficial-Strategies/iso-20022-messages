@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderEventType1Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IOrderEventType1Choice, IIsoChoiceVariant
 {
     /// <summary>

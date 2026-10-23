@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the ownership of an investment account.
 /// </summary>
 [IsoId("_JZMzcRRQEeOKWo1NF21OVw")]
+[IsoDisplayName(@"Investment Account Ownership Information")]
 public interface IInvestmentAccountOwnershipInformation8 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IInvestmentAccountOwnershipInformation8 : IIsoComponent
     [IsoId("_JwaZlxRQEeOKWo1NF21OVw")]
     [DisplayName("Ownership Beneficiary Rate")]
     [IsoXmlTag("OwnrshBnfcryRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OwnershipBeneficiaryRate { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface IInvestmentAccountOwnershipInformation8 : IIsoComponent
     [IsoId("_JwaZmRRQEeOKWo1NF21OVw")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientIdentification { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IInvestmentAccountOwnershipInformation8 : IIsoComponent
     [IsoId("_JwaZmxRQEeOKWo1NF21OVw")]
     [DisplayName("Fiscal Exemption")]
     [IsoXmlTag("FsclXmptn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FiscalExemption { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IInvestmentAccountOwnershipInformation8 : IIsoComponent
     [IsoId("_JwaZnRRQEeOKWo1NF21OVw")]
     [DisplayName("Signatory Right Indicator")]
     [IsoXmlTag("SgntryRghtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SignatoryRightIndicator { get; }
 
     /// <summary>
@@ -65,6 +71,9 @@ public interface IInvestmentAccountOwnershipInformation8 : IIsoComponent
     [IsoId("_JwaZnxRQEeOKWo1NF21OVw")]
     [DisplayName("Modified Investor Profile Validation")]
     [IsoXmlTag("ModfdInvstrPrflVldtn")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope19> ModifiedInvestorProfileValidation { get; }
 
     /// <summary>

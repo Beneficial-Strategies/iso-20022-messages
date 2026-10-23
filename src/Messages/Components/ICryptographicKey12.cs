@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cryptographic key.
 /// </summary>
 [IsoId("_47wD8bTwEeeQy4o2AayYHg")]
+[IsoDisplayName(@"Cryptographic Key")]
 public interface ICryptographicKey12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICryptographicKey12 : IIsoComponent
     [IsoId("_5EX0cbTwEeeQy4o2AayYHg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICryptographicKey12 : IIsoComponent
     [IsoId("_5EX0c7TwEeeQy4o2AayYHg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Identification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ICryptographicKey12 : IIsoComponent
     [IsoId("_5EX0dbTwEeeQy4o2AayYHg")]
     [DisplayName("Security Domain Identification")]
     [IsoXmlTag("SctyDomnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecurityDomainIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface ICryptographicKey12 : IIsoComponent
     [IsoId("_5EX0d7TwEeeQy4o2AayYHg")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary? AdditionalIdentification { get; }
 
     /// <summary>
@@ -49,6 +57,8 @@ public interface ICryptographicKey12 : IIsoComponent
     [IsoId("_5EX0ebTwEeeQy4o2AayYHg")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Version { get; }
 
     /// <summary>
@@ -57,6 +67,7 @@ public interface ICryptographicKey12 : IIsoComponent
     [IsoId("_5EX0e7TwEeeQy4o2AayYHg")]
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SequenceCounter { get; }
 
     /// <summary>
@@ -73,6 +84,7 @@ public interface ICryptographicKey12 : IIsoComponent
     [IsoId("_5EX0f7TwEeeQy4o2AayYHg")]
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<KeyUsage1Code> Function { get; }
 
     /// <summary>
@@ -81,6 +93,7 @@ public interface ICryptographicKey12 : IIsoComponent
     [IsoId("_5EX0gbTwEeeQy4o2AayYHg")]
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ActivationDate { get; }
 
     /// <summary>
@@ -89,6 +102,7 @@ public interface ICryptographicKey12 : IIsoComponent
     [IsoId("_5EX0g7TwEeeQy4o2AayYHg")]
     [DisplayName("Deactivation Date")]
     [IsoXmlTag("DeactvtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DeactivationDate { get; }
 
     /// <summary>
@@ -97,6 +111,7 @@ public interface ICryptographicKey12 : IIsoComponent
     [IsoId("_5EX0hbTwEeeQy4o2AayYHg")]
     [DisplayName("Key Check Value")]
     [IsoXmlTag("KeyChckVal")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary? KeyCheckValue { get; }
 
     /// <summary>

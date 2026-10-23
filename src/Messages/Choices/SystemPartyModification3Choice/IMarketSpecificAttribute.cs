@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice;
 /// <summary>
 /// Market Specific Attribute.
 /// </summary>
+[IsoDisplayName(@"Market Specific Attribute")]
 public interface IMarketSpecificAttribute : ISystemPartyModification3Choice, IIsoChoiceVariant
 {
     /// <summary>

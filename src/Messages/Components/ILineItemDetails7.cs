@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Goods or services that are part of a commercial trade agreement.
 /// </summary>
 [IsoId("_SqDwgdp-Ed-ak6NoX_4Aeg_-733825048")]
+[IsoDisplayName(@"Line Item Details")]
 public interface ILineItemDetails7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILineItemDetails7 : IIsoComponent
     [IsoId("_SqDwgtp-Ed-ak6NoX_4Aeg_-733824910")]
     [DisplayName("Line Item Identification")]
     [IsoXmlTag("LineItmId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text LineItemIdentification { get; }
 
     /// <summary>
@@ -57,6 +60,8 @@ public interface ILineItemDetails7 : IIsoComponent
     [IsoId("_SqDwh9p-Ed-ak6NoX_4Aeg_-733824581")]
     [DisplayName("Product Name")]
     [IsoXmlTag("PdctNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ProductName { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ILineItemDetails7 : IIsoComponent
     [IsoId("_SqDwiNp-Ed-ak6NoX_4Aeg_-732903900")]
     [DisplayName("Product Identifier")]
     [IsoXmlTag("PdctIdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductIdentifier2Choice> ProductIdentifier { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface ILineItemDetails7 : IIsoComponent
     [IsoId("_SqDwidp-Ed-ak6NoX_4Aeg_-732902953")]
     [DisplayName("Product Characteristics")]
     [IsoXmlTag("PdctChrtcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductCharacteristics1Choice> ProductCharacteristics { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface ILineItemDetails7 : IIsoComponent
     [IsoId("_SqM6cNp-Ed-ak6NoX_4Aeg_-732902516")]
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductCategory1Choice> ProductCategory { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface ILineItemDetails7 : IIsoComponent
     [IsoId("_SqM6cdp-Ed-ak6NoX_4Aeg_-733824521")]
     [DisplayName("Product Origin")]
     [IsoXmlTag("PdctOrgn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> ProductOrigin { get; }
 
     /// <summary>
@@ -113,6 +122,7 @@ public interface ILineItemDetails7 : IIsoComponent
     [IsoId("_SqM6dNp-Ed-ak6NoX_4Aeg_-732902858")]
     [DisplayName("Incoterms")]
     [IsoXmlTag("Incotrms")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIncoterms1> Incoterms { get; }
 
     /// <summary>
@@ -121,6 +131,7 @@ public interface ILineItemDetails7 : IIsoComponent
     [IsoId("_SqM6ddp-Ed-ak6NoX_4Aeg_-732903385")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment3> Adjustment { get; }
 
     /// <summary>
@@ -137,6 +148,7 @@ public interface ILineItemDetails7 : IIsoComponent
     [IsoId("_SqM6d9p-Ed-ak6NoX_4Aeg_-732903480")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax13> Tax { get; }
 
     /// <summary>

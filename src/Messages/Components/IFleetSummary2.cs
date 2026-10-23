@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Supplies additional transaction information for fleet transactions.
 /// </summary>
 [IsoId("_wKGeYRytEey6gI8SKlv7rg")]
+[IsoDisplayName(@"Fleet Summary")]
 public interface IFleetSummary2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IFleetSummary2 : IIsoComponent
     [IsoId("_wQXedxytEey6gI8SKlv7rg")]
     [DisplayName("Card Fuel Prompt Code")]
     [IsoXmlTag("CardFuelPrmptCd")]
+    [IsoSimpleType(IsoSimpleType.Max1Number)]
     Max1Number? CardFuelPromptCode { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface IFleetSummary2 : IIsoComponent
     [IsoId("_wQXeeRytEey6gI8SKlv7rg")]
     [DisplayName("Agent Fuel Prompt Code")]
     [IsoXmlTag("AgtFuelPrmptCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AgentFuelPromptCode { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IFleetSummary2 : IIsoComponent
     [IsoId("_wQXefRytEey6gI8SKlv7rg")]
     [DisplayName("Local Amenity")]
     [IsoXmlTag("LclAmnty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalAmenity1> LocalAmenity { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface IFleetSummary2 : IIsoComponent
     [IsoId("_wQXefxytEey6gI8SKlv7rg")]
     [DisplayName("Transaction Related Data")]
     [IsoXmlTag("TxRltdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction141> TransactionRelatedData { get; }
 
     /// <summary>

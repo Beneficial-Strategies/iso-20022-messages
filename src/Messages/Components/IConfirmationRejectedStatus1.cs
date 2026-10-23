@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status is rejected.
 /// </summary>
 [IsoId("_RM7EItp-Ed-ak6NoX_4Aeg_490888050")]
+[IsoDisplayName(@"Confirmation Rejected Status")]
 public interface IConfirmationRejectedStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IConfirmationRejectedStatus1 : IIsoComponent
     [IsoId("_RM7EJNp-Ed-ak6NoX_4Aeg_490888068")]
     [DisplayName("Extended Reason")]
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedReason { get; }
 
     /// <summary>

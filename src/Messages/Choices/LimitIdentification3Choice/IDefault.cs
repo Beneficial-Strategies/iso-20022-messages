@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitIdentification3Choice;
 /// <summary>
 /// Default.
 /// </summary>
+[IsoDisplayName(@"Default")]
 public interface IDefault : ILimitIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>

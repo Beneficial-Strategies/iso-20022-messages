@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgEqtyTradgActvtyRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.040.001.01"
 )]
+[Description(@"The FinancialInstrumentReportingEquityTradingActivityReport message is sent by the trading venue to the national competent authority to report on equity specific trading activity data, used for the transparency calculations.")]
+[IsoDisplayName(@"Financial Instrument Reporting Equity Trading Activity Report V")]
 public interface IFinancialInstrumentReportingEquityTradingActivityReportV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IFinancialInstrumentReportingEquityTradingActivityReportV01 : I
     [IsoId("_4LK8QURNEee7JdgA9zPESA")]
     [DisplayName("Equity Transparency Data")]
     [IsoXmlTag("EqtyTrnsprncyData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransparencyDataReport13> EquityTransparencyData { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IFinancialInstrumentReportingEquityTradingActivityReportV01 : I
     [IsoId("_4LK8Q0RNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

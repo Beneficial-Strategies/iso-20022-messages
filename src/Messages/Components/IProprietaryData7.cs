@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Container for proprietary information. Business content of this element is not specified.
 /// </summary>
 [IsoId("_1UAkgYKYEee7hrXqLO3yQg")]
+[IsoDisplayName(@"Proprietary Data")]
 public interface IProprietaryData7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProprietaryData7 : IIsoComponent
     [IsoId("_1gNNcYKYEee7hrXqLO3yQg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>

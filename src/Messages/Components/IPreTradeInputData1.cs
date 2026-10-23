@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// QuantityGuideline: When EmptyBookIndicator is true, then Quantity is optional.
 /// </remarks>
 [IsoId("_zMIJAGF9EfC07JR6e2JJ-w")]
+[IsoDisplayName(@"Pre Trade Input Data1")]
 public interface IPreTradeInputData1 : IIsoComponent
 {
     /// <summary>

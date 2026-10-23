@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the members of a system.
 /// </summary>
 [IsoId("_W1ihMXSeEeiH1ZOt2UD8vQ")]
+[IsoDisplayName(@"Member")]
 public interface IMember6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMember6 : IIsoComponent
     [IsoId("_XBEbwXSeEeiH1ZOt2UD8vQ")]
     [DisplayName("Member Return Address")]
     [IsoXmlTag("MmbRtrAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMemberIdentification3Choice> MemberReturnAddress { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IMember6 : IIsoComponent
     [IsoId("_XBEbw3SeEeiH1ZOt2UD8vQ")]
     [DisplayName("Contact Reference")]
     [IsoXmlTag("CtctRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentificationAndAddress1> ContactReference { get; }
 
     /// <summary>

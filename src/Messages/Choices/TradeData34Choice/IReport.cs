@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData34Choice;
 /// </summary>
 [IsoId("_ArgEc8K3EeuFNp8LZAnorg")]
 [IsoXmlTag("Rpt")]
+[IsoDisplayName(@"Report")]
 public interface IReport : ITradeData34Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IReport : ITradeData34Choice, IIsoChoiceVariant
     [IsoId("_AtBHYcK3EeuFNp8LZAnorg")]
     [DisplayName("Pairing Reconciliation Status")]
     [IsoXmlTag("PairgRcncltnSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfReportsPerStatus4> PairingReconciliationStatus { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IReport : ITradeData34Choice, IIsoChoiceVariant
     [IsoId("_AtBHY8K3EeuFNp8LZAnorg")]
     [DisplayName("Reconciliation Report")]
     [IsoXmlTag("RcncltnRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReconciliationReport8> ReconciliationReport { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface IReport : ITradeData34Choice, IIsoChoiceVariant
     [IsoId("_AtBHZcK3EeuFNp8LZAnorg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

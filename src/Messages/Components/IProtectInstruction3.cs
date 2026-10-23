@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information on protect and cover protect instructions.
 /// </summary>
 [IsoId("_ohErVrpZEeilsanBGAzy4A")]
+[IsoDisplayName(@"Protect Instruction")]
 public interface IProtectInstruction3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IProtectInstruction3 : IIsoComponent
     [IsoId("_ohErWbpZEeilsanBGAzy4A")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IProtectInstruction3 : IIsoComponent
     [IsoId("_ohErWLpZEeilsanBGAzy4A")]
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ProtectDate { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a MIC (Market Identifier Code-ISO10383) identifier.
 /// </summary>
 [IsoId("_3899Ma5hEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Compare MIC Identifier")]
 public interface ICompareMICIdentifier3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICompareMICIdentifier3 : IIsoComponent
     [IsoId("_4MK20a5hEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? Value1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICompareMICIdentifier3 : IIsoComponent
     [IsoId("_4MK2065hEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? Value2 { get; }
 }

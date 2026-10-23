@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateFormat10Choice;
 /// </summary>
 [IsoId("_OYqlqRFbEeKp2ZN13DI_pA")]
 [IsoXmlTag("Amt")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount : INetDividendRateFormat10Choice, IIsoChoiceVariant
 {
     /// <summary>

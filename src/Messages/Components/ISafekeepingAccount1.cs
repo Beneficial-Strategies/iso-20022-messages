@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Safekeeping or investment account. A safekeeping account is an account on which a securities entry is made. An investment account is an account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
 /// </summary>
 [IsoId("_VafQyNp-Ed-ak6NoX_4Aeg_-1628848569")]
+[IsoDisplayName(@"Safekeeping Account")]
 public interface ISafekeepingAccount1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISafekeepingAccount1 : IIsoComponent
     [IsoId("_VafQytp-Ed-ak6NoX_4Aeg_-1816630449")]
     [DisplayName("Fungible Indicator")]
     [IsoXmlTag("FngbInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator FungibleIndicator { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface ISafekeepingAccount1 : IIsoComponent
     [IsoId("_VaoasNp-Ed-ak6NoX_4Aeg_-1346518930")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface ISafekeepingAccount1 : IIsoComponent
     [IsoId("_Vaoasdp-Ed-ak6NoX_4Aeg_-1346518852")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Designation { get; }
 
     /// <summary>
@@ -49,6 +55,9 @@ public interface ISafekeepingAccount1 : IIsoComponent
     [IsoId("_Vaoastp-Ed-ak6NoX_4Aeg_-1346518792")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary1> IntermediaryInformation { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Securities Trade Details148.
 /// </summary>
 [IsoId("_zjP-O4otEe-efPejSUAtLw")]
+[IsoDisplayName(@"Securities Trade Details148")]
 public interface ISecuritiesTradeDetails148 : IIsoComponent
 {
     /// <summary>
@@ -93,6 +94,7 @@ public interface ISecuritiesTradeDetails148 : IIsoComponent
     /// </summary>
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReporting7Choice> Reporting { get; }
 
     /// <summary>
@@ -149,5 +151,6 @@ public interface ISecuritiesTradeDetails148 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

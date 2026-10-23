@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OffMarket1Choice;
 /// Indicates that the trade was executed off-exchange.
 /// </summary>
 [IsoId("_TCpPodp-Ed-ak6NoX_4Aeg_2045804810")]
+[IsoDisplayName(@"Off Market Indicator")]
 public interface IOffMarketIndicator : IOffMarket1Choice, IIsoChoiceVariant
 {
     /// <summary>

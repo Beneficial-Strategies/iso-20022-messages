@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OutputData1Choice;
 
 /// <summary>Data related to the auction trading system for the pre-trade output report.</summary>
 [IsoId("_uk_s8GIZEfCeoPFCHQnhvA")]
+[IsoDisplayName(@"Auction Trading System")]
 public interface IAuctionTradingSystem : IOutputData1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

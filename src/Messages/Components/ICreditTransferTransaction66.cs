@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details specific to the individual transaction(s) included in the message.
 /// </summary>
 [IsoId("_66vhYTEyEe6g-ffJsqGiSA")]
+[Description(@"Provides further details specific to the individual transaction(s) included in the message.")]
+[IsoDisplayName(@"Credit Transfer Transaction66")]
 public interface ICreditTransferTransaction66 : IIsoComponent
 {
     /// <summary>
@@ -161,6 +163,7 @@ public interface ICreditTransferTransaction66 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent3> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -168,6 +171,7 @@ public interface ICreditTransferTransaction66 : IIsoComponent
     /// </summary>
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDirectDebitTransactionInformation33> DirectDebitTransactionInformation { get; }
 
     /// <summary>
@@ -175,5 +179,6 @@ public interface ICreditTransferTransaction66 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References66Choice;
 /// Unique reference agreed upon by the two trade counterparties to identify the trade.
 /// </summary>
 [IsoId("_MMl8__yjEeiM0vtizCHcoA")]
+[IsoDisplayName(@"Common Identification")]
 public interface ICommonIdentification : IReferences66Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ICommonIdentification : IReferences66Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 16 characters. It has a pattern that disables the use of characters that is not part of the character set X, that is, that is not a-z A-Z / - ? : ( ) . , ‘ + , and disable the use of slash &quot;/&quot; at the beginning and end of line and double slash &quot;//&quot; within the line.
     /// </summary>
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text Value { get; }
 }

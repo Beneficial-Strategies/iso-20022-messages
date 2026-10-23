@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Local time offset to UTC (Coordinated Universal Time).
 /// </summary>
 [IsoId("_4KU98GpuEeSMqvBfBY1c9A")]
+[IsoDisplayName(@"Local Date Time")]
 public interface ILocalDateTime1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILocalDateTime1 : IIsoComponent
     [IsoId("_-wojkGpuEeSMqvBfBY1c9A")]
     [DisplayName("From Date Time")]
     [IsoXmlTag("FrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? FromDateTime { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ILocalDateTime1 : IIsoComponent
     [IsoId("_GdqgsGpvEeSMqvBfBY1c9A")]
     [DisplayName("To Date Time")]
     [IsoXmlTag("ToDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ToDateTime { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ILocalDateTime1 : IIsoComponent
     [IsoId("_LJO38GpvEeSMqvBfBY1c9A")]
     [DisplayName("UTC Offset")]
     [IsoXmlTag("UTCOffset")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number UTCOffset { get; }
 }

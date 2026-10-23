@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ValidityPeriod1Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IValidityPeriod1Choice, IIsoChoiceVariant
 {
     /// <summary>

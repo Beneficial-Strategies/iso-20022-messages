@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IncorrectData1Choice;
 /// Incorrect data type, in a coded form.
 /// </summary>
 [IsoId("_DfjHsNjLEeq5MfBBxQig1Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IIncorrectData1Choice, IIsoChoiceVariant
 {
     /// <summary>

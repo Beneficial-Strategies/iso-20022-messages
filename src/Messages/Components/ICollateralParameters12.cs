@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ***is all the elements required/used in today, should we simplify?***
 /// </summary>
 [IsoId("_L3fC4Ss9EeySlt9bF77XfA")]
+[IsoDisplayName(@"Collateral Parameters")]
 public interface ICollateralParameters12 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface ICollateralParameters12 : IIsoComponent
     [IsoId("_MOvFSys9EeySlt9bF77XfA")]
     [DisplayName("Automatic Allocation")]
     [IsoXmlTag("AutomtcAllcn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AutomaticAllocation { get; }
 
     /// <summary>
@@ -66,6 +68,7 @@ public interface ICollateralParameters12 : IIsoComponent
     [IsoId("_MOvFTSs9EeySlt9bF77XfA")]
     [DisplayName("Collateral Approved")]
     [IsoXmlTag("CollApprvd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CollateralApproved { get; }
 
     /// <summary>
@@ -74,5 +77,6 @@ public interface ICollateralParameters12 : IIsoComponent
     [IsoId("_MOvFTys9EeySlt9bF77XfA")]
     [DisplayName("Settlement Approved")]
     [IsoXmlTag("SttlmApprvd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SettlementApproved { get; }
 }

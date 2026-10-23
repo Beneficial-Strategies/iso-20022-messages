@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the attributes of a report and its content.
 /// </summary>
 [IsoId("_fuq9cMlNEeuJ35KoBRZFOg")]
+[IsoDisplayName(@"Report Data")]
 public interface IReportData6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportData6 : IIsoComponent
     [IsoId("_hWn9QMlOEeuJ35KoBRZFOg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IReportData6 : IIsoComponent
     [IsoId("_qKltQMlOEeuJ35KoBRZFOg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Identification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IReportData6 : IIsoComponent
     [IsoId("_vtcR0MlOEeuJ35KoBRZFOg")]
     [DisplayName("Qualifier")]
     [IsoXmlTag("Qlfr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Qualifier { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface IReportData6 : IIsoComponent
     [IsoId("_7jbBUMlOEeuJ35KoBRZFOg")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -49,6 +57,7 @@ public interface IReportData6 : IIsoComponent
     [IsoId("__aO60MlOEeuJ35KoBRZFOg")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? Time { get; }
 
     /// <summary>
@@ -57,6 +66,7 @@ public interface IReportData6 : IIsoComponent
     [IsoId("_ElHrUMlPEeuJ35KoBRZFOg")]
     [DisplayName("Sequence")]
     [IsoXmlTag("Seq")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? Sequence { get; }
 
     /// <summary>
@@ -65,6 +75,7 @@ public interface IReportData6 : IIsoComponent
     [IsoId("_PRaO4MlPEeuJ35KoBRZFOg")]
     [DisplayName("Total Occurrences")]
     [IsoXmlTag("TtlOcrncs")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? TotalOccurrences { get; }
 
     /// <summary>
@@ -89,6 +100,7 @@ public interface IReportData6 : IIsoComponent
     [IsoId("_hC0JEclREeuJ35KoBRZFOg")]
     [DisplayName("Continuation Indicator")]
     [IsoXmlTag("ConttnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ContinuationIndicator { get; }
 
     /// <summary>
@@ -97,6 +109,7 @@ public interface IReportData6 : IIsoComponent
     [IsoId("_ugTB4MlREeuJ35KoBRZFOg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 
     /// <summary>
@@ -113,6 +126,8 @@ public interface IReportData6 : IIsoComponent
     [IsoId("_UY1M8MlVEeuJ35KoBRZFOg")]
     [DisplayName("Other Format")]
     [IsoXmlTag("OthrFrmt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherFormat { get; }
 
     /// <summary>
@@ -121,5 +136,6 @@ public interface IReportData6 : IIsoComponent
     [IsoId("_syuwAMlVEeuJ35KoBRZFOg")]
     [DisplayName("Content")]
     [IsoXmlTag("Cntt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportContent1> Content { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of either the last payment date or the number of payments to make.
 /// </summary>
 [IsoId("_avgfkbvGEfCYYbmqNrQFSg")]
+[IsoDisplayName(@"End Point 2 Choice")]
 public interface IEndPoint2Choice : IIsoChoice { }

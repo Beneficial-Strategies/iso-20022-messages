@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisputeNotification1Choice;
 /// </summary>
 [IsoId("_QmU-M9p-Ed-ak6NoX_4Aeg_-1470616414")]
 [IsoXmlTag("DsptNtfctnDtls")]
+[IsoDisplayName(@"Dispute Notification Details")]
 public interface IDisputeNotificationDetails : IDisputeNotification1Choice, IIsoChoiceVariant
 {
     /// <summary>

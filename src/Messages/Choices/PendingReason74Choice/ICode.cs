@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason74Choice;
 
 /// <summary>Pending reason specified as a code.</summary>
 [IsoId("_FPP-od8FEe-NrtAAlrBEgQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPendingReason74Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

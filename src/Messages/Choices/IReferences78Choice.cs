@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of reference.
 /// </summary>
 [IsoId("_d_pEWzi8Eeydid5dcNPKvg")]
+[IsoDisplayName(@"References 78 Choice")]
 public interface IReferences78Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingType1Choice;
 /// Type of processing restrictions, in a proprietary form.
 /// </summary>
 [IsoId("_705FRKMgEeCJ6YNENx4h-w_619782211")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IProcessingType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IProcessingType1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

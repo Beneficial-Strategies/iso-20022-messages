@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.
 /// </summary>
 [IsoId("_VNOQ1Np-Ed-ak6NoX_4Aeg_1641810312")]
+[IsoDisplayName(@"Transfer")]
 public interface ITransfer4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransfer4 : IIsoComponent
     [IsoId("_VNOQ1dp-Ed-ak6NoX_4Aeg_1116256257")]
     [DisplayName("Transfer Confirmation Reference")]
     [IsoXmlTag("TrfConfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferConfirmationReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransfer4 : IIsoComponent
     [IsoId("_VNOQ1tp-Ed-ak6NoX_4Aeg_882100093")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ITransfer4 : IIsoComponent
     [IsoId("_VNOQ2Np-Ed-ak6NoX_4Aeg_-827985976")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ITransfer4 : IIsoComponent
     [IsoId("_VNOQ2tp-Ed-ak6NoX_4Aeg_1259759606")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit1> UnitsDetails { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ITransfer4 : IIsoComponent
     [IsoId("_VNYB0Np-Ed-ak6NoX_4Aeg_1714769377")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator OwnAccountTransferIndicator { get; }
 
     /// <summary>

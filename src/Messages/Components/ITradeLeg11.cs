@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade Leg11.
 /// </summary>
 [IsoId("_gVMg8YcQEe-U27oWwgmhCQ")]
+[IsoDisplayName(@"Trade Leg11")]
 public interface ITradeLeg11 : IIsoComponent
 {
     /// <summary>

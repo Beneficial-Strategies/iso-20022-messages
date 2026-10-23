@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference3Choice;
 /// Unique identifier of the collateral substitution request.
 /// </summary>
 [IsoId("_d0qV4ALyEeutW5-TpeYJhA")]
+[IsoDisplayName(@"Collateral Substitution Request Identification")]
 public interface ICollateralSubstitutionRequestIdentification : IReference3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ICollateralSubstitutionRequestIdentification : IReference3Choic
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("CollSbstitnReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

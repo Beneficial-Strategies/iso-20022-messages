@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrOperationalError4Choice;
 /// <summary>
 /// Operational Error.
 /// </summary>
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : IPartyOrOperationalError4Choice, IIsoChoiceVariant
 {
     /// <summary>

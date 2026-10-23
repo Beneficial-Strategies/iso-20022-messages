@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Loyalty Account description.
 /// </summary>
 [IsoId("_JSd9kU7NEeyGi9JAv6wq7Q")]
+[IsoDisplayName(@"Loyalty Account")]
 public interface ILoyaltyAccount3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILoyaltyAccount3 : IIsoComponent
     [IsoId("_JY9AEU7NEeyGi9JAv6wq7Q")]
     [DisplayName("Loyalty Identification")]
     [IsoXmlTag("LltyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text LoyaltyIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ILoyaltyAccount3 : IIsoComponent
     [IsoId("_JY9AF07NEeyGi9JAv6wq7Q")]
     [DisplayName("Brand")]
     [IsoXmlTag("Brnd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Brand { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface ILoyaltyAccount3 : IIsoComponent
     [IsoId("_JY9AGU7NEeyGi9JAv6wq7Q")]
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Provider { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface ILoyaltyAccount3 : IIsoComponent
     [IsoId("_JY9AG07NEeyGi9JAv6wq7Q")]
     [DisplayName("Owner Name")]
     [IsoXmlTag("OwnrNm")]
+    [IsoSimpleType(IsoSimpleType.Max45Text)]
+    [StringLength(45, MinimumLength = 1)]
     Max45Text? OwnerName { get; }
 
     /// <summary>

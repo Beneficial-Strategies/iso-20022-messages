@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria2Choice;
 /// </summary>
 [IsoId("_kmHRhZlaEeeE1Ya-LgRsuQ")]
 [IsoXmlTag("NewCrit")]
+[IsoDisplayName(@"New Criteria")]
 public interface INewCriteria : IReservationCriteria2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface INewCriteria : IReservationCriteria2Choice, IIsoChoiceVariant
     [IsoId("_kuH-BZlaEeeE1Ya-LgRsuQ")]
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NewQueryName { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface INewCriteria : IReservationCriteria2Choice, IIsoChoiceVariant
     [IsoId("_kuH-B5laEeeE1Ya-LgRsuQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReservationSearchCriteria2> SearchCriteria { get; }
 
     /// <summary>

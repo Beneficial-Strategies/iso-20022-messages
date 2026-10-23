@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeMarket1Choice;
 /// Standard trade market code.
 /// </summary>
 [IsoId("_NzE0NzQ4-AOSNFX-5096945")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITradeMarket1Choice, IIsoChoiceVariant
 {
     /// <summary>

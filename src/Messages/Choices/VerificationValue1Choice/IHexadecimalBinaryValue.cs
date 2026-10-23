@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice;
 /// Value of the data expressed in hexadecimal encoded binary form.
 /// </summary>
 [IsoId("_4EhKqJaNEemfCcEf5rVTyg")]
+[IsoDisplayName(@"Hexadecimal Binary Value")]
 public interface IHexadecimalBinaryValue : IVerificationValue1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IHexadecimalBinaryValue : IVerificationValue1Choice, IIsoChoice
     /// Used only for hex binary data only, supports only characters A-F and 0-9.
     /// </summary>
     [IsoXmlTag("HexBinryVal")]
+    [IsoSimpleType(IsoSimpleType.Max9999HexBinaryText)]
     Max9999HexBinaryText Value { get; }
 }

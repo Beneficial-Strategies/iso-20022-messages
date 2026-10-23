@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between business day information details or a business error when the requested data cannot be retrieved.
 /// </summary>
 [IsoId("_ONBJt3XyEei3jO6riKEVXg")]
+[IsoDisplayName(@"Business Day Report Or Error 10 Choice")]
 public interface IBusinessDayReportOrError10Choice : IIsoChoice { }

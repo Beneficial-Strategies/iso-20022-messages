@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Undertaking extend or pay query details.
 /// </summary>
 [IsoId("_-Des53ltEeG7BsjMvd1mEw_2002292702")]
+[IsoDisplayName(@"Extend Or Pay Query")]
 public interface IExtendOrPayQuery1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IExtendOrPayQuery1 : IIsoComponent
     [IsoId("_-Dn20XltEeG7BsjMvd1mEw_2099672583")]
     [DisplayName("Requested Expiry Date")]
     [IsoXmlTag("ReqdXpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate RequestedExpiryDate { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IExtendOrPayQuery1 : IIsoComponent
     [IsoId("_-Dn203ltEeG7BsjMvd1mEw_916958004")]
     [DisplayName("Bank Contact")]
     [IsoXmlTag("BkCtct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContacts3> BankContact { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IExtendOrPayQuery1 : IIsoComponent
     [IsoId("_-Dxn0HltEeG7BsjMvd1mEw_-1682717592")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument9> EnclosedFile { get; }
 
     /// <summary>
@@ -65,5 +69,9 @@ public interface IExtendOrPayQuery1 : IIsoComponent
     [IsoId("_-Dxn0XltEeG7BsjMvd1mEw_1306509943")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

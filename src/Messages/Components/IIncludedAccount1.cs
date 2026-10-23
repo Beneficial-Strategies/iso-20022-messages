@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the account that is impacted or not by the standing instruction.
 /// </summary>
 [IsoId("_QUmVCNp-Ed-ak6NoX_4Aeg_1997970663")]
+[IsoDisplayName(@"Included Account")]
 public interface IIncludedAccount1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IIncludedAccount1 : IIsoComponent
     [IsoId("_QUwGANp-Ed-ak6NoX_4Aeg_-2068886946")]
     [DisplayName("Securities Account Identification")]
     [IsoXmlTag("SctiesAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SecuritiesAccountIdentification { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IIncludedAccount1 : IIsoComponent
     [IsoId("_QUwGAdp-Ed-ak6NoX_4Aeg_-2068886937")]
     [DisplayName("Included Indicator")]
     [IsoXmlTag("InclInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator IncludedIndicator { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Number of individual reports or transactions received / sent, detailed per validation rule.
 /// </summary>
 [IsoId("_TiPqwcrdEeii_5g6VX90qQ")]
+[IsoDisplayName(@"Number Of Transactions Per Validation Rule")]
 public interface INumberOfTransactionsPerValidationRule5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INumberOfTransactionsPerValidationRule5 : IIsoComponent
     [IsoId("_Tr7yQcrdEeii_5g6VX90qQ")]
     [DisplayName("Detailed Number")]
     [IsoXmlTag("DtldNb")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText DetailedNumber { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface INumberOfTransactionsPerValidationRule5 : IIsoComponent
     [IsoId("_Tr7yQ8rdEeii_5g6VX90qQ")]
     [DisplayName("Report Status")]
     [IsoXmlTag("RptSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason45> ReportStatus { get; }
 }

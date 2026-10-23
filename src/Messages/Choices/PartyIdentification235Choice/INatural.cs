@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification235Choice;
 /// </summary>
 [IsoId("_36SD8O9KEemVGdgB8P8uQQ")]
 [IsoXmlTag("Ntrl")]
+[IsoDisplayName(@"Natural")]
 public interface INatural : IPartyIdentification235Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface INatural : IPartyIdentification235Choice, IIsoChoiceVariant
     [IsoId("_jJtX4y40Eeuxhbw_aW6haw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? Name { get; }
 
     /// <summary>
@@ -34,5 +37,7 @@ public interface INatural : IPartyIdentification235Choice, IIsoChoiceVariant
     [IsoId("_jJtX5S40Eeuxhbw_aW6haw")]
     [DisplayName("Domicile")]
     [IsoXmlTag("Dmcl")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? Domicile { get; }
 }

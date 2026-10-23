@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a person or an organisation.
 /// </summary>
 [IsoId("_fZe8sSGYEeWKAaDJcYGKLw")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification96 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPartyIdentification96 : IIsoComponent
     [IsoId("_f2C84yGYEeWKAaDJcYGKLw")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 }

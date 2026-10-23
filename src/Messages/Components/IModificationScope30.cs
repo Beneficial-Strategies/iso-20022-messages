@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Scope of the modification to be applied on an identified set of information.
 /// </summary>
 [IsoId("_tJYcASFoEeW9XJWqfgXIIA")]
+[IsoDisplayName(@"Modification Scope")]
 public interface IModificationScope30 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IModificationScope30 : IIsoComponent
     [IsoId("_xKBm8SFoEeW9XJWqfgXIIA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountRestrictions1> AdditionalInformation { get; }
 }

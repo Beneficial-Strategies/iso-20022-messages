@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice23Choi
 /// <summary>
 /// Decimal.
 /// </summary>
+[IsoDisplayName(@"Decimal")]
 public interface IDecimal : ISecuritiesTransactionPrice23Choice, IIsoChoiceVariant
 {
     /// <summary>

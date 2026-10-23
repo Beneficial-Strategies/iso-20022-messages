@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details an individual country including its name and country code.
 /// </summary>
 [IsoId("_lv3_EYAMEeaYeOsLN4966A")]
+[IsoDisplayName(@"Securities Country Identification")]
 public interface ISecuritiesCountryIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISecuritiesCountryIdentification2 : IIsoComponent
     [IsoId("_l7Ja84AMEeaYeOsLN4966A")]
     [DisplayName("EEA Country")]
     [IsoXmlTag("EEACtry")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator EEACountry { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface ISecuritiesCountryIdentification2 : IIsoComponent
     [IsoId("_l7Ja-YAMEeaYeOsLN4966A")]
     [DisplayName("Last Updated")]
     [IsoXmlTag("LastUpdtd")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LastUpdated { get; }
 }

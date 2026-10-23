@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report Entry14.
 /// </summary>
 [IsoId("_9JSrcTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Report Entry14")]
 public interface IReportEntry14 : IIsoComponent
 {
     /// <summary>
@@ -72,6 +73,7 @@ public interface IReportEntry14 : IIsoComponent
     /// </summary>
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAvailability1> Availability { get; }
 
     /// <summary>
@@ -135,6 +137,7 @@ public interface IReportEntry14 : IIsoComponent
     /// </summary>
     [DisplayName("Entry Details")]
     [IsoXmlTag("NtryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEntryDetails13> EntryDetails { get; }
 
     /// <summary>

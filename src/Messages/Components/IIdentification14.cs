@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique identifier of a document, message or transaction.
 /// </summary>
 [IsoId("_jXzlYu5NEeCisYr99QEiWA_-2122254183")]
+[IsoDisplayName(@"Identification")]
 public interface IIdentification14 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface IIdentification14 : IIsoComponent
     [IsoId("_jXzlY-5NEeCisYr99QEiWA_2058874047")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

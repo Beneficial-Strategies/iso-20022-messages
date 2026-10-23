@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a tranche indicator.
 /// </summary>
 [IsoId("_KvKvcE6pEeyEpI66tm807w")]
+[IsoDisplayName(@"Compare Tranche Indicator")]
 public interface ICompareTrancheIndicator1 : IIsoComponent
 {
     /// <summary>

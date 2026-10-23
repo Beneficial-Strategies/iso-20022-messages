@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Subscription leg, or switch-in, of a switch order.
 /// </summary>
 [IsoId("_VS4z9Np-Ed-ak6NoX_4Aeg_1801928799")]
+[IsoDisplayName(@"Switch Subscription Leg Order")]
 public interface ISwitchSubscriptionLegOrder2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISwitchSubscriptionLegOrder2 : IIsoComponent
     [IsoId("_VS4z9dp-Ed-ak6NoX_4Aeg_1801930589")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ISwitchSubscriptionLegOrder2 : IIsoComponent
     [IsoId("_VS4z-9p-Ed-ak6NoX_4Aeg_1801931152")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge8> ChargeDetails { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface ISwitchSubscriptionLegOrder2 : IIsoComponent
     [IsoId("_VS4z_Np-Ed-ak6NoX_4Aeg_1801931169")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission6> CommissionDetails { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface ISwitchSubscriptionLegOrder2 : IIsoComponent
     [IsoId("_VTCk8Np-Ed-ak6NoX_4Aeg_1801931213")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax6> TaxDetails { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface ISwitchSubscriptionLegOrder2 : IIsoComponent
     [IsoId("_VTCk8tp-Ed-ak6NoX_4Aeg_1801928859")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>

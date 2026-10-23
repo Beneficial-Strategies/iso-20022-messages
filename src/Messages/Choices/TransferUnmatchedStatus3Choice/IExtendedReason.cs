@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferUnmatchedStatus3Choice;
 /// Reason for the unmatched status.
 /// </summary>
 [IsoId("_eLXpxyY4EeW_ZNn8gbfY7Q")]
+[IsoDisplayName(@"Extended Reason")]
 public interface IExtendedReason : ITransferUnmatchedStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IExtendedReason : ITransferUnmatchedStatus3Choice, IIsoChoiceVa
     /// Code and / or description for values that are not yet part of the related code list.
     /// </summary>
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationReason1Choice;
 /// Reason why the verified identification information is incorrect, in a proprietary form.
 /// </summary>
 [IsoId("_Qo3U1tp-Ed-ak6NoX_4Aeg_722205440")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IVerificationReason1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IVerificationReason1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

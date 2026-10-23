@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FXStandingInstruction3Choice;
 /// Specifies whether the forex standing instruction in place should apply.
 /// </summary>
 [IsoId("_Aamt1dokEeC60axPepSq7g_1488577319")]
+[IsoDisplayName(@"Indicator")]
 public interface IIndicator : IFXStandingInstruction3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIndicator : IFXStandingInstruction3Choice, IIsoChoiceVariant
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Driver3.
 /// </summary>
 [IsoId("_lFljcXNTEe6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Driver3")]
 public interface IDriver3 : IIsoComponent
 {
     /// <summary>
@@ -121,6 +122,7 @@ public interface IDriver3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITravelDocument2> AdditionalIdentification { get; }
 
     /// <summary>

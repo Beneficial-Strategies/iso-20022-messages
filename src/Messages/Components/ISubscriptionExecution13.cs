@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a subscription order.
 /// </summary>
 [IsoId("_HUyktTbtEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Subscription Execution")]
 public interface ISubscriptionExecution13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVneTbtEead9bDRE_1DAQ")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnezbtEead9bDRE_1DAQ")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnfTbtEead9bDRE_1DAQ")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DealReference { get; }
 
     /// <summary>
@@ -41,6 +48,9 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnfzbtEead9bDRE_1DAQ")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType4Choice> OrderType { get; }
 
     /// <summary>
@@ -65,6 +75,7 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnhTbtEead9bDRE_1DAQ")]
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber UnitsNumber { get; }
 
     /// <summary>
@@ -115,6 +126,9 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnlzbtEead9bDRE_1DAQ")]
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice22> InformativePriceDetails { get; }
 
     /// <summary>
@@ -131,6 +145,7 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnmzbtEead9bDRE_1DAQ")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CashSettlementDate { get; }
 
     /// <summary>
@@ -147,6 +162,7 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnnzbtEead9bDRE_1DAQ")]
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PartiallyExecutedIndicator { get; }
 
     /// <summary>
@@ -163,6 +179,7 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnozbtEead9bDRE_1DAQ")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -188,6 +205,7 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnpzbtEead9bDRE_1DAQ")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms33> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -204,6 +222,8 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnqzbtEead9bDRE_1DAQ")]
     [DisplayName("Letter Intent Reference")]
     [IsoXmlTag("LttrInttRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LetterIntentReference { get; }
 
     /// <summary>
@@ -212,6 +232,8 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnrTbtEead9bDRE_1DAQ")]
     [DisplayName("Accumulation Right Reference")]
     [IsoXmlTag("AcmltnRghtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccumulationRightReference { get; }
 
     /// <summary>
@@ -244,6 +266,7 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVntzbtEead9bDRE_1DAQ")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>
@@ -300,6 +323,8 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnxTbtEead9bDRE_1DAQ")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>
@@ -308,6 +333,7 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnxzbtEead9bDRE_1DAQ")]
     [DisplayName("Partial Settlement Of Units")]
     [IsoXmlTag("PrtlSttlmOfUnits")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PartialSettlementOfUnits { get; }
 
     /// <summary>
@@ -316,6 +342,7 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnyTbtEead9bDRE_1DAQ")]
     [DisplayName("Partial Settlement Of Cash")]
     [IsoXmlTag("PrtlSttlmOfCsh")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PartialSettlementOfCash { get; }
 
     /// <summary>
@@ -324,6 +351,9 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVnyzbtEead9bDRE_1DAQ")]
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
+    [MinLength(0)]
+    [MaxLength(4)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; }
 
     /// <summary>
@@ -356,6 +386,9 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_HtVn0zbtEead9bDRE_1DAQ")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary39> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -372,6 +405,7 @@ public interface ISubscriptionExecution13 : IIsoComponent
     [IsoId("_3oiToTlIEeaYrqEUdbYZQQ")]
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISourceOfCash1Choice> SourceOfCash { get; }
 
     /// <summary>

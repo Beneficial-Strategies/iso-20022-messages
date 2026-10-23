@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate action event notification status and contents.
 /// </summary>
 [IsoId("_YXNL2l99Ee262vCSVgjImg")]
+[IsoDisplayName(@"Corporate Action Notification")]
 public interface ICorporateActionNotification8 : IIsoComponent
 {
     /// <summary>

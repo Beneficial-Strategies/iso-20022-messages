@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the risk associated with the transaction.
 /// </summary>
 [IsoId("_VFt7wcStEeuBjv5G5kw00g")]
+[IsoDisplayName(@"Risk Context")]
 public interface IRiskContext2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRiskContext2 : IIsoComponent
     [IsoId("_VKsiYcStEeuBjv5G5kw00g")]
     [DisplayName("Risk Input Data")]
     [IsoXmlTag("RskInptData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRiskInputData1> RiskInputData { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IRiskContext2 : IIsoComponent
     [IsoId("_VKtJccStEeuBjv5G5kw00g")]
     [DisplayName("Risk Assessment")]
     [IsoXmlTag("RskAssmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRiskAssessment2> RiskAssessment { get; }
 }

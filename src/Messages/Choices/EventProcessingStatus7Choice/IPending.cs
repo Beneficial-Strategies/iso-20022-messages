@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus7Choice;
 /// <summary>
 /// Pending.
 /// </summary>
+[IsoDisplayName(@"Pending")]
 public interface IPending : IEventProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>

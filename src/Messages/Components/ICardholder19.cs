@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed information about the cardholder.
 /// </summary>
 [IsoId("__kNqIZ1EEeublrfU-wN95w")]
+[IsoDisplayName(@"Cardholder")]
 public interface ICardholder19 : IIsoComponent
 {
     /// <summary>
@@ -28,6 +29,7 @@ public interface ICardholder19 : IIsoComponent
     [IsoId("__o_cc51EEeublrfU-wN95w")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICredentials2> Identification { get; }
 
     /// <summary>
@@ -55,6 +57,7 @@ public interface ICardholder19 : IIsoComponent
     [IsoId("__o_ceZ1EEeublrfU-wN95w")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfBirth { get; }
 
     /// <summary>
@@ -63,6 +66,7 @@ public interface ICardholder19 : IIsoComponent
     [IsoId("_VdeccJ1FEeublrfU-wN95w")]
     [DisplayName("High Value Customer Indicator")]
     [IsoXmlTag("HghValCstmrInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? HighValueCustomerIndicator { get; }
 
     /// <summary>
@@ -71,6 +75,7 @@ public interface ICardholder19 : IIsoComponent
     [IsoId("_GL2qMMXOEeumGdYElfgmbw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 
     /// <summary>

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details relative to the submission of the insurance data set.
 /// </summary>
 [IsoId("_Rax58tp-Ed-ak6NoX_4Aeg_-1897093654")]
+[IsoDisplayName(@"Required Submission")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IRequiredSubmission3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IRequiredSubmission3 : IIsoComponent
     [IsoId("_Rax589p-Ed-ak6NoX_4Aeg_-1897093637")]
     [DisplayName("Submitter")]
     [IsoXmlTag("Submitr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> Submitter { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IRequiredSubmission3 : IIsoComponent
     [IsoId("_Rax59dp-Ed-ak6NoX_4Aeg_-1540614996")]
     [DisplayName("Match Issue Date")]
     [IsoXmlTag("MtchIsseDt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator MatchIssueDate { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IRequiredSubmission3 : IIsoComponent
     [IsoId("_Rax59tp-Ed-ak6NoX_4Aeg_-1514758562")]
     [DisplayName("Match Transport")]
     [IsoXmlTag("MtchTrnsprt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator MatchTransport { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IRequiredSubmission3 : IIsoComponent
     [IsoId("_Rax599p-Ed-ak6NoX_4Aeg_-1037296621")]
     [DisplayName("Match Amount")]
     [IsoXmlTag("MtchAmt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator MatchAmount { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IRequiredSubmission3 : IIsoComponent
     [IsoId("_Rax5-Np-Ed-ak6NoX_4Aeg_-1000355227")]
     [DisplayName("Clauses Required")]
     [IsoXmlTag("ClausesReqrd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<InsuranceClauses1Code> ClausesRequired { get; }
 
     /// <summary>

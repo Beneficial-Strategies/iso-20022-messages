@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the central counterparty clearing time.
 /// </summary>
 [IsoId("_-GFDERZNEe2QNcZTDeoKnQ")]
+[IsoDisplayName(@"Clearing Party And Time")]
 public interface IClearingPartyAndTime22 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IClearingPartyAndTime22 : IIsoComponent
     [IsoId("_-HsMqRZNEe2QNcZTDeoKnQ")]
     [DisplayName("Clearing Receipt Date Time")]
     [IsoXmlTag("ClrRctDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ClearingReceiptDateTime { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IClearingPartyAndTime22 : IIsoComponent
     [IsoId("_-HsMqxZNEe2QNcZTDeoKnQ")]
     [DisplayName("Clearing Date Time")]
     [IsoXmlTag("ClrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ClearingDateTime { get; }
 
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria6Choice;
 /// <summary>
 /// Query Name.
 /// </summary>
+[IsoDisplayName(@"Query Name")]
 public interface IQueryName : IReservationCriteria6Choice, IIsoChoiceVariant
 {
     /// <summary>

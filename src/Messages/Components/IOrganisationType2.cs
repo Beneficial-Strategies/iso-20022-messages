@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a type of identification requested for an organisation.
 /// </summary>
 [IsoId("_AGP6yeH5Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Organisation Type")]
 public interface IOrganisationType2 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IOrganisationType2 : IIsoComponent
     [IsoId("_AIL0ceH5Eeqbls7Gk4-ckA")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? AnyBIC { get; }
 
     /// <summary>
@@ -27,6 +29,7 @@ public interface IOrganisationType2 : IIsoComponent
     [IsoId("_AIL0c-H5Eeqbls7Gk4-ckA")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? LEI { get; }
 
     /// <summary>
@@ -36,6 +39,7 @@ public interface IOrganisationType2 : IIsoComponent
     [IsoId("_MfUwQeH5Eeqbls7Gk4-ckA")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? EmailAddress { get; }
 
     /// <summary>
@@ -44,5 +48,6 @@ public interface IOrganisationType2 : IIsoComponent
     [IsoId("_AIL0deH5Eeqbls7Gk4-ckA")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericOrganisationType1> Other { get; }
 }

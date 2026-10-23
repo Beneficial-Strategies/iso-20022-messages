@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information used to identify a product.
 /// </summary>
 [IsoId("_TRPsXdp-Ed-ak6NoX_4Aeg_-1876396278")]
+[IsoDisplayName(@"Product Identifier")]
 public interface IProductIdentifier2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IProductIdentifier2 : IIsoComponent
     [IsoId("_TRZdUdp-Ed-ak6NoX_4Aeg_-1876396236")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identifier { get; }
 }

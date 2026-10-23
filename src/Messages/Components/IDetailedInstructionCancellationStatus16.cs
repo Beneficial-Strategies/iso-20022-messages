@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status applying to individual cancellation instructions of a meeting instruction cancellation request message.
 /// </summary>
 [IsoId("_hakyYa8uEfCx2aBifPEdRg")]
+[IsoDisplayName(@"Detailed Instruction Cancellation Status16")]
 public interface IDetailedInstructionCancellationStatus16 : IIsoComponent
 {
     /// <summary>

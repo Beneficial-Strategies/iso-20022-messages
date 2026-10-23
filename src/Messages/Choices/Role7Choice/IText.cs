@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Role7Choice;
 /// Role of the party in the activity.
 /// </summary>
 [IsoId("_5WyhB5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Text")]
 public interface IText : IRole7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IText : IRole7Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 350 characters limited to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + .
     /// </summary>
     [IsoXmlTag("Txt")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text Value { get; }
 }

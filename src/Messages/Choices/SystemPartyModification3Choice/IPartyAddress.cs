@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice;
 /// <summary>
 /// Party Address.
 /// </summary>
+[IsoDisplayName(@"Party Address")]
 public interface IPartyAddress : ISystemPartyModification3Choice, IIsoChoiceVariant
 {
     /// <summary>

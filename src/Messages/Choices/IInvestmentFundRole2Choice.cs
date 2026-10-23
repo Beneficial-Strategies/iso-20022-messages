@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a Role.
 /// </summary>
 [IsoId("_cdaGUDhcEeaRwdGFv45qTQ")]
+[IsoDisplayName(@"Investment Fund Role 2 Choice")]
 public interface IInvestmentFundRole2Choice : IIsoChoice { }

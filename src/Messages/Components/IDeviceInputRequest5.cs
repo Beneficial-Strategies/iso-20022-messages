@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the content of the input request message.
 /// </summary>
 [IsoId("_OzUpUXGcEe2TbaNWBpRZpQ")]
+[IsoDisplayName(@"Device Input Request")]
 public interface IDeviceInputRequest5 : IIsoComponent
 {
     /// <summary>

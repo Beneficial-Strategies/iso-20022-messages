@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedReason7Choice;
 /// Reason for the accepted status expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_PFE48FjzEeOnqqBHs8Gasw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAcceptedReason7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument61Choice;
 /// </summary>
 [IsoId("_mW7mEZNBEemQB_8XA98K0Q")]
 [IsoXmlTag("Scty")]
+[IsoDisplayName(@"Security")]
 public interface ISecurity : IFinancialInstrument61Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface ISecurity : IFinancialInstrument61Choice, IIsoChoiceVariant
     [IsoId("_w33UlZNJEemQB_8XA98K0Q")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface ISecurity : IFinancialInstrument61Choice, IIsoChoiceVariant
     [IsoId("_w33Ul5NJEemQB_8XA98K0Q")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to further detail the information related to the type of payment.
 /// </summary>
 [IsoId("_cm369kjwEeaVLL5QKJ4f-A")]
+[IsoDisplayName(@"Mandate Type Information")]
 public interface IMandateTypeInformation2 : IIsoComponent
 {
     /// <summary>

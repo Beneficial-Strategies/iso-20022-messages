@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the parameters of the report.
 /// </summary>
 [IsoId("_QlScaNp-Ed-ak6NoX_4Aeg_1048103905")]
+[IsoDisplayName(@"Report Parameters")]
 public interface IReportParameters3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportParameters3 : IIsoComponent
     [IsoId("_QlcNYNp-Ed-ak6NoX_4Aeg_928215481")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ReportIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IReportParameters3 : IIsoComponent
     [IsoId("_QlcNY9p-Ed-ak6NoX_4Aeg_-1305521230")]
     [DisplayName("Calculation Date And Time")]
     [IsoXmlTag("ClctnDtAndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CalculationDateAndTime { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface IReportParameters3 : IIsoComponent
     [IsoId("_QlcNZdp-Ed-ak6NoX_4Aeg_-1126454468")]
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
+    [IsoSimpleType(IsoSimpleType.Exact5NumericText)]
     Exact5NumericText? ReportNumber { get; }
 }

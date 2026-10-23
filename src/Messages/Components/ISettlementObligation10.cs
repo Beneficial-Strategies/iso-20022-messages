@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement Obligation10.
 /// </summary>
 [IsoId("_PpnCn4cSEe-U27oWwgmhCQ")]
+[IsoDisplayName(@"Settlement Obligation10")]
 public interface ISettlementObligation10 : IIsoComponent
 {
     /// <summary>

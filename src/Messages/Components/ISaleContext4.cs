@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sale context in which the transaction is performed.
 /// </summary>
 [IsoId("_cJQTMQx5Eeqdx6buGpCCQw")]
+[IsoDisplayName(@"Sale Context")]
 public interface ISaleContext4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONEQx5Eeqdx6buGpCCQw")]
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONEwx5Eeqdx6buGpCCQw")]
     [DisplayName("Sale Reference Number")]
     [IsoXmlTag("SaleRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceNumber { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONFQx5Eeqdx6buGpCCQw")]
     [DisplayName("Sale Reconciliation Identification")]
     [IsoXmlTag("SaleRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReconciliationIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONFwx5Eeqdx6buGpCCQw")]
     [DisplayName("Cashier Identification")]
     [IsoXmlTag("CshrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CashierIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,7 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONGQx5Eeqdx6buGpCCQw")]
     [DisplayName("Cashier Language")]
     [IsoXmlTag("CshrLang")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<LanguageCode> CashierLanguage { get; }
 
     /// <summary>
@@ -57,6 +67,7 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONGwx5Eeqdx6buGpCCQw")]
     [DisplayName("Shift Number")]
     [IsoXmlTag("ShftNb")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? ShiftNumber { get; }
 
     /// <summary>
@@ -65,6 +76,7 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONHQx5Eeqdx6buGpCCQw")]
     [DisplayName("Customer Order Request Flag")]
     [IsoXmlTag("CstmrOrdrReqFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CustomerOrderRequestFlag { get; }
 
     /// <summary>
@@ -73,6 +85,8 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONHwx5Eeqdx6buGpCCQw")]
     [DisplayName("Purchase Order Number")]
     [IsoXmlTag("PurchsOrdrNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PurchaseOrderNumber { get; }
 
     /// <summary>
@@ -81,6 +95,8 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONIQx5Eeqdx6buGpCCQw")]
     [DisplayName("Invoice Number")]
     [IsoXmlTag("InvcNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InvoiceNumber { get; }
 
     /// <summary>
@@ -89,6 +105,8 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONIwx5Eeqdx6buGpCCQw")]
     [DisplayName("Delivery Note Number")]
     [IsoXmlTag("DlvryNoteNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DeliveryNoteNumber { get; }
 
     /// <summary>
@@ -97,6 +115,7 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONJQx5Eeqdx6buGpCCQw")]
     [DisplayName("Sponsored Merchant")]
     [IsoXmlTag("SpnsrdMrchnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation26> SponsoredMerchant { get; }
 
     /// <summary>
@@ -105,6 +124,7 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONJwx5Eeqdx6buGpCCQw")]
     [DisplayName("Split Payment")]
     [IsoXmlTag("SpltPmt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? SplitPayment { get; }
 
     /// <summary>
@@ -121,6 +141,7 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONKwx5Eeqdx6buGpCCQw")]
     [DisplayName("Force Online Flag")]
     [IsoXmlTag("ForceOnlnFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ForceOnlineFlag { get; }
 
     /// <summary>
@@ -129,6 +150,7 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONLQx5Eeqdx6buGpCCQw")]
     [DisplayName("Reuse Card Data Flag")]
     [IsoXmlTag("ReuseCardDataFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReuseCardDataFlag { get; }
 
     /// <summary>
@@ -137,6 +159,7 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONLwx5Eeqdx6buGpCCQw")]
     [DisplayName("Allowed Entry Mode")]
     [IsoXmlTag("AllwdNtryMd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataReading8Code> AllowedEntryMode { get; }
 
     /// <summary>
@@ -153,5 +176,7 @@ public interface ISaleContext4 : IIsoComponent
     [IsoId("_cUONMwx5Eeqdx6buGpCCQw")]
     [DisplayName("Additional Sale Data")]
     [IsoXmlTag("AddtlSaleData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalSaleData { get; }
 }

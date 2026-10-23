@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the transaction details or a business error when the requested data cannot be retrieved.
 /// </summary>
 [IsoId("_NI2W15lPEee-Zps0fZQaFQ")]
+[IsoDisplayName(@"Transaction Or Error 3 Choice")]
 public interface ITransactionOrError3Choice : IIsoChoice { }

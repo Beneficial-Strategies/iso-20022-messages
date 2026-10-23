@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters which explicitly state the conditions that must be fulfilled before a particular triparty collateral instruction/transaction  can be confirmed. These parameters are defined by the instructing party in compliance with triparty collateral rules in the market the instruction/transaction will take place.
 /// </summary>
 [IsoId("_KuBgcSs9EeySlt9bF77XfA")]
+[IsoDisplayName(@"Collateral Parameters")]
 public interface ICollateralParameters10 : IIsoComponent
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface ICollateralParameters10 : IIsoComponent
     [IsoId("_LIZvXys9EeySlt9bF77XfA")]
     [DisplayName("Transfer Title")]
     [IsoXmlTag("TrfTitl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TransferTitle { get; }
 
     /// <summary>
@@ -74,6 +76,7 @@ public interface ICollateralParameters10 : IIsoComponent
     [IsoId("_LIZvZSs9EeySlt9bF77XfA")]
     [DisplayName("Automatic Allocation")]
     [IsoXmlTag("AutomtcAllcn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AutomaticAllocation { get; }
 
     /// <summary>
@@ -82,6 +85,7 @@ public interface ICollateralParameters10 : IIsoComponent
     [IsoId("_LIZvZys9EeySlt9bF77XfA")]
     [DisplayName("Failed Settlement Salvation")]
     [IsoXmlTag("FaildSttlmSlvtn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FailedSettlementSalvation { get; }
 
     /// <summary>
@@ -90,6 +94,7 @@ public interface ICollateralParameters10 : IIsoComponent
     [IsoId("_LIZvaSs9EeySlt9bF77XfA")]
     [DisplayName("Main Trading Account Collateralisation")]
     [IsoXmlTag("MainTradgAcctCollstn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? MainTradingAccountCollateralisation { get; }
 
     /// <summary>

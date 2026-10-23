@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Outcome of the processing of the batch.
 /// </summary>
 [IsoId("_jFmMUcsWEeuNe7RtB4qFHw")]
+[IsoDisplayName(@"Processing Result")]
 public interface IProcessingResult13 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IProcessingResult13 : IIsoComponent
     [IsoId("_dyaFQSFWEey8XKHwKquEQw")]
     [DisplayName("Approval Code")]
     [IsoXmlTag("ApprvlCd")]
+    [IsoSimpleType(IsoSimpleType.Exact6AlphaNumericText)]
     Exact6AlphaNumericText? ApprovalCode { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IProcessingResult13 : IIsoComponent
     [IsoId("_e2jC0SFWEey8XKHwKquEQw")]
     [DisplayName("Error Detail")]
     [IsoXmlTag("ErrDtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorDetails2> ErrorDetail { get; }
 
     /// <summary>
@@ -58,5 +61,6 @@ public interface IProcessingResult13 : IIsoComponent
     [IsoId("_MiqNQTHUEeyTT91yHXSlSQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation29> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a meeting vote instruction.
 /// </summary>
 [IsoId("_wxo4kTT5Ee2j2eQlcOSMKg")]
+[IsoDisplayName(@"Instruction")]
 public interface IInstruction7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInstruction7 : IIsoComponent
     [IsoId("_xJCr9TT5Ee2j2eQlcOSMKg")]
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SingleInstructionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IInstruction7 : IIsoComponent
     [IsoId("_xJCr9zT5Ee2j2eQlcOSMKg")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? RequestedExecutionDate { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IInstruction7 : IIsoComponent
     [IsoId("_xJCr-TT5Ee2j2eQlcOSMKg")]
     [DisplayName("Vote Execution Confirmation")]
     [IsoXmlTag("VoteExctnConf")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator VoteExecutionConfirmation { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IInstruction7 : IIsoComponent
     [IsoId("_xJCsATT5Ee2j2eQlcOSMKg")]
     [DisplayName("Meeting Attendee")]
     [IsoXmlTag("MtgAttndee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson41> MeetingAttendee { get; }
 
     /// <summary>

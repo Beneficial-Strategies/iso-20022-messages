@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Description of the elements that violated a rule.
 /// </summary>
 [IsoId("_RFLdZtp-Ed-ak6NoX_4Aeg_-642511348")]
+[IsoDisplayName(@"Element Identification")]
 public interface IElementIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IElementIdentification3 : IIsoComponent
     [IsoId("_RFLdZ9p-Ed-ak6NoX_4Aeg_-642511346")]
     [DisplayName("Element Path")]
     [IsoXmlTag("ElmtPth")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text ElementPath { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IElementIdentification3 : IIsoComponent
     [IsoId("_RFLdaNp-Ed-ak6NoX_4Aeg_-642511288")]
     [DisplayName("Element Name")]
     [IsoXmlTag("ElmtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ElementName { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IElementIdentification3 : IIsoComponent
     [IsoId("_RFUnUNp-Ed-ak6NoX_4Aeg_-642511305")]
     [DisplayName("Element Value")]
     [IsoXmlTag("ElmtVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? ElementValue { get; }
 }

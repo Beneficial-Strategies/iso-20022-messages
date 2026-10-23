@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalEnrolment2Choice;
 /// This element must be identical to the creditor identification in the original creditor enrolment.
 /// </summary>
 [IsoId("_UZbOIeH7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Original Creditor Identification")]
 public interface IOriginalCreditorIdentification : IOriginalEnrolment2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

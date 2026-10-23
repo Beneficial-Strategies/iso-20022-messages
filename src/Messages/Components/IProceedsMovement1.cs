@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the proceeds movements.
 /// </summary>
 [IsoId("_Ri1Csdp-Ed-ak6NoX_4Aeg_1504216884")]
+[IsoDisplayName(@"Proceeds Movement")]
 public interface IProceedsMovement1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IProceedsMovement1 : IIsoComponent
     [IsoId("_Ri1Cstp-Ed-ak6NoX_4Aeg_-2002064127")]
     [DisplayName("Cash Proceeds Movement Details")]
     [IsoXmlTag("CshPrcdsMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashProceeds1> CashProceedsMovementDetails { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IProceedsMovement1 : IIsoComponent
     [IsoId("_Ri1Cs9p-Ed-ak6NoX_4Aeg_-2011300771")]
     [DisplayName("Securities Proceeds Movement Details")]
     [IsoXmlTag("SctiesPrcdsMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesProceeds1> SecuritiesProceedsMovementDetails { get; }
 
     /// <summary>

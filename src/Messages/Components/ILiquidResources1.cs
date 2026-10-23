@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Resources of a legal entity or other financial construct that are available to meet cash obligations.
 /// </summary>
 [IsoId("_Ta5foLJQEeaYqc4G3TTwhA")]
+[IsoDisplayName(@"Liquid Resources")]
 public interface ILiquidResources1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILiquidResources1 : IIsoComponent
     [IsoId("_yq6uYESsEemM8-DVOYzdVQ")]
     [DisplayName("Cash Due")]
     [IsoXmlTag("CshDue")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILiquidResourceInformation1> CashDue { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ILiquidResources1 : IIsoComponent
     [IsoId("_ADHekEStEemM8-DVOYzdVQ")]
     [DisplayName("Facilities Committed Lines Of Credit")]
     [IsoXmlTag("FcltiesCmmtdLinesOfCdt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILiquidResourceInformation1> FacilitiesCommittedLinesOfCredit { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ILiquidResources1 : IIsoComponent
     [IsoId("_GH3PQEStEemM8-DVOYzdVQ")]
     [DisplayName("Facilities Committed Repurchase Agreements")]
     [IsoXmlTag("FcltiesCmmtdRpAgrmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILiquidResourceInformation1> FacilitiesCommittedRepurchaseAgreements { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ILiquidResources1 : IIsoComponent
     [IsoId("_LR_KwEStEemM8-DVOYzdVQ")]
     [DisplayName("Facilities Committed FX Swaps")]
     [IsoXmlTag("FcltiesCmmtdFxSwps")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILiquidResourceInformation1> FacilitiesCommittedFXSwaps { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ILiquidResources1 : IIsoComponent
     [IsoId("_RIdO4EStEemM8-DVOYzdVQ")]
     [DisplayName("Facilities Other Committed")]
     [IsoXmlTag("FcltiesOthrCmmtd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILiquidResourceInformation1> FacilitiesOtherCommitted { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ILiquidResources1 : IIsoComponent
     [IsoId("_V9wJ4EStEemM8-DVOYzdVQ")]
     [DisplayName("Facilities Uncommitted")]
     [IsoXmlTag("FcltiesUcmmtd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILiquidResourceInformation1> FacilitiesUncommitted { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ILiquidResources1 : IIsoComponent
     [IsoId("_bPLAMEStEemM8-DVOYzdVQ")]
     [DisplayName("Financial Instruments CCP")]
     [IsoXmlTag("FinInstrmsCCP")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILiquidResourceInformation1> FinancialInstrumentsCCP { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface ILiquidResources1 : IIsoComponent
     [IsoId("_hQgQgEStEemM8-DVOYzdVQ")]
     [DisplayName("Financial Instruments Treasury Investments")]
     [IsoXmlTag("FinInstrmsTrsrInvstmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILiquidResourceInformation1> FinancialInstrumentsTreasuryInvestments { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface ILiquidResources1 : IIsoComponent
     [IsoId("_l39j0EStEemM8-DVOYzdVQ")]
     [DisplayName("Financial Instruments Defaulters Settlement Collateral")]
     [IsoXmlTag("FinInstrmsDfltrsSttlmColl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILiquidResourceInformation1> FinancialInstrumentsDefaultersSettlementCollateral { get; }
 
     /// <summary>
@@ -89,5 +99,6 @@ public interface ILiquidResources1 : IIsoComponent
     [IsoId("_qv8mcEStEemM8-DVOYzdVQ")]
     [DisplayName("Financial Instruments Defaulters Non Cash Collateral")]
     [IsoXmlTag("FinInstrmsDfltrsNonCshColl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILiquidResourceInformation1> FinancialInstrumentsDefaultersNonCashCollateral { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosingBalance3Choice;
 /// </summary>
 [IsoId("_96S_QQgHEeSxsfb1OEDVsw")]
 [IsoXmlTag("FnlClsgBal")]
+[IsoDisplayName(@"Final Closing Balance")]
 public interface IFinalClosingBalance : IClosingBalance3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,6 @@ public interface IFinalClosingBalance : IClosingBalance3Choice, IIsoChoiceVarian
     [IsoId("_SoH21dp-Ed-ak6NoX_4Aeg_-1748202212")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Unit { get; }
 }

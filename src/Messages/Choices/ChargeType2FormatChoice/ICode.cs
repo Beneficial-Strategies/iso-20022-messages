@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType2FormatChoice;
 /// Standard code to specify the type of charge.
 /// </summary>
 [IsoId("_Rl0FRdp-Ed-ak6NoX_4Aeg_-1541781007")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChargeType2FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

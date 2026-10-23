@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Updated Additional Information25.
 /// </summary>
 [IsoId("_U_8et3SdEe6VWZz2tTgENw")]
+[IsoDisplayName(@"Updated Additional Information25")]
 public interface IUpdatedAdditionalInformation25 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IUpdatedAdditionalInformation25 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<RestrictedFINXMax350Text> AdditionalInformation { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData14Choic
 /// </summary>
 [IsoId("_kyCmN__9Eemefbt-QjTNnA")]
 [IsoXmlTag("MrgnLndg")]
+[IsoDisplayName(@"Margin Lending")]
 public interface IMarginLending : ITransactionCollateralData14Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IMarginLending : ITransactionCollateralData14Choice, IIsoChoice
     [IsoId("_rt67QdLvEem1A4OOmCK97A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? Identification { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IMarginLending : ITransactionCollateralData14Choice, IIsoChoice
     [IsoId("_rt67Q9LvEem1A4OOmCK97A")]
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier? ClassificationType { get; }
 
     /// <summary>
@@ -66,6 +69,7 @@ public interface IMarginLending : ITransactionCollateralData14Choice, IIsoChoice
     [IsoId("_rt67TdLvEem1A4OOmCK97A")]
     [DisplayName("Maturity")]
     [IsoXmlTag("Mtrty")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Maturity { get; }
 
     /// <summary>
@@ -82,6 +86,7 @@ public interface IMarginLending : ITransactionCollateralData14Choice, IIsoChoice
     [IsoId("_rt67UdLvEem1A4OOmCK97A")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesLendingType3Choice> Type { get; }
 
     /// <summary>
@@ -90,6 +95,7 @@ public interface IMarginLending : ITransactionCollateralData14Choice, IIsoChoice
     [IsoId("_rt67U9LvEem1A4OOmCK97A")]
     [DisplayName("Exclusive Arrangement")]
     [IsoXmlTag("ExclsvArrgmnt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ExclusiveArrangement { get; }
 
     /// <summary>
@@ -98,6 +104,7 @@ public interface IMarginLending : ITransactionCollateralData14Choice, IIsoChoice
     [IsoId("_rt67VdLvEem1A4OOmCK97A")]
     [DisplayName("Available For Collateral Reuse")]
     [IsoXmlTag("AvlblForCollReuse")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AvailableForCollateralReuse { get; }
 
     /// <summary>
@@ -108,5 +115,6 @@ public interface IMarginLending : ITransactionCollateralData14Choice, IIsoChoice
     [IsoId("_rt67V9LvEem1A4OOmCK97A")]
     [DisplayName("Haircut Or Margin")]
     [IsoXmlTag("HrcutOrMrgn")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? HaircutOrMargin { get; }
 }

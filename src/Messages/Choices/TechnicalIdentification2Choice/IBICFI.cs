@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TechnicalIdentification2Choice;
 /// Technical address of the party is defined as a financial institution business identifier code.
 /// </summary>
 [IsoId("_YD53kb11Eeiut6mmSKzDFQ")]
+[IsoDisplayName(@"BICFI")]
 public interface IBICFI : ITechnicalIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBICFI : ITechnicalIdentification2Choice, IIsoChoiceVariant
     /// Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362: 2014 - &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
     /// </summary>
     [IsoXmlTag("BICFI")]
+    [IsoSimpleType(IsoSimpleType.BICFIDec2014Identifier)]
     BICFIDec2014Identifier Value { get; }
 }

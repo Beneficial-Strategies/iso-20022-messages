@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Set of elements that further identifies the type of local instruments being requested by the initiating party.
 /// </summary>
 [IsoId("_TGhDB9p-Ed-ak6NoX_4Aeg_-2017969290")]
+[IsoDisplayName(@"Local Instrument 1 Choice")]
 public interface ILocalInstrument1Choice : IIsoChoice { }

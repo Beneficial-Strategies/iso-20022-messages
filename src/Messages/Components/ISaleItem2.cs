@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Item purchased with the transaction
 /// </summary>
 [IsoId("_buMzlPJxEeiJn9rM2Znz2w")]
+[IsoDisplayName(@"Sale Item")]
 public interface ISaleItem2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISaleItem2 : IIsoComponent
     [IsoId("_pgLVs_JxEeiJn9rM2Znz2w")]
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProductType { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISaleItem2 : IIsoComponent
     [IsoId("_pgLVtPJxEeiJn9rM2Znz2w")]
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ProductCode { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ISaleItem2 : IIsoComponent
     [IsoId("_1dhRefJxEeiJn9rM2Znz2w")]
     [DisplayName("Additional Product Code")]
     [IsoXmlTag("AddtlPdctCd")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalProductCode { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ISaleItem2 : IIsoComponent
     [IsoId("_1dhRevJxEeiJn9rM2Znz2w")]
     [DisplayName("Additional Product Code Type")]
     [IsoXmlTag("AddtlPdctCdTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalProductCodeType { get; }
 
     /// <summary>
@@ -57,6 +66,7 @@ public interface ISaleItem2 : IIsoComponent
     [IsoId("_1dhRe_JxEeiJn9rM2Znz2w")]
     [DisplayName("Product Code Modifier")]
     [IsoXmlTag("PdctCdModfr")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ProductCodeModifier { get; }
 
     /// <summary>
@@ -65,6 +75,8 @@ public interface ISaleItem2 : IIsoComponent
     [IsoId("_1dhRfPJxEeiJn9rM2Znz2w")]
     [DisplayName("Product Description")]
     [IsoXmlTag("PdctDesc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? ProductDescription { get; }
 
     /// <summary>
@@ -81,6 +93,8 @@ public interface ISaleItem2 : IIsoComponent
     [IsoId("_1dhRfvJxEeiJn9rM2Znz2w")]
     [DisplayName("Other Unit Of Measure")]
     [IsoXmlTag("OthrUnitOfMeasr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherUnitOfMeasure { get; }
 
     /// <summary>
@@ -89,6 +103,7 @@ public interface ISaleItem2 : IIsoComponent
     [IsoId("_1dhRf_JxEeiJn9rM2Znz2w")]
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ProductQuantity { get; }
 
     /// <summary>
@@ -113,6 +128,7 @@ public interface ISaleItem2 : IIsoComponent
     [IsoId("_1dhRhfJxEeiJn9rM2Znz2w")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment10> Adjustment { get; }
 
     /// <summary>
@@ -129,6 +145,7 @@ public interface ISaleItem2 : IIsoComponent
     [IsoId("_PotZsfJ3EeiJn9rM2Znz2w")]
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? InsuranceIndicator { get; }
 
     /// <summary>
@@ -145,6 +162,7 @@ public interface ISaleItem2 : IIsoComponent
     [IsoId("_1dhRhPJxEeiJn9rM2Znz2w")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax33> Tax { get; }
 
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference16Choice;
 /// <summary>
 /// Client Order Link Identification.
 /// </summary>
+[IsoDisplayName(@"Client Order Link Identification")]
 public interface IClientOrderLinkIdentification
     : IIdentificationReference16Choice,
         IIsoChoiceVariant

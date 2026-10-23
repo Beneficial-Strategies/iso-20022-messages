@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a duration type.
 /// </summary>
 [IsoId("_-eV4AE6dEeyEpI66tm807w")]
+[IsoDisplayName(@"Compare Duration Type")]
 public interface ICompareDurationType1 : IIsoComponent
 {
     /// <summary>

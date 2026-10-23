@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.supl;
     "DTCCCANODerivSD1",
     "urn:iso:std:iso:20022:tech:xsd:supl.005.001.03"
 )]
+[Description(@"The DTCCCANODerivativeSD1 message extends ISO corporate action notification (CANO) message with DTCC corporate action derivative notice elements not covered in the standard message.")]
+[IsoDisplayName(@"DTCCCANO Derivative SD 1 V")]
 public interface IDTCCCANODerivativeSD1V03 : IOuterRecord
 {
     /// <summary>
@@ -24,5 +26,6 @@ public interface IDTCCCANODerivativeSD1V03 : IOuterRecord
     [IsoId("_1OJ85TL3EeKU9IrkkToqcw_778471175")]
     [DisplayName("Corporate Action Notification")]
     [IsoXmlTag("CorpActnNtfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionNotificationSD2> CorporateActionNotification { get; }
 }

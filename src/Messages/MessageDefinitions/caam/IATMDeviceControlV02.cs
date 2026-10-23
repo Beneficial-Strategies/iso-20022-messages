@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// </summary>
 [IsoId("_caM7Qa45EeWRfYPBaeOY8w")]
 [IsoMessage("caam.002.001.02", "ATMDvcCtrl", "urn:iso:std:iso:20022:tech:xsd:caam.002.001.02")]
+[Description(@"The ATMDeviceControl message is sent by a maintenance host to an ATM in response to an ATMDeviceReport message. The message contains a sequence of maintenance commands the ATM must perform.")]
+[IsoDisplayName(@"ATM Device Control V")]
 public interface IATMDeviceControlV02 : IOuterRecord
 {
     /// <summary>

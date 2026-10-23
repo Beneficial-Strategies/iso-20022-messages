@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberOrPercentage1Choice;
 /// Threshold provided as a percentage rate.
 /// </summary>
 [IsoId("_waiGEK4pEemG7MmivSuE5g")]
+[IsoDisplayName(@"Threshold Percentage")]
 public interface IThresholdPercentage : INumberOrPercentage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IThresholdPercentage : INumberOrPercentage1Choice, IIsoChoiceVa
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("ThrshldPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

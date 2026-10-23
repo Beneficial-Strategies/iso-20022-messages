@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_PT1lANsDEeqmdMJWobugpw")]
 [IsoMessage("seev.050.001.01", "MktClmCre", "urn:iso:std:iso:20022:tech:xsd:seev.050.001.01")]
+[Description(@"Scope and Usage|The MarketClaimCreation message is sent by an account servicer to an account holder to advise of the creation of a market claim transaction on a securities account, for example by a CSD that has automatically generated market claims on a mandatory distribution type of corporate action event. The MarketClaimCreation message may also be sent by an account holder to its account holder, to instruct settlement of a bilaterally agreed (as opposed to centrally generated) market claim for a corporate action event.|This message definition is intended for use with the Business Application Header (BAH).")]
+[IsoDisplayName(@"Market Claim Creation V")]
 public interface IMarketClaimCreationV01 : IOuterRecord
 {
     /// <summary>
@@ -94,5 +96,6 @@ public interface IMarketClaimCreationV01 : IOuterRecord
     [IsoId("_hhuxcdsGEeqmdMJWobugpw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

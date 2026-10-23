@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a generic type of identification requested for an organisation.
 /// </summary>
 [IsoId("_lvDMenFwEemaN4ndAVY1ZQ")]
+[IsoDisplayName(@"Generic Organisation Type")]
 public interface IGenericOrganisationType1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IGenericOrganisationType1 : IIsoComponent
     [IsoId("_lvDMe3FwEemaN4ndAVY1ZQ")]
     [DisplayName("Requested")]
     [IsoXmlTag("Reqd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator Requested { get; }
 
     /// <summary>

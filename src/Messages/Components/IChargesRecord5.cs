@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further individual record details on the charges related to the payment transaction.
 /// </summary>
 [IsoId("_n3siQbt7Eeq_cfXrH83Rcw")]
+[IsoDisplayName(@"Charges Record")]
 public interface IChargesRecord5 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IChargesRecord5 : IIsoComponent
     [IsoId("_62YjACkaEeuBrrgCSpsocg")]
     [DisplayName("Charges Record Identification")]
     [IsoXmlTag("ChrgsRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ChargesRecordIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IChargesRecord5 : IIsoComponent
     [IsoId("_YDA8oCkYEeuBrrgCSpsocg")]
     [DisplayName("Underlying Transaction")]
     [IsoXmlTag("UndrlygTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionReferences7> UnderlyingTransaction { get; }
 
     /// <summary>
@@ -106,5 +110,7 @@ public interface IChargesRecord5 : IIsoComponent
     [IsoId("_n4aUAbt7Eeq_cfXrH83Rcw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalInformation { get; }
 }

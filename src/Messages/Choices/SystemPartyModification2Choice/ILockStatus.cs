@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// </summary>
 [IsoId("__edeA4v_Eei289CGNqs21g")]
 [IsoXmlTag("LckSts")]
+[IsoDisplayName(@"Lock Status")]
 public interface ILockStatus : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ILockStatus : ISystemPartyModification2Choice, IIsoChoiceVarian
     [IsoId("_WiPMQGjNEeiRg5NzP0jkQg")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidFrom { get; }
 
     /// <summary>
@@ -34,5 +36,8 @@ public interface ILockStatus : ISystemPartyModification2Choice, IIsoChoiceVarian
     [IsoId("_JfT99GjMEeiRg5NzP0jkQg")]
     [DisplayName("Lock Reason")]
     [IsoXmlTag("LckRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> LockReason { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Breakdown of cash movements out of a fund as a result of investment funds transactions, eg, redemptions or switch-out.
 /// </summary>
 [IsoId("_I7Gg_QatEeS3lpTattq7hg")]
+[IsoDisplayName(@"Fund Cash Out Breakdown")]
 public interface IFundCashOutBreakdown3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IFundCashOutBreakdown3 : IIsoComponent
     [IsoId("_JVSimwatEeS3lpTattq7hg")]
     [DisplayName("New Amount Indicator")]
     [IsoXmlTag("NewAmtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NewAmountIndicator { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IFundCashOutBreakdown3 : IIsoComponent
     [IsoId("_JVSipQatEeS3lpTattq7hg")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge26> ChargeDetails { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IFundCashOutBreakdown3 : IIsoComponent
     [IsoId("_JVSipwatEeS3lpTattq7hg")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission21> CommissionDetails { get; }
 
     /// <summary>

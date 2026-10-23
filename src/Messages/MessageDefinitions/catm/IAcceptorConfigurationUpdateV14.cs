@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// </summary>
 [IsoId("_joLOgaFEEe-MRKYsaX6JDg")]
 [IsoMessage("catm.003.001.14", "AccptrCfgtnUpd", "urn:iso:std:iso:20022:tech:xsd:catm.003.001.14")]
+[IsoDisplayName(@"Acceptor Configuration Update V14")]
 public interface IAcceptorConfigurationUpdateV14 : IOuterRecord
 {
     /// <summary>

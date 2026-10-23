@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an agricultural derivative of type seafood.
 /// </summary>
 [IsoId("_LqPBoVrBEeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Agricultural Commodity Seafood")]
 public interface IAgriculturalCommoditySeafood1 : IIsoComponent
 {
     /// <summary>

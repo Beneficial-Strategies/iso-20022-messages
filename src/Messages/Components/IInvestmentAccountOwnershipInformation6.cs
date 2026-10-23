@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the ownership of an investment account.
 /// </summary>
 [IsoId("_KH4-gROAEeKjmvxNCObNeQ")]
+[IsoDisplayName(@"Investment Account Ownership Information")]
 public interface IInvestmentAccountOwnershipInformation6 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IInvestmentAccountOwnershipInformation6 : IIsoComponent
     [IsoId("_KdgCQROAEeKjmvxNCObNeQ")]
     [DisplayName("Investor Profile Validation")]
     [IsoXmlTag("InvstrPrflVldtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyProfileInformation2> InvestorProfileValidation { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IInvestmentAccountOwnershipInformation6 : IIsoComponent
     [IsoId("_KdgCRROAEeKjmvxNCObNeQ")]
     [DisplayName("Ownership Beneficiary Rate")]
     [IsoXmlTag("OwnrshBnfcryRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OwnershipBeneficiaryRate { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IInvestmentAccountOwnershipInformation6 : IIsoComponent
     [IsoId("_KdgCSROAEeKjmvxNCObNeQ")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientIdentification { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IInvestmentAccountOwnershipInformation6 : IIsoComponent
     [IsoId("_KdgCTROAEeKjmvxNCObNeQ")]
     [DisplayName("Fiscal Exemption")]
     [IsoXmlTag("FsclXmptn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FiscalExemption { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IInvestmentAccountOwnershipInformation6 : IIsoComponent
     [IsoId("_KdgCUROAEeKjmvxNCObNeQ")]
     [DisplayName("Signatory Right Indicator")]
     [IsoXmlTag("SgntryRghtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SignatoryRightIndicator { get; }
 
     /// <summary>

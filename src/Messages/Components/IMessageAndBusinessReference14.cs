@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the message reference of the message for which the status is requested and the business reference of the transfer instruction.
 /// </summary>
 [IsoId("219fa134-6a0f-4688-927f-51f44b29a8e7")]
+[IsoDisplayName(@"Message And Business Reference14")]
 public interface IMessageAndBusinessReference14 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IMessageAndBusinessReference14 : IIsoComponent
     [IsoId("79950a17-132b-4fa2-98ea-126e3eaf35be")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary48> IntermediaryInformation { get; }
 
     /// <summary>
@@ -89,6 +91,7 @@ public interface IMessageAndBusinessReference14 : IIsoComponent
     [IsoId("72f7d04a-a0f0-4029-9a01-1f2e955847c6")]
     [DisplayName("Query Information")]
     [IsoXmlTag("QryInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation25> QueryInformation { get; }
 
     /// <summary>

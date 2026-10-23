@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the commercial contract type.
 /// </summary>
 [IsoId("_93QOw3ltEeG7BsjMvd1mEw_-521905675")]
+[IsoDisplayName(@"Underlying Trade Transaction Type 1 Choice")]
 public interface IUnderlyingTradeTransactionType1Choice : IIsoChoice { }

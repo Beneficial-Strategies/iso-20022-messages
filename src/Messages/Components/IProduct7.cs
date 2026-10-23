@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Product related to the transaction
 /// </summary>
 [IsoId("_BiJBIfcsEeiW-auGnDPZIw")]
+[IsoDisplayName(@"Product")]
 public interface IProduct7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProduct7 : IIsoComponent
     [IsoId("_BiJBKvcsEeiW-auGnDPZIw")]
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ProductCode { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IProduct7 : IIsoComponent
     [IsoId("_Vw9DwfcsEeiW-auGnDPZIw")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SummaryCommodityIdentification { get; }
 }

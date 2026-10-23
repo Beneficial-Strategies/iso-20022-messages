@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RequestType4Choice;
 /// Request type is an enquiry on a position or a transaction.
 /// </summary>
 [IsoId("_i375o5IhEeect698_YsnIA")]
+[IsoDisplayName(@"Enquiry")]
 public interface IEnquiry : IRequestType4Choice, IIsoChoiceVariant
 {
     /// <summary>

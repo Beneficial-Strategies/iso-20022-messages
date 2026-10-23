@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData4Choice;
 
 /// <summary>Specific direct debit mandate data.</summary>
 [IsoId("_MPNCYbvHEfCYYbmqNrQFSg")]
+[IsoDisplayName(@"Direct Debit Mandate")]
 public interface IDirectDebitMandate : IMandateRelatedData4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason why the instruction is in repair.
 /// </summary>
 [IsoId("_6P_Z-ZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Repair Reason")]
 public interface IRepairReason12 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IRepairReason12 : IIsoComponent
     [IsoId("_6P_aA5NLEeWGlc8L7oPDIg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
+    [StringLength(210, MinimumLength = 1)]
     RestrictedFINXMax210Text? AdditionalReasonInformation { get; }
 }

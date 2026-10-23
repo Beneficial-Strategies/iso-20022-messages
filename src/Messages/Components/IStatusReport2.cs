@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status of the acceptor system containing the identification of the POI, its components and their installed versions.
 /// </summary>
 [IsoId("_dTvNEQyVEeK5P9Ihqok3VA")]
+[IsoDisplayName(@"Status Report")]
 public interface IStatusReport2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IStatusReport2 : IIsoComponent
     [IsoId("_df7O-QyVEeK5P9Ihqok3VA")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITerminalManagementDataSet4> DataSet { get; }
 }

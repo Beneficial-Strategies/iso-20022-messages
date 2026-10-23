@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the rejection reason of an individual element.
 /// </summary>
 [IsoId("_RJy3pdp-Ed-ak6NoX_4Aeg_2106998089")]
+[IsoDisplayName(@"Rejected Element")]
 public interface IRejectedElement1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRejectedElement1 : IIsoComponent
     [IsoId("_RJy3ptp-Ed-ak6NoX_4Aeg_-1803784041")]
     [DisplayName("Element Sequence Number")]
     [IsoXmlTag("ElmtSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number ElementSequenceNumber { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface IRejectedElement1 : IIsoComponent
     [IsoId("_RJy3p9p-Ed-ak6NoX_4Aeg_1481340627")]
     [DisplayName("Individual Rejection Reason")]
     [IsoXmlTag("IndvRjctnRsn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text IndividualRejectionReason { get; }
 }

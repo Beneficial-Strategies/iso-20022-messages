@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variation parameters and triggers.
 /// </summary>
 [IsoId("_9yyli3ltEeG7BsjMvd1mEw_-1016607830")]
+[IsoDisplayName(@"Automatic Variation")]
 public interface IAutomaticVariation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAutomaticVariation1 : IIsoComponent
     [IsoId("_9yyljHltEeG7BsjMvd1mEw_-276845926")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IAutomaticVariation1 : IIsoComponent
     [IsoId("_9y7vcHltEeG7BsjMvd1mEw_-1036746610")]
     [DisplayName("Amount And Trigger")]
     [IsoXmlTag("AmtAndTrggr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountAndTrigger1> AmountAndTrigger { get; }
 
     /// <summary>
@@ -41,5 +45,9 @@ public interface IAutomaticVariation1 : IIsoComponent
     [IsoId("_9y7vcXltEeG7BsjMvd1mEw_-469370329")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

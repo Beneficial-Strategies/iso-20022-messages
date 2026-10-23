@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines a frequency in terms a specific moment within a specified period type.
 /// </summary>
 [IsoId("_CWY182k3Eeanu6HLe77Rkg")]
+[IsoDisplayName(@"Frequency And Moment")]
 public interface IFrequencyAndMoment1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IFrequencyAndMoment1 : IIsoComponent
     [IsoId("_CWY19Gk3Eeanu6HLe77Rkg")]
     [DisplayName("Point In Time")]
     [IsoXmlTag("PtInTm")]
+    [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
     Exact2NumericText PointInTime { get; }
 }

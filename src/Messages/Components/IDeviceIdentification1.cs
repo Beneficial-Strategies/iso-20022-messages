@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the device.
 /// </summary>
 [IsoId("_w1Pa4JfLEeuqNYk2TG3bTg")]
+[IsoDisplayName(@"Device Identification")]
 public interface IDeviceIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDeviceIdentification1 : IIsoComponent
     [IsoId("_xtLoIJfOEeuqNYk2TG3bTg")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IDeviceIdentification1 : IIsoComponent
     [IsoId("_3nsewJfOEeuqNYk2TG3bTg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Identification { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface IDeviceIdentification1 : IIsoComponent
     [IsoId("_A1NXMJfPEeuqNYk2TG3bTg")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Assigner { get; }
 }

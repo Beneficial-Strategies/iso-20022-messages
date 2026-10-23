@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Referred Document Information8.
 /// </summary>
 [IsoId("_OzVnATE0Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Referred Document Information8")]
 public interface IReferredDocumentInformation8 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IReferredDocumentInformation8 : IIsoComponent
     /// </summary>
     [DisplayName("Line Details")]
     [IsoXmlTag("LineDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentLineInformation2> LineDetails { get; }
 }

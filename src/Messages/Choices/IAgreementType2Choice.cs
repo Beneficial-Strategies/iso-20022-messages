@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Classification of a master agreement.
 /// </summary>
 [IsoId("_Nw6gQS4yEeuxhbw_aW6haw")]
+[IsoDisplayName(@"Agreement Type 2 Choice")]
 public interface IAgreementType2Choice : IIsoChoice { }

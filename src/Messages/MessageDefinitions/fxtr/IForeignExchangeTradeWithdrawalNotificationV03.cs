@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.fxtr;
     "FXTradWdrwlNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:fxtr.013.001.03"
 )]
+[Description(@"Scope|The ForeignExchangeTradeWithdrawalNotification message is sent by a central system to notify the withdrawal of a foreign exchange trade which was previously notified to the receiver as an alleged trade.|Usage|The ForeignExchangeTradeWithdrawalNotification message is used to confirm the cancellation of a previously notified trade.")]
+[IsoDisplayName(@"Foreign Exchange Trade Withdrawal Notification V")]
 public interface IForeignExchangeTradeWithdrawalNotificationV03 : IOuterRecord
 {
     /// <summary>
@@ -27,6 +29,8 @@ public interface IForeignExchangeTradeWithdrawalNotificationV03 : IOuterRecord
     [IsoId("_oEmmtzqMEeKXK8qRvydwAw")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -35,6 +39,8 @@ public interface IForeignExchangeTradeWithdrawalNotificationV03 : IOuterRecord
     [IsoId("_g9h2VTqMEeKXK8qRvydwAw")]
     [DisplayName("Matching System Unique Reference")]
     [IsoXmlTag("MtchgSysUnqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MatchingSystemUniqueReference { get; }
 
     /// <summary>
@@ -51,6 +57,7 @@ public interface IForeignExchangeTradeWithdrawalNotificationV03 : IOuterRecord
     [IsoId("_QVqk05TkEeKShbaq9ixROw")]
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SettlementSessionIdentifier { get; }
 
     /// <summary>
@@ -59,5 +66,6 @@ public interface IForeignExchangeTradeWithdrawalNotificationV03 : IOuterRecord
     [IsoId("_GJJnaS53EeKwTrPDLMbLxA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

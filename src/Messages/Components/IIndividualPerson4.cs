@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Human entity, as distinguished from a corporate entity (which is sometimes referred to as an &apos;artificial person&apos;).
 /// </summary>
 [IsoId("_QBrZBNp-Ed-ak6NoX_4Aeg_540588929")]
+[IsoDisplayName(@"Individual Person")]
 public interface IIndividualPerson4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IIndividualPerson4 : IIsoComponent
     [IsoId("_QBrZBdp-Ed-ak6NoX_4Aeg_995882490")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text GivenName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IIndividualPerson4 : IIsoComponent
     [IsoId("_QBrZBtp-Ed-ak6NoX_4Aeg_867841803")]
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MiddleName { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IIndividualPerson4 : IIsoComponent
     [IsoId("_QBrZB9p-Ed-ak6NoX_4Aeg_995884938")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface IIndividualPerson4 : IIsoComponent
     [IsoId("_QB0i8Np-Ed-ak6NoX_4Aeg_996806013")]
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BirthDate { get; }
 }

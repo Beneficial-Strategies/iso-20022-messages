@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties4Choice;
 /// </summary>
 [IsoId("_CB0Go2pSEeSgo9vJrfSF_Q")]
 [IsoXmlTag("RcvgSttlmPties")]
+[IsoDisplayName(@"Receiving Settlement Parties")]
 public interface IReceivingSettlementParties : ISettlementParties4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -42,5 +43,7 @@ public interface IReceivingSettlementParties : ISettlementParties4Choice, IIsoCh
     [IsoId("_b8gHC2pSEeSgo9vJrfSF_Q")]
     [DisplayName("Securities Settlement System")]
     [IsoXmlTag("SctiesSttlmSys")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecuritiesSettlementSystem { get; }
 }

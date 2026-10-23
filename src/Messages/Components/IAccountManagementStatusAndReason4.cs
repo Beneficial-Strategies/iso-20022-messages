@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status information.
 /// </summary>
 [IsoId("_pxVPYSGaEeWKAaDJcYGKLw")]
+[IsoDisplayName(@"Account Management Status And Reason")]
 public interface IAccountManagementStatusAndReason4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAccountManagementStatusAndReason4 : IIsoComponent
     [IsoId("_qOyAYyGaEeWKAaDJcYGKLw")]
     [DisplayName("Account Application Identification")]
     [IsoXmlTag("AcctApplId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountApplicationIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IAccountManagementStatusAndReason4 : IIsoComponent
     [IsoId("_koqw0VxQEeW8MLuBzR10cg")]
     [DisplayName("Existing Account Identification")]
     [IsoXmlTag("ExstgAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ExistingAccountIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber1Choice;
 /// Message type number of the document referenced.
 /// </summary>
 [IsoId("_QzcNJ9p-Ed-ak6NoX_4Aeg_-1195273185")]
+[IsoDisplayName(@"Short Number")]
 public interface IShortNumber : IDocumentNumber1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IShortNumber : IDocumentNumber1Choice, IIsoChoiceVariant
     /// Specifies a numeric string with an exact length of 3 digits.
     /// </summary>
     [IsoXmlTag("ShrtNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of driving license.
 /// </summary>
 [IsoId("_JUVlIFzPEeeDqe2giKl0eQ")]
+[IsoDisplayName(@"Driving License")]
 public interface IDrivingLicense1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDrivingLicense1 : IIsoComponent
     [IsoId("_ULFsQFzPEeeDqe2giKl0eQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Type { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IDrivingLicense1 : IIsoComponent
     [IsoId("_o_nEEFzPEeeDqe2giKl0eQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Identification { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IDrivingLicense1 : IIsoComponent
     [IsoId("_clDLYFzQEeeDqe2giKl0eQ")]
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IssuanceDate { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IDrivingLicense1 : IIsoComponent
     [IsoId("_kRaaIFzQEeeDqe2giKl0eQ")]
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpirationDate { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IDrivingLicense1 : IIsoComponent
     [IsoId("_uLAVcFzQEeeDqe2giKl0eQ")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
     Min2Max3AlphaText? Country { get; }
 
     /// <summary>
@@ -73,6 +81,8 @@ public interface IDrivingLicense1 : IIsoComponent
     [IsoId("_7cuqMFzQEeeDqe2giKl0eQ")]
     [DisplayName("State")]
     [IsoXmlTag("Stat")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? State { get; }
 
     /// <summary>
@@ -81,6 +91,8 @@ public interface IDrivingLicense1 : IIsoComponent
     [IsoId("_IyfKYFzREeeDqe2giKl0eQ")]
     [DisplayName("Province")]
     [IsoXmlTag("Prvc")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? Province { get; }
 
     /// <summary>
@@ -89,5 +101,7 @@ public interface IDrivingLicense1 : IIsoComponent
     [IsoId("_POT-UFzREeeDqe2giKl0eQ")]
     [DisplayName("Other Authority")]
     [IsoXmlTag("OthrAuthrty")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? OtherAuthority { get; }
 }

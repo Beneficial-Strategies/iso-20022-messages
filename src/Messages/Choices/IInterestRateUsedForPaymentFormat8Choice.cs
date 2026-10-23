@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an amount or a rate or an unspecified rate.
 /// </summary>
 [IsoId("_WG3o2UEIEeWVgfuHGaKtRQ")]
+[IsoDisplayName(@"Interest Rate Used For Payment Format 8 Choice")]
 public interface IInterestRateUsedForPaymentFormat8Choice : IIsoChoice { }

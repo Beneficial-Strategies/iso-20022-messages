@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "RedBlkOrdrConfAmdmntV01",
     "urn:iso:std:iso:20022:tech:xsd:setr.054.001.01"
 )]
+[Description(@"Scope|An executing party, for example, a transfer agent, sends the RedemptionBulkOrderConfirmationAmendment message to the instructing party, for example, an investment manager or its authorised representative to amend a previously sent RedemptionBulkOrderConfirmation message.|Usage|The RedemptionBulkOrderConfirmationAmendment message is used to amend one or more previously sent redemption bulk order confirmations.|Each bulk order confirmation amendment specified is identified in DealReference. The reference of the original individual order is specified in OrderReference.|The message identification of the RedemptionBulkOrder message in which the orders were conveyed may also be quoted in RelatedReference. The message identification of the RedemptionBulkOrderConfirmation message in which the original order confirmations were conveyed may also be quoted in PreviousReference.")]
+[IsoDisplayName(@"Redemption Bulk Order Confirmation Amendment V")]
 public interface IRedemptionBulkOrderConfirmationAmendmentV01 : IOuterRecord
 {
     /// <summary>
@@ -45,6 +47,7 @@ public interface IRedemptionBulkOrderConfirmationAmendmentV01 : IOuterRecord
     [IsoId("_oK5XI9E7Ed-BzquC8wXy7w_-86978193")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -69,6 +72,9 @@ public interface IRedemptionBulkOrderConfirmationAmendmentV01 : IOuterRecord
     [IsoId("_oK5XJtE7Ed-BzquC8wXy7w_-86977676")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary9> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -85,5 +91,6 @@ public interface IRedemptionBulkOrderConfirmationAmendmentV01 : IOuterRecord
     [IsoId("_oK5XKNE7Ed-BzquC8wXy7w_-86057117")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

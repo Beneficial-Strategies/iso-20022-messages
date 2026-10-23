@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateFormat38Choice;
 /// Value of the rate not specified.
 /// </summary>
 [IsoId("_PVD4f-XsEemEj48jhmlA0Q")]
+[IsoDisplayName(@"Not Specified Rate")]
 public interface INotSpecifiedRate : INetDividendRateFormat38Choice, IIsoChoiceVariant
 {
     /// <summary>

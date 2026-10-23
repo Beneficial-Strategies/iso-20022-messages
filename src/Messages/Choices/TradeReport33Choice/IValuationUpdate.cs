@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice;
 /// <summary>
 /// Valuation Update.
 /// </summary>
+[IsoDisplayName(@"Valuation Update")]
 public interface IValuationUpdate : ITradeReport33Choice, IIsoChoiceVariant
 {
     /// <summary>

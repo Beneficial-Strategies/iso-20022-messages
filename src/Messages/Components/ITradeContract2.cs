@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Agreement between the parties, stipulating the terms and conditions of the delivery of goods or services.
 /// </summary>
 [IsoId("_J3au_W49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Trade Contract")]
 public interface ITradeContract2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ITradeContract2 : IIsoComponent
     [IsoId("_KAgZhW49EeiU9cctagi5ow")]
     [DisplayName("Buyer")]
     [IsoXmlTag("Buyr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty5> Buyer { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ITradeContract2 : IIsoComponent
     [IsoId("_KAgZh249EeiU9cctagi5ow")]
     [DisplayName("Seller")]
     [IsoXmlTag("Sellr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty5> Seller { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ITradeContract2 : IIsoComponent
     [IsoId("_KAgZiW49EeiU9cctagi5ow")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ITradeContract2 : IIsoComponent
     [IsoId("_KAgZi249EeiU9cctagi5ow")]
     [DisplayName("Prolongation Flag")]
     [IsoXmlTag("PrlngtnFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator ProlongationFlag { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ITradeContract2 : IIsoComponent
     [IsoId("_KAgZjW49EeiU9cctagi5ow")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate StartDate { get; }
 
     /// <summary>
@@ -105,5 +111,6 @@ public interface ITradeContract2 : IIsoComponent
     [IsoId("_KAgZl249EeiU9cctagi5ow")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation3> Attachment { get; }
 }

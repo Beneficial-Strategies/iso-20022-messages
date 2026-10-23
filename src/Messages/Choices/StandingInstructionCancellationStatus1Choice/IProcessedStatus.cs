@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingInstructionCancellationS
 /// </summary>
 [IsoId("_RirRs9p-Ed-ak6NoX_4Aeg_1145802950")]
 [IsoXmlTag("PrcdSts")]
+[IsoDisplayName(@"Processed Status")]
 public interface IProcessedStatus : IStandingInstructionCancellationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IProcessedStatus : IStandingInstructionCancellationStatus1Choic
     [IsoId("_Rk6tY9p-Ed-ak6NoX_4Aeg_1118099524")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

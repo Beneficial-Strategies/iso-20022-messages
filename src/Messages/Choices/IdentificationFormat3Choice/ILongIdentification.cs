@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationFormat3Choice;
 /// Format expressed as a long identification.
 /// </summary>
 [IsoId("_qmP-eUEFEeWVgfuHGaKtRQ")]
+[IsoDisplayName(@"Long Identification")]
 public interface ILongIdentification : IIdentificationFormat3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ILongIdentification : IIdentificationFormat3Choice, IIsoChoiceV
     /// Specifies a character string with a maximum length of 30 characters.
     /// </summary>
     [IsoXmlTag("LngId")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text Value { get; }
 }

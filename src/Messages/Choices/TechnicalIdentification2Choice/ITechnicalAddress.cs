@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TechnicalIdentification2Choice;
 /// Technical address of the party is defined in a free text format.
 /// </summary>
 [IsoId("_YD53k711Eeiut6mmSKzDFQ")]
+[IsoDisplayName(@"Technical Address")]
 public interface ITechnicalAddress : ITechnicalIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ITechnicalAddress : ITechnicalIdentification2Choice, IIsoChoice
     /// Specifies a character string with a maximum length of 256 characters.
     /// </summary>
     [IsoXmlTag("TechAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Value { get; }
 }

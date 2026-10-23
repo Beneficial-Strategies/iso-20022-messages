@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Remittance Location10.
 /// </summary>
 [IsoId("_22HOUTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Remittance Location10")]
 public interface IRemittanceLocation10 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IRemittanceLocation10 : IIsoComponent
     /// </summary>
     [DisplayName("Remittance Location Details")]
     [IsoXmlTag("RmtLctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocationData2> RemittanceLocationDetails { get; }
 
     /// <summary>

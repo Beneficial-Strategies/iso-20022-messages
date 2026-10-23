@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EnabledStatusReason1Choice;
 /// There is no reason available or to report for the enabled account status.
 /// </summary>
 [IsoId("_4hBVcEy9EeafiMTDrtSnyw")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IEnabledStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

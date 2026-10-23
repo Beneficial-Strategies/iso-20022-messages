@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "ReqToPayCdtrEnrlmntStsRpt",
     "urn:iso:std:iso:20022:tech:xsd:reda.069.001.01"
 )]
+[Description(@"The RequestToPayCreditorEnrolmentStatusReport message is sent from the RTP (Request To Pay) directory provider to the creditor RTP provider and optionally from the creditor RTP provider to the creditor or any of the forwarding agent to provide the status of the initial creation, amendment or cancellation request.")]
+[IsoDisplayName(@"Request To Pay Creditor Enrolment Status Report V")]
 public interface IRequestToPayCreditorEnrolmentStatusReportV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IRequestToPayCreditorEnrolmentStatusReportV01 : IOuterRecord
     [IsoId("_rNNBteHzEeqbls7Gk4-ckA")]
     [DisplayName("Original Enrolment And Status")]
     [IsoXmlTag("OrgnlEnrlmntAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEnrolmentStatus2> OriginalEnrolmentAndStatus { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IRequestToPayCreditorEnrolmentStatusReportV01 : IOuterRecord
     [IsoId("_rNNBt-HzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

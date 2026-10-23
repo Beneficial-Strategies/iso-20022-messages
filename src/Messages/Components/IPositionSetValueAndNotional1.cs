@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variables used to quantify the different calculations for position sets and currency position sets reports.
 /// </summary>
 [IsoId("_wx1DhcWEEeiRga8tPu1L4Q")]
+[IsoDisplayName(@"Position Set Value And Notional")]
 public interface IPositionSetValueAndNotional1 : IIsoComponent
 {
     /// <summary>

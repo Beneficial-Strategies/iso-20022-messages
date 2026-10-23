@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "SctiesFincgRptgPosSetRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.105.001.01"
 )]
+[Description(@"The SecuritiesFinancingReportingPositionSetReport message is sent by the trade repositories to the supervisory authority system, to report aggregated exposures between a pair of counterparties (except reuse report).")]
+[IsoDisplayName(@"Securities Financing Reporting Position Set Report V")]
 public interface ISecuritiesFinancingReportingPositionSetReportV01 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +34,6 @@ public interface ISecuritiesFinancingReportingPositionSetReportV01 : IOuterRecor
     [IsoId("_YpHNxcKvEeuzU9S_IANlog")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

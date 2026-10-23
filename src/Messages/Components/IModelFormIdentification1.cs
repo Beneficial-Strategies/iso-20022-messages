@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a model form.
 /// </summary>
 [IsoId("_94mSlXltEeG7BsjMvd1mEw_-921216115")]
+[IsoDisplayName(@"Model Form Identification")]
 public interface IModelFormIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IModelFormIdentification1 : IIsoComponent
     [IsoId("_94wDkXltEeG7BsjMvd1mEw_-2048295830")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Version { get; }
 }

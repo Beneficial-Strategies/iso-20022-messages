@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a freight derivative of type dry.
 /// </summary>
 [IsoId("_UwBLgU8REe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Freight Commodity Dry")]
 public interface IFreightCommodityDry3 : IIsoComponent
 {
     /// <summary>

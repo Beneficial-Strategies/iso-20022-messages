@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// </summary>
 [IsoId("_KI0-4XfYEe2I4Iip2NEM0A")]
 [IsoMessage("fxtr.034.001.02", "FXTradConfReq", "urn:iso:std:iso:20022:tech:xsd:fxtr.034.001.02")]
+[IsoDisplayName(@"Foreign Exchange Trade Confirmation Request V02")]
 public interface IForeignExchangeTradeConfirmationRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -67,5 +68,6 @@ public interface IForeignExchangeTradeConfirmationRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

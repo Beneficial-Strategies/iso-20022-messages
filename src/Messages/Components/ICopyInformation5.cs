@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information provided when the message is a copy of a previous message.
 /// </summary>
 [IsoId("_y6HYAZELEem-9Y6mq5ZH3Q")]
+[IsoDisplayName(@"Copy Information")]
 public interface ICopyInformation5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICopyInformation5 : IIsoComponent
     [IsoId("_zNKP05ELEem-9Y6mq5ZH3Q")]
     [DisplayName("Copy Indicator")]
     [IsoXmlTag("CpyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CopyIndicator { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICopyInformation5 : IIsoComponent
     [IsoId("_zNKP1ZELEem-9Y6mq5ZH3Q")]
     [DisplayName("Original Receiver")]
     [IsoXmlTag("OrgnlRcvr")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier? OriginalReceiver { get; }
 }

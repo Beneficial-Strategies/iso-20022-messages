@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the identification of the relevant supervising authority.
 /// </summary>
 [IsoId("_4ZQrMPH-Eeaz_YGUGLjP6A")]
+[IsoDisplayName(@"Supervising Authority Identification 1 Choice")]
 public interface ISupervisingAuthorityIdentification1Choice : IIsoChoice { }

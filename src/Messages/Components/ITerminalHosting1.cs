@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Entity hosting the ATM terminal.
 /// </summary>
 [IsoId("_gJenIIn2EeS9F4Qrq_eaVA")]
+[IsoDisplayName(@"Terminal Hosting")]
 public interface ITerminalHosting1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITerminalHosting1 : IIsoComponent
     [IsoId("_8G24AIn2EeS9F4Qrq_eaVA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 }

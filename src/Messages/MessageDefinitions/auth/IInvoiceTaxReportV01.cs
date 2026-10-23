@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_B5eQoFmrEeOQYsoJizpkVw")]
 [IsoMessage("auth.034.001.01", "InvcTaxRpt", "urn:iso:std:iso:20022:tech:xsd:auth.034.001.01")]
+[Description(@"The InvoiceTaxReport message is sent by tax responsible to tax authority. Tax authorities require corporates to report their sales based value added tax (VAT). This message is targeted to this reporting based on information in sales invoices and card transactions.")]
+[IsoDisplayName(@"Invoice Tax Report V")]
 public interface IInvoiceTaxReportV01 : IOuterRecord
 {
     /// <summary>
@@ -28,6 +30,7 @@ public interface IInvoiceTaxReportV01 : IOuterRecord
     [IsoId("_DiX4YFm8EeOQYsoJizpkVw")]
     [DisplayName("Tax Report")]
     [IsoXmlTag("TaxRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxReport1> TaxReport { get; }
 
     /// <summary>
@@ -36,5 +39,6 @@ public interface IInvoiceTaxReportV01 : IOuterRecord
     [IsoId("_YqO7oEjvEeaOe8w0NJ11wQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

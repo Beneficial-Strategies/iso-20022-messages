@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason1Choice;
 /// </summary>
 [IsoId("_RJ8ootp-Ed-ak6NoX_4Aeg_1044987769")]
 [IsoXmlTag("RjctdElmt")]
+[IsoDisplayName(@"Rejected Element")]
 public interface IRejectedElement : IRejectionReason1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IRejectedElement : IRejectionReason1Choice, IIsoChoiceVariant
     [IsoId("_RJy3ptp-Ed-ak6NoX_4Aeg_-1803784041")]
     [DisplayName("Element Sequence Number")]
     [IsoXmlTag("ElmtSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number ElementSequenceNumber { get; }
 
     /// <summary>
@@ -26,5 +28,7 @@ public interface IRejectedElement : IRejectionReason1Choice, IIsoChoiceVariant
     [IsoId("_RJy3p9p-Ed-ak6NoX_4Aeg_1481340627")]
     [DisplayName("Individual Rejection Reason")]
     [IsoXmlTag("IndvRjctnRsn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text IndividualRejectionReason { get; }
 }

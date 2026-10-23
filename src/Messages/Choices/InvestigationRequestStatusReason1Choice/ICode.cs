@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationRequestStatusReason
 /// Reason for the investigation request status, in a coded form.
 /// </summary>
 [IsoId("_xWB3s3bnEe2GR4CRzIB77g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInvestigationRequestStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

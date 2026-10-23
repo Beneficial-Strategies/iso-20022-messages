@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference11Choice;
 /// It permits order originators to tie together groups of orders in which trades resulting from orders are associated for a specific purpose, for example the calculation of average execution price for a customer.
 /// </summary>
 [IsoId("_AdlJVtokEeC60axPepSq7g_1387767748")]
+[IsoDisplayName(@"Client Order Link Identification")]
 public interface IClientOrderLinkIdentification
     : IIdentificationReference11Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface IClientOrderLinkIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("ClntOrdrLkId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

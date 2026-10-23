@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the vote methods to be used.
 /// </summary>
 [IsoId("_MPdpxa4jEemG7MmivSuE5g")]
+[IsoDisplayName(@"Vote Methods")]
 public interface IVoteMethods3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,10 @@ public interface IVoteMethods3 : IIsoComponent
     [IsoId("_Mm0Z064jEemG7MmivSuE5g")]
     [DisplayName("Vote Through Network")]
     [IsoXmlTag("VoteThrghNtwk")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> VoteThroughNetwork { get; }
 
     /// <summary>
@@ -25,6 +30,9 @@ public interface IVoteMethods3 : IIsoComponent
     [IsoId("_Mm0Z1a4jEemG7MmivSuE5g")]
     [DisplayName("Vote By Mail")]
     [IsoXmlTag("VoteByMail")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress1> VoteByMail { get; }
 
     /// <summary>
@@ -33,6 +41,9 @@ public interface IVoteMethods3 : IIsoComponent
     [IsoId("_Mm0Z164jEemG7MmivSuE5g")]
     [DisplayName("Electronic Vote")]
     [IsoXmlTag("ElctrncVote")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommunicationAddress11> ElectronicVote { get; }
 
     /// <summary>
@@ -41,5 +52,9 @@ public interface IVoteMethods3 : IIsoComponent
     [IsoId("_Mm0Z2a4jEemG7MmivSuE5g")]
     [DisplayName("Vote By Telephone")]
     [IsoXmlTag("VoteByTel")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> VoteByTelephone { get; }
 }

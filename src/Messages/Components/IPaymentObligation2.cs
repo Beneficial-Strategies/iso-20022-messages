@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment obligation contracted between two financial institutions related to the financing of a commercial transaction.
 /// </summary>
 [IsoId("_H7FLkdNVEeKdOs2hjJ_3WQ")]
+[IsoDisplayName(@"Payment Obligation")]
 public interface IPaymentObligation2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IPaymentObligation2 : IIsoComponent
     [IsoId("_bUWsINP_EeK0PPbKncCqzA")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges5> Charges { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IPaymentObligation2 : IIsoComponent
     [IsoId("_IbM2H9NVEeKdOs2hjJ_3WQ")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ExpiryDate { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IPaymentObligation2 : IIsoComponent
     [IsoId("_IbM2I9NVEeKdOs2hjJ_3WQ")]
     [DisplayName("Payment Terms")]
     [IsoXmlTag("PmtTerms")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTerms4> PaymentTerms { get; }
 
     /// <summary>

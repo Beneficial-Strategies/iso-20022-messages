@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Addendum Data6.
 /// </summary>
 [IsoId("_LlKvIXNREe6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Addendum Data6")]
 public interface IAddendumData6 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IAddendumData6 : IIsoComponent
     /// </summary>
     [DisplayName("Travel Agency")]
     [IsoXmlTag("TrvlAgcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITravelAgency4> TravelAgency { get; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public interface IAddendumData6 : IIsoComponent
     /// </summary>
     [DisplayName("Vehicle Rental")]
     [IsoXmlTag("VhclRntl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVehicleRentalService3> VehicleRental { get; }
 
     /// <summary>
@@ -58,6 +61,7 @@ public interface IAddendumData6 : IIsoComponent
     /// </summary>
     [DisplayName("Lodging")]
     [IsoXmlTag("Ldgg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILodging4> Lodging { get; }
 
     /// <summary>
@@ -79,6 +83,7 @@ public interface IAddendumData6 : IIsoComponent
     /// </summary>
     [DisplayName("Temporary Services")]
     [IsoXmlTag("TempSvcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITemporaryServices3> TemporaryServices { get; }
 
     /// <summary>
@@ -86,5 +91,6 @@ public interface IAddendumData6 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 }

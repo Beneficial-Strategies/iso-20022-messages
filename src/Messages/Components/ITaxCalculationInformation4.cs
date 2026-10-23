@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information used to calculate the tax.
 /// </summary>
 [IsoId("_SlvRNtp-Ed-ak6NoX_4Aeg_-1975400876")]
+[IsoDisplayName(@"Tax Calculation Information")]
 public interface ITaxCalculationInformation4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITaxCalculationInformation4 : IIsoComponent
     [IsoId("_SlvRONp-Ed-ak6NoX_4Aeg_-1153836760")]
     [DisplayName("Extended EU Capital Gain")]
     [IsoXmlTag("XtndedEUCptlGn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedEUCapitalGain { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITaxCalculationInformation4 : IIsoComponent
     [IsoId("_SlvROdp-Ed-ak6NoX_4Aeg_-1975400668")]
     [DisplayName("Percentage Of Debt Claim")]
     [IsoXmlTag("PctgOfDebtClm")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfDebtClaim { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ITaxCalculationInformation4 : IIsoComponent
     [IsoId("_SlvROtp-Ed-ak6NoX_4Aeg_-1975400608")]
     [DisplayName("Percentage Grandfathered Debt")]
     [IsoXmlTag("PctgGrdfthdDebt")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageGrandfatheredDebt { get; }
 
     /// <summary>
@@ -65,5 +70,7 @@ public interface ITaxCalculationInformation4 : IIsoComponent
     [IsoId("_Sl4bItp-Ed-ak6NoX_4Aeg_-962659408")]
     [DisplayName("Extended EU Dividend Status")]
     [IsoXmlTag("XtndedEUDvddSts")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedEUDividendStatus { get; }
 }

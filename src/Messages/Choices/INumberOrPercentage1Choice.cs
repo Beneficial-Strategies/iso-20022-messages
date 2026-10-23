@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a percentage and number for a threshold.
 /// </summary>
 [IsoId("_U1n_kK4pEemG7MmivSuE5g")]
+[IsoDisplayName(@"Number Or Percentage 1 Choice")]
 public interface INumberOrPercentage1Choice : IIsoChoice { }

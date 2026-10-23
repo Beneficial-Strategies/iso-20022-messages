@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature7Choice;
 /// </summary>
 [IsoId("_-UtqQan9EemdLtwzt4CWxg")]
 [IsoXmlTag("FI")]
+[IsoDisplayName(@"Financial Institution")]
 public interface IFinancialInstitution : ICounterpartyTradeNature7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IFinancialInstitution : ICounterpartyTradeNature7Choice, IIsoCh
     [IsoId("_1VoPYan9EemdLtwzt4CWxg")]
     [DisplayName("Classification")]
     [IsoXmlTag("Clssfctn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<FinancialPartySectorType2Code> Classification { get; }
 
     /// <summary>

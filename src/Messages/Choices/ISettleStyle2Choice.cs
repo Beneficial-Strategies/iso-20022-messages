@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for settle style.
 /// </summary>
 [IsoId("_rPPgweLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Settle Style 2 Choice")]
 public interface ISettleStyle2Choice : IIsoChoice { }

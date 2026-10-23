@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the transaction type.
 /// </summary>
 [IsoId("_SyV7QQf_EeSaceXTzyiZRg")]
+[IsoDisplayName(@"Transaction Type 2 Choice")]
 public interface ITransactionType2Choice : IIsoChoice { }

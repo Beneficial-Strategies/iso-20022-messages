@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentSubStructureType2Choic
 /// Instrument sub-structure type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_QkVkYeLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInstrumentSubStructureType2Choice, IIsoChoiceVariant
 {
     /// <summary>

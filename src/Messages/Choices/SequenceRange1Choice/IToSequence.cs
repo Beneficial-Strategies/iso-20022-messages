@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SequenceRange1Choice;
 /// End sequence of the range.
 /// </summary>
 [IsoId("_rsIb9Iy3EeeGkvZr3jtnCQ")]
+[IsoDisplayName(@"To Sequence")]
 public interface IToSequence : ISequenceRange1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IToSequence : ISequenceRange1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("ToSeq")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

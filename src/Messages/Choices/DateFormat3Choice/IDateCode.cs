@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat3Choice;
 /// Indicates that date is unknown.
 /// </summary>
 [IsoId("_RVtzwdp-Ed-ak6NoX_4Aeg_1324481735")]
+[IsoDisplayName(@"Date Code")]
 public interface IDateCode : IDateFormat3Choice, IIsoChoiceVariant
 {
     /// <summary>

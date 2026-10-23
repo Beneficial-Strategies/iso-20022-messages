@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Capabilities of the display components performing the transaction.
 /// </summary>
 [IsoId("_mYI9YUeYEee9r7QjOdsbFw")]
+[IsoDisplayName(@"Display Capabilities")]
 public interface IDisplayCapabilities6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IDisplayCapabilities6 : IIsoComponent
     [IsoId("_mjKho0eYEee9r7QjOdsbFw")]
     [DisplayName("Available Format")]
     [IsoXmlTag("AvlblFrmt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<OutputFormat1Code> AvailableFormat { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IDisplayCapabilities6 : IIsoComponent
     [IsoId("_mjKhpUeYEee9r7QjOdsbFw")]
     [DisplayName("Number Of Lines")]
     [IsoXmlTag("NbOfLines")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfLines { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IDisplayCapabilities6 : IIsoComponent
     [IsoId("_mjKhp0eYEee9r7QjOdsbFw")]
     [DisplayName("Line Width")]
     [IsoXmlTag("LineWidth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LineWidth { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IDisplayCapabilities6 : IIsoComponent
     [IsoId("_mjKhqUeYEee9r7QjOdsbFw")]
     [DisplayName("Available Language")]
     [IsoXmlTag("AvlblLang")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<LanguageCode> AvailableLanguage { get; }
 }

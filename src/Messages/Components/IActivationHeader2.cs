@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the identification and parties playing a role in a request to pay service management message.
 /// </summary>
 [IsoId("_UUIee-H7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Activation Header")]
 public interface IActivationHeader2 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IActivationHeader2 : IIsoComponent
     [IsoId("_UVRG4eH7Eeqbls7Gk4-ckA")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IActivationHeader2 : IIsoComponent
     [IsoId("_UVRG4-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>

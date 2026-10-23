@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies other amounts pertaining to the transaction.
 /// </summary>
 [IsoId("_AkJEUNokEeC60axPepSq7g_-185304496")]
+[IsoDisplayName(@"Other Amounts")]
 public interface IOtherAmounts16 : IIsoComponent
 {
     /// <summary>
@@ -257,6 +258,7 @@ public interface IOtherAmounts16 : IIsoComponent
     [IsoId("_Aku6NNokEeC60axPepSq7g_-871934786")]
     [DisplayName("Remuneration Amount Request")]
     [IsoXmlTag("RmnrtnAmtReq")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RemunerationAmountRequest { get; }
 
     /// <summary>
@@ -329,5 +331,6 @@ public interface IOtherAmounts16 : IIsoComponent
     [IsoId("_AlCcMNokEeC60axPepSq7g_-2089465782")]
     [DisplayName("Odd Lot Fee")]
     [IsoXmlTag("OddLotFee")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OddLotFee { get; }
 }

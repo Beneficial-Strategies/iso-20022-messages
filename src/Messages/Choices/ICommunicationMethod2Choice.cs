@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies a choice for the method of communication for documents.
 /// </summary>
 [IsoId("_vGYggA1fEeKGXqvMN6jpiw")]
+[IsoDisplayName(@"Communication Method 2 Choice")]
 public interface ICommunicationMethod2Choice : IIsoChoice { }

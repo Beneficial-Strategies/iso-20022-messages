@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusReason6Choice;
 /// Reason for the status, as published in an external reason code list.
 /// </summary>
 [IsoId("_TRGiZ9p-Ed-ak6NoX_4Aeg_-1877638996")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IStatusReason6Choice, IIsoChoiceVariant
 {
     /// <summary>

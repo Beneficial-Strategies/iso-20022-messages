@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sequence of terminal management actions to be performed by a point of interaction (POI).
 /// </summary>
 [IsoId("_LYnu1H1DEeCF8NjrBemJWQ_327413113")]
+[IsoDisplayName(@"Management Plan")]
 public interface IManagementPlan1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IManagementPlan1 : IIsoComponent
     [IsoId("_LYnu131DEeCF8NjrBemJWQ_-223303412")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITerminalManagementDataSet2> DataSet { get; }
 }

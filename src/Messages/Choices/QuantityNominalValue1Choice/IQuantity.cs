@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityNominalValue1Choice;
 /// Quantity of the securities other than bonds.
 /// </summary>
 [IsoId("_wh7ZgHaiEeavseMKyTsJEA")]
+[IsoDisplayName(@"Quantity")]
 public interface IQuantity : IQuantityNominalValue1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IQuantity : IQuantityNominalValue1Choice, IIsoChoiceVariant
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("Qty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 }

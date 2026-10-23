@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_pokg9tE5Ed-BzquC8wXy7w_938886633")]
 [IsoMessage("sese.004.001.01", "sese.004.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.004.001.01")]
+[Description(@"Scope|The ReversalOfTransferOutConfirmation message is sent by an executing party to the instructing party or the instructing party's designated agent. This message is used to reverse a TransferOutConfirmation that was previously sent by the instructing party.|Usage|The ReversalOfTransferOutConfirmation message is sent by an executing party to reverse a previously sent TransferOutConfirmation.|This message must contain the reference of the message to be reversed. The message may also contain all the details of the reversed message, but this is not recommended.")]
+[IsoDisplayName(@"Reversal Of Transfer Out Confirmation")]
 public interface IReversalOfTransferOutConfirmation : IOuterRecord
 {
     /// <summary>

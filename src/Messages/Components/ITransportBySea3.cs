@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related for the transportation of goods by sea.
 /// </summary>
 [IsoId("_SuYP39p-Ed-ak6NoX_4Aeg_-719790573")]
+[IsoDisplayName(@"Transport By Sea")]
 public interface ITransportBySea3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransportBySea3 : IIsoComponent
     [IsoId("_SuYP4Np-Ed-ak6NoX_4Aeg_-719790542")]
     [DisplayName("Port Of Loading")]
     [IsoXmlTag("PortOfLoadng")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> PortOfLoading { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITransportBySea3 : IIsoComponent
     [IsoId("_SuiA0Np-Ed-ak6NoX_4Aeg_-719790520")]
     [DisplayName("Port Of Discharge")]
     [IsoXmlTag("PortOfDschrge")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> PortOfDischarge { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface ITransportBySea3 : IIsoComponent
     [IsoId("_SuiA0dp-Ed-ak6NoX_4Aeg_-719790397")]
     [DisplayName("Sea Carrier Name")]
     [IsoXmlTag("SeaCrrierNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SeaCarrierName { get; }
 }

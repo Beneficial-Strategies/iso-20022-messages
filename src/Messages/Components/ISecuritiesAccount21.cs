@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unambiguous identification for the account between the account owner and the account servicer.
 /// </summary>
 [IsoId("_m-Itu_NBEeCuA5Tr22BnwA_1737617622")]
+[IsoDisplayName(@"Securities Account")]
 public interface ISecuritiesAccount21 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface ISecuritiesAccount21 : IIsoComponent
     [IsoId("_m-SetPNBEeCuA5Tr22BnwA_-2029423443")]
     [DisplayName("Foreign Exchange Rate")]
     [IsoXmlTag("FXRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ForeignExchangeRate { get; }
 }

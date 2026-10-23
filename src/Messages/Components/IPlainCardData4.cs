@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sensible data associated with the payment card performing the transaction.
 /// </summary>
 [IsoId("_2Gul8S9mEeOlZIh7PImd0A")]
+[IsoDisplayName(@"Plain Card Data")]
 public interface IPlainCardData4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPlainCardData4 : IIsoComponent
     [IsoId("_2XsaIS9mEeOlZIh7PImd0A")]
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
+    [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
     Min8Max28NumericText PAN { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPlainCardData4 : IIsoComponent
     [IsoId("_2XsaIy9mEeOlZIh7PImd0A")]
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
     Min2Max3NumericText? CardSequenceNumber { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPlainCardData4 : IIsoComponent
     [IsoId("_2XsaJS9mEeOlZIh7PImd0A")]
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? EffectiveDate { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPlainCardData4 : IIsoComponent
     [IsoId("_2XsaJy9mEeOlZIh7PImd0A")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text ExpiryDate { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IPlainCardData4 : IIsoComponent
     [IsoId("_2XsaKS9mEeOlZIh7PImd0A")]
     [DisplayName("Service Code")]
     [IsoXmlTag("SvcCd")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? ServiceCode { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IPlainCardData4 : IIsoComponent
     [IsoId("_2XsaKy9mEeOlZIh7PImd0A")]
     [DisplayName("Track Data")]
     [IsoXmlTag("TrckData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITrackData1> TrackData { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about additional rights that can be granted for a meeting.
 /// </summary>
 [IsoId("_k8fcwa09EemDtrWpq90Ckg")]
+[IsoDisplayName(@"Additional Rights")]
 public interface IAdditionalRights3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAdditionalRights3 : IIsoComponent
     [IsoId("_lReOM609EemDtrWpq90Ckg")]
     [DisplayName("Additional Right Information URL Address")]
     [IsoXmlTag("AddtlRghtInfURLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? AdditionalRightInformationURLAddress { get; }
 
     /// <summary>

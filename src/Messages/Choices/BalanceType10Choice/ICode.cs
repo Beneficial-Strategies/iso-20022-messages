@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceType10Choice;
 /// Balance type, in a coded format.
 /// </summary>
 [IsoId("_DOF0dYakEeeUws0ZryHQ2w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBalanceType10Choice, IIsoChoiceVariant
 {
     /// <summary>

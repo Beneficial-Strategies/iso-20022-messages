@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed Instruction Status20.
 /// </summary>
 [IsoId("_YwSdxVx1Ee6fgZt44_IqFA")]
+[IsoDisplayName(@"Detailed Instruction Status20")]
 public interface IDetailedInstructionStatus20 : IIsoComponent
 {
     /// <summary>

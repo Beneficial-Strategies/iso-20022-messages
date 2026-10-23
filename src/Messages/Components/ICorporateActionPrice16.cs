@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies prices related to a corporate action option.
 /// </summary>
 [IsoId("_lvGroeEJEd-udr336SN7mQ")]
+[IsoDisplayName(@"Corporate Action Price")]
 public interface ICorporateActionPrice16 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICorporateActionPrice16 : IIsoComponent
     [IsoId("_lvGrp-EJEd-udr336SN7mQ")]
     [DisplayName("Generic Cash Price Received Per Product")]
     [IsoXmlTag("GncCshPricRcvdPerPdct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceFormat20Choice> GenericCashPriceReceivedPerProduct { get; }
 
     /// <summary>

@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.fxtr;
     "FXTradConfReqAmdmntReq",
     "urn:iso:std:iso:20022:tech:xsd:fxtr.035.001.01"
 )]
+[Description(@"Scope|The ForeignExchangeTradeConfirmationRequestAmendmentRequest message is sent from a market participant to a Central matching utility (CMU) to amend the ForeignExchangeTradeConfirmationRequest previously sent.||Usage|The request is sent by the market participants to the CMU after the confirmation is requested.")]
+[IsoDisplayName(@"Foreign Exchange Trade Confirmation Request Amendment Request V")]
 public interface IForeignExchangeTradeConfirmationRequestAmendmentRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -76,6 +78,7 @@ public interface IForeignExchangeTradeConfirmationRequestAmendmentRequestV01 : I
     [IsoId("_2S1V4IHdEeSY3ulMDfpmvA")]
     [DisplayName("Query Start Number")]
     [IsoXmlTag("QryStartNb")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText QueryStartNumber { get; }
 
     /// <summary>
@@ -92,5 +95,6 @@ public interface IForeignExchangeTradeConfirmationRequestAmendmentRequestV01 : I
     [IsoId("_gyxZAKHiEeS69KkQis5bYg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

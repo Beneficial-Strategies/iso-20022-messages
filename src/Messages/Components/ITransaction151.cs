@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Batch management transaction.
 /// </summary>
 [IsoId("_hxv1AYdNEeuBS50MFjViNw")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction151 : IIsoComponent
 {
     /// <summary>
@@ -27,6 +28,8 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYU4dNEeuBS50MFjViNw")]
     [DisplayName("Other Batch Management Type")]
     [IsoXmlTag("OthrBtchMgmtTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherBatchManagementType { get; }
 
     /// <summary>
@@ -43,6 +46,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYV4dNEeuBS50MFjViNw")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee2> AdditionalFee { get; }
 
     /// <summary>
@@ -53,6 +57,8 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYWYdNEeuBS50MFjViNw")]
     [DisplayName("Collection Identification")]
     [IsoXmlTag("ColltnId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CollectionIdentification { get; }
 
     /// <summary>
@@ -62,6 +68,8 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYW4dNEeuBS50MFjViNw")]
     [DisplayName("Batch Identification")]
     [IsoXmlTag("BtchId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? BatchIdentification { get; }
 
     /// <summary>
@@ -71,6 +79,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYXYdNEeuBS50MFjViNw")]
     [DisplayName("Collection Size")]
     [IsoXmlTag("ColltnSz")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? CollectionSize { get; }
 
     /// <summary>
@@ -80,6 +89,8 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYX4dNEeuBS50MFjViNw")]
     [DisplayName("Original Collection Identification")]
     [IsoXmlTag("OrgnlColltnId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? OriginalCollectionIdentification { get; }
 
     /// <summary>
@@ -89,6 +100,8 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYYYdNEeuBS50MFjViNw")]
     [DisplayName("Original Batch Identification")]
     [IsoXmlTag("OrgnlBtchId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? OriginalBatchIdentification { get; }
 
     /// <summary>
@@ -101,6 +114,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYY4dNEeuBS50MFjViNw")]
     [DisplayName("Number Of Batches In Collection")]
     [IsoXmlTag("NbOfBtchsInColltn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfBatchesInCollection { get; }
 
     /// <summary>
@@ -118,6 +132,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYZYdNEeuBS50MFjViNw")]
     [DisplayName("Number Of Messages")]
     [IsoXmlTag("NbOfMsgs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfMessages { get; }
 
     /// <summary>
@@ -127,6 +142,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYZ4dNEeuBS50MFjViNw")]
     [DisplayName("Remaining Messages In Collection")]
     [IsoXmlTag("RmngMsgsInColltn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? RemainingMessagesInCollection { get; }
 
     /// <summary>
@@ -140,6 +156,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYaYdNEeuBS50MFjViNw")]
     [DisplayName("Message Sequence Number")]
     [IsoXmlTag("MsgSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? MessageSequenceNumber { get; }
 
     /// <summary>
@@ -148,6 +165,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_YnxPgJb1Eeuc6pwKtqbEVQ")]
     [DisplayName("Collection Identification List")]
     [IsoXmlTag("ColltnIdList")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> CollectionIdentificationList { get; }
 
     /// <summary>
@@ -159,6 +177,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYa4dNEeuBS50MFjViNw")]
     [DisplayName("Batch Identification List")]
     [IsoXmlTag("BtchIdList")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> BatchIdentificationList { get; }
 
     /// <summary>
@@ -167,6 +186,8 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYbYdNEeuBS50MFjViNw")]
     [DisplayName("Checkpoint Identification")]
     [IsoXmlTag("ChckptId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CheckpointIdentification { get; }
 
     /// <summary>
@@ -175,6 +196,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_tGsx0Jb1Eeuc6pwKtqbEVQ")]
     [DisplayName("Collection Checksum")]
     [IsoXmlTag("ColltnChcksm")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary? CollectionChecksum { get; }
 
     /// <summary>
@@ -183,6 +205,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYb4dNEeuBS50MFjViNw")]
     [DisplayName("Batch Checksum")]
     [IsoXmlTag("BtchChcksm")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary? BatchChecksum { get; }
 
     /// <summary>
@@ -193,6 +216,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYcYdNEeuBS50MFjViNw")]
     [DisplayName("Request Acknowledgement")]
     [IsoXmlTag("ReqAck")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RequestAcknowledgement { get; }
 
     /// <summary>
@@ -201,6 +225,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYc4dNEeuBS50MFjViNw")]
     [DisplayName("Messages Before Acknowledgement")]
     [IsoXmlTag("MsgsBfrAck")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MessagesBeforeAcknowledgement { get; }
 
     /// <summary>
@@ -211,6 +236,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYdYdNEeuBS50MFjViNw")]
     [DisplayName("Positive Acknowledgement")]
     [IsoXmlTag("PostvAck")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PositiveAcknowledgement { get; }
 
     /// <summary>
@@ -219,6 +245,7 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_h2rYd4dNEeuBS50MFjViNw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 
     /// <summary>
@@ -235,5 +262,6 @@ public interface ITransaction151 : IIsoComponent
     [IsoId("_MERdQJb2Eeuc6pwKtqbEVQ")]
     [DisplayName("Continuation Indicator")]
     [IsoXmlTag("ConttnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ContinuationIndicator { get; }
 }

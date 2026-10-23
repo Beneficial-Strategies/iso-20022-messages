@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "SwtchOrdrConfAmdmntV01",
     "urn:iso:std:iso:20022:tech:xsd:setr.056.001.01"
 )]
+[Description(@"Scope|An executing party, for example, a transfer agent, sends the SwitchOrderConfirmationAmendment message to the instructing party, for example, an investment manager or its authorised representative to amend a previously sent SwitchOrderConfirmation message.|Usage|The SwitchOrderConfirmationAmendment message is used to amend a previously sent switch order confirmation.|Each order confirmation amendment specified is identified in DealReference. The reference of the original order is specified in OrderReference.|The message identification of the SwitchOrder message in which the switch order was conveyed may also be quoted in RelatedReference. The message identification of the SwitchOrderConfirmation message in which the original switch order confirmation was conveyed may also be quoted in PreviousReference.")]
+[IsoDisplayName(@"Switch Order Confirmation Amendment V")]
 public interface ISwitchOrderConfirmationAmendmentV01 : IOuterRecord
 {
     /// <summary>
@@ -45,6 +47,7 @@ public interface ISwitchOrderConfirmationAmendmentV01 : IOuterRecord
     [IsoId("_6dPGE9E7Ed-BzquC8wXy7w_-634211065")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -61,6 +64,7 @@ public interface ISwitchOrderConfirmationAmendmentV01 : IOuterRecord
     [IsoId("_6dPGFdE7Ed-BzquC8wXy7w_-633289446")]
     [DisplayName("Switch Execution Details")]
     [IsoXmlTag("SwtchExctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchExecution4> SwitchExecutionDetails { get; }
 
     /// <summary>
@@ -77,5 +81,6 @@ public interface ISwitchOrderConfirmationAmendmentV01 : IOuterRecord
     [IsoId("_6dPGF9E7Ed-BzquC8wXy7w_-633289776")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

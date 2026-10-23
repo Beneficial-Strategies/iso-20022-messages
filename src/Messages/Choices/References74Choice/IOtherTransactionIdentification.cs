@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References74Choice;
 /// Identification of a transaction that cannot be identified using a standard reference element present in the message.
 /// </summary>
 [IsoId("_SiFNsSgaEey2k_sfZmJz4g")]
+[IsoDisplayName(@"Other Transaction Identification")]
 public interface IOtherTransactionIdentification : IReferences74Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOtherTransactionIdentification : IReferences74Choice, IIsoChoi
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("OthrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

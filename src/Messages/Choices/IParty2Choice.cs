@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the identification of a person and the identification of a non-financial institution.
 /// </summary>
 [IsoId("_RCDQ4Np-Ed-ak6NoX_4Aeg_-1691234030")]
+[IsoDisplayName(@"Party 2 Choice")]
 public interface IParty2Choice : IIsoChoice { }

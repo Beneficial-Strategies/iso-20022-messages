@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about hold back and gating.
 /// </summary>
 [IsoId("_PwkDkawIEeaFSqx7FdVuJQ")]
+[IsoDisplayName(@"Hold Back Information")]
 public interface IHoldBackInformation3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IHoldBackInformation3 : IIsoComponent
     [IsoId("_QII2FawIEeaFSqx7FdVuJQ")]
     [DisplayName("Expected Release Date")]
     [IsoXmlTag("XpctdRlsDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedReleaseDate { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface IHoldBackInformation3 : IIsoComponent
     [IsoId("_QII2GawIEeaFSqx7FdVuJQ")]
     [DisplayName("Financial Instrument Name")]
     [IsoXmlTag("FinInstrmNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FinancialInstrumentName { get; }
 
     /// <summary>

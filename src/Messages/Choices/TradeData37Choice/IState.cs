@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData37Choice;
 /// </summary>
 [IsoId("_S05rE8K9EeuCIrYISEfoUg")]
 [IsoXmlTag("Stat")]
+[IsoDisplayName(@"State")]
 public interface IState : ITradeData37Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IState : ITradeData37Choice, IIsoChoiceVariant
     [IsoId("_S2WckcK9EeuCIrYISEfoUg")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IState : ITradeData37Choice, IIsoChoiceVariant
     [IsoId("_S2WclcK9EeuCIrYISEfoUg")]
     [DisplayName("Collateral Component")]
     [IsoXmlTag("CollCmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralType19> CollateralComponent { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface IState : ITradeData37Choice, IIsoChoiceVariant
     [IsoId("_S2Wcl8K9EeuCIrYISEfoUg")]
     [DisplayName("Event Day")]
     [IsoXmlTag("EvtDay")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDay { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface IState : ITradeData37Choice, IIsoChoiceVariant
     [IsoId("_S2WcmcK9EeuCIrYISEfoUg")]
     [DisplayName("Reporting Date Time")]
     [IsoXmlTag("RptgDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ReportingDateTime { get; }
 
     /// <summary>
@@ -58,6 +64,7 @@ public interface IState : ITradeData37Choice, IIsoChoiceVariant
     [IsoId("_S2Wcm8K9EeuCIrYISEfoUg")]
     [DisplayName("Funding Source")]
     [IsoXmlTag("FndgSrc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundingSource3> FundingSource { get; }
 
     /// <summary>
@@ -82,5 +89,6 @@ public interface IState : ITradeData37Choice, IIsoChoiceVariant
     [IsoId("_S2WcocK9EeuCIrYISEfoUg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

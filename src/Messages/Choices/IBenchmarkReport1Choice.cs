@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Benchmark report by the relevant national institution. The report can be either an update or a cancellation.
 /// </summary>
 [IsoId("_P2VfczrWEeedCZZ8dIPp6g")]
+[IsoDisplayName(@"Benchmark Report 1 Choice")]
 public interface IBenchmarkReport1Choice : IIsoChoice { }

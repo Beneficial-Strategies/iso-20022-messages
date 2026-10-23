@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for liability.
 /// </summary>
 [IsoId("_YmJhYCDMEeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Liability 1 Choice")]
 public interface ILiability1Choice : IIsoChoice { }

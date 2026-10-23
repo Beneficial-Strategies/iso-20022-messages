@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of a account opening instruction or account modification instruction that was previously received.
 /// </summary>
 [IsoId("_RElAd9p-Ed-ak6NoX_4Aeg_-169847202")]
+[IsoDisplayName(@"Account Management Status And Reason")]
 public interface IAccountManagementStatusAndReason1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IAccountManagementStatusAndReason1 : IIsoComponent
     [IsoId("_REuxctp-Ed-ak6NoX_4Aeg_58059420")]
     [DisplayName("Account Application Identification")]
     [IsoXmlTag("AcctApplId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountApplicationIdentification { get; }
 }

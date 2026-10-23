@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Preparation/bringing to market of a security (also known as primary market or Initial Public Offering (IPO) issuance).
 /// </summary>
 [IsoId("_r6TOIWf2Eembv_9KtOEw8g")]
+[IsoDisplayName(@"Issuance")]
 public interface IIssuance6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IIssuance6 : IIsoComponent
     [IsoId("_sG_mUWf2Eembv_9KtOEw8g")]
     [DisplayName("Issue Place")]
     [IsoXmlTag("IssePlc")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? IssuePlace { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IIssuance6 : IIsoComponent
     [IsoId("_sG_mZ2f2Eembv_9KtOEw8g")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IssueDate { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IIssuance6 : IIsoComponent
     [IsoId("_sG_mb2f2Eembv_9KtOEw8g")]
     [DisplayName("Announcement Date")]
     [IsoXmlTag("AnncmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AnnouncementDate { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface IIssuance6 : IIsoComponent
     [IsoId("_sG_md2f2Eembv_9KtOEw8g")]
     [DisplayName("Issue Size")]
     [IsoXmlTag("IsseSz")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? IssueSize { get; }
 
     /// <summary>
@@ -97,5 +102,6 @@ public interface IIssuance6 : IIsoComponent
     [IsoId("_sG_mfWf2Eembv_9KtOEw8g")]
     [DisplayName("Governing Law")]
     [IsoXmlTag("GovngLaw")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IJurisdiction1> GoverningLaw { get; }
 }

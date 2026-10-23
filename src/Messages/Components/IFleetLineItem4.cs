@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Supplies additional transaction information for fleet transactions.
 /// </summary>
 [IsoId("_HUQwMSCFEey8XKHwKquEQw")]
+[IsoDisplayName(@"Fleet Line Item")]
 public interface IFleetLineItem4 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface IFleetLineItem4 : IIsoComponent
     [IsoId("_HZlVESCFEey8XKHwKquEQw")]
     [DisplayName("Fuel Indicator")]
     [IsoXmlTag("FuelInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator FuelIndicator { get; }
 
     /// <summary>
@@ -35,6 +37,8 @@ public interface IFleetLineItem4 : IIsoComponent
     [IsoId("_HZlVFSCFEey8XKHwKquEQw")]
     [DisplayName("Fuel Brand Code")]
     [IsoXmlTag("FuelBrndCd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? FuelBrandCode { get; }
 
     /// <summary>
@@ -43,6 +47,8 @@ public interface IFleetLineItem4 : IIsoComponent
     [IsoId("_HZlVFyCFEey8XKHwKquEQw")]
     [DisplayName("Fleet Product Code")]
     [IsoXmlTag("FleetPdctCd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? FleetProductCode { get; }
 
     /// <summary>
@@ -51,6 +57,8 @@ public interface IFleetLineItem4 : IIsoComponent
     [IsoId("_HZlVGSCFEey8XKHwKquEQw")]
     [DisplayName("Fleet Product Category")]
     [IsoXmlTag("FleetPdctCtgy")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FleetProductCategory { get; }
 
     /// <summary>
@@ -59,6 +67,8 @@ public interface IFleetLineItem4 : IIsoComponent
     [IsoId("_HZlVGyCFEey8XKHwKquEQw")]
     [DisplayName("Fleet Product Qualifier")]
     [IsoXmlTag("FleetPdctQlfr")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text? FleetProductQualifier { get; }
 
     /// <summary>
@@ -67,6 +77,8 @@ public interface IFleetLineItem4 : IIsoComponent
     [IsoId("_HZlVHSCFEey8XKHwKquEQw")]
     [DisplayName("Fleet Product Code Assigner")]
     [IsoXmlTag("FleetPdctCdAssgnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FleetProductCodeAssigner { get; }
 
     /// <summary>
@@ -77,6 +89,7 @@ public interface IFleetLineItem4 : IIsoComponent
     [IsoId("_HZlVHyCFEey8XKHwKquEQw")]
     [DisplayName("Unit Price Tax Indicator")]
     [IsoXmlTag("UnitPricTaxInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? UnitPriceTaxIndicator { get; }
 
     /// <summary>
@@ -101,6 +114,8 @@ public interface IFleetLineItem4 : IIsoComponent
     [IsoId("_HZlVJSCFEey8XKHwKquEQw")]
     [DisplayName("Other Unit Of Measure")]
     [IsoXmlTag("OthrUnitOfMeasr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherUnitOfMeasure { get; }
 
     /// <summary>
@@ -109,6 +124,7 @@ public interface IFleetLineItem4 : IIsoComponent
     [IsoId("_HZlVJyCFEey8XKHwKquEQw")]
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ProductQuantity { get; }
 
     /// <summary>
@@ -125,6 +141,7 @@ public interface IFleetLineItem4 : IIsoComponent
     [IsoId("_HZlVKyCFEey8XKHwKquEQw")]
     [DisplayName("Non Taxable Indicator")]
     [IsoXmlTag("NonTaxblInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NonTaxableIndicator { get; }
 
     /// <summary>
@@ -133,6 +150,7 @@ public interface IFleetLineItem4 : IIsoComponent
     [IsoId("_HZlVLSCFEey8XKHwKquEQw")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax39> Tax { get; }
 
     /// <summary>

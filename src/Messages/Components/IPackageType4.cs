@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Chunk of a software package.
 /// </summary>
 [IsoId("_flEsIXDUEe2MCaKO5AtGsA")]
+[IsoDisplayName(@"Package Type")]
 public interface IPackageType4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPackageType4 : IIsoComponent
     [IsoId("_fsSHY3DUEe2MCaKO5AtGsA")]
     [DisplayName("Package Length")]
     [IsoXmlTag("PackgLngth")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? PackageLength { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IPackageType4 : IIsoComponent
     [IsoId("_fsSHZXDUEe2MCaKO5AtGsA")]
     [DisplayName("Offset Start")]
     [IsoXmlTag("OffsetStart")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? OffsetStart { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IPackageType4 : IIsoComponent
     [IsoId("_fsSHZ3DUEe2MCaKO5AtGsA")]
     [DisplayName("Offset End")]
     [IsoXmlTag("OffsetEnd")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? OffsetEnd { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IPackageType4 : IIsoComponent
     [IsoId("_fsSucXDUEe2MCaKO5AtGsA")]
     [DisplayName("Package Block")]
     [IsoXmlTag("PackgBlck")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExternallyDefinedData4> PackageBlock { get; }
 }

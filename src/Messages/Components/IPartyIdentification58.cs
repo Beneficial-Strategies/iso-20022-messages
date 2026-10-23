@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the details of an organisation.
 /// </summary>
 [IsoId("_6TOaIpqlEeGSON8vddiWzQ_1457984694")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification58 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyIdentification58 : IIsoComponent
     [IsoId("_6TOaI5qlEeGSON8vddiWzQ_544533769")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPartyIdentification58 : IIsoComponent
     [IsoId("_6TOaJJqlEeGSON8vddiWzQ_-631834127")]
     [DisplayName("Legal Name")]
     [IsoXmlTag("LglNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? LegalName { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
 /// </summary>
 [IsoId("_XLSgAtp-Ed-ak6NoX_4Aeg_-1555366002")]
+[IsoDisplayName(@"Party Text Information")]
 public interface IPartyTextInformation3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyTextInformation3 : IIsoComponent
     [IsoId("_XLSgA9p-Ed-ak6NoX_4Aeg_1628689875")]
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text? DeclarationDetails { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPartyTextInformation3 : IIsoComponent
     [IsoId("_XLSgBNp-Ed-ak6NoX_4Aeg_1863065851")]
     [DisplayName("Party Contact Details")]
     [IsoXmlTag("PtyCtctDtls")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text? PartyContactDetails { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IPartyTextInformation3 : IIsoComponent
     [IsoId("_XLSgBdp-Ed-ak6NoX_4Aeg_-17239789")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text? RegistrationDetails { get; }
 }

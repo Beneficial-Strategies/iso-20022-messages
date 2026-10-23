@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics shared by all individual notifications included in the message.
 /// </summary>
 [IsoId("_fi4XMbe4Ee-Dk_aQVAan8Q")]
+[IsoDisplayName(@"Group Header132")]
 public interface IGroupHeader132 : IIsoComponent
 {
     /// <summary>

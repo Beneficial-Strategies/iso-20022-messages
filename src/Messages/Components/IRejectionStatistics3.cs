@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed information on rejections for derivatives submitted to trade repositories and failed to pass validations.
 /// </summary>
 [IsoId("_MwencVfdEeqZr5K1Woax-g")]
+[IsoDisplayName(@"Rejection Statistics")]
 public interface IRejectionStatistics3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRejectionStatistics3 : IIsoComponent
     [IsoId("_NHlf4VfdEeqZr5K1Woax-g")]
     [DisplayName("Total Number Of Technical Rejections")]
     [IsoXmlTag("TtlNbOfTechRjctns")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber TotalNumberOfTechnicalRejections { get; }
 
     /// <summary>

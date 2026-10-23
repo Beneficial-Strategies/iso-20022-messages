@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Order to invest the investor's principal in an investment fund.
 /// </summary>
 [IsoId("5a4a5eec-77f6-48c6-beab-f7f1d471f03f")]
+[IsoDisplayName(@"Subscription Order17")]
 public interface ISubscriptionOrder17 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ISubscriptionOrder17 : IIsoComponent
     [IsoId("71a2569f-f0ea-4d83-8bf8-aad6c88e7190")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType4Choice> OrderType { get; }
 
     /// <summary>
@@ -209,6 +211,7 @@ public interface ISubscriptionOrder17 : IIsoComponent
     [IsoId("9665d886-caf0-4711-ad51-659bce87539c")]
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; }
 
     /// <summary>
@@ -233,6 +236,7 @@ public interface ISubscriptionOrder17 : IIsoComponent
     [IsoId("f0d6579c-6e91-4183-837a-e024419ee728")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary50> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -249,6 +253,7 @@ public interface ISubscriptionOrder17 : IIsoComponent
     [IsoId("fa275d26-9c79-45e0-8604-be42f408ff6b")]
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISourceOfCash1Choice> SourceOfCash { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the ownership of an investment account.
 /// </summary>
 [IsoId("_TT7M6tp-Ed-ak6NoX_4Aeg_2021205061")]
+[IsoDisplayName(@"Investment Account Ownership Information")]
 public interface IInvestmentAccountOwnershipInformation4 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface IInvestmentAccountOwnershipInformation4 : IIsoComponent
     [IsoId("_TUE94Np-Ed-ak6NoX_4Aeg_2024900244")]
     [DisplayName("Extended Money Laundering Check")]
     [IsoXmlTag("XtndedMnyLndrgChck")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedMoneyLaunderingCheck { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IInvestmentAccountOwnershipInformation4 : IIsoComponent
     [IsoId("_TUE94dp-Ed-ak6NoX_4Aeg_2024901192")]
     [DisplayName("Ownership Beneficiary Rate")]
     [IsoXmlTag("OwnrshBnfcryRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OwnershipBeneficiaryRate { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface IInvestmentAccountOwnershipInformation4 : IIsoComponent
     [IsoId("_TUE94tp-Ed-ak6NoX_4Aeg_2025822759")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientIdentification { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IInvestmentAccountOwnershipInformation4 : IIsoComponent
     [IsoId("_TUE949p-Ed-ak6NoX_4Aeg_2026746126")]
     [DisplayName("Fiscal Exemption")]
     [IsoXmlTag("FsclXmptn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FiscalExemption { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IInvestmentAccountOwnershipInformation4 : IIsoComponent
     [IsoId("_TUE95Np-Ed-ak6NoX_4Aeg_2026747073")]
     [DisplayName("Signatory Right Indicator")]
     [IsoXmlTag("SgntryRghtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SignatoryRightIndicator { get; }
 
     /// <summary>
@@ -81,5 +89,8 @@ public interface IInvestmentAccountOwnershipInformation4 : IIsoComponent
     [IsoId("_TUE95dp-Ed-ak6NoX_4Aeg_1886110107")]
     [DisplayName("Modified Investor Profile Validation")]
     [IsoXmlTag("ModfdInvstrPrflVldtn")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope11> ModifiedInvestorProfileValidation { get; }
 }

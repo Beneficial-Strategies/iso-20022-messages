@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement totals or the report.
 /// </summary>
 [IsoId("_jWGXwFdGEeeIAMBcVOw01w")]
+[IsoDisplayName(@"Settlement Totals")]
 public interface ISettlementTotals1 : IIsoComponent
 {
     /// <summary>

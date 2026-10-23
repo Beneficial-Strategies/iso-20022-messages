@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency36Choice;
 /// </summary>
 [IsoId("_seR6M2k2Eeanu6HLe77Rkg")]
 [IsoXmlTag("Prd")]
+[IsoDisplayName(@"Period")]
 public interface IPeriod : IFrequency36Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IPeriod : IFrequency36Choice, IIsoChoiceVariant
     [IsoId("_OPlVUB72EeSxevWRRWxNAg")]
     [DisplayName("Count Per Period")]
     [IsoXmlTag("CntPerPrd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber CountPerPeriod { get; }
 }

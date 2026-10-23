@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice19Choi
 /// Price expressed in units.
 /// </summary>
 [IsoId("_ijNt4MgqEeuGrNSsxk3B0A")]
+[IsoDisplayName(@"Unit")]
 public interface IUnit : ISecuritiesTransactionPrice19Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IUnit : ISecuritiesTransactionPrice19Choice, IIsoChoiceVariant
     /// Number of objects represented as a decimal number, such as 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
     LongFraction19DecimalNumber Value { get; }
 }

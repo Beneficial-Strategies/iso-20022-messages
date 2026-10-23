@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Point Of Interaction Capabilities10.
 /// </summary>
 [IsoId("_tdeaEZ9fEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Point Of Interaction Capabilities10")]
 public interface IPointOfInteractionCapabilities10 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IPointOfInteractionCapabilities10 : IIsoComponent
     /// </summary>
     [DisplayName("Card Read Data")]
     [IsoXmlTag("CardRdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CardDataReading4Code> CardReadData { get; }
 
     /// <summary>
@@ -23,6 +25,7 @@ public interface IPointOfInteractionCapabilities10 : IIsoComponent
     /// </summary>
     [DisplayName("Card Write Data")]
     [IsoXmlTag("CardWrtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CardDataReading4Code> CardWriteData { get; }
 
     /// <summary>
@@ -30,6 +33,7 @@ public interface IPointOfInteractionCapabilities10 : IIsoComponent
     /// </summary>
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CardholderVerificationCapability3Code> Authentication { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IPointOfInteractionCapabilities10 : IIsoComponent
     /// </summary>
     [DisplayName("Withdrawal Media")]
     [IsoXmlTag("WdrwlMdia")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATMMediaType1Code> WithdrawalMedia { get; }
 
     /// <summary>
@@ -72,6 +77,7 @@ public interface IPointOfInteractionCapabilities10 : IIsoComponent
     /// </summary>
     [DisplayName("Deposited Media")]
     [IsoXmlTag("DpstdMdia")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATMMediaType4Code> DepositedMedia { get; }
 
     /// <summary>
@@ -79,6 +85,7 @@ public interface IPointOfInteractionCapabilities10 : IIsoComponent
     /// </summary>
     [DisplayName("Message Capabilities")]
     [IsoXmlTag("MsgCpblties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisplayCapabilities5> MessageCapabilities { get; }
 
     /// <summary>
@@ -86,6 +93,7 @@ public interface IPointOfInteractionCapabilities10 : IIsoComponent
     /// </summary>
     [DisplayName("Interactive Transactions")]
     [IsoXmlTag("IntractvTxs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max256Text> InteractiveTransactions { get; }
 
     /// <summary>

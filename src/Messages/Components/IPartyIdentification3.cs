@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous way to identify an organisation.
 /// </summary>
 [IsoId("_QQa_otp-Ed-ak6NoX_4Aeg_51184003")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IPartyIdentification3 : IIsoComponent
     [IsoId("_QQa_o9p-Ed-ak6NoX_4Aeg_120447237")]
     [DisplayName("BIC Or BEI")]
     [IsoXmlTag("BICOrBEI")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier BICOrBEI { get; }
 }

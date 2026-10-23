@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the message that is associated with the activity.
 /// </summary>
 [IsoId("_RI5fxdp-Ed-ak6NoX_4Aeg_156972015")]
+[IsoDisplayName(@"Activity")]
 public interface IActivity1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IActivity1 : IIsoComponent
     [IsoId("_RI5fxtp-Ed-ak6NoX_4Aeg_180986461")]
     [DisplayName("Message Name")]
     [IsoXmlTag("MsgNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text MessageName { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IActivity1 : IIsoComponent
     [IsoId("_RI5fx9p-Ed-ak6NoX_4Aeg_495904420")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

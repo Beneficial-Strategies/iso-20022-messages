@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the baskets identification and the Eligibility Set Profile.
 /// </summary>
 [IsoId("_rh-hcLzTEeivTd4NUfCi2g")]
+[IsoDisplayName(@"Basket Identification And Eligibility Set Profile")]
 public interface IBasketIdentificationAndEligibilitySetProfile1 : IIsoComponent
 {
     /// <summary>

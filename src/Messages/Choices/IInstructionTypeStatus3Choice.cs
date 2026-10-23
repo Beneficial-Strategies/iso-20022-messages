@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of instruction type status.
 /// </summary>
 [IsoId("_7xaDIa-nEemJ1NnLPsTFaw")]
+[IsoDisplayName(@"Instruction Type Status 3 Choice")]
 public interface IInstructionTypeStatus3Choice : IIsoChoice { }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "SctiesFincgRptgTxStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:auth.084.001.01"
 )]
+[Description(@"The SecuritiesFinancingReportingTransactionStatusAdvice message is sent by the trade repository (TR) to the authority or made available to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, identifying the transactions rejected and the reasons for a rejection.")]
+[IsoDisplayName(@"Securities Financing Reporting Transaction Status Advice V")]
 public interface ISecuritiesFinancingReportingTransactionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface ISecuritiesFinancingReportingTransactionStatusAdviceV01 : IOute
     [IsoId("_2zvMMQuAEeqVvtu9Ny8FDA")]
     [DisplayName("Transaction Report Status And Reason")]
     [IsoXmlTag("TxRptStsAndRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeData11Choice> TransactionReportStatusAndReason { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface ISecuritiesFinancingReportingTransactionStatusAdviceV01 : IOute
     [IsoId("_2zvMMwuAEeqVvtu9Ny8FDA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Credit Transfer Transaction62.
 /// </summary>
 [IsoId("_84CjQTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Credit Transfer Transaction62")]
 public interface ICreditTransferTransaction62 : IIsoComponent
 {
     /// <summary>
@@ -233,6 +234,7 @@ public interface ICreditTransferTransaction62 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent3> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -240,6 +242,7 @@ public interface ICreditTransferTransaction62 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>
@@ -261,6 +264,7 @@ public interface ICreditTransferTransaction62 : IIsoComponent
     /// </summary>
     [DisplayName("Underlying Allocation")]
     [IsoXmlTag("UndrlygAllcn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionAllocation1> UnderlyingAllocation { get; }
 
     /// <summary>
@@ -275,5 +279,6 @@ public interface ICreditTransferTransaction62 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification Assignment4.
 /// </summary>
 [IsoId("_0_d1wTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Identification Assignment4")]
 public interface IIdentificationAssignment4 : IIsoComponent
 {
     /// <summary>

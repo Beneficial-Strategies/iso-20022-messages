@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party49Choice;
 /// </summary>
 [IsoId("_dbeBY-EpEemRzcIkmUETeA")]
 [IsoXmlTag("OrgId")]
+[IsoDisplayName(@"Organisation Identification")]
 public interface IOrganisationIdentification : IParty49Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IOrganisationIdentification : IParty49Choice, IIsoChoiceVariant
     [IsoId("_gSyz0-EpEemRzcIkmUETeA")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier? AnyBIC { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IOrganisationIdentification : IParty49Choice, IIsoChoiceVariant
     [IsoId("_gSyz1eEpEemRzcIkmUETeA")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IOrganisationIdentification : IParty49Choice, IIsoChoiceVariant
     [IsoId("_hfVfceEpEemRzcIkmUETeA")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 
     /// <summary>
@@ -42,5 +47,6 @@ public interface IOrganisationIdentification : IParty49Choice, IIsoChoiceVariant
     [IsoId("_gSyz1-EpEemRzcIkmUETeA")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericOrganisationIdentification1> Other { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a which classifies the type of the security.
 /// </summary>
 [IsoId("_ekC-AdR7EemZdYGWu384Zw")]
+[IsoDisplayName(@"Compare Securities Lending Type")]
 public interface ICompareSecuritiesLendingType2 : IIsoComponent
 {
     /// <summary>

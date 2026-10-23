@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Modality of counting as a predefined or proprietary code value.
 /// </summary>
 [IsoId("_ZBJPkK-vEemJ1NnLPsTFaw")]
+[IsoDisplayName(@"Modality Of Counting 1 Choice")]
 public interface IModalityOfCounting1Choice : IIsoChoice { }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Trade Leg Notification Identification1Choice.
 /// </summary>
 [IsoId("_5vhw04cREe-U27oWwgmhCQ")]
+[IsoDisplayName(@"Trade Leg Notification Identification1Choice")]
 public interface ITradeLegNotificationIdentification1Choice : IIsoChoice { }

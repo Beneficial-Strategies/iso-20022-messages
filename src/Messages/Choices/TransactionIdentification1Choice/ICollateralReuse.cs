@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification1Choice
 /// </summary>
 [IsoId("_q0jNYK7LEemZxoEFHjN-AQ")]
 [IsoXmlTag("CollReuse")]
+[IsoDisplayName(@"Collateral Reuse")]
 public interface ICollateralReuse : ITransactionIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>

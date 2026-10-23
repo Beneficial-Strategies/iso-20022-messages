@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details relative to the submission of the certificate data set.
 /// </summary>
 [IsoId("_TnmW1tp-Ed-ak6NoX_4Aeg_-1858308306")]
+[IsoDisplayName(@"Required Submission")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IRequiredSubmission4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IRequiredSubmission4 : IIsoComponent
     [IsoId("_TnmW19p-Ed-ak6NoX_4Aeg_-1858308280")]
     [DisplayName("Submitter")]
     [IsoXmlTag("Submitr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> Submitter { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IRequiredSubmission4 : IIsoComponent
     [IsoId("_TnwH0dp-Ed-ak6NoX_4Aeg_-530283967")]
     [DisplayName("Match Issue Date")]
     [IsoXmlTag("MtchIsseDt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator MatchIssueDate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IRequiredSubmission4 : IIsoComponent
     [IsoId("_TnwH0tp-Ed-ak6NoX_4Aeg_-523817028")]
     [DisplayName("Match Inspection Date")]
     [IsoXmlTag("MtchInspctnDt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator MatchInspectionDate { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IRequiredSubmission4 : IIsoComponent
     [IsoId("_TnwH09p-Ed-ak6NoX_4Aeg_-456402441")]
     [DisplayName("Authorised Inspector Indicator")]
     [IsoXmlTag("AuthrsdInspctrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AuthorisedInspectorIndicator { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IRequiredSubmission4 : IIsoComponent
     [IsoId("_TnwH1Np-Ed-ak6NoX_4Aeg_-198739488")]
     [DisplayName("Match Consignee")]
     [IsoXmlTag("MtchConsgn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator MatchConsignee { get; }
 
     /// <summary>
@@ -81,5 +88,6 @@ public interface IRequiredSubmission4 : IIsoComponent
     [IsoId("_TnwH1tp-Ed-ak6NoX_4Aeg_161434273")]
     [DisplayName("Line Item Identification")]
     [IsoXmlTag("LineItmId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> LineItemIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of a bulk or multiple or switch order that was previously received.
 /// </summary>
 [IsoId("_Uvkrg9p-Ed-ak6NoX_4Aeg_-1625631905")]
+[IsoDisplayName(@"Order Status And Reason")]
 public interface IOrderStatusAndReason3 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,7 @@ public interface IOrderStatusAndReason3 : IIsoComponent
     [IsoId("_Uvt1cNp-Ed-ak6NoX_4Aeg_-1625631819")]
     [DisplayName("Switch Order Leg Identification")]
     [IsoXmlTag("SwtchOrdrLegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SwitchOrderLegIdentification { get; }
 }

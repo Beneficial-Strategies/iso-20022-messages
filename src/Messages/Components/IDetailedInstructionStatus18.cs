@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a meeting instruction vote.
 /// </summary>
 [IsoId("__hC9MTUCEe2tRf29bleifQ")]
+[IsoDisplayName(@"Detailed Instruction Status")]
 public interface IDetailedInstructionStatus18 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDetailedInstructionStatus18 : IIsoComponent
     [IsoId("__6rlNzUCEe2tRf29bleifQ")]
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SingleInstructionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IDetailedInstructionStatus18 : IIsoComponent
     [IsoId("__6rlOTUCEe2tRf29bleifQ")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IDetailedInstructionStatus18 : IIsoComponent
     [IsoId("__6rlPTUCEe2tRf29bleifQ")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubAccountIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,9 @@ public interface IDetailedInstructionStatus18 : IIsoComponent
     [IsoId("__6rlPzUCEe2tRf29bleifQ")]
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
+    [MinLength(0)]
+    [MaxLength(250)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification246Choice> RightsHolder { get; }
 
     /// <summary>
@@ -65,6 +75,7 @@ public interface IDetailedInstructionStatus18 : IIsoComponent
     [IsoId("__6rlQzUCEe2tRf29bleifQ")]
     [DisplayName("Standing Instruction")]
     [IsoXmlTag("StgInstr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? StandingInstruction { get; }
 
     /// <summary>
@@ -89,5 +100,8 @@ public interface IDetailedInstructionStatus18 : IIsoComponent
     [IsoId("__6rlSTUCEe2tRf29bleifQ")]
     [DisplayName("Vote Per Resolution")]
     [IsoXmlTag("VotePerRsltn")]
+    [MinLength(0)]
+    [MaxLength(1000)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVote17> VotePerResolution { get; }
 }

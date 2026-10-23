@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice;
 /// <summary>
 /// Any BIC.
 /// </summary>
+[IsoDisplayName(@"Any BIC")]
 public interface IAnyBIC : ITransactionAmendment1Choice, IIsoChoiceVariant
 {
     /// <summary>

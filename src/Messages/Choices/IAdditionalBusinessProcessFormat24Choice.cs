@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Additional Business Process Format24Choice.
 /// </summary>
 [IsoId("_kv5XmZt3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Additional Business Process Format24Choice")]
 public interface IAdditionalBusinessProcessFormat24Choice : IIsoChoice { }

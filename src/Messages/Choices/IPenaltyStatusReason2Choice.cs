@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Specifies the penalties status reason.</summary>
 [IsoId("_vEVX1R-DEeuwwezkzufkMw")]
+[IsoDisplayName(@"Penalty Status Reason 2 Choice")]
 public interface IPenaltyStatusReason2Choice : IIsoChoice { }

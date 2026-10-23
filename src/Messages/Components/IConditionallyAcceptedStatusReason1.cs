@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for a conditionally accepted status.
 /// </summary>
 [IsoId("_UyQMEdp-Ed-ak6NoX_4Aeg_524981898")]
+[IsoDisplayName(@"Conditionally Accepted Status Reason")]
 public interface IConditionallyAcceptedStatusReason1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,9 @@ public interface IConditionallyAcceptedStatusReason1 : IIsoComponent
     [IsoId("_UyQMEtp-Ed-ak6NoX_4Aeg_524981907")]
     [DisplayName("Structured")]
     [IsoXmlTag("Strd")]
+    [MinLength(1)]
+    [MaxLength(4)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ConditionallyAcceptedStatusReason1Code> Structured { get; }
 
     /// <summary>
@@ -25,5 +29,7 @@ public interface IConditionallyAcceptedStatusReason1 : IIsoComponent
     [IsoId("_UyQME9p-Ed-ak6NoX_4Aeg_524982157")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

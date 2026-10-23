@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Underlying Transaction33.
 /// </summary>
 [IsoId("_9c2ggTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Underlying Transaction33")]
 public interface IUnderlyingTransaction33 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IUnderlyingTransaction33 : IIsoComponent
     /// </summary>
     [DisplayName("Original Payment Information And Cancellation")]
     [IsoXmlTag("OrgnlPmtInfAndCxl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalPaymentInstruction49> OriginalPaymentInformationAndCancellation { get; }
 }

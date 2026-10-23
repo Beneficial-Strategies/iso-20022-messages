@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details specific to the individual transaction(s) included in the message.
 /// </summary>
 [IsoId("93934465-b451-4b8f-9290-2b4ac7d51d84")]
+[IsoDisplayName(@"Credit Transfer Transaction74")]
 public interface ICreditTransferTransaction74 : IIsoComponent
 {
     /// <summary>
@@ -153,6 +154,7 @@ public interface ICreditTransferTransaction74 : IIsoComponent
     [IsoId("26cdbbac-3c45-47a9-bea1-bd02a188bfbc")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent3> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -169,6 +171,9 @@ public interface ICreditTransferTransaction74 : IIsoComponent
     [IsoId("8eaa4431-dfa2-4ff5-84c4-85f4ea479289")]
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting10> RegulatoryReporting { get; }
 
     /// <summary>
@@ -185,6 +190,9 @@ public interface ICreditTransferTransaction74 : IIsoComponent
     [IsoId("b881d794-be1d-4f2b-a4ce-c52dc9457692")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation8> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -201,6 +209,7 @@ public interface ICreditTransferTransaction74 : IIsoComponent
     [IsoId("63afda71-2174-48bb-a151-5b15b10138a2")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument15> EnclosedFile { get; }
 
     /// <summary>
@@ -209,5 +218,6 @@ public interface ICreditTransferTransaction74 : IIsoComponent
     [IsoId("8308c3a9-fa92-4007-be29-9f09ab0b28f0")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

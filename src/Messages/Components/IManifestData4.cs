@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the related items or attachments (such as message types and number of messages types) within the file.
 /// </summary>
 [IsoId("_zswRIcF1EfC5bNIScwOWFA")]
+[IsoDisplayName(@"Manifest Data4")]
 public interface IManifestData4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IManifestData4 : IIsoComponent
     [IsoId("_zvgqMcF1EfC5bNIScwOWFA")]
     [DisplayName("Message Definition Identifier")]
     [IsoXmlTag("MsgDefIdr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> MessageDefinitionIdentifier { get; }
 
     /// <summary>

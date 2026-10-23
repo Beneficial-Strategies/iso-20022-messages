@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Processing characteristics linked to the instrument, that is, not to the market.
 /// </summary>
 [IsoId("_cx-V4TgCEei6RvewLQWEqw")]
+[IsoDisplayName(@"Forms")]
 public interface IForms1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IForms1 : IIsoComponent
     [IsoId("_dCMjMTgCEei6RvewLQWEqw")]
     [DisplayName("Application Form")]
     [IsoXmlTag("ApplForm")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ApplicationForm { get; }
 
     /// <summary>

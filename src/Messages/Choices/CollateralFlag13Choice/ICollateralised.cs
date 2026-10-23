@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralFlag13Choice;
 /// </summary>
 [IsoId("_J_aqIcg5Eeu4ecZgAYuz5w")]
 [IsoXmlTag("Collsd")]
+[IsoDisplayName(@"Collateralised")]
 public interface ICollateralised : ICollateralFlag13Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICollateralised : ICollateralFlag13Choice, IIsoChoiceVariant
     [IsoId("_KA3bo8g5Eeu4ecZgAYuz5w")]
     [DisplayName("Collateral Value Date")]
     [IsoXmlTag("CollValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CollateralValueDate { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface ICollateralised : ICollateralFlag13Choice, IIsoChoiceVariant
     [IsoId("_KA3bp8g5Eeu4ecZgAYuz5w")]
     [DisplayName("Net Exposure Collateralisation Indicator")]
     [IsoXmlTag("NetXpsrCollstnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NetExposureCollateralisationIndicator { get; }
 
     /// <summary>

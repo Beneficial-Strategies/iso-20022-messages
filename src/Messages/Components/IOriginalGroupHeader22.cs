@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the original group, to which the message refers.
 /// </summary>
 [IsoId("_4qUW4TEyEe6g-ffJsqGiSA")]
+[Description(@"Provides details on the original group, to which the message refers.")]
+[IsoDisplayName(@"Original Group Header22")]
 public interface IOriginalGroupHeader22 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +60,7 @@ public interface IOriginalGroupHeader22 : IIsoComponent
     /// </summary>
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation14> StatusReasonInformation { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface IOriginalGroupHeader22 : IIsoComponent
     /// </summary>
     [DisplayName("Number Of Transactions Per Status")]
     [IsoXmlTag("NbOfTxsPerSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfTransactionsPerStatus5> NumberOfTransactionsPerStatus { get; }
 }

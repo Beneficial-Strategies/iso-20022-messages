@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus5Choice;
 /// Provides the status of settlement of an instruction/financial instrument movement.
 /// </summary>
 [IsoId("_w2B8NEABEeCaq78Ig8ATcA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlementStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

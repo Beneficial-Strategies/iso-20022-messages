@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeToMaturity1Choice;
 /// </summary>
 [IsoId("__m-r4MVaEeiYpLQka876sg")]
 [IsoXmlTag("Prd")]
+[IsoDisplayName(@"Period")]
 public interface IPeriod : ITimeToMaturity1Choice, IIsoChoiceVariant
 {
     /// <summary>

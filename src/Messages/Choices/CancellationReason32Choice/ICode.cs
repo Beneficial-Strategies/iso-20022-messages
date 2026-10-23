@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationReason32Choice;
 /// Cancellation reason expressed as a code.
 /// </summary>
 [IsoId("_E3LrMViCEea0N7AwCvR5KA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICancellationReason32Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ICode : ICancellationReason32Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

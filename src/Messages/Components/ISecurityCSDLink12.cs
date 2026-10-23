@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security CSD Link12.
 /// </summary>
 [IsoId("_FpaikeFTEe6zNorB_Q2tDg")]
+[IsoDisplayName(@"Security CSD Link12")]
 public interface ISecurityCSDLink12 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface ISecurityCSDLink12 : IIsoComponent
     /// </summary>
     [DisplayName("Issuance Account")]
     [IsoXmlTag("IssncAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIssuanceAccount3> IssuanceAccount { get; }
 
     /// <summary>

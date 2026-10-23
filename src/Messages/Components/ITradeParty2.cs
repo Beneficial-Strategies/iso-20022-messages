@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies an entity involved in a trade activity.
 /// </summary>
 [IsoId("_4NfCAdOdEeS75MhTUaTyUQ")]
+[IsoDisplayName(@"Trade Party")]
 public interface ITradeParty2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ITradeParty2 : IIsoComponent
     [IsoId("_4Xc2VdOdEeS75MhTUaTyUQ")]
     [DisplayName("Tax Party")]
     [IsoXmlTag("TaxPty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxParty3> TaxParty { get; }
 }

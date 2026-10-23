@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card transaction information to be transferred.
 /// </summary>
 [IsoId("_Y-DEIfwLEeGHDMP28rpT3g_1761080314")]
+[IsoDisplayName(@"Transaction Data")]
 public interface ITransactionData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionData1 : IIsoComponent
     [IsoId("_Y-DEIvwLEeGHDMP28rpT3g_237700941")]
     [DisplayName("Card Brand")]
     [IsoXmlTag("CardBrnd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardBrand { get; }
 
     /// <summary>

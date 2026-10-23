@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentLineType1Choice;
 /// Line identification type in a coded form.
 /// </summary>
 [IsoId("__rM9WabkEeKvUvwX_r3tzA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDocumentLineType1Choice, IIsoChoiceVariant
 {
     /// <summary>

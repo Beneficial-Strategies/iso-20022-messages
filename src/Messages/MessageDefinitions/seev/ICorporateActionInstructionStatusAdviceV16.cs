@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnInstrStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.034.001.16"
 )]
+[IsoDisplayName(@"Corporate Action Instruction Status Advice V16")]
 public interface ICorporateActionInstructionStatusAdviceV16 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface ICorporateActionInstructionStatusAdviceV16 : IOuterRecord
     /// </summary>
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification33> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public interface ICorporateActionInstructionStatusAdviceV16 : IOuterRecord
     /// </summary>
     [DisplayName("Instruction Processing Status")]
     [IsoXmlTag("InstrPrcgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionProcessingStatus60Choice> InstructionProcessingStatus { get; }
 
     /// <summary>
@@ -71,5 +74,6 @@ public interface ICorporateActionInstructionStatusAdviceV16 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

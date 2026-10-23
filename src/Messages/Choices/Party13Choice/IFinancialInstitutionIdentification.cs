@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party13Choice;
 /// </summary>
 [IsoId("_6Q10hZqlEeGSON8vddiWzQ_1922530449")]
 [IsoXmlTag("FIId")]
+[IsoDisplayName(@"Financial Institution Identification")]
 public interface IFinancialInstitutionIdentification : IParty13Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IFinancialInstitutionIdentification : IParty13Choice, IIsoChoic
     [IsoId("_6T-oF5qlEeGSON8vddiWzQ_-1460045446")]
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
+    [IsoSimpleType(IsoSimpleType.BICFIIdentifier)]
     BICFIIdentifier? BICFI { get; }
 
     /// <summary>

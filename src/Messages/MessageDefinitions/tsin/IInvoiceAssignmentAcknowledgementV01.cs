@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.tsin;
 /// </summary>
 [IsoId("_OTgzNDk4-AOSNFX-8224507")]
 [IsoMessage("tsin.013.001.01", "InvcAssgnmtAck", "urn:iso:std:iso:20022:tech:xsd:tsin.013.001.01")]
+[Description(@"The InvoiceAssignmentAcknowledgement message is sent from a trade partner to communicate the status of payment obligations related to financial items. The message can be sent independently or as a response to an InvoiceAssignmentNotification message.|Depending on legal contexts the message may be required as a response to an InvoiceAssignmentNotification message in order for the assignment to become effective.|The trade party may include references to the corresponding items of an InvoiceAssignmentRequest, InvoiceAssignmentStatus or InvoiceAssignmentNotification or other messages and may include referenced data.|The message can carry digital signatures if required by context.")]
+[IsoDisplayName(@"Invoice Assignment Acknowledgement V")]
 public interface IInvoiceAssignmentAcknowledgementV01 : IOuterRecord
 {
     /// <summary>
@@ -31,6 +33,7 @@ public interface IInvoiceAssignmentAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNTAw-AOSNFX-8224507")]
     [DisplayName("Payment Status List")]
     [IsoXmlTag("PmtStsList")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancingItemList1> PaymentStatusList { get; }
 
     /// <summary>
@@ -39,6 +42,7 @@ public interface IInvoiceAssignmentAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNTAx-AOSNFX-8224507")]
     [DisplayName("Payment Status Count")]
     [IsoXmlTag("PmtStsCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? PaymentStatusCount { get; }
 
     /// <summary>
@@ -47,6 +51,7 @@ public interface IInvoiceAssignmentAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNTAy-AOSNFX-8224507")]
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? ItemCount { get; }
 
     /// <summary>
@@ -55,6 +60,7 @@ public interface IInvoiceAssignmentAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNTAz-AOSNFX-8224507")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -63,5 +69,6 @@ public interface IInvoiceAssignmentAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNTA0-AOSNFX-8224507")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncapsulatedBusinessMessage1> AttachedMessage { get; }
 }

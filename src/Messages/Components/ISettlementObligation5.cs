@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the settlement obligation.
 /// </summary>
 [IsoId("_-ezL8aMOEeCojJW5vEuTEQ_1121588279")]
+[IsoDisplayName(@"Settlement Obligation")]
 public interface ISettlementObligation5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISettlementObligation5 : IIsoComponent
     [IsoId("_-ezL8qMOEeCojJW5vEuTEQ_1007749213")]
     [DisplayName("Related Settlement Obligation Identification")]
     [IsoXmlTag("RltdSttlmOblgtnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RelatedSettlementObligationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ISettlementObligation5 : IIsoComponent
     [IsoId("_-ezL9KMOEeCojJW5vEuTEQ_-986395493")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Description { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ISettlementObligation5 : IIsoComponent
     [IsoId("_-ezL9aMOEeCojJW5vEuTEQ_-1983467846")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TradeDate { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface ISettlementObligation5 : IIsoComponent
     [IsoId("_-e888qMOEeCojJW5vEuTEQ_-1676789962")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate SettlementDate { get; }
 
     /// <summary>

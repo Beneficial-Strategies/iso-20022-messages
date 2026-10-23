@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status applying to individual cancellation instructions of a meeting instruction cancellation request message.
 /// </summary>
 [IsoId("_WrUtJ8T3Eem9aZlimxVUIw")]
+[IsoDisplayName(@"Detailed Instruction Cancellation Status")]
 public interface IDetailedInstructionCancellationStatus14 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDetailedInstructionCancellationStatus14 : IIsoComponent
     [IsoId("_Wrd3E8T3Eem9aZlimxVUIw")]
     [DisplayName("Single Instruction Cancellation Identification")]
     [IsoXmlTag("SnglInstrCxlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SingleInstructionCancellationIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IDetailedInstructionCancellationStatus14 : IIsoComponent
     [IsoId("_Wrd3FMT3Eem9aZlimxVUIw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IDetailedInstructionCancellationStatus14 : IIsoComponent
     [IsoId("_Wrd3EMT3Eem9aZlimxVUIw")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubAccountIdentification { get; }
 
     /// <summary>

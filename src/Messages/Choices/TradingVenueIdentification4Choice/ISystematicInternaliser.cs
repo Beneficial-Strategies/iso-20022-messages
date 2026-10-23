@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingVenueIdentification4Choic
 
 /// <summary>Code used when a transaction on a financial instrument is executed on a Systematic Internaliser.</summary>
 [IsoId("_GrBldYTPEfClBYp_xDbOWg")]
+[IsoDisplayName(@"Systematic Internaliser")]
 public interface ISystematicInternaliser : ITradingVenueIdentification4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

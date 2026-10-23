@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about an amended election instruction.
 /// </summary>
 [IsoId("_UJuMftp-Ed-ak6NoX_4Aeg_599123828")]
+[IsoDisplayName(@"Corporate Action Election")]
 public interface ICorporateActionElection1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICorporateActionElection1 : IIsoComponent
     [IsoId("_UJuMgNp-Ed-ak6NoX_4Aeg_873409749")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText OptionNumber { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action general information details.
 /// </summary>
 [IsoId("_g9dp8eaNEei5aPS232E3Mw")]
+[IsoDisplayName(@"Corporate Action General Information SD")]
 public interface ICorporateActionGeneralInformationSD33 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionGeneralInformationSD33 : IIsoComponent
     [IsoId("_hj2Ug-aNEei5aPS232E3Mw")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICorporateActionGeneralInformationSD33 : IIsoComponent
     [IsoId("_hj2UneaNEei5aPS232E3Mw")]
     [DisplayName("Instruction Messaging Eligibility Flag")]
     [IsoXmlTag("InstrMsggElgbltyFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? InstructionMessagingEligibilityFlag { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ICorporateActionGeneralInformationSD33 : IIsoComponent
     [IsoId("_hj2Un-aNEei5aPS232E3Mw")]
     [DisplayName("Redemption Identification")]
     [IsoXmlTag("RedId")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? RedemptionIdentification { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ICorporateActionGeneralInformationSD33 : IIsoComponent
     [IsoId("_hj2UoeaNEei5aPS232E3Mw")]
     [DisplayName("DTCFCP Election Flag")]
     [IsoXmlTag("DTCFCPElctnFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DTCFCPElectionFlag { get; }
 
     /// <summary>
@@ -73,5 +79,6 @@ public interface ICorporateActionGeneralInformationSD33 : IIsoComponent
     [IsoId("_hj2Uo-aNEei5aPS232E3Mw")]
     [DisplayName("Asset Servicer Processing Flag")]
     [IsoXmlTag("AsstSvcrPrcgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AssetServicerProcessingFlag { get; }
 }

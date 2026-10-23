@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity40Choice;
 /// </summary>
 [IsoId("_NwxZHpp3EeWLs7cvLxlyAg")]
 [IsoXmlTag("OrgnlAndCurFaceAmt")]
+[IsoDisplayName(@"Original And Current Face Amount")]
 public interface IOriginalAndCurrentFaceAmount : IQuantity40Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a product structure.
 /// </summary>
 [IsoId("_G5LTIKDqEequlaOyi6MUhw")]
+[IsoDisplayName(@"Product Structure 1 Choice")]
 public interface IProductStructure1Choice : IIsoChoice { }

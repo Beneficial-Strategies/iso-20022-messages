@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates how the amount of the investment plan is split amongst the funds.
 /// </summary>
 [IsoId("_RQptnNp-Ed-ak6NoX_4Aeg_421967977")]
+[IsoDisplayName(@"Repartition")]
 public interface IRepartition1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRepartition1 : IIsoComponent
     [IsoId("_RQptndp-Ed-ak6NoX_4Aeg_175124020")]
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Percentage { get; }
 
     /// <summary>

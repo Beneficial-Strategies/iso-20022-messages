@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of a cheque instruction, such as cheque type or cheque number.
 /// </summary>
 [IsoId("_uBZX7Sm6EeutWNGMV2XKIQ")]
+[IsoDisplayName(@"Cheque")]
 public interface ICheque15 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICheque15 : IIsoComponent
     [IsoId("_uBZX8Sm6EeutWNGMV2XKIQ")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface ICheque15 : IIsoComponent
     [IsoId("_uBZX-Sm6EeutWNGMV2XKIQ")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface ICheque15 : IIsoComponent
     [IsoId("_uBZX8im6EeutWNGMV2XKIQ")]
     [DisplayName("Cheque Number")]
     [IsoXmlTag("ChqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ChequeNumber { get; }
 
     /// <summary>
@@ -42,6 +49,7 @@ public interface ICheque15 : IIsoComponent
     [IsoId("_uBZX9ym6EeutWNGMV2XKIQ")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate IssueDate { get; }
 
     /// <summary>
@@ -54,6 +62,7 @@ public interface ICheque15 : IIsoComponent
     [IsoId("_uBZX7im6EeutWNGMV2XKIQ")]
     [DisplayName("Stale Date")]
     [IsoXmlTag("StlDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StaleDate { get; }
 
     /// <summary>

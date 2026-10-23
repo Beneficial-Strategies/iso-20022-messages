@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TonsOrCurrency2Choice;
 /// Total number of specific transactions expresses in tons.
 /// </summary>
 [IsoId("_aCdOYWlSEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Number")]
 public interface INumber : ITonsOrCurrency2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INumber : ITonsOrCurrency2Choice, IIsoChoiceVariant
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 }

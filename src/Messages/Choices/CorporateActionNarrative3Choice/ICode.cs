@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionNarrative3Choice;
 /// Standard code to specify the narrative type of the message.
 /// </summary>
 [IsoId("_76NXIUGVEeWqy4niLuXETA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionNarrative3Choice, IIsoChoiceVariant
 {
     /// <summary>

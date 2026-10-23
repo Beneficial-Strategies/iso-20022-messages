@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details about tax paid, or to be paid, to the government in accordance with the law, including pre-defined parameters such as thresholds and type of account.
 /// </summary>
 [IsoId("_Cdax17TNEeeYQd8Z9bqFog")]
+[IsoDisplayName(@"Tax Information")]
 public interface ITaxInformation7 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ITaxInformation7 : IIsoComponent
     [IsoId("_CmIo97TNEeeYQd8Z9bqFog")]
     [DisplayName("Administration Zone")]
     [IsoXmlTag("AdmstnZone")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdministrationZone { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface ITaxInformation7 : IIsoComponent
     [IsoId("_CmIo-bTNEeeYQd8Z9bqFog")]
     [DisplayName("Reference Number")]
     [IsoXmlTag("RefNb")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? ReferenceNumber { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface ITaxInformation7 : IIsoComponent
     [IsoId("_CmIo-7TNEeeYQd8Z9bqFog")]
     [DisplayName("Method")]
     [IsoXmlTag("Mtd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Method { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface ITaxInformation7 : IIsoComponent
     [IsoId("_CmIpAbTNEeeYQd8Z9bqFog")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface ITaxInformation7 : IIsoComponent
     [IsoId("_CmIpA7TNEeeYQd8Z9bqFog")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SequenceNumber { get; }
 
     /// <summary>
@@ -97,5 +106,6 @@ public interface ITaxInformation7 : IIsoComponent
     [IsoId("_CmIpBbTNEeeYQd8Z9bqFog")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxRecord2> Record { get; }
 }

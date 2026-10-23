@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Diagnosis Response message.
 /// </summary>
 [IsoId("_99qRgQ0sEeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Diagnosis Response")]
 public interface IDiagnosisResponse2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDiagnosisResponse2 : IIsoComponent
     [IsoId("_-JB0AQ0sEeqUVL7sB4m7NA")]
     [DisplayName("Logged Sale Identification")]
     [IsoXmlTag("LggdSaleId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> LoggedSaleIdentification { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IDiagnosisResponse2 : IIsoComponent
     [IsoId("_-JB0BQ0sEeqUVL7sB4m7NA")]
     [DisplayName("Host Status")]
     [IsoXmlTag("HstSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHostStatus1> HostStatus { get; }
 }

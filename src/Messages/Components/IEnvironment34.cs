@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of the transaction.
 /// </summary>
 [IsoId("_t2X2ETNHEeylu6lH-gut-A")]
+[IsoDisplayName(@"Environment")]
 public interface IEnvironment34 : IIsoComponent
 {
     /// <summary>
@@ -140,5 +141,6 @@ public interface IEnvironment34 : IIsoComponent
     [IsoId("_7hLZMDNHEeylu6lH-gut-A")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 }

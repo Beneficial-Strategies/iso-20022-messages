@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information used to calculate the tax.
 /// </summary>
 [IsoId("_SlvRMNp-Ed-ak6NoX_4Aeg_500717863")]
+[IsoDisplayName(@"Tax Calculation Information")]
 public interface ITaxCalculationInformation5 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITaxCalculationInformation5 : IIsoComponent
     [IsoId("_SlvRMtp-Ed-ak6NoX_4Aeg_1085303745")]
     [DisplayName("Extended Basis")]
     [IsoXmlTag("XtndedBsis")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedBasis { get; }
 }

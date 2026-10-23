@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Pending Reason66Choice.
 /// </summary>
 [IsoId("_QGnc01x2Ee6fgZt44_IqFA")]
+[IsoDisplayName(@"Pending Reason66Choice")]
 public interface IPendingReason66Choice : IIsoChoice { }

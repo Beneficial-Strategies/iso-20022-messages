@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnmatchedStatus1Choice;
 /// </summary>
 [IsoId("_UaHY59p-Ed-ak6NoX_4Aeg_-331326632")]
 [IsoXmlTag("Rsn")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IUnmatchedStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IReason : IUnmatchedStatus1Choice, IIsoChoiceVariant
     [IsoId("_UaHY5Np-Ed-ak6NoX_4Aeg_-1379840589")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

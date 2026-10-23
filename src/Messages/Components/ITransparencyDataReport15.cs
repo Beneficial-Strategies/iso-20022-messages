@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides for reporting quantitative data of non-equity instruments for transparency calculations.
 /// </summary>
 [IsoId("_hLn-cX5kEeaGiOUFl5b1oQ")]
+[IsoDisplayName(@"Transparency Data Report")]
 public interface ITransparencyDataReport15 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,8 @@ public interface ITransparencyDataReport15 : IIsoComponent
     [IsoId("_hWyFlX5kEeaGiOUFl5b1oQ")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -27,6 +30,7 @@ public interface ITransparencyDataReport15 : IIsoComponent
     [IsoId("_hWyFl35kEeaGiOUFl5b1oQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier Identification { get; }
 
     /// <summary>
@@ -35,6 +39,7 @@ public interface ITransparencyDataReport15 : IIsoComponent
     [IsoId("_hWyFmX5kEeaGiOUFl5b1oQ")]
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ReportingDate { get; }
 
     /// <summary>
@@ -43,6 +48,7 @@ public interface ITransparencyDataReport15 : IIsoComponent
     [IsoId("_hWyFm35kEeaGiOUFl5b1oQ")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? TradingVenue { get; }
 
     /// <summary>
@@ -51,6 +57,7 @@ public interface ITransparencyDataReport15 : IIsoComponent
     [IsoId("_hWyFnX5kEeaGiOUFl5b1oQ")]
     [DisplayName("Suspension")]
     [IsoXmlTag("Sspnsn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator Suspension { get; }
 
     /// <summary>
@@ -59,6 +66,7 @@ public interface ITransparencyDataReport15 : IIsoComponent
     [IsoId("_hWyFn35kEeaGiOUFl5b1oQ")]
     [DisplayName("Number Transactions")]
     [IsoXmlTag("NbTxs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberTransactions { get; }
 
     /// <summary>
@@ -67,5 +75,6 @@ public interface ITransparencyDataReport15 : IIsoComponent
     [IsoId("_hWyFoX5kEeaGiOUFl5b1oQ")]
     [DisplayName("Aggregated Quantitative Data")]
     [IsoXmlTag("AggtdQttvData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionsBin2> AggregatedQuantitativeData { get; }
 }

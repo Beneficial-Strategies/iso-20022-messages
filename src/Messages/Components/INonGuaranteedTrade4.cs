@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Non Guaranteed Trade4.
 /// </summary>
 [IsoId("_eVSbC5IOEe-HRNGM304Vlw")]
+[IsoDisplayName(@"Non Guaranteed Trade4")]
 public interface INonGuaranteedTrade4 : IIsoComponent
 {
     /// <summary>

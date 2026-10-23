@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification2Choic
 /// Indicates whether or not the referred item is a possible duplicate of a previous instruction or entry.
 /// </summary>
 [IsoId("_T-i3Ntp-Ed-ak6NoX_4Aeg_1279007626")]
+[IsoDisplayName(@"Possible Duplicate Instruction")]
 public interface IPossibleDuplicateInstruction
     : IUnableToApplyJustification2Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IPossibleDuplicateInstruction
     /// A flag indicating a True or False value.
     /// </summary>
     [IsoXmlTag("PssblDplctInstr")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator Value { get; }
 }

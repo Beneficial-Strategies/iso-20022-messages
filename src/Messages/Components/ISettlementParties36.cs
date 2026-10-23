@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.
 /// </summary>
 [IsoId("_CFY_UR5dEeWE3PufGMdJ3w")]
+[IsoDisplayName(@"Settlement Parties")]
 public interface ISettlementParties36 : IIsoComponent
 {
     /// <summary>

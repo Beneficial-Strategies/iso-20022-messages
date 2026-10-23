@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_R3P4TzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("pain.010.001.08", "MndtAmdmntReq", "urn:iso:std:iso:20022:tech:xsd:pain.010.001.08")]
+[IsoDisplayName(@"Mandate Amendment Request V08")]
 public interface IMandateAmendmentRequestV08 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IMandateAmendmentRequestV08 : IOuterRecord
     /// </summary>
     [DisplayName("Underlying Amendment Details")]
     [IsoXmlTag("UndrlygAmdmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMandateAmendment8> UnderlyingAmendmentDetails { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IMandateAmendmentRequestV08 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

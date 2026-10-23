@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Net position of a segregated holding, in a single security, within the overall position held in a securities account at a specified place of safekeeping.
 /// </summary>
 [IsoId("_8MIWv9LCEeiN28wlpBQScw")]
+[IsoDisplayName(@"Aggregate Balance Per Safekeeping Place")]
 public interface IAggregateBalancePerSafekeepingPlace32 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IAggregateBalancePerSafekeepingPlace32 : IIsoComponent
     [IsoId("_8d-7UdLCEeiN28wlpBQScw")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceInformation20> PriceDetails { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface IAggregateBalancePerSafekeepingPlace32 : IIsoComponent
     [IsoId("_8d-7WdLCEeiN28wlpBQScw")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms34> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IAggregateBalancePerSafekeepingPlace32 : IIsoComponent
     [IsoId("_8d-7YdLCEeiN28wlpBQScw")]
     [DisplayName("Days Accrued")]
     [IsoXmlTag("DaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? DaysAccrued { get; }
 
     /// <summary>
@@ -105,6 +109,7 @@ public interface IAggregateBalancePerSafekeepingPlace32 : IIsoComponent
     [IsoId("_8d-7edLCEeiN28wlpBQScw")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQuantityBreakdown54> QuantityBreakdown { get; }
 
     /// <summary>
@@ -121,6 +126,7 @@ public interface IAggregateBalancePerSafekeepingPlace32 : IIsoComponent
     [IsoId("_8d-7g9LCEeiN28wlpBQScw")]
     [DisplayName("Balance Breakdown")]
     [IsoXmlTag("BalBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubBalanceInformation18> BalanceBreakdown { get; }
 
     /// <summary>
@@ -129,6 +135,7 @@ public interface IAggregateBalancePerSafekeepingPlace32 : IIsoComponent
     [IsoId("_8d-7i9LCEeiN28wlpBQScw")]
     [DisplayName("Additional Balance Breakdown")]
     [IsoXmlTag("AddtlBalBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBalanceInformation18> AdditionalBalanceBreakdown { get; }
 
     /// <summary>
@@ -137,5 +144,7 @@ public interface IAggregateBalancePerSafekeepingPlace32 : IIsoComponent
     [IsoId("_8d-7k9LCEeiN28wlpBQScw")]
     [DisplayName("Holding Additional Details")]
     [IsoXmlTag("HldgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? HoldingAdditionalDetails { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains additional fee reconciliation data.
 /// </summary>
 [IsoId("_LudzZsy0EeiqqJhU2tqK8A")]
+[IsoDisplayName(@"Additional Fee Reconciliation")]
 public interface IAdditionalFeeReconciliation1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IAdditionalFeeReconciliation1 : IIsoComponent
     [IsoId("_LudzaMy0EeiqqJhU2tqK8A")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -51,5 +54,6 @@ public interface IAdditionalFeeReconciliation1 : IIsoComponent
     [IsoId("_Ludzacy0EeiqqJhU2tqK8A")]
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Count { get; }
 }

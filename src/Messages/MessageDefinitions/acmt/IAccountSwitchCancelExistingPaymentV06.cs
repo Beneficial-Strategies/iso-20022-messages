@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctSwtchCclExstgPmt",
     "urn:iso:std:iso:20022:tech:xsd:acmt.029.001.06"
 )]
+[IsoDisplayName(@"Account Switch Cancel Existing Payment V06")]
 public interface IAccountSwitchCancelExistingPaymentV06 : IOuterRecord
 {
     /// <summary>
@@ -43,6 +44,7 @@ public interface IAccountSwitchCancelExistingPaymentV06 : IOuterRecord
     /// </summary>
     [DisplayName("Payment Instruction")]
     [IsoXmlTag("PmtInstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstruction49> PaymentInstruction { get; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public interface IAccountSwitchCancelExistingPaymentV06 : IOuterRecord
     /// </summary>
     [DisplayName("Direct Debit Instruction")]
     [IsoXmlTag("DrctDbtInstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDirectDebitInstructionDetails3> DirectDebitInstruction { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface IAccountSwitchCancelExistingPaymentV06 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amounts of the card transaction.
 /// </summary>
 [IsoId("_E1lxcWl-EfCyxsm1jzUNug")]
+[IsoDisplayName(@"Transaction Amounts6")]
 public interface ITransactionAmounts6 : IIsoComponent
 {
     /// <summary>
@@ -89,5 +90,6 @@ public interface ITransactionAmounts6 : IIsoComponent
     [IsoId("_E3w8BWl-EfCyxsm1jzUNug")]
     [DisplayName("Detailed Amount")]
     [IsoXmlTag("DtldAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount24> DetailedAmount { get; }
 }

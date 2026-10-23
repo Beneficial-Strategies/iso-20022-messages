@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnInstrCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:seev.040.001.13"
 )]
+[IsoDisplayName(@"Corporate Action Instruction Cancellation Request V13")]
 public interface ICorporateActionInstructionCancellationRequestV13 : IOuterRecord
 {
     /// <summary>
@@ -71,5 +72,6 @@ public interface ICorporateActionInstructionCancellationRequestV13 : IOuterRecor
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingExceptionOrExemption3Cho
 /// No reason to report or no reason available to report.
 /// </summary>
 [IsoId("_AjSxcZPuEey0rJ3Gl6WZVA")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IClearingExceptionOrExemption3Choice, IIsoChoiceVariant
 {
     /// <summary>

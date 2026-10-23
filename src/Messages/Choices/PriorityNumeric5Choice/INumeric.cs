@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriorityNumeric5Choice;
 /// Specifies the execution priority of the instruction with a number between 0001 and 9999.
 /// </summary>
 [IsoId("_5Pg0WpNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Numeric")]
 public interface INumeric : IPriorityNumeric5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INumeric : IPriorityNumeric5Choice, IIsoChoiceVariant
     /// Specifies a numeric string with an exact length of 4 digits.
     /// </summary>
     [IsoXmlTag("Nmrc")]
+    [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
     Exact4NumericText Value { get; }
 }

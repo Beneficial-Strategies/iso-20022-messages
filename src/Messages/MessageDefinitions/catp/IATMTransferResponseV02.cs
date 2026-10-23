@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_696wcaFFEe-MRKYsaX6JDg")]
 [IsoMessage("catp.017.001.02", "ATMTrfRspn", "urn:iso:std:iso:20022:tech:xsd:catp.017.001.02")]
+[IsoDisplayName(@"ATM Transfer Response V02")]
 public interface IATMTransferResponseV02 : IOuterRecord
 {
     /// <summary>

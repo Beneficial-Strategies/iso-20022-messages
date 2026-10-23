@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// This component defines the service to be called.
 /// </summary>
 [IsoId("_jYNgQQ1VEeqjM-rxn3HuXQ")]
+[IsoDisplayName(@"Service Request")]
 public interface IServiceRequest3 : IIsoComponent
 {
     /// <summary>
@@ -105,5 +106,6 @@ public interface IServiceRequest3 : IIsoComponent
     [IsoId("_jkawVw1VEeqjM-rxn3HuXQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

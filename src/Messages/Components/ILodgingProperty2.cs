@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Company in charge of a lodging establishment
 /// </summary>
 [IsoId("_-3z8AcWlEeuhguwJmlgagQ")]
+[IsoDisplayName(@"Lodging Property")]
 public interface ILodgingProperty2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ILodgingProperty2 : IIsoComponent
     [IsoId("_-8GmI8WlEeuhguwJmlgagQ")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ILodgingProperty2 : IIsoComponent
     [IsoId("_-8GmJcWlEeuhguwJmlgagQ")]
     [DisplayName("Prestigious Property")]
     [IsoXmlTag("PrstgsPrprty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PrestigiousProperty { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ILodgingProperty2 : IIsoComponent
     [IsoId("_-8GmJ8WlEeuhguwJmlgagQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -92,5 +99,6 @@ public interface ILodgingProperty2 : IIsoComponent
     [IsoId("_-8GmM8WlEeuhguwJmlgagQ")]
     [DisplayName("Fire Safety Act Indicator")]
     [IsoXmlTag("FireSftyActInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? FireSafetyActIndicator { get; }
 }

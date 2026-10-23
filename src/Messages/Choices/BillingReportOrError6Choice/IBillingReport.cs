@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingReportOrError6Choice;
 
 /// <summary>Report on billing data.</summary>
 [IsoId("_2jks0TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Billing Report")]
 public interface IBillingReport : IBillingReportOrError6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

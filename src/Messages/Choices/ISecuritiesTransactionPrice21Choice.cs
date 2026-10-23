@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Securities Transaction Price21Choice.
 /// </summary>
 [IsoId("_KzWSEWsgEe25qph5Y8_eYQ")]
+[IsoDisplayName(@"Securities Transaction Price21Choice")]
 public interface ISecuritiesTransactionPrice21Choice : IIsoChoice { }

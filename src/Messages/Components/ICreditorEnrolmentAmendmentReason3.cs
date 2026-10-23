@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Creditor Enrolment Amendment Reason3.
 /// </summary>
 [IsoId("_zcmU0TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Creditor Enrolment Amendment Reason3")]
 public interface ICreditorEnrolmentAmendmentReason3 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface ICreditorEnrolmentAmendmentReason3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

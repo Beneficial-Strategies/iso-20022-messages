@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash movements from or to a fund as a result of investment funds transactions, eg, subscriptions or redemptions.
 /// </summary>
 [IsoId("_VBdFudp-Ed-ak6NoX_4Aeg_386757279")]
+[IsoDisplayName(@"Fund Cash Forecast")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IFundCashForecast2 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +75,7 @@ public interface IFundCashForecast2 : IIsoComponent
     [IsoId("_VBmPpdp-Ed-ak6NoX_4Aeg_386757693")]
     [DisplayName("Total NAV Change Rate")]
     [IsoXmlTag("TtlNAVChngRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TotalNAVChangeRate { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IFundCashForecast2 : IIsoComponent
     [IsoId("_VBmPptp-Ed-ak6NoX_4Aeg_386758019")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface IFundCashForecast2 : IIsoComponent
     [IsoId("_VBmPp9p-Ed-ak6NoX_4Aeg_386757984")]
     [DisplayName("Exceptional Net Cash Flow Indicator")]
     [IsoXmlTag("XcptnlNetCshFlowInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ExceptionalNetCashFlowIndicator { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface IFundCashForecast2 : IIsoComponent
     [IsoId("_VBmPqNp-Ed-ak6NoX_4Aeg_386758081")]
     [DisplayName("Sorting Criteria Details")]
     [IsoXmlTag("SrtgCritDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashSortingCriterion2> SortingCriteriaDetails { get; }
 
     /// <summary>
@@ -105,5 +111,6 @@ public interface IFundCashForecast2 : IIsoComponent
     [IsoId("_VBmPqdp-Ed-ak6NoX_4Aeg_1702783920")]
     [DisplayName("Net Cash Forecast Details")]
     [IsoXmlTag("NetCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetCashForecast1> NetCashForecastDetails { get; }
 }

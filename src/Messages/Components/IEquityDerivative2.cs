@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Element to define an equity instrument.
 /// </summary>
 [IsoId("_PVUIgWlNEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Equity Derivative")]
 public interface IEquityDerivative2 : IIsoComponent
 {
     /// <summary>

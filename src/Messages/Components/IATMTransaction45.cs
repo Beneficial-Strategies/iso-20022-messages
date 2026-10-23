@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Transaction45.
 /// </summary>
 [IsoId("_HLcQUaEREe-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Transaction45")]
 public interface IATMTransaction45 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IATMTransaction45 : IIsoComponent
     /// </summary>
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the type of address.
 /// </summary>
 [IsoId("_B0HaACCKEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Address Type 1 Choice")]
 public interface IAddressType1Choice : IIsoChoice { }

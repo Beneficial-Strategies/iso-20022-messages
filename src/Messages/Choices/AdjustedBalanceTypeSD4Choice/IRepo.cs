@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdjustedBalanceTypeSD4Choice;
 /// </summary>
 [IsoId("_RnUrWcSTEeeRJJtE9TSlkw")]
 [IsoXmlTag("Repo")]
+[IsoDisplayName(@"Repo")]
 public interface IRepo : IAdjustedBalanceTypeSD4Choice, IIsoChoiceVariant
 {
     /// <summary>

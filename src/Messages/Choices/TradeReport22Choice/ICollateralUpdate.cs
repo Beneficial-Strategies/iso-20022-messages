@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport22Choice;
 /// </summary>
 [IsoId("_zvSse8g3EeuGrNSsxk3B0A")]
 [IsoXmlTag("CollUpd")]
+[IsoDisplayName(@"Collateral Update")]
 public interface ICollateralUpdate : ITradeReport22Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICollateralUpdate : ITradeReport22Choice, IIsoChoiceVariant
     [IsoId("__0b7Uc0DEeufhKfUxzsnrQ")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -50,5 +53,6 @@ public interface ICollateralUpdate : ITradeReport22Choice, IIsoChoiceVariant
     [IsoId("__0b7Wc0DEeufhKfUxzsnrQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

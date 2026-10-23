@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural1
 /// </summary>
 [IsoId("_YkYj4FrBEeWN79Bl6BUd3g")]
 [IsoXmlTag("Dairy")]
+[IsoDisplayName(@"Dairy")]
 public interface IDairy : IAssetClassCommodityAgricultural1Choice, IIsoChoiceVariant
 {
     /// <summary>

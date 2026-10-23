@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the status of a transfer instruction and its reason.
 /// </summary>
 [IsoId("_q-YLIRwjEeOIveEnnb_1-A")]
+[IsoDisplayName(@"Transfer Status And Reason")]
 public interface ITransferStatusAndReason3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransferStatusAndReason3 : IIsoComponent
     [IsoId("_rWCdNRwjEeOIveEnnb_1-A")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransferStatusAndReason3 : IIsoComponent
     [IsoId("_rWCdNxwjEeOIveEnnb_1-A")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransferStatusAndReason3 : IIsoComponent
     [IsoId("_rWCdORwjEeOIveEnnb_1-A")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITransferStatusAndReason3 : IIsoComponent
     [IsoId("_rWCdOxwjEeOIveEnnb_1-A")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -57,6 +66,7 @@ public interface ITransferStatusAndReason3 : IIsoComponent
     [IsoId("_rWCdTxwjEeOIveEnnb_1-A")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TradeDate { get; }
 
     /// <summary>
@@ -65,6 +75,7 @@ public interface ITransferStatusAndReason3 : IIsoComponent
     [IsoId("_rWCdURwjEeOIveEnnb_1-A")]
     [DisplayName("Send Out Date")]
     [IsoXmlTag("SndOutDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SendOutDate { get; }
 
     /// <summary>

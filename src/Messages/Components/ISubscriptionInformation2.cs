@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about cumulative subscriptions.
 /// </summary>
 [IsoId("_bgNQUU7dEeifNrXGwadPmg")]
+[IsoDisplayName(@"Subscription Information")]
 public interface ISubscriptionInformation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISubscriptionInformation2 : IIsoComponent
     [IsoId("_bxBThU7dEeifNrXGwadPmg")]
     [DisplayName("Date Of First Subscription")]
     [IsoXmlTag("DtOfFrstSbcpt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate DateOfFirstSubscription { get; }
 
     /// <summary>

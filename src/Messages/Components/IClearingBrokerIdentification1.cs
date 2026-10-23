@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reference number assigned by the clearing broker. A distinction can be made between the reference for the Central Counterparty (CCP) leg and the reference for the client leg of the transaction.
 /// </summary>
 [IsoId("_KYvvc4uZEeKYr_965Eh8aQ")]
+[IsoDisplayName(@"Clearing Broker Identification")]
 public interface IClearingBrokerIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IClearingBrokerIdentification1 : IIsoComponent
     [IsoId("_1RBSUIuZEeKYr_965Eh8aQ")]
     [DisplayName("Clearing Broker Identification")]
     [IsoXmlTag("ClrBrkrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ClearingBrokerIdentification { get; }
 }

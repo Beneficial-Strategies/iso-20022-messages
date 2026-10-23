@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// </summary>
 [IsoId("_AgFfYOQXEeCGktPI9k4Dlw_1733626146")]
 [IsoMessage("catm.003.001.01", "AccptrCfgtnUpd", "urn:iso:std:iso:20022:tech:xsd:catm.003.001.01")]
+[Description(@"Scope|The AcceptorConfigurationUpdate message is sent by the master terminal manager or delegated terminal manager to the acceptor system for the update of acquirer parameters, merchant parameters, vendor parameters or cryptographic keys of the acquirer.|Usage|The AcceptorConfigurationUpdate message may embed the information required by the acceptor system for the configuration of:|- the application parameters necessary for software applications processed by the POI system,|- the acquirer protocol parameters for the message content and message exchange behaviour of the acquirer protocol supported by the POI system,|- the host communication parameters to define the addresses of the connected acquirer hosts, and|- the merchant parameters needed for the retailer protocol settings of the POI system.")]
+[IsoDisplayName(@"Acceptor Configuration Update V")]
 public interface IAcceptorConfigurationUpdateV01 : IOuterRecord
 {
     /// <summary>

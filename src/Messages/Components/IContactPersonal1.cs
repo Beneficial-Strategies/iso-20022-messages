@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contact Personal1.
 /// </summary>
 [IsoId("_V8JsAW9qEe6DxcrvCrq6hQ")]
+[IsoDisplayName(@"Contact Personal1")]
 public interface IContactPersonal1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of the withdrawal transaction.
 /// </summary>
 [IsoId("_KRspIa4KEeWZgJQOa6iKCQ")]
+[IsoDisplayName(@"ATM Environment")]
 public interface IATMEnvironment13 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IATMEnvironment13 : IIsoComponent
     [IsoId("_KdxWQ64KEeWZgJQOa6iKCQ")]
     [DisplayName("ATM Manager Identification")]
     [IsoXmlTag("ATMMgrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ATMManagerIdentification { get; }
 
     /// <summary>

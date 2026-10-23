@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "ReqToPayDbtrActvtnCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:reda.072.001.01"
 )]
+[Description(@"The RequestToPayDebtorActivationCancellationRequest message is sent by the debtor RTP (Request To Pay) provider to the creditor RTP provider and optionally from the debtor to its RTP provider and from the creditor RTP provider to the creditor to request for the cancellation of the debtor activation of the RTP service with that specific creditor.")]
+[IsoDisplayName(@"Request To Pay Debtor Activation Cancellation Request V")]
 public interface IRequestToPayDebtorActivationCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IRequestToPayDebtorActivationCancellationRequestV01 : IOuterRec
     [IsoId("_rNNByeHzEeqbls7Gk4-ckA")]
     [DisplayName("Cancellation Data")]
     [IsoXmlTag("CxlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDebtorActivationCancellation2> CancellationData { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IRequestToPayDebtorActivationCancellationRequestV01 : IOuterRec
     [IsoId("_rNNBy-HzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

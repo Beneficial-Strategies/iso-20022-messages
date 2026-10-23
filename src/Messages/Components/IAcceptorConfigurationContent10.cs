@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the acceptor configuration.
 /// </summary>
 [IsoId("_VMUz4S1sEeuZtpnZJ4v-5Q")]
+[IsoDisplayName(@"Acceptor Configuration Content")]
 public interface IAcceptorConfigurationContent10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAcceptorConfigurationContent10 : IIsoComponent
     [IsoId("_Va-68S1sEeuZtpnZJ4v-5Q")]
     [DisplayName("Replace Configuration")]
     [IsoXmlTag("RplcCfgtn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReplaceConfiguration { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAcceptorConfigurationContent10 : IIsoComponent
     [IsoId("_Va-68y1sEeuZtpnZJ4v-5Q")]
     [DisplayName("TMS Protocol Parameters")]
     [IsoXmlTag("TMSPrtcolParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITMSProtocolParameters5> TMSProtocolParameters { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IAcceptorConfigurationContent10 : IIsoComponent
     [IsoId("_Va-69S1sEeuZtpnZJ4v-5Q")]
     [DisplayName("Acquirer Protocol Parameters")]
     [IsoXmlTag("AcqrrPrtcolParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcquirerProtocolParameters14> AcquirerProtocolParameters { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IAcceptorConfigurationContent10 : IIsoComponent
     [IsoId("_ZBVdIDAKEeugIJ3Gvoevmg")]
     [DisplayName("Service Provider Parameters")]
     [IsoXmlTag("SvcPrvdrParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IServiceProviderParameters1> ServiceProviderParameters { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IAcceptorConfigurationContent10 : IIsoComponent
     [IsoId("_Va-69y1sEeuZtpnZJ4v-5Q")]
     [DisplayName("Merchant Parameters")]
     [IsoXmlTag("MrchntParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMerchantConfigurationParameters6> MerchantParameters { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IAcceptorConfigurationContent10 : IIsoComponent
     [IsoId("_Va-6-S1sEeuZtpnZJ4v-5Q")]
     [DisplayName("Terminal Parameters")]
     [IsoXmlTag("TermnlParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTerminalParameters8> TerminalParameters { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IAcceptorConfigurationContent10 : IIsoComponent
     [IsoId("_Va-6-y1sEeuZtpnZJ4v-5Q")]
     [DisplayName("Application Parameters")]
     [IsoXmlTag("ApplParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IApplicationParameters10> ApplicationParameters { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IAcceptorConfigurationContent10 : IIsoComponent
     [IsoId("_Va-6_S1sEeuZtpnZJ4v-5Q")]
     [DisplayName("Host Communication Parameters")]
     [IsoXmlTag("HstComParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHostCommunicationParameter6> HostCommunicationParameters { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface IAcceptorConfigurationContent10 : IIsoComponent
     [IsoId("_Va-6_y1sEeuZtpnZJ4v-5Q")]
     [DisplayName("Security Parameters")]
     [IsoXmlTag("SctyParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityParameters13> SecurityParameters { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface IAcceptorConfigurationContent10 : IIsoComponent
     [IsoId("_Va-7AS1sEeuZtpnZJ4v-5Q")]
     [DisplayName("Sale To POI Parameters")]
     [IsoXmlTag("SaleToPOIParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISaleToPOIProtocolParameter1> SaleToPOIParameters { get; }
 
     /// <summary>
@@ -97,5 +108,6 @@ public interface IAcceptorConfigurationContent10 : IIsoComponent
     [IsoId("_Va-7Ay1sEeuZtpnZJ4v-5Q")]
     [DisplayName("Terminal Package")]
     [IsoXmlTag("TermnlPackg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITerminalPackageType2> TerminalPackage { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// References of the original instruction for which an action has been requested.
 /// </summary>
 [IsoId("_pf1OJ-SmEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"References33")]
 public interface IReferences33 : IIsoComponent
 {
     /// <summary>

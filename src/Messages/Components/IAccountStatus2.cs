@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status of an account.
 /// </summary>
 [IsoId("_N5eWMEy9EeafiMTDrtSnyw")]
+[IsoDisplayName(@"Account Status")]
 public interface IAccountStatus2 : IIsoComponent
 {
     /// <summary>
@@ -73,5 +74,6 @@ public interface IAccountStatus2 : IIsoComponent
     [IsoId("_h6vsIEy9EeafiMTDrtSnyw")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherAccountStatus1> Other { get; }
 }

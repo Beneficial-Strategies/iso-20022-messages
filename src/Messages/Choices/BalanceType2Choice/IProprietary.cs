@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceType2Choice;
 /// Specifies a proprietary code for the balance type.
 /// </summary>
 [IsoId("_RcH9xNp-Ed-ak6NoX_4Aeg_1127275052")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IBalanceType2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IBalanceType2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

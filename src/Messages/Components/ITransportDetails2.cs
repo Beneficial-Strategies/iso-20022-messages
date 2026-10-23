@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information on the shipment date, the charges, the routing and the goods described in the transport document.
 /// </summary>
 [IsoId("_Ste39tp-Ed-ak6NoX_4Aeg_-1923970939")]
+[IsoDisplayName(@"Transport Details")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ITransportDetails2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface ITransportDetails2 : IIsoComponent
     [IsoId("_Ste399p-Ed-ak6NoX_4Aeg_-1923970514")]
     [DisplayName("Transport Document Reference")]
     [IsoXmlTag("TrnsprtDocRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification7> TransportDocumentReference { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ITransportDetails2 : IIsoComponent
     [IsoId("_Ste3-Np-Ed-ak6NoX_4Aeg_-1923969895")]
     [DisplayName("Transported Goods")]
     [IsoXmlTag("TrnsprtdGoods")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransportedGoods1> TransportedGoods { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ITransportDetails2 : IIsoComponent
     [IsoId("_Stoo8dp-Ed-ak6NoX_4Aeg_-1923970904")]
     [DisplayName("Proposed Shipment Date")]
     [IsoXmlTag("PropsdShipmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ProposedShipmentDate { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ITransportDetails2 : IIsoComponent
     [IsoId("_Stoo8tp-Ed-ak6NoX_4Aeg_-1923970627")]
     [DisplayName("Actual Shipment Date")]
     [IsoXmlTag("ActlShipmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ActualShipmentDate { get; }
 
     /// <summary>

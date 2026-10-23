@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes of non-financial instrument of type foreign exchange as underlying.
 /// </summary>
 [IsoId("_8LPcAXvyEeanCNPcMT7sSg")]
+[IsoDisplayName(@"Derivative Foreign Exchange")]
 public interface IDerivativeForeignExchange3 : IIsoComponent
 {
     /// <summary>

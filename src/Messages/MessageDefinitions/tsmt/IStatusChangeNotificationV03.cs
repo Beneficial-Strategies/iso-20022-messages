@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_vbs12NE8Ed-BzquC8wXy7w_-1030664392")]
 [IsoMessage("tsmt.025.001.03", "StsChngNtfctn", "urn:iso:std:iso:20022:tech:xsd:tsmt.025.001.03")]
+[Description(@"Scope|The StatusChangeNotification message is sent by the matching application to the parties involved in the change of the status of a transaction.|This message is used to inform about the change of a status.|Usage|The StatusChangeNotification message can be sent by the matching application|- to the submitter of the request to change the status of a transaction to pass on the information about the acceptance of the request that it has obtained through the receipt of an StatusChangeRequestAcceptance message.|- to the accepter of a request to change the status of a transaction inform about the actual status of the transaction in response to a StatusChangeRequestAcceptance message.|- to either party involved in the establishment of a transaction to inform about the change of the status of the transaction to the status close. This can be done when the limit of possible attempts to establish the transaction has been reached or when unilaterally requested by one of the parties involved in the not yet established transaction.|- to either party involved in a transaction to inform about the change of the status of the transaction as announced in a TimeOutNotification message sent by the matching application prior to the StatusChangeNotification message.")]
+[IsoDisplayName(@"Status Change Notification V")]
 public interface IStatusChangeNotificationV03 : IOuterRecord
 {
     /// <summary>
@@ -60,6 +62,9 @@ public interface IStatusChangeNotificationV03 : IOuterRecord
     [IsoId("_vb1_wtE8Ed-BzquC8wXy7w_-1030664021")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to search for a report.
 /// </summary>
 [IsoId("_3b6DFZb6Eee4htziCyV8eA")]
+[IsoDisplayName(@"Report Query Search Criteria")]
 public interface IReportQuerySearchCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IReportQuerySearchCriteria2 : IIsoComponent
     [IsoId("_3pS-0Zb6Eee4htziCyV8eA")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentificationSearchCriteria2Choice> AccountIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IReportQuerySearchCriteria2 : IIsoComponent
     [IsoId("_3pS-05b6Eee4htziCyV8eA")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance12> Balance { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IReportQuerySearchCriteria2 : IIsoComponent
     [IsoId("_3pS-1Zb6Eee4htziCyV8eA")]
     [DisplayName("Report Name")]
     [IsoXmlTag("RptNm")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText? ReportName { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IReportQuerySearchCriteria2 : IIsoComponent
     [IsoId("_S1RJ0Fg7Eeiv7OYKCzUSAg")]
     [DisplayName("Message Name Identification")]
     [IsoXmlTag("MsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageNameIdentification { get; }
 
     /// <summary>

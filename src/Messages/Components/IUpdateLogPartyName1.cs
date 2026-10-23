@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the old and new values for the name of a party.
 /// </summary>
 [IsoId("_zOmJYGjVEeiRg5NzP0jkQg")]
+[IsoDisplayName(@"Update Log Party Name")]
 public interface IUpdateLogPartyName1 : IIsoComponent
 {
     /// <summary>

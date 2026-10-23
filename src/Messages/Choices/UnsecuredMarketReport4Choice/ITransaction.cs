@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnsecuredMarketReport4Choice;
 /// </summary>
 [IsoId("_HHn748EREea7jLfvGi1PDw")]
 [IsoXmlTag("Tx")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction : IUnsecuredMarketReport4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -36,6 +37,7 @@ public interface ITransaction : IUnsecuredMarketReport4Choice, IIsoChoiceVariant
     [IsoId("_HQZdZ8EREea7jLfvGi1PDw")]
     [DisplayName("Branch Identification")]
     [IsoXmlTag("BrnchId")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? BranchIdentification { get; }
 
     /// <summary>
@@ -44,6 +46,8 @@ public interface ITransaction : IUnsecuredMarketReport4Choice, IIsoChoiceVariant
     [IsoId("_HQZdacEREea7jLfvGi1PDw")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? UniqueTransactionIdentifier { get; }
 
     /// <summary>
@@ -52,6 +56,8 @@ public interface ITransaction : IUnsecuredMarketReport4Choice, IIsoChoiceVariant
     [IsoId("_HQZda8EREea7jLfvGi1PDw")]
     [DisplayName("Proprietary Transaction Identification")]
     [IsoXmlTag("PrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text ProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -60,6 +66,8 @@ public interface ITransaction : IUnsecuredMarketReport4Choice, IIsoChoiceVariant
     [IsoId("_Ky6vocEWEea7jLfvGi1PDw")]
     [DisplayName("Related Proprietary Transaction Identification")]
     [IsoXmlTag("RltdPrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? RelatedProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -68,6 +76,8 @@ public interface ITransaction : IUnsecuredMarketReport4Choice, IIsoChoiceVariant
     [IsoId("_HQZdbcEREea7jLfvGi1PDw")]
     [DisplayName("Counterparty Proprietary Transaction Identification")]
     [IsoXmlTag("CtrPtyPrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? CounterpartyProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -96,6 +106,7 @@ public interface ITransaction : IUnsecuredMarketReport4Choice, IIsoChoiceVariant
     [IsoId("_HQZdc8EREea7jLfvGi1PDw")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate SettlementDate { get; }
 
     /// <summary>
@@ -104,6 +115,7 @@ public interface ITransaction : IUnsecuredMarketReport4Choice, IIsoChoiceVariant
     [IsoId("_HQZddcEREea7jLfvGi1PDw")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -136,6 +148,7 @@ public interface ITransaction : IUnsecuredMarketReport4Choice, IIsoChoiceVariant
     [IsoId("_HQZdf8EREea7jLfvGi1PDw")]
     [DisplayName("Deal Price")]
     [IsoXmlTag("DealPric")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate DealPrice { get; }
 
     /// <summary>
@@ -156,6 +169,7 @@ public interface ITransaction : IUnsecuredMarketReport4Choice, IIsoChoiceVariant
     [IsoId("_HQZdg8EREea7jLfvGi1PDw")]
     [DisplayName("Deal Rate")]
     [IsoXmlTag("DealRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? DealRate { get; }
 
     /// <summary>
@@ -180,6 +194,9 @@ public interface ITransaction : IUnsecuredMarketReport4Choice, IIsoChoiceVariant
     [IsoId("_HQZdicEREea7jLfvGi1PDw")]
     [DisplayName("Call Put Option")]
     [IsoXmlTag("CallPutOptn")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOption12> CallPutOption { get; }
 
     /// <summary>
@@ -188,5 +205,6 @@ public interface ITransaction : IUnsecuredMarketReport4Choice, IIsoChoiceVariant
     [IsoId("_HQZdi8EREea7jLfvGi1PDw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

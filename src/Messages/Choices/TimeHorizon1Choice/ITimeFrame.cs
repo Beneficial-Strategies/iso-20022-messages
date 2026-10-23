@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeHorizon1Choice;
 /// Time frame as a qualitative value.
 /// </summary>
 [IsoId("_7x92gDcuEeidBoT_PugKiA")]
+[IsoDisplayName(@"Time Frame")]
 public interface ITimeFrame : ITimeHorizon1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

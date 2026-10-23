@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctSwtchBalTrfAck",
     "urn:iso:std:iso:20022:tech:xsd:acmt.032.001.06"
 )]
+[IsoDisplayName(@"Account Switch Balance Transfer Acknowledgement V06")]
 public interface IAccountSwitchBalanceTransferAcknowledgementV06 : IOuterRecord
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface IAccountSwitchBalanceTransferAcknowledgementV06 : IOuterRecord
     /// </summary>
     [DisplayName("Balance Transfer")]
     [IsoXmlTag("BalTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceTransfer7> BalanceTransfer { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IAccountSwitchBalanceTransferAcknowledgementV06 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

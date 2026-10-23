@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of performed transactions.
 /// </summary>
 [IsoId("_XRIDwNxWEeioifFt1dhnJA")]
+[IsoDisplayName(@"Performed Transaction")]
 public interface IPerformedTransaction1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface IPerformedTransaction1 : IIsoComponent
     [IsoId("_o_NkMNxYEeioifFt1dhnJA")]
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? POIReconciliationIdentification { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IPerformedTransaction1 : IIsoComponent
     [IsoId("_v6QDsNxYEeioifFt1dhnJA")]
     [DisplayName("Loyalty Result")]
     [IsoXmlTag("LltyRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyResult1> LoyaltyResult { get; }
 
     /// <summary>

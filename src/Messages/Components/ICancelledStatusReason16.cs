@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for a cancelled status.
 /// </summary>
 [IsoId("_E11NIUHVEeasdbKMiqizqA")]
+[IsoDisplayName(@"Cancelled Status Reason")]
 public interface ICancelledStatusReason16 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICancelledStatusReason16 : IIsoComponent
     [IsoId("_YZDVI0HVEeasdbKMiqizqA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

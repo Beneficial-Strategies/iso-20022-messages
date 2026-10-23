@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional functions or services to be performed in conjunction with the transaction.
 /// </summary>
 [IsoId("_tv_4oJ8NEei6TYPuA7AYQg")]
+[IsoDisplayName(@"Additional Service")]
 public interface IAdditionalService1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IAdditionalService1 : IIsoComponent
     [IsoId("_tv_4op8NEei6TYPuA7AYQg")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 }

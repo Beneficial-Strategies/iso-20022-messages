@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the beneficiary&apos;s account information for the settlement of a purchase of goods or services.
 /// </summary>
 [IsoId("_QIrY5tp-Ed-ak6NoX_4Aeg_739233613")]
+[IsoDisplayName(@"Settlement Terms")]
 public interface ISettlementTerms2 : IIsoComponent
 {
     /// <summary>

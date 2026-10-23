@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.supl;
     "MltplDbtAcctsSD1",
     "urn:iso:std:iso:20022:tech:xsd:supl.044.001.01"
 )]
+[Description(@"The MultipleDebitAccountsSD1V01 message extends ISO 20022 Customer Credit Transfer Initiation (pain.001) message for multiple debit accounts.")]
+[IsoDisplayName(@"Multiple Debit Accounts SD1V01")]
 public interface IMultipleDebitAccountsSD1V01 : IOuterRecord
 {
     /// <summary>
@@ -23,5 +25,6 @@ public interface IMultipleDebitAccountsSD1V01 : IOuterRecord
     /// </summary>
     [DisplayName("Foreign Exchange Supplementary Data")]
     [IsoXmlTag("FXSplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFXSupplementaryData2> ForeignExchangeSupplementaryData { get; }
 }

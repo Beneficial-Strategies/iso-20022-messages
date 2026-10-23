@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, eg, commercial invoices in an accounts&apos; receivable system.
 /// </summary>
 [IsoId("_QFsWV9p-Ed-ak6NoX_4Aeg_-92384845")]
+[IsoDisplayName(@"Remittance Information")]
 public interface IRemittanceInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRemittanceInformation1 : IIsoComponent
     [IsoId("_QFsWWNp-Ed-ak6NoX_4Aeg_-92384592")]
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max140Text> Unstructured { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IRemittanceInformation1 : IIsoComponent
     [IsoId("_QF2HUNp-Ed-ak6NoX_4Aeg_-92384550")]
     [DisplayName("Structured")]
     [IsoXmlTag("Strd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStructuredRemittanceInformation6> Structured { get; }
 }

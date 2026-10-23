@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information needed to contact a physical person.
 /// </summary>
 [IsoId("_QDdht9p-Ed-ak6NoX_4Aeg_-1442959327")]
+[IsoDisplayName(@"Contact Identification")]
 public interface IContactIdentification4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContactIdentification4 : IIsoComponent
     [IsoId("_QDdhuNp-Ed-ak6NoX_4Aeg_-1381085869")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IContactIdentification4 : IIsoComponent
     [IsoId("_QDnSsNp-Ed-ak6NoX_4Aeg_-1381085868")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? GivenName { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IContactIdentification4 : IIsoComponent
     [IsoId("_QDnSsdp-Ed-ak6NoX_4Aeg_-1381085806")]
     [DisplayName("Role")]
     [IsoXmlTag("Role")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Role { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IContactIdentification4 : IIsoComponent
     [IsoId("_QDnSstp-Ed-ak6NoX_4Aeg_-1381085807")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IContactIdentification4 : IIsoComponent
     [IsoId("_QDnSs9p-Ed-ak6NoX_4Aeg_-1381085838")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -65,5 +74,7 @@ public interface IContactIdentification4 : IIsoComponent
     [IsoId("_QDnStNp-Ed-ak6NoX_4Aeg_-1381085867")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 }

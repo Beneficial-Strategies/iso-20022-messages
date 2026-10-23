@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the amount type.
 /// </summary>
 [IsoId("_9DBuYzH0Ee6BxvG014AZzQ")]
+[IsoDisplayName(@"Document Amount Type1Choice")]
 public interface IDocumentAmountType1Choice : IIsoChoice { }

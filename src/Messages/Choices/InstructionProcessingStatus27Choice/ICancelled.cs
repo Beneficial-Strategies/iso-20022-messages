@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus27Cho
 /// Instruction has been cancelled.
 /// </summary>
 [IsoId("_8VJIw5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Cancelled")]
 public interface ICancelled : IInstructionProcessingStatus27Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

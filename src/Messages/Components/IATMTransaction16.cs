@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response to the deposit request.
 /// </summary>
 [IsoId("_0Rvq4a4HEeWL1uap3dNhCQ")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction16 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IATMTransaction16 : IIsoComponent
     [IsoId("_0cneI64HEeWL1uap3dNhCQ")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IATMTransaction16 : IIsoComponent
     [IsoId("_Aq-RYK4IEeWL1uap3dNhCQ")]
     [DisplayName("Completion Required")]
     [IsoXmlTag("CmpltnReqrd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CompletionRequired { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface IATMTransaction16 : IIsoComponent
     [IsoId("_0cneK64HEeWL1uap3dNhCQ")]
     [DisplayName("Detailed Requested Amount")]
     [IsoXmlTag("DtldReqdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount16> DetailedRequestedAmount { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IATMTransaction16 : IIsoComponent
     [IsoId("_59U4MK4IEeWL1uap3dNhCQ")]
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount13> AdditionalCharge { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface IATMTransaction16 : IIsoComponent
     [IsoId("_0cneMa4HEeWL1uap3dNhCQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 
     /// <summary>
@@ -105,5 +112,6 @@ public interface IATMTransaction16 : IIsoComponent
     [IsoId("_EbeSEK4JEeWL1uap3dNhCQ")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 }

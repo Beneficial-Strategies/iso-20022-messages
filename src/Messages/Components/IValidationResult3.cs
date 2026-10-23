@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the error that is the cause of the rejection.
 /// </summary>
 [IsoId("_RFLdYdp-Ed-ak6NoX_4Aeg_-1930823301")]
+[IsoDisplayName(@"Validation Result")]
 public interface IValidationResult3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IValidationResult3 : IIsoComponent
     [IsoId("_RFLdYtp-Ed-ak6NoX_4Aeg_-1930823223")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number SequenceNumber { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IValidationResult3 : IIsoComponent
     [IsoId("_RFLdY9p-Ed-ak6NoX_4Aeg_-1930823282")]
     [DisplayName("Rule Identification")]
     [IsoXmlTag("RuleId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RuleIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IValidationResult3 : IIsoComponent
     [IsoId("_RFLdZNp-Ed-ak6NoX_4Aeg_-1930823266")]
     [DisplayName("Rule Description")]
     [IsoXmlTag("RuleDesc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text RuleDescription { get; }
 
     /// <summary>
@@ -41,5 +47,6 @@ public interface IValidationResult3 : IIsoComponent
     [IsoId("_RFLdZdp-Ed-ak6NoX_4Aeg_-1930823205")]
     [DisplayName("Element")]
     [IsoXmlTag("Elmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IElementIdentification3> Element { get; }
 }

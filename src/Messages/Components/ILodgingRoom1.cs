@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Room details
 /// </summary>
 [IsoId("_kVNgxfcTEeiW-auGnDPZIw")]
+[IsoDisplayName(@"Lodging Room")]
 public interface ILodgingRoom1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILodgingRoom1 : IIsoComponent
     [IsoId("_kVNgxvcTEeiW-auGnDPZIw")]
     [DisplayName("Room Type")]
     [IsoXmlTag("RoomTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RoomType { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ILodgingRoom1 : IIsoComponent
     [IsoId("_kVNgx_cTEeiW-auGnDPZIw")]
     [DisplayName("Room Location")]
     [IsoXmlTag("RoomLctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RoomLocation { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ILodgingRoom1 : IIsoComponent
     [IsoId("_kVNgyfcTEeiW-auGnDPZIw")]
     [DisplayName("Bed Type")]
     [IsoXmlTag("BedTp")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? BedType { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface ILodgingRoom1 : IIsoComponent
     [IsoId("_kVNgyPcTEeiW-auGnDPZIw")]
     [DisplayName("Guests Per Room")]
     [IsoXmlTag("GstsPerRoom")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? GuestsPerRoom { get; }
 
     /// <summary>
@@ -49,6 +57,7 @@ public interface ILodgingRoom1 : IIsoComponent
     [IsoId("_hpN_IfcUEeiW-auGnDPZIw")]
     [DisplayName("Adults In Room")]
     [IsoXmlTag("AdltsInRoom")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? AdultsInRoom { get; }
 
     /// <summary>
@@ -57,6 +66,7 @@ public interface ILodgingRoom1 : IIsoComponent
     [IsoId("_oUeWMfcUEeiW-auGnDPZIw")]
     [DisplayName("Children In Room")]
     [IsoXmlTag("ChldrnInRoom")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? ChildrenInRoom { get; }
 
     /// <summary>

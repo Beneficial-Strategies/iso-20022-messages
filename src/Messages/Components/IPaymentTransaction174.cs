@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the reference and status on the original transactions, included in the original instruction, to which the reversal message applies.
 /// </summary>
 [IsoId("5be6bec5-d8be-45bf-83e9-ccc1cafba2ba")]
+[IsoDisplayName(@"Payment Transaction174")]
 public interface IPaymentTransaction174 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface IPaymentTransaction174 : IIsoComponent
     [IsoId("882c9868-57c1-4066-9aba-f6ee9b6f4e58")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReversalReason10> ReversalReasonInformation { get; }
 
     /// <summary>
@@ -89,5 +91,6 @@ public interface IPaymentTransaction174 : IIsoComponent
     [IsoId("54226b0c-ab8e-45e5-843c-a1f32913e928")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

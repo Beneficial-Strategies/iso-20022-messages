@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommunicationMethod1Choice;
 /// Communication channel method.
 /// </summary>
 [IsoId("_93Z_xHltEeG7BsjMvd1mEw_543627896")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICommunicationMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>

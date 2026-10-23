@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification25Choice;
 /// Stock Exchange Daily Official List (SEDOL) number. A code used by the London Stock Exchange to identify foreign stocks, especially those that aren&apos;t actively traded in the US and don&apos;t have a CUSIP number.
 /// </summary>
 [IsoId("_cH1L5TnxEeabspMEjqY5TQ")]
+[IsoDisplayName(@"SEDOL")]
 public interface ISEDOL : ISecurityIdentification25Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ISEDOL : ISecurityIdentification25Choice, IIsoChoiceVariant
     /// Stock Exchange Daily Official List (SEDOL) number. A code used by the London Stock Exchange to identify foreign stocks, especially those that aren&apos;t actively traded in the US and don&apos;t have a CUSIP number.
     /// </summary>
     [IsoXmlTag("SEDOL")]
+    [IsoSimpleType(IsoSimpleType.SEDOLIdentifier)]
     SEDOLIdentifier Value { get; }
 }

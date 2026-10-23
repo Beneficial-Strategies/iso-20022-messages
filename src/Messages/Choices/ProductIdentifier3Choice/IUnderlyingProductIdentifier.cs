@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductIdentifier3Choice;
 /// <summary>
 /// Underlying Product Identifier.
 /// </summary>
+[IsoDisplayName(@"Underlying Product Identifier")]
 public interface IUnderlyingProductIdentifier : IProductIdentifier3Choice, IIsoChoiceVariant
 {
     /// <summary>

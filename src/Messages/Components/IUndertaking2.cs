@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Independent undertaking, such as a demand guarantee or standby letter of credit, that provides financial assurance, to be honoured on the presentation of documents that comply with its terms and conditions.
 /// </summary>
 [IsoId("_916yAnltEeG7BsjMvd1mEw_562975782")]
+[IsoDisplayName(@"Undertaking")]
 public interface IUndertaking2 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IUndertaking2 : IIsoComponent
     [IsoId("_92D78nltEeG7BsjMvd1mEw_816197846")]
     [DisplayName("Standard Claim Document Indicator")]
     [IsoXmlTag("StdClmDocInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? StandardClaimDocumentIndicator { get; }
 
     /// <summary>
@@ -73,5 +75,9 @@ public interface IUndertaking2 : IIsoComponent
     [IsoId("_92D783ltEeG7BsjMvd1mEw_1702800733")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

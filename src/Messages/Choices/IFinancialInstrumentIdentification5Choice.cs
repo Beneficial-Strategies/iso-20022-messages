@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice for identifying the underlying instruments that a derivative can consist of.
 /// </summary>
 [IsoId("_HH3GN35aEea2k7EBUopqxw")]
+[IsoDisplayName(@"Financial Instrument Identification 5 Choice")]
 public interface IFinancialInstrumentIdentification5Choice : IIsoChoice { }

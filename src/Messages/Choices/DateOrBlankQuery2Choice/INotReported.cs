@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateOrBlankQuery2Choice;
 /// Field may be queried for not reported value.
 /// </summary>
 [IsoId("_cmD8M9GgEeaQk737TH1Fzw")]
+[IsoDisplayName(@"Not Reported")]
 public interface INotReported : IDateOrBlankQuery2Choice, IIsoChoiceVariant
 {
     /// <summary>

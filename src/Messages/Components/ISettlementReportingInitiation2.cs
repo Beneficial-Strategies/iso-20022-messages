@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the  settlement initiation message.
 /// </summary>
 [IsoId("_dZDlAYwEEeuC5632vxUfGg")]
+[IsoDisplayName(@"Settlement Reporting Initiation")]
 public interface ISettlementReportingInitiation2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ISettlementReportingInitiation2 : IIsoComponent
     [IsoId("_ddMeJ4wEEeuC5632vxUfGg")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface ISettlementReportingInitiation2 : IIsoComponent
     [IsoId("_ddMeKYwEEeuC5632vxUfGg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

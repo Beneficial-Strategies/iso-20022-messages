@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original and current value of an asset-back instrument.
 /// </summary>
 [IsoId("_Sotsttp-Ed-ak6NoX_4Aeg_975131994")]
+[IsoDisplayName(@"Original And Current Quantities")]
 public interface IOriginalAndCurrentQuantities1 : IIsoComponent
 {
     /// <summary>

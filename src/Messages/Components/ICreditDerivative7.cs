@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Credit Derivative7.
 /// </summary>
 [IsoId("_KJgQUSyuEe6J0v6OMXVc7g")]
+[IsoDisplayName(@"Credit Derivative7")]
 public interface ICreditDerivative7 : IIsoComponent
 {
     /// <summary>

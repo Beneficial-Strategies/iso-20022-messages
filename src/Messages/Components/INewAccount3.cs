@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the new account.
 /// </summary>
 [IsoId("_a8noUdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"New Account")]
 public interface INewAccount3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface INewAccount3 : IIsoComponent
     [IsoId("_a99FE9cZEeqRFcf2R4bPBw")]
     [DisplayName("Account Party")]
     [IsoXmlTag("AcctPty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson36> AccountParty { get; }
 
     /// <summary>

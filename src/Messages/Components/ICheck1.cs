@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of check as payment instrument.
 /// </summary>
 [IsoId("_grZ50NkJEeiojJsa6FYyew")]
+[IsoDisplayName(@"Check")]
 public interface ICheck1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICheck1 : IIsoComponent
     [IsoId("_wrMXUNkJEeiojJsa6FYyew")]
     [DisplayName("Bank Identification")]
     [IsoXmlTag("BkId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BankIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICheck1 : IIsoComponent
     [IsoId("_qyELUNkKEeiojJsa6FYyew")]
     [DisplayName("Account Number")]
     [IsoXmlTag("AcctNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountNumber { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ICheck1 : IIsoComponent
     [IsoId("_0LCs4NkKEeiojJsa6FYyew")]
     [DisplayName("Check Number")]
     [IsoXmlTag("ChckNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CheckNumber { get; }
 
     /// <summary>
@@ -42,6 +49,8 @@ public interface ICheck1 : IIsoComponent
     [IsoId("_Aq0nUNkLEeiojJsa6FYyew")]
     [DisplayName("Check Card Number")]
     [IsoXmlTag("ChckCardNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CheckCardNumber { get; }
 
     /// <summary>
@@ -66,5 +75,7 @@ public interface ICheck1 : IIsoComponent
     [IsoId("_H-b-4NkLEeiojJsa6FYyew")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
+    [IsoSimpleType(IsoSimpleType.Max3Text)]
+    [StringLength(3, MinimumLength = 1)]
     Max3Text? Country { get; }
 }

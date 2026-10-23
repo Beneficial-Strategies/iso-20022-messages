@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the breakdown of a reported amount that can be split across a range of assets: bonds, cash, equities, or another asset class.
 /// </summary>
 [IsoId("_J02CgDWzEemdWfjs3tykFQ")]
+[IsoDisplayName(@"Reporting Asset Breakdown")]
 public interface IReportingAssetBreakdown1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IReportingAssetBreakdown1 : IIsoComponent
     [IsoId("_xu3rkDWzEemdWfjs3tykFQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Identification { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DividendTypeFormat1Choice;
 /// Standard code to specify the frequency of the corporate action event.
 /// </summary>
 [IsoId("_Q36dc9p-Ed-ak6NoX_4Aeg_-1957267186")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDividendTypeFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

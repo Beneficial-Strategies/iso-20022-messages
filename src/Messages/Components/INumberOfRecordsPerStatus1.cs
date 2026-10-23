@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information on the number of transactions that are reported with a specific transaction status.
 /// </summary>
 [IsoId("_4rGw9dHEEeaokquJJ-K6uA")]
+[IsoDisplayName(@"Number Of Records Per Status")]
 public interface INumberOfRecordsPerStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INumberOfRecordsPerStatus1 : IIsoComponent
     [IsoId("_40TJMdHEEeaokquJJ-K6uA")]
     [DisplayName("Detailed Number Of Records")]
     [IsoXmlTag("DtldNbOfRcrds")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText DetailedNumberOfRecords { get; }
 
     /// <summary>

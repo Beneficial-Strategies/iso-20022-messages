@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionType3Choice
 /// Securities transaction type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_vo7r8ZCAEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlementTransactionType3Choice, IIsoChoiceVariant
 {
     /// <summary>

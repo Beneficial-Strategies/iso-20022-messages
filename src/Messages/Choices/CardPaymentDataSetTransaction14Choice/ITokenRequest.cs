@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction14C
 
 /// <summary>Request for a token computation.</summary>
 [IsoId("_tKIfbbYJEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Token Request")]
 public interface ITokenRequest : ICardPaymentDataSetTransaction14Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

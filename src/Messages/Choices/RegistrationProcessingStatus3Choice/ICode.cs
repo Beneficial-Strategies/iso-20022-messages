@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RegistrationProcessingStatus3Cho
 /// Provides the status of the registration processing.
 /// </summary>
 [IsoId("_giL60TqqEeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRegistrationProcessingStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

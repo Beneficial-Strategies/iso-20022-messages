@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide further means of referencing a payment transaction.
 /// </summary>
 [IsoId("_rf468HrhEeidVZmeoasaWQ")]
+[IsoDisplayName(@"Payment Identification")]
 public interface IPaymentIdentification8 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IPaymentIdentification8 : IIsoComponent
     [IsoId("_r0WIAXrhEeidVZmeoasaWQ")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -27,6 +30,8 @@ public interface IPaymentIdentification8 : IIsoComponent
     [IsoId("_r0WIA3rhEeidVZmeoasaWQ")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text EndToEndIdentification { get; }
 
     /// <summary>
@@ -35,6 +40,8 @@ public interface IPaymentIdentification8 : IIsoComponent
     [IsoId("_vLfqAXrhEeidVZmeoasaWQ")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -43,5 +50,6 @@ public interface IPaymentIdentification8 : IIsoComponent
     [IsoId("_r0WIBXrhEeidVZmeoasaWQ")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? UETR { get; }
 }

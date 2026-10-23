@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the network management initiation message.</summary>
 [IsoId("_kNBjwW7-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Network Management Initiation")]
 public interface INetworkManagementInitiation : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

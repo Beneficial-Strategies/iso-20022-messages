@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "TrptyCollUnltrlRmvlReq",
     "urn:iso:std:iso:20022:tech:xsd:reda.074.001.01"
 )]
+[Description(@"Scope:|A collateral giver/taker sends a TripartyCollateralFinancialInstrumentRemovalRequest to the Triparty Agent to remove a financial instrument from the collateral pool.||The status of this request is provided with the reda.028 , the CollateralDataStatusAdvice.")]
+[IsoDisplayName(@"Triparty Collateral Unilateral Removal Request V")]
 public interface ITripartyCollateralUnilateralRemovalRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -35,6 +37,8 @@ public interface ITripartyCollateralUnilateralRemovalRequestV01 : IOuterRecord
     [IsoId("_2uaNSys7EeySlt9bF77XfA")]
     [DisplayName("Removal Request Identification")]
     [IsoXmlTag("RmvlReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RemovalRequestIdentification { get; }
 
     /// <summary>

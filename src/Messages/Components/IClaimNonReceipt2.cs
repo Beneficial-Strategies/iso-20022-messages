@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies details of a claim non receipt status advice.
 /// </summary>
 [IsoId("_EhbFNW4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Claim Non Receipt")]
 public interface IClaimNonReceipt2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IClaimNonReceipt2 : IIsoComponent
     [IsoId("_EtCfUW4-EeiU9cctagi5ow")]
     [DisplayName("Date Processed")]
     [IsoXmlTag("DtPrcd")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate DateProcessed { get; }
 
     /// <summary>

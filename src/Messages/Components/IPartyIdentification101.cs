@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the beneficial owner of the securities.
 /// </summary>
 [IsoId("_chc-k5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification101 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPartyIdentification101 : IIsoComponent
     [IsoId("_chc-n5KQEeWHWpTQn1FFVg")]
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAlternatePartyIdentification9> AlternateIdentification { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IPartyIdentification101 : IIsoComponent
     [IsoId("_chc-r5KQEeWHWpTQn1FFVg")]
     [DisplayName("Non Domicile Country")]
     [IsoXmlTag("NonDmclCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> NonDomicileCountry { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IPartyIdentification101 : IIsoComponent
     [IsoId("_chc-v5KQEeWHWpTQn1FFVg")]
     [DisplayName("Certification Type")]
     [IsoXmlTag("CertfctnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficiaryCertificationType11Choice> CertificationType { get; }
 
     /// <summary>
@@ -65,5 +69,7 @@ public interface IPartyIdentification101 : IIsoComponent
     [IsoId("_chc-x5KQEeWHWpTQn1FFVg")]
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text? CertificationBreakdown { get; }
 }

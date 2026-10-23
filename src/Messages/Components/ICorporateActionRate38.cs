@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies rates.
 /// </summary>
 [IsoId("_kxu8fxLnEeKJ5uSjVyVvug")]
+[IsoDisplayName(@"Corporate Action Rate")]
 public interface ICorporateActionRate38 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionRate38 : IIsoComponent
     [IsoId("_lIPYDRLnEeKJ5uSjVyVvug")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGrossDividendRateFormat10Choice> GrossDividendRate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICorporateActionRate38 : IIsoComponent
     [IsoId("_lIPYFxLnEeKJ5uSjVyVvug")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetDividendRateFormat12Choice> NetDividendRate { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICorporateActionRate38 : IIsoComponent
     [IsoId("_lIPYJRLnEeKJ5uSjVyVvug")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateUsedForPaymentFormat2Choice> InterestRateUsedForPayment { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICorporateActionRate38 : IIsoComponent
     [IsoId("_lIPYLxLnEeKJ5uSjVyVvug")]
     [DisplayName("Maximum Allowed Oversubscription Rate")]
     [IsoXmlTag("MaxAllwdOvrsbcptRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? MaximumAllowedOversubscriptionRate { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ICorporateActionRate38 : IIsoComponent
     [IsoId("_lIPYORLnEeKJ5uSjVyVvug")]
     [DisplayName("Proration Rate")]
     [IsoXmlTag("PrratnRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ProrationRate { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface ICorporateActionRate38 : IIsoComponent
     [IsoId("_lIPYQxLnEeKJ5uSjVyVvug")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateTypeAndAmountAndStatus6> TaxRelatedRate { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface ICorporateActionRate38 : IIsoComponent
     [IsoId("_lIPYTRLnEeKJ5uSjVyVvug")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? WithholdingTaxRate { get; }
 
     /// <summary>
@@ -97,5 +105,6 @@ public interface ICorporateActionRate38 : IIsoComponent
     [IsoId("_lIPYZRLnEeKJ5uSjVyVvug")]
     [DisplayName("Taxable Income Per Dividend Share")]
     [IsoXmlTag("TaxblIncmPerDvddShr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateTypeAndAmountAndStatus11> TaxableIncomePerDividendShare { get; }
 }

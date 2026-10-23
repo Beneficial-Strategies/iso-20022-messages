@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Deposited Media4.
 /// </summary>
 [IsoId("_hdxhIZ9PEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"ATM Deposited Media4")]
 public interface IATMDepositedMedia4 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IATMDepositedMedia4 : IIsoComponent
     /// </summary>
     [DisplayName("Media Item")]
     [IsoXmlTag("MdiaItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMDepositedMediaItem1> MediaItem { get; }
 }

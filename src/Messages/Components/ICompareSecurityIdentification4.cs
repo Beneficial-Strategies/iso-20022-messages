@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a securities identification.
 /// </summary>
 [IsoId("_vPvfoa5nEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Compare Security Identification")]
 public interface ICompareSecurityIdentification4 : IIsoComponent
 {
     /// <summary>

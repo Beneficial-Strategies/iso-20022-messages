@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Maintenance Delegation17.
 /// </summary>
 [IsoId("_62UBcZB2Ee6FLLjWp95ntQ")]
+[IsoDisplayName(@"Maintenance Delegation17")]
 public interface IMaintenanceDelegation17 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IMaintenanceDelegation17 : IIsoComponent
     /// </summary>
     [DisplayName("Maintenance Service")]
     [IsoXmlTag("MntncSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<DataSetCategory19Code> MaintenanceService { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface IMaintenanceDelegation17 : IIsoComponent
     /// </summary>
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> POISubset { get; }
 
     /// <summary>
@@ -79,5 +82,6 @@ public interface IMaintenanceDelegation17 : IIsoComponent
     /// </summary>
     [DisplayName("POI Identification Association")]
     [IsoXmlTag("POIIdAssoctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMaintenanceIdentificationAssociation1> POIIdentificationAssociation { get; }
 }

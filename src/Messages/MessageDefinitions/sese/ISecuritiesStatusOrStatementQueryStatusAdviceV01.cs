@@ -26,6 +26,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesStsOrStmtQryStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:sese.022.001.01"
 )]
+[Description(@"Scope|An account servicer sends a SecuritiesStatusOrStatementQueryStatusAdvice to an account owner to advise the status of a status query or statement query previously sent by the account owner.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).|ISO 15022 - 20022 Coexistence|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
+[IsoDisplayName(@"Securities Status Or Statement Query Status Advice V")]
 public interface ISecuritiesStatusOrStatementQueryStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -98,5 +100,6 @@ public interface ISecuritiesStatusOrStatementQueryStatusAdviceV01 : IOuterRecord
     [IsoId("__zKT0tE5Ed-BzquC8wXy7w_1981475286")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension2> Extension { get; }
 }

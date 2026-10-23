@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the trade status report.
 /// </summary>
 [IsoId("_-C4P-HltEeG7BsjMvd1mEw_2067370861")]
+[IsoDisplayName(@"Trade Status Report")]
 public interface ITradeStatusReport1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ITradeStatusReport1 : IIsoComponent
     [IsoId("_-DCA8XltEeG7BsjMvd1mEw_-415310632")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation8> StatusReason { get; }
 
     /// <summary>
@@ -41,5 +43,7 @@ public interface ITradeStatusReport1 : IIsoComponent
     [IsoId("_-DCA8nltEeG7BsjMvd1mEw_-952635895")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalInformation { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus2Choice;
 /// </summary>
 [IsoId("_RWwVkNp-Ed-ak6NoX_4Aeg_-1271508072")]
 [IsoXmlTag("PrcgSts")]
+[IsoDisplayName(@"Processing Status")]
 public interface IProcessingStatus : IInstructionStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IProcessingStatus : IInstructionStatus2Choice, IIsoChoiceVarian
     [IsoId("_RWwVlNp-Ed-ak6NoX_4Aeg_-316967450")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

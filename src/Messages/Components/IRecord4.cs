@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Message in file message identified as a batch record.
 /// </summary>
 [IsoId("_dn4bkW7-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Record4")]
 public interface IRecord4 : IIsoComponent
 {
     /// <summary>

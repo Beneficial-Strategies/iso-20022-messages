@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason1Choice;
 /// Specifies the reason why the related instruction is cancelled, or the related cancellation request is executed.
 /// </summary>
 [IsoId("_UXb4Vdp-Ed-ak6NoX_4Aeg_-295489570")]
+[IsoDisplayName(@"Cancellation Reason")]
 public interface ICancellationReason : IReason1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

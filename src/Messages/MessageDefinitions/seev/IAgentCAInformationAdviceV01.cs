@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_TODKy9EwEd-BzquC8wXy7w_-190409931")]
 [IsoMessage("seev.023.001.01", "AgtCAInfAdvc", "urn:iso:std:iso:20022:tech:xsd:seev.023.001.01")]
+[Description(@"Scope|This message is sent by a CSD to an issuer (or its agent) to provide information about the certification and/or the delivery details to the issuer (or its agent).|Usage|This message can be used in the case of a corporate action event without an election.|This message can also be used in the case of a corporate action event with election when the election details and the additional information cannot be provided in the same message. In this case, the Agent Corporate Action Election Advice Identification must be used to link this message to the election advice for which additional information is provided.")]
+[IsoDisplayName(@"Agent CA Information Advice V")]
 public interface IAgentCAInformationAdviceV01 : IOuterRecord
 {
     /// <summary>

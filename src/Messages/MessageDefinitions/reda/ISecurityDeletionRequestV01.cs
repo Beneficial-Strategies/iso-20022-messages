@@ -26,6 +26,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_jTumsR62Eeu31YsWNiv_cw")]
 [IsoMessage("reda.013.001.01", "SctyDeltnReq", "urn:iso:std:iso:20022:tech:xsd:reda.013.001.01")]
+[Description(@"SCOPE|An instructing party sends a SecurityDeletionRequest message to an executing/servicing party to advice the complete removal of a financial instrument entry from their system.||The instructing party - executing/servicing party relationship may be:|- Central Securities Depositories (CSD) who would like to publish security static data, or |- a Corporate, or|- a Bank, or|- a Market Infrastructure, or |- a Market Data Provider.||USAGE|The request is sent when the instructing party identified that a security is wrongly created in the securities coverage of the executing/servicing party. The instructing party needs this security to be removed from the executing /servicing party database. |This message can be used when a security identification code was issued too quickly or if a security identification code needs to be reused (for example, in case of money market instrument). The result of this message is a complete removal of the security identification from the executing/servicing party's database.||Initiator: instructing party.")]
+[IsoDisplayName(@"Security Deletion Request V")]
 public interface ISecurityDeletionRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -50,5 +52,6 @@ public interface ISecurityDeletionRequestV01 : IOuterRecord
     [IsoId("_jTumxR62Eeu31YsWNiv_cw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

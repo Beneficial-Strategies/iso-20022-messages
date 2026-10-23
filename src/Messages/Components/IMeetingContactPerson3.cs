@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a contact person.
 /// </summary>
 [IsoId("_qdH44bINEemux5trsZcCpw")]
+[IsoDisplayName(@"Meeting Contact Person")]
 public interface IMeetingContactPerson3 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IMeetingContactPerson3 : IIsoComponent
     [IsoId("_q0B9B7INEemux5trsZcCpw")]
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? PlaceOfListing { get; }
 }

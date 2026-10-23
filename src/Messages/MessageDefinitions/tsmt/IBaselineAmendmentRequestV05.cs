@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_Nd_okQgGEeSeS5xdjFfOTw")]
 [IsoMessage("tsmt.009.001.05", "BaselnAmdmntReq", "urn:iso:std:iso:20022:tech:xsd:tsmt.009.001.05")]
+[Description(@"Scope|The BaselineAmendmentRequest message is sent by a primary party involved in a transaction to the matching application.|The message is used to request the amendment of an established baseline.|Usage|The BaselineAmendmentRequest message may only be sent if the transaction is in the state Established or Active.|The BaselineAmendmentRequest message can be sent to the matching application by one of the primary parties involved in a transaction established in the push-through mode to request the amendment of an established baseline.|The matching application acknowledges the receipt of the amendment request by sending a DeltaReport message to the submitter of the BaselineAmendmentRequest message. It passes on the newly proposed baseline to the counterparty by sending a FullPushThroughReport message, a DeltaReport message and a pre-calculated BaselineReport message.|The counterparty is expected to either accept or reject the amendment request by submitting an AmendmentAcceptance or AmendmentRejection message.|or|The BaselineAmendmentRequest message can be sent by the party involved in a transaction established in the lodge mode to the matching application to amend an established baseline.|The matching application amends the baseline according to the BaselineAmendmentRequest message and confirms the execution of the request by sending a DeltaReport and calculated BaselineReport message to the requester of the amendment.")]
+[IsoDisplayName(@"Baseline Amendment Request V")]
 public interface IBaselineAmendmentRequestV05 : IOuterRecord
 {
     /// <summary>
@@ -62,6 +64,7 @@ public interface IBaselineAmendmentRequestV05 : IOuterRecord
     [IsoId("_Nd_onQgGEeSeS5xdjFfOTw")]
     [DisplayName("Buyer Contact Person")]
     [IsoXmlTag("BuyrCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification1> BuyerContactPerson { get; }
 
     /// <summary>
@@ -70,6 +73,7 @@ public interface IBaselineAmendmentRequestV05 : IOuterRecord
     [IsoId("_Nd_onwgGEeSeS5xdjFfOTw")]
     [DisplayName("Seller Contact Person")]
     [IsoXmlTag("SellrCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification1> SellerContactPerson { get; }
 
     /// <summary>
@@ -78,6 +82,7 @@ public interface IBaselineAmendmentRequestV05 : IOuterRecord
     [IsoId("_Nd_ooQgGEeSeS5xdjFfOTw")]
     [DisplayName("Buyer Bank Contact Person")]
     [IsoXmlTag("BuyrBkCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification1> BuyerBankContactPerson { get; }
 
     /// <summary>
@@ -86,6 +91,7 @@ public interface IBaselineAmendmentRequestV05 : IOuterRecord
     [IsoId("_Nd_oowgGEeSeS5xdjFfOTw")]
     [DisplayName("Seller Bank Contact Person")]
     [IsoXmlTag("SellrBkCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification1> SellerBankContactPerson { get; }
 
     /// <summary>
@@ -94,5 +100,6 @@ public interface IBaselineAmendmentRequestV05 : IOuterRecord
     [IsoId("_Nd_opQgGEeSeS5xdjFfOTw")]
     [DisplayName("Other Bank Contact Person")]
     [IsoXmlTag("OthrBkCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification3> OtherBankContactPerson { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusCode6Choice;
 /// Qualifies further the pending status.
 /// </summary>
 [IsoId("_phD1AxbzEeOy-PlRuFSUzQ")]
+[IsoDisplayName(@"Pending")]
 public interface IPending : IPaymentStatusCode6Choice, IIsoChoiceVariant
 {
     /// <summary>

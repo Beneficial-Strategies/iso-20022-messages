@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_KAu-wZ2fEem_Be8NuxvF7Q")]
 [IsoMessage("reda.019.001.01", "SctiesAcctQry", "urn:iso:std:iso:20022:tech:xsd:reda.019.001.01")]
+[Description(@"The SecuritiesAccountQuery message sent by an instructing party to the executing party to request the details related to the securities account.")]
+[IsoDisplayName(@"Securities Account Query V")]
 public interface ISecuritiesAccountQueryV01 : IOuterRecord
 {
     /// <summary>
@@ -44,5 +46,6 @@ public interface ISecuritiesAccountQueryV01 : IOuterRecord
     [IsoId("_KAu-052fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

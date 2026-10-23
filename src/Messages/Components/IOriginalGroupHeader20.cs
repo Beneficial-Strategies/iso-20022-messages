@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the original group, to which the message refers.
 /// </summary>
 [IsoId("_yCJJATEyEe6g-ffJsqGiSA")]
+[Description(@"Provides details on the original group, to which the message refers.")]
+[IsoDisplayName(@"Original Group Header20")]
 public interface IOriginalGroupHeader20 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +39,6 @@ public interface IOriginalGroupHeader20 : IIsoComponent
     /// </summary>
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReversalReason10> ReversalReasonInformation { get; }
 }

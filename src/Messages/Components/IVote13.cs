@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vote expressed for one resolution.
 /// </summary>
 [IsoId("_d3vDAbqPEemCAOifqHrKJw")]
+[IsoDisplayName(@"Vote")]
 public interface IVote13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVote13 : IIsoComponent
     [IsoId("_eJb3A7qPEemCAOifqHrKJw")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>
@@ -121,6 +124,9 @@ public interface IVote13 : IIsoComponent
     [IsoId("_yEAvELqPEemCAOifqHrKJw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [MinLength(0)]
+    [MaxLength(4)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryVote2> Proprietary { get; }
 
     /// <summary>
@@ -129,5 +135,6 @@ public interface IVote13 : IIsoComponent
     [IsoId("_eJb3G7qPEemCAOifqHrKJw")]
     [DisplayName("Withdrawn")]
     [IsoXmlTag("Wdrwn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Withdrawn { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the transportation of goods by rail.
 /// </summary>
 [IsoId("_Q1z98dQxEeK0PPbKncCqzA")]
+[IsoDisplayName(@"Transport By Rail")]
 public interface ITransportByRail4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransportByRail4 : IIsoComponent
     [IsoId("_RQ27MdQxEeK0PPbKncCqzA")]
     [DisplayName("Place Of Receipt")]
     [IsoXmlTag("PlcOfRct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PlaceOfReceipt { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransportByRail4 : IIsoComponent
     [IsoId("_RQ27M9QxEeK0PPbKncCqzA")]
     [DisplayName("Place Of Delivery")]
     [IsoXmlTag("PlcOfDlvry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PlaceOfDelivery { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransportByRail4 : IIsoComponent
     [IsoId("_RQ27NdQxEeK0PPbKncCqzA")]
     [DisplayName("Rail Carrier Name")]
     [IsoXmlTag("RailCrrierNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? RailCarrierName { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ITransportByRail4 : IIsoComponent
     [IsoId("_TeP_sBUzEeOCqpkCrPgk4g")]
     [DisplayName("Carrier Agent Name")]
     [IsoXmlTag("CrrierAgtNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CarrierAgentName { get; }
 
     /// <summary>

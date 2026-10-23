@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of constituents for a basket of indexes.
 /// </summary>
 [IsoId("_mPKjUJNeEeytjZlcgApf6A")]
+[IsoDisplayName(@"Basket Query")]
 public interface IBasketQuery1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IBasketQuery1 : IIsoComponent
     [IsoId("_4uxSMJNeEeytjZlcgApf6A")]
     [DisplayName("Structurer")]
     [IsoXmlTag("Strr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? Structurer { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IBasketQuery1 : IIsoComponent
     [IsoId("_8d5PUJNeEeytjZlcgApf6A")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? Identifier { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IBasketQuery1 : IIsoComponent
     [IsoId("__1ePIJNeEeytjZlcgApf6A")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? ISIN { get; }
 }

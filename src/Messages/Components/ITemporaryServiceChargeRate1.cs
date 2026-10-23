@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Charge rate for a temporary service.
 /// </summary>
 [IsoId("_O_NroVXcEfC0lMwgjvMClw")]
+[IsoDisplayName(@"Temporary Service Charge Rate1")]
 public interface ITemporaryServiceChargeRate1 : IIsoComponent
 {
     /// <summary>

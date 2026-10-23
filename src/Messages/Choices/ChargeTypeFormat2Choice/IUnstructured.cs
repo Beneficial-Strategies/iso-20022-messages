@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeTypeFormat2Choice;
 /// Specifies the type of charge in free text form.
 /// </summary>
 [IsoId("_UyQMGNp-Ed-ak6NoX_4Aeg_2129381679")]
+[IsoDisplayName(@"Unstructured")]
 public interface IUnstructured : IChargeTypeFormat2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IUnstructured : IChargeTypeFormat2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Ustrd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

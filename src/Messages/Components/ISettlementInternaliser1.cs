@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the submitting entity and Settlement Internaliser of the report.
 /// </summary>
 [IsoId("_x6_YcO3mEeaWjpoyrnG6Rw")]
+[IsoDisplayName(@"Settlement Internaliser")]
 public interface ISettlementInternaliser1 : IIsoComponent
 {
     /// <summary>

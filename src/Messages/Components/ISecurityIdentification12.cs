@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security.
 /// </summary>
 [IsoId("_W9k0Idp-Ed-ak6NoX_4Aeg_-702562121")]
+[IsoDisplayName(@"Security Identification")]
 public interface ISecurityIdentification12 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ISecurityIdentification12 : IIsoComponent
     [IsoId("_W9k0I9p-Ed-ak6NoX_4Aeg_1508646071")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text? Description { get; }
 }

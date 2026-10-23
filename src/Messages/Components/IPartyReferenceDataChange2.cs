@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the comparison between the currently established baseline elements and the proposed ones.
 /// </summary>
 [IsoId("_70efBVhLEeih3fUfzR38Ig")]
+[IsoDisplayName(@"Party Reference Data Change")]
 public interface IPartyReferenceDataChange2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPartyReferenceDataChange2 : IIsoComponent
     [IsoId("_E_5woIp8EeiEt5E1WBt_2Q")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdateLogPartyRecord1Choice> Record { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IPartyReferenceDataChange2 : IIsoComponent
     [IsoId("_7_fcOVhLEeih3fUfzR38Ig")]
     [DisplayName("Operation Time Stamp")]
     [IsoXmlTag("OprTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime OperationTimeStamp { get; }
 }

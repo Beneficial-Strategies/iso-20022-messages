@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details on a trading venue as per ISO 10383.
 /// </summary>
 [IsoId("_Q8VpYS6mEeiLE6ldFr13hQ")]
+[IsoDisplayName(@"Market Identification")]
 public interface IMarketIdentification95 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMarketIdentification95 : IIsoComponent
     [IsoId("_RLF3ES6mEeiLE6ldFr13hQ")]
     [DisplayName("Operating")]
     [IsoXmlTag("Oprg")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier Operating { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IMarketIdentification95 : IIsoComponent
     [IsoId("_RLF3Ey6mEeiLE6ldFr13hQ")]
     [DisplayName("Segment")]
     [IsoXmlTag("Sgmt")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier Segment { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IMarketIdentification95 : IIsoComponent
     [IsoId("_RLF3GS6mEeiLE6ldFr13hQ")]
     [DisplayName("Institution Name")]
     [IsoXmlTag("InstnNm")]
+    [IsoSimpleType(IsoSimpleType.Max450Text)]
+    [StringLength(450, MinimumLength = 1)]
     Max450Text InstitutionName { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface IMarketIdentification95 : IIsoComponent
     [IsoId("_RLF3Gy6mEeiLE6ldFr13hQ")]
     [DisplayName("Acronym")]
     [IsoXmlTag("Acrnm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Acronym { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface IMarketIdentification95 : IIsoComponent
     [IsoId("_RLF3HS6mEeiLE6ldFr13hQ")]
     [DisplayName("City")]
     [IsoXmlTag("City")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? City { get; }
 
     /// <summary>
@@ -81,6 +90,8 @@ public interface IMarketIdentification95 : IIsoComponent
     [IsoId("_RLF3IS6mEeiLE6ldFr13hQ")]
     [DisplayName("Authority Name")]
     [IsoXmlTag("AuthrtyNm")]
+    [IsoSimpleType(IsoSimpleType.Max450Text)]
+    [StringLength(450, MinimumLength = 1)]
     Max450Text? AuthorityName { get; }
 
     /// <summary>
@@ -89,6 +100,8 @@ public interface IMarketIdentification95 : IIsoComponent
     [IsoId("_RLF3Iy6mEeiLE6ldFr13hQ")]
     [DisplayName("Web Site")]
     [IsoXmlTag("WebSite")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? WebSite { get; }
 
     /// <summary>
@@ -97,6 +110,8 @@ public interface IMarketIdentification95 : IIsoComponent
     [IsoId("_RLF3JS6mEeiLE6ldFr13hQ")]
     [DisplayName("Note")]
     [IsoXmlTag("Note")]
+    [IsoSimpleType(IsoSimpleType.Max450Text)]
+    [StringLength(450, MinimumLength = 1)]
     Max450Text? Note { get; }
 
     /// <summary>
@@ -113,6 +128,7 @@ public interface IMarketIdentification95 : IIsoComponent
     [IsoId("_RLF3KS6mEeiLE6ldFr13hQ")]
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CreationDate { get; }
 
     /// <summary>
@@ -129,6 +145,7 @@ public interface IMarketIdentification95 : IIsoComponent
     [IsoId("_RLF3LS6mEeiLE6ldFr13hQ")]
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StatusDate { get; }
 
     /// <summary>
@@ -137,5 +154,6 @@ public interface IMarketIdentification95 : IIsoComponent
     [IsoId("_RLF3Ly6mEeiLE6ldFr13hQ")]
     [DisplayName("Last Updated Date")]
     [IsoXmlTag("LastUpdtdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? LastUpdatedDate { get; }
 }

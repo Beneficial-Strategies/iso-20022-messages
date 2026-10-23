@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_77TqgZeSEeen_cyMrluY4w")]
 [IsoMessage("reda.031.001.01", "PtyDeltnReq", "urn:iso:std:iso:20022:tech:xsd:reda.031.001.01")]
+[Description(@"Scope:|The PartyDeletionRequest message is sent by the instructing party to the executing party to request a deletion of a party defined in the executing system.||Usage:|It aims at instructing the deletion of an existing party by providing its identification.|Processing of the party deletion request message is provided via a party status advice.")]
+[IsoDisplayName(@"Party Deletion Request V")]
 public interface IPartyDeletionRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -41,5 +43,6 @@ public interface IPartyDeletionRequestV01 : IOuterRecord
     [IsoId("_77Tqh5eSEeen_cyMrluY4w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

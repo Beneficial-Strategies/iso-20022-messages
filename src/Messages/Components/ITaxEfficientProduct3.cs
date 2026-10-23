@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of a tax efficient product.
 /// </summary>
 [IsoId("_jwT6wU7cEeifNrXGwadPmg")]
+[IsoDisplayName(@"Tax Efficient Product")]
 public interface ITaxEfficientProduct3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITaxEfficientProduct3 : IIsoComponent
     [IsoId("_kAXwB07cEeifNrXGwadPmg")]
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CashComponentIndicator { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface ITaxEfficientProduct3 : IIsoComponent
     [IsoId("_c860D07fEeifNrXGwadPmg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

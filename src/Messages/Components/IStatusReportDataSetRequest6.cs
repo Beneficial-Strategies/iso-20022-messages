@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status Report Data Set Request6.
 /// </summary>
 [IsoId("_5NSE0aE7Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"Status Report Data Set Request6")]
 public interface IStatusReportDataSetRequest6 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the statement.
 /// </summary>
 [IsoId("_HpYh4d_NEe-Ned3-G07x_A")]
+[IsoDisplayName(@"Statement87")]
 public interface IStatement87 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria which are used to search for standing orders defined within the system.
 /// </summary>
 [IsoId("_GWGH2W4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Standing Order Search Criteria")]
 public interface IStandingOrderSearchCriteria3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IStandingOrderSearchCriteria3 : IIsoComponent
     [IsoId("_GfoeUW4-EeiU9cctagi5ow")]
     [DisplayName("Key Attributes Indicator")]
     [IsoXmlTag("KeyAttrbtsInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? KeyAttributesIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IStandingOrderSearchCriteria3 : IIsoComponent
     [IsoId("_GfoeU24-EeiU9cctagi5ow")]
     [DisplayName("Standing Order Identification")]
     [IsoXmlTag("StgOrdrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StandingOrderIdentification { get; }
 
     /// <summary>
@@ -89,6 +93,8 @@ public interface IStandingOrderSearchCriteria3 : IIsoComponent
     [IsoId("_GfoeY24-EeiU9cctagi5ow")]
     [DisplayName("Link Set Identification")]
     [IsoXmlTag("LkSetId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LinkSetIdentification { get; }
 
     /// <summary>
@@ -97,6 +103,8 @@ public interface IStandingOrderSearchCriteria3 : IIsoComponent
     [IsoId("_GfoeZW4-EeiU9cctagi5ow")]
     [DisplayName("Link Set Order Identification")]
     [IsoXmlTag("LkSetOrdrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LinkSetOrderIdentification { get; }
 
     /// <summary>
@@ -105,6 +113,7 @@ public interface IStandingOrderSearchCriteria3 : IIsoComponent
     [IsoId("_GfoeZ24-EeiU9cctagi5ow")]
     [DisplayName("Link Set Order Sequence")]
     [IsoXmlTag("LkSetOrdrSeq")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LinkSetOrderSequence { get; }
 
     /// <summary>
@@ -114,5 +123,6 @@ public interface IStandingOrderSearchCriteria3 : IIsoComponent
     [IsoId("_GfoeaW4-EeiU9cctagi5ow")]
     [DisplayName("Zero Sweep Indicator")]
     [IsoXmlTag("ZeroSweepInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ZeroSweepIndicator { get; }
 }

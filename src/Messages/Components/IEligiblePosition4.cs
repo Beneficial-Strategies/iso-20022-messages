@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the voting entitlement.
 /// </summary>
 [IsoId("_R7tcwtp-Ed-ak6NoX_4Aeg_-758914703")]
+[IsoDisplayName(@"Eligible Position")]
 public interface IEligiblePosition4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IEligiblePosition4 : IIsoComponent
     [IsoId("_R73NwNp-Ed-ak6NoX_4Aeg_-1970577751")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,9 @@ public interface IEligiblePosition4 : IIsoComponent
     [IsoId("_R73Nwtp-Ed-ak6NoX_4Aeg_632876877")]
     [DisplayName("Holding Balance")]
     [IsoXmlTag("HldgBal")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHoldingBalance6> HoldingBalance { get; }
 
     /// <summary>
@@ -41,5 +47,8 @@ public interface IEligiblePosition4 : IIsoComponent
     [IsoId("_R73Nw9p-Ed-ak6NoX_4Aeg_1847729299")]
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification39> RightsHolder { get; }
 }

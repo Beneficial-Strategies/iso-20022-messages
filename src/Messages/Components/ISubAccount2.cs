@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// The subaccount of the safekeeping account.
 /// </summary>
 [IsoId("_PopN9Np-Ed-ak6NoX_4Aeg_1758087373")]
+[IsoDisplayName(@"Sub Account")]
 public interface ISubAccount2 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface ISubAccount2 : IIsoComponent
     [IsoId("_PopN9dp-Ed-ak6NoX_4Aeg_1758087375")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

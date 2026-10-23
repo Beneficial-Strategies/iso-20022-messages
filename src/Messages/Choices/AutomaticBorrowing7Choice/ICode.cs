@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AutomaticBorrowing7Choice;
 /// Condition for automatic borrowing expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_GoKdMTt4EeW638lNyHKv7A")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAutomaticBorrowing7Choice, IIsoChoiceVariant
 {
     /// <summary>

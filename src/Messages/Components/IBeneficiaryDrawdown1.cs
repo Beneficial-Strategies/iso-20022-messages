@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the beneficiary of a drawdown.
 /// </summary>
 [IsoId("_l8_kcFNgEeijdq8ilaxyOA")]
+[IsoDisplayName(@"Beneficiary Drawdown")]
 public interface IBeneficiaryDrawdown1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IBeneficiaryDrawdown1 : IIsoComponent
     [IsoId("_salS8FNgEeijdq8ilaxyOA")]
     [DisplayName("Death Under Limit")]
     [IsoXmlTag("DthUdrLmt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DeathUnderLimit { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IBeneficiaryDrawdown1 : IIsoComponent
     [IsoId("_7qdhYZC0EeiQvr1XXv37hw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

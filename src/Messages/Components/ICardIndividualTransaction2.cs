@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Individual card transaction entry details.
 /// </summary>
 [IsoId("_0jmr9Tj3EeSz-s1QOUJaOg")]
+[IsoDisplayName(@"Card Individual Transaction")]
 public interface ICardIndividualTransaction2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICardIndividualTransaction2 : IIsoComponent
     [IsoId("_vfHeYzj3EeSz-s1QOUJaOg")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? ICCRelatedData { get; }
 
     /// <summary>
@@ -50,6 +53,8 @@ public interface ICardIndividualTransaction2 : IIsoComponent
     [IsoId("_0yxwZTj3EeSz-s1QOUJaOg")]
     [DisplayName("Sale Reconciliation Identification")]
     [IsoXmlTag("SaleRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReconciliationIdentification { get; }
 
     /// <summary>
@@ -58,6 +63,8 @@ public interface ICardIndividualTransaction2 : IIsoComponent
     [IsoId("_0yxwZzj3EeSz-s1QOUJaOg")]
     [DisplayName("Sale Reference Number")]
     [IsoXmlTag("SaleRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceNumber { get; }
 
     /// <summary>
@@ -74,6 +81,8 @@ public interface ICardIndividualTransaction2 : IIsoComponent
     [IsoId("_0yxwaTj3EeSz-s1QOUJaOg")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SequenceNumber { get; }
 
     /// <summary>
@@ -98,6 +107,7 @@ public interface ICardIndividualTransaction2 : IIsoComponent
     [IsoId("_0yxwbzj3EeSz-s1QOUJaOg")]
     [DisplayName("Validation Date")]
     [IsoXmlTag("VldtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidationDate { get; }
 
     /// <summary>
@@ -107,5 +117,7 @@ public interface ICardIndividualTransaction2 : IIsoComponent
     [IsoId("_0yxwcTj3EeSz-s1QOUJaOg")]
     [DisplayName("Validation Sequence Number")]
     [IsoXmlTag("VldtnSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ValidationSequenceNumber { get; }
 }

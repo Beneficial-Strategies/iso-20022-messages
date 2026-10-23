@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that serves as a basis to debit an account.
 /// </summary>
 [IsoId("_aLTuRx77EeSxevWRRWxNAg")]
+[IsoDisplayName(@"Mandate")]
 public interface IMandate7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMandate7 : IIsoComponent
     [IsoId("_acF8Nx77EeSxevWRRWxNAg")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> MandateIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IMandate7 : IIsoComponent
     [IsoId("_acF8OR77EeSxevWRRWxNAg")]
     [DisplayName("Mandate Request Identification")]
     [IsoXmlTag("MndtReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MandateRequestIdentification { get; }
 
     /// <summary>
@@ -145,6 +149,7 @@ public interface IMandate7 : IIsoComponent
     [IsoId("_acF8VR77EeSxevWRRWxNAg")]
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferredDocumentInformation6> ReferredDocument { get; }
 
     /// <summary>
@@ -153,5 +158,6 @@ public interface IMandate7 : IIsoComponent
     [IsoId("_acF8Vx77EeSxevWRRWxNAg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

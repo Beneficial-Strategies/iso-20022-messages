@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentType5Choice;
 /// Type, or nature, of the payment.
 /// </summary>
 [IsoId("_nQ0J4ekAEemV35DUs8L82Q")]
+[IsoDisplayName(@"Type")]
 public interface IType : IPaymentType5Choice, IIsoChoiceVariant
 {
     /// <summary>

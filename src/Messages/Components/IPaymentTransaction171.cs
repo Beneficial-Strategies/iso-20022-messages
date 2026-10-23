@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the original transactions, to which the status report message refers.
 /// </summary>
 [IsoId("8f5f6e58-5f38-4c81-985e-27a4edf16d5a")]
+[IsoDisplayName(@"Payment Transaction171")]
 public interface IPaymentTransaction171 : IIsoComponent
 {
     /// <summary>
@@ -105,5 +106,6 @@ public interface IPaymentTransaction171 : IIsoComponent
     [IsoId("a0c30313-1d0a-44b1-b8e9-8c07859c02a2")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

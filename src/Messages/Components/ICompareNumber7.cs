@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a number.
 /// </summary>
 [IsoId("_g3yo4U6oEeyEpI66tm807w")]
+[IsoDisplayName(@"Compare Number")]
 public interface ICompareNumber7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICompareNumber7 : IIsoComponent
     [IsoId("_g5q4M06oEeyEpI66tm807w")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Value1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICompareNumber7 : IIsoComponent
     [IsoId("_g5q4NU6oEeyEpI66tm807w")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Value2 { get; }
 }

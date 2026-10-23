@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides various address types of a party.
 /// </summary>
 [IsoId("_K47F0FSYEempisJfoIfvvQ")]
+[IsoDisplayName(@"Party Address")]
 public interface IPartyAddress1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPartyAddress1 : IIsoComponent
     [IsoId("_VpmaIVSYEempisJfoIfvvQ")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier? AnyBIC { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IPartyAddress1 : IIsoComponent
     [IsoId("_fgiqElSYEempisJfoIfvvQ")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 
     /// <summary>
@@ -41,5 +45,7 @@ public interface IPartyAddress1 : IIsoComponent
     [IsoId("_fgiqE1SYEempisJfoIfvvQ")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? URLAddress { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contract Registration Statement4.
 /// </summary>
 [IsoId("_4g7KUTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Contract Registration Statement4")]
 public interface IContractRegistrationStatement4 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface IContractRegistrationStatement4 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Journal")]
     [IsoXmlTag("TxJrnl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionCertificate4> TransactionJournal { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface IContractRegistrationStatement4 : IIsoComponent
     /// </summary>
     [DisplayName("Supporting Document Journal")]
     [IsoXmlTag("SpprtgDocJrnl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupportingDocument4> SupportingDocumentJournal { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IContractRegistrationStatement4 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Supporting Document Journal")]
     [IsoXmlTag("AddtlSpprtgDocJrnl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupportingDocument4> AdditionalSupportingDocumentJournal { get; }
 
     /// <summary>
@@ -72,6 +76,7 @@ public interface IContractRegistrationStatement4 : IIsoComponent
     /// </summary>
     [DisplayName("Regulatory Rule Validation")]
     [IsoXmlTag("RgltryRuleVldtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericValidationRuleIdentification1> RegulatoryRuleValidation { get; }
 
     /// <summary>
@@ -86,5 +91,6 @@ public interface IContractRegistrationStatement4 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

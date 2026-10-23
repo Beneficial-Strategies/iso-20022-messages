@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference11Choice;
 /// Reference that can be shared across a number of allocation instruction or allocation report messages, thereby making it possible to pass an identifier for an original allocation message on multiple messages (for example from one party to a second to a third, across cancel and replace messages etc).
 /// </summary>
 [IsoId("_Adu6VNokEeC60axPepSq7g_-1518522296")]
+[IsoDisplayName(@"Secondary Allocation Identification")]
 public interface ISecondaryAllocationIdentification
     : IIdentificationReference11Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ISecondaryAllocationIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("ScndryAllcnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

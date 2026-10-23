@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on an entry in the report.
 /// </summary>
 [IsoId("_-IPyH248EeiU9cctagi5ow")]
+[IsoDisplayName(@"Report Entry")]
 public interface IReportEntry10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportEntry10 : IIsoComponent
     [IsoId("_-Ro-pW48EeiU9cctagi5ow")]
     [DisplayName("Entry Reference")]
     [IsoXmlTag("NtryRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EntryReference { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IReportEntry10 : IIsoComponent
     [IsoId("_-Ro-q248EeiU9cctagi5ow")]
     [DisplayName("Reversal Indicator")]
     [IsoXmlTag("RvslInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReversalIndicator { get; }
 
     /// <summary>
@@ -73,6 +77,8 @@ public interface IReportEntry10 : IIsoComponent
     [IsoId("_-Ro-s248EeiU9cctagi5ow")]
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerReference { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface IReportEntry10 : IIsoComponent
     [IsoId("_-Ro-tW48EeiU9cctagi5ow")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAvailability1> Availability { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface IReportEntry10 : IIsoComponent
     [IsoId("_-Ro-uW48EeiU9cctagi5ow")]
     [DisplayName("Commission Waiver Indicator")]
     [IsoXmlTag("ComssnWvrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CommissionWaiverIndicator { get; }
 
     /// <summary>
@@ -154,6 +162,7 @@ public interface IReportEntry10 : IIsoComponent
     [IsoId("_-Ro-x248EeiU9cctagi5ow")]
     [DisplayName("Entry Details")]
     [IsoXmlTag("NtryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEntryDetails9> EntryDetails { get; }
 
     /// <summary>
@@ -162,5 +171,7 @@ public interface IReportEntry10 : IIsoComponent
     [IsoId("_-Ro-yW48EeiU9cctagi5ow")]
     [DisplayName("Additional Entry Information")]
     [IsoXmlTag("AddtlNtryInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalEntryInformation { get; }
 }

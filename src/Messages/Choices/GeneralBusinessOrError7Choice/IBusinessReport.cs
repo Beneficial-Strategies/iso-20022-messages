@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessOrError7Choice;
 /// </summary>
 [IsoId("_QdJoA3hdEeidzqjNEfehPg")]
 [IsoXmlTag("BizRpt")]
+[IsoDisplayName(@"Business Report")]
 public interface IBusinessReport : IGeneralBusinessOrError7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IBusinessReport : IGeneralBusinessOrError7Choice, IIsoChoiceVar
     [IsoId("_QrMrE3hdEeidzqjNEfehPg")]
     [DisplayName("Business Information Reference")]
     [IsoXmlTag("BizInfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text BusinessInformationReference { get; }
 
     /// <summary>

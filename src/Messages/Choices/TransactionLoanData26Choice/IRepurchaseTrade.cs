@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData26Choice;
 /// </summary>
 [IsoId("_3-z24Xz2EeurrJrNxcsszQ")]
 [IsoXmlTag("RpTrad")]
+[IsoDisplayName(@"Repurchase Trade")]
 public interface IRepurchaseTrade : ITransactionLoanData26Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IRepurchaseTrade : ITransactionLoanData26Choice, IIsoChoiceVari
     [IsoId("_4AQBUXz2EeurrJrNxcsszQ")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDate { get; }
 
     /// <summary>
@@ -26,6 +28,8 @@ public interface IRepurchaseTrade : ITransactionLoanData26Choice, IIsoChoiceVari
     [IsoId("_4AQBU3z2EeurrJrNxcsszQ")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? UniqueTradeIdentifier { get; }
 
     /// <summary>

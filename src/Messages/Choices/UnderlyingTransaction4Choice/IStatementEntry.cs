@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction4Choice;
 /// </summary>
 [IsoId("_hbH5FYKZEee7hrXqLO3yQg")]
 [IsoXmlTag("StmtNtry")]
+[IsoDisplayName(@"Statement Entry")]
 public interface IStatementEntry : IUnderlyingTransaction4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IStatementEntry : IUnderlyingTransaction4Choice, IIsoChoiceVari
     [IsoId("_b3Bck9wYEee0mvR9H3APRg")]
     [DisplayName("Original Statement Identification")]
     [IsoXmlTag("OrgnlStmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalStatementIdentification { get; }
 
     /// <summary>
@@ -34,5 +37,7 @@ public interface IStatementEntry : IUnderlyingTransaction4Choice, IIsoChoiceVari
     [IsoId("_b3BcldwYEee0mvR9H3APRg")]
     [DisplayName("Original Entry Identification")]
     [IsoXmlTag("OrgnlNtryId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEntryIdentification { get; }
 }

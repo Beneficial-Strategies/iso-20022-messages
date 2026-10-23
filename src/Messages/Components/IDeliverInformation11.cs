@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.
 /// </summary>
 [IsoId("_ytfLYRgmEeK-_89we2b-bA")]
+[IsoDisplayName(@"Deliver Information")]
 public interface IDeliverInformation11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDeliverInformation11 : IIsoComponent
     [IsoId("_eYB_NRgvEeK-_89we2b-bA")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IDeliverInformation11 : IIsoComponent
     [IsoId("_zCfyMRgmEeK-_89we2b-bA")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge20> ChargeDetails { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IDeliverInformation11 : IIsoComponent
     [IsoId("_zCfyNRgmEeK-_89we2b-bA")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission12> CommissionDetails { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface IDeliverInformation11 : IIsoComponent
     [IsoId("_zCfyORgmEeK-_89we2b-bA")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax15> TaxDetails { get; }
 
     /// <summary>

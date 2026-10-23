@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of change to the trading name.
 /// </summary>
 [IsoId("_ogVZgA4jEeK3IMoVvcTkkg")]
+[IsoDisplayName(@"Trading Name Modification")]
 public interface ITradingNameModification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITradingNameModification1 : IIsoComponent
     [IsoId("_4tgywA4jEeK3IMoVvcTkkg")]
     [DisplayName("Trading Name")]
     [IsoXmlTag("TradgNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text TradingName { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to request to enable a service.
 /// </summary>
 [IsoId("_LIrhUQ0tEeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Enable Service Request")]
 public interface IEnableServiceRequest2 : IIsoComponent
 {
     /// <summary>

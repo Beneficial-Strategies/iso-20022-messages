@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// System Party7.
 /// </summary>
 [IsoId("_ZAMbkTE_Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"System Party7")]
 public interface ISystemParty7 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ISystemParty7 : IIsoComponent
     /// </summary>
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress28> Address { get; }
 
     /// <summary>
@@ -30,6 +32,7 @@ public interface ISystemParty7 : IIsoComponent
     /// </summary>
     [DisplayName("Contact Details")]
     [IsoXmlTag("CtctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContact14> ContactDetails { get; }
 
     /// <summary>
@@ -58,6 +61,7 @@ public interface ISystemParty7 : IIsoComponent
     /// </summary>
     [DisplayName("Technical Address")]
     [IsoXmlTag("TechAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITechnicalIdentification2Choice> TechnicalAddress { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ISystemParty7 : IIsoComponent
     /// </summary>
     [DisplayName("Market Specific Attribute")]
     [IsoXmlTag("MktSpcfcAttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMarketSpecificAttribute1> MarketSpecificAttribute { get; }
 
     /// <summary>
@@ -93,5 +98,6 @@ public interface ISystemParty7 : IIsoComponent
     /// </summary>
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemRestriction1> Restriction { get; }
 }

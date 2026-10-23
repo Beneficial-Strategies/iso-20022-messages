@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChequeDeliveryMethod1Choice;
 /// Specifies the delivery method of the cheque by the debtor&apos;s agent.
 /// </summary>
 [IsoId("_QbwF59p-Ed-ak6NoX_4Aeg_1044150030")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChequeDeliveryMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>

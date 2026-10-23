@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Return Indicator2.
 /// </summary>
 [IsoId("_dG4aQTd4Ee62mtJT34z25w")]
+[IsoDisplayName(@"Return Indicator2")]
 public interface IReturnIndicator2 : IIsoComponent
 {
     /// <summary>

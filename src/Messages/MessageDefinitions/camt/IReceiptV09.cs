@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_0fdSoVP-Ee-Fk_N0FBjY0Q")]
 [IsoMessage("camt.025.001.09", "Rct", "urn:iso:std:iso:20022:tech:xsd:camt.025.001.09")]
+[IsoDisplayName(@"Receipt V09")]
 public interface IReceiptV09 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IReceiptV09 : IOuterRecord
     /// </summary>
     [DisplayName("Receipt Details")]
     [IsoXmlTag("RctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReceipt7> ReceiptDetails { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IReceiptV09 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

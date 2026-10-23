@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Clearing Member Fee1.
 /// </summary>
 [IsoId("_zbMlUF7rEe-hdLDytyjg_A")]
+[IsoDisplayName(@"Clearing Member Fee1")]
 public interface IClearingMemberFee1 : IIsoComponent
 {
     /// <summary>

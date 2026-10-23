@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityRange1Choice;
 
 /// <summary>Specifies the equal quantity.</summary>
 [IsoId("_jtRfE-5NEeCisYr99QEiWA_-675705255")]
+[IsoDisplayName(@"Equal Quantity")]
 public interface IEqualQuantity : IQuantityRange1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

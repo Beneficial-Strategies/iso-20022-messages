@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the verification initiation message.
 /// </summary>
 [IsoId("_TVdDwVf4EeedJb6VxsnkPg")]
+[IsoDisplayName(@"Verification Initiation")]
 public interface IVerificationInitiation1 : IIsoComponent
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface IVerificationInitiation1 : IIsoComponent
     [IsoId("_TgnK6Vf4EeedJb6VxsnkPg")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10KHexBinaryText)]
     Max10KHexBinaryText? ICCRelatedData { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface IVerificationInitiation1 : IIsoComponent
     [IsoId("_ijrG0dXuEee5XtaG1wqDfQ")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -66,5 +69,6 @@ public interface IVerificationInitiation1 : IIsoComponent
     [IsoId("_kehvUaK8EeeQobSgLcPRvA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

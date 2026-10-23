@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeCounterpartyRelationship1Ch
 /// Classification of the party relationship using a proprietary identification scheme.
 /// </summary>
 [IsoId("_01yXUCb_Ee2BYL6XeAmCWw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ITradeCounterpartyRelationship1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : ITradeCounterpartyRelationship1Choice, IIsoChoic
     /// Specifies a character string with a maximum length of 100 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max100Text)]
+    [StringLength(100, MinimumLength = 1)]
     Max100Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the driver or vehicle card.
 /// </summary>
 [IsoId("_ZjY8EUYlEfCJpvfyM9roFQ")]
+[IsoDisplayName(@"Driver Or Vehicle Card Data1")]
 public interface IDriverOrVehicleCardData1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IDriverOrVehicleCardData1 : IIsoComponent
     [IsoId("_LgaJgkYlEfCJpvfyM9roFQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IDriverOrVehicleCardData1 : IIsoComponent
     [IsoId("_LgaJg0YlEfCJpvfyM9roFQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

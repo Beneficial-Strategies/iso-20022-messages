@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus27Cho
 /// Transaction was created by the account servicer or a third party. It was not instructed directly by the account owner.
 /// </summary>
 [IsoId("_8VJIx5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Generated")]
 public interface IGenerated : IInstructionProcessingStatus27Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

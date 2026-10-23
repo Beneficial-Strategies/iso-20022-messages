@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies whether the infromation on the type of the master agrement are matching or not.
 /// </summary>
 [IsoId("_FHLgwKxoEem81-uIvTF5rQ")]
+[IsoDisplayName(@"Compare Agreement Type")]
 public interface ICompareAgreementType1 : IIsoComponent
 {
     /// <summary>

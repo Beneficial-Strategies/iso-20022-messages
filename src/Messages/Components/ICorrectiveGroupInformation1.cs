@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the group of the corrective transaction, to which the resolution message refers.
 /// </summary>
 [IsoId("_Rquacdp-Ed-ak6NoX_4Aeg_1268012765")]
+[IsoDisplayName(@"Corrective Group Information")]
 public interface ICorrectiveGroupInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorrectiveGroupInformation1 : IIsoComponent
     [IsoId("_Rquactp-Ed-ak6NoX_4Aeg_1268012796")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICorrectiveGroupInformation1 : IIsoComponent
     [IsoId("_Rquac9p-Ed-ak6NoX_4Aeg_1268012826")]
     [DisplayName("Message Name Identification")]
     [IsoXmlTag("MsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageNameIdentification { get; }
 
     /// <summary>
@@ -33,5 +38,6 @@ public interface ICorrectiveGroupInformation1 : IIsoComponent
     [IsoId("_RquadNp-Ed-ak6NoX_4Aeg_1268013105")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CreationDateTime { get; }
 }

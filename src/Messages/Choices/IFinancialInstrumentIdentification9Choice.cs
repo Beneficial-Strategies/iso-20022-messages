@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between formats for the identification of the financial instruments.
 /// </summary>
 [IsoId("_26V3lZ3DEeuwmdq0KtnICg")]
+[IsoDisplayName(@"Financial Instrument Identification 9 Choice")]
 public interface IFinancialInstrumentIdentification9Choice : IIsoChoice { }

@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "AmdmntRjctnNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.008.001.03"
 )]
+[Description(@"Scope|The AmendmentRejectionNotification message is sent by the matching application to the requester of an amendment.|This message is used to notify the rejection of an amendment request.|Usage|The AmendmentRejectionNotification message can be sent by the matching application to pass on information about the rejection of an amendment request that it has obtained through the receipt of an AmendmentRejection message.|In order to pass on information about the acceptance of an amendment request the matching application sends an AmendmentAcceptanceNotification message.")]
+[IsoDisplayName(@"Amendment Rejection Notification V")]
 public interface IAmendmentRejectionNotificationV03 : IOuterRecord
 {
     /// <summary>
@@ -61,6 +63,9 @@ public interface IAmendmentRejectionNotificationV03 : IOuterRecord
     [IsoId("_kPQLgtE8Ed-BzquC8wXy7w_-266191055")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

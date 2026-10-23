@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Branch Data5.
 /// </summary>
 [IsoId("_v0bUQTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Branch Data5")]
 public interface IBranchData5 : IIsoComponent
 {
     /// <summary>

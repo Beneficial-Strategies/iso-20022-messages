@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action details.
 /// </summary>
 [IsoId("__yA5EeaJEei5aPS232E3Mw")]
+[IsoDisplayName(@"Corporate Action SD")]
 public interface ICorporateActionSD21 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_AK224-aKEei5aPS232E3Mw")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_AK22--aKEei5aPS232E3Mw")]
     [DisplayName("Number Of Shares To Be Issued")]
     [IsoXmlTag("NbOfShrsToBeIssd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? NumberOfSharesToBeIssued { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_AK23A-aKEei5aPS232E3Mw")]
     [DisplayName("Total Number Of Shares Offered")]
     [IsoXmlTag("TtlNbOfShrsOfferd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? TotalNumberOfSharesOffered { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_AK23C-aKEei5aPS232E3Mw")]
     [DisplayName("Cut Off Days")]
     [IsoXmlTag("CutOffDays")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? CutOffDays { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_ALAoAeaKEei5aPS232E3Mw")]
     [DisplayName("Conditional Payment Applicable Flag")]
     [IsoXmlTag("CondlPmtAplblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ConditionalPaymentApplicableFlag { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_ALAoCeaKEei5aPS232E3Mw")]
     [DisplayName("Solicitation Dealer Fee Flag")]
     [IsoXmlTag("SlctnDealrFeeFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SolicitationDealerFeeFlag { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_ALAoEeaKEei5aPS232E3Mw")]
     [DisplayName("DTC Custody Eligible Flag")]
     [IsoXmlTag("DTCCtdyElgblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DTCCustodyEligibleFlag { get; }
 
     /// <summary>
@@ -121,6 +130,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_ALAoGeaKEei5aPS232E3Mw")]
     [DisplayName("DTC Reorganisation Custody Eligible Flag")]
     [IsoXmlTag("DTCReorgCtdyElgblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DTCReorganisationCustodyEligibleFlag { get; }
 
     /// <summary>
@@ -129,6 +139,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_ALAoIeaKEei5aPS232E3Mw")]
     [DisplayName("DTC Reorganisation Deposit Eligible Flag")]
     [IsoXmlTag("DTCReorgDpstElgblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DTCReorganisationDepositEligibleFlag { get; }
 
     /// <summary>
@@ -137,6 +148,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_ALAoKeaKEei5aPS232E3Mw")]
     [DisplayName("Surrender Shares To Agent Flag")]
     [IsoXmlTag("SrrndrShrsToAgtFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SurrenderSharesToAgentFlag { get; }
 
     /// <summary>
@@ -145,6 +157,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_ALAoMeaKEei5aPS232E3Mw")]
     [DisplayName("Step Up Privilege Flag")]
     [IsoXmlTag("StepUpPrvlgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? StepUpPrivilegeFlag { get; }
 
     /// <summary>
@@ -153,6 +166,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_ALAoOeaKEei5aPS232E3Mw")]
     [DisplayName("Rights Oversubscription Flag")]
     [IsoXmlTag("RghtsOvrsbcptFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RightsOversubscriptionFlag { get; }
 
     /// <summary>
@@ -161,6 +175,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_ALAoQeaKEei5aPS232E3Mw")]
     [DisplayName("Rights Round Up Privilege Flag")]
     [IsoXmlTag("RghtsRndUpPrvlgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RightsRoundUpPrivilegeFlag { get; }
 
     /// <summary>
@@ -169,6 +184,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_ALAoSeaKEei5aPS232E3Mw")]
     [DisplayName("Rights Transferable Flag")]
     [IsoXmlTag("RghtsTrfblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RightsTransferableFlag { get; }
 
     /// <summary>
@@ -177,6 +193,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_ALAoUeaKEei5aPS232E3Mw")]
     [DisplayName("Non Exempt Allowed Indicator")]
     [IsoXmlTag("NonXmptAllwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NonExemptAllowedIndicator { get; }
 
     /// <summary>
@@ -185,6 +202,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_ALAoU-aKEei5aPS232E3Mw")]
     [DisplayName("Certificate Details")]
     [IsoXmlTag("CertDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionSD15> CertificateDetails { get; }
 
     /// <summary>
@@ -201,6 +219,7 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_ALAoXeaKEei5aPS232E3Mw")]
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
     Exact32AlphaNumericText? RDPReferenceNumber { get; }
 
     /// <summary>
@@ -217,5 +236,6 @@ public interface ICorporateActionSD21 : IIsoComponent
     [IsoId("_Fegh1uaKEei5aPS232E3Mw")]
     [DisplayName("Proration Fraction")]
     [IsoXmlTag("PrratnFrctn")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ProrationFraction { get; }
 }

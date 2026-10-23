@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details related to the local undertaking.
 /// </summary>
 [IsoId("_PjZ-2379EeGvEbxvurqpIg")]
+[IsoDisplayName(@"Undertaking")]
 public interface IUndertaking11 : IIsoComponent
 {
     /// <summary>

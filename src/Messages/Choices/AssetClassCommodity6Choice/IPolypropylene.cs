@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity6Choice;
 /// Polypropylene commodities.
 /// </summary>
 [IsoId("_1bgUIxZXEe2QNcZTDeoKnQ")]
+[IsoDisplayName(@"Polypropylene")]
 public interface IPolypropylene : IAssetClassCommodity6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

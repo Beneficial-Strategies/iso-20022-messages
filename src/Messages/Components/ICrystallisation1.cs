@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Number of crystallised units.
 /// </summary>
 [IsoId("_PzGf8E3gEeidB49bWZiS0g")]
+[IsoDisplayName(@"Crystallisation")]
 public interface ICrystallisation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICrystallisation1 : IIsoComponent
     [IsoId("_XvKXkE3gEeidB49bWZiS0g")]
     [DisplayName("Tranche Identification")]
     [IsoXmlTag("TrchId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TrancheIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICrystallisation1 : IIsoComponent
     [IsoId("_erZw8E3gEeidB49bWZiS0g")]
     [DisplayName("Crystallised Units Number")]
     [IsoXmlTag("CrstllsdUnitsNb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? CrystallisedUnitsNumber { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ICrystallisation1 : IIsoComponent
     [IsoId("_iUO40E3gEeidB49bWZiS0g")]
     [DisplayName("Uncrystallised Units Number")]
     [IsoXmlTag("UcrstllsdUnitsNb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? UncrystallisedUnitsNumber { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface ICrystallisation1 : IIsoComponent
     [IsoId("_tmFnkE3gEeidB49bWZiS0g")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

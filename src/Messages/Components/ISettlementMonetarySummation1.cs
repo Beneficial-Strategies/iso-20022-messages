@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a collection of monetary totals for this settlement.
 /// </summary>
 [IsoId("_S-ZInQEcEeCQm6a_G2yO_w_-2077201907")]
+[IsoDisplayName(@"Settlement Monetary Summation")]
 public interface ISettlementMonetarySummation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementMonetarySummation1 : IIsoComponent
     [IsoId("_S-ZIngEcEeCQm6a_G2yO_w_-1438063154")]
     [DisplayName("Line Total Amount")]
     [IsoXmlTag("LineTtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> LineTotalAmount { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISettlementMonetarySummation1 : IIsoComponent
     [IsoId("_S-i5kAEcEeCQm6a_G2yO_w_-1976793835")]
     [DisplayName("Allowance Total Amount")]
     [IsoXmlTag("AllwncTtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> AllowanceTotalAmount { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISettlementMonetarySummation1 : IIsoComponent
     [IsoId("_S-i5kQEcEeCQm6a_G2yO_w_427851198")]
     [DisplayName("Total Discount Amount")]
     [IsoXmlTag("TtlDscntAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> TotalDiscountAmount { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ISettlementMonetarySummation1 : IIsoComponent
     [IsoId("_S-i5kgEcEeCQm6a_G2yO_w_1451423672")]
     [DisplayName("Charge Total Amount")]
     [IsoXmlTag("ChrgTtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> ChargeTotalAmount { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ISettlementMonetarySummation1 : IIsoComponent
     [IsoId("_S-i5kwEcEeCQm6a_G2yO_w_1675528526")]
     [DisplayName("Total Prepaid Amount")]
     [IsoXmlTag("TtlPrepdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> TotalPrepaidAmount { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ISettlementMonetarySummation1 : IIsoComponent
     [IsoId("_S-i5lAEcEeCQm6a_G2yO_w_-1622081227")]
     [DisplayName("Tax Total Amount")]
     [IsoXmlTag("TaxTtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> TaxTotalAmount { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ISettlementMonetarySummation1 : IIsoComponent
     [IsoId("_S-i5lQEcEeCQm6a_G2yO_w_1868239250")]
     [DisplayName("Tax Basis Amount")]
     [IsoXmlTag("TaxBsisAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> TaxBasisAmount { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface ISettlementMonetarySummation1 : IIsoComponent
     [IsoId("_S-i5lgEcEeCQm6a_G2yO_w_-575396775")]
     [DisplayName("Rounding Amount")]
     [IsoXmlTag("RndgAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> RoundingAmount { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface ISettlementMonetarySummation1 : IIsoComponent
     [IsoId("_S-i5lwEcEeCQm6a_G2yO_w_-444855441")]
     [DisplayName("Grand Total Amount")]
     [IsoXmlTag("GrdTtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> GrandTotalAmount { get; }
 
     /// <summary>
@@ -89,5 +99,6 @@ public interface ISettlementMonetarySummation1 : IIsoComponent
     [IsoId("_S-i5mAEcEeCQm6a_G2yO_w_310144010")]
     [DisplayName("Information Amount")]
     [IsoXmlTag("InfAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> InformationAmount { get; }
 }

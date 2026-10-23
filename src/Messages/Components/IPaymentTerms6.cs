@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the payment terms of the underlying transaction.
 /// </summary>
 [IsoId("_ODM5MDI2-AOSNFX-3397728")]
+[IsoDisplayName(@"Payment Terms")]
 public interface IPaymentTerms6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPaymentTerms6 : IIsoComponent
     [IsoId("_ODM5MDI3-AOSNFX-3397728")]
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DueDate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IPaymentTerms6 : IIsoComponent
     [IsoId("_ODM5MDI5-AOSNFX-3397728")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max140Text> Description { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IPaymentTerms6 : IIsoComponent
     [IsoId("_ODM5MDMw-AOSNFX-3397728")]
     [DisplayName("Partial Payment Percent")]
     [IsoXmlTag("PrtlPmtPct")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PartialPaymentPercent { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IPaymentTerms6 : IIsoComponent
     [IsoId("_ODM5MDMx-AOSNFX-3397728")]
     [DisplayName("Direct Debit Mandate Identification")]
     [IsoXmlTag("DrctDbtMndtId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> DirectDebitMandateIdentification { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface IPaymentTerms6 : IIsoComponent
     [IsoId("_ODM5MDM0-AOSNFX-3397729")]
     [DisplayName("Discount Percent Rate")]
     [IsoXmlTag("DscntPctRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? DiscountPercentRate { get; }
 
     /// <summary>
@@ -89,5 +95,6 @@ public interface IPaymentTerms6 : IIsoComponent
     [IsoId("_ODM5MDM2-AOSNFX-3397729")]
     [DisplayName("Penalty Percent Rate")]
     [IsoXmlTag("PnltyPctRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PenaltyPercentRate { get; }
 }

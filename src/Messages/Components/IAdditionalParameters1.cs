@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sort criteria.
 /// </summary>
 [IsoId("_Q7Vk6Np-Ed-ak6NoX_4Aeg_934154443")]
+[IsoDisplayName(@"Additional Parameters")]
 public interface IAdditionalParameters1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IAdditionalParameters1 : IIsoComponent
     [IsoId("_Q7fV4Np-Ed-ak6NoX_4Aeg_1747776290")]
     [DisplayName("Geographical Area")]
     [IsoXmlTag("GeoArea")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? GeographicalArea { get; }
 }

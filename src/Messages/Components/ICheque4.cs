@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics related to a cheque instruction, such as cheque type or cheque number.
 /// </summary>
 [IsoId("_QbdK-dp-Ed-ak6NoX_4Aeg_2112357361")]
+[IsoDisplayName(@"Cheque")]
 public interface ICheque4 : IIsoComponent
 {
     /// <summary>

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument30Choice;
 
 /// <summary>Cheque details.</summary>
 [IsoId("f6f46e24-0359-4ec4-8fe6-7ed61c0f9b1d")]
+[IsoDisplayName(@"Cheque Details")]
 public interface IChequeDetails : IPaymentInstrument30Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

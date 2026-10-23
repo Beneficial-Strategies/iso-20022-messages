@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action83.
 /// </summary>
 [IsoId("_jtN600m_Ee-NocYul3BKXQ")]
+[IsoDisplayName(@"Corporate Action83")]
 public interface ICorporateAction83 : IIsoComponent
 {
     /// <summary>
@@ -128,6 +129,7 @@ public interface ICorporateAction83 : IIsoComponent
     /// </summary>
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOfferTypeFormat14Choice> OfferType { get; }
 
     /// <summary>
@@ -142,6 +144,7 @@ public interface ICorporateAction83 : IIsoComponent
     /// </summary>
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventStageFormat13Choice> EventStage { get; }
 
     /// <summary>
@@ -149,6 +152,7 @@ public interface ICorporateAction83 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBusinessProcessFormat17Choice> AdditionalBusinessProcessIndicator { get; }
 
     /// <summary>
@@ -156,6 +160,7 @@ public interface ICorporateAction83 : IIsoComponent
     /// </summary>
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionChangeTypeFormat5Choice> ChangeType { get; }
 
     /// <summary>
@@ -212,6 +217,7 @@ public interface ICorporateAction83 : IIsoComponent
     /// </summary>
     [DisplayName("Tax On Non Distributed Proceeds Indicator")]
     [IsoXmlTag("TaxOnNonDstrbtdPrcdsInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification30> TaxOnNonDistributedProceedsIndicator { get; }
 
     /// <summary>
@@ -247,6 +253,7 @@ public interface ICorporateAction83 : IIsoComponent
     /// </summary>
     [DisplayName("Certificate Details")]
     [IsoXmlTag("CertDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionSD26> CertificateDetails { get; }
 
     /// <summary>

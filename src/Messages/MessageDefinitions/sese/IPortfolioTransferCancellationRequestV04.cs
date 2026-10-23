@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_gvWxsRgBEeKqWJINzXcn5g")]
 [IsoMessage("sese.014.001.04", "PrtflTrfCxlReq", "urn:iso:std:iso:20022:tech:xsd:sese.014.001.04")]
+[Description(@"Scope|An instructing party, for example, a (new) plan manager (Transferee), sends the PortfolioTransferCancellationRequest message to the executing party, for example, a (old) plan manager (Transferor), to request the cancellation of a previously sent PortfolioTransferInstruction.|Usage|The PortfolioTransferCancellationRequest message is used to request the cancellation of an entire PortfolioTransferInstruction message, ie, all the product transfers that it contained. The cancellation request can be specified either by:|- quoting the transfer references of all the product transfers listed in the PortfolioTransferInstruction message, or,|- quoting the details of all the product transfers (this includes TransferReference) listed in PortfolioTransferInstruction message.|The message identification of the PortfolioTransferInstruction may also be quoted in PreviousReference. It is also possible to request the cancellation of PortfolioTransferInstruction by just quoting its message identification in PreviousReference.")]
+[IsoDisplayName(@"Portfolio Transfer Cancellation Request V")]
 public interface IPortfolioTransferCancellationRequestV04 : IOuterRecord
 {
     /// <summary>

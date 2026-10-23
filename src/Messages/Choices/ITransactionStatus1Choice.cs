@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Transaction Status1Choice.
 /// </summary>
 [IsoId("_rTkjwRZNEe6d6Ip1Ob2kaQ")]
+[IsoDisplayName(@"Transaction Status1Choice")]
 public interface ITransactionStatus1Choice : IIsoChoice { }

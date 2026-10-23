@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment card performing the transaction.
 /// </summary>
 [IsoId("_PnIJUXu3EeS2Z_kGi7H1VQ")]
+[IsoDisplayName(@"Payment Card")]
 public interface IPaymentCard15 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IPaymentCard15 : IIsoComponent
     [IsoId("_Pzo7VXu3EeS2Z_kGi7H1VQ")]
     [DisplayName("Masked PAN")]
     [IsoXmlTag("MskdPAN")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? MaskedPAN { get; }
 
     /// <summary>
@@ -49,5 +51,7 @@ public interface IPaymentCard15 : IIsoComponent
     [IsoId("_Pzo7WXu3EeS2Z_kGi7H1VQ")]
     [DisplayName("Card Product Name")]
     [IsoXmlTag("CardPdctNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardProductName { get; }
 }

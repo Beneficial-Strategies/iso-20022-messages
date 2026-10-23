@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AirportName1Choice;
 /// Identifies an airport by means of its IATA identification code. Example: LHR.
 /// </summary>
 [IsoId("_SsSlJNp-Ed-ak6NoX_4Aeg_-939167147")]
+[IsoDisplayName(@"Airport Code")]
 public interface IAirportCode : IAirportName1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IAirportCode : IAirportName1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 6 characters.
     /// </summary>
     [IsoXmlTag("AirprtCd")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text Value { get; }
 }

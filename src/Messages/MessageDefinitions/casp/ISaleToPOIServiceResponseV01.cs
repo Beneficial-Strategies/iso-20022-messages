@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.casp;
     "SaleToPOISvcRspn",
     "urn:iso:std:iso:20022:tech:xsd:casp.002.001.01"
 )]
+[Description(@"This financial service is a response of the POI system to the Sale System after a service request.")]
+[IsoDisplayName(@"Sale To POI Service Response V")]
 public interface ISaleToPOIServiceResponseV01 : IOuterRecord
 {
     /// <summary>

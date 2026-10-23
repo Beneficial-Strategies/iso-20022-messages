@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details specific to the individual transaction(s) included in the message.
 /// </summary>
 [IsoId("_AyXSMORsEeaY150p1rZlTg")]
+[IsoDisplayName(@"Credit Transfer Transaction")]
 public interface ICreditTransferTransaction27 : IIsoComponent
 {
     /// <summary>
@@ -145,6 +146,7 @@ public interface ICreditTransferTransaction27 : IIsoComponent
     [IsoId("_AyXSOeRsEeaY150p1rZlTg")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent1> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -162,6 +164,9 @@ public interface ICreditTransferTransaction27 : IIsoComponent
     [IsoId("_AyXSNuRsEeaY150p1rZlTg")]
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting3> RegulatoryReporting { get; }
 
     /// <summary>
@@ -178,6 +183,9 @@ public interface ICreditTransferTransaction27 : IIsoComponent
     [IsoId("_AyXSM-RsEeaY150p1rZlTg")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation2> RelatedRemittanceInformation { get; }
 
     /// <summary>

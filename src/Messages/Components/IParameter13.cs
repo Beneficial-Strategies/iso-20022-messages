@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters of the asymmetric encryption algorithm.
 /// </summary>
 [IsoId("_pOdcgaRZEeeWXKXf3KjtmQ")]
+[IsoDisplayName(@"Parameter")]
 public interface IParameter13 : IIsoComponent
 {
     /// <summary>

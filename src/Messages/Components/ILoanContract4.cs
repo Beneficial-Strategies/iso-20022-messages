@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Loan Contract4.
 /// </summary>
 [IsoId("_2Q955TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Loan Contract4")]
 public interface ILoanContract4 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface ILoanContract4 : IIsoComponent
     /// </summary>
     [DisplayName("Buyer")]
     [IsoXmlTag("Buyr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty6> Buyer { get; }
 
     /// <summary>
@@ -37,6 +39,7 @@ public interface ILoanContract4 : IIsoComponent
     /// </summary>
     [DisplayName("Seller")]
     [IsoXmlTag("Sellr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty6> Seller { get; }
 
     /// <summary>
@@ -100,6 +103,7 @@ public interface ILoanContract4 : IIsoComponent
     /// </summary>
     [DisplayName("Tranche")]
     [IsoXmlTag("Trch")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoanContractTranche1> Tranche { get; }
 
     /// <summary>
@@ -107,6 +111,7 @@ public interface ILoanContract4 : IIsoComponent
     /// </summary>
     [DisplayName("Payment Schedule")]
     [IsoXmlTag("PmtSchdl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentSchedule1> PaymentSchedule { get; }
 
     /// <summary>
@@ -114,6 +119,7 @@ public interface ILoanContract4 : IIsoComponent
     /// </summary>
     [DisplayName("Interest Schedule")]
     [IsoXmlTag("IntrstSchdl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestPaymentSchedule1> InterestSchedule { get; }
 
     /// <summary>
@@ -135,6 +141,7 @@ public interface ILoanContract4 : IIsoComponent
     /// </summary>
     [DisplayName("Syndicated Loan")]
     [IsoXmlTag("SndctdLn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISyndicatedLoan3> SyndicatedLoan { get; }
 
     /// <summary>
@@ -142,5 +149,6 @@ public interface ILoanContract4 : IIsoComponent
     /// </summary>
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation5> Attachment { get; }
 }

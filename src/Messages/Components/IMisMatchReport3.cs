@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Description of the mis-matched situation between two baselines or between a baseline and a data set.
 /// </summary>
 [IsoId("_RaowANp-Ed-ak6NoX_4Aeg_-1146148189")]
+[IsoDisplayName(@"Mis Match Report")]
 public interface IMisMatchReport3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMisMatchReport3 : IIsoComponent
     [IsoId("_RaowAdp-Ed-ak6NoX_4Aeg_-1146148150")]
     [DisplayName("Number Of Mis Matches")]
     [IsoXmlTag("NbOfMisMtchs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfMisMatches { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IMisMatchReport3 : IIsoComponent
     [IsoId("_RaowAtp-Ed-ak6NoX_4Aeg_-1146147848")]
     [DisplayName("Mis Match Information")]
     [IsoXmlTag("MisMtchInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IValidationResult5> MisMatchInformation { get; }
 }

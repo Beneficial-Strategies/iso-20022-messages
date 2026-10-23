@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide detailed information on the acceptance result.
 /// </summary>
 [IsoId("_RBvu4dp-Ed-ak6NoX_4Aeg_2046006177")]
+[IsoDisplayName(@"Acceptance Result")]
 public interface IAcceptanceResult6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAcceptanceResult6 : IIsoComponent
     [IsoId("_RBvu4tp-Ed-ak6NoX_4Aeg_1773632231")]
     [DisplayName("Accepted")]
     [IsoXmlTag("Accptd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Accepted { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IAcceptanceResult6 : IIsoComponent
     [IsoId("_RBvu5Np-Ed-ak6NoX_4Aeg_-192674430")]
     [DisplayName("Additional Reject Reason Information")]
     [IsoXmlTag("AddtlRjctRsnInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalRejectReasonInformation { get; }
 }

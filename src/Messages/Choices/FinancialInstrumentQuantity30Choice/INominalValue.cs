@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity30Cho
 /// Indicates that quantity is expressed as a nominal value.
 /// </summary>
 [IsoId("_zSz2pf9jEea3W_f2lS_aiw")]
+[IsoDisplayName(@"Nominal Value")]
 public interface INominalValue : IFinancialInstrumentQuantity30Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

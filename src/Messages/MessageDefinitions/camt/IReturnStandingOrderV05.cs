@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_ThWhvdb6Eeq_l4BJLVUF2Q")]
 [IsoMessage("camt.070.001.05", "RtrStgOrdr", "urn:iso:std:iso:20022:tech:xsd:camt.070.001.05")]
+[Description(@"Scope|The ReturnStandingOrder message is sent by a transaction administrator to a member.|It is used to provide information on the details of one or more standing orders, based on specific request and return criteria.|in response to a request a on information on standing and predefined orders.|Usage|The ReturnStandingOrder message lists the standing order based on the following possible return criteria: |- Generic standing order details,|- Details of a specific predefined or standing liquidity transfer orders,|- Details on the set to which the standing order belongs to,|- List of all predefined and standing liquidity transfer standing orders and/or per set,|- Total amount of predefined and standing liquidity transfer orders defined in the system.")]
+[IsoDisplayName(@"Return Standing Order V")]
 public interface IReturnStandingOrderV05 : IOuterRecord
 {
     /// <summary>
@@ -36,5 +38,6 @@ public interface IReturnStandingOrderV05 : IOuterRecord
     [IsoId("_ThWhydb6Eeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitReportOrError3Choice;
 /// </summary>
 [IsoId("_Q1IWIZlhEeeE1Ya-LgRsuQ")]
 [IsoXmlTag("BizRpt")]
+[IsoDisplayName(@"Business Report")]
 public interface IBusinessReport : ILimitReportOrError3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IBusinessReport : ILimitReportOrError3Choice, IIsoChoiceVariant
     [IsoId("_RDVxQ5lhEeeE1Ya-LgRsuQ")]
     [DisplayName("Current Limit")]
     [IsoXmlTag("CurLmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILimitReport6> CurrentLimit { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface IBusinessReport : ILimitReportOrError3Choice, IIsoChoiceVariant
     [IsoId("_RDVxRZlhEeeE1Ya-LgRsuQ")]
     [DisplayName("Default Limit")]
     [IsoXmlTag("DfltLmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILimitReport6> DefaultLimit { get; }
 }

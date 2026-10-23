@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestType1Choice;
 /// Specifies the type of interest.
 /// </summary>
 [IsoId("_SRnbV9p-Ed-ak6NoX_4Aeg_-822918101")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInterestType1Choice, IIsoChoiceVariant
 {
     /// <summary>

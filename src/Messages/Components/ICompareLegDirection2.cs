@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a direction of the Leg.
 /// </summary>
 [IsoId("_uaggwTAlEe2Ne600gC45nw")]
+[IsoDisplayName(@"Compare Leg Direction")]
 public interface ICompareLegDirection2 : IIsoComponent
 {
     /// <summary>

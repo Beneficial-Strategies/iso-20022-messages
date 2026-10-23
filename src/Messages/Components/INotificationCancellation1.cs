@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the cancellation of a notification advice or the withdrawal of a CA event.
 /// </summary>
 [IsoId("_Rjual9p-Ed-ak6NoX_4Aeg_493176942")]
+[IsoDisplayName(@"Notification Cancellation")]
 public interface INotificationCancellation1 : IIsoComponent
 {
     /// <summary>

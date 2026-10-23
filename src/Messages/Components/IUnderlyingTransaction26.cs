@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the underlying (group of) transaction(s) to which the investigation applies.
 /// </summary>
 [IsoId("_wgb7fcloEem0vqvvoqYsqQ")]
+[IsoDisplayName(@"Underlying Transaction")]
 public interface IUnderlyingTransaction26 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IUnderlyingTransaction26 : IIsoComponent
     [IsoId("_wqkuz8loEem0vqvvoqYsqQ")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction120> TransactionInformation { get; }
 }

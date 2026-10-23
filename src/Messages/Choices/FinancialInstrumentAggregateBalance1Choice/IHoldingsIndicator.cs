@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAggregateBala
 /// Indicates whether holdings are present.
 /// </summary>
 [IsoId("_nlciMKCCEeOEyO7fCl8lLA")]
+[IsoDisplayName(@"Holdings Indicator")]
 public interface IHoldingsIndicator : IFinancialInstrumentAggregateBalance1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IHoldingsIndicator : IFinancialInstrumentAggregateBalance1Choic
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("HldgsInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

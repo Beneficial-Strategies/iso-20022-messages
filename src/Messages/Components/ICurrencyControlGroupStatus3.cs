@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency Control Group Status3.
 /// </summary>
 [IsoId("_8AN7sTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Currency Control Group Status3")]
 public interface ICurrencyControlGroupStatus3 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface ICurrencyControlGroupStatus3 : IIsoComponent
     /// </summary>
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IValidationStatusReason3> StatusReason { get; }
 
     /// <summary>

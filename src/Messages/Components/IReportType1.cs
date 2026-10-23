@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of report.
 /// </summary>
 [IsoId("_RJ8opdp-Ed-ak6NoX_4Aeg_1748144086")]
+[IsoDisplayName(@"Report Type")]
 public interface IReportType1 : IIsoComponent
 {
     /// <summary>

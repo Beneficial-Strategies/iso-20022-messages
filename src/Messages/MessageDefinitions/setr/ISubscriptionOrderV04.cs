@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("_Aab6nzbLEead9bDRE_1DAQ")]
 [IsoMessage("setr.010.001.04", "SbcptOrdr", "urn:iso:std:iso:20022:tech:xsd:setr.010.001.04")]
+[Description(@"Scope|The SubscriptionOrder message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to instruct the subscription of one or more financial instruments for one investment fund account.|Usage|The SubscriptionOrder message is used to instruct single subscription orders, that is, a message containing one order for one financial instrument for one investment account. The SubscriptionOrder message may also be used for multiple orders, that is, a message containing several orders for the same investment account for different financial instruments.|For a single subscription order, the SubscriptionOrder message, not the SubscriptionBulkOrder message, must be used.|If there are subscription orders for the same financial instrument but for different accounts that are to be communicated in a single message, then the SubscriptionBulkOrder message must be used.")]
+[IsoDisplayName(@"Subscription Order V")]
 public interface ISubscriptionOrderV04 : IOuterRecord
 {
     /// <summary>
@@ -41,6 +43,7 @@ public interface ISubscriptionOrderV04 : IOuterRecord
     [IsoId("_Aab6qzbLEead9bDRE_1DAQ")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference8> PreviousReference { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface ISubscriptionOrderV04 : IOuterRecord
     [IsoId("_Aab6szbLEead9bDRE_1DAQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_DlKfgY7YEe6S0_1AaJzQCA")]
 [IsoMessage("caad.007.001.04", "Err", "urn:iso:std:iso:20022:tech:xsd:caad.007.001.04")]
+[IsoDisplayName(@"Error V04")]
 public interface IErrorV04 : IOuterRecord
 {
     /// <summary>
@@ -88,6 +89,7 @@ public interface IErrorV04 : IOuterRecord
     /// </summary>
     [DisplayName("Error Detail")]
     [IsoXmlTag("ErrDtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorDetails3> ErrorDetail { get; }
 
     /// <summary>
@@ -109,6 +111,7 @@ public interface IErrorV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -123,6 +126,7 @@ public interface IErrorV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -130,6 +134,7 @@ public interface IErrorV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -137,6 +142,7 @@ public interface IErrorV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

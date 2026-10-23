@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between per-resolution and global voting instructions.</summary>
 [IsoId("_w-jL1ajGEfCzuLlmLrhIvA")]
+[IsoDisplayName(@"Vote 17 Choice")]
 public interface IVote17Choice : IIsoChoice { }

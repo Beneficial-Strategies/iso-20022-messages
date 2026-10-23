@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// No specified reason available for the status.
 /// </summary>
 [IsoId("_UakE19p-Ed-ak6NoX_4Aeg_-1550563657")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason1 : IIsoComponent
 {
     /// <summary>

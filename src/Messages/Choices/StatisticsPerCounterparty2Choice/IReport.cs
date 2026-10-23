@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty2Choice
 /// </summary>
 [IsoId("_85s8lEwWEeqwfMIOLcNxbw")]
 [IsoXmlTag("Rpt")]
+[IsoDisplayName(@"Report")]
 public interface IReport : IStatisticsPerCounterparty2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -42,5 +43,6 @@ public interface IReport : IStatisticsPerCounterparty2Choice, IIsoChoiceVariant
     [IsoId("_MweAZ1fdEeqZr5K1Woax-g")]
     [DisplayName("Competent Authority")]
     [IsoXmlTag("CmptntAuthrty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompetentAuthority1> CompetentAuthority { get; }
 }

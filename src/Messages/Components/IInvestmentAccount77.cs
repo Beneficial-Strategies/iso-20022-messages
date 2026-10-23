@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a securities account and its characteristics.
 /// </summary>
 [IsoId("_EPDdgZTQEemqYPWMBuVawg")]
+[IsoDisplayName(@"Investment Account")]
 public interface IInvestmentAccount77 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentAccount77 : IIsoComponent
     [IsoId("_EiQGUZTQEemqYPWMBuVawg")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IInvestmentAccount77 : IIsoComponent
     [IsoId("_EiQGU5TQEemqYPWMBuVawg")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountName { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IInvestmentAccount77 : IIsoComponent
     [IsoId("_EiQGVZTQEemqYPWMBuVawg")]
     [DisplayName("Account Designation")]
     [IsoXmlTag("AcctDsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountDesignation { get; }
 
     /// <summary>

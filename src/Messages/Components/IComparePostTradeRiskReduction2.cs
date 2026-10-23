@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a post trade risk reduction.
 /// </summary>
 [IsoId("__B6gAVo3Ee23K4GXSpBSeg")]
+[IsoDisplayName(@"Compare Post Trade Risk Reduction")]
 public interface IComparePostTradeRiskReduction2 : IIsoComponent
 {
     /// <summary>

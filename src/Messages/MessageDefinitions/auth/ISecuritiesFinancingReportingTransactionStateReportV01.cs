@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "SctiesFincgRptgTxStatRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.079.001.01"
 )]
+[Description(@"The SecuritiesFinancingReportingTransactionStateReport is sent by the trade repository (TR) to the other trade repository (TR) or the authority or made available to the  report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, containing latest state of the transaction.")]
+[IsoDisplayName(@"Securities Financing Reporting Transaction State Report V")]
 public interface ISecuritiesFinancingReportingTransactionStateReportV01 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +34,6 @@ public interface ISecuritiesFinancingReportingTransactionStateReportV01 : IOuter
     [IsoId("_2zvMLQuAEeqVvtu9Ny8FDA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

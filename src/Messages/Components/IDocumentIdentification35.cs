@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies a document by a unique identification and a date of issue.
 /// </summary>
 [IsoId("_zRWo0bMmEeueudaIbClZbQ")]
+[IsoDisplayName(@"Document Identification")]
 public interface IDocumentIdentification35 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDocumentIdentification35 : IIsoComponent
     [IsoId("_zSWHUbMmEeueudaIbClZbQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IDocumentIdentification35 : IIsoComponent
     [IsoId("_zSWHU7MmEeueudaIbClZbQ")]
     [DisplayName("Date Of Issue")]
     [IsoXmlTag("DtOfIsse")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfIssue { get; }
 }

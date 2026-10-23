@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Redemption leg of a switch order.
 /// </summary>
 [IsoId("fc3f78a9-f91e-4880-a8ee-df34d88caf54")]
+[IsoDisplayName(@"Switch Redemption Leg Order7")]
 public interface ISwitchRedemptionLegOrder7 : IIsoComponent
 {
     /// <summary>

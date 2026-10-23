@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a redemption order.
 /// </summary>
 [IsoId("398ebf77-74c4-4965-8d41-84270a5ab8c0")]
+[IsoDisplayName(@"Redemption Execution18")]
 public interface IRedemptionExecution18 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IRedemptionExecution18 : IIsoComponent
     [IsoId("41f71ea4-8b0e-4104-9373-59862913d05c")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType4Choice> OrderType { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IRedemptionExecution18 : IIsoComponent
     [IsoId("f94a58c1-49c1-4ea0-bb04-4f7fb2d1cc85")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson32> BeneficiaryDetails { get; }
 
     /// <summary>
@@ -153,6 +156,7 @@ public interface IRedemptionExecution18 : IIsoComponent
     [IsoId("bf9d0860-d689-4c07-943b-9521ee6e94e6")]
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice22> InformativePriceDetails { get; }
 
     /// <summary>
@@ -193,6 +197,7 @@ public interface IRedemptionExecution18 : IIsoComponent
     [IsoId("cbe77d70-a096-462c-bd32-1f5308e4db4b")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms37> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -233,6 +238,7 @@ public interface IRedemptionExecution18 : IIsoComponent
     [IsoId("7e02ce0a-9824-4bf0-96fe-11a07fe7aff6")]
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; }
 
     /// <summary>
@@ -337,6 +343,7 @@ public interface IRedemptionExecution18 : IIsoComponent
     [IsoId("367c2b5b-0f5d-47ca-9dff-de76076a46a5")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary49> RelatedPartyDetails { get; }
 
     /// <summary>

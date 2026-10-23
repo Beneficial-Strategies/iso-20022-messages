@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Description of the financial instrument.
 /// </summary>
 [IsoId("_T1Tbpdp-Ed-ak6NoX_4Aeg_-1678511644")]
+[IsoDisplayName(@"Financial Instrument Description")]
 public interface IFinancialInstrumentDescription3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IFinancialInstrumentDescription3 : IIsoComponent
     [IsoId("_T1Tbp9p-Ed-ak6NoX_4Aeg_635271488")]
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? PlaceOfListing { get; }
 
     /// <summary>

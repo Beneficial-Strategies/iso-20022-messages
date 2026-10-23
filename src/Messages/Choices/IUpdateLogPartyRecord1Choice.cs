@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the details related to an update of an individual record in the static data of a party.
 /// </summary>
 [IsoId("_xPtUfWjNEeiRg5NzP0jkQg")]
+[IsoDisplayName(@"Update Log Party Record 1 Choice")]
 public interface IUpdateLogPartyRecord1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action details.
 /// </summary>
 [IsoId("_1dzicDL3EeKU9IrkkToqcw_-1985913164")]
+[IsoDisplayName(@"Corporate Action SD")]
 public interface ICorporateActionSD4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionSD4 : IIsoComponent
     [IsoId("_1dzicTL3EeKU9IrkkToqcw_1311981779")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICorporateActionSD4 : IIsoComponent
     [IsoId("_1dzidDL3EeKU9IrkkToqcw_-1824148456")]
     [DisplayName("Exchange Fee Required Flag")]
     [IsoXmlTag("XchgFeeReqrdFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ExchangeFeeRequiredFlag { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICorporateActionSD4 : IIsoComponent
     [IsoId("_1dzidTL3EeKU9IrkkToqcw_166643569")]
     [DisplayName("Custodian Shell Flag")]
     [IsoXmlTag("CtdnShellFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CustodianShellFlag { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ICorporateActionSD4 : IIsoComponent
     [IsoId("_1dzidjL3EeKU9IrkkToqcw_512871924")]
     [DisplayName("Must All Shares Be Submitted Flag")]
     [IsoXmlTag("MustAllShrsBeSubmittdFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? MustAllSharesBeSubmittedFlag { get; }
 
     /// <summary>
@@ -81,6 +87,8 @@ public interface ICorporateActionSD4 : IIsoComponent
     [IsoId("_1d8sYjL3EeKU9IrkkToqcw_-1163046817")]
     [DisplayName("Surviving Company")]
     [IsoXmlTag("SrvvgCpny")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SurvivingCompany { get; }
 
     /// <summary>
@@ -89,5 +97,6 @@ public interface ICorporateActionSD4 : IIsoComponent
     [IsoId("_1d8sYzL3EeKU9IrkkToqcw_1468724564")]
     [DisplayName("Foreign Income Source Flag")]
     [IsoXmlTag("FrgnIncmSrcFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ForeignIncomeSourceFlag { get; }
 }

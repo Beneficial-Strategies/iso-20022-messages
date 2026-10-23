@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity50Cho
 
 /// <summary>Percentage of the total switch amount (buy-driven) to be invested in a particular investment fund or investment fund class.</summary>
 [IsoId("3de9a4bb-1635-44f1-b0c8-9bdc1ab3f27d")]
+[IsoDisplayName(@"Percentage Of Total Subscription Amount")]
 public interface IPercentageOfTotalSubscriptionAmount
     : IFinancialInstrumentQuantity50Choice,
         IIsoChoiceVariant

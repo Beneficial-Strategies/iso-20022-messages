@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_BjjyQS0mEeSRe9rElPHBfg")]
 [IsoMessage("secl.001.001.03", "TradLegNtfctn", "urn:iso:std:iso:20022:tech:xsd:secl.001.001.03")]
+[Description(@"Scope|The TradeLegNotification message is sent by the central counterparty (CCP) to a clearing member to report the trade that has been executed by the trading platform.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|The CCP reports both sides of the trade from the clearing member perspective. The CCP sends a message to the global clearing member of the seller and a message to the global clearing member of the buyer. Note: An individual clearing member only clear its own trades.")]
+[IsoDisplayName(@"Trade Leg Notification V")]
 public interface ITradeLegNotificationV03 : IOuterRecord
 {
     /// <summary>
@@ -82,5 +84,6 @@ public interface ITradeLegNotificationV03 : IOuterRecord
     [IsoId("_BjjyUy0mEeSRe9rElPHBfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

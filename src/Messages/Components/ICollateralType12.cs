@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the security or cash pledged as collateral.
 /// </summary>
 [IsoId("_MAdVYcpnEem6kd3Y9uIDqg")]
+[IsoDisplayName(@"Collateral Type")]
 public interface ICollateralType12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICollateralType12 : IIsoComponent
     [IsoId("_MEoqwcpnEem6kd3Y9uIDqg")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityReuseData1> Security { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICollateralType12 : IIsoComponent
     [IsoId("_MEoqw8pnEem6kd3Y9uIDqg")]
     [DisplayName("Cash")]
     [IsoXmlTag("Csh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashReuseData1> Cash { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Authorisation response from the acquirer.
 /// </summary>
 [IsoId("_oVu5IR0jEeK5OKMB21JFBg")]
+[IsoDisplayName(@"Card Payment Transaction")]
 public interface ICardPaymentTransaction18 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface ICardPaymentTransaction18 : IIsoComponent
     [IsoId("_ohyYMR0jEeK5OKMB21JFBg")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction2> Action { get; }
 }

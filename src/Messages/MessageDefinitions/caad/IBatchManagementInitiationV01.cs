@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_CcEcRVW9EeeiG_nL4vgKnQ")]
 [IsoMessage("caad.001.001.01", "BtchMgmtInitn", "urn:iso:std:iso:20022:tech:xsd:caad.001.001.01")]
+[Description(@"The BatchManagementInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer) connected to a network.||This message provides flow control information enabling a series of messages in batches and batches in collections to start, end or require checkpoints during the flow.")]
+[IsoDisplayName(@"Batch Management Initiation V")]
 public interface IBatchManagementInitiationV01 : IOuterRecord
 {
     /// <summary>

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesTxPnltiesRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.044.001.01"
 )]
+[IsoDisplayName(@"Securities Transaction Penalties Report V01")]
 public interface ISecuritiesTransactionPenaltiesReportV01 : IOuterRecord
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ISecuritiesTransactionPenaltiesReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Penalty")]
     [IsoXmlTag("Pnlty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPenalty4> Penalty { get; }
 
     /// <summary>
@@ -64,5 +66,6 @@ public interface ISecuritiesTransactionPenaltiesReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

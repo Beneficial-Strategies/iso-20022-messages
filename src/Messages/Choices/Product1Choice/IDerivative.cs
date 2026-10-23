@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice;
 /// </summary>
 [IsoId("_IojKYLVQEeadLcJesEbkTQ")]
 [IsoXmlTag("Deriv")]
+[IsoDisplayName(@"Derivative")]
 public interface IDerivative : IProduct1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,9 @@ public interface IDerivative : IProduct1Choice, IIsoChoiceVariant
     [IsoId("_iQdcUMhiEeadgvwNGwK05w")]
     [DisplayName("Derivative Underlying Leg")]
     [IsoXmlTag("DerivUndrlygLeg")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDerivativeUnderlyingLeg1> DerivativeUnderlyingLeg { get; }
 
     /// <summary>

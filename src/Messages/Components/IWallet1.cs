@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Container for tenders used by the customer to perform the payment transaction.
 /// </summary>
 [IsoId("_kmWJIEanEeeIjf8aP9KbJA")]
+[IsoDisplayName(@"Wallet")]
 public interface IWallet1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IWallet1 : IIsoComponent
     [IsoId("_Xa5YkBWJEeiTbY4xN42WAw")]
     [DisplayName("Additional Wallet Data")]
     [IsoXmlTag("AddtlWlltData")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? AdditionalWalletData { get; }
 }

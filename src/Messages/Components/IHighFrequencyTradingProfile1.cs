@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a high frequency trading profile.
 /// </summary>
 [IsoId("_O87qwCDUEeWCLu74WLgP4w")]
+[IsoDisplayName(@"High Frequency Trading Profile")]
 public interface IHighFrequencyTradingProfile1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IHighFrequencyTradingProfile1 : IIsoComponent
     [IsoId("_dfZOoCDUEeWCLu74WLgP4w")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>

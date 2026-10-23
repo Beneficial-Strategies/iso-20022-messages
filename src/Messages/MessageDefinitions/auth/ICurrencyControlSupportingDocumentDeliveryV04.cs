@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CcyCtrlSpprtgDocDlvry",
     "urn:iso:std:iso:20022:tech:xsd:auth.025.001.04"
 )]
+[IsoDisplayName(@"Currency Control Supporting Document Delivery V04")]
 public interface ICurrencyControlSupportingDocumentDeliveryV04 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface ICurrencyControlSupportingDocumentDeliveryV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supporting Document")]
     [IsoXmlTag("SpprtgDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupportingDocument4> SupportingDocument { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface ICurrencyControlSupportingDocumentDeliveryV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

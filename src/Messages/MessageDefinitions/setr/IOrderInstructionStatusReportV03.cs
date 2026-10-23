@@ -47,6 +47,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "OrdrInstrStsRptV03",
     "urn:iso:std:iso:20022:tech:xsd:setr.016.001.03"
 )]
+[Description(@"Scope|An executing party, for example, a transfer agent, sends the OrderInstructionStatusReport to the instructing party, for example, an investment manager or its authorised representative to report the status of an order from the time the executing party receives the order until the time the order is executed.|Usage|The OrderInstructionStatusReport message is used to report on the status of a subscription, redemption or a switch order.|The OrderInstructionStatusReport message may be used to give the status of:|- one order message by using OrderDetailsReport or,|- one or more individual order instructions by using IndividualOrderDetailsReport, or|- one or more switch orders by using SwitchOrderDetailsReport.|If the OrderInstructionStatusReport message is used to report the status of an individual order, then IndividualOrderDetailsReport is used and the order reference of the individual order is quoted in OrderReference. The message identification of the message in which the individual order was conveyed may also be quoted in RelatedReference.|If the OrderInstructionStatusReport message is used to report the status of a switch order, then SwitchOrderDetailsReport is used and the order reference of the switch order is quoted in OrderReference. The message identification of the message in which the switch order was conveyed may also be quoted in RelatedReference.|If the OrderInstructionStatusReport message is used to report the status of an entire order message, for example, the SubscriptionBulkOrder, or a SubscriptionOrder containing several orders, then OrderDetailsReport is used and the message identification of the order message is quoted in RelatedReference. All the orders within the message must have the same status.|One of the following statuses can be reported:|- an accepted status, or,|- an already executed status, or,|- a sent to next party status, or,|- a received status, or,|- a settled status, or,|- a communication problem with next party status, or,|- a confirmation amendment status, or,|- a done for the day status, or,|- a partially done status, or,|- an open status, or,|- a cancelled status, or|- a conditionally accepted status, or,|- a rejected status, or,|- a suspended status, or,|- a partially settled status, or,|- an in-repair status (only for an individual or switch order).|For a switch order, the OrderInstructionStatusReport message provides the status of the whole switch order, that is, it is not possible to accept one leg and to reject the other leg: the entire switch order has to be rejected. In order to identify the legs within the switch that are causing the problem, the leg is identified in either the RedemptionLegIdentification or SubscriptionLegIdentification elements.|When the OrderInstructionStatusReport is used to give the status of an individual or a switch order, the following can be specified:|- repaired conditions (for a switch, this is at the level of a leg),|- information related to the order, for example, settlement amount, number of units, expected trade date, etc.")]
+[IsoDisplayName(@"Order Instruction Status Report V")]
 public interface IOrderInstructionStatusReportV03 : IOuterRecord
 {
     /// <summary>
@@ -63,6 +65,9 @@ public interface IOrderInstructionStatusReportV03 : IOuterRecord
     [IsoId("_jk5cZ9E7Ed-BzquC8wXy7w_-1984080310")]
     [DisplayName("Other Reference")]
     [IsoXmlTag("OthrRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> OtherReference { get; }
 
     /// <summary>
@@ -71,6 +76,9 @@ public interface IOrderInstructionStatusReportV03 : IOuterRecord
     [IsoId("_jk5caNE7Ed-BzquC8wXy7w_-1831700378")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> RelatedReference { get; }
 
     /// <summary>
@@ -87,6 +95,7 @@ public interface IOrderInstructionStatusReportV03 : IOuterRecord
     [IsoId("_jlDNYNE7Ed-BzquC8wXy7w_1516458830")]
     [DisplayName("Individual Order Details Report")]
     [IsoXmlTag("IndvOrdrDtlsRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualOrderStatusAndReason2> IndividualOrderDetailsReport { get; }
 
     /// <summary>
@@ -95,6 +104,7 @@ public interface IOrderInstructionStatusReportV03 : IOuterRecord
     [IsoId("_jlDNYdE7Ed-BzquC8wXy7w_-475245778")]
     [DisplayName("Switch Order Details Report")]
     [IsoXmlTag("SwtchOrdrDtlsRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchOrderStatusAndReason1> SwitchOrderDetailsReport { get; }
 
     /// <summary>
@@ -103,5 +113,6 @@ public interface IOrderInstructionStatusReportV03 : IOuterRecord
     [IsoId("_jlDNYtE7Ed-BzquC8wXy7w_1340149318")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

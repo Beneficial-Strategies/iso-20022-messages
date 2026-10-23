@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferenceType1Choice;
 /// Code identifying the type of reference.
 /// </summary>
 [IsoId("_uD80wMeUEeysUoBKYz1Ytw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IReferenceType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ICode : IReferenceType1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 4 characters.
     /// </summary>
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text Value { get; }
 }

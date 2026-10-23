@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements for the identification of the message and related references.
 /// </summary>
 [IsoId("_Qn9899p-Ed-ak6NoX_4Aeg_-250058534")]
+[IsoDisplayName(@"References")]
 public interface IReferences4 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IReferences4 : IIsoComponent
     [IsoId("_QoHt8dp-Ed-ak6NoX_4Aeg_-938129435")]
     [DisplayName("Attached Document Name")]
     [IsoXmlTag("AttchdDocNm")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AttachedDocumentName { get; }
 }

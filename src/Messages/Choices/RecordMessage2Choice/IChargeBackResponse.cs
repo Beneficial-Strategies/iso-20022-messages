@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the charge back response message.</summary>
 [IsoId("_kNBjoW7-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Charge Back Response")]
 public interface IChargeBackResponse : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

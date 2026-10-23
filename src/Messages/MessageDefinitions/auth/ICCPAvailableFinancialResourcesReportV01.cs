@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPAvlblFinRsrcsRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.064.001.01"
 )]
+[Description(@"The CCPAvailableFinancialResourcesReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority of the aggregate quantum of resources available in each default waterfall to absorb losses resulting from the failure of one or more clearing member(s).")]
+[IsoDisplayName(@"CCP Available Financial Resources Report V")]
 public interface ICCPAvailableFinancialResourcesReportV01 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface ICCPAvailableFinancialResourcesReportV01 : IOuterRecord
     [IsoId("_omGWbeUREem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

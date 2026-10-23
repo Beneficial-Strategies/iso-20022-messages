@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Capabilities of the display components performing the transaction.
 /// </summary>
 [IsoId("_1lJwFc-cEfCTVKnQ8NFKFg")]
+[IsoDisplayName(@"Display Capabilities7")]
 public interface IDisplayCapabilities7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDisplayCapabilities7 : IIsoComponent
     [IsoId("_1l4Ioc-cEfCTVKnQ8NFKFg")]
     [DisplayName("Destination")]
     [IsoXmlTag("Dstn")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<UserInterface9Code> Destination { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IDisplayCapabilities7 : IIsoComponent
     [IsoId("_1l4Ip8-cEfCTVKnQ8NFKFg")]
     [DisplayName("Available Format")]
     [IsoXmlTag("AvlblFrmt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<OutputFormat1Code> AvailableFormat { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IDisplayCapabilities7 : IIsoComponent
     [IsoId("_1l4Iuc-cEfCTVKnQ8NFKFg")]
     [DisplayName("Available Language")]
     [IsoXmlTag("AvlblLang")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<LanguageCode> AvailableLanguage { get; }
 }

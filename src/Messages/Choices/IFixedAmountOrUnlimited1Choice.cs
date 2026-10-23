@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a fixed amount and an unlimited amount.
 /// </summary>
 [IsoId("_9m4ooEqAEeKw5sECfP82rg")]
+[IsoDisplayName(@"Fixed Amount Or Unlimited 1 Choice")]
 public interface IFixedAmountOrUnlimited1Choice : IIsoChoice { }

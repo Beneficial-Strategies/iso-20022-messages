@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeDate4Choice;
 /// Date and time at which the securities are to be traded.
 /// </summary>
 [IsoId("_AXK_UtokEeC60axPepSq7g_1512121673")]
+[IsoDisplayName(@"Date")]
 public interface IDate : ITradeDate4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionDateOrPeriod1Choice;
 /// First date on which the call option or the put option can be exercised.
 /// </summary>
 [IsoId("_FBT62DU7EeWITbq5W8H-2w")]
+[IsoDisplayName(@"Earliest Exercise Date")]
 public interface IEarliestExerciseDate : IOptionDateOrPeriod1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IEarliestExerciseDate : IOptionDateOrPeriod1Choice, IIsoChoiceV
     /// A particular point in the progression of time in a calendar year expressed in the YYYY-MM-DD format. This representation is defined in &quot;XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004&quot; which is aligned with ISO 8601.
     /// </summary>
     [IsoXmlTag("EarlstExrcDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Value { get; }
 }

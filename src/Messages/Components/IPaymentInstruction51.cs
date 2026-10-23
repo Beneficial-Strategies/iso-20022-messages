@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics that apply to the debit side of the payment transactions included in the credit transfer initiation.
 /// </summary>
 [IsoId("a376f506-35bc-4f88-9925-eceabe35beea")]
+[IsoDisplayName(@"Payment Instruction51")]
 public interface IPaymentInstruction51 : IIsoComponent
 {
     /// <summary>
@@ -161,5 +162,7 @@ public interface IPaymentInstruction51 : IIsoComponent
     [IsoId("efdc5154-cbfe-46ef-a00b-941804dc87a5")]
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICreditTransferTransaction76> CreditTransferTransactionInformation { get; }
 }

@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "ActvtyRptSetUpReq",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.004.001.02"
 )]
+[Description(@"Scope|The ActivityReportSetUpRequest message is sent by any party involved in a transaction to the matching application.|The ActivityReportSetUpRequest message can be sent to request the reset of the pre-determined time at which the daily production of the activity report should take place.|Usage|This message is sent to the matching application by a bank, in order to set the UTC offset specifying the hour when the matching application will generate every day an activity report covering the last 24 hours and send it. By default, this offset is equal to 0.")]
+[IsoDisplayName(@"Activity Report Set Up Request V")]
 public interface IActivityReportSetUpRequestV02 : IOuterRecord
 {
     /// <summary>

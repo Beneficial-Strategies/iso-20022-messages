@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural6
 /// </summary>
 [IsoId("_xG_LpU8SEe2PGo0mhYCh1g")]
 [IsoXmlTag("Ptt")]
+[IsoDisplayName(@"Potato")]
 public interface IPotato : IAssetClassCommodityAgricultural6Choice, IIsoChoiceVariant
 {
     /// <summary>

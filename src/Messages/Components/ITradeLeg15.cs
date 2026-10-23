@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the trade leg details.
 /// </summary>
 [IsoId("_2q6lnao2EfCG2_q2WT-90w")]
+[IsoDisplayName(@"Trade Leg15")]
 public interface ITradeLeg15 : IIsoComponent
 {
     /// <summary>
@@ -185,6 +186,7 @@ public interface ITradeLeg15 : IIsoComponent
     [IsoId("_TswSIao5EfCG2_q2WT-90w")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition5Choice> TradeTransactionCondition { get; }
 
     /// <summary>

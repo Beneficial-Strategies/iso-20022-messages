@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_AQe65TqWEemL_ewJY9QP1g")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification214 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPartyIdentification214 : IIsoComponent
     [IsoId("_rh-REFSXEempisJfoIfvvQ")]
     [DisplayName("Recipient Name")]
     [IsoXmlTag("RcptNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text RecipientName { get; }
 
     /// <summary>

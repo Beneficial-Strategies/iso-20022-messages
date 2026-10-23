@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate action event notification status and contents.
 /// </summary>
 [IsoId("_JLFPYTnXEeWLJsP1cO-amg")]
+[IsoDisplayName(@"Corporate Action Notification")]
 public interface ICorporateActionNotification5 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ICorporateActionNotification5 : IIsoComponent
     [IsoId("_JZXjEznXEeWLJsP1cO-amg")]
     [DisplayName("Eligible Balance Indicator")]
     [IsoXmlTag("ElgblBalInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EligibleBalanceIndicator { get; }
 }

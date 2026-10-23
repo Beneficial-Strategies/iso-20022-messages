@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Liability a clearing member has to a central counterparty with respect to potential future exposures.
 /// </summary>
 [IsoId("_XCK8BapzEeamNLogr5TkIQ")]
+[IsoDisplayName(@"Initial Margin Exposure")]
 public interface IInitialMarginExposure1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IInitialMarginExposure1 : IIsoComponent
     [IsoId("_XCK8CapzEeamNLogr5TkIQ")]
     [DisplayName("Core Indicator")]
     [IsoXmlTag("CoreInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator CoreIndicator { get; }
 }

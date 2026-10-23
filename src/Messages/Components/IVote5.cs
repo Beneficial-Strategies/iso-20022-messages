@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the number of voting rights cast to a resolution.
 /// </summary>
 [IsoId("_T5VABdp-Ed-ak6NoX_4Aeg_-129713306")]
+[IsoDisplayName(@"Vote")]
 public interface IVote5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVote5 : IIsoComponent
     [IsoId("_T5VABtp-Ed-ak6NoX_4Aeg_-129712899")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IVote5 : IIsoComponent
     [IsoId("_T5VAB9p-Ed-ak6NoX_4Aeg_-129712548")]
     [DisplayName("Accepted")]
     [IsoXmlTag("Accptd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Accepted { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IVote5 : IIsoComponent
     [IsoId("_T5VACNp-Ed-ak6NoX_4Aeg_-129712633")]
     [DisplayName("For")]
     [IsoXmlTag("For")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? For { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IVote5 : IIsoComponent
     [IsoId("_T5VACdp-Ed-ak6NoX_4Aeg_-129712608")]
     [DisplayName("Against")]
     [IsoXmlTag("Agnst")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Against { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IVote5 : IIsoComponent
     [IsoId("_T5VACtp-Ed-ak6NoX_4Aeg_-129712591")]
     [DisplayName("Abstain")]
     [IsoXmlTag("Abstn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Abstain { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IVote5 : IIsoComponent
     [IsoId("_T5exANp-Ed-ak6NoX_4Aeg_-129712573")]
     [DisplayName("Withhold")]
     [IsoXmlTag("Wthhld")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Withhold { get; }
 
     /// <summary>
@@ -65,5 +73,6 @@ public interface IVote5 : IIsoComponent
     [IsoId("_T5exAdp-Ed-ak6NoX_4Aeg_223997005")]
     [DisplayName("No Action")]
     [IsoXmlTag("NoActn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NoAction { get; }
 }

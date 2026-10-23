@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Equalisation Methodology Type2.
 /// </summary>
 [IsoId("_o4QsYSVKEe6pm5v5rjJOgQ")]
+[IsoDisplayName(@"Equalisation Methodology Type2")]
 public interface IEqualisationMethodologyType2 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IEqualisationMethodologyType2 : IIsoComponent
     /// </summary>
     [DisplayName("Related Subscription")]
     [IsoXmlTag("RltdSbcpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRelatedSubscription1> RelatedSubscription { get; }
 }

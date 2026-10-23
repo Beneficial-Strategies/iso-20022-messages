@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related for the transportation of goods by sea.
 /// </summary>
 [IsoId("_IIXFodQxEeK0PPbKncCqzA")]
+[IsoDisplayName(@"Transport By Sea")]
 public interface ITransportBySea5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransportBySea5 : IIsoComponent
     [IsoId("_IjneQdQxEeK0PPbKncCqzA")]
     [DisplayName("Port Of Loading")]
     [IsoXmlTag("PortOfLoadng")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PortOfLoading { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransportBySea5 : IIsoComponent
     [IsoId("_IjneQ9QxEeK0PPbKncCqzA")]
     [DisplayName("Port Of Discharge")]
     [IsoXmlTag("PortOfDschrge")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PortOfDischarge { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransportBySea5 : IIsoComponent
     [IsoId("_IjneRdQxEeK0PPbKncCqzA")]
     [DisplayName("Vessel Name")]
     [IsoXmlTag("VsslNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? VesselName { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITransportBySea5 : IIsoComponent
     [IsoId("_IjneR9QxEeK0PPbKncCqzA")]
     [DisplayName("Sea Carrier Name")]
     [IsoXmlTag("SeaCrrierNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SeaCarrierName { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface ITransportBySea5 : IIsoComponent
     [IsoId("_RYdtINQzEeK0PPbKncCqzA")]
     [DisplayName("Carrier Agent Name")]
     [IsoXmlTag("CrrierAgtNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CarrierAgentName { get; }
 
     /// <summary>
@@ -73,6 +84,8 @@ public interface ITransportBySea5 : IIsoComponent
     [IsoId("_6GgNENQzEeK0PPbKncCqzA")]
     [DisplayName("Master Name")]
     [IsoXmlTag("MstrNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? MasterName { get; }
 
     /// <summary>
@@ -81,6 +94,8 @@ public interface ITransportBySea5 : IIsoComponent
     [IsoId("_AwsNINQ0EeK0PPbKncCqzA")]
     [DisplayName("Charterer Name")]
     [IsoXmlTag("ChrtrrNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ChartererName { get; }
 
     /// <summary>
@@ -89,6 +104,8 @@ public interface ITransportBySea5 : IIsoComponent
     [IsoId("_GBZRwNQ0EeK0PPbKncCqzA")]
     [DisplayName("Owner Name")]
     [IsoXmlTag("OwnrNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? OwnerName { get; }
 
     /// <summary>
@@ -97,6 +114,7 @@ public interface ITransportBySea5 : IIsoComponent
     [IsoId("_Xiw2wNQ0EeK0PPbKncCqzA")]
     [DisplayName("IMO Number")]
     [IsoXmlTag("IMONb")]
+    [IsoSimpleType(IsoSimpleType.Exact7NumericText)]
     Exact7NumericText? IMONumber { get; }
 
     /// <summary>
@@ -105,5 +123,7 @@ public interface ITransportBySea5 : IIsoComponent
     [IsoId("_zjc3ABUyEeOCqpkCrPgk4g")]
     [DisplayName("Voyage Number")]
     [IsoXmlTag("VygNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? VoyageNumber { get; }
 }

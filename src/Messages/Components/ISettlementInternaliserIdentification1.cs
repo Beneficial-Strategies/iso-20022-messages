@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the identification of the settlement internaliser.
 /// </summary>
 [IsoId("_8dG-QO3kEeaWjpoyrnG6Rw")]
+[IsoDisplayName(@"Settlement Internaliser Identification")]
 public interface ISettlementInternaliserIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementInternaliserIdentification1 : IIsoComponent
     [IsoId("_BYNmUO3lEeaWjpoyrnG6Rw")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier LEI { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface ISettlementInternaliserIdentification1 : IIsoComponent
     [IsoId("_wgfUUhJlEeiE15g1wPm3UA")]
     [DisplayName("Branch Identification")]
     [IsoXmlTag("BrnchId")]
+    [IsoSimpleType(IsoSimpleType.Exact2UpperCaseAlphaText)]
     Exact2UpperCaseAlphaText? BranchIdentification { get; }
 }

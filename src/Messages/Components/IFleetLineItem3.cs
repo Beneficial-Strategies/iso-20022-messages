@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Supplies additional transaction information for fleet transactions.
 /// </summary>
 [IsoId("_Tw694R1TEey8XKHwKquEQw")]
+[IsoDisplayName(@"Fleet Line Item")]
 public interface IFleetLineItem3 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface IFleetLineItem3 : IIsoComponent
     [IsoId("_T46cQR1TEey8XKHwKquEQw")]
     [DisplayName("Allowed Item Indicator")]
     [IsoXmlTag("AllwdItmInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AllowedItemIndicator { get; }
 
     /// <summary>
@@ -27,6 +29,7 @@ public interface IFleetLineItem3 : IIsoComponent
     [IsoId("_T46cQx1TEey8XKHwKquEQw")]
     [DisplayName("Fuel Indicator")]
     [IsoXmlTag("FuelInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator FuelIndicator { get; }
 
     /// <summary>
@@ -43,6 +46,8 @@ public interface IFleetLineItem3 : IIsoComponent
     [IsoId("_T46cRx1TEey8XKHwKquEQw")]
     [DisplayName("Fleet Product Category")]
     [IsoXmlTag("FleetPdctCtgy")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FleetProductCategory { get; }
 
     /// <summary>
@@ -51,6 +56,8 @@ public interface IFleetLineItem3 : IIsoComponent
     [IsoId("_T46cSR1TEey8XKHwKquEQw")]
     [DisplayName("Fleet Product Code")]
     [IsoXmlTag("FleetPdctCd")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text? FleetProductCode { get; }
 
     /// <summary>
@@ -67,6 +74,7 @@ public interface IFleetLineItem3 : IIsoComponent
     [IsoId("_T46cTR1TEey8XKHwKquEQw")]
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ProductQuantity { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the original group, to which the message refers.
 /// </summary>
 [IsoId("_Pe9Ge9p-Ed-ak6NoX_4Aeg_-379878312")]
+[IsoDisplayName(@"Original Group Information")]
 public interface IOriginalGroupInformation25 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalGroupInformation25 : IIsoComponent
     [IsoId("_Pe9GfNp-Ed-ak6NoX_4Aeg_-714905591")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalGroupInformation25 : IIsoComponent
     [IsoId("_Pe9Gfdp-Ed-ak6NoX_4Aeg_225247229")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageNameIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IOriginalGroupInformation25 : IIsoComponent
     [IsoId("_Pe9Gftp-Ed-ak6NoX_4Aeg_-1000778660")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IOriginalGroupInformation25 : IIsoComponent
     [IsoId("_Pe9Gf9p-Ed-ak6NoX_4Aeg_1490921697")]
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? OriginalNumberOfTransactions { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IOriginalGroupInformation25 : IIsoComponent
     [IsoId("_Pe9GgNp-Ed-ak6NoX_4Aeg_-1231894763")]
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? OriginalControlSum { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IOriginalGroupInformation25 : IIsoComponent
     [IsoId("_PfG3cNp-Ed-ak6NoX_4Aeg_-686759930")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation9> StatusReasonInformation { get; }
 
     /// <summary>
@@ -73,5 +82,6 @@ public interface IOriginalGroupInformation25 : IIsoComponent
     [IsoId("_PfG3cdp-Ed-ak6NoX_4Aeg_28156858")]
     [DisplayName("Number Of Transactions Per Status")]
     [IsoXmlTag("NbOfTxsPerSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfTransactionsPerStatus3> NumberOfTransactionsPerStatus { get; }
 }

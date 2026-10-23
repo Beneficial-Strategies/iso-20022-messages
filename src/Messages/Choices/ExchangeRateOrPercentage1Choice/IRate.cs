@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateOrPercentage1Choice;
 /// Rate is expressed an currency exchange rate.
 /// </summary>
 [IsoId("_zZKxgNfvEeqoweZZxm4TPQ")]
+[IsoDisplayName(@"Rate")]
 public interface IRate : IExchangeRateOrPercentage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IRate : IExchangeRateOrPercentage1Choice, IIsoChoiceVariant
     /// Rate expressed as a decimal, for example, 0.7 is 7/10 and 70%.
     /// </summary>
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate Value { get; }
 }

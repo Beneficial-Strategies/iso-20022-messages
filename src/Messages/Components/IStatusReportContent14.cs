@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status Report Content14.
 /// </summary>
 [IsoId("_mLAtwaE7Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"Status Report Content14")]
 public interface IStatusReportContent14 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IStatusReportContent14 : IIsoComponent
     /// </summary>
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent17> POIComponent { get; }
 
     /// <summary>
@@ -30,6 +32,7 @@ public interface IStatusReportContent14 : IIsoComponent
     /// </summary>
     [DisplayName("POI Group Identification")]
     [IsoXmlTag("POIGrpId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> POIGroupIdentification { get; }
 
     /// <summary>
@@ -51,6 +54,7 @@ public interface IStatusReportContent14 : IIsoComponent
     /// </summary>
     [DisplayName("Data Set Required")]
     [IsoXmlTag("DataSetReqrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDataSetRequest6> DataSetRequired { get; }
 
     /// <summary>
@@ -58,6 +62,7 @@ public interface IStatusReportContent14 : IIsoComponent
     /// </summary>
     [DisplayName("Event")]
     [IsoXmlTag("Evt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITMSEvent12> Event { get; }
 
     /// <summary>
@@ -65,5 +70,6 @@ public interface IStatusReportContent14 : IIsoComponent
     /// </summary>
     [DisplayName("Errors")]
     [IsoXmlTag("Errs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max140Text> Errors { get; }
 }

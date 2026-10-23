@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification36Choice;
 /// Proprietary identification of a security assigned by an institution or organisation.
 /// </summary>
 [IsoId("_POTEo4rpEeq91phomTRDDA")]
+[IsoDisplayName(@"Alternative Instrument Identification")]
 public interface IAlternativeInstrumentIdentification
     : ISecurityIdentification36Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface IAlternativeInstrumentIdentification
     /// Specifies a character string with a maximum length of 52 characters.
     /// </summary>
     [IsoXmlTag("AltrntvInstrmId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Value { get; }
 }

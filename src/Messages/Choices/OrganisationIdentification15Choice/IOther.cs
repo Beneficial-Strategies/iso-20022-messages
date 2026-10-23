@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification15Choi
 /// </summary>
 [IsoId("_F-FycMgoEeuGrNSsxk3B0A")]
 [IsoXmlTag("Othr")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IOrganisationIdentification15Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IOther : IOrganisationIdentification15Choice, IIsoChoiceVariant
     [IsoId("_yyv-8MgnEeuGrNSsxk3B0A")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? Name { get; }
 
     /// <summary>
@@ -34,5 +37,7 @@ public interface IOther : IOrganisationIdentification15Choice, IIsoChoiceVariant
     [IsoId("_8ndaQMgnEeuGrNSsxk3B0A")]
     [DisplayName("Domicile")]
     [IsoXmlTag("Dmcl")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? Domicile { get; }
 }

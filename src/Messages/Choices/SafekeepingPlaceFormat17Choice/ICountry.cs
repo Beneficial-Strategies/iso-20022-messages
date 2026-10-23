@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat17Choice;
 /// Place of safekeeping expressed with a country code.
 /// </summary>
 [IsoId("_cj_8i5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Country")]
 public interface ICountry : ISafekeepingPlaceFormat17Choice, IIsoChoiceVariant
 {
     /// <summary>

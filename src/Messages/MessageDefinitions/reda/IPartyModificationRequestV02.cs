@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_R3RGqTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("reda.022.001.02", "PtyModReq", "urn:iso:std:iso:20022:tech:xsd:reda.022.001.02")]
+[IsoDisplayName(@"Party Modification Request V02")]
 public interface IPartyModificationRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +33,7 @@ public interface IPartyModificationRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyModification3> Modification { get; }
 
     /// <summary>
@@ -39,5 +41,6 @@ public interface IPartyModificationRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

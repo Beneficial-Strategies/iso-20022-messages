@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the matching processing change requested.
 /// </summary>
 [IsoId("_ZYK_kTt4EeW638lNyHKv7A")]
+[IsoDisplayName(@"Matching Denied 3 Choice")]
 public interface IMatchingDenied3Choice : IIsoChoice { }

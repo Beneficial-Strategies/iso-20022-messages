@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TypeOfPrice46Choice;
 /// Type expressed as a code.
 /// </summary>
 [IsoId("_JNG9gjhgEeamLZQeccJa7w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITypeOfPrice46Choice, IIsoChoiceVariant
 {
     /// <summary>

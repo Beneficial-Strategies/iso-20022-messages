@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame4Choice;
 /// An agreed number of days after the Trade date (T) used to define standard timeframes e.g T+3 settlement period. ||Where = T is the date that the price is applied to a transaction.
 /// </summary>
 [IsoId("_UAew6tp-Ed-ak6NoX_4Aeg_1882783639")]
+[IsoDisplayName(@"Trade Plus")]
 public interface ITradePlus : ITimeFrame4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ITradePlus : ITimeFrame4Choice, IIsoChoiceVariant
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("TPlus")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

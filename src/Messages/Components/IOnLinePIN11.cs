@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// On Line PIN11.
 /// </summary>
 [IsoId("_ICLSwY-bEe6oobnCtR50kw")]
+[IsoDisplayName(@"On Line PIN11")]
 public interface IOnLinePIN11 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to report on a payment transaction.
 /// </summary>
 [IsoId("_yNepoZlbEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Transaction Return Criteria")]
 public interface ITransactionReturnCriteria5 : IIsoComponent
 {
     /// <summary>

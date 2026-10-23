@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationReason16Choice;
 
 /// <summary>Reason for the cancellation request, in a proprietary form.</summary>
 [IsoId("_jG-UEe5NEeCisYr99QEiWA_-734160402")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICancellationReason16Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

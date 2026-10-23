@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status of a transfer cancellation instruction and the reason for the status.
 /// </summary>
 [IsoId("_Uww-Vtp-Ed-ak6NoX_4Aeg_-973620019")]
+[IsoDisplayName(@"Cancellation Status And Reason")]
 public interface ICancellationStatusAndReason : IIsoComponent
 {
     /// <summary>

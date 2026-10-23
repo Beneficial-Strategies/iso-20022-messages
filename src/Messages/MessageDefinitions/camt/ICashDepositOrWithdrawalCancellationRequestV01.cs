@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "CshDpstOrWdrwlCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:camt.116.001.01"
 )]
+[Description(@"The CashDepositOrWithdrawalCancellationRequest message requests the cancellation of a cash deposit request or cash withdrawal request.|Where requesting cancellation of a cash deposit request, it is sent by a cash receiver to a cash sender.|Where requesting cancellation of a cash withdrawal request, it is sent by a cash sender to a cash receiver.")]
+[IsoDisplayName(@"Cash Deposit Or Withdrawal Cancellation Request V01")]
 public interface ICashDepositOrWithdrawalCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -35,6 +37,8 @@ public interface ICashDepositOrWithdrawalCancellationRequestV01 : IOuterRecord
     [IsoId("_CUHVYHgzEfCdoODv2ypKfw")]
     [DisplayName("Underlying Transaction")]
     [IsoXmlTag("UndrlygTx")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnderlyingTransaction38> UnderlyingTransaction { get; }
 
     /// <summary>
@@ -43,5 +47,6 @@ public interface ICashDepositOrWithdrawalCancellationRequestV01 : IOuterRecord
     [IsoId("_dJ5uEatiEfC6tbn8zOl_iw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

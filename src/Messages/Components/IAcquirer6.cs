@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acquirer of the card transaction.
 /// </summary>
 [IsoId("_WJDmUXroEeSz_of_1TY14A")]
+[IsoDisplayName(@"Acquirer")]
 public interface IAcquirer6 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IAcquirer6 : IIsoComponent
     [IsoId("_tj2c0HroEeSz_of_1TY14A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IAcquirer6 : IIsoComponent
     [IsoId("_17RawHroEeSz_of_1TY14A")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 
     /// <summary>

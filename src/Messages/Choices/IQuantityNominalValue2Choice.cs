@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Information on the securities quantity or bonds nominal amount.
 /// </summary>
 [IsoId("_byObccpbEem6kd3Y9uIDqg")]
+[IsoDisplayName(@"Quantity Nominal Value 2 Choice")]
 public interface IQuantityNominalValue2Choice : IIsoChoice { }

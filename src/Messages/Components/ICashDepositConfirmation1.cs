@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Confirmation of how the cash receiver will settle the cash deposit.
 /// </summary>
 [IsoId("_G165MKtjEfC6tbn8zOl_iw")]
+[IsoDisplayName(@"Cash Deposit Confirmation1")]
 public interface ICashDepositConfirmation1 : IIsoComponent
 {
     /// <summary>

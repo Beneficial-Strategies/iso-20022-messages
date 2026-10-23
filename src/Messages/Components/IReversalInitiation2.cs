@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the reversal of an authorisation or financial message.
 /// </summary>
 [IsoId("_LKK5gYHOEeuwq_rv81SdXw")]
+[IsoDisplayName(@"Reversal Initiation")]
 public interface IReversalInitiation2 : IIsoComponent
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface IReversalInitiation2 : IIsoComponent
     [IsoId("_LPbM-YHOEeuwq_rv81SdXw")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10KHexBinaryText)]
     Max10KHexBinaryText? ICCRelatedData { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface IReversalInitiation2 : IIsoComponent
     [IsoId("_LPbM-4HOEeuwq_rv81SdXw")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -66,5 +69,6 @@ public interface IReversalInitiation2 : IIsoComponent
     [IsoId("_LPbM_YHOEeuwq_rv81SdXw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

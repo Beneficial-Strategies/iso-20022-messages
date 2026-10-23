@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of customer identification requested.
 /// </summary>
 [IsoId("_AEhcceH5Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Customer Type Request")]
 public interface ICustomerTypeRequest2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICustomerTypeRequest2 : IIsoComponent
     [IsoId("_AGP6w-H5Eeqbls7Gk4-ckA")]
     [DisplayName("Requested")]
     [IsoXmlTag("Reqd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator Requested { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to define the balance type and sub-type.
 /// </summary>
 [IsoId("_SYoCRtp-Ed-ak6NoX_4Aeg_833472278")]
+[IsoDisplayName(@"Balance Type")]
 public interface IBalanceType12 : IIsoComponent
 {
     /// <summary>

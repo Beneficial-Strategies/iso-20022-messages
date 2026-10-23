@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code or a data source scheme to determine the option style.
 /// </summary>
 [IsoId("_Q_EOVtp-Ed-ak6NoX_4Aeg_560393555")]
+[IsoDisplayName(@"Option Style 1 Choice")]
 public interface IOptionStyle1Choice : IIsoChoice { }

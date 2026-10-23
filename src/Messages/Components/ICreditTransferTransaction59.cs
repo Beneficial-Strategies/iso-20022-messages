@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Credit Transfer Transaction59.
 /// </summary>
 [IsoId("_76OQgTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Credit Transfer Transaction59")]
 public interface ICreditTransferTransaction59 : IIsoComponent
 {
     /// <summary>
@@ -128,6 +129,7 @@ public interface ICreditTransferTransaction59 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent3> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -142,6 +144,7 @@ public interface ICreditTransferTransaction59 : IIsoComponent
     /// </summary>
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting3> RegulatoryReporting { get; }
 
     /// <summary>
@@ -156,6 +159,7 @@ public interface ICreditTransferTransaction59 : IIsoComponent
     /// </summary>
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation9> RelatedRemittanceInformation { get; }
 
     /// <summary>

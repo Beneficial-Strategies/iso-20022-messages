@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_oqwXcfpbEeCPwaG9zjUPNQ")]
 [IsoMessage("sese.001.001.03", "TrfOutInstr", "urn:iso:std:iso:20022:tech:xsd:sese.001.001.03")]
+[Description(@"Scope|An instructing party, for example, an investment manager or its authorised representative, sends the TransferOutInstruction message to the executing party, for example, a transfer agent, to instruct the delivery of a financial instrument, free of payment, on a given date from a specified party.|This message may also be used to instruct the delivery of a financial instrument, free of payment, to another of the instructing parties own accounts or to a third party.|Usage|The TransferOutInstruction message is used to instruct the withdrawal of a financial instrument from one account and deliver it to either another account or to a third party.")]
+[IsoDisplayName(@"Transfer Out Instruction V")]
 public interface ITransferOutInstructionV03 : IOuterRecord
 {
     /// <summary>
@@ -56,6 +58,8 @@ public interface ITransferOutInstructionV03 : IOuterRecord
     [IsoId("_C11dgkNIEeGHJ_bHJRPaIQ_1379273282")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -72,6 +76,7 @@ public interface ITransferOutInstructionV03 : IOuterRecord
     [IsoId("_oqwXhfpbEeCPwaG9zjUPNQ")]
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransfer11> TransferDetails { get; }
 
     /// <summary>
@@ -104,5 +109,6 @@ public interface ITransferOutInstructionV03 : IOuterRecord
     [IsoId("_oqwXmfpbEeCPwaG9zjUPNQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

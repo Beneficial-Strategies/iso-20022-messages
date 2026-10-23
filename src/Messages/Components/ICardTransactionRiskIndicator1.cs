@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates to the issuer the level of risk of the transaction.
 /// </summary>
 [IsoId("_lnDF4HsKEeSR68OJvMfxJQ")]
+[IsoDisplayName(@"Card Transaction Risk Indicator")]
 public interface ICardTransactionRiskIndicator1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardTransactionRiskIndicator1 : IIsoComponent
     [IsoId("_BJYHkHsNEeSR68OJvMfxJQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardTransactionRiskReason1Code> Reason { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICardTransactionRiskIndicator1 : IIsoComponent
     [IsoId("_NUeygHsNEeSR68OJvMfxJQ")]
     [DisplayName("Level")]
     [IsoXmlTag("Lvl")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Level { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ICardTransactionRiskIndicator1 : IIsoComponent
     [IsoId("_4l1jwHsNEeSR68OJvMfxJQ")]
     [DisplayName("Recommended Action")]
     [IsoXmlTag("RcmmnddActn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActionType4Code> RecommendedAction { get; }
 }

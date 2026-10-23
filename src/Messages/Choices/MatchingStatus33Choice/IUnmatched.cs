@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus33Choice;
 /// Instruction has not been matched.
 /// </summary>
 [IsoId("_LuVKgOB-Eei2UYJ62ws-Fw")]
+[IsoDisplayName(@"Unmatched")]
 public interface IUnmatched : IMatchingStatus33Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

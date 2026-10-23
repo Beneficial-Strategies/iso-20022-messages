@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "StsXtnsnReqRjctn",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.033.001.03"
 )]
+[Description(@"Scope|The StatusExtensionRequestRejection message is sent by the party requested to accept or reject a request to extend the status of a transaction to the matching application.|This message is used to inform about the rejection of a request to extend the status of a transaction.|Usage|The StatusExtensionRequestRejection message can be sent by the party requested to accept or reject the request to extend the status of a transaction to inform that it rejects the request.|The message can be sent in response to a StatusExtensionRequestNotification message.|The acceptance of a request to extend the status of a transaction can be achieved by sending a StatusExtensionRequestAcceptance message.")]
+[IsoDisplayName(@"Status Extension Request Rejection V")]
 public interface IStatusExtensionRequestRejectionV03 : IOuterRecord
 {
     /// <summary>

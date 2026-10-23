@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityType1Choice;
 /// Quantity type expressed as a code.
 /// </summary>
 [IsoId("_2-19cQaxEeS3lpTattq7hg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IQuantityType1Choice, IIsoChoiceVariant
 {
     /// <summary>

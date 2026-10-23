@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Set of elements used to identify a financial institution.
 /// </summary>
 [IsoId("_h_8rhXSbEeiH1ZOt2UD8vQ")]
+[IsoDisplayName(@"Member Identification 3 Choice")]
 public interface IMemberIdentification3Choice : IIsoChoice { }

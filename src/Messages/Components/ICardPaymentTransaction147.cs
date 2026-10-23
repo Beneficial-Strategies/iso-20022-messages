@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction information in the completion advice message.
 /// </summary>
 [IsoId("_UbMbAZ_9EfC4Q_xhaK1hdQ")]
+[IsoDisplayName(@"Card Payment Transaction147")]
 public interface ICardPaymentTransaction147 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICardPaymentTransaction147 : IIsoComponent
     [IsoId("_Ucc_UZ_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardPaymentServiceType9Code> AdditionalService { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface ICardPaymentTransaction147 : IIsoComponent
     [IsoId("_Ucc_b5_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CardProgrammeProposed { get; }
 
     /// <summary>
@@ -137,6 +140,7 @@ public interface ICardPaymentTransaction147 : IIsoComponent
     [IsoId("_Ucc_n5_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<FailureReason3Code> FailureReason { get; }
 
     /// <summary>
@@ -233,6 +237,7 @@ public interface ICardPaymentTransaction147 : IIsoComponent
     [IsoId("_Ucc_55_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AdditionalTransactionData { get; }
 
     /// <summary>
@@ -241,5 +246,6 @@ public interface ICardPaymentTransaction147 : IIsoComponent
     [IsoId("_9dKjkJ_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Message From Merchant")]
     [IsoXmlTag("MsgFrMrchnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction18> MessageFromMerchant { get; }
 }

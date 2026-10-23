@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of the document referred in the remittance information.
 /// </summary>
 [IsoId("_Xf7GCR77EeSxevWRRWxNAg")]
+[IsoDisplayName(@"Referred Document Type")]
 public interface IReferredDocumentType4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IReferredDocumentType4 : IIsoComponent
     [IsoId("_XxL1JR77EeSxevWRRWxNAg")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingSettlementStatusChoice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_U1POqNp-Ed-ak6NoX_4Aeg_-1628599640")]
+[IsoDisplayName(@"No Reason")]
 public interface INoReason : IPendingSettlementStatusChoice, IIsoChoiceVariant
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// </summary>
 [IsoId("_1Eb9wtEtEd-BzquC8wXy7w_693848369")]
 [IsoMessage("fxtr.013.001.02", "WdrwlNtfctnV02", "urn:iso:std:iso:20022:tech:xsd:fxtr.013.001.02")]
+[IsoDisplayName(@"Withdrawal Notification V02")]
 public interface IWithdrawalNotificationV02 : IOuterRecord
 {
     /// <summary>

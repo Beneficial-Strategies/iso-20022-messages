@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References65Choice;
 /// Unambiguous identification of the intra-position movement transaction as known by the account owner (or instructing party acting on its behalf).
 /// </summary>
 [IsoId("_1IqiVdBwEeihG9bKfarOOA")]
+[IsoDisplayName(@"Intra Position Movement Identification")]
 public interface IIntraPositionMovementIdentification : IReferences65Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IIntraPositionMovementIdentification : IReferences65Choice, IIs
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("IntraPosMvmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

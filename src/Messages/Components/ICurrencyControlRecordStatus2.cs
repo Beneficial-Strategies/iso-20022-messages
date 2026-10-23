@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of each individual currency control record.
 /// </summary>
 [IsoId("_9rC4vW48EeiU9cctagi5ow")]
+[IsoDisplayName(@"Currency Control Record Status")]
 public interface ICurrencyControlRecordStatus2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICurrencyControlRecordStatus2 : IIsoComponent
     [IsoId("_91eAAW48EeiU9cctagi5ow")]
     [DisplayName("Record Identification")]
     [IsoXmlTag("RcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RecordIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICurrencyControlRecordStatus2 : IIsoComponent
     [IsoId("_91eABW48EeiU9cctagi5ow")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IValidationStatusReason2> StatusReason { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICurrencyControlRecordStatus2 : IIsoComponent
     [IsoId("_91eAB248EeiU9cctagi5ow")]
     [DisplayName("Status Date Time")]
     [IsoXmlTag("StsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StatusDateTime { get; }
 
     /// <summary>

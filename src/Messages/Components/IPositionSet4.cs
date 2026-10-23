@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Values either taken directly from the reporting fields as defined in the local regulation or derived from those fields that will be used by trade repositories to calculate positions.
 /// </summary>
 [IsoId("_8sobkeNfEeiTop2HXWk15w")]
+[IsoDisplayName(@"Position Set")]
 public interface IPositionSet4 : IIsoComponent
 {
     /// <summary>

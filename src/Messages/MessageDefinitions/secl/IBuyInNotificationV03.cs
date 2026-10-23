@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_1K820S0lEeSRe9rElPHBfg")]
 [IsoMessage("secl.007.001.03", "BuyInNtfctn", "urn:iso:std:iso:20022:tech:xsd:secl.007.001.03")]
+[Description(@"Scope|The BuyInNotification message is sent by the central counterparty (CCP) to a clearing member to notify the start of the buy in process.||The message definition is intended for use with the ISO 20022 Business Application Header.||Usage|The buy in process is a process by which the CCP buys in stocks to cover failed transactions; the clearing member is notified that this process has started. Depending on each CCP internal rules, this message can also be sent, as a warning, by the central counterparty to the clearing member some days before the buy in process starts.")]
+[IsoDisplayName(@"Buy In Notification V")]
 public interface IBuyInNotificationV03 : IOuterRecord
 {
     /// <summary>
@@ -26,6 +28,8 @@ public interface IBuyInNotificationV03 : IOuterRecord
     [IsoId("_1K821S0lEeSRe9rElPHBfg")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -58,5 +62,6 @@ public interface IBuyInNotificationV03 : IOuterRecord
     [IsoId("_1K823S0lEeSRe9rElPHBfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

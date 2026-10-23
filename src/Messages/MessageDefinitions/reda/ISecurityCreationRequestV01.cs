@@ -25,6 +25,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_jTt_oR62Eeu31YsWNiv_cw")]
 [IsoMessage("reda.006.001.01", "SctyCreReq", "urn:iso:std:iso:20022:tech:xsd:reda.006.001.01")]
+[Description(@"SCOPE|An instructing party sends a SecurityCreationRequest message to an executing/servicing party to request the creation of financial instrument static details in their system.||The instructing party - executing/servicing party relationship may be:|- Central Securities Depositories (CSD) who would like to publish security static data, or |- a Corporate, or|- a Bank, or|- a Market Infrastructure, or |- a Market Data Provider.||USAGE|The request is sent when the instructing party identified a gap in the securities coverage of the executing/servicing party. The instructing party needs this security to be set-up at the executing /servicing party to perform its activities.||Initiator: instructing party.")]
+[IsoDisplayName(@"Security Creation Request V")]
 public interface ISecurityCreationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -49,5 +51,6 @@ public interface ISecurityCreationRequestV01 : IOuterRecord
     [IsoId("_jTt_tR62Eeu31YsWNiv_cw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.auth;
     "PmtRgltryInfNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:auth.024.001.04"
 )]
+[IsoDisplayName(@"Payment Regulatory Information Notification V04")]
 public interface IPaymentRegulatoryInformationNotificationV04 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface IPaymentRegulatoryInformationNotificationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Notification")]
     [IsoXmlTag("TxNtfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReportingNotification4> TransactionNotification { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface IPaymentRegulatoryInformationNotificationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

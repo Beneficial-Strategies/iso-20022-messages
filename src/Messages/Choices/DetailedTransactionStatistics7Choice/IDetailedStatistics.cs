@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics7Ch
 /// <summary>
 /// Detailed Statistics.
 /// </summary>
+[IsoDisplayName(@"Detailed Statistics")]
 public interface IDetailedStatistics : IDetailedTransactionStatistics7Choice, IIsoChoiceVariant
 {
     /// <summary>

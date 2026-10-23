@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash dividend amount per equity after deductions or allowances have been made.
 /// </summary>
 [IsoId("_UPrqgNp-Ed-ak6NoX_4Aeg_2118430595")]
+[IsoDisplayName(@"Net Dividend Rate")]
 public interface INetDividendRate2 : IIsoComponent
 {
     /// <summary>

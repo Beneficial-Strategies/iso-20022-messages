@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountStatusUpdateInstructionRe
 /// There is no reason available or to report for the instruction to change the account status.
 /// </summary>
 [IsoId("_NHQjMXi8EeaRm5xIK6nGuQ")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason
     : IAccountStatusUpdateInstructionReason1Choice,
         IIsoChoiceVariant

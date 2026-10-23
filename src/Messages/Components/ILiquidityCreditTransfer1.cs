@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details specific to the liquidity credit transfer, used to transfer an amount of money from the debtor to the creditor, where both are financial institutions.
 /// </summary>
 [IsoId("_8FlMpaMgEeCJ6YNENx4h-w_1212962921")]
+[IsoDisplayName(@"Liquidity Credit Transfer")]
 public interface ILiquidityCreditTransfer1 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,6 @@ public interface ILiquidityCreditTransfer1 : IIsoComponent
     [IsoId("_8Fu9o6MgEeCJ6YNENx4h-w_-1435428673")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SettlementDate { get; }
 }

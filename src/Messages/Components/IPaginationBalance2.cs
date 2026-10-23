@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance of a financial instrument for a specific statement page.
 /// </summary>
 [IsoId("_s56c4QgGEeSxsfb1OEDVsw")]
+[IsoDisplayName(@"Pagination Balance")]
 public interface IPaginationBalance2 : IIsoComponent
 {
     /// <summary>

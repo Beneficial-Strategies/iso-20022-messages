@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.tsin;
 /// </summary>
 [IsoId("_BUjIPn1LEeCF8NjrBemJWQ_-1871971623")]
 [IsoMessage("tsin.003.001.01", "InvcFincgCxlReq", "urn:iso:std:iso:20022:tech:xsd:tsin.003.001.01")]
+[Description(@"Scope|The InvoiceFinancingCancellationRequest message is sent by the Financing Requestor to the Intermediary Agent (relay scenario) or First Agent (direct scenario). It is used to request the cancellation of a previously sent financing request.|Usage|The InvoiceFinancingCancellationRequest message is used by the Financing Requestor to request the cancellation of a previously sent financing request.|It is not possible to send a cancellation request for a single invoice contained in a bulk invoice financing request.|The InvoiceFinancingCancellationRequest message contains references (original group identification and original creation date and time) of the original financing request message to which is referred.|As for InvoiceFinancingRequest, the message can be used in a direct or a relay scenario:|- In a direct scenario, the message is sent directly to the First Agent. The First Agent is the account servicer of the Financing Requestor.|- In a relay scenario, the message is sent to an Intermediary Agent. The Intermediary Agent forwards the InvoiceFinancingCancellingRequest message to the First Agent.")]
+[IsoDisplayName(@"Invoice Financing Cancellation Request V")]
 public interface IInvoiceFinancingCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

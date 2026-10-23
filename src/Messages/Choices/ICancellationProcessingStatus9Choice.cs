@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of cancellation processing status.
 /// </summary>
 [IsoId("_BlUUkeFfEeWIA4E9cYSxxQ")]
+[IsoDisplayName(@"Cancellation Processing Status 9 Choice")]
 public interface ICancellationProcessingStatus9Choice : IIsoChoice { }

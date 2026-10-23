@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for the pending settlement status.
 /// </summary>
 [IsoId("_RRPjdtp-Ed-ak6NoX_4Aeg_-685618546")]
+[IsoDisplayName(@"Pending Settlement Status")]
 public interface IPendingSettlementStatus2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPendingSettlementStatus2 : IIsoComponent
     [IsoId("_RRPjeNp-Ed-ak6NoX_4Aeg_1820827730")]
     [DisplayName("Extended Reason")]
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedReason { get; }
 
     /// <summary>

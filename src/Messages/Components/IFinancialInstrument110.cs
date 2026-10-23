@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security or other asset.
 /// </summary>
 [IsoId("5f293067-925e-4dbc-ae42-ab01fabd043b")]
+[IsoDisplayName(@"Financial Instrument110")]
 public interface IFinancialInstrument110 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IFinancialInstrument110 : IIsoComponent
     [IsoId("dcc72cb5-b5e7-4a46-9f82-a008d708badc")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit14> UnitsDetails { get; }
 
     /// <summary>
@@ -121,6 +123,7 @@ public interface IFinancialInstrument110 : IIsoComponent
     [IsoId("8ade3a26-f8b3-4fb5-a3ab-489bb5d7aafb")]
     [DisplayName("Transferor")]
     [IsoXmlTag("Trfr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccount37> Transferor { get; }
 
     /// <summary>
@@ -129,6 +132,7 @@ public interface IFinancialInstrument110 : IIsoComponent
     [IsoId("2166f3e5-23b3-44d8-b9ce-d4d22af5e1d0")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary43> IntermediaryInformation { get; }
 
     /// <summary>
@@ -137,6 +141,7 @@ public interface IFinancialInstrument110 : IIsoComponent
     [IsoId("5b8fd0a7-9193-47b7-82bf-aee3b0761d60")]
     [DisplayName("Crystallisation Details")]
     [IsoXmlTag("CrstllstnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICrystallisation2> CrystallisationDetails { get; }
 
     /// <summary>
@@ -153,6 +158,7 @@ public interface IFinancialInstrument110 : IIsoComponent
     [IsoId("aa74b197-ef2f-4467-87b7-d432d1f32094")]
     [DisplayName("Settlement Parties Details")]
     [IsoXmlTag("SttlmPtiesDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundSettlementParameters24> SettlementPartiesDetails { get; }
 
     /// <summary>
@@ -177,5 +183,6 @@ public interface IFinancialInstrument110 : IIsoComponent
     [IsoId("9cd8d181-460b-49ba-a519-a3bd1e7c7a7c")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

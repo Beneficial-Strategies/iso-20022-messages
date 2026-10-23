@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information with update description and date.
 /// </summary>
 [IsoId("_c5XIRZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Updated UR Llnformation")]
 public interface IUpdatedURLlnformation3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IUpdatedURLlnformation3 : IIsoComponent
     [IsoId("_c5XIR5KQEeWHWpTQn1FFVg")]
     [DisplayName("Update Description")]
     [IsoXmlTag("UpdDesc")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text? UpdateDescription { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IUpdatedURLlnformation3 : IIsoComponent
     [IsoId("_c5XISZKQEeWHWpTQn1FFVg")]
     [DisplayName("Update Date")]
     [IsoXmlTag("UpdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? UpdateDate { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IUpdatedURLlnformation3 : IIsoComponent
     [IsoId("_c5XIS5KQEeWHWpTQn1FFVg")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINZMax256Text)]
+    [StringLength(256, MinimumLength = 1)]
     RestrictedFINZMax256Text URLAddress { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contact person at the party organising the meeting, at the issuer or at an intermediary.
 /// </summary>
 [IsoId("_QDKmxtp-Ed-ak6NoX_4Aeg_-854378880")]
+[IsoDisplayName(@"Meeting Contact Person")]
 public interface IMeetingContactPerson1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IMeetingContactPerson1 : IIsoComponent
     [IsoId("_QDTwsNp-Ed-ak6NoX_4Aeg_-854378862")]
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? PlaceOfListing { get; }
 }

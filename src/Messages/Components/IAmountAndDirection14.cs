@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.
 /// </summary>
 [IsoId("_WQIfXNp-Ed-ak6NoX_4Aeg_457061647")]
+[IsoDisplayName(@"Amount And Direction")]
 public interface IAmountAndDirection14 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IAmountAndDirection14 : IIsoComponent
     [IsoId("_WQRpQdp-Ed-ak6NoX_4Aeg_-1765245322")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator Sign { get; }
 }

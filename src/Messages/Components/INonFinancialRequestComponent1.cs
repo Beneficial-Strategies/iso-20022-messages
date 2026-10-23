@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the non financial request.
 /// </summary>
 [IsoId("_MeptkC_nEeugIJ3Gvoevmg")]
+[IsoDisplayName(@"Non Financial Request Component")]
 public interface INonFinancialRequestComponent1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface INonFinancialRequestComponent1 : IIsoComponent
     [IsoId("_NlxRNy_oEeugIJ3Gvoevmg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

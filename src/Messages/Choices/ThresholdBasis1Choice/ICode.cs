@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ThresholdBasis1Choice;
 /// Nature of the quantity used as a basis to set a threshold for voting on resolutions at general meetings and provided as a code value.
 /// </summary>
 [IsoId("_4JOLYBuMEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IThresholdBasis1Choice, IIsoChoiceVariant
 {
     /// <summary>

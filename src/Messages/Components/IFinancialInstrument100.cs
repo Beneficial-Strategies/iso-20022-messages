@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security or other asset.
 /// </summary>
 [IsoId("_A991celvEeuvhrZwLF0fDg")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument100 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrument100 : IIsoComponent
     [IsoId("_BUdp7elvEeuvhrZwLF0fDg")]
     [DisplayName("Line Identification")]
     [IsoXmlTag("LineId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LineIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IFinancialInstrument100 : IIsoComponent
     [IsoId("_BUdp8-lvEeuvhrZwLF0fDg")]
     [DisplayName("Partial Instructed Quantity")]
     [IsoXmlTag("PrtlInstdQty")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PartialInstructedQuantity { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IFinancialInstrument100 : IIsoComponent
     [IsoId("_BUdp9elvEeuvhrZwLF0fDg")]
     [DisplayName("Original Percentage Instructed")]
     [IsoXmlTag("OrgnlPctgInstd")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OriginalPercentageInstructed { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IFinancialInstrument100 : IIsoComponent
     [IsoId("_BUdp-elvEeuvhrZwLF0fDg")]
     [DisplayName("Additional Asset")]
     [IsoXmlTag("AddtlAsst")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AdditionalAsset { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface IFinancialInstrument100 : IIsoComponent
     [IsoId("_BUdp--lvEeuvhrZwLF0fDg")]
     [DisplayName("Not Available")]
     [IsoXmlTag("NotAvlbl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NotAvailable { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface IFinancialInstrument100 : IIsoComponent
     [IsoId("_BUdp_-lvEeuvhrZwLF0fDg")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit11> UnitsDetails { get; }
 
     /// <summary>
@@ -178,6 +186,7 @@ public interface IFinancialInstrument100 : IIsoComponent
     [IsoId("_BUdqFelvEeuvhrZwLF0fDg")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary43> IntermediaryInformation { get; }
 
     /// <summary>
@@ -186,6 +195,7 @@ public interface IFinancialInstrument100 : IIsoComponent
     [IsoId("_BUdqF-lvEeuvhrZwLF0fDg")]
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedTradeDate { get; }
 
     /// <summary>
@@ -194,6 +204,7 @@ public interface IFinancialInstrument100 : IIsoComponent
     [IsoId("_BUdqGelvEeuvhrZwLF0fDg")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>
@@ -226,6 +237,7 @@ public interface IFinancialInstrument100 : IIsoComponent
     [IsoId("_BUdqIelvEeuvhrZwLF0fDg")]
     [DisplayName("Crystallisation Details")]
     [IsoXmlTag("CrstllstnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICrystallisation2> CrystallisationDetails { get; }
 
     /// <summary>
@@ -250,6 +262,7 @@ public interface IFinancialInstrument100 : IIsoComponent
     [IsoId("_JwyV8OlvEeuvhrZwLF0fDg")]
     [DisplayName("Assets Held In Own Name")]
     [IsoXmlTag("AsstsHeldInOwnNm")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AssetsHeldInOwnName { get; }
 
     /// <summary>
@@ -258,6 +271,7 @@ public interface IFinancialInstrument100 : IIsoComponent
     [IsoId("_NUxaEOlvEeuvhrZwLF0fDg")]
     [DisplayName("Transfer Results In Change Of Beneficial Owner")]
     [IsoXmlTag("TrfRsltsInChngOfBnfclOwnr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TransferResultsInChangeOfBeneficialOwner { get; }
 
     /// <summary>
@@ -266,5 +280,6 @@ public interface IFinancialInstrument100 : IIsoComponent
     [IsoId("_BUdqJ-lvEeuvhrZwLF0fDg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

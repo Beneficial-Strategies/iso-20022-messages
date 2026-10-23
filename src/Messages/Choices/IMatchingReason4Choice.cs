@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the matching processing status.
 /// </summary>
 [IsoId("_1Bk5i2XREeOWzsrIp2keDA")]
+[IsoDisplayName(@"Matching Reason 4 Choice")]
 public interface IMatchingReason4Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Disposition of previously submitted fraud report message.
 /// </summary>
 [IsoId("_gRLGcRNTEfC1ZfCQz0xB3g")]
+[IsoDisplayName(@"Fraud Disposition Status3")]
 public interface IFraudDispositionStatus3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IFraudDispositionStatus3 : IIsoComponent
     [IsoId("_gZIIlRNTEfC1ZfCQz0xB3g")]
     [DisplayName("Error Data")]
     [IsoXmlTag("ErrData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max256Text> ErrorData { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IFraudDispositionStatus3 : IIsoComponent
     [IsoId("_gZIIlxNTEfC1ZfCQz0xB3g")]
     [DisplayName("Warning Data")]
     [IsoXmlTag("WrngData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max256Text> WarningData { get; }
 }

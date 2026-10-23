@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus2Choice;
 /// <summary>
 /// Rejected Status.
 /// </summary>
+[IsoDisplayName(@"Rejected Status")]
 public interface IRejectedStatus : INotificationAdviceStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

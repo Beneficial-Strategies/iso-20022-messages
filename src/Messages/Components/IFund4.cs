@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about an investment fund.
 /// </summary>
 [IsoId("_h_KfYWASEeSkSfzdpzkxXg")]
+[IsoDisplayName(@"Fund")]
 public interface IFund4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFund4 : IIsoComponent
     [IsoId("_iaGH6WASEeSkSfzdpzkxXg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IFund4 : IIsoComponent
     [IsoId("_iaGH62ASEeSkSfzdpzkxXg")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 
     /// <summary>
@@ -81,5 +85,6 @@ public interface IFund4 : IIsoComponent
     [IsoId("_iaGH-WASEeSkSfzdpzkxXg")]
     [DisplayName("Percentage Of Fund Total NAV")]
     [IsoXmlTag("PctgOfFndTtlNAV")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfFundTotalNAV { get; }
 }

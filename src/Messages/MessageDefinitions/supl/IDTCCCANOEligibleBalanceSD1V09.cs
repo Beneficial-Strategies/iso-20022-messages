@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.supl;
     "DTCCCANOElgblBalSD1",
     "urn:iso:std:iso:20022:tech:xsd:supl.007.001.09"
 )]
+[Description(@"The DTCCCANOEligibleBalanceSD1 message extends ISO corporate action notification (Eligible Balance market practice) message with DTCC corporate action eligible balance elements not covered in the standard message.")]
+[IsoDisplayName(@"DTCCCANO Eligible Balance SD 1 V")]
 public interface IDTCCCANOEligibleBalanceSD1V09 : IOuterRecord
 {
     /// <summary>
@@ -40,6 +42,7 @@ public interface IDTCCCANOEligibleBalanceSD1V09 : IOuterRecord
     [IsoId("_x6QSCwB6EeqouY-yI_q3qQ")]
     [DisplayName("Distribution Account Balance")]
     [IsoXmlTag("DstrbtnAcctBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountBalanceSD10> DistributionAccountBalance { get; }
 
     /// <summary>

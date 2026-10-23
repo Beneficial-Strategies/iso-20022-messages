@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that locates and identifies a specific address, as defined by postal services.
 /// </summary>
 [IsoId("_QHCaJNp-Ed-ak6NoX_4Aeg_1389999614")]
+[IsoDisplayName(@"Postal Address")]
 public interface IPostalAddress6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPostalAddress6 : IIsoComponent
     [IsoId("_QHCaJtp-Ed-ak6NoX_4Aeg_596895935")]
     [DisplayName("Department")]
     [IsoXmlTag("Dept")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Department { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPostalAddress6 : IIsoComponent
     [IsoId("_QHCaJ9p-Ed-ak6NoX_4Aeg_1609731352")]
     [DisplayName("Sub Department")]
     [IsoXmlTag("SubDept")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SubDepartment { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPostalAddress6 : IIsoComponent
     [IsoId("_QHCaKNp-Ed-ak6NoX_4Aeg_1389999977")]
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? StreetName { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IPostalAddress6 : IIsoComponent
     [IsoId("_QHCaKdp-Ed-ak6NoX_4Aeg_1390000378")]
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? BuildingNumber { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface IPostalAddress6 : IIsoComponent
     [IsoId("_QHMLINp-Ed-ak6NoX_4Aeg_1390000038")]
     [DisplayName("Post Code")]
     [IsoXmlTag("PstCd")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? PostCode { get; }
 
     /// <summary>
@@ -65,6 +76,8 @@ public interface IPostalAddress6 : IIsoComponent
     [IsoId("_QHMLIdp-Ed-ak6NoX_4Aeg_1390000069")]
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TownName { get; }
 
     /// <summary>
@@ -73,6 +86,8 @@ public interface IPostalAddress6 : IIsoComponent
     [IsoId("_QHMLItp-Ed-ak6NoX_4Aeg_1390000099")]
     [DisplayName("Country Sub Division")]
     [IsoXmlTag("CtrySubDvsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CountrySubDivision { get; }
 
     /// <summary>
@@ -89,5 +104,9 @@ public interface IPostalAddress6 : IIsoComponent
     [IsoId("_QHMLJNp-Ed-ak6NoX_4Aeg_1389999668")]
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [MinLength(0)]
+    [MaxLength(7)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AddressLine { get; }
 }

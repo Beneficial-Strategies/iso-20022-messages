@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NDFOpeningFixing1Choice;
 /// </summary>
 [IsoId("_hvh9oLC1EeaYscKJ1tWGRA")]
 [IsoXmlTag("OpngConds")]
+[IsoDisplayName(@"Opening Conditions")]
 public interface IOpeningConditions : INDFOpeningFixing1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IOpeningConditions : INDFOpeningFixing1Choice, IIsoChoiceVarian
     [IsoId("_XAtxMJR_Eeak6e8_Fc5fQg")]
     [DisplayName("Valuation Date")]
     [IsoXmlTag("ValtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValuationDate { get; }
 
     /// <summary>
@@ -34,5 +36,8 @@ public interface IOpeningConditions : INDFOpeningFixing1Choice, IIsoChoiceVarian
     [IsoId("_q4iDMJUOEeak6e8_Fc5fQg")]
     [DisplayName("Settlement Rate Source")]
     [IsoXmlTag("SttlmRateSrc")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementRateSource1> SettlementRateSource { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationStatus6Choice;
 
 /// <summary>Specifies the reason of the modification status.</summary>
 [IsoId("a7ea634d-4026-409c-8921-e68cd77303ed")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IModificationStatus6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

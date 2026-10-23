@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgCcyCdRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.048.001.01"
 )]
+[Description(@"The MiFIRCurrencyCodeReport message provides the details the ISO 4217 currency codes and is created by ESMA for distribution to National Competent Authorities.")]
+[IsoDisplayName(@"Financial Instrument Reporting Currency Code Report V")]
 public interface IFinancialInstrumentReportingCurrencyCodeReportV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface IFinancialInstrumentReportingCurrencyCodeReportV01 : IOuterReco
     [IsoId("_4LK8OURNEee7JdgA9zPESA")]
     [DisplayName("Currency Data")]
     [IsoXmlTag("CcyData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesCurrencyIdentification2> CurrencyData { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface IFinancialInstrumentReportingCurrencyCodeReportV01 : IOuterReco
     [IsoId("_4LK8O0RNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

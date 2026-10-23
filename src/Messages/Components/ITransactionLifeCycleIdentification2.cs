@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ISO 8583:2003 bit 21
 /// </summary>
 [IsoId("_LoxEIMWaEeiCfKAZkk6ZAQ")]
+[IsoDisplayName(@"Transaction Life Cycle Identification")]
 public interface ITransactionLifeCycleIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -20,5 +21,6 @@ public interface ITransactionLifeCycleIdentification2 : IIsoComponent
     [IsoId("_Lztv4cWaEeiCfKAZkk6ZAQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Exact15Text)]
     Exact15Text Identification { get; }
 }

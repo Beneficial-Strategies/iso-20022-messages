@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// File Data1.
 /// </summary>
 [IsoId("_6csvISedEe6TQOljeYYeiQ")]
+[IsoDisplayName(@"File Data1")]
 public interface IFileData1 : IIsoComponent
 {
     /// <summary>

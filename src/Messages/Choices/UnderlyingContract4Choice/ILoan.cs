@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract4Choice;
 /// <summary>
 /// Loan.
 /// </summary>
+[IsoDisplayName(@"Loan")]
 public interface ILoan : IUnderlyingContract4Choice, IIsoChoiceVariant
 {
     /// <summary>

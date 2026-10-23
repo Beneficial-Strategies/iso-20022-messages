@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity26Cho
 /// Percentage of the total redemption amount used for the subscription in an investment fund or investment fund class.
 /// </summary>
 [IsoId("_Aw-nJU_4Eea1ZIrmU5dI3w")]
+[IsoDisplayName(@"Percentage Of Total Redemption Amount")]
 public interface IPercentageOfTotalRedemptionAmount
     : IFinancialInstrumentQuantity26Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IPercentageOfTotalRedemptionAmount
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("PctgOfTtlRedAmt")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

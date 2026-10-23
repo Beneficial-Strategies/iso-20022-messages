@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Card Reader Application Protocol Data Unit Request message.
 /// </summary>
 [IsoId("_m22qMN7BEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Device Send Application Protocol Data Unit Card Reader Request")]
 public interface IDeviceSendApplicationProtocolDataUnitCardReaderRequest1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDeviceSendApplicationProtocolDataUnitCardReaderRequest1 : IIso
     [IsoId("_sVzmMN7BEeiwsev40qZGEQ")]
     [DisplayName("Class")]
     [IsoXmlTag("Clss")]
+    [IsoSimpleType(IsoSimpleType.Min1Max256Binary)]
     Min1Max256Binary Class { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IDeviceSendApplicationProtocolDataUnitCardReaderRequest1 : IIso
     [IsoId("_u3PoMN7BEeiwsev40qZGEQ")]
     [DisplayName("Instruction")]
     [IsoXmlTag("Instr")]
+    [IsoSimpleType(IsoSimpleType.Min1Max256Binary)]
     Min1Max256Binary Instruction { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IDeviceSendApplicationProtocolDataUnitCardReaderRequest1 : IIso
     [IsoId("_xNyBwN7BEeiwsev40qZGEQ")]
     [DisplayName("Parameter")]
     [IsoXmlTag("Param1")]
+    [IsoSimpleType(IsoSimpleType.Min1Max256Binary)]
     Min1Max256Binary Parameter1 { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IDeviceSendApplicationProtocolDataUnitCardReaderRequest1 : IIso
     [IsoId("_0qCoEe15Eei-V5h0ja04AA")]
     [DisplayName("Parameter")]
     [IsoXmlTag("Param2")]
+    [IsoSimpleType(IsoSimpleType.Min1Max256Binary)]
     Min1Max256Binary Parameter2 { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IDeviceSendApplicationProtocolDataUnitCardReaderRequest1 : IIso
     [IsoId("_APE2sN7CEeiwsev40qZGEQ")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
+    [IsoSimpleType(IsoSimpleType.Min1Max256Binary)]
     Min1Max256Binary? Data { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface IDeviceSendApplicationProtocolDataUnitCardReaderRequest1 : IIso
     [IsoId("_DORLsN7CEeiwsev40qZGEQ")]
     [DisplayName("Expected Length")]
     [IsoXmlTag("XpctdLngth")]
+    [IsoSimpleType(IsoSimpleType.Min1Max256Binary)]
     Min1Max256Binary? ExpectedLength { get; }
 }

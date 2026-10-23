@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// List of elements which provide the parameters of an option trade.
 /// </summary>
 [IsoId("_XCwBUQ8iEeSFHsNYty4C9Q")]
+[IsoDisplayName(@"Option")]
 public interface IOption10 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,8 @@ public interface IOption10 : IIsoComponent
     [IsoId("_lmNm8KbREeSnSIf9q_Ahng")]
     [DisplayName("Derivative Option Identification")]
     [IsoXmlTag("DerivOptnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DerivativeOptionIdentification { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IOption10 : IIsoComponent
     [IsoId("_cp_Z0A8mEeSFHsNYty4C9Q")]
     [DisplayName("Volatility Margin")]
     [IsoXmlTag("VoltlyMrgn")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate VolatilityMargin { get; }
 
     /// <summary>
@@ -97,6 +101,7 @@ public interface IOption10 : IIsoComponent
     [IsoId("_XdRaLQ8iEeSFHsNYty4C9Q")]
     [DisplayName("Expiry Date And Time")]
     [IsoXmlTag("XpryDtAndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ExpiryDateAndTime { get; }
 
     /// <summary>
@@ -105,6 +110,8 @@ public interface IOption10 : IIsoComponent
     [IsoId("_XdRaLw8iEeSFHsNYty4C9Q")]
     [DisplayName("Expiry Location")]
     [IsoXmlTag("XpryLctn")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText ExpiryLocation { get; }
 
     /// <summary>
@@ -145,5 +152,7 @@ public interface IOption10 : IIsoComponent
     [IsoId("_XdRaMw8iEeSFHsNYty4C9Q")]
     [DisplayName("Additional Option Information")]
     [IsoXmlTag("AddtlOptnInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text AdditionalOptionInformation { get; }
 }

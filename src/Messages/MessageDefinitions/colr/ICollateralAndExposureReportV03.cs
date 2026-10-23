@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_XAW1sYFrEeWtPe6Crjmeug")]
 [IsoMessage("colr.016.001.03", "CollAndXpsrRpt", "urn:iso:std:iso:20022:tech:xsd:colr.016.001.03")]
+[Description(@"Scope|The CollateralAndExposureReport message is sent:|- either by the collateral giver, or its collateral manager, to the collateral taker, or its collateral manager, or|- or by the collateral taker, or its collateral manager to the collateral giver, or its collateral manager||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|The CollateralAndExposureReport is used to provide the details of the valuation of the collateral, that is, the valuation of securities collateral, cash collateral or other type of collateral, posted at a specific calculation date.")]
+[IsoDisplayName(@"Collateral And Exposure Report V")]
 public interface ICollateralAndExposureReportV03 : IOuterRecord
 {
     /// <summary>
@@ -60,6 +62,7 @@ public interface ICollateralAndExposureReportV03 : IOuterRecord
     [IsoId("_XAW1u4FrEeWtPe6Crjmeug")]
     [DisplayName("Collateral Report")]
     [IsoXmlTag("CollRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateral13> CollateralReport { get; }
 
     /// <summary>
@@ -68,5 +71,6 @@ public interface ICollateralAndExposureReportV03 : IOuterRecord
     [IsoId("_XAW1vYFrEeWtPe6Crjmeug")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

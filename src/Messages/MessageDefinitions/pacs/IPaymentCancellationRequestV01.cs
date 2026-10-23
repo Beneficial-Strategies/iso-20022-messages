@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// </summary>
 [IsoId("_eoSrcdEuEd-BzquC8wXy7w_-1218856998")]
 [IsoMessage("pacs.006.001.01", "pacs.006.001.01", "urn:iso:std:iso:20022:tech:xsd:pacs.006.001.01")]
+[Description(@"Scope|The PaymentCancellationRequest message is sent by the initiating party or any agent, to the next party in the payment chain. It is used to request the cancellation of an instruction previously sent.|Usage|The PaymentCancellationRequest message is exchanged between agents to request the cancellation of a payment message previously sent (i.e. FIToFICustomerCreditTransfer, FIToFICustomerDirectDebit, and FinancialInstitutionCreditTransfer).|The PaymentCancellationRequest message can be used to request the cancellation of single instructions or multiple instructions, from one or multiple files.|The PaymentCancellationRequest message can be used in domestic and cross-border scenarios.|The PaymentCancellationRequest message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.|The PaymentCancellationRequest message exchanged between agents is identified in the schema as follows: |urn: iso: std: iso: 20022: tech: xsd: pacs.006.001.01|.")]
+[IsoDisplayName(@"Payment Cancellation Request V")]
 public interface IPaymentCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -43,5 +45,6 @@ public interface IPaymentCancellationRequestV01 : IOuterRecord
     [IsoId("_eoccYtEuEd-BzquC8wXy7w_1545316731")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransactionInformation3> TransactionInformation { get; }
 }

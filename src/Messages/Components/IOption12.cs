@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details for a call/put option.
 /// </summary>
 [IsoId("_TvjDULtJEeSmENFdxjMqzQ")]
+[IsoDisplayName(@"Option")]
 public interface IOption12 : IIsoComponent
 {
     /// <summary>

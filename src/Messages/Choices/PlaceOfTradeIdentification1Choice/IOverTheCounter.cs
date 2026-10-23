@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification1Choic
 /// Place at which the Over-the-Counter (OTC) transaction is executed.
 /// </summary>
 [IsoId("_TCfeo9p-Ed-ak6NoX_4Aeg_-307445135")]
+[IsoDisplayName(@"Over The Counter")]
 public interface IOverTheCounter : IPlaceOfTradeIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOverTheCounter : IPlaceOfTradeIdentification1Choice, IIsoChoic
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("OverTheCntr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

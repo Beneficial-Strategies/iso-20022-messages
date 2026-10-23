@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference11Choice;
 /// Reference identifying a index trade.
 /// </summary>
 [IsoId("_Adu6VdokEeC60axPepSq7g_1550706670")]
+[IsoDisplayName(@"Index Identification")]
 public interface IIndexIdentification : IIdentificationReference11Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IIndexIdentification : IIdentificationReference11Choice, IIsoCh
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("IndxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

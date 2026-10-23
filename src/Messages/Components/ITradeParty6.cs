@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade Party6.
 /// </summary>
 [IsoId("_2TUDZzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Trade Party6")]
 public interface ITradeParty6 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface ITradeParty6 : IIsoComponent
     /// </summary>
     [DisplayName("Tax Party")]
     [IsoXmlTag("TaxPty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxParty4> TaxParty { get; }
 }

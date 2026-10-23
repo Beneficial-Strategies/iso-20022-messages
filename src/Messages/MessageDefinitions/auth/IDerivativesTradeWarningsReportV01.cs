@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "DerivsTradWrnngsRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.106.001.01"
 )]
+[Description(@"The DerivativesTradeWarningsReport is sent by the trade repository (TR) to the authority or made available by the trade repository (TR) to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable.")]
+[IsoDisplayName(@"Derivatives Trade Warnings Report V")]
 public interface IDerivativesTradeWarningsReportV01 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +34,6 @@ public interface IDerivativesTradeWarningsReportV01 : IOuterRecord
     [IsoId("_pVW9s2mFEe2DRvVJM2Qy-g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

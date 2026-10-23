@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for a rejected cancellation status.
 /// </summary>
 [IsoId("_2ZcXKrKgEemux5trsZcCpw")]
+[IsoDisplayName(@"Rejected Status Reason")]
 public interface IRejectedStatusReason28 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IRejectedStatusReason28 : IIsoComponent
     [IsoId("_2ZcXLLKgEemux5trsZcCpw")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalReasonInformation { get; }
 }

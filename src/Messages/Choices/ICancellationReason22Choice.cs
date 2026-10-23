@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the cancellation reason.
 /// </summary>
 [IsoId("_2k-biTt5EeW638lNyHKv7A")]
+[IsoDisplayName(@"Cancellation Reason 22 Choice")]
 public interface ICancellationReason22Choice : IIsoChoice { }

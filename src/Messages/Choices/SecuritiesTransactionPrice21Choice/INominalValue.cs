@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice21Choi
 /// <summary>
 /// Nominal Value.
 /// </summary>
+[IsoDisplayName(@"Nominal Value")]
 public interface INominalValue : ISecuritiesTransactionPrice21Choice, IIsoChoiceVariant
 {
     /// <summary>

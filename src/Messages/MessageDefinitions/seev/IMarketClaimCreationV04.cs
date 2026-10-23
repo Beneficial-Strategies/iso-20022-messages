@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_FfUWEaN1EfCxxJ9emeyVvA")]
 [IsoMessage("seev.050.001.04", "MktClmCre", "urn:iso:std:iso:20022:tech:xsd:seev.050.001.04")]
+[IsoDisplayName(@"Market Claim Creation V04")]
 public interface IMarketClaimCreationV04 : IOuterRecord
 {
     /// <summary>
@@ -60,6 +61,7 @@ public interface IMarketClaimCreationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Market Claim Settlement Indicator")]
     [IsoXmlTag("MktClmSttlmInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? MarketClaimSettlementIndicator { get; }
 
     /// <summary>
@@ -88,5 +90,6 @@ public interface IMarketClaimCreationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

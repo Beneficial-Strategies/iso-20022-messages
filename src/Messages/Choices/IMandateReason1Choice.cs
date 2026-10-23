@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the request or status of a mandate.
 /// </summary>
 [IsoId("_TOt8xdp-Ed-ak6NoX_4Aeg_-162041513")]
+[IsoDisplayName(@"Mandate Reason 1 Choice")]
 public interface IMandateReason1Choice : IIsoChoice { }

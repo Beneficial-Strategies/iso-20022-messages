@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesSttlmTxAudtTrlRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.022.001.07"
 )]
+[IsoDisplayName(@"Securities Settlement Transaction Audit Trail Report V07")]
 public interface ISecuritiesSettlementTransactionAuditTrailReportV07 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,8 @@ public interface ISecuritiesSettlementTransactionAuditTrailReportV07 : IOuterRec
     /// </summary>
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryReference { get; }
 
     /// <summary>
@@ -64,5 +67,6 @@ public interface ISecuritiesSettlementTransactionAuditTrailReportV07 : IOuterRec
     /// </summary>
     [DisplayName("Status Trail")]
     [IsoXmlTag("StsTrl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusTrail13> StatusTrail { get; }
 }

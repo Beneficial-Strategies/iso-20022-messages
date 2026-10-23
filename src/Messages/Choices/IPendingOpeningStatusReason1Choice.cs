@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a pending account opening status reason.
 /// </summary>
 [IsoId("_gh55AWCJEeabZtzjEVWYCQ")]
+[IsoDisplayName(@"Pending Opening Status Reason 1 Choice")]
 public interface IPendingOpeningStatusReason1Choice : IIsoChoice { }

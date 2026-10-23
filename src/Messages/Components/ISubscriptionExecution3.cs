@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a subscription order.
 /// </summary>
 [IsoId("_VUYBttp-Ed-ak6NoX_4Aeg_127522648")]
+[IsoDisplayName(@"Subscription Execution")]
 public interface ISubscriptionExecution3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISubscriptionExecution3 : IIsoComponent
     [IsoId("_VUYBt9p-Ed-ak6NoX_4Aeg_127522650")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISubscriptionExecution3 : IIsoComponent
     [IsoId("_VUYBuNp-Ed-ak6NoX_4Aeg_127522938")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DealReference { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface ISubscriptionExecution3 : IIsoComponent
     [IsoId("_VUYBudp-Ed-ak6NoX_4Aeg_127523146")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType1> OrderType { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface ISubscriptionExecution3 : IIsoComponent
     [IsoId("_VUhytdp-Ed-ak6NoX_4Aeg_127523111")]
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PartiallyExecutedIndicator { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface ISubscriptionExecution3 : IIsoComponent
     [IsoId("_VUhyttp-Ed-ak6NoX_4Aeg_127523128")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -129,6 +137,7 @@ public interface ISubscriptionExecution3 : IIsoComponent
     [IsoId("_VUhyuNp-Ed-ak6NoX_4Aeg_127523527")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms4> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -145,6 +154,8 @@ public interface ISubscriptionExecution3 : IIsoComponent
     [IsoId("_VUq8oNp-Ed-ak6NoX_4Aeg_127523093")]
     [DisplayName("Letter Intent Reference")]
     [IsoXmlTag("LttrInttRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LetterIntentReference { get; }
 
     /// <summary>
@@ -153,6 +164,8 @@ public interface ISubscriptionExecution3 : IIsoComponent
     [IsoId("_VUq8odp-Ed-ak6NoX_4Aeg_127523076")]
     [DisplayName("Accumulation Right Reference")]
     [IsoXmlTag("AcmltnRghtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccumulationRightReference { get; }
 
     /// <summary>
@@ -193,6 +206,7 @@ public interface ISubscriptionExecution3 : IIsoComponent
     [IsoId("_VUq8ptp-Ed-ak6NoX_4Aeg_127523171")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>

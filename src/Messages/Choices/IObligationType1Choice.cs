@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indicates the type of obligation.
 /// </summary>
 [IsoId("_Ql4SSNp-Ed-ak6NoX_4Aeg_-44053834")]
+[IsoDisplayName(@"Obligation Type 1 Choice")]
 public interface IObligationType1Choice : IIsoChoice { }

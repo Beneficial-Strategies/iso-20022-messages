@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Method and data intended to be verified as well as the related results.
 /// </summary>
 [IsoId("_lx7V0T1vEfCQAqQ9lolFUg")]
+[IsoDisplayName(@"Verification8")]
 public interface IVerification8 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IVerification8 : IIsoComponent
     [IsoId("_l0nddz1vEfCQAqQ9lolFUg")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerificationValue1> Data { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the reason for rejecting the case assignment.
 /// </summary>
 [IsoId("_VJDig9p-Ed-ak6NoX_4Aeg_-1410536131")]
+[IsoDisplayName(@"Case Assignment Rejection Justification")]
 public interface ICaseAssignmentRejectionJustification : IIsoComponent
 {
     /// <summary>

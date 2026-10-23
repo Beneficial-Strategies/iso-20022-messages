@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status43Choice;
 
 /// <summary>Status expressed as a proprietary code.</summary>
 [IsoId("c16daf04-aac4-41ec-b817-edbf8fbf9f81")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IStatus43Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

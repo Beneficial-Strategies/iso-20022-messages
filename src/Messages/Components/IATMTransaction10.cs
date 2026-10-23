@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response to the PIN management transaction. request.
 /// </summary>
 [IsoId("_VdrcoYrDEeSgLpgNvMAP2g")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction10 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IATMTransaction10 : IIsoComponent
     [IsoId("_VqDEs4rDEeSgLpgNvMAP2g")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IATMTransaction10 : IIsoComponent
     [IsoId("_VqDEtYrDEeSgLpgNvMAP2g")]
     [DisplayName("Completion Required")]
     [IsoXmlTag("CmpltnReqrd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CompletionRequired { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IATMTransaction10 : IIsoComponent
     [IsoId("_FmVUAIrEEeSgLpgNvMAP2g")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction5> Action { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IATMTransaction10 : IIsoComponent
     [IsoId("_VqDEx4rDEeSgLpgNvMAP2g")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 
     /// <summary>
@@ -65,5 +71,6 @@ public interface IATMTransaction10 : IIsoComponent
     [IsoId("_VqDEyYrDEeSgLpgNvMAP2g")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand1> Command { get; }
 }

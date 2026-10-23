@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original Group Header21.
 /// </summary>
 [IsoId("_zPOAITEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Original Group Header21")]
 public interface IOriginalGroupHeader21 : IIsoComponent
 {
     /// <summary>
@@ -72,5 +73,6 @@ public interface IOriginalGroupHeader21 : IIsoComponent
     /// </summary>
     [DisplayName("Cancellation Reason Information")]
     [IsoXmlTag("CxlRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentCancellationReason6> CancellationReasonInformation { get; }
 }

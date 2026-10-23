@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("039bf4ef-c5d8-415f-9be1-e97dd49d7ccb")]
 [IsoMessage("camt.088.001.04", "NetRpt", "urn:iso:std:iso:20022:tech:xsd:camt.088.001.04")]
+[IsoDisplayName(@"Net Report V04")]
 public interface INetReportV04 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +40,7 @@ public interface INetReportV04 : IOuterRecord
     /// </summary>
     [DisplayName("Net Obligation")]
     [IsoXmlTag("NetOblgtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetObligation4> NetObligation { get; }
 
     /// <summary>
@@ -46,5 +48,6 @@ public interface INetReportV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

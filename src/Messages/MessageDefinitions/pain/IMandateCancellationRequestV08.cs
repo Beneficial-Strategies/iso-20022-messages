@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_R3P4XzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("pain.011.001.08", "MndtCxlReq", "urn:iso:std:iso:20022:tech:xsd:pain.011.001.08")]
+[IsoDisplayName(@"Mandate Cancellation Request V08")]
 public interface IMandateCancellationRequestV08 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IMandateCancellationRequestV08 : IOuterRecord
     /// </summary>
     [DisplayName("Underlying Cancellation Details")]
     [IsoXmlTag("UndrlygCxlDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMandateCancellation8> UnderlyingCancellationDetails { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IMandateCancellationRequestV08 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

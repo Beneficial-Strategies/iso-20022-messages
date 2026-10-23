@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about an accounting statement of holdings.
 /// </summary>
 [IsoId("_UxD5R9p-Ed-ak6NoX_4Aeg_-1253958762")]
+[IsoDisplayName(@"Accounting Statement Of Holdings")]
 public interface IAccountingStatementOfHoldings1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IAccountingStatementOfHoldings1 : IIsoComponent
     [IsoId("_UxNqQNp-Ed-ak6NoX_4Aeg_299025122")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateBalanceInformation2> BalanceForAccount { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IAccountingStatementOfHoldings1 : IIsoComponent
     [IsoId("_UxNqQdp-Ed-ak6NoX_4Aeg_369211218")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubAccountIdentification2> SubAccountDetails { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface IAccountingStatementOfHoldings1 : IIsoComponent
     [IsoId("_UxNqQ9p-Ed-ak6NoX_4Aeg_-587709497")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

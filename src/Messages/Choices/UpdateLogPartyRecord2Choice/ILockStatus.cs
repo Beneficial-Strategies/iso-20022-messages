@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice;
 /// <summary>
 /// Lock Status.
 /// </summary>
+[IsoDisplayName(@"Lock Status")]
 public interface ILockStatus : IUpdateLogPartyRecord2Choice, IIsoChoiceVariant
 {
     /// <summary>

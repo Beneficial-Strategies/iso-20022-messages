@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Lodging4.
 /// </summary>
 [IsoId("_xbSzYXTpEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Lodging4")]
 public interface ILodging4 : IIsoComponent
 {
     /// <summary>
@@ -142,6 +143,7 @@ public interface ILodging4 : IIsoComponent
     /// </summary>
     [DisplayName("Room")]
     [IsoXmlTag("Room")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILodgingRoom2> Room { get; }
 
     /// <summary>
@@ -191,6 +193,7 @@ public interface ILodging4 : IIsoComponent
     /// </summary>
     [DisplayName("Total Tax")]
     [IsoXmlTag("TtlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax41> TotalTax { get; }
 
     /// <summary>
@@ -205,6 +208,7 @@ public interface ILodging4 : IIsoComponent
     /// </summary>
     [DisplayName("Authorised Amount")]
     [IsoXmlTag("AuthrsdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorisedAmount2> AuthorisedAmount { get; }
 
     /// <summary>
@@ -219,6 +223,7 @@ public interface ILodging4 : IIsoComponent
     /// </summary>
     [DisplayName("Loyalty Programme")]
     [IsoXmlTag("LltyPrgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyProgramme4> LoyaltyProgramme { get; }
 
     /// <summary>
@@ -226,6 +231,7 @@ public interface ILodging4 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 
     /// <summary>
@@ -233,5 +239,6 @@ public interface ILodging4 : IIsoComponent
     /// </summary>
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILodgingLineItem3> LineItem { get; }
 }

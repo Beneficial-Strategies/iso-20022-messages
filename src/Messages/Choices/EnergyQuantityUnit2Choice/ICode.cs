@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EnergyQuantityUnit2Choice;
 /// Energy quantity units, expressed as a code.
 /// </summary>
 [IsoId("_sTr98Si_EeuKKc2MztSwPw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IEnergyQuantityUnit2Choice, IIsoChoiceVariant
 {
     /// <summary>

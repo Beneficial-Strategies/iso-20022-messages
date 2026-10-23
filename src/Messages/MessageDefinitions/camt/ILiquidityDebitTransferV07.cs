@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3PRqzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.051.001.07", "LqdtyDbtTrf", "urn:iso:std:iso:20022:tech:xsd:camt.051.001.07")]
+[IsoDisplayName(@"Liquidity Debit Transfer V07")]
 public interface ILiquidityDebitTransferV07 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +33,6 @@ public interface ILiquidityDebitTransferV07 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

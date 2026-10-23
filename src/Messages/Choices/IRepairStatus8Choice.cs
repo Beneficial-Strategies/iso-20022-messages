@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies whether the status is provided with a reason or not.
 /// </summary>
 [IsoId("_0ka00AlIEeGATtfOBToyew_412690380")]
+[IsoDisplayName(@"Repair Status 8 Choice")]
 public interface IRepairStatus8Choice : IIsoChoice { }

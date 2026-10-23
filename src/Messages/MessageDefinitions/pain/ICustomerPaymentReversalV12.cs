@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_R3H8YTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("pain.007.001.12", "CstmrPmtRvsl", "urn:iso:std:iso:20022:tech:xsd:pain.007.001.12")]
+[IsoDisplayName(@"Customer Payment Reversal V12")]
 public interface ICustomerPaymentReversalV12 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +33,7 @@ public interface ICustomerPaymentReversalV12 : IOuterRecord
     /// </summary>
     [DisplayName("Original Payment Information And Reversal")]
     [IsoXmlTag("OrgnlPmtInfAndRvsl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalPaymentInstruction50> OriginalPaymentInformationAndReversal { get; }
 
     /// <summary>
@@ -39,5 +41,6 @@ public interface ICustomerPaymentReversalV12 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

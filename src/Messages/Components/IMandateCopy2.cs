@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the mandate, for which a copy of the details is requested.
 /// </summary>
 [IsoId("_RSUaQW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Mandate Copy")]
 public interface IMandateCopy2 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IMandateCopy2 : IIsoComponent
     [IsoId("_Rb2wx249EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

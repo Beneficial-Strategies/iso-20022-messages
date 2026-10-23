@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Transaction Report Response message.
 /// </summary>
 [IsoId("_woyUoS8PEeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Report Transaction Response")]
 public interface IReportTransactionResponse3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IReportTransactionResponse3 : IIsoComponent
     [IsoId("_w0nKIS8PEeu125Ip9zFcsQ")]
     [DisplayName("Report Full Size")]
     [IsoXmlTag("RptFullSz")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber ReportFullSize { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IReportTransactionResponse3 : IIsoComponent
     [IsoId("_w0nKIy8PEeu125Ip9zFcsQ")]
     [DisplayName("Block Start")]
     [IsoXmlTag("BlckStart")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber BlockStart { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IReportTransactionResponse3 : IIsoComponent
     [IsoId("_w0nKJS8PEeu125Ip9zFcsQ")]
     [DisplayName("Block Stop")]
     [IsoXmlTag("BlckStop")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber BlockStop { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IReportTransactionResponse3 : IIsoComponent
     [IsoId("_w0nKJy8PEeu125Ip9zFcsQ")]
     [DisplayName("Transaction Report")]
     [IsoXmlTag("TxRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionTransactionReport3> TransactionReport { get; }
 }

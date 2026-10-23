@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// </summary>
 [IsoId("_B9H34KE-Ee-MRKYsaX6JDg")]
 [IsoMessage("caam.014.001.01", "ATMCfgtnCtrl", "urn:iso:std:iso:20022:tech:xsd:caam.014.001.01")]
+[IsoDisplayName(@"ATM Configuration Control V01")]
 public interface IATMConfigurationControlV01 : IOuterRecord
 {
     /// <summary>

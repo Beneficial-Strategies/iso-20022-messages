@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the rates related to securities movement.
 /// </summary>
 [IsoId("_o3ADcRFMEeKp2ZN13DI_pA")]
+[IsoDisplayName(@"Rate Details")]
 public interface IRateDetails11 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IRateDetails11 : IIsoComponent
     [IsoId("_pMmgKRFMEeKp2ZN13DI_pA")]
     [DisplayName("Fiscal Stamp")]
     [IsoXmlTag("FsclStmp")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? FiscalStamp { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IRateDetails11 : IIsoComponent
     [IsoId("_pMmgMRFMEeKp2ZN13DI_pA")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGrossDividendRateFormat8Choice> GrossDividendRate { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IRateDetails11 : IIsoComponent
     [IsoId("_pMmgPRFMEeKp2ZN13DI_pA")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateUsedForPaymentFormat2Choice> InterestRateUsedForPayment { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface IRateDetails11 : IIsoComponent
     [IsoId("_pMmgQRFMEeKp2ZN13DI_pA")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetDividendRateFormat10Choice> NetDividendRate { get; }
 
     /// <summary>
@@ -113,6 +118,7 @@ public interface IRateDetails11 : IIsoComponent
     [IsoId("_pMmgTRFMEeKp2ZN13DI_pA")]
     [DisplayName("Applicable Rate")]
     [IsoXmlTag("AplblRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ApplicableRate { get; }
 
     /// <summary>
@@ -129,6 +135,7 @@ public interface IRateDetails11 : IIsoComponent
     [IsoId("_pMmgVRFMEeKp2ZN13DI_pA")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCreditRateFormat2Choice> TaxCreditRate { get; }
 
     /// <summary>
@@ -137,6 +144,7 @@ public interface IRateDetails11 : IIsoComponent
     [IsoId("_pMmgWRFMEeKp2ZN13DI_pA")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateTypeAndAmountAndStatus6> TaxRelatedRate { get; }
 
     /// <summary>
@@ -145,6 +153,7 @@ public interface IRateDetails11 : IIsoComponent
     [IsoId("_pMmgXRFMEeKp2ZN13DI_pA")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? WithholdingTaxRate { get; }
 
     /// <summary>
@@ -153,6 +162,7 @@ public interface IRateDetails11 : IIsoComponent
     [IsoId("_pMmgYRFMEeKp2ZN13DI_pA")]
     [DisplayName("Tax On Income")]
     [IsoXmlTag("TaxOnIncm")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TaxOnIncome { get; }
 
     /// <summary>
@@ -161,6 +171,7 @@ public interface IRateDetails11 : IIsoComponent
     [IsoId("_pMmgZRFMEeKp2ZN13DI_pA")]
     [DisplayName("Tax On Profits")]
     [IsoXmlTag("TaxOnPrfts")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TaxOnProfits { get; }
 
     /// <summary>
@@ -169,6 +180,7 @@ public interface IRateDetails11 : IIsoComponent
     [IsoId("_pMmgaRFMEeKp2ZN13DI_pA")]
     [DisplayName("Tax Reclaim Rate")]
     [IsoXmlTag("TaxRclmRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TaxReclaimRate { get; }
 
     /// <summary>

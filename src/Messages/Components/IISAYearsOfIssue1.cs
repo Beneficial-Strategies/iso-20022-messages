@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Year in which the ISA plan is issued.
 /// </summary>
 [IsoId("_Sv3dmNp-Ed-ak6NoX_4Aeg_98060804")]
+[IsoDisplayName(@"ISA Years Of Issue")]
 public interface IISAYearsOfIssue1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IISAYearsOfIssue1 : IIsoComponent
     [IsoId("_Sv3dmtp-Ed-ak6NoX_4Aeg_642016687")]
     [DisplayName("Extended Current Year Type")]
     [IsoXmlTag("XtndedCurYrTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedCurrentYearType { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IISAYearsOfIssue1 : IIsoComponent
     [IsoId("_Sv3dm9p-Ed-ak6NoX_4Aeg_1710283535")]
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CashComponentIndicator { get; }
 
     /// <summary>

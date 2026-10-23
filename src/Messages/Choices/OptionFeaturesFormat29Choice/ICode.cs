@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionFeaturesFormat29Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IOptionFeaturesFormat29Choice, IIsoChoiceVariant
 {
     /// <summary>

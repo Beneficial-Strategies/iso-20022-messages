@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Capabilities of the POI (Point Of Interaction) performing the transaction.
 /// </summary>
 [IsoId("_L_T7YWiuEeS87LmvcA55sg")]
+[IsoDisplayName(@"Point Of Interaction Capabilities")]
 public interface IPointOfInteractionCapabilities3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPointOfInteractionCapabilities3 : IIsoComponent
     [IsoId("_MMNH4WiuEeS87LmvcA55sg")]
     [DisplayName("Card Reading Capabilities")]
     [IsoXmlTag("CardRdngCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataReading1Code> CardReadingCapabilities { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPointOfInteractionCapabilities3 : IIsoComponent
     [IsoId("_MMNH42iuEeS87LmvcA55sg")]
     [DisplayName("Cardholder Verification Capabilities")]
     [IsoXmlTag("CrdhldrVrfctnCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardholderVerificationCapability1Code> CardholderVerificationCapabilities { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPointOfInteractionCapabilities3 : IIsoComponent
     [IsoId("_l3yVQGiuEeS87LmvcA55sg")]
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? PINLengthCapabilities { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IPointOfInteractionCapabilities3 : IIsoComponent
     [IsoId("_CvY9QGiwEeS87LmvcA55sg")]
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ApprovalCodeLength { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IPointOfInteractionCapabilities3 : IIsoComponent
     [IsoId("_KuVJwGiwEeS87LmvcA55sg")]
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardCaptureCapable { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IPointOfInteractionCapabilities3 : IIsoComponent
     [IsoId("_MMNH52iuEeS87LmvcA55sg")]
     [DisplayName("Display Capabilities")]
     [IsoXmlTag("DispCpblties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisplayCapabilities2> DisplayCapabilities { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IPointOfInteractionCapabilities3 : IIsoComponent
     [IsoId("_MMNH6WiuEeS87LmvcA55sg")]
     [DisplayName("Print Line Width")]
     [IsoXmlTag("PrtLineWidth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? PrintLineWidth { get; }
 
     /// <summary>
@@ -82,5 +90,6 @@ public interface IPointOfInteractionCapabilities3 : IIsoComponent
     [IsoId("_MMNH62iuEeS87LmvcA55sg")]
     [DisplayName("Available Language")]
     [IsoXmlTag("AvlblLang")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<LanguageCode> AvailableLanguage { get; }
 }

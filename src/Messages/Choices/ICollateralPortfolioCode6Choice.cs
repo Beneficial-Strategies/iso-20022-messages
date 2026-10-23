@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Collateral Portfolio Code6Choice.
 /// </summary>
 [IsoId("_PhHpcbEtEe63r8FIfzOHCQ")]
+[IsoDisplayName(@"Collateral Portfolio Code6Choice")]
 public interface ICollateralPortfolioCode6Choice : IIsoChoice { }

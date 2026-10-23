@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Description of the element that creates the mismatch.
 /// </summary>
 [IsoId("_RJf8s9p-Ed-ak6NoX_4Aeg_1263580782")]
+[IsoDisplayName(@"Element Identification")]
 public interface IElementIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IElementIdentification1 : IIsoComponent
     [IsoId("_RJf8tNp-Ed-ak6NoX_4Aeg_-1274214222")]
     [DisplayName("Document Index")]
     [IsoXmlTag("DocIndx")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText DocumentIndex { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IElementIdentification1 : IIsoComponent
     [IsoId("_RJf8tdp-Ed-ak6NoX_4Aeg_1320841192")]
     [DisplayName("Element Path")]
     [IsoXmlTag("ElmtPth")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text ElementPath { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IElementIdentification1 : IIsoComponent
     [IsoId("_RJf8ttp-Ed-ak6NoX_4Aeg_-1433356393")]
     [DisplayName("Element Name")]
     [IsoXmlTag("ElmtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ElementName { get; }
 
     /// <summary>
@@ -41,5 +47,7 @@ public interface IElementIdentification1 : IIsoComponent
     [IsoId("_RJf8t9p-Ed-ak6NoX_4Aeg_1327304238")]
     [DisplayName("Element Value")]
     [IsoXmlTag("ElmtVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? ElementValue { get; }
 }

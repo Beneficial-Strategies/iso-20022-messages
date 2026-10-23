@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyIdentification3Choic
 /// </summary>
 [IsoId("_mcwKscEcEea7jLfvGi1PDw")]
 [IsoXmlTag("NmAndLctn")]
+[IsoDisplayName(@"Name And Location")]
 public interface INameAndLocation : ICounterpartyIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface INameAndLocation : ICounterpartyIdentification3Choice, IIsoChoi
     [IsoId("_x2XHQcEcEea7jLfvGi1PDw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Name { get; }
 
     /// <summary>

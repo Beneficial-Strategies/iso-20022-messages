@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information needed to move funds from the debtor's account to the creditor.
 /// </summary>
 [IsoId("a33039aa-bf55-47e6-a598-68f0ecf7e0e0")]
+[IsoDisplayName(@"Credit Transfer13")]
 public interface ICreditTransfer13 : IIsoComponent
 {
     /// <summary>

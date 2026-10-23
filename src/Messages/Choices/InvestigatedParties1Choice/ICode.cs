@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigatedParties1Choice;
 /// Specifies the investigated parties as a code.
 /// </summary>
 [IsoId("_dCh4RjwTEeGKuZXNQxGH3g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInvestigatedParties1Choice, IIsoChoiceVariant
 {
     /// <summary>

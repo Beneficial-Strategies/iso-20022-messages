@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Name of the cardholder in the local language.
 /// </summary>
 [IsoId("_UcqZAcWwEeuhguwJmlgagQ")]
+[IsoDisplayName(@"Cardholder Name")]
 public interface ICardholderName2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICardholderName2 : IIsoComponent
     [IsoId("_UhX54cWwEeuhguwJmlgagQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICardholderName2 : IIsoComponent
     [IsoId("_UhX548WwEeuhguwJmlgagQ")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? GivenName { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ICardholderName2 : IIsoComponent
     [IsoId("_UhX55cWwEeuhguwJmlgagQ")]
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? MiddleName { get; }
 
     /// <summary>
@@ -41,5 +48,7 @@ public interface ICardholderName2 : IIsoComponent
     [IsoId("_UhX558WwEeuhguwJmlgagQ")]
     [DisplayName("Last Name")]
     [IsoXmlTag("LastNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? LastName { get; }
 }

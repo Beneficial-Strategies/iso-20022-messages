@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References3Choice;
 /// Unambiguous account servicer identification of the intra-position movement confirmation to be cancelled.
 /// </summary>
 [IsoId("_USqtGdp-Ed-ak6NoX_4Aeg_-173663524")]
+[IsoDisplayName(@"Intra Position Movement Confirmation Identification")]
 public interface IIntraPositionMovementConfirmationIdentification
     : IReferences3Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface IIntraPositionMovementConfirmationIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("IntraPosMvmntConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

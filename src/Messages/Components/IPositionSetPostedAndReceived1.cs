@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variables used to quantify the different calculations for position sets and currency position sets reports.
 /// </summary>
 [IsoId("_9h9p68WLEeiRga8tPu1L4Q")]
+[IsoDisplayName(@"Position Set Posted And Received")]
 public interface IPositionSetPostedAndReceived1 : IIsoComponent
 {
     /// <summary>

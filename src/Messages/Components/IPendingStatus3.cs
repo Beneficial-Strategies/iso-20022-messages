@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status and quantity information related to a pending instruction request.
 /// </summary>
 [IsoId("_JWF6waKuEfCHi7w3_0pcpw")]
+[IsoDisplayName(@"Pending Status3")]
 public interface IPendingStatus3 : IIsoComponent
 {
     /// <summary>

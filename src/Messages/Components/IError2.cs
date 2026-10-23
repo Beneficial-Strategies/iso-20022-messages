@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the error.
 /// </summary>
 [IsoId("_rZTGkYgoEeu8-LhY4KPfWg")]
+[IsoDisplayName(@"Error")]
 public interface IError2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IError2 : IIsoComponent
     [IsoId("_rez4tYgoEeu8-LhY4KPfWg")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface IError2 : IIsoComponent
     [IsoId("_rez4t4goEeu8-LhY4KPfWg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

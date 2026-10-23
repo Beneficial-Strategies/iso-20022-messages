@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a transaction.
 /// </summary>
 [IsoId("_96PRVnltEeG7BsjMvd1mEw_-533314240")]
+[IsoDisplayName(@"Underlying Trade Transaction")]
 public interface IUnderlyingTradeTransaction1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IUnderlyingTradeTransaction1 : IIsoComponent
     [IsoId("_96PRWHltEeG7BsjMvd1mEw_-1698193570")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IUnderlyingTradeTransaction1 : IIsoComponent
     [IsoId("_96PRWXltEeG7BsjMvd1mEw_-1244106301")]
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TransactionDate { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IUnderlyingTradeTransaction1 : IIsoComponent
     [IsoId("_96PRWnltEeG7BsjMvd1mEw_211943685")]
     [DisplayName("Tender Closing Date")]
     [IsoXmlTag("TndrClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TenderClosingDate { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IUnderlyingTradeTransaction1 : IIsoComponent
     [IsoId("_96YbQXltEeG7BsjMvd1mEw_-304059961")]
     [DisplayName("Contract Amount Percentage")]
     [IsoXmlTag("CtrctAmtPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ContractAmountPercentage { get; }
 
     /// <summary>
@@ -65,5 +71,9 @@ public interface IUnderlyingTradeTransaction1 : IIsoComponent
     [IsoId("_96YbQnltEeG7BsjMvd1mEw_-826765043")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

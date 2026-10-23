@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the list of direct debit mandate elements that have been modified when the amendment indicator has been set.
 /// </summary>
 [IsoId("_Acqr2249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Amendment Information Details")]
 public interface IAmendmentInformationDetails13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAmendmentInformationDetails13 : IIsoComponent
     [IsoId("_AlwWUW49EeiU9cctagi5ow")]
     [DisplayName("Original Mandate Identification")]
     [IsoXmlTag("OrgnlMndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalMandateIdentification { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IAmendmentInformationDetails13 : IIsoComponent
     [IsoId("_AlwWYW49EeiU9cctagi5ow")]
     [DisplayName("Original Final Collection Date")]
     [IsoXmlTag("OrgnlFnlColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OriginalFinalCollectionDate { get; }
 
     /// <summary>
@@ -105,5 +109,6 @@ public interface IAmendmentInformationDetails13 : IIsoComponent
     [IsoId("_AlwWZ249EeiU9cctagi5ow")]
     [DisplayName("Original Tracking Days")]
     [IsoXmlTag("OrgnlTrckgDays")]
+    [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
     Exact2NumericText? OriginalTrackingDays { get; }
 }

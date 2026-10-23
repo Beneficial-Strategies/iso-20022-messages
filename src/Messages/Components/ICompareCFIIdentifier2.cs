@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a CFI identifier.
 /// </summary>
 [IsoId("_uo6lQdR6EemZdYGWu384Zw")]
+[IsoDisplayName(@"Compare CFI Identifier")]
 public interface ICompareCFIIdentifier2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICompareCFIIdentifier2 : IIsoComponent
     [IsoId("_us004dR6EemZdYGWu384Zw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier? Value1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICompareCFIIdentifier2 : IIsoComponent
     [IsoId("_us0049R6EemZdYGWu384Zw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier? Value2 { get; }
 }

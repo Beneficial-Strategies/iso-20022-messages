@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModalityOfCounting1Choice;
 /// Modality of counting expressed as a code.
 /// </summary>
 [IsoId("_eYiLAK-vEemJ1NnLPsTFaw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IModalityOfCounting1Choice, IIsoChoiceVariant
 {
     /// <summary>

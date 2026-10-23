@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the tax exemption reason.
 /// </summary>
 [IsoId("_jJ3P4xc-EeK5g-3oYI0_9Q")]
+[IsoDisplayName(@"Tax Exemption Reason 1 Choice")]
 public interface ITaxExemptionReason1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Tracking5Choice;
 /// Specifies whether the loan and/or collateral is tracked.
 /// </summary>
 [IsoId("_5xrt9ZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Indicator")]
 public interface IIndicator : ITracking5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIndicator : ITracking5Choice, IIsoChoiceVariant
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

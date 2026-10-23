@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice;
 /// <summary>
 /// Residence Type.
 /// </summary>
+[IsoDisplayName(@"Residence Type")]
 public interface IResidenceType : IUpdateLogPartyRecord2Choice, IIsoChoiceVariant
 {
     /// <summary>

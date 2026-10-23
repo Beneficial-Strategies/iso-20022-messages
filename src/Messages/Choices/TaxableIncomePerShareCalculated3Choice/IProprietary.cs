@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxableIncomePerShareCalculated3
 
 /// <summary>Taxable income per share calculated expressed as a proprietary code.</summary>
 [IsoId("9b8738fe-8173-4ffc-ac40-2f21598ff8f4")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ITaxableIncomePerShareCalculated3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

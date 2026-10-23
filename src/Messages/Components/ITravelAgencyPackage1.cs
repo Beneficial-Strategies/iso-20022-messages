@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information about the travel package, excluding specific itinerary data.
 /// </summary>
 [IsoId("_VWwMQ_PYEeihCvvpsmGI2w")]
+[IsoDisplayName(@"Travel Agency Package")]
 public interface ITravelAgencyPackage1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITravelAgencyPackage1 : IIsoComponent
     [IsoId("_VWwMTPPYEeihCvvpsmGI2w")]
     [DisplayName("Reservation Number")]
     [IsoXmlTag("RsvatnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReservationNumber { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITravelAgencyPackage1 : IIsoComponent
     [IsoId("_VW4vFPPYEeihCvvpsmGI2w")]
     [DisplayName("Travel Package Type")]
     [IsoXmlTag("TrvlPackgTp")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? TravelPackageType { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface ITravelAgencyPackage1 : IIsoComponent
     [IsoId("_VW4vFvPYEeihCvvpsmGI2w")]
     [DisplayName("Number In Party")]
     [IsoXmlTag("NbInPty")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? NumberInParty { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface ITravelAgencyPackage1 : IIsoComponent
     [IsoId("_VWwMRfPYEeihCvvpsmGI2w")]
     [DisplayName("Customer Reference")]
     [IsoXmlTag("CstmrRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomerReference1> CustomerReference { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ITravelAgencyPackage1 : IIsoComponent
     [IsoId("_VWwMS_PYEeihCvvpsmGI2w")]
     [DisplayName("Data Source")]
     [IsoXmlTag("DataSrc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DataSource { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface ITravelAgencyPackage1 : IIsoComponent
     [IsoId("_VW4vF_PYEeihCvvpsmGI2w")]
     [DisplayName("Delivery Order Number")]
     [IsoXmlTag("DlvryOrdrNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DeliveryOrderNumber { get; }
 
     /// <summary>
@@ -65,6 +76,8 @@ public interface ITravelAgencyPackage1 : IIsoComponent
     [IsoId("_VWwMRvPYEeihCvvpsmGI2w")]
     [DisplayName("Credit Card Slip Number")]
     [IsoXmlTag("CdtCardSlipNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CreditCardSlipNumber { get; }
 
     /// <summary>
@@ -73,6 +86,7 @@ public interface ITravelAgencyPackage1 : IIsoComponent
     [IsoId("_VW4vEPPYEeihCvvpsmGI2w")]
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? InsuranceIndicator { get; }
 
     /// <summary>

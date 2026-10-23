@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Period before or at the end of which the loan should be repaid or renegotiated for another term.
 /// </summary>
 [IsoId("_-9nQEa5OEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Contract Term 6 Choice")]
 public interface IContractTerm6Choice : IIsoChoice { }

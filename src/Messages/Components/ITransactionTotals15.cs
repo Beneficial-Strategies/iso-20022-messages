@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Totals of the reconciliation.
 /// </summary>
 [IsoId("_A8of8WP5EfCX7uJiAWHfoQ")]
+[IsoDisplayName(@"Transaction Totals15")]
 public interface ITransactionTotals15 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ITransactionTotals15 : IIsoComponent
     [IsoId("_BAE1h2P5EfCX7uJiAWHfoQ")]
     [DisplayName("Financial")]
     [IsoXmlTag("Fin")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialReconciliation4> Financial { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ITransactionTotals15 : IIsoComponent
     [IsoId("_BAE1iWP5EfCX7uJiAWHfoQ")]
     [DisplayName("Message")]
     [IsoXmlTag("Msg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageReconciliation4> Message { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ITransactionTotals15 : IIsoComponent
     [IsoId("_BAE1i2P5EfCX7uJiAWHfoQ")]
     [DisplayName("Additional Fee Reconciliation")]
     [IsoXmlTag("AddtlFeeRcncltn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFeeReconciliation4> AdditionalFeeReconciliation { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the account expressed with a name and an account number.
 /// </summary>
 [IsoId("_1R5l4dASEeuSBa1PsnseFg")]
+[IsoDisplayName(@"Account Identification And Name")]
 public interface IAccountIdentificationAndName7 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IAccountIdentificationAndName7 : IIsoComponent
     [IsoId("_1nD9k9ASEeuSBa1PsnseFg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 }

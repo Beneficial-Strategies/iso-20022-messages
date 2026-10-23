@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties34Choice;
 /// Identification of the central securities depository participant involved in the transaction.
 /// </summary>
 [IsoId("_viBlUcg4Eeu4ecZgAYuz5w")]
+[IsoDisplayName(@"Central Securities Depository Participant")]
 public interface ICentralSecuritiesDepositoryParticipant
     : ISettlementParties34Choice,
         IIsoChoiceVariant

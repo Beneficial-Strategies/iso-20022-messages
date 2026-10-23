@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the unique codes.
 /// </summary>
 [IsoId("_tm21gTICEe2fXedS_ucFOA")]
+[IsoDisplayName(@"Margin Portfolio")]
 public interface IMarginPortfolio3 : IIsoComponent
 {
     /// <summary>

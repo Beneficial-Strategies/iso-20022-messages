@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a document as well as the document number and type of link.
 /// </summary>
 [IsoId("_ni5s8TnYEeWLJsP1cO-amg")]
+[IsoDisplayName(@"Document Identification")]
 public interface IDocumentIdentification32 : IIsoComponent
 {
     /// <summary>

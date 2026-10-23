@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrAbsoluteValue1Choice;
 /// Absolute value determined with a number.
 /// </summary>
 [IsoId("_RBcz8dp-Ed-ak6NoX_4Aeg_-1504048386")]
+[IsoDisplayName(@"Absolute Value")]
 public interface IAbsoluteValue : IRateOrAbsoluteValue1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IAbsoluteValue : IRateOrAbsoluteValue1Choice, IIsoChoiceVariant
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("AbsVal")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

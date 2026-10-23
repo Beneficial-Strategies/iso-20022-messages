@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus2Choice;
 /// Reason for the rejection of a modification request, in a coded form.
 /// </summary>
 [IsoId("_T-P8Rtp-Ed-ak6NoX_4Aeg_523812729")]
+[IsoDisplayName(@"Rejected Modification")]
 public interface IRejectedModification : IInvestigationStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

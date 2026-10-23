@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration parameters to communicate with a host.
 /// </summary>
 [IsoId("_K86DOH1DEeCF8NjrBemJWQ_-1777383124")]
+[IsoDisplayName(@"Network Parameters")]
 public interface INetworkParameters1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INetworkParameters1 : IIsoComponent
     [IsoId("_K9D0MH1DEeCF8NjrBemJWQ_1112033591")]
     [DisplayName("Primary Address")]
     [IsoXmlTag("PmryAdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PrimaryAddress { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface INetworkParameters1 : IIsoComponent
     [IsoId("_K9D0MX1DEeCF8NjrBemJWQ_1665134773")]
     [DisplayName("Primary Port Number")]
     [IsoXmlTag("PmryPortNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number PrimaryPortNumber { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface INetworkParameters1 : IIsoComponent
     [IsoId("_K9D0Mn1DEeCF8NjrBemJWQ_386383236")]
     [DisplayName("Secondary Address")]
     [IsoXmlTag("ScndryAdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecondaryAddress { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface INetworkParameters1 : IIsoComponent
     [IsoId("_K9D0M31DEeCF8NjrBemJWQ_-776733232")]
     [DisplayName("Secondary Port Number")]
     [IsoXmlTag("ScndryPortNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SecondaryPortNumber { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface INetworkParameters1 : IIsoComponent
     [IsoId("_K9D0NH1DEeCF8NjrBemJWQ_434071500")]
     [DisplayName("User Name")]
     [IsoXmlTag("UsrNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? UserName { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface INetworkParameters1 : IIsoComponent
     [IsoId("_K9D0NX1DEeCF8NjrBemJWQ_73749005")]
     [DisplayName("Access Code")]
     [IsoXmlTag("AccsCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccessCode { get; }
 
     /// <summary>
@@ -65,5 +76,6 @@ public interface INetworkParameters1 : IIsoComponent
     [IsoId("_K9D0Nn1DEeCF8NjrBemJWQ_69300385")]
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
+    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
     Max3000Binary? ClientCertificate { get; }
 }

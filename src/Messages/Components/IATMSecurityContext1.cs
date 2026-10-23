@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to security commands.
 /// </summary>
 [IsoId("_lCc_AIr4EeSvuOJS0mmL0g")]
+[IsoDisplayName(@"ATM Security Context")]
 public interface IATMSecurityContext1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IATMSecurityContext1 : IIsoComponent
     [IsoId("_ydPTsIr5EeSvuOJS0mmL0g")]
     [DisplayName("Security Scheme Capabilities")]
     [IsoXmlTag("SctySchmeCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATMSecurityScheme2Code> SecuritySchemeCapabilities { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IATMSecurityContext1 : IIsoComponent
     [IsoId("_AYkRYItCEeSxlKlAGYErFg")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICryptographicKey7> Key { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IATMSecurityContext1 : IIsoComponent
     [IsoId("_D54KEItEEeSxlKlAGYErFg")]
     [DisplayName("Host Challenge")]
     [IsoXmlTag("HstChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? HostChallenge { get; }
 }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_R3M1AzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("acmt.024.001.04", "IdVrfctnRpt", "urn:iso:std:iso:20022:tech:xsd:acmt.024.001.04")]
+[IsoDisplayName(@"Identification Verification Report V04")]
 public interface IIdentificationVerificationReportV04 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +33,7 @@ public interface IIdentificationVerificationReportV04 : IOuterRecord
     /// </summary>
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerificationReport5> Report { get; }
 
     /// <summary>
@@ -39,5 +41,6 @@ public interface IIdentificationVerificationReportV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

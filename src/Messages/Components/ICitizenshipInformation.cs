@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Human entity, as distinguished from a corporate entity (which is sometimes referred to as an &apos;artificial person&apos;).
 /// </summary>
 [IsoId("_QBhoB9p-Ed-ak6NoX_4Aeg_-1749124449")]
+[IsoDisplayName(@"Citizenship Information")]
 public interface ICitizenshipInformation : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICitizenshipInformation : IIsoComponent
     [IsoId("_QBhoCdp-Ed-ak6NoX_4Aeg_-1749124447")]
     [DisplayName("Minor Indicator")]
     [IsoXmlTag("MnrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator MinorIndicator { get; }
 }

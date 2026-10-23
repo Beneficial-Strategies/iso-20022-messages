@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus2Choice;
 /// Instruction/request has been rejected for further processing.
 /// </summary>
 [IsoId("_WLfY8ukGEemm4qhb2yFPOw")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IPortfolioTransferStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

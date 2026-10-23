@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investment fund transactions that result in cash movements into a fund, eg, subscription, switch-in.
 /// </summary>
 [IsoId("_UwBXdNp-Ed-ak6NoX_4Aeg_-452894639")]
+[IsoDisplayName(@"Investment Fund Transaction In Type")]
 public interface IInvestmentFundTransactionInType1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IInvestmentFundTransactionInType1 : IIsoComponent
     [IsoId("_UwBXdtp-Ed-ak6NoX_4Aeg_63354155")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

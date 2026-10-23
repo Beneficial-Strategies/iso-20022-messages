@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Withdrawal service provided by the ATM inside the session.
 /// </summary>
 [IsoId("_jZqZEa17EeWMg5rOByfExw")]
+[IsoDisplayName(@"ATM Service")]
 public interface IATMService10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMService10 : IIsoComponent
     [IsoId("_jnFKAa17EeWMg5rOByfExw")]
     [DisplayName("Service Reference")]
     [IsoXmlTag("SvcRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ServiceReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMService10 : IIsoComponent
     [IsoId("_jnFKA617EeWMg5rOByfExw")]
     [DisplayName("ATM Service Code")]
     [IsoXmlTag("ATMSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ATMServiceCode { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IATMService10 : IIsoComponent
     [IsoId("_jnFKBa17EeWMg5rOByfExw")]
     [DisplayName("Host Service Code")]
     [IsoXmlTag("HstSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? HostServiceCode { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface IATMService10 : IIsoComponent
     [IsoId("_tymi0K17EeWMg5rOByfExw")]
     [DisplayName("Service Variant Identification")]
     [IsoXmlTag("SvcVarntId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ServiceVariantIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor parameters dedicated to a payment application of the point of interaction.
 /// </summary>
 [IsoId("_Vq9WcXITEe2OqYulmHWukQ")]
+[IsoDisplayName(@"Application Parameters")]
 public interface IApplicationParameters12 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IApplicationParameters12 : IIsoComponent
     [IsoId("_VxW5Y3ITEe2OqYulmHWukQ")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ApplicationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IApplicationParameters12 : IIsoComponent
     [IsoId("_VxW5ZXITEe2OqYulmHWukQ")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Version { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IApplicationParameters12 : IIsoComponent
     [IsoId("_VxW5Z3ITEe2OqYulmHWukQ")]
     [DisplayName("Parameter Format Identifier")]
     [IsoXmlTag("ParamFrmtIdr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? ParameterFormatIdentifier { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IApplicationParameters12 : IIsoComponent
     [IsoId("_VxW5aXITEe2OqYulmHWukQ")]
     [DisplayName("Parameters Length")]
     [IsoXmlTag("ParamsLngth")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? ParametersLength { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IApplicationParameters12 : IIsoComponent
     [IsoId("_VxW5a3ITEe2OqYulmHWukQ")]
     [DisplayName("Offset Start")]
     [IsoXmlTag("OffsetStart")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? OffsetStart { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IApplicationParameters12 : IIsoComponent
     [IsoId("_VxW5bXITEe2OqYulmHWukQ")]
     [DisplayName("Offset End")]
     [IsoXmlTag("OffsetEnd")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? OffsetEnd { get; }
 
     /// <summary>
@@ -73,6 +83,7 @@ public interface IApplicationParameters12 : IIsoComponent
     [IsoId("_VxW5b3ITEe2OqYulmHWukQ")]
     [DisplayName("Parameters")]
     [IsoXmlTag("Params")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max100KBinary> Parameters { get; }
 
     /// <summary>

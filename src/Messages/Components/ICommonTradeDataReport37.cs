@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to contract and transaction details.
 /// </summary>
 [IsoId("_EPVkyQ1KEeqV4s5SpzR1dQ")]
+[IsoDisplayName(@"Common Trade Data Report")]
 public interface ICommonTradeDataReport37 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface ICommonTradeDataReport37 : IIsoComponent
     [IsoId("_EQKEJQ1KEeqV4s5SpzR1dQ")]
     [DisplayName("Action Type Details")]
     [IsoXmlTag("ActnTpDtls")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? ActionTypeDetails { get; }
 }

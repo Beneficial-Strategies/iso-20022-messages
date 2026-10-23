@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Resulting debit or credit amount of the netted amounts for all debit and credit entries.
 /// </summary>
 [IsoId("_mK6yUSmjEeKdFJmzhTDOvQ")]
+[IsoDisplayName(@"Amount And Direction")]
 public interface IAmountAndDirection35 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAmountAndDirection35 : IIsoComponent
     [IsoId("_mgrm8SmjEeKdFJmzhTDOvQ")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
+    [IsoSimpleType(IsoSimpleType.NonNegativeDecimalNumber)]
     NonNegativeDecimalNumber Amount { get; }
 
     /// <summary>

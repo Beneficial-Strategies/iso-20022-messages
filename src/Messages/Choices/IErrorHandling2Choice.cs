@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the choice between the listed and the proprietary error codes.
 /// </summary>
 [IsoId("_jXcINxbvEeOy-PlRuFSUzQ")]
+[IsoDisplayName(@"Error Handling 2 Choice")]
 public interface IErrorHandling2Choice : IIsoChoice { }

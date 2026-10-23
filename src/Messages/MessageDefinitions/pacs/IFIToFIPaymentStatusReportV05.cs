@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// </summary>
 [IsoId("_FXEtkSGnEeKjd4jizyIDGA")]
 [IsoMessage("pacs.002.001.05", "FIToFIPmtStsRpt", "urn:iso:std:iso:20022:tech:xsd:pacs.002.001.05")]
+[Description(@"Scope|The FinancialInstitutionToFinancialInstitutionPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.|Usage|The FIToFIPaymentStatusReport message is exchanged between agents to provide status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.|The FIToFIPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).|The FIToFIPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.|The FIToFIPaymentStatusReport message can be used in domestic and cross-border scenarios.")]
+[IsoDisplayName(@"FI To FI Payment Status Report V")]
 public interface IFIToFIPaymentStatusReportV05 : IOuterRecord
 {
     /// <summary>
@@ -42,6 +44,7 @@ public interface IFIToFIPaymentStatusReportV05 : IOuterRecord
     [IsoId("_FXEtqyGnEeKjd4jizyIDGA")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction43> TransactionInformationAndStatus { get; }
 
     /// <summary>
@@ -50,5 +53,6 @@ public interface IFIToFIPaymentStatusReportV05 : IOuterRecord
     [IsoId("_FXEtryGnEeKjd4jizyIDGA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

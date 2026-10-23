@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the message reference of the message for which the status is requested and the business reference of the order.
 /// </summary>
 [IsoId("_UvH_lNp-Ed-ak6NoX_4Aeg_-1303328661")]
+[IsoDisplayName(@"Message And Business Reference")]
 public interface IMessageAndBusinessReference2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IMessageAndBusinessReference2 : IIsoComponent
     [IsoId("_UvH_l9p-Ed-ak6NoX_4Aeg_-1275621169")]
     [DisplayName("Individual Order Reference")]
     [IsoXmlTag("IndvOrdrRef")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> IndividualOrderReference { get; }
 
     /// <summary>

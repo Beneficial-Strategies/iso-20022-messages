@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action date details.
 /// </summary>
 [IsoId("_ETPUgb5QEeexmbB7KsjCwA")]
+[IsoDisplayName(@"Corporate Action Date SD")]
 public interface ICorporateActionDateSD8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionDateSD8 : IIsoComponent
     [IsoId("_Ejwcwb5QEeexmbB7KsjCwA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICorporateActionDateSD8 : IIsoComponent
     [IsoId("_Ejwcw75QEeexmbB7KsjCwA")]
     [DisplayName("DTC Last Day For Early Redemption")]
     [IsoXmlTag("DTCLastDayForEarlyRed")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DTCLastDayForEarlyRedemption { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ICorporateActionDateSD8 : IIsoComponent
     [IsoId("_Ejwcy75QEeexmbB7KsjCwA")]
     [DisplayName("DTC Position Capture Date")]
     [IsoXmlTag("DTCPosCaptrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DTCPositionCaptureDate { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ICorporateActionDateSD8 : IIsoComponent
     [IsoId("_Ejwc075QEeexmbB7KsjCwA")]
     [DisplayName("New York Cut Off Date")]
     [IsoXmlTag("NewYorkCutOffDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NewYorkCutOffDate { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ICorporateActionDateSD8 : IIsoComponent
     [IsoId("_Ejwc275QEeexmbB7KsjCwA")]
     [DisplayName("DTC Extended Cut Off Date")]
     [IsoXmlTag("DTCXtndedCutOffDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DTCExtendedCutOffDate { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface ICorporateActionDateSD8 : IIsoComponent
     [IsoId("_Ejwc475QEeexmbB7KsjCwA")]
     [DisplayName("Effective Date By Exchange")]
     [IsoXmlTag("FctvDtByXchg")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EffectiveDateByExchange { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface ICorporateActionDateSD8 : IIsoComponent
     [IsoId("_Ejwc675QEeexmbB7KsjCwA")]
     [DisplayName("Date Declared Worthless")]
     [IsoXmlTag("DtDclrdWrthls")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateDeclaredWorthless { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface ICorporateActionDateSD8 : IIsoComponent
     [IsoId("_Ejwc875QEeexmbB7KsjCwA")]
     [DisplayName("Delete Worthless Security Date")]
     [IsoXmlTag("DelWrthlsSctyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DeleteWorthlessSecurityDate { get; }
 
     /// <summary>
@@ -81,6 +91,7 @@ public interface ICorporateActionDateSD8 : IIsoComponent
     [IsoId("_Ejwc-75QEeexmbB7KsjCwA")]
     [DisplayName("DTC Exit Date")]
     [IsoXmlTag("DTCExitDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DTCExitDate { get; }
 
     /// <summary>
@@ -89,6 +100,7 @@ public interface ICorporateActionDateSD8 : IIsoComponent
     [IsoId("_EjwdA75QEeexmbB7KsjCwA")]
     [DisplayName("Subscription Begin Date")]
     [IsoXmlTag("SbcptBegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SubscriptionBeginDate { get; }
 
     /// <summary>
@@ -97,6 +109,7 @@ public interface ICorporateActionDateSD8 : IIsoComponent
     [IsoId("_Y7LjkL_qEeeb2ZBoAlSG1Q")]
     [DisplayName("Rights Distribution As Of Date")]
     [IsoXmlTag("RghtsDstrbtnAsOfDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RightsDistributionAsOfDate { get; }
 
     /// <summary>
@@ -105,5 +118,6 @@ public interface ICorporateActionDateSD8 : IIsoComponent
     [IsoId("_n1j4ML_qEeeb2ZBoAlSG1Q")]
     [DisplayName("Rights Distribution Date")]
     [IsoXmlTag("RghtsDstrbtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RightsDistributionDate { get; }
 }

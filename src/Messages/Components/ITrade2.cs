@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the foreign exchange trade including spot\forward\NDF\swap that is confirmed.
 /// </summary>
 [IsoId("_yDLnEA2IEeSwB74WgTbh4Q")]
+[IsoDisplayName(@"Trade")]
 public interface ITrade2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITrade2 : IIsoComponent
     [IsoId("_6QrTkBkmEeSmqJmZFbWcmQ")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TradeIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ITrade2 : IIsoComponent
     [IsoId("_FQB2cg2JEeSwB74WgTbh4Q")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -81,6 +85,8 @@ public interface ITrade2 : IIsoComponent
     [IsoId("_sixnQIdSEeS8A78Q2OnhsA")]
     [DisplayName("Symbol")]
     [IsoXmlTag("Symb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Symbol { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface ITrade2 : IIsoComponent
     [IsoId("_FQB2eA2JEeSwB74WgTbh4Q")]
     [DisplayName("Place Of Confirmation")]
     [IsoXmlTag("PlcOfConf")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier? PlaceOfConfirmation { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface ITrade2 : IIsoComponent
     [IsoId("_FQB2ew2JEeSwB74WgTbh4Q")]
     [DisplayName("Swap Leg")]
     [IsoXmlTag("SwpLeg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstrumentLeg6> SwapLeg { get; }
 
     /// <summary>
@@ -121,5 +129,6 @@ public interface ITrade2 : IIsoComponent
     [IsoId("_BLgREA2JEeSwB74WgTbh4Q")]
     [DisplayName("Associated Trade Reference")]
     [IsoXmlTag("AssoctdTradRef")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AssociatedTradeReference { get; }
 }

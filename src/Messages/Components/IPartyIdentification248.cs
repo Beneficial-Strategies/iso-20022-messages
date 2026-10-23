@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_fs1bZRuUEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification248 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPartyIdentification248 : IIsoComponent
     [IsoId("_gCI9AxuUEeyhRdHRjakS2w")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IPartyIdentification248 : IIsoComponent
     [IsoId("_xLUrgBuUEeyhRdHRjakS2w")]
     [DisplayName("Company Register Shareholder Identification")]
     [IsoXmlTag("CpnyRegrShrhldrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CompanyRegisterShareholderIdentification { get; }
 }

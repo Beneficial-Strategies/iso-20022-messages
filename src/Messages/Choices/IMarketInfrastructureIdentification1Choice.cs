@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the market infrastructure identification.
 /// </summary>
 [IsoId("_8BQtWKMgEeCJ6YNENx4h-w_739589116")]
+[IsoDisplayName(@"Market Infrastructure Identification 1 Choice")]
 public interface IMarketInfrastructureIdentification1Choice : IIsoChoice { }

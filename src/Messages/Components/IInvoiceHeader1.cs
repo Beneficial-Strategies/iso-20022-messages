@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Collection of data for that is exchanged between two or more parties in written, printed or electronic form.
 /// </summary>
 [IsoId("_SuAjMAEcEeCQm6a_G2yO_w_-887541899")]
+[IsoDisplayName(@"Invoice Header")]
 public interface IInvoiceHeader1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvoiceHeader1 : IIsoComponent
     [IsoId("_SuAjMQEcEeCQm6a_G2yO_w_1153581036")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IInvoiceHeader1 : IIsoComponent
     [IsoId("_SuAjMwEcEeCQm6a_G2yO_w_1331699708")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> Name { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IInvoiceHeader1 : IIsoComponent
     [IsoId("_SuAjNAEcEeCQm6a_G2yO_w_334627355")]
     [DisplayName("Issue Date Time")]
     [IsoXmlTag("IsseDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime IssueDateTime { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IInvoiceHeader1 : IIsoComponent
     [IsoId("_SuAjNwEcEeCQm6a_G2yO_w_448466421")]
     [DisplayName("Copy Indicator")]
     [IsoXmlTag("CpyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CopyIndicator { get; }
 
     /// <summary>
@@ -81,5 +87,6 @@ public interface IInvoiceHeader1 : IIsoComponent
     [IsoId("_SuAjOQEcEeCQm6a_G2yO_w_-726724604")]
     [DisplayName("Included Note")]
     [IsoXmlTag("InclNote")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation6> IncludedNote { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the intra-position movement.
 /// </summary>
 [IsoId("_TgKYgWp9EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Intra Position6")]
 public interface IIntraPosition6 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements providing the total amount of all operations.
 /// </summary>
 [IsoId("_73bb46MgEeCJ6YNENx4h-w_2011477148")]
+[IsoDisplayName(@"Total Amount And Currency")]
 public interface ITotalAmountAndCurrency1 : IIsoComponent
 {
     /// <summary>

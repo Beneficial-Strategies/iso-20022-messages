@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalActivation2Choice;
 /// </summary>
 [IsoId("_UPBU8-H7Eeqbls7Gk4-ckA")]
 [IsoXmlTag("OrgnlActvtnData")]
+[IsoDisplayName(@"Original Activation Data")]
 public interface IOriginalActivationData : IOriginalActivation2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -20,6 +21,8 @@ public interface IOriginalActivationData : IOriginalActivation2Choice, IIsoChoic
     [IsoId("_UQacEeH7Eeqbls7Gk4-ckA")]
     [DisplayName("Debtor Activation Identification")]
     [IsoXmlTag("DbtrActvtnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DebtorActivationIdentification { get; }
 
     /// <summary>
@@ -28,6 +31,8 @@ public interface IOriginalActivationData : IOriginalActivation2Choice, IIsoChoic
     [IsoId("_UQacE-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Display Name")]
     [IsoXmlTag("DispNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? DisplayName { get; }
 
     /// <summary>
@@ -60,6 +65,7 @@ public interface IOriginalActivationData : IOriginalActivation2Choice, IIsoChoic
     [IsoId("_UQacG-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Customer Identification")]
     [IsoXmlTag("CstmrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IParty49Choice> CustomerIdentification { get; }
 
     /// <summary>
@@ -68,6 +74,7 @@ public interface IOriginalActivationData : IOriginalActivation2Choice, IIsoChoic
     [IsoId("_UQacHeH7Eeqbls7Gk4-ckA")]
     [DisplayName("Contract Format Type")]
     [IsoXmlTag("CtrctFrmtTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentFormat2Choice> ContractFormatType { get; }
 
     /// <summary>
@@ -78,6 +85,7 @@ public interface IOriginalActivationData : IOriginalActivation2Choice, IIsoChoic
     [IsoId("_UQacH-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Contract Reference")]
     [IsoXmlTag("CtrctRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContractReference1> ContractReference { get; }
 
     /// <summary>
@@ -126,5 +134,7 @@ public interface IOriginalActivationData : IOriginalActivation2Choice, IIsoChoic
     [IsoId("_UQacMeH7Eeqbls7Gk4-ckA")]
     [DisplayName("Dedicated Activation Code")]
     [IsoXmlTag("DdctdActvtnCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DedicatedActivationCode { get; }
 }

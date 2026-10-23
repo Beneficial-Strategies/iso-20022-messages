@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_uMfpsS-1Ee-7Nrf72hv69A")]
 [IsoMessage("reda.049.001.01", "AcctLkCreReq", "urn:iso:std:iso:20022:tech:xsd:reda.049.001.01")]
+[IsoDisplayName(@"Account Link Creation Request V01")]
 public interface IAccountLinkCreationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IAccountLinkCreationRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Account Link")]
     [IsoXmlTag("AcctLk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountLink7> AccountLink { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IAccountLinkCreationRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

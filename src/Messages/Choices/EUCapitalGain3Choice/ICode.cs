@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EUCapitalGain3Choice;
 /// EU capital gain expressed as a code.
 /// </summary>
 [IsoId("_6r67QTh7EeaH-93K5JKmzw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IEUCapitalGain3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Balance49.
 /// </summary>
 [IsoId("_Uou4jXSdEe6VWZz2tTgENw")]
+[IsoDisplayName(@"Corporate Action Balance49")]
 public interface ICorporateActionBalance49 : IIsoComponent
 {
     /// <summary>
@@ -121,6 +122,7 @@ public interface ICorporateActionBalance49 : IIsoComponent
     /// </summary>
     [DisplayName("Pending Delivery Balance")]
     [IsoXmlTag("PdgDlvryBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPendingBalance8> PendingDeliveryBalance { get; }
 
     /// <summary>
@@ -128,5 +130,6 @@ public interface ICorporateActionBalance49 : IIsoComponent
     /// </summary>
     [DisplayName("Pending Receipt Balance")]
     [IsoXmlTag("PdgRctBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPendingBalance8> PendingReceiptBalance { get; }
 }

@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_IcTD1FaCEeeFltjJxERUxw")]
 [IsoMessage("cain.021.001.01", "RtrvlInitn", "urn:iso:std:iso:20022:tech:xsd:cain.021.001.01")]
+[Description(@"The RetrievalInitiation message is sent by an issuer or agent to an acquirer to retrieve the original transaction details.")]
+[IsoDisplayName(@"Retrieval Initiation V")]
 public interface IRetrievalInitiationV01 : IOuterRecord
 {
     /// <summary>

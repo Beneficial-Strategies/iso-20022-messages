@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Elements characterising a financial instrument.
 /// </summary>
 [IsoId("_qZQIYMhiEeadgvwNGwK05w")]
+[IsoDisplayName(@"Financial Instrument Attributes")]
 public interface IFinancialInstrumentAttributes88 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,9 @@ public interface IFinancialInstrumentAttributes88 : IIsoComponent
     [IsoId("_4ICzoMhiEeadgvwNGwK05w")]
     [DisplayName("Standardisation")]
     [IsoXmlTag("Stdstn")]
+    [MinLength(0)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Standardisation1Code> Standardisation { get; }
 
     /// <summary>

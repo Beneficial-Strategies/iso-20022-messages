@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Charges15.
 /// </summary>
 [IsoId("_xv4UXzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Charges15")]
 public interface ICharges15 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface ICharges15 : IIsoComponent
     /// </summary>
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChargesRecord8> Record { get; }
 }

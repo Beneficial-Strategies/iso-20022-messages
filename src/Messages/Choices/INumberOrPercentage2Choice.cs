@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Number Or Percentage2Choice.
 /// </summary>
 [IsoId("_TJVpRZK5Ee-l-O3vIHRmRw")]
+[IsoDisplayName(@"Number Or Percentage2Choice")]
 public interface INumberOrPercentage2Choice : IIsoChoice { }

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "BuyrPrtcnInstrRptReq",
     "urn:iso:std:iso:20022:tech:xsd:seev.066.001.01"
 )]
+[IsoDisplayName(@"Buyer Protection Instruction Report Request V01")]
 public interface IBuyerProtectionInstructionReportRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -22,6 +23,8 @@ public interface IBuyerProtectionInstructionReportRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryReference { get; }
 
     /// <summary>
@@ -36,5 +39,6 @@ public interface IBuyerProtectionInstructionReportRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

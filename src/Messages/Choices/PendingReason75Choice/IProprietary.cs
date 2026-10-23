@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason75Choice;
 
 /// <summary>Specifies the reason why the instruction has a pending status in a proprietary form.</summary>
 [IsoId("_YQ2EaeSkEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPendingReason75Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

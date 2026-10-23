@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for put type.
 /// </summary>
 [IsoId("_bj1s8eLcEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Put Type 3 Choice")]
 public interface IPutType3Choice : IIsoChoice { }

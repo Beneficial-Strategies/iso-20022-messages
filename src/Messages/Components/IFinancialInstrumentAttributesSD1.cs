@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action option securities movement security details.
 /// </summary>
 [IsoId("_1T9p8TL3EeKU9IrkkToqcw_1018764700")]
+[IsoDisplayName(@"Financial Instrument Attributes SD")]
 public interface IFinancialInstrumentAttributesSD1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrumentAttributesSD1 : IIsoComponent
     [IsoId("_1T9p8jL3EeKU9IrkkToqcw_2098495270")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IFinancialInstrumentAttributesSD1 : IIsoComponent
     [IsoId("_1T9p8zL3EeKU9IrkkToqcw_1274549265")]
     [DisplayName("DTC Security Transferable Flag")]
     [IsoXmlTag("DTCSctyTrfblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DTCSecurityTransferableFlag { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface IFinancialInstrumentAttributesSD1 : IIsoComponent
     [IsoId("_1UHa8TL3EeKU9IrkkToqcw_-1764347640")]
     [DisplayName("Baby Bond Denomination")]
     [IsoXmlTag("BabyBdDnmtn")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? BabyBondDenomination { get; }
 }

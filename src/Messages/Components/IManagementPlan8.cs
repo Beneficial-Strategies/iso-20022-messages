@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sequence of terminal management actions to be performed by a point of interaction (POI).
 /// </summary>
 [IsoId("_TVsscQ01EeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Management Plan")]
 public interface IManagementPlan8 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of market.
 /// </summary>
 [IsoId("_Q4XJYdp-Ed-ak6NoX_4Aeg_472330061")]
+[IsoDisplayName(@"Market Type Format 1 Choice")]
 public interface IMarketTypeFormat1Choice : IIsoChoice { }

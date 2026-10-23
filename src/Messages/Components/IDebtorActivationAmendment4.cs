@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the amendment of the information that serves as a basis to debit an account.
 /// </summary>
 [IsoId("_UQacM-H7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Debtor Activation Amendment")]
 public interface IDebtorActivationAmendment4 : IIsoComponent
 {
     /// <summary>

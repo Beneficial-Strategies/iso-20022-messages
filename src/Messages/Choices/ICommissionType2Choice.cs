@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code or a data source scheme to determine the commission type.
 /// </summary>
 [IsoId("_Ac_TctokEeC60axPepSq7g_1955335824")]
+[IsoDisplayName(@"Commission Type 2 Choice")]
 public interface ICommissionType2Choice : IIsoChoice { }

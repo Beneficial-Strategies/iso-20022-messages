@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient13Choice;
 /// Specifies the recipient&apos;s certificate by a key identifier.
 /// </summary>
 [IsoId("_d9kLgHDDEe2MCaKO5AtGsA")]
+[IsoDisplayName(@"Subject Key Identifier")]
 public interface ISubjectKeyIdentifier : IRecipient13Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ISubjectKeyIdentifier : IRecipient13Choice, IIsoChoiceVariant
     /// Specifies a binary string with a maximum length of 140 binary bytes.
     /// </summary>
     [IsoXmlTag("SbjtKeyIdr")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary Value { get; }
 }

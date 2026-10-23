@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides reasons of rejecting transactions.
 /// </summary>
 [IsoId("_yAw2W1yGEe24CqbZJK5XxA")]
+[IsoDisplayName(@"Rejection Reason")]
 public interface IRejectionReason71 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IRejectionReason71 : IIsoComponent
     [IsoId("_yBsqdVyGEe24CqbZJK5XxA")]
     [DisplayName("Detailed Validation Rule")]
     [IsoXmlTag("DtldVldtnRule")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericValidationRuleIdentification1> DetailedValidationRule { get; }
 }

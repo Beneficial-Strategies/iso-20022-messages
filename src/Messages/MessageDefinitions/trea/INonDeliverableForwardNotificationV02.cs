@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// </summary>
 [IsoId("_URegMNE8Ed-BzquC8wXy7w_1248981968")]
 [IsoMessage("trea.007.001.02", "NDFNtfctnV02", "urn:iso:std:iso:20022:tech:xsd:trea.007.001.02")]
+[Description(@"Scope|The NonDeliverableForwardNotification message is sent by a central system to a participant to provide details of a non deliverable forward trade.|Usage|The notification is sent by a central settlement system to the two trading parties after it has received create, amend or cancel messages from both. The message may also contain information on the settlement of the trade.")]
+[IsoDisplayName(@"Non Deliverable Forward Notification V")]
 public interface INonDeliverableForwardNotificationV02 : IOuterRecord
 {
     /// <summary>

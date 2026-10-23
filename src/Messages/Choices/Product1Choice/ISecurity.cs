@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice;
 /// </summary>
 [IsoId("_QapNsLVQEeadLcJesEbkTQ")]
 [IsoXmlTag("Scty")]
+[IsoDisplayName(@"Security")]
 public interface ISecurity : IProduct1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ISecurity : IProduct1Choice, IIsoChoiceVariant
     [IsoId("_9iE2ILVYEeadLcJesEbkTQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier Identification { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface ISecurity : IProduct1Choice, IIsoChoiceVariant
     [IsoId("_DnQrsLVZEeadLcJesEbkTQ")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Issuer { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface ISecurity : IProduct1Choice, IIsoChoiceVariant
     [IsoId("_Hr6M4LVZEeadLcJesEbkTQ")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoSimpleType(IsoSimpleType.SNA2008SectorIdentifier)]
     SNA2008SectorIdentifier? Sector { get; }
 }

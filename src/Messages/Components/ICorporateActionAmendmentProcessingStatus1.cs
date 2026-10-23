@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provide processing status information of an election amendment request.
 /// </summary>
 [IsoId("_RkUQcNp-Ed-ak6NoX_4Aeg_-1531109168")]
+[IsoDisplayName(@"Corporate Action Amendment Processing Status")]
 public interface ICorporateActionAmendmentProcessingStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICorporateActionAmendmentProcessingStatus1 : IIsoComponent
     [IsoId("_RkUQctp-Ed-ak6NoX_4Aeg_-1503403592")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

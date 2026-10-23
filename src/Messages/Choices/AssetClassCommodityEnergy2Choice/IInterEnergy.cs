@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy2Choice
 /// </summary>
 [IsoId("_x4yAebvsEeiLRYqS-r-R-A")]
 [IsoXmlTag("IntrNrgy")]
+[IsoDisplayName(@"Inter Energy")]
 public interface IInterEnergy : IAssetClassCommodityEnergy2Choice, IIsoChoiceVariant
 {
     /// <summary>

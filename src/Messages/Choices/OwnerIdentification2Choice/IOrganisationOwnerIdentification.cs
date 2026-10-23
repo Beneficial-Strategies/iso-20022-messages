@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OwnerIdentification2Choice;
 /// </summary>
 [IsoId("_FJYQgyGZEeWKAaDJcYGKLw")]
 [IsoXmlTag("OrgOwnrId")]
+[IsoDisplayName(@"Organisation Owner Identification")]
 public interface IOrganisationOwnerIdentification : IOwnerIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IOrganisationOwnerIdentification : IOwnerIdentification2Choice,
     [IsoId("_w3KuoSFjEeW9XJWqfgXIIA")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 }

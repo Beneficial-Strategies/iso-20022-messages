@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Terminal Management Data Set34.
 /// </summary>
 [IsoId("_0ywXEaE3Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"Terminal Management Data Set34")]
 public interface ITerminalManagementDataSet34 : IIsoComponent
 {
     /// <summary>

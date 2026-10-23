@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Profile of the customer selected by an ATM.
 /// </summary>
 [IsoId("_-JYQ8IoYEeSirOZJBRz_nA")]
+[IsoDisplayName(@"ATM Customer Profile")]
 public interface IATMCustomerProfile1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IATMCustomerProfile1 : IIsoComponent
     [IsoId("_0mnEwIoZEeSirOZJBRz_nA")]
     [DisplayName("Profile Reference")]
     [IsoXmlTag("PrflRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProfileReference { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IATMCustomerProfile1 : IIsoComponent
     [IsoId("_5_Kd0IoZEeSirOZJBRz_nA")]
     [DisplayName("Customer Identification")]
     [IsoXmlTag("CstmrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CustomerIdentification { get; }
 }

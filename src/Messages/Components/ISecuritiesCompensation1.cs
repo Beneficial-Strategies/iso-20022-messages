@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the securities compensation such as the depository and the total settlement amount.
 /// </summary>
 [IsoId("_Uot1kdp-Ed-ak6NoX_4Aeg_-1569066973")]
+[IsoDisplayName(@"Securities Compensation")]
 public interface ISecuritiesCompensation1 : IIsoComponent
 {
     /// <summary>

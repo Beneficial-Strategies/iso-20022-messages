@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EligibilityIdentification3Choice
 
 /// <summary>Issuer CSD identification used to identify the securities to be defined as eligible.</summary>
 [IsoId("_xHPWtWc-EemvNLufWGIVOQ")]
+[IsoDisplayName(@"Issuer CSD Identification")]
 public interface IIssuerCSDIdentification : IEligibilityIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

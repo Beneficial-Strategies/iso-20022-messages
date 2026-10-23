@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details on the settlement fails per currency.
 /// </summary>
 [IsoId("_antbaR2lEeqF2P5v-Rtejg")]
+[IsoDisplayName(@"Settlement Fails Currency")]
 public interface ISettlementFailsCurrency2 : IIsoComponent
 {
     /// <summary>

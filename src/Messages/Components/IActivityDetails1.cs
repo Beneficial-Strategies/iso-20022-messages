@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the activities that took place during a certain period for one trade transaction.
 /// </summary>
 [IsoId("_RJDQwNp-Ed-ak6NoX_4Aeg_2070733092")]
+[IsoDisplayName(@"Activity Details")]
 public interface IActivityDetails1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IActivityDetails1 : IIsoComponent
     [IsoId("_RJDQwdp-Ed-ak6NoX_4Aeg_-1926860432")]
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime DateTime { get; }
 
     /// <summary>

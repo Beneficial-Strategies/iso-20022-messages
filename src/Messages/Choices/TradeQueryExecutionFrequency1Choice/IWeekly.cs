@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeQueryExecutionFrequency1Cho
 /// Query is executed on a weekly basis. The day of the week for the query execution should be specified.
 /// </summary>
 [IsoId("_lyvAwNGYEeaQk737TH1Fzw")]
+[IsoDisplayName(@"Weekly")]
 public interface IWeekly : ITradeQueryExecutionFrequency1Choice, IIsoChoiceVariant
 {
     /// <summary>

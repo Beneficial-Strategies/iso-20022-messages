@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Treasury trading profile.
 /// </summary>
 [IsoId("_BzjroCDSEeWCLu74WLgP4w")]
+[IsoDisplayName(@"Treasury Profile")]
 public interface ITreasuryProfile1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITreasuryProfile1 : IIsoComponent
     [IsoId("_IENKUCDSEeWCLu74WLgP4w")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Date { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ITreasuryProfile1 : IIsoComponent
     [IsoId("_79wgcCDSEeWCLu74WLgP4w")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Rate { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Association of the TM identifier and the MTM identifier of an entity.
 /// </summary>
 [IsoId("_mG754GqCEeSojYXQbRlLzA")]
+[IsoDisplayName(@"Maintenance Identification Association")]
 public interface IMaintenanceIdentificationAssociation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMaintenanceIdentificationAssociation1 : IIsoComponent
     [IsoId("_0cY8gGqCEeSojYXQbRlLzA")]
     [DisplayName("Master TM Identification")]
     [IsoXmlTag("MstrTMId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MasterTMIdentification { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IMaintenanceIdentificationAssociation1 : IIsoComponent
     [IsoId("_8ftSsGqCEeSojYXQbRlLzA")]
     [DisplayName("TM Identification")]
     [IsoXmlTag("TMId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TMIdentification { get; }
 }

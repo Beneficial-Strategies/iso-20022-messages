@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money due to a party as compensation for a service.
 /// </summary>
 [IsoId("_A9DHsUevEeODR7vDcYOqmg")]
+[IsoDisplayName(@"Commission")]
 public interface ICommission19 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICommission19 : IIsoComponent
     [IsoId("_ZX9-cEevEeODR7vDcYOqmg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card reading capability of the terminal performing the transaction.
 /// </summary>
 [IsoId("_V4weYTEuEeyjbpgZW6G1Fg")]
+[IsoDisplayName(@"Card Reading Capabilities")]
 public interface ICardReadingCapabilities1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICardReadingCapabilities1 : IIsoComponent
     [IsoId("_V-xm0zEuEeyjbpgZW6G1Fg")]
     [DisplayName("Other Capability")]
     [IsoXmlTag("OthrCpblty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherCapability { get; }
 }

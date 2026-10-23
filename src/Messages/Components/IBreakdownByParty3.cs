@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the cash-in and cash-out flows by party.
 /// </summary>
 [IsoId("_LVijGQatEeS3lpTattq7hg")]
+[IsoDisplayName(@"Breakdown By Party")]
 public interface IBreakdownByParty3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IBreakdownByParty3 : IIsoComponent
     [IsoId("_LvuktQatEeS3lpTattq7hg")]
     [DisplayName("Cash In Forecast")]
     [IsoXmlTag("CshInFcst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashInForecast5> CashInForecast { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IBreakdownByParty3 : IIsoComponent
     [IsoId("_LvuktwatEeS3lpTattq7hg")]
     [DisplayName("Cash Out Forecast")]
     [IsoXmlTag("CshOutFcst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOutForecast5> CashOutForecast { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IBreakdownByParty3 : IIsoComponent
     [IsoId("_LvukuQatEeS3lpTattq7hg")]
     [DisplayName("Net Cash Forecast")]
     [IsoXmlTag("NetCshFcst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetCashForecast4> NetCashForecast { get; }
 }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPPrtflStrssTstgDefRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.057.001.01"
 )]
+[Description(@"The CCPPortfolioStressTestingDefinitionReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about how the central counterparty defines stress scenarios used to stress clearing member portfolios.")]
+[IsoDisplayName(@"CCP Portfolio Stress Testing Definition Report V")]
 public interface ICCPPortfolioStressTestingDefinitionReportV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface ICCPPortfolioStressTestingDefinitionReportV01 : IOuterRecord
     [IsoId("_kjFsmeUUEem3X-64-NKdqg")]
     [DisplayName("Scenario Definition")]
     [IsoXmlTag("ScnroDef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IScenarioDefinition1> ScenarioDefinition { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface ICCPPortfolioStressTestingDefinitionReportV01 : IOuterRecord
     [IsoId("_kjFsm-UUEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

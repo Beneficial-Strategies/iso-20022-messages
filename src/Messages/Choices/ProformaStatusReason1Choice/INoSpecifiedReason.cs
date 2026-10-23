@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProformaStatusReason1Choice;
 /// There is no reason available or to report for the proforma account status.
 /// </summary>
 [IsoId("_5BVa8UzCEeafiMTDrtSnyw")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IProformaStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

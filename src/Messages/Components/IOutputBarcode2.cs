@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Barcode content to display or print.
 /// </summary>
 [IsoId("_gocIQXDBEe2MCaKO5AtGsA")]
+[IsoDisplayName(@"Output Barcode")]
 public interface IOutputBarcode2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IOutputBarcode2 : IIsoComponent
     [IsoId("_g0Hz03DBEe2MCaKO5AtGsA")]
     [DisplayName("Barcode Value")]
     [IsoXmlTag("BrcdVal")]
+    [IsoSimpleType(IsoSimpleType.Max8000Text)]
+    [StringLength(8000, MinimumLength = 1)]
     Max8000Text? BarcodeValue { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IOutputBarcode2 : IIsoComponent
     [IsoId("_g0JpAXDBEe2MCaKO5AtGsA")]
     [DisplayName("QR Code Binary Value")]
     [IsoXmlTag("QRCdBinryVal")]
+    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
     Max3000Binary? QRCodeBinaryValue { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface IOutputBarcode2 : IIsoComponent
     [IsoId("_g0JpA3DBEe2MCaKO5AtGsA")]
     [DisplayName("QR Code Version")]
     [IsoXmlTag("QRCdVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? QRCodeVersion { get; }
 
     /// <summary>

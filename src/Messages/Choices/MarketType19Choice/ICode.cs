@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketType19Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IMarketType19Choice, IIsoChoiceVariant
 {
     /// <summary>

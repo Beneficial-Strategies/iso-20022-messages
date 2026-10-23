@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FATCAStatus1Choice;
 /// Foreign Account Tax Compliance Act (FATCA) status expressed as a code.
 /// </summary>
 [IsoId("_5yPV8AjREeS5F6qHcKOrew")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IFATCAStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

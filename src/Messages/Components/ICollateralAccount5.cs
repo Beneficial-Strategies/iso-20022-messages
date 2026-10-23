@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Operational construct used by a central counterparty to record ownership of assets posted as collateral by clearing members to meet their obligations at the central counterparty.
 /// </summary>
 [IsoId("_hcja4XYAEee_qcLXasnA4g")]
+[IsoDisplayName(@"Collateral Account")]
 public interface ICollateralAccount5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICollateralAccount5 : IIsoComponent
     [IsoId("_EPbHcHYCEee_qcLXasnA4g")]
     [DisplayName("Related Margin Account")]
     [IsoXmlTag("RltdMrgnAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMarginAccount1> RelatedMarginAccount { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICollateralAccount5 : IIsoComponent
     [IsoId("_GuWoAHYCEee_qcLXasnA4g")]
     [DisplayName("Title Transfer Collateral Arrangement")]
     [IsoXmlTag("TitlTrfCollArrgmnt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TitleTransferCollateralArrangement { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ICollateralAccount5 : IIsoComponent
     [IsoId("_JNSIkHYCEee_qcLXasnA4g")]
     [DisplayName("Collateral Segregation By Value")]
     [IsoXmlTag("CollSgrtnByVal")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CollateralSegregationByValue { get; }
 }

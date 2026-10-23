@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains data related to key exchange activity.
 /// </summary>
 [IsoId("_ciSS0f5tEeiLerArw36g0w")]
+[IsoDisplayName(@"Key Exchange Data")]
 public interface IKeyExchangeData1 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface IKeyExchangeData1 : IIsoComponent
     [IsoId("_cshM4f5tEeiLerArw36g0w")]
     [DisplayName("Control")]
     [IsoXmlTag("Ctrl")]
+    [IsoSimpleType(IsoSimpleType.Exact1HexBinaryText)]
     Exact1HexBinaryText? Control { get; }
 
     /// <summary>
@@ -29,6 +31,7 @@ public interface IKeyExchangeData1 : IIsoComponent
     [IsoId("_cshM4_5tEeiLerArw36g0w")]
     [DisplayName("Key Set Identifier")]
     [IsoXmlTag("KeySetIdr")]
+    [IsoSimpleType(IsoSimpleType.Max8NumericText)]
     Max8NumericText? KeySetIdentifier { get; }
 
     /// <summary>
@@ -39,6 +42,7 @@ public interface IKeyExchangeData1 : IIsoComponent
     [IsoId("_cshM7f5tEeiLerArw36g0w")]
     [DisplayName("Derived Information")]
     [IsoXmlTag("DrvdInf")]
+    [IsoSimpleType(IsoSimpleType.Max32HexBinaryText)]
     Max32HexBinaryText? DerivedInformation { get; }
 
     /// <summary>
@@ -48,6 +52,7 @@ public interface IKeyExchangeData1 : IIsoComponent
     [IsoId("_cshM6_5tEeiLerArw36g0w")]
     [DisplayName("Algorithm")]
     [IsoXmlTag("Algo")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? Algorithm { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IKeyExchangeData1 : IIsoComponent
     [IsoId("_cshM5_5tEeiLerArw36g0w")]
     [DisplayName("Key Length")]
     [IsoXmlTag("KeyLngth")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? KeyLength { get; }
 
     /// <summary>
@@ -66,6 +72,7 @@ public interface IKeyExchangeData1 : IIsoComponent
     [IsoId("_cshM6f5tEeiLerArw36g0w")]
     [DisplayName("Key Protection")]
     [IsoXmlTag("KeyPrtcn")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? KeyProtection { get; }
 
     /// <summary>
@@ -76,6 +83,7 @@ public interface IKeyExchangeData1 : IIsoComponent
     [IsoId("_cshM5f5tEeiLerArw36g0w")]
     [DisplayName("Key Index")]
     [IsoXmlTag("KeyIndx")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? KeyIndex { get; }
 
     /// <summary>
@@ -85,6 +93,7 @@ public interface IKeyExchangeData1 : IIsoComponent
     [IsoId("_fPXHoP5uEeiLerArw36g0w")]
     [DisplayName("Encrypted Data")]
     [IsoXmlTag("NcrptdData")]
+    [IsoSimpleType(IsoSimpleType.Max9999HexBinaryText)]
     Max9999HexBinaryText? EncryptedData { get; }
 
     /// <summary>
@@ -94,5 +103,6 @@ public interface IKeyExchangeData1 : IIsoComponent
     [IsoId("_jF57YP5uEeiLerArw36g0w")]
     [DisplayName("Key Checksum Value")]
     [IsoXmlTag("KeyChcksmVal")]
+    [IsoSimpleType(IsoSimpleType.Max9999HexBinaryText)]
     Max9999HexBinaryText? KeyChecksumValue { get; }
 }

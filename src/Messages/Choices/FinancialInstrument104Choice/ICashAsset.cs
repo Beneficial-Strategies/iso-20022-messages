@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument104Choice;
 
 /// <summary>Identification of the cash asset.</summary>
 [IsoId("f40877a9-f27b-47f2-9367-68ab672a80bd")]
+[IsoDisplayName(@"Cash Asset")]
 public interface ICashAsset : IFinancialInstrument104Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

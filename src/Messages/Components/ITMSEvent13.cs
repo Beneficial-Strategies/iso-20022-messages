@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Event on a terminal management system.
 /// </summary>
 [IsoId("_PMKpAbYEEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"TMS Event13")]
 public interface ITMSEvent13 : IIsoComponent
 {
     /// <summary>

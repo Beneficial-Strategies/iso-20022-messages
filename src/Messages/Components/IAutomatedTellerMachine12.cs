@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Automated Teller Machine12.
 /// </summary>
 [IsoId("_ZIAcMaEUEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Automated Teller Machine12")]
 public interface IAutomatedTellerMachine12 : IIsoComponent
 {
     /// <summary>

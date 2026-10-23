@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instalment amount details
 /// </summary>
 [IsoId("_yiOENNuXEei2qvU6FBLZYA")]
+[IsoDisplayName(@"Instalment Amount Details")]
 public interface IInstalmentAmountDetails1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IInstalmentAmountDetails1 : IIsoComponent
     [IsoId("_yiOEN9uXEei2qvU6FBLZYA")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IInstalmentAmountDetails1 : IIsoComponent
     [IsoId("_yiOENduXEei2qvU6FBLZYA")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubType { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IInstalmentAmountDetails1 : IIsoComponent
     [IsoId("_kqktANuZEei2qvU6FBLZYA")]
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Percentage { get; }
 }

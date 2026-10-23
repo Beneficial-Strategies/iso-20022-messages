@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the removal type, the reason, the exclusion period, the extension date and the termination date.
 /// </summary>
 [IsoId("_50I1UPolEeiAfJEqh4xF_Q")]
+[IsoDisplayName(@"Removal Type And Reason")]
 public interface IRemovalTypeAndReason1 : IIsoComponent
 {
     /// <summary>

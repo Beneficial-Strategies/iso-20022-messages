@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportContent2Choice;
 /// <summary>
 /// Binary.
 /// </summary>
+[IsoDisplayName(@"Binary")]
 public interface IBinary : IReportContent2Choice, IIsoChoiceVariant
 {
     /// <summary>

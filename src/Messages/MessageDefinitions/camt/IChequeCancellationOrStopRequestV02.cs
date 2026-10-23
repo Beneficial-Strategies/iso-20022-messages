@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3E5JTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.108.001.02", "ChqCxlOrStopReq", "urn:iso:std:iso:20022:tech:xsd:camt.108.001.02")]
+[IsoDisplayName(@"Cheque Cancellation Or Stop Request V02")]
 public interface IChequeCancellationOrStopRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IChequeCancellationOrStopRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Cheque")]
     [IsoXmlTag("Chq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICheque20> Cheque { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IChequeCancellationOrStopRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

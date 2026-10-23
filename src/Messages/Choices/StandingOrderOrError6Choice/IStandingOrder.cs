@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError6Choice;
 /// </summary>
 [IsoId("_CtV4cW4-EeiU9cctagi5ow")]
 [IsoXmlTag("StgOrdr")]
+[IsoDisplayName(@"Standing Order")]
 public interface IStandingOrder : IStandingOrderOrError6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -58,6 +59,8 @@ public interface IStandingOrder : IStandingOrderOrError6Choice, IIsoChoiceVarian
     [IsoId("_9GXo7W49EeiU9cctagi5ow")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reference { get; }
 
     /// <summary>
@@ -98,6 +101,8 @@ public interface IStandingOrder : IStandingOrderOrError6Choice, IIsoChoiceVarian
     [IsoId("_9GXo9249EeiU9cctagi5ow")]
     [DisplayName("Link Set Identification")]
     [IsoXmlTag("LkSetId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LinkSetIdentification { get; }
 
     /// <summary>
@@ -106,6 +111,8 @@ public interface IStandingOrder : IStandingOrderOrError6Choice, IIsoChoiceVarian
     [IsoId("_9GXo-W49EeiU9cctagi5ow")]
     [DisplayName("Link Set Order Identification")]
     [IsoXmlTag("LkSetOrdrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LinkSetOrderIdentification { get; }
 
     /// <summary>
@@ -114,6 +121,7 @@ public interface IStandingOrder : IStandingOrderOrError6Choice, IIsoChoiceVarian
     [IsoId("_9GXo-249EeiU9cctagi5ow")]
     [DisplayName("Link Set Order Sequence")]
     [IsoXmlTag("LkSetOrdrSeq")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LinkSetOrderSequence { get; }
 
     /// <summary>
@@ -170,5 +178,6 @@ public interface IStandingOrder : IStandingOrderOrError6Choice, IIsoChoiceVarian
     [IsoId("_9GXpBW49EeiU9cctagi5ow")]
     [DisplayName("Zero Sweep Indicator")]
     [IsoXmlTag("ZeroSweepInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ZeroSweepIndicator { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification30Choice;
 /// Mobile Subscriber Integrated Service Digital Network (i.e. mobile phone number of the SIM card).
 /// </summary>
 [IsoId("_GGm1wHs9EeSTS7uHCe8FPQ")]
+[IsoDisplayName(@"MSISDN")]
 public interface IMSISDN : IAccountIdentification30Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IMSISDN : IAccountIdentification30Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 16 characters.
     /// </summary>
     [IsoXmlTag("MSISDN")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text Value { get; }
 }

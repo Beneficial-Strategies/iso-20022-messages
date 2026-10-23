@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingSettlementStatusChoice;
 /// </summary>
 [IsoId("_U1POptp-Ed-ak6NoX_4Aeg_-485496729")]
 [IsoXmlTag("Rsn")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IPendingSettlementStatusChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IReason : IPendingSettlementStatusChoice, IIsoChoiceVariant
     [IsoId("_U1YYktp-Ed-ak6NoX_4Aeg_-888151424")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information regarding the total amount of taxes.
 /// </summary>
 [IsoId("_WKLBTNp-Ed-ak6NoX_4Aeg_-1710794276")]
+[IsoDisplayName(@"Total Taxes")]
 public interface ITotalTaxes5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITotalTaxes5 : IIsoComponent
     [IsoId("_WKULMdp-Ed-ak6NoX_4Aeg_-1709874006")]
     [DisplayName("Percentage Of Debt Claim")]
     [IsoXmlTag("PctgOfDebtClm")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfDebtClaim { get; }
 
     /// <summary>
@@ -33,5 +35,8 @@ public interface ITotalTaxes5 : IIsoComponent
     [IsoId("_WKULMtp-Ed-ak6NoX_4Aeg_-1709873727")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [MinLength(0)]
+    [MaxLength(7)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax20> TaxDetails { get; }
 }

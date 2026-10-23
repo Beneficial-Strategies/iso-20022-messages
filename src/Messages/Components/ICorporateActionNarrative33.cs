@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information such as the information to comply with.
 /// </summary>
 [IsoId("_chfbP5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Corporate Action Narrative")]
 public interface ICorporateActionNarrative33 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionNarrative33 : IIsoComponent
     [IsoId("_chfbQZKQEeWHWpTQn1FFVg")]
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax350Text> InformationToComplyWith { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICorporateActionNarrative33 : IIsoComponent
     [IsoId("_chfbSZKQEeWHWpTQn1FFVg")]
     [DisplayName("Delivery Details")]
     [IsoXmlTag("DlvryDtls")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax350Text> DeliveryDetails { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICorporateActionNarrative33 : IIsoComponent
     [IsoId("_chfbUZKQEeWHWpTQn1FFVg")]
     [DisplayName("Foreign Exchange Instructions Additional Information")]
     [IsoXmlTag("FXInstrsAddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax350Text> ForeignExchangeInstructionsAdditionalInformation { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ICorporateActionNarrative33 : IIsoComponent
     [IsoId("_chfbWZKQEeWHWpTQn1FFVg")]
     [DisplayName("Instruction Additional Information")]
     [IsoXmlTag("InstrAddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax350Text> InstructionAdditionalInformation { get; }
 }

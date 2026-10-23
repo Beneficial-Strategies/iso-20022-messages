@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus4Choice;
 
 /// <summary>Provides information about the processing status of advice.</summary>
 [IsoId("_4z1pYaUeEfCnE_wCEfCqTA")]
+[IsoDisplayName(@"Processed Status")]
 public interface IProcessedStatus : INotificationAdviceStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

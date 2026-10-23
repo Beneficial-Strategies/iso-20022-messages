@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Device Input Request6.
 /// </summary>
 [IsoId("_zsWg4ZCREe6zroekBXoFoQ")]
+[IsoDisplayName(@"Device Input Request6")]
 public interface IDeviceInputRequest6 : IIsoComponent
 {
     /// <summary>

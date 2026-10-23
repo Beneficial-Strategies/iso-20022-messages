@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contact14.
 /// </summary>
 [IsoId("_YYdtSTE_Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Contact14")]
 public interface IContact14 : IIsoComponent
 {
     /// <summary>
@@ -93,6 +94,7 @@ public interface IContact14 : IIsoComponent
     /// </summary>
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherContact1> Other { get; }
 
     /// <summary>

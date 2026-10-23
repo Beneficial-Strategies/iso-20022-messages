@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the form of securities.
 /// </summary>
 [IsoId("_5NZUzpNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Form Of Security 7 Choice")]
 public interface IFormOfSecurity7Choice : IIsoChoice { }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction8Choice;
 /// <summary>
 /// Initiation.
 /// </summary>
+[IsoDisplayName(@"Initiation")]
 public interface IInitiation : IUnderlyingTransaction8Choice, IIsoChoiceVariant
 {
     /// <summary>

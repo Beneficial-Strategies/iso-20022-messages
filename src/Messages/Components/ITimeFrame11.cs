@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Time Frame11.
 /// </summary>
 [IsoId("_8mTdQTdyEe6UObU50fB8Cw")]
+[IsoDisplayName(@"Time Frame11")]
 public interface ITimeFrame11 : IIsoComponent
 {
     /// <summary>

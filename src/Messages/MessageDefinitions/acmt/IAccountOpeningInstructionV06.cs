@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_51Xr0R8KEeWpZde3LQh6dg")]
 [IsoMessage("acmt.001.001.06", "AcctOpngInstr", "urn:iso:std:iso:20022:tech:xsd:acmt.001.001.06")]
+[Description(@"Scope|An account owner, for example, an investor or its designated agent sends the AccountOpeningInstruction message to the account servicer, for example, a registrar, transfer agent, custodian or securities depository to instruct the opening of an account or the opening of an account and the establishment of an investment plan.|Usage|The AccountOpeningInstruction is used to open an account directly or indirectly with the account servicer or an intermediary.|In some markets, for example, Australia, and for some products in the United Kingdom, a first order (also known as a deposit instruction) is placed at the same time as the account opening. To cater for this scenario, an order message can be linked (via references in the message) to the AccountOpeningInstruction message when needed.|Execution of the AccountOpeningInstruction is confirmed via an AccountDetailsConfirmation message.")]
+[IsoDisplayName(@"Account Opening Instruction V")]
 public interface IAccountOpeningInstructionV06 : IOuterRecord
 {
     /// <summary>
@@ -73,6 +75,9 @@ public interface IAccountOpeningInstructionV06 : IOuterRecord
     [IsoId("_51Xr7x8KEeWpZde3LQh6dg")]
     [DisplayName("Intermediaries")]
     [IsoXmlTag("Intrmies")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary36> Intermediaries { get; }
 
     /// <summary>
@@ -97,6 +102,9 @@ public interface IAccountOpeningInstructionV06 : IOuterRecord
     [IsoId("_51Xr9R8KEeWpZde3LQh6dg")]
     [DisplayName("Savings Investment Plan")]
     [IsoXmlTag("SvgsInvstmtPlan")]
+    [MinLength(0)]
+    [MaxLength(50)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentPlan12> SavingsInvestmentPlan { get; }
 
     /// <summary>
@@ -105,6 +113,9 @@ public interface IAccountOpeningInstructionV06 : IOuterRecord
     [IsoId("_51Xr9x8KEeWpZde3LQh6dg")]
     [DisplayName("Withdrawal Investment Plan")]
     [IsoXmlTag("WdrwlInvstmtPlan")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentPlan12> WithdrawalInvestmentPlan { get; }
 
     /// <summary>
@@ -113,6 +124,9 @@ public interface IAccountOpeningInstructionV06 : IOuterRecord
     [IsoId("_51Xr-R8KEeWpZde3LQh6dg")]
     [DisplayName("Cash Settlement")]
     [IsoXmlTag("CshSttlm")]
+    [MinLength(0)]
+    [MaxLength(8)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashSettlement1> CashSettlement { get; }
 
     /// <summary>
@@ -121,6 +135,9 @@ public interface IAccountOpeningInstructionV06 : IOuterRecord
     [IsoId("_51Xr-x8KEeWpZde3LQh6dg")]
     [DisplayName("Service Level Agreement")]
     [IsoXmlTag("SvcLvlAgrmt")]
+    [MinLength(0)]
+    [MaxLength(30)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentToSend3> ServiceLevelAgreement { get; }
 
     /// <summary>
@@ -129,6 +146,7 @@ public interface IAccountOpeningInstructionV06 : IOuterRecord
     [IsoId("_6Md8ACFhEeW9XJWqfgXIIA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountRestrictions1> AdditionalInformation { get; }
 
     /// <summary>
@@ -145,5 +163,6 @@ public interface IAccountOpeningInstructionV06 : IOuterRecord
     [IsoId("_51Xr_x8KEeWpZde3LQh6dg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

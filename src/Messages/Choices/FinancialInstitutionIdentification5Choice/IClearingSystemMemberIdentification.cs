@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 /// Unique and unambiguous identifier of a clearing system member, as assigned by the system or system administrator.
 /// </summary>
 [IsoId("_TFehONp-Ed-ak6NoX_4Aeg_1156630120")]
+[IsoDisplayName(@"Clearing System Member Identification")]
 public interface IClearingSystemMemberIdentification
     : IFinancialInstitutionIdentification5Choice,
         IIsoChoiceVariant

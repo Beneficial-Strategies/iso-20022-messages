@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Place Of Trade Identification4Choice.
 /// </summary>
 [IsoId("_w2GyoRwIEe6fEumgV5aG_A")]
+[IsoDisplayName(@"Place Of Trade Identification4Choice")]
 public interface IPlaceOfTradeIdentification4Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the placement agent identification for a hedge fund if the investor was referred by one.
 /// </summary>
 [IsoId("_RQy3hdp-Ed-ak6NoX_4Aeg_-1121982136")]
+[IsoDisplayName(@"Referred Agent")]
 public interface IReferredAgent1 : IIsoComponent
 {
     /// <summary>

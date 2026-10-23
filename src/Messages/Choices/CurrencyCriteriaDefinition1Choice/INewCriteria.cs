@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choic
 /// </summary>
 [IsoId("_H5cuM5lZEeeE1Ya-LgRsuQ")]
 [IsoXmlTag("NewCrit")]
+[IsoDisplayName(@"New Criteria")]
 public interface INewCriteria : ICurrencyCriteriaDefinition1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface INewCriteria : ICurrencyCriteriaDefinition1Choice, IIsoChoiceVa
     [IsoId("_IB770ZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NewQueryName { get; }
 
     /// <summary>
@@ -26,5 +29,6 @@ public interface INewCriteria : ICurrencyCriteriaDefinition1Choice, IIsoChoiceVa
     [IsoId("_IB7705lZEeeE1Ya-LgRsuQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICurrencyExchangeSearchCriteria1> SearchCriteria { get; }
 }

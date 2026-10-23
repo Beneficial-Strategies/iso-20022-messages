@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTradeVenueCriteria1Cho
 /// Market identifier code of the trading venue.
 /// </summary>
 [IsoId("_a5LOBR3ZEeWNp95x0ENf8w")]
+[IsoDisplayName(@"MIC")]
 public interface IMIC : ISecuritiesTradeVenueCriteria1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IMIC : ISecuritiesTradeVenueCriteria1Choice, IIsoChoiceVariant
     /// Market Identifier Code. The identification of a financial market, as stipulated in the norm ISO 10383 &apos;Codes for exchanges and market identifications&apos;.
     /// </summary>
     [IsoXmlTag("MIC")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier Value { get; }
 }

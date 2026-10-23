@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money due to a party as compensation for a service.
 /// </summary>
 [IsoId("_GK8bkQavEeS3lpTattq7hg")]
+[IsoDisplayName(@"Commission")]
 public interface ICommission21 : IIsoComponent
 {
     /// <summary>

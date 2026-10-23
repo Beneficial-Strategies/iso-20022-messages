@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the settlement of the instruction.
 /// </summary>
 [IsoId("_QJROwtp-Ed-ak6NoX_4Aeg_-626239009")]
+[IsoDisplayName(@"Settlement Information")]
 public interface ISettlementInformation15 : IIsoComponent
 {
     /// <summary>

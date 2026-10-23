@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Unique identifier of a document, message or transaction.
 /// </summary>
 [IsoId("_AdlJUtokEeC60axPepSq7g_197856577")]
+[IsoDisplayName(@"Identification Reference 11 Choice")]
 public interface IIdentificationReference11Choice : IIsoChoice { }

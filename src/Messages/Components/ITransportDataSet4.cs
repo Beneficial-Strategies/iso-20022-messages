@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the transportation of goods that are part of a commercial trade agreement.
 /// </summary>
 [IsoId("_LhNqEdQsEeK0PPbKncCqzA")]
+[IsoDisplayName(@"Transport Data Set")]
 public interface ITransportDataSet4 : IIsoComponent
 {
     /// <summary>

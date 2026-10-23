@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data specific to counterparties and related fields.
 /// </summary>
 [IsoId("_77_r0Xd5EeerYuOTCu2Zqg")]
+[IsoDisplayName(@"Counterparty Data")]
 public interface ICounterpartyData36 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICounterpartyData36 : IIsoComponent
     [IsoId("_8HGIlXd5EeerYuOTCu2Zqg")]
     [DisplayName("Report Submitting Entity")]
     [IsoXmlTag("RptSubmitgNtty")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier ReportSubmittingEntity { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICounterpartyData36 : IIsoComponent
     [IsoId("_8HGIl3d5EeerYuOTCu2Zqg")]
     [DisplayName("Reporting Counterparty")]
     [IsoXmlTag("RptgCtrPty")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier ReportingCounterparty { get; }
 }

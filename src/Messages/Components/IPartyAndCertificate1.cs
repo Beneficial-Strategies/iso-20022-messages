@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Entity involved in an activity.
 /// </summary>
 [IsoId("_PXDuuNp-Ed-ak6NoX_4Aeg_818704056")]
+[IsoDisplayName(@"Party And Certificate")]
 public interface IPartyAndCertificate1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPartyAndCertificate1 : IIsoComponent
     [IsoId("_PXM4odp-Ed-ak6NoX_4Aeg_1578430719")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
     Max10KBinary? Certificate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IPartyAndCertificate1 : IIsoComponent
     [IsoId("_PXM4otp-Ed-ak6NoX_4Aeg_880566094")]
     [DisplayName("Signature Order")]
     [IsoXmlTag("SgntrOrdr")]
+    [IsoSimpleType(IsoSimpleType.Max15PlusSignedNumericText)]
     Max15PlusSignedNumericText? SignatureOrder { get; }
 
     /// <summary>

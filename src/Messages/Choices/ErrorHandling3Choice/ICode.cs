@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ErrorHandling3Choice;
 /// Specification of the error, in coded form.
 /// </summary>
 [IsoId("_RN4hYXhdEeidzqjNEfehPg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IErrorHandling3Choice, IIsoChoiceVariant
 {
     /// <summary>

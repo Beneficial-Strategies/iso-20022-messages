@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Totals of the reconciliation.
 /// </summary>
 [IsoId("_BQQtQXu-EeSLmfFG0DG7zQ")]
+[IsoDisplayName(@"Transaction Totals")]
 public interface ITransactionTotals4 : IIsoComponent
 {
     /// <summary>

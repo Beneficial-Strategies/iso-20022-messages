@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification18Choice;
 /// </summary>
 [IsoId("_Jg42I_pTEeCLrd06h-p51g")]
 [IsoXmlTag("AcctsListAndBalDtls")]
+[IsoDisplayName(@"Accounts List And Balance Details")]
 public interface IAccountsListAndBalanceDetails : IAccountIdentification18Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IAccountsListAndBalanceDetails : IAccountIdentification18Choice
     [IsoId("_Jg42M_pTEeCLrd06h-p51g")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SafekeepingAccount { get; }
 
     /// <summary>

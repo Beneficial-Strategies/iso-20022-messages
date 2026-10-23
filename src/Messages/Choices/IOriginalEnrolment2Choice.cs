@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the enrolment details which is referenced.
 /// </summary>
 [IsoId("_UX7ZV-H7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Original Enrolment 2 Choice")]
 public interface IOriginalEnrolment2Choice : IIsoChoice { }

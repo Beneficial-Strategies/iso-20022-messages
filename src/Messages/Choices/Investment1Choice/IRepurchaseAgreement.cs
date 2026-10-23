@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice;
 /// </summary>
 [IsoId("_AIsK8LJXEeaYqc4G3TTwhA")]
 [IsoXmlTag("RpAgrmt")]
+[IsoDisplayName(@"Repurchase Agreement")]
 public interface IRepurchaseAgreement : IInvestment1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IRepurchaseAgreement : IInvestment1Choice, IIsoChoiceVariant
     [IsoId("_oxf3gbJVEeaYqc4G3TTwhA")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -42,6 +44,7 @@ public interface IRepurchaseAgreement : IInvestment1Choice, IIsoChoiceVariant
     [IsoId("_oxf3hbJVEeaYqc4G3TTwhA")]
     [DisplayName("Counterparty")]
     [IsoXmlTag("CtrPty")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Counterparty { get; }
 
     /// <summary>
@@ -58,5 +61,6 @@ public interface IRepurchaseAgreement : IInvestment1Choice, IIsoChoiceVariant
     [IsoId("_63_i0LJVEeaYqc4G3TTwhA")]
     [DisplayName("Triparty Agent Identification")]
     [IsoXmlTag("TrptyAgtId")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? TripartyAgentIdentification { get; }
 }

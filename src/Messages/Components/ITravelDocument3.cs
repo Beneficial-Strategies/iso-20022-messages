@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of travel document used for identification and/or authentication of the customer.
 /// </summary>
 [IsoId("_CkD_QVN7EfC0lMwgjvMClw")]
+[IsoDisplayName(@"Travel Document3")]
 public interface ITravelDocument3 : IIsoComponent
 {
     /// <summary>

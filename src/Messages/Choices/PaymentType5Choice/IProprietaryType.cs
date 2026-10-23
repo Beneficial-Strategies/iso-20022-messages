@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentType5Choice;
 /// Payment type that is not included in a predefined list.
 /// </summary>
 [IsoId("_nQ0J4-kAEemV35DUs8L82Q")]
+[IsoDisplayName(@"Proprietary Type")]
 public interface IProprietaryType : IPaymentType5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietaryType : IPaymentType5Choice, IIsoChoiceVariant
     /// Specifies an alphanumeric string with a maximum length of 4 characters.
     /// </summary>
     [IsoXmlTag("PrtryTp")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText Value { get; }
 }

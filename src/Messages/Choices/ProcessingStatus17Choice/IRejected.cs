@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice;
 /// Trade has been rejected.
 /// </summary>
 [IsoId("_A5JrAdokEeC60axPepSq7g_-2129572820")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

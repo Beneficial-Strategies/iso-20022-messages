@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format between rate and amount.
 /// </summary>
 [IsoId("_UOCrwNp-Ed-ak6NoX_4Aeg_722186259")]
+[IsoDisplayName(@"Rate And Amount Format 5 Choice")]
 public interface IRateAndAmountFormat5Choice : IIsoChoice { }

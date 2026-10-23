@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// expressed as a ISO20022 code.
 /// </summary>
 [IsoId("_AXK_UdokEeC60axPepSq7g_-1712034418")]
+[IsoDisplayName(@"Trade Date 4 Choice")]
 public interface ITradeDate4Choice : IIsoChoice { }

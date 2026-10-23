@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a redemption order.
 /// </summary>
 [IsoId("_VXDiStp-Ed-ak6NoX_4Aeg_781695182")]
+[IsoDisplayName(@"Redemption Execution")]
 public interface IRedemptionExecution4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRedemptionExecution4 : IIsoComponent
     [IsoId("_VXNTQNp-Ed-ak6NoX_4Aeg_781695201")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IRedemptionExecution4 : IIsoComponent
     [IsoId("_VXNTQdp-Ed-ak6NoX_4Aeg_781696941")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DealReference { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IRedemptionExecution4 : IIsoComponent
     [IsoId("_VXNTQtp-Ed-ak6NoX_4Aeg_781697433")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType1> OrderType { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface IRedemptionExecution4 : IIsoComponent
     [IsoId("_VXNTR9p-Ed-ak6NoX_4Aeg_781697001")]
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? HoldingsRedemptionRate { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface IRedemptionExecution4 : IIsoComponent
     [IsoId("_VXXEQdp-Ed-ak6NoX_4Aeg_781697096")]
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PartiallyExecutedIndicator { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface IRedemptionExecution4 : IIsoComponent
     [IsoId("_VXXEQtp-Ed-ak6NoX_4Aeg_781697138")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -129,6 +138,7 @@ public interface IRedemptionExecution4 : IIsoComponent
     [IsoId("_VXXERNp-Ed-ak6NoX_4Aeg_782617572")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms4> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -185,6 +195,7 @@ public interface IRedemptionExecution4 : IIsoComponent
     [IsoId("_VXgOMdp-Ed-ak6NoX_4Aeg_781697450")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>

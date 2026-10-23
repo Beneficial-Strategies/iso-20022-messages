@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// This entity shall store the parties from the first three levels: the system operator, the central securities depositaries, the participants of the central securities depositaries, the national central banks and payment banks.
 /// </summary>
 [IsoId("_-ojlcRirEeiNm9ItaZcR2A")]
+[IsoDisplayName(@"System Party")]
 public interface ISystemParty4 : IIsoComponent
 {
     /// <summary>
@@ -27,6 +28,7 @@ public interface ISystemParty4 : IIsoComponent
     [IsoId("_-7V-kxirEeiNm9ItaZcR2A")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress25> Address { get; }
 
     /// <summary>
@@ -35,6 +37,7 @@ public interface ISystemParty4 : IIsoComponent
     [IsoId("_Q47wEBitEeiNm9ItaZcR2A")]
     [DisplayName("Contact Details")]
     [IsoXmlTag("CtctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContact5> ContactDetails { get; }
 
     /// <summary>
@@ -43,6 +46,7 @@ public interface ISystemParty4 : IIsoComponent
     [IsoId("_-7V-lRirEeiNm9ItaZcR2A")]
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OpeningDate { get; }
 
     /// <summary>
@@ -51,6 +55,7 @@ public interface ISystemParty4 : IIsoComponent
     [IsoId("_-7V-lxirEeiNm9ItaZcR2A")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClosingDate { get; }
 
     /// <summary>
@@ -67,6 +72,7 @@ public interface ISystemParty4 : IIsoComponent
     [IsoId("_-7V-mxirEeiNm9ItaZcR2A")]
     [DisplayName("Technical Address")]
     [IsoXmlTag("TechAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITechnicalIdentification2Choice> TechnicalAddress { get; }
 
     /// <summary>
@@ -75,6 +81,7 @@ public interface ISystemParty4 : IIsoComponent
     [IsoId("_-7V-nRirEeiNm9ItaZcR2A")]
     [DisplayName("Market Specific Attribute")]
     [IsoXmlTag("MktSpcfcAttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMarketSpecificAttribute1> MarketSpecificAttribute { get; }
 
     /// <summary>
@@ -107,5 +114,6 @@ public interface ISystemParty4 : IIsoComponent
     [IsoId("_-7V-oRirEeiNm9ItaZcR2A")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemRestriction1> Restriction { get; }
 }

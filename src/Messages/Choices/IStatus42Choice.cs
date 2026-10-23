@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of format for an order cancellation status report.</summary>
 [IsoId("fe0d7a73-3cb0-457e-963c-4f0e5a6e7986")]
+[IsoDisplayName(@"Status 42 Choice")]
 public interface IStatus42Choice : IIsoChoice { }

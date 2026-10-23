@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosureReason2Choice;
 /// Reason the system is closed/not operating, in a bilateral agreed code.
 /// </summary>
 [IsoId("_72rN8qMgEeCJ6YNENx4h-w_672613014")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IClosureReason2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IClosureReason2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

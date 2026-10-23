@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OtherAsset1Choice;
 /// Other asset type specified as a code.
 /// </summary>
 [IsoId("_L3yDwEyJEeir2sRRVd9XhA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOtherAsset1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action option.
 /// </summary>
 [IsoId("_UDm9Ydp-Ed-ak6NoX_4Aeg_1050930838")]
+[IsoDisplayName(@"Corporate Action Option")]
 public interface ICorporateActionOption5 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICorporateActionOption5 : IIsoComponent
     [IsoId("_UDm9Zdp-Ed-ak6NoX_4Aeg_1050931150")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionChangeTypeFormat2Choice> ChangeType { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ICorporateActionOption5 : IIsoComponent
     [IsoId("_UDm9Ztp-Ed-ak6NoX_4Aeg_714557345")]
     [DisplayName("Eligible For Collateral Indicator")]
     [IsoXmlTag("ElgblForCollInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EligibleForCollateralIndicator { get; }
 
     /// <summary>

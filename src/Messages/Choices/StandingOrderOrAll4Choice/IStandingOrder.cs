@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrAll4Choice;
 /// <summary>
 /// Standing Order.
 /// </summary>
+[IsoDisplayName(@"Standing Order")]
 public interface IStandingOrder : IStandingOrderOrAll4Choice, IIsoChoiceVariant
 {
     /// <summary>

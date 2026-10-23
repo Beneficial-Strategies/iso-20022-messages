@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates how to register a proxy.
 /// </summary>
 [IsoId("_T4vKKdp-Ed-ak6NoX_4Aeg_-1494746003")]
+[IsoDisplayName(@"Proxy Appointment Information")]
 public interface IProxyAppointmentInformation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProxyAppointmentInformation2 : IIsoComponent
     [IsoId("_T4vKKtp-Ed-ak6NoX_4Aeg_-1494745964")]
     [DisplayName("Registration Method")]
     [IsoXmlTag("RegnMtd")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? RegistrationMethod { get; }
 
     /// <summary>
@@ -49,5 +52,8 @@ public interface IProxyAppointmentInformation2 : IIsoComponent
     [IsoId("_T44UENp-Ed-ak6NoX_4Aeg_2026044451")]
     [DisplayName("Authorised Proxy")]
     [IsoXmlTag("AuthrsdPrxy")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProxy3> AuthorisedProxy { get; }
 }

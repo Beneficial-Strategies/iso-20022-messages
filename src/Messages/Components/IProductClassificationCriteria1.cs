@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Criteria regarding product classification.
 /// </summary>
 [IsoId("_hfq2Ux3YEeWNp95x0ENf8w")]
+[IsoDisplayName(@"Product Classification Criteria")]
 public interface IProductClassificationCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IProductClassificationCriteria1 : IIsoComponent
     [IsoId("_hfq2VR3YEeWNp95x0ENf8w")]
     [DisplayName("Classification Financial Instrument")]
     [IsoXmlTag("ClssfctnFinInstrm")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CFIOct2015Identifier> ClassificationFinancialInstrument { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IProductClassificationCriteria1 : IIsoComponent
     [IsoId("_hfq2VB3YEeWNp95x0ENf8w")]
     [DisplayName("Unique Product Identifier")]
     [IsoXmlTag("UnqPdctIdr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max52Text> UniqueProductIdentifier { get; }
 }

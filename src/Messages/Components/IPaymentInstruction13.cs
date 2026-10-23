@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.|.
 /// </summary>
 [IsoId("_Lss7yxbwEeOy-PlRuFSUzQ")]
+[IsoDisplayName(@"Payment Instruction")]
 public interface IPaymentInstruction13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPaymentInstruction13 : IIsoComponent
     [IsoId("_MFP-oxbwEeOy-PlRuFSUzQ")]
     [DisplayName("Requested Execution Date Time")]
     [IsoXmlTag("ReqdExctnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? RequestedExecutionDateTime { get; }
 
     /// <summary>

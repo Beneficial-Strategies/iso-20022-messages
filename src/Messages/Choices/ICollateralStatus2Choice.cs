@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indicates whether the transaction is pending initiation or has been initiated.
 /// </summary>
 [IsoId("_5S5l0MX2EeiSF9q-coWegA")]
+[IsoDisplayName(@"Collateral Status 2 Choice")]
 public interface ICollateralStatus2Choice : IIsoChoice { }

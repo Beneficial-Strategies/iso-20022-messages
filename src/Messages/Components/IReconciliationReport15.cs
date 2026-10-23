@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reconciliation Report15.
 /// </summary>
 [IsoId("_BVEY95BIEe6Ojt1b3tfu9Q")]
+[IsoDisplayName(@"Reconciliation Report15")]
 public interface IReconciliationReport15 : IIsoComponent
 {
     /// <summary>

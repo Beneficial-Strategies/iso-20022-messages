@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus4Choice;
 
 /// <summary>Provides information about the pending status of advice.</summary>
 [IsoId("_DYZ0UKUfEfCnE_wCEfCqTA")]
+[IsoDisplayName(@"Pending Status")]
 public interface IPendingStatus : INotificationAdviceStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

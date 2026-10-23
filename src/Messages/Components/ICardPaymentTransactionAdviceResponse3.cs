@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card payment completion advice response from the acquirer.
 /// </summary>
 [IsoId("_9evdESpyEeKu3rbsflh_TQ")]
+[IsoDisplayName(@"Card Payment Transaction Advice Response")]
 public interface ICardPaymentTransactionAdviceResponse3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICardPaymentTransactionAdviceResponse3 : IIsoComponent
     [IsoId("_MFx-8CpzEeKu3rbsflh_TQ")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>

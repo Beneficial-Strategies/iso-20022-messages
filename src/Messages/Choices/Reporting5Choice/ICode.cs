@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reporting5Choice;
 /// Third party reporting information expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_Ad4rV9okEeC60axPepSq7g_-16696353")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IReporting5Choice, IIsoChoiceVariant
 {
     /// <summary>

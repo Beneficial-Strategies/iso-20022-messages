@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction1Choice;
 /// </summary>
 [IsoId("_P9DXutp-Ed-ak6NoX_4Aeg_-479786889")]
 [IsoXmlTag("IntrBk")]
+[IsoDisplayName(@"Interbank")]
 public interface IInterbank : IUnderlyingTransaction1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IInterbank : IUnderlyingTransaction1Choice, IIsoChoiceVariant
     [IsoId("_P9DXsNp-Ed-ak6NoX_4Aeg_1526635598")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IInterbank : IUnderlyingTransaction1Choice, IIsoChoiceVariant
     [IsoId("_P9DXsdp-Ed-ak6NoX_4Aeg_1527555623")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -42,6 +47,8 @@ public interface IInterbank : IUnderlyingTransaction1Choice, IIsoChoiceVariant
     [IsoId("_P9DXstp-Ed-ak6NoX_4Aeg_1527555653")]
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalTransactionIdentification { get; }
 
     /// <summary>
@@ -58,5 +65,6 @@ public interface IInterbank : IUnderlyingTransaction1Choice, IIsoChoiceVariant
     [IsoId("_P9DXtNp-Ed-ak6NoX_4Aeg_1527555715")]
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate OriginalInterbankSettlementDate { get; }
 }

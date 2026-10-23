@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Customer account information.
 /// </summary>
 [IsoId("_Em5UYa4IEeWL1uap3dNhCQ")]
+[IsoDisplayName(@"Card Account")]
 public interface ICardAccount10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardAccount10 : IIsoComponent
     [IsoId("_EzAdwa4IEeWL1uap3dNhCQ")]
     [DisplayName("Account Sequence Number")]
     [IsoXmlTag("AcctSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? AccountSequenceNumber { get; }
 
     /// <summary>
@@ -42,6 +44,8 @@ public interface ICardAccount10 : IIsoComponent
     [IsoId("_EzAdx64IEeWL1uap3dNhCQ")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AccountName { get; }
 
     /// <summary>
@@ -74,6 +78,8 @@ public interface ICardAccount10 : IIsoComponent
     [IsoId("_EzAdz64IEeWL1uap3dNhCQ")]
     [DisplayName("Credit Reference")]
     [IsoXmlTag("CdtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CreditReference { get; }
 
     /// <summary>
@@ -98,6 +104,7 @@ public interface ICardAccount10 : IIsoComponent
     [IsoId("_VRg3kK4IEeWL1uap3dNhCQ")]
     [DisplayName("Balance Display Flag")]
     [IsoXmlTag("BalDispFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? BalanceDisplayFlag { get; }
 
     /// <summary>
@@ -106,6 +113,7 @@ public interface ICardAccount10 : IIsoComponent
     [IsoId("_ZazBIK4IEeWL1uap3dNhCQ")]
     [DisplayName("Default Account Indicator")]
     [IsoXmlTag("DfltAcctInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DefaultAccountIndicator { get; }
 
     /// <summary>

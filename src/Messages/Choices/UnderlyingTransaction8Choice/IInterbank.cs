@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction8Choice;
 /// <summary>
 /// Interbank.
 /// </summary>
+[IsoDisplayName(@"Interbank")]
 public interface IInterbank : IUnderlyingTransaction8Choice, IIsoChoiceVariant
 {
     /// <summary>

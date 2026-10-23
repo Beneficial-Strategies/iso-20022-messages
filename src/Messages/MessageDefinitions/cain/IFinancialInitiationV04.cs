@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_pYvdoXjYEe6YlIMyoxWMJA")]
 [IsoMessage("cain.003.001.04", "FinInitn", "urn:iso:std:iso:20022:tech:xsd:cain.003.001.04")]
+[IsoDisplayName(@"Financial Initiation V04")]
 public interface IFinancialInitiationV04 : IOuterRecord
 {
     /// <summary>
@@ -116,6 +117,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExchangeRateInformation5> ExchangeRate { get; }
 
     /// <summary>
@@ -130,6 +132,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAmounts4> AdditionalAmount { get; }
 
     /// <summary>
@@ -158,6 +161,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent16> POIComponent { get; }
 
     /// <summary>
@@ -228,6 +232,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerification6> Verification { get; }
 
     /// <summary>
@@ -235,6 +240,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Risk")]
     [IsoXmlTag("Rsk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRiskContext3> Risk { get; }
 
     /// <summary>
@@ -242,6 +248,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialProgrammeQualification2> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -256,6 +263,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Account Balance")]
     [IsoXmlTag("AcctBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountBalance3> AccountBalance { get; }
 
     /// <summary>
@@ -263,6 +271,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalService2> AdditionalService { get; }
 
     /// <summary>
@@ -277,6 +286,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Deposit Details")]
     [IsoXmlTag("DpstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDepositDetails3> DepositDetails { get; }
 
     /// <summary>
@@ -298,6 +308,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -312,6 +323,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Dispute Data")]
     [IsoXmlTag("DsptData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeData4> DisputeData { get; }
 
     /// <summary>
@@ -319,6 +331,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Documentation")]
     [IsoXmlTag("Dcmnttn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeDocumentation1> Documentation { get; }
 
     /// <summary>
@@ -347,6 +360,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -361,6 +375,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -368,6 +383,7 @@ public interface IFinancialInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

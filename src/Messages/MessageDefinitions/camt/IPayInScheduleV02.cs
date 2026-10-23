@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_sYMvWWtdEeCY4-KZ9JEyUQ_-571581596")]
 [IsoMessage("camt.062.001.02", "PayInSchdl", "urn:iso:std:iso:20022:tech:xsd:camt.062.001.02")]
+[IsoDisplayName(@"Pay In Schedule V02")]
 public interface IPayInScheduleV02 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +33,7 @@ public interface IPayInScheduleV02 : IOuterRecord
     /// </summary>
     [DisplayName("Pay In Schedule Balance")]
     [IsoXmlTag("PayInSchdlBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceStatus2> PayInScheduleBalance { get; }
 
     /// <summary>
@@ -39,6 +41,7 @@ public interface IPayInScheduleV02 : IOuterRecord
     /// </summary>
     [DisplayName("Pay In Schedule Item")]
     [IsoXmlTag("PayInSchdlItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPayInScheduleItems> PayInScheduleItem { get; }
 
     /// <summary>

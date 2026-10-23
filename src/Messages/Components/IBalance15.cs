@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card account balance.
 /// </summary>
 [IsoId("_Fwe7QEUSEeea-M6VZkEPUw")]
+[IsoDisplayName(@"Balance")]
 public interface IBalance15 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IBalance15 : IIsoComponent
     [IsoId("_zHWngEUSEeea-M6VZkEPUw")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IBalance15 : IIsoComponent
     [IsoId("_JUXcQEUTEeea-M6VZkEPUw")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? Sign { get; }
 
     /// <summary>
@@ -59,6 +63,7 @@ public interface IBalance15 : IIsoComponent
     [IsoId("_hsI4YEUTEeea-M6VZkEPUw")]
     [DisplayName("Cardholder Currency Indicator")]
     [IsoXmlTag("CrdhldrCcyInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardholderCurrencyIndicator { get; }
 
     /// <summary>
@@ -67,5 +72,6 @@ public interface IBalance15 : IIsoComponent
     [IsoId("_n0y4sEUTEeea-M6VZkEPUw")]
     [DisplayName("Balance Date")]
     [IsoXmlTag("BalDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BalanceDate { get; }
 }

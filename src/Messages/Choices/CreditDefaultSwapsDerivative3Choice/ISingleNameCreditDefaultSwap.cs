@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
 /// </summary>
 [IsoId("_xfbL0X5eEea2k7EBUopqxw")]
 [IsoXmlTag("SnglNmCdtDfltSwp")]
+[IsoDisplayName(@"Single Name Credit Default Swap")]
 public interface ISingleNameCreditDefaultSwap
     : ICreditDefaultSwapsDerivative3Choice,
         IIsoChoiceVariant
@@ -20,6 +21,7 @@ public interface ISingleNameCreditDefaultSwap
     [IsoId("_NvBOEX5fEea2k7EBUopqxw")]
     [DisplayName("Sovereign Issuer")]
     [IsoXmlTag("SvrgnIssr")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator SovereignIssuer { get; }
 
     /// <summary>

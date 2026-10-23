@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details on the margin report per clearing member, and optionally either per financial instrument or per non-clearing member.
 /// </summary>
 [IsoId("_UksRONp-Ed-ak6NoX_4Aeg_-985439899")]
+[IsoDisplayName(@"Margin Report1")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IMarginReport1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface IMarginReport1 : IIsoComponent
     [IsoId("_Uk2CMdp-Ed-ak6NoX_4Aeg_-1346583456")]
     [DisplayName("Non Clearing Member")]
     [IsoXmlTag("NonClrMmb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentificationAndAccount31> NonClearingMember { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IMarginReport1 : IIsoComponent
     [IsoId("_Uk2CMtp-Ed-ak6NoX_4Aeg_394991412")]
     [DisplayName("Margin Product")]
     [IsoXmlTag("MrgnPdct")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMarginProductType1Choice> MarginProduct { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface IMarginReport1 : IIsoComponent
     [IsoId("_Uk2CM9p-Ed-ak6NoX_4Aeg_-1376804738")]
     [DisplayName("Margin Details")]
     [IsoXmlTag("MrgnDtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMargin2> MarginDetails { get; }
 }

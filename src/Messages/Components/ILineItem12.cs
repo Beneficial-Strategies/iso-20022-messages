@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Commercial details of a trade transaction between a buyer and a seller.
 /// </summary>
 [IsoId("_SW4OUTAWEeOKib24wnHaFg")]
+[IsoDisplayName(@"Line Item")]
 public interface ILineItem12 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ILineItem12 : IIsoComponent
     [IsoId("_SxvlZTAWEeOKib24wnHaFg")]
     [DisplayName("Final Submission")]
     [IsoXmlTag("FnlSubmissn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator FinalSubmission { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ILineItem12 : IIsoComponent
     [IsoId("_SxvlZzAWEeOKib24wnHaFg")]
     [DisplayName("Commercial Line Items")]
     [IsoXmlTag("ComrclLineItms")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItemDetails11> CommercialLineItems { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ILineItem12 : IIsoComponent
     [IsoId("_SxvlbTAWEeOKib24wnHaFg")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment6> Adjustment { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ILineItem12 : IIsoComponent
     [IsoId("_SxvlcTAWEeOKib24wnHaFg")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax22> Tax { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface ILineItem12 : IIsoComponent
     [IsoId("_SxvldTAWEeOKib24wnHaFg")]
     [DisplayName("Buyer Defined Information")]
     [IsoXmlTag("BuyrDfndInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUserDefinedInformation1> BuyerDefinedInformation { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface ILineItem12 : IIsoComponent
     [IsoId("_SxvldzAWEeOKib24wnHaFg")]
     [DisplayName("Seller Defined Information")]
     [IsoXmlTag("SellrDfndInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUserDefinedInformation1> SellerDefinedInformation { get; }
 
     /// <summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "SctiesFincgRptgTxQry",
     "urn:iso:std:iso:20022:tech:xsd:auth.094.001.01"
 )]
+[Description(@"The SecuritiesFinancingReportingTransactionQuery message is sent by the authority to the trade repositories, to query data based on the search criteria for the  transactions as defined by the system user.")]
+[IsoDisplayName(@"Securities Financing Reporting Transaction Query V")]
 public interface ISecuritiesFinancingReportingTransactionQueryV01 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface ISecuritiesFinancingReportingTransactionQueryV01 : IOuterRecord
     [IsoId("_2zvMGwuAEeqVvtu9Ny8FDA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

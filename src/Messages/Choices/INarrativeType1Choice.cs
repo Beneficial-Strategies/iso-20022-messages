@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the type of narrative.
 /// </summary>
 [IsoId("_93HE0nltEeG7BsjMvd1mEw_-1199542784")]
+[IsoDisplayName(@"Narrative Type 1 Choice")]
 public interface INarrativeType1Choice : IIsoChoice { }

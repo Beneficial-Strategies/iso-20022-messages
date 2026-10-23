@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between formats for the balance information.
 /// </summary>
 [IsoId("_5W52FZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Sub Balance Quantity 7 Choice")]
 public interface ISubBalanceQuantity7Choice : IIsoChoice { }

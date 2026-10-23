@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RegulatoryReportingType1Choice;
 
 /// <summary>Specifies the proprietary value.</summary>
 [IsoId("_75HhwHeLEfCdoODv2ypKfw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IRegulatoryReportingType1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

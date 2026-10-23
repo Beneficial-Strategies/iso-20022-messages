@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration parameters of the TMS protocol between a POI and a terminal manager.
 /// </summary>
 [IsoId("_jGE_IXIQEe2OqYulmHWukQ")]
+[IsoDisplayName(@"TMS Protocol Parameters")]
 public interface ITMSProtocolParameters7 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ITMSProtocolParameters7 : IIsoComponent
     [IsoId("_jM3jpXIQEe2OqYulmHWukQ")]
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? ProtocolVersion { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ITMSProtocolParameters7 : IIsoComponent
     [IsoId("_jM3jp3IQEe2OqYulmHWukQ")]
     [DisplayName("Maintenance Service")]
     [IsoXmlTag("MntncSvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<DataSetCategory10Code> MaintenanceService { get; }
 
     /// <summary>
@@ -49,6 +53,8 @@ public interface ITMSProtocolParameters7 : IIsoComponent
     [IsoId("_jM3jqXIQEe2OqYulmHWukQ")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Version { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ITMSProtocolParameters7 : IIsoComponent
     [IsoId("_jM3jq3IQEe2OqYulmHWukQ")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ApplicationIdentification { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface ITMSProtocolParameters7 : IIsoComponent
     [IsoId("_jM3jrXIQEe2OqYulmHWukQ")]
     [DisplayName("Host Identification")]
     [IsoXmlTag("HstId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text HostIdentification { get; }
 
     /// <summary>
@@ -73,6 +82,8 @@ public interface ITMSProtocolParameters7 : IIsoComponent
     [IsoId("_jM3jr3IQEe2OqYulmHWukQ")]
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? POIIdentification { get; }
 
     /// <summary>
@@ -81,6 +92,8 @@ public interface ITMSProtocolParameters7 : IIsoComponent
     [IsoId("_jM3jsXIQEe2OqYulmHWukQ")]
     [DisplayName("Initiating Party Identification")]
     [IsoXmlTag("InitgPtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InitiatingPartyIdentification { get; }
 
     /// <summary>
@@ -89,6 +102,8 @@ public interface ITMSProtocolParameters7 : IIsoComponent
     [IsoId("_jM5Y0XIQEe2OqYulmHWukQ")]
     [DisplayName("Recipient Party Identification")]
     [IsoXmlTag("RcptPtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RecipientPartyIdentification { get; }
 
     /// <summary>
@@ -97,6 +112,7 @@ public interface ITMSProtocolParameters7 : IIsoComponent
     [IsoId("_jM5Y03IQEe2OqYulmHWukQ")]
     [DisplayName("File Transfer")]
     [IsoXmlTag("FileTrf")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? FileTransfer { get; }
 
     /// <summary>
@@ -105,6 +121,7 @@ public interface ITMSProtocolParameters7 : IIsoComponent
     [IsoId("_jM5Y1XIQEe2OqYulmHWukQ")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageItemCondition2> MessageItem { get; }
 
     /// <summary>
@@ -113,5 +130,6 @@ public interface ITMSProtocolParameters7 : IIsoComponent
     [IsoId("_jM5Y13IQEe2OqYulmHWukQ")]
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max1025Text> ExternallyTypeSupported { get; }
 }

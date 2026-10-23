@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Intra Balance Query Criteria12.
 /// </summary>
 [IsoId("_70w5pTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Intra Balance Query Criteria12")]
 public interface IIntraBalanceQueryCriteria12 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IIntraBalanceQueryCriteria12 : IIsoComponent
     /// </summary>
     [DisplayName("Modification Request Identification")]
     [IsoXmlTag("ModReqId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> ModificationRequestIdentification { get; }
 
     /// <summary>
@@ -23,6 +25,7 @@ public interface IIntraBalanceQueryCriteria12 : IIsoComponent
     /// </summary>
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationProcessingStatus9Choice> ProcessingStatus { get; }
 
     /// <summary>
@@ -30,6 +33,7 @@ public interface IIntraBalanceQueryCriteria12 : IIsoComponent
     /// </summary>
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentificationSearchCriteria2Choice> CashAccount { get; }
 
     /// <summary>
@@ -37,6 +41,7 @@ public interface IIntraBalanceQueryCriteria12 : IIsoComponent
     /// </summary>
     [DisplayName("Cash Account Owner")]
     [IsoXmlTag("CshAcctOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> CashAccountOwner { get; }
 
     /// <summary>
@@ -51,6 +56,7 @@ public interface IIntraBalanceQueryCriteria12 : IIsoComponent
     /// </summary>
     [DisplayName("Message Originator")]
     [IsoXmlTag("MsgOrgtr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> MessageOriginator { get; }
 
     /// <summary>

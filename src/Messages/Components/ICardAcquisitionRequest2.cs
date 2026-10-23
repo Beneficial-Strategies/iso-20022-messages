@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to request to card data acquisition.
 /// </summary>
 [IsoId("_mmNwMYYEEemxIqbaFEE8-w")]
+[IsoDisplayName(@"Card Acquisition Request")]
 public interface ICardAcquisitionRequest2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardAcquisitionRequest2 : IIsoComponent
     [IsoId("_mxLDAYYEEemxIqbaFEE8-w")]
     [DisplayName("Allowed Payment Brand")]
     [IsoXmlTag("AllwdPmtBrnd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> AllowedPaymentBrand { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICardAcquisitionRequest2 : IIsoComponent
     [IsoId("_mxLDA4YEEemxIqbaFEE8-w")]
     [DisplayName("Allowed Loyalty Brand")]
     [IsoXmlTag("AllwdLltyBrnd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> AllowedLoyaltyBrand { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICardAcquisitionRequest2 : IIsoComponent
     [IsoId("_mxLDBYYEEemxIqbaFEE8-w")]
     [DisplayName("Force Customer Selection Flag")]
     [IsoXmlTag("ForceCstmrSelctnFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ForceCustomerSelectionFlag { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ICardAcquisitionRequest2 : IIsoComponent
     [IsoId("_mxLDC4YEEemxIqbaFEE8-w")]
     [DisplayName("Cash Back Flag")]
     [IsoXmlTag("CshBckFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CashBackFlag { get; }
 
     /// <summary>
@@ -65,6 +70,8 @@ public interface ICardAcquisitionRequest2 : IIsoComponent
     [IsoId("_kR1Sw4YEEemxIqbaFEE8-w")]
     [DisplayName("Sale To POI Data")]
     [IsoXmlTag("SaleToPOIData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SaleToPOIData { get; }
 
     /// <summary>
@@ -73,6 +80,8 @@ public interface ICardAcquisitionRequest2 : IIsoComponent
     [IsoId("_kR1SxIYEEemxIqbaFEE8-w")]
     [DisplayName("Sale To Acquirer Data")]
     [IsoXmlTag("SaleToAcqrrData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SaleToAcquirerData { get; }
 
     /// <summary>
@@ -81,5 +90,7 @@ public interface ICardAcquisitionRequest2 : IIsoComponent
     [IsoId("_kR1SxYYEEemxIqbaFEE8-w")]
     [DisplayName("Sale To Issuer Data")]
     [IsoXmlTag("SaleToIssrData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SaleToIssuerData { get; }
 }

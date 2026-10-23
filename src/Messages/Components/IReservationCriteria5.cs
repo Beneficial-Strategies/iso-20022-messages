@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria to extract the reservation information and the expected reservation report. A name may be given to the new query.
 /// </summary>
 [IsoId("_gt_xFdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Reservation Criteria")]
 public interface IReservationCriteria5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReservationCriteria5 : IIsoComponent
     [IsoId("_gv7Ds9cZEeqRFcf2R4bPBw")]
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NewQueryName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IReservationCriteria5 : IIsoComponent
     [IsoId("_gv7DtdcZEeqRFcf2R4bPBw")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReservationSearchCriteria4> SearchCriteria { get; }
 
     /// <summary>

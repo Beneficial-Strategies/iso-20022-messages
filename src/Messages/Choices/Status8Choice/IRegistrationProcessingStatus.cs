@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status8Choice;
 /// Provides the status of the registration processing.
 /// </summary>
 [IsoId("_w2B72kABEeCaq78Ig8ATcA")]
+[IsoDisplayName(@"Registration Processing Status")]
 public interface IRegistrationProcessingStatus : IStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

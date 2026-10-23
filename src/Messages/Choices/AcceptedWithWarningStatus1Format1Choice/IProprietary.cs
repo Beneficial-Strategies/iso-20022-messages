@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedWithWarningStatus1Format
 
 /// <summary>Proprietary code to express the processing status of the notification advice.</summary>
 [IsoId("__1hY46UdEfCnE_wCEfCqTA")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IAcceptedWithWarningStatus1Format1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

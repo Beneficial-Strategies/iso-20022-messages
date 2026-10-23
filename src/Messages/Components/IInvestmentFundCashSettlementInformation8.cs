@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement instructions to be used to transfer cash from the debtor to the creditor.
 /// </summary>
 [IsoId("_u6DycRRgEeOKWo1NF21OVw")]
+[IsoDisplayName(@"Investment Fund Cash Settlement Information")]
 public interface IInvestmentFundCashSettlementInformation8 : IIsoComponent
 {
     /// <summary>

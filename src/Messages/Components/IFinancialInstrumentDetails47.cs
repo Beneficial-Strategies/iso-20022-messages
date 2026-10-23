@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial Instrument Details47.
 /// </summary>
 [IsoId("_m75jsYybEe-PVZsedaAGaA")]
+[IsoDisplayName(@"Financial Instrument Details47")]
 public interface IFinancialInstrumentDetails47 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IFinancialInstrumentDetails47 : IIsoComponent
     /// </summary>
     [DisplayName("Sub Balance")]
     [IsoXmlTag("SubBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraPositionDetails66> SubBalance { get; }
 }

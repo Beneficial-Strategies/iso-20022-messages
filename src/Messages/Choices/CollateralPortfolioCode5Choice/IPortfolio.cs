@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode5Choice;
 /// NoPortfolio is reported if the collateralisation was performed on a transaction level basis, or if there is no collateral agreement or if no collateral is posted or received.
 /// </summary>
 [IsoId("_YxDO0TIDEe2fXedS_ucFOA")]
+[IsoDisplayName(@"Portfolio")]
 public interface IPortfolio : ICollateralPortfolioCode5Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

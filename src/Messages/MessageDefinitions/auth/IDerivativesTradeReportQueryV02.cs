@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "DerivsTradRptQry",
     "urn:iso:std:iso:20022:tech:xsd:auth.029.001.02"
 )]
+[Description(@"The DerivativesTradeReportQuery message is sent by the supervisory authority system to the trade repositories, to query data based on the search criteria for the trade transaction as defined by the system user.")]
+[IsoDisplayName(@"Derivatives Trade Report Query V")]
 public interface IDerivativesTradeReportQueryV02 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface IDerivativesTradeReportQueryV02 : IOuterRecord
     [IsoId("_F_J2891bEeqxpKDfBZC1vg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

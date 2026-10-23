@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements to identify a proprietary reference.
 /// </summary>
 [IsoId("_RUrR8dp-Ed-ak6NoX_4Aeg_-121377116")]
+[IsoDisplayName(@"Proprietary Reference")]
 public interface IProprietaryReference1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProprietaryReference1 : IIsoComponent
     [IsoId("_RUrR8tp-Ed-ak6NoX_4Aeg_139056847")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IProprietaryReference1 : IIsoComponent
     [IsoId("_RUrR89p-Ed-ak6NoX_4Aeg_164916968")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Reference { get; }
 }

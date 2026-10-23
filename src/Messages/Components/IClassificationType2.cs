@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice of format for the classification.
 /// </summary>
 [IsoId("_58Yc4eLVEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Classification Type")]
 public interface IClassificationType2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IClassificationType2 : IIsoComponent
     [IsoId("_6LaXYeLVEeWFtOV72FbX9w")]
     [DisplayName("Classification Financial Instrument")]
     [IsoXmlTag("ClssfctnFinInstrm")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier? ClassificationFinancialInstrument { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IClassificationType2 : IIsoComponent
     [IsoId("_6LaXZeLVEeWFtOV72FbX9w")]
     [DisplayName("Alternate Classification")]
     [IsoXmlTag("AltrnClssfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification36> AlternateClassification { get; }
 }

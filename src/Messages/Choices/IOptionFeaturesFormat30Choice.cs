@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Option Features Format30Choice.
 /// </summary>
 [IsoId("_Ur46y3SdEe6VWZz2tTgENw")]
+[IsoDisplayName(@"Option Features Format30Choice")]
 public interface IOptionFeaturesFormat30Choice : IIsoChoice { }

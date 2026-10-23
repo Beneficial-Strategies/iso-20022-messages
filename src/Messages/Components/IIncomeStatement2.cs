@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Income Statement2.
 /// </summary>
 [IsoId("_ATtogUQUEe-2k_vYsOPbHA")]
+[IsoDisplayName(@"Income Statement2")]
 public interface IIncomeStatement2 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IIncomeStatement2 : IIsoComponent
     /// </summary>
     [DisplayName("Clearing Member Fee")]
     [IsoXmlTag("ClrMmbFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IClearingMemberFee1> ClearingMemberFee { get; }
 
     /// <summary>

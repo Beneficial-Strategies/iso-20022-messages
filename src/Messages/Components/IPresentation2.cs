@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information for the presentation of documents.
 /// </summary>
 [IsoId("_97bkJnltEeG7BsjMvd1mEw_1224258578")]
+[IsoDisplayName(@"Presentation")]
 public interface IPresentation2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPresentation2 : IIsoComponent
     [IsoId("_97kuEXltEeG7BsjMvd1mEw_-177176006")]
     [DisplayName("Beneficiary Presentation Date")]
     [IsoXmlTag("BnfcryPresntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BeneficiaryPresentationDate { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between formats for the specification of the number of units, amount of money or percentage.
 /// </summary>
 [IsoId("c3608a25-7ef0-409d-8054-afb7fc1acf21")]
+[IsoDisplayName(@"Financial Instrument Quantity 48 Choice")]
 public interface IFinancialInstrumentQuantity48Choice : IIsoChoice { }

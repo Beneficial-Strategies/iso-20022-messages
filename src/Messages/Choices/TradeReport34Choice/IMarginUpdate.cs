@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport34Choice;
 /// <summary>
 /// Margin Update.
 /// </summary>
+[IsoDisplayName(@"Margin Update")]
 public interface IMarginUpdate : ITradeReport34Choice, IIsoChoiceVariant
 {
     /// <summary>

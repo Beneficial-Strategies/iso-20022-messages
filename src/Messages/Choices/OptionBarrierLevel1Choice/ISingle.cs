@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionBarrierLevel1Choice;
 /// <summary>
 /// Single.
 /// </summary>
+[IsoDisplayName(@"Single")]
 public interface ISingle : IOptionBarrierLevel1Choice, IIsoChoiceVariant
 {
     /// <summary>

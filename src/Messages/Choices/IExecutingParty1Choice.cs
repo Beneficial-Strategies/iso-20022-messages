@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification of the executing party.
 /// </summary>
 [IsoId("_FVhI0ViJEea-d4CsgzjlAw")]
+[IsoDisplayName(@"Executing Party 1 Choice")]
 public interface IExecutingParty1Choice : IIsoChoice { }

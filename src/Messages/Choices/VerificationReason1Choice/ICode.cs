@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationReason1Choice;
 /// Reason why the verified identification information is incorrect, as published in an external reason code list.
 /// </summary>
 [IsoId("_Qo3U1dp-Ed-ak6NoX_4Aeg_-1342337588")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IVerificationReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

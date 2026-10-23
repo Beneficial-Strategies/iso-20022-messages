@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_xDAOUVtcEeSwKe7KuKvXhg")]
 [IsoMessage("seev.004.001.05", "MtgInstr", "urn:iso:std:iso:20022:tech:xsd:seev.004.001.05")]
+[Description(@"Scope|A party holding the right to vote sends the MeetingInstruction message to an intermediary, the issuer or its agent to request the receiving party to act upon one or several instructions.|Usage|The MeetingInstruction message is used to register for a shareholders meeting, request blocking or registration of securities. It is used to assign a proxy, to specify the names of meeting attendees and to relay vote instructions per resolution electronically.|The MeetingInstruction message may only be sent for one security, though several safekeeping places may be specified.|Once the message is sent, it cannot be modified. It must be cancelled by a MeetingInstructionCancellationRequest. Only after receipt of a confirmed cancelled status via the MeetingInstructionStatus message, a new MeetingInstruction message can be sent.|This message definition is intended for use with the Business Application Header.")]
+[IsoDisplayName(@"Meeting Instruction V")]
 public interface IMeetingInstructionV05 : IOuterRecord
 {
     /// <summary>
@@ -42,6 +44,7 @@ public interface IMeetingInstructionV05 : IOuterRecord
     [IsoId("_xDAOW1tcEeSwKe7KuKvXhg")]
     [DisplayName("Instruction")]
     [IsoXmlTag("Instr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstruction3> Instruction { get; }
 
     /// <summary>
@@ -50,5 +53,6 @@ public interface IMeetingInstructionV05 : IOuterRecord
     [IsoId("_vE2o0VtoEeSwKe7KuKvXhg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

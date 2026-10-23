@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Purpose2Choice;
 /// Underlying reason for the payment transaction, as published in an external purpose code list.
 /// </summary>
 [IsoId("_P6qyH9p-Ed-ak6NoX_4Aeg_-1283223370")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPurpose2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies totals related to the invoice.
 /// </summary>
 [IsoId("_v9vRcUw0EfCpsI1b9uv5FQ")]
+[IsoDisplayName(@"Invoice Totals7")]
 public interface IInvoiceTotals7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInvoiceTotals7 : IIsoComponent
     [IsoId("_xItPwUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingTaxRecord2> Tax { get; }
 
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus48Cho
 /// </summary>
 [IsoId("_pf9iZTi7Eeydid5dcNPKvg")]
 [IsoXmlTag("Cvrd")]
+[IsoDisplayName(@"Covered")]
 public interface ICovered : IInstructionProcessingStatus48Choice, IIsoChoiceVariant
 {
     /// <summary>

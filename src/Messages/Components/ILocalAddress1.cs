@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Local Address1.
 /// </summary>
 [IsoId("_xYnCUZkFEe6Qpd-x8YgzaA")]
+[IsoDisplayName(@"Local Address1")]
 public interface ILocalAddress1 : IIsoComponent
 {
     /// <summary>

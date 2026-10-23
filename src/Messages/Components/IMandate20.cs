@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Mandate20.
 /// </summary>
 [IsoId("_yPqnozEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Mandate20")]
 public interface IMandate20 : IIsoComponent
 {
     /// <summary>
@@ -163,5 +164,6 @@ public interface IMandate20 : IIsoComponent
     /// </summary>
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferredMandateDocument2> ReferredDocument { get; }
 }

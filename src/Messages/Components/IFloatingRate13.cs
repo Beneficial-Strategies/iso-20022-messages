@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Floating rate related information.
 /// </summary>
 [IsoId("_WIFf0SJdEe2zWP9pqvmqdw")]
+[IsoDisplayName(@"Floating Rate")]
 public interface IFloatingRate13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFloatingRate13 : IIsoComponent
     [IsoId("_WJf1EyJdEe2zWP9pqvmqdw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? Identification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IFloatingRate13 : IIsoComponent
     [IsoId("_WJf1FSJdEe2zWP9pqvmqdw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>

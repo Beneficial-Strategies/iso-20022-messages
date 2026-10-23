@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FrequencyCodeAndDSSCodeChoice;
 /// Frequency expressed as a code.
 /// </summary>
 [IsoId("_Uuhiodp-Ed-ak6NoX_4Aeg_501343039")]
+[IsoDisplayName(@"Frequency As Code")]
 public interface IFrequencyAsCode : IFrequencyCodeAndDSSCodeChoice, IIsoChoiceVariant
 {
     /// <summary>

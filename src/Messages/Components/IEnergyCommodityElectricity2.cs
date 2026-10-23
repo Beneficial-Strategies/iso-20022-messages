@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an energy derivative of type electricity.
 /// </summary>
 [IsoId("_T2uWkU8SEe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Energy Commodity Electricity")]
 public interface IEnergyCommodityElectricity2 : IIsoComponent
 {
     /// <summary>

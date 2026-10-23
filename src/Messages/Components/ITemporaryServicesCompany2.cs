@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains company related information for Temporary Services.
 /// </summary>
 [IsoId("_eYF2ccWnEeuhguwJmlgagQ")]
+[IsoDisplayName(@"Temporary Services Company")]
 public interface ITemporaryServicesCompany2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITemporaryServicesCompany2 : IIsoComponent
     [IsoId("_ecf1UcWnEeuhguwJmlgagQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITemporaryServicesCompany2 : IIsoComponent
     [IsoId("_ecf1U8WnEeuhguwJmlgagQ")]
     [DisplayName("Department")]
     [IsoXmlTag("Dept")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Department { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface ITemporaryServicesCompany2 : IIsoComponent
     [IsoId("_ecf1V8WnEeuhguwJmlgagQ")]
     [DisplayName("Supervisor")]
     [IsoXmlTag("Sprvsr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Supervisor { get; }
 }

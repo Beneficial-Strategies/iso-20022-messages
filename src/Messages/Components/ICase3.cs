@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details to identify an investigation case.
 /// </summary>
 [IsoId("_tijOcFkyEeGeoaLUQk__nA_-1838378407")]
+[IsoDisplayName(@"Case")]
 public interface ICase3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICase3 : IIsoComponent
     [IsoId("_tijOcVkyEeGeoaLUQk__nA_-299412976")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ICase3 : IIsoComponent
     [IsoId("_tijOc1kyEeGeoaLUQk__nA_1501386472")]
     [DisplayName("Reopen Case Indication")]
     [IsoXmlTag("ReopCaseIndctn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ReopenCaseIndication { get; }
 }

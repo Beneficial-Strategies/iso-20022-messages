@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of a bank account
 /// </summary>
 [IsoId("_Ma6g8csSEeuNe7RtB4qFHw")]
+[IsoDisplayName(@"Account Details")]
 public interface IAccountDetails3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountDetails3 : IIsoComponent
     [IsoId("_MfKu0csSEeuNe7RtB4qFHw")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AccountName { get; }
 
     /// <summary>
@@ -35,5 +38,7 @@ public interface IAccountDetails3 : IIsoComponent
     [IsoId("_MfKu1csSEeuNe7RtB4qFHw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AccountIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit Utilisation Journal Search Criteria2.
 /// </summary>
 [IsoId("_iz-VUWdSEemVjsmmE4lqKA")]
+[IsoDisplayName(@"Limit Utilisation Journal Search Criteria2")]
 public interface ILimitUtilisationJournalSearchCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface ILimitUtilisationJournalSearchCriteria2 : IIsoComponent
     /// </summary>
     [DisplayName("Limit Type")]
     [IsoXmlTag("LmtTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LimitType4Code> LimitType { get; }
 
     /// <summary>

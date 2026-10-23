@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Case Assignment6.
 /// </summary>
 [IsoId("_voTj0DEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Case Assignment6")]
 public interface ICaseAssignment6 : IIsoComponent
 {
     /// <summary>

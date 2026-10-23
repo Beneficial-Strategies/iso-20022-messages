@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the old and new values for a date.
 /// </summary>
 [IsoId("_Zi5Hk2jSEeiRg5NzP0jkQg")]
+[IsoDisplayName(@"Update Log Date")]
 public interface IUpdateLogDate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IUpdateLogDate1 : IIsoComponent
     [IsoId("_Zi5HlGjSEeiRg5NzP0jkQg")]
     [DisplayName("Old")]
     [IsoXmlTag("Od")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Old { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IUpdateLogDate1 : IIsoComponent
     [IsoId("_Zi5HlWjSEeiRg5NzP0jkQg")]
     [DisplayName("New")]
     [IsoXmlTag("New")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate New { get; }
 }

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the type of product and the assets to be transferred.
 /// </summary>
 [IsoId("_gYsfwS8EEeO59oUFO5eLvw")]
+[IsoDisplayName(@"ISA Transfer")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IISATransfer17 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IISATransfer17 : IIsoComponent
     [IsoId("_DjufkS8EEeO59oUFO5eLvw")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -25,5 +29,6 @@ public interface IISATransfer17 : IIsoComponent
     [IsoId("_sFyZAS8EEeO59oUFO5eLvw")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IISATransfer16> ProductTransfer { get; }
 }

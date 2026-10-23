@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Settlement Parties38Choice.
 /// </summary>
 [IsoId("_3wzzIZIOEe-HRNGM304Vlw")]
+[IsoDisplayName(@"Settlement Parties38Choice")]
 public interface ISettlementParties38Choice : IIsoChoice { }

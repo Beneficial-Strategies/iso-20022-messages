@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrCxlAdvcRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.008.001.14"
 )]
+[IsoDisplayName(@"Acceptor Cancellation Advice Response V14")]
 public interface IAcceptorCancellationAdviceResponseV14 : IOuterRecord
 {
     /// <summary>

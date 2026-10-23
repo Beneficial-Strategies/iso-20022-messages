@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification3Choice;
 /// International Bank Account Number (IBAN) - identifier used internationally by financial institutions to uniquely identify the account of a customer. Further specifications of the format and content of the IBAN can be found in the standard ISO 13616 &quot;Banking and related financial services - International Bank Account Number (IBAN)&quot; version 1997-10-01, or later revisions.
 /// </summary>
 [IsoId("_PdnCptp-Ed-ak6NoX_4Aeg_638115990")]
+[IsoDisplayName(@"IBAN")]
 public interface IIBAN : IAccountIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIBAN : IAccountIdentification3Choice, IIsoChoiceVariant
     /// An identifier used internationally by financial institutions to uniquely identify the account of a customer at a financial institution, as described in the latest edition of the international standard ISO 13616. &quot;Banking and related financial services - International Bank Account Number (IBAN)&quot;.
     /// </summary>
     [IsoXmlTag("IBAN")]
+    [IsoSimpleType(IsoSimpleType.IBANIdentifier)]
     IBANIdentifier Value { get; }
 }

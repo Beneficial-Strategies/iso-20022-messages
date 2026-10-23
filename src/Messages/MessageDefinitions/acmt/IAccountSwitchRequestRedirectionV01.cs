@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctSwtchReqRdrctn",
     "urn:iso:std:iso:20022:tech:xsd:acmt.030.001.01"
 )]
+[Description(@"The AccountSwitchRequestRedirection message is sent by the new account servicer to a central account switch servicer to set up the redirection of payment and collection transactions that are processed after completion of the account switch.  It is routed to the previous account servicer to signal that it should schedule the cancellation of all payment arrangements on the old account. This message may also be used by the new bank to amend the new account details, if the details previously provided were incorrect.")]
+[IsoDisplayName(@"Account Switch Request Redirection V")]
 public interface IAccountSwitchRequestRedirectionV01 : IOuterRecord
 {
     /// <summary>
@@ -56,5 +58,6 @@ public interface IAccountSwitchRequestRedirectionV01 : IOuterRecord
     [IsoId("_lcrIMA8EEeeJ4ZumUkzG4Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

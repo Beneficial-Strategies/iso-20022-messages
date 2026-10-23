@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the sender of the message.
 /// </summary>
 [IsoId("_g-kHQR7gEfCkq6-p7S3J1Q")]
+[IsoDisplayName(@"Sender Data1")]
 public interface ISenderData1 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ISenderData1 : IIsoComponent
     [IsoId("_g-kHXR7gEfCkq6-p7S3J1Q")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface ISenderData1 : IIsoComponent
     [IsoId("_g-kHYR7gEfCkq6-p7S3J1Q")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>
@@ -81,5 +84,6 @@ public interface ISenderData1 : IIsoComponent
     [IsoId("_g-kHZR7gEfCkq6-p7S3J1Q")]
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData20> LocalData { get; }
 }

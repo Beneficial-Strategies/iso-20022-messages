@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information for the MTM to build or include delegated actions in the management plan of the POI.
 /// </summary>
 [IsoId("_0Ri5kdqKEeearpaEPXv9UA")]
+[IsoDisplayName(@"Maintenance Delegate Action")]
 public interface IMaintenanceDelegateAction4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMaintenanceDelegateAction4 : IIsoComponent
     [IsoId("_0adlAdqKEeearpaEPXv9UA")]
     [DisplayName("Periodic Action")]
     [IsoXmlTag("PrdcActn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PeriodicAction { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IMaintenanceDelegateAction4 : IIsoComponent
     [IsoId("_0adlBdqKEeearpaEPXv9UA")]
     [DisplayName("TMS Protocol")]
     [IsoXmlTag("TMSPrtcol")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TMSProtocol { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface IMaintenanceDelegateAction4 : IIsoComponent
     [IsoId("_0adlB9qKEeearpaEPXv9UA")]
     [DisplayName("TMS Protocol Version")]
     [IsoXmlTag("TMSPrtcolVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TMSProtocolVersion { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IMaintenanceDelegateAction4 : IIsoComponent
     [IsoId("_0adlDdqKEeearpaEPXv9UA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max3000Binary> AdditionalInformation { get; }
 
     /// <summary>
@@ -73,5 +80,6 @@ public interface IMaintenanceDelegateAction4 : IIsoComponent
     [IsoId("_0adlD9qKEeearpaEPXv9UA")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITMSAction7> Action { get; }
 }

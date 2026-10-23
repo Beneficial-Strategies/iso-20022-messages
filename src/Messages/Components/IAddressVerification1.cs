@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Numeric characters of the cardholder&apos;s address for verification.
 /// </summary>
 [IsoId("_SqbqxgEcEeCQm6a_G2yO_w_1267025270")]
+[IsoDisplayName(@"Address Verification")]
 public interface IAddressVerification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAddressVerification1 : IIsoComponent
     [IsoId("_SqbqxwEcEeCQm6a_G2yO_w_-502786467")]
     [DisplayName("Address Digits")]
     [IsoXmlTag("AdrDgts")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? AddressDigits { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IAddressVerification1 : IIsoComponent
     [IsoId("_SqbqyAEcEeCQm6a_G2yO_w_-1460020434")]
     [DisplayName("Postal Code Digits")]
     [IsoXmlTag("PstlCdDgts")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? PostalCodeDigits { get; }
 }

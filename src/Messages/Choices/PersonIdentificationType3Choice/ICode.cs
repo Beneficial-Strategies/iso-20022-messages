@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType3Choice;
 /// Person identification expressed as a code.
 /// </summary>
 [IsoId("_Ri-zutp-Ed-ak6NoX_4Aeg_-142125379")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPersonIdentificationType3Choice, IIsoChoiceVariant
 {
     /// <summary>

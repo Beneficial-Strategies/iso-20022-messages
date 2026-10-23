@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledReason13Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : ICancelledReason13Choice, IIsoChoiceVariant
 {
     /// <summary>

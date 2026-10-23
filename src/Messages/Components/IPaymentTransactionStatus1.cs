@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Transaction Status1.
 /// </summary>
 [IsoId("_lbVzYfSTEe2NguPP5QspEw")]
+[IsoDisplayName(@"Payment Transaction Status1")]
 public interface IPaymentTransactionStatus1 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IPaymentTransactionStatus1 : IIsoComponent
     /// </summary>
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation12> StatusReasonInformation { get; }
 }

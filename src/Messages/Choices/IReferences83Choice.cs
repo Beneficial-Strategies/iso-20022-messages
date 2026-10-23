@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between transaction reference identifications.</summary>
 [IsoId("_WqDHEagzEfCXwLUUylXgrQ")]
+[IsoDisplayName(@"References 83 Choice")]
 public interface IReferences83Choice : IIsoChoice { }

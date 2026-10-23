@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the return of cash.
 /// </summary>
 [IsoId("_BGt5wALpEeutW5-TpeYJhA")]
+[IsoDisplayName(@"Return Excess Cash 1 Choice")]
 public interface IReturnExcessCash1Choice : IIsoChoice { }

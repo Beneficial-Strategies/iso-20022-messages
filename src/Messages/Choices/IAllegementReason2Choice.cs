@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the allegment reason.
 /// </summary>
 [IsoId("_3TyQtQd3Ee2fOITqoTnSLQ")]
+[IsoDisplayName(@"Allegement Reason 2 Choice")]
 public interface IAllegementReason2Choice : IIsoChoice { }

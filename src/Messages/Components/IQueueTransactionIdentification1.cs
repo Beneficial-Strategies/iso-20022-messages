@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a payment instruction by its relative position in a queue of payment transactions managed by the clearing agent.
 /// </summary>
 [IsoId("_X0ioAZlQEee-Zps0fZQaFQ")]
+[IsoDisplayName(@"Queue Transaction Identification")]
 public interface IQueueTransactionIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IQueueTransactionIdentification1 : IIsoComponent
     [IsoId("_X8kioZlQEee-Zps0fZQaFQ")]
     [DisplayName("Queue Identification")]
     [IsoXmlTag("QId")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text QueueIdentification { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IQueueTransactionIdentification1 : IIsoComponent
     [IsoId("_X8kio5lQEee-Zps0fZQaFQ")]
     [DisplayName("Position In Queue")]
     [IsoXmlTag("PosInQ")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text PositionInQueue { get; }
 }

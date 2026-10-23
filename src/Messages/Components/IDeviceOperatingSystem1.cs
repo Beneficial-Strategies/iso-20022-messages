@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information of the device operating system.
 /// </summary>
 [IsoId("_1BW5MJfPEeuqNYk2TG3bTg")]
+[IsoDisplayName(@"Device Operating System")]
 public interface IDeviceOperatingSystem1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDeviceOperatingSystem1 : IIsoComponent
     [IsoId("_EPWGUJfQEeuqNYk2TG3bTg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Identification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IDeviceOperatingSystem1 : IIsoComponent
     [IsoId("_SE8SQJfSEeuqNYk2TG3bTg")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IDeviceOperatingSystem1 : IIsoComponent
     [IsoId("_XS-dYJfSEeuqNYk2TG3bTg")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Version { get; }
 
     /// <summary>
@@ -49,5 +56,7 @@ public interface IDeviceOperatingSystem1 : IIsoComponent
     [IsoId("_cBT0wJfSEeuqNYk2TG3bTg")]
     [DisplayName("Build")]
     [IsoXmlTag("Bld")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Build { get; }
 }

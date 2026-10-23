@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of transactions to capture, sharing common characteristics.
 /// </summary>
 [IsoId("_ZjQG0WmFEeS7iYydEtv3Ug")]
+[IsoDisplayName(@"Card Payment Data Set")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ICardPaymentDataSet10 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICardPaymentDataSet10 : IIsoComponent
     [IsoId("_ZxFHc2mFEeS7iYydEtv3Ug")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITraceability2> Traceability { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICardPaymentDataSet10 : IIsoComponent
     [IsoId("_ZxFHd2mFEeS7iYydEtv3Ug")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotals3> TransactionTotals { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface ICardPaymentDataSet10 : IIsoComponent
     [IsoId("_ZxFHe2mFEeS7iYydEtv3Ug")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSetTransaction3Choice> Transaction { get; }
 }

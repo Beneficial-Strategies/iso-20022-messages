@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action security option.
 /// </summary>
 [IsoId("_zZzSYaucEfCqjuqNaaNXgw")]
+[IsoDisplayName(@"Securities Option122")]
 public interface ISecuritiesOption122 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface ISecuritiesOption122 : IIsoComponent
     [IsoId("_ziQrBaucEfCqjuqNaaNXgw")]
     [DisplayName("Other Income Type")]
     [IsoXmlTag("OthrIncmTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification30> OtherIncomeType { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface ISecuritiesOption122 : IIsoComponent
     [IsoId("_ziQrB6ucEfCqjuqNaaNXgw")]
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification30> ExemptionType { get; }
 
     /// <summary>

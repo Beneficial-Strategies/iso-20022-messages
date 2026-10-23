@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money associated with a service.
 /// </summary>
 [IsoId("_WIrzjNp-Ed-ak6NoX_4Aeg_555462799")]
+[IsoDisplayName(@"Charge")]
 public interface ICharge23 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ICharge23 : IIsoComponent
     [IsoId("_WI09ctp-Ed-ak6NoX_4Aeg_555463138")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 }

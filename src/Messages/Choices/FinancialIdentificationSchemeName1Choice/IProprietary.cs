@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialIdentificationSchemeNam
 /// Name of the identification scheme, in a free text form.
 /// </summary>
 [IsoId("_QALkMtp-Ed-ak6NoX_4Aeg_-2021925152")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IFinancialIdentificationSchemeName1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IFinancialIdentificationSchemeName1Choice, IIsoC
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

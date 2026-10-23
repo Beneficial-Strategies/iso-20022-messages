@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial loan (instalment) or a recurring transaction.
 /// </summary>
 [IsoId("_SpYh7gEcEeCQm6a_G2yO_w_-569860423")]
+[IsoDisplayName(@"Recurring Transaction")]
 public interface IRecurringTransaction1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRecurringTransaction1 : IIsoComponent
     [IsoId("_SpiS4AEcEeCQm6a_G2yO_w_295359691")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText SequenceNumber { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IRecurringTransaction1 : IIsoComponent
     [IsoId("_SpiS4gEcEeCQm6a_G2yO_w_-377494272")]
     [DisplayName("Instalment Period")]
     [IsoXmlTag("InstlmtPrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number InstalmentPeriod { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IRecurringTransaction1 : IIsoComponent
     [IsoId("_SpiS4wEcEeCQm6a_G2yO_w_-1926232913")]
     [DisplayName("Total Number Of Payments")]
     [IsoXmlTag("TtlNbOfPmts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number TotalNumberOfPayments { get; }
 
     /// <summary>

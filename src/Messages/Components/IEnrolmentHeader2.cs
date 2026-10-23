@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the header information for the creditor enrolment.
 /// </summary>
 [IsoId("_US8LoeH7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Enrolment Header")]
 public interface IEnrolmentHeader2 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IEnrolmentHeader2 : IIsoComponent
     [IsoId("_UUIeceH7Eeqbls7Gk4-ckA")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IEnrolmentHeader2 : IIsoComponent
     [IsoId("_UUIec-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>

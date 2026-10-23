@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References82Choice;
 
 /// <summary>Specifies the processor transaction identification.</summary>
 [IsoId("_4SiC2eSlEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Processor Transaction Identification")]
 public interface IProcessorTransactionIdentification : IReferences82Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

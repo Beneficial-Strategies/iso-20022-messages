@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates whether the collateral is proprietarily owned or client owned.
 /// </summary>
 [IsoId("_CsoAsWQcEeSTN56gbbyx2g")]
+[IsoDisplayName(@"Collateral Ownership")]
 public interface ICollateralOwnership1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICollateralOwnership1 : IIsoComponent
     [IsoId("_dP8uYGQcEeSTN56gbbyx2g")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Proprietary { get; }
 
     /// <summary>

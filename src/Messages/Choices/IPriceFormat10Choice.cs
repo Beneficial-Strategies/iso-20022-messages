@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a percentage price or an amount price or an unspecified price or an amount price per amount or an amount price per financial instrument quantity.
 /// </summary>
 [IsoId("_Q4z1Vdp-Ed-ak6NoX_4Aeg_-1792370853")]
+[IsoDisplayName(@"Price Format 10 Choice")]
 public interface IPriceFormat10Choice : IIsoChoice { }

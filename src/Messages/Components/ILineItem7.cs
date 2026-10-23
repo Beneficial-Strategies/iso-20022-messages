@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Commercial details of a trade transaction between a buyer and a seller.
 /// </summary>
 [IsoId("_SrZNRdp-Ed-ak6NoX_4Aeg_956811526")]
+[IsoDisplayName(@"Line Item")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ILineItem7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ILineItem7 : IIsoComponent
     [IsoId("_SrZNRtp-Ed-ak6NoX_4Aeg_956812066")]
     [DisplayName("Goods Description")]
     [IsoXmlTag("GoodsDesc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? GoodsDescription { get; }
 
     /// <summary>
@@ -25,6 +29,7 @@ public interface ILineItem7 : IIsoComponent
     [IsoId("_SrZNR9p-Ed-ak6NoX_4Aeg_956811543")]
     [DisplayName("Partial Shipment")]
     [IsoXmlTag("PrtlShipmnt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PartialShipment { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface ILineItem7 : IIsoComponent
     [IsoId("_SrZNSNp-Ed-ak6NoX_4Aeg_956811603")]
     [DisplayName("Trans Shipment")]
     [IsoXmlTag("TrnsShipmnt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TransShipment { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ILineItem7 : IIsoComponent
     [IsoId("_SrZNStp-Ed-ak6NoX_4Aeg_956812180")]
     [DisplayName("Line Item Details")]
     [IsoXmlTag("LineItmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItemDetails7> LineItemDetails { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface ILineItem7 : IIsoComponent
     [IsoId("_Sri-Qtp-Ed-ak6NoX_4Aeg_956812257")]
     [DisplayName("Incoterms")]
     [IsoXmlTag("Incotrms")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIncoterms1> Incoterms { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface ILineItem7 : IIsoComponent
     [IsoId("_Sri-Q9p-Ed-ak6NoX_4Aeg_956812997")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment3> Adjustment { get; }
 
     /// <summary>
@@ -97,6 +106,7 @@ public interface ILineItem7 : IIsoComponent
     [IsoId("_Sri-Rdp-Ed-ak6NoX_4Aeg_956812577")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax13> Tax { get; }
 
     /// <summary>
@@ -113,6 +123,7 @@ public interface ILineItem7 : IIsoComponent
     [IsoId("_Sri-R9p-Ed-ak6NoX_4Aeg_956813507")]
     [DisplayName("Buyer Defined Information")]
     [IsoXmlTag("BuyrDfndInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUserDefinedInformation1> BuyerDefinedInformation { get; }
 
     /// <summary>
@@ -121,5 +132,6 @@ public interface ILineItem7 : IIsoComponent
     [IsoId("_Sri-SNp-Ed-ak6NoX_4Aeg_956813092")]
     [DisplayName("Seller Defined Information")]
     [IsoXmlTag("SellrDfndInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUserDefinedInformation1> SellerDefinedInformation { get; }
 }

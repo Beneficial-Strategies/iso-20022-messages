@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio2Choice;
 /// </summary>
 [IsoId("_pEam004aEeiQHa-q1Uephw")]
 [IsoXmlTag("GnlInvstmt")]
+[IsoDisplayName(@"General Investment")]
 public interface IGeneralInvestment : IFundPortfolio2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -42,5 +43,6 @@ public interface IGeneralInvestment : IFundPortfolio2Choice, IIsoChoiceVariant
     [IsoId("_yHL6wE4NEeiQHa-q1Uephw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

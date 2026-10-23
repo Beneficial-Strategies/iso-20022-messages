@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unless bilaterally agreed between the Sender and the Receiver, additional information must not contain information that can be provided in a structured field.
 /// </summary>
 [IsoId("_2xhasLzhEeivTd4NUfCi2g")]
+[IsoDisplayName(@"Additional Information")]
 public interface IAdditionalInformation24 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAdditionalInformation24 : IIsoComponent
     [IsoId("_M3nIELziEeivTd4NUfCi2g")]
     [DisplayName("Collateral Instruction")]
     [IsoXmlTag("CollInstr")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? CollateralInstruction { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IAdditionalInformation24 : IIsoComponent
     [IsoId("_dOOxMLziEeivTd4NUfCi2g")]
     [DisplayName("Note")]
     [IsoXmlTag("Note")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Note { get; }
 }

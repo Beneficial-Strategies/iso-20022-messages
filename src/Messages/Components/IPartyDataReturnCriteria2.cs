@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Return criteria for information to be returned in the report deriving from a query about party reference data.
 /// </summary>
 [IsoId("_bwbnYYwXEei289CGNqs21g")]
+[IsoDisplayName(@"Party Data Return Criteria")]
 public interface IPartyDataReturnCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_b7KQsYwXEei289CGNqs21g")]
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? OpeningDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_b7KQs4wXEei289CGNqs21g")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? ClosingDate { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_b7KQtYwXEei289CGNqs21g")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? Type { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_b7KQt4wXEei289CGNqs21g")]
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? PartyIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_b7KQuYwXEei289CGNqs21g")]
     [DisplayName("Responsible Party Identification")]
     [IsoXmlTag("RspnsblPtyId")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? ResponsiblePartyIdentification { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_b7KQu4wXEei289CGNqs21g")]
     [DisplayName("Restriction Identification")]
     [IsoXmlTag("RstrctnId")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? RestrictionIdentification { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_b7KQvYwXEei289CGNqs21g")]
     [DisplayName("Restricted On Date")]
     [IsoXmlTag("RstrctdOnDt")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? RestrictedOnDate { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_b7KQv4wXEei289CGNqs21g")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? Name { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_b7KQwYwXEei289CGNqs21g")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? ShortName { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_b7KQw4wXEei289CGNqs21g")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? Address { get; }
 
     /// <summary>
@@ -97,6 +108,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_b7KQxYwXEei289CGNqs21g")]
     [DisplayName("Technical Address")]
     [IsoXmlTag("TechAdr")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? TechnicalAddress { get; }
 
     /// <summary>
@@ -105,6 +117,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_UHeKk4waEei289CGNqs21g")]
     [DisplayName("Contact Details")]
     [IsoXmlTag("CtctDtls")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? ContactDetails { get; }
 
     /// <summary>
@@ -113,6 +126,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_UHeKlIwaEei289CGNqs21g")]
     [DisplayName("Residence Type")]
     [IsoXmlTag("ResTp")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? ResidenceType { get; }
 
     /// <summary>
@@ -121,6 +135,7 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_UHeKlYwaEei289CGNqs21g")]
     [DisplayName("Lock Status")]
     [IsoXmlTag("LckSts")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? LockStatus { get; }
 
     /// <summary>
@@ -129,5 +144,6 @@ public interface IPartyDataReturnCriteria2 : IIsoComponent
     [IsoId("_b7KQx4wXEei289CGNqs21g")]
     [DisplayName("Market Specific Attribute")]
     [IsoXmlTag("MktSpcfcAttr")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? MarketSpecificAttribute { get; }
 }

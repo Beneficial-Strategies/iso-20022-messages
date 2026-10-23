@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData3Choice;
 /// <summary>
 /// Credit Transfer Mandate.
 /// </summary>
+[IsoDisplayName(@"Credit Transfer Mandate")]
 public interface ICreditTransferMandate : IMandateRelatedData3Choice, IIsoChoiceVariant
 {
     /// <summary>

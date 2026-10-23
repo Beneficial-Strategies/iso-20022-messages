@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the parties specific to the individual transaction.
 /// </summary>
 [IsoId("_5b7aATEyEe6g-ffJsqGiSA")]
+[Description(@"Provides further details on the parties specific to the individual transaction.")]
+[IsoDisplayName(@"Transaction Parties11")]
 public interface ITransactionParties11 : IIsoComponent
 {
     /// <summary>

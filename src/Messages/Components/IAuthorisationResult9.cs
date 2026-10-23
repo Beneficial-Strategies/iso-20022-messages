@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Outcome of the withdrawal authorisation.
 /// </summary>
 [IsoId("_TJtuMYp8EeS3NqNpgnMh2w")]
+[IsoDisplayName(@"Authorisation Result")]
 public interface IAuthorisationResult9 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IAuthorisationResult9 : IIsoComponent
     [IsoId("_0Kuz4IqDEeS3NqNpgnMh2w")]
     [DisplayName("Response Trace")]
     [IsoXmlTag("RspnTrac")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IResponseType4> ResponseTrace { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface IAuthorisationResult9 : IIsoComponent
     [IsoId("_TWFWR4p8EeS3NqNpgnMh2w")]
     [DisplayName("Authorisation Code")]
     [IsoXmlTag("AuthstnCd")]
+    [IsoSimpleType(IsoSimpleType.Min6Max8Text)]
+    [StringLength(8, MinimumLength = 6)]
     Min6Max8Text? AuthorisationCode { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IAuthorisationResult9 : IIsoComponent
     [IsoId("_TWFWRYp8EeS3NqNpgnMh2w")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction5> Action { get; }
 }

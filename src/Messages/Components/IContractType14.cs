@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to contract attributes.
 /// </summary>
 [IsoId("_k5ZioWEUEe2P-L9DBerEgA")]
+[IsoDisplayName(@"Contract Type")]
 public interface IContractType14 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IContractType14 : IIsoComponent
     [IsoId("_k6RFVWEUEe2P-L9DBerEgA")]
     [DisplayName("Product Classification")]
     [IsoXmlTag("PdctClssfctn")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier? ProductClassification { get; }
 
     /// <summary>
@@ -83,5 +85,6 @@ public interface IContractType14 : IIsoComponent
     [IsoId("_k6RFY2EUEe2P-L9DBerEgA")]
     [DisplayName("Derivative Based On Crypto Asset")]
     [IsoXmlTag("DerivBasedOnCrptAsst")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DerivativeBasedOnCryptoAsset { get; }
 }

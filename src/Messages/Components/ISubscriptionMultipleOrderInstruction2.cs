@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a subscription multiple order.
 /// </summary>
 [IsoId("_RN0cCtp-Ed-ak6NoX_4Aeg_-1747169582")]
+[IsoDisplayName(@"Subscription Multiple Order Instruction")]
 public interface ISubscriptionMultipleOrderInstruction2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,9 @@ public interface ISubscriptionMultipleOrderInstruction2 : IIsoComponent
     [IsoId("_RN-NANp-Ed-ak6NoX_4Aeg_-1747169286")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary8> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface ISubscriptionMultipleOrderInstruction2 : IIsoComponent
     [IsoId("_RN-NAdp-Ed-ak6NoX_4Aeg_-1747169321")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

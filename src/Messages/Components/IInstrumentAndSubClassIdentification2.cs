@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a financial instrument and of the non-equity sub-class of the financial instrument.
 /// </summary>
 [IsoId("_GUulYaaUEeqZmriXpMtonA")]
+[IsoDisplayName(@"Instrument And Sub Class Identification")]
 public interface IInstrumentAndSubClassIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInstrumentAndSubClassIdentification2 : IIsoComponent
     [IsoId("_GWXkIaaUEeqZmriXpMtonA")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier ISIN { get; }
 
     /// <summary>

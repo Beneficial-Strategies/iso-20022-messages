@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMSignature3Choice;
 
 /// <summary>The data block for a TR31 or TR34 block, where the block does not contain a key.</summary>
 [IsoId("_CObUY8PzEfCTf8R2j0RpdQ")]
+[IsoDisplayName(@"TRRelated Data")]
 public interface ITRRelatedData : IATMSignature3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria4Choice;
 /// </summary>
 [IsoId("_gdi6Q9cZEeqRFcf2R4bPBw")]
 [IsoXmlTag("NewCrit")]
+[IsoDisplayName(@"New Criteria")]
 public interface INewCriteria : IStandingOrderCriteria4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface INewCriteria : IStandingOrderCriteria4Choice, IIsoChoiceVariant
     [IsoId("_ge92k9cZEeqRFcf2R4bPBw")]
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NewQueryName { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface INewCriteria : IStandingOrderCriteria4Choice, IIsoChoiceVariant
     [IsoId("_ge92ldcZEeqRFcf2R4bPBw")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStandingOrderSearchCriteria4> SearchCriteria { get; }
 
     /// <summary>

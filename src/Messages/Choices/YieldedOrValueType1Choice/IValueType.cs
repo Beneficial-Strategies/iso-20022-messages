@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.YieldedOrValueType1Choice;
 /// Type of value in which the price is expressed.
 /// </summary>
 [IsoId("_RdBVqNp-Ed-ak6NoX_4Aeg_599544875")]
+[IsoDisplayName(@"Value Type")]
 public interface IValueType : IYieldedOrValueType1Choice, IIsoChoiceVariant
 {
     /// <summary>

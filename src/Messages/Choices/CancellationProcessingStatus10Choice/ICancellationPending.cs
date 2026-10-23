@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationProcessingStatus10Ch
 /// Trade is in cancelation pending.
 /// </summary>
 [IsoId("_l0B_0Qd4Ee2fOITqoTnSLQ")]
+[IsoDisplayName(@"Cancellation Pending")]
 public interface ICancellationPending : ICancellationProcessingStatus10Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

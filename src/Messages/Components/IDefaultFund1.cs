@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information such as the default fund account identification or the default fund amount.
 /// </summary>
 [IsoId("_UqpvS9p-Ed-ak6NoX_4Aeg_1890910429")]
+[IsoDisplayName(@"Default Fund")]
 public interface IDefaultFund1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IDefaultFund1 : IIsoComponent
     [IsoId("_UqzgQNp-Ed-ak6NoX_4Aeg_-799365417")]
     [DisplayName("Contribution")]
     [IsoXmlTag("Cntrbtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContribution1> Contribution { get; }
 
     /// <summary>

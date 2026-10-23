@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed information about the cardholder.
 /// </summary>
 [IsoId("_9P-9MTTTEfCLfeKcVPKw8g")]
+[IsoDisplayName(@"Cardholder23")]
 public interface ICardholder23 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ICardholder23 : IIsoComponent
     [IsoId("_9SthEzTTEfCLfeKcVPKw8g")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICredentials3> Identification { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface ICardholder23 : IIsoComponent
     [IsoId("_wCen0TTYEfCLfeKcVPKw8g")]
     [DisplayName("Shipping Address")]
     [IsoXmlTag("ShppgAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAddress4> ShippingAddress { get; }
 
     /// <summary>
@@ -129,6 +132,7 @@ public interface ICardholder23 : IIsoComponent
     [IsoId("_X7dOokVZEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -137,6 +141,7 @@ public interface ICardholder23 : IIsoComponent
     [IsoId("_X7dOo0VZEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> NationalData { get; }
 
     /// <summary>

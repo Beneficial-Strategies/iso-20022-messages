@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus36Cho
 /// </summary>
 [IsoId("_U39JOf0oEeiKOe8GCUL1Lg")]
 [IsoXmlTag("Ucvrd")]
+[IsoDisplayName(@"Uncovered")]
 public interface IUncovered : IInstructionProcessingStatus36Choice, IIsoChoiceVariant
 {
     /// <summary>

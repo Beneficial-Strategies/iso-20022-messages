@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instructions, initiated by the creditor, to debit a debtor&apos;s account in favour of the creditor.
 /// </summary>
 [IsoId("_W-O3YQ2mEeSNWNtJlXOAhg")]
+[IsoDisplayName(@"Direct Debit Instruction Details")]
 public interface IDirectDebitInstructionDetails1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDirectDebitInstructionDetails1 : IIsoComponent
     [IsoId("_qUm2MA2mEeSNWNtJlXOAhg")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MandateIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IDirectDebitInstructionDetails1 : IIsoComponent
     [IsoId("_da9K4ISTEeacouu3s33q-Q")]
     [DisplayName("Automated Direct Debit Instruction Indicator")]
     [IsoXmlTag("AutomtdDrctDbtInstrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AutomatedDirectDebitInstructionIndicator { get; }
 
     /// <summary>
@@ -35,6 +39,7 @@ public interface IDirectDebitInstructionDetails1 : IIsoComponent
     [IsoId("_M2KtcISUEeacouu3s33q-Q")]
     [DisplayName("Direct Debit Transferable Indicator")]
     [IsoXmlTag("DrctDbtTrfblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DirectDebitTransferableIndicator { get; }
 
     /// <summary>
@@ -60,6 +65,7 @@ public interface IDirectDebitInstructionDetails1 : IIsoComponent
     [IsoId("_2IhJIA2mEeSNWNtJlXOAhg")]
     [DisplayName("Last Collection Date")]
     [IsoXmlTag("LastColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LastCollectionDate { get; }
 
     /// <summary>
@@ -68,5 +74,6 @@ public interface IDirectDebitInstructionDetails1 : IIsoComponent
     [IsoId("_RW8awOfNEea-bLUDhRZm-w")]
     [DisplayName("Other Details")]
     [IsoXmlTag("OthrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransferInstruction1> OtherDetails { get; }
 }

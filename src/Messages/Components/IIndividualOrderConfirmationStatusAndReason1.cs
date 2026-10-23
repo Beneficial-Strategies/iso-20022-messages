@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of the individual orders confirmation that was previously received.
 /// </summary>
 [IsoId("_RMoJOdp-Ed-ak6NoX_4Aeg_-1768968908")]
+[IsoDisplayName(@"Individual Order Confirmation Status And Reason")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IIndividualOrderConfirmationStatusAndReason1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IIndividualOrderConfirmationStatusAndReason1 : IIsoComponent
     [IsoId("_RMoJOtp-Ed-ak6NoX_4Aeg_-1768968890")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +29,8 @@ public interface IIndividualOrderConfirmationStatusAndReason1 : IIsoComponent
     [IsoId("_RMx6MNp-Ed-ak6NoX_4Aeg_-1768968873")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -33,6 +39,8 @@ public interface IIndividualOrderConfirmationStatusAndReason1 : IIsoComponent
     [IsoId("_RMx6Mdp-Ed-ak6NoX_4Aeg_-1768968856")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -41,6 +49,8 @@ public interface IIndividualOrderConfirmationStatusAndReason1 : IIsoComponent
     [IsoId("_RMx6Mtp-Ed-ak6NoX_4Aeg_-1768968838")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DealReference { get; }
 
     /// <summary>
@@ -49,6 +59,9 @@ public interface IIndividualOrderConfirmationStatusAndReason1 : IIsoComponent
     [IsoId("_RMx6M9p-Ed-ak6NoX_4Aeg_-1768968423")]
     [DisplayName("Confirmation Rejected")]
     [IsoXmlTag("ConfRjctd")]
+    [MinLength(1)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IConfirmationRejectedStatus1> ConfirmationRejected { get; }
 
     /// <summary>
@@ -57,6 +70,9 @@ public interface IIndividualOrderConfirmationStatusAndReason1 : IIsoComponent
     [IsoId("_RMx6NNp-Ed-ak6NoX_4Aeg_1434728868")]
     [DisplayName("Amendment Rejected")]
     [IsoXmlTag("AmdmntRjctd")]
+    [MinLength(1)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IConfirmationRejectedStatus1> AmendmentRejected { get; }
 
     /// <summary>

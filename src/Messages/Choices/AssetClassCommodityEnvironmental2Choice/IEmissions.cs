@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental
 /// </summary>
 [IsoId("_g7vTsbvwEeiLRYqS-r-R-A")]
 [IsoXmlTag("Emssns")]
+[IsoDisplayName(@"Emissions")]
 public interface IEmissions : IAssetClassCommodityEnvironmental2Choice, IIsoChoiceVariant
 {
     /// <summary>

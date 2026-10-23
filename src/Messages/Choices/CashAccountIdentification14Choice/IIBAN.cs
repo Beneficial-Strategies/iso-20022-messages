@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification14Choic
 /// <summary>
 /// IBAN.
 /// </summary>
+[IsoDisplayName(@"IBAN")]
 public interface IIBAN : ICashAccountIdentification14Choice, IIsoChoiceVariant
 {
     /// <summary>

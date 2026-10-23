@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CallType3Choice;
 /// Call type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_fNbCweLcEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICallType3Choice, IIsoChoiceVariant
 {
     /// <summary>

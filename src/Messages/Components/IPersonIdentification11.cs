@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of unique and unambiguous ways to identify a person.
 /// </summary>
 [IsoId("_QCWkEZXrEeWMQt4mOczoDw")]
+[IsoDisplayName(@"Person Identification")]
 public interface IPersonIdentification11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_QOQSE5XrEeWMQt4mOczoDw")]
     [DisplayName("Driver License Number")]
     [IsoXmlTag("DrvrLicNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DriverLicenseNumber { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_KHCKQJXtEeWMQt4mOczoDw")]
     [DisplayName("Driver License Location")]
     [IsoXmlTag("DrvrLicLctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DriverLicenseLocation { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_Pa5QkJXtEeWMQt4mOczoDw")]
     [DisplayName("Driver License Name")]
     [IsoXmlTag("DrvrLicNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DriverLicenseName { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_XdzXEJXtEeWMQt4mOczoDw")]
     [DisplayName("Driver Identification")]
     [IsoXmlTag("DrvrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DriverIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_QOQSFZXrEeWMQt4mOczoDw")]
     [DisplayName("Customer Number")]
     [IsoXmlTag("CstmrNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CustomerNumber { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_QOQSF5XrEeWMQt4mOczoDw")]
     [DisplayName("Social Security Number")]
     [IsoXmlTag("SclSctyNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SocialSecurityNumber { get; }
 
     /// <summary>
@@ -65,6 +78,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_QOQSGZXrEeWMQt4mOczoDw")]
     [DisplayName("Alien Registration Number")]
     [IsoXmlTag("AlnRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AlienRegistrationNumber { get; }
 
     /// <summary>
@@ -73,6 +88,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_QOQSG5XrEeWMQt4mOczoDw")]
     [DisplayName("Passport Number")]
     [IsoXmlTag("PsptNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PassportNumber { get; }
 
     /// <summary>
@@ -81,6 +98,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_QOQSHZXrEeWMQt4mOczoDw")]
     [DisplayName("Tax Identification Number")]
     [IsoXmlTag("TaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxIdentificationNumber { get; }
 
     /// <summary>
@@ -89,6 +108,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_QOQSH5XrEeWMQt4mOczoDw")]
     [DisplayName("Identity Card Number")]
     [IsoXmlTag("IdntyCardNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? IdentityCardNumber { get; }
 
     /// <summary>
@@ -97,6 +118,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_QOQSIZXrEeWMQt4mOczoDw")]
     [DisplayName("Employer Identification Number")]
     [IsoXmlTag("MplyrIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EmployerIdentificationNumber { get; }
 
     /// <summary>
@@ -105,6 +128,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_QOQSI5XrEeWMQt4mOczoDw")]
     [DisplayName("Employee Identification Number")]
     [IsoXmlTag("MplyeeIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EmployeeIdentificationNumber { get; }
 
     /// <summary>
@@ -113,6 +138,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_dv9RoJXtEeWMQt4mOczoDw")]
     [DisplayName("Job Number")]
     [IsoXmlTag("JobNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? JobNumber { get; }
 
     /// <summary>
@@ -121,6 +148,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_i7MAYJXtEeWMQt4mOczoDw")]
     [DisplayName("Department")]
     [IsoXmlTag("Dept")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Department { get; }
 
     /// <summary>
@@ -129,6 +158,8 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_QOQSJZXrEeWMQt4mOczoDw")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 
     /// <summary>
@@ -145,5 +176,6 @@ public interface IPersonIdentification11 : IIsoComponent
     [IsoId("_QOQSKZXrEeWMQt4mOczoDw")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification4> Other { get; }
 }

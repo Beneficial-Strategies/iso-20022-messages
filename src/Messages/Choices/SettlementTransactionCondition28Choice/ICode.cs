@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionCondition28
 /// Settlement conditions expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_6SbDL5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlementTransactionCondition28Choice, IIsoChoiceVariant
 {
     /// <summary>

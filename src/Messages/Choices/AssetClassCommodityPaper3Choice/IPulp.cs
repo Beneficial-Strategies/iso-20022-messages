@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper3Choice;
 /// </summary>
 [IsoId("__n-Whbv7EeiLRYqS-r-R-A")]
 [IsoXmlTag("Pulp")]
+[IsoDisplayName(@"Pulp")]
 public interface IPulp : IAssetClassCommodityPaper3Choice, IIsoChoiceVariant
 {
     /// <summary>

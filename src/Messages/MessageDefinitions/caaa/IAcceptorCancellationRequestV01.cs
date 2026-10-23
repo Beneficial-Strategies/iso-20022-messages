@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_cMhxZaMVEeCJ6YNENx4h-w_602094635")]
 [IsoMessage("caaa.005.001.01", "AccptrCxlReq", "urn:iso:std:iso:20022:tech:xsd:caaa.005.001.01")]
+[Description(@"Scope|The AcceptorCancellationRequest message is sent by a card acceptor to cancel a successfully completed card payment transaction. The message can be sent directly to the acquirer or through an agent.|Usage|The AcceptorCancellationRequest message is used when the card acceptor is unaware of the cancellation of the transaction by the acquirer.")]
+[IsoDisplayName(@"Acceptor Cancellation Request V")]
 public interface IAcceptorCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

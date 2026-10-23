@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the reason of the creditor enrolment cancellation request.
 /// </summary>
 [IsoId("_Ufpx-eH7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Creditor Enrolment Cancellation Reason")]
 public interface ICreditorEnrolmentCancellationReason2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ICreditorEnrolmentCancellationReason2 : IIsoComponent
     [IsoId("_Ug_1xeH7Eeqbls7Gk4-ckA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

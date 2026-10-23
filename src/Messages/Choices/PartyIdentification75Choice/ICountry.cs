@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification75Choice;
 /// Country of the party.
 /// </summary>
 [IsoId("_HitG1UiQEeOdL6nMHefDgg")]
+[IsoDisplayName(@"Country")]
 public interface ICountry : IPartyIdentification75Choice, IIsoChoiceVariant
 {
     /// <summary>

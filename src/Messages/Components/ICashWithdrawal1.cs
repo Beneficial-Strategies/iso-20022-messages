@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Withdrawal of an amount of money defined in cash notes and or cash coins.
 /// </summary>
 [IsoId("_yg8nEbDnEfCbk9-eHc2eXw")]
+[IsoDisplayName(@"Cash Withdrawal1")]
 public interface ICashWithdrawal1 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface ICashWithdrawal1 : IIsoComponent
     [IsoId("_ynAy0bDnEfCbk9-eHc2eXw")]
     [DisplayName("Note Details")]
     [IsoXmlTag("NoteDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashNote1> NoteDetails { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface ICashWithdrawal1 : IIsoComponent
     [IsoId("_ynAy07DnEfCbk9-eHc2eXw")]
     [DisplayName("Coin Details")]
     [IsoXmlTag("CoinDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashCoin1> CoinDetails { get; }
 
     /// <summary>

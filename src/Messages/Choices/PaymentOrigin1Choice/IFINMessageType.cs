@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentOrigin1Choice;
 /// Specifies that the payment was included in a SWIFT FIN format message, for example, MT 103.
 /// </summary>
 [IsoId("_RIwV1dp-Ed-ak6NoX_4Aeg_1910593546")]
+[IsoDisplayName(@"FIN Message Type")]
 public interface IFINMessageType : IPaymentOrigin1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IFINMessageType : IPaymentOrigin1Choice, IIsoChoiceVariant
     /// Specifies a numeric string with a maximum length of 3 digits.
     /// </summary>
     [IsoXmlTag("FINMT")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText Value { get; }
 }

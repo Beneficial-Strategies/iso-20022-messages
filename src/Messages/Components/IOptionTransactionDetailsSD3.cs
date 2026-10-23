@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action movement option details.
 /// </summary>
 [IsoId("_57pqEb5ZEeexmbB7KsjCwA")]
+[IsoDisplayName(@"Option Transaction Details SD")]
 public interface IOptionTransactionDetailsSD3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOptionTransactionDetailsSD3 : IIsoComponent
     [IsoId("_6L2pQb5ZEeexmbB7KsjCwA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOptionTransactionDetailsSD3 : IIsoComponent
     [IsoId("_6L2pQ75ZEeexmbB7KsjCwA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text TransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IOptionTransactionDetailsSD3 : IIsoComponent
     [IsoId("_6L2pRb5ZEeexmbB7KsjCwA")]
     [DisplayName("Transaction Sequence Number")]
     [IsoXmlTag("TxSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? TransactionSequenceNumber { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IOptionTransactionDetailsSD3 : IIsoComponent
     [IsoId("_6L2pR75ZEeexmbB7KsjCwA")]
     [DisplayName("Transaction Identification Date")]
     [IsoXmlTag("TxIdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TransactionIdentificationDate { get; }
 
     /// <summary>
@@ -89,5 +96,6 @@ public interface IOptionTransactionDetailsSD3 : IIsoComponent
     [IsoId("_6L2pU75ZEeexmbB7KsjCwA")]
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? CustomerReferenceIdentification { get; }
 }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.casr;
 /// </summary>
 [IsoId("_sMvjkZjHEe6OBt2eQPMPsQ")]
 [IsoMessage("casr.001.001.03", "SttlmRptgInitn", "urn:iso:std:iso:20022:tech:xsd:casr.001.001.03")]
+[IsoDisplayName(@"Settlement Reporting Initiation V03")]
 public interface ISettlementReportingInitiationV03 : IOuterRecord
 {
     /// <summary>
@@ -74,6 +75,7 @@ public interface ISettlementReportingInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode5> Programme { get; }
 
     /// <summary>
@@ -123,6 +125,7 @@ public interface ISettlementReportingInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -130,6 +133,7 @@ public interface ISettlementReportingInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -186,6 +190,7 @@ public interface ISettlementReportingInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -207,6 +212,7 @@ public interface ISettlementReportingInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -214,6 +220,7 @@ public interface ISettlementReportingInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -221,6 +228,7 @@ public interface ISettlementReportingInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

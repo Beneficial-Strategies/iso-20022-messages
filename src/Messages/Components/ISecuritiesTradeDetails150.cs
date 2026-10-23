@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities trade.
 /// </summary>
 [IsoId("0f1b08c9-d021-4c2c-a692-ce0ed00a532f")]
+[IsoDisplayName(@"Securities Trade Details150")]
 public interface ISecuritiesTradeDetails150 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecuritiesTradeDetails150 : IIsoComponent
     [IsoId("3c6fd793-d1cb-4584-a017-adde4a71fa7d")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TradeIdentification { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ISecuritiesTradeDetails150 : IIsoComponent
     [IsoId("62995e18-fa0d-4c7f-be75-765d540062f9")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -105,6 +108,7 @@ public interface ISecuritiesTradeDetails150 : IIsoComponent
     [IsoId("73c832c0-6680-4c72-b413-902562ecc427")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReporting6Choice> Reporting { get; }
 
     /// <summary>
@@ -113,6 +117,7 @@ public interface ISecuritiesTradeDetails150 : IIsoComponent
     [IsoId("2edef64e-7da5-422b-b41f-9bbf83974d9f")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition5Choice> TradeTransactionCondition { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice;
 /// Indicates if the goods have passed the health check.
 /// </summary>
 [IsoId("_3DBVOzANEeOKib24wnHaFg")]
+[IsoDisplayName(@"Health Indication")]
 public interface IHealthIndication : ICertifiedCharacteristics2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IHealthIndication : ICertifiedCharacteristics2Choice, IIsoChoic
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("HlthIndctn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the beneficial owner of the securities.
 /// </summary>
 [IsoId("_QsENUQE4EeG0G9kfgQ0HLA")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification56 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPartyIdentification56 : IIsoComponent
     [IsoId("_QsN-YwE4EeG0G9kfgQ0HLA")]
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAlternatePartyIdentification2> AlternateIdentification { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IPartyIdentification56 : IIsoComponent
     [IsoId("_QsN-dwE4EeG0G9kfgQ0HLA")]
     [DisplayName("Non Domicile Country")]
     [IsoXmlTag("NonDmclCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> NonDomicileCountry { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IPartyIdentification56 : IIsoComponent
     [IsoId("_QsN-iwE4EeG0G9kfgQ0HLA")]
     [DisplayName("Certification Type")]
     [IsoXmlTag("CertfctnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficiaryCertificationType6Choice> CertificationType { get; }
 
     /// <summary>
@@ -65,5 +69,7 @@ public interface IPartyIdentification56 : IIsoComponent
     [IsoId("_QsN-lQE4EeG0G9kfgQ0HLA")]
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? DeclarationDetails { get; }
 }

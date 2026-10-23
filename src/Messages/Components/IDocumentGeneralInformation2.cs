@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General information that unambiguously identifies a document, such as identification number and issue date time.
 /// </summary>
 [IsoId("_S-ZIkAEcEeCQm6a_G2yO_w_-1398499112")]
+[IsoDisplayName(@"Document General Information")]
 public interface IDocumentGeneralInformation2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDocumentGeneralInformation2 : IIsoComponent
     [IsoId("_S-ZIkgEcEeCQm6a_G2yO_w_-1512338178")]
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DocumentNumber { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IDocumentGeneralInformation2 : IIsoComponent
     [IsoId("_S-ZIkwEcEeCQm6a_G2yO_w_-166388554")]
     [DisplayName("Sender Receiver Sequence Identification")]
     [IsoXmlTag("SndrRcvrSeqId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SenderReceiverSequenceIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IDocumentGeneralInformation2 : IIsoComponent
     [IsoId("_S-ZIlAEcEeCQm6a_G2yO_w_-1163460907")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IssueDate { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IDocumentGeneralInformation2 : IIsoComponent
     [IsoId("_S-ZIlQEcEeCQm6a_G2yO_w_2134434036")]
     [DisplayName("URL")]
     [IsoXmlTag("URL")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? URL { get; }
 
     /// <summary>
@@ -57,5 +65,6 @@ public interface IDocumentGeneralInformation2 : IIsoComponent
     [IsoId("_S-ZIlgEcEeCQm6a_G2yO_w_1137361683")]
     [DisplayName("Attached Binary File")]
     [IsoXmlTag("AttchdBinryFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBinaryFile1> AttachedBinaryFile { get; }
 }

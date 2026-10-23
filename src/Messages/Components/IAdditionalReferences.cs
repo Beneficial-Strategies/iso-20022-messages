@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Business reference(s) to one or more relevant messages previously sent by other parties, or by the same party issuing this message.
 /// </summary>
 [IsoId("_Rca4sNp-Ed-ak6NoX_4Aeg_-583688066")]
+[IsoDisplayName(@"Additional References")]
 public interface IAdditionalReferences : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAdditionalReferences : IIsoComponent
     [IsoId("_Rca4sdp-Ed-ak6NoX_4Aeg_-470092785")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Reference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAdditionalReferences : IIsoComponent
     [IsoId("_Rca4stp-Ed-ak6NoX_4Aeg_200384123")]
     [DisplayName("Message Name")]
     [IsoXmlTag("MsgNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageName { get; }
 
     /// <summary>

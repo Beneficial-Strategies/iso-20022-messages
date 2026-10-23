@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Charges related to a payment obligation contracted between two financial institutions related to the financing of a commercial transaction.
 /// </summary>
 [IsoId("_D8zW4dP_EeK0PPbKncCqzA")]
+[IsoDisplayName(@"Charges")]
 public interface ICharges5 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICharges5 : IIsoComponent
     [IsoId("_EaqXodP_EeK0PPbKncCqzA")]
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Percentage { get; }
 
     /// <summary>
@@ -49,5 +51,7 @@ public interface ICharges5 : IIsoComponent
     [IsoId("_QeQdoBUsEeOCqpkCrPgk4g")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 }

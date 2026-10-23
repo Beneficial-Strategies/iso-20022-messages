@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Margin Report Data10.
 /// </summary>
 [IsoId("_hoWZccEkEe66laxnCpxfpw")]
+[IsoDisplayName(@"Margin Report Data10")]
 public interface IMarginReportData10 : IIsoComponent
 {
     /// <summary>
@@ -93,5 +94,6 @@ public interface IMarginReportData10 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

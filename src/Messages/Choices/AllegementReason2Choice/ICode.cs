@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllegementReason2Choice;
 /// Specifies the reason why the instruction has been alleged.
 /// </summary>
 [IsoId("_3m3kwQd3Ee2fOITqoTnSLQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAllegementReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame8Choice;
 /// Number of days after the trade date (T) for the standard settlement timeframe.
 /// </summary>
 [IsoId("_cB3nQzgFEei6RvewLQWEqw")]
+[IsoDisplayName(@"Trade Plus")]
 public interface ITradePlus : ITimeFrame8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ITradePlus : ITimeFrame8Choice, IIsoChoiceVariant
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("TPlus")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

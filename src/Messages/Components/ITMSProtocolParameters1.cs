@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration parameters of the TMS protocol between a POI and a terminal manager.
 /// </summary>
 [IsoId("_dnyOAGpbEeS4r8z7dKyh1g")]
+[IsoDisplayName(@"TMS Protocol Parameters")]
 public interface ITMSProtocolParameters1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITMSProtocolParameters1 : IIsoComponent
     [IsoId("_CoSFMGpcEeS4r8z7dKyh1g")]
     [DisplayName("Maintenance Service")]
     [IsoXmlTag("MntncSvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<DataSetCategory5Code> MaintenanceService { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface ITMSProtocolParameters1 : IIsoComponent
     [IsoId("_uWz6oGpcEeS4r8z7dKyh1g")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Version { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ITMSProtocolParameters1 : IIsoComponent
     [IsoId("_zmYW0GpcEeS4r8z7dKyh1g")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ApplicationIdentification { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ITMSProtocolParameters1 : IIsoComponent
     [IsoId("_Iby-IGprEeSMqvBfBY1c9A")]
     [DisplayName("Host Key")]
     [IsoXmlTag("HstKey")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IKEKIdentifier2> HostKey { get; }
 
     /// <summary>
@@ -65,6 +71,8 @@ public interface ITMSProtocolParameters1 : IIsoComponent
     [IsoId("_OnH38GprEeSMqvBfBY1c9A")]
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? POIIdentification { get; }
 
     /// <summary>
@@ -73,6 +81,8 @@ public interface ITMSProtocolParameters1 : IIsoComponent
     [IsoId("_UK63sGprEeSMqvBfBY1c9A")]
     [DisplayName("Initiating Party Identification")]
     [IsoXmlTag("InitgPtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InitiatingPartyIdentification { get; }
 
     /// <summary>
@@ -81,5 +91,7 @@ public interface ITMSProtocolParameters1 : IIsoComponent
     [IsoId("_nSjP4GprEeSMqvBfBY1c9A")]
     [DisplayName("Recipient Party Identification")]
     [IsoXmlTag("RcptPtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RecipientPartyIdentification { get; }
 }

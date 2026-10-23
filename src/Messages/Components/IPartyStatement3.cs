@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party Statement3.
 /// </summary>
 [IsoId("_Y1fAYTE_Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Party Statement3")]
 public interface IPartyStatement3 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IPartyStatement3 : IIsoComponent
     /// </summary>
     [DisplayName("Change")]
     [IsoXmlTag("Chng")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyReferenceDataChange3> Change { get; }
 }

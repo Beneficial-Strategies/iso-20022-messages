@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date and identification of a trade.
 /// </summary>
 [IsoId("_wiD-kVN4EeOEi5J12GuNGQ")]
+[IsoDisplayName(@"Trade Agreement")]
 public interface ITradeAgreement10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeAgreement10 : IIsoComponent
     [IsoId("_w0Fis1N4EeOEi5J12GuNGQ")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITradeAgreement10 : IIsoComponent
     [IsoId("_w0FitVN4EeOEi5J12GuNGQ")]
     [DisplayName("Originator Reference")]
     [IsoXmlTag("OrgtrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginatorReference { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface ITradeAgreement10 : IIsoComponent
     [IsoId("_w0Fit1N4EeOEi5J12GuNGQ")]
     [DisplayName("Common Reference")]
     [IsoXmlTag("CmonRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonReference { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface ITradeAgreement10 : IIsoComponent
     [IsoId("_w0FiuVN4EeOEi5J12GuNGQ")]
     [DisplayName("Operation Type")]
     [IsoXmlTag("OprTp")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? OperationType { get; }
 
     /// <summary>
@@ -49,6 +57,8 @@ public interface ITradeAgreement10 : IIsoComponent
     [IsoId("_w0Fiu1N4EeOEi5J12GuNGQ")]
     [DisplayName("Operation Scope")]
     [IsoXmlTag("OprScp")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? OperationScope { get; }
 
     /// <summary>
@@ -57,6 +67,7 @@ public interface ITradeAgreement10 : IIsoComponent
     [IsoId("_w0FivVN4EeOEi5J12GuNGQ")]
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SettlementSessionIdentifier { get; }
 
     /// <summary>
@@ -65,5 +76,6 @@ public interface ITradeAgreement10 : IIsoComponent
     [IsoId("__BgqsFN4EeOEi5J12GuNGQ")]
     [DisplayName("Payment Versus Payment Indicator")]
     [IsoXmlTag("PmtVrssPmtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PaymentVersusPaymentIndicator { get; }
 }

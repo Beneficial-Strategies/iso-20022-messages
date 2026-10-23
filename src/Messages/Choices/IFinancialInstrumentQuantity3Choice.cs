@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between ways to express the quantity of the financial instrument to be redeemed.
 /// </summary>
 [IsoId("_VOten9p-Ed-ak6NoX_4Aeg_1922478092")]
+[IsoDisplayName(@"Financial Instrument Quantity 3 Choice")]
 public interface IFinancialInstrumentQuantity3Choice : IIsoChoice { }

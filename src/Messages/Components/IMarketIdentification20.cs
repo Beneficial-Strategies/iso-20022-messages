@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.
 /// </summary>
 [IsoId("_TCCyttp-Ed-ak6NoX_4Aeg_-1053537962")]
+[IsoDisplayName(@"Market Identification")]
 public interface IMarketIdentification20 : IIsoComponent
 {
     /// <summary>

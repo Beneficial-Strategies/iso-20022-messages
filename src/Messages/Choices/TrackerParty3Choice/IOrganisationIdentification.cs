@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrackerParty3Choice;
 /// <summary>
 /// Organisation Identification.
 /// </summary>
+[IsoDisplayName(@"Organisation Identification")]
 public interface IOrganisationIdentification : ITrackerParty3Choice, IIsoChoiceVariant
 {
     /// <summary>

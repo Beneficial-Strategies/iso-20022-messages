@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details to identify a financial institution.
 /// </summary>
 [IsoId("_8xXCNW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Financial Institution Identification")]
 public interface IFinancialInstitutionIdentification18 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancialInstitutionIdentification18 : IIsoComponent
     [IsoId("_87o_kW49EeiU9cctagi5ow")]
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
+    [IsoSimpleType(IsoSimpleType.BICFIDec2014Identifier)]
     BICFIDec2014Identifier? BICFI { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IFinancialInstitutionIdentification18 : IIsoComponent
     [IsoId("_b1ZcUXRwEeiH1ZOt2UD8vQ")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IFinancialInstitutionIdentification18 : IIsoComponent
     [IsoId("_87o_lW49EeiU9cctagi5ow")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>

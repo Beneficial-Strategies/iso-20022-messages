@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationType1Choice;
 /// Type of organisation expressed as a code.
 /// </summary>
 [IsoId("_4Ght0CCeEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOrganisationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

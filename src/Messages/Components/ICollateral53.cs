@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides for each collateral account the report summary and the valuation of each piece of collateral.
 /// </summary>
 [IsoId("_zoKi8SgtEeyB747fKu7_rw")]
+[IsoDisplayName(@"Collateral")]
 public interface ICollateral53 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface ICollateral53 : IIsoComponent
     [IsoId("_0AdHJSgtEeyB747fKu7_rw")]
     [DisplayName("Collateral Valuation")]
     [IsoXmlTag("CollValtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralValuation13> CollateralValuation { get; }
 }

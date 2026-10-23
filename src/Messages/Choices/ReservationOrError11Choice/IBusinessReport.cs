@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError11Choice;
 /// <summary>
 /// Business Report.
 /// </summary>
+[IsoDisplayName(@"Business Report")]
 public interface IBusinessReport : IReservationOrError11Choice, IIsoChoiceVariant
 {
     /// <summary>

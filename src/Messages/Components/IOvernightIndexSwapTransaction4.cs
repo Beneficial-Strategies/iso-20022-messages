@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of each individual overnight index swap transaction.
 /// </summary>
 [IsoId("_G1Uq9cEREea7jLfvGi1PDw")]
+[IsoDisplayName(@"Overnight Index Swap Transaction")]
 public interface IOvernightIndexSwapTransaction4 : IIsoComponent
 {
     /// <summary>
@@ -35,6 +36,7 @@ public interface IOvernightIndexSwapTransaction4 : IIsoComponent
     [IsoId("_G-P9c8EREea7jLfvGi1PDw")]
     [DisplayName("Branch Identification")]
     [IsoXmlTag("BrnchId")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? BranchIdentification { get; }
 
     /// <summary>
@@ -43,6 +45,8 @@ public interface IOvernightIndexSwapTransaction4 : IIsoComponent
     [IsoId("_G-P9dcEREea7jLfvGi1PDw")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? UniqueTransactionIdentifier { get; }
 
     /// <summary>
@@ -51,6 +55,8 @@ public interface IOvernightIndexSwapTransaction4 : IIsoComponent
     [IsoId("_G-P9d8EREea7jLfvGi1PDw")]
     [DisplayName("Proprietary Transaction Identification")]
     [IsoXmlTag("PrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text ProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -59,6 +65,8 @@ public interface IOvernightIndexSwapTransaction4 : IIsoComponent
     [IsoId("_GMpIEcEWEea7jLfvGi1PDw")]
     [DisplayName("Related Proprietary Transaction Identification")]
     [IsoXmlTag("RltdPrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? RelatedProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -67,6 +75,8 @@ public interface IOvernightIndexSwapTransaction4 : IIsoComponent
     [IsoId("_G-P9ecEREea7jLfvGi1PDw")]
     [DisplayName("Counterparty Proprietary Transaction Identification")]
     [IsoXmlTag("CtrPtyPrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? CounterpartyProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -94,6 +104,7 @@ public interface IOvernightIndexSwapTransaction4 : IIsoComponent
     [IsoId("_G-P9f8EREea7jLfvGi1PDw")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate StartDate { get; }
 
     /// <summary>
@@ -102,6 +113,7 @@ public interface IOvernightIndexSwapTransaction4 : IIsoComponent
     [IsoId("_G-P9gcEREea7jLfvGi1PDw")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -110,6 +122,7 @@ public interface IOvernightIndexSwapTransaction4 : IIsoComponent
     [IsoId("_G-P9g8EREea7jLfvGi1PDw")]
     [DisplayName("Fixed Interest Rate")]
     [IsoXmlTag("FxdIntrstRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate FixedInterestRate { get; }
 
     /// <summary>
@@ -134,5 +147,6 @@ public interface IOvernightIndexSwapTransaction4 : IIsoComponent
     [IsoId("_G-P9icEREea7jLfvGi1PDw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Document that a user must file with an authorized servicer for each contract that involves foreign currency transactions with non residents.
 /// </summary>
 [IsoId("_JNsckW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Contract Registration")]
 public interface IContractRegistration4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContractRegistration4 : IIsoComponent
     [IsoId("_JXX88W49EeiU9cctagi5ow")]
     [DisplayName("Contract Registration Opening Identification")]
     [IsoXmlTag("CtrctRegnOpngId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ContractRegistrationOpeningIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IContractRegistration4 : IIsoComponent
     [IsoId("_JXX8_W49EeiU9cctagi5ow")]
     [DisplayName("Contract Balance")]
     [IsoXmlTag("CtrctBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContractBalance1> ContractBalance { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IContractRegistration4 : IIsoComponent
     [IsoId("_JXX9AW49EeiU9cctagi5ow")]
     [DisplayName("Previous Registration Identification")]
     [IsoXmlTag("PrvsRegnId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification22> PreviousRegistrationIdentification { get; }
 
     /// <summary>
@@ -65,6 +70,8 @@ public interface IContractRegistration4 : IIsoComponent
     [IsoId("_JXX9A249EeiU9cctagi5ow")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? AdditionalInformation { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IContractRegistration4 : IIsoComponent
     [IsoId("_JXX9BW49EeiU9cctagi5ow")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation3> Attachment { get; }
 
     /// <summary>
@@ -81,5 +89,6 @@ public interface IContractRegistration4 : IIsoComponent
     [IsoId("_JXX9B249EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

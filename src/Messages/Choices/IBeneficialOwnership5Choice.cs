@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the beneficial ownership.
 /// </summary>
 [IsoId("_5m6A45NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Beneficial Ownership 5 Choice")]
 public interface IBeneficialOwnership5Choice : IIsoChoice { }

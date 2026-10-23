@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial Instrument105.
 /// </summary>
 [IsoId("_BeLSMX_5Ee-5A_neRtHpSQ")]
+[IsoDisplayName(@"Financial Instrument105")]
 public interface IFinancialInstrument105 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface IFinancialInstrument105 : IIsoComponent
     /// </summary>
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit11> UnitsDetails { get; }
 
     /// <summary>
@@ -156,6 +158,7 @@ public interface IFinancialInstrument105 : IIsoComponent
     /// </summary>
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary43> IntermediaryInformation { get; }
 
     /// <summary>
@@ -198,6 +201,7 @@ public interface IFinancialInstrument105 : IIsoComponent
     /// </summary>
     [DisplayName("Crystallisation Details")]
     [IsoXmlTag("CrstllstnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICrystallisation2> CrystallisationDetails { get; }
 
     /// <summary>
@@ -233,5 +237,6 @@ public interface IFinancialInstrument105 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

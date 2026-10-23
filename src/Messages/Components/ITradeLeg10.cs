@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the trade leg details.
 /// </summary>
 [IsoId("_LpIEAS6aEeSQQqw1BT_aMg")]
+[IsoDisplayName(@"Trade Leg")]
 public interface ITradeLeg10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeLeg10 : IIsoComponent
     [IsoId("_L9qJkS6aEeSQQqw1BT_aMg")]
     [DisplayName("Trade Leg Identification")]
     [IsoXmlTag("TradLegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TradeLegIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITradeLeg10 : IIsoComponent
     [IsoId("_L9qJky6aEeSQQqw1BT_aMg")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TradeIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITradeLeg10 : IIsoComponent
     [IsoId("_L9qJlS6aEeSQQqw1BT_aMg")]
     [DisplayName("Trade Execution Identification")]
     [IsoXmlTag("TradExctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TradeExecutionIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITradeLeg10 : IIsoComponent
     [IsoId("_rk0PoC69EeSQQqw1BT_aMg")]
     [DisplayName("Order Identification")]
     [IsoXmlTag("OrdrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OrderIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface ITradeLeg10 : IIsoComponent
     [IsoId("_0pJBwC67EeSQQqw1BT_aMg")]
     [DisplayName("Allocation Identification")]
     [IsoXmlTag("AllcnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AllocationIdentification { get; }
 
     /// <summary>
@@ -57,6 +68,7 @@ public interface ITradeLeg10 : IIsoComponent
     [IsoId("_L9qJly6aEeSQQqw1BT_aMg")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -65,6 +77,7 @@ public interface ITradeLeg10 : IIsoComponent
     [IsoId("_p0ynAC6-EeSQQqw1BT_aMg")]
     [DisplayName("Transaction Date And Time")]
     [IsoXmlTag("TxDtAndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TransactionDateAndTime { get; }
 
     /// <summary>
@@ -145,6 +158,7 @@ public interface ITradeLeg10 : IIsoComponent
     [IsoId("_L9qJqS6aEeSQQqw1BT_aMg")]
     [DisplayName("Derivative Related Trade")]
     [IsoXmlTag("DerivRltdTrad")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DerivativeRelatedTrade { get; }
 
     /// <summary>
@@ -169,6 +183,8 @@ public interface ITradeLeg10 : IIsoComponent
     [IsoId("_pqoI8C6_EeSQQqw1BT_aMg")]
     [DisplayName("Trade Registration Origin")]
     [IsoXmlTag("TradRegnOrgn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TradeRegistrationOrigin { get; }
 
     /// <summary>

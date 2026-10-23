@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides details about the proposal for the variation margin and optionaly the segregated independent amount, or the segregated independent amount only.
 /// </summary>
 [IsoId("_PYHrBV9-EeSMgPeFpRHeJw")]
+[IsoDisplayName(@"Collateral Proposal 3 Choice")]
 public interface ICollateralProposal3Choice : IIsoChoice { }

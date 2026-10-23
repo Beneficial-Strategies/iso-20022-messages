@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GovernanceIdentification1Choice;
 /// Governance identification information.
 /// </summary>
 [IsoId("_929T0XltEeG7BsjMvd1mEw_-1110032848")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IGovernanceIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>

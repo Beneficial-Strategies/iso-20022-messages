@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a document and type of link.
 /// </summary>
 [IsoId("_chT0l5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Document Identification")]
 public interface IDocumentIdentification37 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDocumentIdentification37 : IIsoComponent
     [IsoId("_chT0mZKQEeWHWpTQn1FFVg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text Identification { get; }
 
     /// <summary>

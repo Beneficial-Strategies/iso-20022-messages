@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalBusinessProcessFormat9
 /// Standard code to specify the additional business process linked to a corporate action event.
 /// </summary>
 [IsoId("_EjnfYUEGEeWVgfuHGaKtRQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAdditionalBusinessProcessFormat9Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConfirmationStatus1Choice;
 /// Status of the order confirmation is accepted or received or sent to next party or there is a communication problem with next party. There is no reason attached.
 /// </summary>
 [IsoId("_1BFlFUhCEea8pJjypp-yMQ")]
+[IsoDisplayName(@"Status")]
 public interface IStatus : IConfirmationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

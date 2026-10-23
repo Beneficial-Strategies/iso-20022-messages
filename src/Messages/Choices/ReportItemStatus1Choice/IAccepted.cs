@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportItemStatus1Choice;
 /// Statement is accepted.
 /// </summary>
 [IsoId("_08aRY73QEeO2FLWuu_JIqg")]
+[IsoDisplayName(@"Accepted")]
 public interface IAccepted : IReportItemStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

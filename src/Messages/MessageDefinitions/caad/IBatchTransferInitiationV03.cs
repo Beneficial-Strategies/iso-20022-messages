@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_KEzWMY1IEe6S0_1AaJzQCA")]
 [IsoMessage("caad.003.001.03", "BtchTrfInitn", "urn:iso:std:iso:20022:tech:xsd:caad.003.001.03")]
+[IsoDisplayName(@"Batch Transfer Initiation V03")]
 public interface IBatchTransferInitiationV03 : IOuterRecord
 {
     /// <summary>
@@ -74,6 +75,7 @@ public interface IBatchTransferInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode5> Programme { get; }
 
     /// <summary>
@@ -109,6 +111,7 @@ public interface IBatchTransferInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Clearing Batch Data")]
     [IsoXmlTag("ClrBtchData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IClearingBatchData3> ClearingBatchData { get; }
 
     /// <summary>
@@ -123,6 +126,7 @@ public interface IBatchTransferInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Agent Data")]
     [IsoXmlTag("AgtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation21> AgentData { get; }
 
     /// <summary>
@@ -130,6 +134,7 @@ public interface IBatchTransferInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRecord3> Record { get; }
 
     /// <summary>
@@ -172,6 +177,7 @@ public interface IBatchTransferInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -179,6 +185,7 @@ public interface IBatchTransferInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -186,6 +193,7 @@ public interface IBatchTransferInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

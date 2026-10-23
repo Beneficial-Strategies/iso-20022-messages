@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates whether transaction was reported by mistake and needs to be removed.
 /// </summary>
 [IsoId("_iKpmQczzEeufhKfUxzsnrQ")]
+[IsoDisplayName(@"Trade Error")]
 public interface ITradeError9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeError9 : IIsoComponent
     [IsoId("_iMeLMczzEeufhKfUxzsnrQ")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ITradeError9 : IIsoComponent
     [IsoId("_iMeLN8zzEeufhKfUxzsnrQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

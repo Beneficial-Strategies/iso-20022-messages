@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification references of the underlying transaction.
 /// </summary>
 [IsoId("_RJCi4dLpEeSDLevdaFPXHw")]
+[IsoDisplayName(@"Certificate Identification")]
 public interface ICertificateIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICertificateIdentification1 : IIsoComponent
     [IsoId("_RUVz89LpEeSDLevdaFPXHw")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICertificateIdentification1 : IIsoComponent
     [IsoId("_RUVz9dLpEeSDLevdaFPXHw")]
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ICertificateIdentification1 : IIsoComponent
     [IsoId("_RUVz99LpEeSDLevdaFPXHw")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ICertificateIdentification1 : IIsoComponent
     [IsoId("_RUVz-dLpEeSDLevdaFPXHw")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface ICertificateIdentification1 : IIsoComponent
     [IsoId("_RUVz-9LpEeSDLevdaFPXHw")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>

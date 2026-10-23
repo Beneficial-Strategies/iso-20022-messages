@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to registration of securities.
 /// </summary>
 [IsoId("_Ua2_xtp-Ed-ak6NoX_4Aeg_-1399251365")]
+[IsoDisplayName(@"Registration Parameters")]
 public interface IRegistrationParameters1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRegistrationParameters1 : IIsoComponent
     [IsoId("_Ua2_x9p-Ed-ak6NoX_4Aeg_-1327219631")]
     [DisplayName("Certification Identification")]
     [IsoXmlTag("CertfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CertificationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IRegistrationParameters1 : IIsoComponent
     [IsoId("_Ua2_ydp-Ed-ak6NoX_4Aeg_-837753513")]
     [DisplayName("Registrar Account")]
     [IsoXmlTag("RegarAcct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegistrarAccount { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface IRegistrationParameters1 : IIsoComponent
     [IsoId("_Ua2_ytp-Ed-ak6NoX_4Aeg_1478746755")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesCertificate1> CertificateNumber { get; }
 }

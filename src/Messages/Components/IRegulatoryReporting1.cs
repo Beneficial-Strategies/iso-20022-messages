@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Includes data elements that can be used for reporting to trade repositories, it is not to be used on regular trade confirmations. Although some fields, for example, unique transaction identifier and prior unique transaction identifier, might be used on regular confirmations.
 /// </summary>
 [IsoId("_SEtVEyi-EeKnA5P_jl2DUw")]
+[IsoDisplayName(@"Regulatory Reporting")]
 public interface IRegulatoryReporting1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRegulatoryReporting1 : IIsoComponent
     [IsoId("_koKpMCi-EeKnA5P_jl2DUw")]
     [DisplayName("Reporting Jurisdiction")]
     [IsoXmlTag("RptgJursdctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReportingJurisdiction { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IRegulatoryReporting1 : IIsoComponent
     [IsoId("_01RIsC5KEeK7-OZOLIksSw")]
     [DisplayName("Clearing Threshold Indicator")]
     [IsoXmlTag("ClrThrshldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ClearingThresholdIndicator { get; }
 
     /// <summary>
@@ -73,6 +77,8 @@ public interface IRegulatoryReporting1 : IIsoComponent
     [IsoId("_iYdM8C47EeK7-OZOLIksSw")]
     [DisplayName("Cleared Product Identification")]
     [IsoXmlTag("ClrdPdctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClearedProductIdentification { get; }
 
     /// <summary>
@@ -105,6 +111,8 @@ public interface IRegulatoryReporting1 : IIsoComponent
     [IsoId("_luDhICjoEeK1Sbo8NpBROA")]
     [DisplayName("Execution Venue")]
     [IsoXmlTag("ExctnVn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ExecutionVenue { get; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public interface IRegulatoryReporting1 : IIsoComponent
     [IsoId("_MnF0kC5KEeK7-OZOLIksSw")]
     [DisplayName("Non Standard Flag")]
     [IsoXmlTag("NonStdFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NonStandardFlag { get; }
 
     /// <summary>
@@ -129,6 +138,7 @@ public interface IRegulatoryReporting1 : IIsoComponent
     [IsoId("_U_yssCjrEeK1Sbo8NpBROA")]
     [DisplayName("Link Swap Identification")]
     [IsoXmlTag("LkSwpId")]
+    [IsoSimpleType(IsoSimpleType.Exact42Text)]
     Exact42Text? LinkSwapIdentification { get; }
 
     /// <summary>
@@ -137,5 +147,7 @@ public interface IRegulatoryReporting1 : IIsoComponent
     [IsoId("_ZGe_0CjsEeK1Sbo8NpBROA")]
     [DisplayName("Additional Reporting Information")]
     [IsoXmlTag("AddtlRptgInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReportingInformation { get; }
 }

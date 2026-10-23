@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of parameters used to calculate the fixing rate to be applied to a non-deliverable agreement.
 /// </summary>
 [IsoId("_TIAQw9p-Ed-ak6NoX_4Aeg_1813124879")]
+[IsoDisplayName(@"Non Deliverable Forward Valuation Conditions")]
 public interface INonDeliverableForwardValuationConditions2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface INonDeliverableForwardValuationConditions2 : IIsoComponent
     [IsoId("_TIAQxdp-Ed-ak6NoX_4Aeg_1813124914")]
     [DisplayName("Valuation Date")]
     [IsoXmlTag("ValtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValuationDate { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface INonDeliverableForwardValuationConditions2 : IIsoComponent
     [IsoId("_TIAQxtp-Ed-ak6NoX_4Aeg_1813124939")]
     [DisplayName("Additional Valuation Information")]
     [IsoXmlTag("AddtlValtnInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalValuationInformation { get; }
 
     /// <summary>

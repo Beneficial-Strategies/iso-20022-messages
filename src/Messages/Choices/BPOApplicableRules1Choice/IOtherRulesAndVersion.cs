@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BPOApplicableRules1Choice;
 /// Applicable rules are not URBPO and are specified here with version.
 /// </summary>
 [IsoId("_GHRpoNNrEeKdOs2hjJ_3WQ")]
+[IsoDisplayName(@"Other Rules And Version")]
 public interface IOtherRulesAndVersion : IBPOApplicableRules1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOtherRulesAndVersion : IBPOApplicableRules1Choice, IIsoChoiceV
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("OthrRulesAndVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

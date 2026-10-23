@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Physical attendance admission conditions for a meeting.
 /// </summary>
 [IsoId("_7HCzcK4mEemG7MmivSuE5g")]
+[IsoDisplayName(@"Attendance Admission Conditions")]
 public interface IAttendanceAdmissionConditions1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IAttendanceAdmissionConditions1 : IIsoComponent
     [IsoId("_bJHBwK4nEemG7MmivSuE5g")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

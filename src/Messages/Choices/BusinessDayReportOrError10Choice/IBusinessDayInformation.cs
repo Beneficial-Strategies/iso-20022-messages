@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayReportOrError10Choice
 /// </summary>
 [IsoId("_OYVo4XXyEei3jO6riKEVXg")]
 [IsoXmlTag("BizDayInf")]
+[IsoDisplayName(@"Business Day Information")]
 public interface IBusinessDayInformation : IBusinessDayReportOrError10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,5 +35,6 @@ public interface IBusinessDayInformation : IBusinessDayReportOrError10Choice, II
     [IsoId("_OinmRXXyEei3jO6riKEVXg")]
     [DisplayName("System Information Per Currency")]
     [IsoXmlTag("SysInfPerCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemAvailabilityAndEvents3> SystemInformationPerCurrency { get; }
 }

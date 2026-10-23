@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements providing further details on the account notification.
 /// </summary>
 [IsoId("_RTe_JNp-Ed-ak6NoX_4Aeg_-1487171908")]
+[IsoDisplayName(@"Account Notification")]
 public interface IAccountNotification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountNotification1 : IIsoComponent
     [IsoId("_RTe_Jdp-Ed-ak6NoX_4Aeg_-1487171890")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IAccountNotification1 : IIsoComponent
     [IsoId("_RTe_Jtp-Ed-ak6NoX_4Aeg_-1487171561")]
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ElectronicSequenceNumber { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IAccountNotification1 : IIsoComponent
     [IsoId("_RTe_J9p-Ed-ak6NoX_4Aeg_-1487171501")]
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LegalSequenceNumber { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IAccountNotification1 : IIsoComponent
     [IsoId("_RTe_KNp-Ed-ak6NoX_4Aeg_-1487171596")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface IAccountNotification1 : IIsoComponent
     [IsoId("_RToJEtp-Ed-ak6NoX_4Aeg_1577699848")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INotificationEntry1> Entry { get; }
 
     /// <summary>
@@ -97,5 +104,7 @@ public interface IAccountNotification1 : IIsoComponent
     [IsoId("_RToJE9p-Ed-ak6NoX_4Aeg_-1487171176")]
     [DisplayName("Additional Notification Information")]
     [IsoXmlTag("AddtlNtfctnInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalNotificationInformation { get; }
 }

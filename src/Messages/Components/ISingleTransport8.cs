@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies individually each leg of a transport of goods.
 /// </summary>
 [IsoId("__F4NETckEeSaC-PiOaz_KQ")]
+[IsoDisplayName(@"Single Transport")]
 public interface ISingleTransport8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISingleTransport8 : IIsoComponent
     [IsoId("__bvvYTckEeSaC-PiOaz_KQ")]
     [DisplayName("Transport By Air")]
     [IsoXmlTag("TrnsprtByAir")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransportByAir4> TransportByAir { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISingleTransport8 : IIsoComponent
     [IsoId("__bvvYzckEeSaC-PiOaz_KQ")]
     [DisplayName("Transport By Sea")]
     [IsoXmlTag("TrnsprtBySea")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransportBySea5> TransportBySea { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISingleTransport8 : IIsoComponent
     [IsoId("__bvvZTckEeSaC-PiOaz_KQ")]
     [DisplayName("Transport By Road")]
     [IsoXmlTag("TrnsprtByRoad")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransportByRoad4> TransportByRoad { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ISingleTransport8 : IIsoComponent
     [IsoId("__bvvZzckEeSaC-PiOaz_KQ")]
     [DisplayName("Transport By Rail")]
     [IsoXmlTag("TrnsprtByRail")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransportByRail4> TransportByRail { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the reconciliation period between an acquirer and an issuer or their respective agents.
 /// </summary>
 [IsoId("_bjH8Ua25EfCKbLfqFyM0kg")]
+[IsoDisplayName(@"Reconciliation5")]
 public interface IReconciliation5 : IIsoComponent
 {
     /// <summary>

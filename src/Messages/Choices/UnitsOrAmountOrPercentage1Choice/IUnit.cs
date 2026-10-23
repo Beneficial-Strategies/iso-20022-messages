@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitsOrAmountOrPercentage1Choice
 /// Number of units.
 /// </summary>
 [IsoId("_TcJuYwjdEeS5F6qHcKOrew")]
+[IsoDisplayName(@"Unit")]
 public interface IUnit : IUnitsOrAmountOrPercentage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IUnit : IUnitsOrAmountOrPercentage1Choice, IIsoChoiceVariant
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason21Choice;
 
 /// <summary>Specifies the repair reason.</summary>
 [IsoId("f18cb7f0-7ca3-469f-a99f-f26ad2e3aefa")]
+[IsoDisplayName(@"Repair Reason")]
 public interface IRepairReason : IReason21Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

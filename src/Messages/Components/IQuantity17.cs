@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Quantity of the commodity.
 /// </summary>
 [IsoId("_jOPbKaocEemdLtwzt4CWxg")]
+[IsoDisplayName(@"Quantity")]
 public interface IQuantity17 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IQuantity17 : IIsoComponent
     [IsoId("_jRzsgaocEemdLtwzt4CWxg")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 
     /// <summary>

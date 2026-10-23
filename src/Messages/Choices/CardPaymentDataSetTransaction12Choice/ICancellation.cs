@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction12C
 /// <summary>
 /// Cancellation.
 /// </summary>
+[IsoDisplayName(@"Cancellation")]
 public interface ICancellation : ICardPaymentDataSetTransaction12Choice, IIsoChoiceVariant
 {
     /// <summary>

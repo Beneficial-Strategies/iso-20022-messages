@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details related to interest rate attributes.
 /// </summary>
 [IsoId("_GOMJAQ1IEeqV4s5SpzR1dQ")]
+[IsoDisplayName(@"Interest Rate Legs")]
 public interface IInterestRateLegs7 : IIsoComponent
 {
     /// <summary>

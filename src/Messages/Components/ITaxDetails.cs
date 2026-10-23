@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics defining the type of tax.
 /// </summary>
 [IsoId("_RvWbwNp-Ed-ak6NoX_4Aeg_-1792079217")]
+[IsoDisplayName(@"Tax Details")]
 public interface ITaxDetails : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITaxDetails : IIsoComponent
     [IsoId("_RvWbwdp-Ed-ak6NoX_4Aeg_-1514098436")]
     [DisplayName("Certificate Identification")]
     [IsoXmlTag("CertId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CertificateIdentification { get; }
 
     /// <summary>

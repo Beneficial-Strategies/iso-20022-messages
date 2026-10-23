@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PositionSetAggregated2Choice;
 /// <summary>
 /// Report.
 /// </summary>
+[IsoDisplayName(@"Report")]
 public interface IReport : IPositionSetAggregated2Choice, IIsoChoiceVariant
 {
     /// <summary>

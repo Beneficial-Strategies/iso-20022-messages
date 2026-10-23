@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the contact person.
 /// </summary>
 [IsoId("__RflYS1AEeqVb9PEK4pNyA")]
+[IsoDisplayName(@"Contact")]
 public interface IContact9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContact9 : IIsoComponent
     [IsoId("__TBPYS1AEeqVb9PEK4pNyA")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IContact9 : IIsoComponent
     [IsoId("__TBPYy1AEeqVb9PEK4pNyA")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber PhoneNumber { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IContact9 : IIsoComponent
     [IsoId("__TBPZS1AEeqVb9PEK4pNyA")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text EmailAddress { get; }
 
     /// <summary>
@@ -41,5 +47,7 @@ public interface IContact9 : IIsoComponent
     [IsoId("__TBPZy1AEeqVb9PEK4pNyA")]
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Function { get; }
 }

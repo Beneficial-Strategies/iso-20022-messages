@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a shipment schedule, that is the quantity that must be shipped no sooner than the earliest shipment date and no later than the latest shipment date.
 /// </summary>
 [IsoId("_Sp5_hdp-Ed-ak6NoX_4Aeg_-1202382033")]
+[IsoDisplayName(@"Shipment Date Range")]
 public interface IShipmentDateRange2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IShipmentDateRange2 : IIsoComponent
     [IsoId("_Sp5_htp-Ed-ak6NoX_4Aeg_-1202382015")]
     [DisplayName("Sub Quantity Value")]
     [IsoXmlTag("SubQtyVal")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber SubQuantityValue { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IShipmentDateRange2 : IIsoComponent
     [IsoId("_Sp5_h9p-Ed-ak6NoX_4Aeg_-876378095")]
     [DisplayName("Earliest Shipment Date")]
     [IsoXmlTag("EarlstShipmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EarliestShipmentDate { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IShipmentDateRange2 : IIsoComponent
     [IsoId("_SqDwgNp-Ed-ak6NoX_4Aeg_-1202381938")]
     [DisplayName("Latest Shipment Date")]
     [IsoXmlTag("LatstShipmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LatestShipmentDate { get; }
 }

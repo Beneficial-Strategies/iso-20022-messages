@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError11Choice;
 /// <summary>
 /// Operational Error.
 /// </summary>
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : IReservationOrError11Choice, IIsoChoiceVariant
 {
     /// <summary>

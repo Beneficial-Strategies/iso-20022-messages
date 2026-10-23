@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the legs of swap transaction.
 /// </summary>
 [IsoId("_Ky7eRYG-EeaalK9UbuVGFw")]
+[IsoDisplayName(@"Swap Leg Identification")]
 public interface ISwapLegIdentification2 : IIsoComponent
 {
     /// <summary>

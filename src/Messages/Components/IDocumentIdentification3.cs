@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies a document by a unique identification and a version.
 /// </summary>
 [IsoId("_RJNBwdp-Ed-ak6NoX_4Aeg_-1127047102")]
+[IsoDisplayName(@"Document Identification")]
 public interface IDocumentIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDocumentIdentification3 : IIsoComponent
     [IsoId("_RJNBwtp-Ed-ak6NoX_4Aeg_-841680229")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IDocumentIdentification3 : IIsoComponent
     [IsoId("_RJNBw9p-Ed-ak6NoX_4Aeg_-841680211")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Version { get; }
 }

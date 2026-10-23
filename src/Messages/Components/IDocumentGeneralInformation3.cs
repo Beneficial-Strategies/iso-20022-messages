@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General information that unambiguously identifies a document, such as identification number and issue date time.
 /// </summary>
 [IsoId("_jFYWAdLQEeSdq5yU2aaSNw")]
+[IsoDisplayName(@"Document General Information")]
 public interface IDocumentGeneralInformation3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDocumentGeneralInformation3 : IIsoComponent
     [IsoId("_jPf7U9LQEeSdq5yU2aaSNw")]
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DocumentNumber { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IDocumentGeneralInformation3 : IIsoComponent
     [IsoId("_jPf7VdLQEeSdq5yU2aaSNw")]
     [DisplayName("Sender Receiver Sequence Identification")]
     [IsoXmlTag("SndrRcvrSeqId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SenderReceiverSequenceIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IDocumentGeneralInformation3 : IIsoComponent
     [IsoId("_jPf7V9LQEeSdq5yU2aaSNw")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IssueDate { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IDocumentGeneralInformation3 : IIsoComponent
     [IsoId("_jPf7WdLQEeSdq5yU2aaSNw")]
     [DisplayName("URL")]
     [IsoXmlTag("URL")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? URL { get; }
 
     /// <summary>

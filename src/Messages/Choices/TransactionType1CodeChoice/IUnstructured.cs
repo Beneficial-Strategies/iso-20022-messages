@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionType1CodeChoice;
 /// Transaction type in free text form.
 /// </summary>
 [IsoId("_U0V2w9p-Ed-ak6NoX_4Aeg_-2145545823")]
+[IsoDisplayName(@"Unstructured")]
 public interface IUnstructured : ITransactionType1CodeChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IUnstructured : ITransactionType1CodeChoice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Ustrd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

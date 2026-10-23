@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Undertaking status information.
 /// </summary>
 [IsoId("_-DLK5XltEeG7BsjMvd1mEw_1047822406")]
+[IsoDisplayName(@"Undertaking Status Advice")]
 public interface IUndertakingStatusAdvice1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IUndertakingStatusAdvice1 : IIsoComponent
     [IsoId("_-DLK6HltEeG7BsjMvd1mEw_-238433445")]
     [DisplayName("Amendment Sequence Number")]
     [IsoXmlTag("AmdmntSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? AmendmentSequenceNumber { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface IUndertakingStatusAdvice1 : IIsoComponent
     [IsoId("_-DU74HltEeG7BsjMvd1mEw_-1490832620")]
     [DisplayName("Advising Party Reference Number")]
     [IsoXmlTag("AdvsgPtyRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdvisingPartyReferenceNumber { get; }
 
     /// <summary>
@@ -49,6 +53,8 @@ public interface IUndertakingStatusAdvice1 : IIsoComponent
     [IsoId("_-DU74XltEeG7BsjMvd1mEw_1807062323")]
     [DisplayName("Confirmer Reference Number")]
     [IsoXmlTag("CnfrmrRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ConfirmerReferenceNumber { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface IUndertakingStatusAdvice1 : IIsoComponent
     [IsoId("_-DU743ltEeG7BsjMvd1mEw_1827841012")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation8> StatusReason { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IUndertakingStatusAdvice1 : IIsoComponent
     [IsoId("_rO8tFq-2EeGNi5z8K_XPKQ")]
     [DisplayName("Reported Amount")]
     [IsoXmlTag("RptdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportedAmount1> ReportedAmount { get; }
 
     /// <summary>
@@ -97,6 +105,7 @@ public interface IUndertakingStatusAdvice1 : IIsoComponent
     [IsoId("_1IyGs37nEeGudZE4UaJCHQ")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument9> EnclosedFile { get; }
 
     /// <summary>
@@ -105,5 +114,9 @@ public interface IUndertakingStatusAdvice1 : IIsoComponent
     [IsoId("_-Des4HltEeG7BsjMvd1mEw_1652499690")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

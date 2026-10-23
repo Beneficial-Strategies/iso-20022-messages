@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Assumed stress move for a set of financial instruments defined by a common trading strategy.
 /// </summary>
 [IsoId("_uSmK8Ks2Eeayv9XxdmMwKQ")]
+[IsoDisplayName(@"Strategy")]
 public interface IStrategy1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStrategy1 : IIsoComponent
     [IsoId("_y-9zcKs2Eeayv9XxdmMwKQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

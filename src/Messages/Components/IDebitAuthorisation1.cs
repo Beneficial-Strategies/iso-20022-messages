@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the reason for requesting a debit authorisation as well as the amount of the requested debit.
 /// </summary>
 [IsoId("_t4cl-FkyEeGeoaLUQk__nA_820376924")]
+[IsoDisplayName(@"Debit Authorisation")]
 public interface IDebitAuthorisation1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IDebitAuthorisation1 : IIsoComponent
     [IsoId("_t4mW8lkyEeGeoaLUQk__nA_108386986")]
     [DisplayName("Value Date To Debit")]
     [IsoXmlTag("ValDtToDbt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValueDateToDebit { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IDebitAuthorisation1 : IIsoComponent
     [IsoId("_t4mW81kyEeGeoaLUQk__nA_1939310155")]
     [DisplayName("Additional Cancellation Reason Information")]
     [IsoXmlTag("AddtlCxlRsnInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalCancellationReasonInformation { get; }
 }

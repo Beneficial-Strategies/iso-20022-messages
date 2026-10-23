@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionTypeStatus7Choice;
 /// <summary>
 /// Instruction Status.
 /// </summary>
+[IsoDisplayName(@"Instruction Status")]
 public interface IInstructionStatus : IInstructionTypeStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>

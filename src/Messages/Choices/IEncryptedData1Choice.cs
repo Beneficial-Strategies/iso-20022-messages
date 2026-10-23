@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between binary and hexadicimal binary for encrypted data of the transaction.
 /// </summary>
 [IsoId("_-on80-kLEemeDPHh-U9b6w")]
+[IsoDisplayName(@"Encrypted Data 1 Choice")]
 public interface IEncryptedData1Choice : IIsoChoice { }

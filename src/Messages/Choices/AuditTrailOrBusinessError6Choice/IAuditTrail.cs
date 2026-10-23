@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AuditTrailOrBusinessError6Choice
 /// </summary>
 [IsoId("_bcWXkWc-EemvNLufWGIVOQ")]
 [IsoXmlTag("AudtTrl")]
+[IsoDisplayName(@"Audit Trail")]
 public interface IAuditTrail : IAuditTrailOrBusinessError6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IAuditTrail : IAuditTrailOrBusinessError6Choice, IIsoChoiceVari
     [IsoId("_kzm1AO5NEeCisYr99QEiWA_1740662573")]
     [DisplayName("Field Name")]
     [IsoXmlTag("FldNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text FieldName { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IAuditTrail : IAuditTrailOrBusinessError6Choice, IIsoChoiceVari
     [IsoId("_kzm1Ae5NEeCisYr99QEiWA_-998075288")]
     [DisplayName("Old Field Value")]
     [IsoXmlTag("OdFldVal")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text OldFieldValue { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface IAuditTrail : IAuditTrailOrBusinessError6Choice, IIsoChoiceVari
     [IsoId("_kzm1Au5NEeCisYr99QEiWA_-1286976113")]
     [DisplayName("New Field Value")]
     [IsoXmlTag("NewFldVal")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text NewFieldValue { get; }
 
     /// <summary>
@@ -42,6 +49,7 @@ public interface IAuditTrail : IAuditTrailOrBusinessError6Choice, IIsoChoiceVari
     [IsoId("_kzm1A-5NEeCisYr99QEiWA_-1287417640")]
     [DisplayName("Operation Time Stamp")]
     [IsoXmlTag("OprTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime OperationTimeStamp { get; }
 
     /// <summary>
@@ -50,6 +58,8 @@ public interface IAuditTrail : IAuditTrailOrBusinessError6Choice, IIsoChoiceVari
     [IsoId("_kzm1BO5NEeCisYr99QEiWA_-1840195094")]
     [DisplayName("Instructing User")]
     [IsoXmlTag("InstgUsr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text InstructingUser { get; }
 
     /// <summary>
@@ -58,5 +68,7 @@ public interface IAuditTrail : IAuditTrailOrBusinessError6Choice, IIsoChoiceVari
     [IsoId("_kzm1Be5NEeCisYr99QEiWA_276002183")]
     [DisplayName("Approving User")]
     [IsoXmlTag("ApprvgUsr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? ApprovingUser { get; }
 }

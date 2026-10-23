@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Date2Choice;
 /// Date is defined using a code.
 /// </summary>
 [IsoId("_UdgCINopEeCWg-hsBVGrDA_1430086433")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDate2Choice, IIsoChoiceVariant
 {
     /// <summary>

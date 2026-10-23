@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// </remarks>
 [IsoId("_fSVgYZe9EfCsfrvk22Hpaw")]
 [IsoMessage("pacs.007.001.14", "FIToFIPmtRvsl", "urn:iso:std:iso:20022:tech:xsd:pacs.007.001.14")]
+[Description(@"Scope|The FinancialInstitutionToFinancialInstitutionPaymentReversal message is sent by an agent to the next party in the payment chain. It is used to reverse a payment previously executed.|Usage|The FIToFIPaymentReversal message is exchanged between agents to reverse a payment message that has been settled. The result will be a credit on the debtor account (when the reversed payment was a direct debit) or a debit on the creditor account (when the reversed payment was a credit transfer).|The FIToFIPaymentReversal message may or may not be the follow-up of a payment message.|The FIToFIPaymentReversal message refers to the original payment message by means of references only or by means of references and a set of elements from the original instruction.|The FIToFIPaymentReversal message can be used in domestic and cross-border scenarios.")]
+[IsoDisplayName(@"FI To FI Payment Reversal V14")]
 public interface IFIToFIPaymentReversalV14 : IOuterRecord
 {
     /// <summary>
@@ -40,6 +42,7 @@ public interface IFIToFIPaymentReversalV14 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction182> TransactionInformation { get; }
 
     /// <summary>
@@ -47,5 +50,6 @@ public interface IFIToFIPaymentReversalV14 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

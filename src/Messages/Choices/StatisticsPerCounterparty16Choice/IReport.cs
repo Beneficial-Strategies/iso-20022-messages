@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty16Choic
 /// </summary>
 [IsoId("_rpsLQ1owEe23K4GXSpBSeg")]
 [IsoXmlTag("Rpt")]
+[IsoDisplayName(@"Report")]
 public interface IReport : IStatisticsPerCounterparty16Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IReport : IStatisticsPerCounterparty16Choice, IIsoChoiceVariant
     [IsoId("_rqy-gVowEe23K4GXSpBSeg")]
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ReferenceDate { get; }
 
     /// <summary>

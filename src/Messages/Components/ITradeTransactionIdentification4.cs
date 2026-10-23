@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on transaction and conducting counterparty.
 /// </summary>
 [IsoId("_CUwEIaxiEem81-uIvTF5rQ")]
+[IsoDisplayName(@"Trade Transaction Identification")]
 public interface ITradeTransactionIdentification4 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ITradeTransactionIdentification4 : IIsoComponent
     [IsoId("_CYn3haxiEem81-uIvTF5rQ")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? UniqueTradeIdentifier { get; }
 
     /// <summary>

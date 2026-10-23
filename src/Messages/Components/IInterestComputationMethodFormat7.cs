@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice between a standard code or proprietary code to specify the type of interest computation method.
 /// </summary>
 [IsoId("_YO9D8XitEeqKjIYaFgh_2g")]
+[IsoDisplayName(@"Interest Computation Method Format")]
 public interface IInterestComputationMethodFormat7 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IInterestComputationMethodFormat7 : IIsoComponent
     [IsoId("_2h3KIH_yEeqdQubSe21TTw")]
     [DisplayName("Narrative")]
     [IsoXmlTag("Nrrtv")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? Narrative { get; }
 }

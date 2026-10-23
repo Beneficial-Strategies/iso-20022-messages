@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the non extension request.
 /// </summary>
 [IsoId("_-D6xxnltEeG7BsjMvd1mEw_-1432358339")]
+[IsoDisplayName(@"Undertaking Non Extension Request")]
 public interface IUndertakingNonExtensionRequest1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Operational construct of a central counterparty that defines the relationship between collateral, margin and position accounts and upon default of a clearing member defines the segregation of losses on positions and assets held in such accounts.
 /// </summary>
 [IsoId("_zZQ3oZXeEeaEh9L5Y0ZaKQ")]
+[IsoDisplayName(@"Clearing Account")]
 public interface IClearingAccount1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IClearingAccount1 : IIsoComponent
     [IsoId("_fXQ-0HX_Eee_qcLXasnA4g")]
     [DisplayName("Collateral Account Owner")]
     [IsoXmlTag("CollAcctOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralAccount5> CollateralAccountOwner { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
 /// </summary>
 [IsoId("_o1S5h6WvEeqZmriXpMtonA")]
 [IsoXmlTag("CancRcrd")]
+[IsoDisplayName(@"Cancelled Record")]
 public interface ICancelledRecord : ISecuritiesReferenceDeltaStatusReport5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -20,6 +21,8 @@ public interface ICancelledRecord : ISecuritiesReferenceDeltaStatusReport5Choice
     [IsoId("_EO4YNUmXEeqmSrLQiFB8FA")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -36,6 +39,7 @@ public interface ICancelledRecord : ISecuritiesReferenceDeltaStatusReport5Choice
     [IsoId("_EO4YOUmXEeqmSrLQiFB8FA")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? Issuer { get; }
 
     /// <summary>
@@ -44,6 +48,7 @@ public interface ICancelledRecord : ISecuritiesReferenceDeltaStatusReport5Choice
     [IsoId("_EO4YO0mXEeqmSrLQiFB8FA")]
     [DisplayName("Trading Venue Related Attributes")]
     [IsoXmlTag("TradgVnRltdAttrbts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradingVenueAttributes2> TradingVenueRelatedAttributes { get; }
 
     /// <summary>

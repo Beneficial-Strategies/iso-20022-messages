@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional Rights4.
 /// </summary>
 [IsoId("_dTVYEZK5Ee-l-O3vIHRmRw")]
+[IsoDisplayName(@"Additional Rights4")]
 public interface IAdditionalRights4 : IIsoComponent
 {
     /// <summary>

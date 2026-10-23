@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a linked meeting event.
 /// </summary>
 [IsoId("_M8fK-a7rEemG7MmivSuE5g")]
+[IsoDisplayName(@"Meeting Event Reference")]
 public interface IMeetingEventReference1 : IIsoComponent
 {
     /// <summary>

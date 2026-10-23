@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification198Choice;
 /// Unique and unambiguous identification of the client&apos;s counterparty.
 /// </summary>
 [IsoId("_pDdK0TtqEemIf7eyjCwinw")]
+[IsoDisplayName(@"Client Identification")]
 public interface IClientIdentification : IPartyIdentification198Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IClientIdentification : IPartyIdentification198Choice, IIsoChoi
     /// Specifies a character string with a maximum length of 50 characters.
     /// </summary>
     [IsoXmlTag("ClntId")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text Value { get; }
 }

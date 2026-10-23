@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Lodging Room2.
 /// </summary>
 [IsoId("_ZOHLwXTrEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Lodging Room2")]
 public interface ILodgingRoom2 : IIsoComponent
 {
     /// <summary>

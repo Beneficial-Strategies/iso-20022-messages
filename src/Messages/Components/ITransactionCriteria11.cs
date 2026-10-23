@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Criteria11.
 /// </summary>
 [IsoId("_3K7nxTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Transaction Criteria11")]
 public interface ITransactionCriteria11 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ITransactionCriteria11 : IIsoComponent
     /// </summary>
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionSearchCriteria11> SearchCriteria { get; }
 
     /// <summary>

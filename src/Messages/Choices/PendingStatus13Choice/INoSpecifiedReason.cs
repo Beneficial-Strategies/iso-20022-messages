@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus13Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_5y9kR_7qEeCvPoRGOxRobQ")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IPendingStatus13Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateAndDateTimeSearch5Choice;
 /// Specified date.
 /// </summary>
 [IsoId("_VptEkTp9EemwKdP955WBJQ")]
+[IsoDisplayName(@"Date")]
 public interface IDate : IDateAndDateTimeSearch5Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

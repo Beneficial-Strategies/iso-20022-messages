@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Input notification message.
 /// </summary>
 [IsoId("_zP5loVE6EeyApZmLzm74zA")]
+[IsoDisplayName(@"Device Input Notification")]
 public interface IDeviceInputNotification4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDeviceInputNotification4 : IIsoComponent
     [IsoId("_zWJXkVE6EeyApZmLzm74zA")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ExchangeIdentification { get; }
 
     /// <summary>

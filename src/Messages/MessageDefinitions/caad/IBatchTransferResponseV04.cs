@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_w8HcIROHEfC1ZfCQz0xB3g")]
 [IsoMessage("caad.004.001.04", "BtchTrfRspn", "urn:iso:std:iso:20022:tech:xsd:caad.004.001.04")]
+[IsoDisplayName(@"Batch Transfer Response V04")]
 public interface IBatchTransferResponseV04 : IOuterRecord
 {
     /// <summary>
@@ -74,6 +75,7 @@ public interface IBatchTransferResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode6> Programme { get; }
 
     /// <summary>
@@ -109,6 +111,7 @@ public interface IBatchTransferResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Clearing Batch Data")]
     [IsoXmlTag("ClrBtchData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IClearingBatchData4> ClearingBatchData { get; }
 
     /// <summary>
@@ -123,6 +126,7 @@ public interface IBatchTransferResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRecord4> Record { get; }
 
     /// <summary>
@@ -165,6 +169,7 @@ public interface IBatchTransferResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -172,6 +177,7 @@ public interface IBatchTransferResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -179,6 +185,7 @@ public interface IBatchTransferResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

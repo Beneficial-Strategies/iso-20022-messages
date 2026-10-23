@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// </summary>
 [IsoId("_xPt7hWjNEeiRg5NzP0jkQg")]
 [IsoXmlTag("MktSpcfcAttr")]
+[IsoDisplayName(@"Market Specific Attribute")]
 public interface IMarketSpecificAttribute : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

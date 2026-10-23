@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the type of proposal and if the proposal is for the variation margin and the segregated independent amount, or the segregated independent amount only.
 /// </summary>
 [IsoId("_O7jq0V9-EeSMgPeFpRHeJw")]
+[IsoDisplayName(@"Proposal")]
 public interface IProposal3 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Terminal performing a card transaction.
 /// </summary>
 [IsoId("_Dx2WYWP1EfCX7uJiAWHfoQ")]
+[IsoDisplayName(@"Terminal12")]
 public interface ITerminal12 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITerminal12 : IIsoComponent
     [IsoId("_Dx2WYWP1EfCX7uJiAWHfoQ-pvdt")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ITerminal12 : IIsoComponent
     [IsoId("_Dx2WYWP1EfCX7uJiAWHfoQ-ntdt")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

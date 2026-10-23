@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressSize1Choice;
 /// </summary>
 [IsoId("_rwZwcKs1Eeayv9XxdmMwKQ")]
 [IsoXmlTag("Abs")]
+[IsoDisplayName(@"Absolute")]
 public interface IAbsolute : IStressSize1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IAbsolute : IStressSize1Choice, IIsoChoiceVariant
     [IsoId("_wwCQEMBmEeak3I7j2hsibw")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Unit { get; }
 
     /// <summary>
@@ -26,5 +29,6 @@ public interface IAbsolute : IStressSize1Choice, IIsoChoiceVariant
     [IsoId("_12l6MMBmEeak3I7j2hsibw")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Quantity { get; }
 }

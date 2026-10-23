@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transaction in the authorisation request in a batch.
 /// </summary>
 [IsoId("_S0AtQbZjEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Card Payment Transaction Details54")]
 public interface ICardPaymentTransactionDetails54 : IIsoComponent
 {
     /// <summary>
@@ -89,6 +90,7 @@ public interface ICardPaymentTransactionDetails54 : IIsoComponent
     [IsoId("_S1CoO7ZjEfCUZfsQO4rYeA")]
     [DisplayName("On Line Reason")]
     [IsoXmlTag("OnLineRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<OnLineReason2Code> OnLineReason { get; }
 
     /// <summary>
@@ -121,6 +123,7 @@ public interface ICardPaymentTransactionDetails54 : IIsoComponent
     [IsoId("_S1CoU7ZjEfCUZfsQO4rYeA")]
     [DisplayName("Instalment")]
     [IsoXmlTag("Instlmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalment7> Instalment { get; }
 
     /// <summary>
@@ -153,6 +156,7 @@ public interface ICardPaymentTransactionDetails54 : IIsoComponent
     [IsoId("_S1CoZ7ZjEfCUZfsQO4rYeA")]
     [DisplayName("Sale Item")]
     [IsoXmlTag("SaleItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProduct6> SaleItem { get; }
 
     /// <summary>
@@ -201,6 +205,7 @@ public interface ICardPaymentTransactionDetails54 : IIsoComponent
     [IsoId("_S1Cof7ZjEfCUZfsQO4rYeA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExternallyDefinedData5> AdditionalInformation { get; }
 
     /// <summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.casp;
     "SaleToPOIAdmstvReq",
     "urn:iso:std:iso:20022:tech:xsd:casp.007.001.01"
 )]
+[Description(@"This message is a request for an Administrative service sent to POI System.")]
+[IsoDisplayName(@"Sale To POI Administrative Request V")]
 public interface ISaleToPOIAdministrativeRequestV01 : IOuterRecord
 {
     /// <summary>

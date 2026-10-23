@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information used to calculate the tax.
 /// </summary>
 [IsoId("_VSSXBdp-Ed-ak6NoX_4Aeg_-1673886358")]
+[IsoDisplayName(@"Tax Calculation Information")]
 public interface ITaxCalculationInformation2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITaxCalculationInformation2 : IIsoComponent
     [IsoId("_VSSXB9p-Ed-ak6NoX_4Aeg_-1140089322")]
     [DisplayName("Percentage Of Debt Claim")]
     [IsoXmlTag("PctgOfDebtClm")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfDebtClaim { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ITaxCalculationInformation2 : IIsoComponent
     [IsoId("_VSSXCNp-Ed-ak6NoX_4Aeg_-1286004635")]
     [DisplayName("Percentage Grandfathered Debt")]
     [IsoXmlTag("PctgGrdfthdDebt")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageGrandfatheredDebt { get; }
 }

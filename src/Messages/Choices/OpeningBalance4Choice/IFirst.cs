@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningBalance4Choice;
 /// Opening balance for the statement period. It always equals the closing balance of the previous statement.
 /// </summary>
 [IsoId("_NnIMoTnGEeWV5sr121Fc8A")]
+[IsoDisplayName(@"First")]
 public interface IFirst : IOpeningBalance4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

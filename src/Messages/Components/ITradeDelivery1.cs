@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies how the supply chain shipping arrangements and the delivery of products and/or services as well as related documentation.
 /// </summary>
 [IsoId("_S5CHjgEcEeCQm6a_G2yO_w_-1855522854")]
+[IsoDisplayName(@"Trade Delivery")]
 public interface ITradeDelivery1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITradeDelivery1 : IIsoComponent
     [IsoId("_S5CHkAEcEeCQm6a_G2yO_w_2097470377")]
     [DisplayName("Delivery Date Time")]
     [IsoXmlTag("DlvryDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DeliveryDateTime { get; }
 
     /// <summary>
@@ -65,5 +67,6 @@ public interface ITradeDelivery1 : IIsoComponent
     [IsoId("_S5LRYgEcEeCQm6a_G2yO_w_-3919121")]
     [DisplayName("Consignment")]
     [IsoXmlTag("Consgnmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IConsignment2> Consignment { get; }
 }

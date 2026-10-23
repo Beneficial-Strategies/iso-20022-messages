@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the choice between the major categories of repurchase agreement.
 /// </summary>
 [IsoId("_3-Tf4LbqEeaqL_M7XFD7PQ")]
+[IsoDisplayName(@"Repurchase Agreement Type 1 Choice")]
 public interface IRepurchaseAgreementType1Choice : IIsoChoice { }

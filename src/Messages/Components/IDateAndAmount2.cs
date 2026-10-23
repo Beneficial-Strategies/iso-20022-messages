@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date and amount.
 /// </summary>
 [IsoId("_ByTSIU31EeiQHa-q1Uephw")]
+[IsoDisplayName(@"Date And Amount")]
 public interface IDateAndAmount2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDateAndAmount2 : IIsoComponent
     [IsoId("_CB7CgU31EeiQHa-q1Uephw")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>

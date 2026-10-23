@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the card transaction.
 /// </summary>
 [IsoId("_lK_YgYO8EeSWSLYdc10LRg")]
+[IsoDisplayName(@"Card Transaction Context")]
 public interface ICardTransactionContext4 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface ICardTransactionContext4 : IIsoComponent
     [IsoId("_lXgKlYO8EeSWSLYdc10LRg")]
     [DisplayName("Special Conditions")]
     [IsoXmlTag("SpclConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardTransactionCondition1> SpecialConditions { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation4Choi
 /// <summary>
 /// Current.
 /// </summary>
+[IsoDisplayName(@"Current")]
 public interface ICurrent : ICurrentOrDefaultReservation4Choice, IIsoChoiceVariant
 {
     /// <summary>

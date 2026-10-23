@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a financial institution.
 /// </summary>
 [IsoId("_U3JqwVOVEeijdq8ilaxyOA")]
+[IsoDisplayName(@"Financial Institution Identification")]
 public interface IFinancialInstitutionIdentification16 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancialInstitutionIdentification16 : IIsoComponent
     [IsoId("_nvIdZVOVEeijdq8ilaxyOA")]
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
+    [IsoSimpleType(IsoSimpleType.BICFIDec2014Identifier)]
     BICFIDec2014Identifier? BICFI { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IFinancialInstitutionIdentification16 : IIsoComponent
     [IsoId("_VHX4E1OVEeijdq8ilaxyOA")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IFinancialInstitutionIdentification16 : IIsoComponent
     [IsoId("_CZuQsVOWEeijdq8ilaxyOA")]
     [DisplayName("Proprietary Identification")]
     [IsoXmlTag("PrtryId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProprietaryIdentification { get; }
 
     /// <summary>

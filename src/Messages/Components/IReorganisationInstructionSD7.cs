@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action reorganisation instruction details.
 /// </summary>
 [IsoId("_PWWJYecpEei5aPS232E3Mw")]
+[IsoDisplayName(@"Reorganisation Instruction SD")]
 public interface IReorganisationInstructionSD7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReorganisationInstructionSD7 : IIsoComponent
     [IsoId("_P7dooecpEei5aPS232E3Mw")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IReorganisationInstructionSD7 : IIsoComponent
     [IsoId("_P7dopecpEei5aPS232E3Mw")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IReorganisationInstructionSD7 : IIsoComponent
     [IsoId("_P7dop-cpEei5aPS232E3Mw")]
     [DisplayName("Transaction Sequence Number")]
     [IsoXmlTag("TxSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? TransactionSequenceNumber { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IReorganisationInstructionSD7 : IIsoComponent
     [IsoId("_P7dosecpEei5aPS232E3Mw")]
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? CustomerReferenceIdentification { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface IReorganisationInstructionSD7 : IIsoComponent
     [IsoId("_P7dos-cpEei5aPS232E3Mw")]
     [DisplayName("User Reference Number")]
     [IsoXmlTag("UsrRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text? UserReferenceNumber { get; }
 
     /// <summary>
@@ -73,5 +82,7 @@ public interface IReorganisationInstructionSD7 : IIsoComponent
     [IsoId("_P7doq-cpEei5aPS232E3Mw")]
     [DisplayName("Protect Safekeeping Account")]
     [IsoXmlTag("PrtctSfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINMax35Text? ProtectSafekeepingAccount { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Legally constituted organization specified for this party.
 /// </summary>
 [IsoId("_Sprc0AEcEeCQm6a_G2yO_w_759878882")]
+[IsoDisplayName(@"Legal Organisation")]
 public interface ILegalOrganisation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILegalOrganisation1 : IIsoComponent
     [IsoId("_Sprc0QEcEeCQm6a_G2yO_w_1572549875")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ILegalOrganisation1 : IIsoComponent
     [IsoId("_Sprc0gEcEeCQm6a_G2yO_w_463417334")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information such as the registration details.
 /// </summary>
 [IsoId("_zRqDUfocEeCs84bkrlkROA")]
+[IsoDisplayName(@"Corporate Action Narrative")]
 public interface ICorporateActionNarrative21 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionNarrative21 : IIsoComponent
     [IsoId("_zRz0UfocEeCs84bkrlkROA")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> AdditionalText { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICorporateActionNarrative21 : IIsoComponent
     [IsoId("_zRz0W_ocEeCs84bkrlkROA")]
     [DisplayName("Narrative Version")]
     [IsoXmlTag("NrrtvVrsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> NarrativeVersion { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICorporateActionNarrative21 : IIsoComponent
     [IsoId("_zRz0ZfocEeCs84bkrlkROA")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> RegistrationDetails { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICorporateActionNarrative21 : IIsoComponent
     [IsoId("_zRz0b_ocEeCs84bkrlkROA")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> PartyContactNarrative { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ICorporateActionNarrative21 : IIsoComponent
     [IsoId("_zRz0efocEeCs84bkrlkROA")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> Disclaimer { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ICorporateActionNarrative21 : IIsoComponent
     [IsoId("_zRz0g_ocEeCs84bkrlkROA")]
     [DisplayName("Basket Or Index Information")]
     [IsoXmlTag("BsktOrIndxInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> BasketOrIndexInformation { get; }
 
     /// <summary>
@@ -65,5 +72,6 @@ public interface ICorporateActionNarrative21 : IIsoComponent
     [IsoId("_znH9APocEeCs84bkrlkROA")]
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> CertificationBreakdown { get; }
 }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctOpngAddtlInfReq",
     "urn:iso:std:iso:20022:tech:xsd:acmt.009.001.03"
 )]
+[Description(@"The AccountOpeningAdditionalInformationRequest message is sent from a financial institution to an organisation as part of the account opening process. This message is sent in response to an opening request message from the organisation, if the business content is valid, but additional information is required.")]
+[IsoDisplayName(@"Account Opening Additional Information Request V")]
 public interface IAccountOpeningAdditionalInformationRequestV03 : IOuterRecord
 {
     /// <summary>
@@ -72,6 +74,7 @@ public interface IAccountOpeningAdditionalInformationRequestV03 : IOuterRecord
     [IsoId("_bfzgQ22PEei3KuUgpx7Xcw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature3> DigitalSignature { get; }
 
     /// <summary>
@@ -80,5 +83,6 @@ public interface IAccountOpeningAdditionalInformationRequestV03 : IOuterRecord
     [IsoId("_bfzgRW2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

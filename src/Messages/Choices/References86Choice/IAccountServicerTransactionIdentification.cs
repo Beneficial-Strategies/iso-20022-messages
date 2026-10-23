@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References86Choice;
 
 /// <summary>Specifies the account servicer transaction identification.</summary>
 [IsoId("3d992178-443c-4f4a-af1f-c43af8b1ed30")]
+[IsoDisplayName(@"Account Servicer Transaction Identification")]
 public interface IAccountServicerTransactionIdentification : IReferences86Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

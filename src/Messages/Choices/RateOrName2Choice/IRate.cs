@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrName2Choice;
 /// </summary>
 [IsoId("_XO3Yd9p-Ed-ak6NoX_4Aeg_1588721411")]
 [IsoXmlTag("Rate")]
+[IsoDisplayName(@"Rate")]
 public interface IRate : IRateOrName2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,11 +19,13 @@ public interface IRate : IRateOrName2Choice, IIsoChoiceVariant
     [IsoId("_Q-xTYNp-Ed-ak6NoX_4Aeg_-1215412849")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? Sign { get; }
 
     /// <summary>
     /// Percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument.
     /// </summary>
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_-PSiYROHEfC1ZfCQz0xB3g")]
 [IsoMessage("caad.007.001.05", "Err", "urn:iso:std:iso:20022:tech:xsd:caad.007.001.05")]
+[IsoDisplayName(@"Error V05")]
 public interface IErrorV05 : IOuterRecord
 {
     /// <summary>
@@ -95,6 +96,7 @@ public interface IErrorV05 : IOuterRecord
     /// </summary>
     [DisplayName("Error Detail")]
     [IsoXmlTag("ErrDtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorDetails4> ErrorDetail { get; }
 
     /// <summary>
@@ -116,6 +118,7 @@ public interface IErrorV05 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -130,6 +133,7 @@ public interface IErrorV05 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -137,6 +141,7 @@ public interface IErrorV05 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -144,6 +149,7 @@ public interface IErrorV05 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

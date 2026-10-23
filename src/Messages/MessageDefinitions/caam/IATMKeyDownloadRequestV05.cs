@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// </summary>
 [IsoId("_e_hPAbXuEfCUZfsQO4rYeA")]
 [IsoMessage("caam.003.001.05", "ATMKeyDwnldReq", "urn:iso:std:iso:20022:tech:xsd:caam.003.001.05")]
+[IsoDisplayName(@"ATM Key Download Request V05")]
 public interface IATMKeyDownloadRequestV05 : IOuterRecord
 {
     /// <summary>

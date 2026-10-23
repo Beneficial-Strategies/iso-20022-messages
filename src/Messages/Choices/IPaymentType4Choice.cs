@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a payment type from a predefined list and a proprietary payment type.
 /// </summary>
 [IsoId("_Kjf4MxbwEeOy-PlRuFSUzQ")]
+[IsoDisplayName(@"Payment Type 4 Choice")]
 public interface IPaymentType4Choice : IIsoChoice { }

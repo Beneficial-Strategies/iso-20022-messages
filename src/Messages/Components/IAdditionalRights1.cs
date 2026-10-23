@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the general meeting, specifying the participation requirements and the voting procedures. Alternatively, it may indicate where such information may be obtained.
 /// </summary>
 [IsoId("_TkUZVdp-Ed-ak6NoX_4Aeg_-552052404")]
+[IsoDisplayName(@"Additional Rights")]
 public interface IAdditionalRights1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAdditionalRights1 : IIsoComponent
     [IsoId("_TkUZV9p-Ed-ak6NoX_4Aeg_-990597867")]
     [DisplayName("Additional Right Information URL Address")]
     [IsoXmlTag("AddtlRghtInfURLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? AdditionalRightInformationURLAddress { get; }
 
     /// <summary>

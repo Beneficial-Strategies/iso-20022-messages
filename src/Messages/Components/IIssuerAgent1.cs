@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the role of the Issuer agent.
 /// </summary>
 [IsoId("_QO7x5Np-Ed-ak6NoX_4Aeg_2141002567")]
+[IsoDisplayName(@"Issuer Agent")]
 public interface IIssuerAgent1 : IIsoComponent
 {
     /// <summary>

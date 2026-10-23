@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money associated with a service.
 /// </summary>
 [IsoId("_RtZ7CNp-Ed-ak6NoX_4Aeg_-261306151")]
+[IsoDisplayName(@"Charges Details")]
 public interface IChargesDetails2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IChargesDetails2 : IIsoComponent
     [IsoId("_RtZ7Ctp-Ed-ak6NoX_4Aeg_-203127145")]
     [DisplayName("Other Charges Type")]
     [IsoXmlTag("OthrChrgsTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OtherChargesType { get; }
 
     /// <summary>

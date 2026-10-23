@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Structured information supplied to enable the matching, i.e. reconciliation, of a payment with the items that the payment is intended to settle, eg, commercial invoices in an accounts receivable system.
 /// </summary>
 [IsoId("_QFZbYtp-Ed-ak6NoX_4Aeg_-141764551")]
+[IsoDisplayName(@"Structured Remittance Information")]
 public interface IStructuredRemittanceInformation6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IStructuredRemittanceInformation6 : IIsoComponent
     [IsoId("_QFZbZNp-Ed-ak6NoX_4Aeg_-141764239")]
     [DisplayName("Referred Document Related Date")]
     [IsoXmlTag("RfrdDocRltdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ReferredDocumentRelatedDate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IStructuredRemittanceInformation6 : IIsoComponent
     [IsoId("_QFZbZdp-Ed-ak6NoX_4Aeg_-141764204")]
     [DisplayName("Referred Document Amount")]
     [IsoXmlTag("RfrdDocAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferredDocumentAmount1Choice> ReferredDocumentAmount { get; }
 
     /// <summary>
@@ -65,5 +68,7 @@ public interface IStructuredRemittanceInformation6 : IIsoComponent
     [IsoId("_QFjMYNp-Ed-ak6NoX_4Aeg_-141764179")]
     [DisplayName("Additional Remittance Information")]
     [IsoXmlTag("AddtlRmtInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalRemittanceInformation { get; }
 }

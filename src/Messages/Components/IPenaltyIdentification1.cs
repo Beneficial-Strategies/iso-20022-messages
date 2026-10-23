@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous identification of a penalty.
 /// </summary>
 [IsoId("_Exl5dDkPEem897H7zB2RJg")]
+[IsoDisplayName(@"Penalty Identification1")]
 public interface IPenaltyIdentification1 : IIsoComponent
 {
     /// <summary>

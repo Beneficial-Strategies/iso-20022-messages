@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information describing how the voting process is organised.
 /// </summary>
 [IsoId("_K5fMUfM7EeqRfth943bvEA")]
+[IsoDisplayName(@"Vote Parameters")]
 public interface IVoteParameters6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IVoteParameters6 : IIsoComponent
     [IsoId("_LOa6hfM7EeqRfth943bvEA")]
     [DisplayName("Partial Vote Allowed")]
     [IsoXmlTag("PrtlVoteAllwd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PartialVoteAllowed { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IVoteParameters6 : IIsoComponent
     [IsoId("_LOa6h_M7EeqRfth943bvEA")]
     [DisplayName("Split Vote Allowed")]
     [IsoXmlTag("SpltVoteAllwd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SplitVoteAllowed { get; }
 
     /// <summary>
@@ -97,6 +100,7 @@ public interface IVoteParameters6 : IIsoComponent
     [IsoId("_LOa6l_M7EeqRfth943bvEA")]
     [DisplayName("Beneficial Owner Disclosure")]
     [IsoXmlTag("BnfclOwnrDsclsr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BeneficialOwnerDisclosure { get; }
 
     /// <summary>
@@ -145,6 +149,8 @@ public interface IVoteParameters6 : IIsoComponent
     [IsoId("_LOa6o_M7EeqRfth943bvEA")]
     [DisplayName("Additional Voting Requirements")]
     [IsoXmlTag("AddtlVtngRqrmnts")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalVotingRequirements { get; }
 
     /// <summary>
@@ -153,5 +159,6 @@ public interface IVoteParameters6 : IIsoComponent
     [IsoId("_LOa6pfM7EeqRfth943bvEA")]
     [DisplayName("Previous Instruction Invalidity Indicator")]
     [IsoXmlTag("PrvsInstrInvldtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PreviousInstructionInvalidityIndicator { get; }
 }

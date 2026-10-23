@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variance allowed on a quantity or on a price.
 /// </summary>
 [IsoId("_SsvRF9p-Ed-ak6NoX_4Aeg_964334524")]
+[IsoDisplayName(@"Percentage Tolerance")]
 public interface IPercentageTolerance1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPercentageTolerance1 : IIsoComponent
     [IsoId("_SsvRGNp-Ed-ak6NoX_4Aeg_981883394")]
     [DisplayName("Plus Percent")]
     [IsoXmlTag("PlusPct")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate PlusPercent { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IPercentageTolerance1 : IIsoComponent
     [IsoId("_SsvRGdp-Ed-ak6NoX_4Aeg_1021595225")]
     [DisplayName("Minus Percent")]
     [IsoXmlTag("MnsPct")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate MinusPercent { get; }
 }

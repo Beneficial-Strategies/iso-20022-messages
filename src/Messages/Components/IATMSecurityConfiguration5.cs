@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration of the PIN online verification.
 /// </summary>
 [IsoId("_Xf8qAYr9EeSvuOJS0mmL0g")]
+[IsoDisplayName(@"ATM Security Configuration")]
 public interface IATMSecurityConfiguration5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IATMSecurityConfiguration5 : IIsoComponent
     [IsoId("_lihz8Ir9EeSvuOJS0mmL0g")]
     [DisplayName("PIN Format")]
     [IsoXmlTag("PINFrmt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<PINFormat4Code> PINFormat { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IATMSecurityConfiguration5 : IIsoComponent
     [IsoId("_5hgD0Ir9EeSvuOJS0mmL0g")]
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? PINLengthCapabilities { get; }
 }

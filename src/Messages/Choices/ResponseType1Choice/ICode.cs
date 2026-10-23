@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseType1Choice;
 /// Provides a margin call response type using an ISO 20022 code.
 /// </summary>
 [IsoId("_QnOWF9p-Ed-ak6NoX_4Aeg_1829122886")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IResponseType1Choice, IIsoChoiceVariant
 {
     /// <summary>

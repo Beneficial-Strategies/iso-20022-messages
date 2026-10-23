@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Direct Debit Context1.
 /// </summary>
 [IsoId("_BBFWkKWVEe-ymImuWN-uZA")]
+[IsoDisplayName(@"Direct Debit Context1")]
 public interface IDirectDebitContext1 : IIsoComponent
 {
     /// <summary>

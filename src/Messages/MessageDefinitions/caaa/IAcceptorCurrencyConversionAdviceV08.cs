@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrCcyConvsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:caaa.018.001.08"
 )]
+[IsoDisplayName(@"Acceptor Currency Conversion Advice V08")]
 public interface IAcceptorCurrencyConversionAdviceV08 : IOuterRecord
 {
     /// <summary>

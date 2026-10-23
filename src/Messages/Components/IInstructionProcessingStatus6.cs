@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction Processing Status6.
 /// </summary>
 [IsoId("_YxFiR4Y_Ee-5eN4DwJpixA")]
+[IsoDisplayName(@"Instruction Processing Status6")]
 public interface IInstructionProcessingStatus6 : IIsoComponent
 {
     /// <summary>

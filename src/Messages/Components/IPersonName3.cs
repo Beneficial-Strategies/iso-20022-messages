@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies a person via its first name and surname.
 /// </summary>
 [IsoId("_FhKN1bqcEemCAOifqHrKJw")]
+[IsoDisplayName(@"Person Name")]
 public interface IPersonName3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPersonName3 : IIsoComponent
     [IsoId("_FhKN2LqcEemCAOifqHrKJw")]
     [DisplayName("First Name")]
     [IsoXmlTag("FrstNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text FirstName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPersonName3 : IIsoComponent
     [IsoId("_FhKN2bqcEemCAOifqHrKJw")]
     [DisplayName("Surname")]
     [IsoXmlTag("Srnm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Surname { get; }
 
     /// <summary>

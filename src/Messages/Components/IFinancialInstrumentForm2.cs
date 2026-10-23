@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the form of the financial Instrument.
 /// </summary>
 [IsoId("_dPETJeLxEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Financial Instrument Form")]
 public interface IFinancialInstrumentForm2 : IIsoComponent
 {
     /// <summary>

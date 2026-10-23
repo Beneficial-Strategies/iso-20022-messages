@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency Conversion32.
 /// </summary>
 [IsoId("_qzA3kZ9iEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Currency Conversion32")]
 public interface ICurrencyConversion32 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface ICurrencyConversion32 : IIsoComponent
     /// </summary>
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission19> CommissionDetails { get; }
 
     /// <summary>
@@ -86,6 +88,7 @@ public interface ICurrencyConversion32 : IIsoComponent
     /// </summary>
     [DisplayName("Mark Up Details")]
     [IsoXmlTag("MrkUpDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission18> MarkUpDetails { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndicativeOrMarketPrice2Choice;
 /// Estimated price, for example, for valuation purposes.
 /// </summary>
 [IsoId("_UKwuRtp-Ed-ak6NoX_4Aeg_-814082965")]
+[IsoDisplayName(@"Indicative Price")]
 public interface IIndicativePrice : IIndicativeOrMarketPrice2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

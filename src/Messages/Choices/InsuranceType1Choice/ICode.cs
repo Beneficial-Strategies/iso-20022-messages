@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InsuranceType1Choice;
 /// Type of insurance contract expressed as a code.
 /// </summary>
 [IsoId("_vPyssBQZEeKebsB9eKJSkA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInsuranceType1Choice, IIsoChoiceVariant
 {
     /// <summary>

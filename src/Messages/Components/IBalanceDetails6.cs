@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance related details for a portfolio.
 /// </summary>
 [IsoId("_m91ywPNBEeCuA5Tr22BnwA_934037418")]
+[IsoDisplayName(@"Balance Details")]
 public interface IBalanceDetails6 : IIsoComponent
 {
     /// <summary>

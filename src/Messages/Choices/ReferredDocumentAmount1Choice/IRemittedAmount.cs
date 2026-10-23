@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice;
 /// </summary>
 [IsoId("_QGJCRdp-Ed-ak6NoX_4Aeg_-888106457")]
 [IsoXmlTag("RmtdAmt")]
+[IsoDisplayName(@"Remitted Amount")]
 public interface IRemittedAmount : IReferredDocumentAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

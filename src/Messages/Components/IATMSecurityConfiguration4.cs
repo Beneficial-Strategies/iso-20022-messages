@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration of the digital signatures if the security module is able to perform digital signatures with an asymmetric key.
 /// </summary>
 [IsoId("_u0cgsYr8EeSvuOJS0mmL0g")]
+[IsoDisplayName(@"ATM Security Configuration")]
 public interface IATMSecurityConfiguration4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IATMSecurityConfiguration4 : IIsoComponent
     [IsoId("_HRDZgIr9EeSvuOJS0mmL0g")]
     [DisplayName("Maximum Certificates")]
     [IsoXmlTag("MaxCerts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumCertificates { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IATMSecurityConfiguration4 : IIsoComponent
     [IsoId("_LYwOsIr9EeSvuOJS0mmL0g")]
     [DisplayName("Maximum Signatures")]
     [IsoXmlTag("MaxSgntrs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumSignatures { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IATMSecurityConfiguration4 : IIsoComponent
     [IsoId("_vBzAOYr8EeSvuOJS0mmL0g")]
     [DisplayName("Digital Signature Algorithm")]
     [IsoXmlTag("DgtlSgntrAlgo")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Algorithm14Code> DigitalSignatureAlgorithm { get; }
 }

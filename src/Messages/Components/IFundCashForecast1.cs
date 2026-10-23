@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash movements from or to a fund as a result of investment funds transactions, eg, subscriptions or redemptions.
 /// </summary>
 [IsoId("_VBTUtNp-Ed-ak6NoX_4Aeg_1030770482")]
+[IsoDisplayName(@"Fund Cash Forecast")]
 public interface IFundCashForecast1 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface IFundCashForecast1 : IIsoComponent
     [IsoId("_VBdFsNp-Ed-ak6NoX_4Aeg_1030771317")]
     [DisplayName("Total NAV Change Rate")]
     [IsoXmlTag("TtlNAVChngRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TotalNAVChangeRate { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface IFundCashForecast1 : IIsoComponent
     [IsoId("_VBdFsdp-Ed-ak6NoX_4Aeg_1030771394")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; }
 
     /// <summary>
@@ -89,6 +92,7 @@ public interface IFundCashForecast1 : IIsoComponent
     [IsoId("_VBdFstp-Ed-ak6NoX_4Aeg_1030771352")]
     [DisplayName("Exceptional Net Cash Flow Indicator")]
     [IsoXmlTag("XcptnlNetCshFlowInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ExceptionalNetCashFlowIndicator { get; }
 
     /// <summary>
@@ -97,6 +101,7 @@ public interface IFundCashForecast1 : IIsoComponent
     [IsoId("_VBdFs9p-Ed-ak6NoX_4Aeg_-1419372801")]
     [DisplayName("Cash In Forecast Details")]
     [IsoXmlTag("CshInFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashInForecast2> CashInForecastDetails { get; }
 
     /// <summary>
@@ -105,6 +110,7 @@ public interface IFundCashForecast1 : IIsoComponent
     [IsoId("_VBdFtNp-Ed-ak6NoX_4Aeg_-1360268388")]
     [DisplayName("Cash Out Forecast Details")]
     [IsoXmlTag("CshOutFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOutForecast2> CashOutForecastDetails { get; }
 
     /// <summary>
@@ -113,5 +119,6 @@ public interface IFundCashForecast1 : IIsoComponent
     [IsoId("_VBdFtdp-Ed-ak6NoX_4Aeg_1030771498")]
     [DisplayName("Net Cash Forecast Details")]
     [IsoXmlTag("NetCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetCashForecast1> NetCashForecastDetails { get; }
 }

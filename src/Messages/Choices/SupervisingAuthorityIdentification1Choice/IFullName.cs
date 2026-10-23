@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SupervisingAuthorityIdentificati
 /// Full name of the institution.
 /// </summary>
 [IsoId("_aLmH0fIAEeaz_YGUGLjP6A")]
+[IsoDisplayName(@"Full Name")]
 public interface IFullName : ISupervisingAuthorityIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IFullName : ISupervisingAuthorityIdentification1Choice, IIsoCho
     /// Specifies a character string with a maximum length of 350 characters.
     /// </summary>
     [IsoXmlTag("FullNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Value { get; }
 }

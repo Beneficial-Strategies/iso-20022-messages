@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of the transaction.
 /// </summary>
 [IsoId("__Q-MgXuxEeS2Z_kGi7H1VQ")]
+[IsoDisplayName(@"Card Transaction Environment")]
 public interface ICardTransactionEnvironment3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICardTransactionEnvironment3 : IIsoComponent
     [IsoId("_Tj0ZkIPUEeSvn4rZUbUwhw")]
     [DisplayName("Card Scheme Identification")]
     [IsoXmlTag("CardSchmeId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardSchemeIdentification { get; }
 
     /// <summary>

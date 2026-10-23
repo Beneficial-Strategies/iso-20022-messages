@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity48Cho
 
 /// <summary>Amount of money to be redeemed from the fund. Gross Amount = Quantity * Price.</summary>
 [IsoId("f2020865-6417-4446-b050-67b5590ea3b6")]
+[IsoDisplayName(@"Gross Amount")]
 public interface IGrossAmount : IFinancialInstrumentQuantity48Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

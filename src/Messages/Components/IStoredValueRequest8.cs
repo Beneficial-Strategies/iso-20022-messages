@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Stored Value Request8.
 /// </summary>
 [IsoId("_7GOAYaEPEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Stored Value Request8")]
 public interface IStoredValueRequest8 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IStoredValueRequest8 : IIsoComponent
     /// </summary>
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStoredValueData8> Data { get; }
 }

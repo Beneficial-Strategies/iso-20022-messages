@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance details of a registered contract.
 /// </summary>
 [IsoId("_P1IeoQtKEeWkxvNyFrBT8Q")]
+[IsoDisplayName(@"Contract Balance")]
 public interface IContractBalance1 : IIsoComponent
 {
     /// <summary>

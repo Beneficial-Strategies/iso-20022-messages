@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique identification, as assigned by an organisation, to unambiguously identify a party.
 /// </summary>
 [IsoId("_IV_5UEkJEeaOe8w0NJ11wQ")]
+[IsoDisplayName(@"Organisation Identification")]
 public interface IOrganisationIdentification28 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrganisationIdentification28 : IIsoComponent
     [IsoId("_OYEwgEkJEeaOe8w0NJ11wQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>

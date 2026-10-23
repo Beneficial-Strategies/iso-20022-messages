@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the collateral valuation.
 /// </summary>
 [IsoId("_Spl8ARInEeyZaPkaPAzTvQ")]
+[IsoDisplayName(@"Collateral Amount")]
 public interface ICollateralAmount17 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICollateralAmount17 : IIsoComponent
     [IsoId("_TDEzBxInEeyZaPkaPAzTvQ")]
     [DisplayName("Transaction Amount Breakdown")]
     [IsoXmlTag("TxAmtBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralTransactionAmountBreakdown2> TransactionAmountBreakdown { get; }
 
     /// <summary>

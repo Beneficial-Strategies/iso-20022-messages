@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Status applying to the instruction request received.
 /// </summary>
 [IsoId("_RCpGwtp-Ed-ak6NoX_4Aeg_1720173069")]
+[IsoDisplayName(@"Instruction Status 3 Choice")]
 public interface IInstructionStatus3Choice : IIsoChoice { }

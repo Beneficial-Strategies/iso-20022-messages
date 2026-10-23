@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Requirement for a clearing member to post collateral at a central counterparty with respect to a default fund.
 /// </summary>
 [IsoId("_UvqKAKp3EeamNLogr5TkIQ")]
+[IsoDisplayName(@"Default Fund Requirement")]
 public interface IDefaultFundRequirement1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDefaultFundRequirement1 : IIsoComponent
     [IsoId("_T0Xt0cBtEeak3I7j2hsibw")]
     [DisplayName("Service Identification")]
     [IsoXmlTag("SvcId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ServiceIdentification { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the rejection of a movement cancellation request.
 /// </summary>
 [IsoId("_RlNoVdp-Ed-ak6NoX_4Aeg_1541470017")]
+[IsoDisplayName(@"Corporate Action Movement Rejection Status")]
 public interface ICorporateActionMovementRejectionStatus2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionMovementRejectionStatus2 : IIsoComponent
     [IsoId("_RlNoVtp-Ed-ak6NoX_4Aeg_1616278160")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason14FormatChoice> Reason { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface ICorporateActionMovementRejectionStatus2 : IIsoComponent
     [IsoId("_RlNoV9p-Ed-ak6NoX_4Aeg_1616278191")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

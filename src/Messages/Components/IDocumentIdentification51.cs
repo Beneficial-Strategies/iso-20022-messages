@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification and creation date of a document.
 /// </summary>
 [IsoId("_BsblMTp6EemwKdP955WBJQ")]
+[IsoDisplayName(@"Document Identification")]
 public interface IDocumentIdentification51 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDocumentIdentification51 : IIsoComponent
     [IsoId("_B4MwUTp6EemwKdP955WBJQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NonEligibleProceedsIndicator5Cho
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : INonEligibleProceedsIndicator5Choice, IIsoChoiceVariant
 {
     /// <summary>

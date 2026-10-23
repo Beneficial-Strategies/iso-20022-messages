@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice;
 
 /// <summary>Stock Exchange Daily Official List (SEDOL) identifier.</summary>
 [IsoId("a19ffbd1-7fd5-453c-904d-0d1851517164")]
+[IsoDisplayName(@"SEDOL")]
 public interface ISEDOL : ISecurityIdentification46Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

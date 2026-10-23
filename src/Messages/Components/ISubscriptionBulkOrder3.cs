@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Order to invest the investor&apos;s principal in an investment fund.
 /// </summary>
 [IsoId("_SJbIsdp-Ed-ak6NoX_4Aeg_-270621304")]
+[IsoDisplayName(@"Subscription Bulk Order")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISubscriptionBulkOrder3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ISubscriptionBulkOrder3 : IIsoComponent
     [IsoId("_SJbIstp-Ed-ak6NoX_4Aeg_-2055977532")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ISubscriptionBulkOrder3 : IIsoComponent
     [IsoId("_SJk5oNp-Ed-ak6NoX_4Aeg_-270620855")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ISubscriptionBulkOrder3 : IIsoComponent
     [IsoId("_SJk5otp-Ed-ak6NoX_4Aeg_-1004536518")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedFutureTradeDate { get; }
 
     /// <summary>
@@ -65,6 +71,8 @@ public interface ISubscriptionBulkOrder3 : IIsoComponent
     [IsoId("_SJk5pNp-Ed-ak6NoX_4Aeg_-381119360")]
     [DisplayName("Extended Cancellation Right")]
     [IsoXmlTag("XtndedCxlRght")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedCancellationRight { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface ISubscriptionBulkOrder3 : IIsoComponent
     [IsoId("_SJk5ptp-Ed-ak6NoX_4Aeg_-269699831")]
     [DisplayName("Individual Order Details")]
     [IsoXmlTag("IndvOrdrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubscriptionOrder5> IndividualOrderDetails { get; }
 
     /// <summary>
@@ -113,6 +122,7 @@ public interface ISubscriptionBulkOrder3 : IIsoComponent
     [IsoId("_SJuDkNp-Ed-ak6NoX_4Aeg_-1573666496")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CashSettlementDate { get; }
 
     /// <summary>

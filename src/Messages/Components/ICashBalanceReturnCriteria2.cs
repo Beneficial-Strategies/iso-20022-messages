@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to report on the cash balance.
 /// </summary>
 [IsoId("_1M2zsXX4Eei3jO6riKEVXg")]
+[IsoDisplayName(@"Cash Balance Return Criteria")]
 public interface ICashBalanceReturnCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICashBalanceReturnCriteria2 : IIsoComponent
     [IsoId("_1Z0RoXX4Eei3jO6riKEVXg")]
     [DisplayName("Type Indicator")]
     [IsoXmlTag("TpInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator TypeIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICashBalanceReturnCriteria2 : IIsoComponent
     [IsoId("_1Z0Ro3X4Eei3jO6riKEVXg")]
     [DisplayName("Status Indicator")]
     [IsoXmlTag("StsInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator StatusIndicator { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICashBalanceReturnCriteria2 : IIsoComponent
     [IsoId("_1Z0RpXX4Eei3jO6riKEVXg")]
     [DisplayName("Value Date Indicator")]
     [IsoXmlTag("ValDtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator ValueDateIndicator { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICashBalanceReturnCriteria2 : IIsoComponent
     [IsoId("_50MyQXX4Eei3jO6riKEVXg")]
     [DisplayName("Processing Date Indicator")]
     [IsoXmlTag("PrcgDtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator ProcessingDateIndicator { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface ICashBalanceReturnCriteria2 : IIsoComponent
     [IsoId("_1Z0Rp3X4Eei3jO6riKEVXg")]
     [DisplayName("Number Of Payments Indicator")]
     [IsoXmlTag("NbOfPmtsInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator NumberOfPaymentsIndicator { get; }
 }

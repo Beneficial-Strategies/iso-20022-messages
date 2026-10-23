@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType11Choice;
 
 /// <summary>Charge type expressed as an ISO 20022 code.</summary>
 [IsoId("5a3cebb8-65c3-40ef-bfa3-3432dc08561b")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChargeType11Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

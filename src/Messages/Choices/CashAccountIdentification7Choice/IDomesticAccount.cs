@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification7Choice
 /// </summary>
 [IsoId("_o7ELOeWbEeevU7McUP3D1w")]
 [IsoXmlTag("DmstAcct")]
+[IsoDisplayName(@"Domestic Account")]
 public interface IDomesticAccount : ICashAccountIdentification7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,7 @@ public interface IDomesticAccount : ICashAccountIdentification7Choice, IIsoChoic
     [IsoId("_n2FZYSxxEeKgiYs1KJCQUg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

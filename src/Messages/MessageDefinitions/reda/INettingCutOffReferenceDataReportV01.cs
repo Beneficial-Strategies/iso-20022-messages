@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "NetgCutOffRefDataRpt",
     "urn:iso:std:iso:20022:tech:xsd:reda.061.001.01"
 )]
+[Description(@"The Netting Cut Off Reference Data Report message is sent to a participant by a central system to provide details of scheduled, changed, existing and previous netting cut off data held at a central system.")]
+[IsoDisplayName(@"Netting Cut Off Reference Data Report V")]
 public interface INettingCutOffReferenceDataReportV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface INettingCutOffReferenceDataReportV01 : IOuterRecord
     [IsoId("_pQMvMJXZEeaYkf5FCqYMeA")]
     [DisplayName("Participant Netting Cut Off Data")]
     [IsoXmlTag("PtcptNetgCutOffData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICutOffData1> ParticipantNettingCutOffData { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface INettingCutOffReferenceDataReportV01 : IOuterRecord
     [IsoId("_g5ZZMZnzEeahw7LV9elg3w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

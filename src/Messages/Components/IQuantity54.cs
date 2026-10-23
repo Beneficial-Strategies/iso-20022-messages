@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Quantity of assets.
 /// </summary>
 [IsoId("9f4e9a6d-21be-41d3-a027-b36c24f6f4b4")]
+[IsoDisplayName(@"Quantity54")]
 public interface IQuantity54 : IIsoComponent
 {
     /// <summary>

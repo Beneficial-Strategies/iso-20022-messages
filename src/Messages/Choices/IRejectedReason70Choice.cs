@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a code or proprietary format for a rejected reason.</summary>
 [IsoId("_ETYKM6jVEfCzuLlmLrhIvA")]
+[IsoDisplayName(@"Rejected Reason 70 Choice")]
 public interface IRejectedReason70Choice : IIsoChoice { }

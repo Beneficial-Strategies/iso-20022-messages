@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the undertaking type.
 /// </summary>
 [IsoId("_92qY6HltEeG7BsjMvd1mEw_72990354")]
+[IsoDisplayName(@"Undertaking Type 1 Choice")]
 public interface IUndertakingType1Choice : IIsoChoice { }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for a frequency, for example, the frequency of payment.
 /// </summary>
 [IsoId("_AAc8MeLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Frequency 35 Choice")]
 public interface IFrequency35Choice : IIsoChoice { }

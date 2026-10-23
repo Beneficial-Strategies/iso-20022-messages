@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.
 /// </summary>
 [IsoId("_J00dQdkBEeiojJsa6FYyew")]
+[IsoDisplayName(@"Traceability")]
 public interface ITraceability6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITraceability6 : IIsoComponent
     [IsoId("_J-q809kBEeiojJsa6FYyew")]
     [DisplayName("Protocol Name")]
     [IsoXmlTag("PrtcolNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProtocolName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ITraceability6 : IIsoComponent
     [IsoId("_J-q81dkBEeiojJsa6FYyew")]
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text? ProtocolVersion { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ITraceability6 : IIsoComponent
     [IsoId("_J-q819kBEeiojJsa6FYyew")]
     [DisplayName("Trace Date Time In")]
     [IsoXmlTag("TracDtTmIn")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TraceDateTimeIn { get; }
 
     /// <summary>
@@ -49,5 +55,6 @@ public interface ITraceability6 : IIsoComponent
     [IsoId("_J-q82dkBEeiojJsa6FYyew")]
     [DisplayName("Trace Date Time Out")]
     [IsoXmlTag("TracDtTmOut")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TraceDateTimeOut { get; }
 }

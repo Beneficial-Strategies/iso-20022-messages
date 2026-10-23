@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the unique codes identifying the portfolio.
 /// </summary>
 [IsoId("_YwE-cTIDEe2fXedS_ucFOA")]
+[IsoDisplayName(@"Collateral Portfolio Code 5 Choice")]
 public interface ICollateralPortfolioCode5Choice : IIsoChoice { }

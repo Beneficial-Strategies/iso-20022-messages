@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractTerm6Choice;
 /// Transaction is open term, that is, has no fixed maturity date.
 /// </summary>
 [IsoId("__L6x0a5OEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Open")]
 public interface IOpen : IContractTerm6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IOpen : IContractTerm6Choice, IIsoChoiceVariant
     /// A flag indicating a True or False value.
     /// </summary>
     [IsoXmlTag("Opn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator Value { get; }
 }

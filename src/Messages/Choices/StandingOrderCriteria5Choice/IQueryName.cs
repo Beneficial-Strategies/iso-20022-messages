@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria5Choice;
 /// <summary>
 /// Query Name.
 /// </summary>
+[IsoDisplayName(@"Query Name")]
 public interface IQueryName : IStandingOrderCriteria5Choice, IIsoChoiceVariant
 {
     /// <summary>

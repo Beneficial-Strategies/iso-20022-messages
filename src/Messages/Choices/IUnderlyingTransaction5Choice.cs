@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides details of the underlying transaction, on which the investigation is processed.
 /// </summary>
 [IsoId("_IGwpoW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Underlying Transaction 5 Choice")]
 public interface IUnderlyingTransaction5Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction has been received and accepted by the issuer or offeror.
 /// </summary>
 [IsoId("_R_R3k475EfCbNJ3GwkFTcw")]
+[IsoDisplayName(@"Received By Issuer Or Offeror Status1")]
 public interface IReceivedByIssuerOrOfferorStatus1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Range of amount values.
 /// </summary>
 [IsoId("_PVQ-9Np-Ed-ak6NoX_4Aeg_-844951100")]
+[IsoDisplayName(@"Currency And Amount Range")]
 public interface ICurrencyAndAmountRange2 : IIsoComponent
 {
     /// <summary>

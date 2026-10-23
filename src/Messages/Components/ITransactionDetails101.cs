@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the details of the transaction.
 /// </summary>
 [IsoId("_G191UaWgEeatOerspsHe_g")]
+[IsoDisplayName(@"Transaction Details")]
 public interface ITransactionDetails101 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITransactionDetails101 : IIsoComponent
     [IsoId("_HGCRp6WgEeatOerspsHe_g")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ITransactionDetails101 : IIsoComponent
     [IsoId("_HGCRq6WgEeatOerspsHe_g")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ITransactionDetails101 : IIsoComponent
     [IsoId("_HGCRr6WgEeatOerspsHe_g")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ITransactionDetails101 : IIsoComponent
     [IsoId("_HGCRsaWgEeatOerspsHe_g")]
     [DisplayName("Other Transaction Identification")]
     [IsoXmlTag("OthrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? OtherTransactionIdentification { get; }
 
     /// <summary>

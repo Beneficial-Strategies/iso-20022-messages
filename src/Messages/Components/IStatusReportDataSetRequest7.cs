@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the status report of a point of interaction (POI).
 /// </summary>
 [IsoId("_f9XVUbYEEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Status Report Data Set Request7")]
 public interface IStatusReportDataSetRequest7 : IIsoComponent
 {
     /// <summary>

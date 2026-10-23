@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Standardisation3Choice;
 /// Standardisation expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_PnpgwWp7EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IStandardisation3Choice, IIsoChoiceVariant
 {
     /// <summary>

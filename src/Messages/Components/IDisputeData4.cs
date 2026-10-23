@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Dispute Data4.
 /// </summary>
 [IsoId("_kfXKsXHDEe60F8I8TAMKmg")]
+[IsoDisplayName(@"Dispute Data4")]
 public interface IDisputeData4 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface IDisputeData4 : IIsoComponent
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeReference1> Reference { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface IDisputeData4 : IIsoComponent
     /// </summary>
     [DisplayName("Reject Reason")]
     [IsoXmlTag("RjctRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> RejectReason { get; }
 
     /// <summary>
@@ -72,5 +75,6 @@ public interface IDisputeData4 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

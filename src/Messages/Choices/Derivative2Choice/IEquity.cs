@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative2Choice;
 /// </summary>
 [IsoId("_Bv9MR2kwEeaLAKoEUNsD9g")]
 [IsoXmlTag("Eqty")]
+[IsoDisplayName(@"Equity")]
 public interface IEquity : IDerivative2Choice, IIsoChoiceVariant
 {
     /// <summary>

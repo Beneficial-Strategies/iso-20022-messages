@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the query criteria related to securities.
 /// </summary>
 [IsoId("_YwmEUdGREeaQk737TH1Fzw")]
+[IsoDisplayName(@"Trade Security Identification Query Criteria")]
 public interface ITradeSecurityIdentificationQueryCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITradeSecurityIdentificationQueryCriteria2 : IIsoComponent
     [IsoId("_Y5Yz89GREeaQk737TH1Fzw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentificationQueryCriteria1> Identification { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ITradeSecurityIdentificationQueryCriteria2 : IIsoComponent
     [IsoId("_Y5Yz9dGREeaQk737TH1Fzw")]
     [DisplayName("Underlying Instrument Identification")]
     [IsoXmlTag("UndrlygInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentificationQuery3Choice> UnderlyingInstrumentIdentification { get; }
 }

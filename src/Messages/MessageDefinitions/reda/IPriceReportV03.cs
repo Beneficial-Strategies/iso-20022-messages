@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_ZtdTrNEvEd-BzquC8wXy7w_1235947940")]
 [IsoMessage("reda.001.001.03", "PricRptV03", "urn:iso:std:iso:20022:tech:xsd:reda.001.001.03")]
+[Description(@"Scope|A report provider, eg, a transfer agent, fund accountant or market data provider, sends the PriceReport message to the report recipient, eg, a fund management company, transfer agent, market data provider, regulator or other interested party to provide the net asset value and price information for financial instruments on specific trade dates and, optionally, to quote price variation information.|Usage|The PriceReport message is used to:|- report prices for one or several different financial instruments for one or several different trade dates,|- report statistical information about the valuation of a financial instrument,|- inform another party that the quotation of a financial instrument is suspended,|- report prices that are used for purposes other than the execution of investment funds orders.")]
+[IsoDisplayName(@"Price Report V")]
 public interface IPriceReportV03 : IOuterRecord
 {
     /// <summary>
@@ -43,6 +45,7 @@ public interface IPriceReportV03 : IOuterRecord
     [IsoId("_ZtdTr9EvEd-BzquC8wXy7w_1460364565")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -67,6 +70,7 @@ public interface IPriceReportV03 : IOuterRecord
     [IsoId("_ZtnEotEvEd-BzquC8wXy7w_-1559220548")]
     [DisplayName("Price Valuation Details")]
     [IsoXmlTag("PricValtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceValuation3> PriceValuationDetails { get; }
 
     /// <summary>
@@ -75,5 +79,6 @@ public interface IPriceReportV03 : IOuterRecord
     [IsoId("_ZtnEo9EvEd-BzquC8wXy7w_-1773147282")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

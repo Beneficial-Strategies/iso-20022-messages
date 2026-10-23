@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification2Choic
 /// Exchange or Multilateral Trading Facility (MTF) on which the transaction is executed.
 /// </summary>
 [IsoId("_TCfepdp-Ed-ak6NoX_4Aeg_-1823256759")]
+[IsoDisplayName(@"Market Identification")]
 public interface IMarketIdentification : IPlaceOfTradeIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IMarketIdentification : IPlaceOfTradeIdentification2Choice, IIs
     /// Market Identifier Code. The identification of a financial market, as stipulated in the norm ISO 10383 &apos;Codes for exchanges and market identifications&apos;.
     /// </summary>
     [IsoXmlTag("MktId")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier Value { get; }
 }

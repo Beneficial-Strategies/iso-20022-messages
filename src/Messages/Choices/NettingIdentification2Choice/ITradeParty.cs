@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NettingIdentification2Choice;
 /// Describes the individual trading party.
 /// </summary>
 [IsoId("_CKT6AQN1Ee2-vqzwMUAewg")]
+[IsoDisplayName(@"Trade Party")]
 public interface ITradeParty : INettingIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

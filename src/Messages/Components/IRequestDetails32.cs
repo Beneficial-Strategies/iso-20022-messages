@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Request Details32.
 /// </summary>
 [IsoId("_ItbUYYYeEe-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Request Details32")]
 public interface IRequestDetails32 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IRequestDetails32 : IIsoComponent
     /// </summary>
     [DisplayName("Restriction Reference")]
     [IsoXmlTag("RstrctnRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRestrictionIdentification1> RestrictionReference { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface IRequestDetails32 : IIsoComponent
     /// </summary>
     [DisplayName("Other Processing")]
     [IsoXmlTag("OthrPrcg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification30> OtherProcessing { get; }
 
     /// <summary>
@@ -100,5 +103,6 @@ public interface IRequestDetails32 : IIsoComponent
     /// </summary>
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages74> Linkages { get; }
 }

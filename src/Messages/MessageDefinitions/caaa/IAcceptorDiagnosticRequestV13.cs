@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_wXYo4aFAEe-MRKYsaX6JDg")]
 [IsoMessage("caaa.013.001.13", "AccptrDgnstcReq", "urn:iso:std:iso:20022:tech:xsd:caaa.013.001.13")]
+[IsoDisplayName(@"Acceptor Diagnostic Request V13")]
 public interface IAcceptorDiagnosticRequestV13 : IOuterRecord
 {
     /// <summary>

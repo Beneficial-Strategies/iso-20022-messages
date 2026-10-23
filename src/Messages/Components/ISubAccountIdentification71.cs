@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sub Account Identification71.
 /// </summary>
 [IsoId("_Ws1BjYS2Ee-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Sub Account Identification71")]
 public interface ISubAccountIdentification71 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface ISubAccountIdentification71 : IIsoComponent
     /// </summary>
     [DisplayName("Balance For Sub Account")]
     [IsoXmlTag("BalForSubAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateBalanceInformation46> BalanceForSubAccount { get; }
 }

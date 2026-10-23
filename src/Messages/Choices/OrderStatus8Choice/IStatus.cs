@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus8Choice;
 
 /// <summary>Status of all the orders in the order message. There is no reason attached.</summary>
 [IsoId("3d1882c4-a7a2-49c7-b9b1-192846595217")]
+[IsoDisplayName(@"Status")]
 public interface IStatus : IOrderStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

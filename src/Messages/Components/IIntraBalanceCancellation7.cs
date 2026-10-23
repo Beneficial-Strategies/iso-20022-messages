@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Intra Balance Cancellation7.
 /// </summary>
 [IsoId("_3fKyZTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Intra Balance Cancellation7")]
 public interface IIntraBalanceCancellation7 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IIntraBalanceCancellation7 : IIsoComponent
     /// </summary>
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalanceCancellation8> Cancellation { get; }
 }

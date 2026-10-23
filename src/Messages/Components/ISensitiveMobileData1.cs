@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sensitive information related to the mobile phone.
 /// </summary>
 [IsoId("_U6ri8NtoEeipuvJHTHIw9A")]
+[IsoDisplayName(@"Sensitive Mobile Data")]
 public interface ISensitiveMobileData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISensitiveMobileData1 : IIsoComponent
     [IsoId("_q4gFINtoEeipuvJHTHIw9A")]
     [DisplayName("MSISDN")]
     [IsoXmlTag("MSISDN")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText MSISDN { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISensitiveMobileData1 : IIsoComponent
     [IsoId("_w87FsNtoEeipuvJHTHIw9A")]
     [DisplayName("IMSI")]
     [IsoXmlTag("IMSI")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? IMSI { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ISensitiveMobileData1 : IIsoComponent
     [IsoId("_1pDdoNtoEeipuvJHTHIw9A")]
     [DisplayName("IMEI")]
     [IsoXmlTag("IMEI")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? IMEI { get; }
 }

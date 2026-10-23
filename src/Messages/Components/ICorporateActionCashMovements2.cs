@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the cash movement resulting from the election instruction.
 /// </summary>
 [IsoId("_UI00nNp-Ed-ak6NoX_4Aeg_-1357600195")]
+[IsoDisplayName(@"Corporate Action Cash Movements")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ICorporateActionCashMovements2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ICorporateActionCashMovements2 : IIsoComponent
     [IsoId("_UI00ndp-Ed-ak6NoX_4Aeg_-178406164")]
     [DisplayName("Posting Identification")]
     [IsoXmlTag("PstngId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PostingIdentification { get; }
 
     /// <summary>
@@ -41,5 +45,8 @@ public interface ICorporateActionCashMovements2 : IIsoComponent
     [IsoId("_UI-lktp-Ed-ak6NoX_4Aeg_1235283367")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount19> AccountDetails { get; }
 }

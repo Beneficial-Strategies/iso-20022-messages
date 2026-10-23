@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the status being requested.
 /// </summary>
 [IsoId("_dBQu8aovEfCG2_q2WT-90w")]
+[IsoDisplayName(@"Document Number22")]
 public interface IDocumentNumber22 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IDocumentNumber22 : IIsoComponent
     [IsoId("_dEWfQ6ovEfCG2_q2WT-90w")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIdentification32> References { get; }
 }

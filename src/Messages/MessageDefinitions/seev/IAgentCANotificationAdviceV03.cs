@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("a62916a1-f130-404c-8c6f-2aa78713f931")]
 [IsoMessage("seev.009.001.03", "AgtCANtfctnAdvc", "urn:iso:std:iso:20022:tech:xsd:seev.009.001.03")]
+[IsoDisplayName(@"Agent CA Notification Advice V03")]
 public interface IAgentCANotificationAdviceV03 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +40,7 @@ public interface IAgentCANotificationAdviceV03 : IOuterRecord
     /// </summary>
     [DisplayName("Agent Information")]
     [IsoXmlTag("AgtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionAgent2> AgentInformation { get; }
 
     /// <summary>
@@ -60,6 +62,7 @@ public interface IAgentCANotificationAdviceV03 : IOuterRecord
     /// </summary>
     [DisplayName("Corporate Action Option Details")]
     [IsoXmlTag("CorpActnOptnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionOption250> CorporateActionOptionDetails { get; }
 
     /// <summary>

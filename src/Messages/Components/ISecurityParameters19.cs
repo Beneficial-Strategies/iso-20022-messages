@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters related to the security of software application and application protocol.
 /// </summary>
 [IsoId("_ObBcUbZ6EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Security Parameters19")]
 public interface ISecurityParameters19 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISecurityParameters19 : IIsoComponent
     [IsoId("_ObBcWbZ6EfCUZfsQO4rYeA")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICryptographicKey21> Key { get; }
 
     /// <summary>

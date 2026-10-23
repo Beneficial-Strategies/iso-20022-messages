@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// U-003-2009 Addition and Modification of choice component. S-009-2009 They are not valid business options in the redemption processing context. S-015-2009 Add new data elements to indicate time zone.
 /// </summary>
 [IsoId("_SsJbPdp-Ed-ak6NoX_4Aeg_2033258756")]
+[IsoDisplayName(@"Main Fund Order Desk Location")]
 public interface IMainFundOrderDeskLocation1 : IIsoComponent
 {
     /// <summary>

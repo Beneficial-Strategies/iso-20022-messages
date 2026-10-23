@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies a unit of measure with a code or free text.
 /// </summary>
 [IsoId("__YQFQBrZEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Unit Of Measure 3 Choice")]
 public interface IUnitOfMeasure3Choice : IIsoChoice { }

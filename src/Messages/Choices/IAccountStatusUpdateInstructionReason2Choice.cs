@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a reason for an instruction to change the status of an account.
 /// </summary>
 [IsoId("_0Y8Z4Xi8EeaRm5xIK6nGuQ")]
+[IsoDisplayName(@"Account Status Update Instruction Reason 2 Choice")]
 public interface IAccountStatusUpdateInstructionReason2Choice : IIsoChoice { }

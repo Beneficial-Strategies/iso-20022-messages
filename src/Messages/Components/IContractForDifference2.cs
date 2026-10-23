@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transparency calculation specific details on a contract for difference, spread betting derivatives.
 /// </summary>
 [IsoId("_MStLwWlQEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Contract For Difference")]
 public interface IContractForDifference2 : IIsoComponent
 {
     /// <summary>

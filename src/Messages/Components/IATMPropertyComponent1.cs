@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Property Component1.
 /// </summary>
 [IsoId("_8zqmEJ2gEe-4seDr3Li2Ew")]
+[IsoDisplayName(@"ATM Property Component1")]
 public interface IATMPropertyComponent1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a key encryption key (KEK), using previously distributed symmetric key.
 /// </summary>
 [IsoId("_TNujQVEyEeyApZmLzm74zA")]
+[IsoDisplayName(@"KEK Identifier")]
 public interface IKEKIdentifier7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IKEKIdentifier7 : IIsoComponent
     [IsoId("_TT6q0VEyEeyApZmLzm74zA")]
     [DisplayName("Key Identification")]
     [IsoXmlTag("KeyId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text KeyIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IKEKIdentifier7 : IIsoComponent
     [IsoId("_TT6q01EyEeyApZmLzm74zA")]
     [DisplayName("Key Version")]
     [IsoXmlTag("KeyVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text KeyVersion { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IKEKIdentifier7 : IIsoComponent
     [IsoId("_TT6q1VEyEeyApZmLzm74zA")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SequenceNumber { get; }
 
     /// <summary>
@@ -41,5 +47,6 @@ public interface IKEKIdentifier7 : IIsoComponent
     [IsoId("_TT6q11EyEeyApZmLzm74zA")]
     [DisplayName("Derivation Identification")]
     [IsoXmlTag("DerivtnId")]
+    [IsoSimpleType(IsoSimpleType.Max500Binary)]
     Max500Binary? DerivationIdentification { get; }
 }

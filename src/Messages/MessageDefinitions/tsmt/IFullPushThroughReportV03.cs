@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "FullPushThrghRpt",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.018.001.03"
 )]
+[Description(@"Scope|The FullPushThroughReport message is sent by the matching application to a party involved in a transaction.|This message is used to pass on information that the matching application has received from the submitter. The forwarded information can originate from an InitialBaselineSubmission or BaselineReSubmission or BaselineAmendmentRequest message.|Usage|The FullPushThroughReport message can be sent by the matching application to a party to convey|- the details of an InitialBaselineSubmission message that it has obtained, or|- the details of a BaselineResubmission message that it has obtained, or|- the details of a BaselineAmendmentRequest message that it has obtained.")]
+[IsoDisplayName(@"Full Push Through Report V")]
 public interface IFullPushThroughReportV03 : IOuterRecord
 {
     /// <summary>
@@ -63,6 +65,9 @@ public interface IFullPushThroughReportV03 : IOuterRecord
     [IsoId("_paW-cNE8Ed-BzquC8wXy7w_-1602879793")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>
@@ -87,6 +92,7 @@ public interface IFullPushThroughReportV03 : IOuterRecord
     [IsoId("_paW-c9E8Ed-BzquC8wXy7w_-1602879715")]
     [DisplayName("Buyer Contact Person")]
     [IsoXmlTag("BuyrCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification1> BuyerContactPerson { get; }
 
     /// <summary>
@@ -95,6 +101,7 @@ public interface IFullPushThroughReportV03 : IOuterRecord
     [IsoId("_paW-dNE8Ed-BzquC8wXy7w_-1602879163")]
     [DisplayName("Seller Contact Person")]
     [IsoXmlTag("SellrCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification1> SellerContactPerson { get; }
 
     /// <summary>
@@ -103,6 +110,7 @@ public interface IFullPushThroughReportV03 : IOuterRecord
     [IsoId("_paW-ddE8Ed-BzquC8wXy7w_-1602879518")]
     [DisplayName("Buyer Bank Contact Person")]
     [IsoXmlTag("BuyrBkCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification1> BuyerBankContactPerson { get; }
 
     /// <summary>
@@ -111,6 +119,7 @@ public interface IFullPushThroughReportV03 : IOuterRecord
     [IsoId("_paW-dtE8Ed-BzquC8wXy7w_-1602879638")]
     [DisplayName("Seller Bank Contact Person")]
     [IsoXmlTag("SellrBkCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification1> SellerBankContactPerson { get; }
 
     /// <summary>
@@ -119,6 +128,7 @@ public interface IFullPushThroughReportV03 : IOuterRecord
     [IsoId("_paW-d9E8Ed-BzquC8wXy7w_-595440751")]
     [DisplayName("Other Bank Contact Person")]
     [IsoXmlTag("OthrBkCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification3> OtherBankContactPerson { get; }
 
     /// <summary>

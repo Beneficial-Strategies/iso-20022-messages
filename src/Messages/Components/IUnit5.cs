@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Quantity expressed as a number and its details.
 /// </summary>
 [IsoId("_9g9wURgLEeKqWJINzXcn5g")]
+[IsoDisplayName(@"Unit")]
 public interface IUnit5 : IIsoComponent
 {
     /// <summary>

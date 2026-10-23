@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the dates related to the underlying individual transaction.
 /// </summary>
 [IsoId("_Rpr4p9p-Ed-ak6NoX_4Aeg_-135162253")]
+[IsoDisplayName(@"Transaction Dates")]
 public interface ITransactionDates2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransactionDates2 : IIsoComponent
     [IsoId("_Rpr4qNp-Ed-ak6NoX_4Aeg_-135162161")]
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AcceptanceDateTime { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITransactionDates2 : IIsoComponent
     [IsoId("_Rp1CkNp-Ed-ak6NoX_4Aeg_-939812305")]
     [DisplayName("Trade Activity Contractual Settlement Date")]
     [IsoXmlTag("TradActvtyCtrctlSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TradeActivityContractualSettlementDate { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITransactionDates2 : IIsoComponent
     [IsoId("_Rp1Ckdp-Ed-ak6NoX_4Aeg_-135161799")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TradeDate { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ITransactionDates2 : IIsoComponent
     [IsoId("_Rp1Cktp-Ed-ak6NoX_4Aeg_-135162222")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ITransactionDates2 : IIsoComponent
     [IsoId("_Rp1Ck9p-Ed-ak6NoX_4Aeg_-135161738")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ITransactionDates2 : IIsoComponent
     [IsoId("_Rp1ClNp-Ed-ak6NoX_4Aeg_-135161707")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EndDate { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ITransactionDates2 : IIsoComponent
     [IsoId("_Rp1Cldp-Ed-ak6NoX_4Aeg_-135162100")]
     [DisplayName("Transaction Date Time")]
     [IsoXmlTag("TxDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TransactionDateTime { get; }
 
     /// <summary>
@@ -73,5 +81,6 @@ public interface ITransactionDates2 : IIsoComponent
     [IsoId("_Rp1Cltp-Ed-ak6NoX_4Aeg_-135161675")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryDate2> Proprietary { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Accepted Status Reason14.
 /// </summary>
 [IsoId("_lUYa0ZzoEe-DHYbvdRjdbA")]
+[IsoDisplayName(@"Accepted Status Reason14")]
 public interface IAcceptedStatusReason14 : IIsoComponent
 {
     /// <summary>

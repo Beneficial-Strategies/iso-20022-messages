@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialPartyClassification2Cho
 /// Classification of the business activities of the counterparty via a pre-determined code list.
 /// </summary>
 [IsoId("_IJIRcSI4Ee2zWP9pqvmqdw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IFinancialPartyClassification2Choice, IIsoChoiceVariant
 {
     /// <summary>

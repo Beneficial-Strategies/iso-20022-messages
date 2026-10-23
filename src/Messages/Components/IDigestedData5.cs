@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Digest computed on the identified data.
 /// </summary>
 [IsoId("_6ducAdtbEee9e6xduATmQg")]
+[IsoDisplayName(@"Digested Data")]
 public interface IDigestedData5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDigestedData5 : IIsoComponent
     [IsoId("_6nUc4dtbEee9e6xduATmQg")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IDigestedData5 : IIsoComponent
     [IsoId("_6nUc59tbEee9e6xduATmQg")]
     [DisplayName("Digest")]
     [IsoXmlTag("Dgst")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary Digest { get; }
 }

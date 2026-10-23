@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to search for an account.
 /// </summary>
 [IsoId("_P8Cj2W49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Cash Account Search Criteria")]
 public interface ICashAccountSearchCriteria7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICashAccountSearchCriteria7 : IIsoComponent
     [IsoId("_QHzu9W49EeiU9cctagi5ow")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentificationSearchCriteria2Choice> AccountIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICashAccountSearchCriteria7 : IIsoComponent
     [IsoId("_QHzu9249EeiU9cctagi5ow")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccountType2Choice> Type { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICashAccountSearchCriteria7 : IIsoComponent
     [IsoId("_QHzu-W49EeiU9cctagi5ow")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveOrHistoricCurrencyCode> Currency { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICashAccountSearchCriteria7 : IIsoComponent
     [IsoId("_QHzu-249EeiU9cctagi5ow")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance12> Balance { get; }
 
     /// <summary>

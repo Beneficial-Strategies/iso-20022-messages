@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reported Fraud4.
 /// </summary>
 [IsoId("_w1rKIZK_Ee6TWIDarRgYow")]
+[IsoDisplayName(@"Reported Fraud4")]
 public interface IReportedFraud4 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface IReportedFraud4 : IIsoComponent
     /// </summary>
     [DisplayName("Compromised Credential")]
     [IsoXmlTag("CmprmsdCrdntl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<AuthenticationMethod12Code> CompromisedCredential { get; }
 
     /// <summary>

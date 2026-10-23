@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Net position of a segregated holding, in a single security, within the overall position held in a securities account at a specified place of safekeeping.
 /// </summary>
 [IsoId("_VLvDFNp-Ed-ak6NoX_4Aeg_696928207")]
+[IsoDisplayName(@"Aggregate Balance Per Safekeeping Place")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IAggregateBalancePerSafekeepingPlace2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAggregateBalancePerSafekeepingPlace2 : IIsoComponent
     [IsoId("_VLvDFtp-Ed-ak6NoX_4Aeg_1033088301")]
     [DisplayName("Days Accrued")]
     [IsoXmlTag("DaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? DaysAccrued { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IAggregateBalancePerSafekeepingPlace2 : IIsoComponent
     [IsoId("_VLvDF9p-Ed-ak6NoX_4Aeg_1033088415")]
     [DisplayName("Holding Value")]
     [IsoXmlTag("HldgVal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyAndAmount> HoldingValue { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IAggregateBalancePerSafekeepingPlace2 : IIsoComponent
     [IsoId("_VLvDG9p-Ed-ak6NoX_4Aeg_1210403344")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceInformation1> PriceDetails { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IAggregateBalancePerSafekeepingPlace2 : IIsoComponent
     [IsoId("_VL40Edp-Ed-ak6NoX_4Aeg_1222411582")]
     [DisplayName("Balance Breakdown Details")]
     [IsoXmlTag("BalBrkdwnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubBalanceInformation1> BalanceBreakdownDetails { get; }
 
     /// <summary>
@@ -89,5 +95,6 @@ public interface IAggregateBalancePerSafekeepingPlace2 : IIsoComponent
     [IsoId("_VL40Etp-Ed-ak6NoX_4Aeg_1235339477")]
     [DisplayName("Additional Balance Breakdown Details")]
     [IsoXmlTag("AddtlBalBrkdwnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBalanceInformation> AdditionalBalanceBreakdownDetails { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the comparison between the currently established baseline elements and the proposed ones.
 /// </summary>
 [IsoId("_QSGgFZJKEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Securities Reference Data Change")]
 public interface ISecuritiesReferenceDataChange3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ISecuritiesReferenceDataChange3 : IIsoComponent
     [IsoId("_QUEO85JKEeuAlLVx8pyt3w")]
     [DisplayName("Field Name")]
     [IsoXmlTag("FldNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text FieldName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ISecuritiesReferenceDataChange3 : IIsoComponent
     [IsoId("_QUEO9ZJKEeuAlLVx8pyt3w")]
     [DisplayName("Old Field Value")]
     [IsoXmlTag("OdFldVal")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text OldFieldValue { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ISecuritiesReferenceDataChange3 : IIsoComponent
     [IsoId("_QUEO95JKEeuAlLVx8pyt3w")]
     [DisplayName("New Field Value")]
     [IsoXmlTag("NewFldVal")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text NewFieldValue { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface ISecuritiesReferenceDataChange3 : IIsoComponent
     [IsoId("_QUEO-ZJKEeuAlLVx8pyt3w")]
     [DisplayName("Operation Time Stamp")]
     [IsoXmlTag("OprTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime OperationTimeStamp { get; }
 }

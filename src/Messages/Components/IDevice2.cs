@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the customer device.
 /// </summary>
 [IsoId("_HWMLUYKvEeu4svNQ5N-l6w")]
+[IsoDisplayName(@"Device")]
 public interface IDevice2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDevice2 : IIsoComponent
     [IsoId("_2JR5oJfGEeuBSOvOJYhcGw")]
     [DisplayName("Manufacturer")]
     [IsoXmlTag("Manfctr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Manufacturer { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IDevice2 : IIsoComponent
     [IsoId("_GQ2aIJfHEeuBSOvOJYhcGw")]
     [DisplayName("Manufacturer Model Identification")]
     [IsoXmlTag("ManfctrMdlId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ManufacturerModelIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IDevice2 : IIsoComponent
     [IsoId("_HcUog4KvEeu4svNQ5N-l6w")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IDevice2 : IIsoComponent
     [IsoId("_HcUoh4KvEeu4svNQ5N-l6w")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IDevice2 : IIsoComponent
     [IsoId("_HcUoiYKvEeu4svNQ5N-l6w")]
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
+    [IsoSimpleType(IsoSimpleType.GeographicPointInDecimalDegrees)]
     GeographicPointInDecimalDegrees? GeographicLocation { get; }
 
     /// <summary>
@@ -81,6 +90,8 @@ public interface IDevice2 : IIsoComponent
     [IsoId("_HcUoi4KvEeu4svNQ5N-l6w")]
     [DisplayName("IP Address")]
     [IsoXmlTag("IPAdr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? IPAddress { get; }
 
     /// <summary>
@@ -89,6 +100,8 @@ public interface IDevice2 : IIsoComponent
     [IsoId("_HcUojYKvEeu4svNQ5N-l6w")]
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Email { get; }
 
     /// <summary>
@@ -97,6 +110,8 @@ public interface IDevice2 : IIsoComponent
     [IsoId("_AyfzsJfKEeuqNYk2TG3bTg")]
     [DisplayName("Device Name")]
     [IsoXmlTag("DvcNm")]
+    [IsoSimpleType(IsoSimpleType.Max100Text)]
+    [StringLength(100, MinimumLength = 1)]
     Max100Text? DeviceName { get; }
 
     /// <summary>
@@ -105,5 +120,7 @@ public interface IDevice2 : IIsoComponent
     [IsoId("_158gUJfKEeuqNYk2TG3bTg")]
     [DisplayName("Device Name Normalized")]
     [IsoXmlTag("DvcNmNrmlzd")]
+    [IsoSimpleType(IsoSimpleType.Max100Text)]
+    [StringLength(100, MinimumLength = 1)]
     Max100Text? DeviceNameNormalized { get; }
 }

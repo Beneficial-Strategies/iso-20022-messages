@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide the total sum of entries per bank transaction code.
 /// </summary>
 [IsoId("_VRvSmTqwEeWZFYSPlduMhw")]
+[IsoDisplayName(@"Totals Per Bank Transaction Code")]
 public interface ITotalsPerBankTransactionCode4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITotalsPerBankTransactionCode4 : IIsoComponent
     [IsoId("_VYy80zqwEeWZFYSPlduMhw")]
     [DisplayName("Number Of Entries")]
     [IsoXmlTag("NbOfNtries")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? NumberOfEntries { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITotalsPerBankTransactionCode4 : IIsoComponent
     [IsoId("_VYy81TqwEeWZFYSPlduMhw")]
     [DisplayName("Sum")]
     [IsoXmlTag("Sum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? Sum { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ITotalsPerBankTransactionCode4 : IIsoComponent
     [IsoId("_VYy82TqwEeWZFYSPlduMhw")]
     [DisplayName("Forecast Indicator")]
     [IsoXmlTag("FcstInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ForecastIndicator { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface ITotalsPerBankTransactionCode4 : IIsoComponent
     [IsoId("_VYy83TqwEeWZFYSPlduMhw")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAvailability1> Availability { get; }
 }

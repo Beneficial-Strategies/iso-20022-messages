@@ -27,6 +27,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesSttlmTxModReqStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:sese.039.001.08"
 )]
+[Description(@"Scope|An account servicer sends a SecuritiesSettlementTransactionModificationRequestStatusAdvice to an account owner to advise the status of a SecuritiesSettlementModificationRequest message previously sent by the account owner.|The account servicer may be:|- a central securities depository or another settlement market infrastructure managing securities settlement transactions on behalf of their participants|- an custodian acting as an accounting and/or settlement agent.||Usage|The message may also be used to:|- re-send a message sent by the account owner to the account servicer,|- provide a third party with a copy of a message being sent by the account owner for information,|- re-send to a third party a copy of a message being sent by the account owner for information|using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Settlement Transaction Modification Request Status Advice V08")]
 public interface ISecuritiesSettlementTransactionModificationRequestStatusAdviceV08 : IOuterRecord
 {
     /// <summary>
@@ -34,6 +36,8 @@ public interface ISecuritiesSettlementTransactionModificationRequestStatusAdvice
     /// </summary>
     [DisplayName("Modification Request Reference")]
     [IsoXmlTag("ModReqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ModificationRequestReference { get; }
 
     /// <summary>
@@ -83,5 +87,6 @@ public interface ISecuritiesSettlementTransactionModificationRequestStatusAdvice
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

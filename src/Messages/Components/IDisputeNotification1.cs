@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the dispute notification details for the variation margin and optionaly the segregated independent amount.
 /// </summary>
 [IsoId("_UllpFNp-Ed-ak6NoX_4Aeg_203292187")]
+[IsoDisplayName(@"Dispute Notification")]
 public interface IDisputeNotification1 : IIsoComponent
 {
     /// <summary>

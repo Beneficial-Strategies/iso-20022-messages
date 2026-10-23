@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ServiceLevel2Choice;
 /// Identification of a pre-agreed level of service between the parties in a coded form.
 /// </summary>
 [IsoId("_QJkwwtp-Ed-ak6NoX_4Aeg_1773004320")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IServiceLevel2Choice, IIsoChoiceVariant
 {
     /// <summary>

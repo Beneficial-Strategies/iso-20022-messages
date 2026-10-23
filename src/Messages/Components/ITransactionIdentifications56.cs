@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique identifier of a document, message or transaction.
 /// </summary>
 [IsoId("_PkANsaoxEfCG2_q2WT-90w")]
+[IsoDisplayName(@"Transaction Identifications56")]
 public interface ITransactionIdentifications56 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransactionIdentifications56 : IIsoComponent
     [IsoId("_Pmuxk6oxEfCG2_q2WT-90w")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TradeIdentification { get; }
 
     /// <summary>

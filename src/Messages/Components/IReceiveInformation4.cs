@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.
 /// </summary>
 [IsoId("_SgEuHNp-Ed-ak6NoX_4Aeg_-963851586")]
+[IsoDisplayName(@"Receive Information")]
 public interface IReceiveInformation4 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IReceiveInformation4 : IIsoComponent
     [IsoId("_SgOfEtp-Ed-ak6NoX_4Aeg_-116834417")]
     [DisplayName("Stamp Duty Indicator")]
     [IsoXmlTag("StmpDtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator StampDutyIndicator { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IReceiveInformation4 : IIsoComponent
     [IsoId("_SgOfFNp-Ed-ak6NoX_4Aeg_1625458120")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge20> ChargeDetails { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IReceiveInformation4 : IIsoComponent
     [IsoId("_SgOfFdp-Ed-ak6NoX_4Aeg_-1823046690")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission12> CommissionDetails { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IReceiveInformation4 : IIsoComponent
     [IsoId("_SgOfFtp-Ed-ak6NoX_4Aeg_-963851290")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax15> TaxDetails { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IReceiveInformation4 : IIsoComponent
     [IsoId("_SgOfGNp-Ed-ak6NoX_4Aeg_-963851351")]
     [DisplayName("Physical Transfer Indicator")]
     [IsoXmlTag("PhysTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalTransferIndicator { get; }
 
     /// <summary>

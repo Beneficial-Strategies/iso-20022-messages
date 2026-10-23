@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Method of voting participation to a general meeting.
 /// </summary>
 [IsoId("_hCt54ajJEfCzuLlmLrhIvA")]
+[IsoDisplayName(@"Participation Method3")]
 public interface IParticipationMethod3 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IParticipationMethod3 : IIsoComponent
     [IsoId("_mzh-sK5rEfCUHaCK5HWOhg")]
     [DisplayName("Investor Type Identification")]
     [IsoXmlTag("InvstrTpId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestorTypeIdentification1> InvestorTypeIdentification { get; }
 }

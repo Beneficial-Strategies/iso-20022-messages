@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FixedOrRecurrentDate1Choice;
 /// </summary>
 [IsoId("_98U8AXltEeG7BsjMvd1mEw_-1677013285")]
 [IsoXmlTag("RcrntDt")]
+[IsoDisplayName(@"Recurrent Date")]
 public interface IRecurrentDate : IFixedOrRecurrentDate1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IRecurrentDate : IFixedOrRecurrentDate1Choice, IIsoChoiceVarian
     [IsoId("_98LLA3ltEeG7BsjMvd1mEw_-900960723")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate StartDate { get; }
 
     /// <summary>
@@ -34,5 +36,6 @@ public interface IRecurrentDate : IFixedOrRecurrentDate1Choice, IIsoChoiceVarian
     [IsoId("_98LLBXltEeG7BsjMvd1mEw_-1181408529")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Number { get; }
 }

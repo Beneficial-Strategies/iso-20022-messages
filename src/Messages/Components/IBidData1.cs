@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the bid for the continuous order books.
 /// </summary>
 [IsoId("_mzylAGIaEfCeoPFCHQnhvA")]
+[IsoDisplayName(@"Bid Data1")]
 public interface IBidData1 : IIsoComponent
 {
     /// <summary>

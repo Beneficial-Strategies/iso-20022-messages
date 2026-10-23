@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Species the tax applicable for this settlement.
 /// </summary>
 [IsoId("_S0j3LAEcEeCQm6a_G2yO_w_811596505")]
+[IsoDisplayName(@"Settlement Tax")]
 public interface ISettlementTax1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISettlementTax1 : IIsoComponent
     [IsoId("_S0j3LgEcEeCQm6a_G2yO_w_588725222")]
     [DisplayName("Calculated Amount")]
     [IsoXmlTag("ClctdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> CalculatedAmount { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ISettlementTax1 : IIsoComponent
     [IsoId("_S0j3LwEcEeCQm6a_G2yO_w_-780660433")]
     [DisplayName("Basis Amount")]
     [IsoXmlTag("BsisAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> BasisAmount { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ISettlementTax1 : IIsoComponent
     [IsoId("_S0j3MAEcEeCQm6a_G2yO_w_-805508608")]
     [DisplayName("Tax Point Date")]
     [IsoXmlTag("TaxPtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TaxPointDate { get; }
 }

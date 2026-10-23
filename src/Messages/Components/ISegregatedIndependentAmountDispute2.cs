@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides for the segregated independent amount, the dispute details like the dispute amount or the dispute date and the resolution type details.
 /// </summary>
 [IsoId("_dCiJ4StOEeyOa655cLd-DQ")]
+[IsoDisplayName(@"Segregated Independent Amount Dispute")]
 public interface ISegregatedIndependentAmountDispute2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ISegregatedIndependentAmountDispute2 : IIsoComponent
     [IsoId("_da94AytOEeyOa655cLd-DQ")]
     [DisplayName("Dispute Resolution Type 1 Choice")]
     [IsoXmlTag("DsptRsltnTp1Chc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeResolutionType1Choice> DisputeResolutionType1Choice_ { get; }
 }

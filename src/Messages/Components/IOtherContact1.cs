@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication device number or electronic address used for communication.
 /// </summary>
 [IsoId("_6SokSZqlEeGSON8vddiWzQ_1969673172")]
+[IsoDisplayName(@"Other Contact")]
 public interface IOtherContact1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherContact1 : IIsoComponent
     [IsoId("_6SokSpqlEeGSON8vddiWzQ_444512870")]
     [DisplayName("Channel Type")]
     [IsoXmlTag("ChanlTp")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text ChannelType { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IOtherContact1 : IIsoComponent
     [IsoId("_6SokS5qlEeGSON8vddiWzQ_938910947")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max128Text)]
+    [StringLength(128, MinimumLength = 1)]
     Max128Text? Identification { get; }
 }

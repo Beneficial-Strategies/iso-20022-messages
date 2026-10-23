@@ -27,6 +27,8 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("_MWx4gNFSEd-BzquC8wXy7w_650597621")]
 [IsoMessage("semt.002.001.01", "semt.002.001.01", "urn:iso:std:iso:20022:tech:xsd:semt.002.001.01")]
+[Description(@"Scope|The CustodyStatementOfHoldings message is sent by an account servicer to the account owner or the account owner's designated agent. The account servicer may be a local agent acting on behalf of its global custodian customer, a custodian acting on behalf of an investment management institution or a broker/dealer, a fund administrator or fund intermediary, trustee or registrar, etc.|This message reports, at a specified moment in time, the quantity and identification of financial instruments that an account servicer holds for the account owner.|This message is used to reconcile the books of the account owner and the account servicer for the specified account or sub-account.|This message can also report availability and/or the location of security holdings to facilitate trading and minimise settlement issues. The reporting is per financial instrument, ie, when a financial instrument is held at multiple places of safekeeping, the total holding for all locations can be provided.|Usage|The CustodyStatementOfHoldings message can be sent:|- At a frequency agreed bi-laterally between the Sender and the Receiver|- As a response to a request for statement sent by the account owner.|This message can reflect all outstanding holding information or may only contain changes since the previously sent statement.|The CustodyStatementOfHoldings message can only be used to list the holdings of a single (master) account. However, it is possible to break down these holdings into one or several sub-accounts. Therefore, this message can be used to either specify holdings at|- the main account level, or|- the sub-account level.|This message can be also be used to report where the securities are safe-kept, physically or notionally. If a security is held in more than one safekeeping place, this can also be indicated.|This message must not be used to report audited positions. Audited positions are reported using the AccountingStatementOfHoldings message.|Since a SWIFT message as sent is restricted to the maximum input message length, several messages may be needed to accommodate all the information.")]
+[IsoDisplayName(@"Custody Statement Of Holdings")]
 public interface ICustodyStatementOfHoldings : IOuterRecord
 {
     /// <summary>
@@ -35,6 +37,7 @@ public interface ICustodyStatementOfHoldings : IOuterRecord
     [IsoId("_MW7pgNFSEd-BzquC8wXy7w_1818905401")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference2> PreviousReference { get; }
 
     /// <summary>
@@ -43,6 +46,7 @@ public interface ICustodyStatementOfHoldings : IOuterRecord
     [IsoId("_MW7pgdFSEd-BzquC8wXy7w_1810591867")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference2> RelatedReference { get; }
 
     /// <summary>
@@ -75,6 +79,7 @@ public interface ICustodyStatementOfHoldings : IOuterRecord
     [IsoId("_MW7phdFSEd-BzquC8wXy7w_-2003208951")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateBalanceInformation1> BalanceForAccount { get; }
 
     /// <summary>
@@ -83,6 +88,7 @@ public interface ICustodyStatementOfHoldings : IOuterRecord
     [IsoId("_MW7phtFSEd-BzquC8wXy7w_1776832052")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubAccountIdentification1> SubAccountDetails { get; }
 
     /// <summary>
@@ -99,5 +105,6 @@ public interface ICustodyStatementOfHoldings : IOuterRecord
     [IsoId("_MXEzcNFSEd-BzquC8wXy7w_-143061138")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

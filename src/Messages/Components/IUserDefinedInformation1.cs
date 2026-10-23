@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.
 /// </summary>
 [IsoId("_RKFyldp-Ed-ak6NoX_4Aeg_-1294803117")]
+[IsoDisplayName(@"User Defined Information")]
 public interface IUserDefinedInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IUserDefinedInformation1 : IIsoComponent
     [IsoId("_RKFyltp-Ed-ak6NoX_4Aeg_-1252319958")]
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Label { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IUserDefinedInformation1 : IIsoComponent
     [IsoId("_RKFyl9p-Ed-ak6NoX_4Aeg_-978956797")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Information { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Data3.
 /// </summary>
 [IsoId("_Z2GcQBA3Ee6N57R8Wekj-w")]
+[IsoDisplayName(@"Transaction Data3")]
 public interface ITransactionData3 : IIsoComponent
 {
     /// <summary>

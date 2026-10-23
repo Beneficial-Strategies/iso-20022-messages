@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Agent Document Identification And Status1Choice.
 /// </summary>
 [IsoId("_p_Rg4FuGEe6gDOpEK7Q4ig")]
+[IsoDisplayName(@"Agent Document Identification And Status1Choice")]
 public interface IAgentDocumentIdentificationAndStatus1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies time and type of contract confirmation.
 /// </summary>
 [IsoId("_4dfWIQFXEeaDfK-zDSyB6A")]
+[IsoDisplayName(@"Trade Confirmation")]
 public interface ITradeConfirmation3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ITradeConfirmation3 : IIsoComponent
     [IsoId("_41eYUwFXEeaDfK-zDSyB6A")]
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TimeStamp { get; }
 }

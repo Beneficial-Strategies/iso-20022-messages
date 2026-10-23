@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the modification requests data in the report.
 /// </summary>
 [IsoId("_Z496lTneEem7JZMuWtwtsg")]
+[IsoDisplayName(@"Intra Balance Modification")]
 public interface IIntraBalanceModification5 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IIntraBalanceModification5 : IIsoComponent
     [IsoId("_aD2U7TneEem7JZMuWtwtsg")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalanceModification6> Modification { get; }
 }

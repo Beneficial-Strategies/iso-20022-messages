@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the trading party or broker.
 /// </summary>
 [IsoId("_xMOncCCZEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Company Link 1 Choice")]
 public interface ICompanyLink1Choice : IIsoChoice { }

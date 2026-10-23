@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason10Choice;
 /// Standard code to specify the reason why the instruction/cancellation request has a rejected status.
 /// </summary>
 [IsoId("_26SWcVhnEeSsH9MSoogb7Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectedReason10Choice, IIsoChoiceVariant
 {
     /// <summary>

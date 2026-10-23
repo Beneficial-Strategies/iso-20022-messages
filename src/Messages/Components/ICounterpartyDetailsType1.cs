@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information of the counterparty in case of [sankaku] gappei (a third party is involved as one of the counterparties in the merger but there is no security movement from the third party).
 /// </summary>
 [IsoId("_01K7cGHNEeGknP6xAc4fKw")]
+[IsoDisplayName(@"Counterparty Details Type")]
 public interface ICounterpartyDetailsType1 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,7 @@ public interface ICounterpartyDetailsType1 : IIsoComponent
     [IsoId("_2kS6QGHOEeGknP6xAc4fKw")]
     [DisplayName("Abbreviated Local Language Security Name")]
     [IsoXmlTag("AbbrvtdLclLangSctyNm")]
+    [IsoSimpleType(IsoSimpleType.Max240Text)]
+    [StringLength(240, MinimumLength = 1)]
     Max240Text AbbreviatedLocalLanguageSecurityName { get; }
 }

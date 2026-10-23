@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities trade.
 /// </summary>
 [IsoId("_S8PFsNp-Ed-ak6NoX_4Aeg_35599121")]
+[IsoDisplayName(@"Securities Trade Details")]
 public interface ISecuritiesTradeDetails5 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ISecuritiesTradeDetails5 : IIsoComponent
     [IsoId("_S8PFs9p-Ed-ak6NoX_4Aeg_35599541")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -41,5 +43,7 @@ public interface ISecuritiesTradeDetails5 : IIsoComponent
     [IsoId("_S8Y2oNp-Ed-ak6NoX_4Aeg_35599966")]
     [DisplayName("Instruction Processing Additional Details")]
     [IsoXmlTag("InstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? InstructionProcessingAdditionalDetails { get; }
 }

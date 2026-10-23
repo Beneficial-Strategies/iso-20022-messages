@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the history of status and reasons for a pending, posted or cancelled transaction.
 /// </summary>
 [IsoId("617628f5-cfc7-496d-8be5-a14dadab975f")]
+[IsoDisplayName(@"Status Trail13")]
 public interface IStatusTrail13 : IIsoComponent
 {
     /// <summary>
@@ -97,5 +98,6 @@ public interface IStatusTrail13 : IIsoComponent
     [IsoId("7d19cac3-5f30-4e0f-905b-92ffa81c0399")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Transaction51.
 /// </summary>
 [IsoId("_-8zlsaE2Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Transaction51")]
 public interface IATMTransaction51 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IATMTransaction51 : IIsoComponent
     /// </summary>
     [DisplayName("Incident")]
     [IsoXmlTag("Incdnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<FailureReason9Code> Incident { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface IATMTransaction51 : IIsoComponent
     /// </summary>
     [DisplayName("Incident Detail")]
     [IsoXmlTag("IncdntDtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max70Text> IncidentDetail { get; }
 
     /// <summary>
@@ -51,6 +54,7 @@ public interface IATMTransaction51 : IIsoComponent
     /// </summary>
     [DisplayName("Total Deposited Amount")]
     [IsoXmlTag("TtlDpstdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountAndCurrency1> TotalDepositedAmount { get; }
 
     /// <summary>
@@ -58,6 +62,7 @@ public interface IATMTransaction51 : IIsoComponent
     /// </summary>
     [DisplayName("Total Authorised Amount")]
     [IsoXmlTag("TtlAuthrsdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ImpliedCurrencyAndAmount> TotalAuthorisedAmount { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IATMTransaction51 : IIsoComponent
     /// </summary>
     [DisplayName("Total Requested Amount")]
     [IsoXmlTag("TtlReqdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ImpliedCurrencyAndAmount> TotalRequestedAmount { get; }
 
     /// <summary>
@@ -79,6 +85,7 @@ public interface IATMTransaction51 : IIsoComponent
     /// </summary>
     [DisplayName("Sub Deposit")]
     [IsoXmlTag("SubDpst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMDepositComponent1> SubDeposit { get; }
 
     /// <summary>
@@ -86,6 +93,7 @@ public interface IATMTransaction51 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount13> AdditionalCharge { get; }
 
     /// <summary>
@@ -114,6 +122,7 @@ public interface IATMTransaction51 : IIsoComponent
     /// </summary>
     [DisplayName("To Be Reconciled Media Counters")]
     [IsoXmlTag("ToBeRcncldMdiaCntrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMDepositedMedia4> ToBeReconciledMediaCounters { get; }
 
     /// <summary>
@@ -121,6 +130,7 @@ public interface IATMTransaction51 : IIsoComponent
     /// </summary>
     [DisplayName("ATM Totals")]
     [IsoXmlTag("ATMTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMTotals4> ATMTotals { get; }
 
     /// <summary>
@@ -128,6 +138,7 @@ public interface IATMTransaction51 : IIsoComponent
     /// </summary>
     [DisplayName("Cassette")]
     [IsoXmlTag("Csstt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCassette3> Cassette { get; }
 
     /// <summary>

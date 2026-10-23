@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides transaction type and identification information.
 /// </summary>
 [IsoId("_UiwXj9p-Ed-ak6NoX_4Aeg_62097927")]
+[IsoDisplayName(@"Settlement Type And Additional Parameters")]
 public interface ISettlementTypeAndAdditionalParameters2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface ISettlementTypeAndAdditionalParameters2 : IIsoComponent
     [IsoId("_Ui6Igdp-Ed-ak6NoX_4Aeg_-1932046779")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonIdentification { get; }
 }

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics shared by all individual transactions included in the message.
 /// </summary>
 [IsoId("_5EB3YTEyEe6g-ffJsqGiSA")]
+[Description(@"Set of characteristics shared by all individual transactions included in the message.")]
+[IsoDisplayName(@"Group Header123")]
 public interface IGroupHeader123 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +39,7 @@ public interface IGroupHeader123 : IIsoComponent
     /// </remarks>
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorisation1Choice> Authorisation { get; }
 
     /// <summary>

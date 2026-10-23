@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for an account status update instruction.
 /// </summary>
 [IsoId("_rZMYAHi5EeaRm5xIK6nGuQ")]
+[IsoDisplayName(@"Account Status Update Instruction 1 Choice")]
 public interface IAccountStatusUpdateInstruction1Choice : IIsoChoice { }

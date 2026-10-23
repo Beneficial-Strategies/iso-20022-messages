@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_1-TtoeUREem3X-64-NKdqg")]
 [IsoMessage("auth.068.001.01", "CCPAcctPosRpt", "urn:iso:std:iso:20022:tech:xsd:auth.068.001.01")]
+[Description(@"The CCPAccountPositionReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority of the positions of the clearing members of the central counterparty.")]
+[IsoDisplayName(@"CCP Account Position Report V")]
 public interface ICCPAccountPositionReportV01 : IOuterRecord
 {
     /// <summary>
@@ -20,6 +22,7 @@ public interface ICCPAccountPositionReportV01 : IOuterRecord
     [IsoId("_1-TtqeUREem3X-64-NKdqg")]
     [DisplayName("Portfolio")]
     [IsoXmlTag("Prtfl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionAccount2> Portfolio { get; }
 
     /// <summary>
@@ -28,5 +31,6 @@ public interface ICCPAccountPositionReportV01 : IOuterRecord
     [IsoId("_1-Ttq-UREem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

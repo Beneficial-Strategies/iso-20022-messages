@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instrument used to process a payment instruction.
 /// </summary>
 [IsoId("__Ai3oCC0EeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Payment Instrument")]
 public interface IPaymentInstrument13 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPaymentInstrument13 : IIsoComponent
     [IsoId("_LAh3sSC1EeWJd9HF2tO7BA")]
     [DisplayName("Dividend Percentage")]
     [IsoXmlTag("DvddPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageBoundedRate)]
     PercentageBoundedRate? DividendPercentage { get; }
 
     /// <summary>

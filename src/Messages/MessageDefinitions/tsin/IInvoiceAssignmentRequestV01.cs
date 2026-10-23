@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.tsin;
 /// </summary>
 [IsoId("_OTgzNDQy-AOSNFX-8224505")]
 [IsoMessage("tsin.006.001.01", "InvcAssgnmtReq", "urn:iso:std:iso:20022:tech:xsd:tsin.006.001.01")]
+[Description(@"The InvoiceAssignmentRequest message is sent from a factoring client to a factoring service provider and, optionally, to an interested party. It indicates the transfer of payment obligations concerning financial documents.|The message contains a list of financing requests together with data that are necessary to transfer the related rights for example regarding legal references for example jurisdiction, language or country. Furthermore, the message can reference related messages and can include data from other messages.|A factoring client combines a set of financial documents with same characteristics and assigns them to a factoring service. The client can send several assignments in one message and combine them according to different criteria for example for different clients or different currencies.")]
+[IsoDisplayName(@"Invoice Assignment Request V")]
 public interface IInvoiceAssignmentRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -30,6 +32,7 @@ public interface IInvoiceAssignmentRequestV01 : IOuterRecord
     [IsoId("_OTgzNDQ0-AOSNFX-8224505")]
     [DisplayName("Assignment List")]
     [IsoXmlTag("AssgnmtList")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancingItemList1> AssignmentList { get; }
 
     /// <summary>
@@ -38,6 +41,7 @@ public interface IInvoiceAssignmentRequestV01 : IOuterRecord
     [IsoId("_OTgzNDQ1-AOSNFX-8224505")]
     [DisplayName("Assignment Count")]
     [IsoXmlTag("AssgnmtCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? AssignmentCount { get; }
 
     /// <summary>
@@ -46,6 +50,7 @@ public interface IInvoiceAssignmentRequestV01 : IOuterRecord
     [IsoId("_OTgzNDQ2-AOSNFX-8224505")]
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? ItemCount { get; }
 
     /// <summary>
@@ -54,6 +59,7 @@ public interface IInvoiceAssignmentRequestV01 : IOuterRecord
     [IsoId("_OTgzNDQ3-AOSNFX-8224505")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -62,5 +68,6 @@ public interface IInvoiceAssignmentRequestV01 : IOuterRecord
     [IsoId("_OTgzNDQ4-AOSNFX-8224505")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncapsulatedBusinessMessage1> AttachedMessage { get; }
 }

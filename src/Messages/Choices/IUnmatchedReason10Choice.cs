@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the securities financing unmatched reason.
 /// </summary>
 [IsoId("_EhheOf7ZEeCtrO5qCU90cA")]
+[IsoDisplayName(@"Unmatched Reason 10 Choice")]
 public interface IUnmatchedReason10Choice : IIsoChoice { }

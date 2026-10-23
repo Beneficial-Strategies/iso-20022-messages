@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_xILlyNE8Ed-BzquC8wXy7w_-544947479")]
 [IsoMessage("tsmt.029.001.02", "StsChngReqRjctn", "urn:iso:std:iso:20022:tech:xsd:tsmt.029.001.02")]
+[Description(@"Scope|The StatusChangeRequestRejection message is sent by the party requested to accept or reject the request of a change in the status of a transaction to the matching application.|This message is used to inform about the rejection of a request to change the status of a transaction.|Usage|The StatusChangeRequestRejection message can be sent by the party requested to accept or reject a request to change the status of a transaction to inform that it rejects the request.|The message can be sent in response to a StatusChangeRequestNotification message.|The acceptance of a request to change the status of a transaction can be achieved by sending a StatusChangeRequestAcceptance message.")]
+[IsoDisplayName(@"Status Change Request Rejection V")]
 public interface IStatusChangeRequestRejectionV02 : IOuterRecord
 {
     /// <summary>

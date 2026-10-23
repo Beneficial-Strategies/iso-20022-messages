@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice;
 /// <summary>
 /// System Restriction.
 /// </summary>
+[IsoDisplayName(@"System Restriction")]
 public interface ISystemRestriction : ISystemPartyModification3Choice, IIsoChoiceVariant
 {
     /// <summary>

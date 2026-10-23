@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3MONzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.069.001.05", "GetStgOrdr", "urn:iso:std:iso:20022:tech:xsd:camt.069.001.05")]
+[IsoDisplayName(@"Get Standing Order V05")]
 public interface IGetStandingOrderV05 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +33,6 @@ public interface IGetStandingOrderV05 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

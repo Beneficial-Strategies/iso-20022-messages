@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Elements characterising a financial instrument.
 /// </summary>
 [IsoId("_kMyPIag6EfCXwLUUylXgrQ")]
+[IsoDisplayName(@"Financial Instrument Attributes138")]
 public interface IFinancialInstrumentAttributes138 : IIsoComponent
 {
     /// <summary>
@@ -321,6 +322,7 @@ public interface IFinancialInstrumentAttributes138 : IIsoComponent
     [IsoId("_kPMEq6g6EfCXwLUUylXgrQ")]
     [DisplayName("Underlying Financial Instrument Identification")]
     [IsoXmlTag("UndrlygFinInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification19> UnderlyingFinancialInstrumentIdentification { get; }
 
     /// <summary>

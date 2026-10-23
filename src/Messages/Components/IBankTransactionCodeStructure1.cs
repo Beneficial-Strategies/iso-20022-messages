@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements to fully identify the type of the bank transaction entry.
 /// </summary>
 [IsoId("_TVHfuNp-Ed-ak6NoX_4Aeg_-2139976485")]
+[IsoDisplayName(@"Bank Transaction Code Structure")]
 public interface IBankTransactionCodeStructure1 : IIsoComponent
 {
     /// <summary>

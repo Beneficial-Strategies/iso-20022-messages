@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Securitised right for entitlement, for example, equity or bond.
 /// </summary>
 [IsoId("_XA2xrdp-Ed-ak6NoX_4Aeg_-661527747")]
+[IsoDisplayName(@"Underlying Security")]
 public interface IUnderlyingSecurity2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique identification, as assigned by an organisation, to unambiguously identify a party.
 /// </summary>
 [IsoId("_ynQ8AEkIEeaOe8w0NJ11wQ")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification116 : IIsoComponent
 {
     /// <summary>

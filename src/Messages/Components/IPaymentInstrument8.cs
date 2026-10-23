@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instrument that has or represents monetary value and is used to process a payment instruction.
 /// </summary>
 [IsoId("_SB0r1Np-Ed-ak6NoX_4Aeg_-865361430")]
+[IsoDisplayName(@"Payment Instrument")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IPaymentInstrument8 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,9 @@ public interface IPaymentInstrument8 : IIsoComponent
     [IsoId("_SB0r1tp-Ed-ak6NoX_4Aeg_-865360952")]
     [DisplayName("Cash Account Details")]
     [IsoXmlTag("CshAcctDtls")]
+    [MinLength(1)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount4> CashAccountDetails { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IPaymentInstrument8 : IIsoComponent
     [IsoId("_SB0r2dp-Ed-ak6NoX_4Aeg_-865361256")]
     [DisplayName("Cheque")]
     [IsoXmlTag("Chq")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Cheque { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface IPaymentInstrument8 : IIsoComponent
     [IsoId("_SB0r2tp-Ed-ak6NoX_4Aeg_-816417172")]
     [DisplayName("Bankers Draft")]
     [IsoXmlTag("BkrsDrft")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator BankersDraft { get; }
 }

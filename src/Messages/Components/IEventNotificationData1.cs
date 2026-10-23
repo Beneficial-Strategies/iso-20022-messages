@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the EventNotification message.
 /// </summary>
 [IsoId("_vNo2IN6ZEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Event Notification Data")]
 public interface IEventNotificationData1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IEventNotificationData1 : IIsoComponent
     [IsoId("_OJ_usN6cEeiwsev40qZGEQ")]
     [DisplayName("Maintenance Required Flag")]
     [IsoXmlTag("MntncReqrdFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MaintenanceRequiredFlag { get; }
 
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Product Identifier3Choice.
 /// </summary>
 [IsoId("_V3jkcEj2Ee-KhcStGV4xTg")]
+[IsoDisplayName(@"Product Identifier3Choice")]
 public interface IProductIdentifier3Choice : IIsoChoice { }

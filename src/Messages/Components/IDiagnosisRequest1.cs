@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Diagnosis Request message.
 /// </summary>
 [IsoId("_76gkoN6JEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Diagnosis Request")]
 public interface IDiagnosisRequest1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDiagnosisRequest1 : IIsoComponent
     [IsoId("_BUIUsN6KEeiwsev40qZGEQ")]
     [DisplayName("Host Diagnosis Flag")]
     [IsoXmlTag("HstDgnssFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? HostDiagnosisFlag { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IDiagnosisRequest1 : IIsoComponent
     [IsoId("_ETK4sN6KEeiwsev40qZGEQ")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> AcquirerIdentification { get; }
 }

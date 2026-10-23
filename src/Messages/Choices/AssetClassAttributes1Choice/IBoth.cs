@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassAttributes1Choice;
 /// </summary>
 [IsoId("_vAX4UO94EeW7gabYEJmWIA")]
 [IsoXmlTag("Both")]
+[IsoDisplayName(@"Both")]
 public interface IBoth : IAssetClassAttributes1Choice, IIsoChoiceVariant
 {
     /// <summary>

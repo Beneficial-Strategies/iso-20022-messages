@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original Item8.
 /// </summary>
 [IsoId("_-G48ATEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Original Item8")]
 public interface IOriginalItem8 : IIsoComponent
 {
     /// <summary>

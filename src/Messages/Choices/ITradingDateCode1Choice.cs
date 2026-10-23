@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the trading date code.
 /// </summary>
 [IsoId("_AXUwUdokEeC60axPepSq7g_2130878160")]
+[IsoDisplayName(@"Trading Date Code 1 Choice")]
 public interface ITradingDateCode1Choice : IIsoChoice { }

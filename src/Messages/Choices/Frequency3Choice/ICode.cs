@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency3Choice;
 /// Frequency expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_QvHt1Np-Ed-ak6NoX_4Aeg_1830681054")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IFrequency3Choice, IIsoChoiceVariant
 {
     /// <summary>

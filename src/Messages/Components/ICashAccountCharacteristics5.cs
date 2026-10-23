@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash Account Characteristics5.
 /// </summary>
 [IsoId("_xf3iYTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Cash Account Characteristics5")]
 public interface ICashAccountCharacteristics5 : IIsoComponent
 {
     /// <summary>

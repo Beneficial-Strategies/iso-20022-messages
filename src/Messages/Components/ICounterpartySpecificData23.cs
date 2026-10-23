@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related specifically to counterparties.
 /// </summary>
 [IsoId("_fkwfQZQHEeiILOjNP8ro1w")]
+[IsoDisplayName(@"Counterparty Specific Data")]
 public interface ICounterpartySpecificData23 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface ICounterpartySpecificData23 : IIsoComponent
     [IsoId("_fvd6cZQHEeiILOjNP8ro1w")]
     [DisplayName("Reporting Date Time")]
     [IsoXmlTag("RptgDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ReportingDateTime { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to a component of the POI (Point Of Interaction) performing the transaction.
 /// </summary>
 [IsoId("_tAsCoVFAEeyApZmLzm74zA")]
+[IsoDisplayName(@"Point Of Interaction Component")]
 public interface IPointOfInteractionComponent12 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPointOfInteractionComponent12 : IIsoComponent
     [IsoId("_tHIo41FAEeyApZmLzm74zA")]
     [DisplayName("Sub Type Information")]
     [IsoXmlTag("SubTpInf")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SubTypeInformation { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IPointOfInteractionComponent12 : IIsoComponent
     [IsoId("_tHIo6VFAEeyApZmLzm74zA")]
     [DisplayName("Standard Compliance")]
     [IsoXmlTag("StdCmplc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification48> StandardCompliance { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IPointOfInteractionComponent12 : IIsoComponent
     [IsoId("_tHIo7VFAEeyApZmLzm74zA")]
     [DisplayName("Assessment")]
     [IsoXmlTag("Assmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponentAssessment1> Assessment { get; }
 
     /// <summary>
@@ -73,5 +78,6 @@ public interface IPointOfInteractionComponent12 : IIsoComponent
     [IsoId("_tHIo71FAEeyApZmLzm74zA")]
     [DisplayName("Package")]
     [IsoXmlTag("Packg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPackageType3> Package { get; }
 }

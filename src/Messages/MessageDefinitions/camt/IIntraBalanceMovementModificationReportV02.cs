@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
     "IntraBalMvmntModRpt",
     "urn:iso:std:iso:20022:tech:xsd:camt.081.001.02"
 )]
+[IsoDisplayName(@"Intra Balance Movement Modification Report V02")]
 public interface IIntraBalanceMovementModificationReportV02 : IOuterRecord
 {
     /// <summary>
@@ -50,5 +51,6 @@ public interface IIntraBalanceMovementModificationReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

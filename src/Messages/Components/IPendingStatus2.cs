@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Pending Status2.
 /// </summary>
 [IsoId("_s7SzsZzmEe-DHYbvdRjdbA")]
+[IsoDisplayName(@"Pending Status2")]
 public interface IPendingStatus2 : IIsoComponent
 {
     /// <summary>

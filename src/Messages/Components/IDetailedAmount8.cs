@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed amounts associated with the total amount of transaction.
 /// </summary>
 [IsoId("__NLEUXsyEeSTS7uHCe8FPQ")]
+[IsoDisplayName(@"Detailed Amount")]
 public interface IDetailedAmount8 : IIsoComponent
 {
     /// <summary>
@@ -27,6 +28,7 @@ public interface IDetailedAmount8 : IIsoComponent
     [IsoId("_Q68toHszEeSTS7uHCe8FPQ")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate ExchangeRate { get; }
 
     /// <summary>
@@ -35,6 +37,7 @@ public interface IDetailedAmount8 : IIsoComponent
     [IsoId("_WdkBoHszEeSTS7uHCe8FPQ")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? QuotationDate { get; }
 
     /// <summary>
@@ -43,5 +46,7 @@ public interface IDetailedAmount8 : IIsoComponent
     [IsoId("__az3s3syEeSTS7uHCe8FPQ")]
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Label { get; }
 }

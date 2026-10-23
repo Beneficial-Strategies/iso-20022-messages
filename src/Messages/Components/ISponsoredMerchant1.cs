@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Merchant using the payment services of the card acceptor. The sponsored merchant is not acting as the card acceptor; the latter remaining the only party liable for the transaction vis-à-vis the acquirer.
 /// </summary>
 [IsoId("_r5V9EEXgEeegp_DADCe7HQ")]
+[IsoDisplayName(@"Sponsored Merchant")]
 public interface ISponsoredMerchant1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ISponsoredMerchant1 : IIsoComponent
     [IsoId("_kUYkkEXlEeegp_DADCe7HQ")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ISponsoredMerchant1 : IIsoComponent
     [IsoId("_u4cZMEXlEeegp_DADCe7HQ")]
     [DisplayName("Common Name")]
     [IsoXmlTag("CmonNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? CommonName { get; }
 
     /// <summary>

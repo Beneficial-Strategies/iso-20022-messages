@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EncryptedData1Choice;
 /// BASE-64 encoded encrypted data.
 /// </summary>
 [IsoId("_-on81OkLEemeDPHh-U9b6w")]
+[IsoDisplayName(@"Binary Data")]
 public interface IBinaryData : IEncryptedData1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBinaryData : IEncryptedData1Choice, IIsoChoiceVariant
     /// Binary data of 100K maximum.
     /// </summary>
     [IsoXmlTag("BinryData")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary Value { get; }
 }

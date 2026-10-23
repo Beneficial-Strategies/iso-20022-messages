@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment card performing the transaction.
 /// </summary>
 [IsoId("_qcddgWiyEeS87LmvcA55sg")]
+[IsoDisplayName(@"Payment Card")]
 public interface IPaymentCard9 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IPaymentCard9 : IIsoComponent
     [IsoId("_RxcvwGjHEeSHBr6v3XO0Mg")]
     [DisplayName("Issuer BIN")]
     [IsoXmlTag("IssrBIN")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? IssuerBIN { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface IPaymentCard9 : IIsoComponent
     [IsoId("_qqR3FWiyEeS87LmvcA55sg")]
     [DisplayName("Card Country Code")]
     [IsoXmlTag("CardCtryCd")]
+    [IsoSimpleType(IsoSimpleType.Max3Text)]
+    [StringLength(3, MinimumLength = 1)]
     Max3Text? CardCountryCode { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IPaymentCard9 : IIsoComponent
     [IsoId("_qqR3F2iyEeS87LmvcA55sg")]
     [DisplayName("Card Currency Code")]
     [IsoXmlTag("CardCcyCd")]
+    [IsoSimpleType(IsoSimpleType.Exact3AlphaNumericText)]
     Exact3AlphaNumericText? CardCurrencyCode { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface IPaymentCard9 : IIsoComponent
     [IsoId("_qqR3GWiyEeS87LmvcA55sg")]
     [DisplayName("Card Product Profile")]
     [IsoXmlTag("CardPdctPrfl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardProductProfile { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface IPaymentCard9 : IIsoComponent
     [IsoId("_qqR3G2iyEeS87LmvcA55sg")]
     [DisplayName("Card Brand")]
     [IsoXmlTag("CardBrnd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardBrand { get; }
 
     /// <summary>
@@ -73,5 +82,7 @@ public interface IPaymentCard9 : IIsoComponent
     [IsoId("_qqR3HWiyEeS87LmvcA55sg")]
     [DisplayName("Additional Card Data")]
     [IsoXmlTag("AddtlCardData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalCardData { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// customer site. These values represent information most prevalently provided by travel agencies for transactions booked against a lodged account or central travel account.
 /// </summary>
 [IsoId("_0Fh7xPPaEeihCvvpsmGI2w")]
+[IsoDisplayName(@"Customer Reference")]
 public interface ICustomerReference1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICustomerReference1 : IIsoComponent
     [IsoId("_0Fh7xvPaEeihCvvpsmGI2w")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface ICustomerReference1 : IIsoComponent
     [IsoId("_0Fh7xfPaEeihCvvpsmGI2w")]
     [DisplayName("Detail")]
     [IsoXmlTag("Dtl")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Detail { get; }
 }

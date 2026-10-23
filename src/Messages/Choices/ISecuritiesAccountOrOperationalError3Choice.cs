@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Set of elements used to report between the securities account reference data or an operational error.
 /// </summary>
 [IsoId("_xuZ_ETp1Eemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Securities Account Or Operational Error 3 Choice")]
 public interface ISecuritiesAccountOrOperationalError3Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variables related to derivatives that are used to group derivatives together into positions for position sets and currency position sets reports.
 /// </summary>
 [IsoId("_0xmkFQ1MEeqV4s5SpzR1dQ")]
+[IsoDisplayName(@"Position Set Dimensions")]
 public interface IPositionSetDimensions3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface IPositionSetDimensions3 : IIsoComponent
     [IsoId("_0yWyBw1MEeqV4s5SpzR1dQ")]
     [DisplayName("Portfolio")]
     [IsoXmlTag("Prtfl")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? Portfolio { get; }
 
     /// <summary>
@@ -115,6 +118,7 @@ public interface IPositionSetDimensions3 : IIsoComponent
     [IsoId("_0yWyGQ1MEeqV4s5SpzR1dQ")]
     [DisplayName("Clearing Status")]
     [IsoXmlTag("ClrSts")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ClearingStatus { get; }
 
     /// <summary>
@@ -124,6 +128,7 @@ public interface IPositionSetDimensions3 : IIsoComponent
     [IsoId("_0yWyGw1MEeqV4s5SpzR1dQ")]
     [DisplayName("Intra Group")]
     [IsoXmlTag("IntraGrp")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? IntraGroup { get; }
 
     /// <summary>
@@ -156,6 +161,8 @@ public interface IPositionSetDimensions3 : IIsoComponent
     [IsoId("_0yWyIw1MEeqV4s5SpzR1dQ")]
     [DisplayName("IRS Type")]
     [IsoXmlTag("IRSTp")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? IRSType { get; }
 
     /// <summary>
@@ -172,6 +179,7 @@ public interface IPositionSetDimensions3 : IIsoComponent
     [IsoId("_0yWyJw1MEeqV4s5SpzR1dQ")]
     [DisplayName("Tranche")]
     [IsoXmlTag("Trch")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? Tranche { get; }
 
     /// <summary>
@@ -180,5 +188,7 @@ public interface IPositionSetDimensions3 : IIsoComponent
     [IsoId("_0yWyKQ1MEeqV4s5SpzR1dQ")]
     [DisplayName("Commodity")]
     [IsoXmlTag("Cmmdty")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? Commodity { get; }
 }

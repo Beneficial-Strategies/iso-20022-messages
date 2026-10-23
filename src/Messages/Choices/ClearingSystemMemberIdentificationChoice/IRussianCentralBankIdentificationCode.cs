@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Russian Central Bank Identification Code - identifies Russian financial institutions on the Russian national clearing system.
 /// </summary>
 [IsoId("_TDY2htp-Ed-ak6NoX_4Aeg_-896562590")]
+[IsoDisplayName(@"Russian Central Bank Identification Code")]
 public interface IRussianCentralBankIdentificationCode
     : IClearingSystemMemberIdentificationChoice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IRussianCentralBankIdentificationCode
     /// Russian Central Bank Identification Code. Identifies Russian financial institutions on the Russian national clearing system.
     /// </summary>
     [IsoXmlTag("RUCB")]
+    [IsoSimpleType(IsoSimpleType.RussianCentralBankIdentificationCodeIdentifier)]
     RussianCentralBankIdentificationCodeIdentifier Value { get; }
 }

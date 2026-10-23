@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the underlying (group of) transaction(s) to which the resolution of investigation applies.
 /// </summary>
 [IsoId("_sgYm0FkyEeGeoaLUQk__nA_-1571947250")]
+[IsoDisplayName(@"Underlying Transaction")]
 public interface IUnderlyingTransaction4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IUnderlyingTransaction4 : IIsoComponent
     [IsoId("_sghwwVkyEeGeoaLUQk__nA_599224122")]
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalPaymentInstruction3> OriginalPaymentInformationAndStatus { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IUnderlyingTransaction4 : IIsoComponent
     [IsoId("_sgrhwFkyEeGeoaLUQk__nA_588125345")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction40> TransactionInformationAndStatus { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Intra-balance type used to specify pairs of from/to balances.
 /// </summary>
 [IsoId("_NXCxMTqFEemJ3KLLPeYl6g")]
+[IsoDisplayName(@"Intra Balance Type")]
 public interface IIntraBalanceType3 : IIsoComponent
 {
     /// <summary>

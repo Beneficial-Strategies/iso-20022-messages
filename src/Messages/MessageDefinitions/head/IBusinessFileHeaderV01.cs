@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.head;
 /// </summary>
 [IsoId("_W9-JMexMEe6M4Kz-BKMIbA")]
 [IsoMessage("head.002.001.01", "BizFileHdr", "urn:iso:std:iso:20022:tech:xsd:head.002.001.01")]
+[IsoDisplayName(@"Business File Header V01")]
 public interface IBusinessFileHeaderV01 : IOuterRecord
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IBusinessFileHeaderV01 : IOuterRecord
     /// </summary>
     [DisplayName("Payload")]
     [IsoXmlTag("Pyld")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxPayload> Payload { get; }
 }

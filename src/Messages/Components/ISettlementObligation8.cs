@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the settlement obligation.
 /// </summary>
 [IsoId("_71U0BS9dEeS94oXWDaBauA")]
+[IsoDisplayName(@"Settlement Obligation")]
 public interface ISettlementObligation8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISettlementObligation8 : IIsoComponent
     [IsoId("_8GvUIS9dEeS94oXWDaBauA")]
     [DisplayName("Settlement Obligation Identification")]
     [IsoXmlTag("SttlmOblgtnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SettlementObligationIdentification { get; }
 
     /// <summary>
@@ -129,5 +132,6 @@ public interface ISettlementObligation8 : IIsoComponent
     [IsoId("_8G4eHS9dEeS94oXWDaBauA")]
     [DisplayName("Additional Settlement Obligation Details")]
     [IsoXmlTag("AddtlSttlmOblgtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementObligation5> AdditionalSettlementObligationDetails { get; }
 }

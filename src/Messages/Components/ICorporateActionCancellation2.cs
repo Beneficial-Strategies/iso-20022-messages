@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate action event cancellation status and reason.
 /// </summary>
 [IsoId("_WbT0ktp-Ed-ak6NoX_4Aeg_-826619603")]
+[IsoDisplayName(@"Corporate Action Cancellation")]
 public interface ICorporateActionCancellation2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICorporateActionCancellation2 : IIsoComponent
     [IsoId("_WbT0lNp-Ed-ak6NoX_4Aeg_1001393480")]
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text? CancellationReason { get; }
 
     /// <summary>

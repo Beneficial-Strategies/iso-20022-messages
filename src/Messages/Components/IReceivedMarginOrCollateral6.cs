@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information on the received margin or collateral of the transaction.
 /// </summary>
 [IsoId("_lgGRIYmKEeybbN9emGqfiw")]
+[IsoDisplayName(@"Received Margin Or Collateral")]
 public interface IReceivedMarginOrCollateral6 : IIsoComponent
 {
     /// <summary>

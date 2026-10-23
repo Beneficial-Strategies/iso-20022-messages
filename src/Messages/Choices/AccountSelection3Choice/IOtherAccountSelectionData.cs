@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSelection3Choice;
 /// </summary>
 [IsoId("_oQaFg5TIEemqYPWMBuVawg")]
 [IsoXmlTag("OthrAcctSelctnData")]
+[IsoDisplayName(@"Other Account Selection Data")]
 public interface IOtherAccountSelectionData : IAccountSelection3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOtherAccountSelectionData : IAccountSelection3Choice, IIsoChoi
     [IsoId("_voK9RZTIEemqYPWMBuVawg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IOtherAccountSelectionData : IAccountSelection3Choice, IIsoChoi
     [IsoId("_voK9R5TIEemqYPWMBuVawg")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Designation { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface IOtherAccountSelectionData : IAccountSelection3Choice, IIsoChoi
     [IsoId("_voK9SZTIEemqYPWMBuVawg")]
     [DisplayName("Fund Type")]
     [IsoXmlTag("FndTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FundType { get; }
 
     /// <summary>
@@ -42,6 +49,8 @@ public interface IOtherAccountSelectionData : IAccountSelection3Choice, IIsoChoi
     [IsoId("_voK9S5TIEemqYPWMBuVawg")]
     [DisplayName("Fund Family Name")]
     [IsoXmlTag("FndFmlyNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FundFamilyName { get; }
 
     /// <summary>
@@ -66,6 +75,7 @@ public interface IOtherAccountSelectionData : IAccountSelection3Choice, IIsoChoi
     [IsoId("_voK9UZTIEemqYPWMBuVawg")]
     [DisplayName("Intermediary")]
     [IsoXmlTag("Intrmy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary47> Intermediary { get; }
 
     /// <summary>

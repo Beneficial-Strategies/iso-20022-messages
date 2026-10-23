@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Capabilities of the POI performing the transaction.
 /// </summary>
 [IsoId("_TGJWagEcEeCQm6a_G2yO_w_-1706794151")]
+[IsoDisplayName(@"Point Of Interaction Capabilities")]
 public interface IPointOfInteractionCapabilities1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPointOfInteractionCapabilities1 : IIsoComponent
     [IsoId("_TGJWawEcEeCQm6a_G2yO_w_477826154")]
     [DisplayName("Card Reading Capabilities")]
     [IsoXmlTag("CardRdngCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataReading1Code> CardReadingCapabilities { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPointOfInteractionCapabilities1 : IIsoComponent
     [IsoId("_TGJWbAEcEeCQm6a_G2yO_w_1143315363")]
     [DisplayName("Cardholder Verification Capabilities")]
     [IsoXmlTag("CrdhldrVrfctnCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardholderVerificationCapability1Code> CardholderVerificationCapabilities { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IPointOfInteractionCapabilities1 : IIsoComponent
     [IsoId("_TGSgUQEcEeCQm6a_G2yO_w_666196014")]
     [DisplayName("Display Capabilities")]
     [IsoXmlTag("DispCpblties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisplayCapabilities1> DisplayCapabilities { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IPointOfInteractionCapabilities1 : IIsoComponent
     [IsoId("_TGSgUgEcEeCQm6a_G2yO_w_-1182970689")]
     [DisplayName("Print Line Width")]
     [IsoXmlTag("PrtLineWidth")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? PrintLineWidth { get; }
 }

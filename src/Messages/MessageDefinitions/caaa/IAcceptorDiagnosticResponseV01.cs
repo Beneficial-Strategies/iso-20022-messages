@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrDgnstcRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.014.001.01"
 )]
+[Description(@"Scope|The AcceptorDiagnosticResponse message is sent by the acquirer to the card acceptor to confirm the availability of the acquirer. An agent never forwards the message.|Usage|The AcceptorDiagnosticResponse message is used to:|- confirm the availability of the acquirer;|- validate the security of the exchanges with the acquirer;|- validate the version of the configuration parameters.")]
+[IsoDisplayName(@"Acceptor Diagnostic Response V")]
 public interface IAcceptorDiagnosticResponseV01 : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MissingData1Choice;
 /// Missing data type, in a coded form.
 /// </summary>
 [IsoId("_MN6wldjMEeq5MfBBxQig1Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMissingData1Choice, IIsoChoiceVariant
 {
     /// <summary>

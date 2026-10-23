@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountType2Choice;
 /// Nature or use of the account in a proprietary form.
 /// </summary>
 [IsoId("_scEHgFkyEeGeoaLUQk__nA_1436723705")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICashAccountType2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : ICashAccountType2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

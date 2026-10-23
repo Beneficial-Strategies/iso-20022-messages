@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentSchedule1Choice;
 /// </summary>
 [IsoId("_BhnbcdOAEeSQ_-lmj1tzfw")]
 [IsoXmlTag("DtRg")]
+[IsoDisplayName(@"Date Range")]
 public interface IDateRange : IPaymentSchedule1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IDateRange : IPaymentSchedule1Choice, IIsoChoiceVariant
     [IsoId("_uqWlEdOAEeSQ_-lmj1tzfw")]
     [DisplayName("Payment Schedule Identification")]
     [IsoXmlTag("PmtSchdlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentScheduleIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IDateRange : IPaymentSchedule1Choice, IIsoChoiceVariant
     [IsoId("_LABPkdOAEeSQ_-lmj1tzfw")]
     [DisplayName("Expected Date")]
     [IsoXmlTag("XpctdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedDate { get; }
 
     /// <summary>
@@ -34,5 +38,6 @@ public interface IDateRange : IPaymentSchedule1Choice, IIsoChoiceVariant
     [IsoId("_LABPk9OAEeSQ_-lmj1tzfw")]
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DueDate { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegalRestrictions4Choice;
 /// Legal restrictions expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_KJxCweLcEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ILegalRestrictions4Choice, IIsoChoiceVariant
 {
     /// <summary>

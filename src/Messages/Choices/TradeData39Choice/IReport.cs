@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData39Choice;
 /// Information concerning the reporting at transaction level.
 /// </summary>
 [IsoId("_SJG1c8g2EeuGrNSsxk3B0A")]
+[IsoDisplayName(@"Report")]
 public interface IReport : ITradeData39Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

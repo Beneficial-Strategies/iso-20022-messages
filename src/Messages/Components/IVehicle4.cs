@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes of vehicle.
 /// </summary>
 [IsoId("_fX6l4PTaEeife6veM7daYw")]
+[IsoDisplayName(@"Vehicle")]
 public interface IVehicle4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVehicle4 : IIsoComponent
     [IsoId("_fX6l6PTaEeife6veM7daYw")]
     [DisplayName("Class")]
     [IsoXmlTag("Clss")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Class { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IVehicle4 : IIsoComponent
     [IsoId("_fX6l7fTaEeife6veM7daYw")]
     [DisplayName("Make")]
     [IsoXmlTag("Make")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? Make { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IVehicle4 : IIsoComponent
     [IsoId("_fX6l5_TaEeife6veM7daYw")]
     [DisplayName("Model")]
     [IsoXmlTag("Mdl")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? Model { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface IVehicle4 : IIsoComponent
     [IsoId("_fX6l4vTaEeife6veM7daYw")]
     [DisplayName("Registration Number")]
     [IsoXmlTag("RegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegistrationNumber { get; }
 }

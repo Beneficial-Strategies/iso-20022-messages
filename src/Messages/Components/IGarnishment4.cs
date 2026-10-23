@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides remittance information about a payment for garnishment-related purposes.
 /// </summary>
 [IsoId("_v9i0ETEyEe6g-ffJsqGiSA")]
+[Description(@"Provides remittance information about a payment for garnishment-related purposes.")]
+[IsoDisplayName(@"Garnishment4")]
 public interface IGarnishment4 : IIsoComponent
 {
     /// <summary>

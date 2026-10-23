@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Encrypted data with encryption key.
 /// </summary>
 [IsoId("_wKYgQXDOEe2MCaKO5AtGsA")]
+[IsoDisplayName(@"Enveloped Data")]
 public interface IEnvelopedData10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IEnvelopedData10 : IIsoComponent
     [IsoId("_wSCAYXDOEe2MCaKO5AtGsA")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IEnvelopedData10 : IIsoComponent
     [IsoId("_wSCAZXDOEe2MCaKO5AtGsA")]
     [DisplayName("Recipient")]
     [IsoXmlTag("Rcpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRecipient14Choice> Recipient { get; }
 
     /// <summary>

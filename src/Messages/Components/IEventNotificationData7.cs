@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Event Notification Data7.
 /// </summary>
 [IsoId("_hBNFsaEXEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Event Notification Data7")]
 public interface IEventNotificationData7 : IIsoComponent
 {
     /// <summary>

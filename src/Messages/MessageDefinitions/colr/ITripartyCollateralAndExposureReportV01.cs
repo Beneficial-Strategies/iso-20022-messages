@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.colr;
     "TrptyCollAndXpsrRpt",
     "urn:iso:std:iso:20022:tech:xsd:colr.022.001.01"
 )]
+[Description(@"Scope:|This message is sent by a triparty agent to both the collateral giver and the collateral taker or to an account servicer, who manage the account at the triparty agent on behalf of a trading party, in the following circumstances:|- after all collateral movements have been affected (after settlement-initiated) to show the end (fixed) positions (current status) or,|- taking into account all collateral management instructions (including pending initiation and/or initiated.||Usage:|This message is sent to provide the details of the valuation of both the collateral and the exposure.")]
+[IsoDisplayName(@"Triparty Collateral And Exposure Report V")]
 public interface ITripartyCollateralAndExposureReportV01 : IOuterRecord
 {
     /// <summary>
@@ -62,6 +64,7 @@ public interface ITripartyCollateralAndExposureReportV01 : IOuterRecord
     [IsoId("_2uaM4Ss7EeySlt9bF77XfA")]
     [DisplayName("Exposure Type Aggregation")]
     [IsoXmlTag("XpsrTpAggtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExposureTypeAggregation3> ExposureTypeAggregation { get; }
 
     /// <summary>
@@ -70,6 +73,7 @@ public interface ITripartyCollateralAndExposureReportV01 : IOuterRecord
     [IsoId("_2uaM4ys7EeySlt9bF77XfA")]
     [DisplayName("Counterparty Aggregation")]
     [IsoXmlTag("CtrPtyAggtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICounterpartyAggregation3> CounterpartyAggregation { get; }
 
     /// <summary>
@@ -78,6 +82,7 @@ public interface ITripartyCollateralAndExposureReportV01 : IOuterRecord
     [IsoId("_2uaM5Ss7EeySlt9bF77XfA")]
     [DisplayName("Transactions")]
     [IsoXmlTag("Txs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransaction124> Transactions { get; }
 
     /// <summary>
@@ -94,5 +99,6 @@ public interface ITripartyCollateralAndExposureReportV01 : IOuterRecord
     [IsoId("_2uaM6Ss7EeySlt9bF77XfA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

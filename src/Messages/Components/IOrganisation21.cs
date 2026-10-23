@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.
 /// </summary>
 [IsoId("_xXY_ESX-EeWJkOUkQWu90g")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation21 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrganisation21 : IIsoComponent
     [IsoId("_x0S9gSX-EeWJkOUkQWu90g")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IOrganisation21 : IIsoComponent
     [IsoId("_x0S9hSX-EeWJkOUkQWu90g")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Purpose { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IOrganisation21 : IIsoComponent
     [IsoId("_x0S9iyX-EeWJkOUkQWu90g")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 
     /// <summary>
@@ -65,6 +71,8 @@ public interface IOrganisation21 : IIsoComponent
     [IsoId("_x0S9jSX-EeWJkOUkQWu90g")]
     [DisplayName("Tax Identification Number")]
     [IsoXmlTag("TaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxIdentificationNumber { get; }
 
     /// <summary>
@@ -73,6 +81,8 @@ public interface IOrganisation21 : IIsoComponent
     [IsoId("_x0S9jyX-EeWJkOUkQWu90g")]
     [DisplayName("National Registration Number")]
     [IsoXmlTag("NtlRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NationalRegistrationNumber { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Signed amount.
 /// </summary>
 [IsoId("_4UecAYp5EeS3NqNpgnMh2w")]
+[IsoDisplayName(@"Amount And Direction")]
 public interface IAmountAndDirection43 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IAmountAndDirection43 : IIsoComponent
     [IsoId("_4g2EFYp5EeS3NqNpgnMh2w")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? Sign { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IAmountAndDirection43 : IIsoComponent
     [IsoId("_JJ8kUIp6EeS3NqNpgnMh2w")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 }

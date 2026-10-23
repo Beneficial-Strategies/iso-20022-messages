@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Characteristics4.
 /// </summary>
 [IsoId("_fUJjYZBqEe6TWIDarRgYow")]
+[IsoDisplayName(@"Transaction Characteristics4")]
 public interface ITransactionCharacteristics4 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface ITransactionCharacteristics4 : IIsoComponent
     /// </summary>
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface ITransactionCharacteristics4 : IIsoComponent
     /// </summary>
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface ITransactionCharacteristics4 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

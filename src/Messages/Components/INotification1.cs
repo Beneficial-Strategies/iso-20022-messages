@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Structured information to be communicated to other parties in the transaction.
 /// </summary>
 [IsoId("_RaowA9p-Ed-ak6NoX_4Aeg_1225299644")]
+[IsoDisplayName(@"Notification")]
 public interface INotification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface INotification1 : IIsoComponent
     [IsoId("_RaowBdp-Ed-ak6NoX_4Aeg_1306568538")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text AdditionalInformation { get; }
 }

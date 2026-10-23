@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes5Ch
 /// </summary>
 [IsoId("_6geZA5icEe2f7NHvXATP5g")]
 [IsoXmlTag("Othr")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IFinancialInstrumentAttributes5Choice, IIsoChoiceVariant
 {
     /// <summary>

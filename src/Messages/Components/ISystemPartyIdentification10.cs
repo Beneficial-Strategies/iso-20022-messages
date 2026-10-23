@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique identification to unambiguously identify the party within the system.
 /// </summary>
 [IsoId("_90Gi0b10Eeiut6mmSKzDFQ")]
+[IsoDisplayName(@"System Party Identification")]
 public interface ISystemPartyIdentification10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISystemPartyIdentification10 : IIsoComponent
     [IsoId("_-AKB0b10Eeiut6mmSKzDFQ")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidFrom { get; }
 
     /// <summary>

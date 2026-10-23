@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification248Choice;
 /// </summary>
 [IsoId("_WAhpkz3YEe2uHKhHp3bXyA")]
 [IsoXmlTag("Ntrl")]
+[IsoDisplayName(@"Natural")]
 public interface INatural : IPartyIdentification248Choice, IIsoChoiceVariant
 {
     /// <summary>

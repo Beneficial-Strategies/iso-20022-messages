@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the information that is searched through the definition of specific criteria.
 /// </summary>
 [IsoId("_34wQ0eSlEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Intra Position Query Definition8")]
 public interface IIntraPositionQueryDefinition8 : IIsoComponent
 {
     /// <summary>

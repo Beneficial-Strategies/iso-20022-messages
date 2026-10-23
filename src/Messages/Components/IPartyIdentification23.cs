@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Optionally, the client account number can also be provided.
 /// </summary>
 [IsoId("_QQkwqNp-Ed-ak6NoX_4Aeg_-647119755")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification23 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IPartyIdentification23 : IIsoComponent
     [IsoId("_QQuhoNp-Ed-ak6NoX_4Aeg_-647119753")]
     [DisplayName("BIC Or BEI")]
     [IsoXmlTag("BICOrBEI")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier BICOrBEI { get; }
 
     /// <summary>

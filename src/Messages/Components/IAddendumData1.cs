@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Component contains data structures applicable to certain merchant verticals that require industry-specific data within transaction messages.
 /// </summary>
 [IsoId("_DnFa09kkEeiKYdl5SlduIA")]
+[IsoDisplayName(@"Addendum Data")]
 public interface IAddendumData1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAddendumData1 : IIsoComponent
     [IsoId("_r448gPJQEeiJn9rM2Znz2w")]
     [DisplayName("Other Purchase Identifier Type")]
     [IsoXmlTag("OthrPurchsIdrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherPurchaseIdentifierType { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IAddendumData1 : IIsoComponent
     [IsoId("_7K0OcPJQEeiJn9rM2Znz2w")]
     [DisplayName("Purchase Identifier")]
     [IsoXmlTag("PurchsIdr")]
+    [IsoSimpleType(IsoSimpleType.Max99Text)]
+    [StringLength(99, MinimumLength = 1)]
     Max99Text? PurchaseIdentifier { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface IAddendumData1 : IIsoComponent
     [IsoId("_W9dLwvJNEeiJn9rM2Znz2w")]
     [DisplayName("Vehicle Rental")]
     [IsoXmlTag("VhclRntl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVehicleRentalService1> VehicleRental { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface IAddendumData1 : IIsoComponent
     [IsoId("_W9dLw_JNEeiJn9rM2Znz2w")]
     [DisplayName("Lodging")]
     [IsoXmlTag("Ldgg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILodging2> Lodging { get; }
 
     /// <summary>
@@ -129,6 +136,7 @@ public interface IAddendumData1 : IIsoComponent
     [IsoId("_bfPSoPfkEei89sMSHxl1ew")]
     [DisplayName("Temporary Services")]
     [IsoXmlTag("TempSvcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITemporaryServices1> TemporaryServices { get; }
 
     /// <summary>
@@ -145,5 +153,6 @@ public interface IAddendumData1 : IIsoComponent
     [IsoId("_jeXOgP75Eeic54G0fOJNMg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

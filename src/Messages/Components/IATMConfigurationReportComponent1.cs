@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Configuration Report Component1.
 /// </summary>
 [IsoId("_eAI1MJ2lEe-4seDr3Li2Ew")]
+[IsoDisplayName(@"ATM Configuration Report Component1")]
 public interface IATMConfigurationReportComponent1 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IATMConfigurationReportComponent1 : IIsoComponent
     /// </summary>
     [DisplayName("Non Active Version")]
     [IsoXmlTag("NonActvVrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMVersionReport1> NonActiveVersion { get; }
 }

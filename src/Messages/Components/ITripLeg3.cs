@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trip Leg3.
 /// </summary>
 [IsoId("_stVioXQ9Ee6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Trip Leg3")]
 public interface ITripLeg3 : IIsoComponent
 {
     /// <summary>
@@ -128,6 +129,7 @@ public interface ITripLeg3 : IIsoComponent
     /// </summary>
     [DisplayName("Document")]
     [IsoXmlTag("Doc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentReference1> Document { get; }
 
     /// <summary>
@@ -240,6 +242,7 @@ public interface ITripLeg3 : IIsoComponent
     /// </summary>
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountDetails3> Amount { get; }
 
     /// <summary>
@@ -268,5 +271,6 @@ public interface ITripLeg3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

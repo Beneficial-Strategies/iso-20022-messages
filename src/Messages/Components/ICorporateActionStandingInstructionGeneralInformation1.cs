@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the standing instruction.
 /// </summary>
 [IsoId("_UJkbdNp-Ed-ak6NoX_4Aeg_1871445103")]
+[IsoDisplayName(@"Corporate Action Standing Instruction General Information")]
 public interface ICorporateActionStandingInstructionGeneralInformation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICorporateActionStandingInstructionGeneralInformation1 : IIsoCo
     [IsoId("_UJkbdtp-Ed-ak6NoX_4Aeg_1471624351")]
     [DisplayName("Event Type")]
     [IsoXmlTag("EvtTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventType2FormatChoice> EventType { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface ICorporateActionStandingInstructionGeneralInformation1 : IIsoCo
     [IsoId("_UJkbeNp-Ed-ak6NoX_4Aeg_-290186934")]
     [DisplayName("Client Standing Instruction Identification")]
     [IsoXmlTag("ClntStgInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ClientStandingInstructionIdentification { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICorporateActionStandingInstructionGeneralInformation1 : IIsoCo
     [IsoId("_UJkbedp-Ed-ak6NoX_4Aeg_-1954368406")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIncludedAccount1> AccountDetails { get; }
 
     /// <summary>

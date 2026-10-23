@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// The final result of a single invoice financing request.
 /// </summary>
 [IsoId("_TiFktdp-Ed-ak6NoX_4Aeg_1101123529")]
+[IsoDisplayName(@"Financing Result")]
 public interface IFinancingResult1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IFinancingResult1 : IIsoComponent
     [IsoId("_TiFkuNp-Ed-ak6NoX_4Aeg_-99752141")]
     [DisplayName("Additional Status Reason Information")]
     [IsoXmlTag("AddtlStsRsnInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalStatusReasonInformation { get; }
 
     /// <summary>

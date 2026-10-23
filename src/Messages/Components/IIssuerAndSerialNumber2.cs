@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Certificate issuer name and serial number (see X.509).
 /// </summary>
 [IsoId("_-vM7ES8iEeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Issuer And Serial Number")]
 public interface IIssuerAndSerialNumber2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IIssuerAndSerialNumber2 : IIsoComponent
     [IsoId("_-8B2Iy8iEeu125Ip9zFcsQ")]
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
+    [IsoSimpleType(IsoSimpleType.Max500Binary)]
     Max500Binary SerialNumber { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information to display, print or store.
 /// </summary>
 [IsoId("_V7Cr0VE3EeyApZmLzm74zA")]
+[IsoDisplayName(@"Action Message")]
 public interface IActionMessage9 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface IActionMessage9 : IIsoComponent
     [IsoId("_WBG3l1E3EeyApZmLzm74zA")]
     [DisplayName("Message Content")]
     [IsoXmlTag("MsgCntt")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text? MessageContent { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IActionMessage9 : IIsoComponent
     [IsoId("_WBG3nVE3EeyApZmLzm74zA")]
     [DisplayName("Response Required Flag")]
     [IsoXmlTag("RspnReqrdFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ResponseRequiredFlag { get; }
 
     /// <summary>
@@ -73,5 +77,6 @@ public interface IActionMessage9 : IIsoComponent
     [IsoId("_WBG3n1E3EeyApZmLzm74zA")]
     [DisplayName("Minimum Display Time")]
     [IsoXmlTag("MinDispTm")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MinimumDisplayTime { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus63Cho
 
 /// <summary>Transaction was created by the account servicer or a third party.</summary>
 [IsoId("_9ENHwQNrEfG_3cM8uyJ20w")]
+[IsoDisplayName(@"Generated")]
 public interface IGenerated : IInstructionProcessingStatus63Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

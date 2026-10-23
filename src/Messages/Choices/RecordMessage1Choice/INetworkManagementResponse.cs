@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Network management response message record.
 /// </summary>
 [IsoId("_mMMRkRs8EeqrvK3udMUsNQ")]
+[IsoDisplayName(@"Network Management Response")]
 public interface INetworkManagementResponse : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INetworkManagementResponse : IRecordMessage1Choice, IIsoChoiceV
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("NtwkMgmtRspn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

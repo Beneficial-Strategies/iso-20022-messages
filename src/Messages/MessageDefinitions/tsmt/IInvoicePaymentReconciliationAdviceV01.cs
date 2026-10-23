@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "InvcPmtRcncltnAdvc",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.053.001.01"
 )]
+[Description(@"The message InvoicePaymentReconciliationAdvice is sent by a payer to a payee to indicate attribution of payments to instalment of payment obligations in order to simplify the account netting or clearing when a lot of invoices are paid with a unique payment (for instance an SCT or an SDD).|The message contains references to payment instructions, may reference other messages and may include referenced data.|The message can carry digital signatures if required by context.")]
+[IsoDisplayName(@"Invoice Payment Reconciliation Advice V")]
 public interface IInvoicePaymentReconciliationAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -34,6 +36,7 @@ public interface IInvoicePaymentReconciliationAdviceV01 : IOuterRecord
     [IsoId("_OTgzNDc5-AOSNFX-8224506")]
     [DisplayName("Reconciliation List")]
     [IsoXmlTag("RcncltnList")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReconciliationList1> ReconciliationList { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface IInvoicePaymentReconciliationAdviceV01 : IOuterRecord
     [IsoId("_OTgzNDgw-AOSNFX-8224506")]
     [DisplayName("Reconciliation Count")]
     [IsoXmlTag("RcncltnCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? ReconciliationCount { get; }
 
     /// <summary>
@@ -50,6 +54,7 @@ public interface IInvoicePaymentReconciliationAdviceV01 : IOuterRecord
     [IsoId("_OTgzNDgx-AOSNFX-8224506")]
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? ItemCount { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface IInvoicePaymentReconciliationAdviceV01 : IOuterRecord
     [IsoId("OTgzNDgy-AOSNFX-8224506")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -66,5 +72,6 @@ public interface IInvoicePaymentReconciliationAdviceV01 : IOuterRecord
     [IsoId("_OTgzNDgz-AOSNFX-8224506")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncapsulatedBusinessMessage1> AttachedMessage { get; }
 }

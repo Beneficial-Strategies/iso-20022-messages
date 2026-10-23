@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security that is a sub-set of an investment fund, and is governed by the same investment fund policy.
 /// </summary>
 [IsoId("cd6a8d35-09a3-4c0d-acdf-b6f980205470")]
+[IsoDisplayName(@"Financial Instrument116")]
 public interface IFinancialInstrument116 : IIsoComponent
 {
     /// <summary>

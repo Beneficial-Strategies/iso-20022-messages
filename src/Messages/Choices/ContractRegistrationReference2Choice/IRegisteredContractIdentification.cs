@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference2Ch
 /// Unique and unambiguous identification of the registered contract.
 /// </summary>
 [IsoId("_KVgWYbMmEeueudaIbClZbQ")]
+[IsoDisplayName(@"Registered Contract Identification")]
 public interface IRegisteredContractIdentification
     : IContractRegistrationReference2Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface IRegisteredContractIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("RegdCtrctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

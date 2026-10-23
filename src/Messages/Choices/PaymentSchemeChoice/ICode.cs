@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentSchemeChoice;
 /// Specifies the channel through which the payment instruction is to be processed in coded form.
 /// </summary>
 [IsoId("_QHyBD9p-Ed-ak6NoX_4Aeg_-1149658812")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPaymentSchemeChoice, IIsoChoiceVariant
 {
     /// <summary>

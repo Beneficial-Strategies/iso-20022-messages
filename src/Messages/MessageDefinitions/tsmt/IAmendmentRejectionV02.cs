@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_krHoKNE8Ed-BzquC8wXy7w_-1775142973")]
 [IsoMessage("tsmt.007.001.02", "AmdmntRjctn", "urn:iso:std:iso:20022:tech:xsd:tsmt.007.001.02")]
+[Description(@"Scope|The AmendmentRejection message is sent by the party requested to accept or reject an amendment to the matching application.|This message is used to reject an amendment request.|Usage|The AmendmentRejection message can be sent by the party requested to accept or reject an amendment to inform that it rejects the requested amendment.|The message can be sent in response to a FullPushThroughReport and DeltaReport message conveying the details of a BaselineAmendmentRequest message.|The acceptance of an amendment request can be achieved by sending an AmendmentAcceptance message.")]
+[IsoDisplayName(@"Amendment Rejection V")]
 public interface IAmendmentRejectionV02 : IOuterRecord
 {
     /// <summary>

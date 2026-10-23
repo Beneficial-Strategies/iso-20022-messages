@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_XXmzJVgPEeedJb6VxsnkPg")]
 [IsoMessage("cain.023.001.01", "CardMgmtInitn", "urn:iso:std:iso:20022:tech:xsd:cain.023.001.01")]
+[Description(@"The CardManagementInitiation message is sent by the acquirer to an issuer or agent to fulfil a request initiated by the cardholder at the point of service for an operation on the card account.")]
+[IsoDisplayName(@"Card Management Initiation V")]
 public interface ICardManagementInitiationV01 : IOuterRecord
 {
     /// <summary>

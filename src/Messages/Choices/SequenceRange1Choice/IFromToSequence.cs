@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SequenceRange1Choice;
 /// </summary>
 [IsoId("_64OLoIy3EeeGkvZr3jtnCQ")]
 [IsoXmlTag("FrToSeq")]
+[IsoDisplayName(@"From To Sequence")]
 public interface IFromToSequence : ISequenceRange1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IFromToSequence : ISequenceRange1Choice, IIsoChoiceVariant
     [IsoId("_9nPeAIy0EeeGkvZr3jtnCQ")]
     [DisplayName("From Sequence")]
     [IsoXmlTag("FrSeq")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text FromSequence { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IFromToSequence : ISequenceRange1Choice, IIsoChoiceVariant
     [IsoId("__3Gn0Iy0EeeGkvZr3jtnCQ")]
     [DisplayName("To Sequence")]
     [IsoXmlTag("ToSeq")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ToSequence { get; }
 }

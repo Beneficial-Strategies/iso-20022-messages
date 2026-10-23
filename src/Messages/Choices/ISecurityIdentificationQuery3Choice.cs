@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Query based on various identification of the security.
 /// </summary>
 [IsoId("_P1cwcdGgEeaQk737TH1Fzw")]
+[IsoDisplayName(@"Security Identification Query 3 Choice")]
 public interface ISecurityIdentificationQuery3Choice : IIsoChoice { }

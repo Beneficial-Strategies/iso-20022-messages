@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod7Choice;
 
 /// <summary>Settlement via a debit transfer transaction.</summary>
 [IsoId("_GcCY03eKEfCdoODv2ypKfw")]
+[IsoDisplayName(@"Debit")]
 public interface IDebit : ISettlementMethod7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

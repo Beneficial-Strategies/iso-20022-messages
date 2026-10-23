@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus62Cho
 
 /// <summary>Protect instruction has been fully covered.</summary>
 [IsoId("_H9heda8wEfCx2aBifPEdRg")]
+[IsoDisplayName(@"Covered")]
 public interface ICovered : IInstructionProcessingStatus62Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

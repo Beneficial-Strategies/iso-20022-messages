@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the control of an ATM device.
 /// </summary>
 [IsoId("_p87DYItEEeSxlKlAGYErFg")]
+[IsoDisplayName(@"ATM Device Control")]
 public interface IATMDeviceControl1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IATMDeviceControl1 : IIsoComponent
     [IsoId("_laaFAItFEeSxlKlAGYErFg")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand4> Command { get; }
 }

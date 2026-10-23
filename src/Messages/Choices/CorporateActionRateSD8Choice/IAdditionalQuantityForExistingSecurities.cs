@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionRateSD8Choice;
 
 /// <summary>Quantity of additional securities for a given quantity of underlying securities where underlying securities are not exchanged or debited.</summary>
 [IsoId("_0XjYYbskEfCWCehgFzyN4w")]
+[IsoDisplayName(@"Additional Quantity For Existing Securities")]
 public interface IAdditionalQuantityForExistingSecurities
     : ICorporateActionRateSD8Choice,
         IIsoChoiceVariant

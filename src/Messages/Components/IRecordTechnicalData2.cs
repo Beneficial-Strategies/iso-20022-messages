@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instrument specific technical data to support identification.
 /// </summary>
 [IsoId("_6TNIgTH8EeWRJePX1ORoaw")]
+[IsoDisplayName(@"Record Technical Data")]
 public interface IRecordTechnicalData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRecordTechnicalData2 : IIsoComponent
     [IsoId("_6nJ_RTH8EeWRJePX1ORoaw")]
     [DisplayName("Receipt Date Time")]
     [IsoXmlTag("RctDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ReceiptDateTime { get; }
 
     /// <summary>

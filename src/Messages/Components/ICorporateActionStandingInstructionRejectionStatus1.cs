@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides reason of the rejection of a standing instruction request.
 /// </summary>
 [IsoId("_RlD3Utp-Ed-ak6NoX_4Aeg_-526029435")]
+[IsoDisplayName(@"Corporate Action Standing Instruction Rejection Status")]
 public interface ICorporateActionStandingInstructionRejectionStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionStandingInstructionRejectionStatus1 : IIsoCompo
     [IsoId("_RlD3U9p-Ed-ak6NoX_4Aeg_-484468439")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason20FormatChoice> Reason { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface ICorporateActionStandingInstructionRejectionStatus1 : IIsoCompo
     [IsoId("_RlD3VNp-Ed-ak6NoX_4Aeg_-484468418")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

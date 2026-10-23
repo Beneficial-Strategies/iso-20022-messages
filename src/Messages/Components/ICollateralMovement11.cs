@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the collateral movement direction that is a delivery and optionally a return.
 /// </summary>
 [IsoId("_sWEhdYpIEeaNTaanBSMWmg")]
+[IsoDisplayName(@"Collateral Movement")]
 public interface ICollateralMovement11 : IIsoComponent
 {
     /// <summary>

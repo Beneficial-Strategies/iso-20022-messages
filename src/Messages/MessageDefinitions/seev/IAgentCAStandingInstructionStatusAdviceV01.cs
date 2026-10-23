@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "AgtCAStgInstrStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.027.001.01"
 )]
+[Description(@"Scope|This message is sent by an issuer (or its agent) to the CSD to report the status, or a change in status, of a standing instruction request or the status of a standing instruction cancellation request.|Usage|When this message is used to report the status of a standing instruction request, the building block Standing Instruction Request Identification must be present.|When this message is used to report the status of a standing instruction cancellation request, the building block Standing Instruction Cancellation Request Identification must be present.")]
+[IsoDisplayName(@"Agent CA Standing Instruction Status Advice V")]
 public interface IAgentCAStandingInstructionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

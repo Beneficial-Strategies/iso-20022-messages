@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transfer cancellation status is in pending.
 /// </summary>
 [IsoId("_RQf8l9p-Ed-ak6NoX_4Aeg_1012324214")]
+[IsoDisplayName(@"Transfer Cancellation Pending Status")]
 public interface ITransferCancellationPendingStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface ITransferCancellationPendingStatus1 : IIsoComponent
     [IsoId("_RQf8mNp-Ed-ak6NoX_4Aeg_1012324216")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Reason { get; }
 }

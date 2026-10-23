@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus30Choice;
 /// Cancellation request has been rejected for further processing.
 /// </summary>
 [IsoId("_T_qoBxIwEeydmIVkS03esw")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : ICancellationStatus30Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

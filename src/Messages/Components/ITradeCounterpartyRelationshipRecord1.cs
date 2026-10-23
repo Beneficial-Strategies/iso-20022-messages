@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the relationship record between two parties.
 /// </summary>
 [IsoId("_XVpN0CR7Ee2VuKUpJ7HXPg")]
+[IsoDisplayName(@"Trade Counterparty Relationship Record")]
 public interface ITradeCounterpartyRelationshipRecord1 : IIsoComponent
 {
     /// <summary>
@@ -43,5 +44,7 @@ public interface ITradeCounterpartyRelationshipRecord1 : IIsoComponent
     [IsoId("_tdQlMCR7Ee2VuKUpJ7HXPg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? Description { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Narrative information for an undertaking.
 /// </summary>
 [IsoId("_94mSknltEeG7BsjMvd1mEw_1059061696")]
+[IsoDisplayName(@"Narrative")]
 public interface INarrative1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,9 @@ public interface INarrative1 : IIsoComponent
     [IsoId("_94mSlHltEeG7BsjMvd1mEw_-1855880326")]
     [DisplayName("Text")]
     [IsoXmlTag("Txt")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Text { get; }
 }

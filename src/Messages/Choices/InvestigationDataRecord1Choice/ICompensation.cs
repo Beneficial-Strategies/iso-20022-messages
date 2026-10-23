@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord1Choice;
 /// <summary>
 /// Compensation.
 /// </summary>
+[IsoDisplayName(@"Compensation")]
 public interface ICompensation : IInvestigationDataRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

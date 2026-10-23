@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies whether there is cash in the account awaiting investment.
 /// </summary>
 [IsoId("_lCZdAJP6EemyZbjY08A1Vw")]
+[IsoDisplayName(@"Residual Cash")]
 public interface IResidualCash1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IResidualCash1 : IIsoComponent
     [IsoId("_sjPYQZP6EemyZbjY08A1Vw")]
     [DisplayName("Residual Cash Indicator")]
     [IsoXmlTag("RsdlCshInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ResidualCashIndicator { get; }
 
     /// <summary>

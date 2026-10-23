@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Redemption Execution17.
 /// </summary>
 [IsoId("_o3aFkxwCEe6fEumgV5aG_A")]
+[IsoDisplayName(@"Redemption Execution17")]
 public interface IRedemptionExecution17 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IRedemptionExecution17 : IIsoComponent
     /// </summary>
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType4Choice> OrderType { get; }
 
     /// <summary>
@@ -107,6 +109,7 @@ public interface IRedemptionExecution17 : IIsoComponent
     /// </summary>
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice22> InformativePriceDetails { get; }
 
     /// <summary>
@@ -163,6 +166,7 @@ public interface IRedemptionExecution17 : IIsoComponent
     /// </summary>
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms37> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -261,6 +265,7 @@ public interface IRedemptionExecution17 : IIsoComponent
     /// </summary>
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; }
 
     /// <summary>
@@ -296,6 +301,7 @@ public interface IRedemptionExecution17 : IIsoComponent
     /// </summary>
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary49> RelatedPartyDetails { get; }
 
     /// <summary>

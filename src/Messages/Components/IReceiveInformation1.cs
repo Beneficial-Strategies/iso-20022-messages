@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_VOajqtp-Ed-ak6NoX_4Aeg_299421149")]
+[IsoDisplayName(@"Receive Information")]
 public interface IReceiveInformation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IReceiveInformation1 : IIsoComponent
     [IsoId("_VOajrNp-Ed-ak6NoX_4Aeg_-307930090")]
     [DisplayName("Physical Transfer Indicator")]
     [IsoXmlTag("PhysTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalTransferIndicator { get; }
 
     /// <summary>

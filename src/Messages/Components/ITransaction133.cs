@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Key exchange activity transaction.
 /// </summary>
 [IsoId("_LFWIoIv6EeumSPwlS1PkxQ")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction133 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITransaction133 : IIsoComponent
     [IsoId("_LKnqM4v6EeumSPwlS1PkxQ")]
     [DisplayName("Other Key Exchange Function")]
     [IsoXmlTag("OthrKeyXchgFctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherKeyExchangeFunction { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface ITransaction133 : IIsoComponent
     [IsoId("_uMxA98sJEeuNe7RtB4qFHw")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface ITransaction133 : IIsoComponent
     [IsoId("_LKnqN4v6EeumSPwlS1PkxQ")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -66,6 +71,8 @@ public interface ITransaction133 : IIsoComponent
     [IsoId("_LKnqPYv6EeumSPwlS1PkxQ")]
     [DisplayName("Other Key Exchange Type")]
     [IsoXmlTag("OthrKeyXchgTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherKeyExchangeType { get; }
 
     /// <summary>
@@ -83,6 +90,7 @@ public interface ITransaction133 : IIsoComponent
     [IsoId("_LKnqQYv6EeumSPwlS1PkxQ")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee2> AdditionalFee { get; }
 
     /// <summary>
@@ -91,5 +99,6 @@ public interface ITransaction133 : IIsoComponent
     [IsoId("_LKnqQ4v6EeumSPwlS1PkxQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

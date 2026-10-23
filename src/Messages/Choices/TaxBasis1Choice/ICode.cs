@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxBasis1Choice;
 /// Tax basis expressed as a code.
 /// </summary>
 [IsoId("_kri-kBuIEeOqSdXzJ0oydA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITaxBasis1Choice, IIsoChoiceVariant
 {
     /// <summary>

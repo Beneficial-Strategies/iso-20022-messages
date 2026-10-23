@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction status.
 /// </summary>
 [IsoId("_RQWypdp-Ed-ak6NoX_4Aeg_-1720727029")]
+[IsoDisplayName(@"Transfer Instruction Status")]
 public interface ITransferInstructionStatus2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITransferInstructionStatus2 : IIsoComponent
     [IsoId("_RQWyp9p-Ed-ak6NoX_4Aeg_919583835")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Reason { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the  fraud reporting response message.
 /// </summary>
 [IsoId("_U-EzMYv4EeumSPwlS1PkxQ")]
+[IsoDisplayName(@"Fraud Reporting Response")]
 public interface IFraudReportingResponse2 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IFraudReportingResponse2 : IIsoComponent
     [IsoId("_VDLVqYv4EeumSPwlS1PkxQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

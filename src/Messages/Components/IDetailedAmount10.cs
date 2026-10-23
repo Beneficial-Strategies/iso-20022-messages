@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional amounts from the processor or the issuer without financial impacts on the transaction amount.
 /// </summary>
 [IsoId("_88EdAXs1EeSTS7uHCe8FPQ")]
+[IsoDisplayName(@"Detailed Amount")]
 public interface IDetailedAmount10 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDetailedAmount10 : IIsoComponent
     [IsoId("_9Jz-E3s1EeSTS7uHCe8FPQ")]
     [DisplayName("Additional Type")]
     [IsoXmlTag("AddtlTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalType { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IDetailedAmount10 : IIsoComponent
     [IsoId("_9Jz-GXs1EeSTS7uHCe8FPQ")]
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Label { get; }
 }

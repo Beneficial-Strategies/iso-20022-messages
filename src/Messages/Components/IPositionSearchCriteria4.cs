@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the securities account position query criteria.
 /// </summary>
 [IsoId("_EpRYIQweEfG65oVFfOF9vw")]
+[IsoDisplayName(@"Position Search Criteria4")]
 public interface IPositionSearchCriteria4 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.
 /// </summary>
 [IsoId("_TCWUu9p-Ed-ak6NoX_4Aeg_-2100921873")]
+[IsoDisplayName(@"Place Of Trade Identification 1 Choice")]
 public interface IPlaceOfTradeIdentification1Choice : IIsoChoice { }

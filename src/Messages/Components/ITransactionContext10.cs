@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the card payment transaction
 /// </summary>
 [IsoId("_K4fNUcVeEeuips4fuphvoQ")]
+[IsoDisplayName(@"Transaction Context")]
 public interface ITransactionContext10 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface ITransactionContext10 : IIsoComponent
     [IsoId("_VLKJccV-Eeua2vd9tJAtHg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

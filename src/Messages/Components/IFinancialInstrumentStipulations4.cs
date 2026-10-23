@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional restrictions on the financial instrument, related to the stipulation.
 /// </summary>
 [IsoId("_5DuEYQgTEe2fOITqoTnSLQ")]
+[IsoDisplayName(@"Financial Instrument Stipulations")]
 public interface IFinancialInstrumentStipulations4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdVwgTEe2fOITqoTnSLQ")]
     [DisplayName("Geographics")]
     [IsoXmlTag("Geogcs")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Geographics { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdZQgTEe2fOITqoTnSLQ")]
     [DisplayName("Amortisable Indicator")]
     [IsoXmlTag("AmtsblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AmortisableIndicator { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdZwgTEe2fOITqoTnSLQ")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Purpose { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdaQgTEe2fOITqoTnSLQ")]
     [DisplayName("Alternative Minimum Tax Indicator")]
     [IsoXmlTag("AltrntvMinTaxInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AlternativeMinimumTaxIndicator { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdawgTEe2fOITqoTnSLQ")]
     [DisplayName("Auto Reinvestment")]
     [IsoXmlTag("AutoRinvstmt")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? AutoReinvestment { get; }
 
     /// <summary>
@@ -105,6 +113,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdcwgTEe2fOITqoTnSLQ")]
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Haircut { get; }
 
     /// <summary>
@@ -113,6 +122,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPddQgTEe2fOITqoTnSLQ")]
     [DisplayName("Insured Indicator")]
     [IsoXmlTag("InsrdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? InsuredIndicator { get; }
 
     /// <summary>
@@ -121,6 +131,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPddwgTEe2fOITqoTnSLQ")]
     [DisplayName("Look Back")]
     [IsoXmlTag("LookBck")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LookBack { get; }
 
     /// <summary>
@@ -129,6 +140,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdfwgTEe2fOITqoTnSLQ")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? MaturityDate { get; }
 
     /// <summary>
@@ -137,6 +149,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdgQgTEe2fOITqoTnSLQ")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? IssueDate { get; }
 
     /// <summary>
@@ -145,6 +158,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdgwgTEe2fOITqoTnSLQ")]
     [DisplayName("Issuer Identification")]
     [IsoXmlTag("IssrId")]
+    [IsoSimpleType(IsoSimpleType.BICNonFIDec2014Identifier)]
     BICNonFIDec2014Identifier? IssuerIdentification { get; }
 
     /// <summary>
@@ -153,6 +167,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdhQgTEe2fOITqoTnSLQ")]
     [DisplayName("Issue Size")]
     [IsoXmlTag("IsseSz")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? IssueSize { get; }
 
     /// <summary>
@@ -169,6 +184,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdiQgTEe2fOITqoTnSLQ")]
     [DisplayName("Maximum Substitution")]
     [IsoXmlTag("MaxSbstitn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumSubstitution { get; }
 
     /// <summary>
@@ -201,6 +217,8 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdkQgTEe2fOITqoTnSLQ")]
     [DisplayName("Production")]
     [IsoXmlTag("Pdctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Production { get; }
 
     /// <summary>
@@ -209,6 +227,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdkwgTEe2fOITqoTnSLQ")]
     [DisplayName("Restricted Indicator")]
     [IsoXmlTag("RstrctdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RestrictedIndicator { get; }
 
     /// <summary>
@@ -225,6 +244,8 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdlwgTEe2fOITqoTnSLQ")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Sector { get; }
 
     /// <summary>
@@ -241,6 +262,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdmwgTEe2fOITqoTnSLQ")]
     [DisplayName("Substitution Left")]
     [IsoXmlTag("SbstitnLft")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SubstitutionLeft { get; }
 
     /// <summary>
@@ -249,6 +271,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdnQgTEe2fOITqoTnSLQ")]
     [DisplayName("Whole Pool Indicator")]
     [IsoXmlTag("WhlPoolInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? WholePoolIndicator { get; }
 
     /// <summary>
@@ -257,6 +280,8 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdnwgTEe2fOITqoTnSLQ")]
     [DisplayName("Price Source")]
     [IsoXmlTag("PricSrc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PriceSource { get; }
 
     /// <summary>
@@ -265,6 +290,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdoQgTEe2fOITqoTnSLQ")]
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ExpirationDate { get; }
 
     /// <summary>
@@ -281,6 +307,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdpQgTEe2fOITqoTnSLQ")]
     [DisplayName("Over Allotment Rate")]
     [IsoXmlTag("OverAlltmtRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OverAllotmentRate { get; }
 
     /// <summary>
@@ -297,6 +324,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdqQgTEe2fOITqoTnSLQ")]
     [DisplayName("Callable Indicator")]
     [IsoXmlTag("CllblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CallableIndicator { get; }
 
     /// <summary>
@@ -305,6 +333,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdqwgTEe2fOITqoTnSLQ")]
     [DisplayName("Convertible Indicator")]
     [IsoXmlTag("ConvtblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ConvertibleIndicator { get; }
 
     /// <summary>
@@ -313,6 +342,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdrQgTEe2fOITqoTnSLQ")]
     [DisplayName("Putable Indicator")]
     [IsoXmlTag("PutblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PutableIndicator { get; }
 
     /// <summary>
@@ -321,6 +351,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdrwgTEe2fOITqoTnSLQ")]
     [DisplayName("Pre Funded Indicator")]
     [IsoXmlTag("PreFnddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PreFundedIndicator { get; }
 
     /// <summary>
@@ -329,6 +360,7 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdsQgTEe2fOITqoTnSLQ")]
     [DisplayName("Escrowed Indicator")]
     [IsoXmlTag("EscrwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EscrowedIndicator { get; }
 
     /// <summary>
@@ -337,5 +369,6 @@ public interface IFinancialInstrumentStipulations4 : IIsoComponent
     [IsoId("_5XPdswgTEe2fOITqoTnSLQ")]
     [DisplayName("Perpetual Indicator")]
     [IsoXmlTag("PerptlInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PerpetualIndicator { get; }
 }

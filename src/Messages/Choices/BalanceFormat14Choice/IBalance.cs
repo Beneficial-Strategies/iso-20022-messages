@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat14Choice;
 /// </summary>
 [IsoId("_piui4Ti7Eeydid5dcNPKvg")]
 [IsoXmlTag("Bal")]
+[IsoDisplayName(@"Balance")]
 public interface IBalance : IBalanceFormat14Choice, IIsoChoiceVariant
 {
     /// <summary>

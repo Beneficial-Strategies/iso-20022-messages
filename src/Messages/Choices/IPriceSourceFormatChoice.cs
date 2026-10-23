@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of the source (place) of the price quotation.
 /// </summary>
 [IsoId("_RCDQ49p-Ed-ak6NoX_4Aeg_2134054867")]
+[IsoDisplayName(@"Price Source Format Choice")]
 public interface IPriceSourceFormatChoice : IIsoChoice { }

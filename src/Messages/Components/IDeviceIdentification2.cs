@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the device.
 /// </summary>
 [IsoId("_fx_H8XbbEfCmC4yYaU27Kg")]
+[IsoDisplayName(@"Device Identification2")]
 public interface IDeviceIdentification2 : IIsoComponent
 {
     /// <summary>

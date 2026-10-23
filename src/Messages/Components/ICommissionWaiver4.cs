@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Non-enforcement of the right to all or part of a commission by the party entitled to the commission.
 /// </summary>
 [IsoId("_55smERuCEeOqSdXzJ0oydA")]
+[IsoDisplayName(@"Commission Waiver")]
 public interface ICommissionWaiver4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICommissionWaiver4 : IIsoComponent
     [IsoId("_6QdgSRuCEeOqSdXzJ0oydA")]
     [DisplayName("Waived Rate")]
     [IsoXmlTag("WvdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate WaivedRate { get; }
 }

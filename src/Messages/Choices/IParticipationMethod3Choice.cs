@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a predefined code value or a proprietary code value for a general meeting voting participation method.
 /// </summary>
 [IsoId("_XZhU5RrlEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Participation Method 3 Choice")]
 public interface IParticipationMethod3Choice : IIsoChoice { }

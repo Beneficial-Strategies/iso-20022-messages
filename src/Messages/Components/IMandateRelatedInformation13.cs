@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details related to a direct debit mandate signed between the creditor and the debtor.
 /// </summary>
 [IsoId("_rKvJEdppEeearpaEPXv9UA")]
+[IsoDisplayName(@"Mandate Related Information")]
 public interface IMandateRelatedInformation13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMandateRelatedInformation13 : IIsoComponent
     [IsoId("_rTxJQ9ppEeearpaEPXv9UA")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MandateIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IMandateRelatedInformation13 : IIsoComponent
     [IsoId("_rTxJRdppEeearpaEPXv9UA")]
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfSignature { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IMandateRelatedInformation13 : IIsoComponent
     [IsoId("_IYrp8NpqEeearpaEPXv9UA")]
     [DisplayName("Mandate Image")]
     [IsoXmlTag("MndtImg")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary? MandateImage { get; }
 }

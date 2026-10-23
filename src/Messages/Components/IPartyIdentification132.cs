@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_OevfoU3hEeidB49bWZiS0g")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification132 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPartyIdentification132 : IIsoComponent
     [IsoId("_RyP3w03hEeidB49bWZiS0g")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier? AnyBIC { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface IPartyIdentification132 : IIsoComponent
     [IsoId("_OvOytU3hEeidB49bWZiS0g")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 }

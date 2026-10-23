@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details about tax paid, or to be paid, to the government in accordance with the law, including pre-defined parameters such as thresholds and type of account.
 /// </summary>
 [IsoId("_Rv8Rotp-Ed-ak6NoX_4Aeg_1538842509")]
+[IsoDisplayName(@"Tax Information")]
 public interface ITaxInformation3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ITaxInformation3 : IIsoComponent
     [IsoId("_Rv8Rpdp-Ed-ak6NoX_4Aeg_1607923287")]
     [DisplayName("Administration Zone")]
     [IsoXmlTag("AdmstnZn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdministrationZone { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ITaxInformation3 : IIsoComponent
     [IsoId("_Rv8Rptp-Ed-ak6NoX_4Aeg_1538842570")]
     [DisplayName("Reference Number")]
     [IsoXmlTag("RefNb")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? ReferenceNumber { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface ITaxInformation3 : IIsoComponent
     [IsoId("_Rv8Rp9p-Ed-ak6NoX_4Aeg_1836342968")]
     [DisplayName("Method")]
     [IsoXmlTag("Mtd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Method { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface ITaxInformation3 : IIsoComponent
     [IsoId("_RwGCodp-Ed-ak6NoX_4Aeg_1538842662")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface ITaxInformation3 : IIsoComponent
     [IsoId("_RwGCotp-Ed-ak6NoX_4Aeg_-794505042")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SequenceNumber { get; }
 
     /// <summary>
@@ -89,5 +98,6 @@ public interface ITaxInformation3 : IIsoComponent
     [IsoId("_RwGCo9p-Ed-ak6NoX_4Aeg_1538843017")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxRecord1> Record { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies whether the status is provided with a reason or not.
 /// </summary>
 [IsoId("_au8iseZgEd-q8fx_Zl_34A")]
+[IsoDisplayName(@"Rejection Or Repair Status 10 Choice")]
 public interface IRejectionOrRepairStatus10Choice : IIsoChoice { }

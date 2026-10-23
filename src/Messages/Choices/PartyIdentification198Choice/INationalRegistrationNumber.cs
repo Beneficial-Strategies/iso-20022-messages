@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification198Choice;
 /// Number assigned by a national registration authority to an entity.
 /// </summary>
 [IsoId("_E0OYgTtqEemIf7eyjCwinw")]
+[IsoDisplayName(@"National Registration Number")]
 public interface INationalRegistrationNumber : IPartyIdentification198Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface INationalRegistrationNumber : IPartyIdentification198Choice, II
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("NtlRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

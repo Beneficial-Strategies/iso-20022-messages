@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource2Choice;
 /// Entity that issues the proprietary identification.
 /// </summary>
 [IsoId("_XKZIJNp-Ed-ak6NoX_4Aeg_-819984102")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IIdentificationSource2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IProprietary : IIdentificationSource2Choice, IIsoChoiceVariant
     /// Specifies a character string with an exact length of 2 characters that must has a pattern XX|TS.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINExact2Text)]
     RestrictedFINExact2Text Value { get; }
 }

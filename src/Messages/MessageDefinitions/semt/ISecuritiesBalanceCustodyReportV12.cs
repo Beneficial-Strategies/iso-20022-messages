@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesBalCtdyRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.002.001.12"
 )]
+[IsoDisplayName(@"Securities Balance Custody Report V12")]
 public interface ISecuritiesBalanceCustodyReportV12 : IOuterRecord
 {
     /// <summary>
@@ -64,6 +65,9 @@ public interface ISecuritiesBalanceCustodyReportV12 : IOuterRecord
     /// </summary>
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary44> IntermediaryInformation { get; }
 
     /// <summary>
@@ -71,6 +75,7 @@ public interface ISecuritiesBalanceCustodyReportV12 : IOuterRecord
     /// </summary>
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateBalanceInformation46> BalanceForAccount { get; }
 
     /// <summary>
@@ -78,6 +83,7 @@ public interface ISecuritiesBalanceCustodyReportV12 : IOuterRecord
     /// </summary>
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubAccountIdentification71> SubAccountDetails { get; }
 
     /// <summary>

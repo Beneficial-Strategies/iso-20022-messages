@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for time unit.
 /// </summary>
 [IsoId("_oIB4MeLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Time Unit 3 Choice")]
 public interface ITimeUnit3Choice : IIsoChoice { }

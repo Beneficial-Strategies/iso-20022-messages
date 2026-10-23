@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Terminal performing a card transaction.
 /// </summary>
 [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g")]
+[IsoDisplayName(@"Terminal10")]
 public interface ITerminal10 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ITerminal10 : IIsoComponent
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-rdcp")]
     [DisplayName("Reading Capability")]
     [IsoXmlTag("RdngCpblty")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataReading11Code> ReadingCapability { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ITerminal10 : IIsoComponent
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-wrcp")]
     [DisplayName("Writing Capability")]
     [IsoXmlTag("WrtgCpblty")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataWriting2Code> WritingCapability { get; }
 
     /// <summary>
@@ -105,6 +108,7 @@ public interface ITerminal10 : IIsoComponent
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-mscp")]
     [DisplayName("Message Capability")]
     [IsoXmlTag("MsgCpblty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisplayCapabilities6> MessageCapability { get; }
 
     /// <summary>
@@ -113,6 +117,7 @@ public interface ITerminal10 : IIsoComponent
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-chvc")]
     [DisplayName("Cardholder Verification Capability")]
     [IsoXmlTag("CrdhldrVrfctnCpblty")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardholderVerificationCapability6Code> CardholderVerificationCapability { get; }
 
     /// <summary>
@@ -177,6 +182,7 @@ public interface ITerminal10 : IIsoComponent
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-sftw")]
     [DisplayName("Software")]
     [IsoXmlTag("Sftwr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISoftware2> Software { get; }
 
     /// <summary>
@@ -233,6 +239,7 @@ public interface ITerminal10 : IIsoComponent
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-pvdt")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -241,5 +248,6 @@ public interface ITerminal10 : IIsoComponent
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-ntdt")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

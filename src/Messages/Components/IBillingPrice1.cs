@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the billing price of a service.
 /// </summary>
 [IsoId("_6TrGHJqlEeGSON8vddiWzQ_-1572616191")]
+[IsoDisplayName(@"Billing Price")]
 public interface IBillingPrice1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,7 @@ public interface IBillingPrice1 : IIsoComponent
     [IsoId("_6T03E5qlEeGSON8vddiWzQ_-937813392")]
     [DisplayName("Rule")]
     [IsoXmlTag("Rule")]
+    [IsoSimpleType(IsoSimpleType.Max20Text)]
+    [StringLength(20, MinimumLength = 1)]
     Max20Text? Rule { get; }
 }

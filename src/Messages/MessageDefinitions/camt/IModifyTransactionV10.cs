@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3QfbTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.007.001.10", "ModfyTx", "urn:iso:std:iso:20022:tech:xsd:camt.007.001.10")]
+[IsoDisplayName(@"Modify Transaction V10")]
 public interface IModifyTransactionV10 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IModifyTransactionV10 : IOuterRecord
     /// </summary>
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionModification7> Modification { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IModifyTransactionV10 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

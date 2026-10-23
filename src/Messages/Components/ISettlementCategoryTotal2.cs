@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement totals
 /// </summary>
 [IsoId("_-LcTQZMmEeuleeHpFMMhmQ")]
+[IsoDisplayName(@"Settlement Category Total")]
 public interface ISettlementCategoryTotal2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementCategoryTotal2 : IIsoComponent
     [IsoId("_-SNpoZMmEeuleeHpFMMhmQ")]
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Count { get; }
 
     /// <summary>

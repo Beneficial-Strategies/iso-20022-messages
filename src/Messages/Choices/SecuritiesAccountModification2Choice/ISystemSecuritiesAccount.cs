@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountModification2Ch
 /// </summary>
 [IsoId("_8IwTgTp0Eemk2e6qGBk8IQ")]
 [IsoXmlTag("SysSctiesAcct")]
+[IsoDisplayName(@"System Securities Account")]
 public interface ISystemSecuritiesAccount : ISecuritiesAccountModification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ISystemSecuritiesAccount : ISecuritiesAccountModification2Choic
     [IsoId("_8VuYgTp0Eemk2e6qGBk8IQ")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClosingDate { get; }
 
     /// <summary>
@@ -29,6 +31,7 @@ public interface ISystemSecuritiesAccount : ISecuritiesAccountModification2Choic
     [IsoId("_8VuYgzp0Eemk2e6qGBk8IQ")]
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? HoldIndicator { get; }
 
     /// <summary>
@@ -37,6 +40,7 @@ public interface ISystemSecuritiesAccount : ISecuritiesAccountModification2Choic
     [IsoId("_8VuYhTp0Eemk2e6qGBk8IQ")]
     [DisplayName("Negative Position")]
     [IsoXmlTag("NegPos")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NegativePosition { get; }
 
     /// <summary>
@@ -45,6 +49,7 @@ public interface ISystemSecuritiesAccount : ISecuritiesAccountModification2Choic
     [IsoId("_8VuYhzp0Eemk2e6qGBk8IQ")]
     [DisplayName("End Investor Flag")]
     [IsoXmlTag("EndInvstrFlg")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? EndInvestorFlag { get; }
 
     /// <summary>
@@ -53,5 +58,6 @@ public interface ISystemSecuritiesAccount : ISecuritiesAccountModification2Choic
     [IsoId("_8VuYiTp0Eemk2e6qGBk8IQ")]
     [DisplayName("Pricing Scheme")]
     [IsoXmlTag("PricgSchme")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? PricingScheme { get; }
 }

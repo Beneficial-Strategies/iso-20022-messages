@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the identification of the relevant supervising authority.
 /// </summary>
 [IsoId("_YwcnkImiEeeS2PYASHZxtw")]
+[IsoDisplayName(@"Supervising Authority Identification")]
 public interface ISupervisingAuthorityIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ISupervisingAuthorityIdentification1 : IIsoComponent
     [IsoId("_r3meoImiEeeS2PYASHZxtw")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 }

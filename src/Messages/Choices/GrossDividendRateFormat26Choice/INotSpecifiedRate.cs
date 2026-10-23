@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat26Choice;
 /// Value of the rate not specified.
 /// </summary>
 [IsoId("_ctnLgZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Not Specified Rate")]
 public interface INotSpecifiedRate : IGrossDividendRateFormat26Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DebtorActivationAmendmentReason1
 /// Reason, in a proprietary form.
 /// </summary>
 [IsoId("_bjMUb_GAEemQ7oqCO5NTQw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IDebtorActivationAmendmentReason1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IDebtorActivationAmendmentReason1Choice, IIsoCho
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

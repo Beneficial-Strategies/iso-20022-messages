@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralTransactionType1Choice
 /// Specifies the type of collateral instruction as a code.
 /// </summary>
 [IsoId("_xKnygLyzEeivTd4NUfCi2g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICollateralTransactionType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides a rejection reason and additional information.
 /// </summary>
 [IsoId("_Unhiw9p-Ed-ak6NoX_4Aeg_-1177122853")]
+[IsoDisplayName(@"Rejection Status")]
 public interface IRejectionStatus2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IRejectionStatus2 : IIsoComponent
     [IsoId("_Unhixdp-Ed-ak6NoX_4Aeg_-1876425753")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalInformation { get; }
 }

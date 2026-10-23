@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Securities Market Report Header3.
 /// </summary>
 [IsoId("_g8XmYTguEe60j93i-cxu5Q")]
+[IsoDisplayName(@"Securities Market Report Header3")]
 public interface ISecuritiesMarketReportHeader3 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface ISecuritiesMarketReportHeader3 : IIsoComponent
     /// </summary>
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISINOct2015Identifier> ISIN { get; }
 
     /// <summary>

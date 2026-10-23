@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes a financing relation between two parties, for example invoice, credit, financing request, cash accounts.
 /// </summary>
 [IsoId("_OTgzMzU2-AOSNFX-8224501")]
+[IsoDisplayName(@"Financing Agreement Item")]
 public interface IFinancingAgreementItem1 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IFinancingAgreementItem1 : IIsoComponent
     [IsoId("_OTgzMzcy-AOSNFX-8224501")]
     [DisplayName("Rating")]
     [IsoXmlTag("Ratg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Rating { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IFinancingAgreementItem1 : IIsoComponent
     [IsoId("_OTgzMzcz-AOSNFX-8224501")]
     [DisplayName("Reopen Indication")]
     [IsoXmlTag("ReopIndctn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ReopenIndication { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IFinancingAgreementItem1 : IIsoComponent
     [IsoId("_OTgzMzc1-AOSNFX-8224501")]
     [DisplayName("Guarantee")]
     [IsoXmlTag("Grnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGuaranteeDetails1> Guarantee { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface IFinancingAgreementItem1 : IIsoComponent
     [IsoId("_OTgzMzc4-AOSNFX-8224501")]
     [DisplayName("Associated Document")]
     [IsoXmlTag("AssoctdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> AssociatedDocument { get; }
 
     /// <summary>
@@ -97,5 +102,9 @@ public interface IFinancingAgreementItem1 : IIsoComponent
     [IsoId("_OTgzMzc5-AOSNFX-8224502")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the list of criteria to be returned in the contract registration statement.
 /// </summary>
 [IsoId("_ZgWEUOFIEeStTblywAGIyA")]
+[IsoDisplayName(@"Contract Registration Statement Criteria")]
 public interface IContractRegistrationStatementCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IContractRegistrationStatementCriteria1 : IIsoComponent
     [IsoId("_0pv6lOFIEeStTblywAGIyA")]
     [DisplayName("Transaction Journal")]
     [IsoXmlTag("TxJrnl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TransactionJournal { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IContractRegistrationStatementCriteria1 : IIsoComponent
     [IsoId("_0pv6leFIEeStTblywAGIyA")]
     [DisplayName("Supporting Document Journal")]
     [IsoXmlTag("SpprtgDocJrnl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? SupportingDocumentJournal { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IContractRegistrationStatementCriteria1 : IIsoComponent
     [IsoId("_0pv6luFIEeStTblywAGIyA")]
     [DisplayName("Additional Supporting Document Journal")]
     [IsoXmlTag("AddtlSpprtgDocJrnl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AdditionalSupportingDocumentJournal { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IContractRegistrationStatementCriteria1 : IIsoComponent
     [IsoId("_0pv6l-FIEeStTblywAGIyA")]
     [DisplayName("Regulatory Rule Validation")]
     [IsoXmlTag("RgltryRuleVldtn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RegulatoryRuleValidation { get; }
 }

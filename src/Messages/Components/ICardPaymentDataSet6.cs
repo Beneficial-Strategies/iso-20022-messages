@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction for whose batch capture has been rejected.
 /// </summary>
 [IsoId("_L0uCcQvaEeKzJ69IWwzB9Q")]
+[IsoDisplayName(@"Card Payment Data Set")]
 public interface ICardPaymentDataSet6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardPaymentDataSet6 : IIsoComponent
     [IsoId("_L_4JkQvaEeKzJ69IWwzB9Q")]
     [DisplayName("Transaction Sequence Counter")]
     [IsoXmlTag("TxSeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Max9NumericText)]
     Max9NumericText TransactionSequenceCounter { get; }
 
     /// <summary>

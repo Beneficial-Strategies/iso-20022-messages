@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountType2Choice;
 /// Account type, in a coded form.
 /// </summary>
 [IsoId("_sb6WgVkyEeGeoaLUQk__nA_-1937269286")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICashAccountType2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Summary information about amount financed.
 /// </summary>
 [IsoId("_Th7zwdp-Ed-ak6NoX_4Aeg_-1462438308")]
+[IsoDisplayName(@"Financing Allowed Summary")]
 public interface IFinancingAllowedSummary1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancingAllowedSummary1 : IIsoComponent
     [IsoId("_Th7zwtp-Ed-ak6NoX_4Aeg_-1027457607")]
     [DisplayName("Financed Item Number")]
     [IsoXmlTag("FincdItmNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number FinancedItemNumber { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IFinancingAllowedSummary1 : IIsoComponent
     [IsoId("_TiFksNp-Ed-ak6NoX_4Aeg_2267645")]
     [DisplayName("Applied Percentage")]
     [IsoXmlTag("ApldPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? AppliedPercentage { get; }
 
     /// <summary>

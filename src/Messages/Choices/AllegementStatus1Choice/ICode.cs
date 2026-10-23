@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllegementStatus1Choice;
 /// Status of the allegement reported.
 /// </summary>
 [IsoId("_UakE0tp-Ed-ak6NoX_4Aeg_1621349991")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAllegementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

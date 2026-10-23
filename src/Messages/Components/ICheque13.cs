@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of a cheque instruction, such as cheque type or cheque number.
 /// </summary>
 [IsoId("_2YR7EQF9EeuDW9bNZAE8VA")]
+[IsoDisplayName(@"Cheque")]
 public interface ICheque13 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICheque13 : IIsoComponent
     [IsoId("_2mTI8AF9EeuDW9bNZAE8VA")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface ICheque13 : IIsoComponent
     [IsoId("_2Z2oYQF9EeuDW9bNZAE8VA")]
     [DisplayName("Cheque Number")]
     [IsoXmlTag("ChqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ChequeNumber { get; }
 
     /// <summary>
@@ -34,6 +39,7 @@ public interface ICheque13 : IIsoComponent
     [IsoId("_2Z2oYwF9EeuDW9bNZAE8VA")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate IssueDate { get; }
 
     /// <summary>
@@ -43,6 +49,7 @@ public interface ICheque13 : IIsoComponent
     [IsoId("_AAEUsAF-EeuDW9bNZAE8VA")]
     [DisplayName("Stale Date")]
     [IsoXmlTag("StlDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StaleDate { get; }
 
     /// <summary>
@@ -115,5 +122,6 @@ public interface ICheque13 : IIsoComponent
     [IsoId("_i4gX4Sm6EeutWNGMV2XKIQ")]
     [DisplayName("Instruction For Cheque Agent")]
     [IsoXmlTag("InstrForChqAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForChequeAgent1> InstructionForChequeAgent { get; }
 }

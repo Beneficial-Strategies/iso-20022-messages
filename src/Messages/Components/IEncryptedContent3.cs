@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Encrypted data with an encryption key.
 /// </summary>
 [IsoId("_tsmQMWjAEeSP8Z8nx8HTuQ")]
+[IsoDisplayName(@"Encrypted Content")]
 public interface IEncryptedContent3 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IEncryptedContent3 : IIsoComponent
     [IsoId("_t6HHxWjAEeSP8Z8nx8HTuQ")]
     [DisplayName("Encrypted Data")]
     [IsoXmlTag("NcrptdData")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary EncryptedData { get; }
 }

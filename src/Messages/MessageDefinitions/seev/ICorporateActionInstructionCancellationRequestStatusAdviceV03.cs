@@ -24,6 +24,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnInstrCxlReqStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.041.001.03"
 )]
+[Description(@"Scope|An account servicer sends the CorporateActionInstructionCancellationRequestStatusAdvice message to an account owner or its designated agent to report status of a previously received CorporateActionInstructionCancellationRequest message sent by the account owner.|This will include the acknowledgement/rejection of a request to cancel an outstanding instruction.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),|using the relevant elements in the business application header (BAH).|ISO 15022 - 20022 COEXISTENCE|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
+[IsoDisplayName(@"Corporate Action Instruction Cancellation Request Status Advice V")]
 public interface ICorporateActionInstructionCancellationRequestStatusAdviceV03 : IOuterRecord
 {
     /// <summary>
@@ -40,6 +42,7 @@ public interface ICorporateActionInstructionCancellationRequestStatusAdviceV03 :
     [IsoId("_X2s6pfmOEeC_eLZALo-S0A")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification14> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -56,6 +59,7 @@ public interface ICorporateActionInstructionCancellationRequestStatusAdviceV03 :
     [IsoId("_X2s6rfmOEeC_eLZALo-S0A")]
     [DisplayName("Instruction Cancellation Request Status")]
     [IsoXmlTag("InstrCxlReqSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionCancellationRequestStatus5Choice> InstructionCancellationRequestStatus { get; }
 
     /// <summary>
@@ -80,5 +84,6 @@ public interface ICorporateActionInstructionCancellationRequestStatusAdviceV03 :
     [IsoId("_X2s6ufmOEeC_eLZALo-S0A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period3Choice;
 /// </summary>
 [IsoId("_Nt3jc-ENEd-qUMZtd_eZuQ")]
 [IsoXmlTag("Prd")]
+[IsoDisplayName(@"Period")]
 public interface IPeriod : IPeriod3Choice, IIsoChoiceVariant
 {
     /// <summary>

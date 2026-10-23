@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the civil status.
 /// </summary>
 [IsoId("_zKj4MCCgEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Civil Status 1 Choice")]
 public interface ICivilStatus1Choice : IIsoChoice { }

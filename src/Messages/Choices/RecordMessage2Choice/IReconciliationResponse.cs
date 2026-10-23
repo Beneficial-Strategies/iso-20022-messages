@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the reconciliation response message.</summary>
 [IsoId("_kNBjx27-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Reconciliation Response")]
 public interface IReconciliationResponse : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

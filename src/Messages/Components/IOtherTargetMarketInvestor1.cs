@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investor type target market.
 /// </summary>
 [IsoId("_8aPsYDcLEeiIxKQErQxblg")]
+[IsoDisplayName(@"Other Target Market Investor")]
 public interface IOtherTargetMarketInvestor1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherTargetMarketInvestor1 : IIsoComponent
     [IsoId("_DqAesTcMEeiIxKQErQxblg")]
     [DisplayName("Investor Type")]
     [IsoXmlTag("InvstrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InvestorType { get; }
 
     /// <summary>

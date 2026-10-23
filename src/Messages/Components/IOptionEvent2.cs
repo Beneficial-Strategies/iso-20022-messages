@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Events specified in the contract terms of an option.
 /// </summary>
 [IsoId("_b29F0ZR0Eeeymf3kpbtgrA")]
+[IsoDisplayName(@"Option Event")]
 public interface IOptionEvent2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IOptionEvent2 : IIsoComponent
     [IsoId("_cHKsE5R0Eeeymf3kpbtgrA")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Description { get; }
 }

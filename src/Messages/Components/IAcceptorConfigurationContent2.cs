@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the acceptor configuration.
 /// </summary>
 [IsoId("_76B1cQvbEeK9Xewg3qiFQA")]
+[IsoDisplayName(@"Acceptor Configuration Content")]
 public interface IAcceptorConfigurationContent2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAcceptorConfigurationContent2 : IIsoComponent
     [IsoId("_8LlfgQvbEeK9Xewg3qiFQA")]
     [DisplayName("Acquirer Protocol Parameters")]
     [IsoXmlTag("AcqrrPrtcolParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcquirerProtocolParameters3> AcquirerProtocolParameters { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAcceptorConfigurationContent2 : IIsoComponent
     [IsoId("_8LlfhQvbEeK9Xewg3qiFQA")]
     [DisplayName("Merchant Parameters")]
     [IsoXmlTag("MrchntParams")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10000Binary> MerchantParameters { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IAcceptorConfigurationContent2 : IIsoComponent
     [IsoId("_SrV3YCmnEeKIjpr--01h3Q")]
     [DisplayName("Terminal Parameters")]
     [IsoXmlTag("TermnlParams")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10000Binary> TerminalParameters { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IAcceptorConfigurationContent2 : IIsoComponent
     [IsoId("_8LlfiQvbEeK9Xewg3qiFQA")]
     [DisplayName("Application Parameters")]
     [IsoXmlTag("ApplParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IApplicationParameters2> ApplicationParameters { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IAcceptorConfigurationContent2 : IIsoComponent
     [IsoId("_8LlfjQvbEeK9Xewg3qiFQA")]
     [DisplayName("Host Communication Parameters")]
     [IsoXmlTag("HstComParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHostCommunicationParameter2> HostCommunicationParameters { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface IAcceptorConfigurationContent2 : IIsoComponent
     [IsoId("_o360ACm3EeKIjpr--01h3Q")]
     [DisplayName("Security Parameters")]
     [IsoXmlTag("SctyParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityParameters1> SecurityParameters { get; }
 }

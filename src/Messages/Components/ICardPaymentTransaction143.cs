@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card Payment Transaction143.
 /// </summary>
 [IsoId("_WW5cEZ-LEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Card Payment Transaction143")]
 public interface ICardPaymentTransaction143 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface ICardPaymentTransaction143 : IIsoComponent
     /// </summary>
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> CardProgrammeProposed { get; }
 
     /// <summary>
@@ -79,6 +81,7 @@ public interface ICardPaymentTransaction143 : IIsoComponent
     /// </summary>
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<FailureReason3Code> FailureReason { get; }
 
     /// <summary>
@@ -128,5 +131,6 @@ public interface ICardPaymentTransaction143 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max70Text> AdditionalTransactionData { get; }
 }

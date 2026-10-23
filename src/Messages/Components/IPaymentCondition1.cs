@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the conditions for the execution of the payment.
 /// </summary>
 [IsoId("_BmRRkHVjEeiEU7thYTAN1w")]
+[IsoDisplayName(@"Payment Condition")]
 public interface IPaymentCondition1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPaymentCondition1 : IIsoComponent
     [IsoId("_zg-VYHVjEeiEU7thYTAN1w")]
     [DisplayName("Amount Modification Allowed")]
     [IsoXmlTag("AmtModAllwd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator AmountModificationAllowed { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPaymentCondition1 : IIsoComponent
     [IsoId("_3QRRoXVjEeiEU7thYTAN1w")]
     [DisplayName("Early Payment Allowed")]
     [IsoXmlTag("EarlyPmtAllwd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator EarlyPaymentAllowed { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPaymentCondition1 : IIsoComponent
     [IsoId("_YiSE4HVkEeiEU7thYTAN1w")]
     [DisplayName("Delay Penalty")]
     [IsoXmlTag("DelyPnlty")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? DelayPenalty { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IPaymentCondition1 : IIsoComponent
     [IsoId("_-63wYHVkEeiEU7thYTAN1w")]
     [DisplayName("Guaranteed Payment Requested")]
     [IsoXmlTag("GrntedPmtReqd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator GuaranteedPaymentRequested { get; }
 }

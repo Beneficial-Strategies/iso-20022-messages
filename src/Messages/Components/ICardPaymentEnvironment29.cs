@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of the diagnostic exchange.
 /// </summary>
 [IsoId("_ykqVgTTZEeO5e9wx3yvd8g")]
+[IsoDisplayName(@"Card Payment Environment")]
 public interface ICardPaymentEnvironment29 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardPaymentEnvironment29 : IIsoComponent
     [IsoId("_7GGXgFOYEeO1RfnvbrvgKg")]
     [DisplayName("Acquirer Availability Requested")]
     [IsoXmlTag("AcqrrAvlbtyReqd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AcquirerAvailabilityRequested { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface ICardPaymentEnvironment29 : IIsoComponent
     [IsoId("_6h6f8DTZEeO5e9wx3yvd8g")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent4> POIComponent { get; }
 }

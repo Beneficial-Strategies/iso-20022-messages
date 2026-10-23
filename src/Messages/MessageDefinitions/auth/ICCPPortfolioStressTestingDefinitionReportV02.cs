@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPPrtflStrssTstgDefRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.057.001.02"
 )]
+[IsoDisplayName(@"CCP Portfolio Stress Testing Definition Report V02")]
 public interface ICCPPortfolioStressTestingDefinitionReportV02 : IOuterRecord
 {
     /// <summary>
@@ -22,6 +23,7 @@ public interface ICCPPortfolioStressTestingDefinitionReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Scenario Definition")]
     [IsoXmlTag("ScnroDef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IScenarioDefinition2> ScenarioDefinition { get; }
 
     /// <summary>
@@ -29,5 +31,6 @@ public interface ICCPPortfolioStressTestingDefinitionReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

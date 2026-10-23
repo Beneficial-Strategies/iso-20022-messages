@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transaction.
 /// </summary>
 [IsoId("_S-6mMdp-Ed-ak6NoX_4Aeg_-160365271")]
+[IsoDisplayName(@"Transaction Details")]
 public interface ITransactionDetails3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionDetails3 : IIsoComponent
     [IsoId("_S-6mMtp-Ed-ak6NoX_4Aeg_-160365269")]
     [DisplayName("Trade Reference")]
     [IsoXmlTag("TradRef")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text TradeReference { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ITransactionDetails3 : IIsoComponent
     [IsoId("_S-6mM9p-Ed-ak6NoX_4Aeg_-160365253")]
     [DisplayName("Associated Trade Reference")]
     [IsoXmlTag("AssoctdTradRef")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AssociatedTradeReference { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ITransactionDetails3 : IIsoComponent
     [IsoId("_S-6mNdp-Ed-ak6NoX_4Aeg_-160365218")]
     [DisplayName("Trade Date Time")]
     [IsoXmlTag("TradDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TradeDateTime { get; }
 
     /// <summary>
@@ -65,6 +70,9 @@ public interface ITransactionDetails3 : IIsoComponent
     [IsoId("_S-6mONp-Ed-ak6NoX_4Aeg_-160364357")]
     [DisplayName("Transaction Report Marker")]
     [IsoXmlTag("TxRptMrkr")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification24Choice> TransactionReportMarker { get; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public interface ITransactionDetails3 : IIsoComponent
     [IsoId("_S_EXNdp-Ed-ak6NoX_4Aeg_-160364864")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? SettlementDate { get; }
 
     /// <summary>
@@ -137,5 +146,7 @@ public interface ITransactionDetails3 : IIsoComponent
     [IsoId("_S_EXN9p-Ed-ak6NoX_4Aeg_-160364846")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Proprietary identification of the reason related to a status.
 /// </summary>
 [IsoId("_uoL4YVhFEeOMYfRGLS0NbA")]
+[IsoDisplayName(@"Proprietary Reason 1 Choice")]
 public interface IProprietaryReason1Choice : IIsoChoice { }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator3Choice;
 /// </summary>
 [IsoId("_nCVaUQ06EeuJ1fOEB4bQXA")]
 [IsoXmlTag("Trnchd")]
+[IsoDisplayName(@"Tranched")]
 public interface ITranched : ITrancheIndicator3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ITranched : ITrancheIndicator3Choice, IIsoChoiceVariant
     [IsoId("_eS8oUw06EeuJ1fOEB4bQXA")]
     [DisplayName("Attachment Point")]
     [IsoXmlTag("AttchmntPt")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? AttachmentPoint { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface ITranched : ITrancheIndicator3Choice, IIsoChoiceVariant
     [IsoId("_eS8oVQ06EeuJ1fOEB4bQXA")]
     [DisplayName("Detachment Point")]
     [IsoXmlTag("DtchmntPt")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? DetachmentPoint { get; }
 }

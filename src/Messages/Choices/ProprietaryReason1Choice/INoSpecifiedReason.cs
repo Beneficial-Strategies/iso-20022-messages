@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProprietaryReason1Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_0moS5FjsEeOnqqBHs8Gasw")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IProprietaryReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

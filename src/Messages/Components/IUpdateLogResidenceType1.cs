@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the old and new values for a residence type.
 /// </summary>
 [IsoId("_hgYlw2jWEeiRg5NzP0jkQg")]
+[IsoDisplayName(@"Update Log Residence Type")]
 public interface IUpdateLogResidenceType1 : IIsoComponent
 {
     /// <summary>

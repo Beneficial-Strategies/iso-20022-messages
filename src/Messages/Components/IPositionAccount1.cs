@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Operational construct used to record a position in a set of financial instruments, often linked by a common set of characteristics, ownership or trading strategy.
 /// </summary>
 [IsoId("_oiOLIHYCEee_qcLXasnA4g")]
+[IsoDisplayName(@"Position Account")]
 public interface IPositionAccount1 : IIsoComponent
 {
     /// <summary>

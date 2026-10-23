@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrStatement14Choice;
 
 /// <summary>Expressed as a status advice.</summary>
 [IsoId("_JgawFaowEfCG2_q2WT-90w")]
+[IsoDisplayName(@"Status Advice")]
 public interface IStatusAdvice : IStatusOrStatement14Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

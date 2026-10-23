@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contact person at the party organising the meeting, at the issuer or at an intermediary.
 /// </summary>
 [IsoId("_1VTtwjL3EeKU9IrkkToqcw_-1706678617")]
+[IsoDisplayName(@"Party Identification SD")]
 public interface IPartyIdentificationSD4 : IIsoComponent
 {
     /// <summary>

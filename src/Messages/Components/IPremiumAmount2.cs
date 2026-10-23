@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, eg, the method of the payment.
 /// </summary>
 [IsoId("_TJMjkNp-Ed-ak6NoX_4Aeg_-1139165617")]
+[IsoDisplayName(@"Premium Amount")]
 public interface IPremiumAmount2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IPremiumAmount2 : IIsoComponent
     [IsoId("_TJMjk9p-Ed-ak6NoX_4Aeg_-1139165592")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate SettlementDate { get; }
 
     /// <summary>

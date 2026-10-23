@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the closing of the securities financing transaction.
 /// </summary>
 [IsoId("_At1L1NokEeC60axPepSq7g_-198376474")]
+[IsoDisplayName(@"Securities Financing")]
 public interface ISecuritiesFinancing10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_At1L1dokEeC60axPepSq7g_-695932125")]
     [DisplayName("Rate Change Date")]
     [IsoXmlTag("RateChngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? RateChangeDate { get; }
 
     /// <summary>
@@ -105,6 +107,7 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_AuIGw9okEeC60axPepSq7g_-1267193902")]
     [DisplayName("Callable Trade Indicator")]
     [IsoXmlTag("CllblTradInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CallableTradeIndicator { get; }
 
     /// <summary>
@@ -113,6 +116,7 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_AuIGxNokEeC60axPepSq7g_-1999682362")]
     [DisplayName("Transaction Call Delay")]
     [IsoXmlTag("TxCallDely")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? TransactionCallDelay { get; }
 
     /// <summary>
@@ -129,6 +133,7 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_AuIGxtokEeC60axPepSq7g_-933857720")]
     [DisplayName("Accrued Interest Percentage")]
     [IsoXmlTag("AcrdIntrstPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? AccruedInterestPercentage { get; }
 
     /// <summary>
@@ -161,6 +166,7 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_AuRQs9okEeC60axPepSq7g_1298212581")]
     [DisplayName("Total Number Of Collateral Instructions")]
     [IsoXmlTag("TtlNbOfCollInstrs")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? TotalNumberOfCollateralInstructions { get; }
 
     /// <summary>
@@ -185,6 +191,7 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_AuRQttokEeC60axPepSq7g_-232941151")]
     [DisplayName("Lending With Collateral")]
     [IsoXmlTag("LndgWthColl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LendingWithCollateral { get; }
 
     /// <summary>
@@ -209,6 +216,7 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_AubBstokEeC60axPepSq7g_-1017643701")]
     [DisplayName("Contract Terms Modification Changed")]
     [IsoXmlTag("CtrctTermsModChngd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ContractTermsModificationChanged { get; }
 
     /// <summary>
@@ -265,6 +273,7 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_Aukys9okEeC60axPepSq7g_-1335503795")]
     [DisplayName("Accrued Interest Tax")]
     [IsoXmlTag("AcrdIntrstTax")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AccruedInterestTax { get; }
 
     /// <summary>
@@ -273,6 +282,7 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_AukytNokEeC60axPepSq7g_460885409")]
     [DisplayName("End Number Of Days Accrued")]
     [IsoXmlTag("EndNbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? EndNumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -281,6 +291,7 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_AukytdokEeC60axPepSq7g_1286453782")]
     [DisplayName("End Factor")]
     [IsoXmlTag("EndFctr")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? EndFactor { get; }
 
     /// <summary>
@@ -305,6 +316,7 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_Aut8odokEeC60axPepSq7g_1976821560")]
     [DisplayName("Minimum Date For Call Back")]
     [IsoXmlTag("MinDtForCallBck")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MinimumDateForCallBack { get; }
 
     /// <summary>
@@ -313,6 +325,7 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_Aut8otokEeC60axPepSq7g_446006542")]
     [DisplayName("Roll Over")]
     [IsoXmlTag("RollOver")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RollOver { get; }
 
     /// <summary>
@@ -321,6 +334,7 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_Aut8o9okEeC60axPepSq7g_788130492")]
     [DisplayName("Periodic Payment")]
     [IsoXmlTag("PrdcPmt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PeriodicPayment { get; }
 
     /// <summary>
@@ -329,5 +343,6 @@ public interface ISecuritiesFinancing10 : IIsoComponent
     [IsoId("_Aut8pNokEeC60axPepSq7g_1099234723")]
     [DisplayName("Ex Coupon")]
     [IsoXmlTag("ExCpn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ExCoupon { get; }
 }

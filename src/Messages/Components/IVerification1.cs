@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Method and data intended to be verified as well as the related results.
 /// </summary>
 [IsoId("_aIR0sEbcEeeIjf8aP9KbJA")]
+[IsoDisplayName(@"Verification")]
 public interface IVerification1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IVerification1 : IIsoComponent
     [IsoId("_7xHzkEbcEeeIjf8aP9KbJA")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IVerification1 : IIsoComponent
     [IsoId("_RkuCwEbdEeeIjf8aP9KbJA")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubType { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IVerification1 : IIsoComponent
     [IsoId("_qxdYAEbdEeeIjf8aP9KbJA")]
     [DisplayName("Verification Information")]
     [IsoXmlTag("VrfctnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerificationInformation1> VerificationInformation { get; }
 
     /// <summary>
@@ -51,5 +57,6 @@ public interface IVerification1 : IIsoComponent
     [IsoId("_Ouws0EbeEeeIjf8aP9KbJA")]
     [DisplayName("Verification Result")]
     [IsoXmlTag("VrfctnRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerificationResult1> VerificationResult { get; }
 }

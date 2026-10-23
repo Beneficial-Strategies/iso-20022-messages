@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Totals per service item.
 /// </summary>
 [IsoId("_xPDIUUw0EfCpsI1b9uv5FQ")]
+[IsoDisplayName(@"Service Item Totals12")]
 public interface IServiceItemTotals12 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IServiceItemTotals12 : IIsoComponent
     [IsoId("_xPDIZUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingTaxRecord2> Tax { get; }
 
     /// <summary>

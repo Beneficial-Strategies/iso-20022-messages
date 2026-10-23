@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General cryptographic message syntax (CMS) containing encrypted data.
 /// </summary>
 [IsoId("_fP-osaQuEeeWXKXf3KjtmQ")]
+[IsoDisplayName(@"Content Information Type")]
 public interface IContentInformationType20 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IContentInformationType20 : IIsoComponent
     [IsoId("_fblbw6QuEeeWXKXf3KjtmQ")]
     [DisplayName("MAC")]
     [IsoXmlTag("MAC")]
+    [IsoSimpleType(IsoSimpleType.Max8HexBinaryText)]
     Max8HexBinaryText MAC { get; }
 }

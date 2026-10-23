@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sale Item4.
 /// </summary>
 [IsoId("_fRnPIXNSEe6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Sale Item4")]
 public interface ISaleItem4 : IIsoComponent
 {
     /// <summary>
@@ -100,6 +101,7 @@ public interface ISaleItem4 : IIsoComponent
     /// </summary>
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment14> Adjustment { get; }
 
     /// <summary>
@@ -128,6 +130,7 @@ public interface ISaleItem4 : IIsoComponent
     /// </summary>
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax41> Tax { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Container for tenders used by the customer to perform the payment transaction.
 /// </summary>
 [IsoId("_i-iXYZlYEeu76rs9yGlfEg")]
+[IsoDisplayName(@"Wallet")]
 public interface IWallet2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_JWlQUJlZEeu76rs9yGlfEg")]
     [DisplayName("PAN Age")]
     [IsoXmlTag("PANAge")]
+    [IsoSimpleType(IsoSimpleType.Max5PositiveNumber)]
     Max5PositiveNumber? PANAge { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_Oq3_AJlaEeu76rs9yGlfEg")]
     [DisplayName("User Account Age")]
     [IsoXmlTag("UsrAcctAge")]
+    [IsoSimpleType(IsoSimpleType.Max5PositiveNumber)]
     Max5PositiveNumber? UserAccountAge { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_TudNoJlaEeu76rs9yGlfEg")]
     [DisplayName("Wallet Account Age")]
     [IsoXmlTag("WlltAcctAge")]
+    [IsoSimpleType(IsoSimpleType.Max5PositiveNumber)]
     Max5PositiveNumber? WalletAccountAge { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_ZWVcIJlaEeu76rs9yGlfEg")]
     [DisplayName("Days Since Last Activity")]
     [IsoXmlTag("DaysSncLastActvty")]
+    [IsoSimpleType(IsoSimpleType.Max5PositiveNumber)]
     Max5PositiveNumber? DaysSinceLastActivity { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_fXxaIJlaEeu76rs9yGlfEg")]
     [DisplayName("Activity")]
     [IsoXmlTag("Actvty")]
+    [IsoSimpleType(IsoSimpleType.Max10PositiveNumber)]
     Max10PositiveNumber? Activity { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_fwDh0JlbEeu76rs9yGlfEg")]
     [DisplayName("Last Wallet Change")]
     [IsoXmlTag("LastWlltChng")]
+    [IsoSimpleType(IsoSimpleType.Max5PositiveNumber)]
     Max5PositiveNumber? LastWalletChange { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_laUV8JlbEeu76rs9yGlfEg")]
     [DisplayName("Suspended Cards")]
     [IsoXmlTag("SspdCrds")]
+    [IsoSimpleType(IsoSimpleType.Max5PositiveNumber)]
     Max5PositiveNumber? SuspendedCards { get; }
 
     /// <summary>
@@ -105,6 +113,8 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_1FNIMJlgEeu76rs9yGlfEg")]
     [DisplayName("Other Card Data Entry Mode")]
     [IsoXmlTag("OthrCardDataNtryMd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherCardDataEntryMode { get; }
 
     /// <summary>
@@ -113,6 +123,7 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_CoEQQJlhEeu76rs9yGlfEg")]
     [DisplayName("Wallet Account Email Age")]
     [IsoXmlTag("WlltAcctEmailAge")]
+    [IsoSimpleType(IsoSimpleType.Max5PositiveNumber)]
     Max5PositiveNumber? WalletAccountEmailAge { get; }
 
     /// <summary>
@@ -129,6 +140,8 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_8LKhcJlkEeu76rs9yGlfEg")]
     [DisplayName("Wallet Provider Risk Assessment Model Version")]
     [IsoXmlTag("WlltPrvdrRskAssmntMdlVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? WalletProviderRiskAssessmentModelVersion { get; }
 
     /// <summary>
@@ -137,6 +150,7 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_Wc6-AJllEeu76rs9yGlfEg")]
     [DisplayName("Wallet Provider Phone Score")]
     [IsoXmlTag("WlltPrvdrPhneScore")]
+    [IsoSimpleType(IsoSimpleType.Max5PositiveNumber)]
     Max5PositiveNumber? WalletProviderPhoneScore { get; }
 
     /// <summary>
@@ -145,6 +159,7 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_hZFJkJllEeu76rs9yGlfEg")]
     [DisplayName("Wallet Provider Device Score")]
     [IsoXmlTag("WlltPrvdrDvcScore")]
+    [IsoSimpleType(IsoSimpleType.Max5PositiveNumber)]
     Max5PositiveNumber? WalletProviderDeviceScore { get; }
 
     /// <summary>
@@ -153,6 +168,7 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_1w3iEJllEeu76rs9yGlfEg")]
     [DisplayName("Wallet Provider Account Score")]
     [IsoXmlTag("WlltPrvdrAcctScore")]
+    [IsoSimpleType(IsoSimpleType.Max5PositiveNumber)]
     Max5PositiveNumber? WalletProviderAccountScore { get; }
 
     /// <summary>
@@ -161,5 +177,6 @@ public interface IWallet2 : IIsoComponent
     [IsoId("_jFQqc5lYEeu76rs9yGlfEg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

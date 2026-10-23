@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Maintenance Delegation19.
 /// </summary>
 [IsoId("_ZmehEaE5Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"Maintenance Delegation19")]
 public interface IMaintenanceDelegation19 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IMaintenanceDelegation19 : IIsoComponent
     /// </summary>
     [DisplayName("Maintenance Service")]
     [IsoXmlTag("MntncSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<DataSetCategory19Code> MaintenanceService { get; }
 
     /// <summary>
@@ -37,6 +39,7 @@ public interface IMaintenanceDelegation19 : IIsoComponent
     /// </summary>
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> POISubset { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IMaintenanceDelegation19 : IIsoComponent
     /// </summary>
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max10KBinary> Certificate { get; }
 
     /// <summary>
@@ -72,6 +76,7 @@ public interface IMaintenanceDelegation19 : IIsoComponent
     /// </summary>
     [DisplayName("POI Identification Association")]
     [IsoXmlTag("POIIdAssoctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMaintenanceIdentificationAssociation1> POIIdentificationAssociation { get; }
 
     /// <summary>
@@ -79,6 +84,7 @@ public interface IMaintenanceDelegation19 : IIsoComponent
     /// </summary>
     [DisplayName("Symmetric Key")]
     [IsoXmlTag("SmmtrcKey")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IKEKIdentifier5> SymmetricKey { get; }
 
     /// <summary>

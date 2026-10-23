@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the commission type.
 /// </summary>
 [IsoId("_VPm2fNp-Ed-ak6NoX_4Aeg_-1440307664")]
+[IsoDisplayName(@"Commission Type")]
 public interface ICommissionType1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICommissionType1 : IIsoComponent
     [IsoId("_VPwncdp-Ed-ak6NoX_4Aeg_-1169716014")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

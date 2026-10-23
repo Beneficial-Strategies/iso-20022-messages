@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_uMgQ2y-1Ee-7Nrf72hv69A")]
 [IsoMessage("reda.051.001.01", "AcctLkStsAdvc", "urn:iso:std:iso:20022:tech:xsd:reda.051.001.01")]
+[IsoDisplayName(@"Account Link Status Advice V01")]
 public interface IAccountLinkStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -39,5 +40,6 @@ public interface IAccountLinkStatusAdviceV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

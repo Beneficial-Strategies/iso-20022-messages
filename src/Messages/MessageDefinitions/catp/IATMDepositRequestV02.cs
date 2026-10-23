@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_nmHOQaFFEe-MRKYsaX6JDg")]
 [IsoMessage("catp.012.001.02", "ATMDpstReq", "urn:iso:std:iso:20022:tech:xsd:catp.012.001.02")]
+[IsoDisplayName(@"ATM Deposit Request V02")]
 public interface IATMDepositRequestV02 : IOuterRecord
 {
     /// <summary>

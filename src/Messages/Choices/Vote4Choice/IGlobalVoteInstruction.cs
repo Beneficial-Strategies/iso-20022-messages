@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote4Choice;
 /// </summary>
 [IsoId("_Y98Lta4cEemG7MmivSuE5g")]
 [IsoXmlTag("GblVoteInstr")]
+[IsoDisplayName(@"Global Vote Instruction")]
 public interface IGlobalVoteInstruction : IVote4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IGlobalVoteInstruction : IVote4Choice, IIsoChoiceVariant
     [IsoId("_ZRuqYa4cEemG7MmivSuE5g")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>

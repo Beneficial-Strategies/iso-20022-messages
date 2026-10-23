@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.pain;
     "CdtrPmtActvtnReq",
     "urn:iso:std:iso:20022:tech:xsd:pain.013.001.08"
 )]
+[Description(@"The CreditorPaymentActivationRequest message is sent by the Creditor sending party to the Debtor receiving party, directly or through agents. It is used by a Creditor to request movement of funds from the debtor account to a creditor.")]
+[IsoDisplayName(@"Creditor Payment Activation Request V")]
 public interface ICreditorPaymentActivationRequestV08 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface ICreditorPaymentActivationRequestV08 : IOuterRecord
     [IsoId("_Lv8in8P_Eemsic1bQcEtLA")]
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstruction35> PaymentInformation { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface ICreditorPaymentActivationRequestV08 : IOuterRecord
     [IsoId("_Lv8iocP_Eemsic1bQcEtLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Nature or use of the account.
 /// </summary>
 [IsoId("_T4SeN9p-Ed-ak6NoX_4Aeg_-1717865628")]
+[IsoDisplayName(@"Cash Account Type")]
 public interface ICashAccountType2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICashAccountType2 : IIsoComponent
     [IsoId("_T4SeOdp-Ed-ak6NoX_4Aeg_-1643987013")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Proprietary { get; }
 }

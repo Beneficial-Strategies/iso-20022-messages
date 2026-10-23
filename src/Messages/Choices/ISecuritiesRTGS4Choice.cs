@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the securities RTGS information.
 /// </summary>
 [IsoId("_90cwnzqEEeWVrPy0StzzSg")]
+[IsoDisplayName(@"Securities RTGS 4 Choice")]
 public interface ISecuritiesRTGS4Choice : IIsoChoice { }

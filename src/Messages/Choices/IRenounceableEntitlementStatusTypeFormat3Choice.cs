@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of the renounceable entitlement status.
 /// </summary>
 [IsoId("_63QroUEBEeWVgfuHGaKtRQ")]
+[IsoDisplayName(@"Renounceable Entitlement Status Type Format 3 Choice")]
 public interface IRenounceableEntitlementStatusTypeFormat3Choice : IIsoChoice { }

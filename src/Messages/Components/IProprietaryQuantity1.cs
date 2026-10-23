@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements to identify a proprietary quantity.
 /// </summary>
 [IsoId("_RUhg9tp-Ed-ak6NoX_4Aeg_-1425714284")]
+[IsoDisplayName(@"Proprietary Quantity")]
 public interface IProprietaryQuantity1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProprietaryQuantity1 : IIsoComponent
     [IsoId("_RUhg99p-Ed-ak6NoX_4Aeg_-1425714266")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IProprietaryQuantity1 : IIsoComponent
     [IsoId("_RUrR8Np-Ed-ak6NoX_4Aeg_1280200217")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Quantity { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus21Choic
 
 /// <summary>Reason for the pending cancellation status.</summary>
 [IsoId("_IEVQ-a8wEfCx2aBifPEdRg")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IPendingCancellationStatus21Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of distribution.
 /// </summary>
 [IsoId("_4kYtQUEFEeWVgfuHGaKtRQ")]
+[IsoDisplayName(@"Distribution Type Format 7 Choice")]
 public interface IDistributionTypeFormat7Choice : IIsoChoice { }

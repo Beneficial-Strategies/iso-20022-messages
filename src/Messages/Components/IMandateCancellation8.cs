@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Mandate Cancellation8.
 /// </summary>
 [IsoId("_5ukCITEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Mandate Cancellation8")]
 public interface IMandateCancellation8 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IMandateCancellation8 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

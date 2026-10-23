@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies what to do during a card reader initialisation.
 /// </summary>
 [IsoId("_JUhW8XGfEe2TbaNWBpRZpQ")]
+[IsoDisplayName(@"Device Initialisation Card Reader Request")]
 public interface IDeviceInitialisationCardReaderRequest5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDeviceInitialisationCardReaderRequest5 : IIsoComponent
     [IsoId("_JaxI4XGfEe2TbaNWBpRZpQ")]
     [DisplayName("Warm Reset Flag")]
     [IsoXmlTag("WarmRstFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? WarmResetFlag { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IDeviceInitialisationCardReaderRequest5 : IIsoComponent
     [IsoId("_JaxI43GfEe2TbaNWBpRZpQ")]
     [DisplayName("Force Entry Mode")]
     [IsoXmlTag("ForceNtryMd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataReading8Code> ForceEntryMode { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IDeviceInitialisationCardReaderRequest5 : IIsoComponent
     [IsoId("_JaxI5XGfEe2TbaNWBpRZpQ")]
     [DisplayName("Leave Card Flag")]
     [IsoXmlTag("LeavCardFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? LeaveCardFlag { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IDeviceInitialisationCardReaderRequest5 : IIsoComponent
     [IsoId("_JaxI53GfEe2TbaNWBpRZpQ")]
     [DisplayName("Maximum Waiting Time")]
     [IsoXmlTag("MaxWtgTm")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumWaitingTime { get; }
 
     /// <summary>

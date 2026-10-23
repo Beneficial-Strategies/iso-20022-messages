@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("ef8afc04-dfce-4710-a580-fb8111204b91")]
 [IsoMessage("reda.002.001.05", "PricRptCxl", "urn:iso:std:iso:20022:tech:xsd:reda.002.001.05")]
+[IsoDisplayName(@"Price Report Cancellation V05")]
 public interface IPriceReportCancellationV05 : IOuterRecord
 {
     /// <summary>
@@ -46,6 +47,8 @@ public interface IPriceReportCancellationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Price Report Identification")]
     [IsoXmlTag("PricRptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PriceReportIdentification { get; }
 
     /// <summary>
@@ -53,6 +56,8 @@ public interface IPriceReportCancellationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Cancellation Identification")]
     [IsoXmlTag("CxlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CancellationIdentification { get; }
 
     /// <summary>
@@ -60,6 +65,8 @@ public interface IPriceReportCancellationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? CancellationReason { get; }
 
     /// <summary>
@@ -74,6 +81,7 @@ public interface IPriceReportCancellationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Complete Price Cancellation")]
     [IsoXmlTag("CmpltPricCxl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CompletePriceCancellation { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IPriceReportCancellationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Cancelled Price Valuation Details")]
     [IsoXmlTag("CancPricValtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceReport4> CancelledPriceValuationDetails { get; }
 
     /// <summary>
@@ -88,5 +97,6 @@ public interface IPriceReportCancellationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

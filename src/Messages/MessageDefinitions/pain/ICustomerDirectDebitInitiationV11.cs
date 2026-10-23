@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.pain;
     "CstmrDrctDbtInitn",
     "urn:iso:std:iso:20022:tech:xsd:pain.008.001.11"
 )]
+[IsoDisplayName(@"Customer Direct Debit Initiation V11")]
 public interface ICustomerDirectDebitInitiationV11 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface ICustomerDirectDebitInitiationV11 : IOuterRecord
     /// </summary>
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstruction45> PaymentInformation { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface ICustomerDirectDebitInitiationV11 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

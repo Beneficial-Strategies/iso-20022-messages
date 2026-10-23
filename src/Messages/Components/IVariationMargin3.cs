@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Margin required to cover the risk because of the price fluctuations occurred on the unsettled exposures towards central counterparty.
 /// </summary>
 [IsoId("_-eWgAKMOEeCojJW5vEuTEQ_-52349864")]
+[IsoDisplayName(@"Variation Margin")]
 public interface IVariationMargin3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IVariationMargin3 : IIsoComponent
     [IsoId("_-eWgAqMOEeCojJW5vEuTEQ_-166188930")]
     [DisplayName("Total Variation Margin")]
     [IsoXmlTag("TtlVartnMrgn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITotalVariationMargin1> TotalVariationMargin { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IVariationMargin3 : IIsoComponent
     [IsoId("_-eWgBKMOEeCojJW5vEuTEQ_2134633660")]
     [DisplayName("Mark To Market Netted")]
     [IsoXmlTag("MrkToMktNetd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount2> MarkToMarketNetted { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IVariationMargin3 : IIsoComponent
     [IsoId("_-eWgBaMOEeCojJW5vEuTEQ_1137561307")]
     [DisplayName("Mark To Market Gross")]
     [IsoXmlTag("MrkToMktGrss")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount2> MarkToMarketGross { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IVariationMargin3 : IIsoComponent
     [IsoId("_-eWgBqMOEeCojJW5vEuTEQ_1906471397")]
     [DisplayName("Mark To Market Fails")]
     [IsoXmlTag("MrkToMktFls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount2> MarkToMarketFails { get; }
 
     /// <summary>

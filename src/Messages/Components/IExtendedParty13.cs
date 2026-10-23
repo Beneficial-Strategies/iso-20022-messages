@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other type of party.
 /// </summary>
 [IsoId("_MOiloWALEeiNMJ262H2pWg")]
+[IsoDisplayName(@"Extended Party")]
 public interface IExtendedParty13 : IIsoComponent
 {
     /// <summary>

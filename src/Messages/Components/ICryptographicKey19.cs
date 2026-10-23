@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cryptographic Key.
 /// </summary>
 [IsoId("_FLVBwaABEfC4Q_xhaK1hdQ")]
+[IsoDisplayName(@"Cryptographic Key19")]
 public interface ICryptographicKey19 : IIsoComponent
 {
     /// <summary>
@@ -97,6 +98,7 @@ public interface ICryptographicKey19 : IIsoComponent
     [IsoId("_FMs676ABEfC4Q_xhaK1hdQ")]
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<KeyUsage1Code> Function { get; }
 
     /// <summary>
@@ -129,6 +131,7 @@ public interface ICryptographicKey19 : IIsoComponent
     [IsoId("_FMs7B6ABEfC4Q_xhaK1hdQ")]
     [DisplayName("Component With Authorised Access")]
     [IsoXmlTag("CmpntWthAuthrsdAccs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification186> ComponentWithAuthorisedAccess { get; }
 
     /// <summary>
@@ -137,6 +140,7 @@ public interface ICryptographicKey19 : IIsoComponent
     [IsoId("_FMs7CaABEfC4Q_xhaK1hdQ")]
     [DisplayName("Protected Component With Authorised Access")]
     [IsoXmlTag("PrtctdCmpntWthAuthrsdAccs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContentInformationType39> ProtectedComponentWithAuthorisedAccess { get; }
 
     /// <summary>
@@ -153,6 +157,7 @@ public interface ICryptographicKey19 : IIsoComponent
     [IsoId("_FMs7EaABEfC4Q_xhaK1hdQ")]
     [DisplayName("Additional Management Information")]
     [IsoXmlTag("AddtlMgmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericInformation1> AdditionalManagementInformation { get; }
 
     /// <summary>

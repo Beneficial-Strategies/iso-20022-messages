@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctExcldMndtMntncAmdmntReq",
     "urn:iso:std:iso:20022:tech:xsd:acmt.016.001.04"
 )]
+[IsoDisplayName(@"Account Excluded Mandate Maintenance Amendment Request V04")]
 public interface IAccountExcludedMandateMaintenanceAmendmentRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -71,6 +72,7 @@ public interface IAccountExcludedMandateMaintenanceAmendmentRequestV04 : IOuterR
     /// </summary>
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature4> DigitalSignature { get; }
 
     /// <summary>
@@ -78,5 +80,6 @@ public interface IAccountExcludedMandateMaintenanceAmendmentRequestV04 : IOuterR
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

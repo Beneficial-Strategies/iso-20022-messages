@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Voting Rights Threshold2.
 /// </summary>
 [IsoId("_S_DsAZK5Ee-l-O3vIHRmRw")]
+[IsoDisplayName(@"Voting Rights Threshold2")]
 public interface IVotingRightsThreshold2 : IIsoComponent
 {
     /// <summary>

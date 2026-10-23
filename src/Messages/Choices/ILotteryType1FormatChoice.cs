@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the lottery type.
 /// </summary>
 [IsoId("_Rms2Fdp-Ed-ak6NoX_4Aeg_1767480666")]
+[IsoDisplayName(@"Lottery Type 1 Format Choice")]
 public interface ILotteryType1FormatChoice : IIsoChoice { }

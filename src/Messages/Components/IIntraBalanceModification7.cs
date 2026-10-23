@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Intra Balance Modification7.
 /// </summary>
 [IsoId("_7tvrpTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Intra Balance Modification7")]
 public interface IIntraBalanceModification7 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IIntraBalanceModification7 : IIsoComponent
     /// </summary>
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalanceModification8> Modification { get; }
 }

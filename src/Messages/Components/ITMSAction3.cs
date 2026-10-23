@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Single terminal management action to be performed by the point of interaction.
 /// </summary>
 [IsoId("_8fKyYTV_EeODSIIQsYYKhw")]
+[IsoDisplayName(@"TMS Action")]
 public interface ITMSAction3 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ITMSAction3 : IIsoComponent
     [IsoId("_8vr6qTV_EeODSIIQsYYKhw")]
     [DisplayName("Additional Process")]
     [IsoXmlTag("AddtlPrc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface ITMSAction3 : IIsoComponent
     [IsoId("_8vr6rTV_EeODSIIQsYYKhw")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? TMChallenge { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface ITMSAction3 : IIsoComponent
     [IsoId("_8vr6rzV_EeODSIIQsYYKhw")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10KBinary> KeyEnciphermentCertificate { get; }
 
     /// <summary>
@@ -89,5 +93,6 @@ public interface ITMSAction3 : IIsoComponent
     [IsoId("_8vr6sTV_EeODSIIQsYYKhw")]
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorAction2> ErrorAction { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Merchant token information.
 /// </summary>
 [IsoId("_U_eg0U7ZEeyGi9JAv6wq7Q")]
+[IsoDisplayName(@"Merchant Token")]
 public interface IMerchantToken2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMerchantToken2 : IIsoComponent
     [IsoId("_VGaPQU7ZEeyGi9JAv6wq7Q")]
     [DisplayName("Token")]
     [IsoXmlTag("Tkn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Token { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IMerchantToken2 : IIsoComponent
     [IsoId("_VGaPQ07ZEeyGi9JAv6wq7Q")]
     [DisplayName("Token Expiry Date")]
     [IsoXmlTag("TknXpryDt")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? TokenExpiryDate { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IMerchantToken2 : IIsoComponent
     [IsoId("_VGaPRU7ZEeyGi9JAv6wq7Q")]
     [DisplayName("Token Characteristic")]
     [IsoXmlTag("TknChrtc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TokenCharacteristic { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IMerchantToken2 : IIsoComponent
     [IsoId("_VGaPSU7ZEeyGi9JAv6wq7Q")]
     [DisplayName("Token Assurance Level")]
     [IsoXmlTag("TknAssrncLvl")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TokenAssuranceLevel { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IMerchantToken2 : IIsoComponent
     [IsoId("_VGaPS07ZEeyGi9JAv6wq7Q")]
     [DisplayName("Token Assurance Data")]
     [IsoXmlTag("TknAssrncData")]
+    [IsoSimpleType(IsoSimpleType.Max500Binary)]
     Max500Binary? TokenAssuranceData { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IMerchantToken2 : IIsoComponent
     [IsoId("_VGaPTU7ZEeyGi9JAv6wq7Q")]
     [DisplayName("Token Assurance Method")]
     [IsoXmlTag("TknAssrncMtd")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? TokenAssuranceMethod { get; }
 
     /// <summary>
@@ -73,5 +82,6 @@ public interface IMerchantToken2 : IIsoComponent
     [IsoId("_VGaPT07ZEeyGi9JAv6wq7Q")]
     [DisplayName("Token Initiated Indicator")]
     [IsoXmlTag("TknInittdInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TokenInitiatedIndicator { get; }
 }

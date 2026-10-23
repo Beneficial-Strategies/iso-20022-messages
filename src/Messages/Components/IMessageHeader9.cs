@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics, such as the identification or the creation date and time, specific to the message.
 /// </summary>
 [IsoId("_jAUZkZIhEeect698_YsnIA")]
+[IsoDisplayName(@"Message Header")]
 public interface IMessageHeader9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMessageHeader9 : IIsoComponent
     [IsoId("_jIyZEZIhEeect698_YsnIA")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IMessageHeader9 : IIsoComponent
     [IsoId("_jIyZE5IhEeect698_YsnIA")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CreationDateTime { get; }
 
     /// <summary>

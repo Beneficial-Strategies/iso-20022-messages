@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vehicle rental service provides detailed vehicle rental information.
 /// </summary>
 [IsoId("_9dqxI_TdEeife6veM7daYw")]
+[IsoDisplayName(@"Vehicle Rental Service")]
 public interface IVehicleRentalService1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IVehicleRentalService1 : IIsoComponent
     [IsoId("_h6EcwfTeEeife6veM7daYw")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SummaryCommodityIdentification { get; }
 
     /// <summary>
@@ -57,5 +60,7 @@ public interface IVehicleRentalService1 : IIsoComponent
     [IsoId("_w51nsfTeEeife6veM7daYw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

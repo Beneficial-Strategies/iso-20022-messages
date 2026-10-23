@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "IntraBalMvmntModReq",
     "urn:iso:std:iso:20022:tech:xsd:camt.072.001.01"
 )]
+[Description(@"The IntraBalanceMovementModificationRequest message is sent from an account owner/requestor to a settlement infrastructure to request the modification of a processing indicator on a previously sent IntraBalanceMovementInstruction message.||Usage: |The message may be used to:|- re-send a message previously sent (the sub-function of the message is ""Duplicate"")|- provide a third party with a copy of a message for information (the sub-function of the message is ""Copy"")|- re-send to a third party a copy of a message for information (the sub-function of the message is ""CopyDuplicate"").")]
+[IsoDisplayName(@"Intra Balance Movement Modification Request V")]
 public interface IIntraBalanceMovementModificationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -62,6 +64,7 @@ public interface IIntraBalanceMovementModificationRequestV01 : IOuterRecord
     [IsoId("_DLtLFTncEem7JZMuWtwtsg")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRequestDetails22> RequestDetails { get; }
 
     /// <summary>
@@ -78,5 +81,6 @@ public interface IIntraBalanceMovementModificationRequestV01 : IOuterRecord
     [IsoId("_DLtLGTncEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

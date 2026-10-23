@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the original notification item and to provide the status.
 /// </summary>
 [IsoId("_tBBOtFkyEeGeoaLUQk__nA_1755686524")]
+[IsoDisplayName(@"Original Item And Status")]
 public interface IOriginalItemAndStatus3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalItemAndStatus3 : IIsoComponent
     [IsoId("_tBKYoFkyEeGeoaLUQk__nA_1917816055")]
     [DisplayName("Original Item Identification")]
     [IsoXmlTag("OrgnlItmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalItemIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalItemAndStatus3 : IIsoComponent
     [IsoId("_tBKYoVkyEeGeoaLUQk__nA_1906717278")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IOriginalItemAndStatus3 : IIsoComponent
     [IsoId("_tBKYo1kyEeGeoaLUQk__nA_1450197645")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedValueDate { get; }
 
     /// <summary>
@@ -57,6 +63,8 @@ public interface IOriginalItemAndStatus3 : IIsoComponent
     [IsoId("_tFyZ8FkyEeGeoaLUQk__nA_-2089239349")]
     [DisplayName("Additional Status Information")]
     [IsoXmlTag("AddtlStsInf")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? AdditionalStatusInformation { get; }
 
     /// <summary>

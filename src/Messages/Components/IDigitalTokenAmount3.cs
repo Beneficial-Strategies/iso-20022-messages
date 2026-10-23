@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Digital Token Amount3.
 /// </summary>
 [IsoId("_jxqSYUj3Ee-KhcStGV4xTg")]
+[IsoDisplayName(@"Digital Token Amount3")]
 public interface IDigitalTokenAmount3 : IIsoComponent
 {
     /// <summary>

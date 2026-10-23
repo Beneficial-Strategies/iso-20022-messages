@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the money laundering check.
 /// </summary>
 [IsoId("_GExWwxdDEeK5g-3oYI0_9Q")]
+[IsoDisplayName(@"Money Laundering Check 1 Choice")]
 public interface IMoneyLaunderingCheck1Choice : IIsoChoice { }

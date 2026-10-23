@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information related to a vehicle.
 /// </summary>
 [IsoId("_nC2q8ZdOEeWhUvuI1bSHSA")]
+[IsoDisplayName(@"Vehicle")]
 public interface IVehicle2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVehicle2 : IIsoComponent
     [IsoId("_4aiIcJdOEeWhUvuI1bSHSA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IVehicle2 : IIsoComponent
     [IsoId("_nN4PSZdOEeWhUvuI1bSHSA")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Data { get; }
 }

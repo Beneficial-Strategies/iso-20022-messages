@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response to the deposit request.
 /// </summary>
 [IsoId("_YM1VAa4PEeWZgJQOa6iKCQ")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction19 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IATMTransaction19 : IIsoComponent
     [IsoId("_YXa0Y64PEeWZgJQOa6iKCQ")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IATMTransaction19 : IIsoComponent
     [IsoId("_tR7fcK4PEeWZgJQOa6iKCQ")]
     [DisplayName("Incident")]
     [IsoXmlTag("Incdnt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<FailureReason7Code> Incident { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IATMTransaction19 : IIsoComponent
     [IsoId("_wxbsMK4PEeWZgJQOa6iKCQ")]
     [DisplayName("Incident Detail")]
     [IsoXmlTag("IncdntDtl")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> IncidentDetail { get; }
 
     /// <summary>
@@ -105,6 +110,7 @@ public interface IATMTransaction19 : IIsoComponent
     [IsoId("_YXa0ca4PEeWZgJQOa6iKCQ")]
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount13> AdditionalCharge { get; }
 
     /// <summary>
@@ -113,6 +119,7 @@ public interface IATMTransaction19 : IIsoComponent
     [IsoId("_MCVRkK4QEeWZgJQOa6iKCQ")]
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RequestedReceipt { get; }
 
     /// <summary>
@@ -121,6 +128,7 @@ public interface IATMTransaction19 : IIsoComponent
     [IsoId("_TNzZwK4QEeWZgJQOa6iKCQ")]
     [DisplayName("Receipt Printed")]
     [IsoXmlTag("RctPrtd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReceiptPrinted { get; }
 
     /// <summary>
@@ -137,6 +145,7 @@ public interface IATMTransaction19 : IIsoComponent
     [IsoId("_asex0K4QEeWZgJQOa6iKCQ")]
     [DisplayName("Deposited Media")]
     [IsoXmlTag("DpstdMdia")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMDepositedMedia1> DepositedMedia { get; }
 
     /// <summary>
@@ -145,6 +154,7 @@ public interface IATMTransaction19 : IIsoComponent
     [IsoId("_nqGe0K4QEeWZgJQOa6iKCQ")]
     [DisplayName("To Be Reconciled Media Counters")]
     [IsoXmlTag("ToBeRcncldMdiaCntrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMDepositedMedia3> ToBeReconciledMediaCounters { get; }
 
     /// <summary>
@@ -153,6 +163,7 @@ public interface IATMTransaction19 : IIsoComponent
     [IsoId("_9m6UYK4QEeWZgJQOa6iKCQ")]
     [DisplayName("ATM Totals")]
     [IsoXmlTag("ATMTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMTotals1> ATMTotals { get; }
 
     /// <summary>
@@ -161,6 +172,7 @@ public interface IATMTransaction19 : IIsoComponent
     [IsoId("_BIZeIK4REeWZgJQOa6iKCQ")]
     [DisplayName("Cassette")]
     [IsoXmlTag("Csstt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCassette2> Cassette { get; }
 
     /// <summary>
@@ -169,5 +181,6 @@ public interface IATMTransaction19 : IIsoComponent
     [IsoId("_YXa0da4PEeWZgJQOa6iKCQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

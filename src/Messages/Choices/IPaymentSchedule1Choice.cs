@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between expected/due payment date and a payment schedule per amount and due date.
 /// </summary>
 [IsoId("_BVaygdOAEeSQ_-lmj1tzfw")]
+[IsoDisplayName(@"Payment Schedule 1 Choice")]
 public interface IPaymentSchedule1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Type of movement preliminary advice document.
 /// </summary>
 [IsoId("_QE2AMTQSEe2o-K1dwNg8Gg")]
+[IsoDisplayName(@"Corporate Action Preliminary Advice Type")]
 public interface ICorporateActionPreliminaryAdviceType3 : IIsoComponent
 {
     /// <summary>

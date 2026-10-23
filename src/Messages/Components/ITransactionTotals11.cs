@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Totals of the reconciliation.
 /// </summary>
 [IsoId("_mVydMVANEeedyPuM0kK2EQ")]
+[IsoDisplayName(@"Transaction Totals")]
 public interface ITransactionTotals11 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITransactionTotals11 : IIsoComponent
     [IsoId("_mhPfQVANEeedyPuM0kK2EQ")]
     [DisplayName("Financial Reconciliation")]
     [IsoXmlTag("FinRcncltn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialReconcillation1> FinancialReconciliation { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITransactionTotals11 : IIsoComponent
     [IsoId("_mhPfQ1ANEeedyPuM0kK2EQ")]
     [DisplayName("Message Reconciliation")]
     [IsoXmlTag("MsgRcncltn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageReconcillation1> MessageReconciliation { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ITransactionTotals11 : IIsoComponent
     [IsoId("_mhPfRVANEeedyPuM0kK2EQ")]
     [DisplayName("Additional Fee Reconciliation")]
     [IsoXmlTag("AddtlFeeRcncltn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFeeReconciliation1> AdditionalFeeReconciliation { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ITransactionTotals11 : IIsoComponent
     [IsoId("_y34jEcytEeiqqJhU2tqK8A")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
     Min2Max3NumericText Currency { get; }
 
     /// <summary>

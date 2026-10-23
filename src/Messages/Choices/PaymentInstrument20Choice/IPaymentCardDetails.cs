@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice;
 /// </summary>
 [IsoId("_weKLGTbsEead9bDRE_1DAQ")]
 [IsoXmlTag("PmtCardDtls")]
+[IsoDisplayName(@"Payment Card Details")]
 public interface IPaymentCardDetails : IPaymentInstrument20Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IPaymentCardDetails : IPaymentInstrument20Choice, IIsoChoiceVar
     [IsoId("_xp4-YzbsEead9bDRE_1DAQ")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Number { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IPaymentCardDetails : IPaymentInstrument20Choice, IIsoChoiceVar
     [IsoId("_xp4-ZTbsEead9bDRE_1DAQ")]
     [DisplayName("Holder Name")]
     [IsoXmlTag("HldrNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text HolderName { get; }
 
     /// <summary>
@@ -42,6 +47,7 @@ public interface IPaymentCardDetails : IPaymentInstrument20Choice, IIsoChoiceVar
     [IsoId("_xp4-ZzbsEead9bDRE_1DAQ")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? StartDate { get; }
 
     /// <summary>
@@ -50,6 +56,7 @@ public interface IPaymentCardDetails : IPaymentInstrument20Choice, IIsoChoiceVar
     [IsoId("_xp4-aTbsEead9bDRE_1DAQ")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth ExpiryDate { get; }
 
     /// <summary>
@@ -58,6 +65,8 @@ public interface IPaymentCardDetails : IPaymentInstrument20Choice, IIsoChoiceVar
     [IsoId("_xp4-azbsEead9bDRE_1DAQ")]
     [DisplayName("Card Issuer Name")]
     [IsoXmlTag("CardIssrNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardIssuerName { get; }
 
     /// <summary>
@@ -74,6 +83,8 @@ public interface IPaymentCardDetails : IPaymentInstrument20Choice, IIsoChoiceVar
     [IsoId("_xp4-bzbsEead9bDRE_1DAQ")]
     [DisplayName("Security Code")]
     [IsoXmlTag("SctyCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecurityCode { get; }
 
     /// <summary>
@@ -82,5 +93,7 @@ public interface IPaymentCardDetails : IPaymentInstrument20Choice, IIsoChoiceVar
     [IsoId("_xp4-cTbsEead9bDRE_1DAQ")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3Text)]
+    [StringLength(3, MinimumLength = 1)]
     Max3Text? SequenceNumber { get; }
 }

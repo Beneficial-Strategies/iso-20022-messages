@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// </summary>
 [IsoId("_OzAFVdE8Ed-BzquC8wXy7w_421836002")]
 [IsoMessage("trea.001.001.02", "CretNDFOpngV02", "urn:iso:std:iso:20022:tech:xsd:trea.001.001.02")]
+[Description(@"Scope|The CreateNonDeliverableForwardOpening message is sent by a participant to a central system or to a counterparty to notify the opening of a non deliverable trade.|Usage|The trading parties will send similar messages to the central settlement system and the central settlement system will send notifications to both parties.")]
+[IsoDisplayName(@"Create Non Deliverable Forward Opening V")]
 public interface ICreateNonDeliverableForwardOpeningV02 : IOuterRecord
 {
     /// <summary>

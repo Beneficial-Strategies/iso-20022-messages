@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Range of time defined by a start date and an end date.
 /// </summary>
 [IsoId("_T-1yKNp-Ed-ak6NoX_4Aeg_-1267403940")]
+[IsoDisplayName(@"Date Period Details")]
 public interface IDatePeriodDetails1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDatePeriodDetails1 : IIsoComponent
     [IsoId("_T-_jINp-Ed-ak6NoX_4Aeg_-1267403939")]
     [DisplayName("From Date")]
     [IsoXmlTag("FrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate FromDate { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IDatePeriodDetails1 : IIsoComponent
     [IsoId("_T-_jIdp-Ed-ak6NoX_4Aeg_-1267403938")]
     [DisplayName("To Date")]
     [IsoXmlTag("ToDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ToDate { get; }
 }

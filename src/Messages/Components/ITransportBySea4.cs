@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related for the transportation of goods by sea.
 /// </summary>
 [IsoId("_SuiA0tp-Ed-ak6NoX_4Aeg_-1269157967")]
+[IsoDisplayName(@"Transport By Sea")]
 public interface ITransportBySea4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransportBySea4 : IIsoComponent
     [IsoId("_SuiA09p-Ed-ak6NoX_4Aeg_-1269157628")]
     [DisplayName("Port Of Loading")]
     [IsoXmlTag("PortOfLoadng")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PortOfLoading { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransportBySea4 : IIsoComponent
     [IsoId("_SuiA1Np-Ed-ak6NoX_4Aeg_-1269157906")]
     [DisplayName("Port Of Discharge")]
     [IsoXmlTag("PortOfDschrge")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PortOfDischarge { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransportBySea4 : IIsoComponent
     [IsoId("_SuiA1dp-Ed-ak6NoX_4Aeg_-1269157965")]
     [DisplayName("Vessel Name")]
     [IsoXmlTag("VsslNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? VesselName { get; }
 
     /// <summary>
@@ -41,5 +48,7 @@ public interface ITransportBySea4 : IIsoComponent
     [IsoId("_SuiA1tp-Ed-ak6NoX_4Aeg_-1764443526")]
     [DisplayName("Sea Carrier Name")]
     [IsoXmlTag("SeaCrrierNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SeaCarrierName { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for an notional amount.
 /// </summary>
 [IsoId("_gxGaEWEgEe2P-L9DBerEgA")]
+[IsoDisplayName(@"Compare Notional Amount")]
 public interface ICompareNotionalAmount1 : IIsoComponent
 {
     /// <summary>

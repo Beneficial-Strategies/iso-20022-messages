@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Inquiry information for the transaction.
 /// </summary>
 [IsoId("_-0kyoa4WEeW_TaP-ygI0SQ")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction21 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IATMTransaction21 : IIsoComponent
     [IsoId("__Afuxa4WEeW_TaP-ygI0SQ")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction7> Action { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IATMTransaction21 : IIsoComponent
     [IsoId("__Afuy64WEeW_TaP-ygI0SQ")]
     [DisplayName("Account Information")]
     [IsoXmlTag("AcctInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardAccount12> AccountInformation { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IATMTransaction21 : IIsoComponent
     [IsoId("__Afuza4WEeW_TaP-ygI0SQ")]
     [DisplayName("Account Statement Data")]
     [IsoXmlTag("AcctStmtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMAccountStatement1> AccountStatementData { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface IATMTransaction21 : IIsoComponent
     [IsoId("__Afu0a4WEeW_TaP-ygI0SQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 
     /// <summary>
@@ -89,5 +94,6 @@ public interface IATMTransaction21 : IIsoComponent
     [IsoId("__Afu064WEeW_TaP-ygI0SQ")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 }

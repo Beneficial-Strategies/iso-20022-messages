@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Lodging line item details
 /// </summary>
 [IsoId("_sR3mqvcZEeiW-auGnDPZIw")]
+[IsoDisplayName(@"Lodging Line Item")]
 public interface ILodgingLineItem1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILodgingLineItem1 : IIsoComponent
     [IsoId("_sR3mq_cZEeiW-auGnDPZIw")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ILodgingLineItem1 : IIsoComponent
     [IsoId("_sR3msPcZEeiW-auGnDPZIw")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? Time { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ILodgingLineItem1 : IIsoComponent
     [IsoId("_sR3mt_cZEeiW-auGnDPZIw")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ILodgingLineItem1 : IIsoComponent
     [IsoId("_sR3msvcZEeiW-auGnDPZIw")]
     [DisplayName("Post Check Out Indicator")]
     [IsoXmlTag("PstChckOutInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PostCheckOutIndicator { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ILodgingLineItem1 : IIsoComponent
     [IsoId("_sR3mwPcZEeiW-auGnDPZIw")]
     [DisplayName("Credit Indicator")]
     [IsoXmlTag("CdtInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CreditIndicator { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface ILodgingLineItem1 : IIsoComponent
     [IsoId("_GDYK4fccEeiW-auGnDPZIw")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? Duration { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface ILodgingLineItem1 : IIsoComponent
     [IsoId("_sR3mtPcZEeiW-auGnDPZIw")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax33> Tax { get; }
 
     /// <summary>
@@ -97,5 +106,7 @@ public interface ILodgingLineItem1 : IIsoComponent
     [IsoId("_sR3mtvcZEeiW-auGnDPZIw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

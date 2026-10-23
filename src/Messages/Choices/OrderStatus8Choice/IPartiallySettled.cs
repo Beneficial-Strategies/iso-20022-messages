@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus8Choice;
 
 /// <summary>Status of the order is partially settled.</summary>
 [IsoId("2255eba7-71a9-4ce3-9b34-c00b45e8b672")]
+[IsoDisplayName(@"Partially Settled")]
 public interface IPartiallySettled : IOrderStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

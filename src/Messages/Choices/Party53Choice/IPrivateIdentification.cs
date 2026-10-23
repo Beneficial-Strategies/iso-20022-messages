@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party53Choice;
 /// <summary>
 /// Private Identification.
 /// </summary>
+[IsoDisplayName(@"Private Identification")]
 public interface IPrivateIdentification : IParty53Choice, IIsoChoiceVariant
 {
     /// <summary>

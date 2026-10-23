@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PurposeCode1Choice;
 /// Specifies the type of securities account.
 /// </summary>
 [IsoId("_Q-6dUdp-Ed-ak6NoX_4Aeg_211192708")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPurposeCode1Choice, IIsoChoiceVariant
 {
     /// <summary>

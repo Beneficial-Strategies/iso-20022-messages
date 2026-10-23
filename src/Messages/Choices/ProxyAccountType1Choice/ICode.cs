@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProxyAccountType1Choice;
 /// Name of the identification scheme, in a coded form as published in an external list.
 /// </summary>
 [IsoId("_dyoclXh3EeidzqjNEfehPg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProxyAccountType1Choice, IIsoChoiceVariant
 {
     /// <summary>

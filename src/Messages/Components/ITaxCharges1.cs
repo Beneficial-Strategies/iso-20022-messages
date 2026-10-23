@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.
 /// </summary>
 [IsoId("_Rvygrdp-Ed-ak6NoX_4Aeg_438228373")]
+[IsoDisplayName(@"Tax Charges")]
 public interface ITaxCharges1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITaxCharges1 : IIsoComponent
     [IsoId("_Rvygrtp-Ed-ak6NoX_4Aeg_836264050")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ITaxCharges1 : IIsoComponent
     [IsoId("_Rv8RoNp-Ed-ak6NoX_4Aeg_438228776")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>

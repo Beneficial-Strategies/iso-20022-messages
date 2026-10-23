@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the deactivation.
 /// </summary>
 [IsoId("_UJuMddp-Ed-ak6NoX_4Aeg_-1685692105")]
+[IsoDisplayName(@"Corporate Action Deactivation Instruction")]
 public interface ICorporateActionDeactivationInstruction1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionDeactivationInstruction1 : IIsoComponent
     [IsoId("_UJuMdtp-Ed-ak6NoX_4Aeg_1692268967")]
     [DisplayName("Deactivation Date And Time")]
     [IsoXmlTag("DeactvtnDtAndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime DeactivationDateAndTime { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICorporateActionDeactivationInstruction1 : IIsoComponent
     [IsoId("_UJuMd9p-Ed-ak6NoX_4Aeg_972006480")]
     [DisplayName("Option Details")]
     [IsoXmlTag("OptnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionOption2> OptionDetails { get; }
 }

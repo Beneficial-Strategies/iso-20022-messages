@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_0HNCMH5lEea7cqFPsAF3tQ")]
 [IsoMessage("pain.018.001.01", "MndtSspnsnReq", "urn:iso:std:iso:20022:tech:xsd:pain.018.001.01")]
+[Description(@"Scope|The MandateSuspensionRequest message is sent by the initiator of the request to its agent. The initiator can either be the debtor, debtor agent, creditor or creditor agent.|A MandateSuspensionRequest message is used to request the suspension of an existing mandate until the suspension is lifted. |Usage|The MandateSuspensionRequest message can contain one or more suspension requests.|The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.|The MandateSuspensionRequest message can be used in domestic and cross-border scenarios.|")]
+[IsoDisplayName(@"Mandate Suspension Request V")]
 public interface IMandateSuspensionRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -35,6 +37,7 @@ public interface IMandateSuspensionRequestV01 : IOuterRecord
     [IsoId("_ka8SwH5nEea7cqFPsAF3tQ")]
     [DisplayName("Underlying Suspension Details")]
     [IsoXmlTag("UndrlygSspnsnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMandateSuspension1> UnderlyingSuspensionDetails { get; }
 
     /// <summary>
@@ -43,5 +46,6 @@ public interface IMandateSuspensionRequestV01 : IOuterRecord
     [IsoId("_yoO34H5nEea7cqFPsAF3tQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

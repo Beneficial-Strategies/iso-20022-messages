@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingVenueIdentification1Choic
 /// Identification used where reporting entity is a national competent authority.
 /// </summary>
 [IsoId("_-PXYoAkWEeWGouz230Xp5Q")]
+[IsoDisplayName(@"National Competent Authority")]
 public interface INationalCompetentAuthority : ITradingVenueIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>

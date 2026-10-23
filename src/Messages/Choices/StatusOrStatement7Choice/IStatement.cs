@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrStatement7Choice;
 /// </summary>
 [IsoId("_RMPsVTs-EeWRTLSN0i0tng")]
 [IsoXmlTag("Stmt")]
+[IsoDisplayName(@"Statement")]
 public interface IStatement : IStatusOrStatement7Choice, IIsoChoiceVariant
 {
     /// <summary>

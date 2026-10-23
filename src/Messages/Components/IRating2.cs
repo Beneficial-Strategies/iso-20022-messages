@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Rating and source of the rating of the financial instrument.
 /// </summary>
 [IsoId("_6xRCcL_IEeuexrfMa3dl_Q")]
+[IsoDisplayName(@"Rating")]
 public interface IRating2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRating2 : IIsoComponent
     [IsoId("_Bwe3Ub_JEeuexrfMa3dl_Q")]
     [DisplayName("Rating")]
     [IsoXmlTag("Ratg")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text Rating { get; }
 
     /// <summary>

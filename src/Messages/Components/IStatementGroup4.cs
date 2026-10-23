@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Group of the statement header reporting the bank services billing and the billing statement.
 /// </summary>
 [IsoId("_cI-GsdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Statement Group")]
 public interface IStatementGroup4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStatementGroup4 : IIsoComponent
     [IsoId("_cLa9wdcZEeqRFcf2R4bPBw")]
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text GroupIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,9 @@ public interface IStatementGroup4 : IIsoComponent
     [IsoId("_cLa9xdcZEeqRFcf2R4bPBw")]
     [DisplayName("Sender Individual Contact")]
     [IsoXmlTag("SndrIndvCtct")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContact4> SenderIndividualContact { get; }
 
     /// <summary>
@@ -49,6 +55,9 @@ public interface IStatementGroup4 : IIsoComponent
     [IsoId("_cLa9ydcZEeqRFcf2R4bPBw")]
     [DisplayName("Receiver Individual Contact")]
     [IsoXmlTag("RcvrIndvCtct")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContact4> ReceiverIndividualContact { get; }
 
     /// <summary>
@@ -57,5 +66,6 @@ public interface IStatementGroup4 : IIsoComponent
     [IsoId("_cLa9y9cZEeqRFcf2R4bPBw")]
     [DisplayName("Billing Statement")]
     [IsoXmlTag("BllgStmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingStatement4> BillingStatement { get; }
 }

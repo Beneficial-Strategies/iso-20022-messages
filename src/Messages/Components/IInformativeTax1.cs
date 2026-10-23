@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax related to an investment fund order.
 /// </summary>
 [IsoId("_fH5lkDh7EeaH-93K5JKmzw")]
+[IsoDisplayName(@"Informative Tax")]
 public interface IInformativeTax1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IInformativeTax1 : IIsoComponent
     [IsoId("_j7WRATh8EeaH-93K5JKmzw")]
     [DisplayName("Percentage Of Debt Claim")]
     [IsoXmlTag("PctgOfDebtClm")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfDebtClaim { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface IInformativeTax1 : IIsoComponent
     [IsoId("_n8kqwTh8EeaH-93K5JKmzw")]
     [DisplayName("Individual Tax")]
     [IsoXmlTag("IndvTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax32> IndividualTax { get; }
 }

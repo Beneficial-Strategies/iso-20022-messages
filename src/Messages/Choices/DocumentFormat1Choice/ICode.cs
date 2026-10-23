@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentFormat1Choice;
 /// Document format.
 /// </summary>
 [IsoId("_932rtXltEeG7BsjMvd1mEw_1631851618")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDocumentFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

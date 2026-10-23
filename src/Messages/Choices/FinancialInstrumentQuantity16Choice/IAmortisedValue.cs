@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity16Cho
 /// Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond&apos;s principal amount.
 /// </summary>
 [IsoId("_CfV6deGaEd-1Ktb5rVaajw")]
+[IsoDisplayName(@"Amortised Value")]
 public interface IAmortisedValue : IFinancialInstrumentQuantity16Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

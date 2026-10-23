@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform8Choice;
 
 /// <summary>Transaction to perform expressed as a payment request.</summary>
 [IsoId("_By-kQbZaEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Payment Request")]
 public interface IPaymentRequest : ITransactionToPerform8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

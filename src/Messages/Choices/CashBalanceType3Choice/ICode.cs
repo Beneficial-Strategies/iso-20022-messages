@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashBalanceType3Choice;
 /// Cash balance expressed in a coded form.
 /// </summary>
 [IsoId("_NW5nQTqFEemJ3KLLPeYl6g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICashBalanceType3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference2Choice;
 /// Unique identifier of the dispute notification.
 /// </summary>
 [IsoId("_TYW3k6erEeCq2KR6DaC1kQ_-1344043668")]
+[IsoDisplayName(@"Dispute Notification Identification")]
 public interface IDisputeNotificationIdentification : IReference2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IDisputeNotificationIdentification : IReference2Choice, IIsoCho
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("DsptNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

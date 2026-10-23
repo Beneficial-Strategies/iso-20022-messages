@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform3Choice;
 /// </summary>
 [IsoId("_xaZiVS8QEeu125Ip9zFcsQ")]
 [IsoXmlTag("RvslReq")]
+[IsoDisplayName(@"Reversal Request")]
 public interface IReversalRequest : ITransactionToPerform3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IReversalRequest : ITransactionToPerform3Choice, IIsoChoiceVari
     [IsoId("_IS6LIS8REeu125Ip9zFcsQ")]
     [DisplayName("Loyalty Data")]
     [IsoXmlTag("LltyData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyRequestData2> LoyaltyData { get; }
 
     /// <summary>

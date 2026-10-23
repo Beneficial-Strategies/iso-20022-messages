@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource1Choice;
 /// Country of the proprietary identification scheme.
 /// </summary>
 [IsoId("_RCMa1dp-Ed-ak6NoX_4Aeg_-1064528879")]
+[IsoDisplayName(@"Domestic")]
 public interface IDomestic : IIdentificationSource1Choice, IIsoChoiceVariant
 {
     /// <summary>

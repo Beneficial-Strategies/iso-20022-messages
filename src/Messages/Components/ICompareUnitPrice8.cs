@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a unit price.
 /// </summary>
 [IsoId("_LRvgwU6YEeyEpI66tm807w")]
+[IsoDisplayName(@"Compare Unit Price")]
 public interface ICompareUnitPrice8 : IIsoComponent
 {
     /// <summary>

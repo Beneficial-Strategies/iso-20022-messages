@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sensible data associated with the payment card performing the transaction.
 /// </summary>
 [IsoId("_SqR5xwEcEeCQm6a_G2yO_w_-540118057")]
+[IsoDisplayName(@"Plain Card Data")]
 public interface IPlainCardData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPlainCardData1 : IIsoComponent
     [IsoId("_SqR5yAEcEeCQm6a_G2yO_w_-1641712788")]
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
+    [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
     Min8Max28NumericText PAN { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPlainCardData1 : IIsoComponent
     [IsoId("_SqR5yQEcEeCQm6a_G2yO_w_-1673683552")]
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
     Min2Max3NumericText? CardSequenceNumber { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPlainCardData1 : IIsoComponent
     [IsoId("_SqR5ygEcEeCQm6a_G2yO_w_-1981754175")]
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? EffectiveDate { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IPlainCardData1 : IIsoComponent
     [IsoId("_SqR5ywEcEeCQm6a_G2yO_w_2121563308")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth ExpiryDate { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IPlainCardData1 : IIsoComponent
     [IsoId("_SqR5zAEcEeCQm6a_G2yO_w_1887688472")]
     [DisplayName("Service Code")]
     [IsoXmlTag("SvcCd")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? ServiceCode { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IPlainCardData1 : IIsoComponent
     [IsoId("_SqR5zQEcEeCQm6a_G2yO_w_-1854751741")]
     [DisplayName("Track Data")]
     [IsoXmlTag("TrckData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITrackData1> TrackData { get; }
 
     /// <summary>

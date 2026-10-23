@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralType1Choice;
 /// Type of collateral expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_AYhDI9okEeC60axPepSq7g_-109189380")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICollateralType1Choice, IIsoChoiceVariant
 {
     /// <summary>

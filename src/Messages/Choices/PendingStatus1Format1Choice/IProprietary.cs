@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus1Format1Choice;
 
 /// <summary>Pending status of the notification advice in a proprietary form.</summary>
 [IsoId("_pRDtcaUdEfCnE_wCEfCqTA")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPendingStatus1Format1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

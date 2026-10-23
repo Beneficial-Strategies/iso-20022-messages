@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provide processing status information of a standing instruction request.
 /// </summary>
 [IsoId("_Rk6tZ9p-Ed-ak6NoX_4Aeg_-538958782")]
+[IsoDisplayName(@"Corporate Action Standing Instruction Processing Status")]
 public interface ICorporateActionStandingInstructionProcessingStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICorporateActionStandingInstructionProcessingStatus1 : IIsoComp
     [IsoId("_RlD3Udp-Ed-ak6NoX_4Aeg_-495553232")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Construct used by a central counterparty to define the size of the aggregate quantum of resources available from a clearing member.
 /// </summary>
 [IsoId("_cu3rILV3EeeKi_hRJkOpmQ")]
+[IsoDisplayName(@"Available Financial Resources Amount")]
 public interface IAvailableFinancialResourcesAmount1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IAvailableFinancialResourcesAmount1 : IIsoComponent
     [IsoId("_WGvdAK_uEeaE9YROwd69hA")]
     [DisplayName("CCP Skin In The Game")]
     [IsoXmlTag("CCPSkinInTheGame")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportingAssetBreakdown1> CCPSkinInTheGame { get; }
 
     /// <summary>

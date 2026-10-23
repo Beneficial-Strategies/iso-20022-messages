@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of adjustment applied to the amount of goods/services by means of a code or free text.
 /// </summary>
 [IsoId("_HQHgwBrXEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Adjustment Type 1 Choice")]
 public interface IAdjustmentType1Choice : IIsoChoice { }

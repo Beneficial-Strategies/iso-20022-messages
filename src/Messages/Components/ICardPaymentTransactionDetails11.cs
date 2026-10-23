@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transaction in the authorisation response contained in a batch.
 /// </summary>
 [IsoId("_x1MNYS8PEeKW5usMQLtzqw")]
+[IsoDisplayName(@"Card Payment Transaction Details")]
 public interface ICardPaymentTransactionDetails11 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICardPaymentTransactionDetails11 : IIsoComponent
     [IsoId("_x_A3yS8PEeKW5usMQLtzqw")]
     [DisplayName("Detailed Amount")]
     [IsoXmlTag("DtldAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount2> DetailedAmount { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICardPaymentTransactionDetails11 : IIsoComponent
     [IsoId("_x_A3zS8PEeKW5usMQLtzqw")]
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidityDate { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface ICardPaymentTransactionDetails11 : IIsoComponent
     [IsoId("_x_A31S8PEeKW5usMQLtzqw")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

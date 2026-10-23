@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Group of software packages related to a group of POIComponent of the POI System.
 /// </summary>
 [IsoId("_xUxwkS8SEeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Terminal Package Type")]
 public interface ITerminalPackageType2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITerminalPackageType2 : IIsoComponent
     [IsoId("_xgNkgS8SEeu125Ip9zFcsQ")]
     [DisplayName("POI Component Identification")]
     [IsoXmlTag("POICmpntId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponentIdentification2> POIComponentIdentification { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ITerminalPackageType2 : IIsoComponent
     [IsoId("_xgNkgy8SEeu125Ip9zFcsQ")]
     [DisplayName("Package")]
     [IsoXmlTag("Packg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPackageType2> Package { get; }
 }

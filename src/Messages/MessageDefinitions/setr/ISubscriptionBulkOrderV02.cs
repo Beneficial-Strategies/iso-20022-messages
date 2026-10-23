@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("_zvolqNE7Ed-BzquC8wXy7w_-2097123010")]
 [IsoMessage("setr.007.001.02", "setr.007.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.007.001.02")]
+[Description(@"Scope|The SubscriptionBulkOrder message is sent by an instructing party, eg, an investment manager or its authorised representative, to an executing party, eg, a transfer agent. There may be one or more intermediary parties between the instructing party and the executing party. The intermediary party is, for example, an intermediary or a concentrator.|This message is used to instruct the executing party to subscribe to a financial instrument, for two or more accounts.|Usage|The SubscriptionBulkOrder message is used to bulk several individual orders into one bulk order. The individual orders come from different instructing parties, ie, account owners, but are related to the same financial instrument. This message will be typically be used by a party collecting orders and bulking these individual orders into one bulk order before sending it to another party.|For a single subscription order, the SubscriptionMultipleOrder message, not the SubscriptionBulkOrder message, must be used.|If there are subscription orders for different financial instruments but for the same account, then the SubscriptionMultipleOrder must be used.")]
+[IsoDisplayName(@"Subscription Bulk Order V")]
 public interface ISubscriptionBulkOrderV02 : IOuterRecord
 {
     /// <summary>
@@ -42,6 +44,7 @@ public interface ISubscriptionBulkOrderV02 : IOuterRecord
     [IsoId("_zvyWotE7Ed-BzquC8wXy7w_152526577")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -58,6 +61,9 @@ public interface ISubscriptionBulkOrderV02 : IOuterRecord
     [IsoId("_zvyWpNE7Ed-BzquC8wXy7w_2102293267")]
     [DisplayName("Intermediary Details")]
     [IsoXmlTag("IntrmyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary4> IntermediaryDetails { get; }
 
     /// <summary>
@@ -74,5 +80,6 @@ public interface ISubscriptionBulkOrderV02 : IOuterRecord
     [IsoId("_zvyWptE7Ed-BzquC8wXy7w_862111806")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

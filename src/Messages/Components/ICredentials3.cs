@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Credentials3.
 /// </summary>
 [IsoId("_90C5AW9oEe6DxcrvCrq6hQ")]
+[IsoDisplayName(@"Credentials3")]
 public interface ICredentials3 : IIsoComponent
 {
     /// <summary>

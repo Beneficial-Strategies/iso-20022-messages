@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType51Choice;
 /// Standard code to specify the type of gross dividend rate.
 /// </summary>
 [IsoId("_ctdbA5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRateType51Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action event.
 /// </summary>
 [IsoId("_Td6PVdp-Ed-ak6NoX_4Aeg_2005876121")]
+[IsoDisplayName(@"Corporate Action Information")]
 public interface ICorporateActionInformation2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICorporateActionInformation2 : IIsoComponent
     [IsoId("_Td6PV9p-Ed-ak6NoX_4Aeg_-561952179")]
     [DisplayName("Issuer Corporate Action Identification")]
     [IsoXmlTag("IssrCorpActnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerCorporateActionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICorporateActionInformation2 : IIsoComponent
     [IsoId("_Td6PWNp-Ed-ak6NoX_4Aeg_-1997259025")]
     [DisplayName("Corporate Action Processing Identification")]
     [IsoXmlTag("CorpActnPrcgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CorporateActionProcessingIdentification { get; }
 
     /// <summary>
@@ -73,5 +78,6 @@ public interface ICorporateActionInformation2 : IIsoComponent
     [IsoId("_TeEAUdp-Ed-ak6NoX_4Aeg_301729875")]
     [DisplayName("Other Underlying Security")]
     [IsoXmlTag("OthrUndrlygScty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentDescription3> OtherUnderlyingSecurity { get; }
 }

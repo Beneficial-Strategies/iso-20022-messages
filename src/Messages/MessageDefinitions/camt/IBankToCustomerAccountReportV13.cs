@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
     "BkToCstmrAcctRpt",
     "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13"
 )]
+[IsoDisplayName(@"Bank To Customer Account Report V13")]
 public interface IBankToCustomerAccountReportV13 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface IBankToCustomerAccountReportV13 : IOuterRecord
     /// </summary>
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountReport37> Report { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface IBankToCustomerAccountReportV13 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

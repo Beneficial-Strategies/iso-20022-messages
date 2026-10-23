@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unencrypted sensitive data of a token.
 /// </summary>
 [IsoId("_eHaZsJx0EeuwYeL1lHu9zw")]
+[IsoDisplayName(@"Token")]
 public interface IToken3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IToken3 : IIsoComponent
     [IsoId("_UWuGQZx1EeuwYeL1lHu9zw")]
     [DisplayName("Payment Token")]
     [IsoXmlTag("PmtTkn")]
+    [IsoSimpleType(IsoSimpleType.Max19NumericText)]
     Max19NumericText? PaymentToken { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IToken3 : IIsoComponent
     [IsoId("_XmspQZx1EeuwYeL1lHu9zw")]
     [DisplayName("Token Expiry Date")]
     [IsoXmlTag("TknXpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? TokenExpiryDate { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IToken3 : IIsoComponent
     [IsoId("_f9WyMZx1EeuwYeL1lHu9zw")]
     [DisplayName("Token Requestor Identification")]
     [IsoXmlTag("TknRqstrId")]
+    [IsoSimpleType(IsoSimpleType.Max11NumericText)]
     Max11NumericText? TokenRequestorIdentification { get; }
 
     /// <summary>
@@ -42,6 +46,8 @@ public interface IToken3 : IIsoComponent
     [IsoId("_Z5LCMZx1EeuwYeL1lHu9zw")]
     [DisplayName("Token Assurance Data")]
     [IsoXmlTag("TknAssrncData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TokenAssuranceData { get; }
 
     /// <summary>
@@ -50,6 +56,7 @@ public interface IToken3 : IIsoComponent
     [IsoId("_b9fDUZx1EeuwYeL1lHu9zw")]
     [DisplayName("Token Assurance Method")]
     [IsoXmlTag("TknAssrncMtd")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? TokenAssuranceMethod { get; }
 
     /// <summary>
@@ -58,6 +65,8 @@ public interface IToken3 : IIsoComponent
     [IsoId("_kyOSEcmpEeuF1f85xf6dbg")]
     [DisplayName("Token Reference Identification")]
     [IsoXmlTag("TknRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TokenReferenceIdentification { get; }
 
     /// <summary>
@@ -66,6 +75,7 @@ public interface IToken3 : IIsoComponent
     [IsoId("_IQTfUZx7EeuwYeL1lHu9zw")]
     [DisplayName("Token Initiated Indicator")]
     [IsoXmlTag("TknInittdInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TokenInitiatedIndicator { get; }
 
     /// <summary>
@@ -82,6 +92,8 @@ public interface IToken3 : IIsoComponent
     [IsoId("_0oB0AZyBEeuo7tDc4CDHXg")]
     [DisplayName("Other Storage Location")]
     [IsoXmlTag("OthrStorgLctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherStorageLocation { get; }
 
     /// <summary>
@@ -98,6 +110,8 @@ public interface IToken3 : IIsoComponent
     [IsoId("_6PsAEZyBEeuo7tDc4CDHXg")]
     [DisplayName("Other Protection Method")]
     [IsoXmlTag("OthrPrtcnMtd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherProtectionMethod { get; }
 
     /// <summary>
@@ -114,5 +128,6 @@ public interface IToken3 : IIsoComponent
     [IsoId("_8tvW4ZyBEeuo7tDc4CDHXg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

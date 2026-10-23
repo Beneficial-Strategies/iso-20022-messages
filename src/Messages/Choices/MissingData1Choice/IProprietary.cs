@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MissingData1Choice;
 /// Missing data type, in a proprietary form.
 /// </summary>
 [IsoId("_MN6wlNjMEeq5MfBBxQig1Q")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IMissingData1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IMissingData1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

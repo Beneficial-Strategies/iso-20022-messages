@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a vote per agenda resolution and vote for all agenda resolutions.
 /// </summary>
 [IsoId("_c7P-kK-4EemJ1NnLPsTFaw")]
+[IsoDisplayName(@"Vote 13 Choice")]
 public interface IVote13Choice : IIsoChoice { }

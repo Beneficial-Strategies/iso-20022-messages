@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification25Choice;
 /// Identifier for Belgian securities.
 /// </summary>
 [IsoId("_cH-V1TnxEeabspMEjqY5TQ")]
+[IsoDisplayName(@"Belgian")]
 public interface IBelgian : ISecurityIdentification25Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBelgian : ISecurityIdentification25Choice, IIsoChoiceVariant
     /// Identifier for Belgian securities.
     /// </summary>
     [IsoXmlTag("Belgn")]
+    [IsoSimpleType(IsoSimpleType.BelgianIdentifier)]
     BelgianIdentifier Value { get; }
 }

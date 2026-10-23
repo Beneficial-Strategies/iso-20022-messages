@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementBasis8Choice;
 /// Statement basis expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_bZQ9MTp-EeWVrPy0StzzSg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IStatementBasis8Choice, IIsoChoiceVariant
 {
     /// <summary>

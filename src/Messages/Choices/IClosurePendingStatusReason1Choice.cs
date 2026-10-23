@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a closure pending status reason.
 /// </summary>
 [IsoId("_UW638WCLEeabZtzjEVWYCQ")]
+[IsoDisplayName(@"Closure Pending Status Reason 1 Choice")]
 public interface IClosurePendingStatusReason1Choice : IIsoChoice { }

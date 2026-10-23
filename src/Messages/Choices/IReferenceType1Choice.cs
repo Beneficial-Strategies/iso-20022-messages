@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Type of reference.
 /// </summary>
 [IsoId("_Qjr00MeUEeysUoBKYz1Ytw")]
+[IsoDisplayName(@"Reference Type 1 Choice")]
 public interface IReferenceType1Choice : IIsoChoice { }

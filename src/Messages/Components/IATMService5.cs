@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Inquiry service provided by the ATM inside the session.
 /// </summary>
 [IsoId("_ltY8kYqvEeSIDtZ76p6McQ")]
+[IsoDisplayName(@"ATM Service")]
 public interface IATMService5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMService5 : IIsoComponent
     [IsoId("_l6DfkYqvEeSIDtZ76p6McQ")]
     [DisplayName("Service Reference")]
     [IsoXmlTag("SvcRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ServiceReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMService5 : IIsoComponent
     [IsoId("_l6Dfk4qvEeSIDtZ76p6McQ")]
     [DisplayName("ATM Service Code")]
     [IsoXmlTag("ATMSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ATMServiceCode { get; }
 
     /// <summary>

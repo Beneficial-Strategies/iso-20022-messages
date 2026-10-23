@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Transaction39.
 /// </summary>
 [IsoId("_fm5Z8aEOEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Transaction39")]
 public interface IATMTransaction39 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IATMTransaction39 : IIsoComponent
     /// </summary>
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction7> Action { get; }
 
     /// <summary>
@@ -86,6 +88,7 @@ public interface IATMTransaction39 : IIsoComponent
     /// </summary>
     [DisplayName("Account To")]
     [IsoXmlTag("AcctTo")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardAccount19> AccountTo { get; }
 
     /// <summary>
@@ -121,6 +124,7 @@ public interface IATMTransaction39 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount18> AdditionalCharge { get; }
 
     /// <summary>
@@ -177,6 +181,7 @@ public interface IATMTransaction39 : IIsoComponent
     /// </summary>
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 
     /// <summary>
@@ -184,5 +189,6 @@ public interface IATMTransaction39 : IIsoComponent
     /// </summary>
     [DisplayName("Account Information")]
     [IsoXmlTag("AcctInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardAccount18> AccountInformation { get; }
 }

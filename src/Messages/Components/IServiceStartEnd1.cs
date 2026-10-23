@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Start or end of service.
 /// </summary>
 [IsoId("_rqeg4V1pEeeu75xdwwAXQw")]
+[IsoDisplayName(@"Service Start End")]
 public interface IServiceStartEnd1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IServiceStartEnd1 : IIsoComponent
     [IsoId("_r1ooAV1pEeeu75xdwwAXQw")]
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Location { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IServiceStartEnd1 : IIsoComponent
     [IsoId("_r1ooA11pEeeu75xdwwAXQw")]
     [DisplayName("Location Code")]
     [IsoXmlTag("LctnCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LocationCode { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IServiceStartEnd1 : IIsoComponent
     [IsoId("_r1ooCV1pEeeu75xdwwAXQw")]
     [DisplayName("Date And Time")]
     [IsoXmlTag("DtAndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DateAndTime { get; }
 
     /// <summary>

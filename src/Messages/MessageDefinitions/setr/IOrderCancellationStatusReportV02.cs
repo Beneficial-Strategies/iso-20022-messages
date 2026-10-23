@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("_gilh-NE7Ed-BzquC8wXy7w_-1859459709")]
 [IsoMessage("setr.017.001.02", "setr.017.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.017.001.02")]
+[Description(@"Scope|The OrderCancellationStatusReport is sent by an executing party, eg, a transfer agent, to the instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.|The message gives the status of an order cancellation instruction message that was previously sent by the instructing party.|Usage|The OrderCancellationStatusReport message is used to report the status of an order cancellation instruction message that was previously sent by the instructing party. The message can be used to report one of the following:|- the cancellation is accepted for further processing, or|- the cancellation is rejected, or|- the order has been cancelled.|When the cancellation is rejected, the reason for the rejection must be specified.")]
+[IsoDisplayName(@"Order Cancellation Status Report V")]
 public interface IOrderCancellationStatusReportV02 : IOuterRecord
 {
     /// <summary>
@@ -28,6 +30,9 @@ public interface IOrderCancellationStatusReportV02 : IOuterRecord
     [IsoId("_gilh-dE7Ed-BzquC8wXy7w_339506897")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> RelatedReference { get; }
 
     /// <summary>
@@ -36,6 +41,9 @@ public interface IOrderCancellationStatusReportV02 : IOuterRecord
     [IsoId("_gilh-tE7Ed-BzquC8wXy7w_-1972675840")]
     [DisplayName("Other Reference")]
     [IsoXmlTag("OthrRef")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> OtherReference { get; }
 
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of transaction type, corporate action event or settlement transaction.
 /// </summary>
 [IsoId("_8bir7ZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Settlement Or Corporate Action Event 16 Choice")]
 public interface ISettlementOrCorporateActionEvent16Choice : IIsoChoice { }

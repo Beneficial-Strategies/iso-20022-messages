@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStandingInstructionDat
 /// Settlement standing instruction database expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_5myE3pNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlementStandingInstructionDatabase5Choice, IIsoChoiceVariant
 {
     /// <summary>

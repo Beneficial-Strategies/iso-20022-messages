@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other parties&apos; information.
 /// </summary>
 [IsoId("_6Cg-R9LCEeiN28wlpBQScw")]
+[IsoDisplayName(@"Other Parties")]
 public interface IOtherParties33 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IOtherParties33 : IIsoComponent
     [IsoId("_6T63V9LCEeiN28wlpBQScw")]
     [DisplayName("Investor")]
     [IsoXmlTag("Invstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentificationAndAccount167> Investor { get; }
 
     /// <summary>

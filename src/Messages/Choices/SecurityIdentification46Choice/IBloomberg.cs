@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice;
 
 /// <summary>Bloomberg identifier.</summary>
 [IsoId("b2899719-5f62-48e8-9016-c3622ef01f7b")]
+[IsoDisplayName(@"Bloomberg")]
 public interface IBloomberg : ISecurityIdentification46Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

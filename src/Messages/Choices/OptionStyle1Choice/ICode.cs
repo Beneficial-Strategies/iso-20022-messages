@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionStyle1Choice;
 /// Option style is defined using a code.
 /// </summary>
 [IsoId("_Q_EOV9p-Ed-ak6NoX_4Aeg_708155694")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOptionStyle1Choice, IIsoChoiceVariant
 {
     /// <summary>

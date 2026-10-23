@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Position Set Collateral Dimensions3.
 /// </summary>
 [IsoId("_W4kaVRT8Ee61h9tfoUrWyw")]
+[IsoDisplayName(@"Position Set Collateral Dimensions3")]
 public interface IPositionSetCollateralDimensions3 : IIsoComponent
 {
     /// <summary>

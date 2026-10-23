@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References83Choice;
 
 /// <summary>Specifies the trade identification.</summary>
 [IsoId("_Wt0M6KgzEfCXwLUUylXgrQ")]
+[IsoDisplayName(@"Trade Identification")]
 public interface ITradeIdentification : IReferences83Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

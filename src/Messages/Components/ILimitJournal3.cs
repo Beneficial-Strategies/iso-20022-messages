@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit Journal3.
 /// </summary>
 [IsoId("_tqQ9pZEhEe-Goq1fIU72qA")]
+[IsoDisplayName(@"Limit Journal3")]
 public interface ILimitJournal3 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface ILimitJournal3 : IIsoComponent
     /// </summary>
     [DisplayName("Journal Entry")]
     [IsoXmlTag("JrnlNtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILimitJournalEntry3> JournalEntry { get; }
 }

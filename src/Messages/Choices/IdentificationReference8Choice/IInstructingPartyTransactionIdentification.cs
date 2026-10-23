@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference8Choice;
 /// Unambiguous identification of the confirmation transaction as known by the instructing party.
 /// </summary>
 [IsoId("_AcF7ktokEeC60axPepSq7g_1236461558")]
+[IsoDisplayName(@"Instructing Party Transaction Identification")]
 public interface IInstructingPartyTransactionIdentification
     : IIdentificationReference8Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface IInstructingPartyTransactionIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("InstgPtyTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Transmit Response message.
 /// </summary>
 [IsoId("_EFdOMN7JEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Device Transmit Message Response")]
 public interface IDeviceTransmitMessageResponse1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IDeviceTransmitMessageResponse1 : IIsoComponent
     [IsoId("_LIz8MN7JEeiwsev40qZGEQ")]
     [DisplayName("Received Message")]
     [IsoXmlTag("RcvdMsg")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary? ReceivedMessage { get; }
 }

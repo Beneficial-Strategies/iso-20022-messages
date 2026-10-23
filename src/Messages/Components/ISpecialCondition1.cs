@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Special conditions for the loan.
 /// </summary>
 [IsoId("_pqRrgdOCEeSQ_-lmj1tzfw")]
+[IsoDisplayName(@"Special Condition")]
 public interface ISpecialCondition1 : IIsoComponent
 {
     /// <summary>

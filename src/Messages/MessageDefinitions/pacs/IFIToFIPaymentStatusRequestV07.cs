@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// </remarks>
 [IsoId("8fa60901-04a4-4c2d-8d76-a9c734a35cb6")]
 [IsoMessage("pacs.028.001.07", "FIToFIPmtStsReq", "urn:iso:std:iso:20022:tech:xsd:pacs.028.001.07")]
+[Description(@"Scope|The FinancialInstitutionToFinancialInstitutionPaymentStatusRequest message is sent by the debtor agent to the creditor agent, directly or through other agents and/or a payment clearing and settlement system. It is used to request a FIToFIPaymentStatusReport message containing information on the status of a previously sent instruction.|Usage|The FIToFIPaymentStatusRequest message is exchanged between agents to request status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.|The FIToFIPaymentStatusRequest message can be used to request information about the status (such as rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).|The FIToFIPaymentStatusRequest message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.|The FIToFIPaymentStatusRequest message can be used in domestic and cross-border scenarios.")]
+[IsoDisplayName(@"FI To FI Payment Status Request V07")]
 public interface IFIToFIPaymentStatusRequestV07 : IOuterRecord
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface IFIToFIPaymentStatusRequestV07 : IOuterRecord
     /// </summary>
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalGroupInformation27> OriginalGroupInformation { get; }
 
     /// <summary>
@@ -40,6 +43,7 @@ public interface IFIToFIPaymentStatusRequestV07 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction171> TransactionInformation { get; }
 
     /// <summary>
@@ -47,5 +51,6 @@ public interface IFIToFIPaymentStatusRequestV07 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

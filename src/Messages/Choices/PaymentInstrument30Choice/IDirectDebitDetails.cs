@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument30Choice;
 
 /// <summary>Direct debit details.</summary>
 [IsoId("d0d78763-1344-4421-ad1e-957bcd78cdd2")]
+[IsoDisplayName(@"Direct Debit Details")]
 public interface IDirectDebitDetails : IPaymentInstrument30Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contents of an Undertaking Amendment message.
 /// </summary>
 [IsoId("_98eF8nltEeG7BsjMvd1mEw_1389753684")]
+[IsoDisplayName(@"Undertaking Amendment Message")]
 public interface IUndertakingAmendmentMessage1 : IIsoComponent
 {
     /// <summary>

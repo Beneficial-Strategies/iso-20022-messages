@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the requested reporting period.
 /// </summary>
 [IsoId("_FEM-0Yy1EeeGkvZr3jtnCQ")]
+[IsoDisplayName(@"Reporting Period")]
 public interface IReportingPeriod2 : IIsoComponent
 {
     /// <summary>

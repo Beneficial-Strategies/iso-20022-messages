@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Repurchase agreement where a single, pre defined, financial instrument is sold and repurchased.
 /// </summary>
 [IsoId("_u1WsobcREeabfchHYoktpA")]
+[IsoDisplayName(@"Specific Collateral")]
 public interface ISpecificCollateral2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Programme Mode4.
 /// </summary>
 [IsoId("__--R4W3bEe6dwbOqHXrHWg")]
+[IsoDisplayName(@"Programme Mode4")]
 public interface IProgrammeMode4 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IProgrammeMode4 : IIsoComponent
     /// </summary>
     [DisplayName("Proposed Identification")]
     [IsoXmlTag("PropsdId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> ProposedIdentification { get; }
 
     /// <summary>
@@ -30,6 +32,7 @@ public interface IProgrammeMode4 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalIdentification { get; }
 
     /// <summary>

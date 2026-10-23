@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a document.
 /// </summary>
 [IsoId("_wy9ZETEyEe6g-ffJsqGiSA")]
+[Description(@"Information about a document.")]
+[IsoDisplayName(@"Document15")]
 public interface IDocument15 : IIsoComponent
 {
     /// <summary>

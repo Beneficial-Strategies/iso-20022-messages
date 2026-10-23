@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_R3P4jTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("pain.018.001.04", "MndtSspnsnReq", "urn:iso:std:iso:20022:tech:xsd:pain.018.001.04")]
+[IsoDisplayName(@"Mandate Suspension Request V04")]
 public interface IMandateSuspensionRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IMandateSuspensionRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Underlying Suspension Details")]
     [IsoXmlTag("UndrlygSspnsnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMandateSuspension4> UnderlyingSuspensionDetails { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IMandateSuspensionRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

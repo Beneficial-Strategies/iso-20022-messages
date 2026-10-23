@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Capabilities of the ATM terminal.
 /// </summary>
 [IsoId("_uehdQYn6EeShMpas3885ww")]
+[IsoDisplayName(@"Point Of Interaction Capabilities")]
 public interface IPointOfInteractionCapabilities5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPointOfInteractionCapabilities5 : IIsoComponent
     [IsoId("_uqvUUYn6EeShMpas3885ww")]
     [DisplayName("Card Read Data")]
     [IsoXmlTag("CardRdData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataReading4Code> CardReadData { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPointOfInteractionCapabilities5 : IIsoComponent
     [IsoId("_UHJrcIn7EeShMpas3885ww")]
     [DisplayName("Card Write Data")]
     [IsoXmlTag("CardWrtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataReading4Code> CardWriteData { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPointOfInteractionCapabilities5 : IIsoComponent
     [IsoId("_uqvUU4n6EeShMpas3885ww")]
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardholderVerificationCapability3Code> Authentication { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IPointOfInteractionCapabilities5 : IIsoComponent
     [IsoId("_uqvUVYn6EeShMpas3885ww")]
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? PINLengthCapabilities { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IPointOfInteractionCapabilities5 : IIsoComponent
     [IsoId("_uqvUV4n6EeShMpas3885ww")]
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ApprovalCodeLength { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IPointOfInteractionCapabilities5 : IIsoComponent
     [IsoId("_XMgnoC7zEeWc7f-D6ByqMg")]
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaxScriptLength { get; }
 
     /// <summary>
@@ -65,5 +72,6 @@ public interface IPointOfInteractionCapabilities5 : IIsoComponent
     [IsoId("_uqvUWYn6EeShMpas3885ww")]
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardCaptureCapable { get; }
 }

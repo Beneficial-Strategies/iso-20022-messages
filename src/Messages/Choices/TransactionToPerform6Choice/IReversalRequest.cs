@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform6Choice;
 /// <summary>
 /// Reversal Request.
 /// </summary>
+[IsoDisplayName(@"Reversal Request")]
 public interface IReversalRequest : ITransactionToPerform6Choice, IIsoChoiceVariant
 {
     /// <summary>

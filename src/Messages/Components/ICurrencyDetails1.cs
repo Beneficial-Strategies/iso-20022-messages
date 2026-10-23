@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of a currency.
 /// </summary>
 [IsoId("_Ycu9YGkGEeS7zPBpvm732w")]
+[IsoDisplayName(@"Currency Details")]
 public interface ICurrencyDetails1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICurrencyDetails1 : IIsoComponent
     [IsoId("_qeujMGkGEeS7zPBpvm732w")]
     [DisplayName("Numeric Code")]
     [IsoXmlTag("NmrcCd")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText NumericCode { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICurrencyDetails1 : IIsoComponent
     [IsoId("_3mVSoGkGEeS7zPBpvm732w")]
     [DisplayName("Decimal")]
     [IsoXmlTag("Dcml")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Decimal { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface ICurrencyDetails1 : IIsoComponent
     [IsoId("_8Ry8MGkGEeS7zPBpvm732w")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 }

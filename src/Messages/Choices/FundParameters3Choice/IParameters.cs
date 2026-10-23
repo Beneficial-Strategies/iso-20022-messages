@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundParameters3Choice;
 /// </summary>
 [IsoId("_Q6l-Atp-Ed-ak6NoX_4Aeg_-886438823")]
 [IsoXmlTag("Params")]
+[IsoDisplayName(@"Parameters")]
 public interface IParameters : IFundParameters3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IParameters : IFundParameters3Choice, IIsoChoiceVariant
     [IsoId("_Q6c0ENp-Ed-ak6NoX_4Aeg_651660733")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument17> FinancialInstrumentDetails { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IParameters : IFundParameters3Choice, IIsoChoiceVariant
     [IsoId("_Q6c0Edp-Ed-ak6NoX_4Aeg_-345411620")]
     [DisplayName("Fund Management Company")]
     [IsoXmlTag("FndMgmtCpny")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification2Choice> FundManagementCompany { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IParameters : IFundParameters3Choice, IIsoChoiceVariant
     [IsoId("_Q6c0Etp-Ed-ak6NoX_4Aeg_-1342483973")]
     [DisplayName("Date From")]
     [IsoXmlTag("DtFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateFrom { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of a contact person.
 /// </summary>
 [IsoId("_4-TwPfM4Eei4qfiLgRIZBA")]
+[IsoDisplayName(@"Contact")]
 public interface IContact3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IContact3 : IIsoComponent
     [IsoId("_4-UXSPM4Eei4qfiLgRIZBA")]
     [DisplayName("Central Phone Number")]
     [IsoXmlTag("CntrlPhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? CentralPhoneNumber { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IContact3 : IIsoComponent
     [IsoId("_4-TwPvM4Eei4qfiLgRIZBA")]
     [DisplayName("Property Phone Number")]
     [IsoXmlTag("PrprtyPhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PropertyPhoneNumber { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IContact3 : IIsoComponent
     [IsoId("_4-UXQ_M4Eei4qfiLgRIZBA")]
     [DisplayName("Toll Free Phone Number")]
     [IsoXmlTag("TollFreePhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? TollFreePhoneNumber { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface IContact3 : IIsoComponent
     [IsoId("_4-UXSvM4Eei4qfiLgRIZBA")]
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Email { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IContact3 : IIsoComponent
     [IsoId("_4-UXRvM4Eei4qfiLgRIZBA")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface IContact3 : IIsoComponent
     [IsoId("_4-UXQPM4Eei4qfiLgRIZBA")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? URLAddress { get; }
 
     /// <summary>

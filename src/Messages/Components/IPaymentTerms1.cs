@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the payment terms of the underlying transaction.
 /// </summary>
 [IsoId("_Prd4dNp-Ed-ak6NoX_4Aeg_851180831")]
+[IsoDisplayName(@"Payment Terms")]
 public interface IPaymentTerms1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentTerms1 : IIsoComponent
     [IsoId("_Prd4ddp-Ed-ak6NoX_4Aeg_1227100069")]
     [DisplayName("Other Payment Terms")]
     [IsoXmlTag("OthrPmtTerms")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text OtherPaymentTerms { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPaymentTerms1 : IIsoComponent
     [IsoId("_Prd4d9p-Ed-ak6NoX_4Aeg_791045590")]
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Percentage { get; }
 
     /// <summary>

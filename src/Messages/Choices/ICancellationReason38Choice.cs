@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason why the related instruction is cancelled, or the related cancellation request is executed.
 /// </summary>
 [IsoId("_PYWmAOBOEeiVRbNQx5-Vhg")]
+[IsoDisplayName(@"Cancellation Reason 38 Choice")]
 public interface ICancellationReason38Choice : IIsoChoice { }

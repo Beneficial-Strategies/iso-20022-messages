@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organisation44.
 /// </summary>
 [IsoId("_IKfBsTFKEe651u5xu3f5iw")]
+[IsoDisplayName(@"Organisation44")]
 public interface IOrganisation44 : IIsoComponent
 {
     /// <summary>

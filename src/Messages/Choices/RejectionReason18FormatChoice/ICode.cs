@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason18FormatChoice;
 /// Standard code to specify the reason of a rejection of an election advice.
 /// </summary>
 [IsoId("_RoV01Np-Ed-ak6NoX_4Aeg_202927158")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectionReason18FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

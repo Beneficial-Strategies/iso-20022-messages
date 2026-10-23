@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_jKsTE5t3Ee-wQIOX0djF2w")]
 [IsoMessage("seev.039.002.13", "CorpActnCxlAdvc", "urn:iso:std:iso:20022:tech:xsd:seev.039.002.13")]
+[IsoDisplayName(@"Corporate Action Cancellation Advice002V13")]
 public interface ICorporateActionCancellationAdvice002V13 : IOuterRecord
 {
     /// <summary>
@@ -46,6 +47,7 @@ public interface ICorporateActionCancellationAdvice002V13 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<RestrictedFINZMax8000Text> AdditionalText { get; }
 
     /// <summary>
@@ -53,6 +55,7 @@ public interface ICorporateActionCancellationAdvice002V13 : IOuterRecord
     /// </summary>
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public interface ICorporateActionCancellationAdvice002V13 : IOuterRecord
     /// </summary>
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> PayingAgent { get; }
 
     /// <summary>
@@ -67,6 +71,7 @@ public interface ICorporateActionCancellationAdvice002V13 : IOuterRecord
     /// </summary>
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface ICorporateActionCancellationAdvice002V13 : IOuterRecord
     /// </summary>
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> ResellingAgent { get; }
 
     /// <summary>
@@ -102,6 +108,7 @@ public interface ICorporateActionCancellationAdvice002V13 : IOuterRecord
     /// </summary>
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> SolicitationAgent { get; }
 
     /// <summary>
@@ -116,5 +123,6 @@ public interface ICorporateActionCancellationAdvice002V13 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

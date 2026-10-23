@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference16Choice;
 /// <summary>
 /// Collateral Transaction Identification.
 /// </summary>
+[IsoDisplayName(@"Collateral Transaction Identification")]
 public interface ICollateralTransactionIdentification
     : IIdentificationReference16Choice,
         IIsoChoiceVariant

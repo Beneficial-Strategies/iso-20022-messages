@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Element related to recurring transaction.
 /// </summary>
 [IsoId("__7K_AbZiEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Recurring Transaction7")]
 public interface IRecurringTransaction7 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IRecurringTransaction7 : IIsoComponent
     [IsoId("__8FlF7ZiEfCUZfsQO4rYeA")]
     [DisplayName("Grace Period")]
     [IsoXmlTag("GracePrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGracePeriod1> GracePeriod { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface IRecurringTransaction7 : IIsoComponent
     [IsoId("__8FlHbZiEfCUZfsQO4rYeA")]
     [DisplayName("Plan Notice")]
     [IsoXmlTag("PlanNtce")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActionMessage12> PlanNotice { get; }
 }

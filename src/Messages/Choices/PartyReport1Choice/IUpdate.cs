@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyReport1Choice;
 /// </summary>
 [IsoId("_GejBEDbuEeeYhaZ6bvG1Xg")]
 [IsoXmlTag("Upd")]
+[IsoDisplayName(@"Update")]
 public interface IUpdate : IPartyReport1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IUpdate : IPartyReport1Choice, IIsoChoiceVariant
     [IsoId("_3j8_ITbvEeeYhaZ6bvG1Xg")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -50,6 +53,7 @@ public interface IUpdate : IPartyReport1Choice, IIsoChoiceVariant
     [IsoId("_IffBgPH3Eeaz_YGUGLjP6A")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusDetail1> Status { get; }
 
     /// <summary>
@@ -66,5 +70,6 @@ public interface IUpdate : IPartyReport1Choice, IIsoChoiceVariant
     [IsoId("_5O9IYTbvEeeYhaZ6bvG1Xg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

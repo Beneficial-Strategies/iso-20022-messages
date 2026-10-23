@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat1Choice;
 /// </summary>
 [IsoId("_QatkFtp-Ed-ak6NoX_4Aeg_-935448733")]
 [IsoXmlTag("Amt")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount : IPriceFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

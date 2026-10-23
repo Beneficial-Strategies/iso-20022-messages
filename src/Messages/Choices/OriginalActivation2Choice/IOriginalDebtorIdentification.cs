@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalActivation2Choice;
 /// This element must be identical to the debtor identification in the original debtor activation request.
 /// </summary>
 [IsoId("_UPBU8eH7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Original Debtor Identification")]
 public interface IOriginalDebtorIdentification : IOriginalActivation2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

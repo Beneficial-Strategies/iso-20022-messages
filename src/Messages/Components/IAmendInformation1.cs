@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information specific to an amendment or cancellation.
 /// </summary>
 [IsoId("_RVa40tp-Ed-ak6NoX_4Aeg_-1270467118")]
+[IsoDisplayName(@"Amend Information")]
 public interface IAmendInformation1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IAmendInformation1 : IIsoComponent
     [IsoId("_RVa41Np-Ed-ak6NoX_4Aeg_-1270467116")]
     [DisplayName("Reconfirm Instructions")]
     [IsoXmlTag("RcnfrmInstrs")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ReconfirmInstructions { get; }
 }

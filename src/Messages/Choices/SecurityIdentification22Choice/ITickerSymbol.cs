@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification22Choice;
 /// Letters that identify a stock traded on a stock exchange. The Ticker Symbol is a short and convenient way of identifying a stock, eg, RTR.L for Reuters quoted in London.
 /// </summary>
 [IsoId("_B03cB1hxEeWDI58xzGOTTQ")]
+[IsoDisplayName(@"Ticker Symbol")]
 public interface ITickerSymbol : ISecurityIdentification22Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ITickerSymbol : ISecurityIdentification22Choice, IIsoChoiceVari
     /// Letters that identify a stock traded on a stock exchange. The Ticker Symbol is a short and convenient way of identifying a stock, for example, RTR.L for Reuters quoted in London.
     /// </summary>
     [IsoXmlTag("TckrSymb")]
+    [IsoSimpleType(IsoSimpleType.TickerIdentifier)]
     TickerIdentifier Value { get; }
 }

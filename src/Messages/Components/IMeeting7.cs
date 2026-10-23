@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Meeting7.
 /// </summary>
 [IsoId("_hzqvsZK5Ee-l-O3vIHRmRw")]
+[IsoDisplayName(@"Meeting7")]
 public interface IMeeting7 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IMeeting7 : IIsoComponent
     /// </summary>
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocationFormat1Choice> Location { get; }
 
     /// <summary>

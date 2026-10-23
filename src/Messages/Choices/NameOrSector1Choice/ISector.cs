@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NameOrSector1Choice;
 /// Represents the counterparty institutional section (such as non-financial corporation, central bank.).
 /// </summary>
 [IsoId("_6URv4YInEeWA9fc11zJf1Q")]
+[IsoDisplayName(@"Sector")]
 public interface ISector : INameOrSector1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ISector : INameOrSector1Choice, IIsoChoiceVariant
     /// System of National Accounts (SNA) Sector. Hierarchical classification of the sectors, as defined in the System of National Accounts 2008, as published by the United Nations.
     /// </summary>
     [IsoXmlTag("Sctr")]
+    [IsoSimpleType(IsoSimpleType.SNA2008SectorIdentifier)]
     SNA2008SectorIdentifier Value { get; }
 }

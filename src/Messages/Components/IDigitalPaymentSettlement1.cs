@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the information related to the digital payment settlement.
 /// </summary>
 [IsoId("_0BvvAJZaEfCShM_qO0U4ig")]
+[IsoDisplayName(@"Digital Payment Settlement1")]
 public interface IDigitalPaymentSettlement1 : IIsoComponent
 {
     /// <summary>

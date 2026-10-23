@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Special Programme Details2.
 /// </summary>
 [IsoId("_N8K_0Zm-Ee6Qpd-x8YgzaA")]
+[IsoDisplayName(@"Special Programme Details2")]
 public interface ISpecialProgrammeDetails2 : IIsoComponent
 {
     /// <summary>

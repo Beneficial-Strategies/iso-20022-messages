@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional details of the intra-balance movements data.
 /// </summary>
 [IsoId("_YX0RITneEem7JZMuWtwtsg")]
+[IsoDisplayName(@"Intra Balance Movement")]
 public interface IIntraBalanceMovement6 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IIntraBalanceMovement6 : IIsoComponent
     [IsoId("_YisESTneEem7JZMuWtwtsg")]
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StatusDate { get; }
 
     /// <summary>
@@ -97,6 +99,7 @@ public interface IIntraBalanceMovement6 : IIsoComponent
     [IsoId("_YisEUzneEem7JZMuWtwtsg")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages57> Linkages { get; }
 
     /// <summary>
@@ -121,6 +124,7 @@ public interface IIntraBalanceMovement6 : IIsoComponent
     [IsoId("_YisEXzneEem7JZMuWtwtsg")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -129,6 +133,8 @@ public interface IIntraBalanceMovement6 : IIsoComponent
     [IsoId("_YisEZzneEem7JZMuWtwtsg")]
     [DisplayName("Instruction Processing Additional Details")]
     [IsoXmlTag("InstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? InstructionProcessingAdditionalDetails { get; }
 
     /// <summary>
@@ -137,5 +143,6 @@ public interface IIntraBalanceMovement6 : IIsoComponent
     [IsoId("_YisEbzneEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

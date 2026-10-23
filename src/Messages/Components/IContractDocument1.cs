@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Document that contains the information of the contract agreed between both parties.
 /// </summary>
 [IsoId("_UkjHQtp-Ed-ak6NoX_4Aeg_15886237")]
+[IsoDisplayName(@"Contract Document")]
 public interface IContractDocument1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContractDocument1 : IIsoComponent
     [IsoId("_UkjHQ9p-Ed-ak6NoX_4Aeg_392681280")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Reference { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IContractDocument1 : IIsoComponent
     [IsoId("_UkjHRNp-Ed-ak6NoX_4Aeg_564641730")]
     [DisplayName("Sign Off Date")]
     [IsoXmlTag("SgnOffDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SignOffDate { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IContractDocument1 : IIsoComponent
     [IsoId("_UkjHRdp-Ed-ak6NoX_4Aeg_618206750")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text? Version { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the cancellation request of a notification.
 /// </summary>
 [IsoId("_4LsqKSv_Eey3nPxW-HgLUw")]
+[IsoDisplayName(@"Notification Cancellation Reason 1 Choice")]
 public interface INotificationCancellationReason1Choice : IIsoChoice { }

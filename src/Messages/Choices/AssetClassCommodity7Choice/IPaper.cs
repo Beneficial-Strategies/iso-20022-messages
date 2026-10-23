@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice;
 /// <summary>
 /// Paper.
 /// </summary>
+[IsoDisplayName(@"Paper")]
 public interface IPaper : IAssetClassCommodity7Choice, IIsoChoiceVariant
 {
     /// <summary>

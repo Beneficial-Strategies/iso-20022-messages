@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Summary information about the sale
 /// </summary>
 [IsoId("_IgZ-aPM0Eei4qfiLgRIZBA")]
+[IsoDisplayName(@"Invoice Summary")]
 public interface IInvoiceSummary1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvoiceSummary1 : IIsoComponent
     [IsoId("_IgZ-bfM0Eei4qfiLgRIZBA")]
     [DisplayName("Invoice Number")]
     [IsoXmlTag("InvcNb")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? InvoiceNumber { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IInvoiceSummary1 : IIsoComponent
     [IsoId("_IgZ-b_M0Eei4qfiLgRIZBA")]
     [DisplayName("Invoice Date")]
     [IsoXmlTag("InvcDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InvoiceDate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IInvoiceSummary1 : IIsoComponent
     [IsoId("_IgZ-bPM0Eei4qfiLgRIZBA")]
     [DisplayName("Invoice Creation Date Time")]
     [IsoXmlTag("InvcCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? InvoiceCreationDateTime { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface IInvoiceSummary1 : IIsoComponent
     [IsoId("_IgZ-afM0Eei4qfiLgRIZBA")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SummaryCommodityIdentification { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IInvoiceSummary1 : IIsoComponent
     [IsoId("_5JlPQPM8Eei4qfiLgRIZBA")]
     [DisplayName("Tax Total")]
     [IsoXmlTag("TaxTtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax33> TaxTotal { get; }
 
     /// <summary>
@@ -89,5 +97,7 @@ public interface IInvoiceSummary1 : IIsoComponent
     [IsoId("_C9fZUPM9Eei4qfiLgRIZBA")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

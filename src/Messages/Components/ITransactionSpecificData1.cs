@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains data structures applicable to certain merchant verticals that require industry-specific data within transaction messages.
 /// </summary>
 [IsoId("_jPs8QUYYEfCQAqQ9lolFUg")]
+[IsoDisplayName(@"Transaction Specific Data1")]
 public interface ITransactionSpecificData1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ITransactionSpecificData1 : IIsoComponent
     [IsoId("_jSIlN0YYEfCQAqQ9lolFUg")]
     [DisplayName("Travel Agency")]
     [IsoXmlTag("TrvlAgcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITravelAgency5> TravelAgency { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ITransactionSpecificData1 : IIsoComponent
     [IsoId("_jSIlO0YYEfCQAqQ9lolFUg")]
     [DisplayName("Vehicle Rental")]
     [IsoXmlTag("VhclRntl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVehicleRentalService4> VehicleRental { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ITransactionSpecificData1 : IIsoComponent
     [IsoId("_jSIlPUYYEfCQAqQ9lolFUg")]
     [DisplayName("Lodging")]
     [IsoXmlTag("Ldgg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILodging5> Lodging { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface ITransactionSpecificData1 : IIsoComponent
     [IsoId("_jSIlQ0YYEfCQAqQ9lolFUg")]
     [DisplayName("Temporary Services")]
     [IsoXmlTag("TempSvcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITemporaryServices4> TemporaryServices { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface ITransactionSpecificData1 : IIsoComponent
     [IsoId("_ybFhUkYYEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -105,5 +111,6 @@ public interface ITransactionSpecificData1 : IIsoComponent
     [IsoId("_ybFhU0YYEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

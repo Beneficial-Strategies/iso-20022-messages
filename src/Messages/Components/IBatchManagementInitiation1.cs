@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the batch management.
 /// </summary>
 [IsoId("_NYW1oFAVEeedyPuM0kK2EQ")]
+[IsoDisplayName(@"Batch Management Initiation")]
 public interface IBatchManagementInitiation1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IBatchManagementInitiation1 : IIsoComponent
     [IsoId("_vAvPAdXvEee5XtaG1wqDfQ")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface IBatchManagementInitiation1 : IIsoComponent
     [IsoId("_YMkyUaK4EeeQobSgLcPRvA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

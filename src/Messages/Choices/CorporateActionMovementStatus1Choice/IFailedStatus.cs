@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMovementStatus1Ch
 /// </summary>
 [IsoId("_RiPM19p-Ed-ak6NoX_4Aeg_-1878187408")]
 [IsoXmlTag("FaildSts")]
+[IsoDisplayName(@"Failed Status")]
 public interface IFailedStatus : ICorporateActionMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IFailedStatus : ICorporateActionMovementStatus1Choice, IIsoChoi
     [IsoId("_Rjbfp9p-Ed-ak6NoX_4Aeg_-123497061")]
     [DisplayName("Agent Account Identification")]
     [IsoXmlTag("AgtAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AgentAccountIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IFailedStatus : ICorporateActionMovementStatus1Choice, IIsoChoi
     [IsoId("_RjbfqNp-Ed-ak6NoX_4Aeg_-158591004")]
     [DisplayName("Client Account Identification")]
     [IsoXmlTag("ClntAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientAccountIdentification { get; }
 
     /// <summary>
@@ -42,5 +47,6 @@ public interface IFailedStatus : ICorporateActionMovementStatus1Choice, IIsoChoi
     [IsoId("_Rjbfqtp-Ed-ak6NoX_4Aeg_-1713973917")]
     [DisplayName("Resource Details")]
     [IsoXmlTag("RsrcDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFailedMovement1> ResourceDetails { get; }
 }

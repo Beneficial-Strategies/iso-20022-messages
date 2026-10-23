@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters which explicitly state the conditions that must be fulfilled before a particular triparty collateral instruction/transaction  can be confirmed. These parameters are defined by the instructing party in compliance with triparty collateral rules in the market the instruction/transaction will take place.
 /// </summary>
 [IsoId("_LgF2lSs9EeySlt9bF77XfA")]
+[IsoDisplayName(@"Collateral Parameters")]
 public interface ICollateralParameters11 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ICollateralParameters11 : IIsoComponent
     [IsoId("_L3V4-ys9EeySlt9bF77XfA")]
     [DisplayName("Transfer Title")]
     [IsoXmlTag("TrfTitl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TransferTitle { get; }
 
     /// <summary>

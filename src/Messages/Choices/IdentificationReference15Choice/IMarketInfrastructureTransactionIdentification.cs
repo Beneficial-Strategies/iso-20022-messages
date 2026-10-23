@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference15Choice;
 /// <summary>
 /// Market Infrastructure Transaction Identification.
 /// </summary>
+[IsoDisplayName(@"Market Infrastructure Transaction Identification")]
 public interface IMarketInfrastructureTransactionIdentification
     : IIdentificationReference15Choice,
         IIsoChoiceVariant

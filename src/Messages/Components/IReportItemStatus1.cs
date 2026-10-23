@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status information of the report item.
 /// </summary>
 [IsoId("_hEIC4b3REeO2FLWuu_JIqg")]
+[IsoDisplayName(@"Report Item Status")]
 public interface IReportItemStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IReportItemStatus1 : IIsoComponent
     [IsoId("_j5TZgilEEeWwYv6HydV_vw")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IReportItemStatus1 : IIsoComponent
     [IsoId("_j5TZhClEEeWwYv6HydV_vw")]
     [DisplayName("Report Item")]
     [IsoXmlTag("RptItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportItem1> ReportItem { get; }
 }

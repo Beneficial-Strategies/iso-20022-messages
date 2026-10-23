@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason20FormatChoice;
 /// Standard code to specify the reason of a rejection of the standing instruction request.
 /// </summary>
 [IsoId("_Rofl09p-Ed-ak6NoX_4Aeg_227864528")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectionReason20FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

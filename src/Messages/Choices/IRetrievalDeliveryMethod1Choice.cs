@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Contains information describing the fulfilment information delivery methods.
 /// </summary>
 [IsoId("_wPBNlewhEeiMkKo2clXHdQ")]
+[IsoDisplayName(@"Retrieval Delivery Method 1 Choice")]
 public interface IRetrievalDeliveryMethod1Choice : IIsoChoice { }

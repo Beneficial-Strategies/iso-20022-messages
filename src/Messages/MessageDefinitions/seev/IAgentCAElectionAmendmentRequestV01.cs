@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "AgtCAElctnAmdmntReq",
     "urn:iso:std:iso:20022:tech:xsd:seev.013.001.01"
 )]
+[Description(@"Scope|This message is sent by a CSD to the issuer (or its agent) to request the authorisation of an amendment of a previously sent Agent Corporate Action Election Advice message.|Usage|This message is used to request the amendment of a previously sent Agent Corporate Action Election Advice message.|Once the amendment request has been accepted by the issuer (or its agent), the CSD will process any resource movement and send an Agent Corporate Action Election Advice message with the function, option change, to confirm that the amendment has been booked at the CSD.|This message is used when the terms and conditions of the corporate action event allow amendments.")]
+[IsoDisplayName(@"Agent CA Election Amendment Request V")]
 public interface IAgentCAElectionAmendmentRequestV01 : IOuterRecord
 {
     /// <summary>

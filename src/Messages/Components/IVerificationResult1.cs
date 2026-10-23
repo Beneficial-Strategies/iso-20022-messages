@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of verifications performed prior or after the transaction.
 /// </summary>
 [IsoId("_T2ITcEbXEeeIjf8aP9KbJA")]
+[IsoDisplayName(@"Verification Result")]
 public interface IVerificationResult1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVerificationResult1 : IIsoComponent
     [IsoId("_jrPy0dIpEeirx-13kKhDlQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IVerificationResult1 : IIsoComponent
     [IsoId("_JXcSkBZSEeiwvuY-sPnsNg")]
     [DisplayName("Other Entity")]
     [IsoXmlTag("OthrNtty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherEntity { get; }
 
     /// <summary>
@@ -51,6 +56,8 @@ public interface IVerificationResult1 : IIsoComponent
     [IsoId("_qoTDsEbXEeeIjf8aP9KbJA")]
     [DisplayName("Other Result")]
     [IsoXmlTag("OthrRslt")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? OtherResult { get; }
 
     /// <summary>
@@ -59,5 +66,6 @@ public interface IVerificationResult1 : IIsoComponent
     [IsoId("_7lzGoEbXEeeIjf8aP9KbJA")]
     [DisplayName("Result Details")]
     [IsoXmlTag("RsltDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> ResultDetails { get; }
 }

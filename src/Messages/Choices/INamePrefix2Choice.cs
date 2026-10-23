@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Prefix used for name.
 /// </summary>
 [IsoId("_HMqgQQ2fEeSNWNtJlXOAhg")]
+[IsoDisplayName(@"Name Prefix 2 Choice")]
 public interface INamePrefix2Choice : IIsoChoice { }

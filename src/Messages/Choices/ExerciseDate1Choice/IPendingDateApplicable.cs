@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExerciseDate1Choice;
 /// Indicates that price is currently not available, but pending.
 /// </summary>
 [IsoId("_Y7c_swbBEeqrW7Meu5r3kQ")]
+[IsoDisplayName(@"Pending Date Applicable")]
 public interface IPendingDateApplicable : IExerciseDate1Choice, IIsoChoiceVariant
 {
     /// <summary>

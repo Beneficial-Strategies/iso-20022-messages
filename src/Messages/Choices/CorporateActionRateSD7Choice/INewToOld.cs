@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionRateSD7Choice;
 /// Quantity of new securities for a given quantity of underlying securities, where the underlying securities will be exchanged or debited, for example, 2 for 1: 2 new equities credited for every 1 underlying equity debited = 2 resulting equities.
 /// </summary>
 [IsoId("__QZZOcOTEeeAG4VQMmSqTA")]
+[IsoDisplayName(@"New To Old")]
 public interface INewToOld : ICorporateActionRateSD7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_QVo209p-Ed-ak6NoX_4Aeg_956112303")]
+[IsoDisplayName(@"Transfer")]
 public interface ITransfer9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransfer9 : IIsoComponent
     [IsoId("_QVo21Np-Ed-ak6NoX_4Aeg_956112305")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransfer9 : IIsoComponent
     [IsoId("_QVo21dp-Ed-ak6NoX_4Aeg_956112321")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransfer9 : IIsoComponent
     [IsoId("_QVo21tp-Ed-ak6NoX_4Aeg_956112338")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITransfer9 : IIsoComponent
     [IsoId("_QVo219p-Ed-ak6NoX_4Aeg_1020757521")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface ITransfer9 : IIsoComponent
     [IsoId("_QVo22tp-Ed-ak6NoX_4Aeg_956112416")]
     [DisplayName("Portfolio Transfer Out Rate")]
     [IsoXmlTag("PrtflTrfOutRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate PortfolioTransferOutRate { get; }
 
     /// <summary>
@@ -73,6 +83,7 @@ public interface ITransfer9 : IIsoComponent
     [IsoId("_QVyn0Np-Ed-ak6NoX_4Aeg_956112751")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit3> UnitsDetails { get; }
 
     /// <summary>
@@ -89,6 +100,7 @@ public interface ITransfer9 : IIsoComponent
     [IsoId("_QVyn0tp-Ed-ak6NoX_4Aeg_956112689")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OwnAccountTransferIndicator { get; }
 
     /// <summary>
@@ -105,5 +117,7 @@ public interface ITransfer9 : IIsoComponent
     [IsoId("_QVyn1Np-Ed-ak6NoX_4Aeg_1624105463")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 }

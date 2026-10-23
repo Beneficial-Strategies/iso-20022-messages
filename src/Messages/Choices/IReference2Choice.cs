@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the identification of the MarginCallRequest message, the MarginCallResponse message, the CollateralProposal message, the CollateralProposalResponse message, the CollateralSubstitutionRequest message, the CollateralSubstitutionResponse message, the CollateralSubstitutionConfirmation message, the InterestPaymentRequest message, the InterestPaymentResponse message, the InterestPaymentStatement message or the MarginCallDisputeNotification message.
 /// </summary>
 [IsoId("_TYNGkKerEeCq2KR6DaC1kQ_992102367")]
+[IsoDisplayName(@"Reference 2 Choice")]
 public interface IReference2Choice : IIsoChoice { }

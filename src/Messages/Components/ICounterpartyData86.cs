@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data specific to counterparties.
 /// </summary>
 [IsoId("_CRJNUcgtEeuGrNSsxk3B0A")]
+[IsoDisplayName(@"Counterparty Data")]
 public interface ICounterpartyData86 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICounterpartyData86 : IIsoComponent
     [IsoId("_CSkJp8gtEeuGrNSsxk3B0A")]
     [DisplayName("Triparty Agent")]
     [IsoXmlTag("TrptyAgt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TripartyAgent { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface ICounterpartyData86 : IIsoComponent
     [IsoId("_CSkJqcgtEeuGrNSsxk3B0A")]
     [DisplayName("Agent Lender")]
     [IsoXmlTag("AgtLndr")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AgentLender { get; }
 }

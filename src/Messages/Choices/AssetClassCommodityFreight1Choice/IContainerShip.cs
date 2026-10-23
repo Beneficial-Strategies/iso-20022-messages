@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFreight1Choic
 /// </summary>
 [IsoId("_AXue4vwgEeW4Wthd0Ze_kA")]
 [IsoXmlTag("CntnrShip")]
+[IsoDisplayName(@"Container Ship")]
 public interface IContainerShip : IAssetClassCommodityFreight1Choice, IIsoChoiceVariant
 {
     /// <summary>

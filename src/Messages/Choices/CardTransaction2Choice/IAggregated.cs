@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction2Choice;
 /// </summary>
 [IsoId("_0jmr8Tj3EeSz-s1QOUJaOg")]
 [IsoXmlTag("Aggtd")]
+[IsoDisplayName(@"Aggregated")]
 public interface IAggregated : ICardTransaction2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,8 @@ public interface IAggregated : ICardTransaction2Choice, IIsoChoiceVariant
     [IsoId("_t5ypxFkyEeGeoaLUQk__nA_-684903817")]
     [DisplayName("Sale Reconciliation Identification")]
     [IsoXmlTag("SaleRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReconciliationIdentification { get; }
 
     /// <summary>

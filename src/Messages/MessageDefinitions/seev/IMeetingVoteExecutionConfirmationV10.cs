@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "MtgVoteExctnConf",
     "urn:iso:std:iso:20022:tech:xsd:seev.007.001.10"
 )]
+[IsoDisplayName(@"Meeting Vote Execution Confirmation V10")]
 public interface IMeetingVoteExecutionConfirmationV10 : IOuterRecord
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IMeetingVoteExecutionConfirmationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Vote Instructions")]
     [IsoXmlTag("VoteInstrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedInstructionStatus19> VoteInstructions { get; }
 
     /// <summary>
@@ -71,5 +73,6 @@ public interface IMeetingVoteExecutionConfirmationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

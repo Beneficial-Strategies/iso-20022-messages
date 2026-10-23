@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Telecom Services3.
 /// </summary>
 [IsoId("_05CBYXTwEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Telecom Services3")]
 public interface ITelecomServices3 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface ITelecomServices3 : IIsoComponent
     /// </summary>
     [DisplayName("Billing Event")]
     [IsoXmlTag("BllgEvt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount22> BillingEvent { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface ITelecomServices3 : IIsoComponent
     /// </summary>
     [DisplayName("Total Tax")]
     [IsoXmlTag("TtlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax41> TotalTax { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ITelecomServices3 : IIsoComponent
     /// </summary>
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITelecomServicesLineItem3> LineItem { get; }
 
     /// <summary>
@@ -72,5 +76,6 @@ public interface ITelecomServices3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

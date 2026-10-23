@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction5Choice;
 /// </summary>
 [IsoId("_ISFv5W49EeiU9cctagi5ow")]
 [IsoXmlTag("StmtNtry")]
+[IsoDisplayName(@"Statement Entry")]
 public interface IStatementEntry : IUnderlyingTransaction5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IStatementEntry : IUnderlyingTransaction5Choice, IIsoChoiceVari
     [IsoId("_ebdM884zEeis464yZacv2g")]
     [DisplayName("Original Statement Identification")]
     [IsoXmlTag("OrgnlStmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalStatementIdentification { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IStatementEntry : IUnderlyingTransaction5Choice, IIsoChoiceVari
     [IsoId("_ebdM9c4zEeis464yZacv2g")]
     [DisplayName("Original Entry Identification")]
     [IsoXmlTag("OrgnlNtryId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEntryIdentification { get; }
 
     /// <summary>
@@ -42,5 +47,6 @@ public interface IStatementEntry : IUnderlyingTransaction5Choice, IIsoChoiceVari
     [IsoId("_afVVoc4zEeis464yZacv2g")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? OriginalUETR { get; }
 }

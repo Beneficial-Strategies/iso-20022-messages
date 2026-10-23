@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for the reversed status.
 /// </summary>
 [IsoId("_RQptldp-Ed-ak6NoX_4Aeg_-1949430355")]
+[IsoDisplayName(@"Reversed Status")]
 public interface IReversedStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReversedStatus1 : IIsoComponent
     [IsoId("_RQptltp-Ed-ak6NoX_4Aeg_-1949430313")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Reason { get; }
 
     /// <summary>

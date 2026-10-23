@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit for a quantity range.
 /// </summary>
 [IsoId("_jtRfFe5NEeCisYr99QEiWA_-1438940377")]
+[IsoDisplayName(@"Quantity Range Boundary1")]
 public interface IQuantityRangeBoundary1 : IIsoComponent
 {
     /// <summary>

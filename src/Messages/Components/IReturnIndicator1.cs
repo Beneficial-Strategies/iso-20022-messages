@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the return indicators and the investigation result.
 /// </summary>
 [IsoId("_o8EakzzuEeGl7N0Cd54dlw")]
+[IsoDisplayName(@"Return Indicator")]
 public interface IReturnIndicator1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,7 @@ public interface IReturnIndicator1 : IIsoComponent
     [IsoId("_10Z_ATzuEeGl7N0Cd54dlw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalInformation { get; }
 }

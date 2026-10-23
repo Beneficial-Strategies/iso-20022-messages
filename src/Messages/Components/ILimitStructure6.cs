@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit details of one particular limit set by the member and managed by the transaction administrator.
 /// </summary>
 [IsoId("_4Oc6QTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Limit Structure6")]
 public interface ILimitStructure6 : IIsoComponent
 {
     /// <summary>

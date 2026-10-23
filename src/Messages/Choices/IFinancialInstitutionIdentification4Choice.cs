@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
 /// </summary>
 [IsoId("_QEzlhtp-Ed-ak6NoX_4Aeg_-827596048")]
+[IsoDisplayName(@"Financial Institution Identification 4 Choice")]
 public interface IFinancialInstitutionIdentification4Choice : IIsoChoice { }

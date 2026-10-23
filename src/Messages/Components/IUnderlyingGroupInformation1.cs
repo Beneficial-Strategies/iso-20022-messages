@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique identification, as assigned by the first instructing agent, to unambiguously identify the group of transactions.
 /// </summary>
 [IsoId("_RrBVYtp-Ed-ak6NoX_4Aeg_884871107")]
+[IsoDisplayName(@"Underlying Group Information")]
 public interface IUnderlyingGroupInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IUnderlyingGroupInformation1 : IIsoComponent
     [IsoId("_RrBVY9p-Ed-ak6NoX_4Aeg_884871138")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IUnderlyingGroupInformation1 : IIsoComponent
     [IsoId("_RrBVZNp-Ed-ak6NoX_4Aeg_884871169")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageNameIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IUnderlyingGroupInformation1 : IIsoComponent
     [IsoId("_RrBVZdp-Ed-ak6NoX_4Aeg_884871199")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -41,5 +47,7 @@ public interface IUnderlyingGroupInformation1 : IIsoComponent
     [IsoId("_RrBVZtp-Ed-ak6NoX_4Aeg_1113343746")]
     [DisplayName("Original Message Delivery Channel")]
     [IsoXmlTag("OrgnlMsgDlvryChanl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalMessageDeliveryChannel { get; }
 }

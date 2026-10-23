@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the amendment.
 /// </summary>
 [IsoId("_9-jwoHltEeG7BsjMvd1mEw_-951875342")]
+[IsoDisplayName(@"Amendment")]
 public interface IAmendment1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAmendment1 : IIsoComponent
     [IsoId("_9-jwoXltEeG7BsjMvd1mEw_-733763552")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText SequenceNumber { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IAmendment1 : IIsoComponent
     [IsoId("_9-jwonltEeG7BsjMvd1mEw_571423814")]
     [DisplayName("Date Of Issuance")]
     [IsoXmlTag("DtOfIssnc")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate DateOfIssuance { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface IAmendment1 : IIsoComponent
     [IsoId("_9-2rkHltEeG7BsjMvd1mEw_1346112541")]
     [DisplayName("New Undertaking Terms And Conditions")]
     [IsoXmlTag("NewUdrtkgTermsAndConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INarrative1> NewUndertakingTermsAndConditions { get; }
 
     /// <summary>
@@ -105,6 +110,7 @@ public interface IAmendment1 : IIsoComponent
     [IsoId("_9-2rkXltEeG7BsjMvd1mEw_-270158341")]
     [DisplayName("Beneficiary Consent Request Indicator")]
     [IsoXmlTag("BnfcryCnsntReqInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BeneficiaryConsentRequestIndicator { get; }
 
     /// <summary>
@@ -121,6 +127,7 @@ public interface IAmendment1 : IIsoComponent
     [IsoId("_9-2rk3ltEeG7BsjMvd1mEw_-1801397282")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument9> EnclosedFile { get; }
 
     /// <summary>
@@ -129,5 +136,9 @@ public interface IAmendment1 : IIsoComponent
     [IsoId("_9-2rlHltEeG7BsjMvd1mEw_-1115047921")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

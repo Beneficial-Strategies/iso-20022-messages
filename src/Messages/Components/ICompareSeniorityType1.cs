@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a seniority type.
 /// </summary>
 [IsoId("_46oMQE6nEeyEpI66tm807w")]
+[IsoDisplayName(@"Compare Seniority Type")]
 public interface ICompareSeniorityType1 : IIsoComponent
 {
     /// <summary>

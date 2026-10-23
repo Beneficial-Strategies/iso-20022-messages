@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of search criteria for querying party reference data.
 /// </summary>
 [IsoId("_5ry10Z9wEeejnerJgFeC2w")]
+[IsoDisplayName(@"Party Data Search Criteria")]
 public interface IPartyDataSearchCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,8 @@ public interface IPartyDataSearchCriteria2 : IIsoComponent
     [IsoId("_55esi59wEeejnerJgFeC2w")]
     [DisplayName("Restriction Identification")]
     [IsoXmlTag("RstrctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RestrictionIdentification { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Electronic and physical mail address.
 /// </summary>
 [IsoId("__InD0BrmEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Mail Address")]
 public interface IMailAddress1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,9 @@ public interface IMailAddress1 : IIsoComponent
     [IsoId("_j1WRgBrnEeyhRdHRjakS2w")]
     [DisplayName("Correspondence")]
     [IsoXmlTag("Crspdc")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress1> Correspondence { get; }
 
     /// <summary>
@@ -25,5 +29,9 @@ public interface IMailAddress1 : IIsoComponent
     [IsoId("_vo1tsRrnEeyhRdHRjakS2w")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> EmailAddress { get; }
 }

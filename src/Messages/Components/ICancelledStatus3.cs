@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for the cancelled status.
 /// </summary>
 [IsoId("_RSSsU9p-Ed-ak6NoX_4Aeg_-25230464")]
+[IsoDisplayName(@"Cancelled Status")]
 public interface ICancelledStatus3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ICancelledStatus3 : IIsoComponent
     [IsoId("_RSSsVtp-Ed-ak6NoX_4Aeg_-25230404")]
     [DisplayName("Extended Reason")]
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedReason { get; }
 
     /// <summary>

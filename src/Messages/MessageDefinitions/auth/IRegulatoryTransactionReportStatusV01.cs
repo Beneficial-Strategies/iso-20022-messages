@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "RgltryTxRptStsV01",
     "urn:iso:std:iso:20022:tech:xsd:auth.010.001.01"
 )]
+[Description(@"Scope|A regulator or an intermediary sends the RegulatoryTransactionReportStatus to a reporting institution to provide the status of a RegulatoryTransactionReport previously sent by the reporting institution.|Usage|The message definition may be used to provide a status for the entire report or to provide a status at the level of individual transactions within the report. One of the following statuses can be reported:|- Completed, or,|- Pending, or,|- Rejected.|If the status is rejected, then reason for the rejection must be specified.")]
+[IsoDisplayName(@"Regulatory Transaction Report Status V")]
 public interface IRegulatoryTransactionReportStatusV01 : IOuterRecord
 {
     /// <summary>
@@ -55,5 +57,6 @@ public interface IRegulatoryTransactionReportStatusV01 : IOuterRecord
     [IsoId("_gJ-K9MIFEeGllrOKQRUTYA_1351125442")]
     [DisplayName("Individual Transaction Status")]
     [IsoXmlTag("IndvTxSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionStatusAndReason1> IndividualTransactionStatus { get; }
 }

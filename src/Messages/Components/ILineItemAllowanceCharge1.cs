@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Pricing component, such as a service, promotion, allowance or charge, for this line item.
 /// </summary>
 [IsoId("_S0Q8TgEcEeCQm6a_G2yO_w_145447968")]
+[IsoDisplayName(@"Line Item Allowance Charge")]
 public interface ILineItemAllowanceCharge1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILineItemAllowanceCharge1 : IIsoComponent
     [IsoId("_S0Q8TwEcEeCQm6a_G2yO_w_2144378337")]
     [DisplayName("Charge Indicator")]
     [IsoXmlTag("ChrgInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChargeIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ILineItemAllowanceCharge1 : IIsoComponent
     [IsoId("_S0Q8UAEcEeCQm6a_G2yO_w_1865072585")]
     [DisplayName("Actual Amount")]
     [IsoXmlTag("ActlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> ActualAmount { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ILineItemAllowanceCharge1 : IIsoComponent
     [IsoId("_S0aGIQEcEeCQm6a_G2yO_w_-642810795")]
     [DisplayName("Calculation Percent")]
     [IsoXmlTag("ClctnPct")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? CalculationPercent { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ILineItemAllowanceCharge1 : IIsoComponent
     [IsoId("_S0aGIgEcEeCQm6a_G2yO_w_-1141593647")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SequenceNumber { get; }
 
     /// <summary>

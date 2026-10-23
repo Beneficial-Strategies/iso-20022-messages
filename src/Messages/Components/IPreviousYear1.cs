@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice between selected investment plans issued during previous years or the entirety of the investment plans.
 /// </summary>
 [IsoId("_SvkiqNp-Ed-ak6NoX_4Aeg_-248329088")]
+[IsoDisplayName(@"Previous Year")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IPreviousYear1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IPreviousYear1 : IIsoComponent
     [IsoId("_Svkiqdp-Ed-ak6NoX_4Aeg_-248329010")]
     [DisplayName("All Previous Years")]
     [IsoXmlTag("AllPrvsYrs")]
+    [IsoSimpleType(IsoSimpleType.PreviousAll)]
     PreviousAll AllPreviousYears { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPreviousYear1 : IIsoComponent
     [IsoId("_Svkiqtp-Ed-ak6NoX_4Aeg_-248328915")]
     [DisplayName("Specific Previous Years")]
     [IsoXmlTag("SpcfcPrvsYrs")]
+    [IsoSimpleType(IsoSimpleType.ISOYear)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ushort> SpecificPreviousYears { get; }
 
     /// <summary>
@@ -33,5 +38,6 @@ public interface IPreviousYear1 : IIsoComponent
     [IsoId("_Svkiq9p-Ed-ak6NoX_4Aeg_306709098")]
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CashComponentIndicator { get; }
 }

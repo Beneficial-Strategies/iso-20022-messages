@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria which are used to search for the status of the payment.
 /// </summary>
 [IsoId("_5RK8odEcEei798TPbKJMuw")]
+[IsoDisplayName(@"Instruction Status Search")]
 public interface IInstructionStatusSearch5 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IInstructionStatusSearch5 : IIsoComponent
     [IsoId("_5cxvt9EcEei798TPbKJMuw")]
     [DisplayName("Proprietary Status Reason")]
     [IsoXmlTag("PrtryStsRsn")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText? ProprietaryStatusReason { get; }
 }

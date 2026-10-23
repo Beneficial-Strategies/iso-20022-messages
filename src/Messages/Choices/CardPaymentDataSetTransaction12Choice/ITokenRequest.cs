@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction12C
 /// <summary>
 /// Token Request.
 /// </summary>
+[IsoDisplayName(@"Token Request")]
 public interface ITokenRequest : ICardPaymentDataSetTransaction12Choice, IIsoChoiceVariant
 {
     /// <summary>

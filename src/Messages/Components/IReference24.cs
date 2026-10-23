@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference24.
 /// </summary>
 [IsoId("_Pw59aYcSEe-U27oWwgmhCQ")]
+[IsoDisplayName(@"Reference24")]
 public interface IReference24 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IReference24 : IIsoComponent
     /// </summary>
     [DisplayName("Trade Leg Notification Identification")]
     [IsoXmlTag("TradLegNtfctnId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeLegNotificationIdentification1Choice> TradeLegNotificationIdentification { get; }
 
     /// <summary>

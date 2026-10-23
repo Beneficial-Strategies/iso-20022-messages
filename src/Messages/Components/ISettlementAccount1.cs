@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Deposit account used by the central counterparty to make payments to and from its clearing members.
 /// </summary>
 [IsoId("_hzT7oKp5EeamNLogr5TkIQ")]
+[IsoDisplayName(@"Settlement Account")]
 public interface ISettlementAccount1 : IIsoComponent
 {
     /// <summary>

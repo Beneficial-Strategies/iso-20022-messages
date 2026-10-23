@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_BzcJwRYCEeOBE-jZfcm4KQ")]
+[IsoDisplayName(@"Deliver Information")]
 public interface IDeliverInformation12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDeliverInformation12 : IIsoComponent
     [IsoId("_CP2Y-RYCEeOBE-jZfcm4KQ")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IDeliverInformation12 : IIsoComponent
     [IsoId("_CP2ZAxYCEeOBE-jZfcm4KQ")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge20> ChargeDetails { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IDeliverInformation12 : IIsoComponent
     [IsoId("_CP2ZBRYCEeOBE-jZfcm4KQ")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission17> CommissionDetails { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface IDeliverInformation12 : IIsoComponent
     [IsoId("_CP2ZBxYCEeOBE-jZfcm4KQ")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax21> TaxDetails { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IDeliverInformation12 : IIsoComponent
     [IsoId("_FUYg8RYCEeOBE-jZfcm4KQ")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms7> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -113,5 +119,7 @@ public interface IDeliverInformation12 : IIsoComponent
     [IsoId("_jFFs8BweEeOIveEnnb_1-A")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 }

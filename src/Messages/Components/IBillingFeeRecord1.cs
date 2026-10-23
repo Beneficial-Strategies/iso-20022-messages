@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details for fees and charges.
 /// </summary>
 [IsoId("_Qp56pvsYEemYNq6Sxm5nlg")]
+[IsoDisplayName(@"Billing Fee Record1")]
 public interface IBillingFeeRecord1 : IIsoComponent
 {
     /// <summary>

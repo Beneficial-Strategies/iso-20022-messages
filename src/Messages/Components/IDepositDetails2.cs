@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional functions or services to be performed in conjunction with the transaction.
 /// </summary>
 [IsoId("_3QmsQJMfEeuleeHpFMMhmQ")]
+[IsoDisplayName(@"Deposit Details")]
 public interface IDepositDetails2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDepositDetails2 : IIsoComponent
     [IsoId("_3YljkpMfEeuleeHpFMMhmQ")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>

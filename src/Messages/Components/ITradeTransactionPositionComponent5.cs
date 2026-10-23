@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates contract that is to be reported as a new trade and also included in a separate position report on the same day.
 /// </summary>
 [IsoId("_38nfYf_qEemm3skPVSMJQg")]
+[IsoDisplayName(@"Trade Transaction Position Component")]
 public interface ITradeTransactionPositionComponent5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeTransactionPositionComponent5 : IIsoComponent
     [IsoId("_4AyNof_qEemm3skPVSMJQg")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface ITradeTransactionPositionComponent5 : IIsoComponent
     [IsoId("_4AyNq__qEemm3skPVSMJQg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

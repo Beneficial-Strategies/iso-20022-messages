@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details related to the beneficiary.
 /// </summary>
 [IsoId("_-EXduHltEeG7BsjMvd1mEw_-57311934")]
+[IsoDisplayName(@"Beneficiary")]
 public interface IBeneficiary1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,9 @@ public interface IBeneficiary1 : IIsoComponent
     [IsoId("_-EhOsHltEeG7BsjMvd1mEw_1955117019")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

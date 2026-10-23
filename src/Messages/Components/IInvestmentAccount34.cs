@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
 /// </summary>
 [IsoId("_svFhIRHBEeKVqeHljBM1MQ")]
+[IsoDisplayName(@"Investment Account")]
 public interface IInvestmentAccount34 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IInvestmentAccount34 : IIsoComponent
     [IsoId("_tGCBrRHBEeKVqeHljBM1MQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IInvestmentAccount34 : IIsoComponent
     [IsoId("_tGCBsRHBEeKVqeHljBM1MQ")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Designation { get; }
 
     /// <summary>
@@ -113,6 +118,8 @@ public interface IInvestmentAccount34 : IIsoComponent
     [IsoId("_tGCB6RHBEeKVqeHljBM1MQ")]
     [DisplayName("Accumulation Right Reference")]
     [IsoXmlTag("AcmltnRghtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccumulationRightReference { get; }
 
     /// <summary>
@@ -121,6 +128,7 @@ public interface IInvestmentAccount34 : IIsoComponent
     [IsoId("_tGCB7RHBEeKVqeHljBM1MQ")]
     [DisplayName("Required Signatories Number")]
     [IsoXmlTag("ReqrdSgntriesNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? RequiredSignatoriesNumber { get; }
 
     /// <summary>
@@ -129,6 +137,8 @@ public interface IInvestmentAccount34 : IIsoComponent
     [IsoId("_tGCB8RHBEeKVqeHljBM1MQ")]
     [DisplayName("Fund Family Name")]
     [IsoXmlTag("FndFmlyNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FundFamilyName { get; }
 
     /// <summary>
@@ -137,6 +147,7 @@ public interface IInvestmentAccount34 : IIsoComponent
     [IsoId("_tGCB9RHBEeKVqeHljBM1MQ")]
     [DisplayName("Fund Details")]
     [IsoXmlTag("FndDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument29> FundDetails { get; }
 
     /// <summary>
@@ -161,6 +172,7 @@ public interface IInvestmentAccount34 : IIsoComponent
     [IsoId("_u7mcAxHBEeKVqeHljBM1MQ")]
     [DisplayName("Blocked Status")]
     [IsoXmlTag("BlckdSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBlocked1> BlockedStatus { get; }
 
     /// <summary>

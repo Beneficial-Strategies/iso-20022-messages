@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information and details on the status of a trade.
 /// </summary>
 [IsoId("_KCvS0VBgEeOenoknK_-H2g")]
+[IsoDisplayName(@"Trade Data")]
 public interface ITradeData11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeData11 : IIsoComponent
     [IsoId("_KVqO1VBgEeOenoknK_-H2g")]
     [DisplayName("Originator Reference")]
     [IsoXmlTag("OrgtrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginatorReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITradeData11 : IIsoComponent
     [IsoId("_KVqO11BgEeOenoknK_-H2g")]
     [DisplayName("Matching System Unique Reference")]
     [IsoXmlTag("MtchgSysUnqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MatchingSystemUniqueReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITradeData11 : IIsoComponent
     [IsoId("_KVqO2VBgEeOenoknK_-H2g")]
     [DisplayName("Matching System Matching Reference")]
     [IsoXmlTag("MtchgSysMtchgRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MatchingSystemMatchingReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITradeData11 : IIsoComponent
     [IsoId("_KVqO21BgEeOenoknK_-H2g")]
     [DisplayName("Matching System Matched Side Reference")]
     [IsoXmlTag("MtchgSysMtchdSdRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MatchingSystemMatchedSideReference { get; }
 
     /// <summary>
@@ -49,6 +58,7 @@ public interface ITradeData11 : IIsoComponent
     [IsoId("_KVqO3VBgEeOenoknK_-H2g")]
     [DisplayName("Current Settlement Date")]
     [IsoXmlTag("CurSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CurrentSettlementDate { get; }
 
     /// <summary>
@@ -57,6 +67,7 @@ public interface ITradeData11 : IIsoComponent
     [IsoId("_KVqO31BgEeOenoknK_-H2g")]
     [DisplayName("New Settlement Date")]
     [IsoXmlTag("NewSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NewSettlementDate { get; }
 
     /// <summary>
@@ -65,6 +76,7 @@ public interface ITradeData11 : IIsoComponent
     [IsoId("_KVqO4VBgEeOenoknK_-H2g")]
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CurrentStatusDateTime { get; }
 
     /// <summary>
@@ -73,6 +85,8 @@ public interface ITradeData11 : IIsoComponent
     [IsoId("_KVqO41BgEeOenoknK_-H2g")]
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProductType { get; }
 
     /// <summary>
@@ -81,6 +95,7 @@ public interface ITradeData11 : IIsoComponent
     [IsoId("_KVqO5VBgEeOenoknK_-H2g")]
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SettlementSessionIdentifier { get; }
 
     /// <summary>

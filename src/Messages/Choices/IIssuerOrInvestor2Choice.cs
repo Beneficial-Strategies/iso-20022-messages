@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Issuer Or Investor2Choice.
 /// </summary>
 [IsoId("_yVpDgWc-EemvNLufWGIVOQ")]
+[IsoDisplayName(@"Issuer Or Investor2Choice")]
 public interface IIssuerOrInvestor2Choice : IIsoChoice { }

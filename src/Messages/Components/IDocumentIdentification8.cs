@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the document by providing a unique identification and optionally the date/time of the creation of the document.
 /// </summary>
 [IsoId("_RXNBiNp-Ed-ak6NoX_4Aeg_-320016249")]
+[IsoDisplayName(@"Document Identification")]
 public interface IDocumentIdentification8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDocumentIdentification8 : IIsoComponent
     [IsoId("_RXNBidp-Ed-ak6NoX_4Aeg_-320016247")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IDocumentIdentification8 : IIsoComponent
     [IsoId("_RXNBitp-Ed-ak6NoX_4Aeg_-1412830128")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CreationDateTime { get; }
 }

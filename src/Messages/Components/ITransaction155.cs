@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Error or rejection transaction.
 /// </summary>
 [IsoId("_g8sk0YgoEeu8-LhY4KPfWg")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction155 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface ITransaction155 : IIsoComponent
     [IsoId("_hCNW84goEeu8-LhY4KPfWg")]
     [DisplayName("Error Detail")]
     [IsoXmlTag("ErrDtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorDetails2> ErrorDetail { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface ITransaction155 : IIsoComponent
     [IsoId("_hCN-AYgoEeu8-LhY4KPfWg")]
     [DisplayName("Original Message")]
     [IsoXmlTag("OrgnlMsg")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary? OriginalMessage { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface ITransaction155 : IIsoComponent
     [IsoId("_hCN-A4goEeu8-LhY4KPfWg")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee2> AdditionalFee { get; }
 
     /// <summary>
@@ -50,5 +54,6 @@ public interface ITransaction155 : IIsoComponent
     [IsoId("_hCN-BYgoEeu8-LhY4KPfWg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amounts of the withdrawal transaction.
 /// </summary>
 [IsoId("_gtlD0YokEeSaAcF2oE2GNQ")]
+[IsoDisplayName(@"Detailed Amount")]
 public interface IDetailedAmount12 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IDetailedAmount12 : IIsoComponent
     [IsoId("_NvDH0IolEeSaAcF2oE2GNQ")]
     [DisplayName("Fees")]
     [IsoXmlTag("Fees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount13> Fees { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IDetailedAmount12 : IIsoComponent
     [IsoId("_g4F1QIolEeSaAcF2oE2GNQ")]
     [DisplayName("Donation")]
     [IsoXmlTag("Dontn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount13> Donation { get; }
 }

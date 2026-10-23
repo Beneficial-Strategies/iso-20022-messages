@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Type of vote that can be provided for a resolution in a general meeting.
 /// </summary>
 [IsoId("_X_oUcPNBEeqRfth943bvEA")]
+[IsoDisplayName(@"Vote Type And Quantity")]
 public interface IVoteTypeAndQuantity1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IVoteTypeAndQuantity1 : IIsoComponent
     [IsoId("_n-JmoPNBEeqRfth943bvEA")]
     [DisplayName("Vote Quantity")]
     [IsoXmlTag("VoteQty")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number VoteQuantity { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResidenceLocation1Choice;
 /// Specifies the account owner&apos;s resident country.
 /// </summary>
 [IsoId("_6Qsqk5qlEeGSON8vddiWzQ_-2009722376")]
+[IsoDisplayName(@"Country")]
 public interface ICountry : IResidenceLocation1Choice, IIsoChoiceVariant
 {
     /// <summary>

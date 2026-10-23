@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party15Choice;
 /// </summary>
 [IsoId("_W3gLoRRQEeOKWo1NF21OVw")]
 [IsoXmlTag("Org")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation : IParty15Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOrganisation : IParty15Choice, IIsoChoiceVariant
     [IsoId("_ecY5YRRQEeOKWo1NF21OVw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IOrganisation : IParty15Choice, IIsoChoiceVariant
     [IsoId("_ecY5ZRRQEeOKWo1NF21OVw")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Purpose { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface IOrganisation : IParty15Choice, IIsoChoiceVariant
     [IsoId("_ecY5axRQEeOKWo1NF21OVw")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 
     /// <summary>
@@ -66,6 +72,8 @@ public interface IOrganisation : IParty15Choice, IIsoChoiceVariant
     [IsoId("_ecY5bRRQEeOKWo1NF21OVw")]
     [DisplayName("Tax Identification Number")]
     [IsoXmlTag("TaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxIdentificationNumber { get; }
 
     /// <summary>
@@ -74,6 +82,8 @@ public interface IOrganisation : IParty15Choice, IIsoChoiceVariant
     [IsoId("_ecY5bxRQEeOKWo1NF21OVw")]
     [DisplayName("National Registration Number")]
     [IsoXmlTag("NtlRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NationalRegistrationNumber { get; }
 
     /// <summary>
@@ -82,6 +92,9 @@ public interface IOrganisation : IParty15Choice, IIsoChoiceVariant
     [IsoId("_ecY5cRRQEeOKWo1NF21OVw")]
     [DisplayName("Modified Postal Address")]
     [IsoXmlTag("ModfdPstlAdr")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope1> ModifiedPostalAddress { get; }
 
     /// <summary>

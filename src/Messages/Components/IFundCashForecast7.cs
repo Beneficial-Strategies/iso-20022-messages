@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash movements from or to a fund as a result of investment funds transactions, eg, subscriptions or redemptions.
 /// </summary>
 [IsoId("_7zt4EQdpEeSPHJIdUs1USg")]
+[IsoDisplayName(@"Fund Cash Forecast")]
 public interface IFundCashForecast7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFundCashForecast7 : IIsoComponent
     [IsoId("_8NmXtQdpEeSPHJIdUs1USg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IFundCashForecast7 : IIsoComponent
     [IsoId("_8NmXvQdpEeSPHJIdUs1USg")]
     [DisplayName("Total NAV")]
     [IsoXmlTag("TtlNAV")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyAndAmount> TotalNAV { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IFundCashForecast7 : IIsoComponent
     [IsoId("_8NmXvwdpEeSPHJIdUs1USg")]
     [DisplayName("Previous Total NAV")]
     [IsoXmlTag("PrvsTtlNAV")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyAndAmount> PreviousTotalNAV { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IFundCashForecast7 : IIsoComponent
     [IsoId("_8NmXxQdpEeSPHJIdUs1USg")]
     [DisplayName("Total NAV Change Rate")]
     [IsoXmlTag("TtlNAVChngRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TotalNAVChangeRate { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface IFundCashForecast7 : IIsoComponent
     [IsoId("_8NmXxwdpEeSPHJIdUs1USg")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface IFundCashForecast7 : IIsoComponent
     [IsoId("_8NmXyQdpEeSPHJIdUs1USg")]
     [DisplayName("Exceptional Net Cash Flow Indicator")]
     [IsoXmlTag("XcptnlNetCshFlowInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ExceptionalNetCashFlowIndicator { get; }
 
     /// <summary>
@@ -129,6 +137,7 @@ public interface IFundCashForecast7 : IIsoComponent
     [IsoId("_ov-2hQdrEeSPHJIdUs1USg")]
     [DisplayName("Percentage Of Share Class Total NAV")]
     [IsoXmlTag("PctgOfShrClssTtlNAV")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfShareClassTotalNAV { get; }
 
     /// <summary>
@@ -137,6 +146,7 @@ public interface IFundCashForecast7 : IIsoComponent
     [IsoId("_8NmXywdpEeSPHJIdUs1USg")]
     [DisplayName("Cash In Forecast Details")]
     [IsoXmlTag("CshInFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashInForecast6> CashInForecastDetails { get; }
 
     /// <summary>
@@ -145,6 +155,7 @@ public interface IFundCashForecast7 : IIsoComponent
     [IsoId("_8NmXzQdpEeSPHJIdUs1USg")]
     [DisplayName("Cash Out Forecast Details")]
     [IsoXmlTag("CshOutFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOutForecast6> CashOutForecastDetails { get; }
 
     /// <summary>
@@ -153,5 +164,6 @@ public interface IFundCashForecast7 : IIsoComponent
     [IsoId("_8NmXzwdpEeSPHJIdUs1USg")]
     [DisplayName("Net Cash Forecast Details")]
     [IsoXmlTag("NetCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetCashForecast4> NetCashForecastDetails { get; }
 }

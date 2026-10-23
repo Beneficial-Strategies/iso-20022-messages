@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_Bu3IsWpCEeS4VPLpYyQgxQ")]
 [IsoMessage("caaa.015.001.04", "AccptrRjctn", "urn:iso:std:iso:20022:tech:xsd:caaa.015.001.04")]
+[Description(@"The AcceptorRejection message is sent by the acquirer (or its agent) to reject a message request or advice sent by an acceptor (or its agent), to indicate that the received message could not be processed.")]
+[IsoDisplayName(@"Acceptor Rejection V")]
 public interface IAcceptorRejectionV04 : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Capabilities of the display components performing the transaction.
 /// </summary>
 [IsoId("_DgX_cY0SEeWRYffwL7E13A")]
+[IsoDisplayName(@"Display Capabilities")]
 public interface IDisplayCapabilities4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDisplayCapabilities4 : IIsoComponent
     [IsoId("_Dqzt0Y0SEeWRYffwL7E13A")]
     [DisplayName("Destination")]
     [IsoXmlTag("Dstn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<UserInterface4Code> Destination { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IDisplayCapabilities4 : IIsoComponent
     [IsoId("_Dqzt040SEeWRYffwL7E13A")]
     [DisplayName("Available Format")]
     [IsoXmlTag("AvlblFrmt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<OutputFormat1Code> AvailableFormat { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IDisplayCapabilities4 : IIsoComponent
     [IsoId("_Dqzt1Y0SEeWRYffwL7E13A")]
     [DisplayName("Number Of Lines")]
     [IsoXmlTag("NbOfLines")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfLines { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IDisplayCapabilities4 : IIsoComponent
     [IsoId("_Dqzt140SEeWRYffwL7E13A")]
     [DisplayName("Line Width")]
     [IsoXmlTag("LineWidth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LineWidth { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IDisplayCapabilities4 : IIsoComponent
     [IsoId("_Dqzt2Y0SEeWRYffwL7E13A")]
     [DisplayName("Available Language")]
     [IsoXmlTag("AvlblLang")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<LanguageCode> AvailableLanguage { get; }
 }

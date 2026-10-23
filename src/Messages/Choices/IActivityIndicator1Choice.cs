@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Activity Indicator1Choice.
 /// </summary>
 [IsoId("_Lg8f41x7Ee6fgZt44_IqFA")]
+[IsoDisplayName(@"Activity Indicator1Choice")]
 public interface IActivityIndicator1Choice : IIsoChoice { }

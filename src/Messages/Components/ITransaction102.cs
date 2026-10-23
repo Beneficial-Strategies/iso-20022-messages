@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amendment transaction.
 /// </summary>
 [IsoId("_Mt51QVW5EeeiG_nL4vgKnQ")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction102 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransaction102 : IIsoComponent
     [IsoId("_M6lmYVW5EeeiG_nL4vgKnQ")]
     [DisplayName("Amended Data")]
     [IsoXmlTag("AmddData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedError1> AmendedData { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITransaction102 : IIsoComponent
     [IsoId("_M6lmY1W5EeeiG_nL4vgKnQ")]
     [DisplayName("Original Message")]
     [IsoXmlTag("OrgnlMsg")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary? OriginalMessage { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ITransaction102 : IIsoComponent
     [IsoId("_M6lmaVW5EeeiG_nL4vgKnQ")]
     [DisplayName("Message Amended")]
     [IsoXmlTag("MsgAmdd")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary? MessageAmended { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface ITransaction102 : IIsoComponent
     [IsoId("_aD1CwRqmEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

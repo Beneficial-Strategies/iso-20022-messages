@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Option235.
 /// </summary>
 [IsoId("_254CMYV4Ee-oeNhl-Tk6YQ")]
+[IsoDisplayName(@"Corporate Action Option235")]
 public interface ICorporateActionOption235 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface ICorporateActionOption235 : IIsoComponent
     /// </summary>
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOfferTypeFormat14Choice> OfferType { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface ICorporateActionOption235 : IIsoComponent
     /// </summary>
     [DisplayName("Option Features")]
     [IsoXmlTag("OptnFeatrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOptionFeaturesFormat28Choice> OptionFeatures { get; }
 
     /// <summary>
@@ -51,6 +54,7 @@ public interface ICorporateActionOption235 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Option Features")]
     [IsoXmlTag("SplmtryOptnFeatrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ExtendedOptionFeature2Code> SupplementaryOptionFeatures { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ICorporateActionOption235 : IIsoComponent
     /// </summary>
     [DisplayName("Certification Breakdown Type")]
     [IsoXmlTag("CertfctnBrkdwnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficiaryCertificationType13Choice> CertificationBreakdownType { get; }
 
     /// <summary>
@@ -177,6 +182,7 @@ public interface ICorporateActionOption235 : IIsoComponent
     /// </summary>
     [DisplayName("Tax Category")]
     [IsoXmlTag("TaxCtgy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCategory1> TaxCategory { get; }
 
     /// <summary>
@@ -212,6 +218,7 @@ public interface ICorporateActionOption235 : IIsoComponent
     /// </summary>
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesOption114> SecuritiesMovementDetails { get; }
 
     /// <summary>
@@ -219,6 +226,7 @@ public interface ICorporateActionOption235 : IIsoComponent
     /// </summary>
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOption108> CashMovementDetails { get; }
 
     /// <summary>

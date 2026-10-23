@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_qFMfoY0_Ee6S0_1AaJzQCA")]
 [IsoMessage("caad.001.001.03", "BtchMgmtInitn", "urn:iso:std:iso:20022:tech:xsd:caad.001.001.03")]
+[IsoDisplayName(@"Batch Management Initiation V03")]
 public interface IBatchManagementInitiationV03 : IOuterRecord
 {
     /// <summary>
@@ -102,6 +103,7 @@ public interface IBatchManagementInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Collection Identification List")]
     [IsoXmlTag("ColltnIdList")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max70Text> CollectionIdentificationList { get; }
 
     /// <summary>
@@ -109,6 +111,7 @@ public interface IBatchManagementInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Batch Identification List")]
     [IsoXmlTag("BtchIdList")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max70Text> BatchIdentificationList { get; }
 
     /// <summary>
@@ -193,6 +196,7 @@ public interface IBatchManagementInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode5> Programme { get; }
 
     /// <summary>
@@ -263,6 +267,7 @@ public interface IBatchManagementInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -277,6 +282,7 @@ public interface IBatchManagementInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -284,6 +290,7 @@ public interface IBatchManagementInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Instrument20.
 /// </summary>
 [IsoId("_BrShIX_5Ee-5A_neRtHpSQ")]
+[IsoDisplayName(@"Payment Instrument20")]
 public interface IPaymentInstrument20 : IIsoComponent
 {
     /// <summary>

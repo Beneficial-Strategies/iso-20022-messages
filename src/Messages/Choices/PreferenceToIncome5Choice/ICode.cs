@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PreferenceToIncome5Choice;
 /// Preference to income expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_4ueigeLZEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPreferenceToIncome5Choice, IIsoChoiceVariant
 {
     /// <summary>

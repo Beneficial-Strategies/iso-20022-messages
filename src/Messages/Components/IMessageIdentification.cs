@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous identifier for a message, as assigned by the Sender. This unique identifier can be used for cross-referencing purposes in subsequent messages.
 /// </summary>
 [IsoId("_Q6l-Cdp-Ed-ak6NoX_4Aeg_1451391033")]
+[IsoDisplayName(@"Message Identification")]
 public interface IMessageIdentification : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface IMessageIdentification : IIsoComponent
     [IsoId("_Q6vvANp-Ed-ak6NoX_4Aeg_1505878618")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

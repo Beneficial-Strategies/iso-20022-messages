@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord7Choice;
 /// <summary>
 /// Valuation.
 /// </summary>
+[IsoDisplayName(@"Valuation")]
 public interface IValuation : IInvestigationDataRecord7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a database.
 /// </summary>
 [IsoId("_0wzDEQjWEeS5F6qHcKOrew")]
+[IsoDisplayName(@"Data Base Check")]
 public interface IDataBaseCheck1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDataBaseCheck1 : IIsoComponent
     [IsoId("_YoeRAAjXEeS5F6qHcKOrew")]
     [DisplayName("Database Check")]
     [IsoXmlTag("DBChck")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator DatabaseCheck { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface IDataBaseCheck1 : IIsoComponent
     [IsoId("_eCrP4AjXEeS5F6qHcKOrew")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

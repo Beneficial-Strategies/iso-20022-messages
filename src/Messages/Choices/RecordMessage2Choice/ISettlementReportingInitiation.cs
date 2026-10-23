@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the settlement reporting initiation message.</summary>
 [IsoId("_kNBj1W7-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Settlement Reporting Initiation")]
 public interface ISettlementReportingInitiation : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

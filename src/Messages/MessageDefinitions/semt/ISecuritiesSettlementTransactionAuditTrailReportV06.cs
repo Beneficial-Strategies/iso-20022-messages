@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesSttlmTxAudtTrlRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.022.001.06"
 )]
+[IsoDisplayName(@"Securities Settlement Transaction Audit Trail Report V06")]
 public interface ISecuritiesSettlementTransactionAuditTrailReportV06 : IOuterRecord
 {
     /// <summary>
@@ -64,5 +65,6 @@ public interface ISecuritiesSettlementTransactionAuditTrailReportV06 : IOuterRec
     /// </summary>
     [DisplayName("Status Trail")]
     [IsoXmlTag("StsTrl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusTrail12> StatusTrail { get; }
 }

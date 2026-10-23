@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between formats for the balance information.
 /// </summary>
 [IsoId("_RCDQ59p-Ed-ak6NoX_4Aeg_695361822")]
+[IsoDisplayName(@"Balance Quantity 1 Choice")]
 public interface IBalanceQuantity1Choice : IIsoChoice { }

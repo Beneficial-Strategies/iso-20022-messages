@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Auction Data2.
 /// </summary>
 [IsoId("_7Zfv4RA2Ee6N57R8Wekj-w")]
+[IsoDisplayName(@"Auction Data2")]
 public interface IAuctionData2 : IIsoComponent
 {
     /// <summary>

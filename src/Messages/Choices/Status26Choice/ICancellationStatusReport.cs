@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status26Choice;
 /// </summary>
 [IsoId("_n7iikkgrEeaD2L_hzZaE0w")]
 [IsoXmlTag("CxlStsRpt")]
+[IsoDisplayName(@"Cancellation Status Report")]
 public interface ICancellationStatusReport : IStatus26Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICancellationStatusReport : IStatus26Choice, IIsoChoiceVariant
     [IsoId("_5uS5tTbsEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money expressed with an optional currency code and debit/credit indicator.
 /// </summary>
 [IsoId("_smvlckDXEeWOL-OsSq2h6w")]
+[IsoDisplayName(@"Amount And Direction")]
 public interface IAmountAndDirection53 : IIsoComponent
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IAmountAndDirection53 : IIsoComponent
     [IsoId("_sxKFs0DXEeWOL-OsSq2h6w")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? Sign { get; }
 }

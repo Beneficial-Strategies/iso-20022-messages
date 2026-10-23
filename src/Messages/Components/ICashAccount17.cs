@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the cash account.
 /// </summary>
 [IsoId("_SQINk9p-Ed-ak6NoX_4Aeg_-1116675143")]
+[IsoDisplayName(@"Cash Account")]
 public interface ICashAccount17 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface ICashAccount17 : IIsoComponent
     [IsoId("_SQINl9p-Ed-ak6NoX_4Aeg_-1046488323")]
     [DisplayName("Correspondent Bank Identification")]
     [IsoXmlTag("CrspdtBkId")]
+    [IsoSimpleType(IsoSimpleType.BICIdentifier)]
     BICIdentifier CorrespondentBankIdentification { get; }
 }

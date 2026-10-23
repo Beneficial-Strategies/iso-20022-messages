@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response Type12.
 /// </summary>
 [IsoId("_1IgUcZ9REe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Response Type12")]
 public interface IResponseType12 : IIsoComponent
 {
     /// <summary>

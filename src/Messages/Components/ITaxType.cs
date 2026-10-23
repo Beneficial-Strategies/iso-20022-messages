@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information on the type of tax.
 /// </summary>
 [IsoId("_RvWbxtp-Ed-ak6NoX_4Aeg_1316020660")]
+[IsoDisplayName(@"Tax Type")]
 public interface ITaxType : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITaxType : IIsoComponent
     [IsoId("_RvWbx9p-Ed-ak6NoX_4Aeg_1403753704")]
     [DisplayName("Category Description")]
     [IsoXmlTag("CtgyDesc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CategoryDescription { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ITaxType : IIsoComponent
     [IsoId("_RvWbyNp-Ed-ak6NoX_4Aeg_1403753781")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>

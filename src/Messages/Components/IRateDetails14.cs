@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the rates related to securities movement.
 /// </summary>
 [IsoId("_g1EH8SeLEeOXAt_43VmZGw")]
+[IsoDisplayName(@"Rate Details")]
 public interface IRateDetails14 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IRateDetails14 : IIsoComponent
     [IsoId("_hMkCASeLEeOXAt_43VmZGw")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGrossDividendRateFormat7Choice> GrossDividendRate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IRateDetails14 : IIsoComponent
     [IsoId("_hMkCAyeLEeOXAt_43VmZGw")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateUsedForPaymentFormat5Choice> InterestRateUsedForPayment { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IRateDetails14 : IIsoComponent
     [IsoId("_hMkCBSeLEeOXAt_43VmZGw")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateTypeAndAmountAndStatus6> TaxRelatedRate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IRateDetails14 : IIsoComponent
     [IsoId("_hMkCByeLEeOXAt_43VmZGw")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateFormat10Choice> WithholdingTaxRate { get; }
 
     /// <summary>
@@ -105,6 +110,7 @@ public interface IRateDetails14 : IIsoComponent
     [IsoId("_hMkCFSeLEeOXAt_43VmZGw")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetDividendRateFormat9Choice> NetDividendRate { get; }
 
     /// <summary>
@@ -145,6 +151,7 @@ public interface IRateDetails14 : IIsoComponent
     [IsoId("_hMkCHyeLEeOXAt_43VmZGw")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCreditRateFormat5Choice> TaxCreditRate { get; }
 
     /// <summary>
@@ -177,6 +184,7 @@ public interface IRateDetails14 : IIsoComponent
     [IsoId("_hMkCJyeLEeOXAt_43VmZGw")]
     [DisplayName("Withholding Of Foreign Tax")]
     [IsoXmlTag("WhldgOfFrgnTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat20Choice> WithholdingOfForeignTax { get; }
 
     /// <summary>
@@ -185,6 +193,7 @@ public interface IRateDetails14 : IIsoComponent
     [IsoId("_hMkCKSeLEeOXAt_43VmZGw")]
     [DisplayName("Withholding Of Local Tax")]
     [IsoXmlTag("WhldgOfLclTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat20Choice> WithholdingOfLocalTax { get; }
 
     /// <summary>

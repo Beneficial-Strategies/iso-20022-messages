@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_juFw4YVuEe6odei_lsRKtw")]
 [IsoMessage("cain.021.001.03", "RtrvlInitn", "urn:iso:std:iso:20022:tech:xsd:cain.021.001.03")]
+[IsoDisplayName(@"Retrieval Initiation V03")]
 public interface IRetrievalInitiationV03 : IOuterRecord
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IRetrievalInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode5> Programme { get; }
 
     /// <summary>
@@ -151,6 +153,7 @@ public interface IRetrievalInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialProgrammeQualification2> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -172,6 +175,7 @@ public interface IRetrievalInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -186,6 +190,7 @@ public interface IRetrievalInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Dispute Data")]
     [IsoXmlTag("DsptData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeData4> DisputeData { get; }
 
     /// <summary>
@@ -193,6 +198,7 @@ public interface IRetrievalInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Retrieval Fulfilment Instructions")]
     [IsoXmlTag("RtrvlFlfmtInstrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRetrievalFulfilmentInstructions3> RetrievalFulfilmentInstructions { get; }
 
     /// <summary>
@@ -221,6 +227,7 @@ public interface IRetrievalInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -228,6 +235,7 @@ public interface IRetrievalInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -235,6 +243,7 @@ public interface IRetrievalInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of change to the full legal name.
 /// </summary>
 [IsoId("_c8xsMA4iEeK3IMoVvcTkkg")]
+[IsoDisplayName(@"Full Legal Name Modification")]
 public interface IFullLegalNameModification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IFullLegalNameModification1 : IIsoComponent
     [IsoId("_uXcMQA4iEeK3IMoVvcTkkg")]
     [DisplayName("Full Legal Name")]
     [IsoXmlTag("FullLglNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text FullLegalName { get; }
 }

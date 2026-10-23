@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the data for the pending intra-balance movements.
 /// </summary>
 [IsoId("_Ys-BmzneEem7JZMuWtwtsg")]
+[IsoDisplayName(@"Intra Balance Pending")]
 public interface IIntraBalancePending5 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IIntraBalancePending5 : IIsoComponent
     [IsoId("_Y3sq1TneEem7JZMuWtwtsg")]
     [DisplayName("Movement")]
     [IsoXmlTag("Mvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalancePending6> Movement { get; }
 }

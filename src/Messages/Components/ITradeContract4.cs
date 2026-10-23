@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade Contract4.
 /// </summary>
 [IsoId("_2X0v3TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Trade Contract4")]
 public interface ITradeContract4 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface ITradeContract4 : IIsoComponent
     /// </summary>
     [DisplayName("Buyer")]
     [IsoXmlTag("Buyr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty6> Buyer { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface ITradeContract4 : IIsoComponent
     /// </summary>
     [DisplayName("Seller")]
     [IsoXmlTag("Sellr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty6> Seller { get; }
 
     /// <summary>
@@ -100,5 +103,6 @@ public interface ITradeContract4 : IIsoComponent
     /// </summary>
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation5> Attachment { get; }
 }

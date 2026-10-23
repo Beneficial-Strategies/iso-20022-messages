@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indication whether reused value is actual or estimated.
 /// </summary>
 [IsoId("_MSGu8IxnEeap1-whlAlpOw")]
+[IsoDisplayName(@"Reuse Value 1 Choice")]
 public interface IReuseValue1Choice : IIsoChoice { }

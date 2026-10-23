@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of criteria for the identification of an account.
 /// </summary>
 [IsoId("_n9ODwZTIEemqYPWMBuVawg")]
+[IsoDisplayName(@"Account Selection 3 Choice")]
 public interface IAccountSelection3Choice : IIsoChoice { }

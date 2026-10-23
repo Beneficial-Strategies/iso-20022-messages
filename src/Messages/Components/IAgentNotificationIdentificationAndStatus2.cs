@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification and status of the corporate action notification advice sent by the agent.
 /// </summary>
 [IsoId("_VT37YaUfEfCnE_wCEfCqTA")]
+[IsoDisplayName(@"Agent Notification Identification And Status2")]
 public interface IAgentNotificationIdentificationAndStatus2 : IIsoComponent
 {
     /// <summary>

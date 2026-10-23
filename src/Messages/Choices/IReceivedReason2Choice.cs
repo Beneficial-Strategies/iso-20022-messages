@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the reason of a received status.
 /// </summary>
 [IsoId("_2y5Nxlj6EeOgwYxfAV02bg")]
+[IsoDisplayName(@"Received Reason 2 Choice")]
 public interface IReceivedReason2Choice : IIsoChoice { }

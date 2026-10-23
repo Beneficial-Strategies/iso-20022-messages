@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies target and actual dates dates related to account opening and closing.
 /// </summary>
 [IsoId("_UkPlQ9p-Ed-ak6NoX_4Aeg_1731275671")]
+[IsoDisplayName(@"Account Contract")]
 public interface IAccountContract3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAccountContract3 : IIsoComponent
     [IsoId("_UkPlRNp-Ed-ak6NoX_4Aeg_1617436605")]
     [DisplayName("Target Go Live Date")]
     [IsoXmlTag("TrgtGoLiveDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TargetGoLiveDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAccountContract3 : IIsoComponent
     [IsoId("_UkPlRdp-Ed-ak6NoX_4Aeg_912321990")]
     [DisplayName("Target Closing Date")]
     [IsoXmlTag("TrgtClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TargetClosingDate { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IAccountContract3 : IIsoComponent
     [IsoId("_UkPlRtp-Ed-ak6NoX_4Aeg_-1950335857")]
     [DisplayName("Go Live Date")]
     [IsoXmlTag("GoLiveDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? GoLiveDate { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IAccountContract3 : IIsoComponent
     [IsoId("_UkPlR9p-Ed-ak6NoX_4Aeg_-1886056251")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClosingDate { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IAccountContract3 : IIsoComponent
     [IsoId("_UkZWQNp-Ed-ak6NoX_4Aeg_1233720020")]
     [DisplayName("Urgency Flag")]
     [IsoXmlTag("UrgcyFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? UrgencyFlag { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface IAccountContract3 : IIsoComponent
     [IsoId("_UkZWQdp-Ed-ak6NoX_4Aeg_-1501580453")]
     [DisplayName("Removal Indicator")]
     [IsoXmlTag("RmvlInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RemovalIndicator { get; }
 }

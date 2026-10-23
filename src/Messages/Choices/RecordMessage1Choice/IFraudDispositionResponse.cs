@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Fraud disposition response message record.
 /// </summary>
 [IsoId("_KS-OMFZZEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Fraud Disposition Response")]
 public interface IFraudDispositionResponse : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IFraudDispositionResponse : IRecordMessage1Choice, IIsoChoiceVa
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("FrdDspstnRspn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the loan used for financing the transaction.
 /// </summary>
 [IsoId("__yc-Uc0DEeufhKfUxzsnrQ")]
+[IsoDisplayName(@"Trade Transaction Collateral Update")]
 public interface ITradeTransactionCollateralUpdate8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeTransactionCollateralUpdate8 : IIsoComponent
     [IsoId("__0b7Uc0DEeufhKfUxzsnrQ")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface ITradeTransactionCollateralUpdate8 : IIsoComponent
     [IsoId("__0b7Wc0DEeufhKfUxzsnrQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

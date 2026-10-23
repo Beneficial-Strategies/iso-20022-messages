@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// TMS Action Identification10.
 /// </summary>
 [IsoId("_T_rQYZ9nEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"TMS Action Identification10")]
 public interface ITMSActionIdentification10 : IIsoComponent
 {
     /// <summary>

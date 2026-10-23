@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Calculation of the current situation of a line item as a result of the submission of a commercial dataset.
 /// </summary>
 [IsoId("_SscWJdp-Ed-ak6NoX_4Aeg_245671612")]
+[IsoDisplayName(@"Line Item Details")]
 public interface ILineItemDetails8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILineItemDetails8 : IIsoComponent
     [IsoId("_SscWJtp-Ed-ak6NoX_4Aeg_245671614")]
     [DisplayName("Line Item Identification")]
     [IsoXmlTag("LineItmId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text LineItemIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ILineItemDetails8 : IIsoComponent
     [IsoId("_SscWJ9p-Ed-ak6NoX_4Aeg_245671666")]
     [DisplayName("Product Name")]
     [IsoXmlTag("PdctNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ProductName { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface ILineItemDetails8 : IIsoComponent
     [IsoId("_SscWKNp-Ed-ak6NoX_4Aeg_246592345")]
     [DisplayName("Product Identifier")]
     [IsoXmlTag("PdctIdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductIdentifier2Choice> ProductIdentifier { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface ILineItemDetails8 : IIsoComponent
     [IsoId("_SscWKdp-Ed-ak6NoX_4Aeg_246592654")]
     [DisplayName("Product Characteristics")]
     [IsoXmlTag("PdctChrtcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductCharacteristics1Choice> ProductCharacteristics { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface ILineItemDetails8 : IIsoComponent
     [IsoId("_SscWKtp-Ed-ak6NoX_4Aeg_246592623")]
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductCategory1Choice> ProductCategory { get; }
 
     /// <summary>

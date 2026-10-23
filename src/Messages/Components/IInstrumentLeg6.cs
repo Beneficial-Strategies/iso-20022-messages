@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additionnal details related to the leg.
 /// </summary>
 [IsoId("_Na1yQQ8qEeSFHsNYty4C9Q")]
+[IsoDisplayName(@"Instrument Leg")]
 public interface IInstrumentLeg6 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IInstrumentLeg6 : IIsoComponent
     [IsoId("_vY7BUA8qEeSFHsNYty4C9Q")]
     [DisplayName("Leg Settlement Date")]
     [IsoXmlTag("LegSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime LegSettlementDate { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface IInstrumentLeg6 : IIsoComponent
     [IsoId("_cQ3uABF9EeSahYR-dAI4lQ")]
     [DisplayName("Leg Forward Points")]
     [IsoXmlTag("LegFwdPts")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber LegForwardPoints { get; }
 
     /// <summary>
@@ -97,6 +100,7 @@ public interface IInstrumentLeg6 : IIsoComponent
     [IsoId("_ZO4uQBF-EeSahYR-dAI4lQ")]
     [DisplayName("Leg Value Date")]
     [IsoXmlTag("LegValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate LegValueDate { get; }
 
     /// <summary>
@@ -113,6 +117,8 @@ public interface IInstrumentLeg6 : IIsoComponent
     [IsoId("_0OwKYEeqEeSMv54C-KRx9A")]
     [DisplayName("Leg Symbol")]
     [IsoXmlTag("LegSymb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text LegSymbol { get; }
 
     /// <summary>

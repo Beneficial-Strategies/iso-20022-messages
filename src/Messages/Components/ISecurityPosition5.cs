@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the securities for which the meeting is organised.
 /// </summary>
 [IsoId("_QT2uKNp-Ed-ak6NoX_4Aeg_583952553")]
+[IsoDisplayName(@"Security Position")]
 public interface ISecurityPosition5 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,8 @@ public interface ISecurityPosition5 : IIsoComponent
     [IsoId("_QT_4Edp-Ed-ak6NoX_4Aeg_1240575085")]
     [DisplayName("Position")]
     [IsoXmlTag("Pos")]
+    [MinLength(0)]
+    [MaxLength(1000)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEligiblePosition2> Position { get; }
 }

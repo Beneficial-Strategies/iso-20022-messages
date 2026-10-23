@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Loyalty Request7.
 /// </summary>
 [IsoId("_vWAaUaESEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Loyalty Request7")]
 public interface ILoyaltyRequest7 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface ILoyaltyRequest7 : IIsoComponent
     /// </summary>
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyRequestData3> Data { get; }
 }

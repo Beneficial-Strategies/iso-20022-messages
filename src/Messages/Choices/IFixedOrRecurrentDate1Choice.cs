@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a fixed date and a recurring date.
 /// </summary>
 [IsoId("_98LLBnltEeG7BsjMvd1mEw_-980384765")]
+[IsoDisplayName(@"Fixed Or Recurrent Date 1 Choice")]
 public interface IFixedOrRecurrentDate1Choice : IIsoChoice { }

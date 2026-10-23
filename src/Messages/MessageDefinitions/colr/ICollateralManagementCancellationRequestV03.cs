@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_AP6ogV9MEeSMgPeFpRHeJw")]
 [IsoMessage("colr.005.001.03", "CollMgmtCxlReq", "urn:iso:std:iso:20022:tech:xsd:colr.005.001.03")]
+[Description(@"Scope|This CollateralManagementCancellationRequest message is sent by:|- the collateral taker or its collateral manager to the collateral giver or its collateral manager,|- the collateral giver or its collateral manager to the collateral taker or its collateral manager|This message is used to request the cancellation of a previously sent MarginCallRequest message, MarginCallResponse message, CollateralProposal message, CollateralProposalResponse message, MarginCallDisputeNotification message or a CollateralSubstitutionRequest message.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|The CollateralManagementCancellationRequest message is used to request the cancellation of a collateral message. When requesting the cancellation of a message there must be a cancellation reason specified.|When the CollateralManagementCancellationRequest message is used to cancel a collateral message the reference of the original message must be specified. The rejection or acceptance of a CollateralManagementCancellationRequest message is made using a CollateralManagementCancellationStatus message.")]
+[IsoDisplayName(@"Collateral Management Cancellation Request V")]
 public interface ICollateralManagementCancellationRequestV03 : IOuterRecord
 {
     /// <summary>
@@ -30,6 +32,8 @@ public interface ICollateralManagementCancellationRequestV03 : IOuterRecord
     [IsoId("_AP6og19MEeSMgPeFpRHeJw")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -62,5 +66,6 @@ public interface ICollateralManagementCancellationRequestV03 : IOuterRecord
     [IsoId("_AP6oi19MEeSMgPeFpRHeJw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies a party that notifies a financial document, the party to be notified, and whether notified party must send an acknowledgement and to whom.
 /// </summary>
 [IsoId("_OTgzMzMw-AOSNFX-8224500")]
+[IsoDisplayName(@"Financing Notification Parties")]
 public interface IFinancingNotificationParties1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IFinancingNotificationParties1 : IIsoComponent
     [IsoId("_OTMxOTc0-AOSNFX-0262747")]
     [DisplayName("Acknowledgement Receiver")]
     [IsoXmlTag("AckRcvr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedPartyIdentification1> AcknowledgementReceiver { get; }
 }

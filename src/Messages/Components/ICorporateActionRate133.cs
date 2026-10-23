@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Rate133.
 /// </summary>
 [IsoId("_l6T8kZt3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Corporate Action Rate133")]
 public interface ICorporateActionRate133 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ICorporateActionRate133 : IIsoComponent
     /// </summary>
     [DisplayName("Gross Distribution Rate")]
     [IsoXmlTag("GrssDstrbtnRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGrossDividendRateFormat41Choice> GrossDistributionRate { get; }
 
     /// <summary>
@@ -30,6 +32,7 @@ public interface ICorporateActionRate133 : IIsoComponent
     /// </summary>
     [DisplayName("Net Distribution Rate")]
     [IsoXmlTag("NetDstrbtnRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetDividendRateFormat43Choice> NetDistributionRate { get; }
 
     /// <summary>
@@ -37,6 +40,7 @@ public interface ICorporateActionRate133 : IIsoComponent
     /// </summary>
     [DisplayName("Gross Interest Rate Used For Payment")]
     [IsoXmlTag("GrssIntrstRateUsdForPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateUsedForPaymentFormat18Choice> GrossInterestRateUsedForPayment { get; }
 
     /// <summary>
@@ -58,6 +62,7 @@ public interface ICorporateActionRate133 : IIsoComponent
     /// </summary>
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat70Choice> WithholdingTaxRate { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ICorporateActionRate133 : IIsoComponent
     /// </summary>
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat70Choice> SecondLevelTax { get; }
 
     /// <summary>
@@ -72,6 +78,7 @@ public interface ICorporateActionRate133 : IIsoComponent
     /// </summary>
     [DisplayName("Taxable Income Per Dividend Share")]
     [IsoXmlTag("TaxblIncmPerDvddShr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateTypeAndAmountAndStatus33> TaxableIncomePerDividendShare { get; }
 
     /// <summary>

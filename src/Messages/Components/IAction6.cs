@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of actions to be performed by the POI (Point Of Interaction) system.
 /// </summary>
 [IsoId("_4bj8cY04EeW1W6lLicSC4w")]
+[IsoDisplayName(@"Action")]
 public interface IAction6 : IIsoComponent
 {
     /// <summary>

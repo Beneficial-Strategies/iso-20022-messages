@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a point of interaction.
 /// </summary>
 [IsoId("_9wj-QI4UEeW6h7rGyYlyTg")]
+[IsoDisplayName(@"Point Of Interaction")]
 public interface IPointOfInteraction6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPointOfInteraction6 : IIsoComponent
     [IsoId("_ISnAsI4VEeW6h7rGyYlyTg")]
     [DisplayName("Manufacturer Identifier")]
     [IsoXmlTag("ManfctrIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ManufacturerIdentifier { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPointOfInteraction6 : IIsoComponent
     [IsoId("_K-fYII4VEeW6h7rGyYlyTg")]
     [DisplayName("Model")]
     [IsoXmlTag("Mdl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Model { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IPointOfInteraction6 : IIsoComponent
     [IsoId("_N5OD4I4VEeW6h7rGyYlyTg")]
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SerialNumber { get; }
 }

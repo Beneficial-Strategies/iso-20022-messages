@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitIdentification2Choice;
 /// </summary>
 [IsoId("_BIwgR24-EeiU9cctagi5ow")]
 [IsoXmlTag("AllDflt")]
+[IsoDisplayName(@"All Default")]
 public interface IAllDefault : ILimitIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

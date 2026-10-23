@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Search for a system and a member of a system.
 /// </summary>
 [IsoId("_78osBaMgEeCJ6YNENx4h-w_-1378873885")]
+[IsoDisplayName(@"System")]
 public interface ISystem1 : IIsoComponent
 {
     /// <summary>

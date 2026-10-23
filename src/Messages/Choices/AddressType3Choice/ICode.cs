@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AddressType3Choice;
 /// Type of address expressed as a code.
 /// </summary>
 [IsoId("_C7IDQRb-EeiyVv5j1vf1VQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAddressType3Choice, IIsoChoiceVariant
 {
     /// <summary>

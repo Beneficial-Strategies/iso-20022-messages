@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClaimNonReceipt1Choice;
 /// Specifies that the claim non receipt has been rejected and provides the reason for the rejection.
 /// </summary>
 [IsoId("_w4YfsIjYEeeDW7_wB-eK_g")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IClaimNonReceipt1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

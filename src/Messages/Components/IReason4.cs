@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies whether the status is provided with a reason or not.
 /// </summary>
 [IsoId("_qKKNYeLtEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Reason")]
 public interface IReason4 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IReason4 : IIsoComponent
     [IsoId("_qTYa0eLtEeWOD7aAy2fAcA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryReason4> Reason { get; }
 }

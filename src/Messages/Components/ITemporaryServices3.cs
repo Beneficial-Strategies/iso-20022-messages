@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Temporary Services3.
 /// </summary>
 [IsoId("_lwWqgXc_Ee6YlIMyoxWMJA")]
+[IsoDisplayName(@"Temporary Services3")]
 public interface ITemporaryServices3 : IIsoComponent
 {
     /// <summary>
@@ -142,6 +143,7 @@ public interface ITemporaryServices3 : IIsoComponent
     /// </summary>
     [DisplayName("Charge")]
     [IsoXmlTag("Chrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount12> Charge { get; }
 
     /// <summary>
@@ -149,6 +151,7 @@ public interface ITemporaryServices3 : IIsoComponent
     /// </summary>
     [DisplayName("Miscellaneous Expenses")]
     [IsoXmlTag("MiscExpnss")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount13> MiscellaneousExpenses { get; }
 
     /// <summary>
@@ -163,6 +166,7 @@ public interface ITemporaryServices3 : IIsoComponent
     /// </summary>
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax41> Tax { get; }
 
     /// <summary>
@@ -170,5 +174,6 @@ public interface ITemporaryServices3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

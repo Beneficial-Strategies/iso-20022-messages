@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information on the original transaction, to which the status report message refers.
 /// </summary>
 [IsoId("223270f6-eaaf-4b72-8b14-f17478370b64")]
+[IsoDisplayName(@"Original Payment Instruction53")]
 public interface IOriginalPaymentInstruction53 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IOriginalPaymentInstruction53 : IIsoComponent
     [IsoId("5c551b2c-0dde-478e-9822-6845eff732de")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReversalReason10> ReversalReasonInformation { get; }
 
     /// <summary>
@@ -73,5 +75,6 @@ public interface IOriginalPaymentInstruction53 : IIsoComponent
     [IsoId("a0b2f52d-42ab-44ee-8f65-01e66caff5b3")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction174> TransactionInformation { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria2Choice;
 /// <summary>
 /// Payment Instrument.
 /// </summary>
+[IsoDisplayName(@"Payment Instrument")]
 public interface IPaymentInstrument : ISearchCriteria2Choice, IIsoChoiceVariant
 {
     /// <summary>

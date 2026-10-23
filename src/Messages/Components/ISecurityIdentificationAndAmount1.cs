@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the current valuation of a security.
 /// </summary>
 [IsoId("_HfBSwK_7EeaE9YROwd69hA")]
+[IsoDisplayName(@"Security Identification And Amount")]
 public interface ISecurityIdentificationAndAmount1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityIdentificationAndAmount1 : IIsoComponent
     [IsoId("_RK0CoK_7EeaE9YROwd69hA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier Identification { get; }
 
     /// <summary>

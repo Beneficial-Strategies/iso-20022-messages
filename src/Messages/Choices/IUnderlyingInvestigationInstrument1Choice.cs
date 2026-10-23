@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Underlying Investigation Instrument1Choice.
 /// </summary>
 [IsoId("_CXmpW1RtEe23M4WgERMsYw")]
+[IsoDisplayName(@"Underlying Investigation Instrument1Choice")]
 public interface IUnderlyingInvestigationInstrument1Choice : IIsoChoice { }

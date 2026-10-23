@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractClosureReason1Choice;
 /// Reason in a coded form.
 /// </summary>
 [IsoId("_0KuyYArAEeWD-cmAqruRjw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IContractClosureReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance of the account involved in the card transaction.
 /// </summary>
 [IsoId("_nRjgQRQUEfC1ZfCQz0xB3g")]
+[IsoDisplayName(@"Account Balance4")]
 public interface IAccountBalance4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IAccountBalance4 : IIsoComponent
     [IsoId("_nY-9-RQUEfC1ZfCQz0xB3g")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardAccountBalance1> Balance { get; }
 }

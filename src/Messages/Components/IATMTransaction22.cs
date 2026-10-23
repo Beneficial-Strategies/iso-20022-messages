@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response to the PIN management transaction. request.
 /// </summary>
 [IsoId("_aWJUca4bEeW_TaP-ygI0SQ")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction22 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IATMTransaction22 : IIsoComponent
     [IsoId("_aguz064bEeW_TaP-ygI0SQ")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IATMTransaction22 : IIsoComponent
     [IsoId("_aguz1a4bEeW_TaP-ygI0SQ")]
     [DisplayName("Completion Required")]
     [IsoXmlTag("CmpltnReqrd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CompletionRequired { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IATMTransaction22 : IIsoComponent
     [IsoId("_aguz2a4bEeW_TaP-ygI0SQ")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction7> Action { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IATMTransaction22 : IIsoComponent
     [IsoId("_aguz264bEeW_TaP-ygI0SQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 
     /// <summary>
@@ -65,5 +71,6 @@ public interface IATMTransaction22 : IIsoComponent
     [IsoId("_aguz3a4bEeW_TaP-ygI0SQ")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 }

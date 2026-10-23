@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
 /// </summary>
 [IsoId("_Rw1ph9p-Ed-ak6NoX_4Aeg_-1507060862")]
+[IsoDisplayName(@"Investment Account")]
 public interface IInvestmentAccount24 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInvestmentAccount24 : IIsoComponent
     [IsoId("_Rw1piNp-Ed-ak6NoX_4Aeg_-1507060836")]
     [DisplayName("Owner Identification")]
     [IsoXmlTag("OwnrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification2Choice> OwnerIdentification { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IInvestmentAccount24 : IIsoComponent
     [IsoId("_Rw-zcdp-Ed-ak6NoX_4Aeg_-1507060784")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountName { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface IInvestmentAccount24 : IIsoComponent
     [IsoId("_Rw-zctp-Ed-ak6NoX_4Aeg_-1507060542")]
     [DisplayName("Account Designation")]
     [IsoXmlTag("AcctDsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountDesignation { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IInvestmentAccount24 : IIsoComponent
     [IsoId("_Rw-zc9p-Ed-ak6NoX_4Aeg_-1824466073")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary10> IntermediaryInformation { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IInvestmentAccount24 : IIsoComponent
     [IsoId("_Rw-zddp-Ed-ak6NoX_4Aeg_-1507060447")]
     [DisplayName("Dematerialised Indicator")]
     [IsoXmlTag("DmtrlsdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DematerialisedIndicator { get; }
 
     /// <summary>

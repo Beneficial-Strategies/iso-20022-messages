@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.casr;
 /// </summary>
 [IsoId("_sZIc8ZjLEe6OBt2eQPMPsQ")]
 [IsoMessage("casr.002.001.03", "SttlmRptgRspn", "urn:iso:std:iso:20022:tech:xsd:casr.002.001.03")]
+[IsoDisplayName(@"Settlement Reporting Response V03")]
 public interface ISettlementReportingResponseV03 : IOuterRecord
 {
     /// <summary>
@@ -74,6 +75,7 @@ public interface ISettlementReportingResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode5> Programme { get; }
 
     /// <summary>
@@ -123,6 +125,7 @@ public interface ISettlementReportingResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -158,6 +161,7 @@ public interface ISettlementReportingResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -165,6 +169,7 @@ public interface ISettlementReportingResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -172,6 +177,7 @@ public interface ISettlementReportingResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

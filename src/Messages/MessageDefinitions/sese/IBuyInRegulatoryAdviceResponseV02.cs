@@ -27,6 +27,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "BuyInRgltryAdvcRspn",
     "urn:iso:std:iso:20022:tech:xsd:sese.042.001.02"
 )]
+[Description(@"Scope||An account servicer sends a BuyInRegulatoryAdviceResponse to an account owner to advise the status of a buy-in report previously instructed by the account owner.||The account servicer/owner relationship may be:||- a central securities depository or another settlement market infrastructure acting on behalf of their participants||- an agent (sub-custodian) acting on behalf of their global custodian customer, or||- a custodian acting on behalf of an investment management institution or a broker/dealer.||||Usage||A BuyInRegulatpryReport may contain reports on multiple transactions. However, one BuyInRegulatoryReportStatusAdvice must be sent per transaction reported  unless the BuyInRegulatoryReport is rejected as a whole.|||The message may also be used to:|- re-send a message previously sent,||- provide a third party with a copy of a message for information,||- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Buy In Regulatory Advice Response V02")]
 public interface IBuyInRegulatoryAdviceResponseV02 : IOuterRecord
 {
     /// <summary>
@@ -55,6 +57,7 @@ public interface IBuyInRegulatoryAdviceResponseV02 : IOuterRecord
     /// </summary>
     [DisplayName("Buy In Attributes")]
     [IsoXmlTag("BuyInAttrbts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBuyInAdviceDetails2> BuyInAttributes { get; }
 
     /// <summary>
@@ -69,5 +72,6 @@ public interface IBuyInRegulatoryAdviceResponseV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

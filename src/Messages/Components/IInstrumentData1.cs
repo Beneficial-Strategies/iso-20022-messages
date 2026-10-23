@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instrument related data.
 /// </summary>
 [IsoId("_2HTIMGFSEfC91ZUW7iS7ww")]
+[IsoDisplayName(@"Instrument Data1")]
 public interface IInstrumentData1 : IIsoComponent
 {
     /// <summary>

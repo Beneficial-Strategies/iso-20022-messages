@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgTxRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.016.001.02"
 )]
+[IsoDisplayName(@"Financial Instrument Reporting Transaction Report V02")]
 public interface IFinancialInstrumentReportingTransactionReportV02 : IOuterRecord
 {
     /// <summary>
@@ -22,6 +23,7 @@ public interface IFinancialInstrumentReportingTransactionReportV02 : IOuterRecor
     /// </summary>
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportingTransactionType2Choice> Transaction { get; }
 
     /// <summary>
@@ -29,5 +31,6 @@ public interface IFinancialInstrumentReportingTransactionReportV02 : IOuterRecor
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

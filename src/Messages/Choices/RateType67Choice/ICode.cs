@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType67Choice;
 /// Rate expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_5mw355NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRateType67Choice, IIsoChoiceVariant
 {
     /// <summary>

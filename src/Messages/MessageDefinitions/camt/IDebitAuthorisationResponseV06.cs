@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3H8pzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.036.001.06", "DbtAuthstnRspn", "urn:iso:std:iso:20022:tech:xsd:camt.036.001.06")]
+[IsoDisplayName(@"Debit Authorisation Response V06")]
 public interface IDebitAuthorisationResponseV06 : IOuterRecord
 {
     /// <summary>
@@ -39,5 +40,6 @@ public interface IDebitAuthorisationResponseV06 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

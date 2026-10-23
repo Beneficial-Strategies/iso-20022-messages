@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of each package of currency control records.
 /// </summary>
 [IsoId("_9WLb9248EeiU9cctagi5ow")]
+[IsoDisplayName(@"Currency Control Package Status")]
 public interface ICurrencyControlPackageStatus2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICurrencyControlPackageStatus2 : IIsoComponent
     [IsoId("_9gw7UW48EeiU9cctagi5ow")]
     [DisplayName("Package Identification")]
     [IsoXmlTag("PackgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PackageIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICurrencyControlPackageStatus2 : IIsoComponent
     [IsoId("_9gw7VW48EeiU9cctagi5ow")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IValidationStatusReason2> StatusReason { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICurrencyControlPackageStatus2 : IIsoComponent
     [IsoId("_9gw7V248EeiU9cctagi5ow")]
     [DisplayName("Status Date Time")]
     [IsoXmlTag("StsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StatusDateTime { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface ICurrencyControlPackageStatus2 : IIsoComponent
     [IsoId("_9gw7WW48EeiU9cctagi5ow")]
     [DisplayName("Record Status")]
     [IsoXmlTag("RcrdSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICurrencyControlRecordStatus2> RecordStatus { get; }
 }

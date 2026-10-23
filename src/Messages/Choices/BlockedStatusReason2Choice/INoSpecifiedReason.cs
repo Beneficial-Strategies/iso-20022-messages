@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockedStatusReason2Choice;
 /// There is no reason available or to report for the closed account status.
 /// </summary>
 [IsoId("_8t7ZAV1LEeagR5I1rq5oaw")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IBlockedStatusReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

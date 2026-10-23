@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Repurchase agreement where the agreement allows for the sale and repurchase of any of a selection of assets from a pool of eligible assets.
 /// </summary>
 [IsoId("_M0GsEeoaEeadseq5W5YLvQ")]
+[IsoDisplayName(@"General Collateral")]
 public interface IGeneralCollateral3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IGeneralCollateral3 : IIsoComponent
     [IsoId("_plT7AfnbEeaHA8tUPpXMKA")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument59> FinancialInstrumentIdentification { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IGeneralCollateral3 : IIsoComponent
     [IsoId("_M-XbUeoaEeadseq5W5YLvQ")]
     [DisplayName("Eligible Financial Instrument Identification")]
     [IsoXmlTag("ElgblFinInstrmId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISINOct2015Identifier> EligibleFinancialInstrumentIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration parameter version of the ATM.
 /// </summary>
 [IsoId("_Mv--sIn9EeShMpas3885ww")]
+[IsoDisplayName(@"ATM Configuration Parameter")]
 public interface IATMConfigurationParameter1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IATMConfigurationParameter1 : IIsoComponent
     [IsoId("_TcxKUIn-EeShMpas3885ww")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Version { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organised structure that is set up for a particular purpose. For example, a business, government body, department, charity, or financial institution.
 /// </summary>
 [IsoId("_XjHp9249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation35 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrganisation35 : IIsoComponent
     [IsoId("_XtGsYW49EeiU9cctagi5ow")]
     [DisplayName("Full Legal Name")]
     [IsoXmlTag("FullLglNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text FullLegalName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOrganisation35 : IIsoComponent
     [IsoId("_XtGsY249EeiU9cctagi5ow")]
     [DisplayName("Trading Name")]
     [IsoXmlTag("TradgNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? TradingName { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IOrganisation35 : IIsoComponent
     [IsoId("_XtGsZ249EeiU9cctagi5ow")]
     [DisplayName("Established Date")]
     [IsoXmlTag("EstblishdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EstablishedDate { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IOrganisation35 : IIsoComponent
     [IsoId("_XtGsaW49EeiU9cctagi5ow")]
     [DisplayName("Registration Number")]
     [IsoXmlTag("RegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? RegistrationNumber { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IOrganisation35 : IIsoComponent
     [IsoId("_XtGsbW49EeiU9cctagi5ow")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 
     /// <summary>
@@ -73,6 +82,8 @@ public interface IOrganisation35 : IIsoComponent
     [IsoId("_XtGsb249EeiU9cctagi5ow")]
     [DisplayName("Taxation Identification Number")]
     [IsoXmlTag("TaxtnIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxationIdentificationNumber { get; }
 
     /// <summary>
@@ -97,6 +108,7 @@ public interface IOrganisation35 : IIsoComponent
     [IsoId("_XtGsdW49EeiU9cctagi5ow")]
     [DisplayName("Board Resolution Indicator")]
     [IsoXmlTag("BrdRsltnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? BoardResolutionIndicator { get; }
 
     /// <summary>
@@ -129,6 +141,7 @@ public interface IOrganisation35 : IIsoComponent
     [IsoId("_XtGsfW49EeiU9cctagi5ow")]
     [DisplayName("Representative Officer")]
     [IsoXmlTag("RprtvOffcr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification135> RepresentativeOfficer { get; }
 
     /// <summary>
@@ -145,6 +158,7 @@ public interface IOrganisation35 : IIsoComponent
     [IsoId("_XtGsgW49EeiU9cctagi5ow")]
     [DisplayName("Main Mandate Holder")]
     [IsoXmlTag("MainMndtHldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification135> MainMandateHolder { get; }
 
     /// <summary>
@@ -153,5 +167,6 @@ public interface IOrganisation35 : IIsoComponent
     [IsoId("_XtGsg249EeiU9cctagi5ow")]
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification135> Sender { get; }
 }

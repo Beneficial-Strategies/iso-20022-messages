@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType127Choic
 
 /// <summary>Event type expressed as a proprietary code.</summary>
 [IsoId("_z49Xq6NZEfC9id413JK-Ig")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICorporateActionEventType127Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

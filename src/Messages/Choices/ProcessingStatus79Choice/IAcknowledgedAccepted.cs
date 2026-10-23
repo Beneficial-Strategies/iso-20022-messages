@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus79Choice;
 /// Buy-in advice is acknowledged by the account servicer.
 /// </summary>
 [IsoId("_HqnHYZwZEeqtp-LOti013g")]
+[IsoDisplayName(@"Acknowledged Accepted")]
 public interface IAcknowledgedAccepted : IProcessingStatus79Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

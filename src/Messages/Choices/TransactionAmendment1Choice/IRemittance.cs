@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice;
 /// <summary>
 /// Remittance.
 /// </summary>
+[IsoDisplayName(@"Remittance")]
 public interface IRemittance : ITransactionAmendment1Choice, IIsoChoiceVariant
 {
     /// <summary>

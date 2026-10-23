@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice of formats for the type of charge.
 /// </summary>
 [IsoId("_JVSiqQatEeS3lpTattq7hg")]
+[IsoDisplayName(@"Charge")]
 public interface ICharge26 : IIsoComponent
 {
     /// <summary>

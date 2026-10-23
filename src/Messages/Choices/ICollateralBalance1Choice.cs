@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice to provide the collateral balance for the variation margin and the segregated independent amount, or the segregated independent amount only.
 /// </summary>
 [IsoId("_UnXxx9p-Ed-ak6NoX_4Aeg_-92530976")]
+[IsoDisplayName(@"Collateral Balance 1 Choice")]
 public interface ICollateralBalance1Choice : IIsoChoice { }

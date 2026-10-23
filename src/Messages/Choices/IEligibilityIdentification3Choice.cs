@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the eligibility details.
 /// </summary>
 [IsoId("_w8PAkWc-EemvNLufWGIVOQ")]
+[IsoDisplayName(@"Eligibility Identification 3 Choice")]
 public interface IEligibilityIdentification3Choice : IIsoChoice { }

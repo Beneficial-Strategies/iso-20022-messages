@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the most common data field that has not passed the validation rule.
 /// </summary>
 [IsoId("_NeaEeVfdEeqZr5K1Woax-g")]
+[IsoDisplayName(@"Top Reasons For Rejections")]
 public interface ITopReasonsForRejections2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITopReasonsForRejections2 : IIsoComponent
     [IsoId("_N1g84VfdEeqZr5K1Woax-g")]
     [DisplayName("All")]
     [IsoXmlTag("All")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> All { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITopReasonsForRejections2 : IIsoComponent
     [IsoId("_N1g841fdEeqZr5K1Woax-g")]
     [DisplayName("New")]
     [IsoXmlTag("New")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> New { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ITopReasonsForRejections2 : IIsoComponent
     [IsoId("_N1g85VfdEeqZr5K1Woax-g")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> Modification { get; }
 }

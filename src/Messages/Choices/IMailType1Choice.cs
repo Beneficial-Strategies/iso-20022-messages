@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the type of mail.
 /// </summary>
 [IsoId("_mQiA0CCXEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Mail Type 1 Choice")]
 public interface IMailType1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LocationFormat1Choice;
 /// Indicates that the location is unknown.
 /// </summary>
 [IsoId("_RXD3mdp-Ed-ak6NoX_4Aeg_33853992")]
+[IsoDisplayName(@"Location Code")]
 public interface ILocationCode : ILocationFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

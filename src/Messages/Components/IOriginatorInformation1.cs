@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the originator. It is present only if required by the key management algorithm.
 /// </summary>
 [IsoId("__XpcEOCwEee83LAjB5Kqdw")]
+[IsoDisplayName(@"Originator Information")]
 public interface IOriginatorInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IOriginatorInformation1 : IIsoComponent
     [IsoId("_RHj98OCyEee83LAjB5Kqdw")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max5000Binary> Certificate { get; }
 }

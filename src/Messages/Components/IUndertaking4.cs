@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about an undertaking.
 /// </summary>
 [IsoId("_9zFgdXltEeG7BsjMvd1mEw_1035435998")]
+[IsoDisplayName(@"Undertaking")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IUndertaking4 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface IUndertaking4 : IIsoComponent
     [IsoId("_9zOqYXltEeG7BsjMvd1mEw_-1559280949")]
     [DisplayName("Applicant")]
     [IsoXmlTag("Applcnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification43> Applicant { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IUndertaking4 : IIsoComponent
     [IsoId("_9zOqYnltEeG7BsjMvd1mEw_1081181075")]
     [DisplayName("Beneficiary")]
     [IsoXmlTag("Bnfcry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification43> Beneficiary { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IUndertaking4 : IIsoComponent
     [IsoId("_9zOqY3ltEeG7BsjMvd1mEw_-930204574")]
     [DisplayName("Date Of Issuance")]
     [IsoXmlTag("DtOfIssnc")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfIssuance { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface IUndertaking4 : IIsoComponent
     [IsoId("_56z_IxSAEeKyNbjzgBLUcA")]
     [DisplayName("Confirmation Indicator")]
     [IsoXmlTag("ConfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ConfirmationIndicator { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface IUndertaking4 : IIsoComponent
     [IsoId("_9zYbYnltEeG7BsjMvd1mEw_-1413623178")]
     [DisplayName("Additional Party")]
     [IsoXmlTag("AddtlPty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndType1> AdditionalParty { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface IUndertaking4 : IIsoComponent
     [IsoId("_NC1go31qEeGlwNeVP9egyg")]
     [DisplayName("Underlying Transaction")]
     [IsoXmlTag("UndrlygTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnderlyingTradeTransaction1> UnderlyingTransaction { get; }
 
     /// <summary>
@@ -137,6 +145,7 @@ public interface IUndertaking4 : IIsoComponent
     [IsoId("_SbTu4xSAEeKyNbjzgBLUcA")]
     [DisplayName("Multiple Demand Indicator")]
     [IsoXmlTag("MltplDmndInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? MultipleDemandIndicator { get; }
 
     /// <summary>
@@ -145,6 +154,7 @@ public interface IUndertaking4 : IIsoComponent
     [IsoId("_En7ekxSAEeKyNbjzgBLUcA")]
     [DisplayName("Partial Demand Indicator")]
     [IsoXmlTag("PrtlDmndInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PartialDemandIndicator { get; }
 
     /// <summary>
@@ -169,6 +179,7 @@ public interface IUndertaking4 : IIsoComponent
     [IsoId("_WEveQxSBEeKyNbjzgBLUcA")]
     [DisplayName("Automatic Amount Variation")]
     [IsoXmlTag("AutomtcAmtVartn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAutomaticVariation1> AutomaticAmountVariation { get; }
 
     /// <summary>
@@ -185,6 +196,7 @@ public interface IUndertaking4 : IIsoComponent
     [IsoId("_4WwA0xR_EeKyNbjzgBLUcA")]
     [DisplayName("Transfer Indicator")]
     [IsoXmlTag("TrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TransferIndicator { get; }
 
     /// <summary>
@@ -193,5 +205,9 @@ public interface IUndertaking4 : IIsoComponent
     [IsoId("_9ziMYHltEeG7BsjMvd1mEw_228131973")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

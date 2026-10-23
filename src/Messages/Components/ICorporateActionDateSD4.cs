@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action date details.
 /// </summary>
 [IsoId("_1ePnUzL3EeKU9IrkkToqcw_1659480407")]
+[IsoDisplayName(@"Corporate Action Date SD")]
 public interface ICorporateActionDateSD4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionDateSD4 : IIsoComponent
     [IsoId("_1ePnVDL3EeKU9IrkkToqcw_662408054")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICorporateActionDateSD4 : IIsoComponent
     [IsoId("_1ePnVTL3EeKU9IrkkToqcw_-568372746")]
     [DisplayName("Interim Accounting Start Date")]
     [IsoXmlTag("IntrmAcctgStartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterimAccountingStartDate { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ICorporateActionDateSD4 : IIsoComponent
     [IsoId("_1ePnVjL3EeKU9IrkkToqcw_-868959552")]
     [DisplayName("Delisting Date")]
     [IsoXmlTag("DlistgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DelistingDate { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ICorporateActionDateSD4 : IIsoComponent
     [IsoId("_1eZYUDL3EeKU9IrkkToqcw_608195982")]
     [DisplayName("Exercise Period Begin Date")]
     [IsoXmlTag("ExrcPrdBegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExercisePeriodBeginDate { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ICorporateActionDateSD4 : IIsoComponent
     [IsoId("_1eZYUTL3EeKU9IrkkToqcw_757336184")]
     [DisplayName("Objection Date")]
     [IsoXmlTag("ObjctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ObjectionDate { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface ICorporateActionDateSD4 : IIsoComponent
     [IsoId("_1eZYUjL3EeKU9IrkkToqcw_526220081")]
     [DisplayName("Exclusion Date")]
     [IsoXmlTag("ExclsnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExclusionDate { get; }
 
     /// <summary>
@@ -65,5 +73,6 @@ public interface ICorporateActionDateSD4 : IIsoComponent
     [IsoId("_1eZYUzL3EeKU9IrkkToqcw_338802594")]
     [DisplayName("Proof Of Claim Filing Date")]
     [IsoXmlTag("ProofOfClmFilgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ProofOfClaimFilingDate { get; }
 }

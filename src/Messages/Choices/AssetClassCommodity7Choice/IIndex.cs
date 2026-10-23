@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice;
 /// <summary>
 /// Index.
 /// </summary>
+[IsoDisplayName(@"Index")]
 public interface IIndex : IAssetClassCommodity7Choice, IIsoChoiceVariant
 {
     /// <summary>

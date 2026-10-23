@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndividualPersonIdentificationCh
 /// </summary>
 [IsoId("_RE37YNp-Ed-ak6NoX_4Aeg_1465032202")]
 [IsoXmlTag("PrsnNm")]
+[IsoDisplayName(@"Person Name")]
 public interface IPersonName : IIndividualPersonIdentificationChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IPersonName : IIndividualPersonIdentificationChoice, IIsoChoice
     [IsoId("_QBrZBdp-Ed-ak6NoX_4Aeg_995882490")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text GivenName { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IPersonName : IIndividualPersonIdentificationChoice, IIsoChoice
     [IsoId("_QBrZBtp-Ed-ak6NoX_4Aeg_867841803")]
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MiddleName { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface IPersonName : IIndividualPersonIdentificationChoice, IIsoChoice
     [IsoId("_QBrZB9p-Ed-ak6NoX_4Aeg_995884938")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -50,5 +57,6 @@ public interface IPersonName : IIndividualPersonIdentificationChoice, IIsoChoice
     [IsoId("_QB0i8Np-Ed-ak6NoX_4Aeg_996806013")]
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BirthDate { get; }
 }

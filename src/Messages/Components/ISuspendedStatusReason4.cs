@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for a suspended status.
 /// </summary>
 [IsoId("_d2qkoUHmEea8I67lh6qdSQ")]
+[IsoDisplayName(@"Suspended Status Reason")]
 public interface ISuspendedStatusReason4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ISuspendedStatusReason4 : IIsoComponent
     [IsoId("_eO6sk0HmEea8I67lh6qdSQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

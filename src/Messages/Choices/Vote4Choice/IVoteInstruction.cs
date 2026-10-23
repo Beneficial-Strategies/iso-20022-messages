@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote4Choice;
 /// </summary>
 [IsoId("_Y98Ls64cEemG7MmivSuE5g")]
 [IsoXmlTag("VoteInstr")]
+[IsoDisplayName(@"Vote Instruction")]
 public interface IVoteInstruction : IVote4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IVoteInstruction : IVote4Choice, IIsoChoiceVariant
     [IsoId("_bVfaI6-WEemJ1NnLPsTFaw")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>
@@ -122,5 +125,8 @@ public interface IVoteInstruction : IVote4Choice, IIsoChoiceVariant
     [IsoId("_tkrR8K-XEemJ1NnLPsTFaw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [MinLength(0)]
+    [MaxLength(4)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryVote1> Proprietary { get; }
 }

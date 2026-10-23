@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_sV77T_EkEeqRfth943bvEA")]
 [IsoMessage("seev.008.001.07", "MtgRsltDssmntn", "urn:iso:std:iso:20022:tech:xsd:seev.008.001.07")]
+[Description(@"Scope|The MeetingResultDissemination message is sent by an issuer, its agent or an intermediary to another intermediary, a party holding the right to vote, a registered security holder or to a beneficial holder to provide information on the voting results of a shareholders meeting.|Usage|The MeetingResultDissemination message is used to provide the vote results per resolution. It may also provide information on the level of participation.|This message is also used to notify an update or amendment to a previously sent MeetingResultDissemination message.|This message definition is intended for use with the Business Application Header (BAH).")]
+[IsoDisplayName(@"Meeting Result Dissemination V")]
 public interface IMeetingResultDisseminationV07 : IOuterRecord
 {
     /// <summary>
@@ -33,6 +35,8 @@ public interface IMeetingResultDisseminationV07 : IOuterRecord
     [IsoId("_sV77YfEkEeqRfth943bvEA")]
     [DisplayName("Previous Meeting Results Dissemination Identification")]
     [IsoXmlTag("PrvsMtgRsltsDssmntnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PreviousMeetingResultsDisseminationIdentification { get; }
 
     /// <summary>
@@ -49,6 +53,9 @@ public interface IMeetingResultDisseminationV07 : IOuterRecord
     [IsoId("_sV77ZfEkEeqRfth943bvEA")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition12> Security { get; }
 
     /// <summary>
@@ -57,6 +64,9 @@ public interface IMeetingResultDisseminationV07 : IOuterRecord
     [IsoId("_sV77Z_EkEeqRfth943bvEA")]
     [DisplayName("Vote Result")]
     [IsoXmlTag("VoteRslt")]
+    [MinLength(1)]
+    [MaxLength(1000)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVote16> VoteResult { get; }
 
     /// <summary>
@@ -81,5 +91,6 @@ public interface IMeetingResultDisseminationV07 : IOuterRecord
     [IsoId("_sV77bfEkEeqRfth943bvEA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementType7Choice;
 
 /// <summary>Statement type expressed as a code.</summary>
 [IsoId("_wH_JxQJ3EfGAP_FOfstLIw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IStatementType7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

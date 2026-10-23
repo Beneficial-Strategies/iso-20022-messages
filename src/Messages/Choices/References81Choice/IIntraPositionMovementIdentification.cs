@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References81Choice;
 /// <summary>
 /// Intra Position Movement Identification.
 /// </summary>
+[IsoDisplayName(@"Intra Position Movement Identification")]
 public interface IIntraPositionMovementIdentification : IReferences81Choice, IIsoChoiceVariant
 {
     /// <summary>

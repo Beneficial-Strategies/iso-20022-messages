@@ -25,6 +25,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_jTvNwR62Eeu31YsWNiv_cw")]
 [IsoMessage("reda.007.001.01", "SctyMntncReq", "urn:iso:std:iso:20022:tech:xsd:reda.007.001.01")]
+[Description(@"SCOPE|An instructing party sends a SecurityMaintenanceRequest message to an executing/servicing party to request the maintenance of financial instrument details in their system.||The instructing party - executing/servicing party relationship may be:|- Central Securities Depositories (CSD) who would like to publish security static data, or |- a Corporate, or|- a Bank, or|- a Market Infrastructure, or |- a Market Data Provider.||USAGE|The request is sent when the instructing party identified a gap in the security data within the executing/servicing party system. The instructing party needs this security to be updated at the executing /servicing party to perform its activities.||Initiator: instructing party.")]
+[IsoDisplayName(@"Security Maintenance Request V")]
 public interface ISecurityMaintenanceRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -65,5 +67,6 @@ public interface ISecurityMaintenanceRequestV01 : IOuterRecord
     [IsoId("_wEnt8ZIzEeuAlLVx8pyt3w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

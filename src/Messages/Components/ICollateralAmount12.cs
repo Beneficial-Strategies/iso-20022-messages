@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Deal amount details.
 /// </summary>
 [IsoId("_gX5CYMLYEei34K_Q744LyA")]
+[IsoDisplayName(@"Collateral Amount")]
 public interface ICollateralAmount12 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ICollateralAmount12 : IIsoComponent
     [IsoId("_pznJQI9xEeqMo4JxiuZGSw")]
     [DisplayName("Interest Payment Delay")]
     [IsoXmlTag("IntrstPmtDely")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? InterestPaymentDelay { get; }
 
     /// <summary>

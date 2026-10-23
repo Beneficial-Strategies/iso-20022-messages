@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade settlement details for this invoice which involves the payment of an outstanding debt, account, or charge.
 /// </summary>
 [IsoId("_TB-BBQEcEeCQm6a_G2yO_w_1181239925")]
+[IsoDisplayName(@"Trade Settlement")]
 public interface ITradeSettlement1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TB-BBgEcEeCQm6a_G2yO_w_-689724916")]
     [DisplayName("Due Payable Amount")]
     [IsoXmlTag("DuePyblAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> DuePayableAmount { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TB-BBwEcEeCQm6a_G2yO_w_1023225472")]
     [DisplayName("Creditor Reference")]
     [IsoXmlTag("CdtrRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICreditorReferenceInformation2> CreditorReference { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TB-BCAEcEeCQm6a_G2yO_w_-2064443525")]
     [DisplayName("Payment Reference")]
     [IsoXmlTag("PmtRef")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> PaymentReference { get; }
 
     /// <summary>
@@ -105,6 +109,7 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TB-BEQEcEeCQm6a_G2yO_w_776679773")]
     [DisplayName("Payment Means")]
     [IsoXmlTag("PmtMeans")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentMeans1> PaymentMeans { get; }
 
     /// <summary>
@@ -113,6 +118,7 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TB-BEgEcEeCQm6a_G2yO_w_-417754292")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementTax1> Tax { get; }
 
     /// <summary>
@@ -129,6 +135,7 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TCHyAAEcEeCQm6a_G2yO_w_-1971858521")]
     [DisplayName("Allowance Charge")]
     [IsoXmlTag("AllwncChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementAllowanceCharge1> AllowanceCharge { get; }
 
     /// <summary>
@@ -137,6 +144,7 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TCHyAQEcEeCQm6a_G2yO_w_1581027470")]
     [DisplayName("Sub Total Calculated Tax")]
     [IsoXmlTag("SubTtlClctdTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementSubTotalCalculatedTax1> SubTotalCalculatedTax { get; }
 
     /// <summary>
@@ -145,6 +153,7 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TCHyAgEcEeCQm6a_G2yO_w_885870949")]
     [DisplayName("Logistics Charge")]
     [IsoXmlTag("LogstcsChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChargesDetails2> LogisticsCharge { get; }
 
     /// <summary>
@@ -153,6 +162,7 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TCHyAwEcEeCQm6a_G2yO_w_2019362636")]
     [DisplayName("Payment Terms")]
     [IsoXmlTag("PmtTerms")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTerms3> PaymentTerms { get; }
 
     /// <summary>
@@ -169,6 +179,7 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TCHyBQEcEeCQm6a_G2yO_w_1706467980")]
     [DisplayName("Adjustment Amount And Reason")]
     [IsoXmlTag("AdjstmntAmtAndRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentAdjustment2> AdjustmentAmountAndReason { get; }
 
     /// <summary>
@@ -201,6 +212,7 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TCHyCQEcEeCQm6a_G2yO_w_316575445")]
     [DisplayName("Financial Card")]
     [IsoXmlTag("FinCard")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialCard1> FinancialCard { get; }
 
     /// <summary>
@@ -209,6 +221,7 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TCHyCgEcEeCQm6a_G2yO_w_180570420")]
     [DisplayName("Purchase Accounting Account")]
     [IsoXmlTag("PurchsAcctgAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountingAccount1> PurchaseAccountingAccount { get; }
 
     /// <summary>
@@ -217,6 +230,7 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TCHyCwEcEeCQm6a_G2yO_w_-1864555444")]
     [DisplayName("Issuer Factoring List Identification")]
     [IsoXmlTag("IssrFactrgListId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> IssuerFactoringListIdentification { get; }
 
     /// <summary>
@@ -225,5 +239,6 @@ public interface ITradeSettlement1 : IIsoComponent
     [IsoId("_TCHyDAEcEeCQm6a_G2yO_w_-626725410")]
     [DisplayName("Issuer Factoring Agreement Identification")]
     [IsoXmlTag("IssrFactrgAgrmtId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> IssuerFactoringAgreementIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConditionallyAcceptedStatus3Choi
 /// No reason available or to report for the conditionally accepted status.
 /// </summary>
 [IsoId("_s1kxxUHXEeamVPoS58KxXA")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IConditionallyAcceptedStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information needed to contact a physical person.
 /// </summary>
 [IsoId("_v6kFqMVqEeeprYdSN88o0Q")]
+[IsoDisplayName(@"Contact Identification")]
 public interface IContactIdentification5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContactIdentification5 : IIsoComponent
     [IsoId("_v6kFrcVqEeeprYdSN88o0Q")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Name { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IContactIdentification5 : IIsoComponent
     [IsoId("_v6kFr8VqEeeprYdSN88o0Q")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber PhoneNumber { get; }
 }

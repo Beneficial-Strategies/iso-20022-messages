@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity51Cho
 
 /// <summary>Quantity expressed as a number of units.</summary>
 [IsoId("96bf992e-5334-43ab-a902-703e9e4e649e")]
+[IsoDisplayName(@"Units Number")]
 public interface IUnitsNumber : IFinancialInstrumentQuantity51Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

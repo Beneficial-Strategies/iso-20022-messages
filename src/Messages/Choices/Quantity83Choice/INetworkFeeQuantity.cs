@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity83Choice;
 
 /// <summary>Specifies the network fee quantity.</summary>
 [IsoId("_aUJLkZZeEfCShM_qO0U4ig")]
+[IsoDisplayName(@"Network Fee Quantity")]
 public interface INetworkFeeQuantity : IQuantity83Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

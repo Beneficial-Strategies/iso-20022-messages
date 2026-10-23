@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acquirer configuration parameters for a host.
 /// </summary>
 [IsoId("_R0Ox0dX2Eeia9rtBTv_9KA")]
+[IsoDisplayName(@"Acquirer Host Configuration")]
 public interface IAcquirerHostConfiguration6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAcquirerHostConfiguration6 : IIsoComponent
     [IsoId("_R93O8dX2Eeia9rtBTv_9KA")]
     [DisplayName("Host Identification")]
     [IsoXmlTag("HstId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text HostIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IAcquirerHostConfiguration6 : IIsoComponent
     [IsoId("_R93O89X2Eeia9rtBTv_9KA")]
     [DisplayName("Message To Send")]
     [IsoXmlTag("MsgToSnd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<MessageFunction15Code> MessageToSend { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IAcquirerHostConfiguration6 : IIsoComponent
     [IsoId("_k27msNX2Eeia9rtBTv_9KA")]
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? ProtocolVersion { get; }
 }

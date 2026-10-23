@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vote instruction applying to resolutions added during the meeting.
 /// </summary>
 [IsoId("_TLJEUNp-Ed-ak6NoX_4Aeg_1597899369")]
+[IsoDisplayName(@"Vote Instruction For Meeting Resolution")]
 public interface IVoteInstructionForMeetingResolution1 : IIsoComponent
 {
     /// <summary>

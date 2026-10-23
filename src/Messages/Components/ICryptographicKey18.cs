@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cryptographic Key18.
 /// </summary>
 [IsoId("_cdiXEZB0Ee6FLLjWp95ntQ")]
+[IsoDisplayName(@"Cryptographic Key18")]
 public interface ICryptographicKey18 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ICryptographicKey18 : IIsoComponent
     /// </summary>
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<KeyUsage1Code> Function { get; }
 
     /// <summary>
@@ -93,6 +95,7 @@ public interface ICryptographicKey18 : IIsoComponent
     /// </summary>
     [DisplayName("Component With Authorised Access")]
     [IsoXmlTag("CmpntWthAuthrsdAccs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification186> ComponentWithAuthorisedAccess { get; }
 
     /// <summary>
@@ -100,6 +103,7 @@ public interface ICryptographicKey18 : IIsoComponent
     /// </summary>
     [DisplayName("Protected Component With Authorised Access")]
     [IsoXmlTag("PrtctdCmpntWthAuthrsdAccs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContentInformationType39> ProtectedComponentWithAuthorisedAccess { get; }
 
     /// <summary>
@@ -114,5 +118,6 @@ public interface ICryptographicKey18 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Management Information")]
     [IsoXmlTag("AddtlMgmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericInformation1> AdditionalManagementInformation { get; }
 }

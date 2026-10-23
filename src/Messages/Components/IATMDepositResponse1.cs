@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response to a deposit request.
 /// </summary>
 [IsoId("_Eg99cK4GEeWL1uap3dNhCQ")]
+[IsoDisplayName(@"ATM Deposit Response")]
 public interface IATMDepositResponse1 : IIsoComponent
 {
     /// <summary>

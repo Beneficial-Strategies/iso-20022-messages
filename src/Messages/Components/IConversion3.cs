@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Conversion3.
 /// </summary>
 [IsoId("_enviAX_8Ee-5A_neRtHpSQ")]
+[IsoDisplayName(@"Conversion3")]
 public interface IConversion3 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IConversion3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the status of a transfer instruction and its reason.
 /// </summary>
 [IsoId("_UzmP6dp-Ed-ak6NoX_4Aeg_-2005620583")]
+[IsoDisplayName(@"Transfer Status And Reason")]
 public interface ITransferStatusAndReason : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransferStatusAndReason : IIsoComponent
     [IsoId("_UzmP6tp-Ed-ak6NoX_4Aeg_-1918809978")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>

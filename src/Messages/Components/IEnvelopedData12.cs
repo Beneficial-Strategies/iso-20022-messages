@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Enveloped Data12.
 /// </summary>
 [IsoId("_9rcDQXdCEe6YlIMyoxWMJA")]
+[IsoDisplayName(@"Enveloped Data12")]
 public interface IEnvelopedData12 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IEnvelopedData12 : IIsoComponent
     /// </summary>
     [DisplayName("Recipient")]
     [IsoXmlTag("Rcpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRecipient7Choice> Recipient { get; }
 
     /// <summary>

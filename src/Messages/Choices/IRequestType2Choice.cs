@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines the type of action to be performed in the request.
 /// </summary>
 [IsoId("_76G8cqMgEeCJ6YNENx4h-w_-156360077")]
+[IsoDisplayName(@"Request Type 2 Choice")]
 public interface IRequestType2Choice : IIsoChoice { }

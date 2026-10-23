@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a meeting, participation requirements and voting procedures.
 /// </summary>
 [IsoId("_gmYNETUIEe2tRf29bleifQ")]
+[IsoDisplayName(@"Meeting Notice")]
 public interface IMeetingNotice8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMeetingNotice8 : IIsoComponent
     [IsoId("_g8u3kzUIEe2tRf29bleifQ")]
     [DisplayName("Meeting Identification")]
     [IsoXmlTag("MtgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MeetingIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IMeetingNotice8 : IIsoComponent
     [IsoId("_g8u3lTUIEe2tRf29bleifQ")]
     [DisplayName("Issuer Meeting Identification")]
     [IsoXmlTag("IssrMtgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? IssuerMeetingIdentification { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IMeetingNotice8 : IIsoComponent
     [IsoId("_g8u3nTUIEe2tRf29bleifQ")]
     [DisplayName("One Man One Vote Indicator")]
     [IsoXmlTag("OneManOneVoteInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OneManOneVoteIndicator { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IMeetingNotice8 : IIsoComponent
     [IsoId("_g8u3nzUIEe2tRf29bleifQ")]
     [DisplayName("Participation")]
     [IsoXmlTag("Prtcptn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IParticipationMethod2> Participation { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IMeetingNotice8 : IIsoComponent
     [IsoId("_g8u3ozUIEe2tRf29bleifQ")]
     [DisplayName("Additional Documentation URL Address")]
     [IsoXmlTag("AddtlDcmnttnURLAdr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max2048Text> AdditionalDocumentationURLAddress { get; }
 
     /// <summary>
@@ -89,6 +97,8 @@ public interface IMeetingNotice8 : IIsoComponent
     [IsoId("_g8u3pTUIEe2tRf29bleifQ")]
     [DisplayName("Event Processing Web Site Address")]
     [IsoXmlTag("EvtPrcgWebSiteAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? EventProcessingWebSiteAddress { get; }
 
     /// <summary>
@@ -97,6 +107,9 @@ public interface IMeetingNotice8 : IIsoComponent
     [IsoId("_g8u3pzUIEe2tRf29bleifQ")]
     [DisplayName("Additional Procedure Details")]
     [IsoXmlTag("AddtlPrcdrDtls")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalRights3> AdditionalProcedureDetails { get; }
 
     /// <summary>
@@ -113,6 +126,7 @@ public interface IMeetingNotice8 : IIsoComponent
     [IsoId("_g8u3qzUIEe2tRf29bleifQ")]
     [DisplayName("Total Number Of Voting Rights")]
     [IsoXmlTag("TtlNbOfVtngRghts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberOfVotingRights { get; }
 
     /// <summary>
@@ -137,6 +151,9 @@ public interface IMeetingNotice8 : IIsoComponent
     [IsoId("_g8u3sTUIEe2tRf29bleifQ")]
     [DisplayName("Contact Person Details")]
     [IsoXmlTag("CtctPrsnDtls")]
+    [MinLength(0)]
+    [MaxLength(12)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingContactPerson3> ContactPersonDetails { get; }
 
     /// <summary>

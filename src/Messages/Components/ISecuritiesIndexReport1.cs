@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the securities index request operations for national competent authorities.
 /// </summary>
 [IsoId("_00E_kL3kEeWvRsMSLyTf-A")]
+[IsoDisplayName(@"Securities Index Report")]
 public interface ISecuritiesIndexReport1 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,8 @@ public interface ISecuritiesIndexReport1 : IIsoComponent
     [IsoId("_M8By8b7VEeW_FPJ0tzugkw")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>

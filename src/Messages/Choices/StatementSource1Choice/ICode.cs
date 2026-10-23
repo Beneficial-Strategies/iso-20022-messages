@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementSource1Choice;
 /// Report source expressed in coded form.
 /// </summary>
 [IsoId("_m_xsc_NBEeCuA5Tr22BnwA_-1086239416")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IStatementSource1Choice, IIsoChoiceVariant
 {
     /// <summary>

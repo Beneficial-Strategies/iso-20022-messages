@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("524da510-1286-4f88-89d2-962d2a425f89")]
 [IsoMessage("camt.029.001.14", "RsltnOfInvstgtn", "urn:iso:std:iso:20022:tech:xsd:camt.029.001.14")]
+[IsoDisplayName(@"Resolution Of Investigation V14")]
 public interface IResolutionOfInvestigationV14 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +40,7 @@ public interface IResolutionOfInvestigationV14 : IOuterRecord
     /// </summary>
     [DisplayName("Cancellation Details")]
     [IsoXmlTag("CxlDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnderlyingTransaction35> CancellationDetails { get; }
 
     /// <summary>
@@ -53,5 +55,6 @@ public interface IResolutionOfInvestigationV14 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

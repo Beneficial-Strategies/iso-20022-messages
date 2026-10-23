@@ -24,6 +24,8 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("_PHmTkSW9EeygjNFjAlVoPA")]
 [IsoMessage("semt.018.001.13", "SctiesTxPdgRpt", "urn:iso:std:iso:20022:tech:xsd:semt.018.001.13")]
+[Description(@"Scope|SecuritiesTransactionPendingReport  is sent by an account servicer to an account owner to provide, as at a specified time, the details of pending increases and decreases of holdings, for all or selected securities in a specified safekeeping account, for all or selected reasons why the transaction is pending. |The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of its participants|- an agent (sub-custodian) acting on behalf of its global custodian customer, or |- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The statement may also include future settlement or forward transactions which have become binding on the account owner.|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Transaction Pending Report V")]
 public interface ISecuritiesTransactionPendingReportV13 : IOuterRecord
 {
     /// <summary>
@@ -72,6 +74,7 @@ public interface ISecuritiesTransactionPendingReportV13 : IOuterRecord
     [IsoId("_PHmToyW9EeygjNFjAlVoPA")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusAndReason44> Status { get; }
 
     /// <summary>
@@ -80,5 +83,6 @@ public interface ISecuritiesTransactionPendingReportV13 : IOuterRecord
     [IsoId("_PHmTpSW9EeygjNFjAlVoPA")]
     [DisplayName("Transactions")]
     [IsoXmlTag("Txs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransaction121> Transactions { get; }
 }

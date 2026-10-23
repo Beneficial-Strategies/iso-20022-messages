@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a switch order.
 /// </summary>
 [IsoId("_VVkUhdp-Ed-ak6NoX_4Aeg_-1431911896")]
+[IsoDisplayName(@"Switch Execution")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISwitchExecution3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface ISwitchExecution3 : IIsoComponent
     [IsoId("_VVkUhtp-Ed-ak6NoX_4Aeg_-1431911877")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISwitchExecution3 : IIsoComponent
     [IsoId("_VVkUh9p-Ed-ak6NoX_4Aeg_-1431911853")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DealReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISwitchExecution3 : IIsoComponent
     [IsoId("_VVkUiNp-Ed-ak6NoX_4Aeg_-1431911836")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface ISwitchExecution3 : IIsoComponent
     [IsoId("_VVuFgdp-Ed-ak6NoX_4Aeg_-1431911410")]
     [DisplayName("Redemption Leg Details")]
     [IsoXmlTag("RedLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchRedemptionLegExecution2> RedemptionLegDetails { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface ISwitchExecution3 : IIsoComponent
     [IsoId("_VVuFgtp-Ed-ak6NoX_4Aeg_-1431911480")]
     [DisplayName("Subscription Leg Details")]
     [IsoXmlTag("SbcptLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchSubscriptionLegExecution2> SubscriptionLegDetails { get; }
 
     /// <summary>
@@ -105,5 +114,6 @@ public interface ISwitchExecution3 : IIsoComponent
     [IsoId("_VVuFhNp-Ed-ak6NoX_4Aeg_-1431911102")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms4> ForeignExchangeDetails { get; }
 }

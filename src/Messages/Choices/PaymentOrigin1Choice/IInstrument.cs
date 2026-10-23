@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentOrigin1Choice;
 /// Specifies the type of payment when not included in a SWIFT or proprietary format.
 /// </summary>
 [IsoId("_RIwV2Np-Ed-ak6NoX_4Aeg_-1983565483")]
+[IsoDisplayName(@"Instrument")]
 public interface IInstrument : IPaymentOrigin1Choice, IIsoChoiceVariant
 {
     /// <summary>

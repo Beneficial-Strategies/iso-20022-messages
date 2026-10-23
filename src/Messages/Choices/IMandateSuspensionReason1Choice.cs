@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the suspension request of a mandate.
 /// </summary>
 [IsoId("_gW_7w4PDEeahmOIR_zFG6A")]
+[IsoDisplayName(@"Mandate Suspension Reason 1 Choice")]
 public interface IMandateSuspensionReason1Choice : IIsoChoice { }

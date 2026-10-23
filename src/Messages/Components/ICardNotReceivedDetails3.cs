@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card Not Received Details3.
 /// </summary>
 [IsoId("_NiHOgZLCEe6TWIDarRgYow")]
+[IsoDisplayName(@"Card Not Received Details3")]
 public interface ICardNotReceivedDetails3 : IIsoComponent
 {
     /// <summary>
@@ -58,5 +59,6 @@ public interface ICardNotReceivedDetails3 : IIsoComponent
     /// </summary>
     [DisplayName("Card Security Capability")]
     [IsoXmlTag("CardSctyCpblty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardSecurityCapability1> CardSecurityCapability { get; }
 }

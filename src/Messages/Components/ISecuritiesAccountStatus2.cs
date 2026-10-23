@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status of the securities account processed in the system.
 /// </summary>
 [IsoId("_102h8eGEEeWCAvUNsZ5u6g")]
+[IsoDisplayName(@"Securities Account Status")]
 public interface ISecuritiesAccountStatus2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ISecuritiesAccountStatus2 : IIsoComponent
     [IsoId("_2DI1meGEEeWCAvUNsZ5u6g")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation10> StatusReason { get; }
 }

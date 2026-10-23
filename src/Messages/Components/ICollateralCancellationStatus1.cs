@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the status (that is accept or reject) of the CollateralManagementCancellationRequest message.
 /// </summary>
 [IsoId("_Unhixtp-Ed-ak6NoX_4Aeg_948055066")]
+[IsoDisplayName(@"Collateral Cancellation Status")]
 public interface ICollateralCancellationStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICollateralCancellationStatus1 : IIsoComponent
     [IsoId("_UnhiyNp-Ed-ak6NoX_4Aeg_-1364198621")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalInformation { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatusChoice;
 /// Indicates the status of an investigation.
 /// </summary>
 [IsoId("_UuYYs9p-Ed-ak6NoX_4Aeg_-1918327936")]
+[IsoDisplayName(@"Confirmation")]
 public interface IConfirmation : IInvestigationStatusChoice, IIsoChoiceVariant
 {
     /// <summary>

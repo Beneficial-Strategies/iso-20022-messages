@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty1Choice
 /// </summary>
 [IsoId("_98o1t0wVEeqwfMIOLcNxbw")]
 [IsoXmlTag("Rpt")]
+[IsoDisplayName(@"Report")]
 public interface IReport : IStatisticsPerCounterparty1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IReport : IStatisticsPerCounterparty1Choice, IIsoChoiceVariant
     [IsoId("_5fuIcVfcEeqZr5K1Woax-g")]
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ReferenceDate { get; }
 
     /// <summary>
@@ -42,5 +44,6 @@ public interface IReport : IStatisticsPerCounterparty1Choice, IIsoChoiceVariant
     [IsoId("_5fuId1fcEeqZr5K1Woax-g")]
     [DisplayName("Competent Authority")]
     [IsoXmlTag("CmptntAuthrty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompetentAuthority1> CompetentAuthority { get; }
 }

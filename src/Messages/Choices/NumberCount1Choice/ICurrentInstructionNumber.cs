@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberCount1Choice;
 /// Sequential number of the instruction in a range of linked settlement instructions.
 /// </summary>
 [IsoId("_QrsmaNp-Ed-ak6NoX_4Aeg_1394466276")]
+[IsoDisplayName(@"Current Instruction Number")]
 public interface ICurrentInstructionNumber : INumberCount1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ICurrentInstructionNumber : INumberCount1Choice, IIsoChoiceVari
     /// Specifies a numeric string with an exact length of 3 digits.
     /// </summary>
     [IsoXmlTag("CurInstrNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText Value { get; }
 }

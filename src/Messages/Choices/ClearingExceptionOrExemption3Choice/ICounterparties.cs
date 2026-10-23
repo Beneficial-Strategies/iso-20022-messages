@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingExceptionOrExemption3Cho
 /// </summary>
 [IsoId("_AjSxc5PuEey0rJ3Gl6WZVA")]
 [IsoXmlTag("CtrPties")]
+[IsoDisplayName(@"Counterparties")]
 public interface ICounterparties : IClearingExceptionOrExemption3Choice, IIsoChoiceVariant
 {
     /// <summary>

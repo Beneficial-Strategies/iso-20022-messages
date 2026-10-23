@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variables used to quantify the different calculations for collateral position sets and currency collateral position sets reports.
 /// </summary>
 [IsoId("_imt2X8WJEeiRga8tPu1L4Q")]
+[IsoDisplayName(@"Position Set Collateral Metrics")]
 public interface IPositionSetCollateralMetrics1 : IIsoComponent
 {
     /// <summary>

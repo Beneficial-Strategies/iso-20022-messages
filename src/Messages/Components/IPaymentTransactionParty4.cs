@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Transaction Party4.
 /// </summary>
 [IsoId("_15w68TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Payment Transaction Party4")]
 public interface IPaymentTransactionParty4 : IIsoComponent
 {
     /// <summary>

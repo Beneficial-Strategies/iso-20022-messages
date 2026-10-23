@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "IntraBalMvmntCxlRpt",
     "urn:iso:std:iso:20022:tech:xsd:camt.083.001.01"
 )]
+[Description(@"The IntraBalanceMovementCancellationReport message is sent from a settlement infrastructure to an account owner/requestor to provide full details or current status values of the intra-balance movement cancellation request(s), as defined within the query.||The message may also be used to: |- re-send a message previously sent (the sub-function of the message is ""Duplicate"") |- provide a third party with a copy of a message for information (the sub-function of the message is ""Copy"") |- re-send to a third party a copy of a message for information (the sub-function of the message is ""Copy Duplicate"").")]
+[IsoDisplayName(@"Intra Balance Movement Cancellation Report V")]
 public interface IIntraBalanceMovementCancellationReportV01 : IOuterRecord
 {
     /// <summary>
@@ -60,5 +62,6 @@ public interface IIntraBalanceMovementCancellationReportV01 : IOuterRecord
     [IsoId("_DLtKeTncEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

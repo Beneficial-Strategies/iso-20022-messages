@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PurposeChoice;
 /// Payment transaction purpose that is specific to a user community and is required for use within that user community.
 /// </summary>
 [IsoId("_Rbhg1tp-Ed-ak6NoX_4Aeg_1347829030")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPurposeChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IPurposeChoice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

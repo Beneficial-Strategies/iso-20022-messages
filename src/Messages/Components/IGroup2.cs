@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Group of parties with their related security certificate.
 /// </summary>
 [IsoId("_wNfOoRg4EeKnW4lR85q-0A")]
+[IsoDisplayName(@"Group")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IGroup2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,8 @@ public interface IGroup2 : IIsoComponent
     [IsoId("_wipmVRg4EeKnW4lR85q-0A")]
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText GroupIdentification { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IGroup2 : IIsoComponent
     [IsoId("_wipmXBg4EeKnW4lR85q-0A")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndCertificate3> Party { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the cancellation request of a cheque presentment.
 /// </summary>
 [IsoId("_kwwc-7tvEeq_cfXrH83Rcw")]
+[IsoDisplayName(@"Cheque Cancellation Reason 1 Choice")]
 public interface IChequeCancellationReason1Choice : IIsoChoice { }

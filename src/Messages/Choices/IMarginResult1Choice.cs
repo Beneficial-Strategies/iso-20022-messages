@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides details on the margin result.
 /// </summary>
 [IsoId("_Qk1wddp-Ed-ak6NoX_4Aeg_-1613861504")]
+[IsoDisplayName(@"Margin Result 1 Choice")]
 public interface IMarginResult1Choice : IIsoChoice { }

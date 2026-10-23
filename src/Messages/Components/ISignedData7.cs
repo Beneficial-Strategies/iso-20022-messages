@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Digital signatures of data from one or several signers.
 /// </summary>
 [IsoId("_4_PTwVFKEeyApZmLzm74zA")]
+[IsoDisplayName(@"Signed Data")]
 public interface ISignedData7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISignedData7 : IIsoComponent
     [IsoId("_5FjXIVFKEeyApZmLzm74zA")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISignedData7 : IIsoComponent
     [IsoId("_5FjXI1FKEeyApZmLzm74zA")]
     [DisplayName("Digest Algorithm")]
     [IsoXmlTag("DgstAlgo")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAlgorithmIdentification21> DigestAlgorithm { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ISignedData7 : IIsoComponent
     [IsoId("_5FjXJ1FKEeyApZmLzm74zA")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max5000Binary> Certificate { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface ISignedData7 : IIsoComponent
     [IsoId("_5FjXKVFKEeyApZmLzm74zA")]
     [DisplayName("Signer")]
     [IsoXmlTag("Sgnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISigner6> Signer { get; }
 }

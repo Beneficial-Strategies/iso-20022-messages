@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identifies a product in coded form or free text.
 /// </summary>
 [IsoId("_Rb1C0Np-Ed-ak6NoX_4Aeg_-1291805290")]
+[IsoDisplayName(@"Product Identifier 2 Choice")]
 public interface IProductIdentifier2Choice : IIsoChoice { }

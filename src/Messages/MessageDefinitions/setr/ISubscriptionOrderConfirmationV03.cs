@@ -24,6 +24,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "SbcptOrdrConfV03",
     "urn:iso:std:iso:20022:tech:xsd:setr.012.001.03"
 )]
+[Description(@"Scope|An executing party, for example, a transfer agent, sends the SubscriptionOrderConfirmation message to the instructing party, for example, an investment manager or its authorised representative to confirm the details of the execution of a SubscriptionOrder instruction.|Usage|The SubscriptionOrderConfirmation message is used to confirm the execution of one or more individual orders.|A SubscriptionOrder message containing more than one individual order may be responded to by more than one SubscriptionOrderConfirmation message, as the valuation cycle of the financial instruments in each individual order may be different.|Each individual order confirmation specified is identified in DealReference. The reference of the original individual order is specified in OrderReference. The message identification of the SubscriptionOrder message in which the individual orders was conveyed may also be quoted in RelatedReference.|When the executing party sends several confirmations, there is no specific indication in the message that it is an incomplete confirmation. Reconciliation must be based on the references.|A SubscriptionOrder must in all cases be responded to by a SubscriptionOrderConfirmation message and in no circumstances by a SubscriptionBulkOrderConfirmation message.|If the executing party needs to confirm a SubscriptionBulkOrder message, then a SubscriptionBulkOrderConfirmation message must be used.")]
+[IsoDisplayName(@"Subscription Order Confirmation V")]
 public interface ISubscriptionOrderConfirmationV03 : IOuterRecord
 {
     /// <summary>
@@ -48,6 +50,7 @@ public interface ISubscriptionOrderConfirmationV03 : IOuterRecord
     [IsoId("_4Voga9E7Ed-BzquC8wXy7w_38507116")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -72,6 +75,9 @@ public interface ISubscriptionOrderConfirmationV03 : IOuterRecord
     [IsoId("_4VyRYtE7Ed-BzquC8wXy7w_1049759323")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary9> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -88,5 +94,6 @@ public interface ISubscriptionOrderConfirmationV03 : IOuterRecord
     [IsoId("_4VyRZNE7Ed-BzquC8wXy7w_1053453870")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

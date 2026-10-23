@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressSize1Choice;
 /// Percentage shift if the shift is defined as a relative move.
 /// </summary>
 [IsoId("_oy3oUKs1Eeayv9XxdmMwKQ")]
+[IsoDisplayName(@"Relative")]
 public interface IRelative : IStressSize1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IRelative : IStressSize1Choice, IIsoChoiceVariant
     /// Rate expressed as a decimal, for example, 0.7 is 7/10 and 70%.
     /// </summary>
     [IsoXmlTag("Rltv")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate Value { get; }
 }

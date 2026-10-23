@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Margin over or under an index that determines the repurchase rate expressed as a rate or an amount.
 /// </summary>
 [IsoId("_Q-niYtp-Ed-ak6NoX_4Aeg_-1715964179")]
+[IsoDisplayName(@"Spread Rate")]
 public interface ISpreadRate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISpreadRate1 : IIsoComponent
     [IsoId("_Q-niY9p-Ed-ak6NoX_4Aeg_1222158444")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator Sign { get; }
 
     /// <summary>

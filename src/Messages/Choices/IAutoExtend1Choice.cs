@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the auto extend period.
 /// </summary>
 [IsoId("_95V5enltEeG7BsjMvd1mEw_-1540173231")]
+[IsoDisplayName(@"Auto Extend 1 Choice")]
 public interface IAutoExtend1Choice : IIsoChoice { }

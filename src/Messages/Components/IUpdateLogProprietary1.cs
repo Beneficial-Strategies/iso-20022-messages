@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the old and new values for a proprietary field name.
 /// </summary>
 [IsoId("_LituOGjOEeiRg5NzP0jkQg")]
+[IsoDisplayName(@"Update Log Proprietary")]
 public interface IUpdateLogProprietary1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IUpdateLogProprietary1 : IIsoComponent
     [IsoId("_LituOWjOEeiRg5NzP0jkQg")]
     [DisplayName("Field Name")]
     [IsoXmlTag("FldNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text FieldName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IUpdateLogProprietary1 : IIsoComponent
     [IsoId("_LituPmjOEeiRg5NzP0jkQg")]
     [DisplayName("Old Field Value")]
     [IsoXmlTag("OdFldVal")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text OldFieldValue { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IUpdateLogProprietary1 : IIsoComponent
     [IsoId("_LituPGjOEeiRg5NzP0jkQg")]
     [DisplayName("New Field Value")]
     [IsoXmlTag("NewFldVal")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text NewFieldValue { get; }
 }

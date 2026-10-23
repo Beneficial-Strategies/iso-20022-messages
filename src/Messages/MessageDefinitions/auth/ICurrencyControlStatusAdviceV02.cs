@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_bf9SA22PEei3KuUgpx7Xcw")]
 [IsoMessage("auth.027.001.02", "CcyCtrlStsAdvc", "urn:iso:std:iso:20022:tech:xsd:auth.027.001.02")]
+[Description(@"The CurrencyControlStatusAdvice message is sent by either the reporting party (respectively the registration agent) or the registration agent (respectively the reporting party) to provide a status advice on a previously sent currency control message.||Usage: |The message may be sent in response to requests on the registration of the currency control contract, supporting document or on the payment regulatory information notification.")]
+[IsoDisplayName(@"Currency Control Status Advice V")]
 public interface ICurrencyControlStatusAdviceV02 : IOuterRecord
 {
     /// <summary>
@@ -31,6 +33,7 @@ public interface ICurrencyControlStatusAdviceV02 : IOuterRecord
     [IsoId("_bf9SB22PEei3KuUgpx7Xcw")]
     [DisplayName("Group Status")]
     [IsoXmlTag("GrpSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICurrencyControlGroupStatus2> GroupStatus { get; }
 
     /// <summary>
@@ -39,6 +42,7 @@ public interface ICurrencyControlStatusAdviceV02 : IOuterRecord
     [IsoId("_bf9SCW2PEei3KuUgpx7Xcw")]
     [DisplayName("Package Status")]
     [IsoXmlTag("PackgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICurrencyControlPackageStatus2> PackageStatus { get; }
 
     /// <summary>
@@ -47,5 +51,6 @@ public interface ICurrencyControlStatusAdviceV02 : IOuterRecord
     [IsoId("_bf9SC22PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

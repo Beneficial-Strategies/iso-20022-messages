@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Expiry conditions.
 /// </summary>
 [IsoId("_rhWRxoAAEeGOn4dfTT_QdQ")]
+[IsoDisplayName(@"Expiry Terms")]
 public interface IExpiryTerms2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IExpiryTerms2 : IIsoComponent
     [IsoId("_rhW4xIAAEeGOn4dfTT_QdQ")]
     [DisplayName("Condition")]
     [IsoXmlTag("Cond")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [StringLength(2000, MinimumLength = 1)]
     Max2000Text? Condition { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IExpiryTerms2 : IIsoComponent
     [IsoId("_rhW40oAAEeGOn4dfTT_QdQ")]
     [DisplayName("Open Ended Indicator")]
     [IsoXmlTag("OpnEnddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OpenEndedIndicator { get; }
 }

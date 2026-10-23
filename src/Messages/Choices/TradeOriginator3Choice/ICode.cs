@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeOriginator3Choice;
 /// Trading party capacity expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_69UZwTtCEeWRTLSN0i0tng")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITradeOriginator3Choice, IIsoChoiceVariant
 {
     /// <summary>

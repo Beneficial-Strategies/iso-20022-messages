@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification3Choice
 /// </summary>
 [IsoId("_hY22AcK4EeuFNp8LZAnorg")]
 [IsoXmlTag("Tx")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction : ITransactionIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ITransaction : ITransactionIdentification3Choice, IIsoChoiceVar
     [IsoId("_AG25QM3OEeuiU4QSC_BouQ")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -50,6 +53,8 @@ public interface ITransaction : ITransactionIdentification3Choice, IIsoChoiceVar
     [IsoId("_xrWFNc29Eeu7SNBdMhkjcA")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? UniqueTradeIdentifier { get; }
 
     /// <summary>

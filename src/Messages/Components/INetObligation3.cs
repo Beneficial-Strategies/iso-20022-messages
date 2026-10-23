@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Net Obligation3.
 /// </summary>
 [IsoId("_UnyvQUkCEe-KhcStGV4xTg")]
+[IsoDisplayName(@"Net Obligation3")]
 public interface INetObligation3 : IIsoComponent
 {
     /// <summary>

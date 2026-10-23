@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a general investment.
 /// </summary>
 [IsoId("_e_q3UE4NEeiQHa-q1Uephw")]
+[IsoDisplayName(@"General Investment")]
 public interface IGeneralInvestment1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IGeneralInvestment1 : IIsoComponent
     [IsoId("_yHL6wE4NEeiQHa-q1Uephw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

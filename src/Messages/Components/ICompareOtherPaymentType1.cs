@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a other payment type.
 /// </summary>
 [IsoId("_2_WLcE0fEeyQkYR0RbXyEg")]
+[IsoDisplayName(@"Compare Other Payment Type")]
 public interface ICompareOtherPaymentType1 : IIsoComponent
 {
     /// <summary>

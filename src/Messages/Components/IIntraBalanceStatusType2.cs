@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice of the intra-balance movement status type.
 /// </summary>
 [IsoId("_S62MFeFWEeWIA4E9cYSxxQ")]
+[IsoDisplayName(@"Intra Balance Status Type")]
 public interface IIntraBalanceStatusType2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IIntraBalanceStatusType2 : IIsoComponent
     [IsoId("_TDntkeFWEeWIA4E9cYSxxQ")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProcessingStatus68Choice> ProcessingStatus { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IIntraBalanceStatusType2 : IIsoComponent
     [IsoId("_TDntk-FWEeWIA4E9cYSxxQ")]
     [DisplayName("Settlement Status")]
     [IsoXmlTag("SttlmSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementStatus26Choice> SettlementStatus { get; }
 
     /// <summary>

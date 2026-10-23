@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// </summary>
 [IsoId("_yJhSoYv-Eei289CGNqs21g")]
 [IsoXmlTag("SysPtyDt")]
+[IsoDisplayName(@"System Party Date")]
 public interface ISystemPartyDate : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ISystemPartyDate : ISystemPartyModification2Choice, IIsoChoiceV
     [IsoId("_kmC6Iu5NEeCisYr99QEiWA_1131494895")]
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OpeningDate { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface ISystemPartyDate : ISystemPartyModification2Choice, IIsoChoiceV
     [IsoId("_kmC6I-5NEeCisYr99QEiWA_-586504225")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClosingDate { get; }
 }

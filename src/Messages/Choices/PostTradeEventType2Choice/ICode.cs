@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PostTradeEventType2Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IPostTradeEventType2Choice, IIsoChoiceVariant
 {
     /// <summary>

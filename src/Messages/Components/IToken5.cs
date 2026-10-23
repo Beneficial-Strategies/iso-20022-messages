@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unencrypted sensitive data of a token.
 /// </summary>
 [IsoId("_t0ehQRRBEfC_aaedwHHlmw")]
+[IsoDisplayName(@"Token5")]
 public interface IToken5 : IIsoComponent
 {
     /// <summary>
@@ -145,6 +146,7 @@ public interface IToken5 : IIsoComponent
     [IsoId("_AiY2ckVZEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -153,5 +155,6 @@ public interface IToken5 : IIsoComponent
     [IsoId("_AiY2c0VZEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

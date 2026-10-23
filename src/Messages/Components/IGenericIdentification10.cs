@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the identification of an individual person.
 /// </summary>
 [IsoId("_QAVVMtp-Ed-ak6NoX_4Aeg_-1527540623")]
+[IsoDisplayName(@"Generic Identification")]
 public interface IGenericIdentification10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGenericIdentification10 : IIsoComponent
     [IsoId("_QAVVM9p-Ed-ak6NoX_4Aeg_-1520154884")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IGenericIdentification10 : IIsoComponent
     [IsoId("_QAVVNdp-Ed-ak6NoX_4Aeg_-1520154729")]
     [DisplayName("Extended Identification Type")]
     [IsoXmlTag("XtndedIdTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedIdentificationType { get; }
 }

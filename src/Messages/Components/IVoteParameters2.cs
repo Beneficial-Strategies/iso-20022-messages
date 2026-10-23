@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information describing how the voting process is organised.
 /// </summary>
 [IsoId("_TknUSNp-Ed-ak6NoX_4Aeg_800280634")]
+[IsoDisplayName(@"Vote Parameters")]
 public interface IVoteParameters2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IVoteParameters2 : IIsoComponent
     [IsoId("_TknUSdp-Ed-ak6NoX_4Aeg_800280636")]
     [DisplayName("Securities Quantity Required To Vote")]
     [IsoXmlTag("SctiesQtyReqrdToVote")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? SecuritiesQuantityRequiredToVote { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IVoteParameters2 : IIsoComponent
     [IsoId("_TknUStp-Ed-ak6NoX_4Aeg_800280695")]
     [DisplayName("Partial Vote Allowed")]
     [IsoXmlTag("PrtlVoteAllwd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PartialVoteAllowed { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IVoteParameters2 : IIsoComponent
     [IsoId("_TkxFQNp-Ed-ak6NoX_4Aeg_800280756")]
     [DisplayName("Split Vote Allowed")]
     [IsoXmlTag("SpltVoteAllwd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SplitVoteAllowed { get; }
 
     /// <summary>
@@ -113,6 +117,7 @@ public interface IVoteParameters2 : IIsoComponent
     [IsoId("_Tk62QNp-Ed-ak6NoX_4Aeg_800281157")]
     [DisplayName("Beneficial Owner Disclosure")]
     [IsoXmlTag("BnfclOwnrDsclsr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator BeneficialOwnerDisclosure { get; }
 
     /// <summary>
@@ -121,6 +126,9 @@ public interface IVoteParameters2 : IIsoComponent
     [IsoId("_Tk62Qdp-Ed-ak6NoX_4Aeg_800281188")]
     [DisplayName("Vote Instruction Type")]
     [IsoXmlTag("VoteInstrTp")]
+    [MinLength(0)]
+    [MaxLength(8)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<VoteInstruction2Code> VoteInstructionType { get; }
 
     /// <summary>
@@ -161,5 +169,7 @@ public interface IVoteParameters2 : IIsoComponent
     [IsoId("_Tk62Rtp-Ed-ak6NoX_4Aeg_800281126")]
     [DisplayName("Additional Voting Requirements")]
     [IsoXmlTag("AddtlVtngRqrmnts")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalVotingRequirements { get; }
 }

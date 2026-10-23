@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer3Ch
 /// </summary>
 [IsoId("_QbBSYLv7EeiLRYqS-r-R-A")]
 [IsoXmlTag("Othr")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IAssetClassCommodityFertilizer3Choice, IIsoChoiceVariant
 {
     /// <summary>

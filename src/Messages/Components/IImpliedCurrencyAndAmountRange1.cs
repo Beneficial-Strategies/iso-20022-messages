@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied.
 /// </summary>
 [IsoId("_OvM9t5lcEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Implied Currency And Amount Range")]
 public interface IImpliedCurrencyAndAmountRange1 : IIsoComponent
 {
     /// <summary>

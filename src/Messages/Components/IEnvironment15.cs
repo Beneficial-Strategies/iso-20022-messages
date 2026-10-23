@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of the transaction for Inquiry.
 /// </summary>
 [IsoId("_YL5Y0UTKEeiHaMSBAy2r0A")]
+[IsoDisplayName(@"Environment")]
 public interface IEnvironment15 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date and date parameters.
 /// </summary>
 [IsoId("_oxDxcDceEeOA3chqL9a4Rw")]
+[IsoDisplayName(@"Effective Date")]
 public interface IEffectiveDate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IEffectiveDate1 : IIsoComponent
     [IsoId("_BjtLsDcfEeOA3chqL9a4Rw")]
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EffectiveDate { get; }
 
     /// <summary>

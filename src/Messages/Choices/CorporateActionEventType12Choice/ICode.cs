@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType12Choice
 /// Event types expressed as a code.
 /// </summary>
 [IsoId("_qRaiUQ4zEeKVsZQr6J31Tg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionEventType12Choice, IIsoChoiceVariant
 {
     /// <summary>

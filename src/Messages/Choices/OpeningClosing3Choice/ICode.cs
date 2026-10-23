@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningClosing3Choice;
 /// Opening closing information expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_hE31ETtCEeWRTLSN0i0tng")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOpeningClosing3Choice, IIsoChoiceVariant
 {
     /// <summary>

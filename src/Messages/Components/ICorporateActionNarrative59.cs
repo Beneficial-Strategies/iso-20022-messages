@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Narrative59.
 /// </summary>
 [IsoId("_-wnE4WH0Ee6yt_d72zQZeQ")]
+[IsoDisplayName(@"Corporate Action Narrative59")]
 public interface ICorporateActionNarrative59 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface ICorporateActionNarrative59 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation19> AdditionalText { get; }
 
     /// <summary>
@@ -23,6 +25,7 @@ public interface ICorporateActionNarrative59 : IIsoComponent
     /// </summary>
     [DisplayName("Narrative Version")]
     [IsoXmlTag("NrrtvVrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation19> NarrativeVersion { get; }
 
     /// <summary>
@@ -30,6 +33,7 @@ public interface ICorporateActionNarrative59 : IIsoComponent
     /// </summary>
     [DisplayName("Information Conditions")]
     [IsoXmlTag("InfConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation21> InformationConditions { get; }
 
     /// <summary>
@@ -37,6 +41,7 @@ public interface ICorporateActionNarrative59 : IIsoComponent
     /// </summary>
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation21> InformationToComplyWith { get; }
 
     /// <summary>
@@ -44,6 +49,7 @@ public interface ICorporateActionNarrative59 : IIsoComponent
     /// </summary>
     [DisplayName("Security Restriction")]
     [IsoXmlTag("SctyRstrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation21> SecurityRestriction { get; }
 
     /// <summary>
@@ -51,6 +57,7 @@ public interface ICorporateActionNarrative59 : IIsoComponent
     /// </summary>
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation21> TaxationConditions { get; }
 
     /// <summary>
@@ -58,6 +65,7 @@ public interface ICorporateActionNarrative59 : IIsoComponent
     /// </summary>
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation21> Disclaimer { get; }
 
     /// <summary>
@@ -65,5 +73,6 @@ public interface ICorporateActionNarrative59 : IIsoComponent
     /// </summary>
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation21> CertificationBreakdown { get; }
 }

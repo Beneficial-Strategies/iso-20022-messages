@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_CZL4AbDEEe-g3p7goNrabg")]
 [IsoMessage("reda.077.001.01", "ClsLkDeltnReq", "urn:iso:std:iso:20022:tech:xsd:reda.077.001.01")]
+[IsoDisplayName(@"Close Link Deletion Request V01")]
 public interface ICloseLinkDeletionRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICloseLinkDeletionRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Close Link")]
     [IsoXmlTag("ClsLk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICloseLink5> CloseLink { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface ICloseLinkDeletionRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

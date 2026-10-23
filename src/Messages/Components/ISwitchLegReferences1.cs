@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a switch leg that is rejected or repaired.
 /// </summary>
 [IsoId("_RGg6Idp-Ed-ak6NoX_4Aeg_-513972542")]
+[IsoDisplayName(@"Switch Leg References")]
 public interface ISwitchLegReferences1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISwitchLegReferences1 : IIsoComponent
     [IsoId("_RGg6Itp-Ed-ak6NoX_4Aeg_-325572706")]
     [DisplayName("Redemption Leg Identification")]
     [IsoXmlTag("RedLegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RedemptionLegIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISwitchLegReferences1 : IIsoComponent
     [IsoId("_RGg6I9p-Ed-ak6NoX_4Aeg_-371751546")]
     [DisplayName("Subscription Leg Identification")]
     [IsoXmlTag("SbcptLegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SubscriptionLegIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISwitchLegReferences1 : IIsoComponent
     [IsoId("_RGg6JNp-Ed-ak6NoX_4Aeg_17053572")]
     [DisplayName("Leg Rejection Reason")]
     [IsoXmlTag("LegRjctnRsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? LegRejectionReason { get; }
 
     /// <summary>

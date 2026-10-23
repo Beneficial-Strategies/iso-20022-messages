@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor Cancellation Advice14.
 /// </summary>
 [IsoId("_ay4_8aEwEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Acceptor Cancellation Advice14")]
 public interface IAcceptorCancellationAdvice14 : IIsoComponent
 {
     /// <summary>

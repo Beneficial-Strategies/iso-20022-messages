@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action SD25.
 /// </summary>
 [IsoId("_N9RHMYbrEe--EK81FcmyRA")]
+[IsoDisplayName(@"Corporate Action SD25")]
 public interface ICorporateActionSD25 : IIsoComponent
 {
     /// <summary>
@@ -177,6 +178,7 @@ public interface ICorporateActionSD25 : IIsoComponent
     /// </summary>
     [DisplayName("Certificate Details")]
     [IsoXmlTag("CertDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionSD26> CertificateDetails { get; }
 
     /// <summary>

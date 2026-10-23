@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkCurveName4Choice;
 /// Identifier of the index/benchmark of a floating rate bond, when an identifier exists.
 /// </summary>
 [IsoId("_1yco4QnVEeWa7rBfPECYsw")]
+[IsoDisplayName(@"Index")]
 public interface IIndex : IBenchmarkCurveName4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the exemption reason.
 /// </summary>
 [IsoId("_Qmk-8RuJEeOqSdXzJ0oydA")]
+[IsoDisplayName(@"Exemption Reason 1 Choice")]
 public interface IExemptionReason1Choice : IIsoChoice { }

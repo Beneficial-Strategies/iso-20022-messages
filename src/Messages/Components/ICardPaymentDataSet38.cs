@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card Payment Data Set38.
 /// </summary>
 [IsoId("_qHTSEaEYEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Card Payment Data Set38")]
 public interface ICardPaymentDataSet38 : IIsoComponent
 {
     /// <summary>

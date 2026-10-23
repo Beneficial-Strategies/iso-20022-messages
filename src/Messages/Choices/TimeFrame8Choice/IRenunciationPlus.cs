@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame8Choice;
 /// Number of days after the renunciation of title documents are received used to define the standard settlement timeframe.
 /// </summary>
 [IsoId("_cB3nRTgFEei6RvewLQWEqw")]
+[IsoDisplayName(@"Renunciation Plus")]
 public interface IRenunciationPlus : ITimeFrame8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IRenunciationPlus : ITimeFrame8Choice, IIsoChoiceVariant
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("RPlus")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

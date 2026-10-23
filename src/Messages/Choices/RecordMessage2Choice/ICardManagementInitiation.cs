@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the card management initiation message.</summary>
 [IsoId("_kNBjm27-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Card Management Initiation")]
 public interface ICardManagementInitiation : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

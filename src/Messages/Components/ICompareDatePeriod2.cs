@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a date period.
 /// </summary>
 [IsoId("_0IBd8Vo6Ee23K4GXSpBSeg")]
+[IsoDisplayName(@"Compare Date Period")]
 public interface ICompareDatePeriod2 : IIsoComponent
 {
     /// <summary>

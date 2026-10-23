@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CharacterSearch1Choice;
 /// Exact set of characters to be matched to be considered valid.
 /// </summary>
 [IsoId("_GDljUZlaEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Equal")]
 public interface IEqual : ICharacterSearch1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IEqual : ICharacterSearch1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("EQ")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

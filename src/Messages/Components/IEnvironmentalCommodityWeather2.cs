@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an environmental derivative of type weather.
 /// </summary>
 [IsoId("_Dqy6gU8SEe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Environmental Commodity Weather")]
 public interface IEnvironmentalCommodityWeather2 : IIsoComponent
 {
     /// <summary>

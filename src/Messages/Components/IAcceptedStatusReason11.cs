@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies reasons for the accepted status.
 /// </summary>
 [IsoId("_6HWbl5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Accepted Status Reason")]
 public interface IAcceptedStatusReason11 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IAcceptedStatusReason11 : IIsoComponent
     [IsoId("_6HWbn5NLEeWGlc8L7oPDIg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
+    [StringLength(210, MinimumLength = 1)]
     RestrictedFINXMax210Text? AdditionalReasonInformation { get; }
 }

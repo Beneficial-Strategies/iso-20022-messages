@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies corporate action dates.
 /// </summary>
 [IsoId("_x_Gznx9REeuFz_FaCzCLgQ")]
+[IsoDisplayName(@"Corporate Action Date")]
 public interface ICorporateActionDate82 : IIsoComponent
 {
     /// <summary>
@@ -89,6 +90,7 @@ public interface ICorporateActionDate82 : IIsoComponent
     [IsoId("_x_Gz5R9REeuFz_FaCzCLgQ")]
     [DisplayName("Borrower Stock Lending Deadline")]
     [IsoXmlTag("BrrwrStockLndgDdln")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBorrowerLendingDeadline6> BorrowerStockLendingDeadline { get; }
 
     /// <summary>

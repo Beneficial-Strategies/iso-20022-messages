@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides reason of the rejection of a deactivation cancellation request.
 /// </summary>
 [IsoId("_RkeBcNp-Ed-ak6NoX_4Aeg_1505452945")]
+[IsoDisplayName(@"Corporate Action Deactivation Cancellation Rejection Status")]
 public interface ICorporateActionDeactivationCancellationRejectionStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionDeactivationCancellationRejectionStatus1 : IIso
     [IsoId("_RkeBcdp-Ed-ak6NoX_4Aeg_1510068594")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason7FormatChoice> Reason { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface ICorporateActionDeactivationCancellationRejectionStatus1 : IIso
     [IsoId("_RkeBctp-Ed-ak6NoX_4Aeg_1510068595")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

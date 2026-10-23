@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the details of the reported transaction.
 /// </summary>
 [IsoId("_4AyNrf_qEemm3skPVSMJQg")]
+[IsoDisplayName(@"Transaction Loan Data 21 Choice")]
 public interface ITransactionLoanData21Choice : IIsoChoice { }

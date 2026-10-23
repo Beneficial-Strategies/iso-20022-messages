@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Underlying Payment Instruction9.
 /// </summary>
 [IsoId("_71zqMTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Underlying Payment Instruction9")]
 public interface IUnderlyingPaymentInstruction9 : IIsoComponent
 {
     /// <summary>

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctOpngAmdmntReq",
     "urn:iso:std:iso:20022:tech:xsd:acmt.008.001.05"
 )]
+[IsoDisplayName(@"Account Opening Amendment Request V05")]
 public interface IAccountOpeningAmendmentRequestV05 : IOuterRecord
 {
     /// <summary>
@@ -71,6 +72,7 @@ public interface IAccountOpeningAmendmentRequestV05 : IOuterRecord
     /// </summary>
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOperationMandate7> Mandate { get; }
 
     /// <summary>
@@ -78,6 +80,7 @@ public interface IAccountOpeningAmendmentRequestV05 : IOuterRecord
     /// </summary>
     [DisplayName("Group")]
     [IsoXmlTag("Grp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGroup6> Group { get; }
 
     /// <summary>
@@ -92,6 +95,7 @@ public interface IAccountOpeningAmendmentRequestV05 : IOuterRecord
     /// </summary>
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature4> DigitalSignature { get; }
 
     /// <summary>
@@ -99,5 +103,6 @@ public interface IAccountOpeningAmendmentRequestV05 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

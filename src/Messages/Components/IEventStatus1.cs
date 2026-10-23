@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Notification status of an event.
 /// </summary>
 [IsoId("_eXYv2a7QEemG7MmivSuE5g")]
+[IsoDisplayName(@"Event Status")]
 public interface IEventStatus1 : IIsoComponent
 {
     /// <summary>

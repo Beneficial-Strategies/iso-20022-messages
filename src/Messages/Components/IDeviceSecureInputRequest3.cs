@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Request a secure input for a PIN.
 /// </summary>
 [IsoId("_3Q3kMS_FEeugIJ3Gvoevmg")]
+[IsoDisplayName(@"Device Secure Input Request")]
 public interface IDeviceSecureInputRequest3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDeviceSecureInputRequest3 : IIsoComponent
     [IsoId("_3f3pgy_FEeugIJ3Gvoevmg")]
     [DisplayName("PIN Verification Method")]
     [IsoXmlTag("PINVrfctnMtd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PINVerificationMethod { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IDeviceSecureInputRequest3 : IIsoComponent
     [IsoId("_3f3phS_FEeugIJ3Gvoevmg")]
     [DisplayName("Maximum Waiting Time")]
     [IsoXmlTag("MaxWtgTm")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumWaitingTime { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IDeviceSecureInputRequest3 : IIsoComponent
     [IsoId("_3f3phy_FEeugIJ3Gvoevmg")]
     [DisplayName("Beep Key Flag")]
     [IsoXmlTag("BeepKeyFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? BeepKeyFlag { get; }
 
     /// <summary>

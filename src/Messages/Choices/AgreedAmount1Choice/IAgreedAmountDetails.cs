@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreedAmount1Choice;
 /// </summary>
 [IsoId("_Qm7bJtp-Ed-ak6NoX_4Aeg_-1292111974")]
 [IsoXmlTag("AgrdAmtDtls")]
+[IsoDisplayName(@"Agreed Amount Details")]
 public interface IAgreedAmountDetails : IAgreedAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

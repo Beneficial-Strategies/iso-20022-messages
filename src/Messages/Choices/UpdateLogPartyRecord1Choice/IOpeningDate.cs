@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// </summary>
 [IsoId("_xPt7hGjNEeiRg5NzP0jkQg")]
 [IsoXmlTag("OpngDt")]
+[IsoDisplayName(@"Opening Date")]
 public interface IOpeningDate : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IOpeningDate : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
     [IsoId("_Zi5HlGjSEeiRg5NzP0jkQg")]
     [DisplayName("Old")]
     [IsoXmlTag("Od")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Old { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface IOpeningDate : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
     [IsoId("_Zi5HlWjSEeiRg5NzP0jkQg")]
     [DisplayName("New")]
     [IsoXmlTag("New")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate New { get; }
 }

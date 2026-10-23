@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters to be used by the various cryptographic key commands.
 /// </summary>
 [IsoId("_hyc_gYtIEeSxlKlAGYErFg")]
+[IsoDisplayName(@"ATM Configuration Parameter")]
 public interface IATMConfigurationParameter2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IATMConfigurationParameter2 : IIsoComponent
     [IsoId("_hkcjQItJEeSxlKlAGYErFg")]
     [DisplayName("Host Challenge")]
     [IsoXmlTag("HstChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? HostChallenge { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IATMConfigurationParameter2 : IIsoComponent
     [IsoId("_tNm-wItJEeSxlKlAGYErFg")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max5000Binary> Certificate { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IATMConfigurationParameter2 : IIsoComponent
     [IsoId("_ABCokItKEeSxlKlAGYErFg")]
     [DisplayName("Key Properties")]
     [IsoXmlTag("KeyProps")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IKEKIdentifier4> KeyProperties { get; }
 }

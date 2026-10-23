@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Redemption leg, or switch-out, of a switch transaction.
 /// </summary>
 [IsoId("_4kpxMzbsEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Switch Redemption Leg Order")]
 public interface ISwitchRedemptionLegOrder6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISwitchRedemptionLegOrder6 : IIsoComponent
     [IsoId("_48wIBTbsEead9bDRE_1DAQ")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -97,6 +100,7 @@ public interface ISwitchRedemptionLegOrder6 : IIsoComponent
     [IsoId("_48wIHTbsEead9bDRE_1DAQ")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>
@@ -113,6 +117,8 @@ public interface ISwitchRedemptionLegOrder6 : IIsoComponent
     [IsoId("_48wIITbsEead9bDRE_1DAQ")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>

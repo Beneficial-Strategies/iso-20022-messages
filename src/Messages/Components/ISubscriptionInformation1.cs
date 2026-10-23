@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a subscription order.
 /// </summary>
 [IsoId("_R5oZItp-Ed-ak6NoX_4Aeg_376487239")]
+[IsoDisplayName(@"Subscription Information")]
 public interface ISubscriptionInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISubscriptionInformation1 : IIsoComponent
     [IsoId("_R5oZI9p-Ed-ak6NoX_4Aeg_376487265")]
     [DisplayName("Date Of First Subscription")]
     [IsoXmlTag("DtOfFrstSbcpt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate DateOfFirstSubscription { get; }
 
     /// <summary>

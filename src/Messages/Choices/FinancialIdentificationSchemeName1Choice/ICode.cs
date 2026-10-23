@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialIdentificationSchemeNam
 /// Name of the identification scheme, in a coded form as published in an external list.
 /// </summary>
 [IsoId("_QALkMdp-Ed-ak6NoX_4Aeg_-2021925430")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IFinancialIdentificationSchemeName1Choice, IIsoChoiceVariant
 {
     /// <summary>

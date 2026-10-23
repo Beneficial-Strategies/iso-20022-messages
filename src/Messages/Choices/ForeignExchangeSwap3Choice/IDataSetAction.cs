@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ForeignExchangeSwap3Choice;
 /// Provides the reason why no transactions are being reported for a money market reporting period.
 /// </summary>
 [IsoId("_FAmvkcESEea7jLfvGi1PDw")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : IForeignExchangeSwap3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassAttributes1Choice;
 /// </summary>
 [IsoId("_id4oJe94EeW7gabYEJmWIA")]
 [IsoXmlTag("Intrst")]
+[IsoDisplayName(@"Interest")]
 public interface IInterest : IAssetClassAttributes1Choice, IIsoChoiceVariant
 {
     /// <summary>

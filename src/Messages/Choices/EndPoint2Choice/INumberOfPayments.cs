@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EndPoint2Choice;
 
 /// <summary>Number of the payments that will be made in completing this frequency sequence.</summary>
 [IsoId("_a2rekbvGEfCYYbmqNrQFSg")]
+[IsoDisplayName(@"Number Of Payments")]
 public interface INumberOfPayments : IEndPoint2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

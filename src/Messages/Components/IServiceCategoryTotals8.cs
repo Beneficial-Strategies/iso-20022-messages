@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Totals per service category.
 /// </summary>
 [IsoId("_xLEAMUw0EfCpsI1b9uv5FQ")]
+[IsoDisplayName(@"Service Category Totals8")]
 public interface IServiceCategoryTotals8 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IServiceCategoryTotals8 : IIsoComponent
     [IsoId("_xLEAQUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingTaxRecord2> Tax { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface IServiceCategoryTotals8 : IIsoComponent
     [IsoId("_xLEATUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Service Item Totals")]
     [IsoXmlTag("SvcItmTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IServiceItemTotals12> ServiceItemTotals { get; }
 
     /// <summary>
@@ -73,5 +76,6 @@ public interface IServiceCategoryTotals8 : IIsoComponent
     [IsoId("_xLEAUUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Service Item Correction")]
     [IsoXmlTag("SvcItmCrrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IServiceItemTotals13> ServiceItemCorrection { get; }
 }

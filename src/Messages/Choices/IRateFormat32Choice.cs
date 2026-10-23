@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a rate format expressed as a rate or a not specified rate.</summary>
 [IsoId("_k18KsakHEfCG_LQaXOxwew")]
+[IsoDisplayName(@"Rate Format 32 Choice")]
 public interface IRateFormat32Choice : IIsoChoice { }

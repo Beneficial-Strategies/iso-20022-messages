@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice;
 /// <summary>
 /// Date Time.
 /// </summary>
+[IsoDisplayName(@"Date Time")]
 public interface IDateTime : ITransactionAmendment1Choice, IIsoChoiceVariant
 {
     /// <summary>

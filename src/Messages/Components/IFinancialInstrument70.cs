@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security or other asset.
 /// </summary>
 [IsoId("_4uDcsU3vEeiQHa-q1Uephw")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument70 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrument70 : IIsoComponent
     [IsoId("_NpIvgE3wEeiQHa-q1Uephw")]
     [DisplayName("Line Identification")]
     [IsoXmlTag("LineId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LineIdentification { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IFinancialInstrument70 : IIsoComponent
     [IsoId("_Mz9xsaFYEei_VZq-6SQkuQ")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit11> UnitsDetails { get; }
 
     /// <summary>
@@ -146,6 +150,7 @@ public interface IFinancialInstrument70 : IIsoComponent
     [IsoId("_5s0VkU3wEeiQHa-q1Uephw")]
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedTradeDate { get; }
 
     /// <summary>
@@ -154,6 +159,7 @@ public interface IFinancialInstrument70 : IIsoComponent
     [IsoId("_4-a0DU3vEeiQHa-q1Uephw")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>
@@ -186,6 +192,7 @@ public interface IFinancialInstrument70 : IIsoComponent
     [IsoId("__F0akk3wEeiQHa-q1Uephw")]
     [DisplayName("Crystallisation Details")]
     [IsoXmlTag("CrstllstnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICrystallisation1> CrystallisationDetails { get; }
 
     /// <summary>
@@ -210,5 +217,6 @@ public interface IFinancialInstrument70 : IIsoComponent
     [IsoId("_cEcvoXVaEeiiHo4Gse0d2w")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

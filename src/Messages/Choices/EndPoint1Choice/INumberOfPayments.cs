@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EndPoint1Choice;
 /// Number of the payments that will be made in completing this frequency sequence including any executed since the sequence start date.
 /// </summary>
 [IsoId("_FOEocA2mEeSNWNtJlXOAhg")]
+[IsoDisplayName(@"Number Of Payments")]
 public interface INumberOfPayments : IEndPoint1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface INumberOfPayments : IEndPoint1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("NbOfPmts")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

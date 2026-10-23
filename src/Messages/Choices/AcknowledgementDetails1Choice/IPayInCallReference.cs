@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementDetails1Choice;
 /// Reference to the pay in call that is being acknowledged.
 /// </summary>
 [IsoId("_3SatcCzSEeKZfox_pyYpTA")]
+[IsoDisplayName(@"Pay In Call Reference")]
 public interface IPayInCallReference : IAcknowledgementDetails1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IPayInCallReference : IAcknowledgementDetails1Choice, IIsoChoic
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("PayInCallRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

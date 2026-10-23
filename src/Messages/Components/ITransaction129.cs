@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of transaction for a fraud reporting.
 /// </summary>
 [IsoId("_sIhcsYgrEeu8-LhY4KPfWg")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction129 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransaction129 : IIsoComponent
     [IsoId("_sN0MYYgrEeu8-LhY4KPfWg")]
     [DisplayName("Fraud Transaction Identification")]
     [IsoXmlTag("FrdTxId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text FraudTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ITransaction129 : IIsoComponent
     [IsoId("_sN0MY4grEeu8-LhY4KPfWg")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee2> AdditionalFee { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface ITransaction129 : IIsoComponent
     [IsoId("_sN0MZYgrEeu8-LhY4KPfWg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

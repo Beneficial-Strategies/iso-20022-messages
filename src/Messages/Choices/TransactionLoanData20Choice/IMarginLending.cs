@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData20Choice;
 /// </summary>
 [IsoId("_lksD17ONEemDE9K-I5TT8Q")]
 [IsoXmlTag("MrgnLndg")]
+[IsoDisplayName(@"Margin Lending")]
 public interface IMarginLending : ITransactionLoanData20Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IMarginLending : ITransactionLoanData20Choice, IIsoChoiceVarian
     [IsoId("_eX0PAaotEemdLtwzt4CWxg")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? UniqueTradeIdentifier { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IMarginLending : ITransactionLoanData20Choice, IIsoChoiceVarian
     [IsoId("_eX0PA6otEemdLtwzt4CWxg")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDate { get; }
 
     /// <summary>
@@ -34,6 +38,7 @@ public interface IMarginLending : ITransactionLoanData20Choice, IIsoChoiceVarian
     [IsoId("_eX0PBaotEemdLtwzt4CWxg")]
     [DisplayName("Execution Date Time")]
     [IsoXmlTag("ExctnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ExecutionDateTime { get; }
 
     /// <summary>
@@ -42,6 +47,7 @@ public interface IMarginLending : ITransactionLoanData20Choice, IIsoChoiceVarian
     [IsoId("__QUkkN4LEemiJt2087YZcw")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? TradingVenue { get; }
 
     /// <summary>
@@ -74,6 +80,7 @@ public interface IMarginLending : ITransactionLoanData20Choice, IIsoChoiceVarian
     [IsoId("_eX0PD6otEemdLtwzt4CWxg")]
     [DisplayName("Margin Loan Attribute")]
     [IsoXmlTag("MrgnLnAttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRate3> MarginLoanAttribute { get; }
 
     /// <summary>
@@ -82,5 +89,6 @@ public interface IMarginLending : ITransactionLoanData20Choice, IIsoChoiceVarian
     [IsoId("_0Me_MbODEemDE9K-I5TT8Q")]
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TerminationDate { get; }
 }

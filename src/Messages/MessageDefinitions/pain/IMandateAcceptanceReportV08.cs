@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_R3P4PzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("pain.012.001.08", "MndtAccptncRpt", "urn:iso:std:iso:20022:tech:xsd:pain.012.001.08")]
+[IsoDisplayName(@"Mandate Acceptance Report V08")]
 public interface IMandateAcceptanceReportV08 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IMandateAcceptanceReportV08 : IOuterRecord
     /// </summary>
     [DisplayName("Underlying Acceptance Details")]
     [IsoXmlTag("UndrlygAccptncDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMandateAcceptance8> UnderlyingAcceptanceDetails { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IMandateAcceptanceReportV08 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

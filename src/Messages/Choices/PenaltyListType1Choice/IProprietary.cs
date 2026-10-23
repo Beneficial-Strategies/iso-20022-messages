@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PenaltyListType1Choice;
 
 /// <summary>Specifies the penalty list reported, in a proprietary format.</summary>
 [IsoId("_-p6qldfNEeiJ1vId85LeLw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPenaltyListType1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

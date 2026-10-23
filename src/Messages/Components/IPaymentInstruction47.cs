@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Instruction47.
 /// </summary>
 [IsoId("_13dNuzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Payment Instruction47")]
 public interface IPaymentInstruction47 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface IPaymentInstruction47 : IIsoComponent
     /// </summary>
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentStatus6> Status { get; }
 
     /// <summary>

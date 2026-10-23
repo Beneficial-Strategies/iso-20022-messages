@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgRefDataRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.017.001.01"
 )]
+[Description(@"This FinancialInstrumentReportingReferenceDataReport message is sent by the trading venue to the national competent authority to report on the reference data used in the securities transactions.")]
+[IsoDisplayName(@"Financial Instrument Reporting Reference Data Report V")]
 public interface IFinancialInstrumentReportingReferenceDataReportV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IFinancialInstrumentReportingReferenceDataReportV01 : IOuterRec
     [IsoId("_4LUGPURNEee7JdgA9zPESA")]
     [DisplayName("Reference Data")]
     [IsoXmlTag("RefData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesReferenceDataReport5> ReferenceData { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IFinancialInstrumentReportingReferenceDataReportV01 : IOuterRec
     [IsoId("_4LUGP0RNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

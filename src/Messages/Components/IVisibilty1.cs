@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the visibility of the creditor enrolment as shown to the debtors.
 /// </summary>
 [IsoId("_FnUAsEWOEempSe_3C1a9EQ")]
+[IsoDisplayName(@"Visibilty")]
 public interface IVisibilty1 : IIsoComponent
 {
     /// <summary>
@@ -34,5 +35,6 @@ public interface IVisibilty1 : IIsoComponent
     [IsoId("_cjMGkEWOEempSe_3C1a9EQ")]
     [DisplayName("Limited Visibility")]
     [IsoXmlTag("LtdVsblty")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? LimitedVisibility { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investigation Request3.
 /// </summary>
 [IsoId("_k2CB0WNrEe6rDI7BtgptxA")]
+[IsoDisplayName(@"Investigation Request3")]
 public interface IInvestigationRequest3 : IIsoComponent
 {
     /// <summary>
@@ -107,5 +108,6 @@ public interface IInvestigationRequest3 : IIsoComponent
     /// </summary>
     [DisplayName("Service Level")]
     [IsoXmlTag("SvcLvl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestigationServiceLevel1Choice> ServiceLevel { get; }
 }

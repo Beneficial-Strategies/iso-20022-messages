@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security Identification47.
 /// </summary>
 [IsoId("_yH8W0W2-Ee6KsPNq-miPbQ")]
+[IsoDisplayName(@"Security Identification47")]
 public interface ISecurityIdentification47 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface ISecurityIdentification47 : IIsoComponent
     /// </summary>
     [DisplayName("Registered Distribution Country")]
     [IsoXmlTag("RegdDstrbtnCtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CountryCode> RegisteredDistributionCountry { get; }
 
     /// <summary>
@@ -156,5 +158,6 @@ public interface ISecurityIdentification47 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

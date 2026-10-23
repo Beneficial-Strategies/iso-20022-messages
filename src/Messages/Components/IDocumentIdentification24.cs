@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the message number and the query identification.
 /// </summary>
 [IsoId("_QBS1o_5REeCtrO5qCU90cA")]
+[IsoDisplayName(@"Document Identification")]
 public interface IDocumentIdentification24 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the meta data associated with a netting cut off report.
 /// </summary>
 [IsoId("_ReEwGpXUEeaYkf5FCqYMeA")]
+[IsoDisplayName(@"Netting Cut Off Report Data")]
 public interface INettingCutOffReportData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INettingCutOffReportData1 : IIsoComponent
     [IsoId("_ReEwHZXUEeaYkf5FCqYMeA")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface INettingCutOffReportData1 : IIsoComponent
     [IsoId("_ReEwIJXUEeaYkf5FCqYMeA")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface INettingCutOffReportData1 : IIsoComponent
     [IsoId("_ReEwHpXUEeaYkf5FCqYMeA")]
     [DisplayName("Report Type")]
     [IsoXmlTag("RptTp")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text ReportType { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface INettingCutOffReportData1 : IIsoComponent
     [IsoId("_8Ebk8JnkEeaKH-pm9fIa8w")]
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ActivationDate { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface INettingCutOffReportData1 : IIsoComponent
     [IsoId("_ReEwIZXUEeaYkf5FCqYMeA")]
     [DisplayName("Net Service Type")]
     [IsoXmlTag("NetSvcTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NetServiceType { get; }
 
     /// <summary>

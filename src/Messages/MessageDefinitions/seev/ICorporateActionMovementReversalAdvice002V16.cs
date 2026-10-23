@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnMvmntRvslAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.037.002.16"
 )]
+[IsoDisplayName(@"Corporate Action Movement Reversal Advice002V16")]
 public interface ICorporateActionMovementReversalAdvice002V16 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface ICorporateActionMovementReversalAdvice002V16 : IOuterRecord
     /// </summary>
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification38> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -36,6 +38,7 @@ public interface ICorporateActionMovementReversalAdvice002V16 : IOuterRecord
     /// </summary>
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventReference4> EventsLinkage { get; }
 
     /// <summary>
@@ -92,6 +95,7 @@ public interface ICorporateActionMovementReversalAdvice002V16 : IOuterRecord
     /// </summary>
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -99,6 +103,7 @@ public interface ICorporateActionMovementReversalAdvice002V16 : IOuterRecord
     /// </summary>
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> PayingAgent { get; }
 
     /// <summary>
@@ -106,6 +111,7 @@ public interface ICorporateActionMovementReversalAdvice002V16 : IOuterRecord
     /// </summary>
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -113,5 +119,6 @@ public interface ICorporateActionMovementReversalAdvice002V16 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

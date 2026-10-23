@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Business status of the party for processing in the system.
 /// </summary>
 [IsoId("_7_fcO1hLEeih3fUfzR38Ig")]
+[IsoDisplayName(@"Party Status")]
 public interface IPartyStatus2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPartyStatus2 : IIsoComponent
     [IsoId("_8KDGZ1hLEeih3fUfzR38Ig")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation10> StatusReason { get; }
 
     /// <summary>

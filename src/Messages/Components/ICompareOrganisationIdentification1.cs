@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for an organisation identification.
 /// </summary>
 [IsoId("_NQB58bQ5EemI67HK7aviyg")]
+[IsoDisplayName(@"Compare Organisation Identification")]
 public interface ICompareOrganisationIdentification1 : IIsoComponent
 {
     /// <summary>

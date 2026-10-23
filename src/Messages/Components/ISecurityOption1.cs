@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the CA security option.
 /// </summary>
 [IsoId("_UHVm2dp-Ed-ak6NoX_4Aeg_-583360205")]
+[IsoDisplayName(@"Security Option")]
 public interface ISecurityOption1 : IIsoComponent
 {
     /// <summary>
@@ -121,6 +122,7 @@ public interface ISecurityOption1 : IIsoComponent
     [IsoId("_UHohwdp-Ed-ak6NoX_4Aeg_-1246757948")]
     [DisplayName("Temporary Financial Instrument Indicator")]
     [IsoXmlTag("TempFinInstrmInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TemporaryFinancialInstrumentIndicator { get; }
 
     /// <summary>

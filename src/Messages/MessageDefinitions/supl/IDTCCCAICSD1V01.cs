@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// </summary>
 [IsoId("_b8UwkL5OEeexmbB7KsjCwA")]
 [IsoMessage("supl.032.001.01", "DTCCCAICSD1", "urn:iso:std:iso:20022:tech:xsd:supl.032.001.01")]
+[Description(@"The DTCCCAICSD1 message extends ISO corporate action Instruction Cancellation Request (CAIC) message with DTCC corporate action elements not covered in the standard message.")]
+[IsoDisplayName(@"DTCCCAICSD 1 V")]
 public interface IDTCCCAICSD1V01 : IOuterRecord
 {
     /// <summary>
@@ -20,5 +22,8 @@ public interface IDTCCCAICSD1V01 : IOuterRecord
     [IsoId("_fcQ_wMYxEeesocHIuVGr7g")]
     [DisplayName("Reorganisation Instruction Cancellation Details")]
     [IsoXmlTag("ReorgInstrCxlDtls")]
+    [MinLength(0)]
+    [MaxLength(12)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReorganisationInstructionDetailsSD3> ReorganisationInstructionCancellationDetails { get; }
 }

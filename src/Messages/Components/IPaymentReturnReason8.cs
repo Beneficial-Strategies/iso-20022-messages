@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Return Reason8.
 /// </summary>
 [IsoId("_2e8rgTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Payment Return Reason8")]
 public interface IPaymentReturnReason8 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IPaymentReturnReason8 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

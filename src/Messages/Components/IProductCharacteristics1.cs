@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the characteristic of a product.
 /// </summary>
 [IsoId("_T5L2FNp-Ed-ak6NoX_4Aeg_1219351972")]
+[IsoDisplayName(@"Product Characteristics")]
 public interface IProductCharacteristics1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IProductCharacteristics1 : IIsoComponent
     [IsoId("_T5L2Ftp-Ed-ak6NoX_4Aeg_1319095231")]
     [DisplayName("Characteristics")]
     [IsoXmlTag("Chrtcs")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Characteristics { get; }
 }

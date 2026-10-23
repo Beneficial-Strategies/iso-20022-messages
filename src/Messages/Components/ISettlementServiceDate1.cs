@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date related to the settlement of the transaction.
 /// </summary>
 [IsoId("_eG_WwEX8Eeegp_DADCe7HQ")]
+[IsoDisplayName(@"Settlement Service Date")]
 public interface ISettlementServiceDate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementServiceDate1 : IIsoComponent
     [IsoId("_08wNkEX8Eeegp_DADCe7HQ")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface ISettlementServiceDate1 : IIsoComponent
     [IsoId("_5uzAQEX8Eeegp_DADCe7HQ")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SettlementDate { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface ISettlementServiceDate1 : IIsoComponent
     [IsoId("_OYpPomp-EemXfKijhrqa-Q")]
     [DisplayName("Settlement Time")]
     [IsoXmlTag("SttlmTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? SettlementTime { get; }
 
     /// <summary>
@@ -42,6 +46,8 @@ public interface ISettlementServiceDate1 : IIsoComponent
     [IsoId("_BFdF0Gp_EemXfKijhrqa-Q")]
     [DisplayName("Settlement Period")]
     [IsoXmlTag("SttlmPrd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SettlementPeriod { get; }
 
     /// <summary>
@@ -50,5 +56,6 @@ public interface ISettlementServiceDate1 : IIsoComponent
     [IsoId("_OYpPo2p-EemXfKijhrqa-Q")]
     [DisplayName("Settlement Cut Off Time")]
     [IsoXmlTag("SttlmCutOffTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? SettlementCutOffTime { get; }
 }

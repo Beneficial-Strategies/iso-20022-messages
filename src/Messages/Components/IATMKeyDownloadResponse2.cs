@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the response of an ATM key download from an ATM manager.
 /// </summary>
 [IsoId("_F5BX4a46EeWRfYPBaeOY8w")]
+[IsoDisplayName(@"ATM Key Download Response")]
 public interface IATMKeyDownloadResponse2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IATMKeyDownloadResponse2 : IIsoComponent
     [IsoId("_GF1r5a46EeWRfYPBaeOY8w")]
     [DisplayName("ATM Challenge")]
     [IsoXmlTag("ATMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? ATMChallenge { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface IATMKeyDownloadResponse2 : IIsoComponent
     [IsoId("_GF1r6a46EeWRfYPBaeOY8w")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 }

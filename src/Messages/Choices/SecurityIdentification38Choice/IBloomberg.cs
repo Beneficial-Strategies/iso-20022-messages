@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification38Choice;
 /// <summary>
 /// Bloomberg.
 /// </summary>
+[IsoDisplayName(@"Bloomberg")]
 public interface IBloomberg : ISecurityIdentification38Choice, IIsoChoiceVariant
 {
     /// <summary>

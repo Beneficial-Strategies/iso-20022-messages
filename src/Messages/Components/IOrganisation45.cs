@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Merchant performing the transaction.
 /// </summary>
 [IsoId("_yLNgcbXxEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Organisation45")]
 public interface IOrganisation45 : IIsoComponent
 {
     /// <summary>

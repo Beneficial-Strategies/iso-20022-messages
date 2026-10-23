@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessedStatus1FormatChoice;
 /// Standard code to specify to express the processing status of the notification advice.
 /// </summary>
 [IsoId("_RnJiBNp-Ed-ak6NoX_4Aeg_-138673377")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProcessedStatus1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

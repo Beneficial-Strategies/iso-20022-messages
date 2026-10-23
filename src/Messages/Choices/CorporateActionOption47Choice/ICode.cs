@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionOption47Choice;
 
 /// <summary>Standard code to specify the type of corporate action options.</summary>
 [IsoId("_Rh3a8Q7VEfC-6PbsYHIdig")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionOption47Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

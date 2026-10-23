@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DrawdownEventType1Choice;
 /// Type of event expressed as a code.
 /// </summary>
 [IsoId("_Hh8FUFNiEeijdq8ilaxyOA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDrawdownEventType1Choice, IIsoChoiceVariant
 {
     /// <summary>

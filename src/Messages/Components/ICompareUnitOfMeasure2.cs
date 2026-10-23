@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a unit of measure.
 /// </summary>
 [IsoId("__o7G4bQ_EemPBPgZjF7-nQ")]
+[IsoDisplayName(@"Compare Unit Of Measure")]
 public interface ICompareUnitOfMeasure2 : IIsoComponent
 {
     /// <summary>

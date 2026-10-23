@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotionalOrUnitBased1Choice;
 /// Type of unit basis for a financial instrument expressed as a code.
 /// </summary>
 [IsoId("_EltSQJ9WEeqxTNfi5y7ywQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : INotionalOrUnitBased1Choice, IIsoChoiceVariant
 {
     /// <summary>

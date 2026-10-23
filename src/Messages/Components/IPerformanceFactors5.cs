@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Performance factors of the investment fund / fund class.
 /// </summary>
 [IsoId("41d883f7-39bf-4e64-9d91-7a8b3c8e1e8f")]
+[IsoDisplayName(@"Performance Factors5")]
 public interface IPerformanceFactors5 : IIsoComponent
 {
     /// <summary>

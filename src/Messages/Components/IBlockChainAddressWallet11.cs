@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Block Chain Address Wallet11.
 /// </summary>
 [IsoId("_y6JfAaDcEe-CRv8HNM1RKw")]
+[IsoDisplayName(@"Block Chain Address Wallet11")]
 public interface IBlockChainAddressWallet11 : IIsoComponent
 {
     /// <summary>

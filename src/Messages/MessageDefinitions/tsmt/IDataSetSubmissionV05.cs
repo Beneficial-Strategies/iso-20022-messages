@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_h2S-cQgGEeSeS5xdjFfOTw")]
 [IsoMessage("tsmt.014.001.05", "DataSetSubmissn", "urn:iso:std:iso:20022:tech:xsd:tsmt.014.001.05")]
+[Description(@"Scope|The DataSetSubmission message is sent by a party involved in the transaction to the matching application.|This message is used to trigger either a match or a pre-match of the information submitted with the message.|Usage|The DataSetSubmission message can be sent by either party with the instruction pre-match. In the outlined scenario, the matching application will compare the data set(s) conveyed by the DataSetSubmission message with the established baseline and report the matching result to the requester of the data set pre-match by sending a DataSetMatchReport message.|or|The DataSetSubmission message can be sent by the party specified in the baseline as data set submitter with the instruction match. In the outlined scenario, the matching application will compare the data set(s) conveyed by the DataSetSubmission message with the established baseline and report the matching result to|- the parties involved in a transaction established in the push-through mode, or|- the initiator of a transaction established in the lodge mode.|The DataSetSubmission message can be used to submit multiple data sets for multiple transactions (baselines) at the same time. However, all transactions (baselines) covered by the message must be for the same parties, that is transaction initiator and counterparty, as well as for the same buyer and seller.|The DataSetSubmission message consists of data reflecting trade information related to the purchasing agreement covered by the transaction(s), for example shipment date, invoice amount.")]
+[IsoDisplayName(@"Data Set Submission V")]
 public interface IDataSetSubmissionV05 : IOuterRecord
 {
     /// <summary>
@@ -38,6 +40,7 @@ public interface IDataSetSubmissionV05 : IOuterRecord
     [IsoId("_h2S-dwgGEeSeS5xdjFfOTw")]
     [DisplayName("Related Transaction References")]
     [IsoXmlTag("RltdTxRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDataSetSubmissionReferences3> RelatedTransactionReferences { get; }
 
     /// <summary>
@@ -102,6 +105,7 @@ public interface IDataSetSubmissionV05 : IOuterRecord
     [IsoId("_h2S-hwgGEeSeS5xdjFfOTw")]
     [DisplayName("Certificate Data Set")]
     [IsoXmlTag("CertDataSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICertificateDataSet2> CertificateDataSet { get; }
 
     /// <summary>
@@ -110,5 +114,6 @@ public interface IDataSetSubmissionV05 : IOuterRecord
     [IsoId("_h2S-iQgGEeSeS5xdjFfOTw")]
     [DisplayName("Other Certificate Data Set")]
     [IsoXmlTag("OthrCertDataSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherCertificateDataSet2> OtherCertificateDataSet { get; }
 }

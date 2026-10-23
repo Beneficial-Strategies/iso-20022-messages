@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the additional information for an NDF as supplied on a fixing instruction.
 /// </summary>
 [IsoId("_-eNb8KZqEea16Jw8SEVrDQ")]
+[IsoDisplayName(@"Fixing Conditions")]
 public interface IFixingConditions1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFixingConditions1 : IIsoComponent
     [IsoId("_Oe21EKZrEea16Jw8SEVrDQ")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IFixingConditions1 : IIsoComponent
     [IsoId("_b4koM6ZrEea16Jw8SEVrDQ")]
     [DisplayName("Originator Reference")]
     [IsoXmlTag("OrgtrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginatorReference { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IFixingConditions1 : IIsoComponent
     [IsoId("_b4koNKZrEea16Jw8SEVrDQ")]
     [DisplayName("Common Reference")]
     [IsoXmlTag("CmonRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonReference { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface IFixingConditions1 : IIsoComponent
     [IsoId("_b4koNaZrEea16Jw8SEVrDQ")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RelatedReference { get; }
 
     /// <summary>
@@ -65,5 +73,6 @@ public interface IFixingConditions1 : IIsoComponent
     [IsoId("_B_U80aZsEea16Jw8SEVrDQ")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate ExchangeRate { get; }
 }

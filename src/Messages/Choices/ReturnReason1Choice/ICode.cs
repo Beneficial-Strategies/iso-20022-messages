@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReturnReason1Choice;
 /// Reason for the return in a coded form.
 /// </summary>
 [IsoId("_TOkLyNp-Ed-ak6NoX_4Aeg_191375030")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IReturnReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

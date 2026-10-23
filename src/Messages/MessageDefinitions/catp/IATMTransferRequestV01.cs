@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_vueJoK4rEeWLdt0vLARX2Q")]
 [IsoMessage("catp.016.001.01", "ATMTrfReq", "urn:iso:std:iso:20022:tech:xsd:catp.016.001.01")]
+[Description(@"The ATMTransferRequest message is sent by an ATM to an ATM manager to request the approval of a fund transfer at the ATM.")]
+[IsoDisplayName(@"ATM Transfer Request V")]
 public interface IATMTransferRequestV01 : IOuterRecord
 {
     /// <summary>

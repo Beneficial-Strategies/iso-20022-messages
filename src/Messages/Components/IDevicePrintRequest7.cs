@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Print Request message.
 /// </summary>
 [IsoId("__-8okbZeEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Device Print Request7")]
 public interface IDevicePrintRequest7 : IIsoComponent
 {
     /// <summary>

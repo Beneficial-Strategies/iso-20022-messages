@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report on the net position of a security, on a single securities account, for a certain date.
 /// </summary>
 [IsoId("_zBB40ag1EfCXwLUUylXgrQ")]
+[IsoDisplayName(@"Balance30")]
 public interface IBalance30 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IBalance30 : IIsoComponent
     [IsoId("_zEwiQ6g1EfCXwLUUylXgrQ")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateBalanceInformation47> BalanceForAccount { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IBalance30 : IIsoComponent
     [IsoId("_zEwiRag1EfCXwLUUylXgrQ")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubAccountIdentification75> SubAccountDetails { get; }
 
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal7Choice;
 /// </summary>
 [IsoId("_3VwHYSPvEeWQjryFgN2ITg")]
 [IsoXmlTag("Ref")]
+[IsoDisplayName(@"Reference")]
 public interface IReference : IReversal7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IReference : IReversal7Choice, IIsoChoiceVariant
     [IsoId("_tM0MkyVwEeWES5MJF-y6YA")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IReference : IReversal7Choice, IIsoChoiceVariant
     [IsoId("_tM0MlSVwEeWES5MJF-y6YA")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransferReference { get; }
 
     /// <summary>
@@ -42,6 +47,8 @@ public interface IReference : IReversal7Choice, IIsoChoiceVariant
     [IsoId("_tM0MmSVwEeWES5MJF-y6YA")]
     [DisplayName("Transfer Confirmation Reference")]
     [IsoXmlTag("TrfConfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransferConfirmationReference { get; }
 
     /// <summary>

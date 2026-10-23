@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingBalanceType1Choice;
 /// Defines the type of billing balance, in a proprietary format.
 /// </summary>
 [IsoId("_6Q_lhpqlEeGSON8vddiWzQ_1258331398")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IBillingBalanceType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IBillingBalanceType1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

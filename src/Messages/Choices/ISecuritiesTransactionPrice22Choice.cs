@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice element capturing strike price related descriptive information.
 /// </summary>
 [IsoId("_i5c_MZiuEe2f7NHvXATP5g")]
+[IsoDisplayName(@"Securities Transaction Price 22 Choice")]
 public interface ISecuritiesTransactionPrice22Choice : IIsoChoice { }

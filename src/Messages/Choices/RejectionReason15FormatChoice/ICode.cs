@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason15FormatChoice;
 /// Standard code to specify the reason of a rejection of an information advice.
 /// </summary>
 [IsoId("_RoV00dp-Ed-ak6NoX_4Aeg_356231670")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectionReason15FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

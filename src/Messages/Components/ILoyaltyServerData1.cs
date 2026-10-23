@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the loyalty server during a loyalty transaction.
 /// </summary>
 [IsoId("_0ZN1QNxLEeioifFt1dhnJA")]
+[IsoDisplayName(@"Loyalty Server Data")]
 public interface ILoyaltyServerData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILoyaltyServerData1 : IIsoComponent
     [IsoId("__zNMUNxLEeioifFt1dhnJA")]
     [DisplayName("Loyalty Server Identification")]
     [IsoXmlTag("LltySvrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LoyaltyServerIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ILoyaltyServerData1 : IIsoComponent
     [IsoId("_JAKEENxMEeioifFt1dhnJA")]
     [DisplayName("Approval Code")]
     [IsoXmlTag("ApprvlCd")]
+    [IsoSimpleType(IsoSimpleType.Min6Max8Text)]
+    [StringLength(8, MinimumLength = 6)]
     Min6Max8Text? ApprovalCode { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface ILoyaltyServerData1 : IIsoComponent
     [IsoId("_7kPcENxMEeioifFt1dhnJA")]
     [DisplayName("Host Reconciliation Identification")]
     [IsoXmlTag("HstRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? HostReconciliationIdentification { get; }
 }

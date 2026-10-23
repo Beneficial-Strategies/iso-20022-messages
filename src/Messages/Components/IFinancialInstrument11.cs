@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.
 /// </summary>
 [IsoId("_SdZNi9p-Ed-ak6NoX_4Aeg_1344098076")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument11 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IFinancialInstrument11 : IIsoComponent
     [IsoId("_SdiXcNp-Ed-ak6NoX_4Aeg_1344098136")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>

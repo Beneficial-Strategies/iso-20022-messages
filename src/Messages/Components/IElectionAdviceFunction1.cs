@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the type of election advice and linked messages.
 /// </summary>
 [IsoId("_Rjkpmtp-Ed-ak6NoX_4Aeg_1579470167")]
+[IsoDisplayName(@"Election Advice Function")]
 public interface IElectionAdviceFunction1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies linkage information of a corporate action message.
 /// </summary>
 [IsoId("_RjH9pNp-Ed-ak6NoX_4Aeg_866442593")]
+[IsoDisplayName(@"Linked Corporate Action")]
 public interface ILinkedCorporateAction1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ILinkedCorporateAction1 : IIsoComponent
     [IsoId("_RjRuodp-Ed-ak6NoX_4Aeg_-1520860145")]
     [DisplayName("Linked Issuer Corporate Action Identification")]
     [IsoXmlTag("LkdIssrCorpActnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LinkedIssuerCorporateActionIdentification { get; }
 
     /// <summary>
@@ -49,5 +52,7 @@ public interface ILinkedCorporateAction1 : IIsoComponent
     [IsoId("_RjRuotp-Ed-ak6NoX_4Aeg_-1520860114")]
     [DisplayName("Linked Corporate Action Processing Identification")]
     [IsoXmlTag("LkdCorpActnPrcgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LinkedCorporateActionProcessingIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of a debt instrument in which the periodic interest payments are calculated on the basis of the value (that is, fixing of an underlying reference rate such as the Euribor) on predefined dates (that is, fixing dates) and which has a maturity of no more than one year.
 /// </summary>
 [IsoId("_GIEfkaifEeWHO_l3hf2rlA")]
+[IsoDisplayName(@"Floating Rate Note")]
 public interface IFloatingRateNote2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFloatingRateNote2 : IIsoComponent
     [IsoId("_Gm8z8aifEeWHO_l3hf2rlA")]
     [DisplayName("Reference Rate Index")]
     [IsoXmlTag("RefRateIndx")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier ReferenceRateIndex { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface IFloatingRateNote2 : IIsoComponent
     [IsoId("_Gm8z86ifEeWHO_l3hf2rlA")]
     [DisplayName("Basis Point Spread")]
     [IsoXmlTag("BsisPtSprd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number BasisPointSpread { get; }
 }

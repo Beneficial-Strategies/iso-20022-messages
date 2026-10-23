@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variables used to quantify the different calculations for position sets and currency position sets reports.
 /// </summary>
 [IsoId("_HG95hcWFEeiRga8tPu1L4Q")]
+[IsoDisplayName(@"Position Set Total")]
 public interface IPositionSetTotal1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPositionSetTotal1 : IIsoComponent
     [IsoId("_HG95hsWFEeiRga8tPu1L4Q")]
     [DisplayName("Number Of Trades")]
     [IsoXmlTag("NbOfTrds")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber? NumberOfTrades { get; }
 
     /// <summary>

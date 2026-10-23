@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.
 /// </summary>
 [IsoId("_HOYB15liEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Cash Entry")]
 public interface ICashEntry2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ICashEntry2 : IIsoComponent
     [IsoId("_HWrCN5liEeeE1Ya-LgRsuQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface ICashEntry2 : IIsoComponent
     [IsoId("_HWrCOZliEeeE1Ya-LgRsuQ")]
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StatementIdentification { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ICashEntry2 : IIsoComponent
     [IsoId("_HWrCO5liEeeE1Ya-LgRsuQ")]
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? AccountServicerReference { get; }
 
     /// <summary>
@@ -65,5 +71,6 @@ public interface ICashEntry2 : IIsoComponent
     [IsoId("_HWrCPZliEeeE1Ya-LgRsuQ")]
     [DisplayName("Additional Entry Information")]
     [IsoXmlTag("AddtlNtryInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max140Text> AdditionalEntryInformation { get; }
 }

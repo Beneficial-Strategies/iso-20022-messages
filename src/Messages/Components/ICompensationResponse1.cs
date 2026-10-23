@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Compensation Response1.
 /// </summary>
 [IsoId("__QtDEXZIEe2W3OiCJJKf0A")]
+[IsoDisplayName(@"Compensation Response1")]
 public interface ICompensationResponse1 : IIsoComponent
 {
     /// <summary>

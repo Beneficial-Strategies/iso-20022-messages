@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural5
 /// </summary>
 [IsoId("_NxHXE7veEeiLRYqS-r-R-A")]
 [IsoXmlTag("Soft")]
+[IsoDisplayName(@"Soft")]
 public interface ISoft : IAssetClassCommodityAgricultural5Choice, IIsoChoiceVariant
 {
     /// <summary>

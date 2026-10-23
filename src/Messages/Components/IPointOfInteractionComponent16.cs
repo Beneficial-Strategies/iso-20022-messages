@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Point Of Interaction Component16.
 /// </summary>
 [IsoId("_Gr4uYW6jEe6DxcrvCrq6hQ")]
+[IsoDisplayName(@"Point Of Interaction Component16")]
 public interface IPointOfInteractionComponent16 : IIsoComponent
 {
     /// <summary>

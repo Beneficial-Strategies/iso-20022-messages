@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data associated with the transaction for a potential currency conversion.
 /// </summary>
 [IsoId("_MZWwAXGWEe2TbaNWBpRZpQ")]
+[IsoDisplayName(@"Card Payment Transaction")]
 public interface ICardPaymentTransaction127 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlLlgXGWEe2TbaNWBpRZpQ")]
     [DisplayName("Transaction Capture")]
     [IsoXmlTag("TxCaptr")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TransactionCapture { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlLlhXGWEe2TbaNWBpRZpQ")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardPaymentServiceType9Code> AdditionalService { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlLliXGWEe2TbaNWBpRZpQ")]
     [DisplayName("Last Transaction Flag")]
     [IsoXmlTag("LastTxFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? LastTransactionFlag { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlLli3GWEe2TbaNWBpRZpQ")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Min3Max4Text)]
+    [StringLength(4, MinimumLength = 3)]
     Min3Max4Text? MerchantCategoryCode { get; }
 
     /// <summary>
@@ -65,6 +71,8 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlLljXGWEe2TbaNWBpRZpQ")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceIdentification { get; }
 
     /// <summary>
@@ -89,6 +97,8 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlMzo3GWEe2TbaNWBpRZpQ")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -97,6 +107,8 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlMzpXGWEe2TbaNWBpRZpQ")]
     [DisplayName("Issuer Reference Data")]
     [IsoXmlTag("IssrRefData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? IssuerReferenceData { get; }
 
     /// <summary>
@@ -105,6 +117,8 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlMzp3GWEe2TbaNWBpRZpQ")]
     [DisplayName("Issuer CIT Identification")]
     [IsoXmlTag("IssrCITId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? IssuerCITIdentification { get; }
 
     /// <summary>
@@ -113,6 +127,8 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlMzqXGWEe2TbaNWBpRZpQ")]
     [DisplayName("Merchant CIT Identification")]
     [IsoXmlTag("MrchntCITId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? MerchantCITIdentification { get; }
 
     /// <summary>
@@ -137,6 +153,8 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlOBwXGWEe2TbaNWBpRZpQ")]
     [DisplayName("Merchant Reference Data")]
     [IsoXmlTag("MrchntRefData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? MerchantReferenceData { get; }
 
     /// <summary>
@@ -161,6 +179,7 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlOBx3GWEe2TbaNWBpRZpQ")]
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CustomerConsent { get; }
 
     /// <summary>
@@ -169,6 +188,7 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlOByXGWEe2TbaNWBpRZpQ")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CardProgrammeProposed { get; }
 
     /// <summary>
@@ -177,6 +197,8 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlOBy3GWEe2TbaNWBpRZpQ")]
     [DisplayName("Card Programme Applied")]
     [IsoXmlTag("CardPrgrmmApld")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardProgrammeApplied { get; }
 
     /// <summary>
@@ -185,6 +207,8 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlOBzXGWEe2TbaNWBpRZpQ")]
     [DisplayName("Sale To POI Data")]
     [IsoXmlTag("SaleToPOIData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SaleToPOIData { get; }
 
     /// <summary>
@@ -193,6 +217,8 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlOo0XGWEe2TbaNWBpRZpQ")]
     [DisplayName("Sale To Acquirer Data")]
     [IsoXmlTag("SaleToAcqrrData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SaleToAcquirerData { get; }
 
     /// <summary>
@@ -201,6 +227,8 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlOo03GWEe2TbaNWBpRZpQ")]
     [DisplayName("Sale To Issuer Data")]
     [IsoXmlTag("SaleToIssrData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SaleToIssuerData { get; }
 
     /// <summary>
@@ -209,5 +237,6 @@ public interface ICardPaymentTransaction127 : IIsoComponent
     [IsoId("_MlOo1XGWEe2TbaNWBpRZpQ")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AdditionalTransactionData { get; }
 }

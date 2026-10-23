@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Target market criteria.
 /// </summary>
 [IsoId("_nA4kgaDsEequlaOyi6MUhw")]
+[IsoDisplayName(@"Target Market")]
 public interface ITargetMarket2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITargetMarket2 : IIsoComponent
     [IsoId("_uJoI0KDsEequlaOyi6MUhw")]
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ReferenceDate { get; }
 
     /// <summary>
@@ -65,5 +67,6 @@ public interface ITargetMarket2 : IIsoComponent
     [IsoId("_nWm866DsEequlaOyi6MUhw")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherTargetMarket1> Other { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security or other asset.
 /// </summary>
 [IsoId("_ZpT6delaEeu9cf4XM82AQQ")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument99 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrument99 : IIsoComponent
     [IsoId("_Z-ncB-laEeu9cf4XM82AQQ")]
     [DisplayName("Line Identification")]
     [IsoXmlTag("LineId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LineIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IFinancialInstrument99 : IIsoComponent
     [IsoId("_Z-ncDelaEeu9cf4XM82AQQ")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit11> UnitsDetails { get; }
 
     /// <summary>
@@ -122,6 +126,7 @@ public interface IFinancialInstrument99 : IIsoComponent
     [IsoId("_Z-ncHelaEeu9cf4XM82AQQ")]
     [DisplayName("Transferor")]
     [IsoXmlTag("Trfr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccount28> Transferor { get; }
 
     /// <summary>
@@ -130,6 +135,7 @@ public interface IFinancialInstrument99 : IIsoComponent
     [IsoId("_Z-ncH-laEeu9cf4XM82AQQ")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary43> IntermediaryInformation { get; }
 
     /// <summary>
@@ -138,6 +144,7 @@ public interface IFinancialInstrument99 : IIsoComponent
     [IsoId("_Z-ncIelaEeu9cf4XM82AQQ")]
     [DisplayName("Crystallisation Details")]
     [IsoXmlTag("CrstllstnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICrystallisation2> CrystallisationDetails { get; }
 
     /// <summary>
@@ -154,6 +161,7 @@ public interface IFinancialInstrument99 : IIsoComponent
     [IsoId("_Z-ncJelaEeu9cf4XM82AQQ")]
     [DisplayName("Settlement Parties Details")]
     [IsoXmlTag("SttlmPtiesDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundSettlementParameters17> SettlementPartiesDetails { get; }
 
     /// <summary>
@@ -162,6 +170,7 @@ public interface IFinancialInstrument99 : IIsoComponent
     [IsoId("_yEvXYOluEeuvhrZwLF0fDg")]
     [DisplayName("Assets Held In Own Name")]
     [IsoXmlTag("AsstsHeldInOwnNm")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AssetsHeldInOwnName { get; }
 
     /// <summary>
@@ -170,6 +179,7 @@ public interface IFinancialInstrument99 : IIsoComponent
     [IsoId("_3AffsOluEeuvhrZwLF0fDg")]
     [DisplayName("Transfer Results In Change Of Beneficial Owner")]
     [IsoXmlTag("TrfRsltsInChngOfBnfclOwnr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TransferResultsInChangeOfBeneficialOwner { get; }
 
     /// <summary>
@@ -178,5 +188,6 @@ public interface IFinancialInstrument99 : IIsoComponent
     [IsoId("_Z-ncJ-laEeu9cf4XM82AQQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

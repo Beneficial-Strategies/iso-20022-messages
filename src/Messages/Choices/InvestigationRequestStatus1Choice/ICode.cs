@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationRequestStatus1Choic
 /// Investigation status, as published in an external code set.
 /// </summary>
 [IsoId("_foSGg2QCEe297MhDQvVHLQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInvestigationRequestStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

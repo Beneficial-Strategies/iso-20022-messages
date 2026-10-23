@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.canm;
 /// </summary>
 [IsoId("_2CqhVVWVEeeiG_nL4vgKnQ")]
 [IsoMessage("canm.003.001.02", "KeyXchgInitn", "urn:iso:std:iso:20022:tech:xsd:canm.003.001.02")]
+[Description(@"The KeyExchangeInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer). This message is used to initiate a cryptographic key activity (request of a key change, request of the verification of a key, etc.).|||")]
+[IsoDisplayName(@"Key Exchange Initiation V")]
 public interface IKeyExchangeInitiationV02 : IOuterRecord
 {
     /// <summary>

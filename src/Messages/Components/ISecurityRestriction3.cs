@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Restrictions applicable to the security.
 /// </summary>
 [IsoId("_cIeP8Wf9Eembv_9KtOEw8g")]
+[IsoDisplayName(@"Security Restriction")]
 public interface ISecurityRestriction3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ISecurityRestriction3 : IIsoComponent
     [IsoId("_cVBeN2f9Eembv_9KtOEw8g")]
     [DisplayName("Investor Restriction Type")]
     [IsoXmlTag("InvstrRstrctnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestorRestrictionType3Choice> InvestorRestrictionType { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface ISecurityRestriction3 : IIsoComponent
     [IsoId("_cVBeOWf9Eembv_9KtOEw8g")]
     [DisplayName("Investor Type")]
     [IsoXmlTag("InvstrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestorType3Choice> InvestorType { get; }
 }

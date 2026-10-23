@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus29Cho
 /// </summary>
 [IsoId("_GxRCW4lqEeavwKddCbm3hg")]
 [IsoXmlTag("StgInstr")]
+[IsoDisplayName(@"Standing Instruction")]
 public interface IStandingInstruction : IInstructionProcessingStatus29Choice, IIsoChoiceVariant
 {
     /// <summary>

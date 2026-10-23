@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// </summary>
 [IsoId("_8LH5WNE9Ed-BzquC8wXy7w_-1942533103")]
 [IsoMessage("admi.002.001.01", "admi.002.001.01", "urn:iso:std:iso:20022:tech:xsd:admi.002.001.01")]
+[Description(@"Scope|The MessageReject message is sent by a central system to notify the rejection of a previously received message.|Usage|The message provides specific information about the rejection reason.")]
+[IsoDisplayName(@"Message Reject V")]
 public interface IMessageRejectV01 : IOuterRecord
 {
     /// <summary>

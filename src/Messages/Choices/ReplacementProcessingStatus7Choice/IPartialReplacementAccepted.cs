@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus7Choi
 /// </summary>
 [IsoId("_A5TcBdokEeC60axPepSq7g_1826638997")]
 [IsoXmlTag("PrtlRplcmntAccptd")]
+[IsoDisplayName(@"Partial Replacement Accepted")]
 public interface IPartialReplacementAccepted
     : IReplacementProcessingStatus7Choice,
         IIsoChoiceVariant
@@ -28,5 +29,7 @@ public interface IPartialReplacementAccepted
     [IsoId("_UatOxtp-Ed-ak6NoX_4Aeg_-1133156666")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

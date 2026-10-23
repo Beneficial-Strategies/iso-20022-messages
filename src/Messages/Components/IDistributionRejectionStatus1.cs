@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the rejection status of a global movement.
 /// </summary>
 [IsoId("_RlXZUtp-Ed-ak6NoX_4Aeg_-2041243325")]
+[IsoDisplayName(@"Distribution Rejection Status")]
 public interface IDistributionRejectionStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDistributionRejectionStatus1 : IIsoComponent
     [IsoId("_RlXZU9p-Ed-ak6NoX_4Aeg_-1641361615")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason19FormatChoice> Reason { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface IDistributionRejectionStatus1 : IIsoComponent
     [IsoId("_RlXZVNp-Ed-ak6NoX_4Aeg_-1641361369")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

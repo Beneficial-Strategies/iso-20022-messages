@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities3Choice;
 /// Specifies the quantity (such as securities) in the underlying transaction.
 /// </summary>
 [IsoId("_dNjxo3kcEei6JsZKrqN0hQ")]
+[IsoDisplayName(@"Quantity")]
 public interface IQuantity : ITransactionQuantities3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

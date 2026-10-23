@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a price report.
 /// </summary>
 [IsoId("3d9c790d-ff3d-4d0c-a885-31c66f3e7965")]
+[IsoDisplayName(@"Price Report4")]
 public interface IPriceReport4 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface IPriceReport4 : IIsoComponent
     [IsoId("471c0639-6026-45ca-9690-3ece2afe4e30")]
     [DisplayName("Price Valuation Details")]
     [IsoXmlTag("PricValtnDtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceValuation5> PriceValuationDetails { get; }
 }

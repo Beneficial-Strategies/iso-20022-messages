@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType19Choice;
 /// Rate is defined using a code.
 /// </summary>
 [IsoId("_GOYbkdoqEeCWg-hsBVGrDA_-542688936")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRateType19Choice, IIsoChoiceVariant
 {
     /// <summary>

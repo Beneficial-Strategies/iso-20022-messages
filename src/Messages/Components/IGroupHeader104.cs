@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics shared by all individual instructions included in the message.
 /// </summary>
 [IsoId("_7o6soQcYEeyTDbUIoCmuCw")]
+[IsoDisplayName(@"Group Header")]
 public interface IGroupHeader104 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IGroupHeader104 : IIsoComponent
     [IsoId("_7ua3sQcYEeyTDbUIoCmuCw")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IGroupHeader104 : IIsoComponent
     [IsoId("_7ua3swcYEeyTDbUIoCmuCw")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -34,6 +38,7 @@ public interface IGroupHeader104 : IIsoComponent
     [IsoId("_7ua3twcYEeyTDbUIoCmuCw")]
     [DisplayName("Number Of Settlement Requests")]
     [IsoXmlTag("NbOfSttlmReqs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfSettlementRequests { get; }
 
     /// <summary>
@@ -42,6 +47,7 @@ public interface IGroupHeader104 : IIsoComponent
     [IsoId("_7ua3uQcYEeyTDbUIoCmuCw")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>

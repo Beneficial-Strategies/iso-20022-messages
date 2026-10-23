@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Bid Range Type2Choice.
 /// </summary>
 [IsoId("_Qn8A0aAdEe-6zfgb2Rwrlw")]
+[IsoDisplayName(@"Bid Range Type2Choice")]
 public interface IBidRangeType2Choice : IIsoChoice { }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgCtryCdRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.047.001.01"
 )]
+[Description(@"The FinancialInstrumentReportingCountryCodeReport message provides the details of the two character country codes and is created by ESMA for distribution to national competent authorities.")]
+[IsoDisplayName(@"Financial Instrument Reporting Country Code Report V")]
 public interface IFinancialInstrumentReportingCountryCodeReportV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface IFinancialInstrumentReportingCountryCodeReportV01 : IOuterRecor
     [IsoId("_4LK8M0RNEee7JdgA9zPESA")]
     [DisplayName("Country Data")]
     [IsoXmlTag("CtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesCountryIdentification2> CountryData { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface IFinancialInstrumentReportingCountryCodeReportV01 : IOuterRecor
     [IsoId("_4LK8NURNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

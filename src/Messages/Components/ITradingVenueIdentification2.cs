@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trading venue related fields.
 /// </summary>
 [IsoId("_4g_6MV0hEeWErPfQ7BYx8A")]
+[IsoDisplayName(@"Trading Venue Identification")]
 public interface ITradingVenueIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradingVenueIdentification2 : IIsoComponent
     [IsoId("_4sMdk10hEeWErPfQ7BYx8A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text Identification { get; }
 
     /// <summary>

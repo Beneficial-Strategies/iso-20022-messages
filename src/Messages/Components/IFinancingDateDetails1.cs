@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Includes a set of dates (e.g. credit date) related to settlement of the financing amount.
 /// </summary>
 [IsoId("_T8KRktp-Ed-ak6NoX_4Aeg_1418174558")]
+[IsoDisplayName(@"Financing Date Details")]
 public interface IFinancingDateDetails1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancingDateDetails1 : IIsoComponent
     [IsoId("_T8KRk9p-Ed-ak6NoX_4Aeg_-558847054")]
     [DisplayName("Book Date")]
     [IsoXmlTag("BookDt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISODate> BookDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IFinancingDateDetails1 : IIsoComponent
     [IsoId("_T8KRlNp-Ed-ak6NoX_4Aeg_-183898526")]
     [DisplayName("Credit Date")]
     [IsoXmlTag("CdtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate CreditDate { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IFinancingDateDetails1 : IIsoComponent
     [IsoId("_T8KRldp-Ed-ak6NoX_4Aeg_-69382352")]
     [DisplayName("Debit Date")]
     [IsoXmlTag("DbtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DebitDate { get; }
 }

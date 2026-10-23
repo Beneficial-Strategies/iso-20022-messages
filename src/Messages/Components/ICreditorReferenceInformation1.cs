@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Structured information supplied to enable the matching, i.e. reconciliation, of a payment with the items that the payment is intended to settle, eg, commercial invoices in an accounts receivable system.
 /// </summary>
 [IsoId("_T3_jRNp-Ed-ak6NoX_4Aeg_1085128342")]
+[IsoDisplayName(@"Creditor Reference Information")]
 public interface ICreditorReferenceInformation1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICreditorReferenceInformation1 : IIsoComponent
     [IsoId("_T3_jRtp-Ed-ak6NoX_4Aeg_1086049788")]
     [DisplayName("Creditor Reference")]
     [IsoXmlTag("CdtrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CreditorReference { get; }
 }

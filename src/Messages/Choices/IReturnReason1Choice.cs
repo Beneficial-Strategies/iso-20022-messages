@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for the return of the transaction.
 /// </summary>
 [IsoId("_TOkLx9p-Ed-ak6NoX_4Aeg_191375004")]
+[IsoDisplayName(@"Return Reason 1 Choice")]
 public interface IReturnReason1Choice : IIsoChoice { }

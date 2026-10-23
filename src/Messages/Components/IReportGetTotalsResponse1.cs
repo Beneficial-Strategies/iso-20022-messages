@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Get Totals Response message.
 /// </summary>
 [IsoId("_k6DnIN6REeiwsev40qZGEQ")]
+[IsoDisplayName(@"Report Get Totals Response")]
 public interface IReportGetTotalsResponse1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportGetTotalsResponse1 : IIsoComponent
     [IsoId("_t9D4sN6REeiwsev40qZGEQ")]
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text POIReconciliationIdentification { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IReportGetTotalsResponse1 : IIsoComponent
     [IsoId("_wvXBMN6REeiwsev40qZGEQ")]
     [DisplayName("Transaction Totals Set")]
     [IsoXmlTag("TxTtlsSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotalsSet1> TransactionTotalsSet { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the agreed amount for the variation margin and optionaly the segregated independent amount.
 /// </summary>
 [IsoId("_UmCVAtp-Ed-ak6NoX_4Aeg_-442441347")]
+[IsoDisplayName(@"Agreed Amount")]
 public interface IAgreedAmount1 : IIsoComponent
 {
     /// <summary>

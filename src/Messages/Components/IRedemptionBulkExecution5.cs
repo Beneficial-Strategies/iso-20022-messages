@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a redemption order.
 /// </summary>
 [IsoId("_ENIQJTbtEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Redemption Bulk Execution")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IRedemptionBulkExecution5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IRedemptionBulkExecution5 : IIsoComponent
     [IsoId("_BruBAVAMEeal4_lvhAnyGQ")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AmendmentIndicator { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IRedemptionBulkExecution5 : IIsoComponent
     [IsoId("_Elhh_TbtEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IRedemptionBulkExecution5 : IIsoComponent
     [IsoId("_ElhiATbtEead9bDRE_1DAQ")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IRedemptionBulkExecution5 : IIsoComponent
     [IsoId("_GJW0ITw7Eea0R-RTP9Wg-Q")]
     [DisplayName("Received Date Time")]
     [IsoXmlTag("RcvdDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ReceivedDateTime { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IRedemptionBulkExecution5 : IIsoComponent
     [IsoId("_ElhiAzbtEead9bDRE_1DAQ")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedFutureTradeDate { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IRedemptionBulkExecution5 : IIsoComponent
     [IsoId("_ElhiCzbtEead9bDRE_1DAQ")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRedemptionExecution16> IndividualExecutionDetails { get; }
 
     /// <summary>

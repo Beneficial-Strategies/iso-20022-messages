@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics shared by all individual transactions included in the message.
 /// </summary>
 [IsoId("_s8i-Y1kyEeGeoaLUQk__nA_845535139")]
+[IsoDisplayName(@"Group Header")]
 public interface IGroupHeader56 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGroupHeader56 : IIsoComponent
     [IsoId("_s8svYFkyEeGeoaLUQk__nA_-518427658")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IGroupHeader56 : IIsoComponent
     [IsoId("_s8svYVkyEeGeoaLUQk__nA_8568285")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,9 @@ public interface IGroupHeader56 : IIsoComponent
     [IsoId("_s815UFkyEeGeoaLUQk__nA_113778283")]
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorisation1Choice> Authorisation { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface IGroupHeader56 : IIsoComponent
     [IsoId("_s815UVkyEeGeoaLUQk__nA_102679506")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfTransactions { get; }
 
     /// <summary>
@@ -49,6 +57,7 @@ public interface IGroupHeader56 : IIsoComponent
     [IsoId("_s815UlkyEeGeoaLUQk__nA_-1777626134")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -57,6 +66,7 @@ public interface IGroupHeader56 : IIsoComponent
     [IsoId("_s8_qUFkyEeGeoaLUQk__nA_-2025148337")]
     [DisplayName("Group Reversal")]
     [IsoXmlTag("GrpRvsl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? GroupReversal { get; }
 
     /// <summary>

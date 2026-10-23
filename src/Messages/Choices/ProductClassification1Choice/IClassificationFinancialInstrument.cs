@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductClassification1Choice;
 /// ISO 10962 classification of financial instrument (CFI).
 /// </summary>
 [IsoId("_VaiSQAOGEeWs3sTa9Sj6Lg")]
+[IsoDisplayName(@"Classification Financial Instrument")]
 public interface IClassificationFinancialInstrument
     : IProductClassification1Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IClassificationFinancialInstrument
     /// Classification type of the financial instrument, as per the ISO 10962 Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.
     /// </summary>
     [IsoXmlTag("ClssfctnFinInstrm")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier Value { get; }
 }

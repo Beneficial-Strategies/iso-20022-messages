@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the mandate to be amended and gives details of the new mandate.
 /// </summary>
 [IsoId("_5sMy4SmeEeKdFJmzhTDOvQ")]
+[IsoDisplayName(@"Mandate Amendment")]
 public interface IMandateAmendment3 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IMandateAmendment3 : IIsoComponent
     [IsoId("_6UlolimeEeKdFJmzhTDOvQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

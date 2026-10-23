@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies further details of the party.
 /// </summary>
 [IsoId("_SlObEPH6Eeaz_YGUGLjP6A")]
+[IsoDisplayName(@"Party Detail")]
 public interface IPartyDetail1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyDetail1 : IIsoComponent
     [IsoId("_00Q3QfH6Eeaz_YGUGLjP6A")]
     [DisplayName("Full Name")]
     [IsoXmlTag("FullNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FullName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPartyDetail1 : IIsoComponent
     [IsoId("_tWbeYfKXEeaz_YGUGLjP6A")]
     [DisplayName("Party Type")]
     [IsoXmlTag("PtyTp")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text PartyType { get; }
 
     /// <summary>
@@ -65,5 +70,7 @@ public interface IPartyDetail1 : IIsoComponent
     [IsoId("_zxVFQfKXEeaz_YGUGLjP6A")]
     [DisplayName("Comment")]
     [IsoXmlTag("Cmnt")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text? Comment { get; }
 }

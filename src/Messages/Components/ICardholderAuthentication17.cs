@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cardholder Authentication17.
 /// </summary>
 [IsoId("_E0EvcZCVEe6zroekBXoFoQ")]
+[IsoDisplayName(@"Cardholder Authentication17")]
 public interface ICardholderAuthentication17 : IIsoComponent
 {
     /// <summary>

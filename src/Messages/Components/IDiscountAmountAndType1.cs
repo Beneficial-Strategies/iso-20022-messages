@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the amount with a specific type.
 /// </summary>
 [IsoId("_tlhp8VkyEeGeoaLUQk__nA_1198616303")]
+[IsoDisplayName(@"Discount Amount And Type")]
 public interface IDiscountAmountAndType1 : IIsoComponent
 {
     /// <summary>

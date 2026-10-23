@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3BOyzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.086.001.05", "BkSvcsBllgStmt", "urn:iso:std:iso:20022:tech:xsd:camt.086.001.05")]
+[IsoDisplayName(@"Bank Services Billing Statement V05")]
 public interface IBankServicesBillingStatementV05 : IOuterRecord
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IBankServicesBillingStatementV05 : IOuterRecord
     /// </summary>
     [DisplayName("Billing Statement Group")]
     [IsoXmlTag("BllgStmtGrp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatementGroup5> BillingStatementGroup { get; }
 }

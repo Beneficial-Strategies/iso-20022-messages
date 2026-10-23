@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Participation6.
 /// </summary>
 [IsoId("_QUfGkZK6Ee-l-O3vIHRmRw")]
+[IsoDisplayName(@"Participation6")]
 public interface IParticipation6 : IIsoComponent
 {
     /// <summary>

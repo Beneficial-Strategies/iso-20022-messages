@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "IntraBalMvmntQryRspn",
     "urn:iso:std:iso:20022:tech:xsd:camt.079.001.01"
 )]
+[Description(@"The IntraBalanceMovementQueryResponse message is sent from a settlement infrastructure to an account owner/requestor to provide all intra-balance movement instructions satisfying the selection criteria, as defined within the query, returning current attributes and latest status.|The message may also be used to: |- re-send a message sent by the account owner to the account servicer (the sub-function of the message is ""Duplicate"") |- provide a third party with a copy of a message being sent by the account owner for information (the sub-function of the message is ""Copy"") |- re-send to a third party a copy of a message being sent by the account owner for information (the sub-function of the message is ""Copy Duplicate"").|")]
+[IsoDisplayName(@"Intra Balance Movement Query Response V")]
 public interface IIntraBalanceMovementQueryResponseV01 : IOuterRecord
 {
     /// <summary>

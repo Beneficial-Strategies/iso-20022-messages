@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_5jHEEZeSEeen_cyMrluY4w")]
 [IsoMessage("reda.016.001.01", "PtyStsAdvc", "urn:iso:std:iso:20022:tech:xsd:reda.016.001.01")]
+[Description(@"Scope:|The PartyStatusAdvice message is sent by the executing party to the instructing party to provide details about the processing of a request on party reference data (create or update).||Usage:|When processing information is negative - a failure occurred in applying the changes the message accordingly also delivers information about the reason why the creation or update could not be processed.|When processing is successfully performed, the message includes the related party identification.")]
+[IsoDisplayName(@"Party Status Advice V")]
 public interface IPartyStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -41,5 +43,6 @@ public interface IPartyStatusAdviceV01 : IOuterRecord
     [IsoId("_5jHEHZeSEeen_cyMrluY4w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

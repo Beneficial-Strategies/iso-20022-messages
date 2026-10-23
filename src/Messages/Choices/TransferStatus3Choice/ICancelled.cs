@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus3Choice;
 /// Status of the transfer is cancelled.
 /// </summary>
 [IsoId("_aeWNXVNUEeijdq8ilaxyOA")]
+[IsoDisplayName(@"Cancelled")]
 public interface ICancelled : ITransferStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

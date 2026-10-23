@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Geographic location of the ATM specified by geographic coordinates or UTM coordinates.
 /// </summary>
 [IsoId("_4klZMIn4EeShMpas3885ww")]
+[IsoDisplayName(@"Geographic Location 1 Choice")]
 public interface IGeographicLocation1Choice : IIsoChoice { }

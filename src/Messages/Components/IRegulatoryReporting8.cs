@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Regulatory Reporting8.
 /// </summary>
 [IsoId("_Fm7PkUjrEe-KhcStGV4xTg")]
+[IsoDisplayName(@"Regulatory Reporting8")]
 public interface IRegulatoryReporting8 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IRegulatoryReporting8 : IIsoComponent
     /// </summary>
     [DisplayName("Trading Side Transaction Reporting")]
     [IsoXmlTag("TradgSdTxRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradingSideTransactionReporting3> TradingSideTransactionReporting { get; }
 
     /// <summary>
@@ -23,6 +25,7 @@ public interface IRegulatoryReporting8 : IIsoComponent
     /// </summary>
     [DisplayName("Counterparty Side Transaction Reporting")]
     [IsoXmlTag("CtrPtySdTxRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICounterpartySideTransactionReporting3> CounterpartySideTransactionReporting { get; }
 
     /// <summary>
@@ -198,6 +201,7 @@ public interface IRegulatoryReporting8 : IIsoComponent
     /// </summary>
     [DisplayName("Commissions And Fees")]
     [IsoXmlTag("ComssnsAndFees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFXCommissionOrFee1> CommissionsAndFees { get; }
 
     /// <summary>

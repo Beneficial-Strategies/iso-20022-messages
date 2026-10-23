@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Distinct pool of financial instruments managed by a single investment policy. May or may not be part of an umbrella fund.The pool is issued in at least one investment fund class.
 /// </summary>
 [IsoId("_CQR_IQN1Ee2-vqzwMUAewg")]
+[IsoDisplayName(@"Fund Identification")]
 public interface IFundIdentification5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IFundIdentification5 : IIsoComponent
     [IsoId("_CV2bpQN1Ee2-vqzwMUAewg")]
     [DisplayName("Account Identification With Custodian")]
     [IsoXmlTag("AcctIdWthCtdn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentificationWithCustodian { get; }
 
     /// <summary>

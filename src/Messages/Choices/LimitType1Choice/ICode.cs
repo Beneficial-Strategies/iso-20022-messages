@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitType1Choice;
 /// Type of the limit, in a coded form.
 /// </summary>
 [IsoId("_79FX8aMgEeCJ6YNENx4h-w_418078119")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ILimitType1Choice, IIsoChoiceVariant
 {
     /// <summary>

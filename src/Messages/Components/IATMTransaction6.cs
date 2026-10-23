@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Inquiry information for the transaction.
 /// </summary>
 [IsoId("_9qsqQYqvEeSIDtZ76p6McQ")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction6 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IATMTransaction6 : IIsoComponent
     [IsoId("_93gXR4qvEeSIDtZ76p6McQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

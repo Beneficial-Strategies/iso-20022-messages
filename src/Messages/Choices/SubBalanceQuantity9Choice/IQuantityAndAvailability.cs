@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity9Choice;
 /// </summary>
 [IsoId("_ciAo7zi8Eeydid5dcNPKvg")]
 [IsoXmlTag("QtyAndAvlbty")]
+[IsoDisplayName(@"Quantity And Availability")]
 public interface IQuantityAndAvailability : ISubBalanceQuantity9Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IQuantityAndAvailability : ISubBalanceQuantity9Choice, IIsoChoi
     [IsoId("_ciApHzi8Eeydid5dcNPKvg")]
     [DisplayName("Availability Indicator")]
     [IsoXmlTag("AvlbtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AvailabilityIndicator { get; }
 }

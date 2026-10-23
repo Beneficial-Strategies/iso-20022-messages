@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information regarding the dissemination of data.
 /// </summary>
 [IsoId("_S9HpkCJmEe2zWP9pqvmqdw")]
+[IsoDisplayName(@"Dissemination Data")]
 public interface IDisseminationData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDisseminationData1 : IIsoComponent
     [IsoId("_n3PTECJmEe2zWP9pqvmqdw")]
     [DisplayName("Dissemination Identifier")]
     [IsoXmlTag("DssmntnIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text DisseminationIdentifier { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IDisseminationData1 : IIsoComponent
     [IsoId("_u_-QUCJmEe2zWP9pqvmqdw")]
     [DisplayName("Original Dissemination Identifier")]
     [IsoXmlTag("OrgnlDssmntnIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? OriginalDisseminationIdentifier { get; }
 
     /// <summary>
@@ -34,5 +39,6 @@ public interface IDisseminationData1 : IIsoComponent
     [IsoId("_wu1l4CJmEe2zWP9pqvmqdw")]
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TimeStamp { get; }
 }

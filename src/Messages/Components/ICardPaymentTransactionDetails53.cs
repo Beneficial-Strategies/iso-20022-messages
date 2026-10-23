@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card Payment Transaction Details53.
 /// </summary>
 [IsoId("_hAn3sZHoEe6qwqnYOGEReg")]
+[IsoDisplayName(@"Card Payment Transaction Details53")]
 public interface ICardPaymentTransactionDetails53 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface ICardPaymentTransactionDetails53 : IIsoComponent
     /// </summary>
     [DisplayName("On Line Reason")]
     [IsoXmlTag("OnLineRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<OnLineReason2Code> OnLineReason { get; }
 
     /// <summary>
@@ -107,6 +109,7 @@ public interface ICardPaymentTransactionDetails53 : IIsoComponent
     /// </summary>
     [DisplayName("Instalment")]
     [IsoXmlTag("Instlmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalment5> Instalment { get; }
 
     /// <summary>
@@ -135,6 +138,7 @@ public interface ICardPaymentTransactionDetails53 : IIsoComponent
     /// </summary>
     [DisplayName("Sale Item")]
     [IsoXmlTag("SaleItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProduct6> SaleItem { get; }
 
     /// <summary>
@@ -177,6 +181,7 @@ public interface ICardPaymentTransactionDetails53 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExternallyDefinedData5> AdditionalInformation { get; }
 
     /// <summary>

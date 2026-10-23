@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General characteristics related to a statement which reports information for a precise date.
 /// </summary>
 [IsoId("_AX6mMNokEeC60axPepSq7g_-1810191064")]
+[IsoDisplayName(@"Report")]
 public interface IReport3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IReport3 : IIsoComponent
     [IsoId("_AX6mMdokEeC60axPepSq7g_-1035821271")]
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? ReportNumber { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IReport3 : IIsoComponent
     [IsoId("_AX6mM9okEeC60axPepSq7g_-2032893624")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReportIdentification { get; }
 
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies whether the status is provided with a reason or not.
 /// </summary>
 [IsoId("__JBgITw9EeW3QqUkIQtIUA")]
+[IsoDisplayName(@"Denied Status 17 Choice")]
 public interface IDeniedStatus17Choice : IIsoChoice { }

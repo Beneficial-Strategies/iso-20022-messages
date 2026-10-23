@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "BuyrPrtcnInstrRpt",
     "urn:iso:std:iso:20022:tech:xsd:seev.067.001.01"
 )]
+[IsoDisplayName(@"Buyer Protection Instruction Report V01")]
 public interface IBuyerProtectionInstructionReportV01 : IOuterRecord
 {
     /// <summary>
@@ -43,6 +44,7 @@ public interface IBuyerProtectionInstructionReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Corporate Action Details")]
     [IsoXmlTag("CorpActnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionDetails1> CorporateActionDetails { get; }
 
     /// <summary>
@@ -50,5 +52,6 @@ public interface IBuyerProtectionInstructionReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

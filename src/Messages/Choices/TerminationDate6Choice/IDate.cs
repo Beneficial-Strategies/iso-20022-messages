@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TerminationDate6Choice;
 /// Date in ISO format.
 /// </summary>
 [IsoId("_hUd9YbPvEeelzbgsFa3sqQ")]
+[IsoDisplayName(@"Date")]
 public interface IDate : ITerminationDate6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

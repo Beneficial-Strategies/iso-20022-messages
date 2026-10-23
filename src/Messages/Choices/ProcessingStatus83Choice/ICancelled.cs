@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus83Choice;
 /// Instruction has been cancelled (only as a response to a SecuritiesTransactionStatusQuery). The status on the processing of a cancellation request must be provided using a SecuritiesTransactionCancellationRequestStatusAdvice.
 /// </summary>
 [IsoId("_NAqkpStVEeyhipY4f42fZQ")]
+[IsoDisplayName(@"Cancelled")]
 public interface ICancelled : IProcessingStatus83Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

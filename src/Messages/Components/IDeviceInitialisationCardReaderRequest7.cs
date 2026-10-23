@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies what to do during a card reader initialisation.
 /// </summary>
 [IsoId("_PwJQcbZfEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Device Initialisation Card Reader Request7")]
 public interface IDeviceInitialisationCardReaderRequest7 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IDeviceInitialisationCardReaderRequest7 : IIsoComponent
     [IsoId("_PxHg27ZfEfCUZfsQO4rYeA")]
     [DisplayName("Force Entry Mode")]
     [IsoXmlTag("ForceNtryMd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataReading8Code> ForceEntryMode { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesPaymentStatus5Choice;
 /// Securities payment status expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_cgvT8znAEeWV5sr121Fc8A")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISecuritiesPaymentStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

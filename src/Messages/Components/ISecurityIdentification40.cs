@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security.
 /// </summary>
 [IsoId("_KUKGcdANEeuSBa1PsnseFg")]
+[IsoDisplayName(@"Security Identification")]
 public interface ISecurityIdentification40 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityIdentification40 : IIsoComponent
     [IsoId("_KtoWbdANEeuSBa1PsnseFg")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherIdentification1> OtherIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ISecurityIdentification40 : IIsoComponent
     [IsoId("_KtoWb9ANEeuSBa1PsnseFg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface ISecurityIdentification40 : IIsoComponent
     [IsoId("_KtoWa9ANEeuSBa1PsnseFg")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? ISIN { get; }
 }

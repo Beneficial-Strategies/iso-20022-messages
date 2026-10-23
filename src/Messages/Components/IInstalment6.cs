@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instalment6.
 /// </summary>
 [IsoId("_G2Xe0XG-Ee60F8I8TAMKmg")]
+[IsoDisplayName(@"Instalment6")]
 public interface IInstalment6 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IInstalment6 : IIsoComponent
     /// </summary>
     [DisplayName("Plan")]
     [IsoXmlTag("Plan")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPlan3> Plan { get; }
 }

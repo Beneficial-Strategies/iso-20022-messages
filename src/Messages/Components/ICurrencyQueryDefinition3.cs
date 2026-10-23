@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the query criteria.
 /// </summary>
 [IsoId("_Ho80EZlZEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Currency Query Definition")]
 public interface ICurrencyQueryDefinition3 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify a rate status.
 /// </summary>
 [IsoId("_cj9f_5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Rate Status 4 Choice")]
 public interface IRateStatus4Choice : IIsoChoice { }

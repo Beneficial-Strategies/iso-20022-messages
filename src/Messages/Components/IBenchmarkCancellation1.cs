@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the attributes for the cancellation of the benchmark.
 /// </summary>
 [IsoId("_QSO71DrXEeedCZZ8dIPp6g")]
+[IsoDisplayName(@"Benchmark Cancellation")]
 public interface IBenchmarkCancellation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBenchmarkCancellation1 : IIsoComponent
     [IsoId("_QSO71zrXEeedCZZ8dIPp6g")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IBenchmarkCancellation1 : IIsoComponent
     [IsoId("_QSO71TrXEeedCZZ8dIPp6g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

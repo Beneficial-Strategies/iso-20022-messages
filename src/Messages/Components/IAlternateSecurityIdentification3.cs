@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Proprietary or domestic identification scheme that uniquely identifies a security.
 /// </summary>
 [IsoId("_SlI0Q9p-Ed-ak6NoX_4Aeg_735400890")]
+[IsoDisplayName(@"Alternate Security Identification")]
 public interface IAlternateSecurityIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAlternateSecurityIdentification3 : IIsoComponent
     [IsoId("_SlI0RNp-Ed-ak6NoX_4Aeg_735401045")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Identification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IAlternateSecurityIdentification3 : IIsoComponent
     [IsoId("_SlI0Rtp-Ed-ak6NoX_4Aeg_735400960")]
     [DisplayName("Proprietary Identification Source")]
     [IsoXmlTag("PrtryIdSrc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ProprietaryIdentificationSource { get; }
 }

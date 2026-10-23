@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the type of product and the assets to be transferred.
 /// </summary>
 [IsoId("_Sg-F-dp-Ed-ak6NoX_4Aeg_30087325")]
+[IsoDisplayName(@"PEPISA Transfer")]
 public interface IPEPISATransfer4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPEPISATransfer4 : IIsoComponent
     [IsoId("_ShHP4Np-Ed-ak6NoX_4Aeg_-1388422279")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPEPISATransfer4 : IIsoComponent
     [IsoId("_ShHP4dp-Ed-ak6NoX_4Aeg_31007866")]
     [DisplayName("Transfer Confirmation Identification")]
     [IsoXmlTag("TrfConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferConfirmationIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPEPISATransfer4 : IIsoComponent
     [IsoId("_ShHP4tp-Ed-ak6NoX_4Aeg_31007978")]
     [DisplayName("Transfer Instruction Reference")]
     [IsoXmlTag("TrfInstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferInstructionReference { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface IPEPISATransfer4 : IIsoComponent
     [IsoId("_ShHP49p-Ed-ak6NoX_4Aeg_31008641")]
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ActualTransferDate { get; }
 
     /// <summary>
@@ -49,6 +57,7 @@ public interface IPEPISATransfer4 : IIsoComponent
     [IsoId("_ShHP5Np-Ed-ak6NoX_4Aeg_1686210840")]
     [DisplayName("Residual Cash Indicator")]
     [IsoXmlTag("RsdlCshInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ResidualCashIndicator { get; }
 
     /// <summary>
@@ -81,5 +90,6 @@ public interface IPEPISATransfer4 : IIsoComponent
     [IsoId("_ShHP6Np-Ed-ak6NoX_4Aeg_-1938293075")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument11> FinancialInstrumentAssetForTransfer { get; }
 }

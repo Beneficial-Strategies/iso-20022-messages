@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnMvmntPrlimryAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.035.001.01"
 )]
+[Description(@"Scope|An account servicer sends the CorporateActionMovementPreliminaryAdvice message to an account owner or its designated agent to pre-advise upcoming posting or reversal of securities and/or cash postings.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).|ISO 15022 - 20022 COEXISTENCE|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
+[IsoDisplayName(@"Corporate Action Movement Preliminary Advice V")]
 public interface ICorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -78,6 +80,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TeI1NNEwEd-BzquC8wXy7w_-576128180")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification13> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -86,6 +89,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TeI1NdEwEd-BzquC8wXy7w_1397891250")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventReference1> EventsLinkage { get; }
 
     /// <summary>
@@ -118,6 +122,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TeSmMdEwEd-BzquC8wXy7w_-1840834741")]
     [DisplayName("Corporate Action Movement Details")]
     [IsoXmlTag("CorpActnMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionOption10> CorporateActionMovementDetails { get; }
 
     /// <summary>
@@ -150,6 +155,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TeSmNdEwEd-BzquC8wXy7w_1118516589")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -158,6 +164,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TeSmNtEwEd-BzquC8wXy7w_1390957641")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> PayingAgent { get; }
 
     /// <summary>
@@ -166,6 +173,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TeSmN9EwEd-BzquC8wXy7w_1432514283")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -182,6 +190,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TecXMdEwEd-BzquC8wXy7w_-157068985")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> ResellingAgent { get; }
 
     /// <summary>
@@ -206,6 +215,7 @@ public interface ICorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TecXNNEwEd-BzquC8wXy7w_-145987139")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> SolicitationAgent { get; }
 
     /// <summary>
@@ -222,5 +232,6 @@ public interface ICorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TecXNtEwEd-BzquC8wXy7w_733410265")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension2> Extension { get; }
 }

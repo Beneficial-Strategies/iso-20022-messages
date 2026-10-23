@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountType1Choice;
 /// </summary>
 [IsoId("_Prd4cNp-Ed-ak6NoX_4Aeg_1273347022")]
 [IsoXmlTag("EqvtAmt")]
+[IsoDisplayName(@"Equivalent Amount")]
 public interface IEquivalentAmount : IAmountType1Choice, IIsoChoiceVariant
 {
     /// <summary>

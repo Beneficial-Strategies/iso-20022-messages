@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus5Ch
 /// Instruction has been cancelled.
 /// </summary>
 [IsoId("_ERMQ4TnuEeWfSKvvZlhRKg")]
+[IsoDisplayName(@"Cancelled")]
 public interface ICancelled : IIntraPositionProcessingStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

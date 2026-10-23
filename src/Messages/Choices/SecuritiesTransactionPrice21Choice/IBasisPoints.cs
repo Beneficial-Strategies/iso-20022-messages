@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice21Choi
 /// <summary>
 /// Basis Points.
 /// </summary>
+[IsoDisplayName(@"Basis Points")]
 public interface IBasisPoints : ISecuritiesTransactionPrice21Choice, IIsoChoiceVariant
 {
     /// <summary>

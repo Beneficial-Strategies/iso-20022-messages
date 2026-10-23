@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPDalyCshFlowsRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.060.001.02"
 )]
+[IsoDisplayName(@"CCP Daily Cash Flows Report V02")]
 public interface ICCPDailyCashFlowsReportV02 : IOuterRecord
 {
     /// <summary>
@@ -22,6 +23,7 @@ public interface ICCPDailyCashFlowsReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Concentration Agent")]
     [IsoXmlTag("CncntrtnAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IConcentrationAgent1> ConcentrationAgent { get; }
 
     /// <summary>
@@ -29,6 +31,7 @@ public interface ICCPDailyCashFlowsReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Settlement Agent")]
     [IsoXmlTag("SttlmAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementAgent2> SettlementAgent { get; }
 
     /// <summary>
@@ -36,5 +39,6 @@ public interface ICCPDailyCashFlowsReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

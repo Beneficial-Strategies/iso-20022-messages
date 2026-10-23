@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the customer device.
 /// </summary>
 [IsoId("_zOiXAEamEeeIjf8aP9KbJA")]
+[IsoDisplayName(@"Device")]
 public interface IDevice1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDevice1 : IIsoComponent
     [IsoId("_GtylAEanEeeIjf8aP9KbJA")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IDevice1 : IIsoComponent
     [IsoId("_9rh-sOCTEeeWtMJGJyksMA")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface IDevice1 : IIsoComponent
     [IsoId("_qMsK8OCUEeeWtMJGJyksMA")]
     [DisplayName("IP Address")]
     [IsoXmlTag("IPAdr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? IPAddress { get; }
 
     /// <summary>
@@ -65,5 +71,7 @@ public interface IDevice1 : IIsoComponent
     [IsoId("_IxWnIOCVEeeWtMJGJyksMA")]
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Email { get; }
 }

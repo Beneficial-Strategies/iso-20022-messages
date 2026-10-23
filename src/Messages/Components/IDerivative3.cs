@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial instrument where the value of the instrument derives from another financial instrument, benchmark or index.
 /// </summary>
 [IsoId("_63apwLbkEeaqL_M7XFD7PQ")]
+[IsoDisplayName(@"Derivative")]
 public interface IDerivative3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,9 @@ public interface IDerivative3 : IIsoComponent
     [IsoId("_iQdcUMhiEeadgvwNGwK05w")]
     [DisplayName("Derivative Underlying Leg")]
     [IsoXmlTag("DerivUndrlygLeg")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDerivativeUnderlyingLeg1> DerivativeUnderlyingLeg { get; }
 
     /// <summary>

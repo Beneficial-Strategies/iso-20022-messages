@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to an identification of a financial institution.
 /// </summary>
 [IsoId("_QALkM9p-Ed-ak6NoX_4Aeg_-2141717394")]
+[IsoDisplayName(@"Generic Financial Identification")]
 public interface IGenericFinancialIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGenericFinancialIdentification1 : IIsoComponent
     [IsoId("_QALkNNp-Ed-ak6NoX_4Aeg_-2141717392")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IGenericFinancialIdentification1 : IIsoComponent
     [IsoId("_QALkNtp-Ed-ak6NoX_4Aeg_-2141717116")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

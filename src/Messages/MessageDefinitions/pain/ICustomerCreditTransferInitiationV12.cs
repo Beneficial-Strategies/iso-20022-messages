@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.pain;
     "CstmrCdtTrfInitn",
     "urn:iso:std:iso:20022:tech:xsd:pain.001.001.12"
 )]
+[IsoDisplayName(@"Customer Credit Transfer Initiation V12")]
 public interface ICustomerCreditTransferInitiationV12 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface ICustomerCreditTransferInitiationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstruction44> PaymentInformation { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface ICustomerCreditTransferInitiationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

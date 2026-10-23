@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies security date details.
 /// </summary>
 [IsoId("_skuL6c3wEee5nJBZsW8MFQ")]
+[IsoDisplayName(@"Security Date")]
 public interface ISecurityDate17 : IIsoComponent
 {
     /// <summary>

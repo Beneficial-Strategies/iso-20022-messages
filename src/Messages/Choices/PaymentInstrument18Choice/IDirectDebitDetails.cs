@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument18Choice;
 /// </summary>
 [IsoId("_fprtBSC1EeWJd9HF2tO7BA")]
 [IsoXmlTag("DrctDbtDtls")]
+[IsoDisplayName(@"Direct Debit Details")]
 public interface IDirectDebitDetails : IPaymentInstrument18Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,8 @@ public interface IDirectDebitDetails : IPaymentInstrument18Choice, IIsoChoiceVar
     [IsoId("_DwqQVyC4EeWJd9HF2tO7BA")]
     [DisplayName("Debtor Tax Identification Number")]
     [IsoXmlTag("DbtrTaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DebtorTaxIdentificationNumber { get; }
 
     /// <summary>
@@ -42,6 +45,8 @@ public interface IDirectDebitDetails : IPaymentInstrument18Choice, IIsoChoiceVar
     [IsoId("_DwqQWSC4EeWJd9HF2tO7BA")]
     [DisplayName("Debtor National Registration Number")]
     [IsoXmlTag("DbtrNtlRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DebtorNationalRegistrationNumber { get; }
 
     /// <summary>
@@ -90,6 +95,8 @@ public interface IDirectDebitDetails : IPaymentInstrument18Choice, IIsoChoiceVar
     [IsoId("_DwqQZSC4EeWJd9HF2tO7BA")]
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegistrationIdentification { get; }
 
     /// <summary>
@@ -98,5 +105,7 @@ public interface IDirectDebitDetails : IPaymentInstrument18Choice, IIsoChoiceVar
     [IsoId("_DwqQZyC4EeWJd9HF2tO7BA")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 }

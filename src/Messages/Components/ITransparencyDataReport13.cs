@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides for reporting quantitative details of equity instruments as part of transparency calculations.
 /// </summary>
 [IsoId("_pRLggWlAEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Transparency Data Report")]
 public interface ITransparencyDataReport13 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,8 @@ public interface ITransparencyDataReport13 : IIsoComponent
     [IsoId("_paFk5WlAEeaLAKoEUNsD9g")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -27,6 +30,7 @@ public interface ITransparencyDataReport13 : IIsoComponent
     [IsoId("_paFk52lAEeaLAKoEUNsD9g")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier Identification { get; }
 
     /// <summary>
@@ -35,6 +39,7 @@ public interface ITransparencyDataReport13 : IIsoComponent
     [IsoId("_paFk6WlAEeaLAKoEUNsD9g")]
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ReportingDate { get; }
 
     /// <summary>
@@ -43,6 +48,7 @@ public interface ITransparencyDataReport13 : IIsoComponent
     [IsoId("_paFk62lAEeaLAKoEUNsD9g")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? TradingVenue { get; }
 
     /// <summary>
@@ -51,6 +57,7 @@ public interface ITransparencyDataReport13 : IIsoComponent
     [IsoId("_paFk7WlAEeaLAKoEUNsD9g")]
     [DisplayName("Suspension")]
     [IsoXmlTag("Sspnsn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator Suspension { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundParameters4Choice;
 /// Specifies that there is no criteria for the report. The request is a request for all reports, rather than reports attributed to a specific fund manager, date or financial instrument.
 /// </summary>
 [IsoId("_KQCmFWomEeipaMTLlhaKMQ")]
+[IsoDisplayName(@"No Criteria")]
 public interface INoCriteria : IFundParameters4Choice, IIsoChoiceVariant
 {
     /// <summary>

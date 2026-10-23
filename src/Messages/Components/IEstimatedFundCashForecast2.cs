@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash movements from or to a fund as a result of investment funds transactions, eg, subscriptions or redemptions.
 /// </summary>
 [IsoId("_VCWdldp-Ed-ak6NoX_4Aeg_-373893977")]
+[IsoDisplayName(@"Estimated Fund Cash Forecast")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IEstimatedFundCashForecast2 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +75,7 @@ public interface IEstimatedFundCashForecast2 : IIsoComponent
     [IsoId("_VCfng9p-Ed-ak6NoX_4Aeg_-373893804")]
     [DisplayName("Estimated Total NAV Change Rate")]
     [IsoXmlTag("EstmtdTtlNAVChngRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? EstimatedTotalNAVChangeRate { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IEstimatedFundCashForecast2 : IIsoComponent
     [IsoId("_VCfnhNp-Ed-ak6NoX_4Aeg_-373893727")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface IEstimatedFundCashForecast2 : IIsoComponent
     [IsoId("_VCfnhdp-Ed-ak6NoX_4Aeg_-373893769")]
     [DisplayName("Exceptional Net Cash Flow Indicator")]
     [IsoXmlTag("XcptnlNetCshFlowInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ExceptionalNetCashFlowIndicator { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface IEstimatedFundCashForecast2 : IIsoComponent
     [IsoId("_VCfnhtp-Ed-ak6NoX_4Aeg_-373893431")]
     [DisplayName("Sorting Criteria Details")]
     [IsoXmlTag("SrtgCritDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashSortingCriterion1> SortingCriteriaDetails { get; }
 
     /// <summary>
@@ -105,5 +111,6 @@ public interface IEstimatedFundCashForecast2 : IIsoComponent
     [IsoId("_VCfnh9p-Ed-ak6NoX_4Aeg_-1924210004")]
     [DisplayName("Estimated Net Cash Forecast Details")]
     [IsoXmlTag("EstmtdNetCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetCashForecast1> EstimatedNetCashForecastDetails { get; }
 }

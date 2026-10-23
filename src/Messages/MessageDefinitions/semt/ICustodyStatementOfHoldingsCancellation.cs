@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("_MXYVe9FSEd-BzquC8wXy7w_1108713826")]
 [IsoMessage("semt.004.001.01", "semt.004.001.01", "urn:iso:std:iso:20022:tech:xsd:semt.004.001.01")]
+[Description(@"Scope|The CustodyStatementOfHoldingsCancellation message is sent by an account servicer to the account owner or the account owner's designated agent. The account servicer may be a local agent (sub-custodian) acting on behalf of its global custodian customer, a custodian acting on behalf of an investment management institution or a broker/dealer, a fund administrator or fund intermediary, trustee or registrar, etc.|This message is used to cancel a previously sent CustodyStatementOfHoldings message.|Usage|The CustodyStatementOfHoldingsCancellation message is sent by an account servicer to the account owner to cancel a previously sent CustodyStatementOfHoldings message.|This message must contain the reference of the message to be cancelled. This message may also contain details of the message to be cancelled, but this is not recommended.")]
+[IsoDisplayName(@"Custody Statement Of Holdings Cancellation")]
 public interface ICustodyStatementOfHoldingsCancellation : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PoliticalExposureType1Choice;
 /// Type of political exposure expressed as a code.
 /// </summary>
 [IsoId("_rL9LMBRvEeOKWo1NF21OVw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPoliticalExposureType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Search Criteria2Choice.
 /// </summary>
 [IsoId("_8U6MN248EeiU9cctagi5ow")]
+[IsoDisplayName(@"Search Criteria2Choice")]
 public interface ISearchCriteria2Choice : IIsoChoice { }

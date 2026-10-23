@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the notification of the termination of an undertaking.
 /// </summary>
 [IsoId("_97ufHHltEeG7BsjMvd1mEw_-864278160")]
+[IsoDisplayName(@"Undertaking Termination Notice")]
 public interface IUndertakingTerminationNotice1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IUndertakingTerminationNotice1 : IIsoComponent
     [IsoId("_974QE3ltEeG7BsjMvd1mEw_1574400589")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument9> EnclosedFile { get; }
 
     /// <summary>
@@ -41,5 +43,9 @@ public interface IUndertakingTerminationNotice1 : IIsoComponent
     [IsoId("_974QFHltEeG7BsjMvd1mEw_1143129336")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

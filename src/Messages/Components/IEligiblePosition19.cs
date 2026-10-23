@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Eligible Position19.
 /// </summary>
 [IsoId("_47UQ5Y-9Ee-COKgew96POA")]
+[IsoDisplayName(@"Eligible Position19")]
 public interface IEligiblePosition19 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IEligiblePosition19 : IIsoComponent
     /// </summary>
     [DisplayName("Holding Balance")]
     [IsoXmlTag("HldgBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHoldingBalance14> HoldingBalance { get; }
 
     /// <summary>
@@ -44,5 +46,6 @@ public interface IEligiblePosition19 : IIsoComponent
     /// </summary>
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification270> RightsHolder { get; }
 }

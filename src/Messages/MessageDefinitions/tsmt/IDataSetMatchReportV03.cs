@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_m1ZuaNE8Ed-BzquC8wXy7w_-439674056")]
 [IsoMessage("tsmt.013.001.03", "DataSetMtchRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.013.001.03")]
+[Description(@"Scope|The DataSetMatchReport message is sent by the matching application to the parties involved in a data set match.|This message is used to either|- inform about the successful match of data sets submitted with the instruction match or pre-match (DataSetSubmission message) and the related baseline,or|- inform about mis-matches found between data sets submitted with the instruction match or pre-match (DataSetSubmission message) and the related baseline.|Usage|The DataSetMatchReport message can be sent by the matching application to the party requesting a data set pre-match for a transaction established in the push-through mode. In the outlined scenario, the DataSetMatchReport message will either inform about the successful pre-match or list the mis-matches between the data set(s) conveyed with the DataSetSubmission message and the related baseline.|or|The DataSetMatchReport message can be sent by the matching application to the parties involved in a data set match for a transaction established in the push-through mode. In the outlined scenario, the DataSetMatchReport message will either inform about the successful match or list the mis-matches between the data set(s) conveyed with the DataSetSubmission message and the related baseline.|or|The DataSetMatchReport message can be sent by the matching application to the party requesting a data set match or pre-match for a transaction established in the lodge mode. In the outlined scenario, the DataSetMatchReport will either inform about the successful match or list the mis-matches between the data set(s) conveyed with the DataSetSubmission message and the related baseline.")]
+[IsoDisplayName(@"Data Set Match Report V")]
 public interface IDataSetMatchReportV03 : IOuterRecord
 {
     /// <summary>
@@ -62,6 +64,9 @@ public interface IDataSetMatchReportV03 : IOuterRecord
     [IsoId("_m1i4VNE8Ed-BzquC8wXy7w_-439673775")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>
@@ -102,6 +107,7 @@ public interface IDataSetMatchReportV03 : IOuterRecord
     [IsoId("_m1spUdE8Ed-BzquC8wXy7w_-439674053")]
     [DisplayName("Compared Document Reference")]
     [IsoXmlTag("CmpardDocRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification10> ComparedDocumentReference { get; }
 
     /// <summary>

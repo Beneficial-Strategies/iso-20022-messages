@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingCompensationType1Choice;
 /// Defines the type of billing compensation, as published in an external billing compensation type code list.
 /// </summary>
 [IsoId("_6Q_lgpqlEeGSON8vddiWzQ_-1941802913")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBillingCompensationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the attributes of the creditor used for a creditor enrolment.
 /// </summary>
 [IsoId("_UdRMV-H7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Creditor Enrolment")]
 public interface ICreditorEnrolment4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICreditorEnrolment4 : IIsoComponent
     [IsoId("_UedfI-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Creditor Trading Name")]
     [IsoXmlTag("CdtrTradgNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? CreditorTradingName { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICreditorEnrolment4 : IIsoComponent
     [IsoId("_UedfKeH7Eeqbls7Gk4-ckA")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.MerchantCategoryCodeIdentifier)]
     MerchantCategoryCodeIdentifier? MerchantCategoryCode { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface ICreditorEnrolment4 : IIsoComponent
     [IsoId("_UedfK-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Creditor Logo")]
     [IsoXmlTag("CdtrLogo")]
+    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
     Max10KBinary? CreditorLogo { get; }
 }

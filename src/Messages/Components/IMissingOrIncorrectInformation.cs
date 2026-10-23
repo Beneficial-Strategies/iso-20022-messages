@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the reason for the UnableToApply. It can be missing and/or incorrect information.
 /// </summary>
 [IsoId("_VFn0C9p-Ed-ak6NoX_4Aeg_-503881610")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
+[IsoDisplayName(@"Missing Or Incorrect Information")]
 public interface IMissingOrIncorrectInformation : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,9 @@ public interface IMissingOrIncorrectInformation : IIsoComponent
     [IsoId("_VFn0DNp-Ed-ak6NoX_4Aeg_-2094358719")]
     [DisplayName("Missing Information")]
     [IsoXmlTag("MssngInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<UnableToApplyMissingInfo1Code> MissingInformation { get; }
 
     /// <summary>
@@ -25,5 +30,8 @@ public interface IMissingOrIncorrectInformation : IIsoComponent
     [IsoId("_VFn0Ddp-Ed-ak6NoX_4Aeg_1320808370")]
     [DisplayName("Incorrect Information")]
     [IsoXmlTag("IncrrctInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<UnableToApplyIncorrectInfo1Code> IncorrectInformation { get; }
 }

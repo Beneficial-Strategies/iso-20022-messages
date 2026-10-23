@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies additional parameters to the message or transaction.
 /// </summary>
 [IsoId("_UjpvaNp-Ed-ak6NoX_4Aeg_-793290360")]
+[IsoDisplayName(@"Additional Parameters")]
 public interface IAdditionalParameters4 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IAdditionalParameters4 : IIsoComponent
     [IsoId("_Ujy5UNp-Ed-ak6NoX_4Aeg_396620811")]
     [DisplayName("Triparty Agent Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripartyAgentCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IAdditionalParameters4 : IIsoComponent
     [IsoId("_Ujy5Udp-Ed-ak6NoX_4Aeg_-600451542")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientTripartyCollateralTransactionIdentification { get; }
 }

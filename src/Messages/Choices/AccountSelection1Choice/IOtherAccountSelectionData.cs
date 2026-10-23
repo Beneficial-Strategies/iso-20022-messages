@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSelection1Choice;
 /// </summary>
 [IsoId("_RjijYyFSEeWgV9SQSyaAog")]
 [IsoXmlTag("OthrAcctSelctnData")]
+[IsoDisplayName(@"Other Account Selection Data")]
 public interface IOtherAccountSelectionData : IAccountSelection1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOtherAccountSelectionData : IAccountSelection1Choice, IIsoChoi
     [IsoId("_zWVvhSFSEeWgV9SQSyaAog")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IOtherAccountSelectionData : IAccountSelection1Choice, IIsoChoi
     [IsoId("_zWVvhyFSEeWgV9SQSyaAog")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Designation { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface IOtherAccountSelectionData : IAccountSelection1Choice, IIsoChoi
     [IsoId("_zWVviSFSEeWgV9SQSyaAog")]
     [DisplayName("Fund Type")]
     [IsoXmlTag("FndTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FundType { get; }
 
     /// <summary>
@@ -42,6 +49,8 @@ public interface IOtherAccountSelectionData : IAccountSelection1Choice, IIsoChoi
     [IsoId("_zWVviyFSEeWgV9SQSyaAog")]
     [DisplayName("Fund Family Name")]
     [IsoXmlTag("FndFmlyNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FundFamilyName { get; }
 
     /// <summary>
@@ -66,6 +75,9 @@ public interface IOtherAccountSelectionData : IAccountSelection1Choice, IIsoChoi
     [IsoId("_zWVvkyFSEeWgV9SQSyaAog")]
     [DisplayName("Intermediary")]
     [IsoXmlTag("Intrmy")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary33> Intermediary { get; }
 
     /// <summary>

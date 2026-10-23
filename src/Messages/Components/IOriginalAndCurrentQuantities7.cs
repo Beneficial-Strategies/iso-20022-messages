@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Signed face amount and amortised value.
 /// </summary>
 [IsoId("_cfsEZZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Original And Current Quantities")]
 public interface IOriginalAndCurrentQuantities7 : IIsoComponent
 {
     /// <summary>

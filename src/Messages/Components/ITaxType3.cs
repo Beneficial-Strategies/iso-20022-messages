@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the tax type.
 /// </summary>
 [IsoId("_VR_cE9p-Ed-ak6NoX_4Aeg_-1494522709")]
+[IsoDisplayName(@"Tax Type")]
 public interface ITaxType3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITaxType3 : IIsoComponent
     [IsoId("_VR_cFdp-Ed-ak6NoX_4Aeg_-1446498269")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

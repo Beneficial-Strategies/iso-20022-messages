@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the Administrative initiation.
 /// </summary>
 [IsoId("_wdv6MTZ3EeysP8L3U1Ot-g")]
+[IsoDisplayName(@"Administrative Response")]
 public interface IAdministrativeResponse1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IAdministrativeResponse1 : IIsoComponent
     [IsoId("_wpOKZzZ3EeysP8L3U1Ot-g")]
     [DisplayName("Original Transaction")]
     [IsoXmlTag("OrgnlTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalTransaction2> OriginalTransaction { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IAdministrativeResponse1 : IIsoComponent
     [IsoId("_wpOKazZ3EeysP8L3U1Ot-g")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -74,6 +77,7 @@ public interface IAdministrativeResponse1 : IIsoComponent
     [IsoId("_wpOKbzZ3EeysP8L3U1Ot-g")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10KHexBinaryText)]
     Max10KHexBinaryText? ICCRelatedData { get; }
 
     /// <summary>
@@ -82,6 +86,7 @@ public interface IAdministrativeResponse1 : IIsoComponent
     [IsoId("_wpOKcTZ3EeysP8L3U1Ot-g")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -90,5 +95,6 @@ public interface IAdministrativeResponse1 : IIsoComponent
     [IsoId("_wpOKczZ3EeysP8L3U1Ot-g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

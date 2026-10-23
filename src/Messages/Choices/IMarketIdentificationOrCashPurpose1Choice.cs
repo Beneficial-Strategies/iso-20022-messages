@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of cash purpose or a securities market identifier.
 /// </summary>
 [IsoId("_Lc9dQEiNEeOdL6nMHefDgg")]
+[IsoDisplayName(@"Market Identification Or Cash Purpose 1 Choice")]
 public interface IMarketIdentificationOrCashPurpose1Choice : IIsoChoice { }

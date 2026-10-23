@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice;
 /// </summary>
 [IsoId("_iNq0w166EeSjaerr_EM7AQ")]
 [IsoXmlTag("VoteInstr")]
+[IsoDisplayName(@"Vote Instruction")]
 public interface IVoteInstruction : IVote3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IVoteInstruction : IVote3Choice, IIsoChoiceVariant
     [IsoId("_ipWEI166EeSjaerr_EM7AQ")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IVoteInstruction : IVote3Choice, IIsoChoiceVariant
     [IsoId("_ipWEJV66EeSjaerr_EM7AQ")]
     [DisplayName("For")]
     [IsoXmlTag("For")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? For { get; }
 
     /// <summary>
@@ -34,6 +38,7 @@ public interface IVoteInstruction : IVote3Choice, IIsoChoiceVariant
     [IsoId("_ipWEJ166EeSjaerr_EM7AQ")]
     [DisplayName("Against")]
     [IsoXmlTag("Agnst")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Against { get; }
 
     /// <summary>
@@ -42,6 +47,7 @@ public interface IVoteInstruction : IVote3Choice, IIsoChoiceVariant
     [IsoId("_ipWEKV66EeSjaerr_EM7AQ")]
     [DisplayName("Abstain")]
     [IsoXmlTag("Abstn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Abstain { get; }
 
     /// <summary>
@@ -50,6 +56,7 @@ public interface IVoteInstruction : IVote3Choice, IIsoChoiceVariant
     [IsoId("_ipWEK166EeSjaerr_EM7AQ")]
     [DisplayName("Withhold")]
     [IsoXmlTag("Wthhld")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Withhold { get; }
 
     /// <summary>
@@ -58,6 +65,7 @@ public interface IVoteInstruction : IVote3Choice, IIsoChoiceVariant
     [IsoId("_ipWELV66EeSjaerr_EM7AQ")]
     [DisplayName("With Management")]
     [IsoXmlTag("WthMgmt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? WithManagement { get; }
 
     /// <summary>
@@ -66,6 +74,7 @@ public interface IVoteInstruction : IVote3Choice, IIsoChoiceVariant
     [IsoId("_ipWEL166EeSjaerr_EM7AQ")]
     [DisplayName("Against Management")]
     [IsoXmlTag("AgnstMgmt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? AgainstManagement { get; }
 
     /// <summary>
@@ -74,6 +83,7 @@ public interface IVoteInstruction : IVote3Choice, IIsoChoiceVariant
     [IsoId("_ipWEMV66EeSjaerr_EM7AQ")]
     [DisplayName("Discretionary")]
     [IsoXmlTag("Dscrtnry")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Discretionary { get; }
 
     /// <summary>
@@ -82,6 +92,7 @@ public interface IVoteInstruction : IVote3Choice, IIsoChoiceVariant
     [IsoId("_8KEsYF66EeSjaerr_EM7AQ")]
     [DisplayName("One Year")]
     [IsoXmlTag("OneYr")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? OneYear { get; }
 
     /// <summary>
@@ -90,6 +101,7 @@ public interface IVoteInstruction : IVote3Choice, IIsoChoiceVariant
     [IsoId("_SgHhUF67EeSjaerr_EM7AQ")]
     [DisplayName("Two Years")]
     [IsoXmlTag("TwoYrs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TwoYears { get; }
 
     /// <summary>
@@ -98,6 +110,7 @@ public interface IVoteInstruction : IVote3Choice, IIsoChoiceVariant
     [IsoId("_aA05sF67EeSjaerr_EM7AQ")]
     [DisplayName("Three Years")]
     [IsoXmlTag("ThreeYrs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ThreeYears { get; }
 
     /// <summary>
@@ -106,5 +119,6 @@ public interface IVoteInstruction : IVote3Choice, IIsoChoiceVariant
     [IsoId("_ipWEM166EeSjaerr_EM7AQ")]
     [DisplayName("No Action")]
     [IsoXmlTag("NoActn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NoAction { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of result of a volume capping.
 /// </summary>
 [IsoId("_U7tWsJuJEeaPcol5ibnfBQ")]
+[IsoDisplayName(@"Volume Cap Result")]
 public interface IVolumeCapResult1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IVolumeCapResult1 : IIsoComponent
     [IsoId("_9ch6AJuJEeaPcol5ibnfBQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier Identification { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IVolumeCapResult1 : IIsoComponent
     [IsoId("_LBukYJuKEeaPcol5ibnfBQ")]
     [DisplayName("Last Update Date")]
     [IsoXmlTag("LastUpdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LastUpdateDate { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IVolumeCapResult1 : IIsoComponent
     [IsoId("_6AHBAJuKEeaPcol5ibnfBQ")]
     [DisplayName("Trading Under Waiver Percentage")]
     [IsoXmlTag("TradgUdrWvrPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate TradingUnderWaiverPercentage { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IVolumeCapResult1 : IIsoComponent
     [IsoId("_dyll4JuLEeaPcol5ibnfBQ")]
     [DisplayName("Trading Under Waiver Breakdown")]
     [IsoXmlTag("TradgUdrWvrBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradingUnderWaiversPercentage1> TradingUnderWaiverBreakdown { get; }
 
     /// <summary>
@@ -65,5 +70,7 @@ public interface IVolumeCapResult1 : IIsoComponent
     [IsoId("_JNG6MJuMEeaPcol5ibnfBQ")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Disclaimer { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification82Choice;
 
 /// <summary>Unique identification of an account, as assigned by the account servicer, using an identification scheme.</summary>
 [IsoId("0ea7fcff-df38-469b-8412-306607c0c809")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IAccountIdentification82Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

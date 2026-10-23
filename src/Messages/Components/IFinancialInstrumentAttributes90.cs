@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Elements characterising a financial instrument.
 /// </summary>
 [IsoId("_ja4gschlEeadgvwNGwK05w")]
+[IsoDisplayName(@"Financial Instrument Attributes")]
 public interface IFinancialInstrumentAttributes90 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface IFinancialInstrumentAttributes90 : IIsoComponent
     [IsoId("_HF0BMMhoEeadgvwNGwK05w")]
     [DisplayName("Index Unit")]
     [IsoXmlTag("IndxUnit")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IndexUnit { get; }
 
     /// <summary>

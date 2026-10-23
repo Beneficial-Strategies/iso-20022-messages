@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to identify the documents referred to in the remittance information.
 /// </summary>
 [IsoId("_ThMM2tp-Ed-ak6NoX_4Aeg_-882800583")]
+[IsoDisplayName(@"Referred Document Information")]
 public interface IReferredDocumentInformation3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IReferredDocumentInformation3 : IIsoComponent
     [IsoId("_ThV90dp-Ed-ak6NoX_4Aeg_-882800304")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Number { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IReferredDocumentInformation3 : IIsoComponent
     [IsoId("_ThV90tp-Ed-ak6NoX_4Aeg_1205279992")]
     [DisplayName("Related Date")]
     [IsoXmlTag("RltdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RelatedDate { get; }
 }

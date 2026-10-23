@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateTypeChoice;
 /// Rate is expressed as a text.
 /// </summary>
 [IsoId("_RIwV09p-Ed-ak6NoX_4Aeg_-1267403773")]
+[IsoDisplayName(@"Textual Rate")]
 public interface ITextualRate : IRateTypeChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ITextualRate : IRateTypeChoice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("TxtlRate")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

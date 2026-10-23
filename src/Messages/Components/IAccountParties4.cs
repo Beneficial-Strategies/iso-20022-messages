@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Any party who is related to an investment account.
 /// </summary>
 [IsoId("_RSvYTdp-Ed-ak6NoX_4Aeg_-1282825194")]
+[IsoDisplayName(@"Account Parties")]
 public interface IAccountParties4 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,9 @@ public interface IAccountParties4 : IIsoComponent
     [IsoId("_RSvYUNp-Ed-ak6NoX_4Aeg_-1282822789")]
     [DisplayName("Trustee")]
     [IsoXmlTag("Trstee")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation4> Trustee { get; }
 
     /// <summary>
@@ -57,6 +61,9 @@ public interface IAccountParties4 : IIsoComponent
     [IsoId("_RS4iMdp-Ed-ak6NoX_4Aeg_-1282824126")]
     [DisplayName("Joint Owner")]
     [IsoXmlTag("JntOwnr")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation4> JointOwner { get; }
 
     /// <summary>
@@ -113,6 +120,9 @@ public interface IAccountParties4 : IIsoComponent
     [IsoId("_RS4iONp-Ed-ak6NoX_4Aeg_2104893208")]
     [DisplayName("Granter")]
     [IsoXmlTag("Grntr")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation4> Granter { get; }
 
     /// <summary>
@@ -121,6 +131,9 @@ public interface IAccountParties4 : IIsoComponent
     [IsoId("_RTCTMNp-Ed-ak6NoX_4Aeg_-1816047834")]
     [DisplayName("Settler")]
     [IsoXmlTag("Sttlr")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation4> Settler { get; }
 
     /// <summary>
@@ -129,5 +142,8 @@ public interface IAccountParties4 : IIsoComponent
     [IsoId("_RTCTMdp-Ed-ak6NoX_4Aeg_344725489")]
     [DisplayName("Other Party")]
     [IsoXmlTag("OthrPty")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtendedParty1> OtherParty { get; }
 }

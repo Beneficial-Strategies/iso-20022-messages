@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the aggregated penalties amounts.
 /// </summary>
 [IsoId("_79hU8DmlEemla4muNfgRrg")]
+[IsoDisplayName(@"Aggregated Penalty Amount1")]
 public interface IAggregatedPenaltyAmount1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IAggregatedPenaltyAmount1 : IIsoComponent
     [IsoId("_BO4g5TmmEemla4muNfgRrg")]
     [DisplayName("Counterparty CSD Aggregated Amount")]
     [IsoXmlTag("CtrPtyCSDAggtdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregatedPenaltyAmount2> CounterpartyCSDAggregatedAmount { get; }
 }

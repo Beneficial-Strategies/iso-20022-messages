@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "AgtCAMvmntCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:seev.020.001.01"
 )]
+[Description(@"Scope|This message is sent by an issuer (or its agent) to a CSD to request the cancellation of (a) movement(s) previously sent via an Agent Corporate Action Movement Instruction.|Usage|This message may be used to cancel an entire Agent Corporate Action Movement Instruction message that was previously sent by the issuer (or its agent) or specific movements.|This message must contain the identification of the Agent Corporate Action Movement Instruction containing the movement(s) to be cancelled, the agent identification and the corporate action references. This message must also contain details of the movement(s) to be cancelled.")]
+[IsoDisplayName(@"Agent CA Movement Cancellation Request V")]
 public interface IAgentCAMovementCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

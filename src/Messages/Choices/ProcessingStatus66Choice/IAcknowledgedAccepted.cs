@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus66Choice;
 /// Instruction has been acknowledged by the account servicer.
 /// </summary>
 [IsoId("_BvN4ceFUEeWIA4E9cYSxxQ")]
+[IsoDisplayName(@"Acknowledged Accepted")]
 public interface IAcknowledgedAccepted : IProcessingStatus66Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction3Choice;
 /// </summary>
 [IsoId("_S-5Ek66BEeexrtTFgmVD3Q")]
 [IsoXmlTag("Indv")]
+[IsoDisplayName(@"Individual")]
 public interface IIndividual : ICardTransaction3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IIndividual : ICardTransaction3Choice, IIsoChoiceVariant
     [IsoId("_vfHeYzj3EeSz-s1QOUJaOg")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? ICCRelatedData { get; }
 
     /// <summary>
@@ -51,6 +54,8 @@ public interface IIndividual : ICardTransaction3Choice, IIsoChoiceVariant
     [IsoId("_0yxwZTj3EeSz-s1QOUJaOg")]
     [DisplayName("Sale Reconciliation Identification")]
     [IsoXmlTag("SaleRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReconciliationIdentification { get; }
 
     /// <summary>
@@ -59,6 +64,8 @@ public interface IIndividual : ICardTransaction3Choice, IIsoChoiceVariant
     [IsoId("_0yxwZzj3EeSz-s1QOUJaOg")]
     [DisplayName("Sale Reference Number")]
     [IsoXmlTag("SaleRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceNumber { get; }
 
     /// <summary>
@@ -75,6 +82,8 @@ public interface IIndividual : ICardTransaction3Choice, IIsoChoiceVariant
     [IsoId("_0yxwaTj3EeSz-s1QOUJaOg")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SequenceNumber { get; }
 
     /// <summary>
@@ -99,6 +108,7 @@ public interface IIndividual : ICardTransaction3Choice, IIsoChoiceVariant
     [IsoId("_0yxwbzj3EeSz-s1QOUJaOg")]
     [DisplayName("Validation Date")]
     [IsoXmlTag("VldtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidationDate { get; }
 
     /// <summary>
@@ -108,5 +118,7 @@ public interface IIndividual : ICardTransaction3Choice, IIsoChoiceVariant
     [IsoId("_0yxwcTj3EeSz-s1QOUJaOg")]
     [DisplayName("Validation Sequence Number")]
     [IsoXmlTag("VldtnSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ValidationSequenceNumber { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice;
 /// <summary>
 /// Compression.
 /// </summary>
+[IsoDisplayName(@"Compression")]
 public interface ICompression : ITradeReport33Choice, IIsoChoiceVariant
 {
     /// <summary>

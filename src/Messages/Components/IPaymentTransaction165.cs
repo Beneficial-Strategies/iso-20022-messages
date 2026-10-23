@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Transaction165.
 /// </summary>
 [IsoId("_kTMHYKWXEe-ymImuWN-uZA")]
+[IsoDisplayName(@"Payment Transaction165")]
 public interface IPaymentTransaction165 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IPaymentTransaction165 : IIsoComponent
     /// </summary>
     [DisplayName("Payment Instrument")]
     [IsoXmlTag("PmtInstrm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<PaymentInstrumentType2Code> PaymentInstrument { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface IPaymentTransaction165 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CardPaymentServiceType9Code> AdditionalService { get; }
 
     /// <summary>
@@ -163,6 +166,7 @@ public interface IPaymentTransaction165 : IIsoComponent
     /// </summary>
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> CardProgrammeProposed { get; }
 
     /// <summary>
@@ -198,5 +202,6 @@ public interface IPaymentTransaction165 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max70Text> AdditionalTransactionData { get; }
 }

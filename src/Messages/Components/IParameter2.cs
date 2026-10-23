@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters of the RSAES-OAEP encryption algorithm (RSA Encryption Scheme: Optimal Asymmetric Encryption Padding).
 /// </summary>
 [IsoId("_MLB1AQurEeK6BpGAixa3eA")]
+[IsoDisplayName(@"Parameter")]
 public interface IParameter2 : IIsoComponent
 {
     /// <summary>

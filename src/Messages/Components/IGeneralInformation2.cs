@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information concerning the negotiation process leading to a treasury trade.
 /// </summary>
 [IsoId("_S8KT9gEcEeCQm6a_G2yO_w_1137960838")]
+[IsoDisplayName(@"General Information")]
 public interface IGeneralInformation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IGeneralInformation2 : IIsoComponent
     [IsoId("_S8KT9wEcEeCQm6a_G2yO_w_1024121772")]
     [DisplayName("Block Indicator")]
     [IsoXmlTag("BlckInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BlockIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IGeneralInformation2 : IIsoComponent
     [IsoId("_S8KT-AEcEeCQm6a_G2yO_w_27049419")]
     [DisplayName("Related Trade Reference")]
     [IsoXmlTag("RltdTradRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RelatedTradeReference { get; }
 
     /// <summary>
@@ -49,6 +53,8 @@ public interface IGeneralInformation2 : IIsoComponent
     [IsoId("_S8KT-wEcEeCQm6a_G2yO_w_1330799656")]
     [DisplayName("Counterparty Reference")]
     [IsoXmlTag("CtrPtyRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CounterpartyReference { get; }
 
     /// <summary>
@@ -65,6 +71,8 @@ public interface IGeneralInformation2 : IIsoComponent
     [IsoId("_S8KT_QEcEeCQm6a_G2yO_w_-586306349")]
     [DisplayName("Sender To Receiver Information")]
     [IsoXmlTag("SndrToRcvrInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SenderToReceiverInformation { get; }
 
     /// <summary>

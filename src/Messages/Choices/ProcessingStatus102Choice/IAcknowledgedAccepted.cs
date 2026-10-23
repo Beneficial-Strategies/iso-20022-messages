@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus102Choice;
 
 /// <summary>Specifies the acknowledged accepted status.</summary>
 [IsoId("a48bbefa-2c1d-4bb9-9747-5903b2fe56ad")]
+[IsoDisplayName(@"Acknowledged Accepted")]
 public interface IAcknowledgedAccepted : IProcessingStatus102Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

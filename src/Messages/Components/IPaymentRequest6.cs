@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Request6.
 /// </summary>
 [IsoId("_1f44sZLOEe6-zvj9Dw-ctg")]
+[IsoDisplayName(@"Payment Request6")]
 public interface IPaymentRequest6 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IPaymentRequest6 : IIsoComponent
     /// </summary>
     [DisplayName("Loyalty Data")]
     [IsoXmlTag("LltyData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyRequestData3> LoyaltyData { get; }
 }

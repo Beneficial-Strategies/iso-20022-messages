@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification336Choice;
 
 /// <summary>Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority.</summary>
 [IsoId("_1fJ0EanVEfC5VNwixU6YfQ")]
+[IsoDisplayName(@"Any BIC")]
 public interface IAnyBIC : IPartyIdentification336Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

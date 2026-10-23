@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reports to a corporate on the actual set-up of the account, related services and mandates.
 /// </summary>
 [IsoId("_IlAr9W49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Account Report")]
 public interface IAccountReport23 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IAccountReport23 : IIsoComponent
     [IsoId("_IuZ4e249EeiU9cctagi5ow")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOperationMandate4> Mandate { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IAccountReport23 : IIsoComponent
     [IsoId("_IuZ4fW49EeiU9cctagi5ow")]
     [DisplayName("Group")]
     [IsoXmlTag("Grp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGroup4> Group { get; }
 
     /// <summary>

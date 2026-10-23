@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money for which goods or services are offered, sold, or bought.
 /// </summary>
 [IsoId("_U49RA9p-Ed-ak6NoX_4Aeg_-2122379247")]
+[IsoDisplayName(@"Price Information")]
 public interface IPriceInformation1 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IPriceInformation1 : IIsoComponent
     [IsoId("_U5HCANp-Ed-ak6NoX_4Aeg_-1233950935")]
     [DisplayName("Yielded")]
     [IsoXmlTag("Yldd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Yielded { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 /// </summary>
 [IsoId("_SUOCgBYIEeejf-cbr8l5qw")]
 [IsoXmlTag("Cmmdty")]
+[IsoDisplayName(@"Commodity")]
 public interface ICommodity : IAssetHolding1Choice, IIsoChoiceVariant
 {
     /// <summary>

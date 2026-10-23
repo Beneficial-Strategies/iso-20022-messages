@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
 /// </summary>
 [IsoId("_Rou1F2AZEeiH9-hkDDXUHA")]
+[IsoDisplayName(@"Proprietary Identification")]
 public interface IProprietaryIdentification
     : IFinancialInstitutionIdentification10Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface IProprietaryIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("PrtryId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice element specifying the underlying types of an interest rate derivative.
 /// </summary>
 [IsoId("_xSfx_WlIEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Interest Rate Derivative 2 Choice")]
 public interface IInterestRateDerivative2Choice : IIsoChoice { }

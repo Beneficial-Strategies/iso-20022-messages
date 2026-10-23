@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Agreement between two parties to sell a financial instrument or set of financial instruments and repurchase such instruments at an agreed future date.
 /// </summary>
 [IsoId("_aOU-QbcREeabfchHYoktpA")]
+[IsoDisplayName(@"Repurchase Agreement")]
 public interface IRepurchaseAgreement3 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IRepurchaseAgreement3 : IIsoComponent
     [IsoId("_aYvei7cREeabfchHYoktpA")]
     [DisplayName("Triparty Agent")]
     [IsoXmlTag("TrptyAgt")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? TripartyAgent { get; }
 }

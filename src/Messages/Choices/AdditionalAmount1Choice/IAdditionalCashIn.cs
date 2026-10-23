@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalAmount1Choice;
 /// </summary>
 [IsoId("_uMB7QUG_EeaNEqIb_fgRZg")]
 [IsoXmlTag("AddtlCshIn")]
+[IsoDisplayName(@"Additional Cash In")]
 public interface IAdditionalCashIn : IAdditionalAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

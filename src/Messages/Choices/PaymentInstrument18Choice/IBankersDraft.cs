@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument18Choice;
 /// Indicates whether the payment is done via draft.
 /// </summary>
 [IsoId("_fprtCSC1EeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Bankers Draft")]
 public interface IBankersDraft : IPaymentInstrument18Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBankersDraft : IPaymentInstrument18Choice, IIsoChoiceVariant
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("BkrsDrft")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

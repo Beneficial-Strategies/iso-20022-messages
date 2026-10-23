@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice;
 /// Trade is InRepair.
 /// </summary>
 [IsoId("_A4_6A9okEeC60axPepSq7g_-1646438235")]
+[IsoDisplayName(@"In Repair")]
 public interface IInRepair : IProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

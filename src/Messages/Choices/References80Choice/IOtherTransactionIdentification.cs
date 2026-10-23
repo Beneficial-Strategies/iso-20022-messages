@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References80Choice;
 /// <summary>
 /// Other Transaction Identification.
 /// </summary>
+[IsoDisplayName(@"Other Transaction Identification")]
 public interface IOtherTransactionIdentification : IReferences80Choice, IIsoChoiceVariant
 {
     /// <summary>

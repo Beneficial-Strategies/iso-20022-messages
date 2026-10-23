@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction11C
 /// </summary>
 [IsoId("_1ylO2XJCEe299ZbWCkdR_w")]
 [IsoXmlTag("TknReq")]
+[IsoDisplayName(@"Token Request")]
 public interface ITokenRequest : ICardPaymentDataSetTransaction11Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ITokenRequest : ICardPaymentDataSetTransaction11Choice, IIsoCho
     [IsoId("_-2bqYXJBEe299ZbWCkdR_w")]
     [DisplayName("Transaction Sequence Counter")]
     [IsoXmlTag("TxSeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Max9NumericText)]
     Max9NumericText TransactionSequenceCounter { get; }
 
     /// <summary>

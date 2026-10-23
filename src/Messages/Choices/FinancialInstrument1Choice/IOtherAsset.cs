@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument1Choice;
 /// </summary>
 [IsoId("_xW6fEEyGEeir2sRRVd9XhA")]
 [IsoXmlTag("OthrAsst")]
+[IsoDisplayName(@"Other Asset")]
 public interface IOtherAsset : IFinancialInstrument1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IOtherAsset : IFinancialInstrument1Choice, IIsoChoiceVariant
     [IsoId("_F_4m0EyKEeir2sRRVd9XhA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IOtherAsset : IFinancialInstrument1Choice, IIsoChoiceVariant
     [IsoId("_IkIFMEyKEeir2sRRVd9XhA")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -42,6 +47,11 @@ public interface IOtherAsset : IFinancialInstrument1Choice, IIsoChoiceVariant
     [IsoId("_Ly68cEyKEeir2sRRVd9XhA")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [StringLength(35, MinimumLength = 1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> OtherIdentification { get; }
 
     /// <summary>
@@ -50,5 +60,6 @@ public interface IOtherAsset : IFinancialInstrument1Choice, IIsoChoiceVariant
     [IsoId("_OAtCoEyKEeir2sRRVd9XhA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

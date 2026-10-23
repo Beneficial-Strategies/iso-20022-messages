@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains all needed party details for tax agency (sender of the TaxReport) and tax authority (receiver of the TaxReport) and the details of the reported sales transaction and calculated tax related that specific business transaction.
 /// </summary>
 [IsoId("_oAv2w1m4EeOQYsoJizpkVw")]
+[IsoDisplayName(@"Tax Report")]
 public interface ITaxReport1 : IIsoComponent
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface ITaxReport1 : IIsoComponent
     [IsoId("_ErRwwJD1EeSZY4BVJy2t3A")]
     [DisplayName("Other Party")]
     [IsoXmlTag("OthrPty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification72> OtherParty { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface ITaxReport1 : IIsoComponent
     [IsoId("_zSTYoFm6EeOQYsoJizpkVw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation1> AdditionalInformation { get; }
 
     /// <summary>
@@ -66,6 +69,7 @@ public interface ITaxReport1 : IIsoComponent
     [IsoId("_5Jz-kFm6EeOQYsoJizpkVw")]
     [DisplayName("Additional Reference")]
     [IsoXmlTag("AddtlRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation2> AdditionalReference { get; }
 
     /// <summary>
@@ -74,5 +78,6 @@ public interface ITaxReport1 : IIsoComponent
     [IsoId("_nHYhsEjvEeaOe8w0NJ11wQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

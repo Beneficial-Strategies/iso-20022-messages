@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingReportOrError6Choice;
 
 /// <summary>Report on cancelled billing data.</summary>
 [IsoId("_2jks0zEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Cancellation Report")]
 public interface ICancellationReport : IBillingReportOrError6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

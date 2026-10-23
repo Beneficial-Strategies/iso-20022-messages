@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriorityCode3Choice;
 /// Priority code, in a coded form.
 /// </summary>
 [IsoId("_5eGn4RbwEeOy-PlRuFSUzQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPriorityCode3Choice, IIsoChoiceVariant
 {
     /// <summary>

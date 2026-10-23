@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original Notification Reference13.
 /// </summary>
 [IsoId("_8gGkYTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Original Notification Reference13")]
 public interface IOriginalNotificationReference13 : IIsoComponent
 {
     /// <summary>
@@ -79,5 +80,6 @@ public interface IOriginalNotificationReference13 : IIsoComponent
     /// </summary>
     [DisplayName("Original Item And Status")]
     [IsoXmlTag("OrgnlItmAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalItemAndStatus8> OriginalItemAndStatus { get; }
 }

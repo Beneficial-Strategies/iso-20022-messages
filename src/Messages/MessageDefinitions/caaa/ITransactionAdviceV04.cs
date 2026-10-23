@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_OY5-EXMkEe2vXY6MoVq19w")]
 [IsoMessage("caaa.020.001.04", "TxAdvc", "urn:iso:std:iso:20022:tech:xsd:caaa.020.001.04")]
+[Description(@"The TransactionAdvice message is sent by the Acquirer (or Agent) to provide to the POI the outcome of a transaction processed outside of this protocol. ")]
+[IsoDisplayName(@"Transaction Advice V")]
 public interface ITransactionAdviceV04 : IOuterRecord
 {
     /// <summary>

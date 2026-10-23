@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.
 /// </summary>
 [IsoId("_SVDJ0dp-Ed-ak6NoX_4Aeg_-76711377")]
+[IsoDisplayName(@"Value")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IValue : IIsoComponent
 {
     /// <summary>
@@ -25,5 +27,6 @@ public interface IValue : IIsoComponent
     [IsoId("_SVDJ09p-Ed-ak6NoX_4Aeg_249291013")]
     [DisplayName("Alternate Currency Item")]
     [IsoXmlTag("AltrnCcyItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyAndAmount> AlternateCurrencyItem { get; }
 }

@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_J4YkyygrEeyB747fKu7_rw")]
 [IsoMessage("colr.014.001.05", "IntrstPmtRspn", "urn:iso:std:iso:20022:tech:xsd:colr.014.001.05")]
+[Description(@"Scope|The InterestPaymentResponse message is sent by either;|- the collateral taker or its collateral manager to the collateral giver or its collateral manager, or|- the collateral giver or its collateral manager to the collateral taker or its collateral manager|This is a response to the InterestPaymentRequest message and the amount of interest requested or advised can be accepted or rejected.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|The InterestPaymentResponse message is sent in response to the InterestPaymentRequest in order to accept or reject the amount of interest requested or advised. A rejection reason and information can be provide if the InterestPaymentRequest is being rejected.")]
+[IsoDisplayName(@"Interest Payment Response V")]
 public interface IInterestPaymentResponseV05 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +31,8 @@ public interface IInterestPaymentResponseV05 : IOuterRecord
     [IsoId("_J4Yk0ygrEeyB747fKu7_rw")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -77,5 +81,6 @@ public interface IInterestPaymentResponseV05 : IOuterRecord
     [IsoId("_J4Yk3ygrEeyB747fKu7_rw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "DerivsTradRjctnSttstclRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.092.001.03"
 )]
+[Description(@"The DerivativesTradeRejectionStatisticalReport message is sent by the trade repository (TR) to the report submitting entity, identifying the transactions rejected and the reasons for a rejection.")]
+[IsoDisplayName(@"Derivatives Trade Rejection Statistical Report V")]
 public interface IDerivativesTradeRejectionStatisticalReportV03 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +34,6 @@ public interface IDerivativesTradeRejectionStatisticalReportV03 : IOuterRecord
     [IsoId("_pVVvk2mFEe2DRvVJM2Qy-g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the key exchange initiation message.</summary>
 [IsoId("_kNBjvW7-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Key Exchange Initiation")]
 public interface IKeyExchangeInitiation : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

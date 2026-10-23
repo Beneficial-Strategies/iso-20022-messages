@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// secured market transaction.
 /// </summary>
 [IsoId("_HJT6JaifEeWHO_l3hf2rlA")]
+[IsoDisplayName(@"Unsecured Market Transaction")]
 public interface IUnsecuredMarketTransaction3 : IIsoComponent
 {
     /// <summary>
@@ -28,6 +29,7 @@ public interface IUnsecuredMarketTransaction3 : IIsoComponent
     [IsoId("_Hm7DN6ifEeWHO_l3hf2rlA")]
     [DisplayName("Branch Identification")]
     [IsoXmlTag("BrnchId")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? BranchIdentification { get; }
 
     /// <summary>
@@ -36,6 +38,8 @@ public interface IUnsecuredMarketTransaction3 : IIsoComponent
     [IsoId("_Hm7DOaifEeWHO_l3hf2rlA")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? UniqueTransactionIdentifier { get; }
 
     /// <summary>
@@ -44,6 +48,8 @@ public interface IUnsecuredMarketTransaction3 : IIsoComponent
     [IsoId("_Hm7DO6ifEeWHO_l3hf2rlA")]
     [DisplayName("Proprietary Transaction Identification")]
     [IsoXmlTag("PrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text ProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -52,6 +58,8 @@ public interface IUnsecuredMarketTransaction3 : IIsoComponent
     [IsoId("_Hm7DPaifEeWHO_l3hf2rlA")]
     [DisplayName("Counterparty Proprietary Transaction Identification")]
     [IsoXmlTag("CtrPtyPrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? CounterpartyProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -80,6 +88,7 @@ public interface IUnsecuredMarketTransaction3 : IIsoComponent
     [IsoId("_Hm7DQ6ifEeWHO_l3hf2rlA")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate SettlementDate { get; }
 
     /// <summary>
@@ -88,6 +97,7 @@ public interface IUnsecuredMarketTransaction3 : IIsoComponent
     [IsoId("_Hm7DRaifEeWHO_l3hf2rlA")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -120,6 +130,7 @@ public interface IUnsecuredMarketTransaction3 : IIsoComponent
     [IsoId("_Hm7DT6ifEeWHO_l3hf2rlA")]
     [DisplayName("Deal Price")]
     [IsoXmlTag("DealPric")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate DealPrice { get; }
 
     /// <summary>
@@ -164,6 +175,9 @@ public interface IUnsecuredMarketTransaction3 : IIsoComponent
     [IsoId("_Hm7DWaifEeWHO_l3hf2rlA")]
     [DisplayName("Call Put Option")]
     [IsoXmlTag("CallPutOptn")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOption12> CallPutOption { get; }
 
     /// <summary>
@@ -172,5 +186,6 @@ public interface IUnsecuredMarketTransaction3 : IIsoComponent
     [IsoId("_Hm7DW6ifEeWHO_l3hf2rlA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

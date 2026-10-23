@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_9y4qQR8KEeWpZde3LQh6dg")]
 [IsoMessage("acmt.002.001.06", "AcctDtlsConf", "urn:iso:std:iso:20022:tech:xsd:acmt.002.001.06")]
+[Description(@"Scope|An account servicer, for example, a registrar, transfer agent, custodian bank or securities depository sends the AccountDetailsConfirmation message to the account owner, for example, an investor to confirm the opening of an account, execution of an AccountModificationInstruction or to return information requested in a GetAccountDetails message.|Usage|The AccountDetailsConfirmation message is used to confirm the opening of an account, modification of an account or the provision of information requested in a previously sent GetAccountDetails message. The message contains detailed information relevant to the opened account.|When the AccountDetailsConfirmation is used to confirm execution of an AccountModificationInstruction message, it contains the modified subsets of account details that were specified in the AccountModificationInstruction.|When the AccountDetailsConfirmation is used to reply to a GetAccountDetails message, it returns the selected subsets of account details that were specified in the GetAccountDetails message.")]
+[IsoDisplayName(@"Account Details Confirmation V")]
 public interface IAccountDetailsConfirmationV06 : IOuterRecord
 {
     /// <summary>
@@ -73,6 +75,9 @@ public interface IAccountDetailsConfirmationV06 : IOuterRecord
     [IsoId("_9y4qXx8KEeWpZde3LQh6dg")]
     [DisplayName("Intermediaries")]
     [IsoXmlTag("Intrmies")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary36> Intermediaries { get; }
 
     /// <summary>
@@ -97,6 +102,9 @@ public interface IAccountDetailsConfirmationV06 : IOuterRecord
     [IsoId("_9y4qZR8KEeWpZde3LQh6dg")]
     [DisplayName("Savings Investment Plan")]
     [IsoXmlTag("SvgsInvstmtPlan")]
+    [MinLength(0)]
+    [MaxLength(50)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentPlan12> SavingsInvestmentPlan { get; }
 
     /// <summary>
@@ -105,6 +113,9 @@ public interface IAccountDetailsConfirmationV06 : IOuterRecord
     [IsoId("_9y4qZx8KEeWpZde3LQh6dg")]
     [DisplayName("Withdrawal Investment Plan")]
     [IsoXmlTag("WdrwlInvstmtPlan")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentPlan12> WithdrawalInvestmentPlan { get; }
 
     /// <summary>
@@ -113,6 +124,9 @@ public interface IAccountDetailsConfirmationV06 : IOuterRecord
     [IsoId("_9y4qaR8KEeWpZde3LQh6dg")]
     [DisplayName("Cash Settlement")]
     [IsoXmlTag("CshSttlm")]
+    [MinLength(0)]
+    [MaxLength(8)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashSettlement1> CashSettlement { get; }
 
     /// <summary>
@@ -121,6 +135,9 @@ public interface IAccountDetailsConfirmationV06 : IOuterRecord
     [IsoId("_9y4qax8KEeWpZde3LQh6dg")]
     [DisplayName("Service Level Agreement")]
     [IsoXmlTag("SvcLvlAgrmt")]
+    [MinLength(0)]
+    [MaxLength(30)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentToSend3> ServiceLevelAgreement { get; }
 
     /// <summary>
@@ -129,6 +146,7 @@ public interface IAccountDetailsConfirmationV06 : IOuterRecord
     [IsoId("_JMKmwSFoEeW9XJWqfgXIIA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountRestrictions1> AdditionalInformation { get; }
 
     /// <summary>
@@ -145,5 +163,6 @@ public interface IAccountDetailsConfirmationV06 : IOuterRecord
     [IsoId("_9y4qbx8KEeWpZde3LQh6dg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account on which a securities entry is made.
 /// </summary>
 [IsoId("_0mLLh4jyEeONZKAAW4pOaQ")]
+[IsoDisplayName(@"Safekeeping Account")]
 public interface ISafekeepingAccount5 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ISafekeepingAccount5 : IIsoComponent
     [IsoId("_7khGcKCHEeOEyO7fCl8lLA")]
     [DisplayName("Beneficial Owner")]
     [IsoXmlTag("BnfclOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficialOwner2> BeneficialOwner { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ISafekeepingAccount5 : IIsoComponent
     [IsoId("_0mLLjYjyEeONZKAAW4pOaQ")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateHoldingBalance1> BalanceForAccount { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ISafekeepingAccount5 : IIsoComponent
     [IsoId("_0mLLjIjyEeONZKAAW4pOaQ")]
     [DisplayName("Account Sub Level")]
     [IsoXmlTag("AcctSubLvl1")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountSubLevel1> AccountSubLevel1 { get; }
 
     /// <summary>
@@ -73,5 +77,6 @@ public interface ISafekeepingAccount5 : IIsoComponent
     [IsoId("_7YCN0aCAEeOEyO7fCl8lLA")]
     [DisplayName("Account Sub Level 1 Difference")]
     [IsoXmlTag("AcctSubLvl1Diff")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateHoldingBalance2> AccountSubLevel1Difference { get; }
 }

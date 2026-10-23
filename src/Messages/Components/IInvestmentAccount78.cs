@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investment Account78.
 /// </summary>
 [IsoId("_4u7MMRwMEe6O0NdiBuX__w")]
+[IsoDisplayName(@"Investment Account78")]
 public interface IInvestmentAccount78 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IInvestmentAccount78 : IIsoComponent
     /// </summary>
     [DisplayName("Owner Identification")]
     [IsoXmlTag("OwnrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification139> OwnerIdentification { get; }
 
     /// <summary>

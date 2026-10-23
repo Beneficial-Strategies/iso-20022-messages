@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_ynU4g4b4Eea9VrPZgV7UBQ")]
 [IsoMessage("seev.033.001.07", "CorpActnInstr", "urn:iso:std:iso:20022:tech:xsd:seev.033.001.07")]
+[Description(@"Scope|An account owner sends the CorporateActionInstruction message to an account servicer to instruct election on a corporate action event.||This message is used to provide the custodian with instructions on how the account owner wishes to proceed with a corporate action event. Instructions include investment decisions regarding the exercise of rights issues, the election of stock or cash when the option is available, and decisions on the conversion or tendering of securities.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),|using the relevant elements in the business application header (BAH).")]
+[IsoDisplayName(@"Corporate Action Instruction V")]
 public interface ICorporateActionInstructionV07 : IOuterRecord
 {
     /// <summary>
@@ -28,6 +30,7 @@ public interface ICorporateActionInstructionV07 : IOuterRecord
     [IsoId("_ynU4j4b4Eea9VrPZgV7UBQ")]
     [DisplayName("Change Instruction Indicator")]
     [IsoXmlTag("ChngInstrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChangeInstructionIndicator { get; }
 
     /// <summary>
@@ -52,6 +55,7 @@ public interface ICorporateActionInstructionV07 : IOuterRecord
     [IsoId("_ynU4lYb4Eea9VrPZgV7UBQ")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification32> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -60,6 +64,7 @@ public interface ICorporateActionInstructionV07 : IOuterRecord
     [IsoId("_ynU4l4b4Eea9VrPZgV7UBQ")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventReference3> EventsLinkage { get; }
 
     /// <summary>
@@ -84,6 +89,7 @@ public interface ICorporateActionInstructionV07 : IOuterRecord
     [IsoId("_ynU4nYb4Eea9VrPZgV7UBQ")]
     [DisplayName("Beneficial Owner Details")]
     [IsoXmlTag("BnfclOwnrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification93> BeneficialOwnerDetails { get; }
 
     /// <summary>
@@ -108,5 +114,6 @@ public interface ICorporateActionInstructionV07 : IOuterRecord
     [IsoId("_ynU4o4b4Eea9VrPZgV7UBQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

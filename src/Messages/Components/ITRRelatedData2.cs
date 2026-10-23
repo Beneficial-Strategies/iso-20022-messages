@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data block for a TR31 or TR34 key block which contains the key being transported.
 /// </summary>
 [IsoId("_PRFA0LTpEeeQy4o2AayYHg")]
+[IsoDisplayName(@"TR Related Data")]
 public interface ITRRelatedData2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ITRRelatedData2 : IIsoComponent
     [IsoId("_PZ0GE7TpEeeQy4o2AayYHg")]
     [DisplayName("TR Block")]
     [IsoXmlTag("TRBlck")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary? TRBlock { get; }
 }

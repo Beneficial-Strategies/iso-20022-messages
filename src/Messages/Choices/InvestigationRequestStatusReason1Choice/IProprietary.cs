@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationRequestStatusReason
 /// Reason for the status, in a proprietary form.
 /// </summary>
 [IsoId("_xWB3tXbnEe2GR4CRzIB77g")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IInvestigationRequestStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IInvestigationRequestStatusReason1Choice, IIsoCh
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Criteria for a query about securities reference data.
 /// </summary>
 [IsoId("_QETUpZJKEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Securities Search Criteria")]
 public interface ISecuritiesSearchCriteria4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISecuritiesSearchCriteria4 : IIsoComponent
     [IsoId("_QGUG05JKEeuAlLVx8pyt3w")]
     [DisplayName("Classification Financial Instrument")]
     [IsoXmlTag("ClssfctnFinInstrm")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier? ClassificationFinancialInstrument { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Compares information related to both sides of a counterparty.
 /// </summary>
 [IsoId("_h9g0mTAlEe2Ne600gC45nw")]
+[IsoDisplayName(@"Counterparty Matching Criteria")]
 public interface ICounterpartyMatchingCriteria6 : IIsoComponent
 {
     /// <summary>

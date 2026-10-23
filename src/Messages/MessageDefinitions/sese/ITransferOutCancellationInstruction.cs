@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_K1LPztE6Ed-BzquC8wXy7w_-1400319754")]
 [IsoMessage("sese.002.001.01", "sese.002.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.002.001.01")]
+[Description(@"Scope|The TransferOutCancellationInstruction message is sent by an instructing party or an instructing party's designated agent to the executing party.|This message is used to request the cancellation of a TransferOutInstruction that was previously sent by the instructing party.|Usage|The TransferOutCancellationInstruction message is sent by an instructing party to request cancellation of a previously sent TransferOutInstruction.|This message must contain the reference of the message to be cancelled. The message may also contain all the details of the message to be cancelled, but this is not recommended.")]
+[IsoDisplayName(@"Transfer Out Cancellation Instruction")]
 public interface ITransferOutCancellationInstruction : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the accepted collateral substitution.
 /// </summary>
 [IsoId("_QnhRANp-Ed-ak6NoX_4Aeg_1142450106")]
+[IsoDisplayName(@"Collateral Substitution Response")]
 public interface ICollateralSubstitutionResponse1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICollateralSubstitutionResponse1 : IIsoComponent
     [IsoId("_QnhRAdp-Ed-ak6NoX_4Aeg_-1599404554")]
     [DisplayName("Collateral Substitution Request Identification")]
     [IsoXmlTag("CollSbstitnReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CollateralSubstitutionRequestIdentification { get; }
 
     /// <summary>

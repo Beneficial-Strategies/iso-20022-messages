@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities settlement transaction.
 /// </summary>
 [IsoId("_hCAw8ZaOEfC2_67yGLymgA")]
+[IsoDisplayName(@"Transaction Details183")]
 public interface ITransactionDetails183 : IIsoComponent
 {
     /// <summary>

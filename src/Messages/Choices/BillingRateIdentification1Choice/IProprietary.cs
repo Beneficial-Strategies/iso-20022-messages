@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingRateIdentification1Choice
 /// Specifies the billing rate identification code, as defined in a proprietary format.
 /// </summary>
 [IsoId("_6Q_lgJqlEeGSON8vddiWzQ_-1814132724")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IBillingRateIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IBillingRateIdentification1Choice, IIsoChoiceVar
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Modification reasons.
 /// </summary>
 [IsoId("_C9XfKzq3EeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Modification Reason")]
 public interface IModificationReason4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IModificationReason4 : IIsoComponent
     [IsoId("_DdDr0zq3EeWyoP0PbocV1Q")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

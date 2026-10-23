@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement report transaction.
 /// </summary>
 [IsoId("_bNisUVcyEeeFltjJxERUxw")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction104 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITransaction104 : IIsoComponent
     [IsoId("_bZXh01cyEeeFltjJxERUxw")]
     [DisplayName("Other Settlement Report Type")]
     [IsoXmlTag("OthrSttlmRptTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherSettlementReportType { get; }
 
     /// <summary>
@@ -35,6 +38,7 @@ public interface ITransaction104 : IIsoComponent
     [IsoId("_4TGikmqCEemXfKijhrqa-Q")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Exact4NumericText> MessageReason { get; }
 
     /// <summary>
@@ -43,6 +47,7 @@ public interface ITransaction104 : IIsoComponent
     [IsoId("_4TGik2qCEemXfKijhrqa-Q")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -59,6 +64,7 @@ public interface ITransaction104 : IIsoComponent
     [IsoId("_gVvK0vF-EeiGNursv3uE_g")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee1> AdditionalFees { get; }
 
     /// <summary>
@@ -83,6 +89,8 @@ public interface ITransaction104 : IIsoComponent
     [IsoId("_KyMUEWqDEemXfKijhrqa-Q")]
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? TransactionDescription { get; }
 
     /// <summary>
@@ -91,5 +99,6 @@ public interface ITransaction104 : IIsoComponent
     [IsoId("_2BLpARqnEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the unique transaction identifier (UTI) that was created at the time a transaction was first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime and optionally, the prior unique transaction identifier (PUTI). These identifiers can also be known as the Unique Swap Identifier (USI) or the Prior Unique Swap Identifier (PUSI).
 /// </summary>
 [IsoId("_sIgRQVNgEeOEi5J12GuNGQ")]
+[IsoDisplayName(@"Unique Transaction Identifier")]
 public interface IUniqueTransactionIdentifier2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IUniqueTransactionIdentifier2 : IIsoComponent
     [IsoId("_sbuvQVNgEeOEi5J12GuNGQ")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text UniqueTransactionIdentifier { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IUniqueTransactionIdentifier2 : IIsoComponent
     [IsoId("_sbuvQ1NgEeOEi5J12GuNGQ")]
     [DisplayName("Prior Unique Transaction Identifier")]
     [IsoXmlTag("PrrUnqTxIdr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max52Text> PriorUniqueTransactionIdentifier { get; }
 }

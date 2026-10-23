@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AcqrrToAccptrBtchFileXchg",
     "urn:iso:std:iso:20022:tech:xsd:caaa.027.001.01"
 )]
+[IsoDisplayName(@"Acquirer To Acceptor Batch File Exchange V01")]
 public interface IAcquirerToAcceptorBatchFileExchangeV01 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface IAcquirerToAcceptorBatchFileExchangeV01 : IOuterRecord
     /// </summary>
     [DisplayName("Body Element")]
     [IsoXmlTag("BodyElmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcquirerToAcceptorFileBody1> BodyElement { get; }
 
     /// <summary>

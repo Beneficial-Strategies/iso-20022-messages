@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to contract valuation.
 /// </summary>
 [IsoId("_rIFrmUDWEeWOL-OsSq2h6w")]
+[IsoDisplayName(@"Contract Valuation Data")]
 public interface IContractValuationData2 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IContractValuationData2 : IIsoComponent
     [IsoId("_rS83w0DWEeWOL-OsSq2h6w")]
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TimeStamp { get; }
 
     /// <summary>

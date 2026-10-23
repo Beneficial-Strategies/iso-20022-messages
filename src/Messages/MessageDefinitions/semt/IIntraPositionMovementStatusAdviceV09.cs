@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "IntraPosMvmntStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:semt.014.001.09"
 )]
+[IsoDisplayName(@"Intra Position Movement Status Advice V09")]
 public interface IIntraPositionMovementStatusAdviceV09 : IOuterRecord
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IIntraPositionMovementStatusAdviceV09 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

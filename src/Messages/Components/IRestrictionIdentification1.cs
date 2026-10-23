@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Restriction References applied on the transaction for which the securities settlement condition modification is requested.
 /// </summary>
 [IsoId("_3d1RINj7EeiHnvcp3FV_5w")]
+[IsoDisplayName(@"Restriction Identification")]
 public interface IRestrictionIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IRestrictionIdentification1 : IIsoComponent
     [IsoId("_E3muoNj8EeiHnvcp3FV_5w")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates date and value at which the floating reference rate was reset.
 /// </summary>
 [IsoId("_uPjD8CReEe2VuKUpJ7HXPg")]
+[IsoDisplayName(@"Reset Date And Value")]
 public interface IResetDateAndValue1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IResetDateAndValue1 : IIsoComponent
     [IsoId("_Af_VcSRfEe2VuKUpJ7HXPg")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Date { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IResetDateAndValue1 : IIsoComponent
     [IsoId("_F6PXoSRfEe2VuKUpJ7HXPg")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? Value { get; }
 }

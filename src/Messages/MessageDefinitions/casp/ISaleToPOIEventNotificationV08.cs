@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.casp;
     "SaleToPOIEvtNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:casp.012.001.08"
 )]
+[IsoDisplayName(@"Sale To POI Event Notification V08")]
 public interface ISaleToPOIEventNotificationV08 : IOuterRecord
 {
     /// <summary>

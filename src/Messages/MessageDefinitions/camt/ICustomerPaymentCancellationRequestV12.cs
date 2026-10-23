@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3HVkTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.055.001.12", "CstmrPmtCxlReq", "urn:iso:std:iso:20022:tech:xsd:camt.055.001.12")]
+[IsoDisplayName(@"Customer Payment Cancellation Request V12")]
 public interface ICustomerPaymentCancellationRequestV12 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +40,7 @@ public interface ICustomerPaymentCancellationRequestV12 : IOuterRecord
     /// </summary>
     [DisplayName("Underlying")]
     [IsoXmlTag("Undrlyg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnderlyingTransaction33> Underlying { get; }
 
     /// <summary>
@@ -46,5 +48,6 @@ public interface ICustomerPaymentCancellationRequestV12 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

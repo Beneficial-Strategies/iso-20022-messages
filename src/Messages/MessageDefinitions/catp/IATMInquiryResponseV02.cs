@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_P04uca4WEeW_TaP-ygI0SQ")]
 [IsoMessage("catp.007.001.02", "ATMNqryRspn", "urn:iso:std:iso:20022:tech:xsd:catp.007.001.02")]
+[Description(@"The ATMInquiryResponse message is sent by an ATM manager or its agent to the ATM to provide the information and the outcome of the verifications requested in the ATMInquiryRequest.")]
+[IsoDisplayName(@"ATM Inquiry Response V")]
 public interface IATMInquiryResponseV02 : IOuterRecord
 {
     /// <summary>

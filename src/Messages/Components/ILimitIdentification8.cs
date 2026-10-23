@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the identification details to uniquely identify a limit within the system.
 /// </summary>
 [IsoId("_0WRu0TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Limit Identification8")]
 public interface ILimitIdentification8 : IIsoComponent
 {
     /// <summary>

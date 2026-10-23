@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionCondition4Choice
 /// Trade conditions expressed in a coded form as published in an external list.
 /// </summary>
 [IsoId("_AcingNokEeC60axPepSq7g_-1258318149")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITradeTransactionCondition4Choice, IIsoChoiceVariant
 {
     /// <summary>

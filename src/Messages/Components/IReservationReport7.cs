@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reports either on the reservation or on a business error.
 /// </summary>
 [IsoId("_eJZtZdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Reservation Report")]
 public interface IReservationReport7 : IIsoComponent
 {
     /// <summary>

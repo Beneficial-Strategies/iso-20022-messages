@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Mandate Related Information17.
 /// </summary>
 [IsoId("_VPXPQZ9qEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Mandate Related Information17")]
 public interface IMandateRelatedInformation17 : IIsoComponent
 {
     /// <summary>

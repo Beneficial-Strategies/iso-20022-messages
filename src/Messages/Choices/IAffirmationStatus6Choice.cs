@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of status for the affirmation.
 /// </summary>
 [IsoId("_A55R5NokEeC60axPepSq7g_-1061221633")]
+[IsoDisplayName(@"Affirmation Status 6 Choice")]
 public interface IAffirmationStatus6Choice : IIsoChoice { }

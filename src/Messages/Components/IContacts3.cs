@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Address for electronic mail (e-mail).
 /// </summary>
 [IsoId("_TGcRXwEcEeCQm6a_G2yO_w_1262678434")]
+[IsoDisplayName(@"Contacts")]
 public interface IContacts3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IContacts3 : IIsoComponent
     [IsoId("_TGmCUAEcEeCQm6a_G2yO_w_1280188568")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IContacts3 : IIsoComponent
     [IsoId("_TGmCUQEcEeCQm6a_G2yO_w_-608307246")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IContacts3 : IIsoComponent
     [IsoId("_TGmCUgEcEeCQm6a_G2yO_w_534823921")]
     [DisplayName("Mobile Number")]
     [IsoXmlTag("MobNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? MobileNumber { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IContacts3 : IIsoComponent
     [IsoId("_TGmCUwEcEeCQm6a_G2yO_w_-1316706931")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -57,6 +63,8 @@ public interface IContacts3 : IIsoComponent
     [IsoId("_TGmCVAEcEeCQm6a_G2yO_w_223533731")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? EmailAddress { get; }
 
     /// <summary>
@@ -65,6 +73,8 @@ public interface IContacts3 : IIsoComponent
     [IsoId("_TGmCVQEcEeCQm6a_G2yO_w_-32654467")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Other { get; }
 
     /// <summary>
@@ -73,6 +83,8 @@ public interface IContacts3 : IIsoComponent
     [IsoId("_TGmCVgEcEeCQm6a_G2yO_w_140856843")]
     [DisplayName("Job Title")]
     [IsoXmlTag("JobTitl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? JobTitle { get; }
 
     /// <summary>
@@ -81,6 +93,8 @@ public interface IContacts3 : IIsoComponent
     [IsoId("_TGmCVwEcEeCQm6a_G2yO_w_-1947938826")]
     [DisplayName("Responsibility")]
     [IsoXmlTag("Rspnsblty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Responsibility { get; }
 
     /// <summary>
@@ -89,5 +103,7 @@ public interface IContacts3 : IIsoComponent
     [IsoId("_TGmCWAEcEeCQm6a_G2yO_w_1170289284")]
     [DisplayName("Department")]
     [IsoXmlTag("Dept")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Department { get; }
 }

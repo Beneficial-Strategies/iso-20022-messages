@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnInstrCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:seev.040.002.10"
 )]
+[Description(@"Scope|The CorporateActionInstructionCancellationRequest message is sent by an account owner to an account servicer to request cancellation of a previously sent corporate action election instruction.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).")]
+[IsoDisplayName(@"Corporate Action Instruction Cancellation Request 002 V")]
 public interface ICorporateActionInstructionCancellationRequest002V10 : IOuterRecord
 {
     /// <summary>
@@ -30,6 +32,7 @@ public interface ICorporateActionInstructionCancellationRequest002V10 : IOuterRe
     [IsoId("_eTupnh9QEeuFz_FaCzCLgQ")]
     [DisplayName("Change Instruction Indicator")]
     [IsoXmlTag("ChngInstrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChangeInstructionIndicator { get; }
 
     /// <summary>
@@ -78,5 +81,6 @@ public interface ICorporateActionInstructionCancellationRequest002V10 : IOuterRe
     [IsoId("_eTupqh9QEeuFz_FaCzCLgQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

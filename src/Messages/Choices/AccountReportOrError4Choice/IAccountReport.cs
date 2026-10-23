@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountReportOrError4Choice;
 /// Requested details of the account.
 /// </summary>
 [IsoId("_1Pl8czEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Account Report")]
 public interface IAccountReport : IAccountReportOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

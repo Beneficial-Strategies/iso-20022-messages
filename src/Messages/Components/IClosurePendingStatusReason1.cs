@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for a closure pending status.
 /// </summary>
 [IsoId("_0rCfkWCLEeabZtzjEVWYCQ")]
+[IsoDisplayName(@"Closure Pending Status Reason")]
 public interface IClosurePendingStatusReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IClosurePendingStatusReason1 : IIsoComponent
     [IsoId("_1EL_Y2CLEeabZtzjEVWYCQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

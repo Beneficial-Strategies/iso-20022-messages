@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the withdrawal reason code and optionally a withdrawal reason sub code.
 /// </summary>
 [IsoId("_t1jau4xnEeKdxfnzD2sqyA")]
+[IsoDisplayName(@"Withdrawal Reason")]
 public interface IWithdrawalReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IWithdrawalReason1 : IIsoComponent
     [IsoId("_t1javoxnEeKdxfnzD2sqyA")]
     [DisplayName("Withdrawal Reason Sub Code")]
     [IsoXmlTag("WdrwlRsnSubCd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? WithdrawalReasonSubCode { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a person, or a non-financial institution.
 /// </summary>
 [IsoId("_Pb059Np-Ed-ak6NoX_4Aeg_-72138267")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification25 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyIdentification25 : IIsoComponent
     [IsoId("_Pb059dp-Ed-ak6NoX_4Aeg_-72138265")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Name { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IPartyIdentification25 : IIsoComponent
     [IsoId("_Pb0599p-Ed-ak6NoX_4Aeg_-1406582918")]
     [DisplayName("BEI")]
     [IsoXmlTag("BEI")]
+    [IsoSimpleType(IsoSimpleType.BEIIdentifier)]
     BEIIdentifier? BEI { get; }
 }

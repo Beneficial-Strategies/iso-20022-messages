@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the owner type and mandate type.
 /// </summary>
 [IsoId("_rv8cQC_-EeOKib24wnHaFg")]
+[IsoDisplayName(@"Owner Type")]
 public interface IOwnerType1 : IIsoComponent
 {
     /// <summary>

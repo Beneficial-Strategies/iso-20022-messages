@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionType2Choice;
 /// Identification of the original meeting instruction message for which the global status or the status(es) of one or more individual instructions are provided.
 /// </summary>
 [IsoId("_5wAlwbmwEemdEs93hOkPKA")]
+[IsoDisplayName(@"Instruction Identification")]
 public interface IInstructionIdentification : IInstructionType2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IInstructionIdentification : IInstructionType2Choice, IIsoChoic
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

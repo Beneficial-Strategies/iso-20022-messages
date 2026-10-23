@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment2Choice;
 /// <summary>
 /// Repurchase Agreement.
 /// </summary>
+[IsoDisplayName(@"Repurchase Agreement")]
 public interface IRepurchaseAgreement : IInvestment2Choice, IIsoChoiceVariant
 {
     /// <summary>

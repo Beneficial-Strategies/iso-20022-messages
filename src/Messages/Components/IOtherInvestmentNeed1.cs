@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other investment need.
 /// </summary>
 [IsoId("_II3KcDceEeidBoT_PugKiA")]
+[IsoDisplayName(@"Other Investment Need")]
 public interface IOtherInvestmentNeed1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherInvestmentNeed1 : IIsoComponent
     [IsoId("_QFqo8DceEeidBoT_PugKiA")]
     [DisplayName("Client Objectives And Needs Type")]
     [IsoXmlTag("ClntObjctvsAndNeedsTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientObjectivesAndNeedsType { get; }
 
     /// <summary>

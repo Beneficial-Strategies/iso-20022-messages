@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("_rWctKNE7Ed-BzquC8wXy7w_939882022")]
 [IsoMessage("setr.006.001.02", "setr.006.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.006.001.02")]
+[Description(@"Scope|The RedemptionMultipleOrderConfirmation message is sent by an exacting party, eg, a transfer agent, to an instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.|This message is used to confirm the details of the execution of a RedemptionMultipleOrder message.|Usage|The RedemptionMultipleOrderConfirmation message is sent, after the price has been determined, to confirm the execution of all individual orders.|A RedemptionMultipleOrder may be responded to by more than one RedemptionMultipleOrderConfirmation, as the valuation cycle of the financial instruments in each individual order may be different.|When the executing party sends several confirmations, there is no specific indication in the message that it is an incomplete confirmation. Reconciliation must be based on the references.|A RedemptionMultipleOrder must in all cases be responded to by a RedemptionMultipleOrderConfirmation message/s and in no circumstances by a RedemptionBulkOrderConfirmation message/s.|If the executing party needs to confirm a RedemptionBulkOrder message, then a RedemptionBulkOrderConfirmation message must be used.")]
+[IsoDisplayName(@"Redemption Multiple Order Confirmation V")]
 public interface IRedemptionMultipleOrderConfirmationV02 : IOuterRecord
 {
     /// <summary>
@@ -44,6 +46,7 @@ public interface IRedemptionMultipleOrderConfirmationV02 : IOuterRecord
     [IsoId("_rWmeIdE7Ed-BzquC8wXy7w_1844950048")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -68,6 +71,9 @@ public interface IRedemptionMultipleOrderConfirmationV02 : IOuterRecord
     [IsoId("_rWmeJNE7Ed-BzquC8wXy7w_-1031425681")]
     [DisplayName("Intermediary Details")]
     [IsoXmlTag("IntrmyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary4> IntermediaryDetails { get; }
 
     /// <summary>
@@ -84,5 +90,6 @@ public interface IRedemptionMultipleOrderConfirmationV02 : IOuterRecord
     [IsoId("_rWmeJtE7Ed-BzquC8wXy7w_-8767689")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

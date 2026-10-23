@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Transport key or key encryption key (KEK) for the recipient.
 /// </summary>
 [IsoId("_EvioMQioEeKn9O5oyej_zw")]
+[IsoDisplayName(@"Recipient 2 Choice")]
 public interface IRecipient2Choice : IIsoChoice { }

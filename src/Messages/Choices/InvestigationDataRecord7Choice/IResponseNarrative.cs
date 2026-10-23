@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord7Choice;
 /// <summary>
 /// Response Narrative.
 /// </summary>
+[IsoDisplayName(@"Response Narrative")]
 public interface IResponseNarrative : IInvestigationDataRecord7Choice, IIsoChoiceVariant
 {
     /// <summary>

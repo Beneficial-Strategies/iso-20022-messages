@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters associated to the MAC algorithm.
 /// </summary>
 [IsoId("_PrnlsWkJEeS7zPBpvm732w")]
+[IsoDisplayName(@"Parameter")]
 public interface IParameter7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IParameter7 : IIsoComponent
     [IsoId("_P4zGEWkJEeS7zPBpvm732w")]
     [DisplayName("Initialisation Vector")]
     [IsoXmlTag("InitlstnVctr")]
+    [IsoSimpleType(IsoSimpleType.Max500Binary)]
     Max500Binary? InitialisationVector { get; }
 
     /// <summary>

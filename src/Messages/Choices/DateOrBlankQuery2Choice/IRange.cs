@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateOrBlankQuery2Choice;
 /// </summary>
 [IsoId("_cmD8MdGgEeaQk737TH1Fzw")]
 [IsoXmlTag("Rg")]
+[IsoDisplayName(@"Range")]
 public interface IRange : IDateOrBlankQuery2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IRange : IDateOrBlankQuery2Choice, IIsoChoiceVariant
     [IsoId("_6T03G5qlEeGSON8vddiWzQ_2053251952")]
     [DisplayName("From Date")]
     [IsoXmlTag("FrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FromDate { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface IRange : IDateOrBlankQuery2Choice, IIsoChoiceVariant
     [IsoId("_6T03HJqlEeGSON8vddiWzQ_-1787628075")]
     [DisplayName("To Date")]
     [IsoXmlTag("ToDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ToDate { get; }
 }

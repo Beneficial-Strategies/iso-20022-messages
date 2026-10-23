@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of lottery event.
 /// </summary>
 [IsoId("_ogGV4JSbEfCQbtmJ-bHX4Q")]
+[IsoDisplayName(@"Corporate Action Lottery Event1")]
 public interface ICorporateActionLotteryEvent1 : IIsoComponent
 {
     /// <summary>

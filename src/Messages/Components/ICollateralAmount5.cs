@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Collateral and settlement related amounts.
 /// </summary>
 [IsoId("__fRWYOCuEei2UYJ62ws-Fw")]
+[IsoDisplayName(@"Collateral Amount")]
 public interface ICollateralAmount5 : IIsoComponent
 {
     /// <summary>

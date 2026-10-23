@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details about the MIFID classification of the account owner.
 /// </summary>
 [IsoId("_WsmcQxOAEeKjmvxNCObNeQ")]
+[IsoDisplayName(@"Mi FID Classification")]
 public interface IMiFIDClassification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IMiFIDClassification1 : IIsoComponent
     [IsoId("_XomVABOBEeKjmvxNCObNeQ")]
     [DisplayName("Narrative")]
     [IsoXmlTag("Nrrtv")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Narrative { get; }
 }

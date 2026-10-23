@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate2Choice;
 /// Indicates that the rate is fixed.
 /// </summary>
 [IsoId("_lQ3UAepnEeSsk6KxwbYJ9w")]
+[IsoDisplayName(@"Fixed")]
 public interface IFixed : IInterestRate2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IFixed : IInterestRate2Choice, IIsoChoiceVariant
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("Fxd")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

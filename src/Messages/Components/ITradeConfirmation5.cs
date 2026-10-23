@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade Confirmation5.
 /// </summary>
 [IsoId("_DVBgwI-TEe6Ojt1b3tfu9Q")]
+[IsoDisplayName(@"Trade Confirmation5")]
 public interface ITradeConfirmation5 : IIsoComponent
 {
     /// <summary>

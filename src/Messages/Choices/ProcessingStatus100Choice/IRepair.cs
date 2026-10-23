@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus100Choice;
 
 /// <summary>Specifies the repair status.</summary>
 [IsoId("_XXEmeY5bEfC_4ZEXsY0Xyg")]
+[IsoDisplayName(@"Repair")]
 public interface IRepair : IProcessingStatus100Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

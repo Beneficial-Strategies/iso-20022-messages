@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument11Choice;
 /// </summary>
 [IsoId("_SBhw59p-Ed-ak6NoX_4Aeg_-925008187")]
 [IsoXmlTag("CshAcctDtls")]
+[IsoDisplayName(@"Cash Account Details")]
 public interface ICashAccountDetails : IPaymentInstrument11Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,5 +35,7 @@ public interface ICashAccountDetails : IPaymentInstrument11Choice, IIsoChoiceVar
     [IsoId("_Rzq7Htp-Ed-ak6NoX_4Aeg_-1711849455")]
     [DisplayName("Extended Type")]
     [IsoXmlTag("XtndedTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedType { get; }
 }

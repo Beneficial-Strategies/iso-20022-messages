@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the penalties for a given party.
 /// </summary>
 [IsoId("_xQ97UagzEfCXwLUUylXgrQ")]
+[IsoDisplayName(@"Penalty Per Counterparty4")]
 public interface IPenaltyPerCounterparty4 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IPenaltyPerCounterparty4 : IIsoComponent
     [IsoId("_xUaQ5agzEfCXwLUUylXgrQ")]
     [DisplayName("Penalty Details")]
     [IsoXmlTag("PnltyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPenaltyRecord4> PenaltyDetails { get; }
 }

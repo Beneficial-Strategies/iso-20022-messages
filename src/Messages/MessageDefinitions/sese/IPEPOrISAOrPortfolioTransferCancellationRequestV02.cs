@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "PEPOrISAOrPrtflTrfCxlReqV02",
     "urn:iso:std:iso:20022:tech:xsd:sese.014.001.02"
 )]
+[Description(@"Scope|An instructing party, eg, a (new) plan manager, sends the PEPOrISAOrPortfolioTransferCancellationRequest message to the executing party, eg, a (old) plan manager, to request the cancellation of a previously sent PEPOrISAOrPortfolioTransferInstruction.|Usage|The PEPOrISAOrPortfolioTransferCancellationRequest message is used to request the cancellation of an entire PEPOrISAOrPortfolioTransferInstruction message, ie, all the product transfers that it contained. The cancellation request can be specified either by:|- quoting the transfer references of all the product transfers listed in the PEPOrISAOrPortfolioTransferInstruction message, or,|- quoting the details of all the product transfers (this includes TransferReference) listed in PEPOrISAOrPortfolioTransferInstruction message.|The message identification of the PEPOrISAOrPortfolioTransferInstruction may also be quoted in PreviousReference. It is also possible to request the cancellation of PEPOrISAOrPortfolioTransferInstruction by just quoting its message identification in PreviousReference.")]
+[IsoDisplayName(@"PEP Or ISA Or Portfolio Transfer Cancellation Request V")]
 public interface IPEPOrISAOrPortfolioTransferCancellationRequestV02 : IOuterRecord
 {
     /// <summary>

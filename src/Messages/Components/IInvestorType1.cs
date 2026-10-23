@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investor for which a financial instrument is targeted.
 /// </summary>
 [IsoId("_lejCIDcKEeiIxKQErQxblg")]
+[IsoDisplayName(@"Investor Type")]
 public interface IInvestorType1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IInvestorType1 : IIsoComponent
     [IsoId("_3ng9MDcLEeiIxKQErQxblg")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherTargetMarketInvestor1> Other { get; }
 }

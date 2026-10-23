@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.casr;
 /// </summary>
 [IsoId("_Vc1ZVVcvEeeFltjJxERUxw")]
 [IsoMessage("casr.001.001.01", "SttlmRptgInitn", "urn:iso:std:iso:20022:tech:xsd:casr.001.001.01")]
+[Description(@"The SettlementReportingInitiation message is usually sent by an agent (processor, clearing or settlement agent) to an acquirer, agent or issuer to inform about financial totals already settled or to be settled issued as an outcome of the clearing process.")]
+[IsoDisplayName(@"Settlement Reporting Initiation V")]
 public interface ISettlementReportingInitiationV01 : IOuterRecord
 {
     /// <summary>

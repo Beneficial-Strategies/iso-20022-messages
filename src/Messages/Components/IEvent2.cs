@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on an event that happened in a system.
 /// </summary>
 [IsoId("_whUBYU7TEeSGH6dwL1uJcg")]
+[IsoDisplayName(@"Event")]
 public interface IEvent2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IEvent2 : IIsoComponent
     [IsoId("_w2BtIU7TEeSGH6dwL1uJcg")]
     [DisplayName("Event Code")]
     [IsoXmlTag("EvtCd")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText EventCode { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IEvent2 : IIsoComponent
     [IsoId("_w2BtI07TEeSGH6dwL1uJcg")]
     [DisplayName("Event Parameter")]
     [IsoXmlTag("EvtParam")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> EventParameter { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IEvent2 : IIsoComponent
     [IsoId("_w2BtJU7TEeSGH6dwL1uJcg")]
     [DisplayName("Event Description")]
     [IsoXmlTag("EvtDesc")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? EventDescription { get; }
 
     /// <summary>
@@ -41,5 +47,6 @@ public interface IEvent2 : IIsoComponent
     [IsoId("_w2BtJ07TEeSGH6dwL1uJcg")]
     [DisplayName("Event Time")]
     [IsoXmlTag("EvtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? EventTime { get; }
 }

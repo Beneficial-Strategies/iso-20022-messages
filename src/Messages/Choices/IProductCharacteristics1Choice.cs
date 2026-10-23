@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies that the category of a product may be indicated by a code or by free text.
 /// </summary>
 [IsoId("_RbrR09p-Ed-ak6NoX_4Aeg_-1771903850")]
+[IsoDisplayName(@"Product Characteristics 1 Choice")]
 public interface IProductCharacteristics1Choice : IIsoChoice { }

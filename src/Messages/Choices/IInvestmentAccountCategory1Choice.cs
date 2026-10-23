@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the category of investment account.
 /// </summary>
 [IsoId("_SqpDQRRIEeOKWo1NF21OVw")]
+[IsoDisplayName(@"Investment Account Category 1 Choice")]
 public interface IInvestmentAccountCategory1Choice : IIsoChoice { }

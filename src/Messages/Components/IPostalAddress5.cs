@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Address of a party expressed in a formal structure, usually according to the country&apos;s postal services specifications.
 /// </summary>
 [IsoId("_QGvfMtp-Ed-ak6NoX_4Aeg_1397720211")]
+[IsoDisplayName(@"Postal Address")]
 public interface IPostalAddress5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPostalAddress5 : IIsoComponent
     [IsoId("_QGvfM9p-Ed-ak6NoX_4Aeg_1397720303")]
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? StreetName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPostalAddress5 : IIsoComponent
     [IsoId("_QGvfNNp-Ed-ak6NoX_4Aeg_1397720582")]
     [DisplayName("Post Code Identification")]
     [IsoXmlTag("PstCdId")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? PostCodeIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPostalAddress5 : IIsoComponent
     [IsoId("_QGvfNdp-Ed-ak6NoX_4Aeg_1397720643")]
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TownName { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IPostalAddress5 : IIsoComponent
     [IsoId("_QGvfNtp-Ed-ak6NoX_4Aeg_1397720673")]
     [DisplayName("Country Sub Division")]
     [IsoXmlTag("CtrySubDvsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CountrySubDivision { get; }
 
     /// <summary>

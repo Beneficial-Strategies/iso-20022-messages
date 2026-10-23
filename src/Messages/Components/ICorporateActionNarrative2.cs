@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information about the CA event.
 /// </summary>
 [IsoId("_UMZtAdp-Ed-ak6NoX_4Aeg_325732462")]
+[IsoDisplayName(@"Corporate Action Narrative")]
 public interface ICorporateActionNarrative2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionNarrative2 : IIsoComponent
     [IsoId("_UMZtAtp-Ed-ak6NoX_4Aeg_339584321")]
     [DisplayName("Information Conditions")]
     [IsoXmlTag("InfConds")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? InformationConditions { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICorporateActionNarrative2 : IIsoComponent
     [IsoId("_UMZtA9p-Ed-ak6NoX_4Aeg_339584413")]
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? InformationToComplyWith { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ICorporateActionNarrative2 : IIsoComponent
     [IsoId("_UMZtBNp-Ed-ak6NoX_4Aeg_339584383")]
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? TaxationConditions { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ICorporateActionNarrative2 : IIsoComponent
     [IsoId("_UMZtBdp-Ed-ak6NoX_4Aeg_351590771")]
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? DeclarationDetails { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface ICorporateActionNarrative2 : IIsoComponent
     [IsoId("_UMZtBtp-Ed-ak6NoX_4Aeg_722848075")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? RegistrationDetails { get; }
 
     /// <summary>
@@ -57,5 +68,7 @@ public interface ICorporateActionNarrative2 : IIsoComponent
     [IsoId("_UMZtB9p-Ed-ak6NoX_4Aeg_339584299")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalText { get; }
 }

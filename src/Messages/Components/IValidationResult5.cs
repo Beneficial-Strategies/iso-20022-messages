@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed description of the differences.
 /// </summary>
 [IsoId("_Ra7q8dp-Ed-ak6NoX_4Aeg_-1034400483")]
+[IsoDisplayName(@"Validation Result")]
 public interface IValidationResult5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IValidationResult5 : IIsoComponent
     [IsoId("_Ra7q8tp-Ed-ak6NoX_4Aeg_-1034400369")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number SequenceNumber { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IValidationResult5 : IIsoComponent
     [IsoId("_Ra7q89p-Ed-ak6NoX_4Aeg_-1034400461")]
     [DisplayName("Rule Identification")]
     [IsoXmlTag("RuleId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RuleIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IValidationResult5 : IIsoComponent
     [IsoId("_Ra7q9Np-Ed-ak6NoX_4Aeg_-1034400430")]
     [DisplayName("Rule Description")]
     [IsoXmlTag("RuleDesc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text RuleDescription { get; }
 
     /// <summary>
@@ -41,5 +47,6 @@ public interface IValidationResult5 : IIsoComponent
     [IsoId("_Ra7q9dp-Ed-ak6NoX_4Aeg_-1034400306")]
     [DisplayName("Mis Matched Element")]
     [IsoXmlTag("MisMtchdElmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IElementIdentification1> MisMatchedElement { get; }
 }

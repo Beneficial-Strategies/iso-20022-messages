@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date and place of birth of a person.
 /// </summary>
 [IsoId("_QBE8Gdp-Ed-ak6NoX_4Aeg_1131681932")]
+[IsoDisplayName(@"Date And Place Of Birth")]
 public interface IDateAndPlaceOfBirth : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDateAndPlaceOfBirth : IIsoComponent
     [IsoId("_QBE8Gtp-Ed-ak6NoX_4Aeg_-1166836636")]
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate BirthDate { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IDateAndPlaceOfBirth : IIsoComponent
     [IsoId("_QBOtENp-Ed-ak6NoX_4Aeg_-5969904")]
     [DisplayName("Province Of Birth")]
     [IsoXmlTag("PrvcOfBirth")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProvinceOfBirth { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IDateAndPlaceOfBirth : IIsoComponent
     [IsoId("_QBOtEdp-Ed-ak6NoX_4Aeg_-893474033")]
     [DisplayName("City Of Birth")]
     [IsoXmlTag("CityOfBirth")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CityOfBirth { get; }
 
     /// <summary>

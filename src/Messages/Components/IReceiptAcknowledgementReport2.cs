@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the original request. Identifies the message being acknowledged and its status
 /// </summary>
 [IsoId("_WhpTYZb4Eee4htziCyV8eA")]
+[IsoDisplayName(@"Receipt Acknowledgement Report")]
 public interface IReceiptAcknowledgementReport2 : IIsoComponent
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period11Choice;
 /// <summary>
 /// From To Date Time.
 /// </summary>
+[IsoDisplayName(@"From To Date Time")]
 public interface IFromToDateTime : IPeriod11Choice, IIsoChoiceVariant
 {
     /// <summary>

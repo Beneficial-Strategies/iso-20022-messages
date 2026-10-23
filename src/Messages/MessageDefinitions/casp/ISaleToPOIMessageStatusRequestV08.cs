@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.casp;
     "SaleToPOIMsgStsReq",
     "urn:iso:std:iso:20022:tech:xsd:casp.014.001.08"
 )]
+[IsoDisplayName(@"Sale To POI Message Status Request V08")]
 public interface ISaleToPOIMessageStatusRequestV08 : IOuterRecord
 {
     /// <summary>

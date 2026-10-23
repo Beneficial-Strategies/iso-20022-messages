@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the reason of a rejection of an election cancellation request.
 /// </summary>
 [IsoId("_Roovxdp-Ed-ak6NoX_4Aeg_-1408419853")]
+[IsoDisplayName(@"Rejection Reason 9 Format Choice")]
 public interface IRejectionReason9FormatChoice : IIsoChoice { }

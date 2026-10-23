@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError7Cho
 /// <summary>
 /// Operational Error.
 /// </summary>
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : ICollateralValueReportOrError7Choice, IIsoChoiceVariant
 {
     /// <summary>

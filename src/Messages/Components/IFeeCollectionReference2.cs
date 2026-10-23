@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fee Collection Reference2.
 /// </summary>
 [IsoId("_ghqtIZBvEe6TWIDarRgYow")]
+[IsoDisplayName(@"Fee Collection Reference2")]
 public interface IFeeCollectionReference2 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IFeeCollectionReference2 : IIsoComponent
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFeeCollectionIdentification1> Identification { get; }
 }

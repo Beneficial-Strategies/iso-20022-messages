@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to an original transaction.
 /// </summary>
 [IsoId("_MXuoERNZEfC1ZfCQz0xB3g")]
+[IsoDisplayName(@"Original Transaction4")]
 public interface IOriginalTransaction4 : IIsoComponent
 {
     /// <summary>
@@ -121,6 +122,7 @@ public interface IOriginalTransaction4 : IIsoComponent
     [IsoId("_Me61XRNZEfC1ZfCQz0xB3g")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardExchangeRate1> ExchangeRate { get; }
 
     /// <summary>
@@ -137,6 +139,7 @@ public interface IOriginalTransaction4 : IIsoComponent
     [IsoId("_Me61YRNZEfC1ZfCQz0xB3g")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAmounts5> AdditionalAmount { get; }
 
     /// <summary>
@@ -161,6 +164,7 @@ public interface IOriginalTransaction4 : IIsoComponent
     [IsoId("_Me61bRNZEfC1ZfCQz0xB3g")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent16> POIComponent { get; }
 
     /// <summary>
@@ -217,6 +221,7 @@ public interface IOriginalTransaction4 : IIsoComponent
     [IsoId("_Me61exNZEfC1ZfCQz0xB3g")]
     [DisplayName("Cardholder")]
     [IsoXmlTag("Crdhldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholder23> Cardholder { get; }
 
     /// <summary>
@@ -225,6 +230,7 @@ public interface IOriginalTransaction4 : IIsoComponent
     [IsoId("_Me61fRNZEfC1ZfCQz0xB3g")]
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerification9> Verification { get; }
 
     /// <summary>
@@ -233,6 +239,7 @@ public interface IOriginalTransaction4 : IIsoComponent
     [IsoId("_Me61fxNZEfC1ZfCQz0xB3g")]
     [DisplayName("Risk")]
     [IsoXmlTag("Rsk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRiskContext4> Risk { get; }
 
     /// <summary>
@@ -241,6 +248,7 @@ public interface IOriginalTransaction4 : IIsoComponent
     [IsoId("_Me61gRNZEfC1ZfCQz0xB3g")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -249,6 +257,7 @@ public interface IOriginalTransaction4 : IIsoComponent
     [IsoId("_Me61gxNZEfC1ZfCQz0xB3g")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalService3> AdditionalService { get; }
 
     /// <summary>
@@ -265,6 +274,7 @@ public interface IOriginalTransaction4 : IIsoComponent
     [IsoId("_Me61hxNZEfC1ZfCQz0xB3g")]
     [DisplayName("Deposit Details")]
     [IsoXmlTag("DpstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDepositDetails4> DepositDetails { get; }
 
     /// <summary>
@@ -289,6 +299,7 @@ public interface IOriginalTransaction4 : IIsoComponent
     [IsoId("_Me61jRNZEfC1ZfCQz0xB3g")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -305,6 +316,7 @@ public interface IOriginalTransaction4 : IIsoComponent
     [IsoId("_Me61kRNZEfC1ZfCQz0xB3g")]
     [DisplayName("Dispute Data")]
     [IsoXmlTag("DsptData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeData5> DisputeData { get; }
 
     /// <summary>
@@ -313,6 +325,7 @@ public interface IOriginalTransaction4 : IIsoComponent
     [IsoId("_Me61kxNZEfC1ZfCQz0xB3g")]
     [DisplayName("Documentation")]
     [IsoXmlTag("Dcmnttn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeDocumentation2> Documentation { get; }
 
     /// <summary>

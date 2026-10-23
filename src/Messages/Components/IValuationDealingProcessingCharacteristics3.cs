@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Valuation dealing processing characteristics linked to the instrument, that is, not to the market.
 /// </summary>
 [IsoId("_DovC8UlNEeiZP-CimVE7Hg")]
+[IsoDisplayName(@"Valuation Dealing Processing Characteristics")]
 public interface IValuationDealingProcessingCharacteristics3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IValuationDealingProcessingCharacteristics3 : IIsoComponent
     [IsoId("_D4puRUlNEeiZP-CimVE7Hg")]
     [DisplayName("Valuation Frequency Description")]
     [IsoXmlTag("ValtnFrqcyDesc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? ValuationFrequencyDescription { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IValuationDealingProcessingCharacteristics3 : IIsoComponent
     [IsoId("_lx4-wF80Eeicg40_9gK9vQ")]
     [DisplayName("Valuation Time")]
     [IsoXmlTag("ValtnTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? ValuationTime { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IValuationDealingProcessingCharacteristics3 : IIsoComponent
     [IsoId("_D4puR0lNEeiZP-CimVE7Hg")]
     [DisplayName("Decimalisation Units")]
     [IsoXmlTag("DcmlstnUnits")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? DecimalisationUnits { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IValuationDealingProcessingCharacteristics3 : IIsoComponent
     [IsoId("_D4puSUlNEeiZP-CimVE7Hg")]
     [DisplayName("Decimalisation Price")]
     [IsoXmlTag("DcmlstnPric")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? DecimalisationPrice { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IValuationDealingProcessingCharacteristics3 : IIsoComponent
     [IsoId("_D4puS0lNEeiZP-CimVE7Hg")]
     [DisplayName("Dual Fund Indicator")]
     [IsoXmlTag("DualFndInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DualFundIndicator { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IValuationDealingProcessingCharacteristics3 : IIsoComponent
     [IsoId("_D4puT0lNEeiZP-CimVE7Hg")]
     [DisplayName("Price Currency")]
     [IsoXmlTag("PricCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveCurrencyCode> PriceCurrency { get; }
 
     /// <summary>
@@ -81,5 +89,6 @@ public interface IValuationDealingProcessingCharacteristics3 : IIsoComponent
     [IsoId("_TaV6cWAKEeiNMJ262H2pWg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to search for currency exchange information. A name may be given to the new query.
 /// </summary>
 [IsoId("_H5cuNZlZEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Currency Exchange Criteria")]
 public interface ICurrencyExchangeCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICurrencyExchangeCriteria2 : IIsoComponent
     [IsoId("_IB770ZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NewQueryName { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface ICurrencyExchangeCriteria2 : IIsoComponent
     [IsoId("_IB7705lZEeeE1Ya-LgRsuQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICurrencyExchangeSearchCriteria1> SearchCriteria { get; }
 }

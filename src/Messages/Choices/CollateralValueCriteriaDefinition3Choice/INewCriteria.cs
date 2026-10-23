@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueCriteriaDefinitio
 /// </summary>
 [IsoId("__xM6gzpsEemk2e6qGBk8IQ")]
 [IsoXmlTag("NewCrit")]
+[IsoDisplayName(@"New Criteria")]
 public interface INewCriteria : ICollateralValueCriteriaDefinition3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface INewCriteria : ICollateralValueCriteriaDefinition3Choice, IIsoC
     [IsoId("__7yZ4TpsEemk2e6qGBk8IQ")]
     [DisplayName("Query Name")]
     [IsoXmlTag("QryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryName { get; }
 
     /// <summary>

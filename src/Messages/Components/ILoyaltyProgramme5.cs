@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Loyalty Programme5.
 /// </summary>
 [IsoId("_OykWwXTnEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Loyalty Programme5")]
 public interface ILoyaltyProgramme5 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface ILoyaltyProgramme5 : IIsoComponent
     /// </summary>
     [DisplayName("Eligibility")]
     [IsoXmlTag("Elgblty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<TrueFalseIndicator> Eligibility { get; }
 
     /// <summary>

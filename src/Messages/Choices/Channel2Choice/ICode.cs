@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Channel2Choice;
 /// Specifies a channel by means of a code.
 /// </summary>
 [IsoId("_-FRIsBg2EeKnW4lR85q-0A")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChannel2Choice, IIsoChoiceVariant
 {
     /// <summary>

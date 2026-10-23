@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_Qu04IUiQEeOdL6nMHefDgg")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification64 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPartyIdentification64 : IIsoComponent
     [IsoId("_Q9tBo0iQEeOdL6nMHefDgg")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier? AnyBIC { get; }
 
     /// <summary>

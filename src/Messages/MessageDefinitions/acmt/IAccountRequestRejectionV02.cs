@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_iLTnoQ1TEeKGXqvMN6jpiw")]
 [IsoMessage("acmt.011.001.02", "AcctReqRjctn", "urn:iso:std:iso:20022:tech:xsd:acmt.011.001.02")]
+[Description(@"The AccountRequestRejection message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation, if the business content is not valid.")]
+[IsoDisplayName(@"Account Request Rejection V")]
 public interface IAccountRequestRejectionV02 : IOuterRecord
 {
     /// <summary>
@@ -44,6 +46,7 @@ public interface IAccountRequestRejectionV02 : IOuterRecord
     [IsoId("_iLTnqw1TEeKGXqvMN6jpiw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountForAction1> AccountIdentification { get; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public interface IAccountRequestRejectionV02 : IOuterRecord
     [IsoId("_iLTnsw1TEeKGXqvMN6jpiw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature2> DigitalSignature { get; }
 
     /// <summary>
@@ -68,5 +72,6 @@ public interface IAccountRequestRejectionV02 : IOuterRecord
     [IsoId("_PQieIA4AEeKGXqvMN6jpiw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

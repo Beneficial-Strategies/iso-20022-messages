@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies rates related to a corporate action option.
 /// </summary>
 [IsoId("_TXznW9p-Ed-ak6NoX_4Aeg_-1470635815")]
+[IsoDisplayName(@"Corporate Action Rate")]
 public interface ICorporateActionRate8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionRate8 : IIsoComponent
     [IsoId("_TXznXNp-Ed-ak6NoX_4Aeg_-1111386502")]
     [DisplayName("Proposed Rate")]
     [IsoXmlTag("PropsdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ProposedRate { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ICorporateActionRate8 : IIsoComponent
     [IsoId("_TX8xQdp-Ed-ak6NoX_4Aeg_-802008412")]
     [DisplayName("Requested Taxation Rate")]
     [IsoXmlTag("ReqdTaxtnRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? RequestedTaxationRate { get; }
 }

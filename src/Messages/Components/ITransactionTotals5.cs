@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Total of credit or debit transactions.
 /// </summary>
 [IsoId("_xVxxEXu-EeSLmfFG0DG7zQ")]
+[IsoDisplayName(@"Transaction Totals")]
 public interface ITransactionTotals5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITransactionTotals5 : IIsoComponent
     [IsoId("_Jv4vgHu_EeSLmfFG0DG7zQ")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Number { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ITransactionTotals5 : IIsoComponent
     [IsoId("_RTCX4Hu_EeSLmfFG0DG7zQ")]
     [DisplayName("Charge Back Number")]
     [IsoXmlTag("ChrgBckNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number ChargeBackNumber { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ITransactionTotals5 : IIsoComponent
     [IsoId("_ZPLIAHu_EeSLmfFG0DG7zQ")]
     [DisplayName("Reversal Number")]
     [IsoXmlTag("RvslNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number ReversalNumber { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Logout Request message.
 /// </summary>
 [IsoId("_pv3ZIN6JEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Logout Request")]
 public interface ILogoutRequest1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface ILogoutRequest1 : IIsoComponent
     [IsoId("_z9QaMN6JEeiwsev40qZGEQ")]
     [DisplayName("Maintenance Allowed")]
     [IsoXmlTag("MntncAllwd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MaintenanceAllowed { get; }
 }

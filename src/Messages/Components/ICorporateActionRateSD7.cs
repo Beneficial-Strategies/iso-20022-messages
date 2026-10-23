@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action option securities movement rate details.
 /// </summary>
 [IsoId("_1kgnYTL3EeKU9IrkkToqcw_-1578187294")]
+[IsoDisplayName(@"Corporate Action Rate SD")]
 public interface ICorporateActionRateSD7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionRateSD7 : IIsoComponent
     [IsoId("_1kgnYjL3EeKU9IrkkToqcw_-753142535")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICorporateActionRateSD7 : IIsoComponent
     [IsoId("_1kgnZDL3EeKU9IrkkToqcw_1261231895")]
     [DisplayName("Estimated Rate Flag")]
     [IsoXmlTag("EstmtdRateFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EstimatedRateFlag { get; }
 
     /// <summary>

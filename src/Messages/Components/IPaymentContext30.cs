@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Context30.
 /// </summary>
 [IsoId("_fri9QKacEe-I_MmTxsFykg")]
+[IsoDisplayName(@"Payment Context30")]
 public interface IPaymentContext30 : IIsoComponent
 {
     /// <summary>

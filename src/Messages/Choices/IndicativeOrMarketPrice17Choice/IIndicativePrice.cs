@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndicativeOrMarketPrice17Choice;
 /// <summary>
 /// Indicative Price.
 /// </summary>
+[IsoDisplayName(@"Indicative Price")]
 public interface IIndicativePrice : IIndicativeOrMarketPrice17Choice, IIsoChoiceVariant
 {
     /// <summary>

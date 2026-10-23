@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Range of sequence numbers related to card transactions.
 /// </summary>
 [IsoId("_t5o4wVkyEeGeoaLUQk__nA_-981636366")]
+[IsoDisplayName(@"Card Sequence Number Range")]
 public interface ICardSequenceNumberRange1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICardSequenceNumberRange1 : IIsoComponent
     [IsoId("_t5o4wlkyEeGeoaLUQk__nA_1543954032")]
     [DisplayName("First Transaction")]
     [IsoXmlTag("FrstTx")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FirstTransaction { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ICardSequenceNumberRange1 : IIsoComponent
     [IsoId("_t5ypwFkyEeGeoaLUQk__nA_407420783")]
     [DisplayName("Last Transaction")]
     [IsoXmlTag("LastTx")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LastTransaction { get; }
 }

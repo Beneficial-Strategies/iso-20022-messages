@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionForMeetingResolut
 /// Vote recommendation for resolutions added during the meeting.
 /// </summary>
 [IsoId("_n0rhA64dEemG7MmivSuE5g")]
+[IsoDisplayName(@"Vote Indication")]
 public interface IVoteIndication : IVoteInstructionForMeetingResolution3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

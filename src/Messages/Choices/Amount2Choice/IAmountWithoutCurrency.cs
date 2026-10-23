@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount2Choice;
 /// Number of monetary units specified in a currency where the unit of currency is implied by the context.
 /// </summary>
 [IsoId("_75DzlaMgEeCJ6YNENx4h-w_-106626338")]
+[IsoDisplayName(@"Amount Without Currency")]
 public interface IAmountWithoutCurrency : IAmount2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

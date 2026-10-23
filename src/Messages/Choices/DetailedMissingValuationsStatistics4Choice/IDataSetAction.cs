@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatist
 /// Specifies the type of report activity for a specific reporting period.
 /// </summary>
 [IsoId("_x1GY4VyGEe24CqbZJK5XxA")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : IDetailedMissingValuationsStatistics4Choice, IIsoChoiceVariant
 {
     /// <summary>

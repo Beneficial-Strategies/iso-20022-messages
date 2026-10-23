@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information needed due to regulatory and statutory requirements.
 /// </summary>
 [IsoId("_SnOe_9p-Ed-ak6NoX_4Aeg_699509907")]
+[IsoDisplayName(@"Structured Regulatory Reporting")]
 public interface IStructuredRegulatoryReporting2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStructuredRegulatoryReporting2 : IIsoComponent
     [IsoId("_SnYP8Np-Ed-ak6NoX_4Aeg_766002068")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.Max3Text)]
+    [StringLength(3, MinimumLength = 1)]
     Max3Text? Code { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IStructuredRegulatoryReporting2 : IIsoComponent
     [IsoId("_SnYP8tp-Ed-ak6NoX_4Aeg_766002145")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Information { get; }
 }

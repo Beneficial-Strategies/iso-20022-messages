@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_rmuIWNE8Ed-BzquC8wXy7w_-505567278")]
 [IsoMessage("tsmt.020.001.02", "MisMtchAccptnc", "urn:iso:std:iso:20022:tech:xsd:tsmt.020.001.02")]
+[Description(@"Scope|The MisMatchAcceptance message is sent by the party requested to accept or reject data set mis-matches to the matching application.|This message is used to accept mis-matches between data sets and the related baseline.|Usage|The MisMatchAcceptance message can be sent by the party requested to accept or reject data set mis-matches to inform that it accepts the data sets.|The message can be sent in response to a DataSetMatchReport message conveying mis-matches.|The information about the acceptance of the mis-matched data sets will be forwarded by the matching application to the submitter of the data sets by a MisMatchAcceptanceNotification message.|The rejection of mis-matched data sets can be achieved by sending a MisMatchRejection message.")]
+[IsoDisplayName(@"Mis Match Acceptance V")]
 public interface IMisMatchAcceptanceV02 : IOuterRecord
 {
     /// <summary>

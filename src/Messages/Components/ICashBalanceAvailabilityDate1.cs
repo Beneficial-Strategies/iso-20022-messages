@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates when the amount of money will become available.
 /// </summary>
 [IsoId("_TU0kytp-Ed-ak6NoX_4Aeg_1268888405")]
+[IsoDisplayName(@"Cash Balance Availability Date")]
 public interface ICashBalanceAvailabilityDate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICashBalanceAvailabilityDate1 : IIsoComponent
     [IsoId("_TU0ky9p-Ed-ak6NoX_4Aeg_1379712355")]
     [DisplayName("Number Of Days")]
     [IsoXmlTag("NbOfDays")]
+    [IsoSimpleType(IsoSimpleType.Max15PlusSignedNumericText)]
     Max15PlusSignedNumericText NumberOfDays { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICashBalanceAvailabilityDate1 : IIsoComponent
     [IsoId("_TU0kzNp-Ed-ak6NoX_4Aeg_1424965762")]
     [DisplayName("Actual Date")]
     [IsoXmlTag("ActlDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ActualDate { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason7FormatChoice;
 /// Standard code to specify the reason of a rejection cancellation request.
 /// </summary>
 [IsoId("_RoovwNp-Ed-ak6NoX_4Aeg_255567701")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectionReason7FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

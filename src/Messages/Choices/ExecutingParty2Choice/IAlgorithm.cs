@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExecutingParty2Choice;
 /// <summary>
 /// Algorithm.
 /// </summary>
+[IsoDisplayName(@"Algorithm")]
 public interface IAlgorithm : IExecutingParty2Choice, IIsoChoiceVariant
 {
     /// <summary>

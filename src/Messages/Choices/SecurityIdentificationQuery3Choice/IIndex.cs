@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery3Choi
 /// Identification of the index on which the financial instrument is based.
 /// </summary>
 [IsoId("_P-19CdGgEeaQk737TH1Fzw")]
+[IsoDisplayName(@"Index")]
 public interface IIndex : ISecurityIdentificationQuery3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

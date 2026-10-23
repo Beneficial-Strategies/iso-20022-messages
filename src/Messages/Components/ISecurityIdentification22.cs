@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice between ISIN and an alternative format for the identification of a financial instrument. ISIN is the preferred format.
 /// </summary>
 [IsoId("_DGuj8YrrEeq91phomTRDDA")]
+[IsoDisplayName(@"Security Identification")]
 public interface ISecurityIdentification22 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityIdentification22 : IIsoComponent
     [IsoId("_DHeK0YrrEeq91phomTRDDA")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISIN2021Identifier)]
     ISIN2021Identifier? ISIN { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ISecurityIdentification22 : IIsoComponent
     [IsoId("_ESTmQYrrEeq91phomTRDDA")]
     [DisplayName("Unique Product Identifier")]
     [IsoXmlTag("UnqPdctIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? UniqueProductIdentifier { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface ISecurityIdentification22 : IIsoComponent
     [IsoId("_DHeK04rrEeq91phomTRDDA")]
     [DisplayName("Alternative Instrument Identification")]
     [IsoXmlTag("AltrntvInstrmId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? AlternativeInstrumentIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Return provided by a financial instrument.
 /// </summary>
 [IsoId("_1qNR4Wp7EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Yield Calculation")]
 public interface IYieldCalculation6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IYieldCalculation6 : IIsoComponent
     [IsoId("_12n9QWp7EemmaZLSPtWX5A")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IYieldCalculation6 : IIsoComponent
     [IsoId("_12n9X2p7EemmaZLSPtWX5A")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValueDate { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface IYieldCalculation6 : IIsoComponent
     [IsoId("_12n9b2p7EemmaZLSPtWX5A")]
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CalculationDate { get; }
 }

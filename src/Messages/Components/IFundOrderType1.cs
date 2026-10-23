@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the fund order type.
 /// </summary>
 [IsoId("_VA2oydp-Ed-ak6NoX_4Aeg_-1845301749")]
+[IsoDisplayName(@"Fund Order Type")]
 public interface IFundOrderType1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IFundOrderType1 : IIsoComponent
     [IsoId("_VA2oy9p-Ed-ak6NoX_4Aeg_-1756644789")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

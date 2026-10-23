@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Manifest Data2.
 /// </summary>
 [IsoId("_kz8lEexNEe6M4Kz-BKMIbA")]
+[IsoDisplayName(@"Manifest Data2")]
 public interface IManifestData2 : IIsoComponent
 {
     /// <summary>

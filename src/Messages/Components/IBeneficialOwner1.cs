@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the beneficial owner of the securities.
 /// </summary>
 [IsoId("_UDK4gtp-Ed-ak6NoX_4Aeg_988649524")]
+[IsoDisplayName(@"Beneficial Owner")]
 public interface IBeneficialOwner1 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IBeneficialOwner1 : IIsoComponent
     [IsoId("_UDK4iNp-Ed-ak6NoX_4Aeg_1671667903")]
     [DisplayName("Certification Indicator")]
     [IsoXmlTag("CertfctnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CertificationIndicator { get; }
 
     /// <summary>
@@ -73,6 +75,8 @@ public interface IBeneficialOwner1 : IIsoComponent
     [IsoId("_UDK4itp-Ed-ak6NoX_4Aeg_1438879300")]
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? DeclarationDetails { get; }
 
     /// <summary>

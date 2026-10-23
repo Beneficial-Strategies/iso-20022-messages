@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements qualifying the interest rate.
 /// </summary>
 [IsoId("_Q-niaNp-Ed-ak6NoX_4Aeg_-1215412850")]
+[IsoDisplayName(@"Rate")]
 public interface IRate2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRate2 : IIsoComponent
     [IsoId("_Q-xTYNp-Ed-ak6NoX_4Aeg_-1215412849")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? Sign { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IRate2 : IIsoComponent
     [IsoId("_Q-xTYdp-Ed-ak6NoX_4Aeg_-1215412848")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Rate { get; }
 }

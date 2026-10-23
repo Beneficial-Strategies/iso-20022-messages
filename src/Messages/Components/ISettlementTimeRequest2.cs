@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the requested settlement time(s) of the payment instruction.
 /// </summary>
 [IsoId("_QIrY6dp-Ed-ak6NoX_4Aeg_2050617089")]
+[IsoDisplayName(@"Settlement Time Request")]
 public interface ISettlementTimeRequest2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementTimeRequest2 : IIsoComponent
     [IsoId("_QIrY6tp-Ed-ak6NoX_4Aeg_2050617120")]
     [DisplayName("CLS Time")]
     [IsoXmlTag("CLSTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? CLSTime { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISettlementTimeRequest2 : IIsoComponent
     [IsoId("_QIrY69p-Ed-ak6NoX_4Aeg_2142970270")]
     [DisplayName("Till Time")]
     [IsoXmlTag("TillTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? TillTime { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISettlementTimeRequest2 : IIsoComponent
     [IsoId("_QIrY7Np-Ed-ak6NoX_4Aeg_2123575201")]
     [DisplayName("From Time")]
     [IsoXmlTag("FrTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? FromTime { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ISettlementTimeRequest2 : IIsoComponent
     [IsoId("_QI1J4Np-Ed-ak6NoX_4Aeg_2138351566")]
     [DisplayName("Reject Time")]
     [IsoXmlTag("RjctTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? RejectTime { get; }
 }

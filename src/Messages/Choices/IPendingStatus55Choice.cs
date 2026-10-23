@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a reason and no reason for the general meeting instruction processing pending status.
 /// </summary>
 [IsoId("_Tfp1KbKdEemux5trsZcCpw")]
+[IsoDisplayName(@"Pending Status 55 Choice")]
 public interface IPendingStatus55Choice : IIsoChoice { }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of document referred by the creditor.
 /// </summary>
 [IsoId("_7zR6pTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Creditor Reference Type2Choice")]
 public interface ICreditorReferenceType2Choice : IIsoChoice { }

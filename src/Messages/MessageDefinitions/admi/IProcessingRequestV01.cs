@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// </summary>
 [IsoId("_4X6DQJXbEeaYkf5FCqYMeA")]
 [IsoMessage("admi.017.001.01", "PrcgReq", "urn:iso:std:iso:20022:tech:xsd:admi.017.001.01")]
+[Description(@"The Processing Request message is sent by a participant to a central system to request the initiation of a system process suported by a central system.")]
+[IsoDisplayName(@"Processing Request V")]
 public interface IProcessingRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -20,6 +22,8 @@ public interface IProcessingRequestV01 : IOuterRecord
     [IsoId("_Tos68ZXcEeaYkf5FCqYMeA")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -28,6 +32,7 @@ public interface IProcessingRequestV01 : IOuterRecord
     [IsoId("_V3DB0ZXcEeaYkf5FCqYMeA")]
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SettlementSessionIdentifier { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a fertilizer derivative of type potash.
 /// </summary>
 [IsoId("_qEcycU8REe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Fertilizer Commodity Potash")]
 public interface IFertilizerCommodityPotash2 : IIsoComponent
 {
     /// <summary>

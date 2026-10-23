@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Chargeback initiation message record.
 /// </summary>
 [IsoId("_toPaAFZWEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Charge Back Initiation")]
 public interface IChargeBackInitiation : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IChargeBackInitiation : IRecordMessage1Choice, IIsoChoiceVarian
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("ChrgBckInitn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

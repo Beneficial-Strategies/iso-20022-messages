@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identifies which information are involved by a modification request for party reference data.
 /// </summary>
 [IsoId("_x87oIYv-Eei289CGNqs21g")]
+[IsoDisplayName(@"System Party Modification 2 Choice")]
 public interface ISystemPartyModification2Choice : IIsoChoice { }

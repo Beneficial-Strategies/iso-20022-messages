@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code and a data source scheme to specify the type of natural person identification.
 /// </summary>
 [IsoId("_ql4v0Id6EemJ1cSJJmVYRQ")]
+[IsoDisplayName(@"Identification Type 45 Choice")]
 public interface IIdentificationType45Choice : IIsoChoice { }

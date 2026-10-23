@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit of amounts for the customer.
 /// </summary>
 [IsoId("_awno0Yq2EeSIDtZ76p6McQ")]
+[IsoDisplayName(@"ATM Transaction Amounts")]
 public interface IATMTransactionAmounts3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMTransactionAmounts3 : IIsoComponent
     [IsoId("_vxjE8Iq2EeSIDtZ76p6McQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMTransactionAmounts3 : IIsoComponent
     [IsoId("__7eV4Iq2EeSIDtZ76p6McQ")]
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Label { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the information that is searched through the definition of specific criteria.
 /// </summary>
 [IsoId("_YKC8sWdnEemMLeaDfmIfIA")]
+[IsoDisplayName(@"Securities Cancellation Query Definition1")]
 public interface ISecuritiesCancellationQueryDefinition1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the agents specific to the individual transaction.
 /// </summary>
 [IsoId("_tXX5MFkyEeGeoaLUQk__nA_-435108298")]
+[IsoDisplayName(@"Transaction Agents")]
 public interface ITransactionAgents3 : IIsoComponent
 {
     /// <summary>
@@ -89,5 +90,6 @@ public interface ITransactionAgents3 : IIsoComponent
     [IsoId("_tXq0IlkyEeGeoaLUQk__nA_-1025208769")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryAgent3> Proprietary { get; }
 }

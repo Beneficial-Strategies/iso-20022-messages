@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for the method used to compute accruing interest of a financial instrument
 /// </summary>
 [IsoId("_lTIUEdSaEemZdYGWu384Zw")]
+[IsoDisplayName(@"Compare Interest Computation Method")]
 public interface ICompareInterestComputationMethod2 : IIsoComponent
 {
     /// <summary>

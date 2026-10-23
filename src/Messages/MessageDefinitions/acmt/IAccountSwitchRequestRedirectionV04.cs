@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctSwtchReqRdrctn",
     "urn:iso:std:iso:20022:tech:xsd:acmt.030.001.04"
 )]
+[IsoDisplayName(@"Account Switch Request Redirection V04")]
 public interface IAccountSwitchRequestRedirectionV04 : IOuterRecord
 {
     /// <summary>
@@ -50,5 +51,6 @@ public interface IAccountSwitchRequestRedirectionV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

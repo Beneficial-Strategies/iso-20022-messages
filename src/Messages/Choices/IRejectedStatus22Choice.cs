@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies whether the status is provided with a reason or not.
 /// </summary>
 [IsoId("_6HV1B5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Rejected Status 22 Choice")]
 public interface IRejectedStatus22Choice : IIsoChoice { }

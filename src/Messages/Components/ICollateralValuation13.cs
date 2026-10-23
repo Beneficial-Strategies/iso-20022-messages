@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Valuation details of each piece of collateral posted.
 /// </summary>
 [IsoId("_eJF90SqUEeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Collateral Valuation")]
 public interface ICollateralValuation13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICollateralValuation13 : IIsoComponent
     [IsoId("_eg72ESqUEeyR9JrVGfaMKw")]
     [DisplayName("Collateral Identification")]
     [IsoXmlTag("CollId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CollateralIdentification { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ICollateralValuation13 : IIsoComponent
     [IsoId("_eg72GyqUEeyR9JrVGfaMKw")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface ICollateralValuation13 : IIsoComponent
     [IsoId("_eg72ISqUEeyR9JrVGfaMKw")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ExchangeRate { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface ICollateralValuation13 : IIsoComponent
     [IsoId("_eg72IyqUEeyR9JrVGfaMKw")]
     [DisplayName("Currency Haircut")]
     [IsoXmlTag("CcyHrcut")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? CurrencyHaircut { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface ICollateralValuation13 : IIsoComponent
     [IsoId("_eg72JSqUEeyR9JrVGfaMKw")]
     [DisplayName("Adjusted Rate")]
     [IsoXmlTag("AdjstdRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? AdjustedRate { get; }
 
     /// <summary>

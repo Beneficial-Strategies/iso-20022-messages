@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
 /// Provides status information related to an instruction cancellation request completed.
 /// </summary>
 [IsoId("_NpuVtl99Ee262vCSVgjImg")]
+[IsoDisplayName(@"Cancellation Completed")]
 public interface ICancellationCompleted
     : IInstructionCancellationRequestStatus16Choice,
         IIsoChoiceVariant

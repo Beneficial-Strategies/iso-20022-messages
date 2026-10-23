@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestorType3Choice;
 /// Investor type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_c8LMUeLxEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInvestorType3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Direct Debit Mandate8.
 /// </summary>
 [IsoId("_5v46AxwMEe6O0NdiBuX__w")]
+[IsoDisplayName(@"Direct Debit Mandate8")]
 public interface IDirectDebitMandate8 : IIsoComponent
 {
     /// <summary>

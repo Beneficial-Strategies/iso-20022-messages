@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus62Cho
 
 /// <summary>Instruction has been received, is processable and has been validated for further processing.</summary>
 [IsoId("_H9heW68wEfCx2aBifPEdRg")]
+[IsoDisplayName(@"Accepted For Further Processing")]
 public interface IAcceptedForFurtherProcessing
     : IInstructionProcessingStatus62Choice,
         IIsoChoiceVariant

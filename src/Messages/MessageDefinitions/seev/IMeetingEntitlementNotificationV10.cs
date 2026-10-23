@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "MtgEntitlmntNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:seev.003.001.10"
 )]
+[IsoDisplayName(@"Meeting Entitlement Notification V10")]
 public interface IMeetingEntitlementNotificationV10 : IOuterRecord
 {
     /// <summary>
@@ -50,6 +51,9 @@ public interface IMeetingEntitlementNotificationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition21> Security { get; }
 
     /// <summary>
@@ -78,5 +82,6 @@ public interface IMeetingEntitlementNotificationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

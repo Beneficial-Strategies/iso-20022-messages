@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the units used to quantify an energy.
 /// </summary>
 [IsoId("_GCAHUKfwEeW_OId9wS8dsQ")]
+[IsoDisplayName(@"Energy Quantity Unit 1 Choice")]
 public interface IEnergyQuantityUnit1Choice : IIsoChoice { }

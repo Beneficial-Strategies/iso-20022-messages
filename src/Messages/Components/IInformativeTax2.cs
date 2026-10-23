@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Informative Tax2.
 /// </summary>
 [IsoId("_1qys2RwMEe6O0NdiBuX__w")]
+[IsoDisplayName(@"Informative Tax2")]
 public interface IInformativeTax2 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IInformativeTax2 : IIsoComponent
     /// </summary>
     [DisplayName("Individual Tax")]
     [IsoXmlTag("IndvTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax40> IndividualTax { get; }
 }

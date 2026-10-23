@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate27Choice;
 /// </summary>
 [IsoId("_Z-T6Ucg6Eeu4ecZgAYuz5w")]
 [IsoXmlTag("Fxd")]
+[IsoDisplayName(@"Fixed")]
 public interface IFixed : IInterestRate27Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IFixed : IInterestRate27Choice, IIsoChoiceVariant
     [IsoId("_6GPnwa5qEeuo-IflVgGqiA")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>

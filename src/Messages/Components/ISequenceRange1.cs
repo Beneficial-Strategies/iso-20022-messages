@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a range of sequences from a start sequence to an end sequence.
 /// </summary>
 [IsoId("_22wBoIy0EeeGkvZr3jtnCQ")]
+[IsoDisplayName(@"Sequence Range")]
 public interface ISequenceRange1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISequenceRange1 : IIsoComponent
     [IsoId("_9nPeAIy0EeeGkvZr3jtnCQ")]
     [DisplayName("From Sequence")]
     [IsoXmlTag("FrSeq")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text FromSequence { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ISequenceRange1 : IIsoComponent
     [IsoId("__3Gn0Iy0EeeGkvZr3jtnCQ")]
     [DisplayName("To Sequence")]
     [IsoXmlTag("ToSeq")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ToSequence { get; }
 }

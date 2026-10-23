@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice between selected investment plans issued during previous years or the entirety of the investment plans.
 /// </summary>
 [IsoId("_jl0BAEj2EeG0Lek-7i1x-A_1558311877")]
+[IsoDisplayName(@"Previous Year")]
 public interface IPreviousYear3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPreviousYear3 : IIsoComponent
     [IsoId("_jl9yAEj2EeG0Lek-7i1x-A_982439671")]
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CashComponentIndicator { get; }
 }

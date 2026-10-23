@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the ex-post cost calculation basis.
 /// </summary>
 [IsoId("_Wb5bQJ9XEeqxTNfi5y7ywQ")]
+[IsoDisplayName(@"Ex Post Cost Calculation Basis 1 Choice")]
 public interface IExPostCostCalculationBasis1Choice : IIsoChoice { }

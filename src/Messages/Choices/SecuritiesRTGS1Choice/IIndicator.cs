@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesRTGS1Choice;
 /// Specifies whether the settlement transaction is to be settled through an RTGS or a non RTGS system.
 /// </summary>
 [IsoId("_QwK2sNp-Ed-ak6NoX_4Aeg_-571425728")]
+[IsoDisplayName(@"Indicator")]
 public interface IIndicator : ISecuritiesRTGS1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIndicator : ISecuritiesRTGS1Choice, IIsoChoiceVariant
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the card transaction.
 /// </summary>
 [IsoId("_zU1DIYIeEeSvPp7yXrNQIw")]
+[IsoDisplayName(@"Card Transaction Detail")]
 public interface ICardTransactionDetail3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardTransactionDetail3 : IIsoComponent
     [IsoId("_DCm_oIKYEeSIRfXNMHH5mQ")]
     [DisplayName("Transaction Fees")]
     [IsoXmlTag("TxFees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount11> TransactionFees { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICardTransactionDetail3 : IIsoComponent
     [IsoId("_zhWcM4IeEeSvPp7yXrNQIw")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount10> AdditionalAmounts { get; }
 
     /// <summary>
@@ -51,6 +54,7 @@ public interface ICardTransactionDetail3 : IIsoComponent
     [IsoId("_zhWcN4IeEeSvPp7yXrNQIw")]
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidityDate { get; }
 
     /// <summary>
@@ -59,6 +63,7 @@ public interface ICardTransactionDetail3 : IIsoComponent
     [IsoId("_zhWcOYIeEeSvPp7yXrNQIw")]
     [DisplayName("Unattended Level Category")]
     [IsoXmlTag("UattnddLvlCtgy")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? UnattendedLevelCategory { get; }
 
     /// <summary>
@@ -100,5 +105,6 @@ public interface ICardTransactionDetail3 : IIsoComponent
     [IsoId("_zhWcQ4IeEeSvPp7yXrNQIw")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Subscription Execution14.
 /// </summary>
 [IsoId("_6A4jaRwMEe6O0NdiBuX__w")]
+[IsoDisplayName(@"Subscription Execution14")]
 public interface ISubscriptionExecution14 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface ISubscriptionExecution14 : IIsoComponent
     /// </summary>
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType4Choice> OrderType { get; }
 
     /// <summary>
@@ -100,6 +102,7 @@ public interface ISubscriptionExecution14 : IIsoComponent
     /// </summary>
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice22> InformativePriceDetails { get; }
 
     /// <summary>
@@ -156,6 +159,7 @@ public interface ISubscriptionExecution14 : IIsoComponent
     /// </summary>
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms37> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -275,6 +279,7 @@ public interface ISubscriptionExecution14 : IIsoComponent
     /// </summary>
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; }
 
     /// <summary>
@@ -303,6 +308,7 @@ public interface ISubscriptionExecution14 : IIsoComponent
     /// </summary>
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary49> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -317,6 +323,7 @@ public interface ISubscriptionExecution14 : IIsoComponent
     /// </summary>
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISourceOfCash1Choice> SourceOfCash { get; }
 
     /// <summary>

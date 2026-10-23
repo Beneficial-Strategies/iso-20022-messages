@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the underlying transaction.
 /// </summary>
 [IsoId("_-bxLB248EeiU9cctagi5ow")]
+[IsoDisplayName(@"Entry Transaction")]
 public interface IEntryTransaction10 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IEntryTransaction10 : IIsoComponent
     [IsoId("_-mplW248EeiU9cctagi5ow")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAvailability1> Availability { get; }
 
     /// <summary>
@@ -114,6 +116,9 @@ public interface IEntryTransaction10 : IIsoComponent
     [IsoId("_-mpla248EeiU9cctagi5ow")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation7> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -146,6 +151,7 @@ public interface IEntryTransaction10 : IIsoComponent
     [IsoId("_-mplc248EeiU9cctagi5ow")]
     [DisplayName("Related Quantities")]
     [IsoXmlTag("RltdQties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionQuantities3Choice> RelatedQuantities { get; }
 
     /// <summary>
@@ -194,6 +200,7 @@ public interface IEntryTransaction10 : IIsoComponent
     [IsoId("_-mplf248EeiU9cctagi5ow")]
     [DisplayName("Cash Deposit")]
     [IsoXmlTag("CshDpst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashDeposit1> CashDeposit { get; }
 
     /// <summary>
@@ -210,6 +217,8 @@ public interface IEntryTransaction10 : IIsoComponent
     [IsoId("_-mplg248EeiU9cctagi5ow")]
     [DisplayName("Additional Transaction Information")]
     [IsoXmlTag("AddtlTxInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalTransactionInformation { get; }
 
     /// <summary>
@@ -218,5 +227,6 @@ public interface IEntryTransaction10 : IIsoComponent
     [IsoId("_-mplhW48EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

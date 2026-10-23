@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Location6.
 /// </summary>
 [IsoId("_ZYoPIXTqEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Location6")]
 public interface ILocation6 : IIsoComponent
 {
     /// <summary>

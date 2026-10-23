@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the cancellation right.
 /// </summary>
 [IsoId("_z8OCgDhOEeaTjZWmPo-9OA")]
+[IsoDisplayName(@"Cancellation Right 1 Choice")]
 public interface ICancellationRight1Choice : IIsoChoice { }

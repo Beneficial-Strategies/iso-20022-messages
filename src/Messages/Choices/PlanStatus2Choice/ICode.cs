@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlanStatus2Choice;
 /// Status of the plan expressed as a code.
 /// </summary>
 [IsoId("_ZRAiMSFOEeWgV9SQSyaAog")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPlanStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

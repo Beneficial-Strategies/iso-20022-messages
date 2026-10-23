@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding security that will be distributed as part of entitlement.
 /// </summary>
 [IsoId("_1RIYYjL3EeKU9IrkkToqcw_1649073602")]
+[IsoDisplayName(@"Financial Instrument Attributes SD")]
 public interface IFinancialInstrumentAttributesSD2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IFinancialInstrumentAttributesSD2 : IIsoComponent
     [IsoId("_1RIYZDL3EeKU9IrkkToqcw_1268382321")]
     [DisplayName("Declared Disbursed Security Description")]
     [IsoXmlTag("DclrdDsbrsdSctyDesc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? DeclaredDisbursedSecurityDescription { get; }
 }

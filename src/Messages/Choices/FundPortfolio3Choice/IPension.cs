@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio3Choice;
 /// </summary>
 [IsoId("_TE9HsVLBEeiSDqv62fL07g")]
 [IsoXmlTag("Pnsn")]
+[IsoDisplayName(@"Pension")]
 public interface IPension : IFundPortfolio3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -42,6 +43,7 @@ public interface IPension : IFundPortfolio3Choice, IIsoChoiceVariant
     [IsoId("_EIBQSLKmEeiXL6Ccd-oU8g")]
     [DisplayName("Tax Reference")]
     [IsoXmlTag("TaxRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxReference1> TaxReference { get; }
 
     /// <summary>
@@ -50,6 +52,8 @@ public interface IPension : IFundPortfolio3Choice, IIsoChoiceVariant
     [IsoId("_EIBQSbKmEeiXL6Ccd-oU8g")]
     [DisplayName("Drawdown Tranche Identification")]
     [IsoXmlTag("DrwdwnTrchId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DrawdownTrancheIdentification { get; }
 
     /// <summary>
@@ -58,5 +62,6 @@ public interface IPension : IFundPortfolio3Choice, IIsoChoiceVariant
     [IsoId("_KrFVEE4TEeiQHa-q1Uephw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

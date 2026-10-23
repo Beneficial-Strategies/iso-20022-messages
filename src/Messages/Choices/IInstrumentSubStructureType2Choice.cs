@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for a instrument sub-structure type.
 /// </summary>
 [IsoId("_QYb2YeLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Instrument Sub Structure Type 2 Choice")]
 public interface IInstrumentSubStructureType2Choice : IIsoChoice { }

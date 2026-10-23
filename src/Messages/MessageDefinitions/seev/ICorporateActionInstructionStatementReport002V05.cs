@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnInstrStmtRpt",
     "urn:iso:std:iso:20022:tech:xsd:seev.042.002.05"
 )]
+[Description(@"Scope|An account servicer sends the CorporateActionInstructionStatementReport message to an account owner or its designated agent to report balances at the safekeeping account level for one or more corporate action events or at the corporate action event level for one or more safekeeping accounts.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),|using the relevant elements in the business application header (BAH).")]
+[IsoDisplayName(@"Corporate Action Instruction Statement Report 002 V")]
 public interface ICorporateActionInstructionStatementReport002V05 : IOuterRecord
 {
     /// <summary>
@@ -47,6 +49,7 @@ public interface ICorporateActionInstructionStatementReport002V05 : IOuterRecord
     [IsoId("_cfqOrZKQEeWHWpTQn1FFVg")]
     [DisplayName("Account And Statement Details")]
     [IsoXmlTag("AcctAndStmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentification35> AccountAndStatementDetails { get; }
 
     /// <summary>
@@ -55,5 +58,6 @@ public interface ICorporateActionInstructionStatementReport002V05 : IOuterRecord
     [IsoId("_cfqOr5KQEeWHWpTQn1FFVg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

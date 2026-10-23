@@ -30,6 +30,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesSttlmTxModReq",
     "urn:iso:std:iso:20022:tech:xsd:sese.038.002.08"
 )]
+[Description(@"Scope|The SecuritiesSettlementTransactionModificationRequest is sent by an account owner to an account servicer. ||The account owner will generally be:|- a central securities depository participant which has an account with a central securities depository or a market infrastructure|- an investment manager which has an account with a custodian acting as accounting and/or settlement agent.||It is used to request the modification of non core business data (matching or non-matching) information in a pending or settled instruction. It can also be used for the enrichment of an incomplete transaction.||Usage|The modification must only contain the data to be modified.|The message may also be used to:|- re-send a message sent by the account owner to the account servicer,|- provide a third party with a copy of a message being sent by the account owner for information,|- re-send to a third party a copy of a message being sent by the account owner for information using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Settlement Transaction Modification Request 002 V")]
 public interface ISecuritiesSettlementTransactionModificationRequest002V08 : IOuterRecord
 {
     /// <summary>
@@ -46,5 +48,8 @@ public interface ISecuritiesSettlementTransactionModificationRequest002V08 : IOu
     [IsoId("_a71xnSAdEeuyDZ-ukt4YRg")]
     [DisplayName("Update Type")]
     [IsoXmlTag("UpdTp")]
+    [MinLength(1)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdateType34Choice> UpdateType { get; }
 }

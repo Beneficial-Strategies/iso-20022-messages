@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the rejected collateral substitution.
 /// </summary>
 [IsoId("_QnYHFNp-Ed-ak6NoX_4Aeg_-1313655286")]
+[IsoDisplayName(@"Collateral Substitution Response")]
 public interface ICollateralSubstitutionResponse2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICollateralSubstitutionResponse2 : IIsoComponent
     [IsoId("_QnYHFdp-Ed-ak6NoX_4Aeg_1984239657")]
     [DisplayName("Collateral Substitution Request Identification")]
     [IsoXmlTag("CollSbstitnReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CollateralSubstitutionRequestIdentification { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface ICollateralSubstitutionResponse2 : IIsoComponent
     [IsoId("_QnYHGNp-Ed-ak6NoX_4Aeg_1784143773")]
     [DisplayName("Rejection Reason Information")]
     [IsoXmlTag("RjctnRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? RejectionReasonInformation { get; }
 }

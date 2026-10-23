@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organised structure that is set up for a particular purpose, eg, a business, government body, department, charity, or financial institution.
 /// </summary>
 [IsoId("_QNckJtp-Ed-ak6NoX_4Aeg_-1898805277")]
+[IsoDisplayName(@"Organisation")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IOrganisation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IOrganisation2 : IIsoComponent
     [IsoId("_QNckJ9p-Ed-ak6NoX_4Aeg_-1898805258")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IOrganisation2 : IIsoComponent
     [IsoId("_QNmVINp-Ed-ak6NoX_4Aeg_-1897884143")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Purpose { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IOrganisation2 : IIsoComponent
     [IsoId("_QNmVI9p-Ed-ak6NoX_4Aeg_-1897883728")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface IOrganisation2 : IIsoComponent
     [IsoId("_QNmVJNp-Ed-ak6NoX_4Aeg_1142497781")]
     [DisplayName("Tax Identification Number")]
     [IsoXmlTag("TaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxIdentificationNumber { get; }
 
     /// <summary>
@@ -73,6 +82,8 @@ public interface IOrganisation2 : IIsoComponent
     [IsoId("_QNmVJdp-Ed-ak6NoX_4Aeg_1142498288")]
     [DisplayName("National Registration Number")]
     [IsoXmlTag("NtlRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NationalRegistrationNumber { get; }
 
     /// <summary>
@@ -81,6 +92,9 @@ public interface IOrganisation2 : IIsoComponent
     [IsoId("_QNmVJtp-Ed-ak6NoX_4Aeg_-1678746591")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress3> PostalAddress { get; }
 
     /// <summary>

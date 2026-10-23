@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType2Choice;
 /// </summary>
 [IsoId("_RvC5xdp-Ed-ak6NoX_4Aeg_-1554093134")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IChargeType2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IProprietary : IChargeType2Choice, IIsoChoiceVariant
     [IsoId("_P-sWctp-Ed-ak6NoX_4Aeg_1256785338")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IProprietary : IChargeType2Choice, IIsoChoiceVariant
     [IsoId("_P-sWc9p-Ed-ak6NoX_4Aeg_1555083105")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

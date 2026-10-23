@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OvernightIndexSwap4Choice;
 /// Provides the reason why no transactions are being reported for a money market reporting period.
 /// </summary>
 [IsoId("_G1Uq8cEREea7jLfvGi1PDw")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : IOvernightIndexSwap4Choice, IIsoChoiceVariant
 {
     /// <summary>

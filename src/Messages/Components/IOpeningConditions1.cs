@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the conditions for the NDF opening.
 /// </summary>
 [IsoId("_epxpwJR-Eeak6e8_Fc5fQg")]
+[IsoDisplayName(@"Opening Conditions")]
 public interface IOpeningConditions1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IOpeningConditions1 : IIsoComponent
     [IsoId("_XAtxMJR_Eeak6e8_Fc5fQg")]
     [DisplayName("Valuation Date")]
     [IsoXmlTag("ValtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValuationDate { get; }
 
     /// <summary>
@@ -33,5 +35,8 @@ public interface IOpeningConditions1 : IIsoComponent
     [IsoId("_q4iDMJUOEeak6e8_Fc5fQg")]
     [DisplayName("Settlement Rate Source")]
     [IsoXmlTag("SttlmRateSrc")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementRateSource1> SettlementRateSource { get; }
 }

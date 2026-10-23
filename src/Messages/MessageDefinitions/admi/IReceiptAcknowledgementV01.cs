@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// </summary>
 [IsoId("_4MJ7oZb3Eee4htziCyV8eA")]
 [IsoMessage("admi.007.001.01", "RctAck", "urn:iso:std:iso:20022:tech:xsd:admi.007.001.01")]
+[Description(@"The ReceiptAcknowledgement message is sent by the transaction administrator to a member of the system and vice versa. It is sent to acknowledge the receipt of one or multiple messages sent previously. The Acknowledgement message is 1) an application receipt acknowledgement and 2) conveys information about the processing of the original message(s). In case of 2) the ReceiptAcknowledgement can be used as a Generic error message, which provides information about the status (e.g. rejection, acceptance) of an instruction.")]
+[IsoDisplayName(@"Receipt Acknowledgement V")]
 public interface IReceiptAcknowledgementV01 : IOuterRecord
 {
     /// <summary>
@@ -28,6 +30,7 @@ public interface IReceiptAcknowledgementV01 : IOuterRecord
     [IsoId("_4MJ7pZb3Eee4htziCyV8eA")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReceiptAcknowledgementReport2> Report { get; }
 
     /// <summary>
@@ -36,5 +39,6 @@ public interface IReceiptAcknowledgementV01 : IOuterRecord
     [IsoId("_4MJ7p5b3Eee4htziCyV8eA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria2Choice;
 /// <summary>
 /// Original Transaction Number.
 /// </summary>
+[IsoDisplayName(@"Original Transaction Number")]
 public interface IOriginalTransactionNumber : ISearchCriteria2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Asset Holding3Choice.
 /// </summary>
 [IsoId("_eUalMShJEe2H2s7qerne1w")]
+[IsoDisplayName(@"Asset Holding3Choice")]
 public interface IAssetHolding3Choice : IIsoChoice { }

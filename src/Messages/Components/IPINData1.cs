@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes of a cardholder PIN.
 /// </summary>
 [IsoId("_oIKMwEbYEeeIjf8aP9KbJA")]
+[IsoDisplayName(@"PIN Data")]
 public interface IPINData1 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface IPINData1 : IIsoComponent
     [IsoId("_1o494InMEeiHerJAHfwamw")]
     [DisplayName("Control")]
     [IsoXmlTag("Ctrl")]
+    [IsoSimpleType(IsoSimpleType.Exact1HexBinaryText)]
     Exact1HexBinaryText? Control { get; }
 
     /// <summary>
@@ -29,6 +31,7 @@ public interface IPINData1 : IIsoComponent
     [IsoId("_d0W1wotNEei2ytxdCDTOFQ")]
     [DisplayName("Key Set Identifier")]
     [IsoXmlTag("KeySetIdr")]
+    [IsoSimpleType(IsoSimpleType.Max8NumericText)]
     Max8NumericText? KeySetIdentifier { get; }
 
     /// <summary>
@@ -39,6 +42,7 @@ public interface IPINData1 : IIsoComponent
     [IsoId("_03k44InQEeiHerJAHfwamw")]
     [DisplayName("Derived Information")]
     [IsoXmlTag("DrvdInf")]
+    [IsoSimpleType(IsoSimpleType.Max32HexBinaryText)]
     Max32HexBinaryText? DerivedInformation { get; }
 
     /// <summary>
@@ -48,6 +52,7 @@ public interface IPINData1 : IIsoComponent
     [IsoId("_XqXiYInREeiHerJAHfwamw")]
     [DisplayName("Algorithm")]
     [IsoXmlTag("Algo")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? Algorithm { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IPINData1 : IIsoComponent
     [IsoId("_u95wootNEei2ytxdCDTOFQ")]
     [DisplayName("Key Length")]
     [IsoXmlTag("KeyLngth")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? KeyLength { get; }
 
     /// <summary>
@@ -66,6 +72,7 @@ public interface IPINData1 : IIsoComponent
     [IsoId("_W9lC8YnTEeiHerJAHfwamw")]
     [DisplayName("Key Protection")]
     [IsoXmlTag("KeyPrtcn")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? KeyProtection { get; }
 
     /// <summary>
@@ -76,6 +83,7 @@ public interface IPINData1 : IIsoComponent
     [IsoId("_85vZYotNEei2ytxdCDTOFQ")]
     [DisplayName("Key Index")]
     [IsoXmlTag("KeyIndx")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? KeyIndex { get; }
 
     /// <summary>
@@ -84,6 +92,7 @@ public interface IPINData1 : IIsoComponent
     [IsoId("_DiyMQYnVEeiHerJAHfwamw")]
     [DisplayName("PIN Block Format")]
     [IsoXmlTag("PINBlckFrmt")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText PINBlockFormat { get; }
 
     /// <summary>
@@ -93,5 +102,6 @@ public interface IPINData1 : IIsoComponent
     [IsoId("_BbKmMInaEei2ytxdCDTOFQ")]
     [DisplayName("Encrypted PIN Block")]
     [IsoXmlTag("NcrptdPINBlck")]
+    [IsoSimpleType(IsoSimpleType.Max16HexBinaryText)]
     Max16HexBinaryText EncryptedPINBlock { get; }
 }

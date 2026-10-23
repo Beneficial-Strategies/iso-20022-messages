@@ -27,6 +27,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesSttlmTxAllgmtRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.019.002.09"
 )]
+[Description(@"Scope|An account servicer sends a SecuritiesSettlementTransactionAllegementReport to an account owner to provide, at a specified time, the status and details of pending settlement allegements, for all or selected securities in a specified safekeeping account.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Settlement Transaction Allegement Report 002 V")]
 public interface ISecuritiesSettlementTransactionAllegementReport002V09 : IOuterRecord
 {
     /// <summary>
@@ -67,5 +69,6 @@ public interface ISecuritiesSettlementTransactionAllegementReport002V09 : IOuter
     [IsoId("_rjNT4yAaEeu4a6pNulzZ4Q")]
     [DisplayName("Allegement Details")]
     [IsoXmlTag("AllgmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesTradeDetails127> AllegementDetails { get; }
 }

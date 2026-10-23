@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the margin requirements for the variation margin and optionally the segregated independent amount.
 /// </summary>
 [IsoId("_Ul4kA9p-Ed-ak6NoX_4Aeg_1931035123")]
+[IsoDisplayName(@"Requirement")]
 public interface IRequirement1 : IIsoComponent
 {
     /// <summary>

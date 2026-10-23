@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantitySearc
 
 /// <summary>Quantity expressed as a number, for example a number of shares.</summary>
 [IsoId("_emN9kWqWEemz04WrKJaMEA")]
+[IsoDisplayName(@"Unit")]
 public interface IUnit : IFinancialInstrumentQuantitySearch2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status and quantity information related to a forwarded instruction request.
 /// </summary>
 [IsoId("_p-eGg473EfCbNJ3GwkFTcw")]
+[IsoDisplayName(@"Forwarded Status1")]
 public interface IForwardedStatus1 : IIsoComponent
 {
     /// <summary>

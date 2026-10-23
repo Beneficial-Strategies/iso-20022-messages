@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3GHiTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.101.001.02", "CretLmt", "urn:iso:std:iso:20022:tech:xsd:camt.101.001.02")]
+[IsoDisplayName(@"Create Limit V02")]
 public interface ICreateLimitV02 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICreateLimitV02 : IOuterRecord
     /// </summary>
     [DisplayName("Limit Data")]
     [IsoXmlTag("LmtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILimitStructure6> LimitData { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface ICreateLimitV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

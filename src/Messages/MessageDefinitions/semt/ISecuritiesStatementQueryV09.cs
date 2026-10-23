@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("71d95517-43ac-4b82-a35c-1cf6d29f7688")]
 [IsoMessage("semt.021.001.09", "SctiesStmtQry", "urn:iso:std:iso:20022:tech:xsd:semt.021.001.09")]
+[IsoDisplayName(@"Securities Statement Query V09")]
 public interface ISecuritiesStatementQueryV09 : IOuterRecord
 {
     /// <summary>
@@ -53,6 +54,7 @@ public interface ISecuritiesStatementQueryV09 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Query Parameters")]
     [IsoXmlTag("AddtlQryParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalQueryParameters15> AdditionalQueryParameters { get; }
 
     /// <summary>
@@ -60,5 +62,6 @@ public interface ISecuritiesStatementQueryV09 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

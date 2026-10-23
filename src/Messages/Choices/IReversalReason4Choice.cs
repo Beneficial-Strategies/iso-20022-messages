@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the reversal of the transaction.
 /// </summary>
 [IsoId("_TQ8xYNp-Ed-ak6NoX_4Aeg_-340627899")]
+[IsoDisplayName(@"Reversal Reason 4 Choice")]
 public interface IReversalReason4Choice : IIsoChoice { }

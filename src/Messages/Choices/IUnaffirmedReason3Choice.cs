@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the unaffirmed reason.
 /// </summary>
 [IsoId("_XQesQQd3Ee2fOITqoTnSLQ")]
+[IsoDisplayName(@"Unaffirmed Reason 3 Choice")]
 public interface IUnaffirmedReason3Choice : IIsoChoice { }

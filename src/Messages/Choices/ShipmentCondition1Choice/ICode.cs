@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentCondition1Choice;
 /// Shipment conditions expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_c0JRgLGdEeuSTr8k0UEM8A")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IShipmentCondition1Choice, IIsoChoiceVariant
 {
     /// <summary>

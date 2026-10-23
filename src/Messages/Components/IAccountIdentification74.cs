@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account Identification74.
 /// </summary>
 [IsoId("_j2C9NZt3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Account Identification74")]
 public interface IAccountIdentification74 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IAccountIdentification74 : IIsoComponent
     /// </summary>
     [DisplayName("Corporate Action Event And Balance")]
     [IsoXmlTag("CorpActnEvtAndBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventAndBalance27> CorporateActionEventAndBalance { get; }
 }

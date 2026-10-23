@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sub-account reporting.
 /// </summary>
 [IsoId("_UGnzYQ3sEeKIIIcS0K4sAQ")]
+[IsoDisplayName(@"Sub Account Identification")]
 public interface ISubAccountIdentification30 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ISubAccountIdentification30 : IIsoComponent
     [IsoId("_Uc926Q3sEeKIIIcS0K4sAQ")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface ISubAccountIdentification30 : IIsoComponent
     [IsoId("_Uc928w3sEeKIIIcS0K4sAQ")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentDetails13> FinancialInstrumentDetails { get; }
 }

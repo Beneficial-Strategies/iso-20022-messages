@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RetrievalDeliveryMethod1Choice;
 /// Method established by fulfilment system.
 /// </summary>
 [IsoId("_-v7SROwhEeiMkKo2clXHdQ")]
+[IsoDisplayName(@"Established Method")]
 public interface IEstablishedMethod : IRetrievalDeliveryMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IEstablishedMethod : IRetrievalDeliveryMethod1Choice, IIsoChoic
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("EstblishdMtd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

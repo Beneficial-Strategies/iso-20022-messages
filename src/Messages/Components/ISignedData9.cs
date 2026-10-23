@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Signed Data9.
 /// </summary>
 [IsoId("_A4xIcY-NEe6oobnCtR50kw")]
+[IsoDisplayName(@"Signed Data9")]
 public interface ISignedData9 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ISignedData9 : IIsoComponent
     /// </summary>
     [DisplayName("Digest Algorithm")]
     [IsoXmlTag("DgstAlgo")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAlgorithmIdentification36> DigestAlgorithm { get; }
 
     /// <summary>
@@ -37,6 +39,7 @@ public interface ISignedData9 : IIsoComponent
     /// </summary>
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max5000Binary> Certificate { get; }
 
     /// <summary>
@@ -44,5 +47,6 @@ public interface ISignedData9 : IIsoComponent
     /// </summary>
     [DisplayName("Signer")]
     [IsoXmlTag("Sgnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISigner8> Signer { get; }
 }

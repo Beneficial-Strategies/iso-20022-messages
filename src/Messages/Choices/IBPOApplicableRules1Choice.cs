@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Rules which apply to the BPO (Bank Payment Obligation).
 /// </summary>
 [IsoId("_jjfsgNNqEeKdOs2hjJ_3WQ")]
+[IsoDisplayName(@"BPO Applicable Rules 1 Choice")]
 public interface IBPOApplicableRules1Choice : IIsoChoice { }

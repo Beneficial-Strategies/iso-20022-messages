@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmountOrUnknown1Choic
 /// Indicates whether the market price is unknown.
 /// </summary>
 [IsoId("_Wi6RYdp-Ed-ak6NoX_4Aeg_-1982209591")]
+[IsoDisplayName(@"Unknown Indicator")]
 public interface IUnknownIndicator : IPriceRateOrAmountOrUnknown1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IUnknownIndicator : IPriceRateOrAmountOrUnknown1Choice, IIsoCho
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("UknwnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

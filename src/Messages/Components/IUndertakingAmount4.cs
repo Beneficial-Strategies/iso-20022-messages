@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defined variation amount and balance.
 /// </summary>
 [IsoId("_945Ng3ltEeG7BsjMvd1mEw_1350790559")]
+[IsoDisplayName(@"Undertaking Amount")]
 public interface IUndertakingAmount4 : IIsoComponent
 {
     /// <summary>

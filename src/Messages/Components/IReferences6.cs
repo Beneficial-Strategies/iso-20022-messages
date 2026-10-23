@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements for the identification of the message and related references.
 /// </summary>
 [IsoId("_QoQ34Np-Ed-ak6NoX_4Aeg_126946620")]
+[IsoDisplayName(@"References")]
 public interface IReferences6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IReferences6 : IIsoComponent
     [IsoId("_QoQ34tp-Ed-ak6NoX_4Aeg_1011680219")]
     [DisplayName("Rejection Reason")]
     [IsoXmlTag("RjctnRsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> RejectionReason { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface IReferences6 : IIsoComponent
     [IsoId("_QoQ35tp-Ed-ak6NoX_4Aeg_-564165494")]
     [DisplayName("Attached Document Name")]
     [IsoXmlTag("AttchdDocNm")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AttachedDocumentName { get; }
 }

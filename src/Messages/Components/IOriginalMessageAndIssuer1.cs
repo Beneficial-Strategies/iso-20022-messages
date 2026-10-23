@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Business reference(s) to one or more relevant messages previously sent by other parties, or by the same party issuing this message.||.
 /// </summary>
 [IsoId("_76syVKMgEeCJ6YNENx4h-w_830778529")]
+[IsoDisplayName(@"Original Message And Issuer")]
 public interface IOriginalMessageAndIssuer1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalMessageAndIssuer1 : IIsoComponent
     [IsoId("_76syVaMgEeCJ6YNENx4h-w_1092195587")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalMessageAndIssuer1 : IIsoComponent
     [IsoId("_762jUKMgEeCJ6YNENx4h-w_-1421660788")]
     [DisplayName("Message Name Identification")]
     [IsoXmlTag("MsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageNameIdentification { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IOriginalMessageAndIssuer1 : IIsoComponent
     [IsoId("_762jUaMgEeCJ6YNENx4h-w_-686714558")]
     [DisplayName("Originator Name")]
     [IsoXmlTag("OrgtrNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? OriginatorName { get; }
 }

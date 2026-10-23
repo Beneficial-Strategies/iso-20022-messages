@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides unambiguous instruction or transaction identification information.
 /// </summary>
 [IsoId("_UJ6-h-OPEem5PtD3jXNVeQ")]
+[IsoDisplayName(@"Transaction Identifications")]
 public interface ITransactionIdentifications44 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionIdentifications44 : IIsoComponent
     [IsoId("_UJ6-iOOPEem5PtD3jXNVeQ")]
     [DisplayName("Triparty Agent Service Provider Collateral Instruction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TripartyAgentServiceProviderCollateralInstructionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransactionIdentifications44 : IIsoComponent
     [IsoId("_UJ6-jeOPEem5PtD3jXNVeQ")]
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransactionIdentifications44 : IIsoComponent
     [IsoId("_UJ6-jOOPEem5PtD3jXNVeQ")]
     [DisplayName("Client Collateral Instruction Identification")]
     [IsoXmlTag("ClntCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientCollateralInstructionIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITransactionIdentifications44 : IIsoComponent
     [IsoId("_UJ6-iuOPEem5PtD3jXNVeQ")]
     [DisplayName("Client Collateral Transaction Identification")]
     [IsoXmlTag("ClntCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface ITransactionIdentifications44 : IIsoComponent
     [IsoId("_1HEfYGmyEeqtioZoQfxdKw")]
     [DisplayName("Counterparty Collateral Instruction Identification")]
     [IsoXmlTag("CtrPtyCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CounterpartyCollateralInstructionIdentification { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface ITransactionIdentifications44 : IIsoComponent
     [IsoId("_UJ6-ieOPEem5PtD3jXNVeQ")]
     [DisplayName("Counterparty Collateral Transaction Identification")]
     [IsoXmlTag("CtrPtyCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CounterpartyCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -65,5 +78,7 @@ public interface ITransactionIdentifications44 : IIsoComponent
     [IsoId("_UJ6-i-OPEem5PtD3jXNVeQ")]
     [DisplayName("Common Transaction Identification")]
     [IsoXmlTag("CmonTxId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? CommonTransactionIdentification { get; }
 }

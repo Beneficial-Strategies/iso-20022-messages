@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Calculation of the current situation of a baseline as a result of the submission of a commercial data set.
 /// </summary>
 [IsoId("_9RsSgQy6EeS3puOfnJm56A")]
+[IsoDisplayName(@"Line Item")]
 public interface ILineItem14 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILineItem14 : IIsoComponent
     [IsoId("_9oAgwQy6EeS3puOfnJm56A")]
     [DisplayName("Line Item Details")]
     [IsoXmlTag("LineItmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItemDetails12> LineItemDetails { get; }
 
     /// <summary>

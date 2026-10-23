@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConfirmationRejectedReason1Choic
 /// Reason for the rejected status expressed as a code.
 /// </summary>
 [IsoId("__OYdIXZxEeaN2c674jyTxQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IConfirmationRejectedReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

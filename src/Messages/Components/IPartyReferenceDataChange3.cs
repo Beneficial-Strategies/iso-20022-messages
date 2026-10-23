@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party Reference Data Change3.
 /// </summary>
 [IsoId("_Y4YjZTE_Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Party Reference Data Change3")]
 public interface IPartyReferenceDataChange3 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IPartyReferenceDataChange3 : IIsoComponent
     /// </summary>
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdateLogPartyRecord2Choice> Record { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contracts which grant to the holder either the privilege to purchase or the privilege to sell the assets specified at a predetermined price or formula at or within a time in the future.
 /// </summary>
 [IsoId("_PPNyoWp7EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Option")]
 public interface IOption15 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IOption15 : IIsoComponent
     [IsoId("_PbLyE2p7EemmaZLSPtWX5A")]
     [DisplayName("Conversion Date")]
     [IsoXmlTag("ConvsDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ConversionDate { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface IOption15 : IIsoComponent
     [IsoId("_PbMZLWp7EemmaZLSPtWX5A")]
     [DisplayName("Strike Value")]
     [IsoXmlTag("StrkVal")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? StrikeValue { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IOption15 : IIsoComponent
     [IsoId("_PbMZNWp7EemmaZLSPtWX5A")]
     [DisplayName("Strike Multiplier")]
     [IsoXmlTag("StrkMltplr")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? StrikeMultiplier { get; }
 
     /// <summary>
@@ -97,6 +101,7 @@ public interface IOption15 : IIsoComponent
     [IsoId("_PbMZRWp7EemmaZLSPtWX5A")]
     [DisplayName("Version Number")]
     [IsoXmlTag("VrsnNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? VersionNumber { get; }
 
     /// <summary>
@@ -105,6 +110,8 @@ public interface IOption15 : IIsoComponent
     [IsoId("_PbMZTWp7EemmaZLSPtWX5A")]
     [DisplayName("Expiry Location")]
     [IsoXmlTag("XpryLctn")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText? ExpiryLocation { get; }
 
     /// <summary>
@@ -129,6 +136,7 @@ public interface IOption15 : IIsoComponent
     [IsoId("_PbMZU2p7EemmaZLSPtWX5A")]
     [DisplayName("Contract Size")]
     [IsoXmlTag("CtrctSz")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ContractSize { get; }
 
     /// <summary>
@@ -137,5 +145,6 @@ public interface IOption15 : IIsoComponent
     [IsoId("_PbMZVWp7EemmaZLSPtWX5A")]
     [DisplayName("Additional Underlying Attributes")]
     [IsoXmlTag("AddtlUndrlygAttrbts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnderlyingAttributes4> AdditionalUnderlyingAttributes { get; }
 }

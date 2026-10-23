@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies rates related to a corporate action option.
 /// </summary>
 [IsoId("_S9DdASeQEeOXAt_43VmZGw")]
+[IsoDisplayName(@"Corporate Action Rate")]
 public interface ICorporateActionRate47 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionRate47 : IIsoComponent
     [IsoId("_TUa0ISeQEeOXAt_43VmZGw")]
     [DisplayName("Proposed Rate")]
     [IsoXmlTag("PropsdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ProposedRate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICorporateActionRate47 : IIsoComponent
     [IsoId("_TUa0MSeQEeOXAt_43VmZGw")]
     [DisplayName("Requested Taxation Rate")]
     [IsoXmlTag("ReqdTaxtnRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat21Choice> RequestedTaxationRate { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICorporateActionRate47 : IIsoComponent
     [IsoId("_bZ3RQieQEeOXAt_43VmZGw")]
     [DisplayName("Requested Withholding Of Foreign Tax")]
     [IsoXmlTag("ReqdWhldgOfFrgnTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat21Choice> RequestedWithholdingOfForeignTax { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface ICorporateActionRate47 : IIsoComponent
     [IsoId("_bZ3RQyeQEeOXAt_43VmZGw")]
     [DisplayName("Requested Withholding Of Local Tax")]
     [IsoXmlTag("ReqdWhldgOfLclTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat21Choice> RequestedWithholdingOfLocalTax { get; }
 }

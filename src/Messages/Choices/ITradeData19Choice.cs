@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Position/transaction reporting under EMIR regulation.
 /// </summary>
 [IsoId("_mijCQXg-Eeu3kecHd7QKUQ")]
+[IsoDisplayName(@"Trade Data 19 Choice")]
 public interface ITradeData19Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentIdentification3Choice;
 /// Identification of the document assigned by the account owner.
 /// </summary>
 [IsoId("_FGNkaznaEeWLJsP1cO-amg")]
+[IsoDisplayName(@"Account Owner Document Identification")]
 public interface IAccountOwnerDocumentIdentification
     : IDocumentIdentification3Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface IAccountOwnerDocumentIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("AcctOwnrDocId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

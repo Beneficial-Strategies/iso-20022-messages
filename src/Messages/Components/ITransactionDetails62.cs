@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the details of the transaction.
 /// </summary>
 [IsoId("_V7azDSW7EeOslcz0TJwprQ")]
+[IsoDisplayName(@"Transaction Details")]
 public interface ITransactionDetails62 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface ITransactionDetails62 : IIsoComponent
     [IsoId("_WSB8LSW7EeOslcz0TJwprQ")]
     [DisplayName("Place Of Clearing")]
     [IsoXmlTag("PlcOfClr")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier? PlaceOfClearing { get; }
 
     /// <summary>
@@ -161,6 +163,8 @@ public interface ITransactionDetails62 : IIsoComponent
     [IsoId("_WSB8hSW7EeOslcz0TJwprQ")]
     [DisplayName("Transaction Additional Details")]
     [IsoXmlTag("TxAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? TransactionAdditionalDetails { get; }
 
     /// <summary>
@@ -169,5 +173,6 @@ public interface ITransactionDetails62 : IIsoComponent
     [IsoId("_WSB8jSW7EeOslcz0TJwprQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

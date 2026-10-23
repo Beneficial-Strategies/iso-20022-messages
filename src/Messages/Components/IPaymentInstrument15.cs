@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment parties for the transfer of cash from the debtor to the creditor.
 /// </summary>
 [IsoId("_vhmLYVNZEeijdq8ilaxyOA")]
+[IsoDisplayName(@"Payment Instrument")]
 public interface IPaymentInstrument15 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentInstrument15 : IIsoComponent
     [IsoId("_vxN7wVNZEeijdq8ilaxyOA")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reference { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPaymentInstrument15 : IIsoComponent
     [IsoId("_K5QgEFNaEeijdq8ilaxyOA")]
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PaymentDate { get; }
 
     /// <summary>

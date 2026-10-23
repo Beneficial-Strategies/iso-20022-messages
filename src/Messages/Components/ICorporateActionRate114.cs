@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies rate details.
 /// </summary>
 [IsoId("_QU8l1199Ee262vCSVgjImg")]
+[IsoDisplayName(@"Corporate Action Rate")]
 public interface ICorporateActionRate114 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ICorporateActionRate114 : IIsoComponent
     [IsoId("_QU8l9V99Ee262vCSVgjImg")]
     [DisplayName("Fiscal Stamp")]
     [IsoXmlTag("FsclStmp")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? FiscalStamp { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ICorporateActionRate114 : IIsoComponent
     [IsoId("_QU8l9199Ee262vCSVgjImg")]
     [DisplayName("Applicable Rate")]
     [IsoXmlTag("AplblRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ApplicableRate { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ICorporateActionRate114 : IIsoComponent
     [IsoId("_QU8l-199Ee262vCSVgjImg")]
     [DisplayName("Financial Transaction Tax Rate")]
     [IsoXmlTag("FinTxTaxRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? FinancialTransactionTaxRate { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface ICorporateActionRate114 : IIsoComponent
     [IsoId("_QU8l_V99Ee262vCSVgjImg")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat45Choice> WithholdingTaxRate { get; }
 
     /// <summary>
@@ -89,5 +94,6 @@ public interface ICorporateActionRate114 : IIsoComponent
     [IsoId("_QU8l_199Ee262vCSVgjImg")]
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat45Choice> SecondLevelTax { get; }
 }

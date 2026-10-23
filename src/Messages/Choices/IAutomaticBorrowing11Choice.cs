@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the automatic borrowing information.
 /// </summary>
 [IsoId("_6GVvS5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Automatic Borrowing 11 Choice")]
 public interface IAutomaticBorrowing11Choice : IIsoChoice { }

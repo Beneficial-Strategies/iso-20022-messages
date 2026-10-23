@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fixed rate related information.
 /// </summary>
 [IsoId("_7j19V1fREeqqKf65rDYWYw")]
+[IsoDisplayName(@"Fixed Rate")]
 public interface IFixedRate10 : IIsoComponent
 {
     /// <summary>

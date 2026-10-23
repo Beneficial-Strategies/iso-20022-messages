@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DefinedAttributes1Choice;
 /// </summary>
 [IsoId("__F7tMOPJEea7_eMQH225xA")]
 [IsoXmlTag("QtyDfndAttrbts")]
+[IsoDisplayName(@"Quantity Defined Attributes")]
 public interface IQuantityDefinedAttributes : IDefinedAttributes1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Message Identification8.
 /// </summary>
 [IsoId("_2Hpl0TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Message Identification8")]
 public interface IMessageIdentification8 : IIsoComponent
 {
     /// <summary>

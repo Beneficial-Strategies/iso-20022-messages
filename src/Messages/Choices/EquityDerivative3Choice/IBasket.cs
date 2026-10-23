@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EquityDerivative3Choice;
 /// Populated when sub asset class is either swaps or portfolio swaps and the underlying type is a basket.
 /// </summary>
 [IsoId("_hW-FOmlPEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Basket")]
 public interface IBasket : IEquityDerivative3Choice, IIsoChoiceVariant
 {
     /// <summary>

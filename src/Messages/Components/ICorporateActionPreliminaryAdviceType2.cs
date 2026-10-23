@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Type of movement preliminary advice document.
 /// </summary>
 [IsoId("_hX_uQSqeEeObprHJy8Zrxg")]
+[IsoDisplayName(@"Corporate Action Preliminary Advice Type")]
 public interface ICorporateActionPreliminaryAdviceType2 : IIsoComponent
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface ICorporateActionPreliminaryAdviceType2 : IIsoComponent
     [IsoId("_hvNUcSqeEeObprHJy8Zrxg")]
     [DisplayName("Eligibility Indicator")]
     [IsoXmlTag("ElgbltyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EligibilityIndicator { get; }
 }

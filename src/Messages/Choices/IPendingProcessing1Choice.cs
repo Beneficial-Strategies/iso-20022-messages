@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the Pending Processing status.
 /// </summary>
 [IsoId("_Azyp4NokEeC60axPepSq7g_-1440750655")]
+[IsoDisplayName(@"Pending Processing 1 Choice")]
 public interface IPendingProcessing1Choice : IIsoChoice { }

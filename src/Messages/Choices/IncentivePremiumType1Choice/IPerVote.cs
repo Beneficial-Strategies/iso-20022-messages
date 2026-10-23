@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IncentivePremiumType1Choice;
 /// Number of votes giving right to a premium.
 /// </summary>
 [IsoId("_RDieo9p-Ed-ak6NoX_4Aeg_1361394689")]
+[IsoDisplayName(@"Per Vote")]
 public interface IPerVote : IIncentivePremiumType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPerVote : IIncentivePremiumType1Choice, IIsoChoiceVariant
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("PerVote")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

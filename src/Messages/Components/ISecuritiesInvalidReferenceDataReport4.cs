@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference data instruments that are no longer valid either through an instrument update or that have passed their termination date.
 /// </summary>
 [IsoId("_VjpwwSdpEei12pGEsJIAeQ")]
+[IsoDisplayName(@"Securities Invalid Reference Data Report")]
 public interface ISecuritiesInvalidReferenceDataReport4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ISecuritiesInvalidReferenceDataReport4 : IIsoComponent
     [IsoId("_VvQj0ydpEei12pGEsJIAeQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

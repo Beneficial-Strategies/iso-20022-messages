@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LevelOfControl1Choice;
 /// Level of control expressed as a code.
 /// </summary>
 [IsoId("_RhNOECDDEeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ILevelOfControl1Choice, IIsoChoiceVariant
 {
     /// <summary>

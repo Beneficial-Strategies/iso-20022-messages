@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters3Choice;
 /// </summary>
 [IsoId("_htqcNV2aEeekzJIz1JxYSQ")]
 [IsoXmlTag("ReqrdCfgtnParam")]
+[IsoDisplayName(@"Required Configuration Parameter")]
 public interface IRequiredConfigurationParameter : IATMCommandParameters3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IRequiredConfigurationParameter : IATMCommandParameters3Choice,
     [IsoId("_TcxKUIn-EeShMpas3885ww")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Version { get; }
 }

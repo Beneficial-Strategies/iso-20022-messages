@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctSwtchNtfyAcctSwtchCmplt",
     "urn:iso:std:iso:20022:tech:xsd:acmt.033.001.02"
 )]
+[Description(@"The AccountSwitchNotifyAccountSwitchComplete message is sent by the new account servicer to a central account switch servicer to signal that it has completed the account switch. ")]
+[IsoDisplayName(@"Account Switch Notify Account Switch Complete V")]
 public interface IAccountSwitchNotifyAccountSwitchCompleteV02 : IOuterRecord
 {
     /// <summary>
@@ -41,5 +43,6 @@ public interface IAccountSwitchNotifyAccountSwitchCompleteV02 : IOuterRecord
     [IsoId("_7HK1sW42EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

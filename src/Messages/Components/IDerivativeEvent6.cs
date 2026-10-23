@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to derivative details.
 /// </summary>
 [IsoId("_lk8TIfbeEeyInphUKJZxtQ")]
+[IsoDisplayName(@"Derivative Event")]
 public interface IDerivativeEvent6 : IIsoComponent
 {
     /// <summary>
@@ -42,5 +43,6 @@ public interface IDerivativeEvent6 : IIsoComponent
     [IsoId("_x7bUoTNYEe2Mjc1DeLmBZw")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AmendmentIndicator { get; }
 }

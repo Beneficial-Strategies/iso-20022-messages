@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification of a person, an organisation or a financial institution.
 /// </summary>
 [IsoId("_9vWUh249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Party 44 Choice")]
 public interface IParty44Choice : IIsoChoice { }

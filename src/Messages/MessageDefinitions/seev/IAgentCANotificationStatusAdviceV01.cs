@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "AgtCANtfctnStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.011.001.01"
 )]
+[Description(@"Scope|This message is sent by a CSD to an issuer (or its agent) to report the status, or change in status, of a notification advice or notification cancellation request.|Usage|When this message is used to report the status of a notification advice then the building block Agent Corporate Action Notification Advice Identification must be present.|When this message is used to provide the status of a notification cancellation request then the building block Notification Cancellation Request Identification must be present.")]
+[IsoDisplayName(@"Agent CA Notification Status Advice V")]
 public interface IAgentCANotificationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

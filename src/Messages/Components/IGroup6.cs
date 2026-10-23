@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Group6.
 /// </summary>
 [IsoId("_1WVdpzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Group6")]
 public interface IGroup6 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IGroup6 : IIsoComponent
     /// </summary>
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndCertificate6> Party { get; }
 }

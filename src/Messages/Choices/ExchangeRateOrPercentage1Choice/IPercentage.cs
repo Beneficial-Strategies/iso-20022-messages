@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateOrPercentage1Choice;
 /// Rate is expressed as a percentage relative to the reference rate.
 /// </summary>
 [IsoId("_419xYNfvEeqoweZZxm4TPQ")]
+[IsoDisplayName(@"Percentage")]
 public interface IPercentage : IExchangeRateOrPercentage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPercentage : IExchangeRateOrPercentage1Choice, IIsoChoiceVaria
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("Pctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

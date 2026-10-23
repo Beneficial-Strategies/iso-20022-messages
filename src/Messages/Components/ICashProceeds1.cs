@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the cash proceeds.
 /// </summary>
 [IsoId("_UP1bhtp-Ed-ak6NoX_4Aeg_1953970402")]
+[IsoDisplayName(@"Cash Proceeds")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ICashProceeds1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,8 @@ public interface ICashProceeds1 : IIsoComponent
     [IsoId("_UP1biNp-Ed-ak6NoX_4Aeg_1379272721")]
     [DisplayName("Reconciliation Details")]
     [IsoXmlTag("RcncltnDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? ReconciliationDetails { get; }
 
     /// <summary>
@@ -33,5 +37,8 @@ public interface ICashProceeds1 : IIsoComponent
     [IsoId("_UP1bidp-Ed-ak6NoX_4Aeg_-876446591")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount19> AccountDetails { get; }
 }

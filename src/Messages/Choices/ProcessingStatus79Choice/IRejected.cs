@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus79Choice;
 /// Buy-in advice is rejected for further processing.
 /// </summary>
 [IsoId("_HqnHaZwZEeqtp-LOti013g")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IProcessingStatus79Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_6LPHUSbNEeyhZIgCcGlTyA")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification263 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPartyIdentification263 : IIsoComponent
     [IsoId("_6RtiwSbNEeyhZIgCcGlTyA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max11NumericText)]
     Max11NumericText Identification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IPartyIdentification263 : IIsoComponent
     [IsoId("_6RtiwybNEeyhZIgCcGlTyA")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Assigner { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface IPartyIdentification263 : IIsoComponent
     [IsoId("_6RtixybNEeyhZIgCcGlTyA")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IPartyIdentification263 : IIsoComponent
     [IsoId("_6RtiySbNEeyhZIgCcGlTyA")]
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
+    [IsoSimpleType(IsoSimpleType.Max99Text)]
+    [StringLength(99, MinimumLength = 1)]
     Max99Text? LegalCorporateName { get; }
 
     /// <summary>

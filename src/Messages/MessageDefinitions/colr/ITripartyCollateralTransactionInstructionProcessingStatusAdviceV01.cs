@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.colr;
     "TrptyCollTxInstrPrcgStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:colr.020.001.01"
 )]
+[Description(@"Scope: |This message is sent by a triparty agent after the receipt of a collateral instruction from its client.||In this message, the Sender is the triparty agent and the Receiver is either the collateral taker or the collateral giver or their account servicer.||Usage:|This message provides the status of the Triparty collateral transaction or instruction.")]
+[IsoDisplayName(@"Triparty Collateral Transaction Instruction Processing Status Advice V")]
 public interface ITripartyCollateralTransactionInstructionProcessingStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -38,6 +40,8 @@ public interface ITripartyCollateralTransactionInstructionProcessingStatusAdvice
     [IsoId("_2uaNFSs7EeySlt9bF77XfA")]
     [DisplayName("Cancellation Request Reference")]
     [IsoXmlTag("CxlReqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationRequestReference { get; }
 
     /// <summary>
@@ -110,6 +114,7 @@ public interface ITripartyCollateralTransactionInstructionProcessingStatusAdvice
     [IsoId("_2uaNJys7EeySlt9bF77XfA")]
     [DisplayName("Securities Movement")]
     [IsoXmlTag("SctiesMvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesMovement8> SecuritiesMovement { get; }
 
     /// <summary>
@@ -118,6 +123,7 @@ public interface ITripartyCollateralTransactionInstructionProcessingStatusAdvice
     [IsoId("_2uaNKSs7EeySlt9bF77XfA")]
     [DisplayName("Cash Movement")]
     [IsoXmlTag("CshMvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashMovement7> CashMovement { get; }
 
     /// <summary>
@@ -126,5 +132,6 @@ public interface ITripartyCollateralTransactionInstructionProcessingStatusAdvice
     [IsoId("_2uaNKys7EeySlt9bF77XfA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

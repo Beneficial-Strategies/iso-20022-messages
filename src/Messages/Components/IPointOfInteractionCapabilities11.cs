@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Capabilities of the POI (Point Of Interaction) performing the transaction.
 /// </summary>
 [IsoId("_1kawEc-cEfCTVKnQ8NFKFg")]
+[IsoDisplayName(@"Point Of Interaction Capabilities11")]
 public interface IPointOfInteractionCapabilities11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPointOfInteractionCapabilities11 : IIsoComponent
     [IsoId("_1lJv5c-cEfCTVKnQ8NFKFg")]
     [DisplayName("Card Reading Capabilities")]
     [IsoXmlTag("CardRdngCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataReading8Code> CardReadingCapabilities { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPointOfInteractionCapabilities11 : IIsoComponent
     [IsoId("_1lJv68-cEfCTVKnQ8NFKFg")]
     [DisplayName("Cardholder Verification Capabilities")]
     [IsoXmlTag("CrdhldrVrfctnCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardholderVerificationCapability4Code> CardholderVerificationCapabilities { get; }
 
     /// <summary>
@@ -73,5 +76,6 @@ public interface IPointOfInteractionCapabilities11 : IIsoComponent
     [IsoId("_1lJwD8-cEfCTVKnQ8NFKFg")]
     [DisplayName("Message Capabilities")]
     [IsoXmlTag("MsgCpblties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisplayCapabilities7> MessageCapabilities { get; }
 }

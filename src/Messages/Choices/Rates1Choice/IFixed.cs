@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Rates1Choice;
 /// Details of the fixed rate.
 /// </summary>
 [IsoId("_OvhyoHg2EeuXJdYjLmnO3w")]
+[IsoDisplayName(@"Fixed")]
 public interface IFixed : IRates1Choice, IIsoChoiceVariant
 {
     /// <summary>

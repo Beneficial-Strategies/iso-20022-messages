@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains financial reconciliation data.
 /// </summary>
 [IsoId("_FLdTwSFNEey8XKHwKquEQw")]
+[IsoDisplayName(@"Financial Reconciliation")]
 public interface IFinancialReconciliation2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IFinancialReconciliation2 : IIsoComponent
     [IsoId("_FRo0RSFNEey8XKHwKquEQw")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -55,5 +58,6 @@ public interface IFinancialReconciliation2 : IIsoComponent
     [IsoId("_FRo0SSFNEey8XKHwKquEQw")]
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Count { get; }
 }

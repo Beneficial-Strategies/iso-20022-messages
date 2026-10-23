@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to search for a reservation.
 /// </summary>
 [IsoId("_gv7qwdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Reservation Search Criteria")]
 public interface IReservationSearchCriteria4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IReservationSearchCriteria4 : IIsoComponent
     [IsoId("_gx0hI9cZEeqRFcf2R4bPBw")]
     [DisplayName("Default Reservation Type")]
     [IsoXmlTag("DfltRsvatnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReservationType2Choice> DefaultReservationType { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IReservationSearchCriteria4 : IIsoComponent
     [IsoId("_gx0hJdcZEeqRFcf2R4bPBw")]
     [DisplayName("Current Reservation Type")]
     [IsoXmlTag("CurRsvatnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReservationType2Choice> CurrentReservationType { get; }
 
     /// <summary>

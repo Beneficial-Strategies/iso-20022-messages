@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus2Choice;
 /// </summary>
 [IsoId("_RCy3wtp-Ed-ak6NoX_4Aeg_1583587402")]
 [IsoXmlTag("RjctnSts")]
+[IsoDisplayName(@"Rejection Status")]
 public interface IRejectionStatus : ICancellationStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IRejectionStatus : ICancellationStatus2Choice, IIsoChoiceVarian
     [IsoId("_RDPjuNp-Ed-ak6NoX_4Aeg_1264973826")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

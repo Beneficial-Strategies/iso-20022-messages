@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctSwtchCclExstgPmt",
     "urn:iso:std:iso:20022:tech:xsd:acmt.029.001.01"
 )]
+[Description(@"The AccountSwitchCancelExistingPayment message is sent by the new account servicer to the previous account servicer to identify which payment arrangements are to be cancelled on the account owner's account and when they are to be cancelled. This message is used during a partial switch of the account and may be sent multiple times to allow for the account parties to transfer different payment arrangements at different times during the switch. ")]
+[IsoDisplayName(@"Account Switch Cancel Existing Payment V")]
 public interface IAccountSwitchCancelExistingPaymentV01 : IOuterRecord
 {
     /// <summary>
@@ -48,6 +50,7 @@ public interface IAccountSwitchCancelExistingPaymentV01 : IOuterRecord
     [IsoId("_hfeYAFDdEeeunetnjWUhcA")]
     [DisplayName("Payment Instruction")]
     [IsoXmlTag("PmtInstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstruction24> PaymentInstruction { get; }
 
     /// <summary>
@@ -56,6 +59,7 @@ public interface IAccountSwitchCancelExistingPaymentV01 : IOuterRecord
     [IsoId("_YXy34Fy8Eee48PRwcRxS4A")]
     [DisplayName("Direct Debit Instruction")]
     [IsoXmlTag("DrctDbtInstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDirectDebitInstructionDetails1> DirectDebitInstruction { get; }
 
     /// <summary>
@@ -64,5 +68,6 @@ public interface IAccountSwitchCancelExistingPaymentV01 : IOuterRecord
     [IsoId("_iUM-i09GEeef4o94AcOdBA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

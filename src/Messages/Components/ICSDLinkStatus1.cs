@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Business status of the party for processing in the system.
 /// </summary>
 [IsoId("_hiJFnWliEeGaMcKyqKNRfQ_-127584604")]
+[IsoDisplayName(@"CSD Link Status")]
 public interface ICSDLinkStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICSDLinkStatus1 : IIsoComponent
     [IsoId("_hiJFn2liEeGaMcKyqKNRfQ_-1124656957")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation10> StatusReason { get; }
 }

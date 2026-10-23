@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report7.
 /// </summary>
 [IsoId("_PbV9AYcSEe-U27oWwgmhCQ")]
+[IsoDisplayName(@"Report7")]
 public interface IReport7 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IReport7 : IIsoComponent
     /// </summary>
     [DisplayName("Non Clearing Member")]
     [IsoXmlTag("NonClrMmb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentificationAndAccount227> NonClearingMember { get; }
 
     /// <summary>
@@ -23,5 +25,6 @@ public interface IReport7 : IIsoComponent
     /// </summary>
     [DisplayName("Settlement Obligation Details")]
     [IsoXmlTag("SttlmOblgtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementObligation9> SettlementObligationDetails { get; }
 }

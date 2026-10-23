@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// The process of notifying of an upcoming corporate action. It provides corporate action details including the different options.
 /// </summary>
 [IsoId("_UKK4Ztp-Ed-ak6NoX_4Aeg_1829134178")]
+[IsoDisplayName(@"Corporate Action Event Status")]
 public interface ICorporateActionEventStatus1 : IIsoComponent
 {
     /// <summary>

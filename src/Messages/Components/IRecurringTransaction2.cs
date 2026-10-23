@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial loan (instalment) or a recurring transaction.
 /// </summary>
 [IsoId("_3s3JETDhEeO9waS4ina8CA")]
+[IsoDisplayName(@"Recurring Transaction")]
 public interface IRecurringTransaction2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRecurringTransaction2 : IIsoComponent
     [IsoId("_gVyDADDjEeO9waS4ina8CA")]
     [DisplayName("Instalment Plan")]
     [IsoXmlTag("InstlmtPlan")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<InstalmentPlan1Code> InstalmentPlan { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IRecurringTransaction2 : IIsoComponent
     [IsoId("_wDl_sDDjEeO9waS4ina8CA")]
     [DisplayName("Plan Identification")]
     [IsoXmlTag("PlanId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PlanIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IRecurringTransaction2 : IIsoComponent
     [IsoId("_37vSkTDhEeO9waS4ina8CA")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SequenceNumber { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IRecurringTransaction2 : IIsoComponent
     [IsoId("_37vSlTDhEeO9waS4ina8CA")]
     [DisplayName("Instalment Period")]
     [IsoXmlTag("InstlmtPrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? InstalmentPeriod { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IRecurringTransaction2 : IIsoComponent
     [IsoId("_37vSlzDhEeO9waS4ina8CA")]
     [DisplayName("Total Number Of Payments")]
     [IsoXmlTag("TtlNbOfPmts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberOfPayments { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IRecurringTransaction2 : IIsoComponent
     [IsoId("_2bU70DD5EeO9waS4ina8CA")]
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FirstPaymentDate { get; }
 
     /// <summary>

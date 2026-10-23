@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity attributes of a derivative where the type is inflation.
 /// </summary>
 [IsoId("_aYNJwFr0EeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Asset Class Commodity Inflation")]
 public interface IAssetClassCommodityInflation1 : IIsoComponent
 {
     /// <summary>

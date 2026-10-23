@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a blocked account.
 /// </summary>
 [IsoId("_EGbMcSGeEeWKAaDJcYGKLw")]
+[IsoDisplayName(@"Blocked")]
 public interface IBlocked2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IBlocked2 : IIsoComponent
     [IsoId("_EjSuoSGeEeWKAaDJcYGKLw")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrderType2Choice> OrderType { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IBlocked2 : IIsoComponent
     [IsoId("_EjSuoyGeEeWKAaDJcYGKLw")]
     [DisplayName("Blocked")]
     [IsoXmlTag("Blckd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Blocked { get; }
 
     /// <summary>

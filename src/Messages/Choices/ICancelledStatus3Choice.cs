@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a reason or no reason for the corporate action instruction or instruction cancellation cancelled/cancellation completed status.
 /// </summary>
 [IsoId("_V4EH7eJxEd-Q6MzBzY5WkA")]
+[IsoDisplayName(@"Cancelled Status 3 Choice")]
 public interface ICancelledStatus3Choice : IIsoChoice { }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters3Choice;
 /// </summary>
 [IsoId("_htqcOV2aEeekzJIz1JxYSQ")]
 [IsoXmlTag("SctyDvc")]
+[IsoDisplayName(@"Security Device")]
 public interface ISecurityDevice : IATMCommandParameters3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ISecurityDevice : IATMCommandParameters3Choice, IIsoChoiceVaria
     [IsoId("_ObyFwItIEeSxlKlAGYErFg")]
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SerialNumber { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyType1Choice;
 /// System party type, in a coded format.
 /// </summary>
 [IsoId("_DZrOdVhPEeih3fUfzR38Ig")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISystemPartyType1Choice, IIsoChoiceVariant
 {
     /// <summary>

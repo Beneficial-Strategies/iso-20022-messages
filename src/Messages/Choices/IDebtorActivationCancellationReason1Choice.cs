@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the cancellation request of a creditor enrolment.
 /// </summary>
 [IsoId("_bjMUfPGAEemQ7oqCO5NTQw")]
+[IsoDisplayName(@"Debtor Activation Cancellation Reason 1 Choice")]
 public interface IDebtorActivationCancellationReason1Choice : IIsoChoice { }

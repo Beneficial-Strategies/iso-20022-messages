@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "ShrhldrIdDsclsrRspnStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.049.001.01"
 )]
+[Description(@"The ShareholdersIdentificationDisclosureResponseStatusAdvice message is sent by an issuer or by a third party nominated by the issuer (such as an issuer's agent) to the intermediary in a custody chain in response to a ShareholderIdentificationDisclosureResponse message or in response to a multipart response report (sent with pagination in multiple messages) in order to report about the acceptance status of the received ShareholderIdentificationDisclosureResponse message/report.|Usage: when the shareholder identification disclosure response is sent in a multipart response report (with several messages), a single response status advice only may be sent for the acceptance status of the whole report.")]
+[IsoDisplayName(@"Shareholder Identification Disclosure Response Status Advice V")]
 public interface IShareholderIdentificationDisclosureResponseStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +27,8 @@ public interface IShareholderIdentificationDisclosureResponseStatusAdviceV01 : I
     [IsoId("_9xsWBYd9EemJ1cSJJmVYRQ")]
     [DisplayName("Disclosure Response Identification")]
     [IsoXmlTag("DsclsrRspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DisclosureResponseIdentification { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface IShareholderIdentificationDisclosureResponseStatusAdviceV01 : I
     [IsoId("_-bsZoYebEemJ1cSJJmVYRQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication device number or electronic address used for communication.
 /// </summary>
 [IsoId("_6SyVQJqlEeGSON8vddiWzQ_-774006209")]
+[IsoDisplayName(@"Contact Details")]
 public interface IContactDetails3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IContactDetails3 : IIsoComponent
     [IsoId("_6SyVQpqlEeGSON8vddiWzQ_-1844884135")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IContactDetails3 : IIsoComponent
     [IsoId("_6SyVQ5qlEeGSON8vddiWzQ_-766863797")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IContactDetails3 : IIsoComponent
     [IsoId("_6SyVRJqlEeGSON8vddiWzQ_1064059372")]
     [DisplayName("Mobile Number")]
     [IsoXmlTag("MobNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? MobileNumber { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IContactDetails3 : IIsoComponent
     [IsoId("_6SyVRZqlEeGSON8vddiWzQ_1518146641")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -57,6 +63,8 @@ public interface IContactDetails3 : IIsoComponent
     [IsoId("_6SyVRpqlEeGSON8vddiWzQ_-1736786360")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? EmailAddress { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IContactDetails3 : IIsoComponent
     [IsoId("_6SyVR5qlEeGSON8vddiWzQ_1486175877")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherContact1> Other { get; }
 
     /// <summary>

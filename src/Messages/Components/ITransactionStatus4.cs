@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the status of the transaction by means of a code.
 /// </summary>
 [IsoId("_RbFb-Np-Ed-ak6NoX_4Aeg_1598523783")]
+[IsoDisplayName(@"Transaction Status")]
 public interface ITransactionStatus4 : IIsoComponent
 {
     /// <summary>

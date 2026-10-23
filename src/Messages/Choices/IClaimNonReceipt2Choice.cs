@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies whether the claim non receipt is accepted or rejected.
 /// </summary>
 [IsoId("_EVNOIW4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Claim Non Receipt 2 Choice")]
 public interface IClaimNonReceipt2Choice : IIsoChoice { }

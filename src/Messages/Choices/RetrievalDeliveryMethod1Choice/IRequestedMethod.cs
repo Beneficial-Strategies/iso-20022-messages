@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RetrievalDeliveryMethod1Choice;
 /// Method requested by issuers to convey the transaction information.
 /// </summary>
 [IsoId("_-v7SQ-whEeiMkKo2clXHdQ")]
+[IsoDisplayName(@"Requested Method")]
 public interface IRequestedMethod : IRetrievalDeliveryMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IRequestedMethod : IRetrievalDeliveryMethod1Choice, IIsoChoiceV
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("ReqdMtd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

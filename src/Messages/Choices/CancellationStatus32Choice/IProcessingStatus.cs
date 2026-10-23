@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus32Choice;
 /// <summary>
 /// Processing Status.
 /// </summary>
+[IsoDisplayName(@"Processing Status")]
 public interface IProcessingStatus : ICancellationStatus32Choice, IIsoChoiceVariant
 {
     /// <summary>

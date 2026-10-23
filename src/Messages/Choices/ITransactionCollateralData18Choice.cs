@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the details of the collateral used in the transaction.
 /// </summary>
 [IsoId("_C5KZIcg5Eeu4ecZgAYuz5w")]
+[IsoDisplayName(@"Transaction Collateral Data 18 Choice")]
 public interface ITransactionCollateralData18Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason why the request or instruction was denied.
 /// </summary>
 [IsoId("__K0QETq1EeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Denied Reason")]
 public interface IDeniedReason10 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IDeniedReason10 : IIsoComponent
     [IsoId("__qgcuTq1EeWyoP0PbocV1Q")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report Transaction Response7.
 /// </summary>
 [IsoId("_F1pa4aE5Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"Report Transaction Response7")]
 public interface IReportTransactionResponse7 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IReportTransactionResponse7 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Report")]
     [IsoXmlTag("TxRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IServiceResponse9> TransactionReport { get; }
 }

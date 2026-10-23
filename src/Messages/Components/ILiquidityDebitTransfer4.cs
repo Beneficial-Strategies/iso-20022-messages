@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Liquidity Debit Transfer4.
 /// </summary>
 [IsoId("_3oUHUTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Liquidity Debit Transfer4")]
 public interface ILiquidityDebitTransfer4 : IIsoComponent
 {
     /// <summary>

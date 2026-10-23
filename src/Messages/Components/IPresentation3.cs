@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Electronic presentation information.
 /// </summary>
 [IsoId("_97IpNHltEeG7BsjMvd1mEw_776064240")]
+[IsoDisplayName(@"Presentation")]
 public interface IPresentation3 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IPresentation3 : IIsoComponent
     [IsoId("_97RzInltEeG7BsjMvd1mEw_837339061")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Address { get; }
 }

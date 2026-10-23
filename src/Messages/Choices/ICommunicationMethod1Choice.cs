@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the communication channel method.
 /// </summary>
 [IsoId("_93Z_w3ltEeG7BsjMvd1mEw_1540700249")]
+[IsoDisplayName(@"Communication Method 1 Choice")]
 public interface ICommunicationMethod1Choice : IIsoChoice { }

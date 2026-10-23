@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the security pledged as collateral.
 /// </summary>
 [IsoId("__pEK0IxmEeap1-whlAlpOw")]
+[IsoDisplayName(@"Security Reuse Data")]
 public interface ISecurityReuseData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityReuseData1 : IIsoComponent
     [IsoId("_IiLgkIxnEeap1-whlAlpOw")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier ISIN { get; }
 
     /// <summary>

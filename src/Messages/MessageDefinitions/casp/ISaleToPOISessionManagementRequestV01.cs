@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.casp;
     "SaleToPOISsnMgmtReq",
     "urn:iso:std:iso:20022:tech:xsd:casp.005.001.01"
 )]
+[Description(@"This message is a request for several kind of Administrative services related to Session Management ' that the Sale System (Merchant I.S.) can send to the POI system (Card Acceptor system).")]
+[IsoDisplayName(@"Sale To POI Session Management Request V")]
 public interface ISaleToPOISessionManagementRequestV01 : IOuterRecord
 {
     /// <summary>

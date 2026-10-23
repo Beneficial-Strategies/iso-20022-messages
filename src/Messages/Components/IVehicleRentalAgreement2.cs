@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Agreement (contract) related to a vehicle rental service.
 /// </summary>
 [IsoId("_wcJ5EayeEeuupt0UCH5uiw")]
+[IsoDisplayName(@"Vehicle Rental Agreement")]
 public interface IVehicleRentalAgreement2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUnYayeEeuupt0UCH5uiw")]
     [DisplayName("Agreement Number")]
     [IsoXmlTag("AgrmtNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AgreementNumber { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUnY6yeEeuupt0UCH5uiw")]
     [DisplayName("Adjusted Indicator")]
     [IsoXmlTag("AdjstdInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AdjustedIndicator { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUnZ6yeEeuupt0UCH5uiw")]
     [DisplayName("Pickup Location")]
     [IsoXmlTag("PckpLctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAddress2> PickupLocation { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUnaayeEeuupt0UCH5uiw")]
     [DisplayName("Check Out Date")]
     [IsoXmlTag("ChckOutDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CheckOutDate { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUna6yeEeuupt0UCH5uiw")]
     [DisplayName("Check Out Time")]
     [IsoXmlTag("ChckOutTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? CheckOutTime { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUnb6yeEeuupt0UCH5uiw")]
     [DisplayName("Check In Date")]
     [IsoXmlTag("ChckInDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CheckInDate { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUncayeEeuupt0UCH5uiw")]
     [DisplayName("Check In Time")]
     [IsoXmlTag("ChckInTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? CheckInTime { get; }
 
     /// <summary>
@@ -89,6 +98,7 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUnc6yeEeuupt0UCH5uiw")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? Duration { get; }
 
     /// <summary>
@@ -113,6 +123,7 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUneayeEeuupt0UCH5uiw")]
     [DisplayName("Rental Rate")]
     [IsoXmlTag("RntlRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRentalRate1> RentalRate { get; }
 
     /// <summary>
@@ -129,6 +140,8 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUnfayeEeuupt0UCH5uiw")]
     [DisplayName("Vehicle Registration Number")]
     [IsoXmlTag("VhclRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? VehicleRegistrationNumber { get; }
 
     /// <summary>
@@ -137,6 +150,7 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUnf6yeEeuupt0UCH5uiw")]
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? InsuranceIndicator { get; }
 
     /// <summary>
@@ -145,6 +159,7 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUngayeEeuupt0UCH5uiw")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount18> AdditionalAmount { get; }
 
     /// <summary>
@@ -153,6 +168,7 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUng6yeEeuupt0UCH5uiw")]
     [DisplayName("Estimated Tax")]
     [IsoXmlTag("EstmtdTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax39> EstimatedTax { get; }
 
     /// <summary>
@@ -161,6 +177,7 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUnhayeEeuupt0UCH5uiw")]
     [DisplayName("Discount Programme")]
     [IsoXmlTag("DscntPrgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDiscount3> DiscountProgramme { get; }
 
     /// <summary>
@@ -169,5 +186,6 @@ public interface IVehicleRentalAgreement2 : IIsoComponent
     [IsoId("_wgUnh6yeEeuupt0UCH5uiw")]
     [DisplayName("Loyalty Programme")]
     [IsoXmlTag("LltyPrgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyProgramme3> LoyaltyProgramme { get; }
 }

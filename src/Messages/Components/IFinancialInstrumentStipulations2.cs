@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional restrictions on the financial instrument, related to the stipulation.
 /// </summary>
 [IsoId("_vv4qsNooEeCWg-hsBVGrDA_-742473127")]
+[IsoDisplayName(@"Financial Instrument Stipulations")]
 public interface IFinancialInstrumentStipulations2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vv4qsdooEeCWg-hsBVGrDA_-856312193")]
     [DisplayName("Geographics")]
     [IsoXmlTag("Geogcs")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Geographics { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwCbs9ooEeCWg-hsBVGrDA_-549634309")]
     [DisplayName("Amortisable Indicator")]
     [IsoXmlTag("AmtsblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AmortisableIndicator { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwCbtNooEeCWg-hsBVGrDA_-1546706662")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Purpose { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwCbtdooEeCWg-hsBVGrDA_1751188281")]
     [DisplayName("Alternative Minimum Tax Indicator")]
     [IsoXmlTag("AltrntvMinTaxInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AlternativeMinimumTaxIndicator { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwLloNooEeCWg-hsBVGrDA_754115928")]
     [DisplayName("Auto Reinvestment")]
     [IsoXmlTag("AutoRinvstmt")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? AutoReinvestment { get; }
 
     /// <summary>
@@ -105,6 +113,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwLlpNooEeCWg-hsBVGrDA_1060793812")]
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Haircut { get; }
 
     /// <summary>
@@ -113,6 +122,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwLlpdooEeCWg-hsBVGrDA_1829703902")]
     [DisplayName("Insured Indicator")]
     [IsoXmlTag("InsrdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? InsuredIndicator { get; }
 
     /// <summary>
@@ -121,6 +131,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwLlptooEeCWg-hsBVGrDA_832631549")]
     [DisplayName("Look Back")]
     [IsoXmlTag("LookBck")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LookBack { get; }
 
     /// <summary>
@@ -129,6 +140,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwVWoNooEeCWg-hsBVGrDA_-164440804")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? MaturityDate { get; }
 
     /// <summary>
@@ -137,6 +149,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwVWodooEeCWg-hsBVGrDA_-1161513157")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? IssueDate { get; }
 
     /// <summary>
@@ -145,6 +158,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwVWotooEeCWg-hsBVGrDA_2136381786")]
     [DisplayName("Issuer Identification")]
     [IsoXmlTag("IssrId")]
+    [IsoSimpleType(IsoSimpleType.BICNonFIIdentifier)]
     BICNonFIIdentifier? IssuerIdentification { get; }
 
     /// <summary>
@@ -153,6 +167,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwVWo9ooEeCWg-hsBVGrDA_1139309433")]
     [DisplayName("Issue Size")]
     [IsoXmlTag("IsseSz")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? IssueSize { get; }
 
     /// <summary>
@@ -169,6 +184,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwVWpdooEeCWg-hsBVGrDA_-854835273")]
     [DisplayName("Maximum Substitution")]
     [IsoXmlTag("MaxSbstitn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumSubstitution { get; }
 
     /// <summary>
@@ -201,6 +217,8 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwfHo9ooEeCWg-hsBVGrDA_-2083023729")]
     [DisplayName("Production")]
     [IsoXmlTag("Pdctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Production { get; }
 
     /// <summary>
@@ -209,6 +227,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwfHpNooEeCWg-hsBVGrDA_1214871214")]
     [DisplayName("Restricted Indicator")]
     [IsoXmlTag("RstrctdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RestrictedIndicator { get; }
 
     /// <summary>
@@ -225,6 +244,8 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwfHptooEeCWg-hsBVGrDA_-779273492")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Sector { get; }
 
     /// <summary>
@@ -241,6 +262,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwoRkdooEeCWg-hsBVGrDA_1521549098")]
     [DisplayName("Substitution Left")]
     [IsoXmlTag("SbstitnLft")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SubstitutionLeft { get; }
 
     /// <summary>
@@ -249,6 +271,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwoRktooEeCWg-hsBVGrDA_524476745")]
     [DisplayName("Whole Pool Indicator")]
     [IsoXmlTag("WhlPoolInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? WholePoolIndicator { get; }
 
     /// <summary>
@@ -257,6 +280,8 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwoRk9ooEeCWg-hsBVGrDA_-472595608")]
     [DisplayName("Price Source")]
     [IsoXmlTag("PricSrc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PriceSource { get; }
 
     /// <summary>
@@ -265,6 +290,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwoRlNooEeCWg-hsBVGrDA_-1469667961")]
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ExpirationDate { get; }
 
     /// <summary>
@@ -281,6 +307,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwyCkNooEeCWg-hsBVGrDA_831154629")]
     [DisplayName("Over Allotment Rate")]
     [IsoXmlTag("OverAlltmtRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OverAllotmentRate { get; }
 
     /// <summary>
@@ -297,6 +324,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwyCktooEeCWg-hsBVGrDA_-1162990077")]
     [DisplayName("Callable Indicator")]
     [IsoXmlTag("CllblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CallableIndicator { get; }
 
     /// <summary>
@@ -305,6 +333,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwyCk9ooEeCWg-hsBVGrDA_2134904866")]
     [DisplayName("Convertible Indicator")]
     [IsoXmlTag("ConvtblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ConvertibleIndicator { get; }
 
     /// <summary>
@@ -313,6 +342,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwyClNooEeCWg-hsBVGrDA_1137832513")]
     [DisplayName("Putable Indicator")]
     [IsoXmlTag("PutblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PutableIndicator { get; }
 
     /// <summary>
@@ -321,6 +351,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwyCldooEeCWg-hsBVGrDA_140760160")]
     [DisplayName("Pre Funded Indicator")]
     [IsoXmlTag("PreFnddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PreFundedIndicator { get; }
 
     /// <summary>
@@ -329,6 +360,7 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vwyCltooEeCWg-hsBVGrDA_-856312193")]
     [DisplayName("Escrowed Indicator")]
     [IsoXmlTag("EscrwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EscrowedIndicator { get; }
 
     /// <summary>
@@ -337,5 +369,6 @@ public interface IFinancialInstrumentStipulations2 : IIsoComponent
     [IsoId("_vw7MgNooEeCWg-hsBVGrDA_-1853384546")]
     [DisplayName("Perpetual Indicator")]
     [IsoXmlTag("PerptlInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PerpetualIndicator { get; }
 }

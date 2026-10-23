@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for standardisation.
 /// </summary>
 [IsoId("_PbNAMWp7EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Standardisation 3 Choice")]
 public interface IStandardisation3Choice : IIsoChoice { }

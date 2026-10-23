@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFailsDailyCSD1Choice;
 /// Where no transaction was concluded, this field should be set so that a valid transaction data file can be submitted to the regulator as per submission requirements.
 /// </summary>
 [IsoId("_Umrp4jOaEeqBfed1bmSPqg")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : ISettlementFailsDailyCSD1Choice, IIsoChoiceVariant
 {
     /// <summary>

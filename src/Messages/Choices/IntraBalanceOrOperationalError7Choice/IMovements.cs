@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError7C
 /// </summary>
 [IsoId("_YDGlITneEem7JZMuWtwtsg")]
 [IsoXmlTag("Mvmnts")]
+[IsoDisplayName(@"Movements")]
 public interface IMovements : IIntraBalanceOrOperationalError7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -50,5 +51,6 @@ public interface IMovements : IIntraBalanceOrOperationalError7Choice, IIsoChoice
     [IsoId("_YN1OfTneEem7JZMuWtwtsg")]
     [DisplayName("Movement")]
     [IsoXmlTag("Mvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalanceMovement5> Movement { get; }
 }

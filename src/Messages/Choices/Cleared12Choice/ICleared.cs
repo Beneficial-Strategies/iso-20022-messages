@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared12Choice;
 /// </summary>
 [IsoId("_Bemz8exYEemioJdkOVFBdw")]
 [IsoXmlTag("Clrd")]
+[IsoDisplayName(@"Cleared")]
 public interface ICleared : ICleared12Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,5 +35,6 @@ public interface ICleared : ICleared12Choice, IIsoChoiceVariant
     [IsoId("_BpsClexYEemioJdkOVFBdw")]
     [DisplayName("Clearing Date Time")]
     [IsoXmlTag("ClrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ClearingDateTime { get; }
 }

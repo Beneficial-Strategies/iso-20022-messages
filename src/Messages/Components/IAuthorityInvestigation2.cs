@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the requested authority investigation information details.
 /// </summary>
 [IsoId("_zIYkA01JEeGAs6v-iSb2RQ")]
+[IsoDisplayName(@"Authority Investigation")]
 public interface IAuthorityInvestigation2 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,7 @@ public interface IAuthorityInvestigation2 : IIsoComponent
     [IsoId("_6sOI8U1JEeGAs6v-iSb2RQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalInformation { get; }
 }

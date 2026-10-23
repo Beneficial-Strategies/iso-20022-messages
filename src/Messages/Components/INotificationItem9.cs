@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Notification Item9.
 /// </summary>
 [IsoId("_95jq0TEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Notification Item9")]
 public interface INotificationItem9 : IIsoComponent
 {
     /// <summary>
@@ -121,5 +122,6 @@ public interface INotificationItem9 : IIsoComponent
     /// </summary>
     [DisplayName("Underlying Allocation")]
     [IsoXmlTag("UndrlygAllcn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionAllocation1> UnderlyingAllocation { get; }
 }

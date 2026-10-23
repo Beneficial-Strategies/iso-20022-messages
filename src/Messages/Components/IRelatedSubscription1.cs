@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Related Subscription1.
 /// </summary>
 [IsoId("_F_zyQBvzEe6BvtAMnhq3zw")]
+[IsoDisplayName(@"Related Subscription1")]
 public interface IRelatedSubscription1 : IIsoComponent
 {
     /// <summary>

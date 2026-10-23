@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency Control Package Status3.
 /// </summary>
 [IsoId("_2_P8MTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Currency Control Package Status3")]
 public interface ICurrencyControlPackageStatus3 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface ICurrencyControlPackageStatus3 : IIsoComponent
     /// </summary>
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IValidationStatusReason3> StatusReason { get; }
 
     /// <summary>
@@ -44,5 +46,6 @@ public interface ICurrencyControlPackageStatus3 : IIsoComponent
     /// </summary>
     [DisplayName("Record Status")]
     [IsoXmlTag("RcrdSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICurrencyControlRecordStatus3> RecordStatus { get; }
 }

@@ -10,4 +10,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// ISO 8583 bit 35
 /// </summary>
 [IsoId("_NkLQYEbbEeeIjf8aP9KbJA")]
+[IsoDisplayName(@"Track 2 Data 1 Choice")]
 public interface ITrack2Data1Choice : IIsoChoice { }

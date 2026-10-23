@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor parameters dedicated to the merchant.
 /// </summary>
 [IsoId("_5aBicbAEEeah1_v59tW6Rg")]
+[IsoDisplayName(@"Merchant Configuration Parameters")]
 public interface IMerchantConfigurationParameters3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IMerchantConfigurationParameters3 : IIsoComponent
     [IsoId("_5lFi87AEEeah1_v59tW6Rg")]
     [DisplayName("Merchant Identification")]
     [IsoXmlTag("MrchntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MerchantIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IMerchantConfigurationParameters3 : IIsoComponent
     [IsoId("_5lFi9bAEEeah1_v59tW6Rg")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Version { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IMerchantConfigurationParameters3 : IIsoComponent
     [IsoId("_5lFi-bAEEeah1_v59tW6Rg")]
     [DisplayName("Other Parameters")]
     [IsoXmlTag("OthrParams")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? OtherParameters { get; }
 }

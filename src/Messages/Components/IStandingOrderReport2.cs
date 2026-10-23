@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the detailed attributes of a standing order.
 /// </summary>
 [IsoId("_eamLFdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Standing Order Report")]
 public interface IStandingOrderReport2 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the type of organisation.
 /// </summary>
 [IsoId("_wpZ08CCeEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Organisation Type 1 Choice")]
 public interface IOrganisationType1Choice : IIsoChoice { }

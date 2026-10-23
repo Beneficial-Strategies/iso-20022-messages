@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context19.
 /// </summary>
 [IsoId("_rc-QkW6jEe6DxcrvCrq6hQ")]
+[IsoDisplayName(@"Context19")]
 public interface IContext19 : IIsoComponent
 {
     /// <summary>
@@ -135,6 +136,7 @@ public interface IContext19 : IIsoComponent
     /// </summary>
     [DisplayName("E Commerce Data")]
     [IsoXmlTag("EComrcData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IECommerceData1> ECommerceData { get; }
 
     /// <summary>
@@ -240,6 +242,7 @@ public interface IContext19 : IIsoComponent
     /// </summary>
     [DisplayName("Security Characteristics")]
     [IsoXmlTag("SctyChrtcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<SecurityCharacteristics1Code> SecurityCharacteristics { get; }
 
     /// <summary>
@@ -408,6 +411,7 @@ public interface IContext19 : IIsoComponent
     /// </summary>
     [DisplayName("Receipt Type")]
     [IsoXmlTag("RctTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ReceiptType1Code> ReceiptType { get; }
 
     /// <summary>
@@ -422,5 +426,6 @@ public interface IContext19 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

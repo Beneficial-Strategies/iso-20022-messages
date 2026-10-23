@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Cassette Counters6.
 /// </summary>
 [IsoId("_a2OAYaDmEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Cassette Counters6")]
 public interface IATMCassetteCounters6 : IIsoComponent
 {
     /// <summary>
@@ -58,5 +59,6 @@ public interface IATMCassetteCounters6 : IIsoComponent
     /// </summary>
     [DisplayName("Flow Totals")]
     [IsoXmlTag("FlowTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCassetteCounters5> FlowTotals { get; }
 }

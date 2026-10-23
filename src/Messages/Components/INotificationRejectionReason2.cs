@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Notification Rejection Reason2.
 /// </summary>
 [IsoId("_m059MVuzEe6gDOpEK7Q4ig")]
+[IsoDisplayName(@"Notification Rejection Reason2")]
 public interface INotificationRejectionReason2 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface INotificationRejectionReason2 : IIsoComponent
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason6Format1Choice> Reason { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference2Choice;
 /// Unique identifier of the margin call response.
 /// </summary>
 [IsoId("_TYW3kKerEeCq2KR6DaC1kQ_-118809052")]
+[IsoDisplayName(@"Margin Call Response Identification")]
 public interface IMarginCallResponseIdentification : IReference2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IMarginCallResponseIdentification : IReference2Choice, IIsoChoi
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("MrgnCallRspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

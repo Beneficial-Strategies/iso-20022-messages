@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about market identification and market type.
 /// </summary>
 [IsoId("_URxVOdp-Ed-ak6NoX_4Aeg_-1818595308")]
+[IsoDisplayName(@"Market Identification")]
 public interface IMarketIdentification2 : IIsoComponent
 {
     /// <summary>

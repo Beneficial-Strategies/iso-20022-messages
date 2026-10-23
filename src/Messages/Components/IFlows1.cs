@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payments to and from a concentration bank account of a central counterparty.
 /// </summary>
 [IsoId("_1Qaz8LIhEeaYqc4G3TTwhA")]
+[IsoDisplayName(@"Flows")]
 public interface IFlows1 : IIsoComponent
 {
     /// <summary>

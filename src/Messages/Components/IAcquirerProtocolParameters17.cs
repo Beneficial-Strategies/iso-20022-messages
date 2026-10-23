@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acquirer Protocol Parameters17.
 /// </summary>
 [IsoId("_sd6csZ9uEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Acquirer Protocol Parameters17")]
 public interface IAcquirerProtocolParameters17 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IAcquirerProtocolParameters17 : IIsoComponent
     /// </summary>
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification176> AcquirerIdentification { get; }
 
     /// <summary>
@@ -37,6 +39,7 @@ public interface IAcquirerProtocolParameters17 : IIsoComponent
     /// </summary>
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> ApplicationIdentification { get; }
 
     /// <summary>
@@ -44,6 +47,7 @@ public interface IAcquirerProtocolParameters17 : IIsoComponent
     /// </summary>
     [DisplayName("Host")]
     [IsoXmlTag("Hst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcquirerHostConfiguration10> Host { get; }
 
     /// <summary>
@@ -93,6 +97,7 @@ public interface IAcquirerProtocolParameters17 : IIsoComponent
     /// </summary>
     [DisplayName("Split Total Criteria")]
     [IsoXmlTag("SpltTtlCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ReconciliationCriteria1Code> SplitTotalCriteria { get; }
 
     /// <summary>
@@ -107,6 +112,7 @@ public interface IAcquirerProtocolParameters17 : IIsoComponent
     /// </summary>
     [DisplayName("Amount Qualifier For Reservation")]
     [IsoXmlTag("AmtQlfrForRsvatn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<TypeOfAmount8Code> AmountQualifierForReservation { get; }
 
     /// <summary>
@@ -135,6 +141,7 @@ public interface IAcquirerProtocolParameters17 : IIsoComponent
     /// </summary>
     [DisplayName("Batch Transfer Content")]
     [IsoXmlTag("BtchTrfCntt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<BatchTransactionType1Code> BatchTransferContent { get; }
 
     /// <summary>
@@ -156,6 +163,7 @@ public interface IAcquirerProtocolParameters17 : IIsoComponent
     /// </summary>
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageItemCondition2> MessageItem { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a meeting vote instruction.
 /// </summary>
 [IsoId("_wuMboajGEfCzuLlmLrhIvA")]
+[IsoDisplayName(@"Instruction9")]
 public interface IInstruction9 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IInstruction9 : IIsoComponent
     [IsoId("_w3COn6jGEfCzuLlmLrhIvA")]
     [DisplayName("Meeting Attendee")]
     [IsoXmlTag("MtgAttndee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson41> MeetingAttendee { get; }
 
     /// <summary>
@@ -81,5 +83,6 @@ public interface IInstruction9 : IIsoComponent
     [IsoId("_s0YKYqnXEfC5VNwixU6YfQ")]
     [DisplayName("Additional Disclosure Information")]
     [IsoXmlTag("AddtlDsclsrInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification338> AdditionalDisclosureInformation { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus60Cho
 
 /// <summary>Instruction has been received and accepted by the issuer or offeror.</summary>
 [IsoId("_rt3LRY74EfCbNJ3GwkFTcw")]
+[IsoDisplayName(@"Received By Issuer Or Offeror")]
 public interface IReceivedByIssuerOrOfferor
     : IInstructionProcessingStatus60Choice,
         IIsoChoiceVariant

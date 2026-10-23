@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportContent1Choice;
 /// Report content in text format.
 /// </summary>
 [IsoId("_TSNGoMlWEeuJ35KoBRZFOg")]
+[IsoDisplayName(@"Text")]
 public interface IText : IReportContent1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IText : IReportContent1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 10,000,000 characters.
     /// </summary>
     [IsoXmlTag("Txt")]
+    [IsoSimpleType(IsoSimpleType.Max10MbText)]
+    [StringLength(10000000, MinimumLength = 1)]
     Max10MbText Value { get; }
 }

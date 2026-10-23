@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the ordering in which the resulting transaction reports should be returned.
 /// </summary>
 [IsoId("_s9PP4N6QEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Search Output Order")]
 public interface ISearchOutputOrder1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface ISearchOutputOrder1 : IIsoComponent
     [IsoId("_0aWhsN6QEeiwsev40qZGEQ")]
     [DisplayName("Criteria Order")]
     [IsoXmlTag("CritOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICriteriaOrder1> CriteriaOrder { get; }
 }

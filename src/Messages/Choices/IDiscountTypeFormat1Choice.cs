@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or a proprietary code for specifying the type of discount.
 /// </summary>
 [IsoId("_SumZFQEcEeCQm6a_G2yO_w_1636227092")]
+[IsoDisplayName(@"Discount Type Format 1 Choice")]
 public interface IDiscountTypeFormat1Choice : IIsoChoice { }

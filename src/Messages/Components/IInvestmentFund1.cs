@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details about the investment fund class.
 /// </summary>
 [IsoId("_m-vKpvNBEeCuA5Tr22BnwA_337995700")]
+[IsoDisplayName(@"Investment Fund")]
 public interface IInvestmentFund1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IInvestmentFund1 : IIsoComponent
     [IsoId("_m-vKqPNBEeCuA5Tr22BnwA_693141038")]
     [DisplayName("Class Type")]
     [IsoXmlTag("ClssTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClassType { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IInvestmentFund1 : IIsoComponent
     [IsoId("_m-vKqfNBEeCuA5Tr22BnwA_-744176110")]
     [DisplayName("Total Units Outstanding")]
     [IsoXmlTag("TtlUnitsOutsdng")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? TotalUnitsOutstanding { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IInvestmentFund1 : IIsoComponent
     [IsoId("_m-47oPNBEeCuA5Tr22BnwA_1556646480")]
     [DisplayName("Transactional Units")]
     [IsoXmlTag("TxnlUnits")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? TransactionalUnits { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IInvestmentFund1 : IIsoComponent
     [IsoId("_m-47ovNBEeCuA5Tr22BnwA_-574968216")]
     [DisplayName("Price")]
     [IsoXmlTag("Pric")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceInformation10> Price { get; }
 
     /// <summary>
@@ -65,5 +71,6 @@ public interface IInvestmentFund1 : IIsoComponent
     [IsoId("_m-47o_NBEeCuA5Tr22BnwA_-14332001")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

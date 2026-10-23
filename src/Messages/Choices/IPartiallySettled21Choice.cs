@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between formats for a partially settled reason.
 /// </summary>
 [IsoId("_R48xQUHtEeaNSo9he0Belg")]
+[IsoDisplayName(@"Partially Settled 21 Choice")]
 public interface IPartiallySettled21Choice : IIsoChoice { }

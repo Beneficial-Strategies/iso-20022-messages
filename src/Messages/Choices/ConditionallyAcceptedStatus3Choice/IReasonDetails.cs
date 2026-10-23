@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConditionallyAcceptedStatus3Choi
 /// </summary>
 [IsoId("_s1kxx0HXEeamVPoS58KxXA")]
 [IsoXmlTag("RsnDtls")]
+[IsoDisplayName(@"Reason Details")]
 public interface IReasonDetails : IConditionallyAcceptedStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IReasonDetails : IConditionallyAcceptedStatus3Choice, IIsoChoic
     [IsoId("_BL11YEHaEeamVPoS58KxXA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

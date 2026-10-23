@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_5SjM_zooEemaN9GkhmGkfg")]
 [IsoMessage("colr.002.001.01", "CollValRpt", "urn:iso:std:iso:20022:tech:xsd:colr.002.001.01")]
+[Description(@"The CollateralValueReport message is sent by the system transaction administrator to a system member (such as a directly connected party) to provide further information the current available value of securities for auto collateralisation for one specific or several cash accounts.")]
+[IsoDisplayName(@"Collateral Value Report V")]
 public interface ICollateralValueReportV01 : IOuterRecord
 {
     /// <summary>
@@ -36,5 +38,6 @@ public interface ICollateralValueReportV01 : IOuterRecord
     [IsoId("_5Sj0BTooEemaN9GkhmGkfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteThroughNetwork1Choice;
 /// Voting is performed via message sent through an alternate network channel, that is, either via the chain of intermediaries or via the channel as described in the processing text for next intermediary information field.
 /// </summary>
 [IsoId("_Cph1QDT8Ee2tRf29bleifQ")]
+[IsoDisplayName(@"Vote Channel")]
 public interface IVoteChannel : IVoteThroughNetwork1Choice, IIsoChoiceVariant
 {
     /// <summary>

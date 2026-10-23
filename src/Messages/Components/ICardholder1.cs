@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the cardholder.
 /// </summary>
 [IsoId("_SqIIywEcEeCQm6a_G2yO_w_1845614557")]
+[IsoDisplayName(@"Cardholder")]
 public interface ICardholder1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardholder1 : IIsoComponent
     [IsoId("_SqIIzAEcEeCQm6a_G2yO_w_318846073")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholderIdentification1> Identification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ICardholder1 : IIsoComponent
     [IsoId("_SqIIzQEcEeCQm6a_G2yO_w_1361073626")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max45Text)]
+    [StringLength(45, MinimumLength = 1)]
     Max45Text? Name { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICardholder1 : IIsoComponent
     [IsoId("_SqR5wQEcEeCQm6a_G2yO_w_1813932456")]
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholderAuthentication1> Authentication { get; }
 
     /// <summary>
@@ -57,5 +62,7 @@ public interface ICardholder1 : IIsoComponent
     [IsoId("_SqR5wwEcEeCQm6a_G2yO_w_719216994")]
     [DisplayName("Personal Data")]
     [IsoXmlTag("PrsnlData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? PersonalData { get; }
 }

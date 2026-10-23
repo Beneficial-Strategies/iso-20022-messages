@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organised structure that is set up for a particular purpose, eg, a business, government body, department, charity, or financial institution.
 /// </summary>
 [IsoId("_K62cURQLEeKCyZtSz_i3FA")]
+[IsoDisplayName(@"Organisation")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IOrganisation13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IOrganisation13 : IIsoComponent
     [IsoId("_LRpywRQLEeKCyZtSz_i3FA")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IOrganisation13 : IIsoComponent
     [IsoId("_LRpyyRQLEeKCyZtSz_i3FA")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Purpose { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IOrganisation13 : IIsoComponent
     [IsoId("_LRpy1RQLEeKCyZtSz_i3FA")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface IOrganisation13 : IIsoComponent
     [IsoId("_LRpy2RQLEeKCyZtSz_i3FA")]
     [DisplayName("Tax Identification Number")]
     [IsoXmlTag("TaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxIdentificationNumber { get; }
 
     /// <summary>
@@ -73,6 +82,8 @@ public interface IOrganisation13 : IIsoComponent
     [IsoId("_LRpy3RQLEeKCyZtSz_i3FA")]
     [DisplayName("National Registration Number")]
     [IsoXmlTag("NtlRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NationalRegistrationNumber { get; }
 
     /// <summary>
@@ -81,6 +92,9 @@ public interface IOrganisation13 : IIsoComponent
     [IsoId("_LRpy4RQLEeKCyZtSz_i3FA")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress3> PostalAddress { get; }
 
     /// <summary>

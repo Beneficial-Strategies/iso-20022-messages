@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identifies an airport by its code or by its name and the town where it is located.
 /// </summary>
 [IsoId("_SsSlI9p-Ed-ak6NoX_4Aeg_-992731401")]
+[IsoDisplayName(@"Airport Name 1 Choice")]
 public interface IAirportName1Choice : IIsoChoice { }

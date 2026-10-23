@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice;
 /// Identifier for French securities assigned by the Societe Interprofessionnelle Pour La Compensation des Valeurs Mobilieres in France. The Sicovam is composed of 5-digits.
 /// </summary>
 [IsoId("_Qd1wktp-Ed-ak6NoX_4Aeg_-722284713")]
+[IsoDisplayName(@"Sicovam")]
 public interface ISicovam : ISecurityIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ISicovam : ISecurityIdentification3Choice, IIsoChoiceVariant
     /// Identifier for French securities assigned by the Societe Interprofessionnelle Pour La Compensation des Valeurs Mobilieres in France. The Sicovam is composed of 5-digits.
     /// </summary>
     [IsoXmlTag("SCVM")]
+    [IsoSimpleType(IsoSimpleType.SicovamIdentifier)]
     SicovamIdentifier Value { get; }
 }

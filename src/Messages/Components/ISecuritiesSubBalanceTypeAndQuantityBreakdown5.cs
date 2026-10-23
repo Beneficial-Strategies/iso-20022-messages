@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Quantity breakdown information for a specific securities balance.
 /// </summary>
 [IsoId("_mKE-kyp_EeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Securities Sub Balance Type And Quantity Breakdown")]
 public interface ISecuritiesSubBalanceTypeAndQuantityBreakdown5 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ISecuritiesSubBalanceTypeAndQuantityBreakdown5 : IIsoComponent
     [IsoId("_miqdYyp_EeyR9JrVGfaMKw")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQuantityBreakdown61> QuantityBreakdown { get; }
 }

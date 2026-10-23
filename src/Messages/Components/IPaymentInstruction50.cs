@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics that apply to the credit side of the payment transactions included in the direct debit initiation.
 /// </summary>
 [IsoId("88833a18-3210-4838-a808-05caac40b3f4")]
+[IsoDisplayName(@"Payment Instruction50")]
 public interface IPaymentInstruction50 : IIsoComponent
 {
     /// <summary>
@@ -153,5 +154,7 @@ public interface IPaymentInstruction50 : IIsoComponent
     [IsoId("9f25952d-4690-49c3-a875-7cbd76a528c7")]
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDirectDebitTransactionInformation34> DirectDebitTransactionInformation { get; }
 }

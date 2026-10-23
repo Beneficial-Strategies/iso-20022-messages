@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about a system and about a member of a system.
 /// </summary>
 [IsoId("_78fiFaMgEeCJ6YNENx4h-w_-1952044012")]
+[IsoDisplayName(@"System Member")]
 public interface ISystemMember2 : IIsoComponent
 {
     /// <summary>

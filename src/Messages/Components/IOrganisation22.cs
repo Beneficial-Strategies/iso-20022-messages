@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.
 /// </summary>
 [IsoId("_6nwg0UKSEeWuG5hmkcJWSQ")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation22 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrganisation22 : IIsoComponent
     [IsoId("_7DbwMUKSEeWuG5hmkcJWSQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOrganisation22 : IIsoComponent
     [IsoId("_yyVfkVxjEeWvPv3PXpS3fw")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IOrganisation22 : IIsoComponent
     [IsoId("_7DbwNUKSEeWuG5hmkcJWSQ")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IOrganisation22 : IIsoComponent
     [IsoId("_7DbwN0KSEeWuG5hmkcJWSQ")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Purpose { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IOrganisation22 : IIsoComponent
     [IsoId("_7DbwO0KSEeWuG5hmkcJWSQ")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface IOrganisation22 : IIsoComponent
     [IsoId("__dOlgUKTEeWuG5hmkcJWSQ")]
     [DisplayName("Modified Postal Address")]
     [IsoXmlTag("ModfdPstlAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope34> ModifiedPostalAddress { get; }
 
     /// <summary>

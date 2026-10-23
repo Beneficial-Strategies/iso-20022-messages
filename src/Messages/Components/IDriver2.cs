@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fleet vehicle driver.
 /// </summary>
 [IsoId("_Xa1IQRytEey6gI8SKlv7rg")]
+[IsoDisplayName(@"Driver")]
 public interface IDriver2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDriver2 : IIsoComponent
     [IsoId("_XkokgRytEey6gI8SKlv7rg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IDriver2 : IIsoComponent
     [IsoId("_XkokgxytEey6gI8SKlv7rg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Identification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IDriver2 : IIsoComponent
     [IsoId("_XkokhxytEey6gI8SKlv7rg")]
     [DisplayName("Employer")]
     [IsoXmlTag("Mplyr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Employer { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IDriver2 : IIsoComponent
     [IsoId("_XkokiRytEey6gI8SKlv7rg")]
     [DisplayName("Employee Identification")]
     [IsoXmlTag("MplyeeId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? EmployeeIdentification { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface IDriver2 : IIsoComponent
     [IsoId("_XkokixytEey6gI8SKlv7rg")]
     [DisplayName("Department Number")]
     [IsoXmlTag("DeptNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DepartmentNumber { get; }
 
     /// <summary>
@@ -65,6 +76,7 @@ public interface IDriver2 : IIsoComponent
     [IsoId("_XkokjRytEey6gI8SKlv7rg")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITravelDocument2> AdditionalIdentification { get; }
 
     /// <summary>
@@ -73,6 +85,7 @@ public interface IDriver2 : IIsoComponent
     [IsoId("_XkokjxytEey6gI8SKlv7rg")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfBirth { get; }
 
     /// <summary>

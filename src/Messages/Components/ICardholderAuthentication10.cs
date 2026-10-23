@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the authentication of the cardholder.
 /// </summary>
 [IsoId("_RprEsLACEeah1_v59tW6Rg")]
+[IsoDisplayName(@"Cardholder Authentication")]
 public interface ICardholderAuthentication10 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardholderAuthentication10 : IIsoComponent
     [IsoId("_R4T9o7ACEeah1_v59tW6Rg")]
     [DisplayName("Authentication Value")]
     [IsoXmlTag("AuthntcnVal")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary? AuthenticationValue { get; }
 
     /// <summary>
@@ -65,6 +67,8 @@ public interface ICardholderAuthentication10 : IIsoComponent
     [IsoId("_dkoa0LACEeah1_v59tW6Rg")]
     [DisplayName("Authentication Type")]
     [IsoXmlTag("AuthntcnTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AuthenticationType { get; }
 
     /// <summary>
@@ -73,6 +77,8 @@ public interface ICardholderAuthentication10 : IIsoComponent
     [IsoId("_kTh7wLACEeah1_v59tW6Rg")]
     [DisplayName("Authentication Level")]
     [IsoXmlTag("AuthntcnLvl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AuthenticationLevel { get; }
 
     /// <summary>
@@ -89,5 +95,7 @@ public interface ICardholderAuthentication10 : IIsoComponent
     [IsoId("_48zs4LACEeah1_v59tW6Rg")]
     [DisplayName("Authentication Additional Information")]
     [IsoXmlTag("AuthntcnAddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AuthenticationAdditionalInformation { get; }
 }

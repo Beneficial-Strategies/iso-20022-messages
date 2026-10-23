@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus1Choice
 /// Reason not specified.
 /// </summary>
 [IsoId("_QyGwYNp-Ed-ak6NoX_4Aeg_-632610727")]
+[IsoDisplayName(@"Not Specified Reason")]
 public interface INotSpecifiedReason : IPendingCancellationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

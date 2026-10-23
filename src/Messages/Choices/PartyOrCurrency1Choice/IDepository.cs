@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrCurrency1Choice;
 /// </summary>
 [IsoId("_o-ev0lhDEeOMYfRGLS0NbA")]
 [IsoXmlTag("Dpstry")]
+[IsoDisplayName(@"Depository")]
 public interface IDepository : IPartyOrCurrency1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IDepository : IPartyOrCurrency1Choice, IIsoChoiceVariant
     [IsoId("_HUH4RUiQEeOdL6nMHefDgg")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessingIdentification { get; }
 }

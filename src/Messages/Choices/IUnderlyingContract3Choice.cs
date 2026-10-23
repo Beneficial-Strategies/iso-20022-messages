@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of the type of underlying contract.
 /// </summary>
 [IsoId("_0NEsUbGIEeuSTr8k0UEM8A")]
+[IsoDisplayName(@"Underlying Contract 3 Choice")]
 public interface IUnderlyingContract3Choice : IIsoChoice { }

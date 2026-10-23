@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertificationType1Choice;
 /// Certificate type expressed as a code.
 /// </summary>
 [IsoId("_r9G_cBdEEeK5g-3oYI0_9Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICertificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

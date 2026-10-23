@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PremiumQuote1Choice;
 /// Premium calculation is based on points of the put amount.
 /// </summary>
 [IsoId("_TMLmI9p-Ed-ak6NoX_4Aeg_-1551054603")]
+[IsoDisplayName(@"Points Of Put Amount")]
 public interface IPointsOfPutAmount : IPremiumQuote1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPointsOfPutAmount : IPremiumQuote1Choice, IIsoChoiceVariant
     /// Rate expressed as a decimal, for example, 0.7 is 7/10 and 70%.
     /// </summary>
     [IsoXmlTag("PtsOfPutAmt")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate Value { get; }
 }

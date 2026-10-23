@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transfer cancellation status is accepted or sent to next party.
 /// </summary>
 [IsoId("_5_gzYZM6EemKz5EOjv82iQ")]
+[IsoDisplayName(@"Transfer Cancellation Status")]
 public interface ITransferCancellationStatus3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITransferCancellationStatus3 : IIsoComponent
     [IsoId("_6UCR5ZM6EemKz5EOjv82iQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Reason { get; }
 }

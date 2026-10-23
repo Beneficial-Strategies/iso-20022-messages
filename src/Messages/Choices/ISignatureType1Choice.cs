@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the signature type.
 /// </summary>
 [IsoId("_k8doQDoHEeabspMEjqY5TQ")]
+[IsoDisplayName(@"Signature Type 1 Choice")]
 public interface ISignatureType1Choice : IIsoChoice { }

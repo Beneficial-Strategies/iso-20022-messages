@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between proposed and actual shipment date.
 /// </summary>
 [IsoId("_qi4msDATEeOKib24wnHaFg")]
+[IsoDisplayName(@"Shipment Date 1 Choice")]
 public interface IShipmentDate1Choice : IIsoChoice { }

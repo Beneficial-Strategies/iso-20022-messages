@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reports either on currency exchange information or on a business error.
 /// </summary>
 [IsoId("_MmmysdfiEeqoweZZxm4TPQ")]
+[IsoDisplayName(@"Currency Exchange Report")]
 public interface ICurrencyExchangeReport4 : IIsoComponent
 {
     /// <summary>

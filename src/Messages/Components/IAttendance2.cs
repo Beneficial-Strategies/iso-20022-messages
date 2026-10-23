@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information and conditions provided for the physical attendance to the meeting.
 /// </summary>
 [IsoId("_eX9h8fNhEeqRfth943bvEA")]
+[IsoDisplayName(@"Attendance")]
 public interface IAttendance2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,9 @@ public interface IAttendance2 : IIsoComponent
     [IsoId("_eylocfNhEeqRfth943bvEA")]
     [DisplayName("Admission Conditions")]
     [IsoXmlTag("AdmssnConds")]
+    [MinLength(0)]
+    [MaxLength(7)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAttendanceAdmissionConditions2> AdmissionConditions { get; }
 
     /// <summary>
@@ -25,6 +29,8 @@ public interface IAttendance2 : IIsoComponent
     [IsoId("_eyloc_NhEeqRfth943bvEA")]
     [DisplayName("Confirmation Information")]
     [IsoXmlTag("ConfInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? ConfirmationInformation { get; }
 
     /// <summary>

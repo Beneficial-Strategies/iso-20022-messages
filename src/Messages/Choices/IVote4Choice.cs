@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Determines how the voting instructions are specified.
 /// </summary>
 [IsoId("_YoEpa64cEemG7MmivSuE5g")]
+[IsoDisplayName(@"Vote 4 Choice")]
 public interface IVote4Choice : IIsoChoice { }

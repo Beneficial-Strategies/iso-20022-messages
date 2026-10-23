@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus2Choice;
 /// Processing of the instruction/request is pending.
 /// </summary>
 [IsoId("_sRb8YukGEemm4qhb2yFPOw")]
+[IsoDisplayName(@"Pending Processing")]
 public interface IPendingProcessing : IPortfolioTransferStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

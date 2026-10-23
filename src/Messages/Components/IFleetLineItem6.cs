@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fleet Line Item6.
 /// </summary>
 [IsoId("_icu_sXjWEe6YlIMyoxWMJA")]
+[IsoDisplayName(@"Fleet Line Item6")]
 public interface IFleetLineItem6 : IIsoComponent
 {
     /// <summary>

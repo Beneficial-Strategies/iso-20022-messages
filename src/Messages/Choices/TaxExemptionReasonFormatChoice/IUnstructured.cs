@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxExemptionReasonFormatChoice;
 /// Free text form.
 /// </summary>
 [IsoId("_UzJj89p-Ed-ak6NoX_4Aeg_-1748201269")]
+[IsoDisplayName(@"Unstructured")]
 public interface IUnstructured : ITaxExemptionReasonFormatChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IUnstructured : ITaxExemptionReasonFormatChoice, IIsoChoiceVari
     /// Specifies a character string with a maximum length of 140 characters.
     /// </summary>
     [IsoXmlTag("Ustrd")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Value { get; }
 }

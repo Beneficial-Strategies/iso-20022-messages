@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Entry Transaction15.
 /// </summary>
 [IsoId("_EE7IRT3dEe-thIfLZ94a1w")]
+[IsoDisplayName(@"Entry Transaction15")]
 public interface IEntryTransaction15 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface IEntryTransaction15 : IIsoComponent
     /// </summary>
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAvailability1> Availability { get; }
 
     /// <summary>
@@ -107,6 +109,7 @@ public interface IEntryTransaction15 : IIsoComponent
     /// </summary>
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation8> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -135,6 +138,7 @@ public interface IEntryTransaction15 : IIsoComponent
     /// </summary>
     [DisplayName("Related Quantities")]
     [IsoXmlTag("RltdQties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionQuantities4Choice> RelatedQuantities { get; }
 
     /// <summary>
@@ -177,6 +181,7 @@ public interface IEntryTransaction15 : IIsoComponent
     /// </summary>
     [DisplayName("Underlying Allocation")]
     [IsoXmlTag("UndrlygAllcn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionAllocation1> UnderlyingAllocation { get; }
 
     /// <summary>
@@ -184,6 +189,7 @@ public interface IEntryTransaction15 : IIsoComponent
     /// </summary>
     [DisplayName("Cash Deposit")]
     [IsoXmlTag("CshDpst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashDeposit1> CashDeposit { get; }
 
     /// <summary>
@@ -212,5 +218,6 @@ public interface IEntryTransaction15 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

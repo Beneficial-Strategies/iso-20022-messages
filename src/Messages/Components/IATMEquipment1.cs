@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM terminal equipment.
 /// </summary>
 [IsoId("_eqOMIIn8EeShMpas3885ww")]
+[IsoDisplayName(@"ATM Equipment")]
 public interface IATMEquipment1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMEquipment1 : IIsoComponent
     [IsoId("_mJCHEIn8EeShMpas3885ww")]
     [DisplayName("Manufacturer")]
     [IsoXmlTag("Manfctr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Manufacturer { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMEquipment1 : IIsoComponent
     [IsoId("_pkwnEIn8EeShMpas3885ww")]
     [DisplayName("Model")]
     [IsoXmlTag("Mdl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Model { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IATMEquipment1 : IIsoComponent
     [IsoId("_sqRmgIn8EeShMpas3885ww")]
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SerialNumber { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IATMEquipment1 : IIsoComponent
     [IsoId("_vW_EYIn8EeShMpas3885ww")]
     [DisplayName("Application Provider")]
     [IsoXmlTag("ApplPrvdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ApplicationProvider { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IATMEquipment1 : IIsoComponent
     [IsoId("_yIPrEIn8EeShMpas3885ww")]
     [DisplayName("Application Name")]
     [IsoXmlTag("ApplNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ApplicationName { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface IATMEquipment1 : IIsoComponent
     [IsoId("_1TiiYIn8EeShMpas3885ww")]
     [DisplayName("Application Version")]
     [IsoXmlTag("ApplVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ApplicationVersion { get; }
 
     /// <summary>
@@ -65,6 +78,8 @@ public interface IATMEquipment1 : IIsoComponent
     [IsoId("_4CQycIn8EeShMpas3885ww")]
     [DisplayName("Approval Number")]
     [IsoXmlTag("ApprvlNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ApprovalNumber { get; }
 
     /// <summary>
@@ -73,5 +88,6 @@ public interface IATMEquipment1 : IIsoComponent
     [IsoId("_fAK8EIn-EeShMpas3885ww")]
     [DisplayName("Configuration Parameter")]
     [IsoXmlTag("CfgtnParam")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMConfigurationParameter1> ConfigurationParameter { get; }
 }

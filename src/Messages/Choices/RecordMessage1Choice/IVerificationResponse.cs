@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Verification response message record.
 /// </summary>
 [IsoId("_foFnEFZYEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Verification Response")]
 public interface IVerificationResponse : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IVerificationResponse : IRecordMessage1Choice, IIsoChoiceVarian
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("VrfctnRspn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

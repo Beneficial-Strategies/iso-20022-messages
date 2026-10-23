@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType5Choice;
 /// Fee (charge/commission) expressed as a code.
 /// </summary>
 [IsoId("_-Oqwojh4EeaH-93K5JKmzw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChargeType5Choice, IIsoChoiceVariant
 {
     /// <summary>

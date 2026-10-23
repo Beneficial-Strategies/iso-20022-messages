@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Originator of the transaction.
 /// </summary>
 [IsoId("_V4KakEBeEeepk8PtnyIgsg")]
+[IsoDisplayName(@"Originator")]
 public interface IOriginator1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginator1 : IIsoComponent
     [IsoId("_348_YEBeEeepk8PtnyIgsg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginator1 : IIsoComponent
     [IsoId("_CKXk0EBfEeepk8PtnyIgsg")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Assigner { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface IOriginator1 : IIsoComponent
     [IsoId("_NhhDQEBfEeepk8PtnyIgsg")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 }

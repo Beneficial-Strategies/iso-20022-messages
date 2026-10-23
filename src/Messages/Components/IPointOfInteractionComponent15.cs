@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Point Of Interaction Component15.
 /// </summary>
 [IsoId("_SZOUQZFKEe6reqfAp4CunQ")]
+[IsoDisplayName(@"Point Of Interaction Component15")]
 public interface IPointOfInteractionComponent15 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface IPointOfInteractionComponent15 : IIsoComponent
     /// </summary>
     [DisplayName("Standard Compliance")]
     [IsoXmlTag("StdCmplc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification48> StandardCompliance { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface IPointOfInteractionComponent15 : IIsoComponent
     /// </summary>
     [DisplayName("Assessment")]
     [IsoXmlTag("Assmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponentAssessment1> Assessment { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface IPointOfInteractionComponent15 : IIsoComponent
     /// </summary>
     [DisplayName("Package")]
     [IsoXmlTag("Packg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPackageType5> Package { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Results of backtesting analysis used to test the performance of a risk model.
 /// </summary>
 [IsoId("_9ZdcILC3EeaSl6vJk5Bd8w")]
+[IsoDisplayName(@"Monthly Result")]
 public interface IMonthlyResult1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMonthlyResult1 : IIsoComponent
     [IsoId("_I2UhALC4EeaSl6vJk5Bd8w")]
     [DisplayName("Number Of Observations")]
     [IsoXmlTag("NbOfObsrvtns")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber NumberOfObservations { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IMonthlyResult1 : IIsoComponent
     [IsoId("_4jSh8LC4EeaSl6vJk5Bd8w")]
     [DisplayName("Number Of Exceptions")]
     [IsoXmlTag("NbOfXcptns")]
+    [IsoSimpleType(IsoSimpleType.NonNegativeNumber)]
     NonNegativeNumber NumberOfExceptions { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IMonthlyResult1 : IIsoComponent
     [IsoId("_Y4uYMLC5EeaSl6vJk5Bd8w")]
     [DisplayName("Coverage")]
     [IsoXmlTag("Cvrg")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate Coverage { get; }
 
     /// <summary>

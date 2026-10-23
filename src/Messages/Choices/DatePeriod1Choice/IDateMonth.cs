@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DatePeriod1Choice;
 /// Time span defined by a month and a year.
 /// </summary>
 [IsoId("_kaGgVZ79EeOieb-y7x0pFg")]
+[IsoDisplayName(@"Date Month")]
 public interface IDateMonth : IDatePeriod1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IDateMonth : IDatePeriod1Choice, IIsoChoiceVariant
     /// Month within a particular calendar year represented by YYYY-MM (ISO 8601).
     /// </summary>
     [IsoXmlTag("DtMnth")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth Value { get; }
 }

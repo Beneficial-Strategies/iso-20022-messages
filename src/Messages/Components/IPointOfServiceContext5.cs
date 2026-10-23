@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the transaction at the point of service.
 /// </summary>
 [IsoId("_S9KGEcSoEeuBjv5G5kw00g")]
+[IsoDisplayName(@"Point Of Service Context")]
 public interface IPointOfServiceContext5 : IIsoComponent
 {
     /// <summary>
@@ -20,6 +21,7 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCpqEcSoEeuBjv5G5kw00g")]
     [DisplayName("Card Present")]
     [IsoXmlTag("CardPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardPresent { get; }
 
     /// <summary>
@@ -31,6 +33,7 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCpqE8SoEeuBjv5G5kw00g")]
     [DisplayName("Cardholder Present")]
     [IsoXmlTag("CrdhldrPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardholderPresent { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCpqFcSoEeuBjv5G5kw00g")]
     [DisplayName("Cardholder Activated")]
     [IsoXmlTag("CrdhldrActvtd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardholderActivated { get; }
 
     /// <summary>
@@ -52,6 +56,7 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCpqF8SoEeuBjv5G5kw00g")]
     [DisplayName("Transponder Initiated")]
     [IsoXmlTag("TrnspndrInittd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TransponderInitiated { get; }
 
     /// <summary>
@@ -63,6 +68,7 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCpqGcSoEeuBjv5G5kw00g")]
     [DisplayName("Attended Indicator")]
     [IsoXmlTag("AttnddInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AttendedIndicator { get; }
 
     /// <summary>
@@ -71,6 +77,7 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCpqG8SoEeuBjv5G5kw00g")]
     [DisplayName("Unattended Level Category")]
     [IsoXmlTag("UattnddLvlCtgy")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? UnattendedLevelCategory { get; }
 
     /// <summary>
@@ -83,6 +90,7 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCqRIcSoEeuBjv5G5kw00g")]
     [DisplayName("E Commerce Indicator")]
     [IsoXmlTag("EComrcInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ECommerceIndicator { get; }
 
     /// <summary>
@@ -91,6 +99,7 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCqRI8SoEeuBjv5G5kw00g")]
     [DisplayName("E Commerce Data")]
     [IsoXmlTag("EComrcData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IECommerceData1> ECommerceData { get; }
 
     /// <summary>
@@ -107,6 +116,7 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_Dx1l8THWEeyTT91yHXSlSQ")]
     [DisplayName("Transit Indicator")]
     [IsoXmlTag("TrnstInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TransitIndicator { get; }
 
     /// <summary>
@@ -117,6 +127,7 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCqRJ8SoEeuBjv5G5kw00g")]
     [DisplayName("Partial Approval Supported")]
     [IsoXmlTag("PrtlApprvlSpprtd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PartialApprovalSupported { get; }
 
     /// <summary>
@@ -127,6 +138,7 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCqRKcSoEeuBjv5G5kw00g")]
     [DisplayName("Delayed Authorisation Indicator")]
     [IsoXmlTag("DelydAuthstnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DelayedAuthorisationIndicator { get; }
 
     /// <summary>
@@ -136,6 +148,7 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCqRK8SoEeuBjv5G5kw00g")]
     [DisplayName("Security Characteristics")]
     [IsoXmlTag("SctyChrtcs")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<SecurityCharacteristics1Code> SecurityCharacteristics { get; }
 
     /// <summary>
@@ -144,6 +157,8 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCqRLcSoEeuBjv5G5kw00g")]
     [DisplayName("Other Security Characteristics")]
     [IsoXmlTag("OthrSctyChrtcs")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherSecurityCharacteristics { get; }
 
     /// <summary>
@@ -168,6 +183,8 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_4B5GgcV4Eeua2vd9tJAtHg")]
     [DisplayName("Other QR Code Presentment Mode")]
     [IsoXmlTag("OthrQRCdPresntmntMd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherQRCodePresentmentMode { get; }
 
     /// <summary>
@@ -176,6 +193,8 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCqRMcSoEeuBjv5G5kw00g")]
     [DisplayName("Other Card Data Entry Mode")]
     [IsoXmlTag("OthrCardDataNtryMd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherCardDataEntryMode { get; }
 
     /// <summary>
@@ -184,6 +203,8 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCqRM8SoEeuBjv5G5kw00g")]
     [DisplayName("Storage Location")]
     [IsoXmlTag("StorgLctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StorageLocation { get; }
 
     /// <summary>
@@ -192,6 +213,7 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_TCqRNcSoEeuBjv5G5kw00g")]
     [DisplayName("Special Conditions")]
     [IsoXmlTag("SpclConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialConditions1> SpecialConditions { get; }
 
     /// <summary>
@@ -200,5 +222,6 @@ public interface IPointOfServiceContext5 : IIsoComponent
     [IsoId("_etypYTECEeyjbpgZW6G1Fg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the cash posted as collateral.
 /// </summary>
 [IsoId("_vgU7MWQsEeSTN56gbbyx2g")]
+[IsoDisplayName(@"Cash Collateral")]
 public interface ICashCollateral4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICashCollateral4 : IIsoComponent
     [IsoId("_zYpPEW85EeSYoqRdI5bS5Q")]
     [DisplayName("Asset Number")]
     [IsoXmlTag("AsstNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AssetNumber { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICashCollateral4 : IIsoComponent
     [IsoId("_v9exRWQsEeSTN56gbbyx2g")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ICashCollateral4 : IIsoComponent
     [IsoId("_v9exR2QsEeSTN56gbbyx2g")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValueDate { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ICashCollateral4 : IIsoComponent
     [IsoId("_v9exSWQsEeSTN56gbbyx2g")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ExchangeRate { get; }
 
     /// <summary>
@@ -81,5 +87,6 @@ public interface ICashCollateral4 : IIsoComponent
     [IsoId("_v9exTWQsEeSTN56gbbyx2g")]
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Haircut { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification55Choice;
 /// </summary>
 [IsoId("_e6Hl9watEe2phaVG0lYKTw")]
 [IsoXmlTag("PrtryAcct")]
+[IsoDisplayName(@"Proprietary Account")]
 public interface IProprietaryAccount : IAccountIdentification55Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,7 @@ public interface IProprietaryAccount : IAccountIdentification55Choice, IIsoChoic
     [IsoId("_P_u4QNp-Ed-ak6NoX_4Aeg_618188642")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max34Text)]
+    [StringLength(34, MinimumLength = 1)]
     Max34Text Identification { get; }
 }

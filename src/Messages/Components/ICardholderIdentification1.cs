@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the cardholder involved in a transaction.
 /// </summary>
 [IsoId("_SoWAKwEcEeCQm6a_G2yO_w_-1995265470")]
+[IsoDisplayName(@"Cardholder Identification")]
 public interface ICardholderIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICardholderIdentification1 : IIsoComponent
     [IsoId("_SoWALAEcEeCQm6a_G2yO_w_596422852")]
     [DisplayName("Cardholder Identification Value")]
     [IsoXmlTag("CrdhldrIdVal")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CardholderIdentificationValue { get; }
 
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the different statuses of a movement.
 /// </summary>
 [IsoId("_RiPM1dp-Ed-ak6NoX_4Aeg_-2034263409")]
+[IsoDisplayName(@"Corporate Action Movement Status 1 Choice")]
 public interface ICorporateActionMovementStatus1Choice : IIsoChoice { }

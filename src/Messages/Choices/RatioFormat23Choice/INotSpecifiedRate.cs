@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat23Choice;
 /// Value of the ratio not specified.
 /// </summary>
 [IsoId("_cti6IJKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Not Specified Rate")]
 public interface INotSpecifiedRate : IRatioFormat23Choice, IIsoChoiceVariant
 {
     /// <summary>

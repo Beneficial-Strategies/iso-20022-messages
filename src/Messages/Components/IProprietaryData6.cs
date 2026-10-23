@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Container for proprietary information. Business content of this element is not specified.
 /// </summary>
 [IsoId("_1gW-cYKYEee7hrXqLO3yQg")]
+[IsoDisplayName(@"Proprietary Data")]
 public interface IProprietaryData6 : IIsoComponent
 {
     /// <summary>

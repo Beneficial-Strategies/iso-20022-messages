@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides for the variation margin, the dispute details like the dispute amount or the dispute date and the resolution type details.
 /// </summary>
 [IsoId("_UllpEdp-Ed-ak6NoX_4Aeg_-1732352034")]
+[IsoDisplayName(@"Variation Margin Dispute")]
 public interface IVariationMarginDispute1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IVariationMarginDispute1 : IIsoComponent
     [IsoId("_UllpE9p-Ed-ak6NoX_4Aeg_2088365475")]
     [DisplayName("Resolution Type Details")]
     [IsoXmlTag("RsltnTpDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeResolutionType2Choice> ResolutionTypeDetails { get; }
 }

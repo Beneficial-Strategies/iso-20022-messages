@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between formats for the entity to which the financial instruments are pledged.
 /// </summary>
 [IsoId("_8tov4TnZEeWV5sr121Fc8A")]
+[IsoDisplayName(@"Pledgee Format 3 Choice")]
 public interface IPledgeeFormat3Choice : IIsoChoice { }

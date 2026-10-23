@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "SctiesAcctStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:reda.020.001.01"
 )]
+[Description(@"The SecuritiesAccountStatusAdvice message is send by the the executing party to an instructing party to provide the status of the execution of an creation, modification or deletion of securities account reference data.||Usage: |When processing information is negative – a failure occurred in applying the changes the message accordingly also delivers information about the reason why the creation or update could not be processed. |When the processing is succesfully performed, the message includes the related securities account identification.")]
+[IsoDisplayName(@"Securities Account Status Advice V")]
 public interface ISecuritiesAccountStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -44,5 +46,6 @@ public interface ISecuritiesAccountStatusAdviceV01 : IOuterRecord
     [IsoId("_KAu-_Z2fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

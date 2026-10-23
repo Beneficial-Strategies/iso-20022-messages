@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Ratio expressed as a quotient of quantities.
 /// </summary>
 [IsoId("_OYixZXeuEeGnSLS4l8GDAA")]
+[IsoDisplayName(@"Long Quantity To Quantity Ratio")]
 public interface ILongQuantityToQuantityRatio2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILongQuantityToQuantityRatio2 : IIsoComponent
     [IsoId("_OYixaHeuEeGnSLS4l8GDAA")]
     [DisplayName("Long Quantity")]
     [IsoXmlTag("LngQty1")]
+    [IsoSimpleType(IsoSimpleType.LongDecimalNumber)]
     LongDecimalNumber LongQuantity1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ILongQuantityToQuantityRatio2 : IIsoComponent
     [IsoId("_OYixa3euEeGnSLS4l8GDAA")]
     [DisplayName("Long Quantity")]
     [IsoXmlTag("LngQty2")]
+    [IsoSimpleType(IsoSimpleType.LongDecimalNumber)]
     LongDecimalNumber LongQuantity2 { get; }
 }

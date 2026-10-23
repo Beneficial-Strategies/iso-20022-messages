@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security.
 /// </summary>
 [IsoId("4a677242-b4c0-4397-bce8-ca3243c74171")]
+[IsoDisplayName(@"Security Identification50")]
 public interface ISecurityIdentification50 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISecurityIdentification50 : IIsoComponent
     [IsoId("420496fa-2fd1-43fd-8ad3-cf8dedc0ea70")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherIdentification8> OtherIdentification { get; }
 
     /// <summary>

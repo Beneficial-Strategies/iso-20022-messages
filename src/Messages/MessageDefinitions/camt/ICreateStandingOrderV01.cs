@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_P8uPkckHEem3UrxZgQhVAw")]
 [IsoMessage("camt.102.001.01", "CretStgOrdr", "urn:iso:std:iso:20022:tech:xsd:camt.102.001.01")]
+[Description(@"Scope|The CreateStandingOrder message is sent by a member to the transaction administrator.|It is used to create a permanent order for the transfer of funds between two accounts belonging to the same member and being held at the transaction administrator.|Usage|Based on the criteria defined in the CreateStandingOrder message, the transaction administrator will execute or reject the requested creation and respond with a Receipt message as a reply to the request.")]
+[IsoDisplayName(@"Create Standing Order V")]
 public interface ICreateStandingOrderV01 : IOuterRecord
 {
     /// <summary>
@@ -48,5 +50,6 @@ public interface ICreateStandingOrderV01 : IOuterRecord
     [IsoId("_P8uPn8kHEem3UrxZgQhVAw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

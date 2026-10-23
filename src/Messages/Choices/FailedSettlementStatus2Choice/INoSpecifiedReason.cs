@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailedSettlementStatus2Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_DqHjNyY5EeW_ZNn8gbfY7Q")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IFailedSettlementStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctSwtchInfRspn",
     "urn:iso:std:iso:20022:tech:xsd:acmt.028.001.01"
 )]
+[Description(@"The AccountSwitchInformationResponse message is sent by the account servicer that previously held the account to the new account servicer to signal whether the account owner's account can be switched and to pass details of payment arrangements to be transferred to the new account servicer if the account may be switched. Confirmation of the balance transfer window is permitted by the old account servicer.")]
+[IsoDisplayName(@"Account Switch Information Response V")]
 public interface IAccountSwitchInformationResponseV01 : IOuterRecord
 {
     /// <summary>
@@ -56,6 +58,7 @@ public interface IAccountSwitchInformationResponseV01 : IOuterRecord
     [IsoId("_w07UgFDcEeeunetnjWUhcA")]
     [DisplayName("Payment Instruction")]
     [IsoXmlTag("PmtInstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstruction24> PaymentInstruction { get; }
 
     /// <summary>
@@ -64,6 +67,7 @@ public interface IAccountSwitchInformationResponseV01 : IOuterRecord
     [IsoId("_qIn1MFy8Eee48PRwcRxS4A")]
     [DisplayName("Direct Debit Instruction")]
     [IsoXmlTag("DrctDbtInstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDirectDebitInstructionDetails1> DirectDebitInstruction { get; }
 
     /// <summary>
@@ -72,5 +76,6 @@ public interface IAccountSwitchInformationResponseV01 : IOuterRecord
     [IsoId("_TP6gLUz6EeepdbMfWGyv3Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

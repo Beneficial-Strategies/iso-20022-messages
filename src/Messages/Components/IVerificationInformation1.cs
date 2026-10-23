@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains verification information.
 /// </summary>
 [IsoId("_SSs6A9ImEeirx-13kKhDlQ")]
+[IsoDisplayName(@"Verification Information")]
 public interface IVerificationInformation1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IVerificationInformation1 : IIsoComponent
     [IsoId("_SSthENImEeirx-13kKhDlQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IVerificationInformation1 : IIsoComponent
     [IsoId("_DDFDQdIoEeirx-13kKhDlQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> Reason { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface IVerificationInformation1 : IIsoComponent
     [IsoId("__IV3sGzVEemD24gVaMSpeA")]
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DateTime { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface IVerificationInformation1 : IIsoComponent
     [IsoId("_akg48GzWEemD24gVaMSpeA")]
     [DisplayName("Validity End Date")]
     [IsoXmlTag("VldtyEndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidityEndDate { get; }
 
     /// <summary>
@@ -58,5 +64,6 @@ public interface IVerificationInformation1 : IIsoComponent
     [IsoId("_OOdrgHC2EemD24gVaMSpeA")]
     [DisplayName("Validity End Time")]
     [IsoXmlTag("VldtyEndTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? ValidityEndTime { get; }
 }

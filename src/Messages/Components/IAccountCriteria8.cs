@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account Criteria8.
 /// </summary>
 [IsoId("_6PAcxTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Account Criteria8")]
 public interface IAccountCriteria8 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IAccountCriteria8 : IIsoComponent
     /// </summary>
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccountSearchCriteria8> SearchCriteria { get; }
 
     /// <summary>

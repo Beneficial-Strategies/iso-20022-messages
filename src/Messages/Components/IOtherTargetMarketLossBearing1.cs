@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Loss bearing target market.
 /// </summary>
 [IsoId("_jj99EDcQEeiIxKQErQxblg")]
+[IsoDisplayName(@"Other Target Market Loss Bearing")]
 public interface IOtherTargetMarketLossBearing1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherTargetMarketLossBearing1 : IIsoComponent
     [IsoId("_pQdl0jcQEeiIxKQErQxblg")]
     [DisplayName("Ability To Bear Losses Type")]
     [IsoXmlTag("AbltyToBearLossesTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AbilityToBearLossesType { get; }
 
     /// <summary>

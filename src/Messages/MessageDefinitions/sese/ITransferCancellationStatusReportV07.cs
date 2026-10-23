@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_h5COsZDhEem7fvtoGpNpow")]
 [IsoMessage("sese.010.001.07", "TrfCxlStsRpt", "urn:iso:std:iso:20022:tech:xsd:sese.010.001.07")]
+[Description(@"Scope|The TransferCancellationStatusReport message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received transfer cancellation instruction.|Usage|The TransferCancellationStatusReport message is used to report on the status of a transfer in or transfer out cancellation request.|The reference of the transfer instruction for which the cancellation status is reported is identified in TransferReference. The message identification of the transfer cancellation request message in which the transfer instruction was conveyed may also be quoted in RelatedReference.|The message identification of the transfer instruction request message in which the transfer instruction was conveyed may also be quoted in RelatedReference.|One of the following statuses can be reported:|- the transfer cancellation is accepted, or,|- the transfer cancellation has been sent to the next party, or,|- the transfer cancellation is complete and the reason for the status,|- the transfer cancellation pending and the reason for the status,|- the transfer cancellation is rejected and the reason for the status.")]
+[IsoDisplayName(@"Transfer Cancellation Status Report V")]
 public interface ITransferCancellationStatusReportV07 : IOuterRecord
 {
     /// <summary>
@@ -71,5 +73,6 @@ public interface ITransferCancellationStatusReportV07 : IOuterRecord
     [IsoId("_h5COwZDhEem7fvtoGpNpow")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

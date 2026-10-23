@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification6Choice;
 /// </summary>
 [IsoId("_TBKB8tp-Ed-ak6NoX_4Aeg_-1421894924")]
 [IsoXmlTag("InstrmDesc")]
+[IsoDisplayName(@"Instrument Description")]
 public interface IInstrumentDescription : ISecurityIdentification6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IInstrumentDescription : ISecurityIdentification6Choice, IIsoCh
     [IsoId("_S1FUwNp-Ed-ak6NoX_4Aeg_1287302984")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Description { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IInstrumentDescription : ISecurityIdentification6Choice, IIsoCh
     [IsoId("_S1FUwtp-Ed-ak6NoX_4Aeg_1288222996")]
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? PlaceOfListing { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface IInstrumentDescription : ISecurityIdentification6Choice, IIsoCh
     [IsoId("_S1FUw9p-Ed-ak6NoX_4Aeg_1288223013")]
     [DisplayName("Exercise Date")]
     [IsoXmlTag("ExrcDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExerciseDate { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface IInstrumentDescription : ISecurityIdentification6Choice, IIsoCh
     [IsoId("_S1FUxNp-Ed-ak6NoX_4Aeg_1288223031")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>
@@ -74,5 +80,6 @@ public interface IInstrumentDescription : ISecurityIdentification6Choice, IIsoCh
     [IsoId("_S1FUx9p-Ed-ak6NoX_4Aeg_1288223091")]
     [DisplayName("Multiplier")]
     [IsoXmlTag("Mltplr")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? Multiplier { get; }
 }

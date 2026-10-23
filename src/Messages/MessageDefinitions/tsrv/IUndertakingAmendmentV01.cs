@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// </summary>
 [IsoId("_9gAzdnltEeG7BsjMvd1mEw_-1766556993")]
 [IsoMessage("tsrv.005.001.01", "UdrtkgAmdmnt", "urn:iso:std:iso:20022:tech:xsd:tsrv.005.001.01")]
+[Description(@"The UndertakingAmendment message is sent (and is thus issued) by the party that issued the undertaking. The message may be sent either directly to the beneficiary or via an advising party. The proposed undertaking amendment could be to a demand guarantee, standby letter of credit, or counter-undertaking (counter-guarantee or counter-standby). The message provides details on proposed changes to the undertaking, for example, to the expiry date, the amount, and terms and conditions of the undertaking. It may also be used to propose the termination or cancellation of the undertaking. Under practice and law, this communication binds the party issuing it. The message constitutes an operative financial instrument.")]
+[IsoDisplayName(@"Undertaking Amendment V")]
 public interface IUndertakingAmendmentV01 : IOuterRecord
 {
     /// <summary>
@@ -28,6 +30,11 @@ public interface IUndertakingAmendmentV01 : IOuterRecord
     [IsoId("_825P83_6EeGOn4dfTT_QdQ")]
     [DisplayName("Bank To Bank Information")]
     [IsoXmlTag("BkToBkInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [StringLength(2000, MinimumLength = 1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> BankToBankInformation { get; }
 
     /// <summary>
@@ -36,5 +43,6 @@ public interface IUndertakingAmendmentV01 : IOuterRecord
     [IsoId("_9gAzeHltEeG7BsjMvd1mEw_1718202663")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature2> DigitalSignature { get; }
 }

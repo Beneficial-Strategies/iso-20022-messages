@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Alternate identification for a party using an identification type, a country code and a text field.
 /// </summary>
 [IsoId("_OSYeMa3pEfCN-rGCydxGUA")]
+[IsoDisplayName(@"Alternate Party Identification12")]
 public interface IAlternatePartyIdentification12 : IIsoComponent
 {
     /// <summary>

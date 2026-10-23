@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date and identification of a trade together with references to previous events in its life.
 /// </summary>
 [IsoId("_S8KUAQEcEeCQm6a_G2yO_w_1878007297")]
+[IsoDisplayName(@"Trade Agreement")]
 public interface ITradeAgreement5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeAgreement5 : IIsoComponent
     [IsoId("_S8KUAgEcEeCQm6a_G2yO_w_1764168231")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITradeAgreement5 : IIsoComponent
     [IsoId("_S8KUAwEcEeCQm6a_G2yO_w_880934944")]
     [DisplayName("Notification Identification")]
     [IsoXmlTag("NtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text NotificationIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface ITradeAgreement5 : IIsoComponent
     [IsoId("_S8UE8AEcEeCQm6a_G2yO_w_767095878")]
     [DisplayName("Common Reference")]
     [IsoXmlTag("CmonRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonReference { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface ITradeAgreement5 : IIsoComponent
     [IsoId("_S8UE8QEcEeCQm6a_G2yO_w_-229976475")]
     [DisplayName("Amend Or Cancel Reason")]
     [IsoXmlTag("AmdOrCclRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AmendOrCancelReason { get; }
 
     /// <summary>
@@ -49,6 +57,8 @@ public interface ITradeAgreement5 : IIsoComponent
     [IsoId("_S8UE8gEcEeCQm6a_G2yO_w_-1227048828")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RelatedReference { get; }
 
     /// <summary>
@@ -57,6 +67,8 @@ public interface ITradeAgreement5 : IIsoComponent
     [IsoId("_S8UE8wEcEeCQm6a_G2yO_w_-2110282115")]
     [DisplayName("Operation Type")]
     [IsoXmlTag("OprTp")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? OperationType { get; }
 
     /// <summary>
@@ -65,5 +77,7 @@ public interface ITradeAgreement5 : IIsoComponent
     [IsoId("_S8UE9AEcEeCQm6a_G2yO_w_1187612828")]
     [DisplayName("Operation Scope")]
     [IsoXmlTag("OprScp")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? OperationScope { get; }
 }

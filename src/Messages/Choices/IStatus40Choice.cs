@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of format for an order status report.</summary>
 [IsoId("9c6c2280-d031-470c-8e00-427341a7ecba")]
+[IsoDisplayName(@"Status 40 Choice")]
 public interface IStatus40Choice : IIsoChoice { }

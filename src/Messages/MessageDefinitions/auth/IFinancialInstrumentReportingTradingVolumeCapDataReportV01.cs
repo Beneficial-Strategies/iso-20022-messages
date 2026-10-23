@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgTradgVolCapDataRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.035.001.01"
 )]
+[Description(@"The FinancialInstrumentReportingTradingVolumeCapDataReport message is sent by the trading venue to the national competent authority to report the total volume of trading and volumes of trading under reference price waiver and negotiated transactions waiver.")]
+[IsoDisplayName(@"Financial Instrument Reporting Trading Volume Cap Data Report V")]
 public interface IFinancialInstrumentReportingTradingVolumeCapDataReportV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IFinancialInstrumentReportingTradingVolumeCapDataReportV01 : IO
     [IsoId("_4LUGS0RNEee7JdgA9zPESA")]
     [DisplayName("Volume Cap Data")]
     [IsoXmlTag("VolCapData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVolumeCapReport1> VolumeCapData { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IFinancialInstrumentReportingTradingVolumeCapDataReportV01 : IO
     [IsoId("_4LUGTURNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

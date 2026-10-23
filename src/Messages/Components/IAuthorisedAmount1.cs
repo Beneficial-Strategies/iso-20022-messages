@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the amount reserved to cover the anticipated charges associated with the lodging stay.
 /// </summary>
 [IsoId("_jl_RBPcYEeiW-auGnDPZIw")]
+[IsoDisplayName(@"Authorised Amount")]
 public interface IAuthorisedAmount1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAuthorisedAmount1 : IIsoComponent
     [IsoId("_jl_RBvcYEeiW-auGnDPZIw")]
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DateTime { get; }
 
     /// <summary>
@@ -33,5 +35,7 @@ public interface IAuthorisedAmount1 : IIsoComponent
     [IsoId("_jl_RB_cYEeiW-auGnDPZIw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

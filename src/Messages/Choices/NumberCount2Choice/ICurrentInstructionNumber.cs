@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberCount2Choice;
 /// Sequential number of the instruction in a range of linked settlement instructions.
 /// </summary>
 [IsoId("_JaoZcygdEey2k_sfZmJz4g")]
+[IsoDisplayName(@"Current Instruction Number")]
 public interface ICurrentInstructionNumber : INumberCount2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ICurrentInstructionNumber : INumberCount2Choice, IIsoChoiceVari
     /// Specifies a numeric string with a maximum length of 6 digits.
     /// </summary>
     [IsoXmlTag("CurInstrNb")]
+    [IsoSimpleType(IsoSimpleType.Max6NumericText)]
     Max6NumericText Value { get; }
 }

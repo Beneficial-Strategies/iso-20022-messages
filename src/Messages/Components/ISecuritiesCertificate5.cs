@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Physical representation of a security.
 /// </summary>
 [IsoId("_5TJXe5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Securities Certificate")]
 public interface ISecuritiesCertificate5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesCertificate5 : IIsoComponent
     [IsoId("_5TJXf5NLEeWGlc8L7oPDIg")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
+    [StringLength(30, MinimumLength = 1)]
     RestrictedFINXMax30Text Number { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISecuritiesCertificate5 : IIsoComponent
     [IsoId("_5TJXh5NLEeWGlc8L7oPDIg")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText? Issuer { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface ISecuritiesCertificate5 : IIsoComponent
     [IsoId("_5TJXj5NLEeWGlc8L7oPDIg")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText? SchemeName { get; }
 }

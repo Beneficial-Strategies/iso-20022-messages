@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information on the number of reported items with their respective acceptance status.
 /// </summary>
 [IsoId("_UtSF10ipEeSlHoYg_EudVQ")]
+[IsoDisplayName(@"Number Of Items Per Status")]
 public interface INumberOfItemsPerStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface INumberOfItemsPerStatus1 : IIsoComponent
     [IsoId("_U4cM80ipEeSlHoYg_EudVQ")]
     [DisplayName("Number Of Items")]
     [IsoXmlTag("NbOfItms")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfItems { get; }
 }

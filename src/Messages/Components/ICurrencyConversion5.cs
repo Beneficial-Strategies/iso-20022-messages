@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Exchange rate and calculated amount to be presented to the customer when the dispense currency or the deposit currency (target currency) is different to account currency (source currency).
 /// </summary>
 [IsoId("_S77gUYq9EeSHjtO_wHA7PQ")]
+[IsoDisplayName(@"Currency Conversion")]
 public interface ICurrencyConversion5 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICurrencyConversion5 : IIsoComponent
     [IsoId("_TH2ceYq9EeSHjtO_wHA7PQ")]
     [DisplayName("Target Currency Numeric")]
     [IsoXmlTag("TrgtCcyNmrc")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText TargetCurrencyNumeric { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ICurrencyConversion5 : IIsoComponent
     [IsoId("_TH_mZYq9EeSHjtO_wHA7PQ")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate Rate { get; }
 
     /// <summary>

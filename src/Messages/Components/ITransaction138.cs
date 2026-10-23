@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement report transaction.
 /// </summary>
 [IsoId("_vEFHIYzGEeujJfnIQ4NlpQ")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction138 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITransaction138 : IIsoComponent
     [IsoId("_vJWosYzGEeujJfnIQ4NlpQ")]
     [DisplayName("Other Settlement Report Type")]
     [IsoXmlTag("OthrSttlmRptTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherSettlementReportType { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface ITransaction138 : IIsoComponent
     [IsoId("_J3GaB8sKEeuNe7RtB4qFHw")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface ITransaction138 : IIsoComponent
     [IsoId("_vJWotYzGEeujJfnIQ4NlpQ")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface ITransaction138 : IIsoComponent
     [IsoId("_vJWouYzGEeujJfnIQ4NlpQ")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee2> AdditionalFee { get; }
 
     /// <summary>
@@ -82,6 +88,8 @@ public interface ITransaction138 : IIsoComponent
     [IsoId("_vJWov4zGEeujJfnIQ4NlpQ")]
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? TransactionDescription { get; }
 
     /// <summary>
@@ -90,5 +98,6 @@ public interface ITransaction138 : IIsoComponent
     [IsoId("_vJWowYzGEeujJfnIQ4NlpQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

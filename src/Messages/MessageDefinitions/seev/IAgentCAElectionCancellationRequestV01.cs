@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "AgtCAElctnCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:seev.014.001.01"
 )]
+[Description(@"Scope|This message is sent by a CSD to the issuer (or its agent) to request the cancellation of a previously sent Agent Corporate Action Election Advice message.|Usage|This message may only be used to cancel an entire Agent Corporate Action Election Advice message that was previously sent by the CSD. No partial cancellation is allowed.|This message must contain the identification of the Agent Corporate Action Election Advice to be cancelled, the agent identification and the corporate action references. This message may also contain details of the election advice to be cancelled, but this is not recommended.")]
+[IsoDisplayName(@"Agent CA Election Cancellation Request V")]
 public interface IAgentCAElectionCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

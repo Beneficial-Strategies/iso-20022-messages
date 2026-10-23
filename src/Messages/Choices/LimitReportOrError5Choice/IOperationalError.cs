@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitReportOrError5Choice;
 /// <summary>
 /// Operational Error.
 /// </summary>
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : ILimitReportOrError5Choice, IIsoChoiceVariant
 {
     /// <summary>

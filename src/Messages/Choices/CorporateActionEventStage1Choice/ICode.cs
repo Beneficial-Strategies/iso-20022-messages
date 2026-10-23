@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventStage1Choice
 /// Corporate action event stage expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_Qsl-Qdp-Ed-ak6NoX_4Aeg_526490392")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionEventStage1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Retailer Event message.
 /// </summary>
 [IsoId("_QV5csVFBEeyApZmLzm74zA")]
+[IsoDisplayName(@"Retailer Event")]
 public interface IRetailerEvent4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRetailerEvent4 : IIsoComponent
     [IsoId("_QcP8UVFBEeyApZmLzm74zA")]
     [DisplayName("Event Time Stamp")]
     [IsoXmlTag("EvtTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime EventTimeStamp { get; }
 
     /// <summary>
@@ -41,5 +43,7 @@ public interface IRetailerEvent4 : IIsoComponent
     [IsoId("_QcP8V1FBEeyApZmLzm74zA")]
     [DisplayName("Additional Event Information")]
     [IsoXmlTag("AddtlEvtInf")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? AdditionalEventInformation { get; }
 }

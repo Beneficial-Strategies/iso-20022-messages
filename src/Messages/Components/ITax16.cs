@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax related to an investment fund order.
 /// </summary>
 [IsoId("_SmCMKtp-Ed-ak6NoX_4Aeg_-535677127")]
+[IsoDisplayName(@"Tax")]
 public interface ITax16 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITax16 : IIsoComponent
     [IsoId("_SmCMLNp-Ed-ak6NoX_4Aeg_1412358865")]
     [DisplayName("Extended Type")]
     [IsoXmlTag("XtndedTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedType { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ITax16 : IIsoComponent
     [IsoId("_SmL9INp-Ed-ak6NoX_4Aeg_-535677067")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ITax16 : IIsoComponent
     [IsoId("_SmL9I9p-Ed-ak6NoX_4Aeg_-535676808")]
     [DisplayName("Exemption Indicator")]
     [IsoXmlTag("XmptnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ExemptionIndicator { get; }
 
     /// <summary>
@@ -81,6 +86,8 @@ public interface ITax16 : IIsoComponent
     [IsoId("_SmL9Jdp-Ed-ak6NoX_4Aeg_-1751778954")]
     [DisplayName("Extended Exemption Reason")]
     [IsoXmlTag("XtndedXmptnRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedExemptionReason { get; }
 
     /// <summary>

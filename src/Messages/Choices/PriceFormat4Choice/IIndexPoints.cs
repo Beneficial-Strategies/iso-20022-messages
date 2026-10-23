@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat4Choice;
 /// Price expressed as index points.
 /// </summary>
 [IsoId("_QbJo9tp-Ed-ak6NoX_4Aeg_-883480030")]
+[IsoDisplayName(@"Index Points")]
 public interface IIndexPoints : IPriceFormat4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIndexPoints : IPriceFormat4Choice, IIsoChoiceVariant
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("IndxPts")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 }

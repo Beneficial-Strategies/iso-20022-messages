@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes of a pension.
 /// </summary>
 [IsoId("_7NcYcTOTEeqLMcD_sEa8Xw")]
+[IsoDisplayName(@"Pension")]
 public interface IPension4 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IPension4 : IIsoComponent
     [IsoId("_7lP0dzOTEeqLMcD_sEa8Xw")]
     [DisplayName("Tax Reference")]
     [IsoXmlTag("TaxRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxReference1> TaxReference { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface IPension4 : IIsoComponent
     [IsoId("_7lP0eTOTEeqLMcD_sEa8Xw")]
     [DisplayName("Drawdown Tranche Identification")]
     [IsoXmlTag("DrwdwnTrchId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DrawdownTrancheIdentification { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface IPension4 : IIsoComponent
     [IsoId("_7lP0ezOTEeqLMcD_sEa8Xw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

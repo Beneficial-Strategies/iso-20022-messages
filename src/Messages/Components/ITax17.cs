@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax related to an investment fund order.
 /// </summary>
 [IsoId("_Sl4bKdp-Ed-ak6NoX_4Aeg_1978788372")]
+[IsoDisplayName(@"Tax")]
 public interface ITax17 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITax17 : IIsoComponent
     [IsoId("_Sl4bK9p-Ed-ak6NoX_4Aeg_-1751950721")]
     [DisplayName("Extended Type")]
     [IsoXmlTag("XtndedTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedType { get; }
 
     /// <summary>
@@ -33,6 +36,9 @@ public interface ITax17 : IIsoComponent
     [IsoId("_SmCMINp-Ed-ak6NoX_4Aeg_1978788709")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
+    [MinLength(0)]
+    [MaxLength(7)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyAnd13DecimalAmount> Amount { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface ITax17 : IIsoComponent
     [IsoId("_SmCMIdp-Ed-ak6NoX_4Aeg_1978788786")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>

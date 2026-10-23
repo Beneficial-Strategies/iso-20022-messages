@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number1Choice;
 /// </summary>
 [IsoId("_RdKfldp-Ed-ak6NoX_4Aeg_-1790569525")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : INumber1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IProprietary : INumber1Choice, IIsoChoiceVariant
     [IsoId("_P_luVtp-Ed-ak6NoX_4Aeg_858746211")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text Issuer { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IProprietary : INumber1Choice, IIsoChoiceVariant
     [IsoId("_P_luV9p-Ed-ak6NoX_4Aeg_858746099")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Information { get; }
 }

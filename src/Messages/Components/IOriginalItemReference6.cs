@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further means of referencing a payment transaction.
 /// </summary>
 [IsoId("_b9qOodcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Original Item Reference")]
 public interface IOriginalItemReference6 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Transaction156.
 /// </summary>
 [IsoId("_9ucm5zEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Payment Transaction156")]
 public interface IPaymentTransaction156 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IPaymentTransaction156 : IIsoComponent
     /// </summary>
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReversalReason10> ReversalReasonInformation { get; }
 
     /// <summary>
@@ -79,5 +81,6 @@ public interface IPaymentTransaction156 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

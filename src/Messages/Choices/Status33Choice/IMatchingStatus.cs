@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status33Choice;
 /// Provides the matching status of the instruction.
 /// </summary>
 [IsoId("_waWF_SAeEeuyDZ-ukt4YRg")]
+[IsoDisplayName(@"Matching Status")]
 public interface IMatchingStatus : IStatus33Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

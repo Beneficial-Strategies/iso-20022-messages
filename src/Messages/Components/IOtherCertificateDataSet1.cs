@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Formal document used to record a fact and used as proof of the fact, in the context of a commercial trade transaction.
 /// </summary>
 [IsoId("_Tncl2dp-Ed-ak6NoX_4Aeg_-105876723")]
+[IsoDisplayName(@"Other Certificate Data Set")]
 public interface IOtherCertificateDataSet1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IOtherCertificateDataSet1 : IIsoComponent
     [IsoId("_TnmW0dp-Ed-ak6NoX_4Aeg_1312675433")]
     [DisplayName("Certificate Identification")]
     [IsoXmlTag("CertId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CertificateIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IOtherCertificateDataSet1 : IIsoComponent
     [IsoId("_TnmW09p-Ed-ak6NoX_4Aeg_224743278")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate IssueDate { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface IOtherCertificateDataSet1 : IIsoComponent
     [IsoId("_TnmW1dp-Ed-ak6NoX_4Aeg_237674436")]
     [DisplayName("Certificate Information")]
     [IsoXmlTag("CertInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> CertificateInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Funding sources used to finance margin loans.
 /// </summary>
 [IsoId("_ispmcMkmEeeiAIB1i4AlQw")]
+[IsoDisplayName(@"Funding Source")]
 public interface IFundingSource1 : IIsoComponent
 {
     /// <summary>

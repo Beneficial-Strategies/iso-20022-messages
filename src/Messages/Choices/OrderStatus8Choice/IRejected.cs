@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus8Choice;
 
 /// <summary>Status of the order is rejected.</summary>
 [IsoId("9c5c0fdc-1ec7-46bc-a610-db82e7b6913f")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IOrderStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

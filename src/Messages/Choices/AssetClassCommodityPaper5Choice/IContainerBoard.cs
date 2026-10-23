@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper5Choice;
 /// <summary>
 /// Container Board.
 /// </summary>
+[IsoDisplayName(@"Container Board")]
 public interface IContainerBoard : IAssetClassCommodityPaper5Choice, IIsoChoiceVariant
 {
     /// <summary>

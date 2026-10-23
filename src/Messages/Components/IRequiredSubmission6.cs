@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details relative to the submission of the certificate data set.
 /// </summary>
 [IsoId("_7keh8QgIEeSeS5xdjFfOTw")]
+[IsoDisplayName(@"Required Submission")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IRequiredSubmission6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IRequiredSubmission6 : IIsoComponent
     [IsoId("_77-b8QgIEeSeS5xdjFfOTw")]
     [DisplayName("Submitter")]
     [IsoXmlTag("Submitr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> Submitter { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IRequiredSubmission6 : IIsoComponent
     [IsoId("_77-b8wgIEeSeS5xdjFfOTw")]
     [DisplayName("Certificate Type")]
     [IsoXmlTag("CertTp")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText CertificateType { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IRequiredSubmission6 : IIsoComponent
     [IsoId("_klV3QAgJEeSeS5xdjFfOTw")]
     [DisplayName("Certificate Type Description")]
     [IsoXmlTag("CertTpDesc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text CertificateTypeDescription { get; }
 }

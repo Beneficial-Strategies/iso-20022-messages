@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Specifies the penalties party type.</summary>
 [IsoId("_-EPy1QAUEeqOHNEXayM0Mg")]
+[IsoDisplayName(@"Penalty Party Type 2 Choice")]
 public interface IPenaltyPartyType2Choice : IIsoChoice { }

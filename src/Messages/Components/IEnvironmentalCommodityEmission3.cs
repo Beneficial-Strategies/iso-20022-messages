@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an environmental derivative of type emission.
 /// </summary>
 [IsoId("_BC7gYU8SEe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Environmental Commodity Emission")]
 public interface IEnvironmentalCommodityEmission3 : IIsoComponent
 {
     /// <summary>

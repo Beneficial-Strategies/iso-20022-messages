@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies further details on the penalty.
 /// </summary>
 [IsoId("_xUaQ56gzEfCXwLUUylXgrQ")]
+[IsoDisplayName(@"Penalty Record4")]
 public interface IPenaltyRecord4 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface IPenaltyRecord4 : IIsoComponent
     [IsoId("_xXR-v6gzEfCXwLUUylXgrQ")]
     [DisplayName("Calculation Data")]
     [IsoXmlTag("ClctnData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPenaltyCalculationRecord1> CalculationData { get; }
 
     /// <summary>

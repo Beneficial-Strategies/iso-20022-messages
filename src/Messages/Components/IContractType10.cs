@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to contract attributes.
 /// </summary>
 [IsoId("_qmrCNXhCEeu3kecHd7QKUQ")]
+[IsoDisplayName(@"Contract Type")]
 public interface IContractType10 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IContractType10 : IIsoComponent
     [IsoId("_q25PhXhCEeu3kecHd7QKUQ")]
     [DisplayName("Product Classification")]
     [IsoXmlTag("PdctClssfctn")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier? ProductClassification { get; }
 
     /// <summary>

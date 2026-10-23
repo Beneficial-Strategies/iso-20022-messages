@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Authenticated Data10.
 /// </summary>
 [IsoId("_kXtJcY-REe6oobnCtR50kw")]
+[IsoDisplayName(@"Authenticated Data10")]
 public interface IAuthenticatedData10 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IAuthenticatedData10 : IIsoComponent
     /// </summary>
     [DisplayName("Recipient")]
     [IsoXmlTag("Rcpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRecipient15Choice> Recipient { get; }
 
     /// <summary>

@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// </summary>
 [IsoId("_CzZYcbC8EeamYaqfhG1ZuA")]
 [IsoMessage("catm.002.001.06", "MgmtPlanRplcmnt", "urn:iso:std:iso:20022:tech:xsd:catm.002.001.06")]
+[Description(@"Terminal maintenance actions to be performed by a point of interaction (POI).")]
+[IsoDisplayName(@"Management Plan Replacement V")]
 public interface IManagementPlanReplacementV06 : IOuterRecord
 {
     /// <summary>

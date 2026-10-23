@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information expressed in a proprietary manner.
 /// </summary>
 [IsoId("_P_b9Wdp-Ed-ak6NoX_4Aeg_652282211")]
+[IsoDisplayName(@"Generic Identification")]
 public interface IGenericIdentification5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGenericIdentification5 : IIsoComponent
     [IsoId("_P_b9Wtp-Ed-ak6NoX_4Aeg_691069232")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text Issuer { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IGenericIdentification5 : IIsoComponent
     [IsoId("_P_b9W9p-Ed-ak6NoX_4Aeg_691068172")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText Information { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IGenericIdentification5 : IIsoComponent
     [IsoId("_P_luUNp-Ed-ak6NoX_4Aeg_691069664")]
     [DisplayName("Narrative")]
     [IsoXmlTag("Nrrtv")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Narrative { get; }
 }

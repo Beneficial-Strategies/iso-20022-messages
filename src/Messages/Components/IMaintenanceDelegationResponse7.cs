@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the request of maintenance delegations.
 /// </summary>
 [IsoId("_t9XGkXJkEe299ZbWCkdR_w")]
+[IsoDisplayName(@"Maintenance Delegation Response")]
 public interface IMaintenanceDelegationResponse7 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IMaintenanceDelegationResponse7 : IIsoComponent
     [IsoId("_WZpIIHJlEe299ZbWCkdR_w")]
     [DisplayName("TM Date Time")]
     [IsoXmlTag("TMDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TMDateTime { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IMaintenanceDelegationResponse7 : IIsoComponent
     [IsoId("_C0kwkHJmEe299ZbWCkdR_w")]
     [DisplayName("TM Challenge Value")]
     [IsoXmlTag("TMChllngVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary TMChallengeValue { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IMaintenanceDelegationResponse7 : IIsoComponent
     [IsoId("_uDx3pXJkEe299ZbWCkdR_w")]
     [DisplayName("Delegation Response")]
     [IsoXmlTag("DlgtnRspn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMaintenanceDelegation16> DelegationResponse { get; }
 }

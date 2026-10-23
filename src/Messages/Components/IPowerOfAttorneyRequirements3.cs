@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the conditions to be filled in to obtain a valid power of attorney.
 /// </summary>
 [IsoId("_3-_EcV6YEeSyc4g_pm5hbw")]
+[IsoDisplayName(@"Power Of Attorney Requirements")]
 public interface IPowerOfAttorneyRequirements3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,9 @@ public interface IPowerOfAttorneyRequirements3 : IIsoComponent
     [IsoId("_4bjEpV6YEeSyc4g_pm5hbw")]
     [DisplayName("Legal Requirement")]
     [IsoXmlTag("LglRqrmnt")]
+    [MinLength(0)]
+    [MaxLength(4)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<PowerOfAttorneyLegalisation1Code> LegalRequirement { get; }
 
     /// <summary>
@@ -25,6 +29,8 @@ public interface IPowerOfAttorneyRequirements3 : IIsoComponent
     [IsoId("_4bjEp16YEeSyc4g_pm5hbw")]
     [DisplayName("Other Documentation")]
     [IsoXmlTag("OthrDcmnttn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? OtherDocumentation { get; }
 
     /// <summary>

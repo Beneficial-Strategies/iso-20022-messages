@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity5Choice;
 /// </summary>
 [IsoId("_owQIRbtIEeiLRYqS-r-R-A")]
 [IsoXmlTag("Infltn")]
+[IsoDisplayName(@"Inflation")]
 public interface IInflation : IAssetClassCommodity5Choice, IIsoChoiceVariant
 {
     /// <summary>

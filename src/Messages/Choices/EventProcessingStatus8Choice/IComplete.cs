@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus8Choice;
 /// <summary>
 /// Complete.
 /// </summary>
+[IsoDisplayName(@"Complete")]
 public interface IComplete : IEventProcessingStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>

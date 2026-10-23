@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication device number or electronic address used for communication.
 /// </summary>
 [IsoId("_QKBcuNp-Ed-ak6NoX_4Aeg_-46881250")]
+[IsoDisplayName(@"Communication Address")]
 public interface ICommunicationAddress3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICommunicationAddress3 : IIsoComponent
     [IsoId("_QKBcudp-Ed-ak6NoX_4Aeg_-46881232")]
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Email { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICommunicationAddress3 : IIsoComponent
     [IsoId("_QKKmoNp-Ed-ak6NoX_4Aeg_-45959803")]
     [DisplayName("Phone")]
     [IsoXmlTag("Phne")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? Phone { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ICommunicationAddress3 : IIsoComponent
     [IsoId("_QKKmodp-Ed-ak6NoX_4Aeg_-1695039266")]
     [DisplayName("Mobile")]
     [IsoXmlTag("Mob")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? Mobile { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ICommunicationAddress3 : IIsoComponent
     [IsoId("_QKKmotp-Ed-ak6NoX_4Aeg_-45959726")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface ICommunicationAddress3 : IIsoComponent
     [IsoId("_QKKmo9p-Ed-ak6NoX_4Aeg_-46879947")]
     [DisplayName("Telex Address")]
     [IsoXmlTag("TlxAdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TelexAddress { get; }
 
     /// <summary>
@@ -57,5 +65,7 @@ public interface ICommunicationAddress3 : IIsoComponent
     [IsoId("_QKKmpNp-Ed-ak6NoX_4Aeg_-45959863")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? URLAddress { get; }
 }

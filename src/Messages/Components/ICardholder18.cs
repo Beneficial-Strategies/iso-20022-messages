@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the cardholder.
 /// </summary>
 [IsoId("_IeDr0VFDEeyApZmLzm74zA")]
+[IsoDisplayName(@"Cardholder")]
 public interface ICardholder18 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICardholder18 : IIsoComponent
     [IsoId("_IkSPo1FDEeyApZmLzm74zA")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max45Text)]
+    [StringLength(45, MinimumLength = 1)]
     Max45Text? Name { get; }
 
     /// <summary>
@@ -58,6 +61,8 @@ public interface ICardholder18 : IIsoComponent
     [IsoId("_IkSPq1FDEeyApZmLzm74zA")]
     [DisplayName("Trip Number")]
     [IsoXmlTag("TripNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripNumber { get; }
 
     /// <summary>
@@ -74,6 +79,7 @@ public interface ICardholder18 : IIsoComponent
     [IsoId("_IkSPr1FDEeyApZmLzm74zA")]
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholderAuthentication15> Authentication { get; }
 
     /// <summary>
@@ -82,6 +88,7 @@ public interface ICardholder18 : IIsoComponent
     [IsoId("_IkSPsVFDEeyApZmLzm74zA")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionVerificationResult4> TransactionVerificationResult { get; }
 
     /// <summary>
@@ -90,6 +97,8 @@ public interface ICardholder18 : IIsoComponent
     [IsoId("_IkSPs1FDEeyApZmLzm74zA")]
     [DisplayName("Personal Data")]
     [IsoXmlTag("PrsnlData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? PersonalData { get; }
 
     /// <summary>
@@ -98,5 +107,6 @@ public interface ICardholder18 : IIsoComponent
     [IsoId("_IkSPtVFDEeyApZmLzm74zA")]
     [DisplayName("Mobile Data")]
     [IsoXmlTag("MobData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMobileData4> MobileData { get; }
 }

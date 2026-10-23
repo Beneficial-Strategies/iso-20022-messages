@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between elements to define a time period.
 /// </summary>
 [IsoId("_5ufTETgDEei6RvewLQWEqw")]
+[IsoDisplayName(@"Time Frame 7 Choice")]
 public interface ITimeFrame7Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the transactions in the report.
 /// </summary>
 [IsoId("_YdjDoeSkEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Intra Position Pending11")]
 public interface IIntraPositionPending11 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IIntraPositionPending11 : IIsoComponent
     [IsoId("_YqmBJeSkEe-qVZLXW4RRBw")]
     [DisplayName("Movement")]
     [IsoXmlTag("Mvmnt")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraPositionPending12> Movement { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a quantity expressed in units, face amount or amortised amount and a quantity expressed as an amount.
 /// </summary>
 [IsoId("_wFZWYQeCEe2fOITqoTnSLQ")]
+[IsoDisplayName(@"Quantity Or Amount 2 Choice")]
 public interface IQuantityOrAmount2Choice : IIsoChoice { }

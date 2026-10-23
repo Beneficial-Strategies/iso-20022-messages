@@ -13,6 +13,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_6SbBIZeSEeen_cyMrluY4w")]
 [IsoMessage("reda.017.001.01", "PtyRpt", "urn:iso:std:iso:20022:tech:xsd:reda.017.001.01")]
+[Description(@"Scope:|The PartyReport message is sent by the executing party to a central securities depository, a national central bank, a central securities depository participant, a central counter party, a payment bank, a trading party or a stock exchange to provide detailed information on the requested party reference data of the party defined in the system.")]
+[IsoDisplayName(@"Party Report V")]
 public interface IPartyReportV01 : IOuterRecord
 {
     /// <summary>
@@ -37,5 +39,6 @@ public interface IPartyReportV01 : IOuterRecord
     [IsoId("_6SbBK5eSEeen_cyMrluY4w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

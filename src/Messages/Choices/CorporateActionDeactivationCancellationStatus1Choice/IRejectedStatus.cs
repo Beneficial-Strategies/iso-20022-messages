@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionDeactivationCance
 /// </summary>
 [IsoId("_RiYWwtp-Ed-ak6NoX_4Aeg_1549781490")]
 [IsoXmlTag("RjctdSts")]
+[IsoDisplayName(@"Rejected Status")]
 public interface IRejectedStatus
     : ICorporateActionDeactivationCancellationStatus1Choice,
         IIsoChoiceVariant
@@ -20,6 +21,7 @@ public interface IRejectedStatus
     [IsoId("_RkeBcdp-Ed-ak6NoX_4Aeg_1510068594")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason7FormatChoice> Reason { get; }
 
     /// <summary>
@@ -28,5 +30,7 @@ public interface IRejectedStatus
     [IsoId("_RkeBctp-Ed-ak6NoX_4Aeg_1510068595")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

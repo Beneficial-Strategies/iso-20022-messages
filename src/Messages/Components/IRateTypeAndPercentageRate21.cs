@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Rate Type And Percentage Rate21.
 /// </summary>
 [IsoId("_nLi6vZt3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Rate Type And Percentage Rate21")]
 public interface IRateTypeAndPercentageRate21 : IIsoComponent
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party47Choice;
 /// </summary>
 [IsoId("_mDHs0ZQ_EemqYPWMBuVawg")]
 [IsoXmlTag("Org")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation : IParty47Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOrganisation : IParty47Choice, IIsoChoiceVariant
     [IsoId("_mWdfk5Q_EemqYPWMBuVawg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IOrganisation : IParty47Choice, IIsoChoiceVariant
     [IsoId("_mWdflZQ_EemqYPWMBuVawg")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>
@@ -42,6 +47,7 @@ public interface IOrganisation : IParty47Choice, IIsoChoiceVariant
     [IsoId("_mWdfmZQ_EemqYPWMBuVawg")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 
     /// <summary>
@@ -50,6 +56,8 @@ public interface IOrganisation : IParty47Choice, IIsoChoiceVariant
     [IsoId("_mWdfm5Q_EemqYPWMBuVawg")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Purpose { get; }
 
     /// <summary>
@@ -66,6 +74,7 @@ public interface IOrganisation : IParty47Choice, IIsoChoiceVariant
     [IsoId("_mWdfn5Q_EemqYPWMBuVawg")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 
     /// <summary>
@@ -74,6 +83,9 @@ public interface IOrganisation : IParty47Choice, IIsoChoiceVariant
     [IsoId("_mWdfoZQ_EemqYPWMBuVawg")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress21> PostalAddress { get; }
 
     /// <summary>
@@ -90,5 +102,7 @@ public interface IOrganisation : IParty47Choice, IIsoChoiceVariant
     [IsoId("_mWdfpZQ_EemqYPWMBuVawg")]
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<MICIdentifier> PlaceOfListing { get; }
 }

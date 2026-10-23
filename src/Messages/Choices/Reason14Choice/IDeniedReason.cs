@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason14Choice;
 /// Specifies the reason why the request was denied.
 /// </summary>
 [IsoId("_ux5oK1hpEeS8HfHHd4stCA")]
+[IsoDisplayName(@"Denied Reason")]
 public interface IDeniedReason : IReason14Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

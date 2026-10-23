@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Global status of the ATM.
 /// </summary>
 [IsoId("__xSdUIrxEeSvuOJS0mmL0g")]
+[IsoDisplayName(@"ATM Status")]
 public interface IATMStatus1 : IIsoComponent
 {
     /// <summary>

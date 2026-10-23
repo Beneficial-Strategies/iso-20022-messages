@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sale context in which the transaction is performed.
 /// </summary>
 [IsoId("_1piOoY0VEeWRYffwL7E13A")]
+[IsoDisplayName(@"Sale Context")]
 public interface ISaleContext2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISaleContext2 : IIsoComponent
     [IsoId("_1z99AY0VEeWRYffwL7E13A")]
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISaleContext2 : IIsoComponent
     [IsoId("_1z99A40VEeWRYffwL7E13A")]
     [DisplayName("Sale Reference Number")]
     [IsoXmlTag("SaleRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceNumber { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISaleContext2 : IIsoComponent
     [IsoId("_1z99BY0VEeWRYffwL7E13A")]
     [DisplayName("Sale Reconciliation Identification")]
     [IsoXmlTag("SaleRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReconciliationIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ISaleContext2 : IIsoComponent
     [IsoId("_1z99B40VEeWRYffwL7E13A")]
     [DisplayName("Cashier Identification")]
     [IsoXmlTag("CshrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CashierIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,7 @@ public interface ISaleContext2 : IIsoComponent
     [IsoId("_1z99CY0VEeWRYffwL7E13A")]
     [DisplayName("Shift Number")]
     [IsoXmlTag("ShftNb")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? ShiftNumber { get; }
 
     /// <summary>
@@ -57,6 +67,8 @@ public interface ISaleContext2 : IIsoComponent
     [IsoId("_m9lbcJXEEeWr_-S5OCtcIg")]
     [DisplayName("Purchase Order Number")]
     [IsoXmlTag("PurchsOrdrNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PurchaseOrderNumber { get; }
 
     /// <summary>
@@ -65,6 +77,8 @@ public interface ISaleContext2 : IIsoComponent
     [IsoId("_sp3BwJXEEeWr_-S5OCtcIg")]
     [DisplayName("Invoice Number")]
     [IsoXmlTag("InvcNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InvoiceNumber { get; }
 
     /// <summary>
@@ -73,6 +87,8 @@ public interface ISaleContext2 : IIsoComponent
     [IsoId("_zm_zAJXEEeWr_-S5OCtcIg")]
     [DisplayName("Delivery Note Number")]
     [IsoXmlTag("DlvryNoteNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DeliveryNoteNumber { get; }
 
     /// <summary>
@@ -81,6 +97,7 @@ public interface ISaleContext2 : IIsoComponent
     [IsoId("_93rfUI0WEeWRYffwL7E13A")]
     [DisplayName("Sponsored Merchant")]
     [IsoXmlTag("SpnsrdMrchnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation26> SponsoredMerchant { get; }
 
     /// <summary>
@@ -89,6 +106,7 @@ public interface ISaleContext2 : IIsoComponent
     [IsoId("_HCLgAI0XEeWRYffwL7E13A")]
     [DisplayName("Split Payment")]
     [IsoXmlTag("SpltPmt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? SplitPayment { get; }
 
     /// <summary>
@@ -105,5 +123,7 @@ public interface ISaleContext2 : IIsoComponent
     [IsoId("_1z99C40VEeWRYffwL7E13A")]
     [DisplayName("Additional Sale Data")]
     [IsoXmlTag("AddtlSaleData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalSaleData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of a cash withdrawal request.
 /// </summary>
 [IsoId("_VCI-cOR9Ee-NFYIkYc90gw")]
+[IsoDisplayName(@"Cash Withdrawal Request1")]
 public interface ICashWithdrawalRequest1 : IIsoComponent
 {
     /// <summary>

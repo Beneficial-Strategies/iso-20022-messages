@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification6Choice;
 /// </summary>
 [IsoId("_AghblW4-EeiU9cctagi5ow")]
 [IsoXmlTag("LngBizId")]
+[IsoDisplayName(@"Long Business Identification")]
 public interface ILongBusinessIdentification : IPaymentIdentification6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ILongBusinessIdentification : IPaymentIdentification6Choice, II
     [IsoId("_AqNjEW4-EeiU9cctagi5ow")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface ILongBusinessIdentification : IPaymentIdentification6Choice, II
     [IsoId("_0o9gEYkKEei-69PNFxn_Ew")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? UETR { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface ILongBusinessIdentification : IPaymentIdentification6Choice, II
     [IsoId("_AqNjFW4-EeiU9cctagi5ow")]
     [DisplayName("Inter Bank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate InterBankSettlementDate { get; }
 
     /// <summary>
@@ -74,6 +79,7 @@ public interface ILongBusinessIdentification : IPaymentIdentification6Choice, II
     [IsoId("_AqNjHW4-EeiU9cctagi5ow")]
     [DisplayName("Entry Type")]
     [IsoXmlTag("NtryTp")]
+    [IsoSimpleType(IsoSimpleType.EntryTypeIdentifier)]
     EntryTypeIdentifier? EntryType { get; }
 
     /// <summary>
@@ -82,5 +88,7 @@ public interface ILongBusinessIdentification : IPaymentIdentification6Choice, II
     [IsoId("_AqNjH24-EeiU9cctagi5ow")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 }

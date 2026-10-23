@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Ratio expressed as a quotient of amounts.
 /// </summary>
 [IsoId("_UHySwNp-Ed-ak6NoX_4Aeg_579173663")]
+[IsoDisplayName(@"Amount To Amount Ratio")]
 public interface IAmountToAmountRatio1 : IIsoComponent
 {
     /// <summary>

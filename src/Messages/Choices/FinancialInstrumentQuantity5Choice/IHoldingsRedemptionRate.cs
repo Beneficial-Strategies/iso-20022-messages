@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity5Choi
 /// Portion of the investor&apos;s holdings, in a specific investment fund/ fund class, that is redeemed.
 /// </summary>
 [IsoId("_Soaxxtp-Ed-ak6NoX_4Aeg_1044956415")]
+[IsoDisplayName(@"Holdings Redemption Rate")]
 public interface IHoldingsRedemptionRate : IFinancialInstrumentQuantity5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IHoldingsRedemptionRate : IFinancialInstrumentQuantity5Choice, 
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("HldgsRedRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

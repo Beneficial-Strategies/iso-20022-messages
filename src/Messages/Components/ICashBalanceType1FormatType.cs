@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice of formats to express the type of cash balance.
 /// </summary>
 [IsoId("_Rl0FQdp-Ed-ak6NoX_4Aeg_-1191454030")]
+[IsoDisplayName(@"Cash Balance Type 1 Format Type")]
 public interface ICashBalanceType1FormatType : IIsoComponent
 {
     /// <summary>

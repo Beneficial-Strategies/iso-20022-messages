@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus5Choice;
 /// </summary>
 [IsoId("_P8YAnUHREeasdbKMiqizqA")]
 [IsoXmlTag("PrtlySttld")]
+[IsoDisplayName(@"Partially Settled")]
 public interface IPartiallySettled : IOrderStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IPartiallySettled : IOrderStatus5Choice, IIsoChoiceVariant
     [IsoId("_I7aOhUHtEeaNSo9he0Belg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

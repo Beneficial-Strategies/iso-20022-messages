@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions, as assigned by the Australian Payments Clearing Association (APCA).
 /// </summary>
 [IsoId("_TDinhtp-Ed-ak6NoX_4Aeg_-896562573")]
+[IsoDisplayName(@"Australian Small Network Identification")]
 public interface IAustralianSmallNetworkIdentification
     : IClearingSystemMemberIdentificationChoice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IAustralianSmallNetworkIdentification
     /// The small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions, as assigned by the Australian Payments Clearing Association (APCA).
     /// </summary>
     [IsoXmlTag("AUBSBs")]
+    [IsoSimpleType(IsoSimpleType.SmallNetworkIdentifier)]
     SmallNetworkIdentifier Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status Trail12.
 /// </summary>
 [IsoId("_xZuHAYcSEe-U27oWwgmhCQ")]
+[IsoDisplayName(@"Status Trail12")]
 public interface IStatusTrail12 : IIsoComponent
 {
     /// <summary>
@@ -86,5 +87,6 @@ public interface IStatusTrail12 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

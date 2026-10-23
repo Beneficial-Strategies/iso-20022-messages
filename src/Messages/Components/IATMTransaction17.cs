@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Withdrawal transaction for which the completion is sent.
 /// </summary>
 [IsoId("_9LnHMa4KEeWZgJQOa6iKCQ")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction17 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IATMTransaction17 : IIsoComponent
     [IsoId("_9XrNQ64KEeWZgJQOa6iKCQ")]
     [DisplayName("Multi Bundle")]
     [IsoXmlTag("MultiBndl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MultiBundle { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IATMTransaction17 : IIsoComponent
     [IsoId("_9XrNRa4KEeWZgJQOa6iKCQ")]
     [DisplayName("Bundle Presented Amount")]
     [IsoXmlTag("BndlPresntdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ImpliedCurrencyAndAmount> BundlePresentedAmount { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IATMTransaction17 : IIsoComponent
     [IsoId("_9XrNSa4KEeWZgJQOa6iKCQ")]
     [DisplayName("Incident")]
     [IsoXmlTag("Incdnt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<FailureReason7Code> Incident { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IATMTransaction17 : IIsoComponent
     [IsoId("_9XrNS64KEeWZgJQOa6iKCQ")]
     [DisplayName("Incident Detail")]
     [IsoXmlTag("IncdntDtl")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> IncidentDetail { get; }
 
     /// <summary>
@@ -73,6 +78,8 @@ public interface IATMTransaction17 : IIsoComponent
     [IsoId("_9XrNTa4KEeWZgJQOa6iKCQ")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -137,6 +144,7 @@ public interface IATMTransaction17 : IIsoComponent
     [IsoId("_9XrNXa4KEeWZgJQOa6iKCQ")]
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount13> AdditionalCharge { get; }
 
     /// <summary>
@@ -145,6 +153,7 @@ public interface IATMTransaction17 : IIsoComponent
     [IsoId("_9XrNX64KEeWZgJQOa6iKCQ")]
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RequestedReceipt { get; }
 
     /// <summary>
@@ -153,6 +162,7 @@ public interface IATMTransaction17 : IIsoComponent
     [IsoId("_9XrNYa4KEeWZgJQOa6iKCQ")]
     [DisplayName("Receipt Printed")]
     [IsoXmlTag("RctPrtd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReceiptPrinted { get; }
 
     /// <summary>
@@ -161,6 +171,7 @@ public interface IATMTransaction17 : IIsoComponent
     [IsoId("_TySUgPysEeWVMqALyuondw")]
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CustomerConsent { get; }
 
     /// <summary>
@@ -185,6 +196,7 @@ public interface IATMTransaction17 : IIsoComponent
     [IsoId("_9XrNaa4KEeWZgJQOa6iKCQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 
     /// <summary>
@@ -193,6 +205,7 @@ public interface IATMTransaction17 : IIsoComponent
     [IsoId("_9XrNa64KEeWZgJQOa6iKCQ")]
     [DisplayName("ATM Totals")]
     [IsoXmlTag("ATMTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMTotals1> ATMTotals { get; }
 
     /// <summary>
@@ -201,5 +214,6 @@ public interface IATMTransaction17 : IIsoComponent
     [IsoId("_9XrNba4KEeWZgJQOa6iKCQ")]
     [DisplayName("Cassette")]
     [IsoXmlTag("Csstt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCassette2> Cassette { get; }
 }

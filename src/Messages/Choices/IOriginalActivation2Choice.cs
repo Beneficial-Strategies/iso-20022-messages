@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the activation details which is referenced.
 /// </summary>
 [IsoId("_UNr4PeH7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Original Activation 2 Choice")]
 public interface IOriginalActivation2Choice : IIsoChoice { }

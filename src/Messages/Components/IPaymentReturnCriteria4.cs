@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to report on the payment.
 /// </summary>
 [IsoId("_yV4-y5lbEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Payment Return Criteria")]
 public interface IPaymentReturnCriteria4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkoZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Message Identification Indicator")]
     [IsoXmlTag("MsgIdInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? MessageIdentificationIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzko5lbEeeE1Ya-LgRsuQ")]
     [DisplayName("Requested Execution Date Indicator")]
     [IsoXmlTag("ReqdExctnDtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? RequestedExecutionDateIndicator { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkpZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Instruction Indicator")]
     [IsoXmlTag("InstrInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? InstructionIndicator { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkqZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Instructed Amount Indicator")]
     [IsoXmlTag("InstdAmtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? InstructedAmountIndicator { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkq5lbEeeE1Ya-LgRsuQ")]
     [DisplayName("Credit Debit Indicator")]
     [IsoXmlTag("CdtDbtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? CreditDebitIndicator { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkrZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Interbank Settlement Amount Indicator")]
     [IsoXmlTag("IntrBkSttlmAmtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? InterbankSettlementAmountIndicator { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkr5lbEeeE1Ya-LgRsuQ")]
     [DisplayName("Priority Indicator")]
     [IsoXmlTag("PrtyInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? PriorityIndicator { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzksZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Processing Validity Time Indicator")]
     [IsoXmlTag("PrcgVldtyTmInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? ProcessingValidityTimeIndicator { get; }
 
     /// <summary>
@@ -89,6 +98,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzks5lbEeeE1Ya-LgRsuQ")]
     [DisplayName("Purpose Indicator")]
     [IsoXmlTag("PurpInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? PurposeIndicator { get; }
 
     /// <summary>
@@ -97,6 +107,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzktZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Instruction Copy Indicator")]
     [IsoXmlTag("InstrCpyInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? InstructionCopyIndicator { get; }
 
     /// <summary>
@@ -105,6 +116,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkt5lbEeeE1Ya-LgRsuQ")]
     [DisplayName("Payment Message Type Indicator")]
     [IsoXmlTag("PmtMTInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? PaymentMessageTypeIndicator { get; }
 
     /// <summary>
@@ -113,6 +125,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkuZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Payment Type Indicator")]
     [IsoXmlTag("PmtTpInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? PaymentTypeIndicator { get; }
 
     /// <summary>
@@ -121,6 +134,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzku5lbEeeE1Ya-LgRsuQ")]
     [DisplayName("Transaction Identification Indicator")]
     [IsoXmlTag("TxIdInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? TransactionIdentificationIndicator { get; }
 
     /// <summary>
@@ -129,6 +143,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkvZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Interbank Settlement Date Indicator")]
     [IsoXmlTag("IntrBkSttlmDtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? InterbankSettlementDateIndicator { get; }
 
     /// <summary>
@@ -137,6 +152,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkv5lbEeeE1Ya-LgRsuQ")]
     [DisplayName("End To End Identification Indicator")]
     [IsoXmlTag("EndToEndIdInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? EndToEndIdentificationIndicator { get; }
 
     /// <summary>
@@ -145,6 +161,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkwZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Payment Method Indicator")]
     [IsoXmlTag("PmtMtdInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? PaymentMethodIndicator { get; }
 
     /// <summary>
@@ -153,6 +170,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkw5lbEeeE1Ya-LgRsuQ")]
     [DisplayName("Debtor Indicator")]
     [IsoXmlTag("DbtrInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? DebtorIndicator { get; }
 
     /// <summary>
@@ -161,6 +179,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkxZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Debtor Agent Indicator")]
     [IsoXmlTag("DbtrAgtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? DebtorAgentIndicator { get; }
 
     /// <summary>
@@ -170,6 +189,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkx5lbEeeE1Ya-LgRsuQ")]
     [DisplayName("Instructing Reimbursement Agent Indicator")]
     [IsoXmlTag("InstgRmbrsmntAgtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? InstructingReimbursementAgentIndicator { get; }
 
     /// <summary>
@@ -179,6 +199,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkyZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Instructed Reimbursement Agent Indicator")]
     [IsoXmlTag("InstdRmbrsmntAgtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? InstructedReimbursementAgentIndicator { get; }
 
     /// <summary>
@@ -187,6 +208,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzky5lbEeeE1Ya-LgRsuQ")]
     [DisplayName("Intermediary Indicator")]
     [IsoXmlTag("IntrmyInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? IntermediaryIndicator { get; }
 
     /// <summary>
@@ -195,6 +217,7 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkzZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Creditor Agent Indicator")]
     [IsoXmlTag("CdtrAgtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? CreditorAgentIndicator { get; }
 
     /// <summary>
@@ -203,5 +226,6 @@ public interface IPaymentReturnCriteria4 : IIsoComponent
     [IsoId("_ydzkz5lbEeeE1Ya-LgRsuQ")]
     [DisplayName("Creditor Indicator")]
     [IsoXmlTag("CdtrInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? CreditorIndicator { get; }
 }

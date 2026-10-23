@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FXCancellation3Choice;
 /// Specifies whether the underlying forex transaction should also be cancelled. Yes means forex is to be cancelled. No means forex is to be retained.
 /// </summary>
 [IsoId("_Io5B4T0EEeWjqIDN7tjEjQ")]
+[IsoDisplayName(@"Indicator")]
 public interface IIndicator : IFXCancellation3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIndicator : IFXCancellation3Choice, IIsoChoiceVariant
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

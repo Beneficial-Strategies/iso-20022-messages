@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Complementary Information11.
 /// </summary>
 [IsoId("_974l4TEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Payment Complementary Information11")]
 public interface IPaymentComplementaryInformation11 : IIsoComponent
 {
     /// <summary>
@@ -261,6 +262,7 @@ public interface IPaymentComplementaryInformation11 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>
@@ -268,6 +270,7 @@ public interface IPaymentComplementaryInformation11 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent3> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -275,6 +278,7 @@ public interface IPaymentComplementaryInformation11 : IIsoComponent
     /// </summary>
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation8> RelatedRemittanceInformation { get; }
 
     /// <summary>

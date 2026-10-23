@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Natural or legal person to whom an investment firm provides investment or ancillary services.
 /// </summary>
 [IsoId("_Yo3FgO3pEeaWjpoyrnG6Rw")]
+[IsoDisplayName(@"Settlement Internaliser Client Type")]
 public interface ISettlementInternaliserClientType1 : IIsoComponent
 {
     /// <summary>

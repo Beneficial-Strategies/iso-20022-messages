@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money for which goods or services are offered, sold, or bought.
 /// </summary>
 [IsoId("_Qfn5Qtp-Ed-ak6NoX_4Aeg_-214178771")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
+[IsoDisplayName(@"Unit Price")]
 public interface IUnitPrice9 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,8 @@ public interface IUnitPrice9 : IIsoComponent
     [IsoId("_Qfn5RNp-Ed-ak6NoX_4Aeg_-214178370")]
     [DisplayName("Other Unit Of Measure")]
     [IsoXmlTag("OthrUnitOfMeasr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OtherUnitOfMeasure { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IUnitPrice9 : IIsoComponent
     [IsoId("_Qfn5Rtp-Ed-ak6NoX_4Aeg_-214178679")]
     [DisplayName("Factor")]
     [IsoXmlTag("Fctr")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? Factor { get; }
 }

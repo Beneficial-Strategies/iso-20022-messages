@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeMinimus1Choice;
 /// </summary>
 [IsoId("_CgNiAwgqEeSUG-8hqXsVMQ")]
 [IsoXmlTag("DeMnmsNotAplbl")]
+[IsoDisplayName(@"De Minimus Not Applicable")]
 public interface IDeMinimusNotApplicable : IDeMinimus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,7 @@ public interface IDeMinimusNotApplicable : IDeMinimus1Choice, IIsoChoiceVariant
     [IsoId("_RSI7Wdp-Ed-ak6NoX_4Aeg_491616181")]
     [DisplayName("Restricted Person Reason")]
     [IsoXmlTag("RstrctdPrsnRsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text RestrictedPersonReason { get; }
 }

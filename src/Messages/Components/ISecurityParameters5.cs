@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security parameters of the host downloading the key.
 /// </summary>
 [IsoId("_iobOIYtcEeST3ocKVc8_qA")]
+[IsoDisplayName(@"Security Parameters")]
 public interface ISecurityParameters5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityParameters5 : IIsoComponent
     [IsoId("_i2b094tcEeST3ocKVc8_qA")]
     [DisplayName("Host Challenge")]
     [IsoXmlTag("HstChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? HostChallenge { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecurityParameters5 : IIsoComponent
     [IsoId("_i2b08YtcEeST3ocKVc8_qA")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICryptographicKey8> Key { get; }
 
     /// <summary>

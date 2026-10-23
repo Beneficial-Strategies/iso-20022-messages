@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "SctiesAcctAudtTrlRpt",
     "urn:iso:std:iso:20022:tech:xsd:reda.037.001.01"
 )]
+[Description(@"The SecuritiesAccountAuditTrailReport message is sent by the executing party to an instructing party to provide detailed information on the requested securities account audit trail recorded in the system.")]
+[IsoDisplayName(@"Securities Account Audit Trail Report V")]
 public interface ISecuritiesAccountAuditTrailReportV01 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface ISecuritiesAccountAuditTrailReportV01 : IOuterRecord
     [IsoId("_KAlNy52fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

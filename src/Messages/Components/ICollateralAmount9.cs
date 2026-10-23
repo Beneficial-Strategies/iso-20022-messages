@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Securities collateral position valuation amounts.
 /// </summary>
 [IsoId("__gn0GPSgEeicy5Zn42b9bg")]
+[IsoDisplayName(@"Collateral Amount")]
 public interface ICollateralAmount9 : IIsoComponent
 {
     /// <summary>

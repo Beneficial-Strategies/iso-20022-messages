@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisputeNotification2Choice;
 /// </summary>
 [IsoId("_KkjLoytOEeyOa655cLd-DQ")]
 [IsoXmlTag("SgrtdIndpdntAmtDsptDtls")]
+[IsoDisplayName(@"Segregated Independent Amount Dispute Details")]
 public interface ISegregatedIndependentAmountDisputeDetails
     : IDisputeNotification2Choice,
         IIsoChoiceVariant
@@ -28,5 +29,6 @@ public interface ISegregatedIndependentAmountDisputeDetails
     [IsoId("_da94AytOEeyOa655cLd-DQ")]
     [DisplayName("Dispute Resolution Type 1 Choice")]
     [IsoXmlTag("DsptRsltnTp1Chc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeResolutionType1Choice> DisputeResolutionType1Choice { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Individual cost or charge associated with the distribution or selling of a financial instrument. It may be one-off or recurring charge. It may be intended (ex ante) or actual (ex post).
 /// </summary>
 [IsoId("_p37YMZ9BEeqxTNfi5y7ywQ")]
+[IsoDisplayName(@"Individual Cost Or Charge")]
 public interface IIndividualCostOrCharge2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IIndividualCostOrCharge2 : IIsoComponent
     [IsoId("_-0re4Z9BEeqxTNfi5y7ywQ")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? Sign { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IIndividualCostOrCharge2 : IIsoComponent
     [IsoId("_qPIXO59BEeqxTNfi5y7ywQ")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>

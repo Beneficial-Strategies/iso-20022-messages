@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Calculation Agent1Choice.
 /// </summary>
 [IsoId("_16JIcEj8Ee-KhcStGV4xTg")]
+[IsoDisplayName(@"Calculation Agent1Choice")]
 public interface ICalculationAgent1Choice : IIsoChoice { }

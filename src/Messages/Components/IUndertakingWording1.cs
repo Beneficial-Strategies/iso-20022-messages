@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the wording for a demand guarantee, standby letter of credit or other undertaking.
 /// </summary>
 [IsoId("_94chlnltEeG7BsjMvd1mEw_-1148576989")]
+[IsoDisplayName(@"Undertaking Wording")]
 public interface IUndertakingWording1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IUndertakingWording1 : IIsoComponent
     [IsoId("_94mSkXltEeG7BsjMvd1mEw_-752831189")]
     [DisplayName("Undertaking Terms And Conditions")]
     [IsoXmlTag("UdrtkgTermsAndConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INarrative1> UndertakingTermsAndConditions { get; }
 }

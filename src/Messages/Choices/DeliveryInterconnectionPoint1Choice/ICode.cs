@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeliveryInterconnectionPoint1Cho
 /// Identification of delivery/interconnection point or zone as a code.
 /// </summary>
 [IsoId("_oI0MQIOsEeWqmeP8QNJBew")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDeliveryInterconnectionPoint1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ICode : IDeliveryInterconnectionPoint1Choice, IIsoChoiceVariant
     /// Energy identification coding scheme.
     /// </summary>
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.EICIdentifier)]
     EICIdentifier Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies detailed voting instructions.
 /// </summary>
 [IsoId("_hU-5QV66EeSjaerr_EM7AQ")]
+[IsoDisplayName(@"Vote Details")]
 public interface IVoteDetails3 : IIsoComponent
 {
     /// <summary>

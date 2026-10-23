@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of car rental service.
 /// </summary>
 [IsoId("_Y2H6UcW1EeuhguwJmlgagQ")]
+[IsoDisplayName(@"Rental Details")]
 public interface IRentalDetails2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRentalDetails2 : IIsoComponent
     [IsoId("_Y6vUkcW1EeuhguwJmlgagQ")]
     [DisplayName("Rental Identification")]
     [IsoXmlTag("RntlId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? RentalIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IRentalDetails2 : IIsoComponent
     [IsoId("_Y6vUk8W1EeuhguwJmlgagQ")]
     [DisplayName("Rental Date Time")]
     [IsoXmlTag("RntlDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? RentalDateTime { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IRentalDetails2 : IIsoComponent
     [IsoId("_Y6vUmcW1EeuhguwJmlgagQ")]
     [DisplayName("Rental Time Period")]
     [IsoXmlTag("RntlTmPrd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<PeriodUnit2Code> RentalTimePeriod { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IRentalDetails2 : IIsoComponent
     [IsoId("_Y6vUm8W1EeuhguwJmlgagQ")]
     [DisplayName("Time Period Unit")]
     [IsoXmlTag("TmPrdUnit")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? TimePeriodUnit { get; }
 
     /// <summary>

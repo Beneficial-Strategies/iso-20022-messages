@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice amongst various balance types related to unallocated payment.
 /// </summary>
 [IsoId("_uTU8wcSTEeeRJJtE9TSlkw")]
+[IsoDisplayName(@"Corporate Action Unallocated Balance SD 3 Choice")]
 public interface ICorporateActionUnallocatedBalanceSD3Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the jurisdiction (country, county, state, province, city).
 /// </summary>
 [IsoId("_hZ8L12liEeGaMcKyqKNRfQ_-1193651870")]
+[IsoDisplayName(@"Jurisdiction")]
 public interface IJurisdiction1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IJurisdiction1 : IIsoComponent
     [IsoId("_hZ8L2GliEeGaMcKyqKNRfQ_-1543399295")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Identification { get; }
 
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NonEligibleProceedsIndicator6Cho
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : INonEligibleProceedsIndicator6Choice, IIsoChoiceVariant
 {
     /// <summary>

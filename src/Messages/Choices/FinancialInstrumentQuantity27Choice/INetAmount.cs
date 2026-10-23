@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity27Cho
 /// </summary>
 [IsoId("_xNYrdThTEeaRwdGFv45qTQ")]
 [IsoXmlTag("NetAmt")]
+[IsoDisplayName(@"Net Amount")]
 public interface INetAmount : IFinancialInstrumentQuantity27Choice, IIsoChoiceVariant
 {
     /// <summary>

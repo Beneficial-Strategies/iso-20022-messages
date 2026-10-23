@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References61Choice;
 /// </summary>
 [IsoId("_kuQbc0HOEeazV4RAqPV71g")]
 [IsoXmlTag("OthrRef")]
+[IsoDisplayName(@"Other Reference")]
 public interface IOtherReference : IReferences61Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOtherReference : IReferences61Choice, IIsoChoiceVariant
     [IsoId("_u5IuAzbsEead9bDRE_1DAQ")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Reference { get; }
 
     /// <summary>
@@ -34,5 +37,7 @@ public interface IOtherReference : IReferences61Choice, IIsoChoiceVariant
     [IsoId("_u5IuBzbsEead9bDRE_1DAQ")]
     [DisplayName("Message Name")]
     [IsoXmlTag("MsgNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageName { get; }
 }

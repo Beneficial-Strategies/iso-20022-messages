@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction13C
 /// <summary>
 /// Completion.
 /// </summary>
+[IsoDisplayName(@"Completion")]
 public interface ICompletion : ICardPaymentDataSetTransaction13Choice, IIsoChoiceVariant
 {
     /// <summary>

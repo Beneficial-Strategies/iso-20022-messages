@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Post Trade Event1.
 /// </summary>
 [IsoId("_YgrCIEj-Ee-KhcStGV4xTg")]
+[IsoDisplayName(@"Post Trade Event1")]
 public interface IPostTradeEvent1 : IIsoComponent
 {
     /// <summary>

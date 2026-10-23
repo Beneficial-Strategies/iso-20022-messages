@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system.
 /// </summary>
 [IsoId("_7ql4wTEsEe6GxLzpkVnWYg")]
+[Description(@"Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system.")]
+[IsoDisplayName(@"Remittance Information22")]
 public interface IRemittanceInformation22 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +18,7 @@ public interface IRemittanceInformation22 : IIsoComponent
     /// </summary>
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max140Text> Unstructured { get; }
 
     /// <summary>
@@ -23,5 +26,6 @@ public interface IRemittanceInformation22 : IIsoComponent
     /// </summary>
     [DisplayName("Structured")]
     [IsoXmlTag("Strd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStructuredRemittanceInformation18> Structured { get; }
 }

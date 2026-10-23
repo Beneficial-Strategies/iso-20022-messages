@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies rules governing an undertaking such as a guarantee or standby letter of credit.
 /// </summary>
 [IsoId("_OTgzMjIy-AOSNFX-8224493")]
+[IsoDisplayName(@"Governance Rules")]
 public interface IGovernanceRules2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IGovernanceRules2 : IIsoComponent
     [IsoId("_OTgzMjI5-AOSNFX-8224493")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ID)]
     XsdID Identification { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IGovernanceRules2 : IIsoComponent
     [IsoId("_OTgzMjMy-AOSNFX-8224493")]
     [DisplayName("Jurisdiction")]
     [IsoXmlTag("Jursdctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocation1> Jurisdiction { get; }
 }

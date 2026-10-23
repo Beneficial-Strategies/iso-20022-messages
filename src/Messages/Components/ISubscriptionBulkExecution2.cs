@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a subscription order.
 /// </summary>
 [IsoId("_VUO3wtp-Ed-ak6NoX_4Aeg_-215103151")]
+[IsoDisplayName(@"Subscription Bulk Execution")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISubscriptionBulkExecution2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISubscriptionBulkExecution2 : IIsoComponent
     [IsoId("_VUO3xNp-Ed-ak6NoX_4Aeg_-215103149")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ISubscriptionBulkExecution2 : IIsoComponent
     [IsoId("_VUO3x9p-Ed-ak6NoX_4Aeg_-215102764")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubscriptionExecution3> IndividualExecutionDetails { get; }
 
     /// <summary>

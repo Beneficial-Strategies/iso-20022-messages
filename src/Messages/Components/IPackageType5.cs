@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Package Type5.
 /// </summary>
 [IsoId("_Ur-K4ZEGEe6Un9Rms6YuCg")]
+[IsoDisplayName(@"Package Type5")]
 public interface IPackageType5 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IPackageType5 : IIsoComponent
     /// </summary>
     [DisplayName("Package Block")]
     [IsoXmlTag("PackgBlck")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExternallyDefinedData5> PackageBlock { get; }
 }

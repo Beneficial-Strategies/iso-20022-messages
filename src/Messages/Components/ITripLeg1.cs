@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Supplies additional transaction information for travel transactions.
 /// </summary>
 [IsoId("_Z20p3_PzEeihCvvpsmGI2w")]
+[IsoDisplayName(@"Trip Leg")]
 public interface ITripLeg1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_Z21Q6PPzEeihCvvpsmGI2w")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? SequenceNumber { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_Z21Q7PPzEeihCvvpsmGI2w")]
     [DisplayName("Document")]
     [IsoXmlTag("Doc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentReference1> Document { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_Z21Q4_PzEeihCvvpsmGI2w")]
     [DisplayName("Procedure Reference")]
     [IsoXmlTag("PrcdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcedureReference { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_Z21Q5_PzEeihCvvpsmGI2w")]
     [DisplayName("Other Transport Type")]
     [IsoXmlTag("OthrTrnsprtTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherTransportType { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_Z21Q5vPzEeihCvvpsmGI2w")]
     [DisplayName("Commodity Code")]
     [IsoXmlTag("CmmdtyCd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? CommodityCode { get; }
 
     /// <summary>
@@ -81,6 +90,8 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_Z21Q5fPzEeihCvvpsmGI2w")]
     [DisplayName("Route Number")]
     [IsoXmlTag("RouteNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RouteNumber { get; }
 
     /// <summary>
@@ -89,6 +100,8 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_Z21Q7fPzEeihCvvpsmGI2w")]
     [DisplayName("Service Class")]
     [IsoXmlTag("SvcClss")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ServiceClass { get; }
 
     /// <summary>
@@ -113,6 +126,7 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_07fyQfQNEeihCvvpsmGI2w")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? Duration { get; }
 
     /// <summary>
@@ -121,6 +135,7 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_PGgGkPQOEeihCvvpsmGI2w")]
     [DisplayName("Stop Over Indicator")]
     [IsoXmlTag("StopOverInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? StopOverIndicator { get; }
 
     /// <summary>
@@ -129,6 +144,8 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_oYmc8PQOEeihCvvpsmGI2w")]
     [DisplayName("Non Direct Route Code")]
     [IsoXmlTag("NonDrctRouteCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NonDirectRouteCode { get; }
 
     /// <summary>
@@ -137,6 +154,8 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_-1sVEPQOEeihCvvpsmGI2w")]
     [DisplayName("Fair Basis Code")]
     [IsoXmlTag("FairBsisCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FairBasisCode { get; }
 
     /// <summary>
@@ -145,6 +164,7 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_HddcIvQPEeihCvvpsmGI2w")]
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? InsuranceIndicator { get; }
 
     /// <summary>
@@ -153,6 +173,7 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_HddcI_QPEeihCvvpsmGI2w")]
     [DisplayName("Trip Leg Amount")]
     [IsoXmlTag("TripLegAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountDetails1> TripLegAmount { get; }
 
     /// <summary>
@@ -161,6 +182,8 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_hEmLUekYEemeDPHh-U9b6w")]
     [DisplayName("Credit Reason Code")]
     [IsoXmlTag("CdtRsnCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CreditReasonCode { get; }
 
     /// <summary>
@@ -169,6 +192,8 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_xTVG0PQPEeihCvvpsmGI2w")]
     [DisplayName("Procedure Identification")]
     [IsoXmlTag("PrcdrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcedureIdentification { get; }
 
     /// <summary>
@@ -185,5 +210,7 @@ public interface ITripLeg1 : IIsoComponent
     [IsoId("_Z21Q5PPzEeihCvvpsmGI2w")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

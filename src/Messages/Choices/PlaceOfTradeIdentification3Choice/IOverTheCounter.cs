@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification3Choic
 /// Place at which the Over-the-Counter (OTC) transaction is executed.
 /// </summary>
 [IsoId("_WNmIstp-Ed-ak6NoX_4Aeg_-1162943025")]
+[IsoDisplayName(@"Over The Counter")]
 public interface IOverTheCounter : IPlaceOfTradeIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOverTheCounter : IPlaceOfTradeIdentification3Choice, IIsoChoic
     /// Specifies a character string with a maximum length of 30 characters. It has a pattern ([^/]+/)+([^/]+)|([^/]*) that disables the use of slash &quot;/&quot; at the beginning and end of line and double slash &quot;//&quot; within the line.
     /// </summary>
     [IsoXmlTag("OverTheCntr")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax30Text)]
+    [StringLength(30, MinimumLength = 1)]
     RestrictedFINMax30Text Value { get; }
 }

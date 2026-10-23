@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Withdrawal service provided by the ATM inside the session.
 /// </summary>
 [IsoId("_Dg7gQIogEeSirOZJBRz_nA")]
+[IsoDisplayName(@"ATM Service")]
 public interface IATMService1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMService1 : IIsoComponent
     [IsoId("_SNKrMIogEeSirOZJBRz_nA")]
     [DisplayName("Service Reference")]
     [IsoXmlTag("SvcRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ServiceReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMService1 : IIsoComponent
     [IsoId("_V7glMIogEeSirOZJBRz_nA")]
     [DisplayName("ATM Service Code")]
     [IsoXmlTag("ATMSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ATMServiceCode { get; }
 
     /// <summary>

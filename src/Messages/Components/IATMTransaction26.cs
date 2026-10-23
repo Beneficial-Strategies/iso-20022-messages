@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the reconciliation response.
 /// </summary>
 [IsoId("_iiJCga48EeWRfYPBaeOY8w")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction26 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IATMTransaction26 : IIsoComponent
     [IsoId("_iskw5a48EeWRfYPBaeOY8w")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ReconciliationIdentification { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IATMTransaction26 : IIsoComponent
     [IsoId("_uEGp0K48EeWRfYPBaeOY8w")]
     [DisplayName("ATM Totals")]
     [IsoXmlTag("ATMTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMTotals1> ATMTotals { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IATMTransaction26 : IIsoComponent
     [IsoId("_36_PYK48EeWRfYPBaeOY8w")]
     [DisplayName("Cassette")]
     [IsoXmlTag("Csstt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCassette2> Cassette { get; }
 
     /// <summary>
@@ -65,5 +70,6 @@ public interface IATMTransaction26 : IIsoComponent
     [IsoId("_iskw6a48EeWRfYPBaeOY8w")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 }

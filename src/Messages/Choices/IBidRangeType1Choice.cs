@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Bid range type as a choice of a defined coded value or a proprietary value.
 /// </summary>
 [IsoId("_TIIuYO3NEeqc-LCjwLsUVg")]
+[IsoDisplayName(@"Bid Range Type 1 Choice")]
 public interface IBidRangeType1Choice : IIsoChoice { }

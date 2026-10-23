@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPurpose1Choice;
 /// Provides the collateral purpose using an ISO 20022 code.
 /// </summary>
 [IsoId("_Qkr_dNp-Ed-ak6NoX_4Aeg_1309725745")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICollateralPurpose1Choice, IIsoChoiceVariant
 {
     /// <summary>

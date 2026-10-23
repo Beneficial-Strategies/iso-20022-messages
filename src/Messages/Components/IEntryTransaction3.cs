@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the underlying transaction.
 /// </summary>
 [IsoId("_tuBeolkyEeGeoaLUQk__nA_-1457648646")]
+[IsoDisplayName(@"Entry Transaction")]
 public interface IEntryTransaction3 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IEntryTransaction3 : IIsoComponent
     [IsoId("_tuKoklkyEeGeoaLUQk__nA_822340411")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalanceAvailability2> Availability { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface IEntryTransaction3 : IIsoComponent
     [IsoId("_tuKolFkyEeGeoaLUQk__nA_932867223")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges3> Charges { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface IEntryTransaction3 : IIsoComponent
     [IsoId("_tuUZkFkyEeGeoaLUQk__nA_-442057789")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionInterest3> Interest { get; }
 
     /// <summary>
@@ -105,6 +109,9 @@ public interface IEntryTransaction3 : IIsoComponent
     [IsoId("_tuUZlFkyEeGeoaLUQk__nA_-791805214")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation2> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -137,6 +144,7 @@ public interface IEntryTransaction3 : IIsoComponent
     [IsoId("_tueKk1kyEeGeoaLUQk__nA_-915365354")]
     [DisplayName("Related Quantities")]
     [IsoXmlTag("RltdQties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionQuantities2Choice> RelatedQuantities { get; }
 
     /// <summary>
@@ -185,6 +193,7 @@ public interface IEntryTransaction3 : IIsoComponent
     [IsoId("_tunUhFkyEeGeoaLUQk__nA_1988203952")]
     [DisplayName("Cash Deposit")]
     [IsoXmlTag("CshDpst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashDeposit1> CashDeposit { get; }
 
     /// <summary>
@@ -201,5 +210,7 @@ public interface IEntryTransaction3 : IIsoComponent
     [IsoId("_tuxFgVkyEeGeoaLUQk__nA_-130404251")]
     [DisplayName("Additional Transaction Information")]
     [IsoXmlTag("AddtlTxInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalTransactionInformation { get; }
 }

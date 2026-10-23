@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed Instruction Cancellation Status15.
 /// </summary>
 [IsoId("_ppAtBYYQEe-9jM3-w7OB3g")]
+[IsoDisplayName(@"Detailed Instruction Cancellation Status15")]
 public interface IDetailedInstructionCancellationStatus15 : IIsoComponent
 {
     /// <summary>

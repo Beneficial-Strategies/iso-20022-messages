@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationSearchCrite
 /// Search for one or more accounts based on exact identification of the account(s).
 /// </summary>
 [IsoId("_g7QEuWliEeGaMcKyqKNRfQ_-950111322")]
+[IsoDisplayName(@"Equal")]
 public interface IEqual : IAccountIdentificationSearchCriteria2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

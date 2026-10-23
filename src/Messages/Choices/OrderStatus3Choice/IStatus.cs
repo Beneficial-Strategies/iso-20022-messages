@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus3Choice;
 /// Status of all the orders in the order message. There is no reason attached.
 /// </summary>
 [IsoId("_vIDnYUH7EeaV3ab_pHzFIQ")]
+[IsoDisplayName(@"Status")]
 public interface IStatus : IOrderStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

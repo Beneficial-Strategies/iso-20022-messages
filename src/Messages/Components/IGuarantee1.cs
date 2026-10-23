@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Form of protection where a third party guarantees the performance of a financial obligation.
 /// </summary>
 [IsoId("_-3_WEK_7EeaE9YROwd69hA")]
+[IsoDisplayName(@"Guarantee")]
 public interface IGuarantee1 : IIsoComponent
 {
     /// <summary>

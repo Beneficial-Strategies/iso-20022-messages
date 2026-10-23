@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference16Choice;
 /// <summary>
 /// Common Identification.
 /// </summary>
+[IsoDisplayName(@"Common Identification")]
 public interface ICommonIdentification : IIdentificationReference16Choice, IIsoChoiceVariant
 {
     /// <summary>

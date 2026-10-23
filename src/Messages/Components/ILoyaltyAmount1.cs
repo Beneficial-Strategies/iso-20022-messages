@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Loyalty amount to apply to an Loyalty account.
 /// </summary>
 [IsoId("_GG5KQNuDEeiXqq0XHEoNUA")]
+[IsoDisplayName(@"Loyalty Amount")]
 public interface ILoyaltyAmount1 : IIsoComponent
 {
     /// <summary>

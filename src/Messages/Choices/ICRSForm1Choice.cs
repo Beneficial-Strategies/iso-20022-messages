@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the type of Common Reporting Standard (CRS) form.
 /// </summary>
 [IsoId("_fscaYUNuEeaS-NnwLNvMPg")]
+[IsoDisplayName(@"CRS Form 1 Choice")]
 public interface ICRSForm1Choice : IIsoChoice { }

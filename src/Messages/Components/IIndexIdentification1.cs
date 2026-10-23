@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the elements for the identification of an index. ISIN is the preferred format.
 /// </summary>
 [IsoId("_bs7zADN1Ee2gE4h-lpiUxQ")]
+[IsoDisplayName(@"Index Identification")]
 public interface IIndexIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IIndexIdentification1 : IIsoComponent
     [IsoId("_bs8aEDN1Ee2gE4h-lpiUxQ")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? ISIN { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IIndexIdentification1 : IIsoComponent
     [IsoId("_bs7zATN1Ee2gE4h-lpiUxQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>

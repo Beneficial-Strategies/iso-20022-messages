@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionChangeTypeFormat7
 /// Standard code to specify the type of changes.
 /// </summary>
 [IsoId("_cheMlZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionChangeTypeFormat7Choice, IIsoChoiceVariant
 {
     /// <summary>

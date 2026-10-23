@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the aggregated data per transaction type for a settlement internaliser.
 /// </summary>
 [IsoId("_ZsjzoO3oEeaWjpoyrnG6Rw")]
+[IsoDisplayName(@"Settlement Internaliser Transaction Type")]
 public interface ISettlementInternaliserTransactionType1 : IIsoComponent
 {
     /// <summary>

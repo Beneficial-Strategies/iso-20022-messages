@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.canm;
 /// </summary>
 [IsoId("_YzMe4ROIEfC1ZfCQz0xB3g")]
 [IsoMessage("canm.004.001.05", "KeyXchgRspn", "urn:iso:std:iso:20022:tech:xsd:canm.004.001.05")]
+[IsoDisplayName(@"Key Exchange Response V05")]
 public interface IKeyExchangeResponseV05 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +40,7 @@ public interface IKeyExchangeResponseV05 : IOuterRecord
     /// </summary>
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -46,6 +48,7 @@ public interface IKeyExchangeResponseV05 : IOuterRecord
     /// </summary>
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -116,6 +119,7 @@ public interface IKeyExchangeResponseV05 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -144,6 +148,7 @@ public interface IKeyExchangeResponseV05 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -151,6 +156,7 @@ public interface IKeyExchangeResponseV05 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -158,6 +164,7 @@ public interface IKeyExchangeResponseV05 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Command17.
 /// </summary>
 [IsoId("_gqBxMZ9pEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"ATM Command17")]
 public interface IATMCommand17 : IIsoComponent
 {
     /// <summary>

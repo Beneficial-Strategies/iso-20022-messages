@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Disclosure1Choice;
 /// Shareholding information is not disclosed.
 /// </summary>
 [IsoId("_G07V0MANEembi_x1QDJfxw")]
+[IsoDisplayName(@"No Disclosure")]
 public interface INoDisclosure : IDisclosure1Choice, IIsoChoiceVariant
 {
     /// <summary>

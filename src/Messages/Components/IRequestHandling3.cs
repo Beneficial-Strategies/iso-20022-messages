@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Request Handling3.
 /// </summary>
 [IsoId("_aO3y8bqsEe68nbz8Nl_hLQ")]
+[IsoDisplayName(@"Request Handling3")]
 public interface IRequestHandling3 : IIsoComponent
 {
     /// <summary>

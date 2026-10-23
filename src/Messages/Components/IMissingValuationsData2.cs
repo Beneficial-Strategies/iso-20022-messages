@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed information about the outstanding derivatives for which no valuation or outdated valuation has been reported.
 /// </summary>
 [IsoId("_x2ECMVyGEe24CqbZJK5XxA")]
+[IsoDisplayName(@"Missing Valuations Data")]
 public interface IMissingValuationsData2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IMissingValuationsData2 : IIsoComponent
     [IsoId("_x24hk1yGEe24CqbZJK5XxA")]
     [DisplayName("Number Of Outstanding Derivatives")]
     [IsoXmlTag("NbOfOutsdngDerivs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfOutstandingDerivatives { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IMissingValuationsData2 : IIsoComponent
     [IsoId("_x24hlVyGEe24CqbZJK5XxA")]
     [DisplayName("Number Of Outstanding Derivatives With No Valuation")]
     [IsoXmlTag("NbOfOutsdngDerivsWthNoValtn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfOutstandingDerivativesWithNoValuation { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IMissingValuationsData2 : IIsoComponent
     [IsoId("_x24hl1yGEe24CqbZJK5XxA")]
     [DisplayName("Number Of Outstanding Derivatives With Outdated Valuation")]
     [IsoXmlTag("NbOfOutsdngDerivsWthOutdtdValtn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfOutstandingDerivativesWithOutdatedValuation { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IMissingValuationsData2 : IIsoComponent
     [IsoId("_x24hmVyGEe24CqbZJK5XxA")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMissingValuationsTransactionData2> TransactionDetails { get; }
 }

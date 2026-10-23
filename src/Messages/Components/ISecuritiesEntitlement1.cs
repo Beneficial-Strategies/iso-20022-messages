@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides entitlement information.
 /// </summary>
 [IsoId("_UJRgh9p-Ed-ak6NoX_4Aeg_1912782907")]
+[IsoDisplayName(@"Securities Entitlement")]
 public interface ISecuritiesEntitlement1 : IIsoComponent
 {
     /// <summary>

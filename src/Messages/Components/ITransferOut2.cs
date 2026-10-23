@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a transfer out transaction.
 /// </summary>
 [IsoId("_U07sptp-Ed-ak6NoX_4Aeg_1855595755")]
+[IsoDisplayName(@"Transfer Out")]
 public interface ITransferOut2 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface ITransferOut2 : IIsoComponent
     [IsoId("_U1Fdotp-Ed-ak6NoX_4Aeg_300046229")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

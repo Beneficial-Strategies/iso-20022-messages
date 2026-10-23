@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a demand.
 /// </summary>
 [IsoId("_-BZCMnltEeG7BsjMvd1mEw_76112237")]
+[IsoDisplayName(@"Demand")]
 public interface IDemand4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDemand4 : IIsoComponent
     [IsoId("_-BZCM3ltEeG7BsjMvd1mEw_-920960116")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to an identification, eg, party identification or account identification.
 /// </summary>
 [IsoId("_QAVVOdp-Ed-ak6NoX_4Aeg_-2099297654")]
+[IsoDisplayName(@"Generic Identification")]
 public interface IGenericIdentification11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGenericIdentification11 : IIsoComponent
     [IsoId("_QAVVOtp-Ed-ak6NoX_4Aeg_-2099297636")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IGenericIdentification11 : IIsoComponent
     [IsoId("_QAfGMNp-Ed-ak6NoX_4Aeg_-749110044")]
     [DisplayName("Extended Identification Type")]
     [IsoXmlTag("XtndedIdTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedIdentificationType { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface IGenericIdentification11 : IIsoComponent
     [IsoId("_QAfGMdp-Ed-ak6NoX_4Aeg_-2099297601")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

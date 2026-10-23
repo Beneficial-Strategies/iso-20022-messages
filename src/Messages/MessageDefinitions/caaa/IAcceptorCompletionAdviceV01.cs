@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrCmpltnAdvc",
     "urn:iso:std:iso:20022:tech:xsd:caaa.003.001.01"
 )]
+[Description(@"Scope|The AcceptorCompletionAdvice message is sent by a card acceptor to notify an acquirer about the completion and final outcome of a card payment transaction. The message can be sent directly to the acquirer or through an agent.|Usage|The AcceptorCompletionAdvice message is used either to:|- inform the acquirer about the successful end of a transaction;|- reverse a transaction which was not successfully completed (for example, cancellation of transaction by the cardholder), but where an authorisation had been previously given.|The AcceptorCompletionAdvice message may also embed the information required for transferring to the acquirer all data needed to perform the financial settlement of the transaction (capture). Should the acquirer not receive a correct response to an AcceptorCompletionAdvice message; the card acceptor sends back an AcceptorCompletionAdvice message to the acquirer.")]
+[IsoDisplayName(@"Acceptor Completion Advice V")]
 public interface IAcceptorCompletionAdviceV01 : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics that unambiguously identify the single invoice financing request.
 /// </summary>
 [IsoId("_RYGZZdp-Ed-ak6NoX_4Aeg_909721344")]
+[IsoDisplayName(@"Invoice Request Information")]
 public interface IInvoiceRequestInformation1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IInvoiceRequestInformation1 : IIsoComponent
     [IsoId("_RYQKYNp-Ed-ak6NoX_4Aeg_-1603772146")]
     [DisplayName("Instalment Information")]
     [IsoXmlTag("InstlmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalment1> InstalmentInformation { get; }
 
     /// <summary>
@@ -81,5 +83,6 @@ public interface IInvoiceRequestInformation1 : IIsoComponent
     [IsoId("_RYQKZdp-Ed-ak6NoX_4Aeg_497864820")]
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferredDocumentInformation2> ReferredDocument { get; }
 }

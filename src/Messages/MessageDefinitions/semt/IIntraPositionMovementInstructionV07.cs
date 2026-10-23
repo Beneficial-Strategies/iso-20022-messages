@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "IntraPosMvmntInstr",
     "urn:iso:std:iso:20022:tech:xsd:semt.013.001.07"
 )]
+[IsoDisplayName(@"Intra Position Movement Instruction V07")]
 public interface IIntraPositionMovementInstructionV07 : IOuterRecord
 {
     /// <summary>
@@ -43,6 +44,7 @@ public interface IIntraPositionMovementInstructionV07 : IOuterRecord
     /// </summary>
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages59> Linkages { get; }
 
     /// <summary>
@@ -99,5 +101,6 @@ public interface IIntraPositionMovementInstructionV07 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies additional information as expected by the party that the investigation performs the expected actions for its resolution.
 /// </summary>
 [IsoId("_pVo7ZcQHEemsic1bQcEtLA")]
+[IsoDisplayName(@"Resolution Data")]
 public interface IResolutionData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IResolutionData2 : IIsoComponent
     [IsoId("_pg0Qg8QHEemsic1bQcEtLA")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IResolutionData2 : IIsoComponent
     [IsoId("_pg0QhcQHEemsic1bQcEtLA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IResolutionData2 : IIsoComponent
     [IsoId("_pg0Qh8QHEemsic1bQcEtLA")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? UETR { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IResolutionData2 : IIsoComponent
     [IsoId("_pg0Qi8QHEemsic1bQcEtLA")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -73,5 +80,6 @@ public interface IResolutionData2 : IIsoComponent
     [IsoId("_pg0QkcQHEemsic1bQcEtLA")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges8> Charges { get; }
 }

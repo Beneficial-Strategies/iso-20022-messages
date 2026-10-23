@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics6Ch
 /// </summary>
 [IsoId("_x_mYs1yGEe24CqbZJK5XxA")]
 [IsoXmlTag("DtldSttstcs")]
+[IsoDisplayName(@"Detailed Statistics")]
 public interface IDetailedStatistics : IDetailedTransactionStatistics6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IDetailedStatistics : IDetailedTransactionStatistics6Choice, II
     [IsoId("_yAw2UVyGEe24CqbZJK5XxA")]
     [DisplayName("Total Number Of Transactions")]
     [IsoXmlTag("TtlNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfTransactions { get; }
 
     /// <summary>
@@ -50,5 +52,6 @@ public interface IDetailedStatistics : IDetailedTransactionStatistics6Choice, II
     [IsoId("_yAw2WVyGEe24CqbZJK5XxA")]
     [DisplayName("Transactions Rejections Reason")]
     [IsoXmlTag("TxsRjctnsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason71> TransactionsRejectionsReason { get; }
 }

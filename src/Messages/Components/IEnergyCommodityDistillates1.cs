@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an energy derivative of type distillates.
 /// </summary>
 [IsoId("_TQn-sFrWEeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Energy Commodity Distillates")]
 public interface IEnergyCommodityDistillates1 : IIsoComponent
 {
     /// <summary>

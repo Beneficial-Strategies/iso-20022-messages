@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderRestriction1Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IOrderRestriction1Choice, IIsoChoiceVariant
 {
     /// <summary>

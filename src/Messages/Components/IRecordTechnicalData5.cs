@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instrument specific technical data to support identification.
 /// </summary>
 [IsoId("_XjVHpZ26Eeuwmdq0KtnICg")]
+[IsoDisplayName(@"Record Technical Data")]
 public interface IRecordTechnicalData5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRecordTechnicalData5 : IIsoComponent
     [IsoId("_X5iBAZ26Eeuwmdq0KtnICg")]
     [DisplayName("Receipt Date Time")]
     [IsoXmlTag("RctDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ReceiptDateTime { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IRecordTechnicalData5 : IIsoComponent
     [IsoId("_X5iBA526Eeuwmdq0KtnICg")]
     [DisplayName("Exchange Reason")]
     [IsoXmlTag("XchgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ExternalAuthorityExchangeReason1Code> ExchangeReason { get; }
 }

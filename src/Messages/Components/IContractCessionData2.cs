@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contract Cession Data2.
 /// </summary>
 [IsoId("_6sqpPzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Contract Cession Data2")]
 public interface IContractCessionData2 : IIsoComponent
 {
     /// <summary>

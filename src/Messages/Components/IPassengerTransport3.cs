@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Passenger Transport3.
 /// </summary>
 [IsoId("_8chqQXQ7Ee6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Passenger Transport3")]
 public interface IPassengerTransport3 : IIsoComponent
 {
     /// <summary>
@@ -72,6 +73,7 @@ public interface IPassengerTransport3 : IIsoComponent
     /// </summary>
     [DisplayName("Customer Reference")]
     [IsoXmlTag("CstmrRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomerReference1> CustomerReference { get; }
 
     /// <summary>
@@ -79,6 +81,7 @@ public interface IPassengerTransport3 : IIsoComponent
     /// </summary>
     [DisplayName("Passenger")]
     [IsoXmlTag("Pssngr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomer9> Passenger { get; }
 
     /// <summary>
@@ -107,6 +110,7 @@ public interface IPassengerTransport3 : IIsoComponent
     /// </summary>
     [DisplayName("Total Amount")]
     [IsoXmlTag("TtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountDetails3> TotalAmount { get; }
 
     /// <summary>
@@ -128,6 +132,7 @@ public interface IPassengerTransport3 : IIsoComponent
     /// </summary>
     [DisplayName("Trip Leg")]
     [IsoXmlTag("TripLeg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITripLeg3> TripLeg { get; }
 
     /// <summary>
@@ -135,6 +140,7 @@ public interface IPassengerTransport3 : IIsoComponent
     /// </summary>
     [DisplayName("Ancillary Purchase")]
     [IsoXmlTag("AncllryPurchs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAncillaryPurchase3> AncillaryPurchase { get; }
 
     /// <summary>
@@ -142,6 +148,7 @@ public interface IPassengerTransport3 : IIsoComponent
     /// </summary>
     [DisplayName("Hired Vehicle Details")]
     [IsoXmlTag("HirdVhclDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHiredVehicle3> HiredVehicleDetails { get; }
 
     /// <summary>
@@ -149,5 +156,6 @@ public interface IPassengerTransport3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the reconciliation initiation message.</summary>
 [IsoId("_kNBjxW7-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Reconciliation Initiation")]
 public interface IReconciliationInitiation : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxType2Choice;
 /// Type of tax applied.
 /// </summary>
 [IsoId("_ilKssBrfEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Type")]
 public interface IType : ITaxType2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional details on the underlying. In securities financing deals, it is used to identify and provide information on the collateral.
 /// </summary>
 [IsoId("_1RJ4sWp7EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Underlying Attributes")]
 public interface IUnderlyingAttributes4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IUnderlyingAttributes4 : IIsoComponent
     [IsoId("_1cvdoWp7EemmaZLSPtWX5A")]
     [DisplayName("Allocation Percentage")]
     [IsoXmlTag("AllcnPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? AllocationPercentage { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface IUnderlyingAttributes4 : IIsoComponent
     [IsoId("_1cwEyWp7EemmaZLSPtWX5A")]
     [DisplayName("Cash Type")]
     [IsoXmlTag("CshTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CashType { get; }
 
     /// <summary>
@@ -113,6 +117,7 @@ public interface IUnderlyingAttributes4 : IIsoComponent
     [IsoId("_1cwFA2p7EemmaZLSPtWX5A")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ExchangeRate { get; }
 
     /// <summary>

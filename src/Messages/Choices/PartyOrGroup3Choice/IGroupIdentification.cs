@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrGroup3Choice;
 /// <summary>
 /// Group Identification.
 /// </summary>
+[IsoDisplayName(@"Group Identification")]
 public interface IGroupIdentification : IPartyOrGroup3Choice, IIsoChoiceVariant
 {
     /// <summary>

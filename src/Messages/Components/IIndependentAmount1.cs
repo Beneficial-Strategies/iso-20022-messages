@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the independent amount and how it was applied in the calculation.
 /// </summary>
 [IsoId("_UlI9KNp-Ed-ak6NoX_4Aeg_1173631516")]
+[IsoDisplayName(@"Independent Amount")]
 public interface IIndependentAmount1 : IIsoComponent
 {
     /// <summary>

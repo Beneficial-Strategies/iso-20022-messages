@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the debit instrument.
 /// </summary>
 [IsoId("_PCM3wX5gEea2k7EBUopqxw")]
+[IsoDisplayName(@"Debt Instrument")]
 public interface IDebtInstrument5 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IDebtInstrument5 : IIsoComponent
     [IsoId("_PO2Mo35gEea2k7EBUopqxw")]
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate IssuanceDate { get; }
 }

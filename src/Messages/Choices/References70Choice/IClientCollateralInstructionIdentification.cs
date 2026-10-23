@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References70Choice;
 /// Unique reference identifying the collateral management transaction from the client&apos;s point of view.
 /// </summary>
 [IsoId("_F1wScFSOEemTt7251YwCKw")]
+[IsoDisplayName(@"Client Collateral Instruction Identification")]
 public interface IClientCollateralInstructionIdentification : IReferences70Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IClientCollateralInstructionIdentification : IReferences70Choic
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("ClntCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

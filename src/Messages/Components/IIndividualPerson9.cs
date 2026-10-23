@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Human entity, as distinguished from a corporate entity (which is sometimes referred to as an &apos;artificial person&apos;).
 /// </summary>
 [IsoId("_QB0i8dp-Ed-ak6NoX_4Aeg_-1580790160")]
+[IsoDisplayName(@"Individual Person")]
 public interface IIndividualPerson9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IIndividualPerson9 : IIsoComponent
     [IsoId("_QB0i8tp-Ed-ak6NoX_4Aeg_-1573405523")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IIndividualPerson9 : IIsoComponent
     [IsoId("_QB0i89p-Ed-ak6NoX_4Aeg_-1573405499")]
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BirthDate { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IIndividualPerson9 : IIsoComponent
     [IsoId("_QB0i9tp-Ed-ak6NoX_4Aeg_-1573405463")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification11> OtherIdentification { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod2Choice;
 /// </summary>
 [IsoId("_7HIKc248EeiU9cctagi5ow")]
 [IsoXmlTag("Dbt")]
+[IsoDisplayName(@"Debit")]
 public interface IDebit : ISettlementMethod2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -146,6 +147,7 @@ public interface IDebit : ISettlementMethod2Choice, IIsoChoiceVariant
     [IsoId("_7RaH_W48EeiU9cctagi5ow")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent1> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -163,6 +165,9 @@ public interface IDebit : ISettlementMethod2Choice, IIsoChoiceVariant
     [IsoId("_7RaIAW48EeiU9cctagi5ow")]
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting3> RegulatoryReporting { get; }
 
     /// <summary>
@@ -179,6 +184,9 @@ public interface IDebit : ISettlementMethod2Choice, IIsoChoiceVariant
     [IsoId("_7RaIBW48EeiU9cctagi5ow")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation6> RelatedRemittanceInformation { get; }
 
     /// <summary>

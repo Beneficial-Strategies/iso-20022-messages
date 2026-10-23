@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for global note.
 /// </summary>
 [IsoId("_TiBdgeLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Global Note 2 Choice")]
 public interface IGlobalNote2Choice : IIsoChoice { }

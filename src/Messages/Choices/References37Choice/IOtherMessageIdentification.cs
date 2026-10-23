@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References37Choice;
 /// Unambiguous identification of the message to be cancelled.
 /// </summary>
 [IsoId("_ts-sUQ34EeKN_Y-2Awiamw")]
+[IsoDisplayName(@"Other Message Identification")]
 public interface IOtherMessageIdentification : IReferences37Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOtherMessageIdentification : IReferences37Choice, IIsoChoiceVa
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("OthrMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

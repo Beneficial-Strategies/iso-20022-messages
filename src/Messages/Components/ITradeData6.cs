@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the status of a trade.
 /// </summary>
 [IsoId("_SvDFAAEcEeCQm6a_G2yO_w_-1493991605")]
+[IsoDisplayName(@"Trade Data")]
 public interface ITradeData6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeData6 : IIsoComponent
     [IsoId("_SvDFAQEcEeCQm6a_G2yO_w_-1607830671")]
     [DisplayName("Notification Identification")]
     [IsoXmlTag("NtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text NotificationIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITradeData6 : IIsoComponent
     [IsoId("_SvDFAgEcEeCQm6a_G2yO_w_1803903338")]
     [DisplayName("Matching System Unique Reference")]
     [IsoXmlTag("MtchgSysUnqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MatchingSystemUniqueReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITradeData6 : IIsoComponent
     [IsoId("_SvDFAwEcEeCQm6a_G2yO_w_9925212")]
     [DisplayName("Matching System Matching Reference")]
     [IsoXmlTag("MtchgSysMtchgRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MatchingSystemMatchingReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITradeData6 : IIsoComponent
     [IsoId("_SvDFBAEcEeCQm6a_G2yO_w_1690064272")]
     [DisplayName("Status Originator")]
     [IsoXmlTag("StsOrgtr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StatusOriginator { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface ITradeData6 : IIsoComponent
     [IsoId("_SvDFBgEcEeCQm6a_G2yO_w_-1991547256")]
     [DisplayName("Current Status Sub Type")]
     [IsoXmlTag("CurStsSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CurrentStatusSubType { get; }
 
     /// <summary>
@@ -65,6 +76,7 @@ public interface ITradeData6 : IIsoComponent
     [IsoId("_SvDFBwEcEeCQm6a_G2yO_w_1306347687")]
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CurrentStatusDateTime { get; }
 
     /// <summary>
@@ -81,6 +93,8 @@ public interface ITradeData6 : IIsoComponent
     [IsoId("_SvDFCQEcEeCQm6a_G2yO_w_-1684869372")]
     [DisplayName("Previous Status Sub Type")]
     [IsoXmlTag("PrvsStsSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? PreviousStatusSubType { get; }
 
     /// <summary>
@@ -89,6 +103,7 @@ public interface ITradeData6 : IIsoComponent
     [IsoId("_SvDFCgEcEeCQm6a_G2yO_w_1613025571")]
     [DisplayName("Previous Status Date Time")]
     [IsoXmlTag("PrvsStsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? PreviousStatusDateTime { get; }
 
     /// <summary>
@@ -97,5 +112,7 @@ public interface ITradeData6 : IIsoComponent
     [IsoId("_SvDFCwEcEeCQm6a_G2yO_w_615953218")]
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProductType { get; }
 }

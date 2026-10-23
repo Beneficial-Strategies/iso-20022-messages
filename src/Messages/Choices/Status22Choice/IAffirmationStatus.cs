@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status22Choice;
 /// Status of affirmation of a trade.
 /// </summary>
 [IsoId("_8QboI5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Affirmation Status")]
 public interface IAffirmationStatus : IStatus22Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

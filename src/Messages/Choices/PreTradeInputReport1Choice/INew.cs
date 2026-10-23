@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PreTradeInputReport1Choice;
 
 /// <summary>Pre-trade input related data report.</summary>
 [IsoId("_RroN0GF9EfC07JR6e2JJ-w")]
+[IsoDisplayName(@"New")]
 public interface INew : IPreTradeInputReport1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

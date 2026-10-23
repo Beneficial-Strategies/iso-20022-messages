@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_n_fC4ROIEfC1ZfCQz0xB3g")]
 [IsoMessage("cain.005.001.05", "RvslInitn", "urn:iso:std:iso:20022:tech:xsd:cain.005.001.05")]
+[IsoDisplayName(@"Reversal Initiation V05")]
 public interface IReversalInitiationV05 : IOuterRecord
 {
     /// <summary>
@@ -139,6 +140,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_n_fDExOIEfC1ZfCQz0xB3g")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAmounts5> AdditionalAmount { get; }
 
     /// <summary>
@@ -147,6 +149,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_VZDYgUrZEfCMZJtj4J7UGQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> Tax { get; }
 
     /// <summary>
@@ -195,6 +198,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_n_fDLxOIEfC1ZfCQz0xB3g")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10KHexBinaryText)]
     Max10KHexBinaryText? ICCRelatedData { get; }
 
     /// <summary>
@@ -251,6 +255,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_Zn-JoTTYEfCLfeKcVPKw8g")]
     [DisplayName("Cardholder")]
     [IsoXmlTag("Crdhldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholder23> Cardholder { get; }
 
     /// <summary>
@@ -259,6 +264,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_gChCsRRAEfC_aaedwHHlmw")]
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerification8> Verification { get; }
 
     /// <summary>
@@ -267,6 +273,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_n_fDOROIEfC1ZfCQz0xB3g")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -291,6 +298,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_n_fDOxOIEfC1ZfCQz0xB3g")]
     [DisplayName("Account Balance")]
     [IsoXmlTag("AcctBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountBalance4> AccountBalance { get; }
 
     /// <summary>
@@ -299,6 +307,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_n_fDPROIEfC1ZfCQz0xB3g")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalService3> AdditionalService { get; }
 
     /// <summary>
@@ -315,6 +324,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_n_fDQROIEfC1ZfCQz0xB3g")]
     [DisplayName("Deposit Details")]
     [IsoXmlTag("DpstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDepositDetails4> DepositDetails { get; }
 
     /// <summary>
@@ -339,6 +349,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_n_fDRxOIEfC1ZfCQz0xB3g")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -363,6 +374,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_00lJyWvfEfCyxsm1jzUNug")]
     [DisplayName("Benefits")]
     [IsoXmlTag("Bnfts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBenefitSupportingData1> Benefits { get; }
 
     /// <summary>
@@ -371,6 +383,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_n_fDTxOIEfC1ZfCQz0xB3g")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -379,6 +392,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_WqV0skYMEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -387,6 +401,7 @@ public interface IReversalInitiationV05 : IOuterRecord
     [IsoId("_WqV0s0YMEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

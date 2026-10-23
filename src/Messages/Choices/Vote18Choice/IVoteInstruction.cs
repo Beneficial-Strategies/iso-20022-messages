@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote18Choice;
 
 /// <summary>Instruction specifying the instructed quantity of voting rights per resolution.</summary>
 [IsoId("_xMNNU6jGEfCzuLlmLrhIvA")]
+[IsoDisplayName(@"Vote Instruction")]
 public interface IVoteInstruction : IVote18Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

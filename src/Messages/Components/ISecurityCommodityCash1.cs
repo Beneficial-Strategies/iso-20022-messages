@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indication of the type of assets subject of the transaction.
 /// </summary>
 [IsoId("_lwUpMa-1EemF0ZVFnxVu4g")]
+[IsoDisplayName(@"Security Commodity Cash")]
 public interface ISecurityCommodityCash1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityCommodityCash1 : IIsoComponent
     [IsoId("_l0q9sa-1EemF0ZVFnxVu4g")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurity17> Security { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecurityCommodityCash1 : IIsoComponent
     [IsoId("_l0q9s6-1EemF0ZVFnxVu4g")]
     [DisplayName("Commodity")]
     [IsoXmlTag("Cmmdty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommodity21> Commodity { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ISecurityCommodityCash1 : IIsoComponent
     [IsoId("_pTFlUK-1EemF0ZVFnxVu4g")]
     [DisplayName("Cash")]
     [IsoXmlTag("Csh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashCompare1> Cash { get; }
 }

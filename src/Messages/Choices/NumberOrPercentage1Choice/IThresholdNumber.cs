@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberOrPercentage1Choice;
 /// Threshold provided as a decimal number.
 /// </summary>
 [IsoId("_4TLdUK4pEemG7MmivSuE5g")]
+[IsoDisplayName(@"Threshold Number")]
 public interface IThresholdNumber : INumberOrPercentage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IThresholdNumber : INumberOrPercentage1Choice, IIsoChoiceVarian
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("ThrshldNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

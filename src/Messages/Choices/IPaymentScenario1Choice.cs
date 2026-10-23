@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Payment Scenario1Choice.
 /// </summary>
 [IsoId("_J3dO8Gw9Ee-t2JGPeXy0Sw")]
+[IsoDisplayName(@"Payment Scenario1Choice")]
 public interface IPaymentScenario1Choice : IIsoChoice { }

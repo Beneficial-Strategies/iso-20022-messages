@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a status advice and a statement.</summary>
 [IsoId("_JdxrwaowEfCG2_q2WT-90w")]
+[IsoDisplayName(@"Status Or Statement 14 Choice")]
 public interface IStatusOrStatement14Choice : IIsoChoice { }

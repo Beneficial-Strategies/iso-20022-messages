@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements providing information specific to the individual transaction(s) included in the message.
 /// </summary>
 [IsoId("_TMoSHNp-Ed-ak6NoX_4Aeg_151667435")]
+[IsoDisplayName(@"Credit Transfer Transaction Information")]
 public interface ICreditTransferTransactionInformation3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICreditTransferTransactionInformation3 : IIsoComponent
     [IsoId("_TMxcA9p-Ed-ak6NoX_4Aeg_152589992")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -225,6 +227,7 @@ public interface ICreditTransferTransactionInformation3 : IIsoComponent
     [IsoId("_TNE-CNp-Ed-ak6NoX_4Aeg_1967997773")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent2> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -233,6 +236,7 @@ public interface ICreditTransferTransactionInformation3 : IIsoComponent
     [IsoId("_TNE-Cdp-Ed-ak6NoX_4Aeg_380700533")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>

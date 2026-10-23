@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_Z15XoSGmEeKjd4jizyIDGA")]
 [IsoMessage("pain.007.001.04", "CstmrPmtRvsl", "urn:iso:std:iso:20022:tech:xsd:pain.007.001.04")]
+[Description(@"Scope|The CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.|Usage|The CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.|The CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.|The CustomerPaymentReversal message can be used in domestic and cross-border scenarios.")]
+[IsoDisplayName(@"Customer Payment Reversal V")]
 public interface ICustomerPaymentReversalV04 : IOuterRecord
 {
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICustomerPaymentReversalV04 : IOuterRecord
     [IsoId("_Z15XuyGmEeKjd4jizyIDGA")]
     [DisplayName("Original Payment Information And Reversal")]
     [IsoXmlTag("OrgnlPmtInfAndRvsl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalPaymentInstruction7> OriginalPaymentInformationAndReversal { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface ICustomerPaymentReversalV04 : IOuterRecord
     [IsoId("_Z15XwyGmEeKjd4jizyIDGA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

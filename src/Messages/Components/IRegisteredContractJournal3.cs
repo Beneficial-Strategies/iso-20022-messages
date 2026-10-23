@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Registered Contract Journal3.
 /// </summary>
 [IsoId("_4lkZwTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Registered Contract Journal3")]
 public interface IRegisteredContractJournal3 : IIsoComponent
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice;
 /// </summary>
 [IsoId("_o1CqqhwkEeOIveEnnb_1-A")]
 [IsoXmlTag("Umtchd")]
+[IsoDisplayName(@"Unmatched")]
 public interface IUnmatched : ITransferStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,8 @@ public interface IUnmatched : ITransferStatus1Choice, IIsoChoiceVariant
     [IsoId("_RQWyoNp-Ed-ak6NoX_4Aeg_-256617853")]
     [DisplayName("Extended Reason")]
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedReason { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sensible data associated with the payment card performing the transaction.
 /// </summary>
 [IsoId("_l24gIY0TEeWRYffwL7E13A")]
+[IsoDisplayName(@"Plain Card Data")]
 public interface IPlainCardData15 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPlainCardData15 : IIsoComponent
     [IsoId("_mBWqwY0TEeWRYffwL7E13A")]
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
+    [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
     Min8Max28NumericText PAN { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPlainCardData15 : IIsoComponent
     [IsoId("_mBWqw40TEeWRYffwL7E13A")]
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
     Min2Max3NumericText? CardSequenceNumber { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPlainCardData15 : IIsoComponent
     [IsoId("_mBWqxY0TEeWRYffwL7E13A")]
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? EffectiveDate { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPlainCardData15 : IIsoComponent
     [IsoId("_mBWqx40TEeWRYffwL7E13A")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text ExpiryDate { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IPlainCardData15 : IIsoComponent
     [IsoId("_mBWqyY0TEeWRYffwL7E13A")]
     [DisplayName("Service Code")]
     [IsoXmlTag("SvcCd")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? ServiceCode { get; }
 
     /// <summary>
@@ -57,6 +65,8 @@ public interface IPlainCardData15 : IIsoComponent
     [IsoId("_QluaMI0UEeWRYffwL7E13A")]
     [DisplayName("Track")]
     [IsoXmlTag("Trck1")]
+    [IsoSimpleType(IsoSimpleType.Max76Text)]
+    [StringLength(76, MinimumLength = 1)]
     Max76Text? Track1 { get; }
 
     /// <summary>
@@ -65,6 +75,8 @@ public interface IPlainCardData15 : IIsoComponent
     [IsoId("_WnHU4I0UEeWRYffwL7E13A")]
     [DisplayName("Track")]
     [IsoXmlTag("Trck2")]
+    [IsoSimpleType(IsoSimpleType.Max37Text)]
+    [StringLength(37, MinimumLength = 1)]
     Max37Text? Track2 { get; }
 
     /// <summary>
@@ -73,6 +85,8 @@ public interface IPlainCardData15 : IIsoComponent
     [IsoId("_bE-AQI0UEeWRYffwL7E13A")]
     [DisplayName("Track")]
     [IsoXmlTag("Trck3")]
+    [IsoSimpleType(IsoSimpleType.Max104Text)]
+    [StringLength(104, MinimumLength = 1)]
     Max104Text? Track3 { get; }
 
     /// <summary>
@@ -81,5 +95,7 @@ public interface IPlainCardData15 : IIsoComponent
     [IsoId("_mBWqzY0TEeWRYffwL7E13A")]
     [DisplayName("Cardholder Name")]
     [IsoXmlTag("CrdhldrNm")]
+    [IsoSimpleType(IsoSimpleType.Max45Text)]
+    [StringLength(45, MinimumLength = 1)]
     Max45Text? CardholderName { get; }
 }

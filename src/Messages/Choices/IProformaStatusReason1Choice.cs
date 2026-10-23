@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a proforma status reason.
 /// </summary>
 [IsoId("_4nJZUUzCEeafiMTDrtSnyw")]
+[IsoDisplayName(@"Proforma Status Reason 1 Choice")]
 public interface IProformaStatusReason1Choice : IIsoChoice { }

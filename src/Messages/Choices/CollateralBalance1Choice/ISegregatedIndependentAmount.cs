@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralBalance1Choice;
 /// </summary>
 [IsoId("_UnXxytp-Ed-ak6NoX_4Aeg_1045799197")]
 [IsoXmlTag("SgrtdIndpdntAmt")]
+[IsoDisplayName(@"Segregated Independent Amount")]
 public interface ISegregatedIndependentAmount : ICollateralBalance1Choice, IIsoChoiceVariant
 {
     /// <summary>

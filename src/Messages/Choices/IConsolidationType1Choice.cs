@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the type of consolidation.
 /// </summary>
 [IsoId("_NJKKkCDVEeWCLu74WLgP4w")]
+[IsoDisplayName(@"Consolidation Type 1 Choice")]
 public interface IConsolidationType1Choice : IIsoChoice { }

@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "FndConfdCshFcstRptCxl",
     "urn:iso:std:iso:20022:tech:xsd:camt.044.001.03"
 )]
+[Description(@"Scope|A report provider, such as a transfer agent, sends the FundConfirmedCashForecastReportCancellation message to the report user, such as an investment manager or pricing agent, to cancel a previously sent FundConfirmedCashForecastReport message.|Usage|The FundConfirmedCashForecastReportCancellation message is used to cancel an entire FundConfirmedCashForecastReport message that was previously sent by the report provider. This message must contain reference to the of the message being cancelled.|This message may also contain details of the message to be cancelled, but this is not recommended.")]
+[IsoDisplayName(@"Fund Confirmed Cash Forecast Report Cancellation V")]
 public interface IFundConfirmedCashForecastReportCancellationV03 : IOuterRecord
 {
     /// <summary>
@@ -52,6 +54,7 @@ public interface IFundConfirmedCashForecastReportCancellationV03 : IOuterRecord
     [IsoId("_Q7mCGQasEeSrXeb3pHPmbg")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> RelatedReference { get; }
 
     /// <summary>

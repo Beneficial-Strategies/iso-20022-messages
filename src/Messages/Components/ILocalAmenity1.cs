@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains additional information about the fuel location, such as hours of operation and Interstate Access/Exit Number, etc.
 /// </summary>
 [IsoId("_XRiBY_i7EeiJaN6-Lf-c_w")]
+[IsoDisplayName(@"Local Amenity")]
 public interface ILocalAmenity1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ILocalAmenity1 : IIsoComponent
     [IsoId("_XRiBZPi7EeiJaN6-Lf-c_w")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ILocalAmenity1 : IIsoComponent
     [IsoId("_W3hCEPi_EeiJaN6-Lf-c_w")]
     [DisplayName("Available Indicator")]
     [IsoXmlTag("AvlblInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AvailableIndicator { get; }
 }

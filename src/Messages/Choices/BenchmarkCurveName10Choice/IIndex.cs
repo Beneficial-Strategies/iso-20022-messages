@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkCurveName10Choice;
 /// Index name where the underlying is an index.
 /// </summary>
 [IsoId("_CWO6wax2Eem81-uIvTF5rQ")]
+[IsoDisplayName(@"Index")]
 public interface IIndex : IBenchmarkCurveName10Choice, IIsoChoiceVariant
 {
     /// <summary>

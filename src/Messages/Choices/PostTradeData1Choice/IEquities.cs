@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PostTradeData1Choice;
 
 /// <summary>Information related to the post-trade of equities.</summary>
 [IsoId("_DyBGgGIpEfCeoPFCHQnhvA")]
+[IsoDisplayName(@"Equities")]
 public interface IEquities : IPostTradeData1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

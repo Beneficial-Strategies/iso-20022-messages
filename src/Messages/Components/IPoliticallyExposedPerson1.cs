@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Politically exposed person checks.
 /// </summary>
 [IsoId("_kC2a0KeeEemSUcvu_mDC7w")]
+[IsoDisplayName(@"Politically Exposed Person")]
 public interface IPoliticallyExposedPerson1 : IIsoComponent
 {
     /// <summary>

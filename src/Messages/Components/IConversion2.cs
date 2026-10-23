@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a financial instrument.
 /// </summary>
 [IsoId("_lFfFsXwgEeuQY_68iqAoCQ")]
+[IsoDisplayName(@"Conversion")]
 public interface IConversion2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IConversion2 : IIsoComponent
     [IsoId("_EeuSEXwkEeuQY_68iqAoCQ")]
     [DisplayName("Total Units Number")]
     [IsoXmlTag("TtlUnitsNb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? TotalUnitsNumber { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IConversion2 : IIsoComponent
     [IsoId("__g-GAXwgEeuQY_68iqAoCQ")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit13> UnitsDetails { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IConversion2 : IIsoComponent
     [IsoId("_lcDyo3wgEeuQY_68iqAoCQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

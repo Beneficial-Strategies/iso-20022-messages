@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat73Choice;
 
 /// <summary>Date not specified, for example, the date is unknown.</summary>
 [IsoId("_GUHFUatmEfCqjuqNaaNXgw")]
+[IsoDisplayName(@"Not Specified Date")]
 public interface INotSpecifiedDate : IDateFormat73Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

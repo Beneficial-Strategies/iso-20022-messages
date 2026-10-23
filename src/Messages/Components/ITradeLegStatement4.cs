@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade Leg Statement4.
 /// </summary>
 [IsoId("_Vbog8YcREe-U27oWwgmhCQ")]
+[IsoDisplayName(@"Trade Leg Statement4")]
 public interface ITradeLegStatement4 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface ITradeLegStatement4 : IIsoComponent
     /// </summary>
     [DisplayName("Trade Legs Details")]
     [IsoXmlTag("TradLegsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeLeg12> TradeLegsDetails { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreementType2Choice;
 /// Name of the identification scheme, in a free text form.
 /// </summary>
 [IsoId("_OI9M0y4yEeuxhbw_aW6haw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IAgreementType2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IAgreementType2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 50 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text Value { get; }
 }

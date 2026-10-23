@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of a drawdown tranche.
 /// </summary>
 [IsoId("_9IEgwFNcEeijdq8ilaxyOA")]
+[IsoDisplayName(@"Drawdown")]
 public interface IDrawdown1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IDrawdown1 : IIsoComponent
     [IsoId("_mtcmcFNfEeijdq8ilaxyOA")]
     [DisplayName("Percentage Of Total Transfer Value")]
     [IsoXmlTag("PctgOfTtlTrfVal")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfTotalTransferValue { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IDrawdown1 : IIsoComponent
     [IsoId("_ClsfsFNgEeijdq8ilaxyOA")]
     [DisplayName("Additional Funds Designated")]
     [IsoXmlTag("AddtlFndsDsgntd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AdditionalFundsDesignated { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface IDrawdown1 : IIsoComponent
     [IsoId("_jYEp0LpcEeij7vHPZxBWhA")]
     [DisplayName("Pension Commencement Lump Sum Date")]
     [IsoXmlTag("PnsnCmcmntLumpSumDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PensionCommencementLumpSumDate { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface IDrawdown1 : IIsoComponent
     [IsoId("_tSJtULpcEeij7vHPZxBWhA")]
     [DisplayName("Multiple Pension Commencement Lump Sums")]
     [IsoXmlTag("MltplPnsnCmcmntLumpSums")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? MultiplePensionCommencementLumpSums { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface IDrawdown1 : IIsoComponent
     [IsoId("_2dgpobpcEeij7vHPZxBWhA")]
     [DisplayName("Lifetime Allowance")]
     [IsoXmlTag("LftmAllwnc")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? LifetimeAllowance { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface IDrawdown1 : IIsoComponent
     [IsoId("_8_IcgLGpEeirN-C08vro8Q")]
     [DisplayName("Recipient Of Drawdown Indicator")]
     [IsoXmlTag("RcptOfDrwdwnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RecipientOfDrawdownIndicator { get; }
 
     /// <summary>
@@ -121,6 +128,7 @@ public interface IDrawdown1 : IIsoComponent
     [IsoId("_HEE24FNdEeijdq8ilaxyOA")]
     [DisplayName("Flexible Drawdown Triggered Date")]
     [IsoXmlTag("FlxblDrwdwnTrggrdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FlexibleDrawdownTriggeredDate { get; }
 
     /// <summary>
@@ -129,5 +137,6 @@ public interface IDrawdown1 : IIsoComponent
     [IsoId("_1Q6vkFNiEeijdq8ilaxyOA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

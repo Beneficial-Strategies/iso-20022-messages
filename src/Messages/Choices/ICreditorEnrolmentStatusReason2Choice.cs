@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the status of a creditor enrolment.
 /// </summary>
 [IsoId("_fW_fY-IxEeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Creditor Enrolment Status Reason 2 Choice")]
 public interface ICreditorEnrolmentStatusReason2Choice : IIsoChoice { }

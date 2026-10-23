@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_ecUrgUjuEeaVLL5QKJ4f-A")]
 [IsoMessage("pain.009.001.05", "MndtInitnReq", "urn:iso:std:iso:20022:tech:xsd:pain.009.001.05")]
+[Description(@"Scope|The MandateInitiationRequest message is sent by the initiator of the request to his agent. The initiator can either be the debtor or the creditor.|The MandateInitiationRequest message is forwarded by the agent of the initiator to the agent of the counterparty.|The MandateInitiationRequest message is used to setup the instruction that allows the debtor agent to accept instructions from the creditor, through the creditor agent, to debit the account of the debtor.|Usage|The MandateInitiationRequest message can contain one or more request(s) to setup a specific mandate.|The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.|The message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.|The MandateInitiationRequest message can be used in domestic and cross-border scenarios.")]
+[IsoDisplayName(@"Mandate Initiation Request V")]
 public interface IMandateInitiationRequestV05 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +38,7 @@ public interface IMandateInitiationRequestV05 : IOuterRecord
     [IsoId("_ecUrh0juEeaVLL5QKJ4f-A")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMandate10> Mandate { get; }
 
     /// <summary>
@@ -44,5 +47,6 @@ public interface IMandateInitiationRequestV05 : IOuterRecord
     [IsoId("_ecUriUjuEeaVLL5QKJ4f-A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

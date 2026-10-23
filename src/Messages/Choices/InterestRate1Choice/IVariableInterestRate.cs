@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate1Choice;
 /// </summary>
 [IsoId("_Qk1wdNp-Ed-ak6NoX_4Aeg_1389639465")]
 [IsoXmlTag("VarblIntrstRate")]
+[IsoDisplayName(@"Variable Interest Rate")]
 public interface IVariableInterestRate : IInterestRate1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IVariableInterestRate : IInterestRate1Choice, IIsoChoiceVariant
     [IsoId("_Qk1wcNp-Ed-ak6NoX_4Aeg_-276733537")]
     [DisplayName("Index")]
     [IsoXmlTag("Indx")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Index { get; }
 
     /// <summary>
@@ -26,5 +29,6 @@ public interface IVariableInterestRate : IInterestRate1Choice, IIsoChoiceVariant
     [IsoId("_Qk1wcdp-Ed-ak6NoX_4Aeg_-1323070567")]
     [DisplayName("Basis Point Spread")]
     [IsoXmlTag("BsisPtSprd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? BasisPointSpread { get; }
 }

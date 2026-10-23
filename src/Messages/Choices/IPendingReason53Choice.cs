@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code and a proprietary code to specify the reason why the instruction/event has a pending status.
 /// </summary>
 [IsoId("_kTWzM-XzEemEj48jhmlA0Q")]
+[IsoDisplayName(@"Pending Reason 53 Choice")]
 public interface IPendingReason53Choice : IIsoChoice { }

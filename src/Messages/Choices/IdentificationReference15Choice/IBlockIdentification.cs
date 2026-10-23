@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference15Choice;
 /// <summary>
 /// Block Identification.
 /// </summary>
+[IsoDisplayName(@"Block Identification")]
 public interface IBlockIdentification : IIdentificationReference15Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper5Choice;
 /// <summary>
 /// Recovered Paper.
 /// </summary>
+[IsoDisplayName(@"Recovered Paper")]
 public interface IRecoveredPaper : IAssetClassCommodityPaper5Choice, IIsoChoiceVariant
 {
     /// <summary>

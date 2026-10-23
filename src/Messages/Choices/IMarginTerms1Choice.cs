@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the margin terms for the variation margin and the segregated independent amount, or the segregated independent amount only.
 /// </summary>
 [IsoId("_QmogMtp-Ed-ak6NoX_4Aeg_86732419")]
+[IsoDisplayName(@"Margin Terms 1 Choice")]
 public interface IMarginTerms1Choice : IIsoChoice { }

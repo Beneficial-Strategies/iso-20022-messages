@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies coprorate action dates.
 /// </summary>
 [IsoId("_TfQTJNp-Ed-ak6NoX_4Aeg_901406419")]
+[IsoDisplayName(@"Corporate Action Date")]
 public interface ICorporateActionDate3 : IIsoComponent
 {
     /// <summary>

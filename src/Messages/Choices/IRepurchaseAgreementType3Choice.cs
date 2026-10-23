@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of repurchase agreement.
 /// </summary>
 [IsoId("_BgUqseoaEeadseq5W5YLvQ")]
+[IsoDisplayName(@"Repurchase Agreement Type 3 Choice")]
 public interface IRepurchaseAgreementType3Choice : IIsoChoice { }

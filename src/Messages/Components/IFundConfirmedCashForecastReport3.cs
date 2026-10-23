@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a cash forecast report.
 /// </summary>
 [IsoId("_Q8jO0QdxEeSPHJIdUs1USg")]
+[IsoDisplayName(@"Fund Confirmed Cash Forecast Report")]
 public interface IFundConfirmedCashForecastReport3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFundConfirmedCashForecastReport3 : IIsoComponent
     [IsoId("_ac6KwQdxEeSPHJIdUs1USg")]
     [DisplayName("Fund Or Sub Fund Details")]
     [IsoXmlTag("FndOrSubFndDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFund2> FundOrSubFundDetails { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IFundConfirmedCashForecastReport3 : IIsoComponent
     [IsoId("_RXVGUwdxEeSPHJIdUs1USg")]
     [DisplayName("Fund Cash Forecast Details")]
     [IsoXmlTag("FndCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundCashForecast7> FundCashForecastDetails { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IFundConfirmedCashForecastReport3 : IIsoComponent
     [IsoId("_RXVGVwdxEeSPHJIdUs1USg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

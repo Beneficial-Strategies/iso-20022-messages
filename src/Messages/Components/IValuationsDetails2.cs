@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Valuation details for the cash position.
 /// </summary>
 [IsoId("_LuJTafGMEei2UYJ62ws-Fw")]
+[IsoDisplayName(@"Valuations Details")]
 public interface IValuationsDetails2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IValuationsDetails2 : IIsoComponent
     [IsoId("_LuJTcfGMEei2UYJ62ws-Fw")]
     [DisplayName("Valuation Details Amount")]
     [IsoXmlTag("ValtnDtlsAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralAmount9> ValuationDetailsAmount { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IValuationsDetails2 : IIsoComponent
     [IsoId("_ZyuksTYnEeuD7rm9md9zvg")]
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate Haircut { get; }
 }

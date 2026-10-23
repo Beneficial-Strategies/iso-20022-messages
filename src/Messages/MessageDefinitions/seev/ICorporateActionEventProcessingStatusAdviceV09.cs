@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnEvtPrcgStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.032.001.09"
 )]
+[IsoDisplayName(@"Corporate Action Event Processing Status Advice V09")]
 public interface ICorporateActionEventProcessingStatusAdviceV09 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface ICorporateActionEventProcessingStatusAdviceV09 : IOuterRecord
     /// </summary>
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification33> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public interface ICorporateActionEventProcessingStatusAdviceV09 : IOuterRecord
     /// </summary>
     [DisplayName("Event Processing Status")]
     [IsoXmlTag("EvtPrcgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEventProcessingStatus7Choice> EventProcessingStatus { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface ICorporateActionEventProcessingStatusAdviceV09 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

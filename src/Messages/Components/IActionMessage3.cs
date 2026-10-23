@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information to log.
 /// </summary>
 [IsoId("_TqzxMYO6EeSWSLYdc10LRg")]
+[IsoDisplayName(@"Action Message")]
 public interface IActionMessage3 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IActionMessage3 : IIsoComponent
     [IsoId("_T37AJYO6EeSWSLYdc10LRg")]
     [DisplayName("Content")]
     [IsoXmlTag("Cntt")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text Content { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExecutingParty1Choice;
 /// Indication that the transaction was executed directly by the client.
 /// </summary>
 [IsoId("_OtKNoFiJEea-d4CsgzjlAw")]
+[IsoDisplayName(@"Client")]
 public interface IClient : IExecutingParty1Choice, IIsoChoiceVariant
 {
     /// <summary>

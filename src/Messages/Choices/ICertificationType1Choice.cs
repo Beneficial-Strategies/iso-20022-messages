@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the certificate type.
 /// </summary>
 [IsoId("_c49DwxdEEeK5g-3oYI0_9Q")]
+[IsoDisplayName(@"Certification Type 1 Choice")]
 public interface ICertificationType1Choice : IIsoChoice { }

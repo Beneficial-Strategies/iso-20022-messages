@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics shared by all individual transactions included in the message.
 /// </summary>
 [IsoId("_QmL0Q9p-Ed-ak6NoX_4Aeg_1336812673")]
+[IsoDisplayName(@"Group Header")]
 public interface IGroupHeader45 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IGroupHeader45 : IIsoComponent
     [IsoId("_QmL0RNp-Ed-ak6NoX_4Aeg_-81214479")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IGroupHeader45 : IIsoComponent
     [IsoId("_QmL0Rdp-Ed-ak6NoX_4Aeg_1518554624")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -34,6 +38,7 @@ public interface IGroupHeader45 : IIsoComponent
     [IsoId("_QmL0Rtp-Ed-ak6NoX_4Aeg_-1586925513")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfTransactions { get; }
 
     /// <summary>
@@ -42,6 +47,7 @@ public interface IGroupHeader45 : IIsoComponent
     [IsoId("_QmL0R9p-Ed-ak6NoX_4Aeg_92497717")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>

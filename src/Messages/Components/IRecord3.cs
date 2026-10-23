@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Record3.
 /// </summary>
 [IsoId("_lw9CQY1KEe6S0_1AaJzQCA")]
+[IsoDisplayName(@"Record3")]
 public interface IRecord3 : IIsoComponent
 {
     /// <summary>

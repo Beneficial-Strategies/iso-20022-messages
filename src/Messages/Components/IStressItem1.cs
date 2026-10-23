@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Risk factor, financial instrument or set of financial instruments that is stressed under a hypothetical stress scenario.
 /// </summary>
 [IsoId("_0AzLQKszEeayv9XxdmMwKQ")]
+[IsoDisplayName(@"Stress Item")]
 public interface IStressItem1 : IIsoComponent
 {
     /// <summary>

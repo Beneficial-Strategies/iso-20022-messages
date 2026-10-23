@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to an Input request.
 /// </summary>
 [IsoId("_0ScssS9AEeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Input Data")]
 public interface IInputData3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IInputData3 : IIsoComponent
     [IsoId("_0fXHVy9AEeu125Ip9zFcsQ")]
     [DisplayName("Notify Card Input Flag")]
     [IsoXmlTag("NtfyCardInptFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator NotifyCardInputFlag { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IInputData3 : IIsoComponent
     [IsoId("_0fXHWS9AEeu125Ip9zFcsQ")]
     [DisplayName("Maximum Input Time")]
     [IsoXmlTag("MaxInptTm")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumInputTime { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IInputData3 : IIsoComponent
     [IsoId("_0fXHXS9AEeu125Ip9zFcsQ")]
     [DisplayName("Immediate Response Flag")]
     [IsoXmlTag("ImdtRspnFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ImmediateResponseFlag { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface IInputData3 : IIsoComponent
     [IsoId("_0fXHXy9AEeu125Ip9zFcsQ")]
     [DisplayName("Wait User Validation Flag")]
     [IsoXmlTag("WaitUsrVldtnFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? WaitUserValidationFlag { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IInputData3 : IIsoComponent
     [IsoId("_0fXHYS9AEeu125Ip9zFcsQ")]
     [DisplayName("Beep Key Flag")]
     [IsoXmlTag("BeepKeyFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? BeepKeyFlag { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface IInputData3 : IIsoComponent
     [IsoId("_0fXHYy9AEeu125Ip9zFcsQ")]
     [DisplayName("Global Correction Flag")]
     [IsoXmlTag("GblCrrctnFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? GlobalCorrectionFlag { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface IInputData3 : IIsoComponent
     [IsoId("_0fXHZS9AEeu125Ip9zFcsQ")]
     [DisplayName("Disable Cancel Flag")]
     [IsoXmlTag("DsblCclFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DisableCancelFlag { get; }
 
     /// <summary>
@@ -105,6 +113,7 @@ public interface IInputData3 : IIsoComponent
     [IsoId("_0fXHZy9AEeu125Ip9zFcsQ")]
     [DisplayName("Disable Correct Flag")]
     [IsoXmlTag("DsblCrrctFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DisableCorrectFlag { get; }
 
     /// <summary>
@@ -113,6 +122,7 @@ public interface IInputData3 : IIsoComponent
     [IsoId("_0fXHaS9AEeu125Ip9zFcsQ")]
     [DisplayName("Disable Valid Flag")]
     [IsoXmlTag("DsblVldFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DisableValidFlag { get; }
 
     /// <summary>
@@ -121,5 +131,6 @@ public interface IInputData3 : IIsoComponent
     [IsoId("_0fXHay9AEeu125Ip9zFcsQ")]
     [DisplayName("Menu Back Flag")]
     [IsoXmlTag("MenuBckFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MenuBackFlag { get; }
 }

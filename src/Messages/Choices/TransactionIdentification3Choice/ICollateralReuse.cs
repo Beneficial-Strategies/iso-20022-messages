@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification3Choice
 /// </summary>
 [IsoId("_hY22BcK4EeuFNp8LZAnorg")]
 [IsoXmlTag("CollReuse")]
+[IsoDisplayName(@"Collateral Reuse")]
 public interface ICollateralReuse : ITransactionIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICollateralReuse : ITransactionIdentification3Choice, IIsoChoic
     [IsoId("_IjNagM3OEeuiU4QSC_BouQ")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>

@@ -80,6 +80,30 @@ public class ModelTests
     }
 
     [Fact]
+    public void EveryInterface_CarriesTheNameThatISOGivesItsType()
+    {
+        var problems = Interfaces.Where(t => t.GetCustomAttribute<IsoDisplayNameAttribute>() is null).Select(t => t.FullName!).ToList();
+        Assert.True(problems.Count == 0, Show(problems));
+    }
+
+    [Fact]
+    public void EveryMemberThatMayRepeat_SaysWhichKindOfListHoldsItsItems()
+    {
+        var problems = new List<string>();
+        foreach (var t in Interfaces)
+            foreach (var p in t.GetProperties())
+                if (p.PropertyType.IsGenericType && p.PropertyType.GetGenericTypeDefinition() == typeof(IEnumerable<>) && p.GetCustomAttribute<IsoListAttribute>() is null)
+                    problems.Add($"{t.FullName}.{p.Name}");
+        Assert.True(problems.Count == 0, Show(problems));
+    }
+
+    [Fact]
+    public void TheObsoleteTypesOfTheStandard_AreMarkedObsolete()
+    {
+        Assert.True(Interfaces.Count(t => t.GetCustomAttribute<ObsoleteAttribute>() is not null) >= 300, "obsolete interfaces");
+    }
+
+    [Fact]
     public void EveryMessage_SaysHowItIsReadAndWritten_AndItsIdentifierIsUnique()
     {
         var messages = Interfaces.Where(t => typeof(IOuterRecord).IsAssignableFrom(t)).ToList();

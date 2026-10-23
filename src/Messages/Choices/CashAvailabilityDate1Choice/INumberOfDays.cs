@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAvailabilityDate1Choice;
 /// Indicates the number of float days attached to the balance.
 /// </summary>
 [IsoId("_VnGekzqwEeWZFYSPlduMhw")]
+[IsoDisplayName(@"Number Of Days")]
 public interface INumberOfDays : ICashAvailabilityDate1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INumberOfDays : ICashAvailabilityDate1Choice, IIsoChoiceVariant
     /// Specifies a numeric string with a maximum length of 15 digits and may be prefixed with a plus sign.
     /// </summary>
     [IsoXmlTag("NbOfDays")]
+    [IsoSimpleType(IsoSimpleType.Max15PlusSignedNumericText)]
     Max15PlusSignedNumericText Value { get; }
 }

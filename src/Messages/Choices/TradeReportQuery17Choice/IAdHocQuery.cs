@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery17Choice;
 /// <summary>
 /// Ad Hoc Query.
 /// </summary>
+[IsoDisplayName(@"Ad Hoc Query")]
 public interface IAdHocQuery : ITradeReportQuery17Choice, IIsoChoiceVariant
 {
     /// <summary>

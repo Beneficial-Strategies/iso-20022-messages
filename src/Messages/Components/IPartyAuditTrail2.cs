@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party Audit Trail2.
 /// </summary>
 [IsoId("_YtaCdTE_Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Party Audit Trail2")]
 public interface IPartyAuditTrail2 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IPartyAuditTrail2 : IIsoComponent
     /// </summary>
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdateLogPartyRecord2Choice> Record { get; }
 
     /// <summary>

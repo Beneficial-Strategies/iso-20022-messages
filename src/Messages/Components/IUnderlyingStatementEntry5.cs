@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Underlying Statement Entry5.
 /// </summary>
 [IsoId("_-kS_ARZ4Ee6d6Ip1Ob2kaQ")]
+[IsoDisplayName(@"Underlying Statement Entry5")]
 public interface IUnderlyingStatementEntry5 : IIsoComponent
 {
     /// <summary>

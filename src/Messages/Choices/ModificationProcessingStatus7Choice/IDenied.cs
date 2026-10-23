@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus7Cho
 /// Modification request will not be executed.
 /// </summary>
 [IsoId("_17xaSzp4EeWVrPy0StzzSg")]
+[IsoDisplayName(@"Denied")]
 public interface IDenied : IModificationProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CustomerConductClassification1Ch
 /// Conduct type expressed as a code.
 /// </summary>
 [IsoId("_XdT2cBdwEeKYM7Bc71nDlA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICustomerConductClassification1Choice, IIsoChoiceVariant
 {
     /// <summary>

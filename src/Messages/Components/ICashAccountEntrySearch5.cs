@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to search for a cash entry.
 /// </summary>
 [IsoId("_P4orDZlcEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Cash Account Entry Search")]
 public interface ICashAccountEntrySearch5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICashAccountEntrySearch5 : IIsoComponent
     [IsoId("_QApXd5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentificationSearchCriteria2Choice> AccountIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICashAccountEntrySearch5 : IIsoComponent
     [IsoId("_QApXeZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Entry Amount")]
     [IsoXmlTag("NtryAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActiveOrHistoricAmountRange2Choice> EntryAmount { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICashAccountEntrySearch5 : IIsoComponent
     [IsoId("_QApXe5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Entry Amount Currency")]
     [IsoXmlTag("NtryAmtCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveOrHistoricCurrencyCode> EntryAmountCurrency { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICashAccountEntrySearch5 : IIsoComponent
     [IsoId("_QApXf5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Entry Status")]
     [IsoXmlTag("NtrySts")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<EntryStatus1Code> EntryStatus { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ICashAccountEntrySearch5 : IIsoComponent
     [IsoId("_QApXgZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Entry Date")]
     [IsoXmlTag("NtryDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDateAndDateTimeSearch3Choice> EntryDate { get; }
 
     /// <summary>

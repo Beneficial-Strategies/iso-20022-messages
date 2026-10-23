@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the transaction in an unambiguous way.
 /// </summary>
 [IsoId("_TFsqdwEcEeCQm6a_G2yO_w_-629860519")]
+[IsoDisplayName(@"Transaction Identifier")]
 public interface ITransactionIdentifier1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransactionIdentifier1 : IIsoComponent
     [IsoId("_TFsqeAEcEeCQm6a_G2yO_w_-1727684501")]
     [DisplayName("Transaction Date Time")]
     [IsoXmlTag("TxDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TransactionDateTime { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface ITransactionIdentifier1 : IIsoComponent
     [IsoId("_TFsqeQEcEeCQm6a_G2yO_w_-1113655904")]
     [DisplayName("Transaction Reference")]
     [IsoXmlTag("TxRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionReference { get; }
 }

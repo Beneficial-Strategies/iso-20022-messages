@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "IntraBalMvmntConf",
     "urn:iso:std:iso:20022:tech:xsd:camt.068.001.01"
 )]
+[Description(@"The IntraBalanceMovementConfirmation message is sent from a settlement infrastructure to an account owner/requestor to confirm the movement of an amount of money within its holdings from one sub-balance to another. ||Usage: |The message may be used to: |- re-send a message previously sent (the sub-function of the message is ""Duplicate"")|- provide a third party with a copy of a message for information (the sub-function of the message is ""Copy"")|- re-send to a third party a copy of a message for information (the sub-function of the message is ""CopyDuplicate"").")]
+[IsoDisplayName(@"Intra Balance Movement Confirmation V")]
 public interface IIntraBalanceMovementConfirmationV01 : IOuterRecord
 {
     /// <summary>
@@ -72,5 +74,6 @@ public interface IIntraBalanceMovementConfirmationV01 : IOuterRecord
     [IsoId("_DLtKszncEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

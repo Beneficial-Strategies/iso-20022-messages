@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Status2.
 /// </summary>
 [IsoId("_inj9QZ9bEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"ATM Status2")]
 public interface IATMStatus2 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IATMStatus2 : IIsoComponent
     /// </summary>
     [DisplayName("Current Status Reason")]
     [IsoXmlTag("CurStsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> CurrentStatusReason { get; }
 
     /// <summary>

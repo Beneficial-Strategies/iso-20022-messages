@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommunicationMethod2Choice;
 /// Unique and unambiguous identification of communication method using a code list.
 /// </summary>
 [IsoId("_29oJkA1fEeKGXqvMN6jpiw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICommunicationMethod2Choice, IIsoChoiceVariant
 {
     /// <summary>

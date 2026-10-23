@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of a movement record requested in a single settlement instruction.
 /// </summary>
 [IsoId("_FhFKIJIhEeu5eNv5D0Izbw")]
+[IsoDisplayName(@"Movement Record")]
 public interface IMovementRecord1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IMovementRecord1 : IIsoComponent
     [IsoId("_ehBZgJIhEeu5eNv5D0Izbw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IMovementRecord1 : IIsoComponent
     [IsoId("_b66S4JIhEeu5eNv5D0Izbw")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SequenceNumber { get; }
 
     /// <summary>
@@ -74,5 +78,7 @@ public interface IMovementRecord1 : IIsoComponent
     [IsoId("_JW7sYJfqEeuFlO6opWbACw")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reference { get; }
 }

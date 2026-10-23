@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Services allowed for the customer&apos;s profile.
 /// </summary>
 [IsoId("_IAYH0Yq0EeSIDtZ76p6McQ")]
+[IsoDisplayName(@"ATM Service")]
 public interface IATMService7 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IATMService7 : IIsoComponent
     [IsoId("_nMR4QIq2EeSIDtZ76p6McQ")]
     [DisplayName("Limits")]
     [IsoXmlTag("Lmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMTransactionAmounts3> Limits { get; }
 
     /// <summary>

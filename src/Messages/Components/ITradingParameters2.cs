@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Place at which the security is traded.
 /// </summary>
 [IsoId("_-UQ6IZJMEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Trading Parameters")]
 public interface ITradingParameters2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradingParameters2 : IIsoComponent
     [IsoId("_-WYaAZJMEeuAlLVx8pyt3w")]
     [DisplayName("Market Identification")]
     [IsoXmlTag("MktId")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? MarketIdentification { get; }
 
     /// <summary>
@@ -41,6 +43,10 @@ public interface ITradingParameters2 : IIsoComponent
     [IsoId("_-WYaB5JMEeuAlLVx8pyt3w")]
     [DisplayName("Secondary Place Of Listing")]
     [IsoXmlTag("ScndryPlcOfListg")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> SecondaryPlaceOfListing { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface ITradingParameters2 : IIsoComponent
     [IsoId("_-WYaDZJMEeuAlLVx8pyt3w")]
     [DisplayName("Minimum Trading Pricing Increment")]
     [IsoXmlTag("MinTradgPricgIncrmt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MinimumTradingPricingIncrement { get; }
 
     /// <summary>
@@ -73,5 +80,6 @@ public interface ITradingParameters2 : IIsoComponent
     [IsoId("_-WYaFZJMEeuAlLVx8pyt3w")]
     [DisplayName("Primary Place Of Listing Identification")]
     [IsoXmlTag("PmryPlcOfListgId")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? PrimaryPlaceOfListingIdentification { get; }
 }

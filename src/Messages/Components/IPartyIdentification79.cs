@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to identify an account owner and the associated decision maker.
 /// </summary>
 [IsoId("_5DtlUFCiEeWdp9NcseTlOw")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification79 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPartyIdentification79 : IIsoComponent
     [IsoId("_O_0QQFCjEeWdp9NcseTlOw")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification76> AccountOwner { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IPartyIdentification79 : IIsoComponent
     [IsoId("_5c13BVCiEeWdp9NcseTlOw")]
     [DisplayName("Decision Maker")]
     [IsoXmlTag("DcsnMakr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPersonOrOrganisation2Choice> DecisionMaker { get; }
 }

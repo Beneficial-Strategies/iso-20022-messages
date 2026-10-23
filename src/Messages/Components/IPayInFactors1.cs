@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Factors used in the calculation of the pay in schedule.
 /// </summary>
 [IsoId("_S3PXsAEcEeCQm6a_G2yO_w_-1038379529")]
+[IsoDisplayName(@"Pay In Factors")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IPayInFactors1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +27,6 @@ public interface IPayInFactors1 : IIsoComponent
     [IsoId("_S3PXsgEcEeCQm6a_G2yO_w_1288597221")]
     [DisplayName("Currency Factors")]
     [IsoXmlTag("CcyFctrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICurrencyFactors1> CurrencyFactors { get; }
 }

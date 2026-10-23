@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionTypeStatus8Choice;
 
 /// <summary>Status of the instruction.</summary>
 [IsoId("_D2yUwajVEfCzuLlmLrhIvA")]
+[IsoDisplayName(@"Instruction Status")]
 public interface IInstructionStatus : IInstructionTypeStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionTypeStatus1Choice;
 /// Status applying to the instruction request received. The instruction is identified by the InstructionIdentification.
 /// </summary>
 [IsoId("_RCfVwNp-Ed-ak6NoX_4Aeg_-1678428958")]
+[IsoDisplayName(@"Instruction Status")]
 public interface IInstructionStatus : IInstructionTypeStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identify the original notification, to which the cancellation advice refers.
 /// </summary>
 [IsoId("_e-gQcBsaEd-tQubbyu-X8Q")]
+[IsoDisplayName(@"Original Notification")]
 public interface IOriginalNotification4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalNotification4 : IIsoComponent
     [IsoId("_e-zLYRsaEd-tQubbyu-X8Q")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IOriginalNotification4 : IIsoComponent
     [IsoId("_e-88YRsaEd-tQubbyu-X8Q")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IOriginalNotification4 : IIsoComponent
     [IsoId("_e_GtYhsaEd-tQubbyu-X8Q")]
     [DisplayName("Original Notification Identification")]
     [IsoXmlTag("OrgnlNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalNotificationIdentification { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IOriginalNotification4 : IIsoComponent
     [IsoId("_e_2UQRsaEd-tQubbyu-X8Q")]
     [DisplayName("Notification Cancellation")]
     [IsoXmlTag("NtfctnCxl")]
+    [IsoSimpleType(IsoSimpleType.GroupCancellationIndicator)]
     GroupCancellationIndicator? NotificationCancellation { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface IOriginalNotification4 : IIsoComponent
     [IsoId("_e__eMRsaEd-tQubbyu-X8Q")]
     [DisplayName("Original Notification Reference")]
     [IsoXmlTag("OrgnlNtfctnRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalNotificationReference1> OriginalNotificationReference { get; }
 }

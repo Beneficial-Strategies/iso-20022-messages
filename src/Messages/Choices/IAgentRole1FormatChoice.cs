@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the role of the agent.
 /// </summary>
 [IsoId("_RlgjR9p-Ed-ak6NoX_4Aeg_1472150836")]
+[IsoDisplayName(@"Agent Role 1 Format Choice")]
 public interface IAgentRole1FormatChoice : IIsoChoice { }

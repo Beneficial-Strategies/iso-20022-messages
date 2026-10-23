@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus72Choice;
 /// </summary>
 [IsoId("_a2nK1-LtEeWOD7aAy2fAcA")]
 [IsoXmlTag("Cmpltd")]
+[IsoDisplayName(@"Completed")]
 public interface ICompleted : IProcessingStatus72Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,6 @@ public interface ICompleted : IProcessingStatus72Choice, IIsoChoiceVariant
     [IsoId("_qTYa0eLtEeWOD7aAy2fAcA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryReason4> Reason { get; }
 }

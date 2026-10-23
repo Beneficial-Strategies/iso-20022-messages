@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "SctiesAcctActvtyAdvc",
     "urn:iso:std:iso:20022:tech:xsd:reda.035.001.01"
 )]
+[Description(@"The SecuritieAccountActivityReport message is sent by the executing party to an instructing party containing information about changes on securities account reference data.||Scope and usage: |It aims at informing about the changes occurred during a business date for securities account reference data.")]
+[IsoDisplayName(@"Securities Account Activity Advice V")]
 public interface ISecuritiesAccountActivityAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -48,5 +50,6 @@ public interface ISecuritiesAccountActivityAdviceV01 : IOuterRecord
     [IsoId("_KAlNpZ2fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

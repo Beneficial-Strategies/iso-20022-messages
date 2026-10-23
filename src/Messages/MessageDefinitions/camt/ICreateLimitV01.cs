@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_P8tBcckHEem3UrxZgQhVAw")]
 [IsoMessage("camt.101.001.01", "CretLmt", "urn:iso:std:iso:20022:tech:xsd:camt.101.001.01")]
+[Description(@"Scope|The CreateLimit message is sent by a member to the transaction administrator.|It is used to create one or several limits set by the member and managed by the transaction administrator.|Usage|Based on the criteria defined in the CreateLimit message, the transaction administrator will execute or reject the requested creation and respond with a Receipt message as a reply to the request.")]
+[IsoDisplayName(@"Create Limit V")]
 public interface ICreateLimitV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface ICreateLimitV01 : IOuterRecord
     [IsoId("_P8tBeckHEem3UrxZgQhVAw")]
     [DisplayName("Limit Data")]
     [IsoXmlTag("LmtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILimitStructure4> LimitData { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface ICreateLimitV01 : IOuterRecord
     [IsoId("_P8tBe8kHEem3UrxZgQhVAw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

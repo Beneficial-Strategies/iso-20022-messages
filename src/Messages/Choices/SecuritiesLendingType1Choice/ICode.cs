@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesLendingType1Choice;
 /// Securities lending type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_AYhDINokEeC60axPepSq7g_-328779705")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISecuritiesLendingType1Choice, IIsoChoiceVariant
 {
     /// <summary>

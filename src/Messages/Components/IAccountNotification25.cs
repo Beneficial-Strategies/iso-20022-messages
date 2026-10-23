@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details of the account notification.
 /// </summary>
 [IsoId("40eaa819-e004-464c-a427-b7c716ffe14e")]
+[IsoDisplayName(@"Account Notification25")]
 public interface IAccountNotification25 : IIsoComponent
 {
     /// <summary>
@@ -105,6 +106,7 @@ public interface IAccountNotification25 : IIsoComponent
     [IsoId("3bbeb519-4399-473f-9098-a284cfa6cc2b")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountInterest4> Interest { get; }
 
     /// <summary>
@@ -121,6 +123,7 @@ public interface IAccountNotification25 : IIsoComponent
     [IsoId("f838a0ba-a572-46c5-afc7-21e876e7e26a")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportEntry16> Entry { get; }
 
     /// <summary>

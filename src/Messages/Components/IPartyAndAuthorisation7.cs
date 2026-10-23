@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party And Authorisation7.
 /// </summary>
 [IsoId("_1UGpETEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Party And Authorisation7")]
 public interface IPartyAndAuthorisation7 : IIsoComponent
 {
     /// <summary>

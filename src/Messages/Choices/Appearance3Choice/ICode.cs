@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Appearance3Choice;
 /// Appearance expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_dhNzEeLxEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAppearance3Choice, IIsoChoiceVariant
 {
     /// <summary>

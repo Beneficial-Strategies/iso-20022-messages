@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification35Choice;
 /// Proprietary identification of the index on which the financial instrument is based.
 /// </summary>
 [IsoId("_ZmtSUw1HEeqV4s5SpzR1dQ")]
+[IsoDisplayName(@"Name")]
 public interface IName : ISecurityIdentification35Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IName : ISecurityIdentification35Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 350 characters.
     /// </summary>
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Value { get; }
 }

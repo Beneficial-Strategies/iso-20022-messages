@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the repurchase transaction type information.
 /// </summary>
 [IsoId("_QtL0Jdp-Ed-ak6NoX_4Aeg_285985129")]
+[IsoDisplayName(@"Repurchase Type 2 Choice")]
 public interface IRepurchaseType2Choice : IIsoChoice { }

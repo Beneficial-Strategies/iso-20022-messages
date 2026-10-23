@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus1Choice;
 /// </summary>
 [IsoId("_QxzOadp-Ed-ak6NoX_4Aeg_-1746354035")]
 [IsoXmlTag("Rcncld")]
+[IsoDisplayName(@"Reconciled")]
 public interface IReconciled : IEventProcessingStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

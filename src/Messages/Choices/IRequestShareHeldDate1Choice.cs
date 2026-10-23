@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between different ways of specifying the method to determine as from when shares have been held by an investor.
 /// </summary>
 [IsoId("_iOMVYFSTEempisJfoIfvvQ")]
+[IsoDisplayName(@"Request Share Held Date 1 Choice")]
 public interface IRequestShareHeldDate1Choice : IIsoChoice { }

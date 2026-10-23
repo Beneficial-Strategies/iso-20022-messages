@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_TnFV2tEwEd-BzquC8wXy7w_-50610544")]
 [IsoMessage("seev.005.001.02", "MtgInstrCxlReq", "urn:iso:std:iso:20022:tech:xsd:seev.005.001.02")]
+[Description(@"Scope|The MeetingInstructionCancellationRequest message is sent by the same party that sent the MeetingInstruction message. It is sent to request the cancellation of all instructions included in the original the MeetingInstruction message.|Usage|This message must be answered by a MeetingInstructionStatus message. Some instructions in the previously sent MeetingInstruction message may have already been executed and cannot be cancelled. This information should appear clearly in the status message.")]
+[IsoDisplayName(@"Meeting Instruction Cancellation Request V")]
 public interface IMeetingInstructionCancellationRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -63,5 +65,6 @@ public interface IMeetingInstructionCancellationRequestV02 : IOuterRecord
     [IsoId("_TnPG09EwEd-BzquC8wXy7w_-2011631186")]
     [DisplayName("Instructed Position")]
     [IsoXmlTag("InstdPos")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISafekeepingAccount3> InstructedPosition { get; }
 }

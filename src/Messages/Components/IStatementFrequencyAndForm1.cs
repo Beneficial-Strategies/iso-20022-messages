@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a frequency, format and delivery address for statements.
 /// </summary>
 [IsoId("_Xr9A8A1gEeKGXqvMN6jpiw")]
+[IsoDisplayName(@"Statement Frequency And Form")]
 public interface IStatementFrequencyAndForm1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IStatementFrequencyAndForm1 : IIsoComponent
     [IsoId("_5MpwcA1gEeKGXqvMN6jpiw")]
     [DisplayName("Delivery Address")]
     [IsoXmlTag("DlvryAdr")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text DeliveryAddress { get; }
 
     /// <summary>

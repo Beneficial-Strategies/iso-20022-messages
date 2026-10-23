@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Common identification of a service to be billed.
 /// </summary>
 [IsoId("_6PNc1ZqlEeGSON8vddiWzQ_-1466437811")]
+[IsoDisplayName(@"Billing Service Common Identification")]
 public interface IBillingServiceCommonIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBillingServiceCommonIdentification1 : IIsoComponent
     [IsoId("_6PNc1pqlEeGSON8vddiWzQ_-1580276877")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text Issuer { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IBillingServiceCommonIdentification1 : IIsoComponent
     [IsoId("_6PNc15qlEeGSON8vddiWzQ_1717618066")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text Identification { get; }
 }

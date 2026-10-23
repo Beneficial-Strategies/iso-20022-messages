@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus3
 /// Specifies the status of the details of the corporate action event.
 /// </summary>
 [IsoId("_PMH--QuIEeGnWuuxuI2McQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionProcessingStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

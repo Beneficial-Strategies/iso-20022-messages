@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Inquiry Response3.
 /// </summary>
 [IsoId("_FM1k4aEtEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Inquiry Response3")]
 public interface IATMInquiryResponse3 : IIsoComponent
 {
     /// <summary>

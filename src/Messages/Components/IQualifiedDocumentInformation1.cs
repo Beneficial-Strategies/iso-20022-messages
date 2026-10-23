@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// The element identification is of schema type ID, it can be referenced by IDREF typed elements (composite=false).
 /// </summary>
 [IsoId("_OTgzMjA0-AOSNFX-8224491")]
+[IsoDisplayName(@"Qualified Document Information")]
 public interface IQualifiedDocumentInformation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IQualifiedDocumentInformation1 : IIsoComponent
     [IsoId("_OTgzMjMz-AOSNFX-8224494")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ID)]
     XsdID Identification { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface IQualifiedDocumentInformation1 : IIsoComponent
     [IsoId("_OTgzMjM1-AOSNFX-8224494")]
     [DisplayName("Item List Identifier")]
     [IsoXmlTag("ItmListIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ItemListIdentifier { get; }
 
     /// <summary>
@@ -49,6 +53,8 @@ public interface IQualifiedDocumentInformation1 : IIsoComponent
     [IsoId("_OTgzMjM2-AOSNFX-8224494")]
     [DisplayName("Item Identifier")]
     [IsoXmlTag("ItmIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ItemIdentifier { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IQualifiedDocumentInformation1 : IIsoComponent
     [IsoId("_OTgzMjM3-AOSNFX-8224494")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface IQualifiedDocumentInformation1 : IIsoComponent
     [IsoId("_OTgzMjM4-AOSNFX-8224494")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text? Version { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface IQualifiedDocumentInformation1 : IIsoComponent
     [IsoId("_OTgzMjM5-AOSNFX-8224494")]
     [DisplayName("Electronic Original")]
     [IsoXmlTag("ElctrncOrgnl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ElectronicOriginal { get; }
 
     /// <summary>
@@ -81,6 +91,9 @@ public interface IQualifiedDocumentInformation1 : IIsoComponent
     [IsoId("_OTgzMjQx-AOSNFX-8224494")]
     [DisplayName("Digest")]
     [IsoXmlTag("Dgst")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAlgorithmAndDigest1> Digest { get; }
 
     /// <summary>
@@ -97,6 +110,8 @@ public interface IQualifiedDocumentInformation1 : IIsoComponent
     [IsoId("_OTgzMjQz-AOSNFX-8224494")]
     [DisplayName("URL")]
     [IsoXmlTag("URL")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? URL { get; }
 
     /// <summary>
@@ -105,5 +120,6 @@ public interface IQualifiedDocumentInformation1 : IIsoComponent
     [IsoId("_OTgzMjQ0-AOSNFX-8224494")]
     [DisplayName("Attached File")]
     [IsoXmlTag("AttchdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBinaryFile1> AttachedFile { get; }
 }

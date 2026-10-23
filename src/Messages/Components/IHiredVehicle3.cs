@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Hired Vehicle3.
 /// </summary>
 [IsoId("_K1f94XTfEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Hired Vehicle3")]
 public interface IHiredVehicle3 : IIsoComponent
 {
     /// <summary>

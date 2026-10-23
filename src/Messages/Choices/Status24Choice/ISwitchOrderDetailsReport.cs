@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status24Choice;
 /// </summary>
 [IsoId("_bpQwZUHPEeazV4RAqPV71g")]
 [IsoXmlTag("SwtchOrdrDtlsRpt")]
+[IsoDisplayName(@"Switch Order Details Report")]
 public interface ISwitchOrderDetailsReport : IStatus24Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ISwitchOrderDetailsReport : IStatus24Choice, IIsoChoiceVariant
     [IsoId("_Fx2LJTbtEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface ISwitchOrderDetailsReport : IStatus24Choice, IIsoChoiceVariant
     [IsoId("_Fx2LJzbtEead9bDRE_1DAQ")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface ISwitchOrderDetailsReport : IStatus24Choice, IIsoChoiceVariant
     [IsoId("_Fx2LKTbtEead9bDRE_1DAQ")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -42,6 +49,8 @@ public interface ISwitchOrderDetailsReport : IStatus24Choice, IIsoChoiceVariant
     [IsoId("_Fx2LKzbtEead9bDRE_1DAQ")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DealReference { get; }
 
     /// <summary>
@@ -50,6 +59,8 @@ public interface ISwitchOrderDetailsReport : IStatus24Choice, IIsoChoiceVariant
     [IsoId("_Fx2LLTbtEead9bDRE_1DAQ")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -66,6 +77,7 @@ public interface ISwitchOrderDetailsReport : IStatus24Choice, IIsoChoiceVariant
     [IsoId("_Fx2LPTbtEead9bDRE_1DAQ")]
     [DisplayName("Leg Information")]
     [IsoXmlTag("LegInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchLegReferences2> LegInformation { get; }
 
     /// <summary>

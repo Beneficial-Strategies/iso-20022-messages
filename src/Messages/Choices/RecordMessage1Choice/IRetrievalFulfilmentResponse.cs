@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Retrieval fulfilment response message record.
 /// </summary>
 [IsoId("_N0DMkRs9EeqrvK3udMUsNQ")]
+[IsoDisplayName(@"Retrieval Fulfilment Response")]
 public interface IRetrievalFulfilmentResponse : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IRetrievalFulfilmentResponse : IRecordMessage1Choice, IIsoChoic
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("RtrvlFlfmtRspn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

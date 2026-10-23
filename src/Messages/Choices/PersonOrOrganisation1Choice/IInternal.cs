@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation1Choice;
 /// Identifies internal party.
 /// </summary>
 [IsoId("_W53_AgkhEeWGouz230Xp5Q")]
+[IsoDisplayName(@"Internal")]
 public interface IInternal : IPersonOrOrganisation1Choice, IIsoChoiceVariant
 {
     /// <summary>

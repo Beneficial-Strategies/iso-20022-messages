@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security.
 /// </summary>
 [IsoId("0dc22d15-9813-4686-a02d-cbeab0b7131e")]
+[IsoDisplayName(@"Fund Settlement Parameters24")]
 public interface IFundSettlementParameters24 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IFundSettlementParameters24 : IIsoComponent
     [IsoId("7fb13304-275b-4649-8f30-c050e5a10549")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition8Choice> TradeTransactionCondition { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IFundSettlementParameters24 : IIsoComponent
     [IsoId("d29176da-d775-48e3-a220-4e883826c589")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementTransactionCondition30Choice> SettlementTransactionCondition { get; }
 
     /// <summary>

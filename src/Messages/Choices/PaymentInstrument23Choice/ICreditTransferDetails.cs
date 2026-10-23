@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument23Choice;
 /// </summary>
 [IsoId("_iPPvEVNaEeijdq8ilaxyOA")]
 [IsoXmlTag("CdtTrfDtls")]
+[IsoDisplayName(@"Credit Transfer Details")]
 public interface ICreditTransferDetails : IPaymentInstrument23Choice, IIsoChoiceVariant
 {
     /// <summary>

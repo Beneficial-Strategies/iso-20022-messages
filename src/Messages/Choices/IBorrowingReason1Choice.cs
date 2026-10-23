@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the borrowing reason.
 /// </summary>
 [IsoId("_AYq0IdokEeC60axPepSq7g_1157886245")]
+[IsoDisplayName(@"Borrowing Reason 1 Choice")]
 public interface IBorrowingReason1Choice : IIsoChoice { }

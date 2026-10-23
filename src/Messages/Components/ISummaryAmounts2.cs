@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides amounts taken in to account to calculate the collateral position.
 /// </summary>
 [IsoId("_taYAHgLqEeutW5-TpeYJhA")]
+[IsoDisplayName(@"Summary Amounts")]
 public interface ISummaryAmounts2 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ISummaryAmounts2 : IIsoComponent
     [IsoId("_5F0TgALqEeutW5-TpeYJhA")]
     [DisplayName("Return Excess Cash And Collateral Currency")]
     [IsoXmlTag("RtrXcssCshAndCollCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReturnExcessCash1> ReturnExcessCashAndCollateralCurrency { get; }
 
     /// <summary>

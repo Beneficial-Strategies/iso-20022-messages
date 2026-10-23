@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason42Choice;
 /// Specifies the reason why the cancellation request is pending.
 /// </summary>
 [IsoId("_6QESbZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPendingReason42Choice, IIsoChoiceVariant
 {
     /// <summary>

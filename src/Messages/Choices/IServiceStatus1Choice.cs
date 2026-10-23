@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides detailed information on the service request status.
 /// </summary>
 [IsoId("_z_f3DfDXEemsS_0xy2XRug")]
+[IsoDisplayName(@"Service Status 1 Choice")]
 public interface IServiceStatus1Choice : IIsoChoice { }

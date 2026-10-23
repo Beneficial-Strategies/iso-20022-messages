@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountStatusUpdateInstruction1C
 /// Type of change to the account status expressed as a code.
 /// </summary>
 [IsoId("_xWgD8Hi5EeaRm5xIK6nGuQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAccountStatusUpdateInstruction1Choice, IIsoChoiceVariant
 {
     /// <summary>

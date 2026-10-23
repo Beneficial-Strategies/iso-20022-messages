@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about business parties involved in the transaction.
 /// </summary>
 [IsoId("_AOPFx9okEeC60axPepSq7g_1209561399")]
+[IsoDisplayName(@"Other Parties")]
 public interface IOtherParties18 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IOtherParties18 : IIsoComponent
     [IsoId("_AOYPsNokEeC60axPepSq7g_1095722333")]
     [DisplayName("Investor")]
     [IsoXmlTag("Invstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentificationAndAccount79> Investor { get; }
 
     /// <summary>

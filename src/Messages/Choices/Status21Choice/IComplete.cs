@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status21Choice;
 /// </summary>
 [IsoId("_MHhOUiYuEeW_ZNn8gbfY7Q")]
 [IsoXmlTag("Cmplt")]
+[IsoDisplayName(@"Complete")]
 public interface IComplete : IStatus21Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IComplete : IStatus21Choice, IIsoChoiceVariant
     [IsoId("_aJTcJCYwEeW_ZNn8gbfY7Q")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalReasonInformation { get; }
 }

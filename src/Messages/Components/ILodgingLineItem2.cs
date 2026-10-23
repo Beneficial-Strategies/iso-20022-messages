@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Lodging line item details
 /// </summary>
 [IsoId("_Z6ldASCDEey8XKHwKquEQw")]
+[IsoDisplayName(@"Lodging Line Item")]
 public interface ILodgingLineItem2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILodgingLineItem2 : IIsoComponent
     [IsoId("_Z_7QASCDEey8XKHwKquEQw")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ILodgingLineItem2 : IIsoComponent
     [IsoId("_Z_7QAyCDEey8XKHwKquEQw")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? Time { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ILodgingLineItem2 : IIsoComponent
     [IsoId("_Z_7QByCDEey8XKHwKquEQw")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ILodgingLineItem2 : IIsoComponent
     [IsoId("_Z_7QCSCDEey8XKHwKquEQw")]
     [DisplayName("Post Check Out Indicator")]
     [IsoXmlTag("PstChckOutInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PostCheckOutIndicator { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface ILodgingLineItem2 : IIsoComponent
     [IsoId("_Z_7QDyCDEey8XKHwKquEQw")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? Duration { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface ILodgingLineItem2 : IIsoComponent
     [IsoId("_Z_7QEyCDEey8XKHwKquEQw")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax39> Tax { get; }
 
     /// <summary>
@@ -97,5 +105,7 @@ public interface ILodgingLineItem2 : IIsoComponent
     [IsoId("_Z_7QFSCDEey8XKHwKquEQw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

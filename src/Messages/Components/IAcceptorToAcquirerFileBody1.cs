@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor To Acquirer File Body1.
 /// </summary>
 [IsoId("_V64L4JUVEe6YroSumzeMDQ")]
+[IsoDisplayName(@"Acceptor To Acquirer File Body1")]
 public interface IAcceptorToAcquirerFileBody1 : IIsoComponent
 {
     /// <summary>

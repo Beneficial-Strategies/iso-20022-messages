@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account Link8.
 /// </summary>
 [IsoId("_cCbBYeFSEe6zNorB_Q2tDg")]
+[IsoDisplayName(@"Account Link8")]
 public interface IAccountLink8 : IIsoComponent
 {
     /// <summary>

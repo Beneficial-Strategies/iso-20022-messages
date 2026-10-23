@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Single terminal management action to be performed by the point of interaction.
 /// </summary>
 [IsoId("_Y2MKQR3ZEeKKrOIoqWglDw")]
+[IsoDisplayName(@"TMS Action")]
 public interface ITMSAction2 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ITMSAction2 : IIsoComponent
     [IsoId("_racKMCmuEeKIjpr--01h3Q")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? TMChallenge { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface ITMSAction2 : IIsoComponent
     [IsoId("_GhvusCmvEeKIjpr--01h3Q")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max5000Binary> KeyEnciphermentCertificate { get; }
 
     /// <summary>
@@ -81,5 +84,6 @@ public interface ITMSAction2 : IIsoComponent
     [IsoId("_ZCYzSR3ZEeKKrOIoqWglDw")]
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorAction2> ErrorAction { get; }
 }

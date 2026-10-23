@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClassificationType2Choice;
 /// </summary>
 [IsoId("_Q4NYZ9p-Ed-ak6NoX_4Aeg_719769635")]
 [IsoXmlTag("AltrnClssfctn")]
+[IsoDisplayName(@"Alternate Classification")]
 public interface IAlternateClassification : IClassificationType2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IAlternateClassification : IClassificationType2Choice, IIsoChoi
     [IsoId("_P-ZbjNp-Ed-ak6NoX_4Aeg_993133587")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IAlternateClassification : IClassificationType2Choice, IIsoChoi
     [IsoId("_P-Zbjdp-Ed-ak6NoX_4Aeg_174179906")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Issuer { get; }
 
     /// <summary>
@@ -34,5 +39,7 @@ public interface IAlternateClassification : IClassificationType2Choice, IIsoChoi
     [IsoId("_P-ilcNp-Ed-ak6NoX_4Aeg_879294521")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SchemeName { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Confirmation information for the issued undertaking.
 /// </summary>
 [IsoId("_9yV5knltEeG7BsjMvd1mEw_-1807654359")]
+[IsoDisplayName(@"Undertaking Confirmation")]
 public interface IUndertakingConfirmation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IUndertakingConfirmation1 : IIsoComponent
     [IsoId("_9yV5lHltEeG7BsjMvd1mEw_-1612716749")]
     [DisplayName("Reference Number")]
     [IsoXmlTag("RefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ReferenceNumber { get; }
 
     /// <summary>
@@ -41,5 +44,9 @@ public interface IUndertakingConfirmation1 : IIsoComponent
     [IsoId("_9yV5lnltEeG7BsjMvd1mEw_-1395818404")]
     [DisplayName("Confirmation")]
     [IsoXmlTag("Conf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Confirmation { get; }
 }

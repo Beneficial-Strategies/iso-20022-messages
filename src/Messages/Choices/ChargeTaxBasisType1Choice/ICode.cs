@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeTaxBasisType1Choice;
 /// Securities transaction type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_AdIdY9okEeC60axPepSq7g_-391783727")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChargeTaxBasisType1Choice, IIsoChoiceVariant
 {
     /// <summary>

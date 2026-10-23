@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of identification of a person.
 /// </summary>
 [IsoId("_Ri-zudp-Ed-ak6NoX_4Aeg_-206772035")]
+[IsoDisplayName(@"Person Identification Type 3 Choice")]
 public interface IPersonIdentificationType3Choice : IIsoChoice { }

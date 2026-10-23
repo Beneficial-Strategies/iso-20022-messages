@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "RoleAndBaselnRjctnNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.052.001.01"
 )]
+[Description(@"Scope|The RoleAndBaselineRejectionNotification message is sent by the matching application to the primary banks to inform about role and baseline rejection by a secondary bank.|Usage|The RoleAndBaselineRejectionNotification message is used to inform that a secondary bank has rejected the role and baseline. No response is expected.")]
+[IsoDisplayName(@"Role And Baseline Rejection Notification V")]
 public interface IRoleAndBaselineRejectionNotificationV01 : IOuterRecord
 {
     /// <summary>
@@ -59,6 +61,9 @@ public interface IRoleAndBaselineRejectionNotificationV01 : IOuterRecord
     [IsoId("_tuxZ9NE8Ed-BzquC8wXy7w_1319103454")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

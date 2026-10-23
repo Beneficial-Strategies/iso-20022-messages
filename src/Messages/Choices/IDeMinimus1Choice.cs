@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// De minimus applicability conditions.
 /// </summary>
 [IsoId("_8saXYAgpEeSUG-8hqXsVMQ")]
+[IsoDisplayName(@"De Minimus 1 Choice")]
 public interface IDeMinimus1Choice : IIsoChoice { }

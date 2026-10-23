@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Entity providing data for risk assessment
 /// </summary>
 [IsoId("_sMaVcNv-EeeOusYHZbyj7w")]
+[IsoDisplayName(@"Risk Assessment Data Entity Provider")]
 public interface IRiskAssessmentDataEntityProvider1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IRiskAssessmentDataEntityProvider1 : IIsoComponent
     [IsoId("_d1xKkNv_EeeOusYHZbyj7w")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 }

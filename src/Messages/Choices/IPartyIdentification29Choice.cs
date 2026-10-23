@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification of a party by BIC or by name and address.
 /// </summary>
 [IsoId("_QFGgcNp-Ed-ak6NoX_4Aeg_-162334661")]
+[IsoDisplayName(@"Party Identification 29 Choice")]
 public interface IPartyIdentification29Choice : IIsoChoice { }

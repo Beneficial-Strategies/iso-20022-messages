@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the mandate, which is being suspended.
 /// </summary>
 [IsoId("_d-QNUdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Mandate Suspension")]
 public interface IMandateSuspension3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMandateSuspension3 : IIsoComponent
     [IsoId("_d_uM8dcZEeqRFcf2R4bPBw")]
     [DisplayName("Suspension Request Identification")]
     [IsoXmlTag("SspnsnReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SuspensionRequestIdentification { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IMandateSuspension3 : IIsoComponent
     [IsoId("_d_uM-dcZEeqRFcf2R4bPBw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

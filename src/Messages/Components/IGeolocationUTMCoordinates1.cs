@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the geographic location using the WGS84 ellipsoid spatial reference system.
 /// </summary>
 [IsoId("_IRYb8Nj-EeiojJsa6FYyew")]
+[IsoDisplayName(@"Geolocation UTM Coordinates")]
 public interface IGeolocationUTMCoordinates1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IGeolocationUTMCoordinates1 : IIsoComponent
     [IsoId("_S03o0Nj-EeiojJsa6FYyew")]
     [DisplayName("UTM Zone")]
     [IsoXmlTag("UTMZone")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text UTMZone { get; }
 
     /// <summary>
@@ -27,6 +30,8 @@ public interface IGeolocationUTMCoordinates1 : IIsoComponent
     [IsoId("_bxdJUNj-EeiojJsa6FYyew")]
     [DisplayName("UTM Eastward")]
     [IsoXmlTag("UTMEstwrd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text UTMEastward { get; }
 
     /// <summary>
@@ -36,5 +41,7 @@ public interface IGeolocationUTMCoordinates1 : IIsoComponent
     [IsoId("_iqNJ0Nj-EeiojJsa6FYyew")]
     [DisplayName("UTM Northward")]
     [IsoXmlTag("UTMNrthwrd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text UTMNorthward { get; }
 }

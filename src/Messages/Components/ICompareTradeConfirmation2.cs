@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a trade confirmation.
 /// </summary>
 [IsoId("_LvNugVo3Ee23K4GXSpBSeg")]
+[IsoDisplayName(@"Compare Trade Confirmation")]
 public interface ICompareTradeConfirmation2 : IIsoComponent
 {
     /// <summary>

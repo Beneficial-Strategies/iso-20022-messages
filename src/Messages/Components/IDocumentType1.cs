@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Document Type1.
 /// </summary>
 [IsoId("_O2EK4TE0Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Document Type1")]
 public interface IDocumentType1 : IIsoComponent
 {
     /// <summary>

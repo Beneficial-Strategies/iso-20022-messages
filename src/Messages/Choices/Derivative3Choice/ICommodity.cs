@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative3Choice;
 /// </summary>
 [IsoId("_xH-zYSe0Eei12pGEsJIAeQ")]
 [IsoXmlTag("Cmmdty")]
+[IsoDisplayName(@"Commodity")]
 public interface ICommodity : IDerivative3Choice, IIsoChoiceVariant
 {
     /// <summary>

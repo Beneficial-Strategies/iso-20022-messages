@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reversal transaction results after a Reversal request.
 /// </summary>
 [IsoId("_ENNZoQ1REeqjM-rxn3HuXQ")]
+[IsoDisplayName(@"Retailer Reversal Result")]
 public interface IRetailerReversalResult2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRetailerReversalResult2 : IIsoComponent
     [IsoId("_EZPDcQ1REeqjM-rxn3HuXQ")]
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? POIReconciliationIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IRetailerReversalResult2 : IIsoComponent
     [IsoId("_EZPDdQ1REeqjM-rxn3HuXQ")]
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomerOrder1> CustomerOrder { get; }
 }

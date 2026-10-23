@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the source of the Common Reporting Standard (CRS).
 /// </summary>
 [IsoId("_JdcmcUNfEeamLdeYEZm56w")]
+[IsoDisplayName(@"CRS Source 1 Choice")]
 public interface ICRSSource1Choice : IIsoChoice { }

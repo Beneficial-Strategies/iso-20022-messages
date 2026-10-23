@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference3Choice;
 /// Unique identification (UTI) agreed upon by the two trade counterparties to identify the trade.
 /// </summary>
 [IsoId("_wu7ncQLyEeutW5-TpeYJhA")]
+[IsoDisplayName(@"Common Transaction Identification")]
 public interface ICommonTransactionIdentification : IReference3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ICommonTransactionIdentification : IReference3Choice, IIsoChoic
     /// Specifies a character string with a maximum length of 52 characters.
     /// </summary>
     [IsoXmlTag("CmonTxId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Value { get; }
 }

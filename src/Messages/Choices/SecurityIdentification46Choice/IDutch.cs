@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice;
 
 /// <summary>Dutch identifier.</summary>
 [IsoId("fff15e36-e19e-47bd-bfcf-21bc8e6d2e93")]
+[IsoDisplayName(@"Dutch")]
 public interface IDutch : ISecurityIdentification46Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

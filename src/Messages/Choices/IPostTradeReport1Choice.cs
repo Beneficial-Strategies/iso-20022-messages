@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Post-trade related data report.</summary>
 [IsoId("_esL9AGIgEfCeoPFCHQnhvA")]
+[IsoDisplayName(@"Post Trade Report 1 Choice")]
 public interface IPostTradeReport1Choice : IIsoChoice { }

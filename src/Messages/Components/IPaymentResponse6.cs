@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Response6.
 /// </summary>
 [IsoId("_WM49QZQ2Ee6HYLAajyhWIQ")]
+[IsoDisplayName(@"Payment Response6")]
 public interface IPaymentResponse6 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface IPaymentResponse6 : IIsoComponent
     /// </summary>
     [DisplayName("Payment Receipt")]
     [IsoXmlTag("PmtRct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReceipt6> PaymentReceipt { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface IPaymentResponse6 : IIsoComponent
     /// </summary>
     [DisplayName("Loyalty Result")]
     [IsoXmlTag("LltyRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyResult3> LoyaltyResult { get; }
 
     /// <summary>
@@ -72,5 +75,6 @@ public interface IPaymentResponse6 : IIsoComponent
     /// </summary>
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomerOrder1> CustomerOrder { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of each individual secured market transaction.
 /// </summary>
 [IsoId("_GZo0hcEREea7jLfvGi1PDw")]
+[IsoDisplayName(@"Secured Market Transaction")]
 public interface ISecuredMarketTransaction4 : IIsoComponent
 {
     /// <summary>
@@ -35,6 +36,7 @@ public interface ISecuredMarketTransaction4 : IIsoComponent
     [IsoId("_Gjde58EREea7jLfvGi1PDw")]
     [DisplayName("Branch Identification")]
     [IsoXmlTag("BrnchId")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? BranchIdentification { get; }
 
     /// <summary>
@@ -43,6 +45,8 @@ public interface ISecuredMarketTransaction4 : IIsoComponent
     [IsoId("_Gjde6cEREea7jLfvGi1PDw")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? UniqueTransactionIdentifier { get; }
 
     /// <summary>
@@ -51,6 +55,8 @@ public interface ISecuredMarketTransaction4 : IIsoComponent
     [IsoId("_Gjde68EREea7jLfvGi1PDw")]
     [DisplayName("Proprietary Transaction Identification")]
     [IsoXmlTag("PrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text ProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -59,6 +65,8 @@ public interface ISecuredMarketTransaction4 : IIsoComponent
     [IsoId("_HxN5McEWEea7jLfvGi1PDw")]
     [DisplayName("Related Proprietary Transaction Identification")]
     [IsoXmlTag("RltdPrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? RelatedProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -67,6 +75,8 @@ public interface ISecuredMarketTransaction4 : IIsoComponent
     [IsoId("_Gjde7cEREea7jLfvGi1PDw")]
     [DisplayName("Counterparty Proprietary Transaction Identification")]
     [IsoXmlTag("CtrPtyPrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? CounterpartyProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -83,6 +93,7 @@ public interface ISecuredMarketTransaction4 : IIsoComponent
     [IsoId("_Gjde8cEREea7jLfvGi1PDw")]
     [DisplayName("Triparty Agent Identification")]
     [IsoXmlTag("TrptyAgtId")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? TripartyAgentIdentification { get; }
 
     /// <summary>
@@ -105,6 +116,7 @@ public interface ISecuredMarketTransaction4 : IIsoComponent
     [IsoId("_Gjde9cEREea7jLfvGi1PDw")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate SettlementDate { get; }
 
     /// <summary>
@@ -113,6 +125,7 @@ public interface ISecuredMarketTransaction4 : IIsoComponent
     [IsoId("_Gjde98EREea7jLfvGi1PDw")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -149,6 +162,7 @@ public interface ISecuredMarketTransaction4 : IIsoComponent
     [IsoId("_GjdfAcEREea7jLfvGi1PDw")]
     [DisplayName("Deal Rate")]
     [IsoXmlTag("DealRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? DealRate { get; }
 
     /// <summary>
@@ -181,5 +195,6 @@ public interface ISecuredMarketTransaction4 : IIsoComponent
     [IsoId("_GjdfCcEREea7jLfvGi1PDw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

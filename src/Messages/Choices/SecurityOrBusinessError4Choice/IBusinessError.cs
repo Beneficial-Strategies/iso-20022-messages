@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityOrBusinessError4Choice;
 /// </summary>
 [IsoId("_P7y445JKEeuAlLVx8pyt3w")]
 [IsoXmlTag("BizErr")]
+[IsoDisplayName(@"Business Error")]
 public interface IBusinessError : ISecurityOrBusinessError4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -24,5 +25,6 @@ public interface IBusinessError : ISecurityOrBusinessError4Choice, IIsoChoiceVar
     /// Provides the business error.
     /// </summary>
     [IsoXmlTag("BizErr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorHandling5> Value { get; }
 }

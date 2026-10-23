@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosurePendingStatusReason1Choic
 /// There is no reason available or to report for the closure pending status.
 /// </summary>
 [IsoId("_UwXSsWCLEeabZtzjEVWYCQ")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IClosurePendingStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the update information.
 /// </summary>
 [IsoId("_QxXJh9p-Ed-ak6NoX_4Aeg_-903172755")]
+[IsoDisplayName(@"Update Type 2 Choice")]
 public interface IUpdateType2Choice : IIsoChoice { }

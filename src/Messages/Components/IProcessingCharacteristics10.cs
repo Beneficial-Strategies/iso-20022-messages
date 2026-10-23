@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Processing Characteristics10.
 /// </summary>
 [IsoId("_LohUwTdyEe6UObU50fB8Cw")]
+[IsoDisplayName(@"Processing Characteristics10")]
 public interface IProcessingCharacteristics10 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IProcessingCharacteristics10 : IIsoComponent
     /// </summary>
     [DisplayName("Dealing Currency Accepted")]
     [IsoXmlTag("DealgCcyAccptd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveCurrencyCode> DealingCurrencyAccepted { get; }
 
     /// <summary>
@@ -121,5 +123,6 @@ public interface IProcessingCharacteristics10 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

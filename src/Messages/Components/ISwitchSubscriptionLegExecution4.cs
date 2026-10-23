@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of the subscription part, in a switch between investment funds or investment fund classes.
 /// </summary>
 [IsoId("_-AV9wTbsEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Switch Subscription Leg Execution")]
 public interface ISwitchSubscriptionLegExecution4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISwitchSubscriptionLegExecution4 : IIsoComponent
     [IsoId("_-YvPlTbsEead9bDRE_1DAQ")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISwitchSubscriptionLegExecution4 : IIsoComponent
     [IsoId("_-YvPlzbsEead9bDRE_1DAQ")]
     [DisplayName("Leg Execution Identification")]
     [IsoXmlTag("LegExctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegExecutionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ISwitchSubscriptionLegExecution4 : IIsoComponent
     [IsoId("_-YvPmzbsEead9bDRE_1DAQ")]
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber UnitsNumber { get; }
 
     /// <summary>
@@ -91,6 +97,9 @@ public interface ISwitchSubscriptionLegExecution4 : IIsoComponent
     [IsoId("_IQNyET-gEeaHRKble3Pycg")]
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice22> InformativePriceDetails { get; }
 
     /// <summary>
@@ -99,6 +108,7 @@ public interface ISwitchSubscriptionLegExecution4 : IIsoComponent
     [IsoId("_-YvPpzbsEead9bDRE_1DAQ")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -163,6 +173,7 @@ public interface ISwitchSubscriptionLegExecution4 : IIsoComponent
     [IsoId("_-YvPuTbsEead9bDRE_1DAQ")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>
@@ -179,6 +190,8 @@ public interface ISwitchSubscriptionLegExecution4 : IIsoComponent
     [IsoId("_-YvPvTbsEead9bDRE_1DAQ")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>

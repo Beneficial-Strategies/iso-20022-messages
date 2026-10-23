@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed statistics on derivatives submitted for reconciliation per group of derivative contract.
 /// </summary>
 [IsoId("_5fxLwVfcEeqZr5K1Woax-g")]
+[IsoDisplayName(@"Reconciliation Statistics Per Derivative Contract Group")]
 public interface IReconciliationStatisticsPerDerivativeContractGroup3 : IIsoComponent
 {
     /// <summary>

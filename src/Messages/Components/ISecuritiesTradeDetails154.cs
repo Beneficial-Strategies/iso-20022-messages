@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities trade.
 /// </summary>
 [IsoId("_1eqfgZaHEfC2_67yGLymgA")]
+[IsoDisplayName(@"Securities Trade Details154")]
 public interface ISecuritiesTradeDetails154 : IIsoComponent
 {
     /// <summary>
@@ -105,6 +106,7 @@ public interface ISecuritiesTradeDetails154 : IIsoComponent
     [IsoId("_1hTkW5aHEfC2_67yGLymgA")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReporting7Choice> Reporting { get; }
 
     /// <summary>
@@ -161,6 +163,7 @@ public interface ISecuritiesTradeDetails154 : IIsoComponent
     [IsoId("_PSSrEZaHEfC2_67yGLymgA")]
     [DisplayName("Digital Payment Settlement")]
     [IsoXmlTag("DgtlPmtSttlm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDigitalPaymentSettlement1> DigitalPaymentSettlement { get; }
 
     /// <summary>
@@ -177,5 +180,6 @@ public interface ISecuritiesTradeDetails154 : IIsoComponent
     [IsoId("_1hTku5aHEfC2_67yGLymgA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

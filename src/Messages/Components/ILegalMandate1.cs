@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the legal basis of the request.
 /// </summary>
 [IsoId("_bhYnwEJ4EeGuetKibuqsKw")]
+[IsoDisplayName(@"Legal Mandate")]
 public interface ILegalMandate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILegalMandate1 : IIsoComponent
     [IsoId("_ZiG61UJ8EeGuetKibuqsKw")]
     [DisplayName("Paragraph")]
     [IsoXmlTag("Prgrph")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Paragraph { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ILegalMandate1 : IIsoComponent
     [IsoId("_buerxUJ8EeGuetKibuqsKw")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Disclaimer { get; }
 }

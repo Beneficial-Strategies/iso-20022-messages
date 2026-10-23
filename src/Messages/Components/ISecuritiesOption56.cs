@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the security option of a corporate event.
 /// </summary>
 [IsoId("_ctfP95KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Securities Option")]
 public interface ISecuritiesOption56 : IIsoComponent
 {
     /// <summary>

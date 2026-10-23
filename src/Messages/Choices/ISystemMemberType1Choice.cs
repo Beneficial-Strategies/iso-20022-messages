@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the nature of the relationship a member has with a system.
 /// </summary>
 [IsoId("_Sr86gHhgEeidzqjNEfehPg")]
+[IsoDisplayName(@"System Member Type 1 Choice")]
 public interface ISystemMemberType1Choice : IIsoChoice { }

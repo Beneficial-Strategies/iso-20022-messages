@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.auth;
     "DerivsTradMrgnDataTxStatRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.109.001.02"
 )]
+[IsoDisplayName(@"Derivatives Trade Margin Data Transaction State Report V02")]
 public interface IDerivativesTradeMarginDataTransactionStateReportV02 : IOuterRecord
 {
     /// <summary>
@@ -36,5 +37,6 @@ public interface IDerivativesTradeMarginDataTransactionStateReportV02 : IOuterRe
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

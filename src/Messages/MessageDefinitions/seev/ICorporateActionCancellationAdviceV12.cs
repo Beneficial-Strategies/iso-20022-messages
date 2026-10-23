@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_V4gsFTN3Ee2Amemf1A0gtA")]
 [IsoMessage("seev.039.001.12", "CorpActnCxlAdvc", "urn:iso:std:iso:20022:tech:xsd:seev.039.001.12")]
+[Description(@"Scope|The CorporateActionCancellationAdvice message is sent by an account servicer to an account owner or its designated agent to cancel a previously announced corporate action event in case of error from the account servicer or in case of withdrawal by the issuer.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).")]
+[IsoDisplayName(@"Corporate Action Cancellation Advice V")]
 public interface ICorporateActionCancellationAdviceV12 : IOuterRecord
 {
     /// <summary>
@@ -58,6 +60,9 @@ public interface ICorporateActionCancellationAdviceV12 : IOuterRecord
     [IsoId("_V4gsIzN3Ee2Amemf1A0gtA")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
+    [IsoSimpleType(IsoSimpleType.Max8000Text)]
+    [StringLength(8000, MinimumLength = 1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max8000Text> AdditionalText { get; }
 
     /// <summary>
@@ -66,6 +71,7 @@ public interface ICorporateActionCancellationAdviceV12 : IOuterRecord
     [IsoId("_V4gsJTN3Ee2Amemf1A0gtA")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification120Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -74,6 +80,7 @@ public interface ICorporateActionCancellationAdviceV12 : IOuterRecord
     [IsoId("_V4gsJzN3Ee2Amemf1A0gtA")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification120Choice> PayingAgent { get; }
 
     /// <summary>
@@ -82,6 +89,7 @@ public interface ICorporateActionCancellationAdviceV12 : IOuterRecord
     [IsoId("_V4gsKTN3Ee2Amemf1A0gtA")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification120Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -98,6 +106,7 @@ public interface ICorporateActionCancellationAdviceV12 : IOuterRecord
     [IsoId("_V4gsLTN3Ee2Amemf1A0gtA")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification120Choice> ResellingAgent { get; }
 
     /// <summary>
@@ -122,6 +131,7 @@ public interface ICorporateActionCancellationAdviceV12 : IOuterRecord
     [IsoId("_V4gsMzN3Ee2Amemf1A0gtA")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification120Choice> SolicitationAgent { get; }
 
     /// <summary>
@@ -138,5 +148,6 @@ public interface ICorporateActionCancellationAdviceV12 : IOuterRecord
     [IsoId("_V4gsNzN3Ee2Amemf1A0gtA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

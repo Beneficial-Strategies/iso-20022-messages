@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the derivative contract not included in the general financial instrument attributes component.
 /// </summary>
 [IsoId("_WfB289p-Ed-ak6NoX_4Aeg_2109906816")]
+[IsoDisplayName(@"Derivative Basic Attributes")]
 public interface IDerivativeBasicAttributes2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IDerivativeBasicAttributes2 : IIsoComponent
     [IsoId("_WfB29dp-Ed-ak6NoX_4Aeg_-1878382596")]
     [DisplayName("Interest Included In Price")]
     [IsoXmlTag("IntrstInclInPric")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? InterestIncludedInPrice { get; }
 }

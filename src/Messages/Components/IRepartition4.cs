@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates how the amount of the investment plan is split amongst the funds.
 /// </summary>
 [IsoId("_wrHbcSC6EeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Repartition")]
 public interface IRepartition4 : IIsoComponent
 {
     /// <summary>

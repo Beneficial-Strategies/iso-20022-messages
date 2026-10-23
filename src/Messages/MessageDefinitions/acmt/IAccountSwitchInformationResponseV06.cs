@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctSwtchInfRspn",
     "urn:iso:std:iso:20022:tech:xsd:acmt.028.001.06"
 )]
+[IsoDisplayName(@"Account Switch Information Response V06")]
 public interface IAccountSwitchInformationResponseV06 : IOuterRecord
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface IAccountSwitchInformationResponseV06 : IOuterRecord
     /// </summary>
     [DisplayName("Payment Instruction")]
     [IsoXmlTag("PmtInstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstruction49> PaymentInstruction { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IAccountSwitchInformationResponseV06 : IOuterRecord
     /// </summary>
     [DisplayName("Direct Debit Instruction")]
     [IsoXmlTag("DrctDbtInstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDirectDebitInstructionDetails3> DirectDebitInstruction { get; }
 
     /// <summary>
@@ -64,5 +67,6 @@ public interface IAccountSwitchInformationResponseV06 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

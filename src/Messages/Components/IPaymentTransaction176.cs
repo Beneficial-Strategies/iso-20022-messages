@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides reference and status information on the original transactions, included in the original instruction, to which the cancellation request message applies.
 /// </summary>
 [IsoId("99acbf70-3b0e-4ba6-b8d3-a9086352e2b8")]
+[IsoDisplayName(@"Payment Transaction176")]
 public interface IPaymentTransaction176 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IPaymentTransaction176 : IIsoComponent
     [IsoId("5142d2a8-419c-495a-8ff0-8644e417e510")]
     [DisplayName("Cancellation Reason Information")]
     [IsoXmlTag("CxlRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentCancellationReason6> CancellationReasonInformation { get; }
 
     /// <summary>
@@ -97,5 +99,6 @@ public interface IPaymentTransaction176 : IIsoComponent
     [IsoId("6025cb8d-3a4e-452a-a42e-1d8106e71aa8")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

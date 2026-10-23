@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification25Choice;
 /// Identifier for Dutch securities.
 /// </summary>
 [IsoId("_cH1L9TnxEeabspMEjqY5TQ")]
+[IsoDisplayName(@"Dutch")]
 public interface IDutch : ISecurityIdentification25Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IDutch : ISecurityIdentification25Choice, IIsoChoiceVariant
     /// Identifier for Dutch securities.
     /// </summary>
     [IsoXmlTag("Dtch")]
+    [IsoSimpleType(IsoSimpleType.DutchIdentifier)]
     DutchIdentifier Value { get; }
 }

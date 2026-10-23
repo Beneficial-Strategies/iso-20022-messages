@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fixed rate related information.
 /// </summary>
 [IsoId("_gwtNQayDEem81-uIvTF5rQ")]
+[IsoDisplayName(@"Fixed Rate")]
 public interface IFixedRate8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFixedRate8 : IIsoComponent
     [IsoId("_g04ioayDEem81-uIvTF5rQ")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>

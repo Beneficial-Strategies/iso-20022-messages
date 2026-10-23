@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities trade.
 /// </summary>
 [IsoId("_0iCPNQlIEeGATtfOBToyew_607126183")]
+[IsoDisplayName(@"Securities Trade Details")]
 public interface ISecuritiesTradeDetails26 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecuritiesTradeDetails26 : IIsoComponent
     [IsoId("_0iCPNglIEeGATtfOBToyew_-110677028")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TradeIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecuritiesTradeDetails26 : IIsoComponent
     [IsoId("_0iCPNwlIEeGATtfOBToyew_-1589141120")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ISecuritiesTradeDetails26 : IIsoComponent
     [IsoId("_0iCPOQlIEeGATtfOBToyew_-1692330413")]
     [DisplayName("Place Of Clearing")]
     [IsoXmlTag("PlcOfClr")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier? PlaceOfClearing { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface ISecuritiesTradeDetails26 : IIsoComponent
     [IsoId("_0iVKIQlIEeGATtfOBToyew_-353265358")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface ISecuritiesTradeDetails26 : IIsoComponent
     [IsoId("_0iVKIwlIEeGATtfOBToyew_-1146001275")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReporting2Choice> Reporting { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface ISecuritiesTradeDetails26 : IIsoComponent
     [IsoId("_0iVKJAlIEeGATtfOBToyew_386106332")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition1Choice> TradeTransactionCondition { get; }
 
     /// <summary>
@@ -161,6 +168,8 @@ public interface ISecuritiesTradeDetails26 : IIsoComponent
     [IsoId("_0ie7JQlIEeGATtfOBToyew_-822774565")]
     [DisplayName("FX Additional Details")]
     [IsoXmlTag("FxAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FXAdditionalDetails { get; }
 
     /// <summary>
@@ -169,5 +178,7 @@ public interface ISecuritiesTradeDetails26 : IIsoComponent
     [IsoId("_0ioFEAlIEeGATtfOBToyew_-1933685984")]
     [DisplayName("Settlement Instruction Processing Additional Details")]
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? SettlementInstructionProcessingAdditionalDetails { get; }
 }

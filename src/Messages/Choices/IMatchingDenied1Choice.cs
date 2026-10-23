@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the matching processing change requested.
 /// </summary>
 [IsoId("_UakE1Np-Ed-ak6NoX_4Aeg_-1854020837")]
+[IsoDisplayName(@"Matching Denied 1 Choice")]
 public interface IMatchingDenied1Choice : IIsoChoice { }

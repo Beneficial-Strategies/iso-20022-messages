@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the reason of the mandate cancellation request.
 /// </summary>
 [IsoId("_HSwZ2249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Mandate Cancellation Reason")]
 public interface IMandateCancellationReason1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IMandateCancellationReason1 : IIsoComponent
     [IsoId("_Hfkt1249EeiU9cctagi5ow")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

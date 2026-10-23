@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Inquiry transaction
 /// </summary>
 [IsoId("_nNkNAYv5EeumSPwlS1PkxQ")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction132 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface ITransaction132 : IIsoComponent
     [IsoId("_nTf144v5EeumSPwlS1PkxQ")]
     [DisplayName("Transaction Sub Type")]
     [IsoXmlTag("TxSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionSubType { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface ITransaction132 : IIsoComponent
     [IsoId("_wU8JIbXmEeusf7oR9YukCg")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalService2> AdditionalService { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface ITransaction132 : IIsoComponent
     [IsoId("_nTf15Yv5EeumSPwlS1PkxQ")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialProgrammeQualification1> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -67,6 +72,7 @@ public interface ITransaction132 : IIsoComponent
     [IsoId("_nTf164v5EeumSPwlS1PkxQ")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAmounts3> AdditionalAmount { get; }
 
     /// <summary>
@@ -75,6 +81,7 @@ public interface ITransaction132 : IIsoComponent
     [IsoId("_nTgc8Yv5EeumSPwlS1PkxQ")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee2> AdditionalFee { get; }
 
     /// <summary>
@@ -83,6 +90,7 @@ public interface ITransaction132 : IIsoComponent
     [IsoId("_nTgc84v5EeumSPwlS1PkxQ")]
     [DisplayName("Account Balance")]
     [IsoXmlTag("AcctBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountBalance2> AccountBalance { get; }
 
     /// <summary>
@@ -91,6 +99,7 @@ public interface ITransaction132 : IIsoComponent
     [IsoId("_nTgc9Yv5EeumSPwlS1PkxQ")]
     [DisplayName("Account Statement Data")]
     [IsoXmlTag("AcctStmtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountStatementData2> AccountStatementData { get; }
 
     /// <summary>
@@ -107,6 +116,8 @@ public interface ITransaction132 : IIsoComponent
     [IsoId("_nTgc-Yv5EeumSPwlS1PkxQ")]
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? TransactionDescription { get; }
 
     /// <summary>
@@ -115,5 +126,6 @@ public interface ITransaction132 : IIsoComponent
     [IsoId("_nTgc-4v5EeumSPwlS1PkxQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

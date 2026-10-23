@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Net position of a segregated holding of a single security within the overall position held in the securities account, eg, sub-balance per status.
 /// </summary>
 [IsoId("_5eVTrZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Sub Balance Information")]
 public interface ISubBalanceInformation17 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ISubBalanceInformation17 : IIsoComponent
     [IsoId("_5eVTw5NLEeWGlc8L7oPDIg")]
     [DisplayName("Sub Balance Additional Details")]
     [IsoXmlTag("SubBalAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text? SubBalanceAdditionalDetails { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ISubBalanceInformation17 : IIsoComponent
     [IsoId("_5eVTy5NLEeWGlc8L7oPDIg")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQuantityBreakdown40> QuantityBreakdown { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface ISubBalanceInformation17 : IIsoComponent
     [IsoId("_5eVT05NLEeWGlc8L7oPDIg")]
     [DisplayName("Additional Balance Breakdown Details")]
     [IsoXmlTag("AddtlBalBrkdwnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBalanceInformation17> AdditionalBalanceBreakdownDetails { get; }
 }

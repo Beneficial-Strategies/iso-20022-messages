@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrOperationalError4Choice;
 /// <summary>
 /// Party Report.
 /// </summary>
+[IsoDisplayName(@"Party Report")]
 public interface IPartyReport : IPartyOrOperationalError4Choice, IIsoChoiceVariant
 {
     /// <summary>

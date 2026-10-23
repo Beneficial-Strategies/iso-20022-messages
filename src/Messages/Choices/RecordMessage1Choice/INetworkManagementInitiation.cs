@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Network management initiation message record.
 /// </summary>
 [IsoId("_czvUcRs8EeqrvK3udMUsNQ")]
+[IsoDisplayName(@"Network Management Initiation")]
 public interface INetworkManagementInitiation : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INetworkManagementInitiation : IRecordMessage1Choice, IIsoChoic
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("NtwkMgmtInitn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

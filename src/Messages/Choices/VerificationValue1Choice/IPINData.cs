@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice;
 /// </summary>
 [IsoId("_4EhKppaNEemfCcEf5rVTyg")]
 [IsoXmlTag("PINData")]
+[IsoDisplayName(@"PIN Data")]
 public interface IPINData : IVerificationValue1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -24,6 +25,7 @@ public interface IPINData : IVerificationValue1Choice, IIsoChoiceVariant
     [IsoId("_1o494InMEeiHerJAHfwamw")]
     [DisplayName("Control")]
     [IsoXmlTag("Ctrl")]
+    [IsoSimpleType(IsoSimpleType.Exact1HexBinaryText)]
     Exact1HexBinaryText? Control { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface IPINData : IVerificationValue1Choice, IIsoChoiceVariant
     [IsoId("_d0W1wotNEei2ytxdCDTOFQ")]
     [DisplayName("Key Set Identifier")]
     [IsoXmlTag("KeySetIdr")]
+    [IsoSimpleType(IsoSimpleType.Max8NumericText)]
     Max8NumericText? KeySetIdentifier { get; }
 
     /// <summary>
@@ -44,6 +47,7 @@ public interface IPINData : IVerificationValue1Choice, IIsoChoiceVariant
     [IsoId("_03k44InQEeiHerJAHfwamw")]
     [DisplayName("Derived Information")]
     [IsoXmlTag("DrvdInf")]
+    [IsoSimpleType(IsoSimpleType.Max32HexBinaryText)]
     Max32HexBinaryText? DerivedInformation { get; }
 
     /// <summary>
@@ -53,6 +57,7 @@ public interface IPINData : IVerificationValue1Choice, IIsoChoiceVariant
     [IsoId("_XqXiYInREeiHerJAHfwamw")]
     [DisplayName("Algorithm")]
     [IsoXmlTag("Algo")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? Algorithm { get; }
 
     /// <summary>
@@ -62,6 +67,7 @@ public interface IPINData : IVerificationValue1Choice, IIsoChoiceVariant
     [IsoId("_u95wootNEei2ytxdCDTOFQ")]
     [DisplayName("Key Length")]
     [IsoXmlTag("KeyLngth")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? KeyLength { get; }
 
     /// <summary>
@@ -71,6 +77,7 @@ public interface IPINData : IVerificationValue1Choice, IIsoChoiceVariant
     [IsoId("_W9lC8YnTEeiHerJAHfwamw")]
     [DisplayName("Key Protection")]
     [IsoXmlTag("KeyPrtcn")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? KeyProtection { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IPINData : IVerificationValue1Choice, IIsoChoiceVariant
     [IsoId("_85vZYotNEei2ytxdCDTOFQ")]
     [DisplayName("Key Index")]
     [IsoXmlTag("KeyIndx")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? KeyIndex { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface IPINData : IVerificationValue1Choice, IIsoChoiceVariant
     [IsoId("_DiyMQYnVEeiHerJAHfwamw")]
     [DisplayName("PIN Block Format")]
     [IsoXmlTag("PINBlckFrmt")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText PINBlockFormat { get; }
 
     /// <summary>
@@ -98,5 +107,6 @@ public interface IPINData : IVerificationValue1Choice, IIsoChoiceVariant
     [IsoId("_BbKmMInaEei2ytxdCDTOFQ")]
     [DisplayName("Encrypted PIN Block")]
     [IsoXmlTag("NcrptdPINBlck")]
+    [IsoSimpleType(IsoSimpleType.Max16HexBinaryText)]
     Max16HexBinaryText EncryptedPINBlock { get; }
 }

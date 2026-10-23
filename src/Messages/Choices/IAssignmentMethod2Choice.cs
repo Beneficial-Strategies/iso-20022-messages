@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for assignment method.
 /// </summary>
 [IsoId("_hJG-heLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Assignment Method 2 Choice")]
 public interface IAssignmentMethod2Choice : IIsoChoice { }

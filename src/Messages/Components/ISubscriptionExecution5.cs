@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a subscription order.
 /// </summary>
 [IsoId("_R4lQS9p-Ed-ak6NoX_4Aeg_-1411999859")]
+[IsoDisplayName(@"Subscription Execution")]
 public interface ISubscriptionExecution5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R4lQTNp-Ed-ak6NoX_4Aeg_-1411077871")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R4lQTdp-Ed-ak6NoX_4Aeg_1016626168")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R4lQTtp-Ed-ak6NoX_4Aeg_-1411075388")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DealReference { get; }
 
     /// <summary>
@@ -41,6 +48,9 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R4lQT9p-Ed-ak6NoX_4Aeg_713435160")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType3> OrderType { get; }
 
     /// <summary>
@@ -113,6 +123,9 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R4vBSNp-Ed-ak6NoX_4Aeg_-748773008")]
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice10> InformativePriceDetails { get; }
 
     /// <summary>
@@ -129,6 +142,7 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R44yQNp-Ed-ak6NoX_4Aeg_1689484821")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CashSettlementDate { get; }
 
     /// <summary>
@@ -145,6 +159,7 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R44yQtp-Ed-ak6NoX_4Aeg_-1407384514")]
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PartiallyExecutedIndicator { get; }
 
     /// <summary>
@@ -161,6 +176,7 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R44yRNp-Ed-ak6NoX_4Aeg_-1407383566")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -177,6 +193,7 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R44yRtp-Ed-ak6NoX_4Aeg_-1386141349")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms7> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -193,6 +210,8 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R44ySNp-Ed-ak6NoX_4Aeg_-1407382299")]
     [DisplayName("Letter Intent Reference")]
     [IsoXmlTag("LttrInttRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LetterIntentReference { get; }
 
     /// <summary>
@@ -201,6 +220,8 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R44ySdp-Ed-ak6NoX_4Aeg_-1407381879")]
     [DisplayName("Accumulation Right Reference")]
     [IsoXmlTag("AcmltnRghtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccumulationRightReference { get; }
 
     /// <summary>
@@ -241,6 +262,7 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R5B8NNp-Ed-ak6NoX_4Aeg_-1407381351")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>
@@ -257,6 +279,9 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R5B8Ntp-Ed-ak6NoX_4Aeg_771511099")]
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
+    [MinLength(0)]
+    [MaxLength(4)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundsOrderBreakdown1> StaffClientBreakdown { get; }
 
     /// <summary>
@@ -289,6 +314,8 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R5LtMNp-Ed-ak6NoX_4Aeg_-100739106")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>
@@ -297,6 +324,7 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R5LtMdp-Ed-ak6NoX_4Aeg_-379063892")]
     [DisplayName("Partial Settlement Of Units")]
     [IsoXmlTag("PrtlSttlmOfUnits")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PartialSettlementOfUnits { get; }
 
     /// <summary>
@@ -329,6 +357,7 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R5LtNdp-Ed-ak6NoX_4Aeg_-379063609")]
     [DisplayName("Partial Settlement Of Cash")]
     [IsoXmlTag("PrtlSttlmOfCsh")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PartialSettlementOfCash { get; }
 
     /// <summary>
@@ -337,6 +366,9 @@ public interface ISubscriptionExecution5 : IIsoComponent
     [IsoId("_R5LtNtp-Ed-ak6NoX_4Aeg_151804394")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary9> RelatedPartyDetails { get; }
 
     /// <summary>

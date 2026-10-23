@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies cash parties in the framework of a corporate action event.
 /// </summary>
 [IsoId("_O7Www1kxEeSiQOnYSp7BZg")]
+[IsoDisplayName(@"Cash Parties")]
 public interface ICashParties21 : IIsoComponent
 {
     /// <summary>

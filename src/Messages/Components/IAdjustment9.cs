@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes each adjustment made to the original price.
 /// </summary>
 [IsoId("_mBzOifJqEeiJn9rM2Znz2w")]
+[IsoDisplayName(@"Adjustment")]
 public interface IAdjustment9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAdjustment9 : IIsoComponent
     [IsoId("_mBzOjvJqEeiJn9rM2Znz2w")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAdjustment9 : IIsoComponent
     [IsoId("_mBzOi_JqEeiJn9rM2Znz2w")]
     [DisplayName("Additional Type")]
     [IsoXmlTag("AddtlTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalType { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IAdjustment9 : IIsoComponent
     [IsoId("_mBzOivJqEeiJn9rM2Znz2w")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Description { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IAdjustment9 : IIsoComponent
     [IsoId("_mBzOj_JqEeiJn9rM2Znz2w")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reason { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IAdjustment9 : IIsoComponent
     [IsoId("_sn8w4Rs4EeqrvK3udMUsNQ")]
     [DisplayName("Promotion Code")]
     [IsoXmlTag("PrmtnCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PromotionCode { get; }
 
     /// <summary>
@@ -57,6 +68,7 @@ public interface IAdjustment9 : IIsoComponent
     [IsoId("_mBzOkPJqEeiJn9rM2Znz2w")]
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Percentage { get; }
 
     /// <summary>
@@ -74,5 +86,6 @@ public interface IAdjustment9 : IIsoComponent
     [IsoId("_mBzOkfJqEeiJn9rM2Znz2w")]
     [DisplayName("Tax Calculated On Original Amount")]
     [IsoXmlTag("TaxClctdOnOrgnlAmt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TaxCalculatedOnOriginalAmount { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities trade.
 /// </summary>
 [IsoId("_S7pPzNp-Ed-ak6NoX_4Aeg_-546856650")]
+[IsoDisplayName(@"Securities Trade Details")]
 public interface ISecuritiesTradeDetails8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecuritiesTradeDetails8 : IIsoComponent
     [IsoId("_S7pPzdp-Ed-ak6NoX_4Aeg_-546856590")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TradeIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecuritiesTradeDetails8 : IIsoComponent
     [IsoId("_S7yZsNp-Ed-ak6NoX_4Aeg_-546856477")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISecuritiesTradeDetails8 : IIsoComponent
     [IsoId("_S7yZsdp-Ed-ak6NoX_4Aeg_1640865534")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ISecuritiesTradeDetails8 : IIsoComponent
     [IsoId("_S7yZs9p-Ed-ak6NoX_4Aeg_-222296830")]
     [DisplayName("Place Of Clearing")]
     [IsoXmlTag("PlcOfClr")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier? PlaceOfClearing { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface ISecuritiesTradeDetails8 : IIsoComponent
     [IsoId("_S7yZuNp-Ed-ak6NoX_4Aeg_-545936031")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface ISecuritiesTradeDetails8 : IIsoComponent
     [IsoId("_S78KsNp-Ed-ak6NoX_4Aeg_-546856105")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReporting1Choice> Reporting { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface ISecuritiesTradeDetails8 : IIsoComponent
     [IsoId("_S78Ksdp-Ed-ak6NoX_4Aeg_-545936014")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition1Choice> TradeTransactionCondition { get; }
 
     /// <summary>

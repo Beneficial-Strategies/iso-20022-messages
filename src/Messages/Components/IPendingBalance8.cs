@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about pending balance and pending transactions.
 /// </summary>
 [IsoId("_pgBMvzi7Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Pending Balance")]
 public interface IPendingBalance8 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPendingBalance8 : IIsoComponent
     [IsoId("_pgBMyTi7Eeydid5dcNPKvg")]
     [DisplayName("Pending Transactions")]
     [IsoXmlTag("PdgTxs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementTypeAndIdentification26> PendingTransactions { get; }
 }

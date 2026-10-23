@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Safekeeping Place Type And Any BIC Identifier3.
 /// </summary>
 [IsoId("_Rmb7gRwREe6O0NdiBuX__w")]
+[IsoDisplayName(@"Safekeeping Place Type And Any BIC Identifier3")]
 public interface ISafekeepingPlaceTypeAndAnyBICIdentifier3 : IIsoComponent
 {
     /// <summary>

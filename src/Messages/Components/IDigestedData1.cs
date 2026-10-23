@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Digest computed on the identified data.
 /// </summary>
 [IsoId("_SwiSzgEcEeCQm6a_G2yO_w_-1031438550")]
+[IsoDisplayName(@"Digested Data")]
 public interface IDigestedData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDigestedData1 : IIsoComponent
     [IsoId("_SwsDwAEcEeCQm6a_G2yO_w_1578689395")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IDigestedData1 : IIsoComponent
     [IsoId("_SwsDwQEcEeCQm6a_G2yO_w_1418159419")]
     [DisplayName("Digest Algorithm")]
     [IsoXmlTag("DgstAlgo")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAlgorithmIdentification1> DigestAlgorithm { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IDigestedData1 : IIsoComponent
     [IsoId("_SwsDwwEcEeCQm6a_G2yO_w_1068869380")]
     [DisplayName("Digest")]
     [IsoXmlTag("Dgst")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Digest { get; }
 }

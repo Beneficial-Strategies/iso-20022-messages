@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the place of safekeeping expressed as a code and a BIC.
 /// </summary>
 [IsoId("_SfoCI9p-Ed-ak6NoX_4Aeg_1628228050")]
+[IsoDisplayName(@"Safekeeping Place As Code And Party Identification")]
 public interface ISafekeepingPlaceAsCodeAndPartyIdentification : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ISafekeepingPlaceAsCodeAndPartyIdentification : IIsoComponent
     [IsoId("_SfoCJdp-Ed-ak6NoX_4Aeg_-379437396")]
     [DisplayName("Narrative")]
     [IsoXmlTag("Nrrtv")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Narrative { get; }
 
     /// <summary>

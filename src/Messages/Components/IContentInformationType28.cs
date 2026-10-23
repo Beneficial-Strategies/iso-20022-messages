@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General cryptographic message syntax (CMS) containing encrypted data.
 /// </summary>
 [IsoId("_-3t5sS8pEeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Content Information Type")]
 public interface IContentInformationType28 : IIsoComponent
 {
     /// <summary>

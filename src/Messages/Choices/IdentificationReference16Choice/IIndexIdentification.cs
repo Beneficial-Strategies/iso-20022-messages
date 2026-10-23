@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference16Choice;
 /// <summary>
 /// Index Identification.
 /// </summary>
+[IsoDisplayName(@"Index Identification")]
 public interface IIndexIdentification : IIdentificationReference16Choice, IIsoChoiceVariant
 {
     /// <summary>

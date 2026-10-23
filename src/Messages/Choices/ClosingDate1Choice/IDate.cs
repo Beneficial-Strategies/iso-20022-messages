@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosingDate1Choice;
 /// Closing date is defined as a choice between a date or a date and time format.
 /// </summary>
 [IsoId("_j2-tkdopEeCWg-hsBVGrDA_997160684")]
+[IsoDisplayName(@"Date")]
 public interface IDate : IClosingDate1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

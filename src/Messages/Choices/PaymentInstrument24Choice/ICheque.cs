@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument24Choice;
 /// Indicates whether the payment is done via cheque.
 /// </summary>
 [IsoId("_Jmv4xZTBEemqYPWMBuVawg")]
+[IsoDisplayName(@"Cheque")]
 public interface ICheque : IPaymentInstrument24Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ICheque : IPaymentInstrument24Choice, IIsoChoiceVariant
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Chq")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

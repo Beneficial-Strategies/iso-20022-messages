@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MaturityRedemptionType3Choice;
 /// Maturity redemption type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_eFqj8eLxEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMaturityRedemptionType3Choice, IIsoChoiceVariant
 {
     /// <summary>

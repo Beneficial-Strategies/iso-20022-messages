@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an other c10 of type deliverable.
 /// </summary>
 [IsoId("_1-AdsXvyEeanCNPcMT7sSg")]
+[IsoDisplayName(@"Other C 10 Commodity Deliverable")]
 public interface IOtherC10CommodityDeliverable2 : IIsoComponent
 {
     /// <summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "ShrhldrsIdDsclsrRspn",
     "urn:iso:std:iso:20022:tech:xsd:seev.047.001.02"
 )]
+[Description(@"The ShareholdersIdentificationDisclosureResponse message is sent in response to a shareholder identification disclosure request message by any intermediaries to the recipient designated by the issuer (such as an issuer's agent) in the disclosure request message in order to provide the requested information on the identity of the shareholders and their accounts holdings serviced by the intermediary for the requested financial instrument.")]
+[IsoDisplayName(@"Shareholders Identification Disclosure Response V")]
 public interface IShareholdersIdentificationDisclosureResponseV02 : IOuterRecord
 {
     /// <summary>
@@ -40,6 +42,8 @@ public interface IShareholdersIdentificationDisclosureResponseV02 : IOuterRecord
     [IsoId("_9U3hkfEkEeqRfth943bvEA")]
     [DisplayName("Disclosure Response Identification")]
     [IsoXmlTag("DsclsrRspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DisclosureResponseIdentification { get; }
 
     /// <summary>
@@ -64,5 +68,6 @@ public interface IShareholdersIdentificationDisclosureResponseV02 : IOuterRecord
     [IsoId("_9U3hl_EkEeqRfth943bvEA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

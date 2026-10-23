@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed amounts associated with the total amount of transaction.
 /// </summary>
 [IsoId("_QaMvIDAqEeOqioR9srQH1g")]
+[IsoDisplayName(@"Detailed Amount")]
 public interface IDetailedAmount5 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IDetailedAmount5 : IIsoComponent
     [IsoId("_x29u8DAsEeOqioR9srQH1g")]
     [DisplayName("Fees")]
     [IsoXmlTag("Fees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount4> Fees { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IDetailedAmount5 : IIsoComponent
     [IsoId("_6tylsDAsEeOqioR9srQH1g")]
     [DisplayName("Rebate")]
     [IsoXmlTag("Rbt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount4> Rebate { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IDetailedAmount5 : IIsoComponent
     [IsoId("_A-JJcDAtEeOqioR9srQH1g")]
     [DisplayName("Value Added Tax")]
     [IsoXmlTag("ValAddedTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount4> ValueAddedTax { get; }
 }

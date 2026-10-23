@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// </summary>
 [IsoId("_2qmO4ESCEeStEe_B2dcrqg")]
 [IsoMessage("fxtr.034.001.01", "FXTradConfReq", "urn:iso:std:iso:20022:tech:xsd:fxtr.034.001.01")]
+[Description(@"Scope| The ForeignExchangeTradeConfirmationRequest message is sent from a market participant to a Central matching utility (CMU) to request a foreign exchange(spot/forward/swap) trade confirmation.||Usage|The confirmation request is sent by the market participants to the CMU after they receiving the capture reports.|Note that a confirmation request could be cancelled or amended.")]
+[IsoDisplayName(@"Foreign Exchange Trade Confirmation Request V")]
 public interface IForeignExchangeTradeConfirmationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -65,6 +67,7 @@ public interface IForeignExchangeTradeConfirmationRequestV01 : IOuterRecord
     [IsoId("_WDuD4KaZEeSR8qifggAitQ")]
     [DisplayName("Query Start Number")]
     [IsoXmlTag("QryStartNb")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText QueryStartNumber { get; }
 
     /// <summary>
@@ -81,5 +84,6 @@ public interface IForeignExchangeTradeConfirmationRequestV01 : IOuterRecord
     [IsoId("_upa4YKHlEeS69KkQis5bYg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

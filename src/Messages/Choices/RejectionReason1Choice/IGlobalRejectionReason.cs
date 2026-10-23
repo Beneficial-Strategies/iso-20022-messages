@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason1Choice;
 /// </summary>
 [IsoId("_RJ8oodp-Ed-ak6NoX_4Aeg_1042217735")]
 [IsoXmlTag("GblRjctnRsn")]
+[IsoDisplayName(@"Global Rejection Reason")]
 public interface IGlobalRejectionReason : IRejectionReason1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,7 @@ public interface IGlobalRejectionReason : IRejectionReason1Choice, IIsoChoiceVar
     [IsoId("_RJ8opNp-Ed-ak6NoX_4Aeg_987008657")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Description { get; }
 }

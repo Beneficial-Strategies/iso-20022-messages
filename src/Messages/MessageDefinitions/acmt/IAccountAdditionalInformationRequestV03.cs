@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_bfzgZ22PEei3KuUgpx7Xcw")]
 [IsoMessage("acmt.012.001.03", "AcctAddtlInfReq", "urn:iso:std:iso:20022:tech:xsd:acmt.012.001.03")]
+[Description(@"The AccountAdditionalInformationRequest message is sent from a financial institution to an organisation as part of maintenance process. This message is sent in response to a maintenance request message from the organisation, if the business content is valid, but additional information is required.")]
+[IsoDisplayName(@"Account Additional Information Request V")]
 public interface IAccountAdditionalInformationRequestV03 : IOuterRecord
 {
     /// <summary>
@@ -52,6 +54,7 @@ public interface IAccountAdditionalInformationRequestV03 : IOuterRecord
     [IsoId("_bfzgcW2PEei3KuUgpx7Xcw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountForAction1> AccountIdentification { get; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public interface IAccountAdditionalInformationRequestV03 : IOuterRecord
     [IsoId("_bfzgc22PEei3KuUgpx7Xcw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature3> DigitalSignature { get; }
 
     /// <summary>
@@ -68,5 +72,6 @@ public interface IAccountAdditionalInformationRequestV03 : IOuterRecord
     [IsoId("_bfzgdW2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

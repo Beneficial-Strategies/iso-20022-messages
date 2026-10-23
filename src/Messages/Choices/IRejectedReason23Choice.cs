@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the reason why the instruction or cancellation request has a rejected status.
 /// </summary>
 [IsoId("_kov6b5wsEeazcsnODTksnQ")]
+[IsoDisplayName(@"Rejected Reason 23 Choice")]
 public interface IRejectedReason23Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the request of certificate management.
 /// </summary>
 [IsoId("_gt6twQ0UEeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Certificate Management Request")]
 public interface ICertificateManagementRequest2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ICertificateManagementRequest2 : IIsoComponent
     [IsoId("_g6Ordw0UEeqUVL7sB4m7NA")]
     [DisplayName("Security Domain")]
     [IsoXmlTag("SctyDomn")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SecurityDomain { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface ICertificateManagementRequest2 : IIsoComponent
     [IsoId("_g6OreQ0UEeqUVL7sB4m7NA")]
     [DisplayName("Binary Certification Request")]
     [IsoXmlTag("BinryCertfctnReq")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text? BinaryCertificationRequest { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ICertificateManagementRequest2 : IIsoComponent
     [IsoId("_g6OrfQ0UEeqUVL7sB4m7NA")]
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
+    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
     Max10KBinary? ClientCertificate { get; }
 
     /// <summary>

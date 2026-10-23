@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to request a Stored Value service (Prepaid card or account).
 /// </summary>
 [IsoId("_zsqYsS84Eeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Stored Value Request")]
 public interface IStoredValueRequest4 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IStoredValueRequest4 : IIsoComponent
     [IsoId("_z5FrIS84Eeu125Ip9zFcsQ")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStoredValueData4> Data { get; }
 }

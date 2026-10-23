@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat47Choice;
 /// Value of the rate not specified.
 /// </summary>
 [IsoId("_cteoe5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Not Specified Rate")]
 public interface INotSpecifiedRate : IRateAndAmountFormat47Choice, IIsoChoiceVariant
 {
     /// <summary>

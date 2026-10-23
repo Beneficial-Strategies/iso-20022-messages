@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investment restrictions linked to the trading of an investment fund, or an alternative/hedge fund.
 /// </summary>
 [IsoId("_Sp4ScV88Eeicg40_9gK9vQ")]
+[IsoDisplayName(@"Investment Restrictions")]
 public interface IInvestmentRestrictions3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IInvestmentRestrictions3 : IIsoComponent
     [IsoId("_S5y9xV88Eeicg40_9gK9vQ")]
     [DisplayName("Minimum Initial Subscription Units")]
     [IsoXmlTag("MinInitlSbcptUnits")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MinimumInitialSubscriptionUnits { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IInvestmentRestrictions3 : IIsoComponent
     [IsoId("_S5y9yV88Eeicg40_9gK9vQ")]
     [DisplayName("Minimum Subsequent Subscription Units")]
     [IsoXmlTag("MinSbsqntSbcptUnits")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MinimumSubsequentSubscriptionUnits { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IInvestmentRestrictions3 : IIsoComponent
     [IsoId("_S5y9zV88Eeicg40_9gK9vQ")]
     [DisplayName("Maximum Redemption Units")]
     [IsoXmlTag("MaxRedUnits")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? MaximumRedemptionUnits { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IInvestmentRestrictions3 : IIsoComponent
     [IsoId("_0VZA0N6eEei9RJrL5H7TLQ")]
     [DisplayName("Minimum Redemption Percentage")]
     [IsoXmlTag("MinRedPctg")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? MinimumRedemptionPercentage { get; }
 
     /// <summary>
@@ -73,6 +78,8 @@ public interface IInvestmentRestrictions3 : IIsoComponent
     [IsoId("_S5y9z188Eeicg40_9gK9vQ")]
     [DisplayName("Other Redemption Restrictions")]
     [IsoXmlTag("OthrRedRstrctns")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? OtherRedemptionRestrictions { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface IInvestmentRestrictions3 : IIsoComponent
     [IsoId("_8WiXUN6fEei9RJrL5H7TLQ")]
     [DisplayName("Minimum Switch Subscription Units")]
     [IsoXmlTag("MinSwtchSbcptUnits")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? MinimumSwitchSubscriptionUnits { get; }
 
     /// <summary>
@@ -105,6 +113,7 @@ public interface IInvestmentRestrictions3 : IIsoComponent
     [IsoId("_CNJlYN6gEei9RJrL5H7TLQ")]
     [DisplayName("Maximum Switch Redemption Units")]
     [IsoXmlTag("MaxSwtchRedUnits")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? MaximumSwitchRedemptionUnits { get; }
 
     /// <summary>
@@ -113,6 +122,8 @@ public interface IInvestmentRestrictions3 : IIsoComponent
     [IsoId("_1coDMF89Eeicg40_9gK9vQ")]
     [DisplayName("Other Switch Restrictions")]
     [IsoXmlTag("OthrSwtchRstrctns")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? OtherSwitchRestrictions { get; }
 
     /// <summary>
@@ -129,6 +140,7 @@ public interface IInvestmentRestrictions3 : IIsoComponent
     [IsoId("_S5y90188Eeicg40_9gK9vQ")]
     [DisplayName("Minimum Holding Units")]
     [IsoXmlTag("MinHldgUnits")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? MinimumHoldingUnits { get; }
 
     /// <summary>
@@ -137,6 +149,8 @@ public interface IInvestmentRestrictions3 : IIsoComponent
     [IsoId("_S5y91V88Eeicg40_9gK9vQ")]
     [DisplayName("Minimum Holding Period")]
     [IsoXmlTag("MinHldgPrd")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? MinimumHoldingPeriod { get; }
 
     /// <summary>
@@ -153,5 +167,6 @@ public interface IInvestmentRestrictions3 : IIsoComponent
     [IsoId("_Val68WAKEeiNMJ262H2pWg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

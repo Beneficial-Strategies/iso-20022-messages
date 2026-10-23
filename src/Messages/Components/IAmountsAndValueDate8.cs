@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amounts And Value Date8.
 /// </summary>
 [IsoId("_j4qSSUj3Ee-KhcStGV4xTg")]
+[IsoDisplayName(@"Amounts And Value Date8")]
 public interface IAmountsAndValueDate8 : IIsoComponent
 {
     /// <summary>

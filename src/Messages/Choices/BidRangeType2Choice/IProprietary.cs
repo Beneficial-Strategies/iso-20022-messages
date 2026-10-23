@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BidRangeType2Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IBidRangeType2Choice, IIsoChoiceVariant
 {
     /// <summary>

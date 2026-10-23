@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters of the RSASSA-PSS digital signature algorithm (RSA signature algorithm with appendix: Probabilistic Signature Scheme).
 /// </summary>
 [IsoId("_AU-_wdtbEee9e6xduATmQg")]
+[IsoDisplayName(@"Parameter")]
 public interface IParameter11 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IParameter11 : IIsoComponent
     [IsoId("_AeEDRdtbEee9e6xduATmQg")]
     [DisplayName("Salt Length")]
     [IsoXmlTag("SaltLngth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number SaltLength { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IParameter11 : IIsoComponent
     [IsoId("_AeEDR9tbEee9e6xduATmQg")]
     [DisplayName("Trailer Field")]
     [IsoXmlTag("TrlrFld")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TrailerField { get; }
 }

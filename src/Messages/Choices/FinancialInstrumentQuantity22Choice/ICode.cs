@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity22Cho
 /// Quantity expressed as a code.
 /// </summary>
 [IsoId("_N-fhYwU-EeGZxNLgzisRtw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IFinancialInstrumentQuantity22Choice, IIsoChoiceVariant
 {
     /// <summary>

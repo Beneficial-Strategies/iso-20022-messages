@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Card management initiation message record.
 /// </summary>
 [IsoId("_lIFr8FZYEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Card Management Initiation")]
 public interface ICardManagementInitiation : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ICardManagementInitiation : IRecordMessage1Choice, IIsoChoiceVa
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("CardMgmtInitn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

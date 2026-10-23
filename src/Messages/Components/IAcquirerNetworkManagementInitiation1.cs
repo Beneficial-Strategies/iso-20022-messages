@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the network management.
 /// </summary>
 [IsoId("_QugKoHvDEeSKFIcWw3l4Yw")]
+[IsoDisplayName(@"Acquirer Network Management Initiation")]
 public interface IAcquirerNetworkManagementInitiation1 : IIsoComponent
 {
     /// <summary>

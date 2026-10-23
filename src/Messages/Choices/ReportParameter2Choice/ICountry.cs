@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportParameter2Choice;
 /// Country for which the estimated cash flow is being reported.
 /// </summary>
 [IsoId("_U1-1gdp-Ed-ak6NoX_4Aeg_-922147068")]
+[IsoDisplayName(@"Country")]
 public interface ICountry : IReportParameter2Choice, IIsoChoiceVariant
 {
     /// <summary>

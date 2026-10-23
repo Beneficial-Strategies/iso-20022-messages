@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesBalanceType9FormatChoi
 /// Standard code to specify the type of securities balance.
 /// </summary>
 [IsoId("_Ro8Rwdp-Ed-ak6NoX_4Aeg_-1155770653")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISecuritiesBalanceType9FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

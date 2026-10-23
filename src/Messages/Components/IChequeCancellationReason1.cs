@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the reason of the cheque presentment cancellation request.
 /// </summary>
 [IsoId("_kwwc97tvEeq_cfXrH83Rcw")]
+[IsoDisplayName(@"Cheque Cancellation Reason")]
 public interface IChequeCancellationReason1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IChequeCancellationReason1 : IIsoComponent
     [IsoId("_kwwc-rtvEeq_cfXrH83Rcw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalInformation { get; }
 }

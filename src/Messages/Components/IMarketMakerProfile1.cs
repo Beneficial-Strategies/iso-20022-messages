@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Market maker profile.
 /// </summary>
 [IsoId("_Mtd3oCDWEeWCLu74WLgP4w")]
+[IsoDisplayName(@"Market Maker Profile")]
 public interface IMarketMakerProfile1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IMarketMakerProfile1 : IIsoComponent
     [IsoId("_YTJhUCDWEeWCLu74WLgP4w")]
     [DisplayName("Compliance")]
     [IsoXmlTag("Cmplc")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Compliance { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IMarketMakerProfile1 : IIsoComponent
     [IsoId("_bAeqQCDWEeWCLu74WLgP4w")]
     [DisplayName("Maximum Spread")]
     [IsoXmlTag("MaxSprd")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? MaximumSpread { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IMarketMakerProfile1 : IIsoComponent
     [IsoId("_cvxdoCDWEeWCLu74WLgP4w")]
     [DisplayName("Discount")]
     [IsoXmlTag("Dscnt")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Discount { get; }
 }

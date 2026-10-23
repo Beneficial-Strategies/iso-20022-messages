@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DistributionType1FormatChoice;
 /// Standard code to specify the distribution type.
 /// </summary>
 [IsoId("_RmZ7Jtp-Ed-ak6NoX_4Aeg_-1257954049")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDistributionType1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

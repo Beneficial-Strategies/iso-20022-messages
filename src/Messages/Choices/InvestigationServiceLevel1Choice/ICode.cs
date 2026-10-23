@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationServiceLevel1Choice
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IInvestigationServiceLevel1Choice, IIsoChoiceVariant
 {
     /// <summary>

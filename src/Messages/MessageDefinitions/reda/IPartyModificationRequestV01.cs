@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_xJQSoZeREeen_cyMrluY4w")]
 [IsoMessage("reda.022.001.01", "PtyModReq", "urn:iso:std:iso:20022:tech:xsd:reda.022.001.01")]
+[Description(@"Scope:|The PartyModificationRequest message is sent by the instructing party to the executing party to request for an update of the party reference data of a party defined in the executing system.||Usage:|It aims at instructing the update of an existing party by amending its existing details or by providing additional details.|Processing and confirmation of the party modification request message are provided via a party status advice.")]
+[IsoDisplayName(@"Party Modification Request V")]
 public interface IPartyModificationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +38,7 @@ public interface IPartyModificationRequestV01 : IOuterRecord
     [IsoId("_xJQSq5eREeen_cyMrluY4w")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyModification2> Modification { get; }
 
     /// <summary>
@@ -44,5 +47,6 @@ public interface IPartyModificationRequestV01 : IOuterRecord
     [IsoId("_xJQSrZeREeen_cyMrluY4w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

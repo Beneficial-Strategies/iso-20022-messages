@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the calculation and the resulting margin and independent amount needed to cover the risk exposure of one party versus another.
 /// </summary>
 [IsoId("_xPT9kSqQEeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Margin Call")]
 public interface IMarginCall3 : IIsoComponent
 {
     /// <summary>

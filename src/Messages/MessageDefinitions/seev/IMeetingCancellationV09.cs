@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_nIpWYTQ7Ee22Z83HpR5E8w")]
 [IsoMessage("seev.002.001.09", "MtgCxl", "urn:iso:std:iso:20022:tech:xsd:seev.002.001.09")]
+[Description(@"Scope|The MeetingCancellation message is sent by the party that sent the MeetingNotification message to the original receiver. It is sent to cancel a previously announced meeting or to advise the withdrawal of a meeting.|Usage|The MeetingCancellation message is used to advise that the meeting has been cancelled by the account servicer or withdrawn by the issuer. |This message definition is intended for use with the Business Application Header (BAH).")]
+[IsoDisplayName(@"Meeting Cancellation V")]
 public interface IMeetingCancellationV09 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,9 @@ public interface IMeetingCancellationV09 : IOuterRecord
     [IsoId("_nIpWazQ7Ee22Z83HpR5E8w")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition17> Security { get; }
 
     /// <summary>
@@ -48,5 +53,6 @@ public interface IMeetingCancellationV09 : IOuterRecord
     [IsoId("_nIpWbzQ7Ee22Z83HpR5E8w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

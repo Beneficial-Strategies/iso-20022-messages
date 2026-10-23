@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
     "FXTradConfStsAdvcAck",
     "urn:iso:std:iso:20022:tech:xsd:fxtr.038.001.02"
 )]
+[IsoDisplayName(@"Foreign Exchange Trade Confirmation Status Advice Acknowledgement V02")]
 public interface IForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV02 : IOuterRecord
 {
     /// <summary>
@@ -85,5 +86,6 @@ public interface IForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV02
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Standing Order Query5.
 /// </summary>
 [IsoId("_0mLzETEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Standing Order Query5")]
 public interface IStandingOrderQuery5 : IIsoComponent
 {
     /// <summary>

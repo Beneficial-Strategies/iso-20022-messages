@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgTxRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.016.001.03"
 )]
+[Description(@"The FinancialInstrumentReportingTransactionReport message is sent by the reporting agent to the competent authority to report on the securities transactions or by the competent authority to another competent authority when the transaction needs to be exchanged between the competent authorities.")]
+[IsoDisplayName(@"Financial Instrument Reporting Transaction Report V")]
 public interface IFinancialInstrumentReportingTransactionReportV03 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface IFinancialInstrumentReportingTransactionReportV03 : IOuterRecor
     [IsoId("_YfqlNQxPEe6IZ4NJLf_INA")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportingTransactionType3Choice> Transaction { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface IFinancialInstrumentReportingTransactionReportV03 : IOuterRecor
     [IsoId("_YfrMQQxPEe6IZ4NJLf_INA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

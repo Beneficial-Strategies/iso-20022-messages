@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the input response message.
 /// </summary>
 [IsoId("_EmWr8c-iEfCjWv7IQMnzMg")]
+[IsoDisplayName(@"Device Input Response7")]
 public interface IDeviceInputResponse7 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the settlement condition modification request.
 /// </summary>
 [IsoId("_uQtNwQ4EEeKN_Y-2Awiamw")]
+[IsoDisplayName(@"Request Details")]
 public interface IRequestDetails11 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IRequestDetails11 : IIsoComponent
     [IsoId("_unNCVQ4EEeKN_Y-2Awiamw")]
     [DisplayName("Retain Indicator")]
     [IsoXmlTag("RtnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RetainIndicator { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IRequestDetails11 : IIsoComponent
     [IsoId("_unNCcw4EEeKN_Y-2Awiamw")]
     [DisplayName("Other Processing")]
     [IsoXmlTag("OthrPrcg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification20> OtherProcessing { get; }
 
     /// <summary>
@@ -105,5 +108,6 @@ public interface IRequestDetails11 : IIsoComponent
     [IsoId("_unNCrw4EEeKN_Y-2Awiamw")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages27> Linkages { get; }
 }

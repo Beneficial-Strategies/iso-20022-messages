@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount, currency, exchange rate and quotation date, sign and label.
 /// </summary>
 [IsoId("_zRsDMFKPEeeFcfYfFkVztg")]
+[IsoDisplayName(@"Fee Amount")]
 public interface IFeeAmount2 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IFeeAmount2 : IIsoComponent
     [IsoId("_zeCdJVKPEeeFcfYfFkVztg")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ExchangeRate { get; }
 
     /// <summary>
@@ -45,6 +47,7 @@ public interface IFeeAmount2 : IIsoComponent
     [IsoId("_zeCdJ1KPEeeFcfYfFkVztg")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? QuotationDate { get; }
 
     /// <summary>
@@ -55,5 +58,6 @@ public interface IFeeAmount2 : IIsoComponent
     [IsoId("_9lf1UVKPEeeFcfYfFkVztg")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? Sign { get; }
 }

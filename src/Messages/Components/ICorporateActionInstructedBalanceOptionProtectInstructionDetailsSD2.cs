@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action instructed balance details at option protect level.
 /// </summary>
 [IsoId("_KY-t8b-0Eeeb2ZBoAlSG1Q")]
+[IsoDisplayName(@"Corporate Action Instructed Balance Option Protect Instruction Details SD")]
 public interface ICorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionInstructedBalanceOptionProtectInstructionDetail
     [IsoId("_KoTjYb-0Eeeb2ZBoAlSG1Q")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICorporateActionInstructedBalanceOptionProtectInstructionDetail
     [IsoId("_KoTjY7-0Eeeb2ZBoAlSG1Q")]
     [DisplayName("Protect Identification")]
     [IsoXmlTag("PrtctId")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text ProtectIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ICorporateActionInstructedBalanceOptionProtectInstructionDetail
     [IsoId("_5vrDseZSEeewObBhnieI_A")]
     [DisplayName("Protect Safekeeping Account")]
     [IsoXmlTag("PrtctSfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINMax35Text? ProtectSafekeepingAccount { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface ICorporateActionInstructedBalanceOptionProtectInstructionDetail
     [IsoId("_KoTjZb-0Eeeb2ZBoAlSG1Q")]
     [DisplayName("Protect Sequence Number")]
     [IsoXmlTag("PrtctSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? ProtectSequenceNumber { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface ICorporateActionInstructedBalanceOptionProtectInstructionDetail
     [IsoId("_KoTjb7-0Eeeb2ZBoAlSG1Q")]
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ProtectDate { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface ICorporateActionInstructedBalanceOptionProtectInstructionDetail
     [IsoId("_KoTjcb-0Eeeb2ZBoAlSG1Q")]
     [DisplayName("Cover Protect Date")]
     [IsoXmlTag("CoverPrtctDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CoverProtectDate { get; }
 
     /// <summary>
@@ -121,6 +131,7 @@ public interface ICorporateActionInstructedBalanceOptionProtectInstructionDetail
     [IsoId("_KoTjf7-0Eeeb2ZBoAlSG1Q")]
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? CustomerReferenceIdentification { get; }
 
     /// <summary>
@@ -129,5 +140,7 @@ public interface ICorporateActionInstructedBalanceOptionProtectInstructionDetail
     [IsoId("_252Z8b_uEeeb2ZBoAlSG1Q")]
     [DisplayName("Instruction Comments")]
     [IsoXmlTag("InstrCmnts")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? InstructionComments { get; }
 }

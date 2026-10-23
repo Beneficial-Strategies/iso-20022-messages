@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Details176.
 /// </summary>
 [IsoId("_JKlFYYopEe-efPejSUAtLw")]
+[IsoDisplayName(@"Transaction Details176")]
 public interface ITransactionDetails176 : IIsoComponent
 {
     /// <summary>

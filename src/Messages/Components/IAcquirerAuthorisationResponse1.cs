@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the response of an authorisation.
 /// </summary>
 [IsoId("__-xbkHuOEeSVeNXcmBQ4hQ")]
+[IsoDisplayName(@"Acquirer Authorisation Response")]
 public interface IAcquirerAuthorisationResponse1 : IIsoComponent
 {
     /// <summary>

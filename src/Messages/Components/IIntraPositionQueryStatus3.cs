@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the intra-position movement status query criteria including the status period.
 /// </summary>
 [IsoId("_dE2QUWdHEemVjsmmE4lqKA")]
+[IsoDisplayName(@"Intra Position Query Status3")]
 public interface IIntraPositionQueryStatus3 : IIsoComponent
 {
     /// <summary>

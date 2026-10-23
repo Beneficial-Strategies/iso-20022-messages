@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the failure of the settlement of a movement.
 /// </summary>
 [IsoId("_Rjbfptp-Ed-ak6NoX_4Aeg_-659137401")]
+[IsoDisplayName(@"Corporate Action Movement Failed Status")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ICorporateActionMovementFailedStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ICorporateActionMovementFailedStatus1 : IIsoComponent
     [IsoId("_Rjbfp9p-Ed-ak6NoX_4Aeg_-123497061")]
     [DisplayName("Agent Account Identification")]
     [IsoXmlTag("AgtAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AgentAccountIdentification { get; }
 
     /// <summary>
@@ -25,6 +29,8 @@ public interface ICorporateActionMovementFailedStatus1 : IIsoComponent
     [IsoId("_RjbfqNp-Ed-ak6NoX_4Aeg_-158591004")]
     [DisplayName("Client Account Identification")]
     [IsoXmlTag("ClntAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientAccountIdentification { get; }
 
     /// <summary>
@@ -41,5 +47,6 @@ public interface ICorporateActionMovementFailedStatus1 : IIsoComponent
     [IsoId("_Rjbfqtp-Ed-ak6NoX_4Aeg_-1713973917")]
     [DisplayName("Resource Details")]
     [IsoXmlTag("RsrcDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFailedMovement1> ResourceDetails { get; }
 }

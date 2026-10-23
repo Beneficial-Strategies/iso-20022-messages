@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action event.
 /// </summary>
 [IsoId("_Hzc_ofIIEfCS-OXqezZQmw")]
+[IsoDisplayName(@"Corporate Action94")]
 public interface ICorporateAction94 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ICorporateAction94 : IIsoComponent
     [IsoId("_H738A_IIEfCS-OXqezZQmw")]
     [DisplayName("Coupon Number")]
     [IsoXmlTag("CpnNb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIdentificationFormat3Choice> CouponNumber { get; }
 
     /// <summary>
@@ -161,6 +163,7 @@ public interface ICorporateAction94 : IIsoComponent
     [IsoId("_H738RfIIEfCS-OXqezZQmw")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOfferTypeFormat18Choice> OfferType { get; }
 
     /// <summary>
@@ -177,6 +180,7 @@ public interface ICorporateAction94 : IIsoComponent
     [IsoId("_H738VfIIEfCS-OXqezZQmw")]
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventStageFormat13Choice> EventStage { get; }
 
     /// <summary>
@@ -185,6 +189,7 @@ public interface ICorporateAction94 : IIsoComponent
     [IsoId("_H738XfIIEfCS-OXqezZQmw")]
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBusinessProcessFormat17Choice> AdditionalBusinessProcessIndicator { get; }
 
     /// <summary>
@@ -193,6 +198,7 @@ public interface ICorporateAction94 : IIsoComponent
     [IsoId("_H738ZfIIEfCS-OXqezZQmw")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionChangeTypeFormat5Choice> ChangeType { get; }
 
     /// <summary>
@@ -265,6 +271,7 @@ public interface ICorporateAction94 : IIsoComponent
     [IsoId("_H74jDfIIEfCS-OXqezZQmw")]
     [DisplayName("Tax On Non Distributed Proceeds Indicator")]
     [IsoXmlTag("TaxOnNonDstrbtdPrcdsInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification30> TaxOnNonDistributedProceedsIndicator { get; }
 
     /// <summary>

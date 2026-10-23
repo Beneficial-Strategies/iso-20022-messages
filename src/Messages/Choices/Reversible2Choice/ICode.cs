@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversible2Choice;
 /// Closing of the securities lending contract is identified using a code.
 /// </summary>
 [IsoId("_PUFSA5EkEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IReversible2Choice, IIsoChoiceVariant
 {
     /// <summary>

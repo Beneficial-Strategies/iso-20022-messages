@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Notification Cancellation Processing Status2.
 /// </summary>
 [IsoId("_7LMqYW2aEe6CnszSwbRwFg")]
+[IsoDisplayName(@"Notification Cancellation Processing Status2")]
 public interface INotificationCancellationProcessingStatus2 : IIsoComponent
 {
     /// <summary>

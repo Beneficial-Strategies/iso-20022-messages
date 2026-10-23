@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.WarrantStyle3Choice;
 /// Warrant style expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_q6-rgeLbEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IWarrantStyle3Choice, IIsoChoiceVariant
 {
     /// <summary>

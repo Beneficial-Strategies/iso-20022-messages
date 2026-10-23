@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTradeTransactionType1C
 /// Type of commercial contract.
 /// </summary>
 [IsoId("_93QOxHltEeG7BsjMvd1mEw_-1518978028")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IUnderlyingTradeTransactionType1Choice, IIsoChoiceVariant
 {
     /// <summary>

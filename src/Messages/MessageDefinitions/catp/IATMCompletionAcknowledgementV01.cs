@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_vVWZgIqoEeS4a4abTJTSSw")]
 [IsoMessage("catp.009.001.01", "ATMCmpltnAck", "urn:iso:std:iso:20022:tech:xsd:catp.009.001.01")]
+[Description(@"The ATMCompletionAcknowledgement message is sent by an acquirer or its agent to an ATM to acknowledge the receipt of an ATMCompletionAdvice message.")]
+[IsoDisplayName(@"ATM Completion Acknowledgement V")]
 public interface IATMCompletionAcknowledgementV01 : IOuterRecord
 {
     /// <summary>

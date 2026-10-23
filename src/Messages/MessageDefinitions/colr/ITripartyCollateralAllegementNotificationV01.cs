@@ -27,6 +27,8 @@ namespace BeneficialStrategies.Iso20022.colr;
     "TrptyCollAllgmtNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:colr.021.001.01"
 )]
+[Description(@"Scope:|This message is sent by a triparty agent after the receipt of a collateral transaction or instruction from the collateral giver or taker to advise  that a counterparty has alleged an instruction or a transaction against the account owner's account at the TPA and that the TPA could not find the corresponding transaction or instruction of the account owner.|The allegement is used for initiation, modification and termination.||In this message, the Sender is the triparty agent and the Receiver is either the collateral taker or the collateral giver or their account servicer.||Usage:|An account servicer sends a SecuritiesSettlementTransactionAllegementNotification to an account owner to advise the account owner that a counterparty has alleged an instruction against the account owner's account at the account servicer and that the account servicer could not find the corresponding instruction of the account owner.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.")]
+[IsoDisplayName(@"Triparty Collateral Allegement Notification V")]
 public interface ITripartyCollateralAllegementNotificationV01 : IOuterRecord
 {
     /// <summary>
@@ -83,6 +85,7 @@ public interface ITripartyCollateralAllegementNotificationV01 : IOuterRecord
     [IsoId("_xMpNbys7EeySlt9bF77XfA")]
     [DisplayName("Securities Movement")]
     [IsoXmlTag("SctiesMvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesMovement7> SecuritiesMovement { get; }
 
     /// <summary>
@@ -91,6 +94,7 @@ public interface ITripartyCollateralAllegementNotificationV01 : IOuterRecord
     [IsoId("_xMpNcSs7EeySlt9bF77XfA")]
     [DisplayName("Cash Movement")]
     [IsoXmlTag("CshMvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashMovement5> CashMovement { get; }
 
     /// <summary>
@@ -99,5 +103,6 @@ public interface ITripartyCollateralAllegementNotificationV01 : IOuterRecord
     [IsoId("_xMpNcys7EeySlt9bF77XfA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

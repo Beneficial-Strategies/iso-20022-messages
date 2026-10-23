@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Structured information supplied to fully identify the documents referred to in the remittance information.
 /// </summary>
 [IsoId("_T3sBSNp-Ed-ak6NoX_4Aeg_402190265")]
+[IsoDisplayName(@"Referred Document Information")]
 public interface IReferredDocumentInformation1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IReferredDocumentInformation1 : IIsoComponent
     [IsoId("_T31yQNp-Ed-ak6NoX_4Aeg_402190318")]
     [DisplayName("Referred Document Number")]
     [IsoXmlTag("RfrdDocNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReferredDocumentNumber { get; }
 }

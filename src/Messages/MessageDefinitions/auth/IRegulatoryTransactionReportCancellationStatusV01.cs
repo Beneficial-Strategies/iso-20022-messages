@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "RgltryTxRptCxlStsV01",
     "urn:iso:std:iso:20022:tech:xsd:auth.011.001.01"
 )]
+[Description(@"Scope|A regulator or an intermediary sends the RegulatoryTransactionReportCancellationStatus to a reporting institution to provide the status of a RegulatoryTransactionReportCancellationRequest previously sent by the reporting institution.|Usage|The message definition may be used to provide a status for the entire report or to provide a status at the level of individual transactions within the report. One of the following statuses can be reported:|- Completed, or,|- Pending, or,|- Rejected.|If the status is rejected, then reason for the rejection must be specified.")]
+[IsoDisplayName(@"Regulatory Transaction Report Cancellation Status V")]
 public interface IRegulatoryTransactionReportCancellationStatusV01 : IOuterRecord
 {
     /// <summary>
@@ -55,5 +57,6 @@ public interface IRegulatoryTransactionReportCancellationStatusV01 : IOuterRecor
     [IsoId("_gJrQBcIFEeGllrOKQRUTYA_-1483406141")]
     [DisplayName("Individual Transaction Cancellation Status")]
     [IsoXmlTag("IndvTxCxlSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionStatusAndReason2> IndividualTransactionCancellationStatus { get; }
 }

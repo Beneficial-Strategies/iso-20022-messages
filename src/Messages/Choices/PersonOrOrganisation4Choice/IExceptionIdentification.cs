@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation4Choice;
 /// <summary>
 /// Exception Identification.
 /// </summary>
+[IsoDisplayName(@"Exception Identification")]
 public interface IExceptionIdentification : IPersonOrOrganisation4Choice, IIsoChoiceVariant
 {
     /// <summary>

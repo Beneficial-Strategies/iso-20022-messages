@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a pension policy.
 /// </summary>
 [IsoId("_BNqcEFkOEeiaQoK2-_0KTA")]
+[IsoDisplayName(@"Pension Policy")]
 public interface IPensionPolicy1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPensionPolicy1 : IIsoComponent
     [IsoId("_GWv1wFkOEeiaQoK2-_0KTA")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identifier { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPensionPolicy1 : IIsoComponent
     [IsoId("_KywuEFkOEeiaQoK2-_0KTA")]
     [DisplayName("Sub Identifier")]
     [IsoXmlTag("SubIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubIdentifier { get; }
 
     /// <summary>

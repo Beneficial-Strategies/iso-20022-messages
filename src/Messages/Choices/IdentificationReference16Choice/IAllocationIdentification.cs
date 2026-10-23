@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference16Choice;
 /// <summary>
 /// Allocation Identification.
 /// </summary>
+[IsoDisplayName(@"Allocation Identification")]
 public interface IAllocationIdentification : IIdentificationReference16Choice, IIsoChoiceVariant
 {
     /// <summary>

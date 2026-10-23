@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of format for the settlement transaction conditions.</summary>
 [IsoId("_mjnCUfHVEfChCaiL9q1LKg")]
+[IsoDisplayName(@"Settlement Transaction Condition 46 Choice")]
 public interface ISettlementTransactionCondition46Choice : IIsoChoice { }

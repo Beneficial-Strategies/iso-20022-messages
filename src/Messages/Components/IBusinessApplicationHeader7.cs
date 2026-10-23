@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Can be used when replying to a query; can also be used when canceling or amending.
 /// </summary>
 [IsoId("_VujxkfmsEeuM-bZFEQa_yw")]
+[IsoDisplayName(@"Business Application Header")]
 public interface IBusinessApplicationHeader7 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,8 @@ public interface IBusinessApplicationHeader7 : IIsoComponent
     [IsoId("_V2dJV_msEeuM-bZFEQa_yw")]
     [DisplayName("Business Message Identifier")]
     [IsoXmlTag("BizMsgIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text BusinessMessageIdentifier { get; }
 
     /// <summary>
@@ -52,6 +55,8 @@ public interface IBusinessApplicationHeader7 : IIsoComponent
     [IsoId("_V2dJWfmsEeuM-bZFEQa_yw")]
     [DisplayName("Message Definition Identifier")]
     [IsoXmlTag("MsgDefIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageDefinitionIdentifier { get; }
 
     /// <summary>
@@ -63,6 +68,8 @@ public interface IBusinessApplicationHeader7 : IIsoComponent
     [IsoId("_V2dJW_msEeuM-bZFEQa_yw")]
     [DisplayName("Business Service")]
     [IsoXmlTag("BizSvc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BusinessService { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IBusinessApplicationHeader7 : IIsoComponent
     [IsoId("_V2dJXfmsEeuM-bZFEQa_yw")]
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDate { get; }
 
     /// <summary>
@@ -90,6 +98,7 @@ public interface IBusinessApplicationHeader7 : IIsoComponent
     [IsoId("_oTE1ofmsEeuM-bZFEQa_yw")]
     [DisplayName("Business Processing Date")]
     [IsoXmlTag("BizPrcgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? BusinessProcessingDate { get; }
 
     /// <summary>
@@ -110,6 +119,7 @@ public interface IBusinessApplicationHeader7 : IIsoComponent
     [IsoId("_V2dJYfmsEeuM-bZFEQa_yw")]
     [DisplayName("Possible Duplicate")]
     [IsoXmlTag("PssblDplct")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PossibleDuplicate { get; }
 
     /// <summary>

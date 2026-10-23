@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// </summary>
 [IsoId("_TsQpkTZ8EeOP_KvUKe29ng")]
 [IsoMessage("catm.003.001.03", "AccptrCfgtnUpd", "urn:iso:std:iso:20022:tech:xsd:catm.003.001.03")]
+[Description(@"Update of the acceptor configuration to be dowloaded by the terminal management system.")]
+[IsoDisplayName(@"Acceptor Configuration Update V")]
 public interface IAcceptorConfigurationUpdateV03 : IOuterRecord
 {
     /// <summary>

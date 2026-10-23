@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action instructed balance details at option level.
 /// </summary>
 [IsoId("_tBdBcTDwEey2N-DB7H7A5A")]
+[IsoDisplayName(@"Corporate Action Instructed Balance Option Instruction SD")]
 public interface ICorporateActionInstructedBalanceOptionInstructionSD4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionInstructedBalanceOptionInstructionSD4 : IIsoCom
     [IsoId("_tXzr8TDwEey2N-DB7H7A5A")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICorporateActionInstructedBalanceOptionInstructionSD4 : IIsoCom
     [IsoId("_wLqToTDwEey2N-DB7H7A5A")]
     [DisplayName("Protect Identification")]
     [IsoXmlTag("PrtctId")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text? ProtectIdentification { get; }
 
     /// <summary>

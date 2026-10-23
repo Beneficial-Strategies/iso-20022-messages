@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity5Choice;
 /// Other C10 commodities.
 /// </summary>
 [IsoId("_owQIP7tIEeiLRYqS-r-R-A")]
+[IsoDisplayName(@"Other C")]
 public interface IOtherC10 : IAssetClassCommodity5Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

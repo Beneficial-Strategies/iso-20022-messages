@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security parameters of the ATM for the initiated key download.
 /// </summary>
 [IsoId("_dfs4IbToEeeQy4o2AayYHg")]
+[IsoDisplayName(@"Security Parameters")]
 public interface ISecurityParameters9 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ISecurityParameters9 : IIsoComponent
     [IsoId("_doTahbToEeeQy4o2AayYHg")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max5000Binary> Certificate { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ISecurityParameters9 : IIsoComponent
     [IsoId("_doTah7ToEeeQy4o2AayYHg")]
     [DisplayName("ATM Challenge")]
     [IsoXmlTag("ATMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? ATMChallenge { get; }
 
     /// <summary>
@@ -49,5 +52,7 @@ public interface ISecurityParameters9 : IIsoComponent
     [IsoId("_doTaibToEeeQy4o2AayYHg")]
     [DisplayName("Requested Key")]
     [IsoXmlTag("ReqdKey")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RequestedKey { get; }
 }

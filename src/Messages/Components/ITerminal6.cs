@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment terminal or ATM performing the transaction
 /// </summary>
 [IsoId("_F0hq0RyrEey6gI8SKlv7rg")]
+[IsoDisplayName(@"Terminal")]
 public interface ITerminal6 : IIsoComponent
 {
     /// <summary>

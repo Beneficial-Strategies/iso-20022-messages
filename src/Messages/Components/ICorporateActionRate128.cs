@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Rate128.
 /// </summary>
 [IsoId("_gjA47YV5Ee-oeNhl-Tk6YQ")]
+[IsoDisplayName(@"Corporate Action Rate128")]
 public interface ICorporateActionRate128 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface ICorporateActionRate128 : IIsoComponent
     /// </summary>
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat60Choice> WithholdingTaxRate { get; }
 
     /// <summary>
@@ -86,5 +88,6 @@ public interface ICorporateActionRate128 : IIsoComponent
     /// </summary>
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat60Choice> SecondLevelTax { get; }
 }

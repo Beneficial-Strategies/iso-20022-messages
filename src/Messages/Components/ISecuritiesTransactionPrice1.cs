@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Descriptive fields capturing where no strike price is known.
 /// </summary>
 [IsoId("_cqBnQOI_EeWWKb0jFHxViQ")]
+[IsoDisplayName(@"Securities Transaction Price")]
 public interface ISecuritiesTransactionPrice1 : IIsoComponent
 {
     /// <summary>

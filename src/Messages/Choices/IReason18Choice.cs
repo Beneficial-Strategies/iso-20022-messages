@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies whether the status is provided with a reason or not.
 /// </summary>
 [IsoId("_zII1AeLtEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Reason 18 Choice")]
 public interface IReason18Choice : IIsoChoice { }

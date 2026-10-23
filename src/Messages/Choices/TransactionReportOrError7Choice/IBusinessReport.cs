@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionReportOrError7Choice;
 /// <summary>
 /// Business Report.
 /// </summary>
+[IsoDisplayName(@"Business Report")]
 public interface IBusinessReport : ITransactionReportOrError7Choice, IIsoChoiceVariant
 {
     /// <summary>

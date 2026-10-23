@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the detailed information as provided by a payment tracking system.
 /// </summary>
 [IsoId("_kOqpAIW2EeiDBOVr6AJAFA")]
+[IsoDisplayName(@"Tracker Data")]
 public interface ITrackerData1 : IIsoComponent
 {
     /// <summary>
@@ -35,5 +36,6 @@ public interface ITrackerData1 : IIsoComponent
     [IsoId("_x5xmwIW5EeiDBOVr6AJAFA")]
     [DisplayName("Tracker Record")]
     [IsoXmlTag("TrckrRcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITrackerRecord1> TrackerRecord { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus1Choice;
 /// </summary>
 [IsoId("_Ri1Ct9p-Ed-ak6NoX_4Aeg_348378582")]
 [IsoXmlTag("RjctdSts")]
+[IsoDisplayName(@"Rejected Status")]
 public interface IRejectedStatus : INotificationAdviceStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IRejectedStatus : INotificationAdviceStatus1Choice, IIsoChoiceV
     [IsoId("_RkLGh9p-Ed-ak6NoX_4Aeg_403789574")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason6FormatChoice> Reason { get; }
 
     /// <summary>
@@ -26,5 +28,7 @@ public interface IRejectedStatus : INotificationAdviceStatus1Choice, IIsoChoiceV
     [IsoId("_RkLGiNp-Ed-ak6NoX_4Aeg_403789575")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Account Criteria4Choice.
 /// </summary>
 [IsoId("_6My2QTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Account Criteria4Choice")]
 public interface IAccountCriteria4Choice : IIsoChoice { }

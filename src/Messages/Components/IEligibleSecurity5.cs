@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details of the eligible securities as defined in the collateral reference data.
 /// </summary>
 [IsoId("_vG-yEbDEEe-g3p7goNrabg")]
+[IsoDisplayName(@"Eligible Security5")]
 public interface IEligibleSecurity5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IEligibleSecurity5 : IIsoComponent
     [IsoId("_vMPFgbDEEe-g3p7goNrabg")]
     [DisplayName("Security Identification")]
     [IsoXmlTag("SctyId")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification19> SecurityIdentification { get; }
 
     /// <summary>

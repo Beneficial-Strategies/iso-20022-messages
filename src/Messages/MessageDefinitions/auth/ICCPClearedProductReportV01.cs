@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_sNWfAeUTEem3X-64-NKdqg")]
 [IsoMessage("auth.069.001.01", "CCPClrdPdctRpt", "urn:iso:std:iso:20022:tech:xsd:auth.069.001.01")]
+[Description(@"The CCPClearedProductReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the financial instruments cleared by the central counterparty.")]
+[IsoDisplayName(@"CCP Cleared Product Report V")]
 public interface ICCPClearedProductReportV01 : IOuterRecord
 {
     /// <summary>
@@ -20,6 +22,7 @@ public interface ICCPClearedProductReportV01 : IOuterRecord
     [IsoId("_sNWfCeUTEem3X-64-NKdqg")]
     [DisplayName("Cleared Product")]
     [IsoXmlTag("ClrdPdct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IClearedProduct1> ClearedProduct { get; }
 
     /// <summary>
@@ -28,5 +31,6 @@ public interface ICCPClearedProductReportV01 : IOuterRecord
     [IsoId("_sNWfC-UTEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

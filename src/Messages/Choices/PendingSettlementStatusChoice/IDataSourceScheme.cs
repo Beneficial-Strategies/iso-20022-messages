@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingSettlementStatusChoice;
 /// </summary>
 [IsoId("_U1POp9p-Ed-ak6NoX_4Aeg_-554759285")]
 [IsoXmlTag("DataSrcSchme")]
+[IsoDisplayName(@"Data Source Scheme")]
 public interface IDataSourceScheme : IPendingSettlementStatusChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IDataSourceScheme : IPendingSettlementStatusChoice, IIsoChoiceV
     [IsoId("_QALkONp-Ed-ak6NoX_4Aeg_-1748202217")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IDataSourceScheme : IPendingSettlementStatusChoice, IIsoChoiceV
     [IsoId("_QAVVMNp-Ed-ak6NoX_4Aeg_-1748202215")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SchemeName { get; }
 
     /// <summary>
@@ -34,5 +39,7 @@ public interface IDataSourceScheme : IPendingSettlementStatusChoice, IIsoChoiceV
     [IsoId("_QAVVMdp-Ed-ak6NoX_4Aeg_-1748202216")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

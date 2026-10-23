@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Customer account information.
 /// </summary>
 [IsoId("_eW6GEa4ZEeW_TaP-ygI0SQ")]
+[IsoDisplayName(@"Card Account")]
 public interface ICardAccount12 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface ICardAccount12 : IIsoComponent
     [IsoId("_ehflc64ZEeW_TaP-ygI0SQ")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AccountName { get; }
 
     /// <summary>
@@ -50,6 +53,8 @@ public interface ICardAccount12 : IIsoComponent
     [IsoId("_ehflea4ZEeW_TaP-ygI0SQ")]
     [DisplayName("Credit Reference")]
     [IsoXmlTag("CdtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CreditReference { get; }
 
     /// <summary>
@@ -74,6 +79,7 @@ public interface ICardAccount12 : IIsoComponent
     [IsoId("_ehflf64ZEeW_TaP-ygI0SQ")]
     [DisplayName("Balance Display Flag")]
     [IsoXmlTag("BalDispFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? BalanceDisplayFlag { get; }
 
     /// <summary>
@@ -82,6 +88,7 @@ public interface ICardAccount12 : IIsoComponent
     [IsoId("_ehflga4ZEeW_TaP-ygI0SQ")]
     [DisplayName("Default Account Indicator")]
     [IsoXmlTag("DfltAcctInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DefaultAccountIndicator { get; }
 
     /// <summary>
@@ -90,5 +97,6 @@ public interface ICardAccount12 : IIsoComponent
     [IsoId("_ehflg64ZEeW_TaP-ygI0SQ")]
     [DisplayName("Allowed Service")]
     [IsoXmlTag("AllwdSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMService19> AllowedService { get; }
 }

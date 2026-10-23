@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the parameters to calculate the local reporting time.
 /// </summary>
 [IsoId("_RKPjkNp-Ed-ak6NoX_4Aeg_-688976051")]
+[IsoDisplayName(@"UTC Offset")]
 public interface IUTCOffset1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IUTCOffset1 : IIsoComponent
     [IsoId("_RKPjkdp-Ed-ak6NoX_4Aeg_-597549067")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator Sign { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IUTCOffset1 : IIsoComponent
     [IsoId("_RKPjktp-Ed-ak6NoX_4Aeg_-316800485")]
     [DisplayName("Number Of Hours")]
     [IsoXmlTag("NbOfHrs")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime NumberOfHours { get; }
 }

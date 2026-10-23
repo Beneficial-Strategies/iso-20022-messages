@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason why a cancellation request sent for the related instruction is pending.
 /// </summary>
 [IsoId("_NJb8wOBhEeiVRbNQx5-Vhg")]
+[IsoDisplayName(@"Pending Reason")]
 public interface IPendingReason27 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IPendingReason27 : IIsoComponent
     [IsoId("_ahx24OBhEeiVRbNQx5-Vhg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

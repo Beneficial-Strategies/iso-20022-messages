@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnilateralSplit4Choice;
 /// Unilateral split expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_6GWWM5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IUnilateralSplit4Choice, IIsoChoiceVariant
 {
     /// <summary>

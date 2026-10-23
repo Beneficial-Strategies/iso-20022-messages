@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentFundTransactionOutType
 /// Transaction type expressed as a code.
 /// </summary>
 [IsoId("_TMto8RMJEeSopak1K45eVQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInvestmentFundTransactionOutType1Choice, IIsoChoiceVariant
 {
     /// <summary>

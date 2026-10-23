@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GarnishmentType1Choice;
 /// GTPP     Garnishment from a third party payer to taxing agency.
 /// </summary>
 [IsoId("_lG0rQ4nnEeOORMXOfBk1Bw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IGarnishmentType1Choice, IIsoChoiceVariant
 {
     /// <summary>

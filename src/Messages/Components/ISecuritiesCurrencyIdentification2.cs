@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details an individual currency including details on which country trades the currency.
 /// </summary>
 [IsoId("_c7l_wX58EeaUaa1DpZmwUw")]
+[IsoDisplayName(@"Securities Currency Identification")]
 public interface ISecuritiesCurrencyIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISecuritiesCurrencyIdentification2 : IIsoComponent
     [IsoId("_dGAgA358EeaUaa1DpZmwUw")]
     [DisplayName("Fractional Digit")]
     [IsoXmlTag("FrctnlDgt")]
+    [IsoSimpleType(IsoSimpleType.Max1Number)]
     Max1Number? FractionalDigit { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ISecuritiesCurrencyIdentification2 : IIsoComponent
     [IsoId("_dGAgB358EeaUaa1DpZmwUw")]
     [DisplayName("Pre Euro")]
     [IsoXmlTag("PreEuro")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator PreEuro { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface ISecuritiesCurrencyIdentification2 : IIsoComponent
     [IsoId("_dGAgDX58EeaUaa1DpZmwUw")]
     [DisplayName("Last Updated")]
     [IsoXmlTag("LastUpdtd")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LastUpdated { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of price and information about the price.
 /// </summary>
 [IsoId("_vSVaYQeFEe2fOITqoTnSLQ")]
+[IsoDisplayName(@"Other Prices")]
 public interface IOtherPrices5 : IIsoComponent
 {
     /// <summary>

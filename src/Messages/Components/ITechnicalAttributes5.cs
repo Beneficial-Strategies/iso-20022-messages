@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies technical attributes of the message.
 /// </summary>
 [IsoId("_-UBWoRaIEe27wrM4RUjLog")]
+[IsoDisplayName(@"Technical Attributes")]
 public interface ITechnicalAttributes5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITechnicalAttributes5 : IIsoComponent
     [IsoId("_DH2BkDAdEe2Ne600gC45nw")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ITechnicalAttributes5 : IIsoComponent
     [IsoId("_9ATPgBaJEe27wrM4RUjLog")]
     [DisplayName("Report Receipt Time Stamp")]
     [IsoXmlTag("RptRctTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ReportReceiptTimeStamp { get; }
 }

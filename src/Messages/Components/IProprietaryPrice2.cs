@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to identify a proprietary price.
 /// </summary>
 [IsoId("_Rpr4pNp-Ed-ak6NoX_4Aeg_1562404369")]
+[IsoDisplayName(@"Proprietary Price")]
 public interface IProprietaryPrice2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProprietaryPrice2 : IIsoComponent
     [IsoId("_Rpr4pdp-Ed-ak6NoX_4Aeg_1562404617")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>

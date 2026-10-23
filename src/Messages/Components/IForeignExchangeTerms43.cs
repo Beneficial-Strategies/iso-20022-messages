@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Foreign Exchange Terms43.
 /// </summary>
 [IsoId("_nLnMGZt3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Foreign Exchange Terms43")]
 public interface IForeignExchangeTerms43 : IIsoComponent
 {
     /// <summary>

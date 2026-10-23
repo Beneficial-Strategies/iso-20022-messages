@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of each individual secured market transaction.
 /// </summary>
 [IsoId("_CiwJQaigEeWHO_l3hf2rlA")]
+[IsoDisplayName(@"Money Market Transaction Status")]
 public interface IMoneyMarketTransactionStatus2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMoneyMarketTransactionStatus2 : IIsoComponent
     [IsoId("_C4xckaigEeWHO_l3hf2rlA")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? UniqueTransactionIdentifier { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IMoneyMarketTransactionStatus2 : IIsoComponent
     [IsoId("_C4xck6igEeWHO_l3hf2rlA")]
     [DisplayName("Proprietary Transaction Identification")]
     [IsoXmlTag("PrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text ProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -35,6 +40,7 @@ public interface IMoneyMarketTransactionStatus2 : IIsoComponent
     [IsoId("_-RwOIaifEeWHO_l3hf2rlA")]
     [DisplayName("Branch Identification")]
     [IsoXmlTag("BrnchId")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? BranchIdentification { get; }
 
     /// <summary>
@@ -51,6 +57,7 @@ public interface IMoneyMarketTransactionStatus2 : IIsoComponent
     [IsoId("_C4xcl6igEeWHO_l3hf2rlA")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericValidationRuleIdentification1> ValidationRule { get; }
 
     /// <summary>
@@ -59,5 +66,6 @@ public interface IMoneyMarketTransactionStatus2 : IIsoComponent
     [IsoId("_C4xcmaigEeWHO_l3hf2rlA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

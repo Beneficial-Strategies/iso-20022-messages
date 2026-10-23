@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Instruction Cancellation Request Status18Choice.
 /// </summary>
 [IsoId("_jhlJSZt3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Instruction Cancellation Request Status18Choice")]
 public interface IInstructionCancellationRequestStatus18Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the old and new values for the contact details
 /// </summary>
 [IsoId("_YBkCQ2jTEeiRg5NzP0jkQg")]
+[IsoDisplayName(@"Update Log Contact")]
 public interface IUpdateLogContact1 : IIsoComponent
 {
     /// <summary>

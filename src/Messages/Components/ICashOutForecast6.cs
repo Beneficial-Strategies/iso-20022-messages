@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash movements out of a fund as a result of investment funds transactions, eg, redemptions or switch-out.
 /// </summary>
 [IsoId("_Eh20QQdnEeSPHJIdUs1USg")]
+[IsoDisplayName(@"Cash Out Forecast")]
 public interface ICashOutForecast6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICashOutForecast6 : IIsoComponent
     [IsoId("_E8C14wdnEeSPHJIdUs1USg")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate CashSettlementDate { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICashOutForecast6 : IIsoComponent
     [IsoId("_E8C16QdnEeSPHJIdUs1USg")]
     [DisplayName("Exceptional Cash Flow Indicator")]
     [IsoXmlTag("XcptnlCshFlowInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ExceptionalCashFlowIndicator { get; }
 
     /// <summary>

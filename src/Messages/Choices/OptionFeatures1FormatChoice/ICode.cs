@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionFeatures1FormatChoice;
 /// Standard code to specify the feature of an option.
 /// </summary>
 [IsoId("_Rm2nFtp-Ed-ak6NoX_4Aeg_1295909960")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOptionFeatures1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

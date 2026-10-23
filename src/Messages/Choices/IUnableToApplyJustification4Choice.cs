@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the details of missing or incorrect information or the complete set of available information.
 /// </summary>
 [IsoId("_7JifAdjKEeq5MfBBxQig1Q")]
+[IsoDisplayName(@"Unable To Apply Justification 4 Choice")]
 public interface IUnableToApplyJustification4Choice : IIsoChoice { }

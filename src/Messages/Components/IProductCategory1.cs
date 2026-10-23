@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the category of the product.
 /// </summary>
 [IsoId("_T5CFG9p-Ed-ak6NoX_4Aeg_2136410357")]
+[IsoDisplayName(@"Product Category")]
 public interface IProductCategory1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IProductCategory1 : IIsoComponent
     [IsoId("_T5L2ENp-Ed-ak6NoX_4Aeg_-1658931027")]
     [DisplayName("Category")]
     [IsoXmlTag("Ctgy")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Category { get; }
 }

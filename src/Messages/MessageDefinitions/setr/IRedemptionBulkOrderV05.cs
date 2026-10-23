@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("3a261563-b653-4d49-9418-7de2c9c6b3d0")]
 [IsoMessage("setr.001.001.05", "RedBlkOrdr", "urn:iso:std:iso:20022:tech:xsd:setr.001.001.05")]
+[Description(@"Scope|The RedemptionBulkOrder message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to instruct a redemption from a financial instrument for two or more accounts.|Usage|The RedemptionBulkOrder message is used to bulk several individual orders into one bulk order. The individual orders come from different instructing parties, that is, account owners, but are for the same financial instrument. The RedemptionBulkOrder can result in one single bulk cash settlement or several individual cash settlements.|This message will be typically used by a party collecting orders, that is, a concentrator, bulking these individual orders into one bulk order before sending it to an executing party.|For a single redemption order, the RedemptionOrder message, not the RedemptionBulkOrder message, must be used.|If there are redemption orders for different financial instruments but for the same account, then the RedemptionOrder must be used.")]
+[IsoDisplayName(@"Redemption Bulk Order V05")]
 public interface IRedemptionBulkOrderV05 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +41,7 @@ public interface IRedemptionBulkOrderV05 : IOuterRecord
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference10> PreviousReference { get; }
 
     /// <summary>
@@ -60,5 +63,6 @@ public interface IRedemptionBulkOrderV05 : IOuterRecord
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
 
 /// <summary>Instruction cancellation request is pending cancellation.</summary>
 [IsoId("_Jg5gOa8xEfCx2aBifPEdRg")]
+[IsoDisplayName(@"Pending Cancellation")]
 public interface IPendingCancellation
     : IMarketClaimCancellationRequestStatus3Choice,
         IIsoChoiceVariant

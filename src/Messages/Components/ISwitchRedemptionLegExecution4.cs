@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of the redemption part, in a switch between investment funds or investment fund classes.
 /// </summary>
 [IsoId("_ASu3KzbtEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Switch Redemption Leg Execution")]
 public interface ISwitchRedemptionLegExecution4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISwitchRedemptionLegExecution4 : IIsoComponent
     [IsoId("_Arbq9TbtEead9bDRE_1DAQ")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISwitchRedemptionLegExecution4 : IIsoComponent
     [IsoId("_Arbq9zbtEead9bDRE_1DAQ")]
     [DisplayName("Leg Execution Identification")]
     [IsoXmlTag("LegExctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegExecutionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ISwitchRedemptionLegExecution4 : IIsoComponent
     [IsoId("_Arbq-zbtEead9bDRE_1DAQ")]
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber UnitsNumber { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ISwitchRedemptionLegExecution4 : IIsoComponent
     [IsoId("_Arbq_zbtEead9bDRE_1DAQ")]
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? HoldingsRedemptionRate { get; }
 
     /// <summary>
@@ -99,6 +106,9 @@ public interface ISwitchRedemptionLegExecution4 : IIsoComponent
     [IsoId("_INsAYTxcEea9KZ_pBxG-rQ")]
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice22> InformativePriceDetails { get; }
 
     /// <summary>
@@ -107,6 +117,7 @@ public interface ISwitchRedemptionLegExecution4 : IIsoComponent
     [IsoId("_ArbrCTbtEead9bDRE_1DAQ")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -179,6 +190,7 @@ public interface ISwitchRedemptionLegExecution4 : IIsoComponent
     [IsoId("_ArbrHTbtEead9bDRE_1DAQ")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>
@@ -195,6 +207,8 @@ public interface ISwitchRedemptionLegExecution4 : IIsoComponent
     [IsoId("_ArbrITbtEead9bDRE_1DAQ")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>

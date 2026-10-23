@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account to or from which a securities entry is made.
 /// </summary>
 [IsoId("_T_vKBdp-Ed-ak6NoX_4Aeg_1610207268")]
+[IsoDisplayName(@"Securities Account")]
 public interface ISecuritiesAccount11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesAccount11 : IIsoComponent
     [IsoId("_T_vKBtp-Ed-ak6NoX_4Aeg_1610207270")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ISecuritiesAccount11 : IIsoComponent
     [IsoId("_T_vKCNp-Ed-ak6NoX_4Aeg_1610207303")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface ISecuritiesAccount11 : IIsoComponent
     [IsoId("_T_47ANp-Ed-ak6NoX_4Aeg_1687784367")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Designation { get; }
 }

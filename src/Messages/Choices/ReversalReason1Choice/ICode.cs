@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReversalReason1Choice;
 /// Reason for the reversal in a coded form.
 /// </summary>
 [IsoId("_TPTypNp-Ed-ak6NoX_4Aeg_1404293985")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IReversalReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

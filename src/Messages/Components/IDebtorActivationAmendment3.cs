@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details to identify a creditor enrolment to be amended and the new amended data.
 /// </summary>
 [IsoId("_UJ2hEeH7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Debtor Activation Amendment")]
 public interface IDebtorActivationAmendment3 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IDebtorActivationAmendment3 : IIsoComponent
     [IsoId("_ULMk6eH7Eeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

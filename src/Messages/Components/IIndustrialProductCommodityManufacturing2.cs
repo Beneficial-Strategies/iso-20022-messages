@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an industrial product derivative of type manufacturing.
 /// </summary>
 [IsoId("_Vbx9MRZZEe2QNcZTDeoKnQ")]
+[IsoDisplayName(@"Industrial Product Commodity Manufacturing")]
 public interface IIndustrialProductCommodityManufacturing2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Net Position4.
 /// </summary>
 [IsoId("_feCaAYcREe-U27oWwgmhCQ")]
+[IsoDisplayName(@"Net Position4")]
 public interface INetPosition4 : IIsoComponent
 {
     /// <summary>
@@ -121,5 +122,6 @@ public interface INetPosition4 : IIsoComponent
     /// </summary>
     [DisplayName("Trade Leg Details")]
     [IsoXmlTag("TradLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeLeg13> TradeLegDetails { get; }
 }

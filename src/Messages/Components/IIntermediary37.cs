@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party that provides services to investors relating to financial products (Investment Funds).
 /// </summary>
 [IsoId("_5Wx6hpNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Intermediary")]
 public interface IIntermediary37 : IIsoComponent
 {
     /// <summary>

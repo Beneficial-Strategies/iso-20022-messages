@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Application specific information defined by the service provider.
 /// </summary>
 [IsoId("_7G4bURUZEfCfALVKQ4rOew")]
+[IsoDisplayName(@"Application Specifics2")]
 public interface IApplicationSpecifics2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IApplicationSpecifics2 : IIsoComponent
     [IsoId("_7Hs6sxUZEfCfALVKQ4rOew")]
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<SignatureEnvelope> Signature { get; }
 
     /// <summary>

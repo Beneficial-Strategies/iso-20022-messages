@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Recommended actions as result of risk assessment.
 /// </summary>
 [IsoId("_RLBigRNaEfC1ZfCQz0xB3g")]
+[IsoDisplayName(@"Recommendation Action2")]
 public interface IRecommendationAction2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Digital signature of data, with an asymmetric key.
 /// </summary>
 [IsoId("_SwiSxQEcEeCQm6a_G2yO_w_423305328")]
+[IsoDisplayName(@"Signed Data")]
 public interface ISignedData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISignedData1 : IIsoComponent
     [IsoId("_SwiSxgEcEeCQm6a_G2yO_w_877392597")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISignedData1 : IIsoComponent
     [IsoId("_SwiSxwEcEeCQm6a_G2yO_w_569453236")]
     [DisplayName("Digest Algorithm")]
     [IsoXmlTag("DgstAlgo")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAlgorithmIdentification1> DigestAlgorithm { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ISignedData1 : IIsoComponent
     [IsoId("_SwiSyQEcEeCQm6a_G2yO_w_-997515130")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max3000Binary> Certificate { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface ISignedData1 : IIsoComponent
     [IsoId("_SwiSygEcEeCQm6a_G2yO_w_-1329278332")]
     [DisplayName("Signer")]
     [IsoXmlTag("Sgnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISigner1> Signer { get; }
 }

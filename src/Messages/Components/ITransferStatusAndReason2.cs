@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the status of a transfer instruction and its reason.
 /// </summary>
 [IsoId("_SwUJhNp-Ed-ak6NoX_4Aeg_-313438480")]
+[IsoDisplayName(@"Transfer Status And Reason")]
 public interface ITransferStatusAndReason2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransferStatusAndReason2 : IIsoComponent
     [IsoId("_SwUJhdp-Ed-ak6NoX_4Aeg_-310282796")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransferStatusAndReason2 : IIsoComponent
     [IsoId("_SwUJhtp-Ed-ak6NoX_4Aeg_-313438462")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransferStatusAndReason2 : IIsoComponent
     [IsoId("_SwUJh9p-Ed-ak6NoX_4Aeg_-294579471")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITransferStatusAndReason2 : IIsoComponent
     [IsoId("_SwUJiNp-Ed-ak6NoX_4Aeg_-276111982")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -121,6 +130,7 @@ public interface ITransferStatusAndReason2 : IIsoComponent
     [IsoId("_SwnEcdp-Ed-ak6NoX_4Aeg_272070826")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TradeDate { get; }
 
     /// <summary>
@@ -129,6 +139,7 @@ public interface ITransferStatusAndReason2 : IIsoComponent
     [IsoId("_SwnEctp-Ed-ak6NoX_4Aeg_1132792510")]
     [DisplayName("Send Out Date")]
     [IsoXmlTag("SndOutDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SendOutDate { get; }
 
     /// <summary>

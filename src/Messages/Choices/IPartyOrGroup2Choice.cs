@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies a choice between one party or a group of parties.
 /// </summary>
 [IsoId("_C3Ccd249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Party Or Group 2 Choice")]
 public interface IPartyOrGroup2Choice : IIsoChoice { }

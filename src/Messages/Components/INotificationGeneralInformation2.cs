@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Event notification type and status.
 /// </summary>
 [IsoId("_IW78ATkrEequeo9XmZe9AQ")]
+[IsoDisplayName(@"Notification General Information")]
 public interface INotificationGeneralInformation2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface INotificationGeneralInformation2 : IIsoComponent
     [IsoId("_2uookTkqEequeo9XmZe9AQ")]
     [DisplayName("Shareholder Rights Directive Indicator")]
     [IsoXmlTag("ShrhldrRghtsDrctvInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ShareholderRightsDirectiveIndicator { get; }
 }

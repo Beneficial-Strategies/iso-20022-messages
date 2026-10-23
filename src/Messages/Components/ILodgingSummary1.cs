@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data pertaining to a lodging transaction.
 /// </summary>
 [IsoId("_npqEIPb_EeiW-auGnDPZIw")]
+[IsoDisplayName(@"Lodging Summary")]
 public interface ILodgingSummary1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILodgingSummary1 : IIsoComponent
     [IsoId("_4mIMUfb_EeiW-auGnDPZIw")]
     [DisplayName("Folio Number")]
     [IsoXmlTag("FolioNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FolioNumber { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ILodgingSummary1 : IIsoComponent
     [IsoId("_LIyYwPcMEeiW-auGnDPZIw")]
     [DisplayName("Number Of Rooms")]
     [IsoXmlTag("NbOfRooms")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? NumberOfRooms { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ILodgingSummary1 : IIsoComponent
     [IsoId("_npqEI_b_EeiW-auGnDPZIw")]
     [DisplayName("Room")]
     [IsoXmlTag("Room")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILodgingRoom1> Room { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ILodgingSummary1 : IIsoComponent
     [IsoId("_zIKFxPcVEeiW-auGnDPZIw")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? Duration { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface ILodgingSummary1 : IIsoComponent
     [IsoId("_fKVag_cXEeiW-auGnDPZIw")]
     [DisplayName("No Show Indicator")]
     [IsoXmlTag("NoShowInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NoShowIndicator { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface ILodgingSummary1 : IIsoComponent
     [IsoId("_zIKFxfcVEeiW-auGnDPZIw")]
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? InsuranceIndicator { get; }
 
     /// <summary>
@@ -105,6 +113,7 @@ public interface ILodgingSummary1 : IIsoComponent
     [IsoId("_fKVahfcXEeiW-auGnDPZIw")]
     [DisplayName("Total Tax")]
     [IsoXmlTag("TtlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax33> TotalTax { get; }
 
     /// <summary>
@@ -121,6 +130,7 @@ public interface ILodgingSummary1 : IIsoComponent
     [IsoId("_fKVahPcXEeiW-auGnDPZIw")]
     [DisplayName("Authorised Amount")]
     [IsoXmlTag("AuthrsdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorisedAmount1> AuthorisedAmount { get; }
 
     /// <summary>
@@ -129,6 +139,8 @@ public interface ILodgingSummary1 : IIsoComponent
     [IsoId("_zIKFxvcVEeiW-auGnDPZIw")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SummaryCommodityIdentification { get; }
 
     /// <summary>
@@ -137,6 +149,7 @@ public interface ILodgingSummary1 : IIsoComponent
     [IsoId("_zIKFx_cVEeiW-auGnDPZIw")]
     [DisplayName("Loyalty Programme")]
     [IsoXmlTag("LltyPrgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyProgramme2> LoyaltyProgramme { get; }
 
     /// <summary>
@@ -145,5 +158,7 @@ public interface ILodgingSummary1 : IIsoComponent
     [IsoId("_zIKFyPcVEeiW-auGnDPZIw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

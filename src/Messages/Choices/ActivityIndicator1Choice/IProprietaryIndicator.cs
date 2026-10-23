@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ActivityIndicator1Choice;
 /// <summary>
 /// Proprietary Indicator.
 /// </summary>
+[IsoDisplayName(@"Proprietary Indicator")]
 public interface IProprietaryIndicator : IActivityIndicator1Choice, IIsoChoiceVariant
 {
     /// <summary>

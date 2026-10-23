@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice between ISIN and an alternative format for the identification of a financial instrument. ISIN is the preferred format.
 /// </summary>
 [IsoId("_f72qkWEUEe2P-L9DBerEgA")]
+[IsoDisplayName(@"Security Identification")]
 public interface ISecurityIdentification46 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityIdentification46 : IIsoComponent
     [IsoId("_f8tmM2EUEe2P-L9DBerEgA")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? ISIN { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface ISecurityIdentification46 : IIsoComponent
     [IsoId("_f8tmN2EUEe2P-L9DBerEgA")]
     [DisplayName("Alternative Instrument Identification")]
     [IsoXmlTag("AltrntvInstrmId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? AlternativeInstrumentIdentification { get; }
 
     /// <summary>
@@ -41,5 +45,7 @@ public interface ISecurityIdentification46 : IIsoComponent
     [IsoId("_f8tmOWEUEe2P-L9DBerEgA")]
     [DisplayName("Product Description")]
     [IsoXmlTag("PdctDesc")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? ProductDescription { get; }
 }

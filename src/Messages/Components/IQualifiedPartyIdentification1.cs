@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// A short identification can be used for display purposes.
 /// </summary>
 [IsoId("_OTgzMjEy-AOSNFX-8224491")]
+[IsoDisplayName(@"Qualified Party Identification")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IQualifiedPartyIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -20,6 +22,7 @@ public interface IQualifiedPartyIdentification1 : IIsoComponent
     [IsoId("_OTgzMjU0-AOSNFX-8224494")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ID)]
     XsdID Identification { get; }
 
     /// <summary>
@@ -28,6 +31,7 @@ public interface IQualifiedPartyIdentification1 : IIsoComponent
     [IsoId("_OTgzMjU1-AOSNFX-8224494")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISingleQualifiedPartyIdentification1> Party { get; }
 
     /// <summary>
@@ -52,5 +56,7 @@ public interface IQualifiedPartyIdentification1 : IIsoComponent
     [IsoId("_OTgzMjU4-AOSNFX-8224494")]
     [DisplayName("Role Description")]
     [IsoXmlTag("RoleDesc")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? RoleDescription { get; }
 }

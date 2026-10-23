@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the system restriction.
 /// </summary>
 [IsoId("_kpU3oO5NEeCisYr99QEiWA_1758511651")]
+[IsoDisplayName(@"System Restriction")]
 public interface ISystemRestriction1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISystemRestriction1 : IIsoComponent
     [IsoId("_kpU3oe5NEeCisYr99QEiWA_534617393")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ValidFrom { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISystemRestriction1 : IIsoComponent
     [IsoId("_kpU3ou5NEeCisYr99QEiWA_1295382546")]
     [DisplayName("Valid To")]
     [IsoXmlTag("VldTo")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ValidTo { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface ISystemRestriction1 : IIsoComponent
     [IsoId("_kpU3o-5NEeCisYr99QEiWA_1881329572")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 }

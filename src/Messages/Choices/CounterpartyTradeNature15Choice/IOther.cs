@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice;
 /// Indicates that reporting party is other type of counterparty.
 /// </summary>
 [IsoId("_1z1A9wz1Ee2YoLD-1vFj0g")]
+[IsoDisplayName(@"Other")]
 public interface IOther : ICounterpartyTradeNature15Choice, IIsoChoiceVariant
 {
     /// <summary>

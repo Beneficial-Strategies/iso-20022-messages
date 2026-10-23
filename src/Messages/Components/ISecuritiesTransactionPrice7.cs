@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice to define the price of the securities transaction.
 /// </summary>
 [IsoId("_i7VOgZiuEe2f7NHvXATP5g")]
+[IsoDisplayName(@"Securities Transaction Price")]
 public interface ISecuritiesTransactionPrice7 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the creditor enrolment to be cancelled.
 /// </summary>
 [IsoId("_UedfLeH7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Creditor Enrolment Cancellation")]
 public interface ICreditorEnrolmentCancellation2 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface ICreditorEnrolmentCancellation2 : IIsoComponent
     [IsoId("_Ufpx9-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

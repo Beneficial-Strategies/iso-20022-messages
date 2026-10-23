@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Calculation of the net asset value for an investment fund/fund class.
 /// </summary>
 [IsoId("c71c897c-8454-4285-9f1a-3dd64cd508cd")]
+[IsoDisplayName(@"Price Valuation5")]
 public interface IPriceValuation5 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IPriceValuation5 : IIsoComponent
     [IsoId("be103699-329a-40b5-84f3-27eb7b23ee91")]
     [DisplayName("Total NAV")]
     [IsoXmlTag("TtlNAV")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyAndAmount> TotalNAV { get; }
 
     /// <summary>
@@ -121,6 +123,7 @@ public interface IPriceValuation5 : IIsoComponent
     [IsoId("e6cb24d6-b2de-421c-84f9-ccc8e2b26f02")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice24> PriceDetails { get; }
 
     /// <summary>
@@ -129,6 +132,7 @@ public interface IPriceValuation5 : IIsoComponent
     [IsoId("0ad89090-a822-4920-b163-356999cde7d8")]
     [DisplayName("Valuation Statistics")]
     [IsoXmlTag("ValtnSttstcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IValuationStatistics4> ValuationStatistics { get; }
 
     /// <summary>

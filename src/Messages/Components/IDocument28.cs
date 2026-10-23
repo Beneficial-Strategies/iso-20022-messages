@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Document28.
 /// </summary>
 [IsoId("_Jzrd8fgxEe-yU4gaFULAeA")]
+[IsoDisplayName(@"Document28")]
 public interface IDocument28 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IDocument28 : IIsoComponent
     /// </summary>
     [DisplayName("Related Entity")]
     [IsoXmlTag("RltdNtty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification260Choice> RelatedEntity { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface IDocument28 : IIsoComponent
     /// </summary>
     [DisplayName("Regulatory Data Type")]
     [IsoXmlTag("RgltryDataTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IClassificationType4> RegulatoryDataType { get; }
 
     /// <summary>
@@ -100,6 +103,7 @@ public interface IDocument28 : IIsoComponent
     /// </summary>
     [DisplayName("Host Country")]
     [IsoXmlTag("HstCtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CountryCode> HostCountry { get; }
 
     /// <summary>
@@ -107,6 +111,7 @@ public interface IDocument28 : IIsoComponent
     /// </summary>
     [DisplayName("Related Product Identifier")]
     [IsoXmlTag("RltdPdctIdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification49> RelatedProductIdentifier { get; }
 
     /// <summary>
@@ -114,6 +119,7 @@ public interface IDocument28 : IIsoComponent
     /// </summary>
     [DisplayName("Document Reference")]
     [IsoXmlTag("DocRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument26> DocumentReference { get; }
 
     /// <summary>
@@ -121,6 +127,7 @@ public interface IDocument28 : IIsoComponent
     /// </summary>
     [DisplayName("Related Regulatory Data")]
     [IsoXmlTag("RltdRgltryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification190> RelatedRegulatoryData { get; }
 
     /// <summary>

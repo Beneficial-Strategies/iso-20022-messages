@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
 /// </summary>
 [IsoId("_ujGedcSTEeeRJJtE9TSlkw")]
 [IsoXmlTag("PdgRctBal")]
+[IsoDisplayName(@"Pending Receipt Balance")]
 public interface IPendingReceiptBalance
     : ICorporateActionUnallocatedBalanceSD3Choice,
         IIsoChoiceVariant

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further information on the status reason of the transaction.
 /// </summary>
 [IsoId("_TPA3stp-Ed-ak6NoX_4Aeg_-1001293915")]
+[IsoDisplayName(@"Status Reason Information")]
 public interface IStatusReasonInformation1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IStatusReasonInformation1 : IIsoComponent
     [IsoId("_TPA3tdp-Ed-ak6NoX_4Aeg_-80545028")]
     [DisplayName("Additional Status Reason Information")]
     [IsoXmlTag("AddtlStsRsnInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalStatusReasonInformation { get; }
 }

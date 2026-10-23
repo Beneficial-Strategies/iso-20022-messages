@@ -25,6 +25,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesEndOfPrcRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.023.001.02"
 )]
+[Description(@"Scope|Sent by an executing party or an instructing party to the custodian or an affirming party to notify that all the necessary SecuritiesTradeConfirmation message or any other notification of the process have been sent.|It may also be sent through Central Matching Utility (CMU).|The instructing party is typically the investment manager or an intermediary system/vendor communicating on behalf of the investment manager.|The executing party is typically the broker/dealer or an intermediary system/vendor communicating on behalf of the broker/dealer.|The custodian or an affirming party is typically the custodian, trustee, financial institution, intermediary system/vendor communicating on behalf of them, or their agent.|The ISO 20022 Business Application Header must be used|Usage|Initiator: Executing Party, CMU or Instructing Party|Respondent: Custodian or an affirming party does not need to respond.")]
+[IsoDisplayName(@"Securities End Of Process Report V")]
 public interface ISecuritiesEndOfProcessReportV02 : IOuterRecord
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface ISecuritiesEndOfProcessReportV02 : IOuterRecord
     [IsoId("_j5E4hwNmEe2P7e2qGFFOGg")]
     [DisplayName("Pagination")]
     [IsoXmlTag("Pgntn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPagination1> Pagination { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ISecuritiesEndOfProcessReportV02 : IOuterRecord
     [IsoId("_j5E4iwNmEe2P7e2qGFFOGg")]
     [DisplayName("Confirmation Parties")]
     [IsoXmlTag("ConfPties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IConfirmationParties7> ConfirmationParties { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ISecuritiesEndOfProcessReportV02 : IOuterRecord
     [IsoId("_j5E4jQNmEe2P7e2qGFFOGg")]
     [DisplayName("Investor")]
     [IsoXmlTag("Invstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentificationAndAccount220> Investor { get; }
 
     /// <summary>
@@ -65,5 +70,6 @@ public interface ISecuritiesEndOfProcessReportV02 : IOuterRecord
     [IsoId("_j5E4jwNmEe2P7e2qGFFOGg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

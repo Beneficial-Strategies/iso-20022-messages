@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code or a proprietary code for the underlying master agreement.
 /// </summary>
 [IsoId("_UkZWTNp-Ed-ak6NoX_4Aeg_863321778")]
+[IsoDisplayName(@"Agreement Framework 1 Choice")]
 public interface IAgreementFramework1Choice : IIsoChoice { }

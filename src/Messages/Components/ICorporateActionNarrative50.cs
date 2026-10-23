@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information such as the taxation conditions.
 /// </summary>
 [IsoId("_oxjLQRcBEeyroI8qKgB7Mg")]
+[IsoDisplayName(@"Corporate Action Narrative")]
 public interface ICorporateActionNarrative50 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionNarrative50 : IIsoComponent
     [IsoId("_pIDmwxcBEeyroI8qKgB7Mg")]
     [DisplayName("Offeror")]
     [IsoXmlTag("Offerr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation3> Offeror { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICorporateActionNarrative50 : IIsoComponent
     [IsoId("_pIDm0xcBEeyroI8qKgB7Mg")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedURLlnformation4> URLAddress { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface ICorporateActionNarrative50 : IIsoComponent
     [IsoId("_pyXvEhcBEeyroI8qKgB7Mg")]
     [DisplayName("Event Processing Web Site Address")]
     [IsoXmlTag("EvtPrcgWebSiteAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? EventProcessingWebSiteAddress { get; }
 }

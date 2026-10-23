@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "SbcptBlkOrdrCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:setr.008.001.04"
 )]
+[Description(@"Scope|The SubscriptionBulkOrderCancellationRequest message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to request the cancellation of a previously sent SubscriptionBulkOrder.|Usage|The SubscriptionBulkOrderCancellationRequest message is used to request the cancellation of one or more individual orders.|There is no amendment, but a cancellation and re-instruct policy.|To request the cancellation of one or more individual orders, the order reference of each individual order listed in the original SubscriptionBulkOrder message is specified in the order reference element. The message identification of the SubscriptionBulkOrder message which contains the individual orders to be cancelled may also be quoted in PreviousReference but this is not recommended.|The deadline and acceptance of a cancellation request is subject to a service level agreement (SLA). This cancellation message is a cancellation request. There is no automatic acceptance of the cancellation.|The rejection or acceptance of a SubscriptionBulkOrderCancellationRequest is made using an OrderCancellationStatusReport message.")]
+[IsoDisplayName(@"Subscription Bulk Order Cancellation Request V")]
 public interface ISubscriptionBulkOrderCancellationRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -55,6 +57,8 @@ public interface ISubscriptionBulkOrderCancellationRequestV04 : IOuterRecord
     [IsoId("_MioCslAYEea5nPE5ezGuuw")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -63,6 +67,7 @@ public interface ISubscriptionBulkOrderCancellationRequestV04 : IOuterRecord
     [IsoId("_MioCs1AYEea5nPE5ezGuuw")]
     [DisplayName("Order References")]
     [IsoXmlTag("OrdrRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundOrder9> OrderReferences { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of a tax efficient product.
 /// </summary>
 [IsoId("_7HpiwU4aEeiQHa-q1Uephw")]
+[IsoDisplayName(@"Tax Efficient Product")]
 public interface ITaxEfficientProduct2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITaxEfficientProduct2 : IIsoComponent
     [IsoId("_7XtYB04aEeiQHa-q1Uephw")]
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CashComponentIndicator { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ITaxEfficientProduct2 : IIsoComponent
     [IsoId("_pznNQV2_EeiFXdiLi_Nf4A")]
     [DisplayName("Date Of First Subscription")]
     [IsoXmlTag("DtOfFrstSbcpt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfFirstSubscription { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ITaxEfficientProduct2 : IIsoComponent
     [IsoId("_uXXFQl2_EeiFXdiLi_Nf4A")]
     [DisplayName("Bonus Or Withdrawal")]
     [IsoXmlTag("BnsOrWdrwl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBonusWithdrawal1> BonusOrWithdrawal { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface ITaxEfficientProduct2 : IIsoComponent
     [IsoId("_71Xu8E4bEeiQHa-q1Uephw")]
     [DisplayName("Investments To Follow Value")]
     [IsoXmlTag("InvstmtsToFllwVal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDateAndAmount2> InvestmentsToFollowValue { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface ITaxEfficientProduct2 : IIsoComponent
     [IsoId("_FGYnUE4cEeiQHa-q1Uephw")]
     [DisplayName("Innovative Finance")]
     [IsoXmlTag("InnvtvFinc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInnovativeFinance1> InnovativeFinance { get; }
 
     /// <summary>
@@ -129,5 +135,6 @@ public interface ITaxEfficientProduct2 : IIsoComponent
     [IsoId("_GY9CcE4cEeiQHa-q1Uephw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

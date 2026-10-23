@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statement Group5.
 /// </summary>
 [IsoId("_xZNgwTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Statement Group5")]
 public interface IStatementGroup5 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface IStatementGroup5 : IIsoComponent
     /// </summary>
     [DisplayName("Sender Individual Contact")]
     [IsoXmlTag("SndrIndvCtct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContact13> SenderIndividualContact { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface IStatementGroup5 : IIsoComponent
     /// </summary>
     [DisplayName("Receiver Individual Contact")]
     [IsoXmlTag("RcvrIndvCtct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContact13> ReceiverIndividualContact { get; }
 
     /// <summary>
@@ -51,5 +54,6 @@ public interface IStatementGroup5 : IIsoComponent
     /// </summary>
     [DisplayName("Billing Statement")]
     [IsoXmlTag("BllgStmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingStatement5> BillingStatement { get; }
 }

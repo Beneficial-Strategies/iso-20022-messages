@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_15W1yNE8Ed-BzquC8wXy7w_-2039439363")]
 [IsoMessage("tsmt.042.001.03", "TxRptReq", "urn:iso:std:iso:20022:tech:xsd:tsmt.042.001.03")]
+[Description(@"Scope|The TransactionReportRequest message is sent by a party involved in a transaction to the matching application.|This message is used to request a report on details of transactions registered in the matching application.|Usage|The TransactionReportRequest message can be sent by either party involved in a transaction to request a report on a variety of details of all transactions that the requester is involved in. For example, the message can be used to request a report on all transactions that the requester is involved in with a certain customer.")]
+[IsoDisplayName(@"Transaction Report Request V")]
 public interface ITransactionReportRequestV03 : IOuterRecord
 {
     /// <summary>

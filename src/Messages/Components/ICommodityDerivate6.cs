@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transparency calculation specific details for an energy commodity.
 /// </summary>
 [IsoId("_e4TTIX5zEeasY4u9QTizPQ")]
+[IsoDisplayName(@"Commodity Derivate")]
 public interface ICommodityDerivate6 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface ICommodityDerivate6 : IIsoComponent
     [IsoId("_fDBVYX5zEeasY4u9QTizPQ")]
     [DisplayName("Settlement Location")]
     [IsoXmlTag("SttlmLctn")]
+    [IsoSimpleType(IsoSimpleType.Max25Text)]
+    [StringLength(25, MinimumLength = 1)]
     Max25Text SettlementLocation { get; }
 }

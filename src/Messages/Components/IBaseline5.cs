@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the commercial details of the underlying transaction.
 /// </summary>
 [IsoId("_Jxr5cQgHEeSeS5xdjFfOTw")]
+[IsoDisplayName(@"Baseline")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IBaseline5 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +75,7 @@ public interface IBaseline5 : IIsoComponent
     [IsoId("_KK1ZUQgHEeSeS5xdjFfOTw")]
     [DisplayName("Buyer Side Submitting Bank")]
     [IsoXmlTag("BuyrSdSubmitgBk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> BuyerSideSubmittingBank { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IBaseline5 : IIsoComponent
     [IsoId("_KK1ZUwgHEeSeS5xdjFfOTw")]
     [DisplayName("Seller Side Submitting Bank")]
     [IsoXmlTag("SellrSdSubmitgBk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> SellerSideSubmittingBank { get; }
 
     /// <summary>
@@ -121,6 +125,7 @@ public interface IBaseline5 : IIsoComponent
     [IsoId("_KK1ZXQgHEeSeS5xdjFfOTw")]
     [DisplayName("Payment Terms")]
     [IsoXmlTag("PmtTerms")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTerms5> PaymentTerms { get; }
 
     /// <summary>
@@ -137,6 +142,7 @@ public interface IBaseline5 : IIsoComponent
     [IsoId("_KK1ZYQgHEeSeS5xdjFfOTw")]
     [DisplayName("Payment Obligation")]
     [IsoXmlTag("PmtOblgtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentObligation2> PaymentObligation { get; }
 
     /// <summary>
@@ -145,6 +151,7 @@ public interface IBaseline5 : IIsoComponent
     [IsoId("_KK1ZYwgHEeSeS5xdjFfOTw")]
     [DisplayName("Latest Match Date")]
     [IsoXmlTag("LatstMtchDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LatestMatchDate { get; }
 
     /// <summary>
@@ -177,6 +184,7 @@ public interface IBaseline5 : IIsoComponent
     [IsoId("_KK1ZawgHEeSeS5xdjFfOTw")]
     [DisplayName("Certificate Data Set Required")]
     [IsoXmlTag("CertDataSetReqrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRequiredSubmission4> CertificateDataSetRequired { get; }
 
     /// <summary>
@@ -185,6 +193,7 @@ public interface IBaseline5 : IIsoComponent
     [IsoId("_KK1ZbQgHEeSeS5xdjFfOTw")]
     [DisplayName("Other Certificate Data Set Required")]
     [IsoXmlTag("OthrCertDataSetReqrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRequiredSubmission6> OtherCertificateDataSetRequired { get; }
 
     /// <summary>
@@ -193,5 +202,6 @@ public interface IBaseline5 : IIsoComponent
     [IsoId("_KK1ZbwgHEeSeS5xdjFfOTw")]
     [DisplayName("Intent To Pay Expected")]
     [IsoXmlTag("InttToPayXpctd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator IntentToPayExpected { get; }
 }

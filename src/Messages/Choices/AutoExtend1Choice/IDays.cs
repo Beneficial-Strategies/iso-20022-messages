@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AutoExtend1Choice;
 /// Number of days.
 /// </summary>
 [IsoId("_95fqcHltEeG7BsjMvd1mEw_1889905144")]
+[IsoDisplayName(@"Days")]
 public interface IDays : IAutoExtend1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IDays : IAutoExtend1Choice, IIsoChoiceVariant
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("Days")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

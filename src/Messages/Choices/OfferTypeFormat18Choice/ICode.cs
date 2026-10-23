@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OfferTypeFormat18Choice;
 
 /// <summary>Standard code to specify the conditions that apply to the offer.</summary>
 [IsoId("_h_uUsfIHEfCS-OXqezZQmw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOfferTypeFormat18Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

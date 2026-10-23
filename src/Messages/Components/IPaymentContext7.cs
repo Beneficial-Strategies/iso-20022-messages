@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment context in which the transaction is performed.
 /// </summary>
 [IsoId("_9XFDUTJ1EeOqyZqt0rCZLg")]
+[IsoDisplayName(@"Payment Context")]
 public interface IPaymentContext7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPaymentContext7 : IIsoComponent
     [IsoId("_9mGWwTJ1EeOqyZqt0rCZLg")]
     [DisplayName("Card Present")]
     [IsoXmlTag("CardPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardPresent { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPaymentContext7 : IIsoComponent
     [IsoId("_9mGWwzJ1EeOqyZqt0rCZLg")]
     [DisplayName("Cardholder Present")]
     [IsoXmlTag("CrdhldrPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardholderPresent { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPaymentContext7 : IIsoComponent
     [IsoId("_9mGWxTJ1EeOqyZqt0rCZLg")]
     [DisplayName("On Line Context")]
     [IsoXmlTag("OnLineCntxt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? OnLineContext { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IPaymentContext7 : IIsoComponent
     [IsoId("_9mGWzTJ1EeOqyZqt0rCZLg")]
     [DisplayName("Attendant Message Capable")]
     [IsoXmlTag("AttndntMsgCpbl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AttendantMessageCapable { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface IPaymentContext7 : IIsoComponent
     [IsoId("_9mGW0zJ1EeOqyZqt0rCZLg")]
     [DisplayName("Fallback Indicator")]
     [IsoXmlTag("FllbckInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? FallbackIndicator { get; }
 
     /// <summary>
@@ -97,5 +103,6 @@ public interface IPaymentContext7 : IIsoComponent
     [IsoId("_H7GbsDJ2EeOqyZqt0rCZLg")]
     [DisplayName("Supported Option")]
     [IsoXmlTag("SpprtdOptn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<SupportedPaymentOption1Code> SupportedOption { get; }
 }

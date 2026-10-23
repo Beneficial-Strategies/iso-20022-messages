@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the securities account.
 /// </summary>
 [IsoId("_QUwGAtp-Ed-ak6NoX_4Aeg_591777960")]
+[IsoDisplayName(@"Securities Account")]
 public interface ISecuritiesAccount9 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ISecuritiesAccount9 : IIsoComponent
     [IsoId("_QUwGBdp-Ed-ak6NoX_4Aeg_617635743")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountIdentification { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ISecuritiesAccount9 : IIsoComponent
     [IsoId("_QUwGCNp-Ed-ak6NoX_4Aeg_-34603677")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? OptionNumber { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides reason of the rejection of an election advice.
 /// </summary>
 [IsoId("_Rkw8Ydp-Ed-ak6NoX_4Aeg_-175735359")]
+[IsoDisplayName(@"Corporate Action Instruction Rejection Status")]
 public interface ICorporateActionInstructionRejectionStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionInstructionRejectionStatus1 : IIsoComponent
     [IsoId("_Rkw8Ytp-Ed-ak6NoX_4Aeg_-147105631")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason18FormatChoice> Reason { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface ICorporateActionInstructionRejectionStatus1 : IIsoComponent
     [IsoId("_Rkw8Y9p-Ed-ak6NoX_4Aeg_-147105352")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

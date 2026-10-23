@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReason1Choice;
 /// </summary>
 [IsoId("_QWOzu9EdEei798TPbKJMuw")]
 [IsoXmlTag("PrtryRjctn")]
+[IsoDisplayName(@"Proprietary Rejection")]
 public interface IProprietaryRejection : IPaymentStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IProprietaryRejection : IPaymentStatusReason1Choice, IIsoChoice
     [IsoId("_hU5UQdEdEei798TPbKJMuw")]
     [DisplayName("Proprietary Status Reason")]
     [IsoXmlTag("PrtryStsRsn")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText ProprietaryStatusReason { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IProprietaryRejection : IPaymentStatusReason1Choice, IIsoChoice
     [IsoId("_hU5UQ9EdEei798TPbKJMuw")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Reason { get; }
 }

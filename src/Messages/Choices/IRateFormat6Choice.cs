@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a rate or an unspecified rate.
 /// </summary>
 [IsoId("_PO4fIOwOEd-sn-FiNtktcA")]
+[IsoDisplayName(@"Rate Format 6 Choice")]
 public interface IRateFormat6Choice : IIsoChoice { }

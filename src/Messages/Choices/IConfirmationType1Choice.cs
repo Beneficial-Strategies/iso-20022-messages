@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a confirmation type.
 /// </summary>
 [IsoId("_kY3MAEzLEeafiMTDrtSnyw")]
+[IsoDisplayName(@"Confirmation Type 1 Choice")]
 public interface IConfirmationType1Choice : IIsoChoice { }

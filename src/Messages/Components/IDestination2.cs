@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the details of the destination.
 /// </summary>
 [IsoId("_REQg1fQbEeihCvvpsmGI2w")]
+[IsoDisplayName(@"Destination")]
 public interface IDestination2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDestination2 : IIsoComponent
     [IsoId("_REQg2fQbEeihCvvpsmGI2w")]
     [DisplayName("Name And Location")]
     [IsoXmlTag("NmAndLctn")]
+    [IsoSimpleType(IsoSimpleType.Max99Text)]
+    [StringLength(99, MinimumLength = 1)]
     Max99Text? NameAndLocation { get; }
 
     /// <summary>

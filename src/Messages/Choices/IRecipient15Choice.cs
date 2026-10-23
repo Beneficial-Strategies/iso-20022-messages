@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Recipient15Choice.
 /// </summary>
 [IsoId("_bTfzcY-QEe6oobnCtR50kw")]
+[IsoDisplayName(@"Recipient15Choice")]
 public interface IRecipient15Choice : IIsoChoice { }

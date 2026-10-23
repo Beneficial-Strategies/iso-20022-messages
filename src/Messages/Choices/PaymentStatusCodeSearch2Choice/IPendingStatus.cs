@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusCodeSearch2Choice;
 /// Qualifies further the pending status.
 /// </summary>
 [IsoId("_RGEOMdp-Ed-ak6NoX_4Aeg_396814105")]
+[IsoDisplayName(@"Pending Status")]
 public interface IPendingStatus : IPaymentStatusCodeSearch2Choice, IIsoChoiceVariant
 {
     /// <summary>

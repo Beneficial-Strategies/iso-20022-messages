@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the amendment.
 /// </summary>
 [IsoId("_9_TXgXltEeG7BsjMvd1mEw_678552493")]
+[IsoDisplayName(@"Amendment")]
 public interface IAmendment6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAmendment6 : IIsoComponent
     [IsoId("_9_TXg3ltEeG7BsjMvd1mEw_1382360300")]
     [DisplayName("Applicant Reference Number")]
     [IsoXmlTag("ApplcntRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ApplicantReferenceNumber { get; }
 
     /// <summary>
@@ -33,5 +36,9 @@ public interface IAmendment6 : IIsoComponent
     [IsoId("_9_dIgHltEeG7BsjMvd1mEw_105618459")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

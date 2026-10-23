@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the type of product and the assets to be transferred.
 /// </summary>
 [IsoId("_SghaDtp-Ed-ak6NoX_4Aeg_1019608774")]
+[IsoDisplayName(@"PEPISA Transfer")]
 public interface IPEPISATransfer8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPEPISATransfer8 : IIsoComponent
     [IsoId("_SghaD9p-Ed-ak6NoX_4Aeg_1019608793")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPEPISATransfer8 : IIsoComponent
     [IsoId("_Sgqj8Np-Ed-ak6NoX_4Aeg_1019608827")]
     [DisplayName("Transfer Identification")]
     [IsoXmlTag("TrfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPEPISATransfer8 : IIsoComponent
     [IsoId("_Sgqj8dp-Ed-ak6NoX_4Aeg_2023477547")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface IPEPISATransfer8 : IIsoComponent
     [IsoId("_Sgqj8tp-Ed-ak6NoX_4Aeg_1019609117")]
     [DisplayName("Residual Cash Indicator")]
     [IsoXmlTag("RsdlCshInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ResidualCashIndicator { get; }
 
     /// <summary>
@@ -73,5 +81,6 @@ public interface IPEPISATransfer8 : IIsoComponent
     [IsoId("_Sgqj9tp-Ed-ak6NoX_4Aeg_1019609231")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument11> FinancialInstrumentAssetForTransfer { get; }
 }

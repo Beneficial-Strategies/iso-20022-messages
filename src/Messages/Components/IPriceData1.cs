@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the details of the price applicable to the derivative transaction.
 /// </summary>
 [IsoId("_hM_uQHizEeqKjIYaFgh_2g")]
+[IsoDisplayName(@"Price Data")]
 public interface IPriceData1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPriceData1 : IIsoComponent
     [IsoId("_olN5AXizEeqKjIYaFgh_2g")]
     [DisplayName("Price Schedule")]
     [IsoXmlTag("PricSchdl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISchedule1> PriceSchedule { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IPriceData1 : IIsoComponent
     [IsoId("_p2moYXizEeqKjIYaFgh_2g")]
     [DisplayName("Price Multiplier")]
     [IsoXmlTag("PricMltplr")]
+    [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
     LongFraction19DecimalNumber? PriceMultiplier { get; }
 }

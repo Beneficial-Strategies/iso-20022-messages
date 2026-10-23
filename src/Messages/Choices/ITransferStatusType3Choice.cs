@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a type of status or event.
 /// </summary>
 [IsoId("_SVhIAdydEeqzDbuoooxhdw")]
+[IsoDisplayName(@"Transfer Status Type 3 Choice")]
 public interface ITransferStatusType3Choice : IIsoChoice { }

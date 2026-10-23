@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ServiceCategory1Choice;
 
 /// <summary>Service category expressed as a proprietary code.</summary>
 [IsoId("_kjVzcJudEey__7eNd9lW5Q")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IServiceCategory1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "MnyMktFXSwpsSttstclRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.014.001.01"
 )]
+[Description(@"The MoneyMarketSecuredMarketStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report all daily Foreign Exchange Swaps (FX Swaps) transactions.")]
+[IsoDisplayName(@"Money Market Foreign Exchange Swaps Statistical Report V")]
 public interface IMoneyMarketForeignExchangeSwapsStatisticalReportV01 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface IMoneyMarketForeignExchangeSwapsStatisticalReportV01 : IOuterRe
     [IsoId("_wXy2N52SEeW_58xcYxhewg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

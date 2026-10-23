@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the identification assignment.
 /// </summary>
 [IsoId("_tpGiYVkyEeGeoaLUQk__nA_757109061")]
+[IsoDisplayName(@"Identification Assignment")]
 public interface IIdentificationAssignment2 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IIdentificationAssignment2 : IIsoComponent
     [IsoId("_tpGiYlkyEeGeoaLUQk__nA_-239963292")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IIdentificationAssignment2 : IIsoComponent
     [IsoId("_tpGiY1kyEeGeoaLUQk__nA_-1350874711")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>

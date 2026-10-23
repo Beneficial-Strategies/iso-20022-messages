@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the market type.
 /// </summary>
 [IsoId("_Ql4SQtp-Ed-ak6NoX_4Aeg_1045554562")]
+[IsoDisplayName(@"Market Type 8 Choice")]
 public interface IMarketType8Choice : IIsoChoice { }

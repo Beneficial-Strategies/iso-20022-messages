@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the report.
 /// </summary>
 [IsoId("_MMY5keFiEeWIA4E9cYSxxQ")]
+[IsoDisplayName(@"Intra Position Report4")]
 public interface IIntraPositionReport4 : IIsoComponent
 {
     /// <summary>

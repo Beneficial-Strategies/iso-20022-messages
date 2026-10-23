@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentNeed1Choice;
 /// Investment need expressed as a code.
 /// </summary>
 [IsoId("_PXfw0DcdEeidBoT_PugKiA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInvestmentNeed1Choice, IIsoChoiceVariant
 {
     /// <summary>

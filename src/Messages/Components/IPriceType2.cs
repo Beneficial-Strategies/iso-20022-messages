@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the price type.
 /// </summary>
 [IsoId("_UQlCYtp-Ed-ak6NoX_4Aeg_1864790659")]
+[IsoDisplayName(@"Price Type")]
 public interface IPriceType2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IPriceType2 : IIsoComponent
     [IsoId("_UQlCZNp-Ed-ak6NoX_4Aeg_1890648275")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

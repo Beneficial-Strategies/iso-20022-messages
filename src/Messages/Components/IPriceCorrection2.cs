@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original and corrected price information of an investment fund.
 /// </summary>
 [IsoId("_U1YYltp-Ed-ak6NoX_4Aeg_243480882")]
+[IsoDisplayName(@"Price Correction")]
 public interface IPriceCorrection2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IPriceCorrection2 : IIsoComponent
     [IsoId("_U1YYmdp-Ed-ak6NoX_4Aeg_-884858901")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

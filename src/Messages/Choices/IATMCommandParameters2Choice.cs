@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specific parameters attached to an ATM command.
 /// </summary>
 [IsoId("_pz3tsYtHEeSxlKlAGYErFg")]
+[IsoDisplayName(@"ATM Command Parameters 2 Choice")]
 public interface IATMCommandParameters2Choice : IIsoChoice { }

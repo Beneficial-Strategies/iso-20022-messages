@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a collateral quality type.
 /// </summary>
 [IsoId("_BNmBYdR7EemZdYGWu384Zw")]
+[IsoDisplayName(@"Compare Collateral Quality Type")]
 public interface ICompareCollateralQualityType2 : IIsoComponent
 {
     /// <summary>

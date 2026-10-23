@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R2_ZqTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.060.001.07", "AcctRptgReq", "urn:iso:std:iso:20022:tech:xsd:camt.060.001.07")]
+[IsoDisplayName(@"Account Reporting Request V07")]
 public interface IAccountReportingRequestV07 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IAccountReportingRequestV07 : IOuterRecord
     /// </summary>
     [DisplayName("Reporting Request")]
     [IsoXmlTag("RptgReq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportingRequest7> ReportingRequest { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IAccountReportingRequestV07 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

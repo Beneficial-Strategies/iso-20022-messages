@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed information about single invoice/instalment financing result, such as result of request (financed or not financed), amount, percentage applied.
 /// </summary>
 [IsoId("_ThypxNp-Ed-ak6NoX_4Aeg_1200073540")]
+[IsoDisplayName(@"Invoice Financing Details")]
 public interface IInvoiceFinancingDetails1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IInvoiceFinancingDetails1 : IIsoComponent
     [IsoId("_ThypyNp-Ed-ak6NoX_4Aeg_2076029175")]
     [DisplayName("Instalment Financing Information")]
     [IsoXmlTag("InstlmtFincgInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalmentFinancingInformation1> InstalmentFinancingInformation { get; }
 }

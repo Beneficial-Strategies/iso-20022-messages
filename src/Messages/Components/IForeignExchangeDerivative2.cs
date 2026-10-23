@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Foreign Exchange Derivative which is either deliverable or non-deliverable.
 /// </summary>
 [IsoId("_TzPS8X5iEeaGiOUFl5b1oQ")]
+[IsoDisplayName(@"Foreign Exchange Derivative")]
 public interface IForeignExchangeDerivative2 : IIsoComponent
 {
     /// <summary>

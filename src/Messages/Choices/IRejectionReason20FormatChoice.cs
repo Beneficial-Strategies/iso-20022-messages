@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the reason of a rejection of the standing instruction request.
 /// </summary>
 [IsoId("_Rofl0tp-Ed-ak6NoX_4Aeg_362684216")]
+[IsoDisplayName(@"Rejection Reason 20 Format Choice")]
 public interface IRejectionReason20FormatChoice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType35Choice;
 /// Rate expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_43lAEzqkEeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRateType35Choice, IIsoChoiceVariant
 {
     /// <summary>

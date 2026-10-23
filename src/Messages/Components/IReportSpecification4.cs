@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the parameters for which a transaction report must be generated.
 /// </summary>
 [IsoId("_PcRl4dp-Ed-ak6NoX_4Aeg_1375759875")]
+[IsoDisplayName(@"Report Specification")]
 public interface IReportSpecification4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IReportSpecification4 : IIsoComponent
     [IsoId("_PcRl4tp-Ed-ak6NoX_4Aeg_1375759877")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IReportSpecification4 : IIsoComponent
     [IsoId("_PcRl49p-Ed-ak6NoX_4Aeg_-9261587")]
     [DisplayName("Transaction Status")]
     [IsoXmlTag("TxSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionStatus4> TransactionStatus { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IReportSpecification4 : IIsoComponent
     [IsoId("_PcRl5Np-Ed-ak6NoX_4Aeg_1375760307")]
     [DisplayName("Submitter Transaction Reference")]
     [IsoXmlTag("SubmitrTxRef")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> SubmitterTransactionReference { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IReportSpecification4 : IIsoComponent
     [IsoId("_PcRl5dp-Ed-ak6NoX_4Aeg_1383145049")]
     [DisplayName("Entities To Be Reported")]
     [IsoXmlTag("NttiesToBeRptd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> EntitiesToBeReported { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IReportSpecification4 : IIsoComponent
     [IsoId("_PcRl5tp-Ed-ak6NoX_4Aeg_1383144994")]
     [DisplayName("Correspondent")]
     [IsoXmlTag("Crspdt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> Correspondent { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IReportSpecification4 : IIsoComponent
     [IsoId("_PcRl59p-Ed-ak6NoX_4Aeg_-1521300604")]
     [DisplayName("Submitting Bank")]
     [IsoXmlTag("SubmitgBk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> SubmittingBank { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IReportSpecification4 : IIsoComponent
     [IsoId("_PcRl6Np-Ed-ak6NoX_4Aeg_-1689381272")]
     [DisplayName("Obligor Bank")]
     [IsoXmlTag("OblgrBk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> ObligorBank { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IReportSpecification4 : IIsoComponent
     [IsoId("_Pcav0Np-Ed-ak6NoX_4Aeg_1383145194")]
     [DisplayName("Buyer")]
     [IsoXmlTag("Buyr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification28> Buyer { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface IReportSpecification4 : IIsoComponent
     [IsoId("_Pcav0dp-Ed-ak6NoX_4Aeg_1383145172")]
     [DisplayName("Seller")]
     [IsoXmlTag("Sellr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification28> Seller { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface IReportSpecification4 : IIsoComponent
     [IsoId("_Pcav0tp-Ed-ak6NoX_4Aeg_1375759937")]
     [DisplayName("Buyer Country")]
     [IsoXmlTag("BuyrCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> BuyerCountry { get; }
 
     /// <summary>
@@ -97,6 +108,7 @@ public interface IReportSpecification4 : IIsoComponent
     [IsoId("_Pcav09p-Ed-ak6NoX_4Aeg_1375759967")]
     [DisplayName("Seller Country")]
     [IsoXmlTag("SellrCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> SellerCountry { get; }
 
     /// <summary>
@@ -105,6 +117,7 @@ public interface IReportSpecification4 : IIsoComponent
     [IsoId("_Pcav1Np-Ed-ak6NoX_4Aeg_1375760245")]
     [DisplayName("Correspondent Country")]
     [IsoXmlTag("CrspdtCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> CorrespondentCountry { get; }
 
     /// <summary>
@@ -113,5 +126,6 @@ public interface IReportSpecification4 : IIsoComponent
     [IsoId("_Pcav1dp-Ed-ak6NoX_4Aeg_1383145110")]
     [DisplayName("Pending Request For Action")]
     [IsoXmlTag("PdgReqForActn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPendingActivity1> PendingRequestForAction { get; }
 }

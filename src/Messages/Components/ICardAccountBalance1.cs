@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card account balance.
 /// </summary>
 [IsoId("_higIMRQTEfC1ZfCQz0xB3g")]
+[IsoDisplayName(@"Card Account Balance1")]
 public interface ICardAccountBalance1 : IIsoComponent
 {
     /// <summary>

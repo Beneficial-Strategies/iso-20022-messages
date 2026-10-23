@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice23Choi
 /// <summary>
 /// Unit.
 /// </summary>
+[IsoDisplayName(@"Unit")]
 public interface IUnit : ISecuritiesTransactionPrice23Choice, IIsoChoiceVariant
 {
     /// <summary>

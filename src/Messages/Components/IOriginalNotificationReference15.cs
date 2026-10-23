@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the account notification.
 /// </summary>
 [IsoId("f3661683-1059-491d-b800-a893be378870")]
+[IsoDisplayName(@"Original Notification Reference15")]
 public interface IOriginalNotificationReference15 : IIsoComponent
 {
     /// <summary>
@@ -89,5 +90,7 @@ public interface IOriginalNotificationReference15 : IIsoComponent
     [IsoId("643a6e6e-1b00-4a0e-a5b6-d3d253d94a2b")]
     [DisplayName("Original Item And Status")]
     [IsoXmlTag("OrgnlItmAndSts")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalItemAndStatus9> OriginalItemAndStatus { get; }
 }

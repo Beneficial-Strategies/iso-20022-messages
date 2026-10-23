@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action event.
 /// </summary>
 [IsoId("a2995d12-cea5-4f65-ba58-f4636dff68d9")]
+[IsoDisplayName(@"Corporate Action88")]
 public interface ICorporateAction88 : IIsoComponent
 {
     /// <summary>
@@ -145,6 +146,7 @@ public interface ICorporateAction88 : IIsoComponent
     [IsoId("2777773b-21a1-4a42-bf4c-4cbe96497f0b")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOfferTypeFormat18Choice> OfferType { get; }
 
     /// <summary>
@@ -161,6 +163,7 @@ public interface ICorporateAction88 : IIsoComponent
     [IsoId("b4f7b24c-4c3c-4693-a11b-f92bc85f70b0")]
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventStageFormat13Choice> EventStage { get; }
 
     /// <summary>
@@ -169,6 +172,7 @@ public interface ICorporateAction88 : IIsoComponent
     [IsoId("34fbf6b0-f588-42b6-9418-f86600cb7488")]
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBusinessProcessFormat25Choice> AdditionalBusinessProcessIndicator { get; }
 
     /// <summary>
@@ -177,6 +181,7 @@ public interface ICorporateAction88 : IIsoComponent
     [IsoId("461bbda8-13f2-497e-881d-ad4f0c71e00a")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionChangeTypeFormat5Choice> ChangeType { get; }
 
     /// <summary>
@@ -241,6 +246,7 @@ public interface ICorporateAction88 : IIsoComponent
     [IsoId("e162c8cc-bad2-42ff-8b78-b9c86b73b3fe")]
     [DisplayName("Tax On Non Distributed Proceeds Indicator")]
     [IsoXmlTag("TaxOnNonDstrbtdPrcdsInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification30> TaxOnNonDistributedProceedsIndicator { get; }
 
     /// <summary>
@@ -289,6 +295,7 @@ public interface ICorporateAction88 : IIsoComponent
     [IsoId("98bfeeb6-4c10-464a-96de-16bae230fd73")]
     [DisplayName("Certificate Details")]
     [IsoXmlTag("CertDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionSD26> CertificateDetails { get; }
 
     /// <summary>

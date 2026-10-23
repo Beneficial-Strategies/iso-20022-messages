@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingSource1Choice;
 /// Reporting source, as published in an external reporting source code list.
 /// </summary>
 [IsoId("_RqIkktp-Ed-ak6NoX_4Aeg_-1706426890")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IReportingSource1Choice, IIsoChoiceVariant
 {
     /// <summary>

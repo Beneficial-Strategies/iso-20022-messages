@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor Completion Advice13.
 /// </summary>
 [IsoId("_F3DlkZI5Ee6RsYhlPIxpVw")]
+[IsoDisplayName(@"Acceptor Completion Advice13")]
 public interface IAcceptorCompletionAdvice13 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IAcceptorCompletionAdvice13 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

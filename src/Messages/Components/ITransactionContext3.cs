@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the card payment transaction
 /// </summary>
 [IsoId("_iMrMUSehEeiTrZHuJ0M1-Q")]
+[IsoDisplayName(@"Transaction Context")]
 public interface ITransactionContext3 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface ITransactionContext3 : IIsoComponent
     [IsoId("_w_ElwOwGEeiMkKo2clXHdQ")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
     Exact4NumericText? MerchantCategoryCode { get; }
 
     /// <summary>

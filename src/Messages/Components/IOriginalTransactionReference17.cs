@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Key elements used to refer the original transaction.
 /// </summary>
 [IsoId("_tZ5owFkyEeGeoaLUQk__nA_1065726726")]
+[IsoDisplayName(@"Original Transaction Reference")]
 public interface IOriginalTransactionReference17 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IOriginalTransactionReference17 : IIsoComponent
     [IsoId("_tZ5ow1kyEeGeoaLUQk__nA_1825549627")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IOriginalTransactionReference17 : IIsoComponent
     [IsoId("_tZ5oxFkyEeGeoaLUQk__nA_-931291456")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IOriginalTransactionReference17 : IIsoComponent
     [IsoId("_taDZwFkyEeGeoaLUQk__nA_541954794")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedExecutionDate { get; }
 
     /// <summary>

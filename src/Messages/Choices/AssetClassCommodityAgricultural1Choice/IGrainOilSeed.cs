@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural1
 /// </summary>
 [IsoId("_VQFYZQ2jEeW72qLtWESimw")]
 [IsoXmlTag("GrnOilSeed")]
+[IsoDisplayName(@"Grain Oil Seed")]
 public interface IGrainOilSeed : IAssetClassCommodityAgricultural1Choice, IIsoChoiceVariant
 {
     /// <summary>

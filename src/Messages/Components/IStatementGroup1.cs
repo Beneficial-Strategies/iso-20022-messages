@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Group of the statement header reporting the bank services billing and the billing statement.
 /// </summary>
 [IsoId("_6QsqlZqlEeGSON8vddiWzQ_1977241265")]
+[IsoDisplayName(@"Statement Group")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IStatementGroup1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IStatementGroup1 : IIsoComponent
     [IsoId("_6QsqlpqlEeGSON8vddiWzQ_379980943")]
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text GroupIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,9 @@ public interface IStatementGroup1 : IIsoComponent
     [IsoId("_6QsqmJqlEeGSON8vddiWzQ_1946121169")]
     [DisplayName("Sender Individual Contact")]
     [IsoXmlTag("SndrIndvCtct")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactDetails3> SenderIndividualContact { get; }
 
     /// <summary>
@@ -49,6 +56,9 @@ public interface IStatementGroup1 : IIsoComponent
     [IsoId("_6Q10gZqlEeGSON8vddiWzQ_1985160880")]
     [DisplayName("Receiver Individual Contact")]
     [IsoXmlTag("RcvrIndvCtct")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactDetails3> ReceiverIndividualContact { get; }
 
     /// <summary>
@@ -57,5 +67,6 @@ public interface IStatementGroup1 : IIsoComponent
     [IsoId("_6Q10gpqlEeGSON8vddiWzQ_-1643820345")]
     [DisplayName("Billing Statement")]
     [IsoXmlTag("BllgStmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingStatement1> BillingStatement { get; }
 }

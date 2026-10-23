@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError2Choice
 /// </summary>
 [IsoId("_77TPQ6MgEeCJ6YNENx4h-w_-1305206641")]
 [IsoXmlTag("CcyXchg")]
+[IsoDisplayName(@"Currency Exchange")]
 public interface ICurrencyExchange : IExchangeRateReportOrError2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICurrencyExchange : IExchangeRateReportOrError2Choice, IIsoChoi
     [IsoId("_77cZMKMgEeCJ6YNENx4h-w_150823148")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate ExchangeRate { get; }
 
     /// <summary>
@@ -34,5 +36,6 @@ public interface ICurrencyExchange : IExchangeRateReportOrError2Choice, IIsoChoi
     [IsoId("_77cZMqMgEeCJ6YNENx4h-w_1808142586")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime QuotationDate { get; }
 }

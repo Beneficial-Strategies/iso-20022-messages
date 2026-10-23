@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus23Choice;
 /// </summary>
 [IsoId("_1Bk5g2XREeOWzsrIp2keDA")]
 [IsoXmlTag("MtchdWthTlrnce")]
+[IsoDisplayName(@"Matched With Tolerance")]
 public interface IMatchedWithTolerance : IMatchingStatus23Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IMatchedWithTolerance : IMatchingStatus23Choice, IIsoChoiceVari
     [IsoId("_UatOxtp-Ed-ak6NoX_4Aeg_-1133156666")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

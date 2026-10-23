@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CtrctRegnStmtReq",
     "urn:iso:std:iso:20022:tech:xsd:auth.023.001.03"
 )]
+[Description(@"The ContractRegistrationStatementRequest message is sent by the reporting party to the registration agent to request for a statement of the operations related to the registered contract subject to currency control.")]
+[IsoDisplayName(@"Contract Registration Statement Request V")]
 public interface IContractRegistrationStatementRequestV03 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IContractRegistrationStatementRequestV03 : IOuterRecord
     [IsoId("_Nz8aqx3pEeuiRvbpCaJe6A")]
     [DisplayName("Statement Request")]
     [IsoXmlTag("StmtReq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContractRegistrationStatementRequest2> StatementRequest { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IContractRegistrationStatementRequestV03 : IOuterRecord
     [IsoId("_Nz8arR3pEeuiRvbpCaJe6A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

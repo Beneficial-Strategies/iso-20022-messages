@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Group of parties with their related security certificate.
 /// </summary>
 [IsoId("_D1xVkW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Group")]
 public interface IGroup3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IGroup3 : IIsoComponent
     [IsoId("_D_AxI249EeiU9cctagi5ow")]
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText GroupIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IGroup3 : IIsoComponent
     [IsoId("_D_AxJW49EeiU9cctagi5ow")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndCertificate5> Party { get; }
 }

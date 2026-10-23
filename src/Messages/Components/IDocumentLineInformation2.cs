@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides document line information.
 /// </summary>
 [IsoId("_eZxMgTE4Ee62xuUQ2zyZww")]
+[Description(@"Provides document line information.")]
+[IsoDisplayName(@"Document Line Information2")]
 public interface IDocumentLineInformation2 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +18,7 @@ public interface IDocumentLineInformation2 : IIsoComponent
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentLineIdentification1> Identification { get; }
 
     /// <summary>

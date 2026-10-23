@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Securities Financing Transaction Details56.
 /// </summary>
 [IsoId("_uJr6gYYeEe-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Securities Financing Transaction Details56")]
 public interface ISecuritiesFinancingTransactionDetails56 : IIsoComponent
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledStatus10Choice;
 /// </summary>
 [IsoId("_2FId0zt5EeW638lNyHKv7A")]
 [IsoXmlTag("Rsn")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : ICancelledStatus10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IReason : ICancelledStatus10Choice, IIsoChoiceVariant
     [IsoId("_2k-bhTt5EeW638lNyHKv7A")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

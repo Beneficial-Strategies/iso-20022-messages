@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice;
 /// </summary>
 [IsoId("_PWk1NmHcEeGrBqfAqyy96Q")]
 [IsoXmlTag("OrgnlTxNb")]
+[IsoDisplayName(@"Original Transaction Number")]
 public interface IOriginalTransactionNumber : ISearchCriteria1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOriginalTransactionNumber : ISearchCriteria1Choice, IIsoChoice
     [IsoId("_py93vGHgEeGrBqfAqyy96Q")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Number { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IOriginalTransactionNumber : ISearchCriteria1Choice, IIsoChoice
     [IsoId("_wc1usWHgEeGrBqfAqyy96Q")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TransactionRequestType1Code> Type { get; }
 
     /// <summary>
@@ -34,5 +38,7 @@ public interface IOriginalTransactionNumber : ISearchCriteria1Choice, IIsoChoice
     [IsoId("_yowzsWHgEeGrBqfAqyy96Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalInformation { get; }
 }

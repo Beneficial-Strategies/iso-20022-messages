@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitsOrAmount1Choice;
 /// Number of units to be subscribed or withdrawn.
 /// </summary>
 [IsoId("_xG-wcBQcEeKebsB9eKJSkA")]
+[IsoDisplayName(@"Unit")]
 public interface IUnit : IUnitsOrAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IUnit : IUnitsOrAmount1Choice, IIsoChoiceVariant
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 }

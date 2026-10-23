@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification80Choice;
 /// <summary>
 /// BBAN.
 /// </summary>
+[IsoDisplayName(@"BBAN")]
 public interface IBBAN : IAccountIdentification80Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References43Choice;
 /// Unambiguous identification of the report to be cancelled.
 /// </summary>
 [IsoId("_5pbMdzqnEeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Securities Settlement Transaction Allegement Report Identification")]
 public interface ISecuritiesSettlementTransactionAllegementReportIdentification
     : IReferences43Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ISecuritiesSettlementTransactionAllegementReportIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("SctiesSttlmTxAllgmtRptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

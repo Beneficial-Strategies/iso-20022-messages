@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.
 /// </summary>
 [IsoId("_-lciwRgkEeK-_89we2b-bA")]
+[IsoDisplayName(@"Transfer")]
 public interface ITransfer24 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITransfer24 : IIsoComponent
     [IsoId("_x-ihMRguEeK-_89we2b-bA")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>
@@ -49,6 +51,9 @@ public interface ITransfer24 : IIsoComponent
     [IsoId("_-6dwlRgkEeK-_89we2b-bA")]
     [DisplayName("Holdings Plan Type")]
     [IsoXmlTag("HldgsPlanTp")]
+    [MinLength(0)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<HoldingsPlanType1Code> HoldingsPlanType { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ITransfer24 : IIsoComponent
     [IsoId("_-6dwoRgkEeK-_89we2b-bA")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit3> UnitsDetails { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface ITransfer24 : IIsoComponent
     [IsoId("_-6dwpRgkEeK-_89we2b-bA")]
     [DisplayName("Portfolio Transfer Out Rate")]
     [IsoXmlTag("PrtflTrfOutRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PortfolioTransferOutRate { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface ITransfer24 : IIsoComponent
     [IsoId("_-6dwsRgkEeK-_89we2b-bA")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OwnAccountTransferIndicator { get; }
 
     /// <summary>
@@ -113,6 +121,8 @@ public interface ITransfer24 : IIsoComponent
     [IsoId("_-6dwtRgkEeK-_89we2b-bA")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>

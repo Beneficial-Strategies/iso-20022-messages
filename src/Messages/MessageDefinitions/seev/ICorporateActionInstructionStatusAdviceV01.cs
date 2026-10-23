@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnInstrStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.034.001.01"
 )]
+[Description(@"Scope|An account servicer sends the CorporateActionInstructionStatusAdvice message to an account owner or its designated agent, to report status of a received corporate action election instruction.|This message is used to advise the status, or a change in status, of a corporate action-related transaction previously instructed by, or executed on behalf of, the account owner. This will include the acknowledgement/rejection of a corporate action instruction.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).|ISO 15022 - 20022 COEXISTENCE|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
+[IsoDisplayName(@"Corporate Action Instruction Status Advice V")]
 public interface ICorporateActionInstructionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -47,6 +49,7 @@ public interface ICorporateActionInstructionStatusAdviceV01 : IOuterRecord
     [IsoId("_TXvSQtEwEd-BzquC8wXy7w_2013739724")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification14> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -63,6 +66,7 @@ public interface ICorporateActionInstructionStatusAdviceV01 : IOuterRecord
     [IsoId("_TXvSRNEwEd-BzquC8wXy7w_-2103905329")]
     [DisplayName("Instruction Processing Status")]
     [IsoXmlTag("InstrPrcgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionProcessingStatus1Choice> InstructionProcessingStatus { get; }
 
     /// <summary>
@@ -103,5 +107,6 @@ public interface ICorporateActionInstructionStatusAdviceV01 : IOuterRecord
     [IsoId("_TX4cMdEwEd-BzquC8wXy7w_1689051830")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension2> Extension { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus1
 /// Indicates that the message is for information only, that is processing of client&apos;s instruction will not be supported by the Account Servicer.
 /// </summary>
 [IsoId("_Q1O85tp-Ed-ak6NoX_4Aeg_-1955694222")]
+[IsoDisplayName(@"For Information Only Indicator")]
 public interface IForInformationOnlyIndicator
     : ICorporateActionProcessingStatus1Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IForInformationOnlyIndicator
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("ForInfOnlyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

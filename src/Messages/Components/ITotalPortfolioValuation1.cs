@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Valuation information of the portfolio.
 /// </summary>
 [IsoId("_m_CFkvNBEeCuA5Tr22BnwA_780606232")]
+[IsoDisplayName(@"Total Portfolio Valuation")]
 public interface ITotalPortfolioValuation1 : IIsoComponent
 {
     /// <summary>
@@ -121,5 +122,6 @@ public interface ITotalPortfolioValuation1 : IIsoComponent
     [IsoId("_m_VAg_NBEeCuA5Tr22BnwA_-867400971")]
     [DisplayName("Investment Fund Details")]
     [IsoXmlTag("InvstmtFndDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFund1> InvestmentFundDetails { get; }
 }

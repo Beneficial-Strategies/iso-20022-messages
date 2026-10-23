@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information about an announcement.
 /// </summary>
 [IsoId("_RjH9odp-Ed-ak6NoX_4Aeg_245466411")]
+[IsoDisplayName(@"Corporate Action Notification Advice")]
 public interface ICorporateActionNotificationAdvice1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICorporateActionNotificationAdvice1 : IIsoComponent
     [IsoId("_RjH9o9p-Ed-ak6NoX_4Aeg_635191264")]
     [DisplayName("Corporate Action Option Details")]
     [IsoXmlTag("CorpActnOptnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionOption1> CorporateActionOptionDetails { get; }
 }

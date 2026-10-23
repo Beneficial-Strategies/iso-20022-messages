@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the attributes for a debtor activation.
 /// </summary>
 [IsoId("_URmu5eH7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Debtor Activation")]
 public interface IDebtorActivation4 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,8 @@ public interface IDebtorActivation4 : IIsoComponent
     [IsoId("_USzBseH7Eeqbls7Gk4-ckA")]
     [DisplayName("Debtor Activation Identification")]
     [IsoXmlTag("DbtrActvtnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DebtorActivationIdentification { get; }
 
     /// <summary>
@@ -27,6 +30,8 @@ public interface IDebtorActivation4 : IIsoComponent
     [IsoId("_USzBs-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Display Name")]
     [IsoXmlTag("DispNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? DisplayName { get; }
 
     /// <summary>
@@ -59,6 +64,7 @@ public interface IDebtorActivation4 : IIsoComponent
     [IsoId("_USzBu-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Customer Identification")]
     [IsoXmlTag("CstmrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IParty49Choice> CustomerIdentification { get; }
 
     /// <summary>
@@ -67,6 +73,7 @@ public interface IDebtorActivation4 : IIsoComponent
     [IsoId("_USzBveH7Eeqbls7Gk4-ckA")]
     [DisplayName("Contract Format Type")]
     [IsoXmlTag("CtrctFrmtTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentFormat2Choice> ContractFormatType { get; }
 
     /// <summary>
@@ -77,6 +84,7 @@ public interface IDebtorActivation4 : IIsoComponent
     [IsoId("_USzBv-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Contract Reference")]
     [IsoXmlTag("CtrctRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContractReference1> ContractReference { get; }
 
     /// <summary>
@@ -125,5 +133,7 @@ public interface IDebtorActivation4 : IIsoComponent
     [IsoId("_USzB0eH7Eeqbls7Gk4-ckA")]
     [DisplayName("Dedicated Activation Code")]
     [IsoXmlTag("DdctdActvtnCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DedicatedActivationCode { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
 /// </summary>
 [IsoId("_ujGeS8STEeeRJJtE9TSlkw")]
 [IsoXmlTag("CollOutBal")]
+[IsoDisplayName(@"Collateral Out Balance")]
 public interface ICollateralOutBalance
     : ICorporateActionUnallocatedBalanceSD3Choice,
         IIsoChoiceVariant

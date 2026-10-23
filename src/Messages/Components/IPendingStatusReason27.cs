@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Pending Status Reason27.
 /// </summary>
 [IsoId("_SavkoWHeEe6yt_d72zQZeQ")]
+[IsoDisplayName(@"Pending Status Reason27")]
 public interface IPendingStatusReason27 : IIsoComponent
 {
     /// <summary>

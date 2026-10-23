@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingReportOrError6Choice;
 
 /// <summary>Indicates that an operational error has been issued during the processing of the related request.</summary>
 [IsoId("_2jks1TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : IBillingReportOrError6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

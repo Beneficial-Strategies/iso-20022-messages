@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters related to the security of software application and application protocol.
 /// </summary>
 [IsoId("_WpzpgdtXEee9e6xduATmQg")]
+[IsoDisplayName(@"Security Parameters")]
 public interface ISecurityParameters11 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ISecurityParameters11 : IIsoComponent
     [IsoId("_Wypcc9tXEee9e6xduATmQg")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Version { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISecurityParameters11 : IIsoComponent
     [IsoId("_WypcddtXEee9e6xduATmQg")]
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? POIChallenge { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ISecurityParameters11 : IIsoComponent
     [IsoId("_Wypcd9tXEee9e6xduATmQg")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? TMChallenge { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface ISecurityParameters11 : IIsoComponent
     [IsoId("_WypcedtXEee9e6xduATmQg")]
     [DisplayName("Security Element")]
     [IsoXmlTag("SctyElmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICryptographicKey13> SecurityElement { get; }
 }

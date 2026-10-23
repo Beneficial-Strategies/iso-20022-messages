@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the details related to an individual trip.
 /// </summary>
 [IsoId("_X6Xf1_i3EeiJaN6-Lf-c_w")]
+[IsoDisplayName(@"Trip Information")]
 public interface ITripInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITripInformation1 : IIsoComponent
     [IsoId("_X6YG4vi3EeiJaN6-Lf-c_w")]
     [DisplayName("Trip Number")]
     [IsoXmlTag("TripNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripNumber { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITripInformation1 : IIsoComponent
     [IsoId("_X6YG5Pi3EeiJaN6-Lf-c_w")]
     [DisplayName("Job Number")]
     [IsoXmlTag("JobNb")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? JobNumber { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITripInformation1 : IIsoComponent
     [IsoId("_X6YG5fi3EeiJaN6-Lf-c_w")]
     [DisplayName("Work Order")]
     [IsoXmlTag("WorkOrdr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? WorkOrder { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITripInformation1 : IIsoComponent
     [IsoId("_X6YG4fi3EeiJaN6-Lf-c_w")]
     [DisplayName("Invoice Number")]
     [IsoXmlTag("InvcNb")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? InvoiceNumber { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface ITripInformation1 : IIsoComponent
     [IsoId("_X6YG4Pi3EeiJaN6-Lf-c_w")]
     [DisplayName("Billing Identification")]
     [IsoXmlTag("BllgId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? BillingIdentification { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface ITripInformation1 : IIsoComponent
     [IsoId("_X6YG4_i3EeiJaN6-Lf-c_w")]
     [DisplayName("Control Number")]
     [IsoXmlTag("CtrlNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ControlNumber { get; }
 
     /// <summary>
@@ -65,5 +78,7 @@ public interface ITripInformation1 : IIsoComponent
     [IsoId("_kjUdAPi6EeiJaN6-Lf-c_w")]
     [DisplayName("Delivery Ticket Number")]
     [IsoXmlTag("DlvryTcktNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DeliveryTicketNumber { get; }
 }

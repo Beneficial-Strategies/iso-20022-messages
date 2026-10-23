@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the reason of the return of the transaction.
 /// </summary>
 [IsoId("_I5-c23L_EeidQ_AAdEzxQA")]
+[IsoDisplayName(@"Payment Return Reason")]
 public interface IPaymentReturnReason6 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IPaymentReturnReason6 : IIsoComponent
     [IsoId("_JEjVKXL_EeidQ_AAdEzxQA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

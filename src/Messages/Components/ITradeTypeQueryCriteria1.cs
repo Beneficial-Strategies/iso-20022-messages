@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the query criteria related to transaction types.
 /// </summary>
 [IsoId("_HbKEkN33EemPzZ9FnkQP2A")]
+[IsoDisplayName(@"Trade Type Query Criteria")]
 public interface ITradeTypeQueryCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITradeTypeQueryCriteria1 : IIsoComponent
     [IsoId("_Ec35EN34EemPzZ9FnkQP2A")]
     [DisplayName("Securities Financing Transaction Type")]
     [IsoXmlTag("SctiesFincgTxTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ExposureType6Code> SecuritiesFinancingTransactionType { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ITradeTypeQueryCriteria1 : IIsoComponent
     [IsoId("_FfoWkN34EemPzZ9FnkQP2A")]
     [DisplayName("Collateral Component Type")]
     [IsoXmlTag("CollCmpntTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CollateralType6Code> CollateralComponentType { get; }
 }

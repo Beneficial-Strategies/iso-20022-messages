@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action reorganisation instruction details.
 /// </summary>
 [IsoId("_oxhkuTDtEey2N-DB7H7A5A")]
+[IsoDisplayName(@"Reorganisation Instruction SD")]
 public interface IReorganisationInstructionSD13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReorganisationInstructionSD13 : IIsoComponent
     [IsoId("_pHueMTDtEey2N-DB7H7A5A")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,9 @@ public interface IReorganisationInstructionSD13 : IIsoComponent
     [IsoId("_pHueNTDtEey2N-DB7H7A5A")]
     [DisplayName("Transaction Sequence")]
     [IsoXmlTag("TxSeq")]
+    [MinLength(0)]
+    [MaxLength(99)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionsTransactionsSequence2> TransactionSequence { get; }
 
     /// <summary>
@@ -65,6 +71,8 @@ public interface IReorganisationInstructionSD13 : IIsoComponent
     [IsoId("_pHuePTDtEey2N-DB7H7A5A")]
     [DisplayName("User Reference Number")]
     [IsoXmlTag("UsrRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text? UserReferenceNumber { get; }
 
     /// <summary>
@@ -83,6 +91,7 @@ public interface IReorganisationInstructionSD13 : IIsoComponent
     [IsoId("_pHueQTDtEey2N-DB7H7A5A")]
     [DisplayName("Non Exempt Instructions Allowed Indicator")]
     [IsoXmlTag("NonXmptInstrsAllwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NonExemptInstructionsAllowedIndicator { get; }
 
     /// <summary>
@@ -107,5 +116,6 @@ public interface IReorganisationInstructionSD13 : IIsoComponent
     [IsoId("_hpJ-YTDuEey2N-DB7H7A5A")]
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? CustomerReferenceIdentification { get; }
 }

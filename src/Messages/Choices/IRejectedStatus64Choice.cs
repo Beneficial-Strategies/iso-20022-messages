@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a reason and no reason for the general meeting instruction processing rejected status.</summary>
 [IsoId("_48GC8aKsEfCHi7w3_0pcpw")]
+[IsoDisplayName(@"Rejected Status 64 Choice")]
 public interface IRejectedStatus64Choice : IIsoChoice { }

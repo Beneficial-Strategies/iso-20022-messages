@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the status of a trade in a central settlement system.
 /// </summary>
 [IsoId("_Q7Ma8dp-Ed-ak6NoX_4Aeg_-931990425")]
+[IsoDisplayName(@"Trade Status")]
 public interface ITradeStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeStatus1 : IIsoComponent
     [IsoId("_Q7Ma8tp-Ed-ak6NoX_4Aeg_2061891848")]
     [DisplayName("Alleged Trade")]
     [IsoXmlTag("AllgdTrad")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AllegedTrade { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITradeStatus1 : IIsoComponent
     [IsoId("_Q7Ma89p-Ed-ak6NoX_4Aeg_2043342151")]
     [DisplayName("Matching System Unique Reference")]
     [IsoXmlTag("MtchgSysUnqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MatchingSystemUniqueReference { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface ITradeStatus1 : IIsoComponent
     [IsoId("_Q7Ma9dp-Ed-ak6NoX_4Aeg_1685557048")]
     [DisplayName("Extended Status")]
     [IsoXmlTag("XtndedSts")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedStatus { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface ITradeStatus1 : IIsoComponent
     [IsoId("_Q7Ma9tp-Ed-ak6NoX_4Aeg_824610615")]
     [DisplayName("Status Sub Type")]
     [IsoXmlTag("StsSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? StatusSubType { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface ITradeStatus1 : IIsoComponent
     [IsoId("_Q7Ma99p-Ed-ak6NoX_4Aeg_1765636507")]
     [DisplayName("Status Time")]
     [IsoXmlTag("StsTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StatusTime { get; }
 
     /// <summary>
@@ -65,5 +74,7 @@ public interface ITradeStatus1 : IIsoComponent
     [IsoId("_Q7Ma-Np-Ed-ak6NoX_4Aeg_1712995906")]
     [DisplayName("Status Originator")]
     [IsoXmlTag("StsOrgtr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StatusOriginator { get; }
 }

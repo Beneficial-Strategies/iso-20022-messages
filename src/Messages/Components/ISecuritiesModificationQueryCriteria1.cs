@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria based on which information is included.
 /// </summary>
 [IsoId("_W1EGwWdnEemMLeaDfmIfIA")]
+[IsoDisplayName(@"Securities Modification Query Criteria1")]
 public interface ISecuritiesModificationQueryCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecuritiesModificationQueryCriteria1 : IIsoComponent
     [IsoId("_XB0wYWdnEemMLeaDfmIfIA")]
     [DisplayName("Modification Request Identification")]
     [IsoXmlTag("ModReqId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ModificationRequestIdentification { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ISecuritiesModificationQueryCriteria1 : IIsoComponent
     [IsoId("_XB0wa2dnEemMLeaDfmIfIA")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationProcessingStatus9Choice> ProcessingStatus { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ISecuritiesModificationQueryCriteria1 : IIsoComponent
     [IsoId("_XB0wbWdnEemMLeaDfmIfIA")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesAccount19> SafekeepingAccount { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ISecuritiesModificationQueryCriteria1 : IIsoComponent
     [IsoId("_XB0wb2dnEemMLeaDfmIfIA")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> AccountOwner { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ISecuritiesModificationQueryCriteria1 : IIsoComponent
     [IsoId("_XB0wcWdnEemMLeaDfmIfIA")]
     [DisplayName("Message Originator")]
     [IsoXmlTag("MsgOrgtr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> MessageOriginator { get; }
 
     /// <summary>

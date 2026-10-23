@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of change to a date.
 /// </summary>
 [IsoId("_8KJNgA4qEeK3IMoVvcTkkg")]
+[IsoDisplayName(@"Date Modification")]
 public interface IDateModification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IDateModification1 : IIsoComponent
     [IsoId("_H0vMYA4rEeK3IMoVvcTkkg")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Date { get; }
 }

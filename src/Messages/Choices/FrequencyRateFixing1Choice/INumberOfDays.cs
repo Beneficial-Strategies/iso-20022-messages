@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FrequencyRateFixing1Choice;
 /// Specific number of days assigned for the frequency fixing of the rate.
 /// </summary>
 [IsoId("_GfUYMI9QEeqMo4JxiuZGSw")]
+[IsoDisplayName(@"Number Of Days")]
 public interface INumberOfDays : IFrequencyRateFixing1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INumberOfDays : IFrequencyRateFixing1Choice, IIsoChoiceVariant
     /// Specifies a numeric string with a maximum length of 3 digits.
     /// </summary>
     [IsoXmlTag("NbOfDays")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText Value { get; }
 }

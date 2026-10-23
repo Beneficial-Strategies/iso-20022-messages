@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the type of opening instruction and identification of the application request.
 /// </summary>
 [IsoId("_9UTJoQjgEeSI9qETkJHgqw")]
+[IsoDisplayName(@"Investment Account Opening")]
 public interface IInvestmentAccountOpening1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IInvestmentAccountOpening1 : IIsoComponent
     [IsoId("_9uyGMwjgEeSI9qETkJHgqw")]
     [DisplayName("Account Application Identification")]
     [IsoXmlTag("AcctApplId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountApplicationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IInvestmentAccountOpening1 : IIsoComponent
     [IsoId("_GdTVggjhEeSI9qETkJHgqw")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>

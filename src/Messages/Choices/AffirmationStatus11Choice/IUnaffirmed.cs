@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationStatus11Choice;
 /// Trade has been unaffirmed.
 /// </summary>
 [IsoId("_XzM-0wd3Ee2fOITqoTnSLQ")]
+[IsoDisplayName(@"Unaffirmed")]
 public interface IUnaffirmed : IAffirmationStatus11Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

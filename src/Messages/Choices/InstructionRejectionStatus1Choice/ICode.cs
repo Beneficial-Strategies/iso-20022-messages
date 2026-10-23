@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionRejectionStatus1Choic
 /// Reason advising the rejection of the instruction in the form of a code.
 /// </summary>
 [IsoId("_RCfVxtp-Ed-ak6NoX_4Aeg_-867514428")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInstructionRejectionStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

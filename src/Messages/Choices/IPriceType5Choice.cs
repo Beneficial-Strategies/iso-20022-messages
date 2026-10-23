@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of price type.
 /// </summary>
 [IsoId("_SKL8C83yEee5nJBZsW8MFQ")]
+[IsoDisplayName(@"Price Type 5 Choice")]
 public interface IPriceType5Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amounts of the transaction expressed within the terminal currency.
 /// </summary>
 [IsoId("_f-Mf0HsyEeSTS7uHCe8FPQ")]
+[IsoDisplayName(@"Card Transaction Amount")]
 public interface ICardTransactionAmount1 : IIsoComponent
 {
     /// <summary>
@@ -43,5 +44,6 @@ public interface ICardTransactionAmount1 : IIsoComponent
     [IsoId("_-JY2oHszEeSTS7uHCe8FPQ")]
     [DisplayName("Detailed Amount")]
     [IsoXmlTag("DtldAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount9> DetailedAmount { get; }
 }

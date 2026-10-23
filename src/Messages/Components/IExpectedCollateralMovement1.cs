@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the expected collateral type and direction.
 /// </summary>
 [IsoId("_UmVP9dp-Ed-ak6NoX_4Aeg_571972876")]
+[IsoDisplayName(@"Expected Collateral Movement")]
 public interface IExpectedCollateralMovement1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IExpectedCollateralMovement1 : IIsoComponent
     [IsoId("_UmVP9tp-Ed-ak6NoX_4Aeg_759302404")]
     [DisplayName("Delivery")]
     [IsoXmlTag("Dlvry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CollateralType1Code> Delivery { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IExpectedCollateralMovement1 : IIsoComponent
     [IsoId("_UmVP99p-Ed-ak6NoX_4Aeg_1623020220")]
     [DisplayName("Return")]
     [IsoXmlTag("Rtr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CollateralType1Code> Return { get; }
 }

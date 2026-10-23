@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account and holding of the next sub-level (Level 8).
 /// </summary>
 [IsoId("_L5Y2h4j3EeONZKAAW4pOaQ")]
+[IsoDisplayName(@"Account Sub Level")]
 public interface IAccountSubLevel8 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IAccountSubLevel8 : IIsoComponent
     [IsoId("_2QAz0TyvEeSBD_ZW60GwCQ")]
     [DisplayName("Beneficial Owner")]
     [IsoXmlTag("BnfclOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficialOwner2> BeneficialOwner { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IAccountSubLevel8 : IIsoComponent
     [IsoId("_L5Y2jIj3EeONZKAAW4pOaQ")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateHoldingBalance1> BalanceForAccount { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IAccountSubLevel8 : IIsoComponent
     [IsoId("_L5Y2i4j3EeONZKAAW4pOaQ")]
     [DisplayName("Account Sub Level")]
     [IsoXmlTag("AcctSubLvl9")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountSubLevel9> AccountSubLevel9 { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IAccountSubLevel8 : IIsoComponent
     [IsoId("_L5Y2iYj3EeONZKAAW4pOaQ")]
     [DisplayName("Account Sub Level 9 Difference")]
     [IsoXmlTag("AcctSubLvl9Diff")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateHoldingBalance2> AccountSubLevel9Difference { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface IAccountSubLevel8 : IIsoComponent
     [IsoId("_MxO40b3OEeO2FLWuu_JIqg")]
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary29> Agent { get; }
 
     /// <summary>
@@ -81,5 +87,6 @@ public interface IAccountSubLevel8 : IIsoComponent
     [IsoId("_P8E-wW5HEeSFHPWGV34yZw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

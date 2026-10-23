@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of settlement of a transaction.
 /// </summary>
 [IsoId("_NxH24a3LEeey8N0JWnVPUw")]
+[IsoDisplayName(@"Settlement Details")]
 public interface ISettlementDetails147 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISettlementDetails147 : IIsoComponent
     [IsoId("_N8Eiqa3LEeey8N0JWnVPUw")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementTransactionCondition18Choice> SettlementTransactionCondition { get; }
 
     /// <summary>
@@ -145,5 +147,6 @@ public interface ISettlementDetails147 : IIsoComponent
     [IsoId("_N8Fw8a3LEeey8N0JWnVPUw")]
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EligibleForCollateral { get; }
 }

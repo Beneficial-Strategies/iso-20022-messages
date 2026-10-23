@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance Transfer5.
 /// </summary>
 [IsoId("_8NntVTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Balance Transfer5")]
 public interface IBalanceTransfer5 : IIsoComponent
 {
     /// <summary>

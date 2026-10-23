@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Order to switch an investment from one fund to another.
 /// </summary>
 [IsoId("906f2c3f-6693-415a-ae48-44d8780df86b")]
+[IsoDisplayName(@"Switch Order8")]
 public interface ISwitchOrder8 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface ISwitchOrder8 : IIsoComponent
     [IsoId("906f2c3f-rltd-0001-0008-44d8780df86b")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary50> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -137,6 +139,8 @@ public interface ISwitchOrder8 : IIsoComponent
     [IsoId("906f2c3f-rdmp-0001-0016-44d8780df86b")]
     [DisplayName("Redemption Leg Details")]
     [IsoXmlTag("RedLegDtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchRedemptionLegOrder7> RedemptionLegDetails { get; }
 
     /// <summary>
@@ -145,6 +149,8 @@ public interface ISwitchOrder8 : IIsoComponent
     [IsoId("906f2c3f-sbsc-0001-0017-44d8780df86b")]
     [DisplayName("Subscription Leg Details")]
     [IsoXmlTag("SbcptLegDtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchSubscriptionLegOrder7> SubscriptionLegDetails { get; }
 
     /// <summary>

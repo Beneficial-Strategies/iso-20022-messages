@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action movement option details.
 /// </summary>
 [IsoId("_rV3zQQCEEeqouY-yI_q3qQ")]
+[IsoDisplayName(@"Option Transaction SD")]
 public interface IOptionTransactionSD6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOptionTransactionSD6 : IIsoComponent
     [IsoId("_rpXXAQCEEeqouY-yI_q3qQ")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOptionTransactionSD6 : IIsoComponent
     [IsoId("_rphIAQCEEeqouY-yI_q3qQ")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text TransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IOptionTransactionSD6 : IIsoComponent
     [IsoId("_rphIAwCEEeqouY-yI_q3qQ")]
     [DisplayName("Transaction Sequence Number")]
     [IsoXmlTag("TxSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? TransactionSequenceNumber { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IOptionTransactionSD6 : IIsoComponent
     [IsoId("_rphIBQCEEeqouY-yI_q3qQ")]
     [DisplayName("Transaction Identification Date")]
     [IsoXmlTag("TxIdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TransactionIdentificationDate { get; }
 
     /// <summary>
@@ -129,6 +136,7 @@ public interface IOptionTransactionSD6 : IIsoComponent
     [IsoId("_rphIIQCEEeqouY-yI_q3qQ")]
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? CustomerReferenceIdentification { get; }
 
     /// <summary>
@@ -145,6 +153,8 @@ public interface IOptionTransactionSD6 : IIsoComponent
     [IsoId("_rphIJQCEEeqouY-yI_q3qQ")]
     [DisplayName("Instruction Comments")]
     [IsoXmlTag("InstrCmnts")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? InstructionComments { get; }
 
     /// <summary>

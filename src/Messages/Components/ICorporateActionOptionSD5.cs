@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action option details.
 /// </summary>
 [IsoId("_1e_1RDL3EeKU9IrkkToqcw_-1892432228")]
+[IsoDisplayName(@"Corporate Action Option SD")]
 public interface ICorporateActionOptionSD5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionOptionSD5 : IIsoComponent
     [IsoId("_1e_1RTL3EeKU9IrkkToqcw_-2017370071")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICorporateActionOptionSD5 : IIsoComponent
     [IsoId("_1fI_MTL3EeKU9IrkkToqcw_-1595253566")]
     [DisplayName("Random Lot Preference Flag")]
     [IsoXmlTag("RandLotPrefFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RandomLotPreferenceFlag { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ICorporateActionOptionSD5 : IIsoComponent
     [IsoId("_1fI_MjL3EeKU9IrkkToqcw_-1644636037")]
     [DisplayName("New Share Dispatched Date")]
     [IsoXmlTag("NewShrDsptchdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NewShareDispatchedDate { get; }
 }

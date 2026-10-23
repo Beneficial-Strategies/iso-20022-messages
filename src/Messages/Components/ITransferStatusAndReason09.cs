@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the status of a transfer instruction and its reason.
 /// </summary>
 [IsoId("5d59e824-c7dc-44e1-8320-59c3e1ab7ac7")]
+[IsoDisplayName(@"Transfer Status And Reason09")]
 public interface ITransferStatusAndReason09 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ITransferStatusAndReason09 : IIsoComponent
     [IsoId("30f1743b-3abf-47b0-81fa-0e8629dceacf")]
     [DisplayName("Transfer Event Type")]
     [IsoXmlTag("TrfEvtTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransferStatusType3Choice> TransferEventType { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface ITransferStatusAndReason09 : IIsoComponent
     [IsoId("78a74c05-fc0c-4325-9445-14a123d4e4a2")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary48> IntermediaryInformation { get; }
 
     /// <summary>
@@ -137,6 +140,7 @@ public interface ITransferStatusAndReason09 : IIsoComponent
     [IsoId("87724e29-ea6e-4226-96b0-82bbb2e763c3")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit14> UnitsDetails { get; }
 
     /// <summary>
@@ -161,6 +165,7 @@ public interface ITransferStatusAndReason09 : IIsoComponent
     [IsoId("681b13a3-7e98-49fd-93a5-f36c803c0bae")]
     [DisplayName("Payment Details")]
     [IsoXmlTag("PmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstrument23> PaymentDetails { get; }
 
     /// <summary>
@@ -169,6 +174,7 @@ public interface ITransferStatusAndReason09 : IIsoComponent
     [IsoId("d49de491-7fe7-4b74-8c48-0795ac42b5da")]
     [DisplayName("Benefit Crystallisation Event")]
     [IsoXmlTag("BnftCrstllstnEvt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBenefitCrystallisationEvent2> BenefitCrystallisationEvent { get; }
 
     /// <summary>
@@ -177,6 +183,7 @@ public interface ITransferStatusAndReason09 : IIsoComponent
     [IsoId("a8d700d5-6791-4959-aff8-d796c3bfb099")]
     [DisplayName("Drawdown Tranche")]
     [IsoXmlTag("DrwdwnTrch")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDrawdown04> DrawdownTranche { get; }
 
     /// <summary>
@@ -193,6 +200,7 @@ public interface ITransferStatusAndReason09 : IIsoComponent
     [IsoId("f3147b52-3021-483f-8de7-a8aa3bb0de10")]
     [DisplayName("Query Response")]
     [IsoXmlTag("QryRspn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> QueryResponse { get; }
 
     /// <summary>
@@ -225,5 +233,6 @@ public interface ITransferStatusAndReason09 : IIsoComponent
     [IsoId("563df2ff-7ad3-42b6-9cee-ece1c790c111")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

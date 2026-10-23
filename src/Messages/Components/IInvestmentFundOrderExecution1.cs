@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference of an order, deal reference, client reference and master reference.
 /// </summary>
 [IsoId("_R60r-dp-Ed-ak6NoX_4Aeg_-571676430")]
+[IsoDisplayName(@"Investment Fund Order Execution")]
 public interface IInvestmentFundOrderExecution1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentFundOrderExecution1 : IIsoComponent
     [IsoId("_R60r-tp-Ed-ak6NoX_4Aeg_-1894994328")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IInvestmentFundOrderExecution1 : IIsoComponent
     [IsoId("_R60r-9p-Ed-ak6NoX_4Aeg_-314609339")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AmendmentIndicator { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IInvestmentFundOrderExecution1 : IIsoComponent
     [IsoId("_R60r_Np-Ed-ak6NoX_4Aeg_-424772693")]
     [DisplayName("Order References")]
     [IsoXmlTag("OrdrRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundOrderExecution2> OrderReferences { get; }
 }

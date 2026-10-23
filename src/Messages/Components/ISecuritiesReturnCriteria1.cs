@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Return criteria for information to be returned in the report deriving from a query about securities reference data.
 /// </summary>
 [IsoId("_hXQrSWliEeGaMcKyqKNRfQ_-1281740246")]
+[IsoDisplayName(@"Securities Return Criteria")]
 public interface ISecuritiesReturnCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXQrSmliEeGaMcKyqKNRfQ_1355658104")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator FinancialInstrumentIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXQrS2liEeGaMcKyqKNRfQ_2109594347")]
     [DisplayName("ISO Security Long Name")]
     [IsoXmlTag("ISOSctyLngNm")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator ISOSecurityLongName { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXQrTGliEeGaMcKyqKNRfQ_1698752525")]
     [DisplayName("ISO Security Short Name")]
     [IsoXmlTag("ISOSctyShrtNm")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator ISOSecurityShortName { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXQrTWliEeGaMcKyqKNRfQ_-1867260926")]
     [DisplayName("Classification Financial Instrument")]
     [IsoXmlTag("ClssfctnFinInstrm")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator ClassificationFinancialInstrument { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXQrTmliEeGaMcKyqKNRfQ_1997846748")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator MaturityDate { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXQrT2liEeGaMcKyqKNRfQ_-847027990")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator IssueDate { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXQrUGliEeGaMcKyqKNRfQ_-270251885")]
     [DisplayName("Issue Currency")]
     [IsoXmlTag("IsseCcy")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator IssueCurrency { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXQrUWliEeGaMcKyqKNRfQ_812960440")]
     [DisplayName("Country Of Issue")]
     [IsoXmlTag("CtryOfIsse")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator CountryOfIssue { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXQrUmliEeGaMcKyqKNRfQ_-876696833")]
     [DisplayName("Security Status")]
     [IsoXmlTag("SctySts")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator SecurityStatus { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXQrU2liEeGaMcKyqKNRfQ_-1284010832")]
     [DisplayName("Investor CSD")]
     [IsoXmlTag("InvstrCSD")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator InvestorCSD { get; }
 
     /// <summary>
@@ -97,6 +108,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXQrVGliEeGaMcKyqKNRfQ_361256603")]
     [DisplayName("Issuer CSD")]
     [IsoXmlTag("IssrCSD")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator IssuerCSD { get; }
 
     /// <summary>
@@ -105,6 +117,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXQrVWliEeGaMcKyqKNRfQ_-1496901381")]
     [DisplayName("Technical Issuer CSD")]
     [IsoXmlTag("TechIssrCSD")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator TechnicalIssuerCSD { get; }
 
     /// <summary>
@@ -113,6 +126,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXacQGliEeGaMcKyqKNRfQ_1152798480")]
     [DisplayName("CSD")]
     [IsoXmlTag("CSD")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator CSD { get; }
 
     /// <summary>
@@ -121,6 +135,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXacQWliEeGaMcKyqKNRfQ_-419471499")]
     [DisplayName("Securities Quantity Type")]
     [IsoXmlTag("SctiesQtyTp")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator SecuritiesQuantityType { get; }
 
     /// <summary>
@@ -129,6 +144,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXacQmliEeGaMcKyqKNRfQ_912420582")]
     [DisplayName("Minimum Denomination")]
     [IsoXmlTag("MinDnmtn")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator MinimumDenomination { get; }
 
     /// <summary>
@@ -137,6 +153,7 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXacQ2liEeGaMcKyqKNRfQ_-2107680798")]
     [DisplayName("Minimum Multiple Quantity")]
     [IsoXmlTag("MinMltplQty")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator MinimumMultipleQuantity { get; }
 
     /// <summary>
@@ -145,5 +162,6 @@ public interface ISecuritiesReturnCriteria1 : IIsoComponent
     [IsoId("_hXacRGliEeGaMcKyqKNRfQ_830858922")]
     [DisplayName("Deviating Settlement Unit")]
     [IsoXmlTag("DevtgSttlmUnit")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator DeviatingSettlementUnit { get; }
 }

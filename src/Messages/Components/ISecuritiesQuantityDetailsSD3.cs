@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about securities quantity linked to a corporate action option.
 /// </summary>
 [IsoId("_Hnr6scVJEeeWeZMpNX1JUQ")]
+[IsoDisplayName(@"Securities Quantity Details SD")]
 public interface ISecuritiesQuantityDetailsSD3 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Query criteria regarding action type, product classification, venue of execution, asset class, corporate sector nature of counterparty.
 /// </summary>
 [IsoId("_4eqOvf_lEemm3skPVSMJQg")]
+[IsoDisplayName(@"Trade Additional Query Criteria")]
 public interface ITradeAdditionalQueryCriteria6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeAdditionalQueryCriteria6 : IIsoComponent
     [IsoId("_4irzE__lEemm3skPVSMJQg")]
     [DisplayName("Action Type")]
     [IsoXmlTag("ActnTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TransactionOperationType6Code> ActionType { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITradeAdditionalQueryCriteria6 : IIsoComponent
     [IsoId("_4irzF__lEemm3skPVSMJQg")]
     [DisplayName("Nature Of Counterparty")]
     [IsoXmlTag("NtrOfCtrPty")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<PartyNatureType1Code> NatureOfCounterparty { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ITradeAdditionalQueryCriteria6 : IIsoComponent
     [IsoId("_4irzGf_lEemm3skPVSMJQg")]
     [DisplayName("Corporate Sector")]
     [IsoXmlTag("CorpSctr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateSectorCriteria4> CorporateSector { get; }
 }

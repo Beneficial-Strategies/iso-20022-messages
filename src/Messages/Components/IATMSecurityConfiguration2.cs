@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration of the cryptographic keys.
 /// </summary>
 [IsoId("_Di0fIYr7EeSvuOJS0mmL0g")]
+[IsoDisplayName(@"ATM Security Configuration")]
 public interface IATMSecurityConfiguration2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IATMSecurityConfiguration2 : IIsoComponent
     [IsoId("_QbPjEIr7EeSvuOJS0mmL0g")]
     [DisplayName("Maximum Symmetric Key")]
     [IsoXmlTag("MaxSmmtrcKey")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumSymmetricKey { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IATMSecurityConfiguration2 : IIsoComponent
     [IsoId("_T46j0Ir7EeSvuOJS0mmL0g")]
     [DisplayName("Maximum Asymmetric Key")]
     [IsoXmlTag("MaxAsmmtrcKey")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumAsymmetricKey { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IATMSecurityConfiguration2 : IIsoComponent
     [IsoId("_XJMBwIr7EeSvuOJS0mmL0g")]
     [DisplayName("Maximum RSA Key Length")]
     [IsoXmlTag("MaxRSAKeyLngth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumRSAKeyLength { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IATMSecurityConfiguration2 : IIsoComponent
     [IsoId("_acT_YIr7EeSvuOJS0mmL0g")]
     [DisplayName("Maximum Root Key Length")]
     [IsoXmlTag("MaxRootKeyLngth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumRootKeyLength { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Group Header122.
 /// </summary>
 [IsoId("_4zjLYTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Group Header122")]
 public interface IGroupHeader122 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface IGroupHeader122 : IIsoComponent
     /// </summary>
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorisation1Choice> Authorisation { get; }
 
     /// <summary>

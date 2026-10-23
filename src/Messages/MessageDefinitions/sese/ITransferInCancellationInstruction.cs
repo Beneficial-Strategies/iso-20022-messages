@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_IJ9muNE6Ed-BzquC8wXy7w_-1440956956")]
 [IsoMessage("sese.006.001.01", "sese.006.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.006.001.01")]
+[Description(@"Scope|TheTransferInCancellationInstruction message is sent by an instructing party, or an instructing party's designated agent, to the executing party.|This message is used to request the cancellation of a TransferInInstruction that was previously sent by the instructing party.|Usage|TheTransferInCancellationInstruction message is sent by an instructing party to request cancellation of a previously sent TransferInInstruction.|This message must contain the reference of the message to be cancelled. The message may also contain all the details of the message to be cancelled, but this is not recommended.")]
+[IsoDisplayName(@"Transfer In Cancellation Instruction")]
 public interface ITransferInCancellationInstruction : IOuterRecord
 {
     /// <summary>

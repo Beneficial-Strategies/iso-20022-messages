@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType40Choice;
 
 /// <summary>Update expressed as a deletion of settlement transaction details.</summary>
 [IsoId("_Y7zwy5aMEfC2_67yGLymgA")]
+[IsoDisplayName(@"Deletion")]
 public interface IDeletion : IUpdateType40Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

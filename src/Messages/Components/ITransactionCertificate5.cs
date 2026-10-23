@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Certificate in which all currency control transactions are registered.
 /// </summary>
 [IsoId("_op2wkbMkEeueudaIbClZbQ")]
+[IsoDisplayName(@"Transaction Certificate")]
 public interface ITransactionCertificate5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITransactionCertificate5 : IIsoComponent
     [IsoId("_orbd47MkEeueudaIbClZbQ")]
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TransactionDate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITransactionCertificate5 : IIsoComponent
     [IsoId("_orbd5bMkEeueudaIbClZbQ")]
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
+    [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
     Exact1NumericText? TransactionType { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface ITransactionCertificate5 : IIsoComponent
     [IsoId("_orbd57MkEeueudaIbClZbQ")]
     [DisplayName("Local Instrument")]
     [IsoXmlTag("LclInstrm")]
+    [IsoSimpleType(IsoSimpleType.Exact5NumericText)]
     Exact5NumericText LocalInstrument { get; }
 
     /// <summary>

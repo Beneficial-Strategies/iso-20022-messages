@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Period of time details related to the tax payment.
 /// </summary>
 [IsoId("_oB4Gpd4lEeqt1ZcLzWyWFw")]
+[IsoDisplayName(@"Tax Period")]
 public interface ITaxPeriod3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITaxPeriod3 : IIsoComponent
     [IsoId("_oDl94d4lEeqt1ZcLzWyWFw")]
     [DisplayName("Year")]
     [IsoXmlTag("Yr")]
+    [IsoSimpleType(IsoSimpleType.ISOYear)]
     ISOYear? Year { get; }
 
     /// <summary>

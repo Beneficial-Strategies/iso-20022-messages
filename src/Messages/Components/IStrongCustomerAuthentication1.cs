@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// EU PSD2 Strong Consumer Authentication data.
 /// </summary>
 [IsoId("_umTNkAMfEeujMs2LsB3mMw")]
+[IsoDisplayName(@"Strong Customer Authentication")]
 public interface IStrongCustomerAuthentication1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IStrongCustomerAuthentication1 : IIsoComponent
     [IsoId("_6dGccAMfEeujMs2LsB3mMw")]
     [DisplayName("Subject To SCA")]
     [IsoXmlTag("SbjtToSCA")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? SubjectToSCA { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IStrongCustomerAuthentication1 : IIsoComponent
     [IsoId("_gEuy0AMlEeujMs2LsB3mMw")]
     [DisplayName("Exemption")]
     [IsoXmlTag("Xmptn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExemption1> Exemption { get; }
 
     /// <summary>
@@ -49,5 +52,7 @@ public interface IStrongCustomerAuthentication1 : IIsoComponent
     [IsoId("_PuZWMAMoEeubkNI1IXQTVQ")]
     [DisplayName("Reason Authentication Not Performed")]
     [IsoXmlTag("RsnAuthntcnNotPrfrmd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? ReasonAuthenticationNotPerformed { get; }
 }

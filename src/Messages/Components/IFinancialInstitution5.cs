@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to a financial institution required by business or regulation (for example, in money or funds transfer).
 /// </summary>
 [IsoId("_iSgISWp5EemXfKijhrqa-Q")]
+[IsoDisplayName(@"Financial Institution")]
 public interface IFinancialInstitution5 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IFinancialInstitution5 : IIsoComponent
     [IsoId("_iSgIT2p5EemXfKijhrqa-Q")]
     [DisplayName("Account Number")]
     [IsoXmlTag("AcctNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountNumber { get; }
 }

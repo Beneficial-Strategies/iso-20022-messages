@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus13Choice;
 /// <summary>
 /// Pending.
 /// </summary>
+[IsoDisplayName(@"Pending")]
 public interface IPending : IInstructionStatus13Choice, IIsoChoiceVariant
 {
     /// <summary>

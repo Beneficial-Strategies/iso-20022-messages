@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_UbvIj3_5Ee-h086v0qPiyQ")]
 [IsoMessage("seev.002.001.10", "MtgCxl", "urn:iso:std:iso:20022:tech:xsd:seev.002.001.10")]
+[IsoDisplayName(@"Meeting Cancellation V10")]
 public interface IMeetingCancellationV10 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,9 @@ public interface IMeetingCancellationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition23> Security { get; }
 
     /// <summary>
@@ -39,5 +43,6 @@ public interface IMeetingCancellationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

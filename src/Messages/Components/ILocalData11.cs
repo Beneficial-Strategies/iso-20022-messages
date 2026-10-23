@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Local Data11.
 /// </summary>
 [IsoId("_V34-cW9nEe6DxcrvCrq6hQ")]
+[IsoDisplayName(@"Local Data11")]
 public interface ILocalData11 : IIsoComponent
 {
     /// <summary>
@@ -72,5 +73,6 @@ public interface ILocalData11 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

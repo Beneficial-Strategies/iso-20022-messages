@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Alternate Party Identification11.
 /// </summary>
 [IsoId("_g5D4IaDcEe-CRv8HNM1RKw")]
+[IsoDisplayName(@"Alternate Party Identification11")]
 public interface IAlternatePartyIdentification11 : IIsoComponent
 {
     /// <summary>

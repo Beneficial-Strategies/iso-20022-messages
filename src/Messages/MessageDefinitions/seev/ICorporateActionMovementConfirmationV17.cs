@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnMvmntConf",
     "urn:iso:std:iso:20022:tech:xsd:seev.036.001.17"
 )]
+[IsoDisplayName(@"Corporate Action Movement Confirmation V17")]
 public interface ICorporateActionMovementConfirmationV17 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,8 @@ public interface ICorporateActionMovementConfirmationV17 : IOuterRecord
     /// </summary>
     [DisplayName("Movement Confirmation Identification")]
     [IsoXmlTag("MvmntConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MovementConfirmationIdentification { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ICorporateActionMovementConfirmationV17 : IOuterRecord
     /// </summary>
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification32> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -64,6 +68,7 @@ public interface ICorporateActionMovementConfirmationV17 : IOuterRecord
     /// </summary>
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventReference3> EventsLinkage { get; }
 
     /// <summary>
@@ -113,6 +118,7 @@ public interface ICorporateActionMovementConfirmationV17 : IOuterRecord
     /// </summary>
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification120Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -120,6 +126,7 @@ public interface ICorporateActionMovementConfirmationV17 : IOuterRecord
     /// </summary>
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification120Choice> PayingAgent { get; }
 
     /// <summary>
@@ -127,6 +134,7 @@ public interface ICorporateActionMovementConfirmationV17 : IOuterRecord
     /// </summary>
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification120Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -134,5 +142,6 @@ public interface ICorporateActionMovementConfirmationV17 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

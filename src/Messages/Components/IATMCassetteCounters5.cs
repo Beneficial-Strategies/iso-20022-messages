@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Cassette Counters5.
 /// </summary>
 [IsoId("_L-0XIZ9NEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"ATM Cassette Counters5")]
 public interface IATMCassetteCounters5 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Global collateral status of all transactions covered in the message, in the reporting currency, that is, the total of the exposure amount, of the posted collateral, of the margin amounts, of the accrued interest, of the fees or commissions and of the principals. In addition, it provides collateral-specific information.
 /// </summary>
 [IsoId("_5qoZgRIlEeyLzJfz3xPQNA")]
+[IsoDisplayName(@"Overall Collateral Details")]
 public interface IOverallCollateralDetails2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IOverallCollateralDetails2 : IIsoComponent
     [IsoId("_6CxMsxIlEeyLzJfz3xPQNA")]
     [DisplayName("Margin Rate")]
     [IsoXmlTag("MrgnRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? MarginRate { get; }
 
     /// <summary>
@@ -49,5 +51,7 @@ public interface IOverallCollateralDetails2 : IIsoComponent
     [IsoId("_6CxMuRIlEeyLzJfz3xPQNA")]
     [DisplayName("Collateral Additional Details")]
     [IsoXmlTag("CollAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? CollateralAdditionalDetails { get; }
 }

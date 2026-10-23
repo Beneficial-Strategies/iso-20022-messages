@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Report Content2Choice.
 /// </summary>
 [IsoId("_ftafcY7fEe6S0_1AaJzQCA")]
+[IsoDisplayName(@"Report Content2Choice")]
 public interface IReportContent2Choice : IIsoChoice { }

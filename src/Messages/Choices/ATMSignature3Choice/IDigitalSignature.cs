@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMSignature3Choice;
 
 /// <summary>Digital signature of implicit data depending on the security scheme download procedure.</summary>
 [IsoId("_CObUYcPzEfCTf8R2j0RpdQ")]
+[IsoDisplayName(@"Digital Signature")]
 public interface IDigitalSignature : IATMSignature3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

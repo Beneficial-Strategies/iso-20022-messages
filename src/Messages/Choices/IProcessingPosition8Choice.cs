@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the processing position.
 /// </summary>
 [IsoId("_l5LCHTt4EeW638lNyHKv7A")]
+[IsoDisplayName(@"Processing Position 8 Choice")]
 public interface IProcessingPosition8Choice : IIsoChoice { }

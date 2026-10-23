@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_NJMYgfpeEeCPwaG9zjUPNQ")]
+[IsoDisplayName(@"Transfer")]
 public interface ITransfer11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransfer11 : IIsoComponent
     [IsoId("_gudFcPruEeCJc7cZxzE2fg")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransfer11 : IIsoComponent
     [IsoId("_ylwr8PrzEeCJc7cZxzE2fg")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ITransfer11 : IIsoComponent
     [IsoId("_O7-Wyfu8EeC3VvXpH76gow")]
     [DisplayName("Transfer Order Date Form")]
     [IsoXmlTag("TrfOrdrDtForm")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TransferOrderDateForm { get; }
 
     /// <summary>
@@ -65,6 +71,9 @@ public interface ITransfer11 : IIsoComponent
     [IsoId("_qMLK2fu3EeC3VvXpH76gow")]
     [DisplayName("Holdings Plan Type")]
     [IsoXmlTag("HldgsPlanTp")]
+    [MinLength(0)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<HoldingsPlanType1Code> HoldingsPlanType { get; }
 
     /// <summary>
@@ -89,6 +98,7 @@ public interface ITransfer11 : IIsoComponent
     [IsoId("_NJMYq_peEeCPwaG9zjUPNQ")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit3> UnitsDetails { get; }
 
     /// <summary>
@@ -121,6 +131,7 @@ public interface ITransfer11 : IIsoComponent
     [IsoId("_NJMYs_peEeCPwaG9zjUPNQ")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OwnAccountTransferIndicator { get; }
 
     /// <summary>
@@ -129,5 +140,7 @@ public interface ITransfer11 : IIsoComponent
     [IsoId("_NJMYu_peEeCPwaG9zjUPNQ")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 }

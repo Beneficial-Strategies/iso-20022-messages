@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a type of payment instrument.
 /// </summary>
 [IsoId("_4hKBoF8xEeicg40_9gK9vQ")]
+[IsoDisplayName(@"Fund Payment Type 1 Choice")]
 public interface IFundPaymentType1Choice : IIsoChoice { }

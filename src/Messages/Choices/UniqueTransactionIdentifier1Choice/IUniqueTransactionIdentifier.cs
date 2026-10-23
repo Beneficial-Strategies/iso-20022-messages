@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueTransactionIdentifier1Choi
 /// Unique trade identifier (UTI) as agreed with the counterparty.
 /// </summary>
 [IsoId("_NzBwwAxfEeuoAcnnpX2x_w")]
+[IsoDisplayName(@"Unique Transaction Identifier")]
 public interface IUniqueTransactionIdentifier
     : IUniqueTransactionIdentifier1Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IUniqueTransactionIdentifier
     /// Unique Transaction Identifier (UTI). Unique number allocated to a financial transaction as agreed among the parties and/or within the regulatory system under which it is formed. The UTI is described in the latest edition of the international standard ISO 23897:2020.
     /// </summary>
     [IsoXmlTag("UnqTxIdr")]
+    [IsoSimpleType(IsoSimpleType.UTIIdentifier)]
     UTIIdentifier Value { get; }
 }

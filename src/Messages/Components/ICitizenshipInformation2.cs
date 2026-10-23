@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about an individual person.
 /// </summary>
 [IsoId("_PECrwa18EeaD5sjjwBUhkQ")]
+[IsoDisplayName(@"Citizenship Information")]
 public interface ICitizenshipInformation2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICitizenshipInformation2 : IIsoComponent
     [IsoId("_PbGg4618EeaD5sjjwBUhkQ")]
     [DisplayName("Minor Indicator")]
     [IsoXmlTag("MnrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator MinorIndicator { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the currency control group status details.
 /// </summary>
 [IsoId("_S5InHW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Currency Control Group Status")]
 public interface ICurrencyControlGroupStatus2 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface ICurrencyControlGroupStatus2 : IIsoComponent
     [IsoId("_TC94i249EeiU9cctagi5ow")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IValidationStatusReason2> StatusReason { get; }
 
     /// <summary>
@@ -66,5 +68,6 @@ public interface ICurrencyControlGroupStatus2 : IIsoComponent
     [IsoId("_TC94jW49EeiU9cctagi5ow")]
     [DisplayName("Status Date Time")]
     [IsoXmlTag("StsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StatusDateTime { get; }
 }

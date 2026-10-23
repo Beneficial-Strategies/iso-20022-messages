@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to identify the transactions to be reported.
 /// </summary>
 [IsoId("_P9p0otp-Ed-ak6NoX_4Aeg_943039965")]
+[IsoDisplayName(@"Transaction Type")]
 public interface ITransactionType1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ITransactionType1 : IIsoComponent
     [IsoId("_P9p0pdp-Ed-ak6NoX_4Aeg_-1506075611")]
     [DisplayName("Floor Limit")]
     [IsoXmlTag("FlrLmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILimit2> FloorLimit { get; }
 }

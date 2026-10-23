@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional Information31.
 /// </summary>
 [IsoId("_AXqGIXNXEe6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Additional Information31")]
 public interface IAdditionalInformation31 : IIsoComponent
 {
     /// <summary>

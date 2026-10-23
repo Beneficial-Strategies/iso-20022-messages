@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_jwlbXxbvEeiyVv5j1vf1VQ")]
 [IsoMessage("camt.071.001.03", "DelStgOrdr", "urn:iso:std:iso:20022:tech:xsd:camt.071.001.03")]
+[Description(@"The DeleteStandingOrder message is sent by the system member to delete one or more standing orders within the static data held by the system transaction administrator.")]
+[IsoDisplayName(@"Delete Standing Order V")]
 public interface IDeleteStandingOrderV03 : IOuterRecord
 {
     /// <summary>
@@ -36,5 +38,6 @@ public interface IDeleteStandingOrderV03 : IOuterRecord
     [IsoId("_jwlbZRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

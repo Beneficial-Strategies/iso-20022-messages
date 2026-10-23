@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attribute of the certificate service to be put in the certificate extensions, or to be used for the request.
 /// </summary>
 [IsoId("_W-n0EY4TEeW6h7rGyYlyTg")]
+[IsoDisplayName(@"Relative Distinguished Name")]
 public interface IRelativeDistinguishedName2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IRelativeDistinguishedName2 : IIsoComponent
     [IsoId("_XKBLw44TEeW6h7rGyYlyTg")]
     [DisplayName("Attribute Value")]
     [IsoXmlTag("AttrVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text AttributeValue { get; }
 }

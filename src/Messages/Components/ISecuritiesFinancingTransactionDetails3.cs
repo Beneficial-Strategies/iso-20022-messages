@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the closing of the securities financing transaction.
 /// </summary>
 [IsoId("_ToV9sNp-Ed-ak6NoX_4Aeg_-973044894")]
+[IsoDisplayName(@"Securities Financing Transaction Details")]
 public interface ISecuritiesFinancingTransactionDetails3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesFinancingTransactionDetails3 : IIsoComponent
     [IsoId("_ToV9sdp-Ed-ak6NoX_4Aeg_-1086883960")]
     [DisplayName("Securities Financing Trade Identification")]
     [IsoXmlTag("SctiesFincgTradId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecuritiesFinancingTradeIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISecuritiesFinancingTransactionDetails3 : IIsoComponent
     [IsoId("_ToV9stp-Ed-ak6NoX_4Aeg_-2083956313")]
     [DisplayName("Closing Leg Identification")]
     [IsoXmlTag("ClsgLegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClosingLegIdentification { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface ISecuritiesFinancingTransactionDetails3 : IIsoComponent
     [IsoId("_TofusNp-Ed-ak6NoX_4Aeg_117263226")]
     [DisplayName("Interest Payment")]
     [IsoXmlTag("IntrstPmt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? InterestPayment { get; }
 
     /// <summary>
@@ -137,6 +143,7 @@ public interface ISecuritiesFinancingTransactionDetails3 : IIsoComponent
     [IsoId("_Tofut9p-Ed-ak6NoX_4Aeg_2019649085")]
     [DisplayName("Transaction Call Delay")]
     [IsoXmlTag("TxCallDely")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? TransactionCallDelay { get; }
 
     /// <summary>
@@ -145,6 +152,7 @@ public interface ISecuritiesFinancingTransactionDetails3 : IIsoComponent
     [IsoId("_TofuuNp-Ed-ak6NoX_4Aeg_-630050776")]
     [DisplayName("Total Number Of Collateral Instructions")]
     [IsoXmlTag("TtlNbOfCollInstrs")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? TotalNumberOfCollateralInstructions { get; }
 
     /// <summary>
@@ -201,5 +209,7 @@ public interface ISecuritiesFinancingTransactionDetails3 : IIsoComponent
     [IsoId("_Too4pdp-Ed-ak6NoX_4Aeg_-554488995")]
     [DisplayName("Second Leg Narrative")]
     [IsoXmlTag("ScndLegNrrtv")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SecondLegNarrative { get; }
 }

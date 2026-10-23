@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of rejection status.
 /// </summary>
 [IsoId("_0j0X4wlIEeGATtfOBToyew_1026821782")]
+[IsoDisplayName(@"Rejection Status 7 Choice")]
 public interface IRejectionStatus7Choice : IIsoChoice { }

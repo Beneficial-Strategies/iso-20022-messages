@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the request of a key download from an ATM.
 /// </summary>
 [IsoId("_m7QtYbZ5EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"ATM Key Download Request6")]
 public interface IATMKeyDownloadRequest6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IATMKeyDownloadRequest6 : IIsoComponent
     [IsoId("_m8T2Q7Z5EfCUZfsQO4rYeA")]
     [DisplayName("Command Result")]
     [IsoXmlTag("CmdRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand15> CommandResult { get; }
 
     /// <summary>

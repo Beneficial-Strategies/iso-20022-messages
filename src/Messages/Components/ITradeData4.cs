@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the status of a trade.
 /// </summary>
 [IsoId("_SvM2CgEcEeCQm6a_G2yO_w_-1369738530")]
+[IsoDisplayName(@"Trade Data")]
 public interface ITradeData4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeData4 : IIsoComponent
     [IsoId("_SvM2CwEcEeCQm6a_G2yO_w_1814317347")]
     [DisplayName("Status Originator")]
     [IsoXmlTag("StsOrgtr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StatusOriginator { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ITradeData4 : IIsoComponent
     [IsoId("_SvM2DQEcEeCQm6a_G2yO_w_-179827359")]
     [DisplayName("Current Status Sub Type")]
     [IsoXmlTag("CurStsSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CurrentStatusSubType { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ITradeData4 : IIsoComponent
     [IsoId("_SvM2DgEcEeCQm6a_G2yO_w_-1176899712")]
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CurrentStatusDateTime { get; }
 
     /// <summary>
@@ -57,6 +63,8 @@ public interface ITradeData4 : IIsoComponent
     [IsoId("_SvV_8AEcEeCQm6a_G2yO_w_-513235469")]
     [DisplayName("Previous Status Sub Type")]
     [IsoXmlTag("PrvsStsSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? PreviousStatusSubType { get; }
 
     /// <summary>
@@ -65,5 +73,7 @@ public interface ITradeData4 : IIsoComponent
     [IsoId("_SvV_8QEcEeCQm6a_G2yO_w_126850525")]
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProductType { get; }
 }

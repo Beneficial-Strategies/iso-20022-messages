@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes of a position in a financial instrument or financial product.
 /// </summary>
 [IsoId("_hpBo0LC8EeaSl6vJk5Bd8w")]
+[IsoDisplayName(@"Position")]
 public interface IPosition1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPosition1 : IIsoComponent
     [IsoId("_pAx5gLC8EeaSl6vJk5Bd8w")]
     [DisplayName("Product Identification")]
     [IsoXmlTag("PdctId")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text ProductIdentification { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IPosition1 : IIsoComponent
     [IsoId("_v4CcIOPIEea7_eMQH225xA")]
     [DisplayName("Gross Delta Equivalent Quantity")]
     [IsoXmlTag("GrssDltaEqvtQty")]
+    [IsoSimpleType(IsoSimpleType.NonNegativeFraction5DecimalNumber)]
     NonNegativeFraction5DecimalNumber? GrossDeltaEquivalentQuantity { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface IPosition1 : IIsoComponent
     [IsoId("_yafx0OPIEea7_eMQH225xA")]
     [DisplayName("Net Delta Equivalent Quantity")]
     [IsoXmlTag("NetDltaEqvtQty")]
+    [IsoSimpleType(IsoSimpleType.Fraction5DecimalNumber)]
     Fraction5DecimalNumber? NetDeltaEquivalentQuantity { get; }
 
     /// <summary>

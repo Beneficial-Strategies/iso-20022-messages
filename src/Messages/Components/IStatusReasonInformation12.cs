@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the status reason of the transaction.
 /// </summary>
 [IsoId("_E6Ui6W49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Status Reason Information")]
 public interface IStatusReasonInformation12 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IStatusReasonInformation12 : IIsoComponent
     [IsoId("_FD25WW49EeiU9cctagi5ow")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

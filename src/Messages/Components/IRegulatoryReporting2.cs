@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information needed due to regulatory and/or statutory requirements.
 /// </summary>
 [IsoId("_SnYP89p-Ed-ak6NoX_4Aeg_-2022088805")]
+[IsoDisplayName(@"Regulatory Reporting")]
 public interface IRegulatoryReporting2 : IIsoComponent
 {
     /// <summary>

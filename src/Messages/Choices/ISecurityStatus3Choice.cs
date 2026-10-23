@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for security status.
 /// </summary>
 [IsoId("_F8MPEeLcEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Security Status 3 Choice")]
 public interface ISecurityStatus3Choice : IIsoChoice { }

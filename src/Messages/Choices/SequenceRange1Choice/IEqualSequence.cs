@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SequenceRange1Choice;
 /// Specified sequence to match.
 /// </summary>
 [IsoId("_8FIqsYy3EeeGkvZr3jtnCQ")]
+[IsoDisplayName(@"Equal Sequence")]
 public interface IEqualSequence : ISequenceRange1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IEqualSequence : ISequenceRange1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("EQSeq")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

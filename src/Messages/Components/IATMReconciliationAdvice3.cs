@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Reconciliation Advice3.
 /// </summary>
 [IsoId("_CiOzMZ-VEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"ATM Reconciliation Advice3")]
 public interface IATMReconciliationAdvice3 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IATMReconciliationAdvice3 : IIsoComponent
     /// </summary>
     [DisplayName("Command Result")]
     [IsoXmlTag("CmdRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand8> CommandResult { get; }
 
     /// <summary>

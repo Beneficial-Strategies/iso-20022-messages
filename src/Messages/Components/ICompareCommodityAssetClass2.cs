@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a commodity asset class
 /// </summary>
 [IsoId("_EzO169R8EemZdYGWu384Zw")]
+[IsoDisplayName(@"Compare Commodity Asset Class")]
 public interface ICompareCommodityAssetClass2 : IIsoComponent
 {
     /// <summary>

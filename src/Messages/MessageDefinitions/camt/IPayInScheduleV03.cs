@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_KfNcsS43EeK7-OZOLIksSw")]
 [IsoMessage("camt.062.001.03", "PayInSchdl", "urn:iso:std:iso:20022:tech:xsd:camt.062.001.03")]
+[Description(@"The PayInSchedule message is sent by a central settlement system to the participant to provide notification of a series of timed payments scheduled for each currency at the time and date of the schedule generation. The central settlement system may send information about how the timed payments have been calculated.")]
+[IsoDisplayName(@"Pay In Schedule V")]
 public interface IPayInScheduleV03 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +38,7 @@ public interface IPayInScheduleV03 : IOuterRecord
     [IsoId("_KfNcvS43EeK7-OZOLIksSw")]
     [DisplayName("Pay In Schedule Long Balance")]
     [IsoXmlTag("PayInSchdlLngBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceStatus2> PayInScheduleLongBalance { get; }
 
     /// <summary>
@@ -44,6 +47,7 @@ public interface IPayInScheduleV03 : IOuterRecord
     [IsoId("_KfNcwS43EeK7-OZOLIksSw")]
     [DisplayName("Pay In Schedule Item")]
     [IsoXmlTag("PayInSchdlItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPayInScheduleItems1> PayInScheduleItem { get; }
 
     /// <summary>
@@ -60,5 +64,6 @@ public interface IPayInScheduleV03 : IOuterRecord
     [IsoId("_DTaJUS53EeKwTrPDLMbLxA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

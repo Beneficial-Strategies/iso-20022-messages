@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References80Choice;
 /// <summary>
 /// Intra Balance Movement Identification.
 /// </summary>
+[IsoDisplayName(@"Intra Balance Movement Identification")]
 public interface IIntraBalanceMovementIdentification : IReferences80Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType3Choice;
 /// Charge type, in a coded form.
 /// </summary>
 [IsoId("_tjJEUlkyEeGeoaLUQk__nA_-734620698")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChargeType3Choice, IIsoChoiceVariant
 {
     /// <summary>

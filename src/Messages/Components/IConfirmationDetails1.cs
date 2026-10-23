@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference of the PayInSchedule being confirmed. This is the Message Identification element from the Report Data sequence of the Pay In Schedule message.
 /// </summary>
 [IsoId("_SvM2AgEcEeCQm6a_G2yO_w_-502764871")]
+[IsoDisplayName(@"Confirmation Details")]
 public interface IConfirmationDetails1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface IConfirmationDetails1 : IIsoComponent
     [IsoId("_SvM2AwEcEeCQm6a_G2yO_w_-1406647983")]
     [DisplayName("Pay In Schedule Reference")]
     [IsoXmlTag("PayInSchdlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PayInScheduleReference { get; }
 }

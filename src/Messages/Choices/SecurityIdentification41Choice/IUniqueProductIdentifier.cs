@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice;
 /// Identification through a unique product identifier.
 /// </summary>
 [IsoId("_idD05Vo2Ee23K4GXSpBSeg")]
+[IsoDisplayName(@"Unique Product Identifier")]
 public interface IUniqueProductIdentifier : ISecurityIdentification41Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

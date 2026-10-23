@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice;
 /// Identifier of securities issued in Luxembourg. The common code is a 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes.
 /// </summary>
 [IsoId("_Qd1wlNp-Ed-ak6NoX_4Aeg_1064399423")]
+[IsoDisplayName(@"Common")]
 public interface ICommon : ISecurityIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ICommon : ISecurityIdentification3Choice, IIsoChoiceVariant
     /// Identifier of securities issued in Luxembourg. The common code is a 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes.
     /// </summary>
     [IsoXmlTag("Cmon")]
+    [IsoSimpleType(IsoSimpleType.EuroclearClearstreamIdentifier)]
     EuroclearClearstreamIdentifier Value { get; }
 }

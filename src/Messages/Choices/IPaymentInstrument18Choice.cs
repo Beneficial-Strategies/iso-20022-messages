@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of payment instruments.
 /// </summary>
 [IsoId("_fNjxsSC1EeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Payment Instrument 18 Choice")]
 public interface IPaymentInstrument18Choice : IIsoChoice { }

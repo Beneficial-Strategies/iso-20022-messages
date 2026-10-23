@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification8Choic
 /// Client code used to identify the organisation.
 /// </summary>
 [IsoId("_86WnoZQEEeiILOjNP8ro1w")]
+[IsoDisplayName(@"Client Identification")]
 public interface IClientIdentification : IOrganisationIdentification8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IClientIdentification : IOrganisationIdentification8Choice, IIs
     /// Specifies a character string with a maximum length of 50 characters.
     /// </summary>
     [IsoXmlTag("ClntId")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text Value { get; }
 }

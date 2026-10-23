@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice10Choi
 /// </summary>
 [IsoId("_QtVs6f9iEea3W_f2lS_aiw")]
 [IsoXmlTag("Othr")]
+[IsoDisplayName(@"Other")]
 public interface IOther : ISecuritiesTransactionPrice10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IOther : ISecuritiesTransactionPrice10Choice, IIsoChoiceVariant
     [IsoId("_t14wY_9iEea3W_f2lS_aiw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.LongFraction21DecimalNumber)]
     LongFraction21DecimalNumber? Value { get; }
 
     /// <summary>
@@ -26,5 +28,7 @@ public interface IOther : ISecuritiesTransactionPrice10Choice, IIsoChoiceVariant
     [IsoId("_t14wZf9iEea3W_f2lS_aiw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 }

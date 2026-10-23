@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Maintenance Delegation Request11.
 /// </summary>
 [IsoId("_kJ3AQaE5Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"Maintenance Delegation Request11")]
 public interface IMaintenanceDelegationRequest11 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IMaintenanceDelegationRequest11 : IIsoComponent
     /// </summary>
     [DisplayName("Requested Delegation")]
     [IsoXmlTag("ReqdDlgtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMaintenanceDelegation19> RequestedDelegation { get; }
 }

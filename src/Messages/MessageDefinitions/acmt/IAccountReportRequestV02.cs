@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_eBAKYQ1TEeKGXqvMN6jpiw")]
 [IsoMessage("acmt.013.001.02", "AcctRptReq", "urn:iso:std:iso:20022:tech:xsd:acmt.013.001.02")]
+[Description(@"The AccountReportRequest message is sent from an organisation to a financial institution for reporting purposes. It is a request for an account report. This message can be sent at any time outside of account opening, maintenance or closing processes.")]
+[IsoDisplayName(@"Account Report Request V")]
 public interface IAccountReportRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +38,7 @@ public interface IAccountReportRequestV02 : IOuterRecord
     [IsoId("_eBAKZw1TEeKGXqvMN6jpiw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountForAction1> AccountIdentification { get; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public interface IAccountReportRequestV02 : IOuterRecord
     [IsoId("_eBAKdw1TEeKGXqvMN6jpiw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature2> DigitalSignature { get; }
 
     /// <summary>
@@ -68,5 +72,6 @@ public interface IAccountReportRequestV02 : IOuterRecord
     [IsoId("_ZIPjEA4AEeKGXqvMN6jpiw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

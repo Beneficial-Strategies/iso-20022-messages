@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Collateral Value Criteria Definition4Choice.
 /// </summary>
 [IsoId("_x0dSUTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Collateral Value Criteria Definition4Choice")]
 public interface ICollateralValueCriteriaDefinition4Choice : IIsoChoice { }

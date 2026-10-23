@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information that can not be captured in the structured fields and/or any other specific block.
 /// </summary>
 [IsoId("_Qn0zC9p-Ed-ak6NoX_4Aeg_468227563")]
+[IsoDisplayName(@"Supplementary Data")]
 public interface ISupplementaryData1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ISupplementaryData1 : IIsoComponent
     [IsoId("_Qn988Np-Ed-ak6NoX_4Aeg_354388497")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>

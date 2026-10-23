@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides reason of the rejection of an information advice.
 /// </summary>
 [IsoId("_RknydNp-Ed-ak6NoX_4Aeg_-920261162")]
+[IsoDisplayName(@"Corporate Action Information Rejected Status")]
 public interface ICorporateActionInformationRejectedStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionInformationRejectedStatus1 : IIsoComponent
     [IsoId("_Rknyddp-Ed-ak6NoX_4Aeg_35582095")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason15FormatChoice> Reason { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface ICorporateActionInformationRejectedStatus1 : IIsoComponent
     [IsoId("_Rknydtp-Ed-ak6NoX_4Aeg_35582096")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

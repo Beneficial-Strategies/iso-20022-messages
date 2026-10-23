@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountPrice1Choice;
 /// </summary>
 [IsoId("_VMB-Ctp-Ed-ak6NoX_4Aeg_1790266847")]
 [IsoXmlTag("UnitPric")]
+[IsoDisplayName(@"Unit Price")]
 public interface IUnitPrice : IAmountPrice1Choice, IIsoChoiceVariant
 {
     /// <summary>

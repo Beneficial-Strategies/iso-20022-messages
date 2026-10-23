@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money associated with a service.
 /// </summary>
 [IsoId("_OIXCoDh4EeamLZQeccJa7w")]
+[IsoDisplayName(@"Fee")]
 public interface IFee1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IFee1 : IIsoComponent
     [IsoId("_U-gJJDh6EeaH-93K5JKmzw")]
     [DisplayName("Standard Rate")]
     [IsoXmlTag("StdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? StandardRate { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface IFee1 : IIsoComponent
     [IsoId("_0cBqUWRIEeaj9PFzwy2f6A")]
     [DisplayName("Requested Rate")]
     [IsoXmlTag("ReqdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? RequestedRate { get; }
 
     /// <summary>
@@ -73,6 +76,8 @@ public interface IFee1 : IIsoComponent
     [IsoId("_WCFjcTkyEeapUO0vUIo9Xw")]
     [DisplayName("Non Standard SLA Reference")]
     [IsoXmlTag("NonStdSLARef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NonStandardSLAReference { get; }
 
     /// <summary>

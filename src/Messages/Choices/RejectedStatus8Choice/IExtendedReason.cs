@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus8Choice;
 /// Reason for the rejected status.
 /// </summary>
 [IsoId("_RQy3g9p-Ed-ak6NoX_4Aeg_88630374")]
+[IsoDisplayName(@"Extended Reason")]
 public interface IExtendedReason : IRejectedStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IExtendedReason : IRejectedStatus8Choice, IIsoChoiceVariant
     /// Code and / or description for values that are not yet part of the related code list.
     /// </summary>
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code Value { get; }
 }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("ef94de20-a1ce-4dbd-a74c-80aa25cd029c")]
 [IsoMessage("acmt.034.001.06", "AcctSwtchReqPmt", "urn:iso:std:iso:20022:tech:xsd:acmt.034.001.06")]
+[IsoDisplayName(@"Account Switch Request Payment V06")]
 public interface IAccountSwitchRequestPaymentV06 : IOuterRecord
 {
     /// <summary>
@@ -46,5 +47,6 @@ public interface IAccountSwitchRequestPaymentV06 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Single terminal management action to be performed by the point of interaction.
 /// </summary>
 [IsoId("_NZSNIY31EeWYyJ6P6VfQMg")]
+[IsoDisplayName(@"TMS Action")]
 public interface ITMSAction5 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ITMSAction5 : IIsoComponent
     [IsoId("_NlgrR431EeWYyJ6P6VfQMg")]
     [DisplayName("TMS Protocol")]
     [IsoXmlTag("TMSPrtcol")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TMSProtocol { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface ITMSAction5 : IIsoComponent
     [IsoId("_NlgrSY31EeWYyJ6P6VfQMg")]
     [DisplayName("TMS Protocol Version")]
     [IsoXmlTag("TMSPrtcolVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TMSProtocolVersion { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ITMSAction5 : IIsoComponent
     [IsoId("_NlgrTY31EeWYyJ6P6VfQMg")]
     [DisplayName("Component Type")]
     [IsoXmlTag("CmpntTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<DataSetCategory9Code> ComponentType { get; }
 
     /// <summary>
@@ -73,6 +79,8 @@ public interface ITMSAction5 : IIsoComponent
     [IsoId("_NlgrT431EeWYyJ6P6VfQMg")]
     [DisplayName("Delegation Scope Identification")]
     [IsoXmlTag("DlgtnScpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DelegationScopeIdentification { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface ITMSAction5 : IIsoComponent
     [IsoId("_NlgrUY31EeWYyJ6P6VfQMg")]
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
+    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
     Max3000Binary? DelegationScopeDefinition { get; }
 
     /// <summary>
@@ -89,6 +98,7 @@ public interface ITMSAction5 : IIsoComponent
     [IsoId("_NlgrU431EeWYyJ6P6VfQMg")]
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary? DelegationProof { get; }
 
     /// <summary>
@@ -113,6 +123,7 @@ public interface ITMSAction5 : IIsoComponent
     [IsoId("_NlgrWY31EeWYyJ6P6VfQMg")]
     [DisplayName("Additional Process")]
     [IsoXmlTag("AddtlPrc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; }
 
     /// <summary>
@@ -137,6 +148,7 @@ public interface ITMSAction5 : IIsoComponent
     [IsoId("_NlgrX431EeWYyJ6P6VfQMg")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? TMChallenge { get; }
 
     /// <summary>
@@ -145,6 +157,7 @@ public interface ITMSAction5 : IIsoComponent
     [IsoId("_NlgrYY31EeWYyJ6P6VfQMg")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10KBinary> KeyEnciphermentCertificate { get; }
 
     /// <summary>
@@ -153,6 +166,7 @@ public interface ITMSAction5 : IIsoComponent
     [IsoId("_NlgrY431EeWYyJ6P6VfQMg")]
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorAction2> ErrorAction { get; }
 
     /// <summary>
@@ -161,5 +175,6 @@ public interface ITMSAction5 : IIsoComponent
     [IsoId("_NlgrZY31EeWYyJ6P6VfQMg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max3000Binary> AdditionalInformation { get; }
 }

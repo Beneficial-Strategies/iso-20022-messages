@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between an encrypted key value and TR-related data.</summary>
 [IsoId("_PYTUscPzEfCTf8R2j0RpdQ")]
+[IsoDisplayName(@"Key Value 3 Choice")]
 public interface IKeyValue3Choice : IIsoChoice { }

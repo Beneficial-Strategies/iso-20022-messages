@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the unadjusted effective and end date of the schedule.
 /// </summary>
 [IsoId("_IC8OJA0zEeuJ1fOEB4bQXA")]
+[IsoDisplayName(@"Schedule")]
 public interface ISchedule1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISchedule1 : IIsoComponent
     [IsoId("_IC8OJQ0zEeuJ1fOEB4bQXA")]
     [DisplayName("Unadjusted Effective Date")]
     [IsoXmlTag("UadjstdFctvDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate UnadjustedEffectiveDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISchedule1 : IIsoComponent
     [IsoId("_IC8OJg0zEeuJ1fOEB4bQXA")]
     [DisplayName("Unadjusted End Date")]
     [IsoXmlTag("UadjstdEndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? UnadjustedEndDate { get; }
 
     /// <summary>

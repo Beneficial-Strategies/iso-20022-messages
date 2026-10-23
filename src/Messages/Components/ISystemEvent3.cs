@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on an event occurring in a system, whether planned or unplanned as stipulated in the specifications of the system.
 /// </summary>
 [IsoId("_dw2Oi3hkEeidzqjNEfehPg")]
+[IsoDisplayName(@"System Event")]
 public interface ISystemEvent3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISystemEvent3 : IIsoComponent
     [IsoId("_d6_pBXhkEeidzqjNEfehPg")]
     [DisplayName("Scheduled Time")]
     [IsoXmlTag("SchdldTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ScheduledTime { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ISystemEvent3 : IIsoComponent
     [IsoId("_d6_pB3hkEeidzqjNEfehPg")]
     [DisplayName("Effective Time")]
     [IsoXmlTag("FctvTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? EffectiveTime { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ISystemEvent3 : IIsoComponent
     [IsoId("_d6_pCXhkEeidzqjNEfehPg")]
     [DisplayName("Start Time")]
     [IsoXmlTag("StartTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StartTime { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface ISystemEvent3 : IIsoComponent
     [IsoId("_d6_pC3hkEeidzqjNEfehPg")]
     [DisplayName("End Time")]
     [IsoXmlTag("EndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? EndTime { get; }
 }

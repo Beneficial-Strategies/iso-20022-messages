@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderWaiverReason3Choice;
 /// Reason for the waiver expressed as a code.
 /// </summary>
 [IsoId("_PibkEToREeabspMEjqY5TQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOrderWaiverReason3Choice, IIsoChoiceVariant
 {
     /// <summary>

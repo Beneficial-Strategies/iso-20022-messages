@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the parameters of the report.
 /// </summary>
 [IsoId("_QlScZdp-Ed-ak6NoX_4Aeg_-2031836771")]
+[IsoDisplayName(@"Report Parameters")]
 public interface IReportParameters4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportParameters4 : IIsoComponent
     [IsoId("_QlScZtp-Ed-ak6NoX_4Aeg_-2013136855")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ReportIdentification { get; }
 
     /// <summary>

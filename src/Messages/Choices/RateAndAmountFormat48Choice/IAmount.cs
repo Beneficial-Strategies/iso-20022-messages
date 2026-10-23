@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat48Choice;
 /// </summary>
 [IsoId("_ctpnXZKQEeWHWpTQn1FFVg")]
 [IsoXmlTag("Amt")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount : IRateAndAmountFormat48Choice, IIsoChoiceVariant
 {
     /// <summary>

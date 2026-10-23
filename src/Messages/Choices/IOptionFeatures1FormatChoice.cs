@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the feature of an option.
 /// </summary>
 [IsoId("_Rm2nFdp-Ed-ak6NoX_4Aeg_741252058")]
+[IsoDisplayName(@"Option Features 1 Format Choice")]
 public interface IOptionFeatures1FormatChoice : IIsoChoice { }

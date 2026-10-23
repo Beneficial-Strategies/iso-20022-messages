@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a document.
 /// </summary>
 [IsoId("_Q1Ld4XR1EeiH1ZOt2UD8vQ")]
+[IsoDisplayName(@"Document")]
 public interface IDocument12 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDocument12 : IIsoComponent
     [IsoId("_Q_AvU3R1EeiH1ZOt2UD8vQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IDocument12 : IIsoComponent
     [IsoId("_E_8EYniKEeidzqjNEfehPg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>
@@ -65,6 +70,8 @@ public interface IDocument12 : IIsoComponent
     [IsoId("_ZEDS8XiKEeidzqjNEfehPg")]
     [DisplayName("File Name")]
     [IsoXmlTag("FileNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? FileName { get; }
 
     /// <summary>
@@ -81,5 +88,6 @@ public interface IDocument12 : IIsoComponent
     [IsoId("_Q_AvV3R1EeiH1ZOt2UD8vQ")]
     [DisplayName("Enclosure")]
     [IsoXmlTag("Nclsr")]
+    [IsoSimpleType(IsoSimpleType.Max10MbBinary)]
     Max10MbBinary Enclosure { get; }
 }

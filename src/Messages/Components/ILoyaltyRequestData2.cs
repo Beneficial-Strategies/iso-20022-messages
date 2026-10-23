@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data linked to card loyalty during payment.
 /// </summary>
 [IsoId("_K09FUQ0zEeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Loyalty Request Data")]
 public interface ILoyaltyRequestData2 : IIsoComponent
 {
     /// <summary>

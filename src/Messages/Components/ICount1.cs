@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a sequence number or a total.
 /// </summary>
 [IsoId("_RJDQxNp-Ed-ak6NoX_4Aeg_1838853440")]
+[IsoDisplayName(@"Count")]
 public interface ICount1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface ICount1 : IIsoComponent
     [IsoId("_RJDQxdp-Ed-ak6NoX_4Aeg_1906271406")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Number { get; }
 }

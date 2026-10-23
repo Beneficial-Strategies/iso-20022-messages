@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Transaction Amendment1Choice.
 /// </summary>
 [IsoId("_CsX6bJrOEeyo0KtkyUQoRg")]
+[IsoDisplayName(@"Transaction Amendment1Choice")]
 public interface ITransactionAmendment1Choice : IIsoChoice { }

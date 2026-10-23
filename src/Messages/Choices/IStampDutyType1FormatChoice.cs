@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the stamp duty information.
 /// </summary>
 [IsoId("_Ro8Rxtp-Ed-ak6NoX_4Aeg_-891645005")]
+[IsoDisplayName(@"Stamp Duty Type 1 Format Choice")]
 public interface IStampDutyType1FormatChoice : IIsoChoice { }

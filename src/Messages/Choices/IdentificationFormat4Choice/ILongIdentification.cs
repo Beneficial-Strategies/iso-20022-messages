@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationFormat4Choice;
 /// Format expressed as a long identification.
 /// </summary>
 [IsoId("_c5VTP5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Long Identification")]
 public interface ILongIdentification : IIdentificationFormat4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ILongIdentification : IIdentificationFormat4Choice, IIsoChoiceV
     /// Specifies a character string with a maximum length of 30 characters. It has a pattern that disables the use of characters that is not part of the character set X, that is, that is not a-z A-Z / - ? : ( ) . , ‘ + , and disable the use of slash &quot;/&quot; at the beginning and end of line and double slash &quot;//&quot; within the line.
     /// </summary>
     [IsoXmlTag("LngId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
+    [StringLength(30, MinimumLength = 1)]
     RestrictedFINXMax30Text Value { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyIdentification2Choice
 /// </summary>
 [IsoId("_w8OZg2c-EemvNLufWGIVOQ")]
 [IsoXmlTag("CmbndId")]
+[IsoDisplayName(@"Combined Identification")]
 public interface ICombinedIdentification : ISystemPartyIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

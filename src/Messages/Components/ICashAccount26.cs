@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account to or from which a cash entry is made.
 /// </summary>
 [IsoId("_aVnNARczEeK5g-3oYI0_9Q")]
+[IsoDisplayName(@"Cash Account")]
 public interface ICashAccount26 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface ICashAccount26 : IIsoComponent
     [IsoId("_xpDeUBczEeK5g-3oYI0_9Q")]
     [DisplayName("Account Owner Other Identification")]
     [IsoXmlTag("AcctOwnrOthrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification46> AccountOwnerOtherIdentification { get; }
 }

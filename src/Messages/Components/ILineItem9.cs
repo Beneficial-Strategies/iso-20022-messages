@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Commercial details of a trade transaction between a buyer and a seller.
 /// </summary>
 [IsoId("_SrsvS9p-Ed-ak6NoX_4Aeg_-1149974341")]
+[IsoDisplayName(@"Line Item")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ILineItem9 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface ILineItem9 : IIsoComponent
     [IsoId("_SrsvTdp-Ed-ak6NoX_4Aeg_-121761224")]
     [DisplayName("Final Submission")]
     [IsoXmlTag("FnlSubmissn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator FinalSubmission { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ILineItem9 : IIsoComponent
     [IsoId("_SrsvTtp-Ed-ak6NoX_4Aeg_-1149973794")]
     [DisplayName("Commercial Line Items")]
     [IsoXmlTag("ComrclLineItms")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItemDetails9> CommercialLineItems { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ILineItem9 : IIsoComponent
     [IsoId("_Sr15MNp-Ed-ak6NoX_4Aeg_-1149973824")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment4> Adjustment { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ILineItem9 : IIsoComponent
     [IsoId("_Sr15Mtp-Ed-ak6NoX_4Aeg_-1149974185")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax12> Tax { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface ILineItem9 : IIsoComponent
     [IsoId("_Sr15NNp-Ed-ak6NoX_4Aeg_-1149973362")]
     [DisplayName("Buyer Defined Information")]
     [IsoXmlTag("BuyrDfndInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUserDefinedInformation1> BuyerDefinedInformation { get; }
 
     /// <summary>
@@ -97,5 +104,6 @@ public interface ILineItem9 : IIsoComponent
     [IsoId("_Sr15Ndp-Ed-ak6NoX_4Aeg_-1149973393")]
     [DisplayName("Seller Defined Information")]
     [IsoXmlTag("SellrDfndInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUserDefinedInformation1> SellerDefinedInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity48Choice;
 /// Quantity of security.
 /// </summary>
 [IsoId("_KADDMRuyEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Quantity")]
 public interface IQuantity : IQuantity48Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

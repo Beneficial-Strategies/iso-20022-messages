@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Structured call details with address.
 /// </summary>
 [IsoId("_1J_VOPfGEei89sMSHxl1ew")]
+[IsoDisplayName(@"Telecom Call Details")]
 public interface ITelecomCallDetails1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITelecomCallDetails1 : IIsoComponent
     [IsoId("_1J_VPvfGEei89sMSHxl1ew")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? OtherType { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITelecomCallDetails1 : IIsoComponent
     [IsoId("_d2rxUffHEei89sMSHxl1ew")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface ITelecomCallDetails1 : IIsoComponent
     [IsoId("_1J_VP_fGEei89sMSHxl1ew")]
     [DisplayName("City")]
     [IsoXmlTag("City")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? City { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface ITelecomCallDetails1 : IIsoComponent
     [IsoId("_1J_VO_fGEei89sMSHxl1ew")]
     [DisplayName("State")]
     [IsoXmlTag("Stat")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? State { get; }
 
     /// <summary>
@@ -57,6 +65,8 @@ public interface ITelecomCallDetails1 : IIsoComponent
     [IsoId("_1J_VPPfGEei89sMSHxl1ew")]
     [DisplayName("Province")]
     [IsoXmlTag("Prvc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Province { get; }
 
     /// <summary>
@@ -65,5 +75,6 @@ public interface ITelecomCallDetails1 : IIsoComponent
     [IsoId("_1J_VPffGEei89sMSHxl1ew")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
     Min2Max3AlphaText? Country { get; }
 }

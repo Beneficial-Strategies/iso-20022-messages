@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Structured postal address.
 /// </summary>
 [IsoId("_5S1SQSRYEfCa6bxMAKEOKg")]
+[IsoDisplayName(@"Address4")]
 public interface IAddress4 : IIsoComponent
 {
     /// <summary>

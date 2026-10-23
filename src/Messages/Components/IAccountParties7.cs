@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party related to an investment account.
 /// </summary>
 [IsoId("_D1zGoROGEeKjmvxNCObNeQ")]
+[IsoDisplayName(@"Account Parties")]
 public interface IAccountParties7 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,9 @@ public interface IAccountParties7 : IIsoComponent
     [IsoId("_EKNQqROGEeKjmvxNCObNeQ")]
     [DisplayName("Granter")]
     [IsoXmlTag("Grntr")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation7> Granter { get; }
 
     /// <summary>
@@ -89,6 +93,9 @@ public interface IAccountParties7 : IIsoComponent
     [IsoId("_EKNQrROGEeKjmvxNCObNeQ")]
     [DisplayName("Settler")]
     [IsoXmlTag("Sttlr")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation7> Settler { get; }
 
     /// <summary>
@@ -97,5 +104,8 @@ public interface IAccountParties7 : IIsoComponent
     [IsoId("_EKNQsROGEeKjmvxNCObNeQ")]
     [DisplayName("Other Party")]
     [IsoXmlTag("OthrPty")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtendedParty4> OtherParty { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of charges as a code or free text.
 /// </summary>
 [IsoId("_nKgLABrdEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Charges Type 1 Choice")]
 public interface IChargesType1Choice : IIsoChoice { }

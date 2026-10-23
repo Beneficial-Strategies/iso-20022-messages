@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction identification.
 /// </summary>
 [IsoId("_Ab8KktokEeC60axPepSq7g_597298616")]
+[IsoDisplayName(@"Transactiont Identification")]
 public interface ITransactiontIdentification4 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface ITransactiontIdentification4 : IIsoComponent
     [IsoId("_Ab8Kk9okEeC60axPepSq7g_483459550")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 }

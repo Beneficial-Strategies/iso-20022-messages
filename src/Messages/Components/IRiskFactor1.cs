@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variable, index, benchmark or other price used in the valuation of a financial instrument.
 /// </summary>
 [IsoId("_8KUvwKs2Eeayv9XxdmMwKQ")]
+[IsoDisplayName(@"Risk Factor")]
 public interface IRiskFactor1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRiskFactor1 : IIsoComponent
     [IsoId("_BrXWcKs3Eeayv9XxdmMwKQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

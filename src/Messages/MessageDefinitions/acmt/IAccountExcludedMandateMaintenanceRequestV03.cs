@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctExcldMndtMntncReq",
     "urn:iso:std:iso:20022:tech:xsd:acmt.015.001.03"
 )]
+[Description(@"The AccountExcludedMandateMaintenanceRequest message is sent from an organisation to a financial institution as part of the account maintenance process. It is the initial request message to update an account. Usage: this update is about account details excluding any mandate information.|If modification codes are not used: the organisation will specify under the “Account” and “Organisation” tags the complete information as it should be in the financial institution’s records after processing the update request. |If modification codes are used (in that case, they must be used everywhere): the organisation will specify under the “Account” and “Organisation” tags which elements must be added, deleted, modified, or if they are unchanged.")]
+[IsoDisplayName(@"Account Excluded Mandate Maintenance Request V")]
 public interface IAccountExcludedMandateMaintenanceRequestV03 : IOuterRecord
 {
     /// <summary>
@@ -90,6 +92,7 @@ public interface IAccountExcludedMandateMaintenanceRequestV03 : IOuterRecord
     [IsoId("_bfzgqW2PEei3KuUgpx7Xcw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature3> DigitalSignature { get; }
 
     /// <summary>
@@ -98,5 +101,6 @@ public interface IAccountExcludedMandateMaintenanceRequestV03 : IOuterRecord
     [IsoId("_bfzgq22PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

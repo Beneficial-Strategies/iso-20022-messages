@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sensible data associated with the payment card performing the transaction.
 /// </summary>
 [IsoId("_WO-mMWkjEeSTIuB9A-QJ6g")]
+[IsoDisplayName(@"Plain Card Data")]
 public interface IPlainCardData8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPlainCardData8 : IIsoComponent
     [IsoId("_WcCx0WkjEeSTIuB9A-QJ6g")]
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
+    [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
     Min8Max28NumericText PAN { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPlainCardData8 : IIsoComponent
     [IsoId("_WcCx02kjEeSTIuB9A-QJ6g")]
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
     Min2Max3NumericText? CardSequenceNumber { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPlainCardData8 : IIsoComponent
     [IsoId("_WcCx1WkjEeSTIuB9A-QJ6g")]
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? EffectiveDate { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface IPlainCardData8 : IIsoComponent
     [IsoId("_WcCx12kjEeSTIuB9A-QJ6g")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text ExpiryDate { get; }
 }

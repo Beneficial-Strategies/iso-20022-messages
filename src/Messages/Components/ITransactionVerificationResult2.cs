@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of the verifications performed by the issuer to deliver or decline the authorisation.
 /// </summary>
 [IsoId("_8MCksR2xEeKyZ4l838zwaQ")]
+[IsoDisplayName(@"Transaction Verification Result")]
 public interface ITransactionVerificationResult2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionVerificationResult2 : IIsoComponent
     [IsoId("_8YFcoR2xEeKyZ4l838zwaQ")]
     [DisplayName("Electronic Commerce Authentication Result")]
     [IsoXmlTag("ElctrncComrcAuthntcnRslt")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? ElectronicCommerceAuthenticationResult { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITransactionVerificationResult2 : IIsoComponent
     [IsoId("_8YFcqR2xEeKyZ4l838zwaQ")]
     [DisplayName("Cardholder Address Verification Result")]
     [IsoXmlTag("CrdhldrAdrVrfctnRslt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardholderAddressVerificationResult1Code> CardholderAddressVerificationResult { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ITransactionVerificationResult2 : IIsoComponent
     [IsoId("_8YFcrR2xEeKyZ4l838zwaQ")]
     [DisplayName("Declined Product Code")]
     [IsoXmlTag("DclndPdctCd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> DeclinedProductCode { get; }
 }

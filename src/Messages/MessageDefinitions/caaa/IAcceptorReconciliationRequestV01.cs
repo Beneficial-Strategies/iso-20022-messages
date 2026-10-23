@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrRcncltnReq",
     "urn:iso:std:iso:20022:tech:xsd:caaa.009.001.01"
 )]
+[Description(@"Scope|The AcceptorReconciliationRequest message is sent by the card acceptor to the acquirer or an agent to communicate the totals of the card payment transaction for a reconciliation period. An agent never forwards the message.|Usage|The AcceptorReconciliationRequest message is used to ensure that the debits and credits correspond to the balances computed by the acquirer or its agent for the same reconciliation period.|The AcceptorReconciliationRequest message is also used to close a reconciliation period.")]
+[IsoDisplayName(@"Acceptor Reconciliation Request V")]
 public interface IAcceptorReconciliationRequestV01 : IOuterRecord
 {
     /// <summary>

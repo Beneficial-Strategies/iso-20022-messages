@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice;
 /// </summary>
 [IsoId("_iZO6AaidEeWHO_l3hf2rlA")]
 [IsoXmlTag("SnglColl")]
+[IsoDisplayName(@"Single Collateral")]
 public interface ISingleCollateral : ISecuredCollateral2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface ISingleCollateral : ISecuredCollateral2Choice, IIsoChoiceVarian
     [IsoId("_i2_NA6idEeWHO_l3hf2rlA")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier ISIN { get; }
 }

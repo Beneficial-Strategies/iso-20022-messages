@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Administrative Request8.
 /// </summary>
 [IsoId("_q0V5EaEqEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Administrative Request8")]
 public interface IAdministrativeRequest8 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IAdministrativeRequest8 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Document that a user must file with an authorised servicer for each contract that involves foreign currency transactions with non residents.
 /// </summary>
 [IsoId("_EXwBT249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Registered Contract")]
 public interface IRegisteredContract6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRegisteredContract6 : IIsoComponent
     [IsoId("_EjORcW49EeiU9cctagi5ow")]
     [DisplayName("Registered Contract Closure Identification")]
     [IsoXmlTag("RegdCtrctClsrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RegisteredContractClosureIdentification { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface IRegisteredContract6 : IIsoComponent
     [IsoId("_EjORiW49EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

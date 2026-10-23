@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AuthenticationChannel1Choice;
 /// Authentication channel expressed as an external ISO 20022 code.
 /// </summary>
 [IsoId("_U4Y95ZdgEea1K6JAcAwoVg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAuthenticationChannel1Choice, IIsoChoiceVariant
 {
     /// <summary>

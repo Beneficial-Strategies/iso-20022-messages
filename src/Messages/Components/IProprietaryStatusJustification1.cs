@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines proprietary reason to reject a transaction.
 /// </summary>
 [IsoId("_Ny9Dz5lPEee-Zps0fZQaFQ")]
+[IsoDisplayName(@"Proprietary Status Justification")]
 public interface IProprietaryStatusJustification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProprietaryStatusJustification1 : IIsoComponent
     [IsoId("_N7lbUZlPEee-Zps0fZQaFQ")]
     [DisplayName("Proprietary Status Reason")]
     [IsoXmlTag("PrtryStsRsn")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText ProprietaryStatusReason { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IProprietaryStatusJustification1 : IIsoComponent
     [IsoId("_N7lbU5lPEee-Zps0fZQaFQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Reason { get; }
 }

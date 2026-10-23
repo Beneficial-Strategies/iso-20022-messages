@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the reason for the conditionally accepted status.
 /// </summary>
 [IsoId("_RTLdJNp-Ed-ak6NoX_4Aeg_-536648388")]
+[IsoDisplayName(@"Conditionally Accepted Status Reason")]
 public interface IConditionallyAcceptedStatusReason2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IConditionallyAcceptedStatusReason2 : IIsoComponent
     [IsoId("_RTLdJtp-Ed-ak6NoX_4Aeg_-607817225")]
     [DisplayName("Extended Reason")]
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedReason { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IConditionallyAcceptedStatusReason2 : IIsoComponent
     [IsoId("_RTLdKNp-Ed-ak6NoX_4Aeg_1824265125")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

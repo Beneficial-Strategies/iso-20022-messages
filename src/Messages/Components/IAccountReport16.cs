@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details of the account report.
 /// </summary>
 [IsoId("_kc1gISGxEeKjd4jizyIDGA")]
+[IsoDisplayName(@"Account Report")]
 public interface IAccountReport16 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountReport16 : IIsoComponent
     [IsoId("_kx_31SGxEeKjd4jizyIDGA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IAccountReport16 : IIsoComponent
     [IsoId("_kx_34SGxEeKjd4jizyIDGA")]
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ElectronicSequenceNumber { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface IAccountReport16 : IIsoComponent
     [IsoId("_kx_35SGxEeKjd4jizyIDGA")]
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LegalSequenceNumber { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface IAccountReport16 : IIsoComponent
     [IsoId("_kx_36SGxEeKjd4jizyIDGA")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -98,6 +104,7 @@ public interface IAccountReport16 : IIsoComponent
     [IsoId("_kx_4ASGxEeKjd4jizyIDGA")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountInterest3> Interest { get; }
 
     /// <summary>
@@ -106,6 +113,7 @@ public interface IAccountReport16 : IIsoComponent
     [IsoId("_kx_4BSGxEeKjd4jizyIDGA")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance3> Balance { get; }
 
     /// <summary>
@@ -122,6 +130,7 @@ public interface IAccountReport16 : IIsoComponent
     [IsoId("_kx_4DSGxEeKjd4jizyIDGA")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportEntry4> Entry { get; }
 
     /// <summary>
@@ -130,5 +139,7 @@ public interface IAccountReport16 : IIsoComponent
     [IsoId("_kx_4ESGxEeKjd4jizyIDGA")]
     [DisplayName("Additional Report Information")]
     [IsoXmlTag("AddtlRptInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalReportInformation { get; }
 }

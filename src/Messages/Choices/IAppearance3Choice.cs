@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for appearance.
 /// </summary>
 [IsoId("_dYSgleLxEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Appearance 3 Choice")]
 public interface IAppearance3Choice : IIsoChoice { }

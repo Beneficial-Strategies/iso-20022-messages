@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context in which the card payment transaction is performed.
 /// </summary>
 [IsoId("_drTTUVBPEeedyPuM0kK2EQ")]
+[IsoDisplayName(@"Context")]
 public interface IContext3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IContext3 : IIsoComponent
     [IsoId("_FSoIEewTEeiMkKo2clXHdQ")]
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerification2> Verification { get; }
 
     /// <summary>

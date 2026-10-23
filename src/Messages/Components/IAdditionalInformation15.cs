@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information.
 /// </summary>
 [IsoId("_tmecgZCkEeiQvr1XXv37hw")]
+[IsoDisplayName(@"Additional Information")]
 public interface IAdditionalInformation15 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IAdditionalInformation15 : IIsoComponent
     [IsoId("_t2iRw5CkEeiQvr1XXv37hw")]
     [DisplayName("Information Value")]
     [IsoXmlTag("InfVal")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text InformationValue { get; }
 }

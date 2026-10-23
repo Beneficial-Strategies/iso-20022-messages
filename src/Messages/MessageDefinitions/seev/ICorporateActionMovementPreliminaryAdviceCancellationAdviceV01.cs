@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnMvmntPrlimryAdvcCxlAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.044.001.01"
 )]
+[Description(@"Scope|An account servicer sends the CorporateActionMovementPreliminaryAdviceCancellationAdvice message to an account owner or its designated agent to cancel a previously announced CorporateActionMovementPreliminaryAdvice.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).|ISO 15022 - 20022 COEXISTENCE|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
+[IsoDisplayName(@"Corporate Action Movement Preliminary Advice Cancellation Advice V")]
 public interface ICorporateActionMovementPreliminaryAdviceCancellationAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -86,6 +88,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdviceV01 
     [IsoId("_TdQEZtEwEd-BzquC8wXy7w_1091783642")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -94,6 +97,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdviceV01 
     [IsoId("_TdQEZ9EwEd-BzquC8wXy7w_94711289")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> PayingAgent { get; }
 
     /// <summary>
@@ -102,6 +106,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdviceV01 
     [IsoId("_TdZOUNEwEd-BzquC8wXy7w_-902361064")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -118,6 +123,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdviceV01 
     [IsoId("_TdZOUtEwEd-BzquC8wXy7w_-595683180")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> ResellingAgent { get; }
 
     /// <summary>
@@ -142,6 +148,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdviceV01 
     [IsoId("_TdZOVdEwEd-BzquC8wXy7w_-1592755533")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> SolicitationAgent { get; }
 
     /// <summary>
@@ -158,5 +165,6 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdviceV01 
     [IsoId("_TdZOV9EwEd-BzquC8wXy7w_708067057")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension2> Extension { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between source of identification of a financial instrument.
 /// </summary>
 [IsoId("_nfUx0V9NEeS7xuKaq75oiQ")]
+[IsoDisplayName(@"Identification Source 5 Choice")]
 public interface IIdentificationSource5Choice : IIsoChoice { }

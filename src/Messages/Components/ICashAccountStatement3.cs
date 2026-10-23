@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides system date for all of the changes occurred for an entity.
 /// </summary>
 [IsoId("_dB-GUeTXEfC01pKpYIyMTA")]
+[IsoDisplayName(@"Cash Account Statement3")]
 public interface ICashAccountStatement3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICashAccountStatement3 : IIsoComponent
     [IsoId("_dFQq4uTXEfC01pKpYIyMTA")]
     [DisplayName("Change")]
     [IsoXmlTag("Chng")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccountReferenceDataChange3> Change { get; }
 }

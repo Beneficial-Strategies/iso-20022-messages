@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the refusal of a demand.
 /// </summary>
 [IsoId("_-FHEkHltEeG7BsjMvd1mEw_-1919643766")]
+[IsoDisplayName(@"Demand Refusal")]
 public interface IDemandRefusal1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDemandRefusal1 : IIsoComponent
     [IsoId("_-FHEknltEeG7BsjMvd1mEw_-400262050")]
     [DisplayName("Advising Party Reference Number")]
     [IsoXmlTag("AdvsgPtyRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdvisingPartyReferenceNumber { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IDemandRefusal1 : IIsoComponent
     [IsoId("_xcmwxRVREeKVqNjC36CBuQ")]
     [DisplayName("Second Advising Party Reference Number")]
     [IsoXmlTag("ScndAdvsgPtyRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecondAdvisingPartyReferenceNumber { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IDemandRefusal1 : IIsoComponent
     [IsoId("_-FHEk3ltEeG7BsjMvd1mEw_-671444297")]
     [DisplayName("Confirmer Reference Number")]
     [IsoXmlTag("CnfrmrRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ConfirmerReferenceNumber { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IDemandRefusal1 : IIsoComponent
     [IsoId("_-FHElXltEeG7BsjMvd1mEw_1035244109")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
+    [IsoSimpleType(IsoSimpleType.Refused7Text)]
     Refused7Text Status { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IDemandRefusal1 : IIsoComponent
     [IsoId("_-FQ1kHltEeG7BsjMvd1mEw_733408168")]
     [DisplayName("Discrepancy")]
     [IsoXmlTag("Dscrpncy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDiscrepancy1> Discrepancy { get; }
 
     /// <summary>
@@ -73,6 +82,10 @@ public interface IDemandRefusal1 : IIsoComponent
     [IsoId("_-FQ1kXltEeG7BsjMvd1mEw_952637090")]
     [DisplayName("Disposition Of Documents")]
     [IsoXmlTag("DspstnOfDocs")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> DispositionOfDocuments { get; }
 
     /// <summary>
@@ -81,5 +94,9 @@ public interface IDemandRefusal1 : IIsoComponent
     [IsoId("_-FQ1knltEeG7BsjMvd1mEw_1467059748")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

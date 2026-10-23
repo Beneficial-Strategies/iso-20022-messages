@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of the document line identification.
 /// </summary>
 [IsoId("_cX4kMablEeKvUvwX_r3tzA")]
+[IsoDisplayName(@"Document Line Type")]
 public interface IDocumentLineType1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IDocumentLineType1 : IIsoComponent
     [IsoId("_ciKhmablEeKvUvwX_r3tzA")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

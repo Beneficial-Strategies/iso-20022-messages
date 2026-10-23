@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tangible output or service produced by human or mechanical effort, or by a natural process for purposes of specifying a product.
 /// </summary>
 [IsoId("_S5ezcgEcEeCQm6a_G2yO_w_-1364356663")]
+[IsoDisplayName(@"Trade Product")]
 public interface ITradeProduct1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeProduct1 : IIsoComponent
     [IsoId("_S5ezcwEcEeCQm6a_G2yO_w_1472957533")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductIdentifier2Choice> Identification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITradeProduct1 : IIsoComponent
     [IsoId("_S5ezdAEcEeCQm6a_G2yO_w_504353995")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface ITradeProduct1 : IIsoComponent
     [IsoId("_S5n9UAEcEeCQm6a_G2yO_w_52675725")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface ITradeProduct1 : IIsoComponent
     [IsoId("_S5n9UQEcEeCQm6a_G2yO_w_-691201196")]
     [DisplayName("Country Of Origin")]
     [IsoXmlTag("CtryOfOrgn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICountryCodeAndName1> CountryOfOrigin { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface ITradeProduct1 : IIsoComponent
     [IsoId("_S5n9UgEcEeCQm6a_G2yO_w_-598061413")]
     [DisplayName("Product Characteristics")]
     [IsoXmlTag("PdctChrtcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductCharacteristics2> ProductCharacteristics { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface ITradeProduct1 : IIsoComponent
     [IsoId("_S5n9UwEcEeCQm6a_G2yO_w_1809446636")]
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductCategory1Choice> ProductCategory { get; }
 
     /// <summary>
@@ -65,5 +74,6 @@ public interface ITradeProduct1 : IIsoComponent
     [IsoId("_S5n9VAEcEeCQm6a_G2yO_w_-1551749202")]
     [DisplayName("Global Serial Identifier")]
     [IsoXmlTag("GblSrlIdr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> GlobalSerialIdentifier { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of Retailer for this message.
 /// </summary>
 [IsoId("_EGn-QYX-EemxIqbaFEE8-w")]
+[IsoDisplayName(@"Retailer Sale Environment")]
 public interface IRetailerSaleEnvironment2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRetailerSaleEnvironment2 : IIsoComponent
     [IsoId("_ES4RkYX-EemxIqbaFEE8-w")]
     [DisplayName("Sale Capabilities")]
     [IsoXmlTag("SaleCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<SaleCapabilities1Code> SaleCapabilities { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IRetailerSaleEnvironment2 : IIsoComponent
     [IsoId("_ES4RmYX-EemxIqbaFEE8-w")]
     [DisplayName("Debit Preferred Flag")]
     [IsoXmlTag("DbtPrefrdFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DebitPreferredFlag { get; }
 
     /// <summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "DerivsTradMrgnDataTxStatRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.109.001.01"
 )]
+[Description(@"The DerivativesTradeMarginDataTransactionStateReport message is sent by the trade repository (TR) to the competent authority or made available to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, containing latest state of the margins exchanged in relation to the derivatives transactions.")]
+[IsoDisplayName(@"Derivatives Trade Margin Data Transaction State Report V")]
 public interface IDerivativesTradeMarginDataTransactionStateReportV01 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface IDerivativesTradeMarginDataTransactionStateReportV01 : IOuterRe
     [IsoId("_pVVvh2mFEe2DRvVJM2Qy-g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

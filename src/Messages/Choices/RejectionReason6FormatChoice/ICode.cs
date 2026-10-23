@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason6FormatChoice;
 /// Standard code to specify the reason of a rejection of the notification advice.
 /// </summary>
 [IsoId("_Rofl1tp-Ed-ak6NoX_4Aeg_234326718")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectionReason6FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

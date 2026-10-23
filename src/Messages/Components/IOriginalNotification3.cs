@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identify the original notification and to provide the status.
 /// </summary>
 [IsoId("_1E2M0Bf2Ed--ta5221d4PQ")]
+[IsoDisplayName(@"Original Notification")]
 public interface IOriginalNotification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalNotification3 : IIsoComponent
     [IsoId("_1FcpwRf2Ed--ta5221d4PQ")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IOriginalNotification3 : IIsoComponent
     [IsoId("_1FlzsRf2Ed--ta5221d4PQ")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IOriginalNotification3 : IIsoComponent
     [IsoId("_1Fvkshf2Ed--ta5221d4PQ")]
     [DisplayName("Original Notification Identification")]
     [IsoXmlTag("OrgnlNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalNotificationIdentification { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IOriginalNotification3 : IIsoComponent
     [IsoId("_1GyGgRf2Ed--ta5221d4PQ")]
     [DisplayName("Additional Status Information")]
     [IsoXmlTag("AddtlStsInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalStatusInformation { get; }
 
     /// <summary>
@@ -57,5 +65,6 @@ public interface IOriginalNotification3 : IIsoComponent
     [IsoId("_1HFoghf2Ed--ta5221d4PQ")]
     [DisplayName("Original Notification Reference")]
     [IsoXmlTag("OrgnlNtfctnRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalNotificationReference2> OriginalNotificationReference { get; }
 }

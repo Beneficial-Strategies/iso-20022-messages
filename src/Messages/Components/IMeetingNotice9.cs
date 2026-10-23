@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Meeting Notice9.
 /// </summary>
 [IsoId("_NWvMkYZEEe-5eN4DwJpixA")]
+[IsoDisplayName(@"Meeting Notice9")]
 public interface IMeetingNotice9 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface IMeetingNotice9 : IIsoComponent
     /// </summary>
     [DisplayName("Participation")]
     [IsoXmlTag("Prtcptn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IParticipationMethod2> Participation { get; }
 
     /// <summary>
@@ -72,6 +74,7 @@ public interface IMeetingNotice9 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Documentation URL Address")]
     [IsoXmlTag("AddtlDcmnttnURLAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max2048Text> AdditionalDocumentationURLAddress { get; }
 
     /// <summary>
@@ -86,6 +89,7 @@ public interface IMeetingNotice9 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Procedure Details")]
     [IsoXmlTag("AddtlPrcdrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalRights4> AdditionalProcedureDetails { get; }
 
     /// <summary>
@@ -121,6 +125,7 @@ public interface IMeetingNotice9 : IIsoComponent
     /// </summary>
     [DisplayName("Contact Person Details")]
     [IsoXmlTag("CtctPrsnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingContactPerson3> ContactPersonDetails { get; }
 
     /// <summary>

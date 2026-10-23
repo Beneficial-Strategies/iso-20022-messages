@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOrFaceAmountOrCode1Choice;
 /// Quantity expressed as a code.
 /// </summary>
 [IsoId("_SoRAwNp-Ed-ak6NoX_4Aeg_361303128")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IUnitOrFaceAmountOrCode1Choice, IIsoChoiceVariant
 {
     /// <summary>

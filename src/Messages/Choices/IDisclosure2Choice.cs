@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an indication of no disclosure and the provision of shareholding disclosure information.
 /// </summary>
 [IsoId("_L3-v4fNyEeqRfth943bvEA")]
+[IsoDisplayName(@"Disclosure 2 Choice")]
 public interface IDisclosure2Choice : IIsoChoice { }

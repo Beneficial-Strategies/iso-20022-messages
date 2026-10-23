@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferenceValue1Choice;
 /// Internationalized Resource Identifier (IRI) address.
 /// </summary>
 [IsoId("_yqrhkMePEeysUoBKYz1Ytw")]
+[IsoDisplayName(@"IRI")]
 public interface IIRI : IReferenceValue1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IIRI : IReferenceValue1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 2048 characters.
     /// </summary>
     [IsoXmlTag("IRI")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text Value { get; }
 }

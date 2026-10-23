@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// New standing order values.
 /// </summary>
 [IsoId("_parnIXXtEei3jO6riKEVXg")]
+[IsoDisplayName(@"Standing Order")]
 public interface IStandingOrder7 : IIsoComponent
 {
     /// <summary>
@@ -81,5 +82,6 @@ public interface IStandingOrder7 : IIsoComponent
     [IsoId("_pmAGX3XtEei3jO6riKEVXg")]
     [DisplayName("Zero Sweep Indicator")]
     [IsoXmlTag("ZeroSweepInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ZeroSweepIndicator { get; }
 }

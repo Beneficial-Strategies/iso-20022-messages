@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Intention to transfer an ownership of a financial instrument.
 /// </summary>
 [IsoId("_ApW7idokEeC60axPepSq7g_-431538170")]
+[IsoDisplayName(@"Partial Fill")]
 public interface IPartialFill1 : IIsoComponent
 {
     /// <summary>

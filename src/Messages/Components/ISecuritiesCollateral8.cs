@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the securities posted as collateral.
 /// </summary>
 [IsoId("_szYvn4pIEeaNTaanBSMWmg")]
+[IsoDisplayName(@"Securities Collateral")]
 public interface ISecuritiesCollateral8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesCollateral8 : IIsoComponent
     [IsoId("_tCHIEYpIEeaNTaanBSMWmg")]
     [DisplayName("Collateral Identification")]
     [IsoXmlTag("CollId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CollateralIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ISecuritiesCollateral8 : IIsoComponent
     [IsoId("_tCHIF4pIEeaNTaanBSMWmg")]
     [DisplayName("Limited Coverage Indicator")]
     [IsoXmlTag("LtdCvrgInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LimitedCoverageIndicator { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface ISecuritiesCollateral8 : IIsoComponent
     [IsoId("_tCHIH4pIEeaNTaanBSMWmg")]
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Haircut { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface ISecuritiesCollateral8 : IIsoComponent
     [IsoId("_tCHII4pIEeaNTaanBSMWmg")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValueDate { get; }
 
     /// <summary>

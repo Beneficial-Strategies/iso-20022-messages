@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Local Market Annex6.
 /// </summary>
 [IsoId("_LWM1qzdyEe6UObU50fB8Cw")]
+[IsoDisplayName(@"Local Market Annex6")]
 public interface ILocalMarketAnnex6 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface ILocalMarketAnnex6 : IIsoComponent
     /// </summary>
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CountryCode> Country { get; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public interface ILocalMarketAnnex6 : IIsoComponent
     /// </summary>
     [DisplayName("Cash Settlement Details")]
     [IsoXmlTag("CshSttlmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount205> CashSettlementDetails { get; }
 
     /// <summary>
@@ -58,5 +61,6 @@ public interface ILocalMarketAnnex6 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

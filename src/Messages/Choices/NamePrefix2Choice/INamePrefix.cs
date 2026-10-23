@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NamePrefix2Choice;
 /// Prefix for name.
 /// </summary>
 [IsoId("_M0Pz0A2fEeSNWNtJlXOAhg")]
+[IsoDisplayName(@"Name Prefix")]
 public interface INamePrefix : INamePrefix2Choice, IIsoChoiceVariant
 {
     /// <summary>

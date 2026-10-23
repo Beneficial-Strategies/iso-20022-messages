@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Rejection of a confirmation.
 /// </summary>
 [IsoId("_EwdoAUhDEea8pJjypp-yMQ")]
+[IsoDisplayName(@"Confirmation Rejected Status")]
 public interface IConfirmationRejectedStatus2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IConfirmationRejectedStatus2 : IIsoComponent
     [IsoId("__OYdI3ZxEeaN2c674jyTxQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_TOf2vdEwEd-BzquC8wXy7w_550595772")]
 [IsoMessage("seev.021.001.01", "AgtCAMvmntConf", "urn:iso:std:iso:20022:tech:xsd:seev.021.001.01")]
+[Description(@"Scope|This message is sent by a CSD to an issuer (or its agent) to confirm the settlement of resource movements.|Usage|This message is used to confirm the settlement of the movements resulting from an:|- Agent Corporate Action Movement Instruction message. It confirms the settlement of the exercised resources and/or proceeds movements in which case the building block Agent Corporate Action Movement Instruction Identification must be present. An Agent Corporate Action Movement Instruction message may be responded to by more than one Agent Corporate Action Movement Confirmation messages.|- Agent Corporate Action Global Distribution Status Advice authorising the global distribution. It confirms the settlement of the exercised resources and/or proceeds movements. The building block Agent Corporate Action Global Distribution Status Advice Identification must be present. An Agent Corporate Action Global Distribution Status Advice message may be responded to by more than one Agent Corporate Action Movement Confirmation messages.|- Agent Corporate Action Election Status Advice that rejects an election advice. It confirms the return of the exercised resources. The building block Agent Corporate Action Election Status Advice Identification must be present. An Agent Corporate Action Election Status Advice message may be responded to by more than one Agent Corporate Action Movement Confirmation messages.|- Agent Corporate Action Election Status Advice where an election cancellation request has been accepted. It confirms the return of the exercised resources. The building block Agent Corporate Action Election Status Advice Identification must be present. An Agent Corporate Action Election Status Advice message may be responded to by more than one Agent Corporate Action Movement Confirmation messages.")]
+[IsoDisplayName(@"Agent CA Movement Confirmation V")]
 public interface IAgentCAMovementConfirmationV01 : IOuterRecord
 {
     /// <summary>
@@ -67,6 +69,7 @@ public interface IAgentCAMovementConfirmationV01 : IOuterRecord
     [IsoId("_TOpApdEwEd-BzquC8wXy7w_1725377056")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionSecuritiesMovement1> SecuritiesMovementDetails { get; }
 
     /// <summary>
@@ -75,5 +78,6 @@ public interface IAgentCAMovementConfirmationV01 : IOuterRecord
     [IsoId("_TQR_YNEwEd-BzquC8wXy7w_-1609125049")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashMovement3> CashMovementDetails { get; }
 }

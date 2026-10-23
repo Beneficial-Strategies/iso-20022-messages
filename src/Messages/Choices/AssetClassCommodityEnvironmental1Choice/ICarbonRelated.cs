@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental
 /// </summary>
 [IsoId("_QbLRA1rVEeWN79Bl6BUd3g")]
 [IsoXmlTag("CrbnRltd")]
+[IsoDisplayName(@"Carbon Related")]
 public interface ICarbonRelated : IAssetClassCommodityEnvironmental1Choice, IIsoChoiceVariant
 {
     /// <summary>

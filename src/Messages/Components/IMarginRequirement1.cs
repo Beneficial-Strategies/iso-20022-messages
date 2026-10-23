@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of expected margin required by any of the parties of the margin calculation.
 /// </summary>
 [IsoId("_Ul4kANp-Ed-ak6NoX_4Aeg_836086296")]
+[IsoDisplayName(@"Margin Requirement")]
 public interface IMarginRequirement1 : IIsoComponent
 {
     /// <summary>

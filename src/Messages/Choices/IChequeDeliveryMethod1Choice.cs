@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Set of characteristics related to a cheque instruction, such as cheque type or cheque number.
 /// </summary>
 [IsoId("_QbwF5tp-Ed-ak6NoX_4Aeg_258234806")]
+[IsoDisplayName(@"Cheque Delivery Method 1 Choice")]
 public interface IChequeDeliveryMethod1Choice : IIsoChoice { }

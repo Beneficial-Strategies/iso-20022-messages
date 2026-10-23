@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instructions information received for a given option.
 /// </summary>
 [IsoId("_HvtEz68wEfCx2aBifPEdRg")]
+[IsoDisplayName(@"Option Instruction Details13")]
 public interface IOptionInstructionDetails13 : IIsoComponent
 {
     /// <summary>

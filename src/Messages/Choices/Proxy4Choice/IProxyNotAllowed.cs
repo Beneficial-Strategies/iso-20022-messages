@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Proxy4Choice;
 /// Indicates that no proxy is allowed for a meeting.
 /// </summary>
 [IsoId("_fCkac_M7EeqRfth943bvEA")]
+[IsoDisplayName(@"Proxy Not Allowed")]
 public interface IProxyNotAllowed : IProxy4Choice, IIsoChoiceVariant
 {
     /// <summary>

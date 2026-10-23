@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity attributes of a derivative where the type is index.
 /// </summary>
 [IsoId("_I8M3cU7KEe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Asset Class Commodity Index")]
 public interface IAssetClassCommodityIndex1 : IIsoComponent
 {
     /// <summary>

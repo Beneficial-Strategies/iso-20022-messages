@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "SctiesFincgRptgPairgReq",
     "urn:iso:std:iso:20022:tech:xsd:auth.078.001.01"
 )]
+[Description(@"The SecuritiesFinancingReportingPairingRequest is sent by the trade repository (TR) to the other trade repositories (TRs) in order to identify the trade repository (TR) holding information on a second leg of a given transaction.")]
+[IsoDisplayName(@"Securities Financing Reporting Pairing Request V")]
 public interface ISecuritiesFinancingReportingPairingRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface ISecuritiesFinancingReportingPairingRequestV01 : IOuterRecord
     [IsoId("_2zvL_wuAEeqVvtu9Ny8FDA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionIdentification4> TransactionIdentification { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface ISecuritiesFinancingReportingPairingRequestV01 : IOuterRecord
     [IsoId("_2zvMAQuAEeqVvtu9Ny8FDA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

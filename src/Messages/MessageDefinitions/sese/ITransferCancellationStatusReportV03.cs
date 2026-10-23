@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_By8j4fpcEeCPwaG9zjUPNQ")]
 [IsoMessage("sese.010.001.03", "TrfCxlStsRpt", "urn:iso:std:iso:20022:tech:xsd:sese.010.001.03")]
+[Description(@"Scope|An executing party, for example, a transfer agent, sends the TransferCancellationStatusReport message to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received transfer cancellation instruction.|Usage|The TransferCancellationStatusReport message is used to report on the status of a transfer in or transfer out cancellation request.|The reference of the transfer instruction for which the cancellation status is reported is identified in TransferReference. The message identification of the transfer cancellation request message in which the transfer instruction was conveyed may also be quoted in RelatedReference.|The message identification of the transfer instruction request message in which the transfer instruction was conveyed may also be quoted in RelatedReference.|One of the following statuses can be reported:|- the transfer cancellation is accepted, or,|- the transfer cancellation has been sent to the next party, or,|- the transfer cancellation is complete and the reason for the status,|- the transfer cancellation pending and the reason for the status,|- the transfer cancellation is rejected and the reason for the status.")]
+[IsoDisplayName(@"Transfer Cancellation Status Report V")]
 public interface ITransferCancellationStatusReportV03 : IOuterRecord
 {
     /// <summary>
@@ -47,6 +49,9 @@ public interface ITransferCancellationStatusReportV03 : IOuterRecord
     [IsoId("_By8j-fpcEeCPwaG9zjUPNQ")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> RelatedReference { get; }
 
     /// <summary>
@@ -55,6 +60,9 @@ public interface ITransferCancellationStatusReportV03 : IOuterRecord
     [IsoId("_By8j_fpcEeCPwaG9zjUPNQ")]
     [DisplayName("Other Reference")]
     [IsoXmlTag("OthrRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> OtherReference { get; }
 
     /// <summary>
@@ -71,5 +79,6 @@ public interface ITransferCancellationStatusReportV03 : IOuterRecord
     [IsoId("_By8kBfpcEeCPwaG9zjUPNQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

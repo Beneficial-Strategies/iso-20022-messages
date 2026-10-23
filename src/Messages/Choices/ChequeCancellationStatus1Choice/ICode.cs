@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChequeCancellationStatus1Choice;
 /// Status, in a coded form, as published in an external code set.
 /// </summary>
 [IsoId("_PJJT_LtyEeq_cfXrH83Rcw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChequeCancellationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

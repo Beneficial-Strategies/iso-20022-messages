@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies corporate action quantities.
 /// </summary>
 [IsoId("_TZS1ENp-Ed-ak6NoX_4Aeg_-702995284")]
+[IsoDisplayName(@"Corporate Action Quantity")]
 public interface ICorporateActionQuantity1 : IIsoComponent
 {
     /// <summary>

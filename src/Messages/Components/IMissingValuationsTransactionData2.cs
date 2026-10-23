@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed information about the outstanding derivatives for which no valuation or outdated valuation has been reported.
 /// </summary>
 [IsoId("_x29aEVyGEe24CqbZJK5XxA")]
+[IsoDisplayName(@"Missing Valuations Transaction Data")]
 public interface IMissingValuationsTransactionData2 : IIsoComponent
 {
     /// <summary>

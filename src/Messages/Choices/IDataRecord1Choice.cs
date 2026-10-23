@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Contains the data record in either Binary or text format.
 /// </summary>
 [IsoId("_Gl7WgJb8Eeuc6pwKtqbEVQ")]
+[IsoDisplayName(@"Data Record 1 Choice")]
 public interface IDataRecord1Choice : IIsoChoice { }

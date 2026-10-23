@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_bf9RtW2PEei3KuUgpx7Xcw")]
 [IsoMessage("auth.018.001.02", "CtrctRegnReq", "urn:iso:std:iso:20022:tech:xsd:auth.018.001.02")]
+[Description(@"The ContractRegistrationRequest message is sent by the reporting party to the registration agent to initiate the registration of a new contract subject to currency control.")]
+[IsoDisplayName(@"Contract Registration Request V")]
 public interface IContractRegistrationRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -28,6 +30,7 @@ public interface IContractRegistrationRequestV02 : IOuterRecord
     [IsoId("_bf9RuW2PEei3KuUgpx7Xcw")]
     [DisplayName("Contract Registration")]
     [IsoXmlTag("CtrctRegn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContractRegistration3> ContractRegistration { get; }
 
     /// <summary>
@@ -36,5 +39,6 @@ public interface IContractRegistrationRequestV02 : IOuterRecord
     [IsoId("_bf9Ru22PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

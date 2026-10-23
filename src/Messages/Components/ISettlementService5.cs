@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement Service5.
 /// </summary>
 [IsoId("_jvOZIXHBEe60F8I8TAMKmg")]
+[IsoDisplayName(@"Settlement Service5")]
 public interface ISettlementService5 : IIsoComponent
 {
     /// <summary>
@@ -100,5 +101,6 @@ public interface ISettlementService5 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalInformation { get; }
 }

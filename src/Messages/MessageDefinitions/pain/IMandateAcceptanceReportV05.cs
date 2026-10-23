@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_as1iAUjuEeaVLL5QKJ4f-A")]
 [IsoMessage("pain.012.001.05", "MndtAccptncRpt", "urn:iso:std:iso:20022:tech:xsd:pain.012.001.05")]
+[Description(@"Scope|The MandateAcceptanceReport message is sent from the agent of the receiver (debtor or creditor) of the MandateRequest message (initiation, amendment or cancellation) to the agent of the initiator of the MandateRequest message (debtor or creditor).|A MandateAcceptanceReport message is used to confirm the acceptance or rejection of a MandateRequest message. Where acceptance is part of the full process flow, a MandateRequest message only becomes valid after a confirmation of acceptance is received through a MandateAcceptanceReport message from the agent of the receiver.|Usage|The MandateAcceptanceReport message can contain one or more confirmation(s) of acceptance or rejection of a specific Mandate Request.|The messages can be exchanged between debtor agent and creditor agent and between debtor agent and debtor and creditor agent and creditor.|The MandateAcceptanceReport message can be used in domestic and cross-border scenarios.")]
+[IsoDisplayName(@"Mandate Acceptance Report V")]
 public interface IMandateAcceptanceReportV05 : IOuterRecord
 {
     /// <summary>
@@ -34,6 +36,7 @@ public interface IMandateAcceptanceReportV05 : IOuterRecord
     [IsoId("_as1iB0juEeaVLL5QKJ4f-A")]
     [DisplayName("Underlying Acceptance Details")]
     [IsoXmlTag("UndrlygAccptncDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMandateAcceptance5> UnderlyingAcceptanceDetails { get; }
 
     /// <summary>
@@ -42,5 +45,6 @@ public interface IMandateAcceptanceReportV05 : IOuterRecord
     [IsoId("_as1iCUjuEeaVLL5QKJ4f-A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

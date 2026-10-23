@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate33Choice;
 /// </summary>
 [IsoId("_CRCiEyJLEe2zWP9pqvmqdw")]
 [IsoXmlTag("Fltg")]
+[IsoDisplayName(@"Floating")]
 public interface IFloating : IInterestRate33Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IFloating : IInterestRate33Choice, IIsoChoiceVariant
     [IsoId("_WJf1EyJdEe2zWP9pqvmqdw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? Identification { get; }
 
     /// <summary>
@@ -26,6 +28,8 @@ public interface IFloating : IInterestRate33Choice, IIsoChoiceVariant
     [IsoId("_WJf1FSJdEe2zWP9pqvmqdw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fulfilment instructions for the retrieval
 /// </summary>
 [IsoId("_zvnyIeE2EeeV6-yubHrZaQ")]
+[IsoDisplayName(@"Retrieval Fulfilment Instructions")]
 public interface IRetrievalFulfilmentInstructions1 : IIsoComponent
 {
     /// <summary>

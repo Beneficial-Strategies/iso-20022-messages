@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the distribution type.
 /// </summary>
 [IsoId("_RmZ7Jdp-Ed-ak6NoX_4Aeg_-1392239918")]
+[IsoDisplayName(@"Distribution Type 1 Format Choice")]
 public interface IDistributionType1FormatChoice : IIsoChoice { }

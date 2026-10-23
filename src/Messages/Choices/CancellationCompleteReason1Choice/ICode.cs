@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationCompleteReason1Choic
 /// Cancelled complete reason expressed as a code.
 /// </summary>
 [IsoId("_inS8ICYwEeW_ZNn8gbfY7Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICancellationCompleteReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

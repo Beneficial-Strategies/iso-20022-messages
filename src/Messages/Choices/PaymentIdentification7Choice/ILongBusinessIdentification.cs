@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification7Choice;
 /// </summary>
 [IsoId("_5uqG9QKxEe2rHs6fbn9-0A")]
 [IsoXmlTag("LngBizId")]
+[IsoDisplayName(@"Long Business Identification")]
 public interface ILongBusinessIdentification : IPaymentIdentification7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ILongBusinessIdentification : IPaymentIdentification7Choice, II
     [IsoId("_6Zt2IwKxEe2rHs6fbn9-0A")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface ILongBusinessIdentification : IPaymentIdentification7Choice, II
     [IsoId("_6Zt2JQKxEe2rHs6fbn9-0A")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? UETR { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface ILongBusinessIdentification : IPaymentIdentification7Choice, II
     [IsoId("_6Zt2KQKxEe2rHs6fbn9-0A")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate InterbankSettlementDate { get; }
 
     /// <summary>
@@ -74,6 +79,7 @@ public interface ILongBusinessIdentification : IPaymentIdentification7Choice, II
     [IsoId("_6Zt2MQKxEe2rHs6fbn9-0A")]
     [DisplayName("Entry Type")]
     [IsoXmlTag("NtryTp")]
+    [IsoSimpleType(IsoSimpleType.EntryTypeIdentifier)]
     EntryTypeIdentifier? EntryType { get; }
 
     /// <summary>
@@ -82,5 +88,7 @@ public interface ILongBusinessIdentification : IPaymentIdentification7Choice, II
     [IsoId("_6Zt2MwKxEe2rHs6fbn9-0A")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 }

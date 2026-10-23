@@ -28,6 +28,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesSttlmTxGnrtnNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:sese.032.002.08"
 )]
+[Description(@"Scope|An account servicer sends a SecuritiesSettlementTransactionGenerationNotification to an account owner to advise the account owner of a securities settlement transaction that has been generated/created by the account servicer for the account owner. The reason for creation can range from the automatic transformation of pending settlement instructions following a corporate event to the recovery of an account owner transactions' database initiated by its account servicer.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Settlement Transaction Generation Notification 002 V")]
 public interface ISecuritiesSettlementTransactionGenerationNotification002V08 : IOuterRecord
 {
     /// <summary>
@@ -52,6 +54,7 @@ public interface ISecuritiesSettlementTransactionGenerationNotification002V08 : 
     [IsoId("_KuDPdc30Eee5nJBZsW8MFQ")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages43> Linkages { get; }
 
     /// <summary>
@@ -84,6 +87,7 @@ public interface ISecuritiesSettlementTransactionGenerationNotification002V08 : 
     [IsoId("_KuDPfc30Eee5nJBZsW8MFQ")]
     [DisplayName("Quantity And Account Details")]
     [IsoXmlTag("QtyAndAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQuantityAndAccount69> QuantityAndAccountDetails { get; }
 
     /// <summary>
@@ -156,6 +160,7 @@ public interface ISecuritiesSettlementTransactionGenerationNotification002V08 : 
     [IsoId("_KuDPj830Eee5nJBZsW8MFQ")]
     [DisplayName("Generated Reason")]
     [IsoXmlTag("GnrtdRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGeneratedReason6> GeneratedReason { get; }
 
     /// <summary>
@@ -172,5 +177,6 @@ public interface ISecuritiesSettlementTransactionGenerationNotification002V08 : 
     [IsoId("_KuDPk830Eee5nJBZsW8MFQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

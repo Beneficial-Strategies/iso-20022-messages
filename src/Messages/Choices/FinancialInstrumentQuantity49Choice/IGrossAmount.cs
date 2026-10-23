@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity49Cho
 
 /// <summary>Quantity expressed as a gross amount of money.</summary>
 [IsoId("153b99d8-1a7d-4aaf-9376-f3d3399fd1d3")]
+[IsoDisplayName(@"Gross Amount")]
 public interface IGrossAmount : IFinancialInstrumentQuantity49Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

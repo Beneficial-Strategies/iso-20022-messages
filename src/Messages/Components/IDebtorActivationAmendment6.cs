@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Debtor Activation Amendment6.
 /// </summary>
 [IsoId("_wjziwTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Debtor Activation Amendment6")]
 public interface IDebtorActivationAmendment6 : IIsoComponent
 {
     /// <summary>

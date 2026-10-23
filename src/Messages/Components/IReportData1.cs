@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Numerical representation of the net increases and decreases in an account at a specific point in time.
 /// </summary>
 [IsoId("_SXbvdtp-Ed-ak6NoX_4Aeg_-759204181")]
+[IsoDisplayName(@"Report Data1")]
+[Obsolete]
 public interface IReportData1 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +51,7 @@ public interface IReportData1 : IIsoComponent
     [IsoId("_SXk5Y9p-Ed-ak6NoX_4Aeg_1451930490")]
     [DisplayName("Pay In Call Amount")]
     [IsoXmlTag("PayInCallAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPayInCallItem> PayInCallAmount { get; }
 
     /// <summary>

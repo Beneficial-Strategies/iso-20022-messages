@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies a document by a unique identification and a version.|Also provides reference to a baseline amendment number.
 /// </summary>
 [IsoId("_RJWLtNp-Ed-ak6NoX_4Aeg_-481192802")]
+[IsoDisplayName(@"Document Identification")]
 public interface IDocumentIdentification6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDocumentIdentification6 : IIsoComponent
     [IsoId("_RJWLtdp-Ed-ak6NoX_4Aeg_-449794434")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IDocumentIdentification6 : IIsoComponent
     [IsoId("_RJWLttp-Ed-ak6NoX_4Aeg_-449794157")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Version { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IDocumentIdentification6 : IIsoComponent
     [IsoId("_RJWLt9p-Ed-ak6NoX_4Aeg_-449794140")]
     [DisplayName("Amendment Sequence Number")]
     [IsoXmlTag("AmdmntSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? AmendmentSequenceNumber { get; }
 }

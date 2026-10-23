@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// This message provides the capability to convey customized reports that are defined by bi-lateral agreement.
 /// </summary>
 [IsoId("_6o4MAMlLEeuJ35KoBRZFOg")]
+[IsoDisplayName(@"Custom Report")]
 public interface ICustomReport1 : IIsoComponent
 {
     /// <summary>
@@ -42,5 +43,6 @@ public interface ICustomReport1 : IIsoComponent
     [IsoId("_Iw3vgclOEeuJ35KoBRZFOg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance Inquiry Response6.
 /// </summary>
 [IsoId("_8hcpUZFBEe6reqfAp4CunQ")]
+[IsoDisplayName(@"Balance Inquiry Response6")]
 public interface IBalanceInquiryResponse6 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface IBalanceInquiryResponse6 : IIsoComponent
     /// </summary>
     [DisplayName("Stored Value Account")]
     [IsoXmlTag("StordValAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStoredValueAccount2> StoredValueAccount { get; }
 
     /// <summary>
@@ -51,5 +53,6 @@ public interface IBalanceInquiryResponse6 : IIsoComponent
     /// </summary>
     [DisplayName("Receipt")]
     [IsoXmlTag("Rct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReceipt6> Receipt { get; }
 }

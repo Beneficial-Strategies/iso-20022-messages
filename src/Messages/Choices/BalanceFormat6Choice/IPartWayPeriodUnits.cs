@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat6Choice;
 /// </summary>
 [IsoId("_lHIu-zq5EeWQ1Y7f8kds2A")]
 [IsoXmlTag("PartWayPrdUnits")]
+[IsoDisplayName(@"Part Way Period Units")]
 public interface IPartWayPeriodUnits : IBalanceFormat6Choice, IIsoChoiceVariant
 {
     /// <summary>

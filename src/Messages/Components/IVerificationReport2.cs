@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the verification of identification data for which verification was requested.
 /// </summary>
 [IsoId("_tp2JQVkyEeGeoaLUQk__nA_-1657016641")]
+[IsoDisplayName(@"Verification Report")]
 public interface IVerificationReport2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVerificationReport2 : IIsoComponent
     [IsoId("_tp2JQlkyEeGeoaLUQk__nA_1640878302")]
     [DisplayName("Original Identification")]
     [IsoXmlTag("OrgnlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IVerificationReport2 : IIsoComponent
     [IsoId("_tp2JQ1kyEeGeoaLUQk__nA_529966883")]
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoSimpleType(IsoSimpleType.IdentificationVerificationIndicator)]
     IdentificationVerificationIndicator Verification { get; }
 
     /// <summary>

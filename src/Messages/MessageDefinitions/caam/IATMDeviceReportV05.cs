@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// </summary>
 [IsoId("_ab22kbXuEfCUZfsQO4rYeA")]
 [IsoMessage("caam.001.001.05", "ATMDvcRpt", "urn:iso:std:iso:20022:tech:xsd:caam.001.001.05")]
+[IsoDisplayName(@"ATM Device Report V05")]
 public interface IATMDeviceReportV05 : IOuterRecord
 {
     /// <summary>

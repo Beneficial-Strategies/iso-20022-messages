@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the compensation data of an incorrect billing.
 /// </summary>
 [IsoId("_6PzSsJqlEeGSON8vddiWzQ_-1213048629")]
+[IsoDisplayName(@"Billing Compensation")]
 public interface IBillingCompensation1 : IIsoComponent
 {
     /// <summary>

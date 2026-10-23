@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountType2Choice;
 /// Type of account expressed as a code.
 /// </summary>
 [IsoId("_dPO1ESC7EeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAccountType2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the transaction.
 /// </summary>
 [IsoId("_gEJ6rzi8Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Transaction Details")]
 public interface ITransactionDetails164 : IIsoComponent
 {
     /// <summary>
@@ -153,6 +154,7 @@ public interface ITransactionDetails164 : IIsoComponent
     [IsoId("_gEJ7Azi8Eeydid5dcNPKvg")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AcknowledgedStatusTimeStamp { get; }
 
     /// <summary>
@@ -161,6 +163,7 @@ public interface ITransactionDetails164 : IIsoComponent
     [IsoId("_gEJ7BTi8Eeydid5dcNPKvg")]
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? MatchedStatusTimeStamp { get; }
 
     /// <summary>
@@ -185,6 +188,8 @@ public interface ITransactionDetails164 : IIsoComponent
     [IsoId("_gEJ7Dzi8Eeydid5dcNPKvg")]
     [DisplayName("Transaction Additional Details")]
     [IsoXmlTag("TxAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text? TransactionAdditionalDetails { get; }
 
     /// <summary>
@@ -193,5 +198,6 @@ public interface ITransactionDetails164 : IIsoComponent
     [IsoId("_gEJ7Ezi8Eeydid5dcNPKvg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

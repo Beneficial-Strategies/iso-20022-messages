@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityOtherC102Choi
 /// </summary>
 [IsoId("_lcXQU3vyEeanCNPcMT7sSg")]
 [IsoXmlTag("NonDlvrbl")]
+[IsoDisplayName(@"Non Deliverable")]
 public interface INonDeliverable : IAssetClassCommodityOtherC102Choice, IIsoChoiceVariant
 {
     /// <summary>

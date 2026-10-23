@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains text fields in the local language.
 /// </summary>
 [IsoId("_cqCrUcXKEeumGdYElfgmbw")]
+[IsoDisplayName(@"Local Data")]
 public interface ILocalData6 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ILocalData6 : IIsoComponent
     [IsoId("_zLT4AcrcEeuQjLd-KKZrCg")]
     [DisplayName("Mailing Address Unstructured")]
     [IsoXmlTag("MlngAdrUstrd")]
+    [IsoSimpleType(IsoSimpleType.Max512Text)]
+    [StringLength(512, MinimumLength = 1)]
     Max512Text? MailingAddressUnstructured { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ILocalData6 : IIsoComponent
     [IsoId("_1D_Q4crcEeuQjLd-KKZrCg")]
     [DisplayName("Mailed From Postal Code")]
     [IsoXmlTag("MldFrPstlCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MailedFromPostalCode { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ILocalData6 : IIsoComponent
     [IsoId("_6Mr10cooEeuuJ571wNLKkA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation22> AdditionalInformation { get; }
 
     /// <summary>
@@ -65,5 +71,6 @@ public interface ILocalData6 : IIsoComponent
     [IsoId("_ojr9YMXLEeumGdYElfgmbw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

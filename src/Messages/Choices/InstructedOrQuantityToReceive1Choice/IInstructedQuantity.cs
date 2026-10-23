@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructedOrQuantityToReceive1Ch
 /// Quantity of underlying securities to which this instruction applies.
 /// </summary>
 [IsoId("_UHCr6tp-Ed-ak6NoX_4Aeg_-1856405230")]
+[IsoDisplayName(@"Instructed Quantity")]
 public interface IInstructedQuantity : IInstructedOrQuantityToReceive1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

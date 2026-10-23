@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_OSc-8XhFEeij0vbhRaNJcw")]
 [IsoMessage("sese.014.001.09", "PrtflTrfCxlReq", "urn:iso:std:iso:20022:tech:xsd:sese.014.001.09")]
+[Description(@"Scope|The PortfolioTransferCancellationRequest message is sent by, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to request the cancellation of a previously sent PortfolioTransferInstruction message.|Usage|The PortfolioTransferCancellationRequest message is used to request the cancellation of a portfolio transfer instruction.|There is no amendment, but a cancellation and re-instruct policy.|To request the cancellation of a portfolio transfer instruction, the transfer reference of the portfolio transfer, as specified in the original PortfolioTransferInstruction message, is specified in the transfer reference element.|The message identification of the original PortfolioTransferInstruction message may also be quoted in PreviousReference but this is not recommended.|The deadline and acceptance of a cancellation request is subject to a service level agreement (SLA). This cancellation message is a cancellation request. There is no automatic acceptance of the cancellation.|The rejection or acceptance of a PortfolioTransferCancellationRequest is made using an TransferCancellationStatusReport message.")]
+[IsoDisplayName(@"Portfolio Transfer Cancellation Request V")]
 public interface IPortfolioTransferCancellationRequestV09 : IOuterRecord
 {
     /// <summary>
@@ -60,6 +62,8 @@ public interface IPortfolioTransferCancellationRequestV09 : IOuterRecord
     [IsoId("_OSc--3hFEeij0vbhRaNJcw")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>

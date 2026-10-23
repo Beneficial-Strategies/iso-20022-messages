@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the identification of the collateral message cancellation request.
 /// </summary>
 [IsoId("_QmevMNp-Ed-ak6NoX_4Aeg_386196874")]
+[IsoDisplayName(@"Reference")]
 public interface IReference16 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface IReference16 : IIsoComponent
     [IsoId("_QmevMdp-Ed-ak6NoX_4Aeg_2144150903")]
     [DisplayName("Collateral Message Cancellation Request Identification")]
     [IsoXmlTag("CollMsgCxlReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CollateralMessageCancellationRequestIdentification { get; }
 }

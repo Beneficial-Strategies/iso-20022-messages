@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Message reference of relevance to the present message.
 /// </summary>
 [IsoId("_RB5f4tp-Ed-ak6NoX_4Aeg_1955131952")]
+[IsoDisplayName(@"Message Reference")]
 public interface IMessageReference : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface IMessageReference : IIsoComponent
     [IsoId("_RB5f49p-Ed-ak6NoX_4Aeg_1955131953")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Reference { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Branch5Choice;
 /// Code of a country where the registered office of the branch counterparty is located or country of residence in case that the branch counterparty is a natural person.
 /// </summary>
 [IsoId("_Brx1c8g4Eeu4ecZgAYuz5w")]
+[IsoDisplayName(@"Country")]
 public interface ICountry : IBranch5Choice, IIsoChoiceVariant
 {
     /// <summary>

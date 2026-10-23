@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code or a data source scheme to determine a date format.
 /// </summary>
 [IsoId("_UdW4MNopEeCWg-hsBVGrDA_1543925499")]
+[IsoDisplayName(@"Date 2 Choice")]
 public interface IDate2Choice : IIsoChoice { }

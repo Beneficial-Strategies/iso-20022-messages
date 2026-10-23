@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Type of detailed aggregated position set report between a pair of counterparties.
 /// </summary>
 [IsoId("_0nw0hcKwEeuM4pgP8Vixbg")]
+[IsoDisplayName(@"Named Position")]
 public interface INamedPosition3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INamedPosition3 : IIsoComponent
     [IsoId("_52PEgMKwEeuM4pgP8Vixbg")]
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ReferenceDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface INamedPosition3 : IIsoComponent
     [IsoId("_0pQCQ8KwEeuM4pgP8Vixbg")]
     [DisplayName("General Information")]
     [IsoXmlTag("GnlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet16> GeneralInformation { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface INamedPosition3 : IIsoComponent
     [IsoId("_0pQCRcKwEeuM4pgP8Vixbg")]
     [DisplayName("Loan")]
     [IsoXmlTag("Ln")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet17> Loan { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface INamedPosition3 : IIsoComponent
     [IsoId("_0pQCR8KwEeuM4pgP8Vixbg")]
     [DisplayName("Collateral")]
     [IsoXmlTag("Coll")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet18> Collateral { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface INamedPosition3 : IIsoComponent
     [IsoId("_0pQCScKwEeuM4pgP8Vixbg")]
     [DisplayName("Margin")]
     [IsoXmlTag("Mrgn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet20> Margin { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface INamedPosition3 : IIsoComponent
     [IsoId("_0pQCS8KwEeuM4pgP8Vixbg")]
     [DisplayName("Reuse")]
     [IsoXmlTag("Reuse")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet19> Reuse { get; }
 }

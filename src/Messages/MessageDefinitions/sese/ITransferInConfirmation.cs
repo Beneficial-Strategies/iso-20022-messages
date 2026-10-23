@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_JMkTONE6Ed-BzquC8wXy7w_-1545863539")]
 [IsoMessage("sese.007.001.01", "sese.007.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.007.001.01")]
+[Description(@"Scope|TheTransferInConfirmation message is sent by an executing party to the instructing party or the instructing party's designated agent.|This message is used to confirm the receipt of a financial instrument, free of payment, at a given date, from a specified party. This message can also be used to confirm the transfer a financial instrument from an own account or from a third party.|Usage|TheTransferInConfirmation message is used by an executing party to confirm to the instructing party receipt of a financial instrument, either from another account owned by the instructing party or from a third party.")]
+[IsoDisplayName(@"Transfer In Confirmation")]
 public interface ITransferInConfirmation : IOuterRecord
 {
     /// <summary>
@@ -80,5 +82,6 @@ public interface ITransferInConfirmation : IOuterRecord
     [IsoId("_JMuENdE6Ed-BzquC8wXy7w_879395382")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

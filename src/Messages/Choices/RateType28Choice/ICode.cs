@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType28Choice;
 /// Standard code to specify the type of withholding tax rate.
 /// </summary>
 [IsoId("_52pvYCeGEeOXAt_43VmZGw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRateType28Choice, IIsoChoiceVariant
 {
     /// <summary>

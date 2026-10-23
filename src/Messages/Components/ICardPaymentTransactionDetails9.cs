@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transaction in the cancellation inside a batch transfer.
 /// </summary>
 [IsoId("_M46EoS8LEeKW5usMQLtzqw")]
+[IsoDisplayName(@"Card Payment Transaction Details")]
 public interface ICardPaymentTransactionDetails9 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICardPaymentTransactionDetails9 : IIsoComponent
     [IsoId("_NDUk6S8LEeKW5usMQLtzqw")]
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidityDate { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface ICardPaymentTransactionDetails9 : IIsoComponent
     [IsoId("_NDUk7S8LEeKW5usMQLtzqw")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

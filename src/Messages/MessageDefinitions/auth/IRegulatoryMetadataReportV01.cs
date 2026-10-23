@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.auth;
     "RgltryMetadataRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.114.001.01"
 )]
+[IsoDisplayName(@"Regulatory Metadata Report V01")]
 public interface IRegulatoryMetadataReportV01 : IOuterRecord
 {
     /// <summary>
@@ -22,6 +23,7 @@ public interface IRegulatoryMetadataReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Metadata Report")]
     [IsoXmlTag("MetadataRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMetadataReport5> MetadataReport { get; }
 
     /// <summary>
@@ -29,5 +31,6 @@ public interface IRegulatoryMetadataReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

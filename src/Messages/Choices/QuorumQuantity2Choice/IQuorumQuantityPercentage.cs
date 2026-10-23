@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuorumQuantity2Choice;
 /// <summary>
 /// Quorum Quantity Percentage.
 /// </summary>
+[IsoDisplayName(@"Quorum Quantity Percentage")]
 public interface IQuorumQuantityPercentage : IQuorumQuantity2Choice, IIsoChoiceVariant
 {
     /// <summary>

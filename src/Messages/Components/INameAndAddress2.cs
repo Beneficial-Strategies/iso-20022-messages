@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Entity involved in an activity.
 /// </summary>
 [IsoId("_PZcUVtp-Ed-ak6NoX_4Aeg_-712889948")]
+[IsoDisplayName(@"Name And Address")]
 public interface INameAndAddress2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INameAndAddress2 : IIsoComponent
     [IsoId("_PZcUV9p-Ed-ak6NoX_4Aeg_-618689920")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Name { get; }
 
     /// <summary>

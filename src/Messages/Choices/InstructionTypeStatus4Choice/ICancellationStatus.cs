@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionTypeStatus4Choice;
 /// Status of the meeting instruction cancellation request message or of the individual meeting instruction cancellation request(s). The message is identified in InstructionType/InstructionCancellationIdentification.
 /// </summary>
 [IsoId("_bGDXM_NfEeqRfth943bvEA")]
+[IsoDisplayName(@"Cancellation Status")]
 public interface ICancellationStatus : IInstructionTypeStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

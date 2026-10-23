@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RegulatoryReportingType1Choice;
 
 /// <summary>Specifies the code.</summary>
 [IsoId("_rJAakHeLEfCdoODv2ypKfw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRegulatoryReportingType1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

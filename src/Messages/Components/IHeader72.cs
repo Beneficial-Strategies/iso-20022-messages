@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics related to the protocol.
 /// </summary>
 [IsoId("_XLTzkR7XEfCkq6-p7S3J1Q")]
+[IsoDisplayName(@"Header72")]
 public interface IHeader72 : IIsoComponent
 {
     /// <summary>

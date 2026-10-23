@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ErrorHandling1Choice;
 /// Specification of the error, in free format.
 /// </summary>
 [IsoId("_RZI7M9p-Ed-ak6NoX_4Aeg_-632950304")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IErrorHandling1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IErrorHandling1Choice, IIsoChoiceVariant
     /// Specifies an alphanumeric string with a maximum length of 4 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText Value { get; }
 }

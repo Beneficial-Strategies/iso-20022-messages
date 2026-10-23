@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code and or a data source scheme to determine the role of the party.
 /// </summary>
 [IsoId("_Ny0Ls46OEemzmeK8_tPygg")]
+[IsoDisplayName(@"Party Role 6 Choice")]
 public interface IPartyRole6Choice : IIsoChoice { }

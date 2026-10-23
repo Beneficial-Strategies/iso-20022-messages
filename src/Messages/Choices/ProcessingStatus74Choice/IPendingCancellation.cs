@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus74Choice;
 /// Cancellation request from yourself for this instruction is pending, waiting for further processing.
 /// </summary>
 [IsoId("_GcCjJdB7EeihG9bKfarOOA")]
+[IsoDisplayName(@"Pending Cancellation")]
 public interface IPendingCancellation : IProcessingStatus74Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

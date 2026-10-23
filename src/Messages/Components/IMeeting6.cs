@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the date and location(s) of a general meeting.
 /// </summary>
 [IsoId("_8FEVwfM6EeqRfth943bvEA")]
+[IsoDisplayName(@"Meeting")]
 public interface IMeeting6 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IMeeting6 : IIsoComponent
     [IsoId("_8Z26B_M6EeqRfth943bvEA")]
     [DisplayName("Quorum Required")]
     [IsoXmlTag("QrmReqrd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? QuorumRequired { get; }
 
     /// <summary>
@@ -41,6 +43,9 @@ public interface IMeeting6 : IIsoComponent
     [IsoId("_8Z26CfM6EeqRfth943bvEA")]
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocationFormat1Choice> Location { get; }
 
     /// <summary>
@@ -57,5 +62,7 @@ public interface IMeeting6 : IIsoComponent
     [IsoId("_8Z26DfM6EeqRfth943bvEA")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? URLAddress { get; }
 }

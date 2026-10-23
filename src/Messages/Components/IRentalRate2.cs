@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Rental Rate2.
 /// </summary>
 [IsoId("_sCARIZmhEe6Qpd-x8YgzaA")]
+[IsoDisplayName(@"Rental Rate2")]
 public interface IRentalRate2 : IIsoComponent
 {
     /// <summary>

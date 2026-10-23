@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action confirmation details.
 /// </summary>
 [IsoId("_kNOkkb-zEeeb2ZBoAlSG1Q")]
+[IsoDisplayName(@"Corporate Action Confirmation Details SD")]
 public interface ICorporateActionConfirmationDetailsSD2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionConfirmationDetailsSD2 : IIsoComponent
     [IsoId("_keMYwb-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ICorporateActionConfirmationDetailsSD2 : IIsoComponent
     [IsoId("_keMYxb-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Proration Fraction")]
     [IsoXmlTag("PrratnFrctn")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ProrationFraction { get; }
 }

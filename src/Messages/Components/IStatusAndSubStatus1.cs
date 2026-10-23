@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the status and optionally the sub status.
 /// </summary>
 [IsoId("_X3w_o4xlEeKdxfnzD2sqyA")]
+[IsoDisplayName(@"Status And Sub Status")]
 public interface IStatusAndSubStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IStatusAndSubStatus1 : IIsoComponent
     [IsoId("_0h_vcIxlEeKdxfnzD2sqyA")]
     [DisplayName("Sub Status Code")]
     [IsoXmlTag("SubStsCd")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SubStatusCode { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction information in the cancellation advice.
 /// </summary>
 [IsoId("_HprBkbX8EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Card Payment Transaction151")]
 public interface ICardPaymentTransaction151 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICardPaymentTransaction151 : IIsoComponent
     [IsoId("_HqlnobX8EfCUZfsQO4rYeA")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CardProgrammeProposed { get; }
 
     /// <summary>
@@ -89,6 +91,7 @@ public interface ICardPaymentTransaction151 : IIsoComponent
     [IsoId("_Hqlny7X8EfCUZfsQO4rYeA")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<FailureReason3Code> FailureReason { get; }
 
     /// <summary>
@@ -145,6 +148,7 @@ public interface ICardPaymentTransaction151 : IIsoComponent
     [IsoId("_Hqln9bX8EfCUZfsQO4rYeA")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AdditionalTransactionData { get; }
 
     /// <summary>
@@ -153,5 +157,6 @@ public interface ICardPaymentTransaction151 : IIsoComponent
     [IsoId("_ie3aAbYKEfCUZfsQO4rYeA")]
     [DisplayName("Message From Merchant")]
     [IsoXmlTag("MsgFrMrchnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction18> MessageFromMerchant { get; }
 }

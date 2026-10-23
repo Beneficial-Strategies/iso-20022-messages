@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentYearType2Choice;
 /// Current year ISA is an ISA that was issued during the current fiscal year.
 /// </summary>
 [IsoId("_3gENYEXfEeGY6MkiuzuPOA_-654795239")]
+[IsoDisplayName(@"Current Year Type")]
 public interface ICurrentYearType : ICurrentYearType2Choice, IIsoChoiceVariant
 {
     /// <summary>

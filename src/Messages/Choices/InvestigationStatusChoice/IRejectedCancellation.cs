@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatusChoice;
 /// </summary>
 [IsoId("_UuYYtdp-Ed-ak6NoX_4Aeg_1934789984")]
 [IsoXmlTag("RjctdCxl")]
+[IsoDisplayName(@"Rejected Cancellation")]
 public interface IRejectedCancellation : IInvestigationStatusChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IRejectedCancellation : IInvestigationStatusChoice, IIsoChoiceV
     [IsoId("_T9gVZNp-Ed-ak6NoX_4Aeg_1563536447")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Reason { get; }
 }

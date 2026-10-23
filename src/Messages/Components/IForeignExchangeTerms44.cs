@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information needed to process a currency exchange or conversion.
 /// </summary>
 [IsoId("147c8031-e035-49fa-8fbc-8a99f3fb6846")]
+[IsoDisplayName(@"Foreign Exchange Terms44")]
 public interface IForeignExchangeTerms44 : IIsoComponent
 {
     /// <summary>

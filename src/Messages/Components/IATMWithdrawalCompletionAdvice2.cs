@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the completion of a withdrawal on the ATM.
 /// </summary>
 [IsoId("_DhaBEa4KEeWZgJQOa6iKCQ")]
+[IsoDisplayName(@"ATM Withdrawal Completion Advice")]
 public interface IATMWithdrawalCompletionAdvice2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details on the statement requested elements.
 /// </summary>
 [IsoId("_YU3lLOFHEeStTblywAGIyA")]
+[IsoDisplayName(@"Contract Registration Statement Request")]
 public interface IContractRegistrationStatementRequest1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContractRegistrationStatementRequest1 : IIsoComponent
     [IsoId("_YU3lL-FHEeStTblywAGIyA")]
     [DisplayName("Statement Request Identification")]
     [IsoXmlTag("StmtReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text StatementRequestIdentification { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IContractRegistrationStatementRequest1 : IIsoComponent
     [IsoId("_MtO-MOFIEeStTblywAGIyA")]
     [DisplayName("Registered Contract Identification")]
     [IsoXmlTag("RegdCtrctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RegisteredContractIdentification { get; }
 
     /// <summary>
@@ -65,5 +70,6 @@ public interface IContractRegistrationStatementRequest1 : IIsoComponent
     [IsoId("_CpRSkTmzEeWDb47rJ6ki4Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

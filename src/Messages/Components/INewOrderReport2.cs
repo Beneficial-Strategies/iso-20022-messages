@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// New Order Report2.
 /// </summary>
 [IsoId("_q72RsRA2Ee6N57R8Wekj-w")]
+[IsoDisplayName(@"New Order Report2")]
 public interface INewOrderReport2 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface INewOrderReport2 : IIsoComponent
     /// </summary>
     [DisplayName("Order")]
     [IsoXmlTag("Ordr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrderData3> Order { get; }
 }

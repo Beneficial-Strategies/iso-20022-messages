@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action details rates and amounts details.
 /// </summary>
 [IsoId("_1jnPgjL3EeKU9IrkkToqcw_1739416264")]
+[IsoDisplayName(@"Corporate Action Rate SD")]
 public interface ICorporateActionRateSD5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionRateSD5 : IIsoComponent
     [IsoId("_1jnPgzL3EeKU9IrkkToqcw_-1908624945")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICorporateActionRateSD5 : IIsoComponent
     [IsoId("_1jnPhDL3EeKU9IrkkToqcw_506036711")]
     [DisplayName("Deferred Interest Rate")]
     [IsoXmlTag("DfrrdIntrstRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? DeferredInterestRate { get; }
 
     /// <summary>

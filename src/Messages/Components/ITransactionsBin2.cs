@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies aggregated details on transactions within a defined numeric range bin.
 /// </summary>
 [IsoId("_mbY-AUD5EeW1yage4PQ__A")]
+[IsoDisplayName(@"Transactions Bin")]
 public interface ITransactionsBin2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransactionsBin2 : IIsoComponent
     [IsoId("_mmgB00D5EeW1yage4PQ__A")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfTransactions { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITransactionsBin2 : IIsoComponent
     [IsoId("_mmgB1UD5EeW1yage4PQ__A")]
     [DisplayName("Total Notional Amount")]
     [IsoXmlTag("TtlNtnlAmt")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber TotalNotionalAmount { get; }
 
     /// <summary>

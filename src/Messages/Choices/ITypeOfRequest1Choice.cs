@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between formats for a type of request.
 /// </summary>
 [IsoId("_wZdgANvdEeqxGfKJubfhIw")]
+[IsoDisplayName(@"Type Of Request 1 Choice")]
 public interface ITypeOfRequest1Choice : IIsoChoice { }

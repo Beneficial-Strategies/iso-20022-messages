@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment2Choice;
 /// <summary>
 /// Outright Investment.
 /// </summary>
+[IsoDisplayName(@"Outright Investment")]
 public interface IOutrightInvestment : IInvestment2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRequestData1Choice;
 /// <summary>
 /// Request Narrative.
 /// </summary>
+[IsoDisplayName(@"Request Narrative")]
 public interface IRequestNarrative : IAdditionalRequestData1Choice, IIsoChoiceVariant
 {
     /// <summary>

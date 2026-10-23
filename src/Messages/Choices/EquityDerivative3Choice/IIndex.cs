@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EquityDerivative3Choice;
 /// Populated when the sub asset class is either swap or portfolio swap and the underlying type is an index.
 /// </summary>
 [IsoId("_hW-FOGlPEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Index")]
 public interface IIndex : IEquityDerivative3Choice, IIsoChoiceVariant
 {
     /// <summary>

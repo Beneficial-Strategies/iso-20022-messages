@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a withdrawal reason.
 /// </summary>
 [IsoId("_NMNN8E7XEeifNrXGwadPmg")]
+[IsoDisplayName(@"Withdrawal Reason 1 Choice")]
 public interface IWithdrawalReason1Choice : IIsoChoice { }

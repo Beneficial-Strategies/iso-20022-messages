@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus1Choice;
 /// Status of the allegement reported.
 /// </summary>
 [IsoId("_BJu8wa3EEeeBVbuVcoH9Nw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPortfolioTransferStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

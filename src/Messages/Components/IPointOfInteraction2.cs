@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Point of interaction (POI) performing the transaction.
 /// </summary>
 [IsoId("_y7NhQAyUEeK5P9Ihqok3VA")]
+[IsoDisplayName(@"Point Of Interaction")]
 public interface IPointOfInteraction2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPointOfInteraction2 : IIsoComponent
     [IsoId("_zIHU1QyUEeK5P9Ihqok3VA")]
     [DisplayName("System Name")]
     [IsoXmlTag("SysNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SystemName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPointOfInteraction2 : IIsoComponent
     [IsoId("_zIH74AyUEeK5P9Ihqok3VA")]
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? GroupIdentification { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IPointOfInteraction2 : IIsoComponent
     [IsoId("_zIH76AyUEeK5P9Ihqok3VA")]
     [DisplayName("Component")]
     [IsoXmlTag("Cmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent3> Component { get; }
 }

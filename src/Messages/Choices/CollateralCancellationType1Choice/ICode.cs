@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralCancellationType1Choic
 /// Provides the cancellation reason using an ISO 20022 code.
 /// </summary>
 [IsoId("_QmxqINp-Ed-ak6NoX_4Aeg_-132072527")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICollateralCancellationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

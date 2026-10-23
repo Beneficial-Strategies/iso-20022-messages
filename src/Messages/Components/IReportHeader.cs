@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies generic information about an investigation report.
 /// </summary>
 [IsoId("_RI5fwNp-Ed-ak6NoX_4Aeg_24374172")]
+[IsoDisplayName(@"Report Header")]
 public interface IReportHeader : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportHeader : IIsoComponent
     [IsoId("_RI5fwdp-Ed-ak6NoX_4Aeg_-1998731747")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IReportHeader : IIsoComponent
     [IsoId("_RI5fwtp-Ed-ak6NoX_4Aeg_-1991343595")]
     [DisplayName("From")]
     [IsoXmlTag("Fr")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier From { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IReportHeader : IIsoComponent
     [IsoId("_RI5fw9p-Ed-ak6NoX_4Aeg_-1981183608")]
     [DisplayName("To")]
     [IsoXmlTag("To")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier To { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface IReportHeader : IIsoComponent
     [IsoId("_RI5fxNp-Ed-ak6NoX_4Aeg_-1970102765")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason51Choice;
 /// Pending reason specified as a code.
 /// </summary>
 [IsoId("_fOg6EbLLEemDyeh7tbvg1w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPendingReason51Choice, IIsoChoiceVariant
 {
     /// <summary>

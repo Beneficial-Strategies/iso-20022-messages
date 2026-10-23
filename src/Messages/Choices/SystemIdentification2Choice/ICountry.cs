@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemIdentification2Choice;
 /// Country in which the system is located.
 /// </summary>
 [IsoId("_8BZ3Q6MgEeCJ6YNENx4h-w_-559189317")]
+[IsoDisplayName(@"Country")]
 public interface ICountry : ISystemIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

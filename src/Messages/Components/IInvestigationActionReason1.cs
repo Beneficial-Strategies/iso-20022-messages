@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investigation Action Reason1.
 /// </summary>
 [IsoId("_nj6woSU_Ee6EvsLBQ6cYtA")]
+[IsoDisplayName(@"Investigation Action Reason1")]
 public interface IInvestigationActionReason1 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IInvestigationActionReason1 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party Identification313.
 /// </summary>
 [IsoId("_gKWg0YV5Ee-oeNhl-Tk6YQ")]
+[IsoDisplayName(@"Party Identification313")]
 public interface IPartyIdentification313 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface IPartyIdentification313 : IIsoComponent
     /// </summary>
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAlternatePartyIdentification7> AlternateIdentification { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface IPartyIdentification313 : IIsoComponent
     /// </summary>
     [DisplayName("Non Domicile Country")]
     [IsoXmlTag("NonDmclCtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CountryCode> NonDomicileCountry { get; }
 
     /// <summary>
@@ -58,6 +61,7 @@ public interface IPartyIdentification313 : IIsoComponent
     /// </summary>
     [DisplayName("Certification Type")]
     [IsoXmlTag("CertfctnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficiaryCertificationType10Choice> CertificationType { get; }
 
     /// <summary>
@@ -72,5 +76,6 @@ public interface IPartyIdentification313 : IIsoComponent
     /// </summary>
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max350Text> CertificationBreakdown { get; }
 }

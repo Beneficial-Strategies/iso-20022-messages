@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayReportOrError7Choice;
 /// </summary>
 [IsoId("_wq9RgZlcEeeE1Ya-LgRsuQ")]
 [IsoXmlTag("BizRpt")]
+[IsoDisplayName(@"Business Report")]
 public interface IBusinessReport : IBusinessDayReportOrError7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IBusinessReport : IBusinessDayReportOrError7Choice, IIsoChoiceV
     [IsoId("_wy9-A5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("System Identification")]
     [IsoXmlTag("SysId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemIdentification2Choice> SystemIdentification { get; }
 
     /// <summary>

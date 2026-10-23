@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money for which goods or services are offered, sold, or bought.
 /// </summary>
 [IsoId("_QfLNW9p-Ed-ak6NoX_4Aeg_617785517")]
+[IsoDisplayName(@"Unit Price")]
 public interface IUnitPrice10 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IUnitPrice10 : IIsoComponent
     [IsoId("_QfU-UNp-Ed-ak6NoX_4Aeg_1776540150")]
     [DisplayName("Extended Type")]
     [IsoXmlTag("XtndedTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedType { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IUnitPrice10 : IIsoComponent
     [IsoId("_QfU-U9p-Ed-ak6NoX_4Aeg_617786335")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -73,6 +77,8 @@ public interface IUnitPrice10 : IIsoComponent
     [IsoId("_QfU-Vtp-Ed-ak6NoX_4Aeg_-1416668608")]
     [DisplayName("Extended Taxable Income Per Share Calculated")]
     [IsoXmlTag("XtndedTaxblIncmPerShrClctd")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedTaxableIncomePerShareCalculated { get; }
 
     /// <summary>
@@ -81,5 +87,7 @@ public interface IUnitPrice10 : IIsoComponent
     [IsoId("_QfU-V9p-Ed-ak6NoX_4Aeg_-513409188")]
     [DisplayName("Price Difference Reason")]
     [IsoXmlTag("PricDiffRsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PriceDifferenceReason { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status is cancelled.
 /// </summary>
 [IsoId("_UwnNXNp-Ed-ak6NoX_4Aeg_-1540666967")]
+[IsoDisplayName(@"Cancelled Status")]
 public interface ICancelledStatus1 : IIsoComponent
 {
     /// <summary>

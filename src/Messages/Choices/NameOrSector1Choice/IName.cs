@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NameOrSector1Choice;
 /// Internal name of the counterparty of the reporting agent used by the reporting agent.
 /// </summary>
 [IsoId("_D_ZxYYIoEeWA9fc11zJf1Q")]
+[IsoDisplayName(@"Name")]
 public interface IName : INameOrSector1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IName : INameOrSector1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 70characters.
     /// </summary>
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Value { get; }
 }

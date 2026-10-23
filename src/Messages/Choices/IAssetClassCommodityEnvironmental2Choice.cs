@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines commodity attributes of a derivative where the type is environmental.
 /// </summary>
 [IsoId("_gyGPgbvwEeiLRYqS-r-R-A")]
+[IsoDisplayName(@"Asset Class Commodity Environmental 2 Choice")]
 public interface IAssetClassCommodityEnvironmental2Choice : IIsoChoice { }

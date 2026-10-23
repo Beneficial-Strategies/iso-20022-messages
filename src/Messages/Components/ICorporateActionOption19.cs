@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action option.
 /// </summary>
 [IsoId("_Di_cId3eEd-KAqAOGQOnnw")]
+[IsoDisplayName(@"Corporate Action Option")]
 public interface ICorporateActionOption19 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionOption19 : IIsoComponent
     [IsoId("_Di_cI93eEd-KAqAOGQOnnw")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText OptionNumber { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICorporateActionOption19 : IIsoComponent
     [IsoId("_Di_cKd3eEd-KAqAOGQOnnw")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOfferTypeFormat1Choice> OfferType { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICorporateActionOption19 : IIsoComponent
     [IsoId("_Di_cK93eEd-KAqAOGQOnnw")]
     [DisplayName("Option Features")]
     [IsoXmlTag("OptnFeatrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOptionFeaturesFormat5Choice> OptionFeatures { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ICorporateActionOption19 : IIsoComponent
     [IsoId("_Di_cMd3eEd-KAqAOGQOnnw")]
     [DisplayName("Certification Type")]
     [IsoXmlTag("CertfctnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficiaryCertificationType1Choice> CertificationType { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ICorporateActionOption19 : IIsoComponent
     [IsoId("_Di_cM93eEd-KAqAOGQOnnw")]
     [DisplayName("Non Domicile Country")]
     [IsoXmlTag("NonDmclCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> NonDomicileCountry { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface ICorporateActionOption19 : IIsoComponent
     [IsoId("_Di_cNd3eEd-KAqAOGQOnnw")]
     [DisplayName("Valid Domicile Country")]
     [IsoXmlTag("VldDmclCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> ValidDomicileCountry { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface ICorporateActionOption19 : IIsoComponent
     [IsoId("_Di_cO93eEd-KAqAOGQOnnw")]
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChargesAppliedIndicator { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface ICorporateActionOption19 : IIsoComponent
     [IsoId("_Di_cPd3eEd-KAqAOGQOnnw")]
     [DisplayName("Certification Indicator")]
     [IsoXmlTag("CertfctnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CertificationIndicator { get; }
 
     /// <summary>
@@ -121,6 +130,7 @@ public interface ICorporateActionOption19 : IIsoComponent
     [IsoId("_Di_cP93eEd-KAqAOGQOnnw")]
     [DisplayName("Withdrawal Allowed Indicator")]
     [IsoXmlTag("WdrwlAllwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? WithdrawalAllowedIndicator { get; }
 
     /// <summary>
@@ -129,6 +139,7 @@ public interface ICorporateActionOption19 : IIsoComponent
     [IsoId("_Di_cQd3eEd-KAqAOGQOnnw")]
     [DisplayName("Change Allowed Indicator")]
     [IsoXmlTag("ChngAllwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChangeAllowedIndicator { get; }
 
     /// <summary>
@@ -185,6 +196,7 @@ public interface ICorporateActionOption19 : IIsoComponent
     [IsoId("_Di_cT93eEd-KAqAOGQOnnw")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesOption14> SecuritiesMovementDetails { get; }
 
     /// <summary>
@@ -193,6 +205,7 @@ public interface ICorporateActionOption19 : IIsoComponent
     [IsoId("_Di_cUd3eEd-KAqAOGQOnnw")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOption10> CashMovementDetails { get; }
 
     /// <summary>

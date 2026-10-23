@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_dIOvUQ1TEeKGXqvMN6jpiw")]
 [IsoMessage("acmt.007.001.02", "AcctOpngReq", "urn:iso:std:iso:20022:tech:xsd:acmt.007.001.02")]
+[Description(@"The AccountOpeningRequest message is sent from an organisation to a financial institution as part of the account opening process. It is the initial request message to open an account.")]
+[IsoDisplayName(@"Account Opening Request V")]
 public interface IAccountOpeningRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -76,6 +78,7 @@ public interface IAccountOpeningRequestV02 : IOuterRecord
     [IsoId("_dIOvaw1TEeKGXqvMN6jpiw")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOperationMandate2> Mandate { get; }
 
     /// <summary>
@@ -84,6 +87,7 @@ public interface IAccountOpeningRequestV02 : IOuterRecord
     [IsoId("_HCr0cA4XEeKGXqvMN6jpiw")]
     [DisplayName("Group")]
     [IsoXmlTag("Grp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGroup1> Group { get; }
 
     /// <summary>
@@ -100,6 +104,7 @@ public interface IAccountOpeningRequestV02 : IOuterRecord
     [IsoId("_dIOvcw1TEeKGXqvMN6jpiw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature2> DigitalSignature { get; }
 
     /// <summary>
@@ -108,5 +113,6 @@ public interface IAccountOpeningRequestV02 : IOuterRecord
     [IsoId("_qpMt0A3_EeKGXqvMN6jpiw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

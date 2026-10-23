@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transfer from one investment fund/fund class to another investment fund or investment fund class by the investor. A switch is composed of one or several subscription legs, and one or several redemption legs.
 /// </summary>
 [IsoId("_SMZkJ9p-Ed-ak6NoX_4Aeg_81412346")]
+[IsoDisplayName(@"Switch Order")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISwitchOrder4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ISwitchOrder4 : IIsoComponent
     [IsoId("_SMZkKNp-Ed-ak6NoX_4Aeg_81412363")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +29,7 @@ public interface ISwitchOrder4 : IIsoComponent
     [IsoId("_SMZkKdp-Ed-ak6NoX_4Aeg_81412381")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISwitchOrder4 : IIsoComponent
     [IsoId("_SMZkKtp-Ed-ak6NoX_4Aeg_81412623")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ISwitchOrder4 : IIsoComponent
     [IsoId("_SMjVINp-Ed-ak6NoX_4Aeg_81412640")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface ISwitchOrder4 : IIsoComponent
     [IsoId("_SMjVJNp-Ed-ak6NoX_4Aeg_-1825986571")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedFutureTradeDate { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface ISwitchOrder4 : IIsoComponent
     [IsoId("_SMjVJtp-Ed-ak6NoX_4Aeg_1050057678")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CashSettlementDate { get; }
 
     /// <summary>
@@ -129,6 +140,9 @@ public interface ISwitchOrder4 : IIsoComponent
     [IsoId("_SMtGIdp-Ed-ak6NoX_4Aeg_952308355")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary8> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -145,6 +159,8 @@ public interface ISwitchOrder4 : IIsoComponent
     [IsoId("_SMtGI9p-Ed-ak6NoX_4Aeg_81413156")]
     [DisplayName("Extended Cancellation Right")]
     [IsoXmlTag("XtndedCxlRght")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedCancellationRight { get; }
 
     /// <summary>
@@ -153,6 +169,7 @@ public interface ISwitchOrder4 : IIsoComponent
     [IsoId("_SMtGJNp-Ed-ak6NoX_4Aeg_81413337")]
     [DisplayName("Redemption Leg Details")]
     [IsoXmlTag("RedLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchRedemptionLegOrder3> RedemptionLegDetails { get; }
 
     /// <summary>
@@ -161,6 +178,7 @@ public interface ISwitchOrder4 : IIsoComponent
     [IsoId("_SMtGJdp-Ed-ak6NoX_4Aeg_81413259")]
     [DisplayName("Subscription Leg Details")]
     [IsoXmlTag("SbcptLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchSubscriptionLegOrder3> SubscriptionLegDetails { get; }
 
     /// <summary>

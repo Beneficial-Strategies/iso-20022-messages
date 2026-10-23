@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the status of the global movement.
 /// </summary>
 [IsoId("_Ri-zsNp-Ed-ak6NoX_4Aeg_-2092963403")]
+[IsoDisplayName(@"Global Distribution Status")]
 public interface IGlobalDistributionStatus1 : IIsoComponent
 {
     /// <summary>

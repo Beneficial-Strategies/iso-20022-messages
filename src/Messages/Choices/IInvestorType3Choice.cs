@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for investor type.
 /// </summary>
 [IsoId("_czZDx-LxEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Investor Type 3 Choice")]
 public interface IInvestorType3Choice : IIsoChoice { }

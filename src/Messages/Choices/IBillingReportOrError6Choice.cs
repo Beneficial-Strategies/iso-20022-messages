@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between report on billing data, billing cancellation request details or operational error.
 /// </summary>
 [IsoId("_2hOjcTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"BillingReportOrError6Choice")]
 public interface IBillingReportOrError6Choice : IIsoChoice { }

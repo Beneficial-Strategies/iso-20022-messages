@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the response of a previous device request.
 /// </summary>
 [IsoId("_pJ06oXGqEe2TbaNWBpRZpQ")]
+[IsoDisplayName(@"Device Response")]
 public interface IDeviceResponse6 : IIsoComponent
 {
     /// <summary>
@@ -105,5 +106,6 @@ public interface IDeviceResponse6 : IIsoComponent
     [IsoId("_pQHI53GqEe2TbaNWBpRZpQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

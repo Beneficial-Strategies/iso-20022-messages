@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.tsin;
 /// </summary>
 [IsoId("_9fRMkHltEeG7BsjMvd1mEw_980511566")]
 [IsoMessage("tsin.005.001.01", "UdrtkgAppl", "urn:iso:std:iso:20022:tech:xsd:tsin.005.001.01")]
+[Description(@"The UndertakingApplication message is sent by the party requesting issuance of the undertaking (applicant or obligor) to the party issuing the undertaking. It is used to request the issuance of an undertaking (demand guarantee or standby letter of credit or suretyship) or counter-undertaking (counter-guarantee or counter-standby or suretyship), and provides details on the applicable rules, terms, conditions and content of the undertaking to be issued.")]
+[IsoDisplayName(@"Undertaking Application V")]
 public interface IUndertakingApplicationV01 : IOuterRecord
 {
     /// <summary>
@@ -28,6 +30,11 @@ public interface IUndertakingApplicationV01 : IOuterRecord
     [IsoId("__KBlo3_5EeGOn4dfTT_QdQ")]
     [DisplayName("Instructions To Bank")]
     [IsoXmlTag("InstrsToBk")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [StringLength(2000, MinimumLength = 1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> InstructionsToBank { get; }
 
     /// <summary>

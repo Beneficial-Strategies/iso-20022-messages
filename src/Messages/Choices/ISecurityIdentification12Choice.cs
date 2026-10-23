@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between ISIN and an alternative format for the identification of a security. ISIN is the preferred format.
 /// </summary>
 [IsoId("_XMCG4tp-Ed-ak6NoX_4Aeg_1099227898")]
+[IsoDisplayName(@"Security Identification 12 Choice")]
 public interface ISecurityIdentification12Choice : IIsoChoice { }

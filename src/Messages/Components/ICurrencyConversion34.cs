@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be accepted by the cardholder.
 /// </summary>
 [IsoId("_NSdW8bZoEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Currency Conversion34")]
 public interface ICurrencyConversion34 : IIsoComponent
 {
     /// <summary>
@@ -89,6 +90,7 @@ public interface ICurrencyConversion34 : IIsoComponent
     [IsoId("_NTht_bZoEfCUZfsQO4rYeA")]
     [DisplayName("Applicable Bin Range")]
     [IsoXmlTag("AplblBinRg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBinRange1> ApplicableBinRange { get; }
 
     /// <summary>
@@ -105,6 +107,7 @@ public interface ICurrencyConversion34 : IIsoComponent
     [IsoId("_NThuCbZoEfCUZfsQO4rYeA")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission19> CommissionDetails { get; }
 
     /// <summary>
@@ -113,6 +116,7 @@ public interface ICurrencyConversion34 : IIsoComponent
     [IsoId("_NThuD7ZoEfCUZfsQO4rYeA")]
     [DisplayName("Mark Up Details")]
     [IsoXmlTag("MrkUpDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission18> MarkUpDetails { get; }
 
     /// <summary>
@@ -121,5 +125,6 @@ public interface ICurrencyConversion34 : IIsoComponent
     [IsoId("_NThuFbZoEfCUZfsQO4rYeA")]
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActionMessage12> DeclarationDetails { get; }
 }

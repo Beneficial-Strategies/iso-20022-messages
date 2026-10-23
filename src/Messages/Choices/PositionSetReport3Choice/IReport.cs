@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PositionSetReport3Choice;
 /// </summary>
 [IsoId("_0nw0g8KwEeuM4pgP8Vixbg")]
 [IsoXmlTag("Rpt")]
+[IsoDisplayName(@"Report")]
 public interface IReport : IPositionSetReport3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IReport : IPositionSetReport3Choice, IIsoChoiceVariant
     [IsoId("_52PEgMKwEeuM4pgP8Vixbg")]
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ReferenceDate { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IReport : IPositionSetReport3Choice, IIsoChoiceVariant
     [IsoId("_0pQCQ8KwEeuM4pgP8Vixbg")]
     [DisplayName("General Information")]
     [IsoXmlTag("GnlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet16> GeneralInformation { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IReport : IPositionSetReport3Choice, IIsoChoiceVariant
     [IsoId("_0pQCRcKwEeuM4pgP8Vixbg")]
     [DisplayName("Loan")]
     [IsoXmlTag("Ln")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet17> Loan { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface IReport : IPositionSetReport3Choice, IIsoChoiceVariant
     [IsoId("_0pQCR8KwEeuM4pgP8Vixbg")]
     [DisplayName("Collateral")]
     [IsoXmlTag("Coll")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet18> Collateral { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface IReport : IPositionSetReport3Choice, IIsoChoiceVariant
     [IsoId("_0pQCScKwEeuM4pgP8Vixbg")]
     [DisplayName("Margin")]
     [IsoXmlTag("Mrgn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet20> Margin { get; }
 
     /// <summary>
@@ -58,5 +64,6 @@ public interface IReport : IPositionSetReport3Choice, IIsoChoiceVariant
     [IsoId("_0pQCS8KwEeuM4pgP8Vixbg")]
     [DisplayName("Reuse")]
     [IsoXmlTag("Reuse")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet19> Reuse { get; }
 }

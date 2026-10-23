@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of the Sale to POI Reconciliation processing.
 /// </summary>
 [IsoId("_93n5UNxfEeioifFt1dhnJA")]
+[IsoDisplayName(@"Transaction Totals Set")]
 public interface ITransactionTotalsSet1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITransactionTotalsSet1 : IIsoComponent
     [IsoId("_pIKLMNxgEeioifFt1dhnJA")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AcquirerIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ITransactionTotalsSet1 : IIsoComponent
     [IsoId("_0hroMNxgEeioifFt1dhnJA")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ITransactionTotalsSet1 : IIsoComponent
     [IsoId("__uiiMNxgEeioifFt1dhnJA")]
     [DisplayName("Sale Reconciliation Identification")]
     [IsoXmlTag("SaleRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReconciliationIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ITransactionTotalsSet1 : IIsoComponent
     [IsoId("_DHNuMNxhEeioifFt1dhnJA")]
     [DisplayName("Brand")]
     [IsoXmlTag("Brnd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Brand { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface ITransactionTotalsSet1 : IIsoComponent
     [IsoId("_G9gDQNxhEeioifFt1dhnJA")]
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? POIIdentification { get; }
 
     /// <summary>
@@ -65,6 +76,8 @@ public interface ITransactionTotalsSet1 : IIsoComponent
     [IsoId("_KhixwNxhEeioifFt1dhnJA")]
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleIdentification { get; }
 
     /// <summary>
@@ -73,6 +86,8 @@ public interface ITransactionTotalsSet1 : IIsoComponent
     [IsoId("_Od2PQNxhEeioifFt1dhnJA")]
     [DisplayName("Cashier Identification")]
     [IsoXmlTag("CshrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CashierIdentification { get; }
 
     /// <summary>
@@ -81,6 +96,7 @@ public interface ITransactionTotalsSet1 : IIsoComponent
     [IsoId("_RQcSsNxhEeioifFt1dhnJA")]
     [DisplayName("Shift Number")]
     [IsoXmlTag("ShftNb")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? ShiftNumber { get; }
 
     /// <summary>
@@ -89,6 +105,7 @@ public interface ITransactionTotalsSet1 : IIsoComponent
     [IsoId("_W-gowNxhEeioifFt1dhnJA")]
     [DisplayName("Sponsored Merchant")]
     [IsoXmlTag("SpnsrdMrchnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation26> SponsoredMerchant { get; }
 
     /// <summary>
@@ -105,5 +122,6 @@ public interface ITransactionTotalsSet1 : IIsoComponent
     [IsoId("_WAtHQNxiEeioifFt1dhnJA")]
     [DisplayName("Loyalty Transaction Total")]
     [IsoXmlTag("LltyTxTtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyTransactionTotals1> LoyaltyTransactionTotal { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the type of product and the assets to be transferred.
 /// </summary>
 [IsoId("_bpWdARgIEeKqWJINzXcn5g")]
+[IsoDisplayName(@"ISA Transfer")]
 public interface IISATransfer10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IISATransfer10 : IIsoComponent
     [IsoId("_b-g0vRgIEeKqWJINzXcn5g")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IISATransfer10 : IIsoComponent
     [IsoId("_b-g0wRgIEeKqWJINzXcn5g")]
     [DisplayName("Transfer Confirmation Identification")]
     [IsoXmlTag("TrfConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferConfirmationIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IISATransfer10 : IIsoComponent
     [IsoId("_b-g0xRgIEeKqWJINzXcn5g")]
     [DisplayName("Transfer Instruction Reference")]
     [IsoXmlTag("TrfInstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferInstructionReference { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface IISATransfer10 : IIsoComponent
     [IsoId("_b-g0yRgIEeKqWJINzXcn5g")]
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ActualTransferDate { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IISATransfer10 : IIsoComponent
     [IsoId("_b-g01RgIEeKqWJINzXcn5g")]
     [DisplayName("All Other Cash")]
     [IsoXmlTag("AllOthrCsh")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AllOtherCash { get; }
 
     /// <summary>
@@ -73,5 +82,6 @@ public interface IISATransfer10 : IIsoComponent
     [IsoId("_b-g02RgIEeKqWJINzXcn5g")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument33> FinancialInstrumentAssetForTransfer { get; }
 }

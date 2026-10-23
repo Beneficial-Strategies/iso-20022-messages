@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action options date details.
 /// </summary>
 [IsoId("_CPKmse2KEeiWtrflKsFqHg")]
+[IsoDisplayName(@"Corporate Action Date SD")]
 public interface ICorporateActionDateSD11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionDateSD11 : IIsoComponent
     [IsoId("_CzLSse2KEeiWtrflKsFqHg")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -81,5 +84,6 @@ public interface ICorporateActionDateSD11 : IIsoComponent
     [IsoId("_ASDZwe2KEeiWtrflKsFqHg")]
     [DisplayName("DTC Earliest Payment Date")]
     [IsoXmlTag("DTCEarlstPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DTCEarliestPaymentDate { get; }
 }

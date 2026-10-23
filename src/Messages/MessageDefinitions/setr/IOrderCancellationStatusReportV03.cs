@@ -28,6 +28,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "OrdrCxlStsRptV03",
     "urn:iso:std:iso:20022:tech:xsd:setr.017.001.03"
 )]
+[Description(@"Scope|An executing party, for example, a transfer agent, sends the OrderCancellationStatusReport to the instructing party, for example, an investment manager or its authorised representative, to report the status of an order cancellation request that was previously received.|Usage|The OrderCancellationStatusReport message is used to provide the status of:|- one or more individual order cancellation requests by using IndividualCancellationStatusReport, or,|- an order cancellation request message by using CancellationStatusReport.|If the OrderCancellationStatusReport message is used to report the status of an individual order cancellation request, then the repetitive IndividualCancellationStatusReport sequence is used and the order reference of the individual order is quoted in OrderReference. The message identification of the message in which the individual order was conveyed may also be quoted in RelatedReference.|If the OrderCancellationStatusReport message is used to report the status of an entire order cancellation request message, for example, the SubscriptionBulkOrderCancellationRequest, or a SubscriptionOrderCancellationRequest containing several orders, then the CancellationStatusReport sequence. is used and the message identification of the order cancellation request message is quoted in RelatedReference. All the order cancellation requests within the message must have the same status.|One of the following statuses can be reported:|- the order cancellation is pending, or,|- the order cancellation request is rejected, or,|- the order is cancelled.|When the cancellation is rejected, the reason for the rejection must be specified.")]
+[IsoDisplayName(@"Order Cancellation Status Report V")]
 public interface IOrderCancellationStatusReportV03 : IOuterRecord
 {
     /// <summary>
@@ -44,6 +46,9 @@ public interface IOrderCancellationStatusReportV03 : IOuterRecord
     [IsoId("_g9jmu9E7Ed-BzquC8wXy7w_-1949489212")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> RelatedReference { get; }
 
     /// <summary>
@@ -52,6 +57,9 @@ public interface IOrderCancellationStatusReportV03 : IOuterRecord
     [IsoId("_g9jmvNE7Ed-BzquC8wXy7w_-1949488875")]
     [DisplayName("Other Reference")]
     [IsoXmlTag("OthrRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> OtherReference { get; }
 
     /// <summary>
@@ -68,6 +76,7 @@ public interface IOrderCancellationStatusReportV03 : IOuterRecord
     [IsoId("_g9tXsNE7Ed-BzquC8wXy7w_-358353694")]
     [DisplayName("Individual Cancellation Status Report")]
     [IsoXmlTag("IndvCxlStsRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualOrderStatusAndReason4> IndividualCancellationStatusReport { get; }
 
     /// <summary>
@@ -76,5 +85,6 @@ public interface IOrderCancellationStatusReportV03 : IOuterRecord
     [IsoId("_g9tXsdE7Ed-BzquC8wXy7w_819197774")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

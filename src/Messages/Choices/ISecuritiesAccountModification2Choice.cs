@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identifies which information are involved by a modification request for securities account reference data.
 /// </summary>
 [IsoId("_7-eWJTp0Eemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Securities Account Modification 2 Choice")]
 public interface ISecuritiesAccountModification2Choice : IIsoChoice { }

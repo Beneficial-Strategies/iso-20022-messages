@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the message reference of the message for which the status is requested and the business reference of the transfer instruction.
 /// </summary>
 [IsoId("_STWoEdvdEeqxGfKJubfhIw")]
+[IsoDisplayName(@"Message And Business Reference")]
 public interface IMessageAndBusinessReference13 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IMessageAndBusinessReference13 : IIsoComponent
     [IsoId("_Spi6g9vdEeqxGfKJubfhIw")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IMessageAndBusinessReference13 : IIsoComponent
     [IsoId("_Spi6hdvdEeqxGfKJubfhIw")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface IMessageAndBusinessReference13 : IIsoComponent
     [IsoId("_Spi6idvdEeqxGfKJubfhIw")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IMessageAndBusinessReference13 : IIsoComponent
     [IsoId("_Zy7pAXdiEeuvip1zrZRWzw")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary48> IntermediaryInformation { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface IMessageAndBusinessReference13 : IIsoComponent
     [IsoId("_MGY6EdveEeqxGfKJubfhIw")]
     [DisplayName("Query Information")]
     [IsoXmlTag("QryInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation25> QueryInformation { get; }
 
     /// <summary>

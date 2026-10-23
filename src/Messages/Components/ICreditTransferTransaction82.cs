@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details specific to the individual transaction(s) included in the message.
 /// </summary>
 [IsoId("_eXCdsbpXEfCPZvweyV2nEg")]
+[Description(@"Provides further details specific to the individual transaction(s) included in the message.")]
+[IsoDisplayName(@"Credit Transfer Transaction82")]
 public interface ICreditTransferTransaction82 : IIsoComponent
 {
     /// <summary>
@@ -281,6 +283,7 @@ public interface ICreditTransferTransaction82 : IIsoComponent
     [IsoId("_eeABs7pXEfCPZvweyV2nEg")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent3> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -289,6 +292,7 @@ public interface ICreditTransferTransaction82 : IIsoComponent
     [IsoId("_eeABtbpXEfCPZvweyV2nEg")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>
@@ -313,5 +317,6 @@ public interface ICreditTransferTransaction82 : IIsoComponent
     [IsoId("_eeABu7pXEfCPZvweyV2nEg")]
     [DisplayName("Underlying Allocation")]
     [IsoXmlTag("UndrlygAllcn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionAllocation2> UnderlyingAllocation { get; }
 }

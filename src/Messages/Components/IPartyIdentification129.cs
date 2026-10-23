@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to identify a person or an organisation.
 /// </summary>
 [IsoId("_arsW4eWlEeevU7McUP3D1w")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification129 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPartyIdentification129 : IIsoComponent
     [IsoId("_a0cDM-WlEeevU7McUP3D1w")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IPartyIdentification129 : IIsoComponent
     [IsoId("_a0cDOeWlEeevU7McUP3D1w")]
     [DisplayName("Contact Details")]
     [IsoXmlTag("CtctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContacts3> ContactDetails { get; }
 }

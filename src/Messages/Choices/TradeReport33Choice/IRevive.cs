@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice;
 /// <summary>
 /// Revive.
 /// </summary>
+[IsoDisplayName(@"Revive")]
 public interface IRevive : ITradeReport33Choice, IIsoChoiceVariant
 {
     /// <summary>

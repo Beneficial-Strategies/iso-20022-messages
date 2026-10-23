@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the status being requested.
 /// </summary>
 [IsoId("_WBN2AeZlEd-q8fx_Zl_34A")]
+[IsoDisplayName(@"Document Number")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IDocumentNumber5 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +27,6 @@ public interface IDocumentNumber5 : IIsoComponent
     [IsoId("_WBN2BeZlEd-q8fx_Zl_34A")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIdentification6> References { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Direct debit mandate parties and accounts.
 /// </summary>
 [IsoId("_avW_gZTBEemqYPWMBuVawg")]
+[IsoDisplayName(@"Direct Debit Mandate")]
 public interface IDirectDebitMandate7 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IDirectDebitMandate7 : IIsoComponent
     [IsoId("_bCsyR5TBEemqYPWMBuVawg")]
     [DisplayName("Debtor Tax Identification Number")]
     [IsoXmlTag("DbtrTaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DebtorTaxIdentificationNumber { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IDirectDebitMandate7 : IIsoComponent
     [IsoId("_bCsySZTBEemqYPWMBuVawg")]
     [DisplayName("Debtor National Registration Number")]
     [IsoXmlTag("DbtrNtlRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DebtorNationalRegistrationNumber { get; }
 
     /// <summary>
@@ -89,6 +94,8 @@ public interface IDirectDebitMandate7 : IIsoComponent
     [IsoId("_bCsyVZTBEemqYPWMBuVawg")]
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegistrationIdentification { get; }
 
     /// <summary>
@@ -97,5 +104,7 @@ public interface IDirectDebitMandate7 : IIsoComponent
     [IsoId("_bCsyV5TBEemqYPWMBuVawg")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 }

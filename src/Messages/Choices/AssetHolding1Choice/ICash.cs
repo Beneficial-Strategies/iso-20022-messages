@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 /// </summary>
 [IsoId("_9LXRoK_6EeaE9YROwd69hA")]
 [IsoXmlTag("Csh")]
+[IsoDisplayName(@"Cash")]
 public interface ICash : IAssetHolding1Choice, IIsoChoiceVariant
 {
     /// <summary>

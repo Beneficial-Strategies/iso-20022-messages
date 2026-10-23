@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "RoleAndBaselnRjctn",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.050.001.01"
 )]
+[Description(@"Scope|The RoleAndBaselineRejection message is sent by a secondary bank to the matching application if it rejects to join the transaction based on the baseline and the role that it is expected to play.|Usage|The RoleAndBaselineRejection message is sent in response to a message that is a direct request to join a transaction.")]
+[IsoDisplayName(@"Role And Baseline Rejection V")]
 public interface IRoleAndBaselineRejectionV01 : IOuterRecord
 {
     /// <summary>

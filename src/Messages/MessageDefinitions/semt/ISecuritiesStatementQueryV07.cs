@@ -27,6 +27,8 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("_H8eW0QyQEeuG8M5giQ2e0w")]
 [IsoMessage("semt.021.001.07", "SctiesStmtQry", "urn:iso:std:iso:20022:tech:xsd:semt.021.001.07")]
+[Description(@"Scope|An account owner sends a SecuritiesStatementQuery to an account servicer to request any existing securities statement.|The account owner/servicer relationship may be:|- a global custodian which has an account with a local custodian, or|- an investment management institution which manage a fund account opened at a custodian, or|- a broker which has an account with a custodian, or|- a central securities depository participant which has an account with a central securities depository, or|- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or|- a central counterparty or a stock exchange or a trade matching utility which need to instruct to a central securities depository or another settlement market infrastructure.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Statement Query V")]
 public interface ISecuritiesStatementQueryV07 : IOuterRecord
 {
     /// <summary>
@@ -67,6 +69,7 @@ public interface ISecuritiesStatementQueryV07 : IOuterRecord
     [IsoId("_H8eW3wyQEeuG8M5giQ2e0w")]
     [DisplayName("Additional Query Parameters")]
     [IsoXmlTag("AddtlQryParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalQueryParameters11> AdditionalQueryParameters { get; }
 
     /// <summary>
@@ -75,5 +78,6 @@ public interface ISecuritiesStatementQueryV07 : IOuterRecord
     [IsoId("_H8eW4QyQEeuG8M5giQ2e0w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Hardware security module of the ATM.
 /// </summary>
 [IsoId("_NXsPkbTkEeeQy4o2AayYHg")]
+[IsoDisplayName(@"ATM Security Device")]
 public interface IATMSecurityDevice2 : IIsoComponent
 {
     /// <summary>

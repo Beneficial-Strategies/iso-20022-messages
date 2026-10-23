@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the query criteria.
 /// </summary>
 [IsoId("_1NvnkZlZEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Business Information Query Definition")]
 public interface IBusinessInformationQueryDefinition3 : IIsoComponent
 {
     /// <summary>

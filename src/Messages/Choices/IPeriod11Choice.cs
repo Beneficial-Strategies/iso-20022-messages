@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Period11Choice.
 /// </summary>
 [IsoId("_3JrykTgtEe60j93i-cxu5Q")]
+[IsoDisplayName(@"Period11Choice")]
 public interface IPeriod11Choice : IIsoChoice { }

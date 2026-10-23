@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes an instance of an intraday margin call being made against a margin account.
 /// </summary>
 [IsoId("_dC8lAEG6EemxGPEh9hU2Xg")]
+[IsoDisplayName(@"Intra Day Margin Call")]
 public interface IIntraDayMarginCall1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IIntraDayMarginCall1 : IIsoComponent
     [IsoId("_AaCOYEG7EemxGPEh9hU2Xg")]
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TimeStamp { get; }
 }

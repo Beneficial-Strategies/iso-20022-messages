@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice to provide the summation of the call amounts for the variation margin and the segregated independent amount, or the segregated independent amount only.
 /// </summary>
 [IsoId("_9beRS6MPEeCojJW5vEuTEQ_-1338603652")]
+[IsoDisplayName(@"Margin Call Result 2 Choice")]
 public interface IMarginCallResult2Choice : IIsoChoice { }

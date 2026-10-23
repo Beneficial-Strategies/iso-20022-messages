@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the transaction
 /// </summary>
 [IsoId("_X8nxfvJHEeiJn9rM2Znz2w")]
+[IsoDisplayName(@"Transaction Identification")]
 public interface ITransactionIdentification14 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionIdentification14 : IIsoComponent
     [IsoId("_X8nxhPJHEeiJn9rM2Znz2w")]
     [DisplayName("Transaction Reference")]
     [IsoXmlTag("TxRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionReference { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface ITransactionIdentification14 : IIsoComponent
     [IsoId("_X8nxivJHEeiJn9rM2Znz2w")]
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TransmissionDateTime { get; }
 
     /// <summary>
@@ -35,6 +39,7 @@ public interface ITransactionIdentification14 : IIsoComponent
     [IsoId("_X8nxhfJHEeiJn9rM2Znz2w")]
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
+    [IsoSimpleType(IsoSimpleType.Max12NumericText)]
     Max12NumericText SystemTraceAuditNumber { get; }
 
     /// <summary>
@@ -44,6 +49,7 @@ public interface ITransactionIdentification14 : IIsoComponent
     [IsoId("_X8nxf_JHEeiJn9rM2Znz2w")]
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact12Text)]
     Exact12Text? RetrievalReferenceNumber { get; }
 
     /// <summary>
@@ -62,6 +68,8 @@ public interface ITransactionIdentification14 : IIsoComponent
     [IsoId("_X8nxgPJHEeiJn9rM2Znz2w")]
     [DisplayName("Acquirer Reference Data")]
     [IsoXmlTag("AcqrrRefData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AcquirerReferenceData { get; }
 
     /// <summary>
@@ -71,6 +79,7 @@ public interface ITransactionIdentification14 : IIsoComponent
     [IsoId("_X8nxgvJHEeiJn9rM2Znz2w")]
     [DisplayName("Acquirer Reference Number")]
     [IsoXmlTag("AcqrrRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max23NumericText)]
     Max23NumericText? AcquirerReferenceNumber { get; }
 
     /// <summary>
@@ -80,6 +89,8 @@ public interface ITransactionIdentification14 : IIsoComponent
     [IsoId("_X8nxhvJHEeiJn9rM2Znz2w")]
     [DisplayName("Card Issuer Reference Data")]
     [IsoXmlTag("CardIssrRefData")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? CardIssuerReferenceData { get; }
 
     /// <summary>

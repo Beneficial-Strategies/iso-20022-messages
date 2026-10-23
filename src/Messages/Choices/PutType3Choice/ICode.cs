@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PutType3Choice;
 /// Put type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_buZ-MeLcEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPutType3Choice, IIsoChoiceVariant
 {
     /// <summary>

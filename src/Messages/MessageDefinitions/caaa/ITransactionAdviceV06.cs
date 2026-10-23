@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_IXd9waFBEe-MRKYsaX6JDg")]
 [IsoMessage("caaa.020.001.06", "TxAdvc", "urn:iso:std:iso:20022:tech:xsd:caaa.020.001.06")]
+[IsoDisplayName(@"Transaction Advice V06")]
 public interface ITransactionAdviceV06 : IOuterRecord
 {
     /// <summary>

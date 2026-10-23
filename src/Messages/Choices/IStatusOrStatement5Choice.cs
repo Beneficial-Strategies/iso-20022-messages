@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the identification of a status or statement query.
 /// </summary>
 [IsoId("_BTEbgf7yEeCvPoRGOxRobQ")]
+[IsoDisplayName(@"Status Or Statement 5 Choice")]
 public interface IStatusOrStatement5Choice : IIsoChoice { }

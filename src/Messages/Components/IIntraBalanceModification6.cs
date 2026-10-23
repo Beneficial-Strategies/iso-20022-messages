@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the modification requests.
 /// </summary>
 [IsoId("_aD2U7zneEem7JZMuWtwtsg")]
+[IsoDisplayName(@"Intra Balance Modification")]
 public interface IIntraBalanceModification6 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,8 @@ public interface IIntraBalanceModification6 : IIsoComponent
     [IsoId("_aTDOjTneEem7JZMuWtwtsg")]
     [DisplayName("Request Reference")]
     [IsoXmlTag("ReqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RequestReference { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IIntraBalanceModification6 : IIsoComponent
     [IsoId("_aTDOjzneEem7JZMuWtwtsg")]
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StatusDate { get; }
 
     /// <summary>

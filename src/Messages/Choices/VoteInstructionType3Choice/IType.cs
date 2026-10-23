@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionType3Choice;
 
 /// <summary>Vote option expressed as a code.</summary>
 [IsoId("_r1A-wa5vEfCUHaCK5HWOhg")]
+[IsoDisplayName(@"Type")]
 public interface IType : IVoteInstructionType3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

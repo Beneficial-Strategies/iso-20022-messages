@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the settlement obligation.
 /// </summary>
 [IsoId("_Bu5zUS9aEeS94oXWDaBauA")]
+[IsoDisplayName(@"Settlement Obligation")]
 public interface ISettlementObligation7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISettlementObligation7 : IIsoComponent
     [IsoId("_CATsYS9aEeS94oXWDaBauA")]
     [DisplayName("CSD Transaction Identification")]
     [IsoXmlTag("CSDTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CSDTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISettlementObligation7 : IIsoComponent
     [IsoId("_CATsYy9aEeS94oXWDaBauA")]
     [DisplayName("Central Counterparty Transaction Identification")]
     [IsoXmlTag("CntrlCtrPtyTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CentralCounterpartyTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISettlementObligation7 : IIsoComponent
     [IsoId("_opTggC9cEeS94oXWDaBauA")]
     [DisplayName("Previous Buy In Identification")]
     [IsoXmlTag("PrvsBuyInId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PreviousBuyInIdentification { get; }
 
     /// <summary>
@@ -82,6 +89,7 @@ public interface ISettlementObligation7 : IIsoComponent
     [IsoId("_CATsbS9aEeS94oXWDaBauA")]
     [DisplayName("Intended Settlement Date")]
     [IsoXmlTag("IntnddSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IntendedSettlementDate { get; }
 
     /// <summary>
@@ -98,6 +106,7 @@ public interface ISettlementObligation7 : IIsoComponent
     [IsoId("_CATscS9aEeS94oXWDaBauA")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TradeDate { get; }
 
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_iXdVwY7dEe6S0_1AaJzQCA")]
 [IsoMessage("caad.010.001.02", "CstmRpt", "urn:iso:std:iso:20022:tech:xsd:caad.010.001.02")]
+[IsoDisplayName(@"Custom Report V02")]
 public interface ICustomReportV02 : IOuterRecord
 {
     /// <summary>
@@ -53,6 +54,7 @@ public interface ICustomReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode5> Programme { get; }
 
     /// <summary>
@@ -95,6 +97,7 @@ public interface ICustomReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Report Content")]
     [IsoXmlTag("RptCntt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportContent2> ReportContent { get; }
 
     /// <summary>
@@ -102,6 +105,7 @@ public interface ICustomReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -109,6 +113,7 @@ public interface ICustomReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

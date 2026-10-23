@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData58Choice;
 /// Where no active instruments are present on a venue, this field should be set so that a valid instrument reference data file can be submitted to ESMA as per daily submission requirements.
 /// </summary>
 [IsoId("_CA844WEbEe2P-L9DBerEgA")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : ITradeData58Choice, IIsoChoiceVariant
 {
     /// <summary>

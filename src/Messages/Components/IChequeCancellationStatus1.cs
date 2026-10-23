@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the status of the cheque presentment cancellation request.
 /// </summary>
 [IsoId("_PJJT97tyEeq_cfXrH83Rcw")]
+[IsoDisplayName(@"Cheque Cancellation Status")]
 public interface IChequeCancellationStatus1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IChequeCancellationStatus1 : IIsoComponent
     [IsoId("_PJJT-LtyEeq_cfXrH83Rcw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalInformation { get; }
 }

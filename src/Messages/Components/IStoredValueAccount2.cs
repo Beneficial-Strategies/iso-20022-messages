@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the stored value account or the stored value card (Prepaid card).
 /// </summary>
 [IsoId("_SsowIQxrEeqdx6buGpCCQw")]
+[IsoDisplayName(@"Stored Value Account")]
 public interface IStoredValueAccount2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IStoredValueAccount2 : IIsoComponent
     [IsoId("_S3y3RQxrEeqdx6buGpCCQw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IStoredValueAccount2 : IIsoComponent
     [IsoId("_S3y3RwxrEeqdx6buGpCCQw")]
     [DisplayName("Brand")]
     [IsoXmlTag("Brnd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Brand { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IStoredValueAccount2 : IIsoComponent
     [IsoId("_S3y3SQxrEeqdx6buGpCCQw")]
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Provider { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface IStoredValueAccount2 : IIsoComponent
     [IsoId("_S3y3SwxrEeqdx6buGpCCQw")]
     [DisplayName("Owner Name")]
     [IsoXmlTag("OwnrNm")]
+    [IsoSimpleType(IsoSimpleType.Max45Text)]
+    [StringLength(45, MinimumLength = 1)]
     Max45Text? OwnerName { get; }
 
     /// <summary>
@@ -65,6 +74,8 @@ public interface IStoredValueAccount2 : IIsoComponent
     [IsoId("_S3y3TQxrEeqdx6buGpCCQw")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? ExpiryDate { get; }
 
     /// <summary>

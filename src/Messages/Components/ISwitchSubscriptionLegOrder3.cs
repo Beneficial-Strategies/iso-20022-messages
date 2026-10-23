@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Subscription leg, or switch-in, of a switch order.
 /// </summary>
 [IsoId("_SLXCVdp-Ed-ak6NoX_4Aeg_-708775222")]
+[IsoDisplayName(@"Switch Subscription Leg Order")]
 public interface ISwitchSubscriptionLegOrder3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISwitchSubscriptionLegOrder3 : IIsoComponent
     [IsoId("_SLXCVtp-Ed-ak6NoX_4Aeg_-708775126")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ISwitchSubscriptionLegOrder3 : IIsoComponent
     [IsoId("_SLgzUdp-Ed-ak6NoX_4Aeg_-707854027")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge17> ChargeDetails { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface ISwitchSubscriptionLegOrder3 : IIsoComponent
     [IsoId("_SLgzUtp-Ed-ak6NoX_4Aeg_-108109082")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission10> CommissionDetails { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface ISwitchSubscriptionLegOrder3 : IIsoComponent
     [IsoId("_SLgzVNp-Ed-ak6NoX_4Aeg_-708774784")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface ISwitchSubscriptionLegOrder3 : IIsoComponent
     [IsoId("_SLgzVdp-Ed-ak6NoX_4Aeg_895209820")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax16> TaxDetails { get; }
 
     /// <summary>
@@ -113,6 +120,8 @@ public interface ISwitchSubscriptionLegOrder3 : IIsoComponent
     [IsoId("_SLgzVtp-Ed-ak6NoX_4Aeg_386939737")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>

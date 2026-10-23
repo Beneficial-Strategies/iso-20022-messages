@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason why a cancellation request sent for the related instruction is pending.
 /// </summary>
 [IsoId("_P3Vi4OBgEeiVRbNQx5-Vhg")]
+[IsoDisplayName(@"Pending Status 56 Choice")]
 public interface IPendingStatus56Choice : IIsoChoice { }

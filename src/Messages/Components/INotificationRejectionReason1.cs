@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides reason of the rejection of a notification advice.
 /// </summary>
 [IsoId("_RkLGhtp-Ed-ak6NoX_4Aeg_301280207")]
+[IsoDisplayName(@"Notification Rejection Reason")]
 public interface INotificationRejectionReason1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INotificationRejectionReason1 : IIsoComponent
     [IsoId("_RkLGh9p-Ed-ak6NoX_4Aeg_403789574")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason6FormatChoice> Reason { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface INotificationRejectionReason1 : IIsoComponent
     [IsoId("_RkLGiNp-Ed-ak6NoX_4Aeg_403789575")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

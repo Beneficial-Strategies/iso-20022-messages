@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transparency Data Report21.
 /// </summary>
 [IsoId("_tFpIAW8mEe6_0L6gLGEkbA")]
+[IsoDisplayName(@"Transparency Data Report21")]
 public interface ITransparencyDataReport21 : IIsoComponent
 {
     /// <summary>

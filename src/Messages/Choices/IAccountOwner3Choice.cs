@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an organisation and an individual person.
 /// </summary>
 [IsoId("_6NYocZTIEemqYPWMBuVawg")]
+[IsoDisplayName(@"Account Owner 3 Choice")]
 public interface IAccountOwner3Choice : IIsoChoice { }

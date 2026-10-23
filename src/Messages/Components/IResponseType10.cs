@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response of a requested service.
 /// </summary>
 [IsoId("_Z5cxkQxqEeqdx6buGpCCQw")]
+[IsoDisplayName(@"Response Type")]
 public interface IResponseType10 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IResponseType10 : IIsoComponent
     [IsoId("_aEZdUwxqEeqdx6buGpCCQw")]
     [DisplayName("Response Reason")]
     [IsoXmlTag("RspnRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ResponseReason { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IResponseType10 : IIsoComponent
     [IsoId("_aEZdVQxqEeqdx6buGpCCQw")]
     [DisplayName("Additional Response Information")]
     [IsoXmlTag("AddtlRspnInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalResponseInformation { get; }
 }

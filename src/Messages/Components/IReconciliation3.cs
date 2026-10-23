@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the reconciliation period between an acquirer and an issuer or their respective agents.
 /// </summary>
 [IsoId("_L6ZPMEYXEeegp_DADCe7HQ")]
+[IsoDisplayName(@"Reconciliation")]
 public interface IReconciliation3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReconciliation3 : IIsoComponent
     [IsoId("_qZEYIEYXEeegp_DADCe7HQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IReconciliation3 : IIsoComponent
     [IsoId("_xtdy0EYXEeegp_DADCe7HQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -34,5 +38,7 @@ public interface IReconciliation3 : IIsoComponent
     [IsoId("_ccHP8d0cEeil7LQldntseg")]
     [DisplayName("Checkpoint Reference")]
     [IsoXmlTag("ChckptRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CheckpointReference { get; }
 }

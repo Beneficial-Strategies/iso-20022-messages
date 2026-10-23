@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements to identify a proprietary party.
 /// </summary>
 [IsoId("_RUOmCNp-Ed-ak6NoX_4Aeg_2134128505")]
+[IsoDisplayName(@"Proprietary Agent")]
 public interface IProprietaryAgent1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProprietaryAgent1 : IIsoComponent
     [IsoId("_RUXv8Np-Ed-ak6NoX_4Aeg_2134128748")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>

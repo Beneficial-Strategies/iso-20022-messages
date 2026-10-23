@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentScheduleType1Choice;
 /// Payment schedule type defined in a proprietary format.
 /// </summary>
 [IsoId("_U1OI4AqQEeWqX7rjSIiMuQ")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPaymentScheduleType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IPaymentScheduleType1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

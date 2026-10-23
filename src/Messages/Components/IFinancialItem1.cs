@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// The component may include an external document describing details of the underlying trade object using an external schema.
 /// </summary>
 [IsoId("_OTgzMzMy-AOSNFX-8224500")]
+[IsoDisplayName(@"Financial Item")]
 public interface IFinancialItem1 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IFinancialItem1 : IIsoComponent
     [IsoId("_OTgzMzk4-AOSNFX-8224503")]
     [DisplayName("Financial Document Reference")]
     [IsoXmlTag("FinDocRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> FinancialDocumentReference { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface IFinancialItem1 : IIsoComponent
     [IsoId("_OTgzNDAy-AOSNFX-8224503")]
     [DisplayName("Instalment Information")]
     [IsoXmlTag("InstlmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalment2> InstalmentInformation { get; }
 
     /// <summary>
@@ -66,6 +69,8 @@ public interface IFinancialItem1 : IIsoComponent
     [IsoId("_OTgzNDA1-AOSNFX-8224503")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [StringLength(2000, MinimumLength = 1)]
     Max2000Text? AdditionalInformation { get; }
 
     /// <summary>
@@ -74,6 +79,7 @@ public interface IFinancialItem1 : IIsoComponent
     [IsoId("_OTgzNDA2-AOSNFX-8224503")]
     [DisplayName("Associated Document")]
     [IsoXmlTag("AssoctdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> AssociatedDocument { get; }
 
     /// <summary>

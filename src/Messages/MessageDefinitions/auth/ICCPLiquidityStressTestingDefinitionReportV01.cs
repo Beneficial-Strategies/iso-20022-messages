@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPLqdtyStrssTstgDefRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.062.001.01"
 )]
+[Description(@"The CCPLiquidityStressTestingDefinitionReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about how the central counterparty defines liquidity stress scenarios used to stress the liquidity resources and requirements of the CCP.")]
+[IsoDisplayName(@"CCP Liquidity Stress Testing Definition Report V")]
 public interface ICCPLiquidityStressTestingDefinitionReportV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface ICCPLiquidityStressTestingDefinitionReportV01 : IOuterRecord
     [IsoId("_Q-Y96eUUEem3X-64-NKdqg")]
     [DisplayName("Liquidity Stress Scenario Definition")]
     [IsoXmlTag("LqdtyStrssScnroDef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILiquidityStressScenarioDefinition1> LiquidityStressScenarioDefinition { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface ICCPLiquidityStressTestingDefinitionReportV01 : IOuterRecord
     [IsoId("_Q-Y96-UUEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

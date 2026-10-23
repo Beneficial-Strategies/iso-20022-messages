@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the central counterparty clearing time.
 /// </summary>
 [IsoId("_HQfLpbQ0EemI67HK7aviyg")]
+[IsoDisplayName(@"Clearing Party And Time")]
 public interface IClearingPartyAndTime9 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IClearingPartyAndTime9 : IIsoComponent
     [IsoId("_HUgwA7Q0EemI67HK7aviyg")]
     [DisplayName("Clearing Date Time")]
     [IsoXmlTag("ClrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ClearingDateTime { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IClearingPartyAndTime9 : IIsoComponent
     [IsoId("_HUgwBbQ0EemI67HK7aviyg")]
     [DisplayName("Report Tracking Number")]
     [IsoXmlTag("RptTrckgNb")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? ReportTrackingNumber { get; }
 
     /// <summary>
@@ -41,5 +45,7 @@ public interface IClearingPartyAndTime9 : IIsoComponent
     [IsoId("_HUgwB7Q0EemI67HK7aviyg")]
     [DisplayName("Portfolio Code")]
     [IsoXmlTag("PrtflCd")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? PortfolioCode { get; }
 }

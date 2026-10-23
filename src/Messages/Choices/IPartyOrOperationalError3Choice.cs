@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Report between the party reference data or an operational error.
 /// </summary>
 [IsoId("_7VYvRVhLEeih3fUfzR38Ig")]
+[IsoDisplayName(@"Party Or Operational Error 3 Choice")]
 public interface IPartyOrOperationalError3Choice : IIsoChoice { }

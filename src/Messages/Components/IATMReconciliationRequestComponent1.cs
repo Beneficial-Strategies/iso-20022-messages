@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Reconciliation Request Component1.
 /// </summary>
 [IsoId("_OKbxsJ2uEe-4seDr3Li2Ew")]
+[IsoDisplayName(@"ATM Reconciliation Request Component1")]
 public interface IATMReconciliationRequestComponent1 : IIsoComponent
 {
     /// <summary>

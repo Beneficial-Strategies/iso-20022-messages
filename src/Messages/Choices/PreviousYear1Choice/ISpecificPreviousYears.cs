@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PreviousYear1Choice;
 /// Selection of investment plans issued during previous years.
 /// </summary>
 [IsoId("_3fxSc0XfEeGY6MkiuzuPOA_1191226349")]
+[IsoDisplayName(@"Specific Previous Years")]
 public interface ISpecificPreviousYears : IPreviousYear1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ISpecificPreviousYears : IPreviousYear1Choice, IIsoChoiceVarian
     /// Year represented by YYYY (ISO 8601).
     /// </summary>
     [IsoXmlTag("SpcfcPrvsYrs")]
+    [IsoSimpleType(IsoSimpleType.ISOYear)]
     ISOYear Value { get; }
 }

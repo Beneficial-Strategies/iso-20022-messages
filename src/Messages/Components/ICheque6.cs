@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics related to a cheque instruction, such as cheque type or cheque number.
 /// </summary>
 [IsoId("_QbwF6dp-Ed-ak6NoX_4Aeg_666058434")]
+[IsoDisplayName(@"Cheque")]
 public interface ICheque6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICheque6 : IIsoComponent
     [IsoId("_Qb524Np-Ed-ak6NoX_4Aeg_666058713")]
     [DisplayName("Cheque Number")]
     [IsoXmlTag("ChqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ChequeNumber { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ICheque6 : IIsoComponent
     [IsoId("_Qcpdwtp-Ed-ak6NoX_4Aeg_666058797")]
     [DisplayName("Cheque Maturity Date")]
     [IsoXmlTag("ChqMtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ChequeMaturityDate { get; }
 
     /// <summary>
@@ -73,6 +77,8 @@ public interface ICheque6 : IIsoComponent
     [IsoId("_Qcpdw9p-Ed-ak6NoX_4Aeg_666058828")]
     [DisplayName("Forms Code")]
     [IsoXmlTag("FrmsCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FormsCode { get; }
 
     /// <summary>
@@ -81,6 +87,10 @@ public interface ICheque6 : IIsoComponent
     [IsoId("_QcpdxNp-Ed-ak6NoX_4Aeg_666059137")]
     [DisplayName("Memo Field")]
     [IsoXmlTag("MemoFld")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> MemoField { get; }
 
     /// <summary>
@@ -89,6 +99,8 @@ public interface ICheque6 : IIsoComponent
     [IsoId("_Qcpdxdp-Ed-ak6NoX_4Aeg_666059168")]
     [DisplayName("Regional Clearing Zone")]
     [IsoXmlTag("RgnlClrZone")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegionalClearingZone { get; }
 
     /// <summary>
@@ -97,5 +109,7 @@ public interface ICheque6 : IIsoComponent
     [IsoId("_Qcpdxtp-Ed-ak6NoX_4Aeg_666059230")]
     [DisplayName("Print Location")]
     [IsoXmlTag("PrtLctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PrintLocation { get; }
 }

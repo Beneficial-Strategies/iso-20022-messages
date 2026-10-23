@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial Instrument Attributes130.
 /// </summary>
 [IsoId("_EPb4oYV6Ee-oeNhl-Tk6YQ")]
+[IsoDisplayName(@"Financial Instrument Attributes130")]
 public interface IFinancialInstrumentAttributes130 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TargetMarket3Choice;
 /// Specifies how a financial product is in scope of the target market parameter.
 /// </summary>
 [IsoId("_z2kfYtdiEeibyvRfU9vJ7w")]
+[IsoDisplayName(@"Type")]
 public interface IType : ITargetMarket3Choice, IIsoChoiceVariant
 {
     /// <summary>

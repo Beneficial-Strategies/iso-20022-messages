@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// </summary>
 [IsoId("_J8b4wYwAEei289CGNqs21g")]
 [IsoXmlTag("CtctDtls")]
+[IsoDisplayName(@"Contact Details")]
 public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVa
     [IsoId("_rJkiJYv3Eei289CGNqs21g")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVa
     [IsoId("_rJkiJ4v3Eei289CGNqs21g")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVa
     [IsoId("_rJkiKYv3Eei289CGNqs21g")]
     [DisplayName("Mobile Number")]
     [IsoXmlTag("MobNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? MobileNumber { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVa
     [IsoId("_rJkiK4v3Eei289CGNqs21g")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -58,6 +64,8 @@ public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVa
     [IsoId("_rJkiLYv3Eei289CGNqs21g")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? EmailAddress { get; }
 
     /// <summary>
@@ -66,6 +74,8 @@ public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVa
     [IsoId("_rJlJMYv3Eei289CGNqs21g")]
     [DisplayName("Email Purpose")]
     [IsoXmlTag("EmailPurp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EmailPurpose { get; }
 
     /// <summary>
@@ -74,6 +84,8 @@ public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVa
     [IsoId("_rJlJM4v3Eei289CGNqs21g")]
     [DisplayName("Job Title")]
     [IsoXmlTag("JobTitl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? JobTitle { get; }
 
     /// <summary>
@@ -82,6 +94,8 @@ public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVa
     [IsoId("_rJlJNYv3Eei289CGNqs21g")]
     [DisplayName("Responsibility")]
     [IsoXmlTag("Rspnsblty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Responsibility { get; }
 
     /// <summary>
@@ -90,6 +104,8 @@ public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVa
     [IsoId("_rJlJN4v3Eei289CGNqs21g")]
     [DisplayName("Department")]
     [IsoXmlTag("Dept")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Department { get; }
 
     /// <summary>
@@ -98,6 +114,7 @@ public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVa
     [IsoId("_rJlJOYv3Eei289CGNqs21g")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherContact1> Other { get; }
 
     /// <summary>
@@ -114,6 +131,7 @@ public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVa
     [IsoId("_vDRXkov3Eei289CGNqs21g")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidFrom { get; }
 
     /// <summary>
@@ -122,5 +140,6 @@ public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVa
     [IsoId("_vDRXk4v3Eei289CGNqs21g")]
     [DisplayName("Valid To")]
     [IsoXmlTag("VldTo")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidTo { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to an identification, eg, party identification or account identification.
 /// </summary>
 [IsoId("_P-ile9p-Ed-ak6NoX_4Aeg_745508310")]
+[IsoDisplayName(@"Simple Identification Information")]
 public interface ISimpleIdentificationInformation : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface ISimpleIdentificationInformation : IIsoComponent
     [IsoId("_P-sWcNp-Ed-ak6NoX_4Aeg_836935724")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

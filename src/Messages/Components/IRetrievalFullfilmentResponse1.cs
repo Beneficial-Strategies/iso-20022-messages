@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response to a RetrievalFulfillmentInitiation message.
 /// </summary>
 [IsoId("_dZfqYeFGEeeRS5LRvWPKMw")]
+[IsoDisplayName(@"Retrieval Fullfilment Response")]
 public interface IRetrievalFullfilmentResponse1 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IRetrievalFullfilmentResponse1 : IIsoComponent
     [IsoId("_dliiYeFGEeeRS5LRvWPKMw")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IRetrievalFullfilmentResponse1 : IIsoComponent
     [IsoId("_dliiY-FGEeeRS5LRvWPKMw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

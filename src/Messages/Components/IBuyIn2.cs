@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies elements related to the confirmation sent by the central counterparty to the clearing member in the context of the buy in process.
 /// </summary>
 [IsoId("_Uot1ldp-Ed-ak6NoX_4Aeg_1022669122")]
+[IsoDisplayName(@"Buy In")]
 public interface IBuyIn2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBuyIn2 : IIsoComponent
     [IsoId("_Uot1ltp-Ed-ak6NoX_4Aeg_-1301593621")]
     [DisplayName("Buy In Notification Identification")]
     [IsoXmlTag("BuyInNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BuyInNotificationIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IBuyIn2 : IIsoComponent
     [IsoId("_Uot1l9p-Ed-ak6NoX_4Aeg_1529026602")]
     [DisplayName("Buy In Identification")]
     [IsoXmlTag("BuyInId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text BuyInIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IBuyIn2 : IIsoComponent
     [IsoId("_Uot1mNp-Ed-ak6NoX_4Aeg_1976267456")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Date { get; }
 
     /// <summary>

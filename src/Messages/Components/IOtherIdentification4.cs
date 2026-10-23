@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a financial instrument using an accepted format other than an ISIN.
 /// </summary>
 [IsoId("_fMy68V9NEeS7xuKaq75oiQ")]
+[IsoDisplayName(@"Other Identification")]
 public interface IOtherIdentification4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherIdentification4 : IIsoComponent
     [IsoId("_fn3tYV9NEeS7xuKaq75oiQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

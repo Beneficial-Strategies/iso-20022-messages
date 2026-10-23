@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies key elements as defined in the original transaction.
 /// </summary>
 [IsoId("_MBR7IbvHEfCYYbmqNrQFSg")]
+[IsoDisplayName(@"Original Transaction Reference48")]
 public interface IOriginalTransactionReference48 : IIsoComponent
 {
     /// <summary>

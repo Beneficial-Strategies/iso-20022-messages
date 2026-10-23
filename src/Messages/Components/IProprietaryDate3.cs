@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to identify a proprietary date.
 /// </summary>
 [IsoId("_rtZ5466OEeexrtTFgmVD3Q")]
+[IsoDisplayName(@"Proprietary Date")]
 public interface IProprietaryDate3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProprietaryDate3 : IIsoComponent
     [IsoId("_r2LbU66OEeexrtTFgmVD3Q")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>

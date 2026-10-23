@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("_1eWxQNE7Ed-BzquC8wXy7w_1537721740")]
 [IsoMessage("setr.010.001.02", "setr.010.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.010.001.02")]
+[Description(@"Scope|The SubscriptionMultipleOrder message is sent by an instructing party, eg, an investment manager or its authorised representative, to an executing party, eg, a transfer agent. There may be one or more intermediary parties between the instructing party and the executing party. The intermediary party is, for example, an intermediary or a concentrator.|This message is used to instruct the executing party to subscribe to one or more financial instruments, for the same account.|Usage|The SubscriptionMultipleOrder message is used for multiple orders. It may also be used for single orders, ie, a message containing one order for one financial instrument and related to one investment account. For a single subscription order, the SubscriptionMultipleOrder message, not the SubscriptionBulkOrder message, must be used.|If there are subscription orders for the same financial instrument but for different accounts, then the SubscriptionBulkOrder message must be used.")]
+[IsoDisplayName(@"Subscription Multiple Order V")]
 public interface ISubscriptionMultipleOrderV02 : IOuterRecord
 {
     /// <summary>
@@ -41,6 +43,7 @@ public interface ISubscriptionMultipleOrderV02 : IOuterRecord
     [IsoId("_1eWxQ9E7Ed-BzquC8wXy7w_2058121645")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -57,6 +60,9 @@ public interface ISubscriptionMultipleOrderV02 : IOuterRecord
     [IsoId("_1eWxRdE7Ed-BzquC8wXy7w_1257163700")]
     [DisplayName("Intermediary Details")]
     [IsoXmlTag("IntrmyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary4> IntermediaryDetails { get; }
 
     /// <summary>
@@ -73,5 +79,6 @@ public interface ISubscriptionMultipleOrderV02 : IOuterRecord
     [IsoId("_1eWxR9E7Ed-BzquC8wXy7w_581032056")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

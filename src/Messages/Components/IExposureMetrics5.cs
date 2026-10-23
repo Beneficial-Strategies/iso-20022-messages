@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Numeric variables calculated on market exposures.
 /// </summary>
 [IsoId("_e45Eca5QEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Exposure Metrics")]
 public interface IExposureMetrics5 : IIsoComponent
 {
     /// <summary>

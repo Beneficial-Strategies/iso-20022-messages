@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification262Choice;
 
 /// <summary>Identification of the party expressed as a BIC.</summary>
 [IsoId("e2ae7976-22fd-49c3-b368-82c4b6d9c42d")]
+[IsoDisplayName(@"Any BIC")]
 public interface IAnyBIC : IPartyIdentification262Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

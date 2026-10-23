@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of the transaction.
 /// </summary>
 [IsoId("_ZeCrQXuPEeSVeNXcmBQ4hQ")]
+[IsoDisplayName(@"Card Transaction Environment")]
 public interface ICardTransactionEnvironment2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICardTransactionEnvironment2 : IIsoComponent
     [IsoId("_JAOYgHuQEeSVeNXcmBQ4hQ")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AcquirerIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICardTransactionEnvironment2 : IIsoComponent
     [IsoId("_S9U60HuQEeSVeNXcmBQ4hQ")]
     [DisplayName("Card Scheme Identification")]
     [IsoXmlTag("CardSchmeId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardSchemeIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ICardTransactionEnvironment2 : IIsoComponent
     [IsoId("_Xixb8HuQEeSVeNXcmBQ4hQ")]
     [DisplayName("Acceptor Identification")]
     [IsoXmlTag("AccptrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AcceptorIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ICardTransactionEnvironment2 : IIsoComponent
     [IsoId("_b8lU0HuQEeSVeNXcmBQ4hQ")]
     [DisplayName("Terminal Identification")]
     [IsoXmlTag("TermnlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TerminalIdentification { get; }
 
     /// <summary>

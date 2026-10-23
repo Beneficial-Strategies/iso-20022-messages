@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a redemption order.
 /// </summary>
 [IsoId("_R0jr69p-Ed-ak6NoX_4Aeg_-2086984604")]
+[IsoDisplayName(@"Redemption Execution")]
 public interface IRedemptionExecution6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R0jr7Np-Ed-ak6NoX_4Aeg_-2086984474")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R0jr7dp-Ed-ak6NoX_4Aeg_-922500343")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R0jr7tp-Ed-ak6NoX_4Aeg_-2086984431")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DealReference { get; }
 
     /// <summary>
@@ -41,6 +48,9 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R0jr79p-Ed-ak6NoX_4Aeg_568440444")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType3> OrderType { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R0tc5Np-Ed-ak6NoX_4Aeg_-2086983578")]
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? HoldingsRedemptionRate { get; }
 
     /// <summary>
@@ -121,6 +132,7 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R0tc6Np-Ed-ak6NoX_4Aeg_-1562890881")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CashSettlementDate { get; }
 
     /// <summary>
@@ -137,6 +149,7 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R03N4dp-Ed-ak6NoX_4Aeg_-2086983146")]
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PartiallyExecutedIndicator { get; }
 
     /// <summary>
@@ -153,6 +166,9 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R03N49p-Ed-ak6NoX_4Aeg_857497209")]
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice10> InformativePriceDetails { get; }
 
     /// <summary>
@@ -169,6 +185,7 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R03N5dp-Ed-ak6NoX_4Aeg_-2086983051")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -185,6 +202,7 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R03N59p-Ed-ak6NoX_4Aeg_-2085139478")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms7> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -217,6 +235,9 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R1AX0tp-Ed-ak6NoX_4Aeg_-188093082")]
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
+    [MinLength(0)]
+    [MaxLength(4)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundsOrderBreakdown1> StaffClientBreakdown { get; }
 
     /// <summary>
@@ -249,6 +270,7 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R1AX1tp-Ed-ak6NoX_4Aeg_-2086062812")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>
@@ -289,6 +311,8 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R1KI0dp-Ed-ak6NoX_4Aeg_-615141596")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>
@@ -297,6 +321,7 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R1KI0tp-Ed-ak6NoX_4Aeg_-1007387165")]
     [DisplayName("Partial Settlement Of Units")]
     [IsoXmlTag("PrtlSttlmOfUnits")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PartialSettlementOfUnits { get; }
 
     /// <summary>
@@ -305,6 +330,7 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R1KI09p-Ed-ak6NoX_4Aeg_-935349929")]
     [DisplayName("Partial Settlement Of Cash")]
     [IsoXmlTag("PrtlSttlmOfCsh")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PartialSettlementOfCash { get; }
 
     /// <summary>
@@ -345,6 +371,9 @@ public interface IRedemptionExecution6 : IIsoComponent
     [IsoId("_R1T50dp-Ed-ak6NoX_4Aeg_484616181")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary9> RelatedPartyDetails { get; }
 
     /// <summary>

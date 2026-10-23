@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the entity issuing the command.
 /// </summary>
 [IsoId("_tbkJAIqKEeSRT5rEzcAHEw")]
+[IsoDisplayName(@"ATM Command Identification")]
 public interface IATMCommandIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMCommandIdentification1 : IIsoComponent
     [IsoId("_5ym-MIqKEeSRT5rEzcAHEw")]
     [DisplayName("Origin")]
     [IsoXmlTag("Orgn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Origin { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMCommandIdentification1 : IIsoComponent
     [IsoId("_9G_gEIqKEeSRT5rEzcAHEw")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reference { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IATMCommandIdentification1 : IIsoComponent
     [IsoId("_DAS1wIqLEeSRT5rEzcAHEw")]
     [DisplayName("Processor")]
     [IsoXmlTag("Prcr")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Processor { get; }
 }

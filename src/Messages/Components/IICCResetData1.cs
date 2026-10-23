@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data of a Chip Card related to the reset of the chip.
 /// </summary>
 [IsoId("_SNfVUN7IEeiwsev40qZGEQ")]
+[IsoDisplayName(@"ICC Reset Data")]
 public interface IICCResetData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IICCResetData1 : IIsoComponent
     [IsoId("_ZUB6MN7IEeiwsev40qZGEQ")]
     [DisplayName("ATR Value")]
     [IsoXmlTag("ATRVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? ATRValue { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IICCResetData1 : IIsoComponent
     [IsoId("_dbA9sN7IEeiwsev40qZGEQ")]
     [DisplayName("Card Status")]
     [IsoXmlTag("CardSts")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary? CardStatus { get; }
 }

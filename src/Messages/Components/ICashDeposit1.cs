@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Deposit of an amount of money defined in cash notes and/or coins.
 /// </summary>
 [IsoId("_t0kyllkyEeGeoaLUQk__nA_-1150554853")]
+[IsoDisplayName(@"Cash Deposit")]
 public interface ICashDeposit1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICashDeposit1 : IIsoComponent
     [IsoId("_t0ujkVkyEeGeoaLUQk__nA_-1821036106")]
     [DisplayName("Number Of Notes")]
     [IsoXmlTag("NbOfNotes")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfNotes { get; }
 
     /// <summary>

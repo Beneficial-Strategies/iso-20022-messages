@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash settlement chain parties and accounts.
 /// </summary>
 [IsoId("_nszGBzcjEeOKPpUjhHfcCQ")]
+[IsoDisplayName(@"Cash Parties")]
 public interface ICashParties24 : IIsoComponent
 {
     /// <summary>

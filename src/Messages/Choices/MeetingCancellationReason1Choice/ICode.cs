@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MeetingCancellationReason1Choice
 /// Specifies the reason for cancelling a meeting in coded form.
 /// </summary>
 [IsoId("_RCWL0tp-Ed-ak6NoX_4Aeg_-1788860770")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMeetingCancellationReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

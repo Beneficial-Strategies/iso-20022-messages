@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the margin data.
 /// </summary>
 [IsoId("_SBzrBV52Ee2a_-MvhEjKmA")]
+[IsoDisplayName(@"Margin Report Data")]
 public interface IMarginReportData8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMarginReportData8 : IIsoComponent
     [IsoId("_SCx7YV52Ee2a_-MvhEjKmA")]
     [DisplayName("Reporting Time Stamp")]
     [IsoXmlTag("RptgTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ReportingTimeStamp { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IMarginReportData8 : IIsoComponent
     [IsoId("_SCx7ZV52Ee2a_-MvhEjKmA")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EventDate { get; }
 
     /// <summary>
@@ -74,6 +77,7 @@ public interface IMarginReportData8 : IIsoComponent
     [IsoId("_SCx7b152Ee2a_-MvhEjKmA")]
     [DisplayName("Counterparty Rating Trigger Indicator")]
     [IsoXmlTag("CtrPtyRatgTrggrInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CounterpartyRatingTriggerIndicator { get; }
 
     /// <summary>
@@ -83,6 +87,7 @@ public interface IMarginReportData8 : IIsoComponent
     [IsoId("_SCx7cV52Ee2a_-MvhEjKmA")]
     [DisplayName("Counterparty Rating Threshold Indicator")]
     [IsoXmlTag("CtrPtyRatgThrshldInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CounterpartyRatingThresholdIndicator { get; }
 
     /// <summary>
@@ -107,5 +112,6 @@ public interface IMarginReportData8 : IIsoComponent
     [IsoId("_SCx7d152Ee2a_-MvhEjKmA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

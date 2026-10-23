@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_8dQzMWYdEeeEbu2gL5hFew")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification203 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IPartyIdentification203 : IIsoComponent
     [IsoId("_8pU5QWYdEeeEbu2gL5hFew")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IPartyIdentification203 : IIsoComponent
     [IsoId("_8pU5Q2YdEeeEbu2gL5hFew")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Assigner { get; }
 
     /// <summary>
@@ -43,6 +48,8 @@ public interface IPartyIdentification203 : IIsoComponent
     [IsoId("_8pU5R2YdEeeEbu2gL5hFew")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>
@@ -51,6 +58,8 @@ public interface IPartyIdentification203 : IIsoComponent
     [IsoId("_8pU5SWYdEeeEbu2gL5hFew")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalIdentification { get; }
 
     /// <summary>
@@ -60,6 +69,8 @@ public interface IPartyIdentification203 : IIsoComponent
     [IsoId("_8pU5S2YdEeeEbu2gL5hFew")]
     [DisplayName("Name And Location")]
     [IsoXmlTag("NmAndLctn")]
+    [IsoSimpleType(IsoSimpleType.Max99Text)]
+    [StringLength(99, MinimumLength = 1)]
     Max99Text NameAndLocation { get; }
 
     /// <summary>
@@ -78,6 +89,8 @@ public interface IPartyIdentification203 : IIsoComponent
     [IsoId("_8pU5U2YdEeeEbu2gL5hFew")]
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Email { get; }
 
     /// <summary>
@@ -87,6 +100,8 @@ public interface IPartyIdentification203 : IIsoComponent
     [IsoId("_8pU5VWYdEeeEbu2gL5hFew")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? URLAddress { get; }
 
     /// <summary>
@@ -96,6 +111,8 @@ public interface IPartyIdentification203 : IIsoComponent
     [IsoId("_8pU5V2YdEeeEbu2gL5hFew")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PhoneNumber { get; }
 
     /// <summary>
@@ -105,6 +122,8 @@ public interface IPartyIdentification203 : IIsoComponent
     [IsoId("_8pU5WWYdEeeEbu2gL5hFew")]
     [DisplayName("Customer Service")]
     [IsoXmlTag("CstmrSvc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CustomerService { get; }
 
     /// <summary>
@@ -114,6 +133,8 @@ public interface IPartyIdentification203 : IIsoComponent
     [IsoId("_8pU5W2YdEeeEbu2gL5hFew")]
     [DisplayName("Additional Contact Information")]
     [IsoXmlTag("AddtlCtctInf")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? AdditionalContactInformation { get; }
 
     /// <summary>
@@ -122,6 +143,8 @@ public interface IPartyIdentification203 : IIsoComponent
     [IsoId("_HKMP8WYeEeeEbu2gL5hFew")]
     [DisplayName("Tax Registration Identification")]
     [IsoXmlTag("TaxRegnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxRegistrationIdentification { get; }
 
     /// <summary>
@@ -130,6 +153,7 @@ public interface IPartyIdentification203 : IIsoComponent
     [IsoId("_P5LGUOkGEemeDPHh-U9b6w")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 
     /// <summary>
@@ -138,5 +162,6 @@ public interface IPartyIdentification203 : IIsoComponent
     [IsoId("_bzZ6sf8JEeic54G0fOJNMg")]
     [DisplayName("Sponsored Merchant")]
     [IsoXmlTag("SpnsrdMrchnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISponsoredMerchant1> SponsoredMerchant { get; }
 }

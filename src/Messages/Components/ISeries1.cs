@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a series.
 /// </summary>
 [IsoId("_ZD4mEEgQEea9YuSvQGoi-w")]
+[IsoDisplayName(@"Series")]
 public interface ISeries1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ISeries1 : IIsoComponent
     [IsoId("_81Imc0gREea9YuSvQGoi-w")]
     [DisplayName("Series Name")]
     [IsoXmlTag("SrsNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SeriesName { get; }
 }

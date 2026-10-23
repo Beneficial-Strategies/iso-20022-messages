@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation3Choice;
 /// </summary>
 [IsoId("_MsHJkCcaEeK33eWt3gq4Fg")]
 [IsoXmlTag("CxlByRef")]
+[IsoDisplayName(@"Cancellation By Reference")]
 public interface ICancellationByReference : ICancellation3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICancellationByReference : ICancellation3Choice, IIsoChoiceVari
     [IsoId("_Sww1cNp-Ed-ak6NoX_4Aeg_716567294")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -26,5 +29,6 @@ public interface ICancellationByReference : ICancellation3Choice, IIsoChoiceVari
     [IsoId("_Sww1cdp-Ed-ak6NoX_4Aeg_-1130016572")]
     [DisplayName("Transfer References")]
     [IsoXmlTag("TrfRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransferReference4> TransferReferences { get; }
 }

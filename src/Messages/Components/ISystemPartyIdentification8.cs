@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous identification of a party within a system.
 /// </summary>
 [IsoId("_7KrUEVhLEeih3fUfzR38Ig")]
+[IsoDisplayName(@"System Party Identification")]
 public interface ISystemPartyIdentification8 : IIsoComponent
 {
     /// <summary>

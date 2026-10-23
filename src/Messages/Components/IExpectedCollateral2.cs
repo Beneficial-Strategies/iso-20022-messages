@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the expected collateral type and direction for the variation margin and optionaly the segregated independent amount.
 /// </summary>
 [IsoId("_-sdWNYLZEeWrrO9HojbPQA")]
+[IsoDisplayName(@"Expected Collateral")]
 public interface IExpectedCollateral2 : IIsoComponent
 {
     /// <summary>

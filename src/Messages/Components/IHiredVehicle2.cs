@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vehicle for hire for passenger transport - excludes vehicles driven by a renter.  Examples include, but are not limited to, taxi, chauffeured limousine, boats.
 /// </summary>
 [IsoId("_jwEksYv0EeumSPwlS1PkxQ")]
+[IsoDisplayName(@"Hired Vehicle")]
 public interface IHiredVehicle2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IHiredVehicle2 : IIsoComponent
     [IsoId("_j2JXgYv0EeumSPwlS1PkxQ")]
     [DisplayName("Company Type")]
     [IsoXmlTag("CpnyTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CompanyType { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IHiredVehicle2 : IIsoComponent
     [IsoId("_j2JXg4v0EeumSPwlS1PkxQ")]
     [DisplayName("Company Name")]
     [IsoXmlTag("CpnyNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CompanyName { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IHiredVehicle2 : IIsoComponent
     [IsoId("_j2JXhYv0EeumSPwlS1PkxQ")]
     [DisplayName("Type Of Vehicle")]
     [IsoXmlTag("TpOfVhcl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TypeOfVehicle { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IHiredVehicle2 : IIsoComponent
     [IsoId("_j2JXh4v0EeumSPwlS1PkxQ")]
     [DisplayName("Vehicle Identification")]
     [IsoXmlTag("VhclId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? VehicleIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IHiredVehicle2 : IIsoComponent
     [IsoId("_j2JXiYv0EeumSPwlS1PkxQ")]
     [DisplayName("Driver Identification")]
     [IsoXmlTag("DrvrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DriverIdentification { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface IHiredVehicle2 : IIsoComponent
     [IsoId("_j2JXi4v0EeumSPwlS1PkxQ")]
     [DisplayName("Driver Tax Identification")]
     [IsoXmlTag("DrvrTaxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DriverTaxIdentification { get; }
 
     /// <summary>

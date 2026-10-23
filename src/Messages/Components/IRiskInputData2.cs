@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Risk Input Data2.
 /// </summary>
 [IsoId("_3a5WsXG6Ee60F8I8TAMKmg")]
+[IsoDisplayName(@"Risk Input Data2")]
 public interface IRiskInputData2 : IIsoComponent
 {
     /// <summary>

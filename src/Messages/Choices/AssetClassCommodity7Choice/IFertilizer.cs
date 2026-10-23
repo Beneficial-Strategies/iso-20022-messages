@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice;
 /// <summary>
 /// Fertilizer.
 /// </summary>
+[IsoDisplayName(@"Fertilizer")]
 public interface IFertilizer : IAssetClassCommodity7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a type of party.
 /// </summary>
 [IsoId("_6PWX4E4REeiQHa-q1Uephw")]
+[IsoDisplayName(@"Tax Reference Party 1 Choice")]
 public interface ITaxReferenceParty1Choice : IIsoChoice { }

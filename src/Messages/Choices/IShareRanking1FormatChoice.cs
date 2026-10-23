@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the share ranking.
 /// </summary>
 [IsoId("_Ro8Rw9p-Ed-ak6NoX_4Aeg_1933759381")]
+[IsoDisplayName(@"Share Ranking 1 Format Choice")]
 public interface IShareRanking1FormatChoice : IIsoChoice { }

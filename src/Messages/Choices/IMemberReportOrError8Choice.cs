@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reports either on a member or a business error.
 /// </summary>
 [IsoId("_fQIE5dcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Member Report Or Error 8 Choice")]
 public interface IMemberReportOrError8Choice : IIsoChoice { }

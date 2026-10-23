@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cheque19.
 /// </summary>
 [IsoId("_4oDGATEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Cheque19")]
 public interface ICheque19 : IIsoComponent
 {
     /// <summary>
@@ -72,6 +73,7 @@ public interface ICheque19 : IIsoComponent
     /// </summary>
     [DisplayName("Memo Field")]
     [IsoXmlTag("MemoFld")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> MemoField { get; }
 
     /// <summary>
@@ -93,5 +95,6 @@ public interface ICheque19 : IIsoComponent
     /// </summary>
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> Signature { get; }
 }

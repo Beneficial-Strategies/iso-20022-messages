@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionRight2Choice;
 /// Option rights expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_P_xv0ZEjEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOptionRight2Choice, IIsoChoiceVariant
 {
     /// <summary>

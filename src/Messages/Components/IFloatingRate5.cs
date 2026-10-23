@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Floating rate related information.
 /// </summary>
 [IsoId("_GPrWwQ1IEeqV4s5SpzR1dQ")]
+[IsoDisplayName(@"Floating Rate")]
 public interface IFloatingRate5 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IFloatingRate5 : IIsoComponent
     [IsoId("_GQZvhw1IEeqV4s5SpzR1dQ")]
     [DisplayName("Spread")]
     [IsoXmlTag("Sprd")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Spread { get; }
 
     /// <summary>

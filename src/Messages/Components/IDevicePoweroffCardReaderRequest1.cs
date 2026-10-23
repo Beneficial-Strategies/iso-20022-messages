@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Power-Off Card Reader Request message.
 /// </summary>
 [IsoId("_O6T8EN7CEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Device Poweroff Card Reader Request")]
 public interface IDevicePoweroffCardReaderRequest1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDevicePoweroffCardReaderRequest1 : IIsoComponent
     [IsoId("_VOAHsN7CEeiwsev40qZGEQ")]
     [DisplayName("Power Off Maximum Waiting Time")]
     [IsoXmlTag("PwrOffMaxWtgTm")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? PowerOffMaximumWaitingTime { get; }
 
     /// <summary>

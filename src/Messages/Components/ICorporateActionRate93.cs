@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies rate details.
 /// </summary>
 [IsoId("_skuzP83wEee5nJBZsW8MFQ")]
+[IsoDisplayName(@"Corporate Action Rate")]
 public interface ICorporateActionRate93 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ICorporateActionRate93 : IIsoComponent
     [IsoId("_skuzXc3wEee5nJBZsW8MFQ")]
     [DisplayName("Fiscal Stamp")]
     [IsoXmlTag("FsclStmp")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? FiscalStamp { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ICorporateActionRate93 : IIsoComponent
     [IsoId("_skuzX83wEee5nJBZsW8MFQ")]
     [DisplayName("Applicable Rate")]
     [IsoXmlTag("AplblRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ApplicableRate { get; }
 
     /// <summary>
@@ -73,5 +76,6 @@ public interface ICorporateActionRate93 : IIsoComponent
     [IsoId("_skuzY83wEee5nJBZsW8MFQ")]
     [DisplayName("Financial Transaction Tax Rate")]
     [IsoXmlTag("FinTxTaxRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? FinancialTransactionTaxRate { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of a depostory or settlement currency.
 /// </summary>
 [IsoId("_eY4Ls1K0EeOsJr32EK1NAQ")]
+[IsoDisplayName(@"Party Or Currency 1 Choice")]
 public interface IPartyOrCurrency1Choice : IIsoChoice { }

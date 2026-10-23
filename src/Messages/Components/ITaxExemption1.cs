@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax exemption details.
 /// </summary>
 [IsoId("_enNREPsaEemYNq6Sxm5nlg")]
+[IsoDisplayName(@"Tax Exemption1")]
 public interface ITaxExemption1 : IIsoComponent
 {
     /// <summary>

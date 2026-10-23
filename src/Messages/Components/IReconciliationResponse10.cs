@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reconciliation Response10.
 /// </summary>
 [IsoId("_5MMyoaEuEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Reconciliation Response10")]
 public interface IReconciliationResponse10 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IReconciliationResponse10 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

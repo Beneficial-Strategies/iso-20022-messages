@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_P8togckHEem3UrxZgQhVAw")]
 [IsoMessage("camt.104.001.01", "CretMmb", "urn:iso:std:iso:20022:tech:xsd:camt.104.001.01")]
+[Description(@"Scope|The ModifyMember message is sent by a member to the transaction administrator.|It is used to create the profile of a member that the transaction administrator maintains.|Usage|Based on the criteria defined in the CreateLimit message, the transaction administrator will execute or reject the requested creation and respond with a Receipt message as a reply to the request.")]
+[IsoDisplayName(@"Create Member V")]
 public interface ICreateMemberV01 : IOuterRecord
 {
     /// <summary>
@@ -48,5 +50,6 @@ public interface ICreateMemberV01 : IOuterRecord
     [IsoId("_P8toj8kHEem3UrxZgQhVAw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

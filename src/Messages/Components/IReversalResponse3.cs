@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response Data to a Reversal request.
 /// </summary>
 [IsoId("_EOnRMQ04EeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Reversal Response")]
 public interface IReversalResponse3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IReversalResponse3 : IIsoComponent
     [IsoId("_EboZgw04EeqUVL7sB4m7NA")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IReversalResponse3 : IIsoComponent
     [IsoId("_EboZhw04EeqUVL7sB4m7NA")]
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? POIReconciliationIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IReversalResponse3 : IIsoComponent
     [IsoId("_EboZiQ04EeqUVL7sB4m7NA")]
     [DisplayName("Issuer Reference Data")]
     [IsoXmlTag("IssrRefData")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? IssuerReferenceData { get; }
 
     /// <summary>
@@ -73,5 +80,6 @@ public interface IReversalResponse3 : IIsoComponent
     [IsoId("_EboZjw04EeqUVL7sB4m7NA")]
     [DisplayName("Receipt")]
     [IsoXmlTag("Rct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReceipt2> Receipt { get; }
 }

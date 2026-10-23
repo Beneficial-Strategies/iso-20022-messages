@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Point of interaction parameters related to the security of software application and application protocol.
 /// </summary>
 [IsoId("_Jjm7YTZ4EeOP_KvUKe29ng")]
+[IsoDisplayName(@"Security Parameters")]
 public interface ISecurityParameters2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityParameters2 : IIsoComponent
     [IsoId("_J1bEITZ4EeOP_KvUKe29ng")]
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? POIChallenge { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecurityParameters2 : IIsoComponent
     [IsoId("_J1bEIzZ4EeOP_KvUKe29ng")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? TMChallenge { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ISecurityParameters2 : IIsoComponent
     [IsoId("_J1bEJTZ4EeOP_KvUKe29ng")]
     [DisplayName("Symmetric Key")]
     [IsoXmlTag("SmmtrcKey")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICryptographicKey4> SymmetricKey { get; }
 }

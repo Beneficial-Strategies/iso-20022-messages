@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Authorised Amount2.
 /// </summary>
 [IsoId("_P5meAXTsEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Authorised Amount2")]
 public interface IAuthorisedAmount2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial Reconciliation3.
 /// </summary>
 [IsoId("_aqrfIY1PEe6S0_1AaJzQCA")]
+[IsoDisplayName(@"Financial Reconciliation3")]
 public interface IFinancialReconciliation3 : IIsoComponent
 {
     /// <summary>

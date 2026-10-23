@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus65Choice;
 
 /// <summary>Specifies the reason for the rejected status.</summary>
 [IsoId("_V1Ri2aKvEfCHi7w3_0pcpw")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IRejectedStatus65Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

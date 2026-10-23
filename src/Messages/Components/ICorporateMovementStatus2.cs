@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides status of the movement.
 /// </summary>
 [IsoId("_Ri-zttp-Ed-ak6NoX_4Aeg_728771721")]
+[IsoDisplayName(@"Corporate Movement Status")]
 public interface ICorporateMovementStatus2 : IIsoComponent
 {
     /// <summary>

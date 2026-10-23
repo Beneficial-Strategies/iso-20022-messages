@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vote instruction for an agenda or a meeting resolution.
 /// </summary>
 [IsoId("_gL1YYTUDEe2tRf29bleifQ")]
+[IsoDisplayName(@"Vote Details")]
 public interface IVoteDetails6 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to identify the underlying transaction.
 /// </summary>
 [IsoId("_T8KRltp-Ed-ak6NoX_4Aeg_-609394874")]
+[IsoDisplayName(@"Entry Transaction")]
 public interface IEntryTransaction2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IEntryTransaction2 : IIsoComponent
     [IsoId("_T8KRmdp-Ed-ak6NoX_4Aeg_-609394750")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalanceAvailability2> Availability { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IEntryTransaction2 : IIsoComponent
     [IsoId("_T8UCkNp-Ed-ak6NoX_4Aeg_-608473831")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChargesInformation6> Charges { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IEntryTransaction2 : IIsoComponent
     [IsoId("_T8UCkdp-Ed-ak6NoX_4Aeg_-609394356")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionInterest2> Interest { get; }
 
     /// <summary>
@@ -89,6 +93,9 @@ public interface IEntryTransaction2 : IIsoComponent
     [IsoId("_T8UCldp-Ed-ak6NoX_4Aeg_-608473254")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation2> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -121,6 +128,7 @@ public interface IEntryTransaction2 : IIsoComponent
     [IsoId("_T8UCmdp-Ed-ak6NoX_4Aeg_-609394295")]
     [DisplayName("Related Quantities")]
     [IsoXmlTag("RltdQties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionQuantities1Choice> RelatedQuantities { get; }
 
     /// <summary>
@@ -169,5 +177,7 @@ public interface IEntryTransaction2 : IIsoComponent
     [IsoId("_T8dMhdp-Ed-ak6NoX_4Aeg_-609394843")]
     [DisplayName("Additional Transaction Information")]
     [IsoXmlTag("AddtlTxInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalTransactionInformation { get; }
 }

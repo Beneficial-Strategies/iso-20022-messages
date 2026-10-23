@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for TEFRA rules.
 /// </summary>
 [IsoId("_ighyQeLcEeWFtOV72FbX9w")]
+[IsoDisplayName(@"TEFRA Rules 3 Choice")]
 public interface ITEFRARules3Choice : IIsoChoice { }

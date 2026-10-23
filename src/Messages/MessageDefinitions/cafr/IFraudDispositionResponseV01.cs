@@ -13,6 +13,8 @@ namespace BeneficialStrategies.Iso20022.cafr;
 /// </summary>
 [IsoId("_u1LEsXdnEeeKH6vrEwvLHA")]
 [IsoMessage("cafr.004.001.01", "FrdDspstnRspn", "urn:iso:std:iso:20022:tech:xsd:cafr.004.001.01")]
+[Description(@"A FraudDispositionResponse message is sent by an issuer or acquirer to an agent (processor, agent) in response to a FraudDispositionInitiation message.||")]
+[IsoDisplayName(@"Fraud Disposition Response V")]
 public interface IFraudDispositionResponseV01 : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies whether the transaction is on hold/blocked/frozen.
 /// </summary>
 [IsoId("_6GWV5ZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Hold Indicator")]
 public interface IHoldIndicator7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IHoldIndicator7 : IIsoComponent
     [IsoId("_6GWV55NLEeWGlc8L7oPDIg")]
     [DisplayName("Indicator")]
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Indicator { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IHoldIndicator7 : IIsoComponent
     [IsoId("_6GWV6ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegistrationReason6> Reason { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Account Identification71Choice.
 /// </summary>
 [IsoId("_5eB8i4-9Ee-COKgew96POA")]
+[IsoDisplayName(@"Account Identification71Choice")]
 public interface IAccountIdentification71Choice : IIsoChoice { }

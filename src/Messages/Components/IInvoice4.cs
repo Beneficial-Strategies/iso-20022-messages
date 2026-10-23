@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Invoice data pertaining to the payment transaction.
 /// </summary>
 [IsoId("_gJO2MUhrEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Invoice4")]
 public interface IInvoice4 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IInvoice4 : IIsoComponent
     [IsoId("_w_GDQUhvEfCMZJtj4J7UGQ")]
     [DisplayName("Seller Local Data")]
     [IsoXmlTag("SellrLclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData20> SellerLocalData { get; }
 
     /// <summary>
@@ -153,6 +155,7 @@ public interface IInvoice4 : IIsoComponent
     [IsoId("_XUZKN0hwEfCMZJtj4J7UGQ")]
     [DisplayName("Buyer Local Data")]
     [IsoXmlTag("BuyrLclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData20> BuyerLocalData { get; }
 
     /// <summary>
@@ -201,6 +204,7 @@ public interface IInvoice4 : IIsoComponent
     [IsoId("_gL_2ZUhrEfCMZJtj4J7UGQ")]
     [DisplayName("Tax Total")]
     [IsoXmlTag("TaxTtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> TaxTotal { get; }
 
     /// <summary>
@@ -217,6 +221,7 @@ public interface IInvoice4 : IIsoComponent
     [IsoId("_kjcXskhrEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -225,6 +230,7 @@ public interface IInvoice4 : IIsoComponent
     [IsoId("_kjcXs0hrEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>
@@ -233,5 +239,6 @@ public interface IInvoice4 : IIsoComponent
     [IsoId("_gL_2a0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvoiceLineItem4> LineItem { get; }
 }

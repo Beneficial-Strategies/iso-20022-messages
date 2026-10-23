@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgRefDataDltaRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.036.001.03"
 )]
+[Description(@"The FinancialInstrumentReportingReferenceDataDeltaReport message is sent by the trading venues to the national competent authority to report on changes that have occurred in the base data between reference data file generation.")]
+[IsoDisplayName(@"Financial Instrument Reporting Reference Data Delta Report V")]
 public interface IFinancialInstrumentReportingReferenceDataDeltaReportV03 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IFinancialInstrumentReportingReferenceDataDeltaReportV03 : IOut
     [IsoId("_dA7JBaWuEeqZmriXpMtonA")]
     [DisplayName("Financial Instrument")]
     [IsoXmlTag("FinInstrm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesReferenceDeltaStatusReport5Choice> FinancialInstrument { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IFinancialInstrumentReportingReferenceDataDeltaReportV03 : IOut
     [IsoId("_dA7JB6WuEeqZmriXpMtonA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

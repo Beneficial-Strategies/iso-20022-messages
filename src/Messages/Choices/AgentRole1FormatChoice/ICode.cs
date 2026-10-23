@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgentRole1FormatChoice;
 /// Standard code to specify the role of the agent.
 /// </summary>
 [IsoId("_RlgjSNp-Ed-ak6NoX_4Aeg_349250144")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAgentRole1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Creation/cancellation of investment units on the books of the fund or its designated agent, as a result of executing an investment fund order.
 /// </summary>
 [IsoId("_VGOQ-tp-Ed-ak6NoX_4Aeg_-1833771297")]
+[IsoDisplayName(@"Investment Fund Transaction")]
 public interface IInvestmentFundTransaction2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface IInvestmentFundTransaction2 : IIsoComponent
     [IsoId("_VGOQ_tp-Ed-ak6NoX_4Aeg_-690455126")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IInvestmentFundTransaction2 : IIsoComponent
     [IsoId("_VGOQ_9p-Ed-ak6NoX_4Aeg_-690455056")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OrderReference { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface IInvestmentFundTransaction2 : IIsoComponent
     [IsoId("_VGXa4Np-Ed-ak6NoX_4Aeg_-690454779")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DealReference { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface IInvestmentFundTransaction2 : IIsoComponent
     [IsoId("_VGXa4dp-Ed-ak6NoX_4Aeg_1094293937")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -73,6 +82,8 @@ public interface IInvestmentFundTransaction2 : IIsoComponent
     [IsoId("_VGXa4tp-Ed-ak6NoX_4Aeg_-1320347699")]
     [DisplayName("Leg Execution Identification")]
     [IsoXmlTag("LegExctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegExecutionIdentification { get; }
 
     /// <summary>
@@ -81,6 +92,7 @@ public interface IInvestmentFundTransaction2 : IIsoComponent
     [IsoId("_VGXa49p-Ed-ak6NoX_4Aeg_1044421350")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -89,6 +101,7 @@ public interface IInvestmentFundTransaction2 : IIsoComponent
     [IsoId("_VGXa5Np-Ed-ak6NoX_4Aeg_1044421410")]
     [DisplayName("Settled Transaction Indicator")]
     [IsoXmlTag("SttldTxInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SettledTransactionIndicator { get; }
 
     /// <summary>
@@ -97,6 +110,7 @@ public interface IInvestmentFundTransaction2 : IIsoComponent
     [IsoId("_VGXa5dp-Ed-ak6NoX_4Aeg_25813824")]
     [DisplayName("Registered Transaction Indicator")]
     [IsoXmlTag("RegdTxInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator RegisteredTransactionIndicator { get; }
 
     /// <summary>
@@ -137,6 +151,7 @@ public interface IInvestmentFundTransaction2 : IIsoComponent
     [IsoId("_VGhL4Np-Ed-ak6NoX_4Aeg_1272027468")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SettlementDate { get; }
 
     /// <summary>
@@ -153,6 +168,7 @@ public interface IInvestmentFundTransaction2 : IIsoComponent
     [IsoId("_VGhL4tp-Ed-ak6NoX_4Aeg_1272027853")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -161,6 +177,7 @@ public interface IInvestmentFundTransaction2 : IIsoComponent
     [IsoId("_VGhL49p-Ed-ak6NoX_4Aeg_1272027948")]
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PartiallyExecutedIndicator { get; }
 
     /// <summary>

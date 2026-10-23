@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies whether the transaction is open term, that is. has no fixed maturity date, or fixed term with a contractually agreed maturity date.
 /// </summary>
 [IsoId("_tFmdMa9_EemF0ZVFnxVu4g")]
+[IsoDisplayName(@"Contract Term 3 Choice")]
 public interface IContractTerm3Choice : IIsoChoice { }

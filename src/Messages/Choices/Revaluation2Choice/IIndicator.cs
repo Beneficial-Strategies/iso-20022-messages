@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Revaluation2Choice;
 /// Specifies whether the collateral position should be subject to automatic revaluation by the account servicer.
 /// </summary>
 [IsoId("_AYz-EdokEeC60axPepSq7g_1187469435")]
+[IsoDisplayName(@"Indicator")]
 public interface IIndicator : IRevaluation2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIndicator : IRevaluation2Choice, IIsoChoiceVariant
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

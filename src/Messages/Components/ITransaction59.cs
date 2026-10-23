@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the payment transaction.
 /// </summary>
 [IsoId("_NRCCd5lPEee-Zps0fZQaFQ")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction59 : IIsoComponent
 {
     /// <summary>

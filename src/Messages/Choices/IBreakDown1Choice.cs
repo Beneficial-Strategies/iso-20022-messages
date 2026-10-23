@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies if breakdown is by purchase order or commercial invoice.
 /// </summary>
 [IsoId("_tbfaMBrYEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Break Down 1 Choice")]
 public interface IBreakDown1Choice : IIsoChoice { }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CryptographicKey1Choice;
 /// <summary>
 /// ILPV4.
 /// </summary>
+[IsoDisplayName(@"ILPV4")]
 public interface IILPV4 : ICryptographicKey1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains text fields in the local language.
 /// </summary>
 [IsoId("_bTHMccrfEeuQjLd-KKZrCg")]
+[IsoDisplayName(@"Local Data")]
 public interface ILocalData7 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface ILocalData7 : IIsoComponent
     [IsoId("_bY9818rfEeuQjLd-KKZrCg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

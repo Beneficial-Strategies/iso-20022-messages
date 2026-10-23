@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Settlement reporting initiation message record.
 /// </summary>
 [IsoId("__WOCMFZXEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Settlement Reporting Initiation")]
 public interface ISettlementReportingInitiation : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ISettlementReportingInitiation : IRecordMessage1Choice, IIsoCho
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("SttlmRptgInitn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

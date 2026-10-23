@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Key elements used to identify the original transaction(s) that is being referred to.
 /// </summary>
 [IsoId("_Fpe6gXeKEfCdoODv2ypKfw")]
+[IsoDisplayName(@"Tracker Payment Transaction15")]
 public interface ITrackerPaymentTransaction15 : IIsoComponent
 {
     /// <summary>
@@ -249,6 +250,7 @@ public interface ITrackerPaymentTransaction15 : IIsoComponent
     [IsoId("_Fx_WQXeKEfCdoODv2ypKfw")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges7> ChargesInformation { get; }
 
     /// <summary>
@@ -257,6 +259,7 @@ public interface ITrackerPaymentTransaction15 : IIsoComponent
     [IsoId("_Fx_WQ3eKEfCdoODv2ypKfw")]
     [DisplayName("Tracker Record")]
     [IsoXmlTag("TrckrRcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITrackerRecord8> TrackerRecord { get; }
 
     /// <summary>
@@ -465,6 +468,7 @@ public interface ITrackerPaymentTransaction15 : IIsoComponent
     [IsoId("_Fx_Wd3eKEfCdoODv2ypKfw")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent3> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -473,6 +477,7 @@ public interface ITrackerPaymentTransaction15 : IIsoComponent
     [IsoId("_Fx_WeXeKEfCdoODv2ypKfw")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>
@@ -489,6 +494,7 @@ public interface ITrackerPaymentTransaction15 : IIsoComponent
     [IsoId("_Fx_WfXeKEfCdoODv2ypKfw")]
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting10> RegulatoryReporting { get; }
 
     /// <summary>
@@ -505,6 +511,7 @@ public interface ITrackerPaymentTransaction15 : IIsoComponent
     [IsoId("_Fx_WgXeKEfCdoODv2ypKfw")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation7> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -521,6 +528,7 @@ public interface ITrackerPaymentTransaction15 : IIsoComponent
     [IsoId("_Fx_WhXeKEfCdoODv2ypKfw")]
     [DisplayName("Reject Return Reason")]
     [IsoXmlTag("RjctRtrRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentRejectReturnReason1> RejectReturnReason { get; }
 
     /// <summary>

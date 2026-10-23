@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security CSD Link9.
 /// </summary>
 [IsoId("_yhSS0Wc-EemvNLufWGIVOQ")]
+[IsoDisplayName(@"Security CSD Link9")]
 public interface ISecurityCSDLink9 : IIsoComponent
 {
     /// <summary>

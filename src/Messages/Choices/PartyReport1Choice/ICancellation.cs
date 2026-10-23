@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyReport1Choice;
 /// </summary>
 [IsoId("_HizTYDbuEeeYhaZ6bvG1Xg")]
 [IsoXmlTag("Cxl")]
+[IsoDisplayName(@"Cancellation")]
 public interface ICancellation : IPartyReport1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICancellation : IPartyReport1Choice, IIsoChoiceVariant
     [IsoId("_Ng-FgTbvEeeYhaZ6bvG1Xg")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface ICancellation : IPartyReport1Choice, IIsoChoiceVariant
     [IsoId("_zOVpwTbvEeeYhaZ6bvG1Xg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

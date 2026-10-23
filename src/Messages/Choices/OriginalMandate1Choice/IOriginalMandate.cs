@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate1Choice;
 /// </summary>
 [IsoId("_RD1Zldp-Ed-ak6NoX_4Aeg_1242303145")]
 [IsoXmlTag("OrgnlMndt")]
+[IsoDisplayName(@"Original Mandate")]
 public interface IOriginalMandate : IOriginalMandate1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOriginalMandate : IOriginalMandate1Choice, IIsoChoiceVariant
     [IsoId("_T2pfcNp-Ed-ak6NoX_4Aeg_1069638079")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MandateIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IOriginalMandate : IOriginalMandate1Choice, IIsoChoiceVariant
     [IsoId("_T2pfcdp-Ed-ak6NoX_4Aeg_-1048171244")]
     [DisplayName("Mandate Request Identification")]
     [IsoXmlTag("MndtReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateRequestIdentification { get; }
 
     /// <summary>

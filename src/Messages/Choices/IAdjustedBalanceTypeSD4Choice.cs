@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of balance types to provide transaction details.
 /// </summary>
 [IsoId("_RWpyEcSTEeeRJJtE9TSlkw")]
+[IsoDisplayName(@"Adjusted Balance Type SD 4 Choice")]
 public interface IAdjustedBalanceTypeSD4Choice : IIsoChoice { }

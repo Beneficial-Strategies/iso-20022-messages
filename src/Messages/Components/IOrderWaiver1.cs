@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about how an order is to be processed.
 /// </summary>
 [IsoId("_-312EToQEeabspMEjqY5TQ")]
+[IsoDisplayName(@"Order Waiver")]
 public interface IOrderWaiver1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IOrderWaiver1 : IIsoComponent
     [IsoId("__Q1k4ToQEeabspMEjqY5TQ")]
     [DisplayName("Order Waiver Reason")]
     [IsoXmlTag("OrdrWvrRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrderWaiverReason3Choice> OrderWaiverReason { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface IOrderWaiver1 : IIsoComponent
     [IsoId("__Q1k4zoQEeabspMEjqY5TQ")]
     [DisplayName("Information Value")]
     [IsoXmlTag("InfVal")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? InformationValue { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Loyalty programme used for partial payment in loyalty value (debit) and computation of loyalty value gained on the monetary value paid by the customer (credit).
 /// </summary>
 [IsoId("_kSpocF--Eee_oqB7UglxLw")]
+[IsoDisplayName(@"Loyalty Programme")]
 public interface ILoyaltyProgramme1 : IIsoComponent
 {
     /// <summary>
@@ -20,6 +21,7 @@ public interface ILoyaltyProgramme1 : IIsoComponent
     [IsoId("_VQTYsF_AEee_oqB7UglxLw")]
     [DisplayName("Programme Eligibility Indicator")]
     [IsoXmlTag("PrgrmmElgbltyInd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TrueFalseIndicator> ProgrammeEligibilityIndicator { get; }
 
     /// <summary>
@@ -28,6 +30,8 @@ public interface ILoyaltyProgramme1 : IIsoComponent
     [IsoId("_czqccF_AEee_oqB7UglxLw")]
     [DisplayName("Programme Issuer")]
     [IsoXmlTag("PrgrmmIssr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProgrammeIssuer { get; }
 
     /// <summary>

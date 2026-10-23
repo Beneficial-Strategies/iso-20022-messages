@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the party fields used to search for a payment.
 /// </summary>
 [IsoId("_72PJEKMgEeCJ6YNENx4h-w_-1323572611")]
+[IsoDisplayName(@"Payment Transaction Party")]
 public interface IPaymentTransactionParty2 : IIsoComponent
 {
     /// <summary>

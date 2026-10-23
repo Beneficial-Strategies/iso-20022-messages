@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vehicle6.
 /// </summary>
 [IsoId("_mc1NwXNUEe6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Vehicle6")]
 public interface IVehicle6 : IIsoComponent
 {
     /// <summary>
@@ -107,5 +108,6 @@ public interface IVehicle6 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVehicle2> AdditionalData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficiaryType1Choice;
 /// Type of beneficiary expressed as a code.
 /// </summary>
 [IsoId("_3a4XoFNgEeijdq8ilaxyOA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBeneficiaryType1Choice, IIsoChoiceVariant
 {
     /// <summary>

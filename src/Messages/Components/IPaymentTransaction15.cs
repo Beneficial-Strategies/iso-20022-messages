@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment processes required to transfer cash from the debtor to the creditor.
 /// </summary>
 [IsoId("_VYshBdp-Ed-ak6NoX_4Aeg_-1954007689")]
+[IsoDisplayName(@"Payment Transaction")]
 public interface IPaymentTransaction15 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPaymentTransaction15 : IIsoComponent
     [IsoId("_VYshB9p-Ed-ak6NoX_4Aeg_-1953083729")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SettlementDate { get; }
 
     /// <summary>

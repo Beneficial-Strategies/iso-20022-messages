@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the original transaction number.
 /// </summary>
 [IsoId("_0AWOcGHcEeGrBqfAqyy96Q")]
+[IsoDisplayName(@"Request Type")]
 public interface IRequestType1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRequestType1 : IIsoComponent
     [IsoId("_py93vGHgEeGrBqfAqyy96Q")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Number { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IRequestType1 : IIsoComponent
     [IsoId("_wc1usWHgEeGrBqfAqyy96Q")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TransactionRequestType1Code> Type { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IRequestType1 : IIsoComponent
     [IsoId("_yowzsWHgEeGrBqfAqyy96Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalInformation { get; }
 }

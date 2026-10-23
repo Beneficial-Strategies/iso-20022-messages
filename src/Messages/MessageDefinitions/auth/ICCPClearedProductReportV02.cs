@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_RB9_YUThEe-J4uL5kPsWHg")]
 [IsoMessage("auth.069.001.02", "CCPClrdPdctRpt", "urn:iso:std:iso:20022:tech:xsd:auth.069.001.02")]
+[IsoDisplayName(@"CCP Cleared Product Report V02")]
 public interface ICCPClearedProductReportV02 : IOuterRecord
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICCPClearedProductReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Cleared Product")]
     [IsoXmlTag("ClrdPdct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IClearedProduct2> ClearedProduct { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICCPClearedProductReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide reference and status information on the original transactions, included in the original instruction, to which the reversal message applies.
 /// </summary>
 [IsoId("_P2DX2dp-Ed-ak6NoX_4Aeg_890765236")]
+[IsoDisplayName(@"Payment Transaction Information")]
 public interface IPaymentTransactionInformation28 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentTransactionInformation28 : IIsoComponent
     [IsoId("_P2DX2tp-Ed-ak6NoX_4Aeg_890765267")]
     [DisplayName("Reversal Identification")]
     [IsoXmlTag("RvslId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReversalIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPaymentTransactionInformation28 : IIsoComponent
     [IsoId("_P2DX29p-Ed-ak6NoX_4Aeg_890765328")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPaymentTransactionInformation28 : IIsoComponent
     [IsoId("_P2DX3Np-Ed-ak6NoX_4Aeg_890765351")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IPaymentTransactionInformation28 : IIsoComponent
     [IsoId("_P2Mhw9p-Ed-ak6NoX_4Aeg_890765705")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReversalReasonInformation6> ReversalReasonInformation { get; }
 
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// </summary>
 [IsoId("_6WMzoZ_yEfC4Q_xhaK1hdQ")]
 [IsoMessage("catm.001.001.15", "StsRpt", "urn:iso:std:iso:20022:tech:xsd:catm.001.001.15")]
+[IsoDisplayName(@"Status Report V15")]
 public interface IStatusReportV15 : IOuterRecord
 {
     /// <summary>

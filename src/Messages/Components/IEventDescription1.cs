@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes an event not covered by other formal messages, for example a trace after a telephone call.
 /// </summary>
 [IsoId("_OTgzMjAx-AOSNFX-8224490")]
+[IsoDisplayName(@"Event Description")]
 public interface IEventDescription1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IEventDescription1 : IIsoComponent
     [IsoId("_OTgzMjU5-AOSNFX-8224494")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identifier { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IEventDescription1 : IIsoComponent
     [IsoId("_OTgzMjYw-AOSNFX-8224494")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? Date { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IEventDescription1 : IIsoComponent
     [IsoId("_OTgzMjYz-AOSNFX-8224495")]
     [DisplayName("Other Party")]
     [IsoXmlTag("OthrPty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedPartyIdentification1> OtherParty { get; }
 
     /// <summary>
@@ -65,6 +70,8 @@ public interface IEventDescription1 : IIsoComponent
     [IsoId("_OTgzMjY1-AOSNFX-8224495")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [StringLength(2000, MinimumLength = 1)]
     Max2000Text Description { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IEventDescription1 : IIsoComponent
     [IsoId("_OTgzMjY2-AOSNFX-8224495")]
     [DisplayName("Related Document")]
     [IsoXmlTag("RltdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> RelatedDocument { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IEventDescription1 : IIsoComponent
     [IsoId("_OTgzMjY3-AOSNFX-8224495")]
     [DisplayName("Related Letter")]
     [IsoXmlTag("RltdLttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> RelatedLetter { get; }
 
     /// <summary>
@@ -89,6 +98,7 @@ public interface IEventDescription1 : IIsoComponent
     [IsoId("_OTgzMjY4-AOSNFX-8224495")]
     [DisplayName("Related Message")]
     [IsoXmlTag("RltdMsg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> RelatedMessage { get; }
 
     /// <summary>
@@ -97,6 +107,7 @@ public interface IEventDescription1 : IIsoComponent
     [IsoId("_OTgzMjY5-AOSNFX-8224495")]
     [DisplayName("Associated Document")]
     [IsoXmlTag("AssoctdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> AssociatedDocument { get; }
 
     /// <summary>
@@ -105,6 +116,7 @@ public interface IEventDescription1 : IIsoComponent
     [IsoId("_OTgzMjcw-AOSNFX-8224495")]
     [DisplayName("Governing Contract")]
     [IsoXmlTag("GovngCtrct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> GoverningContract { get; }
 
     /// <summary>

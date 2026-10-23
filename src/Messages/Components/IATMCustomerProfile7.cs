@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Customer Profile7.
 /// </summary>
 [IsoId("_QhXrcee-Ee-AuZFZ3aE3Cg")]
+[IsoDisplayName(@"ATM Customer Profile7")]
 public interface IATMCustomerProfile7 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IATMCustomerProfile7 : IIsoComponent
     /// </summary>
     [DisplayName("Allowed Services")]
     [IsoXmlTag("AllwdSvcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMService28> AllowedServices { get; }
 }

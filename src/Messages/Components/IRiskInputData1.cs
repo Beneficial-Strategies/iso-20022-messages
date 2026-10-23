@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional data to be considered for risk assessment.
 /// </summary>
 [IsoId("_89Mi8EbNEeeIjf8aP9KbJA")]
+[IsoDisplayName(@"Risk Input Data")]
 public interface IRiskInputData1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IRiskInputData1 : IIsoComponent
     [IsoId("_Soz60EbOEeeIjf8aP9KbJA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IRiskInputData1 : IIsoComponent
     [IsoId("_ZjTnwEbOEeeIjf8aP9KbJA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max10KText)]
+    [StringLength(10000, MinimumLength = 1)]
     Max10KText Value { get; }
 }

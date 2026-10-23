@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// </summary>
 [IsoId("_iIi6wXPPEe2pK6udhxEaHA")]
 [IsoMessage("catm.001.001.12", "StsRpt", "urn:iso:std:iso:20022:tech:xsd:catm.001.001.12")]
+[Description(@"The StatusReport message is sent by a POI to inform the master terminal manager (MTM) or the terminal manager (TM) about the status of the acceptor system including the identification of the POI, its components and their installed versions.")]
+[IsoDisplayName(@"Status Report V")]
 public interface IStatusReportV12 : IOuterRecord
 {
     /// <summary>

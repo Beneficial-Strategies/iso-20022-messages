@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Rejected Status60Choice.
 /// </summary>
 [IsoId("_UqcwLXSdEe6VWZz2tTgENw")]
+[IsoDisplayName(@"Rejected Status60Choice")]
 public interface IRejectedStatus60Choice : IIsoChoice { }

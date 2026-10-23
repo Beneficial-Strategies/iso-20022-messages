@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusReason7Choice;
 
 /// <summary>Status reason expressed as a proprietary code.</summary>
 [IsoId("_nLSClakxEeynsLtPxJMJTQ")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IStatusReason7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Resolutions at the agenda of a meeting and type of resolution.
 /// </summary>
 [IsoId("_3vPakRuLEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Resolution")]
 public interface IResolution6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IResolution6 : IIsoComponent
     [IsoId("_4FvPAxuLEeyhRdHRjakS2w")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IResolution6 : IIsoComponent
     [IsoId("_4FvPBRuLEeyhRdHRjakS2w")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IItemDescription1> Description { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IResolution6 : IIsoComponent
     [IsoId("_4FvPBxuLEeyhRdHRjakS2w")]
     [DisplayName("Listing Group Resolution Label")]
     [IsoXmlTag("ListgGrpRsltnLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ListingGroupResolutionLabel { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IResolution6 : IIsoComponent
     [IsoId("_4FvPCxuLEeyhRdHRjakS2w")]
     [DisplayName("For Information Only")]
     [IsoXmlTag("ForInfOnly")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ForInformationOnly { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IResolution6 : IIsoComponent
     [IsoId("_4FvPERuLEeyhRdHRjakS2w")]
     [DisplayName("Submitted By Security Holder")]
     [IsoXmlTag("SubmittdBySctyHldr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SubmittedBySecurityHolder { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IResolution6 : IIsoComponent
     [IsoId("_4FvPExuLEeyhRdHRjakS2w")]
     [DisplayName("Right To Withdraw Indicator")]
     [IsoXmlTag("RghtToWdrwInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RightToWithdrawIndicator { get; }
 
     /// <summary>
@@ -89,6 +98,7 @@ public interface IResolution6 : IIsoComponent
     [IsoId("_4FvPFRuLEeyhRdHRjakS2w")]
     [DisplayName("Vote Instruction Type")]
     [IsoXmlTag("VoteInstrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVoteInstructionType1> VoteInstructionType { get; }
 
     /// <summary>
@@ -121,6 +131,7 @@ public interface IResolution6 : IIsoComponent
     [IsoId("_4FvPHRuLEeyhRdHRjakS2w")]
     [DisplayName("Voting Rights Threshold For Approval")]
     [IsoXmlTag("VtngRghtsThrshldForApprvl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVotingRightsThreshold1> VotingRightsThresholdForApproval { get; }
 
     /// <summary>
@@ -129,5 +140,7 @@ public interface IResolution6 : IIsoComponent
     [IsoId("_4FvPHxuLEeyhRdHRjakS2w")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? URLAddress { get; }
 }

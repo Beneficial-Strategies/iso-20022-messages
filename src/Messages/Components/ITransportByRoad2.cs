@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the transportation of goods by road.
 /// </summary>
 [IsoId("_SuOe2dp-Ed-ak6NoX_4Aeg_-77444670")]
+[IsoDisplayName(@"Transport By Road")]
 public interface ITransportByRoad2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransportByRoad2 : IIsoComponent
     [IsoId("_SuOe2tp-Ed-ak6NoX_4Aeg_-1400067178")]
     [DisplayName("Place Of Receipt")]
     [IsoXmlTag("PlcOfRct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PlaceOfReceipt { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransportByRoad2 : IIsoComponent
     [IsoId("_SuOe29p-Ed-ak6NoX_4Aeg_-1400067238")]
     [DisplayName("Place Of Delivery")]
     [IsoXmlTag("PlcOfDlvry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PlaceOfDelivery { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface ITransportByRoad2 : IIsoComponent
     [IsoId("_SuOe3Np-Ed-ak6NoX_4Aeg_994762252")]
     [DisplayName("Road Carrier Name")]
     [IsoXmlTag("RoadCrrierNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RoadCarrierName { get; }
 }

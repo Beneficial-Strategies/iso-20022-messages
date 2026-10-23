@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies whether the values defined as part of the Margin Loan Attribute are matching or not.
 /// </summary>
 [IsoId("_ufZIwM3MEeuiU4QSC_BouQ")]
+[IsoDisplayName(@"Compare Interest Rate")]
 public interface ICompareInterestRate1 : IIsoComponent
 {
     /// <summary>

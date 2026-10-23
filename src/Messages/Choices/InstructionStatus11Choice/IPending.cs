@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus11Choice;
 /// Status advising that the instruction is pending and advising on the reason for the pending status.
 /// </summary>
 [IsoId("_htjMpxrpEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Pending")]
 public interface IPending : IInstructionStatus11Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

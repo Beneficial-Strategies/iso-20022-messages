@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCriteria8Choice;
 /// <summary>
 /// Query Name.
 /// </summary>
+[IsoDisplayName(@"Query Name")]
 public interface IQueryName : ITransactionCriteria8Choice, IIsoChoiceVariant
 {
     /// <summary>

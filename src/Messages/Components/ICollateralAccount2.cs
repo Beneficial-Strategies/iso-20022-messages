@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information on the collateral account of the party delivering/receiving the collateral.
 /// </summary>
 [IsoId("_Ymh6kYFxEeWtPe6Crjmeug")]
+[IsoDisplayName(@"Collateral Account")]
 public interface ICollateralAccount2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICollateralAccount2 : IIsoComponent
     [IsoId("_Y-LlkYFxEeWtPe6Crjmeug")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface ICollateralAccount2 : IIsoComponent
     [IsoId("_Y-LllYFxEeWtPe6Crjmeug")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 }

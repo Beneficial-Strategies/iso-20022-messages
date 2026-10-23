@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Expiry and extension information.
 /// </summary>
 [IsoId("_95ylYnltEeG7BsjMvd1mEw_522259600")]
+[IsoDisplayName(@"Expiry Details")]
 public interface IExpiryDetails1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,9 @@ public interface IExpiryDetails1 : IIsoComponent
     [IsoId("_95ylZHltEeG7BsjMvd1mEw_807326338")]
     [DisplayName("Additional Expiry Information")]
     [IsoXmlTag("AddtlXpryInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalExpiryInformation { get; }
 }

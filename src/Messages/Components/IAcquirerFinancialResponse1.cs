@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the response of a financial authorisation.
 /// </summary>
 [IsoId("_eBZDMHumEeSBS-QFUaKA-g")]
+[IsoDisplayName(@"Acquirer Financial Response")]
 public interface IAcquirerFinancialResponse1 : IIsoComponent
 {
     /// <summary>

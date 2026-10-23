@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Percentage of ownership or of beneficial ownership of the shares/units in the account.
 /// </summary>
 [IsoId("_5pdeAEzaEea8fovz_9xSTQ")]
+[IsoDisplayName(@"Ownership Beneficiary Rate")]
 public interface IOwnershipBeneficiaryRate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IOwnershipBeneficiaryRate1 : IIsoComponent
     [IsoId("_Inb5MEzbEea8fovz_9xSTQ")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface IOwnershipBeneficiaryRate1 : IIsoComponent
     [IsoId("_LmBxQEzbEea8fovz_9xSTQ")]
     [DisplayName("Fraction")]
     [IsoXmlTag("Frctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Fraction { get; }
 }

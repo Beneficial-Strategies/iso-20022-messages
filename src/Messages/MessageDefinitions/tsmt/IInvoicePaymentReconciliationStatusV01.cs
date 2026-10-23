@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "InvcPmtRcncltnSts",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.054.001.01"
 )]
+[Description(@"The message InvoicePaymentReconciliationStatus is sent from a payee to a payer to acknowledge attribution of payments.|A payee that has received payment reconciliation information uses this message to confirm or to question common understanding of payments and instalments.|The payee may include references to the corresponding items of an InvoicePaymentReconciliationAdvice message or to other messages and may include the referenced data.|The message can carry digital signatures if required by context.")]
+[IsoDisplayName(@"Invoice Payment Reconciliation Status V")]
 public interface IInvoicePaymentReconciliationStatusV01 : IOuterRecord
 {
     /// <summary>
@@ -35,6 +37,7 @@ public interface IInvoicePaymentReconciliationStatusV01 : IOuterRecord
     [IsoId("_OTgzNTA3-AOSNFX-822450")]
     [DisplayName("Reconciliation List")]
     [IsoXmlTag("RcncltnList")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReconciliationList1> ReconciliationList { get; }
 
     /// <summary>
@@ -43,6 +46,7 @@ public interface IInvoicePaymentReconciliationStatusV01 : IOuterRecord
     [IsoId("_OTgzNTA4-AOSNFX-8224507")]
     [DisplayName("Reconciliation Count")]
     [IsoXmlTag("RcncltnCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? ReconciliationCount { get; }
 
     /// <summary>
@@ -51,6 +55,7 @@ public interface IInvoicePaymentReconciliationStatusV01 : IOuterRecord
     [IsoId("_OTgzNTA5-AOSNFX-8224507")]
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? ItemCount { get; }
 
     /// <summary>
@@ -59,6 +64,7 @@ public interface IInvoicePaymentReconciliationStatusV01 : IOuterRecord
     [IsoId("_OTgzNTEw-AOSNFX-8224507")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -67,5 +73,6 @@ public interface IInvoicePaymentReconciliationStatusV01 : IOuterRecord
     [IsoId("_OTgzNTEx-AOSNFX-8224507")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncapsulatedBusinessMessage1> AttachedMessage { get; }
 }

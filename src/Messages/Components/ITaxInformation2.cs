@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details about tax paid, or to be paid, to the government in accordance with the law, including pre-defined parameters such as thresholds and type of account.
 /// </summary>
 [IsoId("_RvflsNp-Ed-ak6NoX_4Aeg_-311641782")]
+[IsoDisplayName(@"Tax Information")]
 public interface ITaxInformation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITaxInformation2 : IIsoComponent
     [IsoId("_Rvflsdp-Ed-ak6NoX_4Aeg_-297789542")]
     [DisplayName("Creditor Tax Identification")]
     [IsoXmlTag("CdtrTaxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CreditorTaxIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITaxInformation2 : IIsoComponent
     [IsoId("_Rvflstp-Ed-ak6NoX_4Aeg_-299636535")]
     [DisplayName("Creditor Tax Type")]
     [IsoXmlTag("CdtrTaxTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CreditorTaxType { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITaxInformation2 : IIsoComponent
     [IsoId("_Rvfls9p-Ed-ak6NoX_4Aeg_-298710996")]
     [DisplayName("Debtor Tax Identification")]
     [IsoXmlTag("DbtrTaxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DebtorTaxIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITaxInformation2 : IIsoComponent
     [IsoId("_RvfltNp-Ed-ak6NoX_4Aeg_-299634098")]
     [DisplayName("Tax Reference Number")]
     [IsoXmlTag("TaxRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TaxReferenceNumber { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface ITaxInformation2 : IIsoComponent
     [IsoId("_Rvflt9p-Ed-ak6NoX_4Aeg_-1970878326")]
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TaxDate { get; }
 
     /// <summary>
@@ -73,5 +83,6 @@ public interface ITaxInformation2 : IIsoComponent
     [IsoId("_RvfluNp-Ed-ak6NoX_4Aeg_-296863056")]
     [DisplayName("Tax Type Information")]
     [IsoXmlTag("TaxTpInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxDetails> TaxTypeInformation { get; }
 }

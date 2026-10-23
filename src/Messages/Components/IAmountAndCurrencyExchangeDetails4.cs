@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the original amount and currency exchange.
 /// </summary>
 [IsoId("_SWFrptp-Ed-ak6NoX_4Aeg_-2139849046")]
+[IsoDisplayName(@"Amount And Currency Exchange Details")]
 public interface IAmountAndCurrencyExchangeDetails4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAmountAndCurrencyExchangeDetails4 : IIsoComponent
     [IsoId("_SWFrp9p-Ed-ak6NoX_4Aeg_-2139848798")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>

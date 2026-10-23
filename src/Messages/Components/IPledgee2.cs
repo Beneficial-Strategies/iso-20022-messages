@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the entity to which the financial instruments are pledged.
 /// </summary>
 [IsoId("_x2r90Zj3EeWn2ur3BXxtdg")]
+[IsoDisplayName(@"Pledgee")]
 public interface IPledgee2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPledgee2 : IIsoComponent
     [IsoId("_yFaWVZj3EeWn2ur3BXxtdg")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 }

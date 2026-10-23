@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_DlZHIS0mEeSRe9rElPHBfg")]
 [IsoMessage("secl.003.001.03", "TradLegStmt", "urn:iso:std:iso:20022:tech:xsd:secl.003.001.03")]
+[Description(@"Scope|The TradeLegStatement message is sent by the central counterparty (CCP) to a clearing member to report all trades that have been executed by the trading platform.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|The TradeLegStatement message may be either sent:|- during the day (to report trades execution by batch) or|- as an end of day report.")]
+[IsoDisplayName(@"Trade Leg Statement V")]
 public interface ITradeLegStatementV03 : IOuterRecord
 {
     /// <summary>
@@ -60,6 +62,7 @@ public interface ITradeLegStatementV03 : IOuterRecord
     [IsoId("_DlZuOS0mEeSRe9rElPHBfg")]
     [DisplayName("Statement Details")]
     [IsoXmlTag("StmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeLegStatement3> StatementDetails { get; }
 
     /// <summary>
@@ -68,5 +71,6 @@ public interface ITradeLegStatementV03 : IOuterRecord
     [IsoId("_DlZuOy0mEeSRe9rElPHBfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

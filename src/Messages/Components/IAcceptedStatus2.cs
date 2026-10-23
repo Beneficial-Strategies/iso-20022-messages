@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Accepted Status2.
 /// </summary>
 [IsoId("_nM3dIYWAEe-ufOxNNkEXmg")]
+[IsoDisplayName(@"Accepted Status2")]
 public interface IAcceptedStatus2 : IIsoComponent
 {
     /// <summary>

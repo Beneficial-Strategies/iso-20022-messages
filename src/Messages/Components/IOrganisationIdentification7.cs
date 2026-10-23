@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous way to identify an organisation.
 /// </summary>
 [IsoId("_QPrYw9p-Ed-ak6NoX_4Aeg_-869974154")]
+[IsoDisplayName(@"Organisation Identification")]
 public interface IOrganisationIdentification7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IOrganisationIdentification7 : IIsoComponent
     [IsoId("_QPrYxNp-Ed-ak6NoX_4Aeg_386164856")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier? AnyBIC { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IOrganisationIdentification7 : IIsoComponent
     [IsoId("_QPrYxdp-Ed-ak6NoX_4Aeg_-540824728")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericOrganisationIdentification1> Other { get; }
 }

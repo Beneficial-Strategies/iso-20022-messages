@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Pre-trade output related data.
 /// </summary>
 [IsoId("_EoadoGIWEfCeoPFCHQnhvA")]
+[IsoDisplayName(@"Pre Trade Output Data1")]
 public interface IPreTradeOutputData1 : IIsoComponent
 {
     /// <summary>

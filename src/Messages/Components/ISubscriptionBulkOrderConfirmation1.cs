@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Order confirmation details.
 /// </summary>
 [IsoId("_RN-NDNp-Ed-ak6NoX_4Aeg_372099263")]
+[IsoDisplayName(@"Subscription Bulk Order Confirmation")]
 public interface ISubscriptionBulkOrderConfirmation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISubscriptionBulkOrderConfirmation1 : IIsoComponent
     [IsoId("_ROHW8Np-Ed-ak6NoX_4Aeg_450319777")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AmendmentIndicator { get; }
 
     /// <summary>
@@ -33,6 +35,9 @@ public interface ISubscriptionBulkOrderConfirmation1 : IIsoComponent
     [IsoId("_ROHW8tp-Ed-ak6NoX_4Aeg_373022880")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary9> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface ISubscriptionBulkOrderConfirmation1 : IIsoComponent
     [IsoId("_ROHW89p-Ed-ak6NoX_4Aeg_373947102")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the references of an account management instruction message.
 /// </summary>
 [IsoId("_eQZ8AZTPEemqYPWMBuVawg")]
+[IsoDisplayName(@"Account Management Message Reference")]
 public interface IAccountManagementMessageReference5 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IAccountManagementMessageReference5 : IIsoComponent
     [IsoId("_ejvuyZTPEemqYPWMBuVawg")]
     [DisplayName("Account Application Identification")]
     [IsoXmlTag("AcctApplId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountApplicationIdentification { get; }
 
     /// <summary>

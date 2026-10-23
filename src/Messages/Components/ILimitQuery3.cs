@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the query criteria.
 /// </summary>
 [IsoId("_PXu9WZlcEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Limit Query")]
 public interface ILimitQuery3 : IIsoComponent
 {
     /// <summary>

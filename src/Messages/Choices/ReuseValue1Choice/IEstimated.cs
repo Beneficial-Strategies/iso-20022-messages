@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseValue1Choice;
 /// </summary>
 [IsoId("_TXut0IxnEeap1-whlAlpOw")]
 [IsoXmlTag("Estmtd")]
+[IsoDisplayName(@"Estimated")]
 public interface IEstimated : IReuseValue1Choice, IIsoChoiceVariant
 {
     /// <summary>

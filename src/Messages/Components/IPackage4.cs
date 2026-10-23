@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Combination of two or more transactions that are reported separately but that are negotiated together as the product of a single economic agreement.
 /// </summary>
 [IsoId("_8GlqARZtEe27wrM4RUjLog")]
+[IsoDisplayName(@"Package")]
 public interface IPackage4 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IPackage4 : IIsoComponent
     [IsoId("_8IV9gRZtEe27wrM4RUjLog")]
     [DisplayName("Complex Trade Identification")]
     [IsoXmlTag("CmplxTradId")]
+    [IsoSimpleType(IsoSimpleType.Max100Text)]
+    [StringLength(100, MinimumLength = 1)]
     Max100Text? ComplexTradeIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IPackage4 : IIsoComponent
     [IsoId("_A9OBwBZuEe27wrM4RUjLog")]
     [DisplayName("FX Swap Link Identification")]
     [IsoXmlTag("FxSwpLkId")]
+    [IsoSimpleType(IsoSimpleType.Max100Text)]
+    [StringLength(100, MinimumLength = 1)]
     Max100Text? FXSwapLinkIdentification { get; }
 
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_M1g7wUHEEe69jJri8QCRYw")]
 [IsoMessage("auth.113.001.01", "OrdrBookRpt", "urn:iso:std:iso:20022:tech:xsd:auth.113.001.01")]
+[IsoDisplayName(@"Order Book Report V01")]
 public interface IOrderBookReportV01 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IOrderBookReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Order Report")]
     [IsoXmlTag("OrdrRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrderReport2Choice> OrderReport { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IOrderBookReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

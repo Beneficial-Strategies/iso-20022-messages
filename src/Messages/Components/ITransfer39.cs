@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("ae3b3cf3-0f34-4065-8ea5-43cf4649949b")]
+[IsoDisplayName(@"Transfer39")]
 public interface ITransfer39 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface ITransfer39 : IIsoComponent
     [IsoId("ac5e600e-6c8e-4303-be6f-11e2e76ace9d")]
     [DisplayName("Holdings Plan Type")]
     [IsoXmlTag("HldgsPlanTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<HoldingsPlanType1Code> HoldingsPlanType { get; }
 
     /// <summary>
@@ -105,6 +107,7 @@ public interface ITransfer39 : IIsoComponent
     [IsoId("a502ea91-e1f2-4bbb-a98e-8a8d33fe4d7a")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit14> UnitsDetails { get; }
 
     /// <summary>

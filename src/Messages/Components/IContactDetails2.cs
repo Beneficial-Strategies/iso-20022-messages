@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication device number or electronic address used for communication.
 /// </summary>
 [IsoId("_QJ3rtNp-Ed-ak6NoX_4Aeg_446489744")]
+[IsoDisplayName(@"Contact Details")]
 public interface IContactDetails2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IContactDetails2 : IIsoComponent
     [IsoId("_QJ3rttp-Ed-ak6NoX_4Aeg_446489753")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IContactDetails2 : IIsoComponent
     [IsoId("_QJ3rt9p-Ed-ak6NoX_4Aeg_447410116")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IContactDetails2 : IIsoComponent
     [IsoId("_QJ3ruNp-Ed-ak6NoX_4Aeg_880542111")]
     [DisplayName("Mobile Number")]
     [IsoXmlTag("MobNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? MobileNumber { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IContactDetails2 : IIsoComponent
     [IsoId("_QKBcsNp-Ed-ak6NoX_4Aeg_447410147")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -57,6 +63,8 @@ public interface IContactDetails2 : IIsoComponent
     [IsoId("_QKBcsdp-Ed-ak6NoX_4Aeg_446490084")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? EmailAddress { get; }
 
     /// <summary>
@@ -65,5 +73,7 @@ public interface IContactDetails2 : IIsoComponent
     [IsoId("_QKBcstp-Ed-ak6NoX_4Aeg_1321060960")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Other { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of an order desk.
 /// </summary>
 [IsoId("_yxKW8F9HEeicg40_9gK9vQ")]
+[IsoDisplayName(@"Order Desk")]
 public interface IOrderDesk1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IOrderDesk1 : IIsoComponent
     [IsoId("_WyRNsF9IEeicg40_9gK9vQ")]
     [DisplayName("Closure Dates")]
     [IsoXmlTag("ClsrDts")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISODate> ClosureDates { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IOrderDesk1 : IIsoComponent
     [IsoId("_6umMIbAbEeiADpd1Q5gEyQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides amounts taken in to account to calculate the collateral position.
 /// </summary>
 [IsoId("_vVx-YqMOEeCojJW5vEuTEQ_933225086")]
+[IsoDisplayName(@"Summary Amounts")]
 public interface ISummaryAmounts1 : IIsoComponent
 {
     /// <summary>

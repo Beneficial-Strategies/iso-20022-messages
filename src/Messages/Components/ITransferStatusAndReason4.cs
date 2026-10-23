@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the status of a transfer instruction and its reason.
 /// </summary>
 [IsoId("_gd6JkSY3EeW_ZNn8gbfY7Q")]
+[IsoDisplayName(@"Transfer Status And Reason")]
 public interface ITransferStatusAndReason4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransferStatusAndReason4 : IIsoComponent
     [IsoId("_g6U_0yY3EeW_ZNn8gbfY7Q")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransferStatusAndReason4 : IIsoComponent
     [IsoId("_g6U_1SY3EeW_ZNn8gbfY7Q")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ITransferStatusAndReason4 : IIsoComponent
     [IsoId("_g6U_2SY3EeW_ZNn8gbfY7Q")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface ITransferStatusAndReason4 : IIsoComponent
     [IsoId("_g6U_3SY3EeW_ZNn8gbfY7Q")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TradeDate { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface ITransferStatusAndReason4 : IIsoComponent
     [IsoId("_g6U_3yY3EeW_ZNn8gbfY7Q")]
     [DisplayName("Send Out Date")]
     [IsoXmlTag("SndOutDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SendOutDate { get; }
 
     /// <summary>

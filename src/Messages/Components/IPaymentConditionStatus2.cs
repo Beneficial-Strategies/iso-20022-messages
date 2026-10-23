@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details on the status of the payment conditions.
 /// </summary>
 [IsoId("_FJs0oWwLEe6Mn47rYvO6fQ")]
+[Description(@"Specifies the details on the status of the payment conditions.")]
+[IsoDisplayName(@"Payment Condition Status2")]
 public interface IPaymentConditionStatus2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Document that a user must file with an authorised servicer for each contract that involves foreign currency transactions with non residents.
 /// </summary>
 [IsoId("_Gyw1EbGJEeuSTr8k0UEM8A")]
+[IsoDisplayName(@"Registered Contract")]
 public interface IRegisteredContract11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRegisteredContract11 : IIsoComponent
     [IsoId("_G0BZUbGJEeuSTr8k0UEM8A")]
     [DisplayName("Original Contract Registration Request")]
     [IsoXmlTag("OrgnlCtrctRegnReq")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalContractRegistrationRequest { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IRegisteredContract11 : IIsoComponent
     [IsoId("_G0BZW7GJEeuSTr8k0UEM8A")]
     [DisplayName("Contract Balance")]
     [IsoXmlTag("CtrctBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContractBalance1> ContractBalance { get; }
 
     /// <summary>
@@ -91,6 +95,7 @@ public interface IRegisteredContract11 : IIsoComponent
     [IsoId("_G0BZb7GJEeuSTr8k0UEM8A")]
     [DisplayName("Registered Contract Journal")]
     [IsoXmlTag("RegdCtrctJrnl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegisteredContractJournal2> RegisteredContractJournal { get; }
 
     /// <summary>
@@ -99,6 +104,7 @@ public interface IRegisteredContract11 : IIsoComponent
     [IsoId("_G0BZcbGJEeuSTr8k0UEM8A")]
     [DisplayName("Amendment")]
     [IsoXmlTag("Amdmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegisteredContractAmendment1> Amendment { get; }
 
     /// <summary>
@@ -133,6 +139,7 @@ public interface IRegisteredContract11 : IIsoComponent
     [IsoId("_G0BZebGJEeuSTr8k0UEM8A")]
     [DisplayName("Estimated Date Indicator")]
     [IsoXmlTag("EstmtdDtInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator EstimatedDateIndicator { get; }
 
     /// <summary>
@@ -143,6 +150,7 @@ public interface IRegisteredContract11 : IIsoComponent
     [IsoId("_G0BZe7GJEeuSTr8k0UEM8A")]
     [DisplayName("Inter Company Loan")]
     [IsoXmlTag("IntrCpnyLn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator InterCompanyLoan { get; }
 
     /// <summary>
@@ -151,6 +159,8 @@ public interface IRegisteredContract11 : IIsoComponent
     [IsoId("_G0BZfbGJEeuSTr8k0UEM8A")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? AdditionalInformation { get; }
 
     /// <summary>
@@ -159,5 +169,6 @@ public interface IRegisteredContract11 : IIsoComponent
     [IsoId("_G0BZf7GJEeuSTr8k0UEM8A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_0ubGbTbsEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Delivering Parties And Account")]
 public interface IDeliveringPartiesAndAccount16 : IIsoComponent
 {
     /// <summary>

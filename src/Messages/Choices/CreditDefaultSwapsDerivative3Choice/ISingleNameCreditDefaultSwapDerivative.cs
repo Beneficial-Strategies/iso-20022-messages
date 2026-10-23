@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
 /// </summary>
 [IsoId("_xfbL1X5eEea2k7EBUopqxw")]
 [IsoXmlTag("SnglNmCdtDfltSwpDeriv")]
+[IsoDisplayName(@"Single Name Credit Default Swap Derivative")]
 public interface ISingleNameCreditDefaultSwapDerivative
     : ICreditDefaultSwapsDerivative3Choice,
         IIsoChoiceVariant
@@ -20,6 +21,7 @@ public interface ISingleNameCreditDefaultSwapDerivative
     [IsoId("_Nmrxc35fEea2k7EBUopqxw")]
     [DisplayName("Underlying Name Identification")]
     [IsoXmlTag("UndrlygNmId")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? UnderlyingNameIdentification { get; }
 
     /// <summary>
@@ -28,6 +30,7 @@ public interface ISingleNameCreditDefaultSwapDerivative
     [IsoId("_NmrxdX5fEea2k7EBUopqxw")]
     [DisplayName("Obligation Identification")]
     [IsoXmlTag("OblgtnId")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier ObligationIdentification { get; }
 
     /// <summary>

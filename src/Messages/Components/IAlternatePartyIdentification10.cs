@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Alternate identification for a party using an id type, a country code and an text field.
 /// </summary>
 [IsoId("_DnKG-ZEbEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Alternate Party Identification")]
 public interface IAlternatePartyIdentification10 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IAlternatePartyIdentification10 : IIsoComponent
     [IsoId("_D2e8ZZEbEeakHoV5BVecAQ")]
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AlternateIdentification { get; }
 }

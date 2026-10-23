@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RequestStatus1Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IRequestStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

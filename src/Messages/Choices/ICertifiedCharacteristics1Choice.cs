@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Characteristics of the goods that are certified, in the context of a commercial trade transaction.
 /// </summary>
 [IsoId("_TnJq6Np-Ed-ak6NoX_4Aeg_524312074")]
+[IsoDisplayName(@"Certified Characteristics 1 Choice")]
 public interface ICertifiedCharacteristics1Choice : IIsoChoice { }

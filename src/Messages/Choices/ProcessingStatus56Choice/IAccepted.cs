@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus56Choice;
 /// Instruction is accepted.
 /// </summary>
 [IsoId("_db1M1Tt5EeW638lNyHKv7A")]
+[IsoDisplayName(@"Accepted")]
 public interface IAccepted : IProcessingStatus56Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

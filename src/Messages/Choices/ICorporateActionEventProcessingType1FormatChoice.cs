@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the type of event processing.
 /// </summary>
 [IsoId("_RmHAMdp-Ed-ak6NoX_4Aeg_699190436")]
+[IsoDisplayName(@"Corporate Action Event Processing Type 1 Format Choice")]
 public interface ICorporateActionEventProcessingType1FormatChoice : IIsoChoice { }

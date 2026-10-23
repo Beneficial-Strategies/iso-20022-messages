@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Operation Mandate7.
 /// </summary>
 [IsoId("_1R0xKTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Operation Mandate7")]
 public interface IOperationMandate7 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IOperationMandate7 : IIsoComponent
     /// </summary>
     [DisplayName("Applicable Channel")]
     [IsoXmlTag("AplblChanl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChannel2Choice> ApplicableChannel { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface IOperationMandate7 : IIsoComponent
     /// </summary>
     [DisplayName("Mandate Holder")]
     [IsoXmlTag("MndtHldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndAuthorisation7> MandateHolder { get; }
 
     /// <summary>
@@ -51,6 +54,7 @@ public interface IOperationMandate7 : IIsoComponent
     /// </summary>
     [DisplayName("Bank Operation")]
     [IsoXmlTag("BkOpr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBankTransactionCodeStructure4> BankOperation { get; }
 
     /// <summary>

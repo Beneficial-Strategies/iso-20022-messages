@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the comparison between the currently established baseline elements and the proposed ones.
 /// </summary>
 [IsoId("_dFQq5OTXEfC01pKpYIyMTA")]
+[IsoDisplayName(@"Cash Account Reference Data Change3")]
 public interface ICashAccountReferenceDataChange3 : IIsoComponent
 {
     /// <summary>

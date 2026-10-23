@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a paper derivative of type pulp.
 /// </summary>
 [IsoId("_TO0XIFryEeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Paper Commodity Pulp")]
 public interface IPaperCommodityPulp1 : IIsoComponent
 {
     /// <summary>

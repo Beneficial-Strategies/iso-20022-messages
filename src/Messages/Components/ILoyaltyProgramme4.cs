@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Loyalty Programme4.
 /// </summary>
 [IsoId("_skOKIXNREe6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Loyalty Programme4")]
 public interface ILoyaltyProgramme4 : IIsoComponent
 {
     /// <summary>

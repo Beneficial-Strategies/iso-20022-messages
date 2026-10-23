@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction information in the cancellation request.
 /// </summary>
 [IsoId("_FxpwAbX8EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Card Payment Transaction150")]
 public interface ICardPaymentTransaction150 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICardPaymentTransaction150 : IIsoComponent
     [IsoId("_FyjvB7X8EfCUZfsQO4rYeA")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CardProgrammeProposed { get; }
 
     /// <summary>
@@ -113,5 +115,6 @@ public interface ICardPaymentTransaction150 : IIsoComponent
     [IsoId("_FyjvPbX8EfCUZfsQO4rYeA")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AdditionalTransactionData { get; }
 }

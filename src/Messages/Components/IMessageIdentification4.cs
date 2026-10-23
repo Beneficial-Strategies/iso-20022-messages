@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of element to identify a message by a unique identifier and the date and time when the message was created by the sender.
 /// </summary>
 [IsoId("_QpBF1dp-Ed-ak6NoX_4Aeg_1103415062")]
+[IsoDisplayName(@"Message Identification")]
 public interface IMessageIdentification4 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IMessageIdentification4 : IIsoComponent
     [IsoId("_QpBF1tp-Ed-ak6NoX_4Aeg_1836446054")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageIdentification { get; }
 
     /// <summary>
@@ -26,5 +29,6 @@ public interface IMessageIdentification4 : IIsoComponent
     [IsoId("_QpBF19p-Ed-ak6NoX_4Aeg_1615504981")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CreationDateTime { get; }
 }

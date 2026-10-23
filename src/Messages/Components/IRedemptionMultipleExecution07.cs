@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a redemption order.
 /// </summary>
 [IsoId("96921b4a-6149-4783-b0f3-c8cf02056280")]
+[IsoDisplayName(@"Redemption Multiple Execution07")]
 public interface IRedemptionMultipleExecution07 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IRedemptionMultipleExecution07 : IIsoComponent
     [IsoId("a9760607-2456-46c9-b185-5bbdfe1d0d41")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson32> BeneficiaryDetails { get; }
 
     /// <summary>
@@ -89,6 +91,8 @@ public interface IRedemptionMultipleExecution07 : IIsoComponent
     [IsoId("9c09d425-c3d8-459e-a441-11285a195946")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRedemptionExecution19> IndividualExecutionDetails { get; }
 
     /// <summary>

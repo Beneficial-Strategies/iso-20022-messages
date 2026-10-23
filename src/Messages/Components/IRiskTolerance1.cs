@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Risk tolerance of an investor for which a financial instrument is targeted.
 /// </summary>
 [IsoId("_vPux4DcWEeidBoT_PugKiA")]
+[IsoDisplayName(@"Risk Tolerance")]
 public interface IRiskTolerance1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRiskTolerance1 : IIsoComponent
     [IsoId("_Dz71wDcXEeidBoT_PugKiA")]
     [DisplayName("Risk Tolerance PRIIPS Methodology")]
     [IsoXmlTag("RskTlrncePRIIPSMthdlgy")]
+    [IsoSimpleType(IsoSimpleType.Max1Number)]
     Max1Number? RiskTolerancePRIIPSMethodology { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IRiskTolerance1 : IIsoComponent
     [IsoId("_PJpw0DcXEeidBoT_PugKiA")]
     [DisplayName("Risk Tolerance UCITS Methodology")]
     [IsoXmlTag("RskTlrnceUCITSMthdlgy")]
+    [IsoSimpleType(IsoSimpleType.Max1Number)]
     Max1Number? RiskToleranceUCITSMethodology { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IRiskTolerance1 : IIsoComponent
     [IsoId("_cMIIoDcXEeidBoT_PugKiA")]
     [DisplayName("Risk Tolerance For Non PRIIPS And Non UCITS Spain")]
     [IsoXmlTag("RskTlrnceForNonPRIIPSAndNonUCITSES")]
+    [IsoSimpleType(IsoSimpleType.Max1Number)]
     Max1Number? RiskToleranceForNonPRIIPSAndNonUCITSSpain { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface IRiskTolerance1 : IIsoComponent
     [IsoId("_An9MgDcYEeidBoT_PugKiA")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherTargetMarketRiskTolerance1> Other { get; }
 }

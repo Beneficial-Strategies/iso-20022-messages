@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters2Choice;
 /// </summary>
 [IsoId("_rAZ80ItIEeSxlKlAGYErFg")]
 [IsoXmlTag("Key")]
+[IsoDisplayName(@"Key")]
 public interface IKey : IATMCommandParameters2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IKey : IATMCommandParameters2Choice, IIsoChoiceVariant
     [IsoId("_hkcjQItJEeSxlKlAGYErFg")]
     [DisplayName("Host Challenge")]
     [IsoXmlTag("HstChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? HostChallenge { get; }
 
     /// <summary>
@@ -34,6 +36,8 @@ public interface IKey : IATMCommandParameters2Choice, IIsoChoiceVariant
     [IsoId("_tNm-wItJEeSxlKlAGYErFg")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max5000Binary> Certificate { get; }
 
     /// <summary>
@@ -42,5 +46,6 @@ public interface IKey : IATMCommandParameters2Choice, IIsoChoiceVariant
     [IsoId("_ABCokItKEeSxlKlAGYErFg")]
     [DisplayName("Key Properties")]
     [IsoXmlTag("KeyProps")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IKEKIdentifier4> KeyProperties { get; }
 }

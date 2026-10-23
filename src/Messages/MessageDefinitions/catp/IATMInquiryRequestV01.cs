@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_h5fxAIqrEeSIDtZ76p6McQ")]
 [IsoMessage("catp.006.001.01", "ATMNqryReq", "urn:iso:std:iso:20022:tech:xsd:catp.006.001.01")]
+[Description(@"The ATMInquiryRequest message is sent by an ATM to an ATM manager to request information about a customer (for example card, account).")]
+[IsoDisplayName(@"ATM Inquiry Request V")]
 public interface IATMInquiryRequestV01 : IOuterRecord
 {
     /// <summary>

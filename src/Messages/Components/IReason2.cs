@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason for an action.
 /// </summary>
 [IsoId("_RJ8oo9p-Ed-ak6NoX_4Aeg_949144780")]
+[IsoDisplayName(@"Reason")]
 public interface IReason2 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface IReason2 : IIsoComponent
     [IsoId("_RJ8opNp-Ed-ak6NoX_4Aeg_987008657")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Description { get; }
 }

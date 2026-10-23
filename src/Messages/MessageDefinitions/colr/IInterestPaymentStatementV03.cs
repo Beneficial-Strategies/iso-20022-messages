@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_7gWa8VnNEeSPgY23yCMQSQ")]
 [IsoMessage("colr.015.001.03", "IntrstPmtStmt", "urn:iso:std:iso:20022:tech:xsd:colr.015.001.03")]
+[Description(@"Scope|This message is sent by either the collateral giver or its collateral manager to the collateral taker or its collateral manager. It is used to report the interest amounts calculated based on the effective posted collateral amount, over a specific period of time agreed by both parties.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|The InterestPaymentStatement message is used for reporting the interest per period on collateral held.")]
+[IsoDisplayName(@"Interest Payment Statement V")]
 public interface IInterestPaymentStatementV03 : IOuterRecord
 {
     /// <summary>
@@ -26,6 +28,8 @@ public interface IInterestPaymentStatementV03 : IOuterRecord
     [IsoId("_7gWa81nNEeSPgY23yCMQSQ")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -74,5 +78,6 @@ public interface IInterestPaymentStatementV03 : IOuterRecord
     [IsoId("_7gWbBVnNEeSPgY23yCMQSQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

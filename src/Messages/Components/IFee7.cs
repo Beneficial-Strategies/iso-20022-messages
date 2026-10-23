@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money associated with a service.
 /// </summary>
 [IsoId("_1AIewZEKEem-9Y6mq5ZH3Q")]
+[IsoDisplayName(@"Fee")]
 public interface IFee7 : IIsoComponent
 {
     /// <summary>

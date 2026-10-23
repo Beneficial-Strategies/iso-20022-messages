@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration parameters to communicate with a sale system.
 /// </summary>
 [IsoId("_nn_tcKAFEfC4Q_xhaK1hdQ")]
+[IsoDisplayName(@"Sale To POI Protocol Parameter4")]
 public interface ISaleToPOIProtocolParameter4 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface ISaleToPOIProtocolParameter4 : IIsoComponent
     [IsoId("_npneOaAFEfC4Q_xhaK1hdQ")]
     [DisplayName("Allowed Sale Message")]
     [IsoXmlTag("AllwdSaleMsg")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RetailerMessage1Code> AllowedSaleMessage { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface ISaleToPOIProtocolParameter4 : IIsoComponent
     [IsoId("_npneO6AFEfC4Q_xhaK1hdQ")]
     [DisplayName("Allowed POI Message")]
     [IsoXmlTag("AllwdPOIMsg")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RetailerMessage1Code> AllowedPOIMessage { get; }
 
     /// <summary>
@@ -89,6 +92,7 @@ public interface ISaleToPOIProtocolParameter4 : IIsoComponent
     [IsoId("_npnePaAFEfC4Q_xhaK1hdQ")]
     [DisplayName("Allowed POI Service")]
     [IsoXmlTag("AllwdPOISvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RetailerService2Code> AllowedPOIService { get; }
 
     /// <summary>
@@ -97,6 +101,7 @@ public interface ISaleToPOIProtocolParameter4 : IIsoComponent
     [IsoId("_npneP6AFEfC4Q_xhaK1hdQ")]
     [DisplayName("Allowed Sale Device")]
     [IsoXmlTag("AllwdSaleDvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RetailerService8Code> AllowedSaleDevice { get; }
 
     /// <summary>
@@ -105,5 +110,6 @@ public interface ISaleToPOIProtocolParameter4 : IIsoComponent
     [IsoId("_npneQaAFEfC4Q_xhaK1hdQ")]
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max1025Text> ExternallyTypeSupported { get; }
 }

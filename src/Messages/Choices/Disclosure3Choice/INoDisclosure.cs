@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Disclosure3Choice;
 /// <summary>
 /// No Disclosure.
 /// </summary>
+[IsoDisplayName(@"No Disclosure")]
 public interface INoDisclosure : IDisclosure3Choice, IIsoChoiceVariant
 {
     /// <summary>

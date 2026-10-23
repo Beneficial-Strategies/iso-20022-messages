@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status Report14.
 /// </summary>
 [IsoId("_uhMgIaE8Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"Status Report14")]
 public interface IStatusReport14 : IIsoComponent
 {
     /// <summary>

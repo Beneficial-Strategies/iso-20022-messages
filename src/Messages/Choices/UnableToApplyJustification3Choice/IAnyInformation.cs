@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification3Choic
 /// Indicates whether or not all available information on the underlying payment instruction is requested.
 /// </summary>
 [IsoId("_S_E3E0goEeaGKYpLDboHPQ")]
+[IsoDisplayName(@"Any Information")]
 public interface IAnyInformation : IUnableToApplyJustification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IAnyInformation : IUnableToApplyJustification3Choice, IIsoChoic
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("AnyInf")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

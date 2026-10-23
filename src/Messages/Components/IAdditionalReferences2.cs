@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional References2.
 /// </summary>
 [IsoId("_-rEYgSpvEe2NrplE7WhvBA")]
+[IsoDisplayName(@"Additional References2")]
 public interface IAdditionalReferences2 : IIsoComponent
 {
     /// <summary>

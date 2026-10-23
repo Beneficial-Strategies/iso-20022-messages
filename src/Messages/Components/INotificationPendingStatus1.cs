@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides pending status information for a notification advice.
 /// </summary>
 [IsoId("_c1zRMaUeEfCnE_wCEfCqTA")]
+[IsoDisplayName(@"Notification Pending Status1")]
 public interface INotificationPendingStatus1 : IIsoComponent
 {
     /// <summary>

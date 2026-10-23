@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the settlement obligation.
 /// </summary>
 [IsoId("_-e889qMOEeCojJW5vEuTEQ_908473002")]
+[IsoDisplayName(@"Settlement Obligation6")]
+[Obsolete]
 public interface ISettlementObligation6 : IIsoComponent
 {
     /// <summary>

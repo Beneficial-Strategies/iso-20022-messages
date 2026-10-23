@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for a closed status.
 /// </summary>
 [IsoId("_d6JVwUzDEeafiMTDrtSnyw")]
+[IsoDisplayName(@"Closed Status Reason")]
 public interface IClosedStatusReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IClosedStatusReason1 : IIsoComponent
     [IsoId("_eUB1Y0zDEeafiMTDrtSnyw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

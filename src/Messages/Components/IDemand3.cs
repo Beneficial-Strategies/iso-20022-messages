@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details related to the demand.
 /// </summary>
 [IsoId("_-BPRM3ltEeG7BsjMvd1mEw_-593670886")]
+[IsoDisplayName(@"Demand")]
 public interface IDemand3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDemand3 : IIsoComponent
     [IsoId("_-BPRNHltEeG7BsjMvd1mEw_485925889")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IDemand3 : IIsoComponent
     [IsoId("_-BZCMHltEeG7BsjMvd1mEw_18772739")]
     [DisplayName("Submission Date Time")]
     [IsoXmlTag("SubmissnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime SubmissionDateTime { get; }
 
     /// <summary>

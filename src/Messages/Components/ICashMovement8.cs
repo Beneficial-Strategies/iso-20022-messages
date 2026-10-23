@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Movements of cash.
 /// </summary>
 [IsoId("_rn_kOxIwEeydmIVkS03esw")]
+[IsoDisplayName(@"Cash Movement")]
 public interface ICashMovement8 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICashMovement8 : IIsoComponent
     [IsoId("_r-pJpxIwEeydmIVkS03esw")]
     [DisplayName("Collateral Movement")]
     [IsoXmlTag("CollMvmnt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CollateralMovement { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface ICashMovement8 : IIsoComponent
     [IsoId("_r-pJqRIwEeydmIVkS03esw")]
     [DisplayName("Client Cash Movement Identification")]
     [IsoXmlTag("ClntCshMvmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientCashMovementIdentification { get; }
 
     /// <summary>
@@ -57,5 +61,7 @@ public interface ICashMovement8 : IIsoComponent
     [IsoId("_r-pJqxIwEeydmIVkS03esw")]
     [DisplayName("Triparty Agent Service Provider Cash Movement Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCshMvmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripartyAgentServiceProviderCashMovementIdentification { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Calculation basis for the charge or fee.
 /// </summary>
 [IsoId("2ab7a9e2-cd84-4250-af38-6aea4dd34b2b")]
+[IsoDisplayName(@"CalculationBasis2Choice")]
 public interface ICalculationBasis2Choice : IIsoChoice { }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Sets of elements to identify a name of the identification scheme.
 /// </summary>
 [IsoId("_P_4pQ9p-Ed-ak6NoX_4Aeg_2056543129")]
+[IsoDisplayName(@"Person Identification Scheme Name 1 Choice")]
 public interface IPersonIdentificationSchemeName1Choice : IIsoChoice { }

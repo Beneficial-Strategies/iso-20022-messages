@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the transport authentication details related to the mandate.
 /// </summary>
 [IsoId("_HSGqsGVVEeacpJ-gG9kyUQ")]
+[IsoDisplayName(@"Mandate Authentication")]
 public interface IMandateAuthentication1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMandateAuthentication1 : IIsoComponent
     [IsoId("_Tw5GoGVVEeacpJ-gG9kyUQ")]
     [DisplayName("Message Authentication Code")]
     [IsoXmlTag("MsgAuthntcnCd")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? MessageAuthenticationCode { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IMandateAuthentication1 : IIsoComponent
     [IsoId("_Z4U-8GVVEeacpJ-gG9kyUQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction13C
 /// <summary>
 /// Token Response.
 /// </summary>
+[IsoDisplayName(@"Token Response")]
 public interface ITokenResponse : ICardPaymentDataSetTransaction13Choice, IIsoChoiceVariant
 {
     /// <summary>

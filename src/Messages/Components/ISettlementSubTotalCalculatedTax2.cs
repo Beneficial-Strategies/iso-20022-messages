@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the subtotal calculated tax applicable for this settlement.
 /// </summary>
 [IsoId("_sGUvgKtnEeSPCbFcs9Ilyw")]
+[IsoDisplayName(@"Settlement Sub Total Calculated Tax")]
 public interface ISettlementSubTotalCalculatedTax2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISettlementSubTotalCalculatedTax2 : IIsoComponent
     [IsoId("_A84usKtoEeSPCbFcs9Ilyw")]
     [DisplayName("Type Code")]
     [IsoXmlTag("TpCd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? TypeCode { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ISettlementSubTotalCalculatedTax2 : IIsoComponent
     [IsoId("_S-CnAKtoEeSPCbFcs9Ilyw")]
     [DisplayName("Calculated Rate")]
     [IsoXmlTag("ClctdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? CalculatedRate { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ISettlementSubTotalCalculatedTax2 : IIsoComponent
     [IsoId("_PI8kwKtoEeSPCbFcs9Ilyw")]
     [DisplayName("Basis Amount")]
     [IsoXmlTag("BsisAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> BasisAmount { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ISettlementSubTotalCalculatedTax2 : IIsoComponent
     [IsoId("_Khf4gKtoEeSPCbFcs9Ilyw")]
     [DisplayName("Calculated Amount")]
     [IsoXmlTag("ClctdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> CalculatedAmount { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface ISettlementSubTotalCalculatedTax2 : IIsoComponent
     [IsoId("_ZH9yoKtoEeSPCbFcs9Ilyw")]
     [DisplayName("Exemption Reason Code")]
     [IsoXmlTag("XmptnRsnCd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? ExemptionReasonCode { get; }
 
     /// <summary>
@@ -57,6 +65,8 @@ public interface ISettlementSubTotalCalculatedTax2 : IIsoComponent
     [IsoId("_-mMusKtoEeSPCbFcs9Ilyw")]
     [DisplayName("Exemption Reason Text")]
     [IsoXmlTag("XmptnRsnTxt")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? ExemptionReasonText { get; }
 
     /// <summary>

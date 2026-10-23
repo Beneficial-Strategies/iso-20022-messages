@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason13FormatChoice;
 /// Standard code to specify the reason of a rejection of a movement.
 /// </summary>
 [IsoId("_RoMq49p-Ed-ak6NoX_4Aeg_331296664")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectionReason13FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a number of clearing status.
 /// </summary>
 [IsoId("_G-wMEdSZEemZdYGWu384Zw")]
+[IsoDisplayName(@"Compare Clearing Status")]
 public interface ICompareClearingStatus2 : IIsoComponent
 {
     /// <summary>

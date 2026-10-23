@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChequeCancellationStatus1Choice;
 /// Status, in a proprietary form.
 /// </summary>
 [IsoId("_PJJT_btyEeq_cfXrH83Rcw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IChequeCancellationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IChequeCancellationStatus1Choice, IIsoChoiceVari
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

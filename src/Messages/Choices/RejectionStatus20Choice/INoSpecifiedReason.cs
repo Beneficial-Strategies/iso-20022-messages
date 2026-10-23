@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionStatus20Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_m-aDETzpEeWeNtT0s2RbkQ")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IRejectionStatus20Choice, IIsoChoiceVariant
 {
     /// <summary>

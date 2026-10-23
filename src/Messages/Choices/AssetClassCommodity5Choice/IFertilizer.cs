@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity5Choice;
 /// Fertilizer commodities.
 /// </summary>
 [IsoId("_owQIN7tIEeiLRYqS-r-R-A")]
+[IsoDisplayName(@"Fertilizer")]
 public interface IFertilizer : IAssetClassCommodity5Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information concerning financial counterparties.
 /// </summary>
 [IsoId("_M0T6AQz2Ee2YoLD-1vFj0g")]
+[IsoDisplayName(@"Financial Institution Sector")]
 public interface IFinancialInstitutionSector1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancialInstitutionSector1 : IIsoComponent
     [IsoId("_UgEEwAz2Ee2YoLD-1vFj0g")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialPartyClassification2Choice> Sector { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface IFinancialInstitutionSector1 : IIsoComponent
     [IsoId("_W7SxEAz2Ee2YoLD-1vFj0g")]
     [DisplayName("Clearing Threshold")]
     [IsoXmlTag("ClrThrshld")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ClearingThreshold { get; }
 }

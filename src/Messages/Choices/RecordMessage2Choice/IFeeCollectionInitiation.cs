@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the fee collection initiation message.</summary>
 [IsoId("_kNBjpW7-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Fee Collection Initiation")]
 public interface IFeeCollectionInitiation : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

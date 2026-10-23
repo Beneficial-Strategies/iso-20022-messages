@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the terminal performing the transaction.
 /// </summary>
 [IsoId("_PE3qQRyqEey6gI8SKlv7rg")]
+[IsoDisplayName(@"Terminal Identification")]
 public interface ITerminalIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ITerminalIdentification3 : IIsoComponent
     [IsoId("_PKX1URyqEey6gI8SKlv7rg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text Identification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface ITerminalIdentification3 : IIsoComponent
     [IsoId("_PKX1UxyqEey6gI8SKlv7rg")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Assigner { get; }
 
     /// <summary>
@@ -42,5 +47,7 @@ public interface ITerminalIdentification3 : IIsoComponent
     [IsoId("_PKX1VxyqEey6gI8SKlv7rg")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 }

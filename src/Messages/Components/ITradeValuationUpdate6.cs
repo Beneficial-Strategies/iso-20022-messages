@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates an update to the valuations of a previously reported position, but not a correction.
 /// </summary>
 [IsoId("_MVyUsbQ4EemI67HK7aviyg")]
+[IsoDisplayName(@"Trade Valuation Update")]
 public interface ITradeValuationUpdate6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeValuationUpdate6 : IIsoComponent
     [IsoId("_MaG0AbQ4EemI67HK7aviyg")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ITradeValuationUpdate6 : IIsoComponent
     [IsoId("_MaG0B7Q4EemI67HK7aviyg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

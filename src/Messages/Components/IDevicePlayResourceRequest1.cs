@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Play Request message.
 /// </summary>
 [IsoId("_3pwzIC8GEeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Device Play Resource Request")]
 public interface IDevicePlayResourceRequest1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IDevicePlayResourceRequest1 : IIsoComponent
     [IsoId("_u_G6tC8HEeu125Ip9zFcsQ")]
     [DisplayName("Sound Volume")]
     [IsoXmlTag("SoundVol")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? SoundVolume { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface IDevicePlayResourceRequest1 : IIsoComponent
     [IsoId("_JPIR4C8IEeu125Ip9zFcsQ")]
     [DisplayName("Display Resolution")]
     [IsoXmlTag("DispRsltn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DisplayResolution { get; }
 
     /// <summary>

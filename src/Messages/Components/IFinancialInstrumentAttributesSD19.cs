@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding underlying security details.
 /// </summary>
 [IsoId("_3f24kQ7uEeuZI5Sr_GAcuA")]
+[IsoDisplayName(@"Financial Instrument Attributes SD")]
 public interface IFinancialInstrumentAttributesSD19 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrumentAttributesSD19 : IIsoComponent
     [IsoId("_31lQ8Q7uEeuZI5Sr_GAcuA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IFinancialInstrumentAttributesSD19 : IIsoComponent
     [IsoId("_31lRCw7uEeuZI5Sr_GAcuA")]
     [DisplayName("Security Eligibility Indicator")]
     [IsoXmlTag("SctyElgbltyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SecurityEligibilityIndicator { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface IFinancialInstrumentAttributesSD19 : IIsoComponent
     [IsoId("_31lREw7uEeuZI5Sr_GAcuA")]
     [DisplayName("Ticker Symbol")]
     [IsoXmlTag("TckrSymb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TickerSymbol { get; }
 
     /// <summary>
@@ -81,6 +87,8 @@ public interface IFinancialInstrumentAttributesSD19 : IIsoComponent
     [IsoId("_31lRKw7uEeuZI5Sr_GAcuA")]
     [DisplayName("DIVANN Security Description")]
     [IsoXmlTag("DIVANNSctyDesc")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? DIVANNSecurityDescription { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface IFinancialInstrumentAttributesSD19 : IIsoComponent
     [IsoId("_31lRLQ7uEeuZI5Sr_GAcuA")]
     [DisplayName("Foreign Issue Flag")]
     [IsoXmlTag("FrgnIsseFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ForeignIssueFlag { get; }
 
     /// <summary>
@@ -97,5 +106,6 @@ public interface IFinancialInstrumentAttributesSD19 : IIsoComponent
     [IsoId("_EFBpUA7vEeuZI5Sr_GAcuA")]
     [DisplayName("Money Market Instrument Flag")]
     [IsoXmlTag("MnyMktInstrmFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? MoneyMarketInstrumentFlag { get; }
 }

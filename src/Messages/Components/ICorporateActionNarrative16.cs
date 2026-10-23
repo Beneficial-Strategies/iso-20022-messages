@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information such as the taxation conditions.
 /// </summary>
 [IsoId("_WZq109p-Ed-ak6NoX_4Aeg_-1678570919")]
+[IsoDisplayName(@"Corporate Action Narrative")]
 public interface ICorporateActionNarrative16 : IIsoComponent
 {
     /// <summary>

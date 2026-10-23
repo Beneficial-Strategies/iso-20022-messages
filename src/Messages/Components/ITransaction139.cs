@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains transaction details.
 /// </summary>
 [IsoId("_K1XcwYzHEeujJfnIQ4NlpQ")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction139 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITransaction139 : IIsoComponent
     [IsoId("_K6f0Y4zHEeujJfnIQ4NlpQ")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee2> AdditionalFee { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface ITransaction139 : IIsoComponent
     [IsoId("_K6f0ZYzHEeujJfnIQ4NlpQ")]
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? TransactionDescription { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ITransaction139 : IIsoComponent
     [IsoId("_K6f0Z4zHEeujJfnIQ4NlpQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnMvmntRvslAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.037.001.05"
 )]
+[Description(@"Scope|An account servicer sends the CorporateActionMovementReversalAdvice message to an account owner or its designated agent to reverse previously confirmed posting of securities or cash.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),|using the relevant elements in the business application header (BAH).|ISO 15022 - 20022 COEXISTENCE|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
+[IsoDisplayName(@"Corporate Action Movement Reversal Advice V")]
 public interface ICorporateActionMovementReversalAdviceV05 : IOuterRecord
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICorporateActionMovementReversalAdviceV05 : IOuterRecord
     [IsoId("_2B2eExbDEeOb5dMswipsLQ")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification13> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICorporateActionMovementReversalAdviceV05 : IOuterRecord
     [IsoId("_2B2eFRbDEeOb5dMswipsLQ")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventReference1> EventsLinkage { get; }
 
     /// <summary>
@@ -97,6 +101,7 @@ public interface ICorporateActionMovementReversalAdviceV05 : IOuterRecord
     [IsoId("_2B2eIRbDEeOb5dMswipsLQ")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification46Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -105,6 +110,7 @@ public interface ICorporateActionMovementReversalAdviceV05 : IOuterRecord
     [IsoId("_2B2eIxbDEeOb5dMswipsLQ")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification46Choice> PayingAgent { get; }
 
     /// <summary>
@@ -113,6 +119,7 @@ public interface ICorporateActionMovementReversalAdviceV05 : IOuterRecord
     [IsoId("_2B2eJRbDEeOb5dMswipsLQ")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification46Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -121,5 +128,6 @@ public interface ICorporateActionMovementReversalAdviceV05 : IOuterRecord
     [IsoId("_2B2eJxbDEeOb5dMswipsLQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

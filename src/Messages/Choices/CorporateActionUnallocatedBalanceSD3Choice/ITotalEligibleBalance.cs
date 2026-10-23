@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
 /// </summary>
 [IsoId("_ujGeIcSTEeeRJJtE9TSlkw")]
 [IsoXmlTag("TtlElgblBal")]
+[IsoDisplayName(@"Total Eligible Balance")]
 public interface ITotalEligibleBalance
     : ICorporateActionUnallocatedBalanceSD3Choice,
         IIsoChoiceVariant

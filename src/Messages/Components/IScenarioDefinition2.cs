@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Scenario Definition2.
 /// </summary>
 [IsoId("_lf5NMTqlEe6GiucvqhDlFQ")]
+[IsoDisplayName(@"Scenario Definition2")]
 public interface IScenarioDefinition2 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IScenarioDefinition2 : IIsoComponent
     /// </summary>
     [DisplayName("Stress Item")]
     [IsoXmlTag("StrssItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStressItem1> StressItem { get; }
 
     /// <summary>

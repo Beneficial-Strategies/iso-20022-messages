@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice;
 /// </summary>
 [IsoId("_Dhy-5UDHEeGUr-Tp_ntVFg")]
 [IsoXmlTag("Acct")]
+[IsoDisplayName(@"Account")]
 public interface IAccount : ISearchCriteria1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,5 +35,6 @@ public interface IAccount : ISearchCriteria1Choice, IIsoChoiceVariant
     [IsoId("_EcwSUUyvEeGcV5yVhSZuNw")]
     [DisplayName("Authority Request Type")]
     [IsoXmlTag("AuthrtyReqTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorityRequestType1> AuthorityRequestType { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the agreed amount and the collateral movement direction.
 /// </summary>
 [IsoId("_5woB5SqREeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Collateral Movement")]
 public interface ICollateralMovement12 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICollateralMovement12 : IIsoComponent
     [IsoId("_6IUJIyqREeyR9JrVGfaMKw")]
     [DisplayName("Movement Direction")]
     [IsoXmlTag("MvmntDrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralMovement6Choice> MovementDirection { get; }
 }

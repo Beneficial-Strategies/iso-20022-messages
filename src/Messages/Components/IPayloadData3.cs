@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the instance of the document exchanged.
 /// </summary>
 [IsoId("_b5oVIRUZEfCfALVKQ4rOew")]
+[IsoDisplayName(@"Payload Data3")]
 public interface IPayloadData3 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a closed status reason.
 /// </summary>
 [IsoId("_UcK_cUzDEeafiMTDrtSnyw")]
+[IsoDisplayName(@"Closed Status Reason 1 Choice")]
 public interface IClosedStatusReason1Choice : IIsoChoice { }

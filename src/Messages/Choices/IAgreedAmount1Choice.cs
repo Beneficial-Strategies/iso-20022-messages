@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides details about the agreed amount for the variation margin and the segregated independent amount, or the segregated independent amount only.
 /// </summary>
 [IsoId("_Qm7bJdp-Ed-ak6NoX_4Aeg_926398968")]
+[IsoDisplayName(@"Agreed Amount 1 Choice")]
 public interface IAgreedAmount1Choice : IIsoChoice { }

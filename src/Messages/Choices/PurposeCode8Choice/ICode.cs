@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PurposeCode8Choice;
 /// Securities account purpose as an ISO 20022 code.
 /// </summary>
 [IsoId("_5Wx6ZJNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPurposeCode8Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice;
 /// <summary>
 /// Type.
 /// </summary>
+[IsoDisplayName(@"Type")]
 public interface IType : IUpdateLogPartyRecord2Choice, IIsoChoiceVariant
 {
     /// <summary>

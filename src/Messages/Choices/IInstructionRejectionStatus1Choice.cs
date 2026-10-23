@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of instruction rejection status.
 /// </summary>
 [IsoId("_RCfVxdp-Ed-ak6NoX_4Aeg_-1295104262")]
+[IsoDisplayName(@"Instruction Rejection Status 1 Choice")]
 public interface IInstructionRejectionStatus1Choice : IIsoChoice { }

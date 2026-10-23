@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GlobalNote2Choice;
 /// Global note expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_TsvfweLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IGlobalNote2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Instruction has not been matched.
 /// </summary>
 [IsoId("_TgpI4OCBEei2UYJ62ws-Fw")]
+[IsoDisplayName(@"Unmatched Status 22 Choice")]
 public interface IUnmatchedStatus22Choice : IIsoChoice { }

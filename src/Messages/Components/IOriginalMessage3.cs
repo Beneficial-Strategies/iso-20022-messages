@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous identification of the original message references.
 /// </summary>
 [IsoId("_4ciG8cQZEeWVvLI4PXU3BQ")]
+[IsoDisplayName(@"Original Message")]
 public interface IOriginalMessage3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IOriginalMessage3 : IIsoComponent
     [IsoId("_423Sg8QZEeWVvLI4PXU3BQ")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IOriginalMessage3 : IIsoComponent
     [IsoId("_423ShcQZEeWVvLI4PXU3BQ")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageNameIdentification { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface IOriginalMessage3 : IIsoComponent
     [IsoId("_423Sh8QZEeWVvLI4PXU3BQ")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 }

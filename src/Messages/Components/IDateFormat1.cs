@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Format to express a date and a date mode.
 /// </summary>
 [IsoId("__ZsXMFuSEeSmO6RkXg92Lg")]
+[IsoDisplayName(@"Date Format")]
 public interface IDateFormat1 : IIsoComponent
 {
     /// <summary>

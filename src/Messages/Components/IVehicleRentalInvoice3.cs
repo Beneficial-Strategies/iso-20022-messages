@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vehicle Rental Invoice3.
 /// </summary>
 [IsoId("_D8WlsXToEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Vehicle Rental Invoice3")]
 public interface IVehicleRentalInvoice3 : IIsoComponent
 {
     /// <summary>
@@ -170,6 +171,7 @@ public interface IVehicleRentalInvoice3 : IIsoComponent
     /// </summary>
     [DisplayName("Charge")]
     [IsoXmlTag("Chrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRentalRate1> Charge { get; }
 
     /// <summary>
@@ -191,6 +193,7 @@ public interface IVehicleRentalInvoice3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount21> AdditionalAmount { get; }
 
     /// <summary>
@@ -198,5 +201,6 @@ public interface IVehicleRentalInvoice3 : IIsoComponent
     /// </summary>
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax41> Tax { get; }
 }

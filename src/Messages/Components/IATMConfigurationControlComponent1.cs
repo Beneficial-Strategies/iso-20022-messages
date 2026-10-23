@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Configuration Control Component1.
 /// </summary>
 [IsoId("_TwK2sJ2kEe-4seDr3Li2Ew")]
+[IsoDisplayName(@"ATM Configuration Control Component1")]
 public interface IATMConfigurationControlComponent1 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IATMConfigurationControlComponent1 : IIsoComponent
     /// </summary>
     [DisplayName("Property")]
     [IsoXmlTag("Prprty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMPropertyComponent1> Property { get; }
 
     /// <summary>

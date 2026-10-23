@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial instrument cleared by a central counterparty.
 /// </summary>
 [IsoId("_vcwiQLVNEeadLcJesEbkTQ")]
+[IsoDisplayName(@"Cleared Product")]
 public interface IClearedProduct1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IClearedProduct1 : IIsoComponent
     [IsoId("__o5ZsLVNEeadLcJesEbkTQ")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> TradingVenue { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface IClearedProduct1 : IIsoComponent
     [IsoId("_xGV_EPqBEeaQh_7a05rSJQ")]
     [DisplayName("Trades Cleared")]
     [IsoXmlTag("TrdsClrd")]
+    [IsoSimpleType(IsoSimpleType.NonNegativeNumber)]
     NonNegativeNumber? TradesCleared { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the revaluation.
 /// </summary>
 [IsoId("_5mw3_ZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Revaluation Indicator 4 Choice")]
 public interface IRevaluationIndicator4Choice : IIsoChoice { }

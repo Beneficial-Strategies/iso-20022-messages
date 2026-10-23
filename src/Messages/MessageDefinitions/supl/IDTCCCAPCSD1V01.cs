@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// </summary>
 [IsoId("_mUvC4OaIEei5aPS232E3Mw")]
 [IsoMessage("supl.034.001.01", "DTCCCAPCSD1", "urn:iso:std:iso:20022:tech:xsd:supl.034.001.01")]
+[Description(@"The DTCCCAPCSD1 message extends ISO corporate action Movement Preliminary Advice Cancellation Advice (CAPC) message with DTCC corporate action elements not covered in the standard message.")]
+[IsoDisplayName(@"DTCCCAPCSD 1 V")]
 public interface IDTCCCAPCSD1V01 : IOuterRecord
 {
     /// <summary>

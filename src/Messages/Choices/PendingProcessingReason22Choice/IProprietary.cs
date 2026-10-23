@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessingReason22Choice;
 
 /// <summary>Specifies the reason why the instruction has a pending processing status.</summary>
 [IsoId("_rgReoaohEfCG2_q2WT-90w")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPendingProcessingReason22Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

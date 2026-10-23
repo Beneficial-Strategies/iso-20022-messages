@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the requested modifications of the underlying payment instruction.
 /// </summary>
 [IsoId("_P8mrwdp-Ed-ak6NoX_4Aeg_-870652409")]
+[IsoDisplayName(@"Requested Modification")]
 public interface IRequestedModification2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRequestedModification2 : IIsoComponent
     [IsoId("_P8mrwtp-Ed-ak6NoX_4Aeg_-1332760630")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IRequestedModification2 : IIsoComponent
     [IsoId("_P8mrw9p-Ed-ak6NoX_4Aeg_-1332760538")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IRequestedModification2 : IIsoComponent
     [IsoId("_P8mrxNp-Ed-ak6NoX_4Aeg_-1332760229")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IRequestedModification2 : IIsoComponent
     [IsoId("_P8mrxtp-Ed-ak6NoX_4Aeg_-1005306999")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedExecutionDate { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IRequestedModification2 : IIsoComponent
     [IsoId("_P8mrx9p-Ed-ak6NoX_4Aeg_-1005307061")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IRequestedModification2 : IIsoComponent
     [IsoId("_P8mryNp-Ed-ak6NoX_4Aeg_-1005307091")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -177,6 +187,8 @@ public interface IRequestedModification2 : IIsoComponent
     [IsoId("_P86Nw9p-Ed-ak6NoX_4Aeg_-1073908022")]
     [DisplayName("Instruction For Debtor Agent")]
     [IsoXmlTag("InstrForDbtrAgt")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InstructionForDebtorAgent { get; }
 
     /// <summary>
@@ -185,6 +197,7 @@ public interface IRequestedModification2 : IIsoComponent
     [IsoId("_P86NxNp-Ed-ak6NoX_4Aeg_-2120525596")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>
@@ -193,6 +206,7 @@ public interface IRequestedModification2 : IIsoComponent
     [IsoId("_P86Nxdp-Ed-ak6NoX_4Aeg_1117275961")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent1> InstructionForCreditorAgent { get; }
 
     /// <summary>

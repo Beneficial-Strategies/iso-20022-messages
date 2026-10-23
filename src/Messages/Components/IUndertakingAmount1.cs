@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about an amount.
 /// </summary>
 [IsoId("_94wDmHltEeG7BsjMvd1mEw_-848178472")]
+[IsoDisplayName(@"Undertaking Amount")]
 public interface IUndertakingAmount1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IUndertakingAmount1 : IIsoComponent
     [IsoId("_945NgXltEeG7BsjMvd1mEw_537164761")]
     [DisplayName("Plus Tolerance")]
     [IsoXmlTag("PlusTlrnce")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PlusTolerance { get; }
 
     /// <summary>
@@ -33,5 +35,9 @@ public interface IUndertakingAmount1 : IIsoComponent
     [IsoId("_945NgnltEeG7BsjMvd1mEw_1114633018")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acknowledgement of a completion advice.
 /// </summary>
 [IsoId("_fYk7IYqlEeS4a4abTJTSSw")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction4 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IATMTransaction4 : IIsoComponent
     [IsoId("_fkf3V4qlEeS4a4abTJTSSw")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface IATMTransaction4 : IIsoComponent
     [IsoId("_fkf3WYqlEeS4a4abTJTSSw")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand1> Command { get; }
 }

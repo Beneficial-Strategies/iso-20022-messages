@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor parameters dedicated to a payment application of the point of interaction.
 /// </summary>
 [IsoId("_yOVVUTY7EeOYzMAJn8nuYA")]
+[IsoDisplayName(@"Application Parameters")]
 public interface IApplicationParameters3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IApplicationParameters3 : IIsoComponent
     [IsoId("_ydqKwTY7EeOYzMAJn8nuYA")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ApplicationIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IApplicationParameters3 : IIsoComponent
     [IsoId("_ydqKwzY7EeOYzMAJn8nuYA")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text Version { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IApplicationParameters3 : IIsoComponent
     [IsoId("_ydqKxTY7EeOYzMAJn8nuYA")]
     [DisplayName("Parameters")]
     [IsoXmlTag("Params")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max100KBinary> Parameters { get; }
 
     /// <summary>

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Total amount of charges.
 /// </summary>
 [IsoId("_VI5xiNp-Ed-ak6NoX_4Aeg_-463850161")]
+[IsoDisplayName(@"Total Charges")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ITotalCharges2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +27,6 @@ public interface ITotalCharges2 : IIsoComponent
     [IsoId("_VI5xitp-Ed-ak6NoX_4Aeg_-463850083")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge10> ChargeDetails { get; }
 }

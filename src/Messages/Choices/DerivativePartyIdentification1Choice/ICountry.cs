@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DerivativePartyIdentification1Ch
 /// Country of the reference entity.
 /// </summary>
 [IsoId("_oTF3kEW8EeWaZZ6gWK8UVw")]
+[IsoDisplayName(@"Country")]
 public interface ICountry : IDerivativePartyIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>

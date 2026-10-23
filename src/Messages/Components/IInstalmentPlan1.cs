@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes of the instalment plan.
 /// </summary>
 [IsoId("_dJGhAT1-EfCQAqQ9lolFUg")]
+[IsoDisplayName(@"Instalment Plan1")]
 public interface IInstalmentPlan1 : IIsoComponent
 {
     /// <summary>
@@ -161,6 +162,7 @@ public interface IInstalmentPlan1 : IIsoComponent
     [IsoId("_dLQdST1-EfCQAqQ9lolFUg")]
     [DisplayName("Amount Details")]
     [IsoXmlTag("AmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalmentAmountData1> AmountDetails { get; }
 
     /// <summary>
@@ -177,6 +179,7 @@ public interface IInstalmentPlan1 : IIsoComponent
     [IsoId("_aWXVYkVaEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -185,5 +188,6 @@ public interface IInstalmentPlan1 : IIsoComponent
     [IsoId("_aWXVY0VaEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

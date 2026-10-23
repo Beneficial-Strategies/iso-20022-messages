@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Intra Balance Or Operational Error11Choice.
 /// </summary>
 [IsoId("_3qht0TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Intra Balance Or Operational Error11Choice")]
 public interface IIntraBalanceOrOperationalError11Choice : IIsoChoice { }

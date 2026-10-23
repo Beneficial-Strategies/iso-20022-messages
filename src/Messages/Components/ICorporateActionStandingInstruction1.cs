@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the standing instruction.
 /// </summary>
 [IsoId("_UJbRidp-Ed-ak6NoX_4Aeg_852863952")]
+[IsoDisplayName(@"Corporate Action Standing Instruction")]
 public interface ICorporateActionStandingInstruction1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,7 @@ public interface ICorporateActionStandingInstruction1 : IIsoComponent
     [IsoId("_UJkbcNp-Ed-ak6NoX_4Aeg_1012038453")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

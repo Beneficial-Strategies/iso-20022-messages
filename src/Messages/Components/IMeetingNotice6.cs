@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a meeting, participation requirements and voting procedures.
 /// </summary>
 [IsoId("_9YWLsfKvEeqRfth943bvEA")]
+[IsoDisplayName(@"Meeting Notice")]
 public interface IMeetingNotice6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMeetingNotice6 : IIsoComponent
     [IsoId("_9tCCQ_KvEeqRfth943bvEA")]
     [DisplayName("Meeting Identification")]
     [IsoXmlTag("MtgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MeetingIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IMeetingNotice6 : IIsoComponent
     [IsoId("_9tCCRfKvEeqRfth943bvEA")]
     [DisplayName("Issuer Meeting Identification")]
     [IsoXmlTag("IssrMtgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? IssuerMeetingIdentification { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IMeetingNotice6 : IIsoComponent
     [IsoId("_0wBlkPNgEeqRfth943bvEA")]
     [DisplayName("One Man One Vote Indicator")]
     [IsoXmlTag("OneManOneVoteInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OneManOneVoteIndicator { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IMeetingNotice6 : IIsoComponent
     [IsoId("_9tCCTfKvEeqRfth943bvEA")]
     [DisplayName("Participation")]
     [IsoXmlTag("Prtcptn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IParticipationMethod1> Participation { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IMeetingNotice6 : IIsoComponent
     [IsoId("_9tCCUfKvEeqRfth943bvEA")]
     [DisplayName("Additional Documentation URL Address")]
     [IsoXmlTag("AddtlDcmnttnURLAdr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max2048Text> AdditionalDocumentationURLAddress { get; }
 
     /// <summary>
@@ -89,6 +97,9 @@ public interface IMeetingNotice6 : IIsoComponent
     [IsoId("_9tCCU_KvEeqRfth943bvEA")]
     [DisplayName("Additional Procedure Details")]
     [IsoXmlTag("AddtlPrcdrDtls")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalRights3> AdditionalProcedureDetails { get; }
 
     /// <summary>
@@ -105,6 +116,7 @@ public interface IMeetingNotice6 : IIsoComponent
     [IsoId("_9tCCV_KvEeqRfth943bvEA")]
     [DisplayName("Total Number Of Voting Rights")]
     [IsoXmlTag("TtlNbOfVtngRghts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberOfVotingRights { get; }
 
     /// <summary>
@@ -129,6 +141,9 @@ public interface IMeetingNotice6 : IIsoComponent
     [IsoId("_9tCCXfKvEeqRfth943bvEA")]
     [DisplayName("Contact Person Details")]
     [IsoXmlTag("CtctPrsnDtls")]
+    [MinLength(0)]
+    [MaxLength(12)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingContactPerson3> ContactPersonDetails { get; }
 
     /// <summary>
@@ -145,6 +160,7 @@ public interface IMeetingNotice6 : IIsoComponent
     [IsoId("_9tCCYfKvEeqRfth943bvEA")]
     [DisplayName("Securities Blocking Period End Date")]
     [IsoXmlTag("SctiesBlckgPrdEndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? SecuritiesBlockingPeriodEndDate { get; }
 
     /// <summary>

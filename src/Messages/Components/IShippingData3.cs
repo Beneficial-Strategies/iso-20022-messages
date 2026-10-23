@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Shipping Data3.
 /// </summary>
 [IsoId("_O2HLQXTtEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Shipping Data3")]
 public interface IShippingData3 : IIsoComponent
 {
     /// <summary>
@@ -72,6 +73,7 @@ public interface IShippingData3 : IIsoComponent
     /// </summary>
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax41> Tax { get; }
 
     /// <summary>
@@ -93,6 +95,7 @@ public interface IShippingData3 : IIsoComponent
     /// </summary>
     [DisplayName("Package")]
     [IsoXmlTag("Packg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IShippingPackage3> Package { get; }
 
     /// <summary>
@@ -100,5 +103,6 @@ public interface IShippingData3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

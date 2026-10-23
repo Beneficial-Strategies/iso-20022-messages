@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingVenueIdentification4Choic
 
 /// <summary>Identification used where reporting entity uses a market identification code (MIC).</summary>
 [IsoId("_GrBlc4TPEfClBYp_xDbOWg")]
+[IsoDisplayName(@"Market Identification Code")]
 public interface IMarketIdentificationCode : ITradingVenueIdentification4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

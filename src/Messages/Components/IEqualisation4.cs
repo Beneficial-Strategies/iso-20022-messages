@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Equalisation4.
 /// </summary>
 [IsoId("_3yi-ERy9Ee6xZagVxBkKsg")]
+[IsoDisplayName(@"Equalisation4")]
 public interface IEqualisation4 : IIsoComponent
 {
     /// <summary>

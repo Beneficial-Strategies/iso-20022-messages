@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IncentivePremiumType1Choice;
 /// Indicates that the premium is given per attendee.
 /// </summary>
 [IsoId("_RDiepNp-Ed-ak6NoX_4Aeg_1361394967")]
+[IsoDisplayName(@"Per Attendee")]
 public interface IPerAttendee : IIncentivePremiumType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPerAttendee : IIncentivePremiumType1Choice, IIsoChoiceVariant
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("PerAttndee")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

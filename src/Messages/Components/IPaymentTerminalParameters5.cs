@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Manufacturer configuration parameters of the point of interaction (POI).
 /// </summary>
 [IsoId("_wkqvcdqbEeearpaEPXv9UA")]
+[IsoDisplayName(@"Payment Terminal Parameters")]
 public interface IPaymentTerminalParameters5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPaymentTerminalParameters5 : IIsoComponent
     [IsoId("_wtSf89qbEeearpaEPXv9UA")]
     [DisplayName("Vendor Identification")]
     [IsoXmlTag("VndrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? VendorIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPaymentTerminalParameters5 : IIsoComponent
     [IsoId("_wtSf9dqbEeearpaEPXv9UA")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Version { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IPaymentTerminalParameters5 : IIsoComponent
     [IsoId("_wtSf-dqbEeearpaEPXv9UA")]
     [DisplayName("Time Zone Line")]
     [IsoXmlTag("TmZoneLine")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> TimeZoneLine { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IPaymentTerminalParameters5 : IIsoComponent
     [IsoId("_wtSf-9qbEeearpaEPXv9UA")]
     [DisplayName("Local Date Time")]
     [IsoXmlTag("LclDtTm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalDateTime1> LocalDateTime { get; }
 
     /// <summary>
@@ -65,5 +72,6 @@ public interface IPaymentTerminalParameters5 : IIsoComponent
     [IsoId("_wtSf_dqbEeearpaEPXv9UA")]
     [DisplayName("Other Parameters")]
     [IsoXmlTag("OthrParams")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? OtherParameters { get; }
 }

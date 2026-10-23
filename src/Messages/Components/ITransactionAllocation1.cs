@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Allocation1.
 /// </summary>
 [IsoId("_GlhY8GdWEe6jWPHmQqpKMw")]
+[IsoDisplayName(@"Transaction Allocation1")]
 public interface ITransactionAllocation1 : IIsoComponent
 {
     /// <summary>
@@ -51,5 +52,6 @@ public interface ITransactionAllocation1 : IIsoComponent
     /// </summary>
     [DisplayName("Related References")]
     [IsoXmlTag("RltdRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferences74Choice> RelatedReferences { get; }
 }

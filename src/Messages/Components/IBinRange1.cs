@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a set of cards which shares the same functionalities.
 /// </summary>
 [IsoId("_qe2mAHC8Ee2bmOA3bkVsMg")]
+[IsoDisplayName(@"Bin Range")]
 public interface IBinRange1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IBinRange1 : IIsoComponent
     [IsoId("_6yFj8HC8Ee2bmOA3bkVsMg")]
     [DisplayName("Lower Bin")]
     [IsoXmlTag("LwrBin")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText LowerBin { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IBinRange1 : IIsoComponent
     [IsoId("_-Bh7cHC8Ee2bmOA3bkVsMg")]
     [DisplayName("Higher Bin")]
     [IsoXmlTag("HghrBin")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText HigherBin { get; }
 }

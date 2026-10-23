@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod1Choice;
 /// </summary>
 [IsoId("_h2zp0A2uEeSNWNtJlXOAhg")]
 [IsoXmlTag("Cdt")]
+[IsoDisplayName(@"Credit")]
 public interface ICredit : ISettlementMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -146,6 +147,7 @@ public interface ICredit : ISettlementMethod1Choice, IIsoChoiceVariant
     [IsoId("_AyXSOeRsEeaY150p1rZlTg")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent1> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -163,6 +165,9 @@ public interface ICredit : ISettlementMethod1Choice, IIsoChoiceVariant
     [IsoId("_AyXSNuRsEeaY150p1rZlTg")]
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting3> RegulatoryReporting { get; }
 
     /// <summary>
@@ -179,6 +184,9 @@ public interface ICredit : ISettlementMethod1Choice, IIsoChoiceVariant
     [IsoId("_AyXSM-RsEeaY150p1rZlTg")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation2> RelatedRemittanceInformation { get; }
 
     /// <summary>

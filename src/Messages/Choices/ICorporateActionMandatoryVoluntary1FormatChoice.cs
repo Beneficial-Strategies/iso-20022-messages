@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express whether the event is mandatory, mandatory with options or voluntary.
 /// </summary>
 [IsoId("_RmZ7Itp-Ed-ak6NoX_4Aeg_1296355739")]
+[IsoDisplayName(@"Corporate Action Mandatory Voluntary 1 Format Choice")]
 public interface ICorporateActionMandatoryVoluntary1FormatChoice : IIsoChoice { }

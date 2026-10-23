@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information regarding the total amount of taxes.
 /// </summary>
 [IsoId("_U5QL9dp-Ed-ak6NoX_4Aeg_1827324489")]
+[IsoDisplayName(@"Total Taxes")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ITotalTaxes2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +27,6 @@ public interface ITotalTaxes2 : IIsoComponent
     [IsoId("_U5QL99p-Ed-ak6NoX_4Aeg_1827325403")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax7> TaxDetails { get; }
 }

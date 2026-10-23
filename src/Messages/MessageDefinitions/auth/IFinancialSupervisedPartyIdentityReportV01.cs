@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinSprvsdPtyIdntyRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.076.001.01"
 )]
+[Description(@"This FinancialSupervisedPartyIdentityReport message is sent by the competent institution to report parties used for the purpose of the local regulation.|")]
+[IsoDisplayName(@"Financial Supervised Party Identity Report V")]
 public interface IFinancialSupervisedPartyIdentityReportV01 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface IFinancialSupervisedPartyIdentityReportV01 : IOuterRecord
     [IsoId("_DehT8fH1Eeaz_YGUGLjP6A")]
     [DisplayName("Party Data")]
     [IsoXmlTag("PtyData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyReport1Choice> PartyData { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IFinancialSupervisedPartyIdentityReportV01 : IOuterRecord
     [IsoId("_nAykQTbuEeeYhaZ6bvG1Xg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

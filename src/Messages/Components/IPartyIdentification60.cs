@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party by fund name, name and address or an LEI.
 /// </summary>
 [IsoId("_f3RSvZT-EeKShbaq9ixROw")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification60 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyIdentification60 : IIsoComponent
     [IsoId("_xNsHsJXJEeK3CZeLifG0eA")]
     [DisplayName("Fund Identification")]
     [IsoXmlTag("FndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text FundIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IPartyIdentification60 : IIsoComponent
     [IsoId("_1rPVUJT-EeKShbaq9ixROw")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification54Choice;
 /// E-mail identifying the account.
 /// </summary>
 [IsoId("_5q1FpVHSEey4xOoMoOPSJQ")]
+[IsoDisplayName(@"E Mail")]
 public interface IEMail : IAccountIdentification54Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IEMail : IAccountIdentification54Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 256 characters.
     /// </summary>
     [IsoXmlTag("EMail")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Value { get; }
 }

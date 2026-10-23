@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Traceability10.
 /// </summary>
 [IsoId("_dgAwMWxjEe6wzr2RagRERg")]
+[IsoDisplayName(@"Traceability10")]
 public interface ITraceability10 : IIsoComponent
 {
     /// <summary>

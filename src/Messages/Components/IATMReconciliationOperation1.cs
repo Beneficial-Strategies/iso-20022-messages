@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Reconciliation Operation1.
 /// </summary>
 [IsoId("_y2c5kJ2hEe-4seDr3Li2Ew")]
+[IsoDisplayName(@"ATM Reconciliation Operation1")]
 public interface IATMReconciliationOperation1 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IATMReconciliationOperation1 : IIsoComponent
     /// </summary>
     [DisplayName("ATM Totals")]
     [IsoXmlTag("ATMTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMTotals4> ATMTotals { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface IATMReconciliationOperation1 : IIsoComponent
     /// </summary>
     [DisplayName("Cassette")]
     [IsoXmlTag("Csstt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCassette3> Cassette { get; }
 
     /// <summary>
@@ -51,6 +54,7 @@ public interface IATMReconciliationOperation1 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMTotals3> TransactionTotals { get; }
 
     /// <summary>
@@ -72,5 +76,6 @@ public interface IATMReconciliationOperation1 : IIsoComponent
     /// </summary>
     [DisplayName("Incident")]
     [IsoXmlTag("Incdnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<FailureReason9Code> Incident { get; }
 }

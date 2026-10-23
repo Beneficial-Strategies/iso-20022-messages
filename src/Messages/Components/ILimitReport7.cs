@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reports either on the risk management limit or on a business error.
 /// </summary>
 [IsoId("_DAtgZ24-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Limit Report")]
 public interface ILimitReport7 : IIsoComponent
 {
     /// <summary>

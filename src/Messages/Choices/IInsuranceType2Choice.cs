@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the type of insurance.
 /// </summary>
 [IsoId("_7iIRISGSEeWKAaDJcYGKLw")]
+[IsoDisplayName(@"Insurance Type 2 Choice")]
 public interface IInsuranceType2Choice : IIsoChoice { }

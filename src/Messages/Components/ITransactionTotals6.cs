@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional count which may be utilised for reconciliation.
 /// </summary>
 [IsoId("_uP6W4Xu_EeSLmfFG0DG7zQ")]
+[IsoDisplayName(@"Transaction Totals")]
 public interface ITransactionTotals6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransactionTotals6 : IIsoComponent
     [IsoId("_A8MP0HvAEeSLmfFG0DG7zQ")]
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Authorisation { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITransactionTotals6 : IIsoComponent
     [IsoId("_EzJ6UHvAEeSLmfFG0DG7zQ")]
     [DisplayName("Authorisation Reversal")]
     [IsoXmlTag("AuthstnRvsl")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? AuthorisationReversal { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITransactionTotals6 : IIsoComponent
     [IsoId("_HZdOMHvAEeSLmfFG0DG7zQ")]
     [DisplayName("Inquiry")]
     [IsoXmlTag("Nqry")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Inquiry { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ITransactionTotals6 : IIsoComponent
     [IsoId("_KRVaQHvAEeSLmfFG0DG7zQ")]
     [DisplayName("Inquiry Reversal")]
     [IsoXmlTag("NqryRvsl")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? InquiryReversal { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ITransactionTotals6 : IIsoComponent
     [IsoId("_NUPxoHvAEeSLmfFG0DG7zQ")]
     [DisplayName("Payments")]
     [IsoXmlTag("Pmts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Payments { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ITransactionTotals6 : IIsoComponent
     [IsoId("_SAEAgHvAEeSLmfFG0DG7zQ")]
     [DisplayName("Payment Reversal")]
     [IsoXmlTag("PmtRvsl")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? PaymentReversal { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ITransactionTotals6 : IIsoComponent
     [IsoId("_WV0f0HvAEeSLmfFG0DG7zQ")]
     [DisplayName("Transfer")]
     [IsoXmlTag("Trf")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Transfer { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface ITransactionTotals6 : IIsoComponent
     [IsoId("_aB3TwHvAEeSLmfFG0DG7zQ")]
     [DisplayName("Transfer Reversal")]
     [IsoXmlTag("TrfRvsl")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TransferReversal { get; }
 
     /// <summary>
@@ -81,5 +90,6 @@ public interface ITransactionTotals6 : IIsoComponent
     [IsoId("_dOp_4HvAEeSLmfFG0DG7zQ")]
     [DisplayName("Fee Collection")]
     [IsoXmlTag("FeeColltn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? FeeCollection { get; }
 }

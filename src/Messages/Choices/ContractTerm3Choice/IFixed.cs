@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractTerm3Choice;
 /// </summary>
 [IsoId("_tKrKc69_EemF0ZVFnxVu4g")]
 [IsoXmlTag("Fxd")]
+[IsoDisplayName(@"Fixed")]
 public interface IFixed : IContractTerm3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IFixed : IContractTerm3Choice, IIsoChoiceVariant
     [IsoId("_aMOjQU9xEeeRtrXYXV38uA")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>

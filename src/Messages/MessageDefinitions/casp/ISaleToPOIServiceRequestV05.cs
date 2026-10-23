@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// </summary>
 [IsoId("_Ids_YXMuEe2vXY6MoVq19w")]
 [IsoMessage("casp.001.001.05", "SaleToPOISvcReq", "urn:iso:std:iso:20022:tech:xsd:casp.001.001.05")]
+[Description(@"This SaleToPOIServiceRequest message is sent by a sale system to trig a financial service on POI system.")]
+[IsoDisplayName(@"Sale To POI Service Request V")]
 public interface ISaleToPOIServiceRequestV05 : IOuterRecord
 {
     /// <summary>

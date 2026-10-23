@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details of the close links as defined in the collateral reference data.
 /// </summary>
 [IsoId("_J3BXAaX_EeynsLtPxJMJTQ")]
+[IsoDisplayName(@"Close Link5")]
 public interface ICloseLink5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICloseLink5 : IIsoComponent
     [IsoId("_J-LH4aX_EeynsLtPxJMJTQ")]
     [DisplayName("Security Identification")]
     [IsoXmlTag("SctyId")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification19> SecurityIdentification { get; }
 
     /// <summary>

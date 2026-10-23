@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the response to the network management.
 /// </summary>
 [IsoId("_aNF6EHvFEeSKFIcWw3l4Yw")]
+[IsoDisplayName(@"Acquirer Network Management Response")]
 public interface IAcquirerNetworkManagementResponse1 : IIsoComponent
 {
     /// <summary>

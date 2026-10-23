@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Means by which a payment will be or has been made for settlement purposes.
 /// </summary>
 [IsoId("_TCRjCAEcEeCQm6a_G2yO_w_-1888332883")]
+[IsoDisplayName(@"Payment Means")]
 public interface IPaymentMeans1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the benchmark against which the financial instrument is measured.
 /// </summary>
 [IsoId("_P1sQ4ZJKEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Benchmark Curve")]
 public interface IBenchmarkCurve6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IBenchmarkCurve6 : IIsoComponent
     [IsoId("_P3vfUZJKEeuAlLVx8pyt3w")]
     [DisplayName("Spread")]
     [IsoXmlTag("Sprd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? Spread { get; }
 
     /// <summary>
@@ -57,5 +59,7 @@ public interface IBenchmarkCurve6 : IIsoComponent
     [IsoId("_P3vfeZJKEeuAlLVx8pyt3w")]
     [DisplayName("Benchmark Curve Point")]
     [IsoXmlTag("BchmkCrvPt")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? BenchmarkCurvePoint { get; }
 }

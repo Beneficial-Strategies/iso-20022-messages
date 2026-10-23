@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the advice for the issuance of an undertaking.
 /// </summary>
 [IsoId("_-AMvZnltEeG7BsjMvd1mEw_-927366247")]
+[IsoDisplayName(@"Undertaking Advice")]
 public interface IUndertakingAdvice1 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,8 @@ public interface IUndertakingAdvice1 : IIsoComponent
     [IsoId("_AoReQz1VEeKvwJ48Wu13ug")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [MinLength(0)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature2> DigitalSignature { get; }
 }

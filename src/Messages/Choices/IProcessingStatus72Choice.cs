@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the status and the reason of the operation.
 /// </summary>
 [IsoId("_atiHUeLtEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Processing Status 72 Choice")]
 public interface IProcessingStatus72Choice : IIsoChoice { }

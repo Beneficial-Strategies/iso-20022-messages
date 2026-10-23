@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further details on the contract collateral.
 /// </summary>
 [IsoId("_5ysDEdOOEeSQ_-lmj1tzfw")]
+[IsoDisplayName(@"Contract Collateral")]
 public interface IContractCollateral1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IContractCollateral1 : IIsoComponent
     [IsoId("_FP2C4NOPEeSQ_-lmj1tzfw")]
     [DisplayName("Collateral Description")]
     [IsoXmlTag("CollDesc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashCollateral5> CollateralDescription { get; }
 
     /// <summary>
@@ -33,5 +35,7 @@ public interface IContractCollateral1 : IIsoComponent
     [IsoId("_f4fVctOPEeSQ_-lmj1tzfw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? AdditionalInformation { get; }
 }

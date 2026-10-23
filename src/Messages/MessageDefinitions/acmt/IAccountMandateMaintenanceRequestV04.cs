@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctMndtMntncReq",
     "urn:iso:std:iso:20022:tech:xsd:acmt.017.001.04"
 )]
+[IsoDisplayName(@"Account Mandate Maintenance Request V04")]
 public interface IAccountMandateMaintenanceRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface IAccountMandateMaintenanceRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountForAction1> AccountIdentification { get; }
 
     /// <summary>
@@ -71,6 +73,7 @@ public interface IAccountMandateMaintenanceRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOperationMandate6> Mandate { get; }
 
     /// <summary>
@@ -78,6 +81,7 @@ public interface IAccountMandateMaintenanceRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Group")]
     [IsoXmlTag("Grp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGroup5> Group { get; }
 
     /// <summary>
@@ -92,6 +96,7 @@ public interface IAccountMandateMaintenanceRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature4> DigitalSignature { get; }
 
     /// <summary>
@@ -99,5 +104,6 @@ public interface IAccountMandateMaintenanceRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

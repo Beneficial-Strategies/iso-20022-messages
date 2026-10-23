@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics2Ch
 /// Specifies the type of report activity for a specific reporting period.
 /// </summary>
 [IsoId("_hUsuwcK4EeuFNp8LZAnorg")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : IDetailedTransactionStatistics2Choice, IIsoChoiceVariant
 {
     /// <summary>

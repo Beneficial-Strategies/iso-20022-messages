@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningBalance3Choice;
 /// </summary>
 [IsoId("_Szn0AQgHEeSxsfb1OEDVsw")]
 [IsoXmlTag("IntrmyOpngBal")]
+[IsoDisplayName(@"Intermediary Opening Balance")]
 public interface IIntermediaryOpeningBalance : IOpeningBalance3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,6 @@ public interface IIntermediaryOpeningBalance : IOpeningBalance3Choice, IIsoChoic
     [IsoId("_SoH21dp-Ed-ak6NoX_4Aeg_-1748202212")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Unit { get; }
 }

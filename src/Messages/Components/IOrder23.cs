@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Intention to transfer an ownership of a financial instrument.
 /// </summary>
 [IsoId("_6GFykQauEe2phaVG0lYKTw")]
+[IsoDisplayName(@"Order")]
 public interface IOrder23 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6aptWwauEe2phaVG0lYKTw")]
     [DisplayName("Order Identification")]
     [IsoXmlTag("OrdrId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> OrderIdentification { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6aptYwauEe2phaVG0lYKTw")]
     [DisplayName("Client Order Identification")]
     [IsoXmlTag("ClntOrdrId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ClientOrderIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6aptawauEe2phaVG0lYKTw")]
     [DisplayName("Secondary Client Order Identification")]
     [IsoXmlTag("ScndryClntOrdrId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> SecondaryClientOrderIdentification { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6aptcwauEe2phaVG0lYKTw")]
     [DisplayName("List Identification")]
     [IsoXmlTag("ListId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ListIdentification { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6aptlQauEe2phaVG0lYKTw")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition9Choice> TradeTransactionCondition { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6aptnQauEe2phaVG0lYKTw")]
     [DisplayName("Pre Advice")]
     [IsoXmlTag("PreAdvc")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PreAdvice { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6aptoQauEe2phaVG0lYKTw")]
     [DisplayName("Order Booking Date")]
     [IsoXmlTag("OrdrBookgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OrderBookingDate { get; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6aptowauEe2phaVG0lYKTw")]
     [DisplayName("Trade Origination Date")]
     [IsoXmlTag("TradOrgtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TradeOriginationDate { get; }
 
     /// <summary>
@@ -161,6 +170,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6aptvwauEe2phaVG0lYKTw")]
     [DisplayName("Partial Fill Details")]
     [IsoXmlTag("PrtlFillDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartialFill4> PartialFillDetails { get; }
 
     /// <summary>
@@ -177,6 +187,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6aptwwauEe2phaVG0lYKTw")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQuantityBreakdown76> QuantityBreakdown { get; }
 
     /// <summary>
@@ -225,6 +236,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6apt1QauEe2phaVG0lYKTw")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -233,6 +245,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6apt3QauEe2phaVG0lYKTw")]
     [DisplayName("Give Up Number Of Days")]
     [IsoXmlTag("GvUpNbOfDays")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? GiveUpNumberOfDays { get; }
 
     /// <summary>
@@ -249,6 +262,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6apt4QauEe2phaVG0lYKTw")]
     [DisplayName("Accrued Interest Percentage")]
     [IsoXmlTag("AcrdIntrstPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? AccruedInterestPercentage { get; }
 
     /// <summary>
@@ -289,6 +303,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6apt9wauEe2phaVG0lYKTw")]
     [DisplayName("Derivative Covered")]
     [IsoXmlTag("DerivCvrd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DerivativeCovered { get; }
 
     /// <summary>
@@ -337,6 +352,7 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6apuDwauEe2phaVG0lYKTw")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReporting6Choice> Reporting { get; }
 
     /// <summary>
@@ -353,6 +369,8 @@ public interface IOrder23 : IIsoComponent
     [IsoId("_6apuGQauEe2phaVG0lYKTw")]
     [DisplayName("Additional Trade Instruction Processing Information")]
     [IsoXmlTag("AddtlTradInstrPrcgInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalTradeInstructionProcessingInformation { get; }
 
     /// <summary>

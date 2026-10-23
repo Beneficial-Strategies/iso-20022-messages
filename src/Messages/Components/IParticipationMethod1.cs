@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Method of voting participation to a general meeting.
 /// </summary>
 [IsoId("_N5h4UK32EemG7MmivSuE5g")]
+[IsoDisplayName(@"Participation Method")]
 public interface IParticipationMethod1 : IIsoComponent
 {
     /// <summary>

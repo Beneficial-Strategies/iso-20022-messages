@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the status of a debtor activation.
 /// </summary>
 [IsoId("_yBQtU-IJEeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Debtor Activation Status Reason 1 Choice")]
 public interface IDebtorActivationStatusReason1Choice : IIsoChoice { }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.tsrv;
     "UdrtkgAmdmntRspn",
     "urn:iso:std:iso:20022:tech:xsd:tsrv.008.001.01"
 )]
+[Description(@"The UndertakingAmendmentResponse message is sent by the beneficiary to the party that issued the undertaking, either directly or via one or more advising parties, to indicate acceptance or rejection by the beneficiary of the amendment.")]
+[IsoDisplayName(@"Undertaking Amendment Response V")]
 public interface IUndertakingAmendmentResponseV01 : IOuterRecord
 {
     /// <summary>

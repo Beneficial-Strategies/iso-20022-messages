@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties6Choice;
 /// </summary>
 [IsoId("_I9Ac-QhDEeSUPbC7DbLJpQ")]
 [IsoXmlTag("Nmnee")]
+[IsoDisplayName(@"Nominee")]
 public interface INominee : IAccountParties6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface INominee : IAccountParties6Choice, IIsoChoiceVariant
     [IsoId("_Gzhn9whDEeSUPbC7DbLJpQ")]
     [DisplayName("Ownership Beneficiary Rate")]
     [IsoXmlTag("OwnrshBnfcryRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OwnershipBeneficiaryRate { get; }
 
     /// <summary>
@@ -42,6 +44,8 @@ public interface INominee : IAccountParties6Choice, IIsoChoiceVariant
     [IsoId("_Gzhn-QhDEeSUPbC7DbLJpQ")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientIdentification { get; }
 
     /// <summary>
@@ -50,6 +54,7 @@ public interface INominee : IAccountParties6Choice, IIsoChoiceVariant
     [IsoId("_Gzhn-whDEeSUPbC7DbLJpQ")]
     [DisplayName("Fiscal Exemption")]
     [IsoXmlTag("FsclXmptn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FiscalExemption { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface INominee : IAccountParties6Choice, IIsoChoiceVariant
     [IsoId("_Gzhn_QhDEeSUPbC7DbLJpQ")]
     [DisplayName("Signatory Right Indicator")]
     [IsoXmlTag("SgntryRghtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SignatoryRightIndicator { get; }
 
     /// <summary>
@@ -66,6 +72,9 @@ public interface INominee : IAccountParties6Choice, IIsoChoiceVariant
     [IsoId("_Gzhn_whDEeSUPbC7DbLJpQ")]
     [DisplayName("Modified Investor Profile Validation")]
     [IsoXmlTag("ModfdInvstrPrflVldtn")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope19> ModifiedInvestorProfileValidation { get; }
 
     /// <summary>
@@ -90,6 +99,7 @@ public interface INominee : IAccountParties6Choice, IIsoChoiceVariant
     [IsoId("_Vs-NYQjQEeS5F6qHcKOrew")]
     [DisplayName("FATCA Form Type")]
     [IsoXmlTag("FATCAFormTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFATCAForm1Choice> FATCAFormType { get; }
 
     /// <summary>
@@ -98,5 +108,6 @@ public interface INominee : IAccountParties6Choice, IIsoChoiceVariant
     [IsoId("_TrvjMQjVEeS5F6qHcKOrew")]
     [DisplayName("FATCA Status")]
     [IsoXmlTag("FATCASts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFATCAStatus1> FATCAStatus { get; }
 }

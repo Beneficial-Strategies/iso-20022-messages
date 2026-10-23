@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Booking Confirmation1.
 /// </summary>
 [IsoId("_EdgLYW8zEe2aW4iy-zispA")]
+[IsoDisplayName(@"Booking Confirmation1")]
 public interface IBookingConfirmation1 : IIsoComponent
 {
     /// <summary>

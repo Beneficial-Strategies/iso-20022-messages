@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information for tax reporting.
 /// </summary>
 [IsoId("_fh93EZS6EemqYPWMBuVawg")]
+[IsoDisplayName(@"Tax Reporting")]
 public interface ITaxReporting3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITaxReporting3 : IIsoComponent
     [IsoId("_f1mkw5S6EemqYPWMBuVawg")]
     [DisplayName("Tax Rate")]
     [IsoXmlTag("TaxRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TaxRate { get; }
 
     /// <summary>
@@ -57,5 +59,7 @@ public interface ITaxReporting3 : IIsoComponent
     [IsoId("_f1mky5S6EemqYPWMBuVawg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Description { get; }
 }

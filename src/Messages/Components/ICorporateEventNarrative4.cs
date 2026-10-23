@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides disclaimer narrative information about the event.
 /// </summary>
 [IsoId("_qwMS0RreEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Corporate Event Narrative")]
 public interface ICorporateEventNarrative4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateEventNarrative4 : IIsoComponent
     [IsoId("_rEmckRreEeyhRdHRjakS2w")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILanguageSpecifiedNarrative1> Disclaimer { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICorporateEventNarrative4 : IIsoComponent
     [IsoId("_pSdwkRreEeyhRdHRjakS2w")]
     [DisplayName("Processing Text For Next Intermediary")]
     [IsoXmlTag("PrcgTxtForNxtIntrmy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max8000Text> ProcessingTextForNextIntermediary { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a custody statement of holdings.
 /// </summary>
 [IsoId("_RPKf0tp-Ed-ak6NoX_4Aeg_1115213683")]
+[IsoDisplayName(@"Custody Statement Of Holdings")]
 public interface ICustodyStatementOfHoldings2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICustodyStatementOfHoldings2 : IIsoComponent
     [IsoId("_RPKf1dp-Ed-ak6NoX_4Aeg_1115213779")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateBalanceInformation4> BalanceForAccount { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICustodyStatementOfHoldings2 : IIsoComponent
     [IsoId("_RPKf1tp-Ed-ak6NoX_4Aeg_1115213821")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubAccountIdentification5> SubAccountDetails { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface ICustodyStatementOfHoldings2 : IIsoComponent
     [IsoId("_RPKf2Np-Ed-ak6NoX_4Aeg_1115213874")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount1Cho
 /// </summary>
 [IsoId("_JFyZAANiEe2-vqzwMUAewg")]
 [IsoXmlTag("DgtlTknAmt")]
+[IsoDisplayName(@"Digital Token Amount")]
 public interface IDigitalTokenAmount : ICurrencyOrDigitalTokenAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IDigitalTokenAmount : ICurrencyOrDigitalTokenAmount1Choice, IIs
     [IsoId("_XQvb0ANiEe2-vqzwMUAewg")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
+    [IsoSimpleType(IsoSimpleType.DTI2021Identifier)]
     DTI2021Identifier? Identifier { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IDigitalTokenAmount : ICurrencyOrDigitalTokenAmount1Choice, IIs
     [IsoId("_dmVr8QNiEe2-vqzwMUAewg")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.Max30DecimalNumber)]
     Max30DecimalNumber Unit { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface IDigitalTokenAmount : ICurrencyOrDigitalTokenAmount1Choice, IIs
     [IsoId("_FY9sgANjEe2-vqzwMUAewg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? Description { get; }
 }

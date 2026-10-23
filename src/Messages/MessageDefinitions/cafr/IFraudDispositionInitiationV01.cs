@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.cafr;
 /// </summary>
 [IsoId("_2sgG8XdfEeeKH6vrEwvLHA")]
 [IsoMessage("cafr.003.001.01", "FrdDspstnInitn", "urn:iso:std:iso:20022:tech:xsd:cafr.003.001.01")]
+[Description(@"A FraudDispositionInitiation message is usually sent by an agent to a financial institution acting as an acquirer or as an issuer   to report about the disposition of a confirmed fraudulent transaction.")]
+[IsoDisplayName(@"Fraud Disposition Initiation V")]
 public interface IFraudDispositionInitiationV01 : IOuterRecord
 {
     /// <summary>

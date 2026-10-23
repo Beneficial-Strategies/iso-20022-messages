@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies security rate details.
 /// </summary>
 [IsoId("_1kNFZjL3EeKU9IrkkToqcw_1911646277")]
+[IsoDisplayName(@"Corporate Action Rate SD 6 Choice")]
 public interface ICorporateActionRateSD6Choice : IIsoChoice { }

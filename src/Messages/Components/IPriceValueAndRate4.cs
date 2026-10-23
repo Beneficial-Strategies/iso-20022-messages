@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Price and rate.
 /// </summary>
 [IsoId("_m-cPsvNBEeCuA5Tr22BnwA_-566679044")]
+[IsoDisplayName(@"Price Value And Rate")]
 public interface IPriceValueAndRate4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPriceValueAndRate4 : IIsoComponent
     [IsoId("_m-cPtPNBEeCuA5Tr22BnwA_-208337999")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 }

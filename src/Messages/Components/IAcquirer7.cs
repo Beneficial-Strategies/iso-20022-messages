@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acquirer of the withdrawal transaction, in charge of the funds settlement with the issuer.
 /// </summary>
 [IsoId("_077-4Yn1EeS9F4Qrq_eaVA")]
+[IsoDisplayName(@"Acquirer")]
 public interface IAcquirer7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAcquirer7 : IIsoComponent
     [IsoId("_1Ivr0Yn1EeS9F4Qrq_eaVA")]
     [DisplayName("Acquiring Institution")]
     [IsoXmlTag("AcqrgInstn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AcquiringInstitution { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IAcquirer7 : IIsoComponent
     [IsoId("_1Ivr04n1EeS9F4Qrq_eaVA")]
     [DisplayName("Branch")]
     [IsoXmlTag("Brnch")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Branch { get; }
 }

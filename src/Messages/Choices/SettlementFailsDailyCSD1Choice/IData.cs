@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFailsDailyCSD1Choice;
 /// </summary>
 [IsoId("_Umrp4zOaEeqBfed1bmSPqg")]
 [IsoXmlTag("Data")]
+[IsoDisplayName(@"Data")]
 public interface IData : ISettlementFailsDailyCSD1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.supl;
     "DTCCCANOSvcDataSD1",
     "urn:iso:std:iso:20022:tech:xsd:supl.003.001.03"
 )]
+[Description(@"The DTCCCANOServiceDataSD1 message extends ISO corporate action notification (CANO) message with DTCC validation service specific data elements that are not covered by the standard message.")]
+[IsoDisplayName(@"DTCCCANO Service Data SD 1 V")]
 public interface IDTCCCANOServiceDataSD1V03 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IDTCCCANOServiceDataSD1V03 : IOuterRecord
     [IsoId("_1PgAsjL3EeKU9IrkkToqcw_1207093876")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventReferenceSD2> EventsLinkage { get; }
 
     /// <summary>
@@ -72,6 +75,7 @@ public interface IDTCCCANOServiceDataSD1V03 : IOuterRecord
     [IsoId("_1PpKoDL3EeKU9IrkkToqcw_531596542")]
     [DisplayName("Option Details")]
     [IsoXmlTag("OptnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionOptionSD5> OptionDetails { get; }
 
     /// <summary>
@@ -80,6 +84,7 @@ public interface IDTCCCANOServiceDataSD1V03 : IOuterRecord
     [IsoId("_1PpKoTL3EeKU9IrkkToqcw_-1504539626")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesOptionSD4> SecuritiesMovementDetails { get; }
 
     /// <summary>
@@ -88,6 +93,7 @@ public interface IDTCCCANOServiceDataSD1V03 : IOuterRecord
     [IsoId("_1PpKojL3EeKU9IrkkToqcw_-86950323")]
     [DisplayName("Securities Movement Security Details")]
     [IsoXmlTag("SctiesMvmntSctyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentAttributesSD5> SecuritiesMovementSecurityDetails { get; }
 
     /// <summary>
@@ -96,5 +102,6 @@ public interface IDTCCCANOServiceDataSD1V03 : IOuterRecord
     [IsoId("_1PpKozL3EeKU9IrkkToqcw_565166861")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOptionSD5> CashMovementDetails { get; }
 }

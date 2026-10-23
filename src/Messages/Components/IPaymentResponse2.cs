@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to respond to a Payment request.
 /// </summary>
 [IsoId("_9qLT0Q03EeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Payment Response")]
 public interface IPaymentResponse2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPaymentResponse2 : IIsoComponent
     [IsoId("_924TEw03EeqUVL7sB4m7NA")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IPaymentResponse2 : IIsoComponent
     [IsoId("_924TFw03EeqUVL7sB4m7NA")]
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? POIReconciliationIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IPaymentResponse2 : IIsoComponent
     [IsoId("_924TGQ03EeqUVL7sB4m7NA")]
     [DisplayName("Issuer Reference Data")]
     [IsoXmlTag("IssrRefData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? IssuerReferenceData { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IPaymentResponse2 : IIsoComponent
     [IsoId("_924THQ03EeqUVL7sB4m7NA")]
     [DisplayName("Payment Receipt")]
     [IsoXmlTag("PmtRct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReceipt2> PaymentReceipt { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IPaymentResponse2 : IIsoComponent
     [IsoId("_924THw03EeqUVL7sB4m7NA")]
     [DisplayName("Loyalty Result")]
     [IsoXmlTag("LltyRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyResult2> LoyaltyResult { get; }
 
     /// <summary>
@@ -81,5 +90,6 @@ public interface IPaymentResponse2 : IIsoComponent
     [IsoId("_924TIQ03EeqUVL7sB4m7NA")]
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomerOrder1> CustomerOrder { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account Sub Level24.
 /// </summary>
 [IsoId("_w26Q01x7Ee6fgZt44_IqFA")]
+[IsoDisplayName(@"Account Sub Level24")]
 public interface IAccountSubLevel24 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IAccountSubLevel24 : IIsoComponent
     /// </summary>
     [DisplayName("Disclosure")]
     [IsoXmlTag("Dsclsr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountSubLevel25> Disclosure { get; }
 }

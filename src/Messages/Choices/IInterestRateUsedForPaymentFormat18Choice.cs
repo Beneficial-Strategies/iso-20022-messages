@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Interest Rate Used For Payment Format18Choice.
 /// </summary>
 [IsoId("_esApkaEPEe-4O7NbwmwJkQ")]
+[IsoDisplayName(@"Interest Rate Used For Payment Format18Choice")]
 public interface IInterestRateUsedForPaymentFormat18Choice : IIsoChoice { }

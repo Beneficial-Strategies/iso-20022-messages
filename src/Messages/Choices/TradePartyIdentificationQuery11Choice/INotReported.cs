@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePartyIdentificationQuery11C
 /// <summary>
 /// Not Reported.
 /// </summary>
+[IsoDisplayName(@"Not Reported")]
 public interface INotReported : ITradePartyIdentificationQuery11Choice, IIsoChoiceVariant
 {
     /// <summary>

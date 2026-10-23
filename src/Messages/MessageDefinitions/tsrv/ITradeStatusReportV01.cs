@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// </summary>
 [IsoId("_9hy8JXltEeG7BsjMvd1mEw_-944920037")]
 [IsoMessage("tsrv.018.001.01", "TradStsRpt", "urn:iso:std:iso:20022:tech:xsd:tsrv.018.001.01")]
+[Description(@"The TradeStatusReport message is exchanged between parties involved in the trade finance domain to report the transaction level status of a transaction previously received. It informs the sender about the positive or negative status of the referenced transaction, such as acceptance or rejection resulting from technical validation performed by the parser and/or front-office applications. It can be used, for example, to acknowledge receipt of a transaction, to report a syntactical error, to report an unrecognised digital signature, to indicate that further processing is pending, and to indicate that a transaction has been technically accepted for processing by the back-office application. Multiple TradeStatusReport messages may be progressively sent in response to the incremental processing of a single transaction.")]
+[IsoDisplayName(@"Trade Status Report V")]
 public interface ITradeStatusReportV01 : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Method of voting participation to a general meeting.
 /// </summary>
 [IsoId("_XENzQRrlEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Participation Method")]
 public interface IParticipationMethod2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IParticipationMethod2 : IIsoComponent
     [IsoId("_X2ut8BroEeyhRdHRjakS2w")]
     [DisplayName("Supported By Account Servicer")]
     [IsoXmlTag("SpprtdByAcctSvcr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SupportedByAccountServicer { get; }
 
     /// <summary>

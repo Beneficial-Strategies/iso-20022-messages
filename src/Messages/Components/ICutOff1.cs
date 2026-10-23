@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that describes a netting cut off held at a central system.
 /// </summary>
 [IsoId("_WkhLEJVIEeaYkf5FCqYMeA")]
+[IsoDisplayName(@"Cut Off")]
 public interface ICutOff1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICutOff1 : IIsoComponent
     [IsoId("_hrAdUZnoEeaKH-pm9fIa8w")]
     [DisplayName("Cut Off Update Identification")]
     [IsoXmlTag("CutOffUpdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CutOffUpdateIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICutOff1 : IIsoComponent
     [IsoId("_tbaqUJVIEeaYkf5FCqYMeA")]
     [DisplayName("Cut Off Time")]
     [IsoXmlTag("CutOffTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime CutOffTime { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ICutOff1 : IIsoComponent
     [IsoId("_V7THkJVLEeaYkf5FCqYMeA")]
     [DisplayName("Value Date Offset")]
     [IsoXmlTag("ValDtOffset")]
+    [IsoSimpleType(IsoSimpleType.DateOffsetText)]
     DateOffsetText ValueDateOffset { get; }
 }

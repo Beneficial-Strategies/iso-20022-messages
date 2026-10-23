@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifying features of a financial instrument that is a sub-set of an investment fund.
 /// </summary>
 [IsoId("_XHDzMf1PEeixXcHVEYIW2g")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument76 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrument76 : IIsoComponent
     [IsoId("_XuVOkf1PEeixXcHVEYIW2g")]
     [DisplayName("Supplementary Identification")]
     [IsoXmlTag("SplmtryId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINXMax35Text? SupplementaryIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IFinancialInstrument76 : IIsoComponent
     [IsoId("_XuVOlf1PEeixXcHVEYIW2g")]
     [DisplayName("Class Type")]
     [IsoXmlTag("ClssTp")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINXMax35Text? ClassType { get; }
 
     /// <summary>

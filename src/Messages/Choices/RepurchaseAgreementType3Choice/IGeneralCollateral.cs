@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseAgreementType3Choice;
 /// </summary>
 [IsoId("_BqvK8-oaEeadseq5W5YLvQ")]
 [IsoXmlTag("GnlColl")]
+[IsoDisplayName(@"General Collateral")]
 public interface IGeneralCollateral : IRepurchaseAgreementType3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IGeneralCollateral : IRepurchaseAgreementType3Choice, IIsoChoic
     [IsoId("_plT7AfnbEeaHA8tUPpXMKA")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument59> FinancialInstrumentIdentification { get; }
 
     /// <summary>
@@ -26,5 +28,7 @@ public interface IGeneralCollateral : IRepurchaseAgreementType3Choice, IIsoChoic
     [IsoId("_M-XbUeoaEeadseq5W5YLvQ")]
     [DisplayName("Eligible Financial Instrument Identification")]
     [IsoXmlTag("ElgblFinInstrmId")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISINOct2015Identifier> EligibleFinancialInstrumentIdentification { get; }
 }

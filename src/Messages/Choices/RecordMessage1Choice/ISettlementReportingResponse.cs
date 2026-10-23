@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Settlement reporting response message record.
 /// </summary>
 [IsoId("_HklKwFZYEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Settlement Reporting Response")]
 public interface ISettlementReportingResponse : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ISettlementReportingResponse : IRecordMessage1Choice, IIsoChoic
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("SttlmRptgRspn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

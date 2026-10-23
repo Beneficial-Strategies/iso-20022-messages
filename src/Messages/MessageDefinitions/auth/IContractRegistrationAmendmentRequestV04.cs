@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CtrctRegnAmdmntReq",
     "urn:iso:std:iso:20022:tech:xsd:auth.021.001.04"
 )]
+[IsoDisplayName(@"Contract Registration Amendment Request V04")]
 public interface IContractRegistrationAmendmentRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface IContractRegistrationAmendmentRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Contract Registration Amendment")]
     [IsoXmlTag("CtrctRegnAmdmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegisteredContract16> ContractRegistrationAmendment { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface IContractRegistrationAmendmentRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

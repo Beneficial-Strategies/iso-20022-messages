@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party51Choice;
 /// <summary>
 /// Financial Institution Identification.
 /// </summary>
+[IsoDisplayName(@"Financial Institution Identification")]
 public interface IFinancialInstitutionIdentification : IParty51Choice, IIsoChoiceVariant
 {
     /// <summary>

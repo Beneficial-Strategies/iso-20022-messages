@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Drawdown allowance check. For pensions that have a lifetime allowance, a check is made of the maximum value of benefits that may be taken from the pension without incurring a special tax. (This check or &apos;event&apos; is known as the benefit crystallisation event in the UK market.)
 /// </summary>
 [IsoId("_6Oo4kLGuEeirN-C08vro8Q")]
+[IsoDisplayName(@"Drawdown Allowance Check")]
 public interface IDrawdownAllowanceCheck1 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface IDrawdownAllowanceCheck1 : IIsoComponent
     [IsoId("_Y6dFoLGvEeirN-C08vro8Q")]
     [DisplayName("BCE Indicator")]
     [IsoXmlTag("BCEInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BCEIndicator { get; }
 
     /// <summary>
@@ -27,5 +29,7 @@ public interface IDrawdownAllowanceCheck1 : IIsoComponent
     [IsoId("_cZUZMLGvEeirN-C08vro8Q")]
     [DisplayName("Check Information")]
     [IsoXmlTag("ChckInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? CheckInformation { get; }
 }

@@ -25,6 +25,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "ReqForOrdrConfStsRptV01",
     "urn:iso:std:iso:20022:tech:xsd:setr.058.001.01"
 )]
+[Description(@"Scope|An executing party, for example, a transfer agent, send the RequestForOrderConfirmationStatusReport message to the instructing party, for example, an investment manager or its authorised representative, to request the status of one or several order confirmations.|Usage|The RequestForOrderConfirmationStatusReport message is used to request the status of either:|- one or several individual order confirmations, or,|- one or several order confirmation messages.|The response to a RequestForOrderConfirmationStatusReport message is the OrderConfirmationStatusReport message.|When the RequestForOrderConfirmationStatusReport message is used to request the status of several individual order confirmations or one or more order confirmation messages, the executing party may receive several OrderConfirmationStatusReport messages from the instructing party.|When the RequestForOrderConfirmationStatusReport is used to request the status of one or more individual order confirmations, each individual order confirmation is identified with its order reference. The message identification of the message in which the individual order confirmation was conveyed may also be quoted in PreviousReference.|When the RequestForOrderConfirmationStatusReport is used to request the status of an order confirmation message, then the message identification of the order confirmation message is identified in PreviousReference.")]
+[IsoDisplayName(@"Request For Order Confirmation Status Report V")]
 public interface IRequestForOrderConfirmationStatusReportV01 : IOuterRecord
 {
     /// <summary>
@@ -41,6 +43,7 @@ public interface IRequestForOrderConfirmationStatusReportV01 : IOuterRecord
     [IsoId("_v72yAdE7Ed-BzquC8wXy7w_-374664944")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageAndBusinessReference5> RequestDetails { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IRequestForOrderConfirmationStatusReportV01 : IOuterRecord
     [IsoId("_v72yAtE7Ed-BzquC8wXy7w_-2086704739")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

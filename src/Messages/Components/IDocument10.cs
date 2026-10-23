@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a document.
 /// </summary>
 [IsoId("_96YbSXltEeG7BsjMvd1mEw_-172031402")]
+[IsoDisplayName(@"Document")]
 public interface IDocument10 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IDocument10 : IIsoComponent
     [IsoId("_96iMQnltEeG7BsjMvd1mEw_1954061068")]
     [DisplayName("Copy Indicator")]
     [IsoXmlTag("CpyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CopyIndicator { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface IDocument10 : IIsoComponent
     [IsoId("_96iMQ3ltEeG7BsjMvd1mEw_1042190213")]
     [DisplayName("Signed Indicator")]
     [IsoXmlTag("SgndInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SignedIndicator { get; }
 }

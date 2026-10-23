@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reconciliation Response Data2.
 /// </summary>
 [IsoId("_RDNicZ9rEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Reconciliation Response Data2")]
 public interface IReconciliationResponseData2 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IReconciliationResponseData2 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotalsSet2> TransactionTotals { get; }
 }

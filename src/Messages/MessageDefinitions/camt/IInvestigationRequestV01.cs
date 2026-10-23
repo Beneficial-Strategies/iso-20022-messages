@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_1oVmAYeJEe6MGNQcEFn2PQ")]
 [IsoMessage("camt.110.001.01", "InvstgtnReq", "urn:iso:std:iso:20022:tech:xsd:camt.110.001.01")]
+[IsoDisplayName(@"Investigation Request V01")]
 public interface IInvestigationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IInvestigationRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Investigation Data")]
     [IsoXmlTag("InvstgtnData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestigationReason2> InvestigationData { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IInvestigationRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

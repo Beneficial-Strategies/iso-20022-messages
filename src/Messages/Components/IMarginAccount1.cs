@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Operational construct used to record the set of positions whose margin requirements is calculated on a gross basis.
 /// </summary>
 [IsoId("_vzEGEHYDEee_qcLXasnA4g")]
+[IsoDisplayName(@"Margin Account")]
 public interface IMarginAccount1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IMarginAccount1 : IIsoComponent
     [IsoId("_5-_HgHYDEee_qcLXasnA4g")]
     [DisplayName("Position Account")]
     [IsoXmlTag("PosAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionAccount1> PositionAccount { get; }
 }

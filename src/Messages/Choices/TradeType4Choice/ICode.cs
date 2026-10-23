@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeType4Choice;
 /// Trade type information expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_6v61AZBgEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITradeType4Choice, IIsoChoiceVariant
 {
     /// <summary>

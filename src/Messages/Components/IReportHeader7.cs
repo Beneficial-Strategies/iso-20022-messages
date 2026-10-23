@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies generic information about an investigation report.
 /// </summary>
 [IsoId("_1LHsITEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Report Header7")]
 public interface IReportHeader7 : IIsoComponent
 {
     /// <summary>

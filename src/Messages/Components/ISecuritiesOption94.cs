@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action security option.
 /// </summary>
 [IsoId("_X4_WQzQLEe2o-K1dwNg8Gg")]
+[IsoDisplayName(@"Securities Option")]
 public interface ISecuritiesOption94 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ISecuritiesOption94 : IIsoComponent
     [IsoId("_YQ-YazQLEe2o-K1dwNg8Gg")]
     [DisplayName("Posting Date")]
     [IsoXmlTag("PstngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate PostingDate { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface ISecuritiesOption94 : IIsoComponent
     [IsoId("_YQ-YczQLEe2o-K1dwNg8Gg")]
     [DisplayName("Original Posting Date")]
     [IsoXmlTag("OrgnlPstngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OriginalPostingDate { get; }
 }

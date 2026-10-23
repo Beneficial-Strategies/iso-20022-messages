@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the Foreign Account Tax Compliance Act (FATCA) status.
 /// </summary>
 [IsoId("_v4N-sSCVEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"FATCA Status 2 Choice")]
 public interface IFATCAStatus2Choice : IIsoChoice { }

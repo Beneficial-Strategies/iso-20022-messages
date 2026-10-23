@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Range of quantities.
 /// </summary>
 [IsoId("_jtHuEe5NEeCisYr99QEiWA_674630365")]
+[IsoDisplayName(@"From To Quantity Range1")]
 public interface IFromToQuantityRange1 : IIsoComponent
 {
     /// <summary>

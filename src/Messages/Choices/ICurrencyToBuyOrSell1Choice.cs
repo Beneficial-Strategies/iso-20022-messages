@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of counterparty type.
 /// </summary>
 [IsoId("_QsvIMdp-Ed-ak6NoX_4Aeg_-947619938")]
+[IsoDisplayName(@"Currency To Buy Or Sell 1 Choice")]
 public interface ICurrencyToBuyOrSell1Choice : IIsoChoice { }

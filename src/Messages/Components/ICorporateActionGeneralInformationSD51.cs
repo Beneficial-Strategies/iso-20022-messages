@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action general information.
 /// </summary>
 [IsoId("_lLXoQTDrEey2N-DB7H7A5A")]
+[IsoDisplayName(@"Corporate Action General Information SD")]
 public interface ICorporateActionGeneralInformationSD51 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionGeneralInformationSD51 : IIsoComponent
     [IsoId("_lg064TDrEey2N-DB7H7A5A")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -57,6 +60,8 @@ public interface ICorporateActionGeneralInformationSD51 : IIsoComponent
     [IsoId("_lg07CTDrEey2N-DB7H7A5A")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINXMax35Text SafekeepingAccount { get; }
 
     /// <summary>
@@ -65,5 +70,6 @@ public interface ICorporateActionGeneralInformationSD51 : IIsoComponent
     [IsoId("_lg07FzDrEey2N-DB7H7A5A")]
     [DisplayName("Unallocated Details")]
     [IsoXmlTag("UallctdDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionUnallocatedDetailsSD7> UnallocatedDetails { get; }
 }

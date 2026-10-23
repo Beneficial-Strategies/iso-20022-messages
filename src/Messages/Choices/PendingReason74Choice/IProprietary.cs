@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason74Choice;
 
 /// <summary>Pending reason in a proprietary form.</summary>
 [IsoId("_FPP-qd8FEe-NrtAAlrBEgQ")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPendingReason74Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Receipt6.
 /// </summary>
 [IsoId("_QyTiIbq9Ee68nbz8Nl_hLQ")]
+[IsoDisplayName(@"Receipt6")]
 public interface IReceipt6 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IReceipt6 : IIsoComponent
     /// </summary>
     [DisplayName("Request Handling")]
     [IsoXmlTag("ReqHdlg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRequestHandling3> RequestHandling { get; }
 }

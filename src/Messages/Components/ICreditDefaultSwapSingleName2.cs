@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Credit default swap derivative specific for reporting on a single name credit default swap.
 /// </summary>
 [IsoId("_NmrxeX5fEea2k7EBUopqxw")]
+[IsoDisplayName(@"Credit Default Swap Single Name")]
 public interface ICreditDefaultSwapSingleName2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICreditDefaultSwapSingleName2 : IIsoComponent
     [IsoId("_NvBOEX5fEea2k7EBUopqxw")]
     [DisplayName("Sovereign Issuer")]
     [IsoXmlTag("SvrgnIssr")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator SovereignIssuer { get; }
 
     /// <summary>

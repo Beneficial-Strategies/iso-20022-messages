@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_qemjoIrBEeSgLpgNvMAP2g")]
 [IsoMessage("catp.011.001.01", "ATMPINMgmtRspn", "urn:iso:std:iso:20022:tech:xsd:catp.011.001.01")]
+[Description(@"The ATMPINManagementResponse message is sent by an ATM manager or its agent to the ATM to provide the information and the outcome of the cardholder PIN operation requested in the ATMPINManagementRequest.")]
+[IsoDisplayName(@"ATMPIN Management Response V")]
 public interface IATMPINManagementResponseV01 : IOuterRecord
 {
     /// <summary>

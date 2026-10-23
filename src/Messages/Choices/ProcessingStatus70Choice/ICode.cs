@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus70Choice;
 
 /// <summary>Specifies the processing status as a code.</summary>
 [IsoId("_mXWx0eGHEeWCAvUNsZ5u6g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProcessingStatus70Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

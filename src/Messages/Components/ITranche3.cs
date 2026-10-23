@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates derivative contract was tranched.
 /// </summary>
 [IsoId("_d9OP8Q06EeuJ1fOEB4bQXA")]
+[IsoDisplayName(@"Tranche")]
 public interface ITranche3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITranche3 : IIsoComponent
     [IsoId("_eS8oUw06EeuJ1fOEB4bQXA")]
     [DisplayName("Attachment Point")]
     [IsoXmlTag("AttchmntPt")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? AttachmentPoint { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ITranche3 : IIsoComponent
     [IsoId("_eS8oVQ06EeuJ1fOEB4bQXA")]
     [DisplayName("Detachment Point")]
     [IsoXmlTag("DtchmntPt")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? DetachmentPoint { get; }
 }

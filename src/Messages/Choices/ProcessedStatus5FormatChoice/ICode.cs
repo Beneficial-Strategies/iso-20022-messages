@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessedStatus5FormatChoice;
 /// Standard code to specify the processing status of a request.
 /// </summary>
 [IsoId("_RnmN89p-Ed-ak6NoX_4Aeg_-2007876597")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProcessedStatus5FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

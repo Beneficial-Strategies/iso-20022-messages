@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Driver in a car rental party
 /// </summary>
 [IsoId("_DNYFscW0EeuhguwJmlgagQ")]
+[IsoDisplayName(@"Driver In Party")]
 public interface IDriverInParty2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDriverInParty2 : IIsoComponent
     [IsoId("_DSE_gcW0EeuhguwJmlgagQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IDriverInParty2 : IIsoComponent
     [IsoId("_DSE_h8W0EeuhguwJmlgagQ")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfBirth { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IDriverInParty2 : IIsoComponent
     [IsoId("_DSE_icW0EeuhguwJmlgagQ")]
     [DisplayName("Age")]
     [IsoXmlTag("Age")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? Age { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IDriverInParty2 : IIsoComponent
     [IsoId("_DSE_i8W0EeuhguwJmlgagQ")]
     [DisplayName("Driver Credential")]
     [IsoXmlTag("DrvrCrdntl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITravelDocument2> DriverCredential { get; }
 
     /// <summary>

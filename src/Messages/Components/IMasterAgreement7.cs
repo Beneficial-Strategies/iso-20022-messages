@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to a master agreement.
 /// </summary>
 [IsoId("_JIKzgS4yEeuxhbw_aW6haw")]
+[IsoDisplayName(@"Master Agreement")]
 public interface IMasterAgreement7 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IMasterAgreement7 : IIsoComponent
     [IsoId("_Jf0egy4yEeuxhbw_aW6haw")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? Version { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IMasterAgreement7 : IIsoComponent
     [IsoId("_J6ADoS4zEeuxhbw_aW6haw")]
     [DisplayName("Other Master Agreement Details")]
     [IsoXmlTag("OthrMstrAgrmtDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? OtherMasterAgreementDetails { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus56Cho
 /// <summary>
 /// Covered.
 /// </summary>
+[IsoDisplayName(@"Covered")]
 public interface ICovered : IInstructionProcessingStatus56Choice, IIsoChoiceVariant
 {
     /// <summary>

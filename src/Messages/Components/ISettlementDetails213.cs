@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
 /// </summary>
 [IsoId("_m0OUkQaTEe2-DuDrUXkg2w")]
+[IsoDisplayName(@"Settlement Details")]
 public interface ISettlementDetails213 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISettlementDetails213 : IIsoComponent
     [IsoId("_nHcLjQaTEe2-DuDrUXkg2w")]
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? HoldIndicator { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ISettlementDetails213 : IIsoComponent
     [IsoId("_nHcLnwaTEe2-DuDrUXkg2w")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementTransactionCondition31Choice> SettlementTransactionCondition { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ISettlementDetails213 : IIsoComponent
     [IsoId("_nHcLpwaTEe2-DuDrUXkg2w")]
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PartialSettlementIndicator { get; }
 
     /// <summary>
@@ -193,6 +197,7 @@ public interface ISettlementDetails213 : IIsoComponent
     [IsoId("_nHcMLwaTEe2-DuDrUXkg2w")]
     [DisplayName("Stamp Duty Indicator")]
     [IsoXmlTag("StmpDtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? StampDutyIndicator { get; }
 
     /// <summary>
@@ -233,6 +238,7 @@ public interface ISettlementDetails213 : IIsoComponent
     [IsoId("_nHcMUQaTEe2-DuDrUXkg2w")]
     [DisplayName("Return Leg")]
     [IsoXmlTag("RtrLeg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ReturnLeg { get; }
 
     /// <summary>
@@ -249,5 +255,6 @@ public interface ISettlementDetails213 : IIsoComponent
     [IsoId("_nHcMYQaTEe2-DuDrUXkg2w")]
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EligibleForCollateral { get; }
 }

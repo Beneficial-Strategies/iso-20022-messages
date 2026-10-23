@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Processing Result23.
 /// </summary>
 [IsoId("_yvL2EX5eEe6YlIMyoxWMJA")]
+[IsoDisplayName(@"Processing Result23")]
 public interface IProcessingResult23 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IProcessingResult23 : IIsoComponent
     /// </summary>
     [DisplayName("Error Detail")]
     [IsoXmlTag("ErrDtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorDetails3> ErrorDetail { get; }
 
     /// <summary>
@@ -72,5 +74,6 @@ public interface IProcessingResult23 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalInformation { get; }
 }

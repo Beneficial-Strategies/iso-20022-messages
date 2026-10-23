@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information to display, print or store.
 /// </summary>
 [IsoId("_Ry7DIZ_7EfC4Q_xhaK1hdQ")]
+[IsoDisplayName(@"Action Message12")]
 public interface IActionMessage12 : IIsoComponent
 {
     /// <summary>

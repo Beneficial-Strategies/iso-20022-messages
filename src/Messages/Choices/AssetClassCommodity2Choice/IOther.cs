@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity2Choice;
 /// Indicates other types of commodities.
 /// </summary>
 [IsoId("_2t5pYUDcEeWOL-OsSq2h6w")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IAssetClassCommodity2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Securities Option112.
 /// </summary>
 [IsoId("_3FrCgYV4Ee-oeNhl-Tk6YQ")]
+[IsoDisplayName(@"Securities Option112")]
 public interface ISecuritiesOption112 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface ISecuritiesOption112 : IIsoComponent
     /// </summary>
     [DisplayName("Other Income Type")]
     [IsoXmlTag("OthrIncmTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification30> OtherIncomeType { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface ISecuritiesOption112 : IIsoComponent
     /// </summary>
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification30> ExemptionType { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the intra-balance movements in the report.
 /// </summary>
 [IsoId("_YDGlJTneEem7JZMuWtwtsg")]
+[IsoDisplayName(@"Intra Balance Movements")]
 public interface IIntraBalanceMovements3 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IIntraBalanceMovements3 : IIsoComponent
     [IsoId("_YN1OfTneEem7JZMuWtwtsg")]
     [DisplayName("Movement")]
     [IsoXmlTag("Mvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalanceMovement5> Movement { get; }
 }

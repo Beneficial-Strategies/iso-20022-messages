@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Measure of the total capital requirement all the clearing members are required to hold against their default fund contributions to a central counterparty.
 /// </summary>
 [IsoId("_LK-vILb2EeabfchHYoktpA")]
+[IsoDisplayName(@"Hypothetical Capital Measure")]
 public interface IHypotheticalCapitalMeasure1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IHypotheticalCapitalMeasure1 : IIsoComponent
     [IsoId("_qdBOsLb2EeabfchHYoktpA")]
     [DisplayName("Default Waterfall Identification")]
     [IsoXmlTag("DfltWtrfllId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DefaultWaterfallIdentification { get; }
 }

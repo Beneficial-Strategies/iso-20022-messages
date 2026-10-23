@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a freight derivative of type container ships.
 /// </summary>
 [IsoId("_i535xPwfEeW4Wthd0Ze_kA")]
+[IsoDisplayName(@"Freight Commodity Container Ship")]
 public interface IFreightCommodityContainerShip1 : IIsoComponent
 {
     /// <summary>

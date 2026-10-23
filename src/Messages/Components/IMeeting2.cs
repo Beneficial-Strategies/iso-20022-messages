@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting.
 /// </summary>
 [IsoId("_TKY2Y9p-Ed-ak6NoX_4Aeg_795834246")]
+[IsoDisplayName(@"Meeting")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IMeeting2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface IMeeting2 : IIsoComponent
     [IsoId("_TKY2Ztp-Ed-ak6NoX_4Aeg_795834537")]
     [DisplayName("Quorum Required")]
     [IsoXmlTag("QrmReqrd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator QuorumRequired { get; }
 
     /// <summary>
@@ -41,6 +44,9 @@ public interface IMeeting2 : IIsoComponent
     [IsoId("_TKY2Z9p-Ed-ak6NoX_4Aeg_205631143")]
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocationFormat1Choice> Location { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IMeeting2 : IIsoComponent
     [IsoId("_TKY2aNp-Ed-ak6NoX_4Aeg_795834554")]
     [DisplayName("Quorum Quantity")]
     [IsoXmlTag("QrmQty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QuorumQuantity { get; }
 
     /// <summary>
@@ -57,5 +65,6 @@ public interface IMeeting2 : IIsoComponent
     [IsoId("_TKY2adp-Ed-ak6NoX_4Aeg_795834597")]
     [DisplayName("Quorum Quantity Percentage")]
     [IsoXmlTag("QrmQtyPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? QuorumQuantityPercentage { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of a payment compensation.
 /// </summary>
 [IsoId("_pg0Qk8QHEemsic1bQcEtLA")]
+[IsoDisplayName(@"Compensation")]
 public interface ICompensation3 : IIsoComponent
 {
     /// <summary>

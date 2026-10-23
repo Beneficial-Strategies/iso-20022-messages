@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Disposition of previously submitted fraud report message.
 /// </summary>
 [IsoId("_tyAHATHUEeyTT91yHXSlSQ")]
+[IsoDisplayName(@"Fraud Disposition Status")]
 public interface IFraudDispositionStatus2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IFraudDispositionStatus2 : IIsoComponent
     [IsoId("_t4meQzHUEeyTT91yHXSlSQ")]
     [DisplayName("Other Action Taken")]
     [IsoXmlTag("OthrActnTaken")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherActionTaken { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IFraudDispositionStatus2 : IIsoComponent
     [IsoId("_t4meRTHUEeyTT91yHXSlSQ")]
     [DisplayName("Error Data")]
     [IsoXmlTag("ErrData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max256Text> ErrorData { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IFraudDispositionStatus2 : IIsoComponent
     [IsoId("_t4meRzHUEeyTT91yHXSlSQ")]
     [DisplayName("Warning Data")]
     [IsoXmlTag("WrngData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max256Text> WarningData { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IFraudDispositionStatus2 : IIsoComponent
     [IsoId("_t4meSTHUEeyTT91yHXSlSQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation30> AdditionalInformation { get; }
 }

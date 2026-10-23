@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contract cession data in structured form.
 /// </summary>
 [IsoId("_qkawwLb-Eeu9Cp6InX88Vw")]
+[IsoDisplayName(@"Contract Cession Data")]
 public interface IContractCessionData1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IContractCessionData1 : IIsoComponent
     [IsoId("_YPJNILb_Eeu9Cp6InX88Vw")]
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DocumentNumber { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IContractCessionData1 : IIsoComponent
     [IsoId("_begFELb_Eeu9Cp6InX88Vw")]
     [DisplayName("Document Date")]
     [IsoXmlTag("DocDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DocumentDate { get; }
 }

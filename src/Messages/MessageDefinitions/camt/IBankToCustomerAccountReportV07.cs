@@ -24,6 +24,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "BkToCstmrAcctRpt",
     "urn:iso:std:iso:20022:tech:xsd:camt.052.001.07"
 )]
+[Description(@"Scope|The BankToCustomerAccountReport message is sent by the account servicer to an account owner or to a party authorised by the account owner to receive the message. It can be used to inform the account owner, or authorised party, of the entries reported to the account, and/or to provide the owner with balance information on the account at a given point in time.|Usage|The BankToCustomerAccountReport message can contain reports for more than one account. It provides information for cash management and/or reconciliation. It can be used to:|- report pending and booked items;|- provide balance information.|It can include underlying details of transactions that have been included in the entry.|It is possible that the receiver of the message is not the account owner, but a party entitled by the account owner to receive the account information (also known as recipient).|For a statement, the Bank-to-Customer Account Statement message should be used.")]
+[IsoDisplayName(@"Bank To Customer Account Report V")]
 public interface IBankToCustomerAccountReportV07 : IOuterRecord
 {
     /// <summary>
@@ -40,6 +42,7 @@ public interface IBankToCustomerAccountReportV07 : IOuterRecord
     [IsoId("_XlRbUV1rEeehlLdFiIrRgQ")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountReport22> Report { get; }
 
     /// <summary>
@@ -48,5 +51,6 @@ public interface IBankToCustomerAccountReportV07 : IOuterRecord
     [IsoId("_XlRbU11rEeehlLdFiIrRgQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxReferenceParty1Choice;
 /// Type of party expressed as a code.
 /// </summary>
 [IsoId("_Holp4E4SEeiQHa-q1Uephw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITaxReferenceParty1Choice, IIsoChoiceVariant
 {
     /// <summary>

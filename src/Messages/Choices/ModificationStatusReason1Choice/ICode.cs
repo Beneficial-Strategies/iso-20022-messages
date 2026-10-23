@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationStatusReason1Choice;
 /// Reason for the modification status, in a coded form.
 /// </summary>
 [IsoId("_MG4Hg4lsEeePr-EGJjGYzQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IModificationStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

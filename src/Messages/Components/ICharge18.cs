@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money associated with a service.
 /// </summary>
 [IsoId("_RuAX_dp-Ed-ak6NoX_4Aeg_791233590")]
+[IsoDisplayName(@"Charge")]
 public interface ICharge18 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICharge18 : IIsoComponent
     [IsoId("_RuKI8Np-Ed-ak6NoX_4Aeg_1336111970")]
     [DisplayName("Extended Type")]
     [IsoXmlTag("XtndedTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedType { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ICharge18 : IIsoComponent
     [IsoId("_RuKI8tp-Ed-ak6NoX_4Aeg_1706442609")]
     [DisplayName("Extended Charge Basis")]
     [IsoXmlTag("XtndedChrgBsis")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedChargeBasis { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ICharge18 : IIsoComponent
     [IsoId("_RuKI9Np-Ed-ak6NoX_4Aeg_791233633")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedStatus13Choice;
 /// <summary>
 /// No Specified Reason.
 /// </summary>
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IAcceptedStatus13Choice, IIsoChoiceVariant
 {
     /// <summary>

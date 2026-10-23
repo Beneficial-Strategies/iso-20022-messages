@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies information about a blocked holding.
 /// </summary>
 [IsoId("_GdlysxKeEeKj15WxqwlXPw")]
+[IsoDisplayName(@"Blocked Holding Details")]
 public interface IBlockedHoldingDetails1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IBlockedHoldingDetails1 : IIsoComponent
     [IsoId("_RGi48BKfEeKj15WxqwlXPw")]
     [DisplayName("Partial Holding Units")]
     [IsoXmlTag("PrtlHldgUnits")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? PartialHoldingUnits { get; }
 
     /// <summary>
@@ -33,5 +35,7 @@ public interface IBlockedHoldingDetails1 : IIsoComponent
     [IsoId("_ZwACEBKfEeKj15WxqwlXPw")]
     [DisplayName("Holding Certificate Number")]
     [IsoXmlTag("HldgCertNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? HoldingCertificateNumber { get; }
 }

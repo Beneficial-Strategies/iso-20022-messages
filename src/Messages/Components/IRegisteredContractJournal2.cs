@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Document that a user must file with an authorised servicer for each contract that involves foreign currency transactions with non residents.
 /// </summary>
 [IsoId("_EtCfVW4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Registered Contract Journal")]
 public interface IRegisteredContractJournal2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IRegisteredContractJournal2 : IIsoComponent
     [IsoId("_E2br5W4-EeiU9cctagi5ow")]
     [DisplayName("Closure Date")]
     [IsoXmlTag("ClsrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ClosureDate { get; }
 
     /// <summary>

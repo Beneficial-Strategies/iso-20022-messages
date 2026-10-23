@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for settlement unit type.
 /// </summary>
 [IsoId("_dzq1AeLxEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Settlement Unit Type 3 Choice")]
 public interface ISettlementUnitType3Choice : IIsoChoice { }

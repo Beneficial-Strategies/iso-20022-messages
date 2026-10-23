@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the transaction type as defined in the relevant regulation.
 /// </summary>
 [IsoId("_apzGIx2lEeqF2P5v-Rtejg")]
+[IsoDisplayName(@"Settlement Fails Transaction Type")]
 public interface ISettlementFailsTransactionType2 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies a choice of format for statements.
 /// </summary>
 [IsoId("_1gGtkA1dEeKGXqvMN6jpiw")]
+[IsoDisplayName(@"Communication Format 1 Choice")]
 public interface ICommunicationFormat1Choice : IIsoChoice { }

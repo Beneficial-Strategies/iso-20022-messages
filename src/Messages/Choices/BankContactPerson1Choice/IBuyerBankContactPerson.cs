@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BankContactPerson1Choice;
 /// </summary>
 [IsoId("_nYAXYDAZEeOKib24wnHaFg")]
 [IsoXmlTag("BuyrBkCtctPrsn")]
+[IsoDisplayName(@"Buyer Bank Contact Person")]
 public interface IBuyerBankContactPerson : IBankContactPerson1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IBuyerBankContactPerson : IBankContactPerson1Choice, IIsoChoice
     [IsoId("_QBOtFNp-Ed-ak6NoX_4Aeg_-1134631327")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Name { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IBuyerBankContactPerson : IBankContactPerson1Choice, IIsoChoice
     [IsoId("_QBOtFtp-Ed-ak6NoX_4Aeg_-1028894727")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? GivenName { get; }
 
     /// <summary>
@@ -42,6 +47,8 @@ public interface IBuyerBankContactPerson : IBankContactPerson1Choice, IIsoChoice
     [IsoId("_QBOtF9p-Ed-ak6NoX_4Aeg_2125093183")]
     [DisplayName("Role")]
     [IsoXmlTag("Role")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Role { get; }
 
     /// <summary>
@@ -50,6 +57,7 @@ public interface IBuyerBankContactPerson : IBankContactPerson1Choice, IIsoChoice
     [IsoId("_QBOtGNp-Ed-ak6NoX_4Aeg_-505408090")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -58,6 +66,7 @@ public interface IBuyerBankContactPerson : IBankContactPerson1Choice, IIsoChoice
     [IsoId("_QBOtGdp-Ed-ak6NoX_4Aeg_-505408635")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -66,5 +75,7 @@ public interface IBuyerBankContactPerson : IBankContactPerson1Choice, IIsoChoice
     [IsoId("_QBX3ANp-Ed-ak6NoX_4Aeg_-505409021")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 }

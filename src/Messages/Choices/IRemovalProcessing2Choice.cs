@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the removal processing change requested and the reason.
 /// </summary>
 [IsoId("__MbGwRIoEeyZaPkaPAzTvQ")]
+[IsoDisplayName(@"Removal Processing 2 Choice")]
 public interface IRemovalProcessing2Choice : IIsoChoice { }

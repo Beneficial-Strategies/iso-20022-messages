@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TypeOfRequest1Choice;
 /// Type of request expressed as a code.
 /// </summary>
 [IsoId("_1DwE4NvdEeqxGfKJubfhIw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITypeOfRequest1Choice, IIsoChoiceVariant
 {
     /// <summary>

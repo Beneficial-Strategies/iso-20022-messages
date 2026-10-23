@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_FG4Dh1xPEe6fgZt44_IqFA")]
 [IsoMessage("seev.050.001.02", "MktClmCre", "urn:iso:std:iso:20022:tech:xsd:seev.050.001.02")]
+[IsoDisplayName(@"Market Claim Creation V02")]
 public interface IMarketClaimCreationV02 : IOuterRecord
 {
     /// <summary>
@@ -81,5 +82,6 @@ public interface IMarketClaimCreationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

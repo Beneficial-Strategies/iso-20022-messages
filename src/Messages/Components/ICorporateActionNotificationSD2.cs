@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action notification.
 /// </summary>
 [IsoId("_1ZecFTL3EeKU9IrkkToqcw_-1357737772")]
+[IsoDisplayName(@"Corporate Action Notification SD")]
 public interface ICorporateActionNotificationSD2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionNotificationSD2 : IIsoComponent
     [IsoId("_1ZoNEDL3EeKU9IrkkToqcw_-1030441987")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICorporateActionNotificationSD2 : IIsoComponent
     [IsoId("_1ZoNEjL3EeKU9IrkkToqcw_278246291")]
     [DisplayName("Derivative Exchange")]
     [IsoXmlTag("DerivXchg")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText DerivativeExchange { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ICorporateActionNotificationSD2 : IIsoComponent
     [IsoId("_1ZoNEzL3EeKU9IrkkToqcw_1623632001")]
     [DisplayName("Derivative Publication Date")]
     [IsoXmlTag("DerivPblctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DerivativePublicationDate { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ICorporateActionNotificationSD2 : IIsoComponent
     [IsoId("_1ZoNFDL3EeKU9IrkkToqcw_282377015")]
     [DisplayName("Derivative Adjustment Date")]
     [IsoXmlTag("DerivAdjstmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate DerivativeAdjustmentDate { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface ICorporateActionNotificationSD2 : IIsoComponent
     [IsoId("_1ZoNFTL3EeKU9IrkkToqcw_-592539143")]
     [DisplayName("Derivative Calculation Method")]
     [IsoXmlTag("DerivClctnMtd")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? DerivativeCalculationMethod { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface ICorporateActionNotificationSD2 : IIsoComponent
     [IsoId("_1ZoNFjL3EeKU9IrkkToqcw_2133733290")]
     [DisplayName("Derivative Factor")]
     [IsoXmlTag("DerivFctr")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? DerivativeFactor { get; }
 
     /// <summary>
@@ -73,6 +83,7 @@ public interface ICorporateActionNotificationSD2 : IIsoComponent
     [IsoId("_1Zx-EDL3EeKU9IrkkToqcw_238505614")]
     [DisplayName("Lot Size Change Flag")]
     [IsoXmlTag("LotSzChngFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LotSizeChangeFlag { get; }
 
     /// <summary>
@@ -81,6 +92,8 @@ public interface ICorporateActionNotificationSD2 : IIsoComponent
     [IsoId("_1Zx-ETL3EeKU9IrkkToqcw_-1956386810")]
     [DisplayName("Lot Adjustment Method")]
     [IsoXmlTag("LotAdjstmntMtd")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? LotAdjustmentMethod { get; }
 
     /// <summary>
@@ -89,6 +102,7 @@ public interface ICorporateActionNotificationSD2 : IIsoComponent
     [IsoId("_1Zx-EjL3EeKU9IrkkToqcw_915856039")]
     [DisplayName("Strike Price Change Flag")]
     [IsoXmlTag("StrkPricChngFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? StrikePriceChangeFlag { get; }
 
     /// <summary>
@@ -97,6 +111,8 @@ public interface ICorporateActionNotificationSD2 : IIsoComponent
     [IsoId("_1Zx-EzL3EeKU9IrkkToqcw_-113518360")]
     [DisplayName("Strike Price Rounding Method")]
     [IsoXmlTag("StrkPricRndgMtd")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? StrikePriceRoundingMethod { get; }
 
     /// <summary>
@@ -105,6 +121,7 @@ public interface ICorporateActionNotificationSD2 : IIsoComponent
     [IsoId("_1Zx-FDL3EeKU9IrkkToqcw_1063112730")]
     [DisplayName("Residual Cash Flag")]
     [IsoXmlTag("RsdlCshFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ResidualCashFlag { get; }
 
     /// <summary>
@@ -113,6 +130,7 @@ public interface ICorporateActionNotificationSD2 : IIsoComponent
     [IsoId("_1Zx-FTL3EeKU9IrkkToqcw_-143242492")]
     [DisplayName("Reference Price")]
     [IsoXmlTag("RefPric")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ReferencePrice { get; }
 
     /// <summary>
@@ -129,5 +147,6 @@ public interface ICorporateActionNotificationSD2 : IIsoComponent
     [IsoId("_1Z7IADL3EeKU9IrkkToqcw_-444572123")]
     [DisplayName("Approved Flag")]
     [IsoXmlTag("ApprvdFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ApprovedFlag { get; }
 }

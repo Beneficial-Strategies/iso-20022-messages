@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SuspendedStatusReason4Choice;
 /// No reason available or to report for the suspended status.
 /// </summary>
 [IsoId("_aSlPU0HlEea8I67lh6qdSQ")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : ISuspendedStatusReason4Choice, IIsoChoiceVariant
 {
     /// <summary>

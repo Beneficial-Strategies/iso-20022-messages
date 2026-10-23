@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_3L3tMYELEeu6D49Gi-ZPwQ")]
 [IsoMessage("cain.018.001.02", "VrfctnInitn", "urn:iso:std:iso:20022:tech:xsd:cain.018.001.02")]
+[Description(@"The VerificationInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer). It conveys information to a receiver requiring verification or authentication. ||||Examples of usages are: authentication of certificates, assurance levels of tokens, certificate management, address verification, account verification and cheque verification. It is also used to inform the receiver of a verification that has been completed on its behalf.")]
+[IsoDisplayName(@"Verification Initiation V")]
 public interface IVerificationInitiationV02 : IOuterRecord
 {
     /// <summary>

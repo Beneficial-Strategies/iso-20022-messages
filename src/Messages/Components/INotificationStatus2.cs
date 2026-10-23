@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies if the occurrence of the event contained in the notification is confirmed or unconfirmed. Details of the event can be complete or incomplete.
 /// </summary>
 [IsoId("_jMDpUXF2EeSuDsBOD9TlUw")]
+[IsoDisplayName(@"Notification Status")]
 public interface INotificationStatus2 : IIsoComponent
 {
     /// <summary>

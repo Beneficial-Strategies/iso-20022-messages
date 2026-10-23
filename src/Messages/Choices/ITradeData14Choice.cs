@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Data concerning the reporting trade.
 /// </summary>
 [IsoId("_ClNWAf_oEemm3skPVSMJQg")]
+[IsoDisplayName(@"Trade Data 14 Choice")]
 public interface ITradeData14Choice : IIsoChoice { }

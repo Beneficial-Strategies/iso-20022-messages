@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the summation of the call amounts per margin type and optionaly the default fund amount (only for CCP).
 /// </summary>
 [IsoId("_9b69MKMPEeCojJW5vEuTEQ_2035479962")]
+[IsoDisplayName(@"Margin Call Result")]
 public interface IMarginCallResult3 : IIsoComponent
 {
     /// <summary>

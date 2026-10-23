@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrRcncltnRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.010.001.01"
 )]
+[Description(@"Scope|The AcceptorReconciliationResponse message is sent by the acquirer to communicate to the card acceptor the totals of the card payment transaction performed for the reconciliation period. An agent never forwards the message.|Usage|The AcceptorReconciliationResponse message is used to compare the totals between a card acceptor and an acquirer for the reconciliation period.")]
+[IsoDisplayName(@"Acceptor Reconciliation Response V")]
 public interface IAcceptorReconciliationResponseV01 : IOuterRecord
 {
     /// <summary>

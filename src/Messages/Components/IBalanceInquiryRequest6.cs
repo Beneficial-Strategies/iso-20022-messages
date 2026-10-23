@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies data element nexessary to request balance information.
 /// </summary>
 [IsoId("_PD2PQXG1Ee2TbaNWBpRZpQ")]
+[IsoDisplayName(@"Balance Inquiry Request")]
 public interface IBalanceInquiryRequest6 : IIsoComponent
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status24Choice;
 /// </summary>
 [IsoId("_bpQwZEHPEeazV4RAqPV71g")]
 [IsoXmlTag("IndvOrdrDtlsRpt")]
+[IsoDisplayName(@"Individual Order Details Report")]
 public interface IIndividualOrderDetailsReport : IStatus24Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IIndividualOrderDetailsReport : IStatus24Choice, IIsoChoiceVari
     [IsoId("_JSDihTbtEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IIndividualOrderDetailsReport : IStatus24Choice, IIsoChoiceVari
     [IsoId("_JSDihzbtEead9bDRE_1DAQ")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface IIndividualOrderDetailsReport : IStatus24Choice, IIsoChoiceVari
     [IsoId("_JSDiiTbtEead9bDRE_1DAQ")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -42,6 +49,8 @@ public interface IIndividualOrderDetailsReport : IStatus24Choice, IIsoChoiceVari
     [IsoId("_JSDiizbtEead9bDRE_1DAQ")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DealReference { get; }
 
     /// <summary>
@@ -50,6 +59,8 @@ public interface IIndividualOrderDetailsReport : IStatus24Choice, IIsoChoiceVari
     [IsoId("_JSDijTbtEead9bDRE_1DAQ")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -66,6 +77,9 @@ public interface IIndividualOrderDetailsReport : IStatus24Choice, IIsoChoiceVari
     [IsoId("_zyjlwTk2EeapUO0vUIo9Xw")]
     [DisplayName("Repaired Fee")]
     [IsoXmlTag("RprdFee")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFee3> RepairedFee { get; }
 
     /// <summary>

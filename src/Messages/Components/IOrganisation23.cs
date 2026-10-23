@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.
 /// </summary>
 [IsoId("_GNFpEVxZEeWvPv3PXpS3fw")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation23 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrganisation23 : IIsoComponent
     [IsoId("_GqORAVxZEeWvPv3PXpS3fw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOrganisation23 : IIsoComponent
     [IsoId("_GqORA1xZEeWvPv3PXpS3fw")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>
@@ -33,5 +38,8 @@ public interface IOrganisation23 : IIsoComponent
     [IsoId("_GqORD1xZEeWvPv3PXpS3fw")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress21> PostalAddress { get; }
 }

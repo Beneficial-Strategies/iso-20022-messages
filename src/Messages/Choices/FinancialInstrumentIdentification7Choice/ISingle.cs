@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
 /// Instrument consists of single instrument.
 /// </summary>
 [IsoId("_LHTy0YG-EeaalK9UbuVGFw")]
+[IsoDisplayName(@"Single")]
 public interface ISingle : IFinancialInstrumentIdentification7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

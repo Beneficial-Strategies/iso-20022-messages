@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.
 /// </summary>
 [IsoId("_wtu2IYFvEeWtPe6Crjmeug")]
+[IsoDisplayName(@"Obligation")]
 public interface IObligation4 : IIsoComponent
 {
     /// <summary>

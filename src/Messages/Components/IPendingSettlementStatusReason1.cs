@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for a pending settlement status.
 /// </summary>
 [IsoId("_U1YYkNp-Ed-ak6NoX_4Aeg_-1256636316")]
+[IsoDisplayName(@"Pending Settlement Status Reason")]
 public interface IPendingSettlementStatusReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IPendingSettlementStatusReason1 : IIsoComponent
     [IsoId("_U1YYktp-Ed-ak6NoX_4Aeg_-888151424")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

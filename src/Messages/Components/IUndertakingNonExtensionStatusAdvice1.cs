@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of a non-extension advice.
 /// </summary>
 [IsoId("_-GdIZ3ltEeG7BsjMvd1mEw_177542708")]
+[IsoDisplayName(@"Undertaking Non Extension Status Advice")]
 public interface IUndertakingNonExtensionStatusAdvice1 : IIsoComponent
 {
     /// <summary>

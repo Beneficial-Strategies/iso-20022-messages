@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Narrative58.
 /// </summary>
 [IsoId("_seLEwWHzEe6yt_d72zQZeQ")]
+[IsoDisplayName(@"Corporate Action Narrative58")]
 public interface ICorporateActionNarrative58 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface ICorporateActionNarrative58 : IIsoComponent
     /// </summary>
     [DisplayName("Offeror")]
     [IsoXmlTag("Offerr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max350Text> Offeror { get; }
 
     /// <summary>
@@ -30,6 +32,7 @@ public interface ICorporateActionNarrative58 : IIsoComponent
     /// </summary>
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedURLlnformation6> URLAddress { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepoCallRequestStatus5Choice;
 /// Instruction/Request will not be executed.
 /// </summary>
 [IsoId("_fHQhQf7rEeCvPoRGOxRobQ")]
+[IsoDisplayName(@"Denied")]
 public interface IDenied : IRepoCallRequestStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashSettlementSystem1Choice;
 /// Cash settlement system expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_Qv3UuNp-Ed-ak6NoX_4Aeg_-882993888")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICashSettlementSystem1Choice, IIsoChoiceVariant
 {
     /// <summary>

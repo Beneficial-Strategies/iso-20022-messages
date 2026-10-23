@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrAuthstnRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.002.001.01"
 )]
+[Description(@"Scope|The AcceptorAuthorisationResponse message is sent by the acquirer to inform the card acceptor of the outcome of the authorisation process. The message can be sent directly to the acceptor or through an agent.|Usage|The AcceptorAuthorisationResponse message is used to indicate one of the possible outcomes of an authorisation process:|- a successful authorisation;|- a decline from the acquirer for financial reasons;|- a decline from the acquirer for technical reasons (for instance, a timeout).")]
+[IsoDisplayName(@"Acceptor Authorisation Response V")]
 public interface IAcceptorAuthorisationResponseV01 : IOuterRecord
 {
     /// <summary>

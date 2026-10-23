@@ -24,6 +24,8 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("_MXrQa9FSEd-BzquC8wXy7w_1518243761")]
 [IsoMessage("semt.006.001.01", "semt.006.001.01", "urn:iso:std:iso:20022:tech:xsd:semt.006.001.01")]
+[Description(@"Scope|The StatementOfInvestmentFundTransactions is sent by an account servicer to the account owner or the account owner's designated agent. The account servicer may be a fund administrator or fund intermediary, trustee or registrar.|This message provides the details of increases and decreases of holdings which occurred during a specified period.|This message can also be used for information purposes, eg, tax information.|Usage|The StatementOfInvestmentFundTransactions message can be sent:|- At a frequency agreed bi-laterally between the Sender and the Receiver and/or|- As a response to a request for statement sent by the account owner.|The StatementOfInvestmentFundTransactions message can only be used to list the transactions of a single (master) account. However, it is possible to break down these transactions into one or several sub-accounts. Therefore, the message can be used to either specify transactions at|- the main account level, or|- the sub-account level.|This message must not be used in place of confirmation messages.|Since a SWIFT message as sent is restricted to the maximum input message length, several messages may be needed to accommodate all the information.")]
+[IsoDisplayName(@"Statement Of Investment Fund Transactions")]
 public interface IStatementOfInvestmentFundTransactions : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IStatementOfInvestmentFundTransactions : IOuterRecord
     [IsoId("_MXrQbNFSEd-BzquC8wXy7w_1597856875")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference2> PreviousReference { get; }
 
     /// <summary>
@@ -40,6 +43,7 @@ public interface IStatementOfInvestmentFundTransactions : IOuterRecord
     [IsoId("_MXrQbdFSEd-BzquC8wXy7w_1600624521")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference2> RelatedReference { get; }
 
     /// <summary>
@@ -72,6 +76,7 @@ public interface IStatementOfInvestmentFundTransactions : IOuterRecord
     [IsoId("_MX0aU9FSEd-BzquC8wXy7w_-591358864")]
     [DisplayName("Transaction On Account")]
     [IsoXmlTag("TxOnAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundTransactionsByFund1> TransactionOnAccount { get; }
 
     /// <summary>
@@ -80,6 +85,7 @@ public interface IStatementOfInvestmentFundTransactions : IOuterRecord
     [IsoId("_MX0aVNFSEd-BzquC8wXy7w_-645201789")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubAccountIdentification4> SubAccountDetails { get; }
 
     /// <summary>
@@ -88,5 +94,6 @@ public interface IStatementOfInvestmentFundTransactions : IOuterRecord
     [IsoId("_MX0aVdFSEd-BzquC8wXy7w_364441815")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

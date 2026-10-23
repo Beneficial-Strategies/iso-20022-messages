@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Business status of the collateral data management request for processing in the system.
 /// </summary>
 [IsoId("_jBTw8e5NEeCisYr99QEiWA_246169338")]
+[IsoDisplayName(@"Collateral Status Reason1")]
 public interface ICollateralStatusReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICollateralStatusReason1 : IIsoComponent
     [IsoId("_jBTw8-5NEeCisYr99QEiWA_-750903015")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation10> Reason { get; }
 }

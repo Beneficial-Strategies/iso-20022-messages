@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_sNdDw1kyEeGeoaLUQk__nA_-791582600")]
 [IsoMessage("camt.060.001.03", "AcctRptgReq", "urn:iso:std:iso:20022:tech:xsd:camt.060.001.03")]
+[Description(@"Scope|The AccountReportingRequest message is sent by the account owner, either directly or through a forwarding agent, to one of its account servicing institutions. It is used to ask the account servicing institution to send a report on the account owner's account in a BankToCustomerAccountReport (camt.052.001.03), a BankToCustomerStatement (camt.053.001.03) or a BankToCustomerDebitCreditNotification (camt.054.001.03).|Usage|The AccountReportingRequest message is used to advise the account servicing institution of funds that the account owner expects to have credited to its account. The message can be used in either a direct or a relay scenario.")]
+[IsoDisplayName(@"Account Reporting Request V")]
 public interface IAccountReportingRequestV03 : IOuterRecord
 {
     /// <summary>
@@ -31,6 +33,7 @@ public interface IAccountReportingRequestV03 : IOuterRecord
     [IsoId("_sNm0wVkyEeGeoaLUQk__nA_-471051475")]
     [DisplayName("Reporting Request")]
     [IsoXmlTag("RptgReq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportingRequest3> ReportingRequest { get; }
 
     /// <summary>
@@ -39,5 +42,6 @@ public interface IAccountReportingRequestV03 : IOuterRecord
     [IsoId("_sNwlwFkyEeGeoaLUQk__nA_1992302117")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

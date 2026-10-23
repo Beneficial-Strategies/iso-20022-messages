@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the details of the transaction.
 /// </summary>
 [IsoId("_JpWvDyW8EeOslcz0TJwprQ")]
+[IsoDisplayName(@"Transaction Details")]
 public interface ITransactionDetails63 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface ITransactionDetails63 : IIsoComponent
     [IsoId("_KAakFyW8EeOslcz0TJwprQ")]
     [DisplayName("Place Of Clearing")]
     [IsoXmlTag("PlcOfClr")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier? PlaceOfClearing { get; }
 
     /// <summary>
@@ -89,6 +91,7 @@ public interface ITransactionDetails63 : IIsoComponent
     [IsoId("_KAakJyW8EeOslcz0TJwprQ")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -161,6 +164,7 @@ public interface ITransactionDetails63 : IIsoComponent
     [IsoId("_KAakbyW8EeOslcz0TJwprQ")]
     [DisplayName("Reversal Indicator")]
     [IsoXmlTag("RvslInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ReversalIndicator { get; }
 
     /// <summary>
@@ -169,5 +173,7 @@ public interface ITransactionDetails63 : IIsoComponent
     [IsoId("_KAakdyW8EeOslcz0TJwprQ")]
     [DisplayName("Transaction Additional Details")]
     [IsoXmlTag("TxAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? TransactionAdditionalDetails { get; }
 }

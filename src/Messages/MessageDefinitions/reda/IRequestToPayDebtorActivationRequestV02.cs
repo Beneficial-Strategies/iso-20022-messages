@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.reda;
     "ReqToPayDbtrActvtnReq",
     "urn:iso:std:iso:20022:tech:xsd:reda.070.001.02"
 )]
+[IsoDisplayName(@"Request To Pay Debtor Activation Request V02")]
 public interface IRequestToPayDebtorActivationRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface IRequestToPayDebtorActivationRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Debtor Activation")]
     [IsoXmlTag("DbtrActvtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDebtorActivation5> DebtorActivation { get; }
 
     /// <summary>
@@ -43,5 +45,6 @@ public interface IRequestToPayDebtorActivationRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

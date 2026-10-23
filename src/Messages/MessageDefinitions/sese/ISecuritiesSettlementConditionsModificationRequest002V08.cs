@@ -36,6 +36,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesSttlmCondsModReq",
     "urn:iso:std:iso:20022:tech:xsd:sese.030.002.08"
 )]
+[Description(@"Scope|An account owner sends a SecuritiesSettlementConditionsModificationRequest to an account servicer to request the modification of a processing indicator or another non-matching information.||The account owner/servicer relationship may be:|- a central securities depository participant which has an account with a central securities depository.|It could also be, if agreed in a service level agreement:|- a global custodian which has an account with its local agent (sub-custodian), or|- an investment management institution which manage a fund account opened at a custodian, or|- a broker which has an account with a custodian, or|- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.||In markets where this applies (for example, securities market infrastructures with no pre-settlement matching process), it is used by a party to approve, cancel or reject a transaction instructed by the counterparty.||This message cannot be used to request the modification of trade or event details.|The use of AdditionalInformation and its fields must be pre-agreed between account servicer and account owner. The fields in that sequence cannot be used to amend a trade or event detail unless authorised by country market practice.")]
+[IsoDisplayName(@"Securities Settlement Conditions Modification Request 002 V")]
 public interface ISecuritiesSettlementConditionsModificationRequest002V08 : IOuterRecord
 {
     /// <summary>
@@ -60,6 +62,7 @@ public interface ISecuritiesSettlementConditionsModificationRequest002V08 : IOut
     [IsoId("_OMbE-_fXEeiNZp_PtLohLw")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRequestDetails21> RequestDetails { get; }
 
     /// <summary>
@@ -68,6 +71,7 @@ public interface ISecuritiesSettlementConditionsModificationRequest002V08 : IOut
     [IsoId("_OMbE_ffXEeiNZp_PtLohLw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation17> AdditionalInformation { get; }
 
     /// <summary>
@@ -76,5 +80,6 @@ public interface ISecuritiesSettlementConditionsModificationRequest002V08 : IOut
     [IsoId("_OMbE__fXEeiNZp_PtLohLw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

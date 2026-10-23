@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Supplies additional transaction information for fleet transactions.
 /// </summary>
 [IsoId("_hlHzIUrhEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Fleet Line Item7")]
 public interface IFleetLineItem7 : IIsoComponent
 {
     /// <summary>
@@ -201,6 +202,7 @@ public interface IFleetLineItem7 : IIsoComponent
     [IsoId("_hnkDPUrhEfCMZJtj4J7UGQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> Tax { get; }
 
     /// <summary>

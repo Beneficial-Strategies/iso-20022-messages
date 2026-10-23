@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Agent Notification Identification And Status1.
 /// </summary>
 [IsoId("_d-x4kFuIEe6gDOpEK7Q4ig")]
+[IsoDisplayName(@"Agent Notification Identification And Status1")]
 public interface IAgentNotificationIdentificationAndStatus1 : IIsoComponent
 {
     /// <summary>

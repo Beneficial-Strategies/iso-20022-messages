@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrCurrency1Choice;
 /// Currency for the settlement.
 /// </summary>
 [IsoId("_n9oL79QiEeKvJeoOII0e7w")]
+[IsoDisplayName(@"Settlement Currency")]
 public interface ISettlementCurrency : IPartyOrCurrency1Choice, IIsoChoiceVariant
 {
     /// <summary>

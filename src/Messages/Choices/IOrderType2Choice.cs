@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the order type.
 /// </summary>
 [IsoId("_cw18IVxUEeWvPv3PXpS3fw")]
+[IsoDisplayName(@"Order Type 2 Choice")]
 public interface IOrderType2Choice : IIsoChoice { }

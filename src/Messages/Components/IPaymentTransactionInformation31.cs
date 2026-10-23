@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide reference and status information on the original transactions, included in the original instruction, to which the cancellation request message applies.
 /// </summary>
 [IsoId("_P8J_09p-Ed-ak6NoX_4Aeg_-1232488366")]
+[IsoDisplayName(@"Payment Transaction Information")]
 public interface IPaymentTransactionInformation31 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentTransactionInformation31 : IIsoComponent
     [IsoId("_P8J_1Np-Ed-ak6NoX_4Aeg_-1232488364")]
     [DisplayName("Cancellation Identification")]
     [IsoXmlTag("CxlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IPaymentTransactionInformation31 : IIsoComponent
     [IsoId("_P8Tw0Np-Ed-ak6NoX_4Aeg_-1232488213")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IPaymentTransactionInformation31 : IIsoComponent
     [IsoId("_P8Tw0dp-Ed-ak6NoX_4Aeg_-1232487912")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface IPaymentTransactionInformation31 : IIsoComponent
     [IsoId("_P8Tw0tp-Ed-ak6NoX_4Aeg_-1232487850")]
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalTransactionIdentification { get; }
 
     /// <summary>
@@ -65,6 +74,8 @@ public interface IPaymentTransactionInformation31 : IIsoComponent
     [IsoId("_P8Tw09p-Ed-ak6NoX_4Aeg_-1295924128")]
     [DisplayName("Original Clearing System Reference")]
     [IsoXmlTag("OrgnlClrSysRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalClearingSystemReference { get; }
 
     /// <summary>
@@ -81,6 +92,7 @@ public interface IPaymentTransactionInformation31 : IIsoComponent
     [IsoId("_P8Tw1dp-Ed-ak6NoX_4Aeg_-134140788")]
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OriginalInterbankSettlementDate { get; }
 
     /// <summary>
@@ -105,6 +117,7 @@ public interface IPaymentTransactionInformation31 : IIsoComponent
     [IsoId("_P8Tw2Np-Ed-ak6NoX_4Aeg_-1232487666")]
     [DisplayName("Cancellation Reason Information")]
     [IsoXmlTag("CxlRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICancellationReasonInformation3> CancellationReasonInformation { get; }
 
     /// <summary>

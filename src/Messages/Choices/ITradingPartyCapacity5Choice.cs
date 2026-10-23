@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the role of the party in the transaction.
 /// </summary>
 [IsoId("_r22iEMGxEeivTd4NUfCi2g")]
+[IsoDisplayName(@"Trading Party Capacity 5 Choice")]
 public interface ITradingPartyCapacity5Choice : IIsoChoice { }

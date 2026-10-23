@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a subscription order.
 /// </summary>
 [IsoId("d64a88ea-0c08-4f10-b789-44790e74e4bd")]
+[IsoDisplayName(@"Subscription Execution16")]
 public interface ISubscriptionExecution16 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ISubscriptionExecution16 : IIsoComponent
     [IsoId("f7b1295a-1a02-4a9d-af2d-4a8c7442637e")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType4Choice> OrderType { get; }
 
     /// <summary>
@@ -121,6 +123,7 @@ public interface ISubscriptionExecution16 : IIsoComponent
     [IsoId("188c6f94-8052-4491-a3a7-30199621d120")]
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice22> InformativePriceDetails { get; }
 
     /// <summary>
@@ -185,6 +188,7 @@ public interface ISubscriptionExecution16 : IIsoComponent
     [IsoId("d8f40d87-135a-4b3f-89f8-052dc2fbc43d")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms37> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -329,6 +333,7 @@ public interface ISubscriptionExecution16 : IIsoComponent
     [IsoId("98934f43-ace2-4f51-8963-d55fac655d48")]
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; }
 
     /// <summary>
@@ -361,6 +366,7 @@ public interface ISubscriptionExecution16 : IIsoComponent
     [IsoId("604b4c29-de6c-48e1-9c65-9aee83a9efa2")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary49> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -377,6 +383,7 @@ public interface ISubscriptionExecution16 : IIsoComponent
     [IsoId("456be021-f552-4930-baf1-390087703005")]
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISourceOfCash1Choice> SourceOfCash { get; }
 
     /// <summary>

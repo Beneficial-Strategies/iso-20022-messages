@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount reported.
 /// </summary>
 [IsoId("_Q24J86-yEeGNi5z8K_XPKQ")]
+[IsoDisplayName(@"Reported Amount")]
 public interface IReportedAmount1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportedAmount1 : IIsoComponent
     [IsoId("_uFIh8K-0EeGNi5z8K_XPKQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

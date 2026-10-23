@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides reason of the rejection of an election cancellation request.
 /// </summary>
 [IsoId("_RlD3WNp-Ed-ak6NoX_4Aeg_-1891281771")]
+[IsoDisplayName(@"Corporate Action Cancellation Rejection Status")]
 public interface ICorporateActionCancellationRejectionStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionCancellationRejectionStatus1 : IIsoComponent
     [IsoId("_RlNoUNp-Ed-ak6NoX_4Aeg_-1877428616")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason9FormatChoice> Reason { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface ICorporateActionCancellationRejectionStatus1 : IIsoComponent
     [IsoId("_RlNoUdp-Ed-ak6NoX_4Aeg_-1877428585")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

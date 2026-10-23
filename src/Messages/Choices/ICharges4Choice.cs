@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Charges4Choice.
 /// </summary>
 [IsoId("_58rWoTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Charges4Choice")]
 public interface ICharges4Choice : IIsoChoice { }

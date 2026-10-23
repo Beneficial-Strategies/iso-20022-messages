@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details about the entity involved in the tax paid or to be paid.
 /// </summary>
 [IsoId("_PdBMxtp-Ed-ak6NoX_4Aeg_-1937885674")]
+[IsoDisplayName(@"Tax Party")]
 public interface ITaxParty1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITaxParty1 : IIsoComponent
     [IsoId("_PdBMx9p-Ed-ak6NoX_4Aeg_-1937885612")]
     [DisplayName("Tax Identification")]
     [IsoXmlTag("TaxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITaxParty1 : IIsoComponent
     [IsoId("_PdBMyNp-Ed-ak6NoX_4Aeg_-1937885613")]
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegistrationIdentification { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface ITaxParty1 : IIsoComponent
     [IsoId("_PdKWsNp-Ed-ak6NoX_4Aeg_-1937885634")]
     [DisplayName("Tax Type")]
     [IsoXmlTag("TaxTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxType { get; }
 }

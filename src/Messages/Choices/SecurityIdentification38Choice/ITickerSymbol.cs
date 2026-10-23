@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification38Choice;
 /// <summary>
 /// Ticker Symbol.
 /// </summary>
+[IsoDisplayName(@"Ticker Symbol")]
 public interface ITickerSymbol : ISecurityIdentification38Choice, IIsoChoiceVariant
 {
     /// <summary>

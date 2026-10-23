@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status advising on the processing of the instruction.
 /// </summary>
 [IsoId("_sSu2t16uEeSyc4g_pm5hbw")]
+[IsoDisplayName(@"Instruction Processing Status")]
 public interface IInstructionProcessingStatus3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IInstructionProcessingStatus3 : IIsoComponent
     [IsoId("_svC_Q16uEeSyc4g_pm5hbw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

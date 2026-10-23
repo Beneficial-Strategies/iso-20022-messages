@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio1Choice;
 /// </summary>
 [IsoId("_ibqr0U4HEeiQHa-q1Uephw")]
 [IsoXmlTag("TaxEffcntPdct")]
+[IsoDisplayName(@"Tax Efficient Product")]
 public interface ITaxEfficientProduct : IFundPortfolio1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -35,6 +36,7 @@ public interface ITaxEfficientProduct : IFundPortfolio1Choice, IIsoChoiceVariant
     [IsoId("_xRJK9U4KEeiQHa-q1Uephw")]
     [DisplayName("Current Year")]
     [IsoXmlTag("CurYr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CurrentYear { get; }
 
     /// <summary>
@@ -43,5 +45,6 @@ public interface ITaxEfficientProduct : IFundPortfolio1Choice, IIsoChoiceVariant
     [IsoId("_DlX7IV3AEeiFXdiLi_Nf4A")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

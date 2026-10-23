@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a settlement purpose.
 /// </summary>
 [IsoId("_J8-MUSUOEeOgKIHGINc2Uw")]
+[IsoDisplayName(@"Purpose 3 Choice")]
 public interface IPurpose3Choice : IIsoChoice { }

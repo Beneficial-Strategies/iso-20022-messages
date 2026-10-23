@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_00UlUwVTEeqjd8n6wD9JVw")]
 [IsoMessage("seev.031.002.10", "CorpActnNtfctn", "urn:iso:std:iso:20022:tech:xsd:seev.031.002.10")]
+[Description(@"Scope|The CorporateActionNotification message is sent by an account servicer to an account owner or its designated agent to notify details of a corporate action event and optionally account information, eligible balance and entitlements.||It may also include possible elections or choices available to the account owner. The account servicer can initially send the CorporateActionNotification message as a preliminary advice, subsequently replaced by another CorporateActionNotification message with complete or confirmed information.||It may also be sent to an account owner or its designated agent, to remind of event details and/or of missing or incomplete instructions for a corporate action event.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).")]
+[IsoDisplayName(@"Corporate Action Notification 002 V")]
 public interface ICorporateActionNotification002V10 : IOuterRecord
 {
     /// <summary>
@@ -60,6 +62,7 @@ public interface ICorporateActionNotification002V10 : IOuterRecord
     [IsoId("_00UlhwVTEeqjd8n6wD9JVw")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification38> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -68,6 +71,7 @@ public interface ICorporateActionNotification002V10 : IOuterRecord
     [IsoId("_00UliQVTEeqjd8n6wD9JVw")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventReference4> EventsLinkage { get; }
 
     /// <summary>
@@ -108,6 +112,7 @@ public interface ICorporateActionNotification002V10 : IOuterRecord
     [IsoId("_00UlkwVTEeqjd8n6wD9JVw")]
     [DisplayName("Corporate Action Option Details")]
     [IsoXmlTag("CorpActnOptnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionOption176> CorporateActionOptionDetails { get; }
 
     /// <summary>
@@ -124,6 +129,7 @@ public interface ICorporateActionNotification002V10 : IOuterRecord
     [IsoId("_00UllwVTEeqjd8n6wD9JVw")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification151Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -132,6 +138,7 @@ public interface ICorporateActionNotification002V10 : IOuterRecord
     [IsoId("_00UlmQVTEeqjd8n6wD9JVw")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> PayingAgent { get; }
 
     /// <summary>
@@ -140,6 +147,7 @@ public interface ICorporateActionNotification002V10 : IOuterRecord
     [IsoId("_00UlmwVTEeqjd8n6wD9JVw")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -156,6 +164,7 @@ public interface ICorporateActionNotification002V10 : IOuterRecord
     [IsoId("_00UlnwVTEeqjd8n6wD9JVw")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> ResellingAgent { get; }
 
     /// <summary>
@@ -180,6 +189,7 @@ public interface ICorporateActionNotification002V10 : IOuterRecord
     [IsoId("_00UlpQVTEeqjd8n6wD9JVw")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> SolicitationAgent { get; }
 
     /// <summary>
@@ -204,6 +214,7 @@ public interface ICorporateActionNotification002V10 : IOuterRecord
     [IsoId("_00UlqwVTEeqjd8n6wD9JVw")]
     [DisplayName("Offeror")]
     [IsoXmlTag("Offerr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification151Choice> Offeror { get; }
 
     /// <summary>
@@ -220,5 +231,6 @@ public interface ICorporateActionNotification002V10 : IOuterRecord
     [IsoId("_00UlrwVTEeqjd8n6wD9JVw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

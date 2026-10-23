@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reports either on the collateral value report or on a business error.
 /// </summary>
 [IsoId("_-DiXdTpvEemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Collateral Value Report")]
 public interface ICollateralValueReport3 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface ICollateralValueReport3 : IIsoComponent
     [IsoId("_-ORAxzpvEemk2e6qGBk8IQ")]
     [DisplayName("Collateral Value Report")]
     [IsoXmlTag("CollValRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralValueReportOrError6Choice> CollateralValueReport { get; }
 }

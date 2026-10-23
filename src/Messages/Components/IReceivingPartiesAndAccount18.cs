@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.
 /// </summary>
 [IsoId("_CoyRH4fuEeevKP8c-ilVhA")]
+[IsoDisplayName(@"Receiving Parties And Account")]
 public interface IReceivingPartiesAndAccount18 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,8 @@ public interface IReceivingPartiesAndAccount18 : IIsoComponent
     [IsoId("_C5dKT4fuEeevKP8c-ilVhA")]
     [DisplayName("Securities Settlement System")]
     [IsoXmlTag("SctiesSttlmSys")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecuritiesSettlementSystem { get; }
 
     /// <summary>

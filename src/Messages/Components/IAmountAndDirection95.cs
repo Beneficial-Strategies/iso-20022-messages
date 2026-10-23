@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.
 /// </summary>
 [IsoId("_u-SJX8vGEeihG9bKfarOOA")]
+[IsoDisplayName(@"Amount And Direction")]
 public interface IAmountAndDirection95 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAmountAndDirection95 : IIsoComponent
     [IsoId("_vQIuQcvGEeihG9bKfarOOA")]
     [DisplayName("Accrued Interest Indicator")]
     [IsoXmlTag("AcrdIntrstInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AccruedInterestIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAmountAndDirection95 : IIsoComponent
     [IsoId("_vQIuRcvGEeihG9bKfarOOA")]
     [DisplayName("Stamp Duty Indicator")]
     [IsoXmlTag("StmpDtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? StampDutyIndicator { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IAmountAndDirection95 : IIsoComponent
     [IsoId("_vQIuScvGEeihG9bKfarOOA")]
     [DisplayName("Brokerage Amount Indicator")]
     [IsoXmlTag("BrkrgAmtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BrokerageAmountIndicator { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IAmountAndDirection95 : IIsoComponent
     [IsoId("_zZ2VocvGEeihG9bKfarOOA")]
     [DisplayName("Research Fee Indicator")]
     [IsoXmlTag("RsrchFeeInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ResearchFeeIndicator { get; }
 
     /// <summary>

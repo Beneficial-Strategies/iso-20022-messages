@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference16Choice;
 /// <summary>
 /// Cancellation Request Identification.
 /// </summary>
+[IsoDisplayName(@"Cancellation Request Identification")]
 public interface ICancellationRequestIdentification
     : IIdentificationReference16Choice,
         IIsoChoiceVariant

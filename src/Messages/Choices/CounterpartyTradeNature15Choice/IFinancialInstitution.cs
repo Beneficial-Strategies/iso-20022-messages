@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice;
 /// </summary>
 [IsoId("_1z1A8Qz1Ee2YoLD-1vFj0g")]
 [IsoXmlTag("FI")]
+[IsoDisplayName(@"Financial Institution")]
 public interface IFinancialInstitution : ICounterpartyTradeNature15Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IFinancialInstitution : ICounterpartyTradeNature15Choice, IIsoC
     [IsoId("_UgEEwAz2Ee2YoLD-1vFj0g")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialPartyClassification2Choice> Sector { get; }
 
     /// <summary>
@@ -27,5 +29,6 @@ public interface IFinancialInstitution : ICounterpartyTradeNature15Choice, IIsoC
     [IsoId("_W7SxEAz2Ee2YoLD-1vFj0g")]
     [DisplayName("Clearing Threshold")]
     [IsoXmlTag("ClrThrshld")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ClearingThreshold { get; }
 }

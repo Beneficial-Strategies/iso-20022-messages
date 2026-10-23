@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Message to be displayed to the cardholder or the cashier.
 /// </summary>
 [IsoId("_t9yQoY0lEeWzoK7sd7oTyw")]
+[IsoDisplayName(@"Action Message")]
 public interface IActionMessage5 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IActionMessage5 : IIsoComponent
     [IsoId("_uJtMw40lEeWzoK7sd7oTyw")]
     [DisplayName("Message Content")]
     [IsoXmlTag("MsgCntt")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text MessageContent { get; }
 }

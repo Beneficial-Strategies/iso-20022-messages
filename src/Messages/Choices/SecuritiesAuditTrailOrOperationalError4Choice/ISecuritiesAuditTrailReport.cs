@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAuditTrailOrOperationa
 /// </summary>
 [IsoId("_Ptf-MZJKEeuAlLVx8pyt3w")]
 [IsoXmlTag("SctiesAudtTrlRpt")]
+[IsoDisplayName(@"Securities Audit Trail Report")]
 public interface ISecuritiesAuditTrailReport
     : ISecuritiesAuditTrailOrOperationalError4Choice,
         IIsoChoiceVariant

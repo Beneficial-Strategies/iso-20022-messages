@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of different types of portfolio.
 /// </summary>
 [IsoId("_iMMFYU4HEeiQHa-q1Uephw")]
+[IsoDisplayName(@"Fund Portfolio 1 Choice")]
 public interface IFundPortfolio1Choice : IIsoChoice { }

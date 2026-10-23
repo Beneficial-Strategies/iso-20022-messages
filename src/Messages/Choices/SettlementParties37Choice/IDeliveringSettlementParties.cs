@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties37Choice;
 /// <summary>
 /// Delivering Settlement Parties.
 /// </summary>
+[IsoDisplayName(@"Delivering Settlement Parties")]
 public interface IDeliveringSettlementParties : ISettlementParties37Choice, IIsoChoiceVariant
 {
     /// <summary>

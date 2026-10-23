@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for an exposure type.
 /// </summary>
 [IsoId("_cqZj4a5hEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Compare Exposure Type")]
 public interface ICompareExposureType3 : IIsoComponent
 {
     /// <summary>

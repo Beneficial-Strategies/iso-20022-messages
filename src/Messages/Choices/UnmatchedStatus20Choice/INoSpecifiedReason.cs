@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnmatchedStatus20Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_6QAoKZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IUnmatchedStatus20Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrAll2Choice;
 /// </summary>
 [IsoId("_Hv82s24-EeiU9cctagi5ow")]
 [IsoXmlTag("AllStgOrdrs")]
+[IsoDisplayName(@"All Standing Orders")]
 public interface IAllStandingOrders : IStandingOrderOrAll2Choice, IIsoChoiceVariant
 {
     /// <summary>

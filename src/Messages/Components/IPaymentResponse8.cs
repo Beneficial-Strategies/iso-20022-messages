@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to respond to a payment request.
 /// </summary>
 [IsoId("_0L804bYMEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Payment Response8")]
 public interface IPaymentResponse8 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IPaymentResponse8 : IIsoComponent
     [IsoId("_0M6eWbYMEfCUZfsQO4rYeA")]
     [DisplayName("Payment Receipt")]
     [IsoXmlTag("PmtRct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReceipt7> PaymentReceipt { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface IPaymentResponse8 : IIsoComponent
     [IsoId("_0M6eX7YMEfCUZfsQO4rYeA")]
     [DisplayName("Loyalty Result")]
     [IsoXmlTag("LltyRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyResult3> LoyaltyResult { get; }
 
     /// <summary>
@@ -81,5 +84,6 @@ public interface IPaymentResponse8 : IIsoComponent
     [IsoId("_0M6eZbYMEfCUZfsQO4rYeA")]
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomerOrder1> CustomerOrder { get; }
 }

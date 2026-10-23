@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the waiving type.
 /// </summary>
 [IsoId("_VRshKNp-Ed-ak6NoX_4Aeg_978065066")]
+[IsoDisplayName(@"Waiving Type")]
 public interface IWaivingType1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IWaivingType1 : IIsoComponent
     [IsoId("_VRshKtp-Ed-ak6NoX_4Aeg_1036247853")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

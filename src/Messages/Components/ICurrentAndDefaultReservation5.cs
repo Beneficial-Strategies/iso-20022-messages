@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reports on reservations.
 /// </summary>
 [IsoId("_eIHT9dcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Current And Default Reservation")]
 public interface ICurrentAndDefaultReservation5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICurrentAndDefaultReservation5 : IIsoComponent
     [IsoId("_eJZtYdcZEeqRFcf2R4bPBw")]
     [DisplayName("Current Reservation")]
     [IsoXmlTag("CurRsvatn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReservationReport7> CurrentReservation { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICurrentAndDefaultReservation5 : IIsoComponent
     [IsoId("_eJZtY9cZEeqRFcf2R4bPBw")]
     [DisplayName("Default Reservation")]
     [IsoXmlTag("DfltRsvatn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReservationReport7> DefaultReservation { get; }
 }

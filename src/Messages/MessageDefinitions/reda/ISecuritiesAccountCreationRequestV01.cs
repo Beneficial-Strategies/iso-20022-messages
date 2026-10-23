@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "SctiesAcctCreReq",
     "urn:iso:std:iso:20022:tech:xsd:reda.018.001.01"
 )]
+[Description(@"The SecuritiesAccountCreationRequest message message is sent by an instructing party to the executing party to instruct the creation of a new securities account with the required account attributes details.|||Usage:||Processing and confirmation of the securities account creation request message are provided via a SecuritiesAccountStatusAdvice message.")]
+[IsoDisplayName(@"Securities Account Creation Request V")]
 public interface ISecuritiesAccountCreationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -43,5 +45,6 @@ public interface ISecuritiesAccountCreationRequestV01 : IOuterRecord
     [IsoId("_KAu-mZ2fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

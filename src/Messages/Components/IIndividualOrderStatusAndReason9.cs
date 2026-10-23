@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of the individual orders of a bulk or multiple order that was previously received.
 /// </summary>
 [IsoId("055610e9-ff4b-463d-8554-c1d66b741e0b")]
+[IsoDisplayName(@"Individual Order Status And Reason9")]
 public interface IIndividualOrderStatusAndReason9 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface IIndividualOrderStatusAndReason9 : IIsoComponent
     [IsoId("eb5bb99c-f2fd-4db1-89b8-16e81ff54ac7")]
     [DisplayName("Repaired Fee")]
     [IsoXmlTag("RprdFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFee12> RepairedFee { get; }
 
     /// <summary>

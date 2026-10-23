@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer3Ch
 /// </summary>
 [IsoId("_K_pO07v7EeiLRYqS-r-R-A")]
 [IsoXmlTag("DmmnmPhspht")]
+[IsoDisplayName(@"Diammonium Phosphate")]
 public interface IDiammoniumPhosphate : IAssetClassCommodityFertilizer3Choice, IIsoChoiceVariant
 {
     /// <summary>

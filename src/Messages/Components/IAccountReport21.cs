@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reports either on the account information or on a business error.
 /// </summary>
 [IsoId("_fSlRIZ-WEee28J7y9KlTWg")]
+[IsoDisplayName(@"Account Report")]
 public interface IAccountReport21 : IIsoComponent
 {
     /// <summary>

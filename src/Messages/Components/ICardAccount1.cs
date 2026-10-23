@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Way to identify a customer account or a relationship to its account affected for the transaction.
 /// </summary>
 [IsoId("_2YV4AHs6EeSTS7uHCe8FPQ")]
+[IsoDisplayName(@"Card Account")]
 public interface ICardAccount1 : IIsoComponent
 {
     /// <summary>
@@ -34,6 +35,8 @@ public interface ICardAccount1 : IIsoComponent
     [IsoId("_59ouQHs7EeSTS7uHCe8FPQ")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AccountName { get; }
 
     /// <summary>

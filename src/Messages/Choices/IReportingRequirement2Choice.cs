@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indicator whether there is a reporting requirement for both counterparties.
 /// </summary>
 [IsoId("_IUKZoV55Ee2a_-MvhEjKmA")]
+[IsoDisplayName(@"Reporting Requirement 2 Choice")]
 public interface IReportingRequirement2Choice : IIsoChoice { }

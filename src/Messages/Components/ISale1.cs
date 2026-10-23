@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of good and services included in the sale.
 /// </summary>
 [IsoId("_MIdVI_JuEeiJn9rM2Znz2w")]
+[IsoDisplayName(@"Sale")]
 public interface ISale1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ISale1 : IIsoComponent
     [IsoId("_MIdVJPJuEeiJn9rM2Znz2w")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISaleItem2> LineItem { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information related to the advising party.
 /// </summary>
 [IsoId("_GBqPw34hEeG2Zfa6JvOQSQ")]
+[IsoDisplayName(@"Advising Party Additional Information")]
 public interface IAdvisingPartyAdditionalInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAdvisingPartyAdditionalInformation1 : IIsoComponent
     [IsoId("_Br7wMH4iEeG2Zfa6JvOQSQ")]
     [DisplayName("Reference Number")]
     [IsoXmlTag("RefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReferenceNumber { get; }
 
     /// <summary>
@@ -25,5 +28,9 @@ public interface IAdvisingPartyAdditionalInformation1 : IIsoComponent
     [IsoId("_cw7w5zhZEeKfZIj_SwVRwA")]
     [DisplayName("Bank To Beneficiary Information")]
     [IsoXmlTag("BkToBnfcryInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> BankToBeneficiaryInformation { get; }
 }

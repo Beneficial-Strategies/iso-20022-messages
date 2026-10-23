@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides characteristics shared by all individual transactions included in the message.
 /// </summary>
 [IsoId("_ov3efbTgEeef0oKPLRNatg")]
+[IsoDisplayName(@"Group Header")]
 public interface IGroupHeader75 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGroupHeader75 : IIsoComponent
     [IsoId("_o3nFNbTgEeef0oKPLRNatg")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IGroupHeader75 : IIsoComponent
     [IsoId("_o3nFN7TgEeef0oKPLRNatg")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,9 @@ public interface IGroupHeader75 : IIsoComponent
     [IsoId("_o3nFObTgEeef0oKPLRNatg")]
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorisation1Choice> Authorisation { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface IGroupHeader75 : IIsoComponent
     [IsoId("_o3nFO7TgEeef0oKPLRNatg")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfTransactions { get; }
 
     /// <summary>
@@ -49,6 +57,7 @@ public interface IGroupHeader75 : IIsoComponent
     [IsoId("_o3nFPbTgEeef0oKPLRNatg")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -57,6 +66,7 @@ public interface IGroupHeader75 : IIsoComponent
     [IsoId("_o3nFP7TgEeef0oKPLRNatg")]
     [DisplayName("Group Reversal")]
     [IsoXmlTag("GrpRvsl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? GroupReversal { get; }
 
     /// <summary>

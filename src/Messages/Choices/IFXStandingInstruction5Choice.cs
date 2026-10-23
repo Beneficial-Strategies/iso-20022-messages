@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the forex standing instruction information.
 /// </summary>
 [IsoId("_5xrHDZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"FX Standing Instruction 5 Choice")]
 public interface IFXStandingInstruction5Choice : IIsoChoice { }

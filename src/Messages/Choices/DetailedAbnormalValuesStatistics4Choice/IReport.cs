@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedAbnormalValuesStatistics
 /// </summary>
 [IsoId("_x4ww41yGEe24CqbZJK5XxA")]
 [IsoXmlTag("Rpt")]
+[IsoDisplayName(@"Report")]
 public interface IReport : IDetailedAbnormalValuesStatistics4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IReport : IDetailedAbnormalValuesStatistics4Choice, IIsoChoiceV
     [IsoId("_x5wPYVyGEe24CqbZJK5XxA")]
     [DisplayName("Number Of Derivatives Reported")]
     [IsoXmlTag("NbOfDerivsRptd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfDerivativesReported { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IReport : IDetailedAbnormalValuesStatistics4Choice, IIsoChoiceV
     [IsoId("_x5wPY1yGEe24CqbZJK5XxA")]
     [DisplayName("Number Of Derivatives Reported With Outliers")]
     [IsoXmlTag("NbOfDerivsRptdWthOtlrs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfDerivativesReportedWithOutliers { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface IReport : IDetailedAbnormalValuesStatistics4Choice, IIsoChoiceV
     [IsoId("_x5wPZVyGEe24CqbZJK5XxA")]
     [DisplayName("Warnings")]
     [IsoXmlTag("Wrnngs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAbnormalValuesData4> Warnings { get; }
 }

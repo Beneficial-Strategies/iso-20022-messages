@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides shareholdings information at account sub level.
 /// </summary>
 [IsoId("_4i27UDqqEemL_ewJY9QP1g")]
+[IsoDisplayName(@"Account Sub Level")]
 public interface IAccountSubLevel20 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountSubLevel20 : IIsoComponent
     [IsoId("_ITuMBTqrEemL_ewJY9QP1g")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SafekeepingAccount { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IAccountSubLevel20 : IIsoComponent
     [IsoId("_kwbvEDttEemIf7eyjCwinw")]
     [DisplayName("Shareholding Balance")]
     [IsoXmlTag("ShrhldgBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IShareholdingBalance1> ShareholdingBalance { get; }
 }

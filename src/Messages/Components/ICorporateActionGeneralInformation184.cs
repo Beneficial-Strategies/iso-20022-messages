@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action General Information184.
 /// </summary>
 [IsoId("_jKs6Q5t3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Corporate Action General Information184")]
 public interface ICorporateActionGeneralInformation184 : IIsoComponent
 {
     /// <summary>

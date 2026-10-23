@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Order to invest the investor's principal in an investment fund.
 /// </summary>
 [IsoId("fb1d61fe-98ad-4a4c-96a2-9349c92eb6f1")]
+[IsoDisplayName(@"Subscription Multiple Order7")]
 public interface ISubscriptionMultipleOrder7 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface ISubscriptionMultipleOrder7 : IIsoComponent
     [IsoId("a5695908-5e63-4d76-bf44-c83adcfd72b2")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson31> BeneficiaryDetails { get; }
 
     /// <summary>
@@ -81,6 +83,8 @@ public interface ISubscriptionMultipleOrder7 : IIsoComponent
     [IsoId("6c9fa652-b2d6-408e-8310-852b6b602b2c")]
     [DisplayName("Individual Order Details")]
     [IsoXmlTag("IndvOrdrDtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubscriptionOrder17> IndividualOrderDetails { get; }
 
     /// <summary>

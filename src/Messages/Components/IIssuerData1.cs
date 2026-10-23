@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the issuer.
 /// </summary>
 [IsoId("_9uqOgR7gEfCkq6-p7S3J1Q")]
+[IsoDisplayName(@"Issuer Data1")]
 public interface IIssuerData1 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IIssuerData1 : IIsoComponent
     [IsoId("_GBDUAkVYEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface IIssuerData1 : IIsoComponent
     [IsoId("_GBDUA0VYEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>
@@ -81,5 +84,6 @@ public interface IIssuerData1 : IIsoComponent
     [IsoId("_91VeYR7gEfCkq6-p7S3J1Q")]
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData20> LocalData { get; }
 }

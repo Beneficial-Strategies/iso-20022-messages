@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the interest rate
 /// </summary>
 [IsoId("_mtqjoZJJEeuuktRxxQZoNQ")]
+[IsoDisplayName(@"Interest Rate Details")]
 public interface IInterestRateDetails2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IInterestRateDetails2 : IIsoComponent
     [IsoId("_mzzn45JJEeuuktRxxQZoNQ")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IInterestRateDetails2 : IIsoComponent
     [IsoId("_mzzn55JJEeuuktRxxQZoNQ")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate Rate { get; }
 }

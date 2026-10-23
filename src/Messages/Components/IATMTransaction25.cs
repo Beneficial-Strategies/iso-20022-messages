@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the reconciliation request.
 /// </summary>
 [IsoId("_DiZz4a48EeWRfYPBaeOY8w")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction25 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IATMTransaction25 : IIsoComponent
     [IsoId("_DtSONa48EeWRfYPBaeOY8w")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ReconciliationIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IATMTransaction25 : IIsoComponent
     [IsoId("_DtSON648EeWRfYPBaeOY8w")]
     [DisplayName("ATM Totals")]
     [IsoXmlTag("ATMTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMTotals1> ATMTotals { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IATMTransaction25 : IIsoComponent
     [IsoId("_DtSOOa48EeWRfYPBaeOY8w")]
     [DisplayName("Cassette")]
     [IsoXmlTag("Csstt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCassette2> Cassette { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IATMTransaction25 : IIsoComponent
     [IsoId("_DtSOO648EeWRfYPBaeOY8w")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMTotals3> TransactionTotals { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IATMTransaction25 : IIsoComponent
     [IsoId("_DtSOPa48EeWRfYPBaeOY8w")]
     [DisplayName("Retained Card")]
     [IsoXmlTag("RtndCard")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? RetainedCard { get; }
 
     /// <summary>
@@ -73,5 +80,7 @@ public interface IATMTransaction25 : IIsoComponent
     [IsoId("_DtSOP648EeWRfYPBaeOY8w")]
     [DisplayName("Additional Transaction Information")]
     [IsoXmlTag("AddtlTxInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalTransactionInformation { get; }
 }

@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "CtdyStmtOfHldgsCxlV02",
     "urn:iso:std:iso:20022:tech:xsd:semt.004.001.02"
 )]
+[Description(@"Scope|An account servicer, for example, a transfer agent, sends the CustodyStatementOfHoldingsCancellation message to the account owner, for example, an investment manager or its authorised representative to cancel a previously sent CustodyStatementOfHoldings message.|Usage|The CustodyStatementOfHoldingsCancellation message is used to cancel a previously sent CustodyStatementOfHoldings message. This message must contain the reference of the message to be cancelled.|This message may also contain details of the message to be cancelled, but this is not recommended.")]
+[IsoDisplayName(@"Custody Statement Of Holdings Cancellation V")]
 public interface ICustodyStatementOfHoldingsCancellationV02 : IOuterRecord
 {
     /// <summary>

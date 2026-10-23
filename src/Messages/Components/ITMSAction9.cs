@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Single terminal management action to be performed by the point of interaction.
 /// </summary>
 [IsoId("_n2d-ASi6Eeurkfo6MpvKDA")]
+[IsoDisplayName(@"TMS Action")]
 public interface ITMSAction9 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ITMSAction9 : IIsoComponent
     [IsoId("_oIosFSi6Eeurkfo6MpvKDA")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IKEKIdentifier5> Key { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface ITMSAction9 : IIsoComponent
     [IsoId("_oIosGSi6Eeurkfo6MpvKDA")]
     [DisplayName("TMS Protocol")]
     [IsoXmlTag("TMSPrtcol")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TMSProtocol { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface ITMSAction9 : IIsoComponent
     [IsoId("_oIpTISi6Eeurkfo6MpvKDA")]
     [DisplayName("TMS Protocol Version")]
     [IsoXmlTag("TMSPrtcolVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TMSProtocolVersion { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface ITMSAction9 : IIsoComponent
     [IsoId("_oIpTJSi6Eeurkfo6MpvKDA")]
     [DisplayName("Component Type")]
     [IsoXmlTag("CmpntTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<DataSetCategory14Code> ComponentType { get; }
 
     /// <summary>
@@ -81,6 +88,8 @@ public interface ITMSAction9 : IIsoComponent
     [IsoId("_oIpTJyi6Eeurkfo6MpvKDA")]
     [DisplayName("Delegation Scope Identification")]
     [IsoXmlTag("DlgtnScpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DelegationScopeIdentification { get; }
 
     /// <summary>
@@ -89,6 +98,7 @@ public interface ITMSAction9 : IIsoComponent
     [IsoId("_oIpTKSi6Eeurkfo6MpvKDA")]
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
+    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
     Max3000Binary? DelegationScopeDefinition { get; }
 
     /// <summary>
@@ -97,6 +107,7 @@ public interface ITMSAction9 : IIsoComponent
     [IsoId("_oIpTKyi6Eeurkfo6MpvKDA")]
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary? DelegationProof { get; }
 
     /// <summary>
@@ -121,6 +132,7 @@ public interface ITMSAction9 : IIsoComponent
     [IsoId("_oIpTMSi6Eeurkfo6MpvKDA")]
     [DisplayName("Additional Process")]
     [IsoXmlTag("AddtlPrc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; }
 
     /// <summary>
@@ -145,6 +157,7 @@ public interface ITMSAction9 : IIsoComponent
     [IsoId("_oIpTNyi6Eeurkfo6MpvKDA")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? TMChallenge { get; }
 
     /// <summary>
@@ -153,6 +166,7 @@ public interface ITMSAction9 : IIsoComponent
     [IsoId("_oIpTOSi6Eeurkfo6MpvKDA")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10KBinary> KeyEnciphermentCertificate { get; }
 
     /// <summary>
@@ -161,6 +175,7 @@ public interface ITMSAction9 : IIsoComponent
     [IsoId("_oIpTOyi6Eeurkfo6MpvKDA")]
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorAction4> ErrorAction { get; }
 
     /// <summary>
@@ -169,6 +184,7 @@ public interface ITMSAction9 : IIsoComponent
     [IsoId("_oIpTPSi6Eeurkfo6MpvKDA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max3000Binary> AdditionalInformation { get; }
 
     /// <summary>
@@ -177,6 +193,7 @@ public interface ITMSAction9 : IIsoComponent
     [IsoId("_oIpTPyi6Eeurkfo6MpvKDA")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageItemCondition1> MessageItem { get; }
 
     /// <summary>

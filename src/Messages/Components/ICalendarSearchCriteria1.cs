@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to search for calendar data.
 /// </summary>
 [IsoId("_w9W9hYm5Eeipw6hHPgB4Sw")]
+[IsoDisplayName(@"Calendar Search Criteria")]
 public interface ICalendarSearchCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICalendarSearchCriteria1 : IIsoComponent
     [IsoId("_4unTUIm5Eeipw6hHPgB4Sw")]
     [DisplayName("Year")]
     [IsoXmlTag("Yr")]
+    [IsoSimpleType(IsoSimpleType.ISOYear)]
     ISOYear? Year { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICalendarSearchCriteria1 : IIsoComponent
     [IsoId("_6zc44Im5Eeipw6hHPgB4Sw")]
     [DisplayName("Month")]
     [IsoXmlTag("Mnth")]
+    [IsoSimpleType(IsoSimpleType.ISOMonth)]
     byte? Month { get; }
 
     /// <summary>

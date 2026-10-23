@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EUDividendStatusType3Choice;
 
 /// <summary>EU dividend status expressed as an ISO 20022 code.</summary>
 [IsoId("6eb9b796-22a9-4ebc-ba56-e0b7c0fa948c")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IEUDividendStatusType3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

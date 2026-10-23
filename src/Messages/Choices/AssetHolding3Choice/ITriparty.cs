@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding3Choice;
 /// <summary>
 /// Triparty.
 /// </summary>
+[IsoDisplayName(@"Triparty")]
 public interface ITriparty : IAssetHolding3Choice, IIsoChoiceVariant
 {
     /// <summary>

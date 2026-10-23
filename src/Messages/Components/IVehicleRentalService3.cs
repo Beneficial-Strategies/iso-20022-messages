@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vehicle Rental Service3.
 /// </summary>
 [IsoId("_pYqlQXTfEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Vehicle Rental Service3")]
 public interface IVehicleRentalService3 : IIsoComponent
 {
     /// <summary>
@@ -93,6 +94,7 @@ public interface IVehicleRentalService3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Driver")]
     [IsoXmlTag("AddtlDrvr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDriverInParty3> AdditionalDriver { get; }
 
     /// <summary>
@@ -128,5 +130,6 @@ public interface IVehicleRentalService3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

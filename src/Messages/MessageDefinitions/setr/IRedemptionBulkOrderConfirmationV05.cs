@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("20ffb2f9-e0ff-484c-939c-2e7b09982696")]
 [IsoMessage("setr.003.001.05", "RedBlkOrdrConf", "urn:iso:std:iso:20022:tech:xsd:setr.003.001.05")]
+[Description(@"Scope|The RedemptionBulkOrderConfirmation message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to confirm the details of execution for a previously received RedemptionBulkOrder message.|Usage|The RedemptionBulkOrderConfirmation message is used to confirm the execution of all individual orders included in a previously sent RedemptionBulkOrder message.|There is usually one bulk confirmation message for one bulk order message.|Each individual order confirmation specified is identified in DealReference. The reference of the original individual order is specified in OrderReference. The message identification of the RedemptionBulkOrder message in which the individual order was conveyed may also be quoted in RelatedReference, but this is not recommended.|A RedemptionBulkOrder must in all cases be responded to by a RedemptionBulkOrderConfirmation and in no circumstances by a RedemptionOrderConfirmation.|If the executing party needs to confirm a RedemptionOrder instruction, then the RedemptionOrderConfirmation must be used.|When the message is used to convey a confirmation amendment/s, the AmendmentIndicator must be present with the value ‘true’ or ‘1’. When this is the case, the message must only contain a confirmation amendment/s and not contain both a confirmation amendment/s and a ‘new’ confirmation/s.")]
+[IsoDisplayName(@"Redemption Bulk Order Confirmation V05")]
 public interface IRedemptionBulkOrderConfirmationV05 : IOuterRecord
 {
     /// <summary>
@@ -41,6 +43,7 @@ public interface IRedemptionBulkOrderConfirmationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference10> PreviousReference { get; }
 
     /// <summary>
@@ -69,5 +72,6 @@ public interface IRedemptionBulkOrderConfirmationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

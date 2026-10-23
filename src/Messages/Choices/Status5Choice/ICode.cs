@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status5Choice;
 /// Status expressed as a code.
 /// </summary>
 [IsoId("_Su5UDAEcEeCQm6a_G2yO_w_1647711877")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

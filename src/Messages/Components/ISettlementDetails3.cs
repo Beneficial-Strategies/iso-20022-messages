@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
 /// </summary>
 [IsoId("_Ug0d1dp-Ed-ak6NoX_4Aeg_1753947071")]
+[IsoDisplayName(@"Settlement Details")]
 public interface ISettlementDetails3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementDetails3 : IIsoComponent
     [IsoId("_Ug0d1tp-Ed-ak6NoX_4Aeg_1753947131")]
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? HoldIndicator { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ISettlementDetails3 : IIsoComponent
     [IsoId("_Ug0d2Np-Ed-ak6NoX_4Aeg_1753947383")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementTransactionCondition1Choice> SettlementTransactionCondition { get; }
 
     /// <summary>
@@ -161,6 +164,7 @@ public interface ISettlementDetails3 : IIsoComponent
     [IsoId("_UhHYwdp-Ed-ak6NoX_4Aeg_1753948356")]
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PartialSettlementIndicator { get; }
 
     /// <summary>
@@ -169,5 +173,6 @@ public interface ISettlementDetails3 : IIsoComponent
     [IsoId("_UhHYwtp-Ed-ak6NoX_4Aeg_209634736")]
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EligibleForCollateral { get; }
 }

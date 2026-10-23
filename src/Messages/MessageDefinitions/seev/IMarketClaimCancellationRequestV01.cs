@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_mmNNYNsFEeqmdMJWobugpw")]
 [IsoMessage("seev.051.001.01", "MktClmCxlReq", "urn:iso:std:iso:20022:tech:xsd:seev.051.001.01")]
+[Description(@"Scope and Usage|The MarketClaimCancellationRequest message is sent by the account holder to the account servicer. |It is sent to request the cancellation of a market claim transaction.|This message definition is intended for use with the Business Application Header (BAH).")]
+[IsoDisplayName(@"Market Claim Cancellation Request V")]
 public interface IMarketClaimCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -55,5 +57,6 @@ public interface IMarketClaimCancellationRequestV01 : IOuterRecord
     [IsoId("_QtiwUSgaEeuYwc3diVMizA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

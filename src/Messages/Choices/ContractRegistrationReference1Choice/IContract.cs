@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference1Ch
 /// </summary>
 [IsoId("_29C6ANM-EeSDLevdaFPXHw")]
 [IsoXmlTag("Ctrct")]
+[IsoDisplayName(@"Contract")]
 public interface IContract : IContractRegistrationReference1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IContract : IContractRegistrationReference1Choice, IIsoChoiceVa
     [IsoId("_W6O80dOWEeSQ_-lmj1tzfw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -26,5 +29,6 @@ public interface IContract : IContractRegistrationReference1Choice, IIsoChoiceVa
     [IsoId("_W6O809OWEeSQ_-lmj1tzfw")]
     [DisplayName("Date Of Issue")]
     [IsoXmlTag("DtOfIsse")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate DateOfIssue { get; }
 }

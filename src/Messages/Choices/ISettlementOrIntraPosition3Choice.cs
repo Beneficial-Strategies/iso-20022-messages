@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between the intra-position movement or the settlement transaction.</summary>
 [IsoId("_TUEdQWp9EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Settlement Or Intra Position 3 Choice")]
 public interface ISettlementOrIntraPosition3Choice : IIsoChoice { }

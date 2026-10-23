@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Creditor Enrolment Amendment5.
 /// </summary>
 [IsoId("_zaajgTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Creditor Enrolment Amendment5")]
 public interface ICreditorEnrolmentAmendment5 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface ICreditorEnrolmentAmendment5 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

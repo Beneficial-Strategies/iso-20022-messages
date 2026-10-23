@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityNominalValue1Choice;
 /// </summary>
 [IsoId("_xcCRUHaiEeavseMKyTsJEA")]
 [IsoXmlTag("NmnlVal")]
+[IsoDisplayName(@"Nominal Value")]
 public interface INominalValue : IQuantityNominalValue1Choice, IIsoChoiceVariant
 {
     /// <summary>

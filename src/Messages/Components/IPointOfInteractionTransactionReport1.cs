@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Report information for one transaction.
 /// </summary>
 [IsoId("_li9A4N6WEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Point Of Interaction Transaction Report")]
 public interface IPointOfInteractionTransactionReport1 : IIsoComponent
 {
     /// <summary>

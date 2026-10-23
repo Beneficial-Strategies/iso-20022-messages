@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of opening and intermediary balances.
 /// </summary>
 [IsoId("_Lu4l8QgHEeSxsfb1OEDVsw")]
+[IsoDisplayName(@"Opening Balance 3 Choice")]
 public interface IOpeningBalance3Choice : IIsoChoice { }

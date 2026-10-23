@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrCcyConvsRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.017.001.05"
 )]
+[Description(@"The AcceptorCurrencyConversionResponse message is sent by currency conversion service provider to the card acceptor to return the result of a potential currency conversion for the cardholder.|")]
+[IsoDisplayName(@"Acceptor Currency Conversion Response V")]
 public interface IAcceptorCurrencyConversionResponseV05 : IOuterRecord
 {
     /// <summary>

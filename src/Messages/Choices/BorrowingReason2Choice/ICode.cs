@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BorrowingReason2Choice;
 /// Borrowing reason expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_7dQRgZEjEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBorrowingReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

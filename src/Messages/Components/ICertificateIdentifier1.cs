@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transport key or key encryption key (KEK) identification for the recipient.
 /// </summary>
 [IsoId("_SxIvtAEcEeCQm6a_G2yO_w_1837772326")]
+[IsoDisplayName(@"Certificate Identifier")]
 public interface ICertificateIdentifier1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date And Type1.
 /// </summary>
 [IsoId("_wbqsoDHxEe6BxvG014AZzQ")]
+[IsoDisplayName(@"Date And Type1")]
 public interface IDateAndType1 : IIsoComponent
 {
     /// <summary>

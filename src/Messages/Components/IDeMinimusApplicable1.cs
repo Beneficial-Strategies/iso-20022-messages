@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Conditions applicable when the investor is covered by the &quot;de minimis&quot; exemption.
 /// </summary>
 [IsoId("_RSSsUNp-Ed-ak6NoX_4Aeg_-1126394129")]
+[IsoDisplayName(@"De Minimus Applicable")]
 public interface IDeMinimusApplicable1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDeMinimusApplicable1 : IIsoComponent
     [IsoId("_RSSsUdp-Ed-ak6NoX_4Aeg_-1045122513")]
     [DisplayName("New Issue Permission")]
     [IsoXmlTag("NewIssePrmssn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator NewIssuePermission { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IDeMinimusApplicable1 : IIsoComponent
     [IsoId("_RSSsUtp-Ed-ak6NoX_4Aeg_-1042351920")]
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Percentage { get; }
 }

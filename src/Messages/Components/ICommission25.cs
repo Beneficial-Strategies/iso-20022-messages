@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money due to a party as compensation for a service.
 /// </summary>
 [IsoId("_6apuIwauEe2phaVG0lYKTw")]
+[IsoDisplayName(@"Commission")]
 public interface ICommission25 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICommission25 : IIsoComponent
     [IsoId("_6sPMtwauEe2phaVG0lYKTw")]
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CalculationDate { get; }
 
     /// <summary>
@@ -65,5 +67,6 @@ public interface ICommission25 : IIsoComponent
     [IsoId("_6sPMvQauEe2phaVG0lYKTw")]
     [DisplayName("VAT Rate")]
     [IsoXmlTag("VATRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? VATRate { get; }
 }

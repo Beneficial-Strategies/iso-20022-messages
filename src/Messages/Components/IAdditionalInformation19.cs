@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information relevant to the destination.
 /// </summary>
 [IsoId("_EkHNFf2qEeiS2rs-hXBB5Q")]
+[IsoDisplayName(@"Additional Information")]
 public interface IAdditionalInformation19 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAdditionalInformation19 : IIsoComponent
     [IsoId("_EkHNGf2qEeiS2rs-hXBB5Q")]
     [DisplayName("Entered Data Numeric")]
     [IsoXmlTag("NtrdDataNmrc")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? EnteredDataNumeric { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IAdditionalInformation19 : IIsoComponent
     [IsoId("_UZ4L4P2qEeiS2rs-hXBB5Q")]
     [DisplayName("Entered Data Alpha Numeric")]
     [IsoXmlTag("NtrdDataAlphaNmrc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? EnteredDataAlphaNumeric { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IAdditionalInformation19 : IIsoComponent
     [IsoId("_W13GIP2qEeiS2rs-hXBB5Q")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

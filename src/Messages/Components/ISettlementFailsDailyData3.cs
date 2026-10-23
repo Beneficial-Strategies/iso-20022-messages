@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details for a specific date on the daily data on settlement fails instructions.
 /// </summary>
 [IsoId("_XevB0TOqEeqX8uoQQ3KffQ")]
+[IsoDisplayName(@"Settlement Fails Daily Data")]
 public interface ISettlementFailsDailyData3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementFailsDailyData3 : IIsoComponent
     [IsoId("_XfxjoTOqEeqX8uoQQ3KffQ")]
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ReportingDate { get; }
 
     /// <summary>

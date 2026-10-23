@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestorCapacity4Choice;
 /// Investor capacity expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_0p2QkTtCEeWRTLSN0i0tng")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInvestorCapacity4Choice, IIsoChoiceVariant
 {
     /// <summary>

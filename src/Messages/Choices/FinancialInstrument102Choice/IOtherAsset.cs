@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument102Choice;
 
 /// <summary>Identification of another kind of asset in the holding that is not a security or cash.</summary>
 [IsoId("c5b8016e-736b-4733-9af3-49ee54a882c6")]
+[IsoDisplayName(@"Other Asset")]
 public interface IOtherAsset : IFinancialInstrument102Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

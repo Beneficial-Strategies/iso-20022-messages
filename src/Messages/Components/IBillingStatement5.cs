@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Billing Statement5.
 /// </summary>
 [IsoId("_xdpU0TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Billing Statement5")]
 public interface IBillingStatement5 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface IBillingStatement5 : IIsoComponent
     /// </summary>
     [DisplayName("Rate Data")]
     [IsoXmlTag("RateData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingRate1> RateData { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface IBillingStatement5 : IIsoComponent
     /// </summary>
     [DisplayName("Currency Exchange")]
     [IsoXmlTag("CcyXchg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICurrencyExchange6> CurrencyExchange { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IBillingStatement5 : IIsoComponent
     /// </summary>
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingBalance1> Balance { get; }
 
     /// <summary>
@@ -72,6 +76,7 @@ public interface IBillingStatement5 : IIsoComponent
     /// </summary>
     [DisplayName("Compensation")]
     [IsoXmlTag("Compstn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingCompensation1> Compensation { get; }
 
     /// <summary>
@@ -79,6 +84,7 @@ public interface IBillingStatement5 : IIsoComponent
     /// </summary>
     [DisplayName("Service")]
     [IsoXmlTag("Svc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingService2> Service { get; }
 
     /// <summary>
@@ -86,6 +92,7 @@ public interface IBillingStatement5 : IIsoComponent
     /// </summary>
     [DisplayName("Tax Region")]
     [IsoXmlTag("TaxRgn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingTaxRegion3> TaxRegion { get; }
 
     /// <summary>
@@ -93,6 +100,7 @@ public interface IBillingStatement5 : IIsoComponent
     /// </summary>
     [DisplayName("Balance Adjustment")]
     [IsoXmlTag("BalAdjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceAdjustment1> BalanceAdjustment { get; }
 
     /// <summary>
@@ -100,5 +108,6 @@ public interface IBillingStatement5 : IIsoComponent
     /// </summary>
     [DisplayName("Service Adjustment")]
     [IsoXmlTag("SvcAdjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingServiceAdjustment1> ServiceAdjustment { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargePaymentMethod1Choice;
 /// Charge payment method expressed as a code.
 /// </summary>
 [IsoId("_8BZF4BXxEeOBE-jZfcm4KQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChargePaymentMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>

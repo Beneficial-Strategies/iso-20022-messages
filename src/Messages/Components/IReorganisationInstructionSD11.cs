@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action reorganisation instruction details.
 /// </summary>
 [IsoId("_pzJNsQ-uEeuE0Pnt-OcNOA")]
+[IsoDisplayName(@"Reorganisation Instruction SD")]
 public interface IReorganisationInstructionSD11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReorganisationInstructionSD11 : IIsoComponent
     [IsoId("_qH-OMQ-uEeuE0Pnt-OcNOA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IReorganisationInstructionSD11 : IIsoComponent
     [IsoId("_qH-OMw-uEeuE0Pnt-OcNOA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,9 @@ public interface IReorganisationInstructionSD11 : IIsoComponent
     [IsoId("_qH-ONQ-uEeuE0Pnt-OcNOA")]
     [DisplayName("Transaction Sequence")]
     [IsoXmlTag("TxSeq")]
+    [MinLength(0)]
+    [MaxLength(99)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionsTransactionsSequence1> TransactionSequence { get; }
 
     /// <summary>
@@ -57,6 +65,9 @@ public interface IReorganisationInstructionSD11 : IIsoComponent
     [IsoId("_qH-OOw-uEeuE0Pnt-OcNOA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [MinLength(0)]
+    [MaxLength(6)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<InstructionReason3Code> Reason { get; }
 
     /// <summary>
@@ -73,6 +84,7 @@ public interface IReorganisationInstructionSD11 : IIsoComponent
     [IsoId("_qH-OPw-uEeuE0Pnt-OcNOA")]
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? CustomerReferenceIdentification { get; }
 
     /// <summary>
@@ -113,6 +125,8 @@ public interface IReorganisationInstructionSD11 : IIsoComponent
     [IsoId("_qH-OSQ-uEeuE0Pnt-OcNOA")]
     [DisplayName("User Reference Number")]
     [IsoXmlTag("UsrRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text? UserReferenceNumber { get; }
 
     /// <summary>
@@ -129,6 +143,7 @@ public interface IReorganisationInstructionSD11 : IIsoComponent
     [IsoId("_qH-OTQ-uEeuE0Pnt-OcNOA")]
     [DisplayName("Transaction Record Number")]
     [IsoXmlTag("TxRcrdNb")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? TransactionRecordNumber { get; }
 
     /// <summary>
@@ -145,5 +160,7 @@ public interface IReorganisationInstructionSD11 : IIsoComponent
     [IsoId("_oLALMQ-uEeuE0Pnt-OcNOA")]
     [DisplayName("Shareholder Number")]
     [IsoXmlTag("ShrhldrNb")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax25Text)]
+    [StringLength(25, MinimumLength = 1)]
     RestrictedFINXMax25Text? ShareholderNumber { get; }
 }

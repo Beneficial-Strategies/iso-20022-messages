@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cleared Product2.
 /// </summary>
 [IsoId("_kJGBQUThEe-J4uL5kPsWHg")]
+[IsoDisplayName(@"Cleared Product2")]
 public interface IClearedProduct2 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IClearedProduct2 : IIsoComponent
     /// </summary>
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<MICIdentifier> TradingVenue { get; }
 
     /// <summary>

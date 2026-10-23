@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information on the shipment date, the charges, the routing and the goods described in the transport document.
 /// </summary>
 [IsoId("_2ZcofzckEeSaC-PiOaz_KQ")]
+[IsoDisplayName(@"Transport Details")]
 public interface ITransportDetails4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransportDetails4 : IIsoComponent
     [IsoId("_2vnswTckEeSaC-PiOaz_KQ")]
     [DisplayName("Transport Document Reference")]
     [IsoXmlTag("TrnsprtDocRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification7> TransportDocumentReference { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITransportDetails4 : IIsoComponent
     [IsoId("_2vnswzckEeSaC-PiOaz_KQ")]
     [DisplayName("Transported Goods")]
     [IsoXmlTag("TrnsprtdGoods")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransportedGoods1> TransportedGoods { get; }
 
     /// <summary>

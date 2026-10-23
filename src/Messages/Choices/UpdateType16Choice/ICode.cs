@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType16Choice;
 /// Indicates whether the report is complete or contains changes only.
 /// </summary>
 [IsoId("_cfq12ZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IUpdateType16Choice, IIsoChoiceVariant
 {
     /// <summary>

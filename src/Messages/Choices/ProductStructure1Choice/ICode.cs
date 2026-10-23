@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductStructure1Choice;
 /// Product structure expressed as a code.
 /// </summary>
 [IsoId("_PSZn4KDqEequlaOyi6MUhw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProductStructure1Choice, IIsoChoiceVariant
 {
     /// <summary>

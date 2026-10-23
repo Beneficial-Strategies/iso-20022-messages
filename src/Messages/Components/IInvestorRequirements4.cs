@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investor Requirements4.
 /// </summary>
 [IsoId("_rK8SgcQXEe2pvZQ_33Qz1Q")]
+[IsoDisplayName(@"Investor Requirements4")]
 public interface IInvestorRequirements4 : IIsoComponent
 {
     /// <summary>
@@ -79,5 +80,6 @@ public interface IInvestorRequirements4 : IIsoComponent
     /// </summary>
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherInvestmentNeed1> Other { get; }
 }

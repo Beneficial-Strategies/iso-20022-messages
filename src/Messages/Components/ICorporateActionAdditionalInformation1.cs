@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information about the delivery details, beneficial owner details, etc.
 /// </summary>
 [IsoId("_UMZtCNp-Ed-ak6NoX_4Aeg_302800554")]
+[IsoDisplayName(@"Corporate Action Additional Information")]
 public interface ICorporateActionAdditionalInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionAdditionalInformation1 : IIsoComponent
     [IsoId("_UMjeANp-Ed-ak6NoX_4Aeg_-2045712044")]
     [DisplayName("Beneficial Owner Details")]
     [IsoXmlTag("BnfclOwnrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficialOwner1> BeneficialOwnerDetails { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ICorporateActionAdditionalInformation1 : IIsoComponent
     [IsoId("_UMjeAdp-Ed-ak6NoX_4Aeg_-1779080684")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? RegistrationDetails { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICorporateActionAdditionalInformation1 : IIsoComponent
     [IsoId("_UMjeA9p-Ed-ak6NoX_4Aeg_-1477351985")]
     [DisplayName("Certification Indicator")]
     [IsoXmlTag("CertfctnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CertificationIndicator { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ICorporateActionAdditionalInformation1 : IIsoComponent
     [IsoId("_UMjeBdp-Ed-ak6NoX_4Aeg_138497699")]
     [DisplayName("Delivery Details")]
     [IsoXmlTag("DlvryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProceedsDelivery1> DeliveryDetails { get; }
 
     /// <summary>
@@ -65,5 +71,7 @@ public interface ICorporateActionAdditionalInformation1 : IIsoComponent
     [IsoId("_UMjeBtp-Ed-ak6NoX_4Aeg_1410048508")]
     [DisplayName("Additional Instruction")]
     [IsoXmlTag("AddtlInstr")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInstruction { get; }
 }

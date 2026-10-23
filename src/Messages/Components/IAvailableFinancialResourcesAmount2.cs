@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Available Financial Resources Amount2.
 /// </summary>
 [IsoId("_YBEVoU2LEe-TXNruDFfwPA")]
+[IsoDisplayName(@"Available Financial Resources Amount2")]
 public interface IAvailableFinancialResourcesAmount2 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface IAvailableFinancialResourcesAmount2 : IIsoComponent
     /// </summary>
     [DisplayName("CCP Skin In The Game")]
     [IsoXmlTag("CCPSkinInTheGame")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportingAssetBreakdown2> CCPSkinInTheGame { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency Conversion30.
 /// </summary>
 [IsoId("_BICSkZFFEe6reqfAp4CunQ")]
+[IsoDisplayName(@"Currency Conversion30")]
 public interface ICurrencyConversion30 : IIsoComponent
 {
     /// <summary>

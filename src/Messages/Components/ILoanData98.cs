@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the loan data details in case of a securities lending transaction.
 /// </summary>
 [IsoId("_4Eg3F__qEemm3skPVSMJQg")]
+[IsoDisplayName(@"Loan Data")]
 public interface ILoanData98 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILoanData98 : IIsoComponent
     [IsoId("_4Iibcf_qEemm3skPVSMJQg")]
     [DisplayName("Delivery By Value")]
     [IsoXmlTag("DlvryByVal")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator DeliveryByValue { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ILoanData98 : IIsoComponent
     [IsoId("_4Iibdf_qEemm3skPVSMJQg")]
     [DisplayName("Term")]
     [IsoXmlTag("Term")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContractTerm3Choice> Term { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ILoanData98 : IIsoComponent
     [IsoId("_4Iibff_qEemm3skPVSMJQg")]
     [DisplayName("Lending Fee")]
     [IsoXmlTag("LndgFee")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? LendingFee { get; }
 
     /// <summary>
@@ -73,6 +77,8 @@ public interface ILoanData98 : IIsoComponent
     [IsoId("_4Iibf__qEemm3skPVSMJQg")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text UniqueTradeIdentifier { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface ILoanData98 : IIsoComponent
     [IsoId("_4Iibgf_qEemm3skPVSMJQg")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDate { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface ILoanData98 : IIsoComponent
     [IsoId("_4Iibhf_qEemm3skPVSMJQg")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier TradingVenue { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface ILoanData98 : IIsoComponent
     [IsoId("_4Iibif_qEemm3skPVSMJQg")]
     [DisplayName("Execution Date Time")]
     [IsoXmlTag("ExctnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ExecutionDateTime { get; }
 
     /// <summary>
@@ -121,6 +130,7 @@ public interface ILoanData98 : IIsoComponent
     [IsoId("_4Iibi__qEemm3skPVSMJQg")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValueDate { get; }
 
     /// <summary>
@@ -129,6 +139,7 @@ public interface ILoanData98 : IIsoComponent
     [IsoId("_4Iibjf_qEemm3skPVSMJQg")]
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TerminationDate { get; }
 
     /// <summary>

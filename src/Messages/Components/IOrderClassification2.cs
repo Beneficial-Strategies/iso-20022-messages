@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Order Classification2.
 /// </summary>
 [IsoId("_iWdMYRA6Ee6N57R8Wekj-w")]
+[IsoDisplayName(@"Order Classification2")]
 public interface IOrderClassification2 : IIsoComponent
 {
     /// <summary>

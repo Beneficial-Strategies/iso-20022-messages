@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the notional quantity of the underlying assets.
 /// </summary>
 [IsoId("_Wc1UsSJFEe2zWP9pqvmqdw")]
+[IsoDisplayName(@"Notional Quantity Legs")]
 public interface INotionalQuantityLegs5 : IIsoComponent
 {
     /// <summary>

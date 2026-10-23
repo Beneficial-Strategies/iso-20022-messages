@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a date or a date time pattern as search selection criteria.
 /// </summary>
 [IsoId("_6yG5333sEeibM9CPDGCw0g")]
+[IsoDisplayName(@"Date And Date Time Search 4 Choice")]
 public interface IDateAndDateTimeSearch4Choice : IIsoChoice { }

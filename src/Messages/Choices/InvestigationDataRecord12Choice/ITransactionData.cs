@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord12Choice;
 
 /// <summary>Provides data related to a request.</summary>
 [IsoId("6e22c992-4cdf-4949-b95c-ae20967934bb")]
+[IsoDisplayName(@"Transaction Data")]
 public interface ITransactionData : IInvestigationDataRecord12Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

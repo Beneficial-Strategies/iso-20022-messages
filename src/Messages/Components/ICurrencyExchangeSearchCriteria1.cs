@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to search for currency exchange information.
 /// </summary>
 [IsoId("_IB771ZlZEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Currency Exchange Search Criteria")]
 public interface ICurrencyExchangeSearchCriteria1 : IIsoComponent
 {
     /// <summary>

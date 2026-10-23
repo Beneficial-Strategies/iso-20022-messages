@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOrFaceAmountOrCode1Choice;
 /// </summary>
 [IsoId("_SoH22Np-Ed-ak6NoX_4Aeg_361302819")]
 [IsoXmlTag("FaceAmt")]
+[IsoDisplayName(@"Face Amount")]
 public interface IFaceAmount : IUnitOrFaceAmountOrCode1Choice, IIsoChoiceVariant
 {
     /// <summary>

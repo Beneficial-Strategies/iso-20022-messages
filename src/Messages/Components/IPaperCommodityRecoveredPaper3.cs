@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Paper Commodity Recovered Paper3.
 /// </summary>
 [IsoId("_FE6GUeFeEe64Zfh-zMOIZQ")]
+[IsoDisplayName(@"Paper Commodity Recovered Paper3")]
 public interface IPaperCommodityRecoveredPaper3 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies whether the status is provided with a reason or not.
 /// </summary>
 [IsoId("_1k2bQTt5EeW638lNyHKv7A")]
+[IsoDisplayName(@"Cancelled Status 10 Choice")]
 public interface ICancelledStatus10Choice : IIsoChoice { }

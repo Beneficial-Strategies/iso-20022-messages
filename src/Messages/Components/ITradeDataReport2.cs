@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade Data Report2.
 /// </summary>
 [IsoId("_isOssFvBEe-c2-hex9EchA")]
+[IsoDisplayName(@"Trade Data Report2")]
 public interface ITradeDataReport2 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface ITradeDataReport2 : IIsoComponent
     /// </summary>
     [DisplayName("Trade Data")]
     [IsoXmlTag("TradData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeData44> TradeData { get; }
 }

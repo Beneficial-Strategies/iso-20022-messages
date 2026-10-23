@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason15Choice;
 /// Specifies the reason why the instruction/request has a repair or rejection status.
 /// </summary>
 [IsoId("_a5BwgSwvEeOEV5XHD-BKpw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectionReason15Choice, IIsoChoiceVariant
 {
     /// <summary>

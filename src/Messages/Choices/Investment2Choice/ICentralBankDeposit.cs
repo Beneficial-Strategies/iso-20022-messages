@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment2Choice;
 /// <summary>
 /// Central Bank Deposit.
 /// </summary>
+[IsoDisplayName(@"Central Bank Deposit")]
 public interface ICentralBankDeposit : IInvestment2Choice, IIsoChoiceVariant
 {
     /// <summary>

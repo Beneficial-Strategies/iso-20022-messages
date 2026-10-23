@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationSearchCrite
 /// Search for one or more accounts based on a pattern that cannot be contained in the account identification.
 /// </summary>
 [IsoId("_g7QEu2liEeGaMcKyqKNRfQ_-1947183675")]
+[IsoDisplayName(@"Not Contain Text")]
 public interface INotContainText : IAccountIdentificationSearchCriteria2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface INotContainText : IAccountIdentificationSearchCriteria2Choice, 
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("NCTTxt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

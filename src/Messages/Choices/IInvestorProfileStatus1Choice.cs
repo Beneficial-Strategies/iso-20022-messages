@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the status of the investor profile.
 /// </summary>
 [IsoId("_pd-vQCDOEeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Investor Profile Status 1 Choice")]
 public interface IInvestorProfileStatus1Choice : IIsoChoice { }

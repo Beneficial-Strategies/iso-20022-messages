@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason why the corporate action reversal occurs.
 /// </summary>
 [IsoId("_bvXBQUGKEeWqy4niLuXETA")]
+[IsoDisplayName(@"Corporate Action Reversal Reason")]
 public interface ICorporateActionReversalReason3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICorporateActionReversalReason3 : IIsoComponent
     [IsoId("_cCQvJUGKEeWqy4niLuXETA")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? AdditionalReasonInformation { get; }
 }

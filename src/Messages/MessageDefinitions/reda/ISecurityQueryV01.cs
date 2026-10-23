@@ -25,6 +25,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_jTvN8x62Eeu31YsWNiv_cw")]
 [IsoMessage("reda.010.001.01", "SctyQry", "urn:iso:std:iso:20022:tech:xsd:reda.010.001.01")]
+[Description(@"SCOPE|An instructing party sends a SecurityQuery message to an executing/servicing party to request a report of financial instrument details in their system.||The instructing party - executing/servicing party relationship may be:|- Central Securities Depositories (CSD) who would like to publish security static data, or |- a Corporate, or|- a Bank, or|- a Market Infrastructure, or |- a Market Data Provider.||USAGE|The request is sent when the instructing party needs to see data of a security data within the executing/servicing party system.||Initiator: instructing party.")]
+[IsoDisplayName(@"Security Query V")]
 public interface ISecurityQueryV01 : IOuterRecord
 {
     /// <summary>
@@ -65,5 +67,6 @@ public interface ISecurityQueryV01 : IOuterRecord
     [IsoId("_jTv04x62Eeu31YsWNiv_cw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

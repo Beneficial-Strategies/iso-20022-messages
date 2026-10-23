@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice;
 /// Identifier for Swiss securities assigned by Telekurs Financial, the Swiss numbering agency.
 /// </summary>
 [IsoId("_CSq4RyGQEeW7gKYhAMEFCw")]
+[IsoDisplayName(@"Valoren")]
 public interface IValoren : ISecurityIdentification23Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IValoren : ISecurityIdentification23Choice, IIsoChoiceVariant
     /// Identifier for Swiss securities assigned by Telekurs Financial, the Swiss numbering agency.
     /// </summary>
     [IsoXmlTag("Vlrn")]
+    [IsoSimpleType(IsoSimpleType.ValorenIdentifier)]
     ValorenIdentifier Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains transaction details.
 /// </summary>
 [IsoId("_vB-boTNJEeylu6lH-gut-A")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction144 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITransaction144 : IIsoComponent
     [IsoId("_gcgVIDNLEeylu6lH-gut-A")]
     [DisplayName("Other Administrative Type")]
     [IsoXmlTag("OthrAdmstvTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherAdministrativeType { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface ITransaction144 : IIsoComponent
     [IsoId("_vIt83zNJEeylu6lH-gut-A")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface ITransaction144 : IIsoComponent
     [IsoId("_vIt87TNJEeylu6lH-gut-A")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface ITransaction144 : IIsoComponent
     [IsoId("_vIt88TNJEeylu6lH-gut-A")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalService2> AdditionalService { get; }
 
     /// <summary>
@@ -58,6 +64,7 @@ public interface ITransaction144 : IIsoComponent
     [IsoId("_vIt88zNJEeylu6lH-gut-A")]
     [DisplayName("Associated Data Indicator")]
     [IsoXmlTag("AssoctdDataInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AssociatedDataIndicator { get; }
 
     /// <summary>
@@ -66,6 +73,8 @@ public interface ITransaction144 : IIsoComponent
     [IsoId("_vIt89TNJEeylu6lH-gut-A")]
     [DisplayName("Associated Data Reference")]
     [IsoXmlTag("AssoctdDataRef")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AssociatedDataReference { get; }
 
     /// <summary>
@@ -74,6 +83,8 @@ public interface ITransaction144 : IIsoComponent
     [IsoId("_vIt89zNJEeylu6lH-gut-A")]
     [DisplayName("Associated Data Destination")]
     [IsoXmlTag("AssoctdDataDstn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AssociatedDataDestination { get; }
 
     /// <summary>
@@ -82,6 +93,7 @@ public interface ITransaction144 : IIsoComponent
     [IsoId("_vIt8-TNJEeylu6lH-gut-A")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialProgrammeQualification1> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -98,6 +110,8 @@ public interface ITransaction144 : IIsoComponent
     [IsoId("_8Q3z8DNLEeylu6lH-gut-A")]
     [DisplayName("Text Message")]
     [IsoXmlTag("TxtMsg")]
+    [IsoSimpleType(IsoSimpleType.Max20KText)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20KText? TextMessage { get; }
 
     /// <summary>
@@ -106,6 +120,7 @@ public interface ITransaction144 : IIsoComponent
     [IsoId("_NCW0IDNMEeylu6lH-gut-A")]
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData9> LocalData { get; }
 
     /// <summary>
@@ -116,6 +131,8 @@ public interface ITransaction144 : IIsoComponent
     [IsoId("_vIt9ITNJEeylu6lH-gut-A")]
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? TransactionDescription { get; }
 
     /// <summary>
@@ -124,5 +141,6 @@ public interface ITransaction144 : IIsoComponent
     [IsoId("_vIt9IzNJEeylu6lH-gut-A")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice;
 /// </summary>
 [IsoId("_A4_6ANokEeC60axPepSq7g_-367909471")]
 [IsoXmlTag("FullyExctdConfSnt")]
+[IsoDisplayName(@"Fully Executed Confirmation Sent")]
 public interface IFullyExecutedConfirmationSent : IProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IFullyExecutedConfirmationSent : IProcessingStatus17Choice, IIs
     [IsoId("_UatOxtp-Ed-ak6NoX_4Aeg_-1133156666")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

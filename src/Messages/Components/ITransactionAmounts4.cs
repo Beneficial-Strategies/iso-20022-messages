@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Amounts4.
 /// </summary>
 [IsoId("_pw8dwX8kEe6aLsvlCMkHOQ")]
+[IsoDisplayName(@"Transaction Amounts4")]
 public interface ITransactionAmounts4 : IIsoComponent
 {
     /// <summary>
@@ -79,5 +80,6 @@ public interface ITransactionAmounts4 : IIsoComponent
     /// </summary>
     [DisplayName("Detailed Amount")]
     [IsoXmlTag("DtldAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount22> DetailedAmount { get; }
 }

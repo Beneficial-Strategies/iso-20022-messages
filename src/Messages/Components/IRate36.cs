@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the rates related to securities movement.
 /// </summary>
 [IsoId("_aAYy_-XsEemEj48jhmlA0Q")]
+[IsoDisplayName(@"Rate")]
 public interface IRate36 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IRate36 : IIsoComponent
     [IsoId("_aQmZCeXsEemEj48jhmlA0Q")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGrossDividendRateFormat38Choice> GrossDividendRate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IRate36 : IIsoComponent
     [IsoId("_aQmZC-XsEemEj48jhmlA0Q")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateUsedForPaymentFormat8Choice> InterestRateUsedForPayment { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IRate36 : IIsoComponent
     [IsoId("_aQmZDeXsEemEj48jhmlA0Q")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat41Choice> WithholdingTaxRate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IRate36 : IIsoComponent
     [IsoId("_aQmZD-XsEemEj48jhmlA0Q")]
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat41Choice> SecondLevelTax { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface IRate36 : IIsoComponent
     [IsoId("_aQmZGeXsEemEj48jhmlA0Q")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetDividendRateFormat39Choice> NetDividendRate { get; }
 
     /// <summary>
@@ -153,5 +159,6 @@ public interface IRate36 : IIsoComponent
     [IsoId("_aQmZKeXsEemEj48jhmlA0Q")]
     [DisplayName("Deemed Rate")]
     [IsoXmlTag("DmdRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat51Choice> DeemedRate { get; }
 }

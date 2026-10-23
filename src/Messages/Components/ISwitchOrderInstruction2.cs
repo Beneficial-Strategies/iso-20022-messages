@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a switch order.
 /// </summary>
 [IsoId("_RNhhFtp-Ed-ak6NoX_4Aeg_-925024145")]
+[IsoDisplayName(@"Switch Order Instruction")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISwitchOrderInstruction2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface ISwitchOrderInstruction2 : IIsoComponent
     [IsoId("_RNhhF9p-Ed-ak6NoX_4Aeg_-925023776")]
     [DisplayName("Switch Order Details")]
     [IsoXmlTag("SwtchOrdrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchOrder3> SwitchOrderDetails { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface ISwitchOrderInstruction2 : IIsoComponent
     [IsoId("_RNhhGNp-Ed-ak6NoX_4Aeg_-925024109")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

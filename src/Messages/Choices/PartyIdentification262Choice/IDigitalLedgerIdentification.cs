@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification262Choice;
 
 /// <summary>Place of settlement expressed with a Digital Ledger Identifier.</summary>
 [IsoId("30bcce29-726f-45c7-b0d5-32ba878d562d")]
+[IsoDisplayName(@"Digital Ledger Identification")]
 public interface IDigitalLedgerIdentification : IPartyIdentification262Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

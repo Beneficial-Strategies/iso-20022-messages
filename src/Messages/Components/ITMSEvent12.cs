@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// TMS Event12.
 /// </summary>
 [IsoId("_-KYi4aE5Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"TMS Event12")]
 public interface ITMSEvent12 : IIsoComponent
 {
     /// <summary>

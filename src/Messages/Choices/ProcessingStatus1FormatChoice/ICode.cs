@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus1FormatChoice;
 /// Standard code to specify the processing status.
 /// </summary>
 [IsoId("_Rnv-9Np-Ed-ak6NoX_4Aeg_-1777014631")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProcessingStatus1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

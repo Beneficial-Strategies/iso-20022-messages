@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of status.
 /// </summary>
 [IsoId("_ZdGjEEgrEeaD2L_hzZaE0w")]
+[IsoDisplayName(@"Status 26 Choice")]
 public interface IStatus26Choice : IIsoChoice { }

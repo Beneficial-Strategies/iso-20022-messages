@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action reorganisation instruction details.
 /// </summary>
 [IsoId("_oDfBQecYEei5aPS232E3Mw")]
+[IsoDisplayName(@"Reorganisation Instruction SD")]
 public interface IReorganisationInstructionSD5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReorganisationInstructionSD5 : IIsoComponent
     [IsoId("_okNvwecYEei5aPS232E3Mw")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,9 @@ public interface IReorganisationInstructionSD5 : IIsoComponent
     [IsoId("_a5hIEOcdEei5aPS232E3Mw")]
     [DisplayName("Transaction Sequence")]
     [IsoXmlTag("TxSeq")]
+    [MinLength(0)]
+    [MaxLength(99)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionsTransactionsSequence1> TransactionSequence { get; }
 
     /// <summary>
@@ -65,6 +71,8 @@ public interface IReorganisationInstructionSD5 : IIsoComponent
     [IsoId("_okNv3-cYEei5aPS232E3Mw")]
     [DisplayName("User Reference Number")]
     [IsoXmlTag("UsrRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text? UserReferenceNumber { get; }
 
     /// <summary>
@@ -83,6 +91,7 @@ public interface IReorganisationInstructionSD5 : IIsoComponent
     [IsoId("_okNv1ecYEei5aPS232E3Mw")]
     [DisplayName("Non Exempt Instructions Allowed Indicator")]
     [IsoXmlTag("NonXmptInstrsAllwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NonExemptInstructionsAllowedIndicator { get; }
 
     /// <summary>
@@ -93,6 +102,7 @@ public interface IReorganisationInstructionSD5 : IIsoComponent
     [IsoId("_okNv1-cYEei5aPS232E3Mw")]
     [DisplayName("Solicitation Fee Indicator")]
     [IsoXmlTag("SlctnFeeInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SolicitationFeeIndicator { get; }
 
     /// <summary>

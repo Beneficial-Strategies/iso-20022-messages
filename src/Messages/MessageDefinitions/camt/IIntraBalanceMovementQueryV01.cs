@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "IntraBalMvmntQry",
     "urn:iso:std:iso:20022:tech:xsd:camt.078.001.01"
 )]
+[Description(@"The IntraBalanceMovementQuery message is sent from an account owner/requestor to a settlement infrastructure to query intra-balance movement instructions, along with their current status, based on a set of search criteria.|The message may also be used to: |- re-send a message sent by the account owner to the account servicer (the sub-function of the message is ""Duplicate"") |- provide a third party with a copy of a message being sent by the account owner for information (the sub-function of the message is ""Copy"") |- re-send to a third party a copy of a message being sent by the account owner for information (the sub-function of the message is ""Copy Duplicate"").|")]
+[IsoDisplayName(@"Intra Balance Movement Query V")]
 public interface IIntraBalanceMovementQueryV01 : IOuterRecord
 {
     /// <summary>
@@ -45,5 +47,6 @@ public interface IIntraBalanceMovementQueryV01 : IOuterRecord
     [IsoId("_DLtLbzncEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

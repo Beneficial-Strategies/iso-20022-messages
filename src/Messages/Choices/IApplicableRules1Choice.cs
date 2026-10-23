@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for applicable rules.
 /// </summary>
 [IsoId("_pSYd0FNeEeijdq8ilaxyOA")]
+[IsoDisplayName(@"Applicable Rules 1 Choice")]
 public interface IApplicableRules1Choice : IIsoChoice { }

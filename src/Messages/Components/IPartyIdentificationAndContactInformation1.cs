@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a person, or a non-financial institution.
 /// </summary>
 [IsoId("_Pb-D5Np-Ed-ak6NoX_4Aeg_196982310")]
+[IsoDisplayName(@"Party Identification And Contact Information")]
 public interface IPartyIdentificationAndContactInformation1 : IIsoComponent
 {
     /// <summary>

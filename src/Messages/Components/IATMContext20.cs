@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the exception.
 /// </summary>
 [IsoId("_CdeSga5EEeWCgYcWSNgX5g")]
+[IsoDisplayName(@"ATM Context")]
 public interface IATMContext20 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMContext20 : IIsoComponent
     [IsoId("_Cp_rka5EEeWCgYcWSNgX5g")]
     [DisplayName("Session Reference")]
     [IsoXmlTag("SsnRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SessionReference { get; }
 
     /// <summary>

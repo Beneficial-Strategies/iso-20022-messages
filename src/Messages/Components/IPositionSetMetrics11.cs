@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variables used to quantify the different calculations for position sets.
 /// </summary>
 [IsoId("_MVJnAa5REeuo-IflVgGqiA")]
+[IsoDisplayName(@"Position Set Metrics")]
 public interface IPositionSetMetrics11 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPositionSetMetrics11 : IIsoComponent
     [IsoId("_Mkfqk65REeuo-IflVgGqiA")]
     [DisplayName("Cash Reinvestment Rate")]
     [IsoXmlTag("CshRinvstmtRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? CashReinvestmentRate { get; }
 }

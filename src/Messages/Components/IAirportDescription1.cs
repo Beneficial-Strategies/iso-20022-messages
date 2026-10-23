@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies an airport by its location and by its name.
 /// </summary>
 [IsoId("_SsSlINp-Ed-ak6NoX_4Aeg_-1395385132")]
+[IsoDisplayName(@"Airport Description")]
 public interface IAirportDescription1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAirportDescription1 : IIsoComponent
     [IsoId("_SsSlIdp-Ed-ak6NoX_4Aeg_-1352905988")]
     [DisplayName("Town")]
     [IsoXmlTag("Twn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Town { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IAirportDescription1 : IIsoComponent
     [IsoId("_SsSlItp-Ed-ak6NoX_4Aeg_-1308575071")]
     [DisplayName("Airport Name")]
     [IsoXmlTag("AirprtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AirportName { get; }
 }

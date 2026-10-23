@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies rates related to a corporate action option.
 /// </summary>
 [IsoId("_dA3X8eA_Ed-D2OAFXdoRmA")]
+[IsoDisplayName(@"Corporate Action Rate")]
 public interface ICorporateActionRate15 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICorporateActionRate15 : IIsoComponent
     [IsoId("_dA3X_eA_Ed-D2OAFXdoRmA")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGrossDividendRateFormat5Choice> GrossDividendRate { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICorporateActionRate15 : IIsoComponent
     [IsoId("_dA3YA-A_Ed-D2OAFXdoRmA")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateUsedForPaymentFormat5Choice> InterestRateUsedForPayment { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ICorporateActionRate15 : IIsoComponent
     [IsoId("_dA3YIeA_Ed-D2OAFXdoRmA")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateTypeAndAmountAndStatus6> TaxRelatedRate { get; }
 
     /// <summary>
@@ -81,5 +85,6 @@ public interface ICorporateActionRate15 : IIsoComponent
     [IsoId("_XyIAsOtMEd-PFJLHKom6FA")]
     [DisplayName("Taxable Income Per Dividend Share")]
     [IsoXmlTag("TaxblIncmPerDvddShr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateTypeAndAmountAndStatus11> TaxableIncomePerDividendShare { get; }
 }

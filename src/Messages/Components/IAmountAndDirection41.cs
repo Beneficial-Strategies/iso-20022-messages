@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Signed amount.
 /// </summary>
 [IsoId("_10alMTGbEeO118ZQJgaQSQ")]
+[IsoDisplayName(@"Amount And Direction")]
 public interface IAmountAndDirection41 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IAmountAndDirection41 : IIsoComponent
     [IsoId("_2FYZYzGbEeO118ZQJgaQSQ")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? Sign { get; }
 }

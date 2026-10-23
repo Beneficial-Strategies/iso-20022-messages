@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Numerical representation of the net increases and decreases in an account at a specific point in time. A cash balance is calculated from a sum of cash credits minus a sum of cash debits.
 /// </summary>
 [IsoId("_S3i5sAEcEeCQm6a_G2yO_w_756219526")]
+[IsoDisplayName(@"Balance Status")]
 public interface IBalanceStatus2 : IIsoComponent
 {
     /// <summary>

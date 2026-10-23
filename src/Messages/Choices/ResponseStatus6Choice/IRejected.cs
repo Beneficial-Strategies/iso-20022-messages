@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus6Choice;
 /// Rejected status of an instruction, advice or request.
 /// </summary>
 [IsoId("_mdrUkzzpEeWeNtT0s2RbkQ")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IResponseStatus6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status and reason of an instructed order.
 /// </summary>
 [IsoId("67c8adc4-75ea-435e-b3f4-cd16a4d19636")]
+[IsoDisplayName(@"Status And Reason49")]
 public interface IStatusAndReason49 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IStatusAndReason49 : IIsoComponent
     [IsoId("dfdee925-0cea-4af4-989c-659ef3babd27")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransaction166> Transaction { get; }
 }

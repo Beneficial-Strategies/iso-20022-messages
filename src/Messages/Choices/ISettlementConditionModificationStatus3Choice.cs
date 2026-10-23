@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of processing change command status.
 /// </summary>
 [IsoId("_8wlDMTqqEeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Settlement Condition Modification Status 3 Choice")]
 public interface ISettlementConditionModificationStatus3Choice : IIsoChoice { }

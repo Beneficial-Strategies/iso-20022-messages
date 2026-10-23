@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an energy derivative of type light end.
 /// </summary>
 [IsoId("_68blkFrWEeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Energy Commodity Light End")]
 public interface IEnergyCommodityLightEnd1 : IIsoComponent
 {
     /// <summary>

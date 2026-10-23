@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "PEPOrISAOrPrtflInfV01",
     "urn:iso:std:iso:20022:tech:xsd:sese.018.001.01"
 )]
+[Description(@"Scope|An executing party, eg, a (old) plan manager, sends the PEPOrISAOrPortfolioInformation message to the instructing party, eg, a (new) plan manager, to provide information about financial instruments held on behalf of a client.|Usage|The PEPOrISAOrPortfolioInformation message is used to provide information about one or more PEP or ISA or portfolio products held in a client's account.")]
+[IsoDisplayName(@"PEP Or ISA Or Portfolio Information V")]
 public interface IPEPOrISAOrPortfolioInformationV01 : IOuterRecord
 {
     /// <summary>
@@ -75,6 +77,7 @@ public interface IPEPOrISAOrPortfolioInformationV01 : IOuterRecord
     [IsoId("_jbJ8cdE5Ed-BzquC8wXy7w_-763765015")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson8> OtherIndividualInvestor { get; }
 
     /// <summary>
@@ -99,6 +102,7 @@ public interface IPEPOrISAOrPortfolioInformationV01 : IOuterRecord
     [IsoId("_jbJ8dNE5Ed-BzquC8wXy7w_-9246374")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation4> OtherCorporateInvestor { get; }
 
     /// <summary>
@@ -131,6 +135,7 @@ public interface IPEPOrISAOrPortfolioInformationV01 : IOuterRecord
     [IsoId("_jbTGYdE5Ed-BzquC8wXy7w_-153289612")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPEPISATransfer6> ProductTransfer { get; }
 
     /// <summary>
@@ -139,5 +144,6 @@ public interface IPEPOrISAOrPortfolioInformationV01 : IOuterRecord
     [IsoId("_jbTGYtE5Ed-BzquC8wXy7w_1484084715")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

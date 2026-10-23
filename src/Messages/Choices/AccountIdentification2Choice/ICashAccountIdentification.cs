@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification2Choice;
 /// Identification of a cash account.
 /// </summary>
 [IsoId("_RjkpmNp-Ed-ak6NoX_4Aeg_108237032")]
+[IsoDisplayName(@"Cash Account Identification")]
 public interface ICashAccountIdentification : IAccountIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ICashAccountIdentification : IAccountIdentification2Choice, IIs
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("CshAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MailType1Choice;
 /// Mail type expressed as a code.
 /// </summary>
 [IsoId("_zx9lgCCXEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMailType1Choice, IIsoChoiceVariant
 {
     /// <summary>

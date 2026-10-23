@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingReason5Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_2-L0JQd3Ee2fOITqoTnSLQ")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IMatchingReason5Choice, IIsoChoiceVariant
 {
     /// <summary>

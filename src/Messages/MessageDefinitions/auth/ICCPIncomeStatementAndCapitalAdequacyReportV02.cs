@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPIncmStmtAndCptlAdqcyRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.059.001.02"
 )]
+[IsoDisplayName(@"CCP Income Statement And Capital Adequacy Report V02")]
 public interface ICCPIncomeStatementAndCapitalAdequacyReportV02 : IOuterRecord
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface ICCPIncomeStatementAndCapitalAdequacyReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Hypothetical Capital Measure")]
     [IsoXmlTag("HpthtclCptlMeasr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHypotheticalCapitalMeasure1> HypotheticalCapitalMeasure { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface ICCPIncomeStatementAndCapitalAdequacyReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
     "BkToCstmrDbtCdtNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:camt.054.001.14"
 )]
+[IsoDisplayName(@"Bank To Customer Debit Credit Notification V14")]
 public interface IBankToCustomerDebitCreditNotificationV14 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface IBankToCustomerDebitCreditNotificationV14 : IOuterRecord
     /// </summary>
     [DisplayName("Notification")]
     [IsoXmlTag("Ntfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountNotification25> Notification { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface IBankToCustomerDebitCreditNotificationV14 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

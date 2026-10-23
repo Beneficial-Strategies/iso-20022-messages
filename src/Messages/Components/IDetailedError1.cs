@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed description of an error that caused the message to be corrected/amended. Transmitted for further analysis.
 /// </summary>
 [IsoId("_fOv6QFW5EeeiG_nL4vgKnQ")]
+[IsoDisplayName(@"Detailed Error")]
 public interface IDetailedError1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDetailedError1 : IIsoComponent
     [IsoId("_31-HoFW5EeeiG_nL4vgKnQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IDetailedError1 : IIsoComponent
     [IsoId("_-4ERYFW5EeeiG_nL4vgKnQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text Description { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IDetailedError1 : IIsoComponent
     [IsoId("__lVpEGdsEem-ycRQGen_YA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Value { get; }
 }

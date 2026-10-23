@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cafc;
 /// </summary>
 [IsoId("_ArDaMROIEfC1ZfCQz0xB3g")]
 [IsoMessage("cafc.001.001.04", "FeeColltnInitn", "urn:iso:std:iso:20022:tech:xsd:cafc.001.001.04")]
+[IsoDisplayName(@"Fee Collection Initiation V04")]
 public interface IFeeCollectionInitiationV04 : IOuterRecord
 {
     /// <summary>
@@ -137,6 +138,7 @@ public interface IFeeCollectionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAmounts5> AdditionalAmount { get; }
 
     /// <summary>
@@ -151,6 +153,7 @@ public interface IFeeCollectionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Fee Collection Reference")]
     [IsoXmlTag("FeeColltnRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFeeCollectionReference3> FeeCollectionReference { get; }
 
     /// <summary>
@@ -172,6 +175,7 @@ public interface IFeeCollectionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialProgrammeQualification2> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -193,6 +197,7 @@ public interface IFeeCollectionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -214,6 +219,7 @@ public interface IFeeCollectionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -221,6 +227,7 @@ public interface IFeeCollectionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -228,6 +235,7 @@ public interface IFeeCollectionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

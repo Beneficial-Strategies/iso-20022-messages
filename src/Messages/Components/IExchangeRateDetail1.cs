@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the exchange rate.
 /// </summary>
 [IsoId("_g9N7sINmEeuHqfO1LgkE9Q")]
+[IsoDisplayName(@"Exchange Rate Detail")]
 public interface IExchangeRateDetail1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IExchangeRateDetail1 : IIsoComponent
     [IsoId("_JQ4h4INpEeuHqfO1LgkE9Q")]
     [DisplayName("Other End Point")]
     [IsoXmlTag("OthrEndPt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherEndPoint { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IExchangeRateDetail1 : IIsoComponent
     [IsoId("_zRp4MINtEeuHqfO1LgkE9Q")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.BaseOne25Rate)]
     BaseOne25Rate? Rate { get; }
 
     /// <summary>
@@ -65,6 +69,8 @@ public interface IExchangeRateDetail1 : IIsoComponent
     [IsoId("_PHyqoIZ5EeuSbct6WWD-Ng")]
     [DisplayName("Other Rate Type")]
     [IsoXmlTag("OthrRateTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherRateType { get; }
 
     /// <summary>
@@ -81,5 +87,7 @@ public interface IExchangeRateDetail1 : IIsoComponent
     [IsoId("_VgLeIIZ7EeuSbct6WWD-Ng")]
     [DisplayName("Other Agreement Type")]
     [IsoXmlTag("OthrAgrmtTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherAgreementType { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification3Cho
 /// Clearing system identification in a proprietary form.
 /// </summary>
 [IsoId("_TMVXJ9p-Ed-ak6NoX_4Aeg_948374951")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IClearingSystemIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IClearingSystemIdentification3Choice, IIsoChoice
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

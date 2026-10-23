@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FractionDispositionType1FormatCh
 /// Standard code to specify how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.
 /// </summary>
 [IsoId("_RmjsJtp-Ed-ak6NoX_4Aeg_-1753886350")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IFractionDispositionType1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

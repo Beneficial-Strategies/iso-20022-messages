@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data used to assign specific condition such as liability shift or preferential interchange fees.
 /// </summary>
 [IsoId("_02aBcHsJEeSR68OJvMfxJQ")]
+[IsoDisplayName(@"Card Transaction Condition")]
 public interface ICardTransactionCondition1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICardTransactionCondition1 : IIsoComponent
     [IsoId("_DtntUHsKEeSR68OJvMfxJQ")]
     [DisplayName("Program")]
     [IsoXmlTag("Prgm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Program { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ICardTransactionCondition1 : IIsoComponent
     [IsoId("_H8loIHsKEeSR68OJvMfxJQ")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Value { get; }
 }

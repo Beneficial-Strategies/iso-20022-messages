@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Validity Period1Choice.
 /// </summary>
 [IsoId("_SDXf4GscEe25qph5Y8_eYQ")]
+[IsoDisplayName(@"Validity Period1Choice")]
 public interface IValidityPeriod1Choice : IIsoChoice { }

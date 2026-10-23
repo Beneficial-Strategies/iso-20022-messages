@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Price with notation.
 /// </summary>
 [IsoId("_tsWZ4f9iEea3W_f2lS_aiw")]
+[IsoDisplayName(@"Securities Transaction Price")]
 public interface ISecuritiesTransactionPrice4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecuritiesTransactionPrice4 : IIsoComponent
     [IsoId("_t14wY_9iEea3W_f2lS_aiw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.LongFraction21DecimalNumber)]
     LongFraction21DecimalNumber? Value { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface ISecuritiesTransactionPrice4 : IIsoComponent
     [IsoId("_t14wZf9iEea3W_f2lS_aiw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 }

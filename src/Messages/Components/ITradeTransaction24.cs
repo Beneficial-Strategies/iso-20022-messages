@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details of the trade transaction.
 /// </summary>
 [IsoId("_GNXCkQ1IEeqV4s5SpzR1dQ")]
+[IsoDisplayName(@"Trade Transaction")]
 public interface ITradeTransaction24 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeTransaction24 : IIsoComponent
     [IsoId("_GOLh8Q1IEeqV4s5SpzR1dQ")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text UniqueTradeIdentifier { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITradeTransaction24 : IIsoComponent
     [IsoId("_GOLh8w1IEeqV4s5SpzR1dQ")]
     [DisplayName("Report Tracking Number")]
     [IsoXmlTag("RptTrckgNb")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? ReportTrackingNumber { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface ITradeTransaction24 : IIsoComponent
     [IsoId("_GOLh9Q1IEeqV4s5SpzR1dQ")]
     [DisplayName("Complex Trade Identification")]
     [IsoXmlTag("CmplxTradId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ComplexTradeIdentification { get; }
 
     /// <summary>
@@ -43,6 +50,7 @@ public interface ITradeTransaction24 : IIsoComponent
     [IsoId("_GOLh9w1IEeqV4s5SpzR1dQ")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? TradingVenue { get; }
 
     /// <summary>
@@ -51,6 +59,7 @@ public interface ITradeTransaction24 : IIsoComponent
     [IsoId("_GOLh-Q1IEeqV4s5SpzR1dQ")]
     [DisplayName("Compression")]
     [IsoXmlTag("Cmprssn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? Compression { get; }
 
     /// <summary>
@@ -76,6 +85,7 @@ public interface ITradeTransaction24 : IIsoComponent
     [IsoId("_GOLh_w1IEeqV4s5SpzR1dQ")]
     [DisplayName("Price Multiplier")]
     [IsoXmlTag("PricMltplr")]
+    [IsoSimpleType(IsoSimpleType.LongFraction21DecimalNumber)]
     LongFraction21DecimalNumber PriceMultiplier { get; }
 
     /// <summary>
@@ -109,6 +119,7 @@ public interface ITradeTransaction24 : IIsoComponent
     [IsoId("_GOLiBw1IEeqV4s5SpzR1dQ")]
     [DisplayName("Execution Date Time")]
     [IsoXmlTag("ExctnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ExecutionDateTime { get; }
 
     /// <summary>
@@ -117,6 +128,7 @@ public interface ITradeTransaction24 : IIsoComponent
     [IsoId("_GOLiCQ1IEeqV4s5SpzR1dQ")]
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EffectiveDate { get; }
 
     /// <summary>
@@ -127,6 +139,7 @@ public interface ITradeTransaction24 : IIsoComponent
     [IsoId("_GOLiCw1IEeqV4s5SpzR1dQ")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>
@@ -135,6 +148,7 @@ public interface ITradeTransaction24 : IIsoComponent
     [IsoId("_GOLiDQ1IEeqV4s5SpzR1dQ")]
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TerminationDate { get; }
 
     /// <summary>
@@ -143,6 +157,7 @@ public interface ITradeTransaction24 : IIsoComponent
     [IsoId("_GOLiDw1IEeqV4s5SpzR1dQ")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISODate> SettlementDate { get; }
 
     /// <summary>

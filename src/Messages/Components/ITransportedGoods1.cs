@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Goods or services that are part of a commercial trade agreement.
 /// </summary>
 [IsoId("_SpnEn9p-Ed-ak6NoX_4Aeg_-1297466325")]
+[IsoDisplayName(@"Transported Goods")]
 public interface ITransportedGoods1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITransportedGoods1 : IIsoComponent
     [IsoId("_Spw1kNp-Ed-ak6NoX_4Aeg_-1205114783")]
     [DisplayName("Goods Description")]
     [IsoXmlTag("GoodsDesc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? GoodsDescription { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITransportedGoods1 : IIsoComponent
     [IsoId("_Spw1kdp-Ed-ak6NoX_4Aeg_-1285621274")]
     [DisplayName("Buyer Defined Information")]
     [IsoXmlTag("BuyrDfndInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUserDefinedInformation1> BuyerDefinedInformation { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ITransportedGoods1 : IIsoComponent
     [IsoId("_Spw1ktp-Ed-ak6NoX_4Aeg_-1295781121")]
     [DisplayName("Seller Defined Information")]
     [IsoXmlTag("SellrDfndInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUserDefinedInformation1> SellerDefinedInformation { get; }
 }

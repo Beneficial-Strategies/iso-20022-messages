@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to identify a financial institution.
 /// </summary>
 [IsoId("_TFLmRNp-Ed-ak6NoX_4Aeg_-434069114")]
+[IsoDisplayName(@"Financial Institution Identification")]
 public interface IFinancialInstitutionIdentification7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancialInstitutionIdentification7 : IIsoComponent
     [IsoId("_TFLmRdp-Ed-ak6NoX_4Aeg_-434069112")]
     [DisplayName("BIC")]
     [IsoXmlTag("BIC")]
+    [IsoSimpleType(IsoSimpleType.BICIdentifier)]
     BICIdentifier? BIC { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IFinancialInstitutionIdentification7 : IIsoComponent
     [IsoId("_TFLmR9p-Ed-ak6NoX_4Aeg_-434068774")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Voting participation method at a general meeting.
 /// </summary>
 [IsoId("_xVOZAfNoEeqRfth943bvEA")]
+[IsoDisplayName(@"Specific Instruction Request")]
 public interface ISpecificInstructionRequest3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ISpecificInstructionRequest3 : IIsoComponent
     [IsoId("_xpKBo_NoEeqRfth943bvEA")]
     [DisplayName("Securities Registration")]
     [IsoXmlTag("SctiesRegn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SecuritiesRegistration { get; }
 }

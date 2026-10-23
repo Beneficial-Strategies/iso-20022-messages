@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the linkage type.
 /// </summary>
 [IsoId("_6GVvb5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Linkage Type 4 Choice")]
 public interface ILinkageType4Choice : IIsoChoice { }

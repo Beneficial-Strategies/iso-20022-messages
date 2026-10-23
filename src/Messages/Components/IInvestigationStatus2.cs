@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investigation Status2.
 /// </summary>
 [IsoId("_CXmCmFRtEe23M4WgERMsYw")]
+[IsoDisplayName(@"Investigation Status2")]
 public interface IInvestigationStatus2 : IIsoComponent
 {
     /// <summary>

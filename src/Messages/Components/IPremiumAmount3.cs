@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, for example, the method of the payment.
 /// </summary>
 [IsoId("_64s9gRF-EeSahYR-dAI4lQ")]
+[IsoDisplayName(@"Premium Amount")]
 public interface IPremiumAmount3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IPremiumAmount3 : IIsoComponent
     [IsoId("_X0udMIGnEeSCANvq7-Awnw")]
     [DisplayName("Decimal Places")]
     [IsoXmlTag("DcmlPlcs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number DecimalPlaces { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IPremiumAmount3 : IIsoComponent
     [IsoId("_Ii_qMIcmEeSSpbtwQkzChA")]
     [DisplayName("Premium Settlement Date")]
     [IsoXmlTag("PrmSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate PremiumSettlementDate { get; }
 
     /// <summary>
@@ -57,6 +60,8 @@ public interface IPremiumAmount3 : IIsoComponent
     [IsoId("_BKYN8EUnEeSGWeX3z5zSZQ")]
     [DisplayName("Payer Party Reference")]
     [IsoXmlTag("PyerPtyRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PayerPartyReference { get; }
 
     /// <summary>
@@ -65,5 +70,7 @@ public interface IPremiumAmount3 : IIsoComponent
     [IsoId("_ZC3igEUmEeSGWeX3z5zSZQ")]
     [DisplayName("Receiver Party Reference")]
     [IsoXmlTag("RcvrPtyRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ReceiverPartyReference { get; }
 }

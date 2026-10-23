@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a redemption order.
 /// </summary>
 [IsoId("51275b2e-45a7-47a6-93bb-88d4326f8423")]
+[IsoDisplayName(@"Redemption Bulk Execution06")]
 public interface IRedemptionBulkExecution06 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,8 @@ public interface IRedemptionBulkExecution06 : IIsoComponent
     [IsoId("cf4601ac-ad1b-4bf4-a671-cc0d09d56312")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRedemptionExecution18> IndividualExecutionDetails { get; }
 
     /// <summary>

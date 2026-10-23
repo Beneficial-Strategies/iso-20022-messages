@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError5Cho
 /// </summary>
 [IsoId("_-DiXcTpvEemk2e6qGBk8IQ")]
 [IsoXmlTag("BizRpt")]
+[IsoDisplayName(@"Business Report")]
 public interface IBusinessReport : ICollateralValueReportOrError5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -58,5 +59,6 @@ public interface IBusinessReport : ICollateralValueReportOrError5Choice, IIsoCho
     [IsoId("_-ORAxzpvEemk2e6qGBk8IQ")]
     [DisplayName("Collateral Value Report")]
     [IsoXmlTag("CollValRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralValueReportOrError6Choice> CollateralValueReport { get; }
 }

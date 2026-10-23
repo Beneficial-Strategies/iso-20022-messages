@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a subscription order.
 /// </summary>
 [IsoId("_G7y2HzbtEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Subscription Multiple Execution")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface ISubscriptionMultipleExecution5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface ISubscriptionMultipleExecution5 : IIsoComponent
     [IsoId("_eovmcVALEeal4_lvhAnyGQ")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AmendmentIndicator { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISubscriptionMultipleExecution5 : IIsoComponent
     [IsoId("_HUyknTbtEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ISubscriptionMultipleExecution5 : IIsoComponent
     [IsoId("_HUykoTbtEead9bDRE_1DAQ")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ISubscriptionMultipleExecution5 : IIsoComponent
     [IsoId("_wP-GADw6Eea0R-RTP9Wg-Q")]
     [DisplayName("Received Date Time")]
     [IsoXmlTag("RcvdDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ReceivedDateTime { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface ISubscriptionMultipleExecution5 : IIsoComponent
     [IsoId("_HUykozbtEead9bDRE_1DAQ")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedFutureTradeDate { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface ISubscriptionMultipleExecution5 : IIsoComponent
     [IsoId("_HUykqzbtEead9bDRE_1DAQ")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson32> BeneficiaryDetails { get; }
 
     /// <summary>
@@ -89,6 +98,7 @@ public interface ISubscriptionMultipleExecution5 : IIsoComponent
     [IsoId("_HUykrTbtEead9bDRE_1DAQ")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubscriptionExecution13> IndividualExecutionDetails { get; }
 
     /// <summary>

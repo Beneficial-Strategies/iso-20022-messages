@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period4Choice;
 /// Date at which the date period range starts.
 /// </summary>
 [IsoId("_tC3TeJfjEeSfnc-VXAEapg")]
+[IsoDisplayName(@"From Date")]
 public interface IFromDate : IPeriod4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IFromDate : IPeriod4Choice, IIsoChoiceVariant
     /// A particular point in the progression of time in a calendar year expressed in the YYYY-MM-DD format. This representation is defined in &quot;XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004&quot; which is aligned with ISO 8601.
     /// </summary>
     [IsoXmlTag("FrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Value { get; }
 }

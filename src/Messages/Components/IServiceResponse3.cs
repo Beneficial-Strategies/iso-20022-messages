@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// This component contains the response of the corresponding service request.
 /// </summary>
 [IsoId("_0fJMAQ1VEeqjM-rxn3HuXQ")]
+[IsoDisplayName(@"Service Response")]
 public interface IServiceResponse3 : IIsoComponent
 {
     /// <summary>
@@ -105,5 +106,6 @@ public interface IServiceResponse3 : IIsoComponent
     [IsoId("_0qncRw1VEeqjM-rxn3HuXQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Shipping Package3.
 /// </summary>
 [IsoId("_g4wRUXTtEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Shipping Package3")]
 public interface IShippingPackage3 : IIsoComponent
 {
     /// <summary>
@@ -135,6 +136,7 @@ public interface IShippingPackage3 : IIsoComponent
     /// </summary>
     [DisplayName("Product")]
     [IsoXmlTag("Pdct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProduct8> Product { get; }
 
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_6s844ajIEfCzuLlmLrhIvA")]
 [IsoMessage("seev.001.001.13", "MtgNtfctn", "urn:iso:std:iso:20022:tech:xsd:seev.001.001.13")]
+[IsoDisplayName(@"Meeting Notification V13")]
 public interface IMeetingNotificationV13 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +40,7 @@ public interface IMeetingNotificationV13 : IOuterRecord
     /// </summary>
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingEventReference1> EventsLinkage { get; }
 
     /// <summary>
@@ -53,6 +55,7 @@ public interface IMeetingNotificationV13 : IOuterRecord
     /// </summary>
     [DisplayName("Meeting Details")]
     [IsoXmlTag("MtgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeeting7> MeetingDetails { get; }
 
     /// <summary>
@@ -67,6 +70,7 @@ public interface IMeetingNotificationV13 : IOuterRecord
     /// </summary>
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIssuerAgent3> IssuerAgent { get; }
 
     /// <summary>
@@ -74,6 +78,7 @@ public interface IMeetingNotificationV13 : IOuterRecord
     /// </summary>
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition20> Security { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IMeetingNotificationV13 : IOuterRecord
     /// </summary>
     [DisplayName("Resolution")]
     [IsoXmlTag("Rsltn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IResolution8> Resolution { get; }
 
     /// <summary>
@@ -109,5 +115,6 @@ public interface IMeetingNotificationV13 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

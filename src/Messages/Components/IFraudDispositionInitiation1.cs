@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the  fraud disposition initiation message.
 /// </summary>
 [IsoId("_3eE4YXdgEeeKH6vrEwvLHA")]
+[IsoDisplayName(@"Fraud Disposition Initiation")]
 public interface IFraudDispositionInitiation1 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IFraudDispositionInitiation1 : IIsoComponent
     [IsoId("_GhJh8Zi-EeefZKJHxQTztg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

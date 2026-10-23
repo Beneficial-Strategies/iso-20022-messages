@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus2Cho
 /// Instruction has been modified.
 /// </summary>
 [IsoId("_0k3gwAlIEeGATtfOBToyew_-1512185367")]
+[IsoDisplayName(@"Modified")]
 public interface IModified : IModificationProcessingStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

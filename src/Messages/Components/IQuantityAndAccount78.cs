@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details on a quantity, account and other related information.
 /// </summary>
 [IsoId("_Yt_p89LCEeiN28wlpBQScw")]
+[IsoDisplayName(@"Quantity And Account")]
 public interface IQuantityAndAccount78 : IIsoComponent
 {
     /// <summary>

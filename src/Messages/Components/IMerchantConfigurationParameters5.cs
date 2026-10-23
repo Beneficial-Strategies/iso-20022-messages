@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor parameters dedicated to the merchant.
 /// </summary>
 [IsoId("_oGnfIQufEeqw5uEXxQ9H4g")]
+[IsoDisplayName(@"Merchant Configuration Parameters")]
 public interface IMerchantConfigurationParameters5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IMerchantConfigurationParameters5 : IIsoComponent
     [IsoId("_oRc2IwufEeqw5uEXxQ9H4g")]
     [DisplayName("Merchant Identification")]
     [IsoXmlTag("MrchntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MerchantIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IMerchantConfigurationParameters5 : IIsoComponent
     [IsoId("_oRc2JQufEeqw5uEXxQ9H4g")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Version { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IMerchantConfigurationParameters5 : IIsoComponent
     [IsoId("_oRc2JwufEeqw5uEXxQ9H4g")]
     [DisplayName("Parameter Format Identifier")]
     [IsoXmlTag("ParamFrmtIdr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? ParameterFormatIdentifier { get; }
 
     /// <summary>
@@ -57,5 +64,6 @@ public interface IMerchantConfigurationParameters5 : IIsoComponent
     [IsoId("_oRc2KwufEeqw5uEXxQ9H4g")]
     [DisplayName("Other Parameters")]
     [IsoXmlTag("OthrParams")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? OtherParameters { get; }
 }

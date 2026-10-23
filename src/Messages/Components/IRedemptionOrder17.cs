@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction from an investor to sell investment fund units back to the fund.
 /// </summary>
 [IsoId("91c0c2fc-6144-409c-aa8f-59b79d683bf4")]
+[IsoDisplayName(@"Redemption Order17")]
 public interface IRedemptionOrder17 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IRedemptionOrder17 : IIsoComponent
     [IsoId("b6a401ea-30d9-426d-85c8-28a99e57f191")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType4Choice> OrderType { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IRedemptionOrder17 : IIsoComponent
     [IsoId("ada1d894-d0b6-40f6-8eee-b0098262c892")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson32> BeneficiaryDetails { get; }
 
     /// <summary>
@@ -185,6 +188,7 @@ public interface IRedemptionOrder17 : IIsoComponent
     [IsoId("73be7441-16d3-4ae5-b799-96defef0be63")]
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; }
 
     /// <summary>
@@ -209,6 +213,7 @@ public interface IRedemptionOrder17 : IIsoComponent
     [IsoId("9983d1a4-3334-49c2-9b34-21c56cfc0261")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary49> RelatedPartyDetails { get; }
 
     /// <summary>

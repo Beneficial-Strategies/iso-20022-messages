@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_TlJcItEwEd-BzquC8wXy7w_-976963352")]
 [IsoMessage("seev.002.001.02", "MtgCxl", "urn:iso:std:iso:20022:tech:xsd:seev.002.001.02")]
+[Description(@"Scope|The MeetingCancellation message is sent by the party that sent the MeetingNotification message to the original receiver. It is sent to cancel the previous MeetingNotification message or to advise the cancellation of a meeting.|Usage|The MeetingCancellation message is used in two different situations.|First, it is used to cancel a previously sent MeetingNotification message. In this case, the MessageCancellation, the MeetingReference and the Reason building blocks need to be present.|Second, it is used to advise that the meeting is cancelled. In this case, only the MeetingReference and Reason building blocks need to be present.")]
+[IsoDisplayName(@"Meeting Cancellation V")]
 public interface IMeetingCancellationV02 : IOuterRecord
 {
     /// <summary>
@@ -57,6 +59,9 @@ public interface IMeetingCancellationV02 : IOuterRecord
     [IsoId("_TlJcJ9EwEd-BzquC8wXy7w_-976963334")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [MinLength(0)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition5> Security { get; }
 
     /// <summary>

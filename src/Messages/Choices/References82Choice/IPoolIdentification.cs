@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References82Choice;
 
 /// <summary>Specifies the pool identification.</summary>
 [IsoId("_4SiC2-SlEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Pool Identification")]
 public interface IPoolIdentification : IReferences82Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BreakDown1Choice;
 /// </summary>
 [IsoId("_6n8NYBrYEeOVR9VN6fAMUg")]
 [IsoXmlTag("ByComrclInvc")]
+[IsoDisplayName(@"By Commercial Invoice")]
 public interface IByCommercialInvoice : IBreakDown1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IByCommercialInvoice : IBreakDown1Choice, IIsoChoiceVariant
     [IsoId("_Ti7gwxrYEeOVR9VN6fAMUg")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment6> Adjustment { get; }
 
     /// <summary>
@@ -42,5 +44,6 @@ public interface IByCommercialInvoice : IBreakDown1Choice, IIsoChoiceVariant
     [IsoId("_Ti7gxxrYEeOVR9VN6fAMUg")]
     [DisplayName("Breakdown By Purchase Order")]
     [IsoXmlTag("BrkdwnByPurchsOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportLine7> BreakdownByPurchaseOrder { get; }
 }

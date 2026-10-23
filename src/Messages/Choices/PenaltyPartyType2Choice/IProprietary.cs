@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PenaltyPartyType2Choice;
 
 /// <summary>Penalty party type, in a proprietary form.</summary>
 [IsoId("_-JKIAwAUEeqOHNEXayM0Mg")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPenaltyPartyType2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

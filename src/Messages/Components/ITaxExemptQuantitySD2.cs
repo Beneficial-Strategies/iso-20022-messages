@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax exempt election details.
 /// </summary>
 [IsoId("_2m0Rsb5YEeexmbB7KsjCwA")]
+[IsoDisplayName(@"Tax Exempt Quantity SD")]
 public interface ITaxExemptQuantitySD2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITaxExemptQuantitySD2 : IIsoComponent
     [IsoId("_24OKwb5YEeexmbB7KsjCwA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITaxExemptQuantitySD2 : IIsoComponent
     [IsoId("_24OKw75YEeexmbB7KsjCwA")]
     [DisplayName("Control Identification")]
     [IsoXmlTag("CtrlId")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text ControlIdentification { get; }
 
     /// <summary>

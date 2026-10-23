@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that locates and identifies a specific address, as defined by postal services.
 /// </summary>
 [IsoId("_uU-DSVU-EembSPFgeLJ9eg")]
+[IsoDisplayName(@"Postal Address")]
 public interface IPostalAddress26 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,10 @@ public interface IPostalAddress26 : IIsoComponent
     [IsoId("_uU-DUVU-EembSPFgeLJ9eg")]
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AddressLine { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPostalAddress26 : IIsoComponent
     [IsoId("_uU-DSlU-EembSPFgeLJ9eg")]
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? StreetName { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IPostalAddress26 : IIsoComponent
     [IsoId("_uU-DTlU-EembSPFgeLJ9eg")]
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? BuildingNumber { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IPostalAddress26 : IIsoComponent
     [IsoId("_1v3HgVU-EembSPFgeLJ9eg")]
     [DisplayName("Post Box")]
     [IsoXmlTag("PstBx")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? PostBox { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface IPostalAddress26 : IIsoComponent
     [IsoId("_uU-DTFU-EembSPFgeLJ9eg")]
     [DisplayName("Post Code")]
     [IsoXmlTag("PstCd")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? PostCode { get; }
 
     /// <summary>
@@ -65,6 +78,8 @@ public interface IPostalAddress26 : IIsoComponent
     [IsoId("_uU-DS1U-EembSPFgeLJ9eg")]
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TownName { get; }
 
     /// <summary>
@@ -73,6 +88,8 @@ public interface IPostalAddress26 : IIsoComponent
     [IsoId("_uU-DT1U-EembSPFgeLJ9eg")]
     [DisplayName("Country Sub Division")]
     [IsoXmlTag("CtrySubDvsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CountrySubDivision { get; }
 
     /// <summary>

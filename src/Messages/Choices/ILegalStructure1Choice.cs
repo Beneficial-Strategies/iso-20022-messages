@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the legal structure of a financial instrument.
 /// </summary>
 [IsoId("_kfzX0DQeEeifw8iDiyZLmQ")]
+[IsoDisplayName(@"Legal Structure 1 Choice")]
 public interface ILegalStructure1Choice : IIsoChoice { }

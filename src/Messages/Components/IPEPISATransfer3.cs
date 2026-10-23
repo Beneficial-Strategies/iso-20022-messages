@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the type of product and the assets to be transferred.
 /// </summary>
 [IsoId("_ShRA49p-Ed-ak6NoX_4Aeg_783524174")]
+[IsoDisplayName(@"PEPISA Transfer")]
 public interface IPEPISATransfer3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPEPISATransfer3 : IIsoComponent
     [IsoId("_ShRA5Np-Ed-ak6NoX_4Aeg_-1650699919")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPEPISATransfer3 : IIsoComponent
     [IsoId("_ShRA5dp-Ed-ak6NoX_4Aeg_784444259")]
     [DisplayName("Transfer Identification")]
     [IsoXmlTag("TrfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IPEPISATransfer3 : IIsoComponent
     [IsoId("_ShRA5tp-Ed-ak6NoX_4Aeg_153165977")]
     [DisplayName("Residual Cash Indicator")]
     [IsoXmlTag("RsdlCshInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ResidualCashIndicator { get; }
 
     /// <summary>
@@ -65,5 +71,6 @@ public interface IPEPISATransfer3 : IIsoComponent
     [IsoId("_ShRA6tp-Ed-ak6NoX_4Aeg_1357950719")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument11> FinancialInstrumentAssetForTransfer { get; }
 }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CtrctRegnAmdmntReq",
     "urn:iso:std:iso:20022:tech:xsd:auth.021.001.02"
 )]
+[Description(@"The ContractRegistrationAmendmentRequest message is sent by the reporting party to the registration agent to amend the registered contract subject to currency control.")]
+[IsoDisplayName(@"Contract Registration Amendment Request V")]
 public interface IContractRegistrationAmendmentRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IContractRegistrationAmendmentRequestV02 : IOuterRecord
     [IsoId("_bf9R122PEei3KuUgpx7Xcw")]
     [DisplayName("Contract Registration Amendment")]
     [IsoXmlTag("CtrctRegnAmdmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegisteredContract9> ContractRegistrationAmendment { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IContractRegistrationAmendmentRequestV02 : IOuterRecord
     [IsoId("_bf9R2W2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

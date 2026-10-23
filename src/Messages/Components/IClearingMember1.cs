@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Legal counterpart to trades cleared through a central counterparty.
 /// </summary>
 [IsoId("_l_0jkJXZEeaEh9L5Y0ZaKQ")]
+[IsoDisplayName(@"Clearing Member")]
 public interface IClearingMember1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IClearingMember1 : IIsoComponent
     [IsoId("_YuOVMJXaEeaEh9L5Y0ZaKQ")]
     [DisplayName("Futures Commission Merchant Indicator")]
     [IsoXmlTag("FutrsComssnMrchntInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator FuturesCommissionMerchantIndicator { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IClearingMember1 : IIsoComponent
     [IsoId("_CMTncJXaEeaEh9L5Y0ZaKQ")]
     [DisplayName("Membership Valid From")]
     [IsoXmlTag("MmbshVldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MembershipValidFrom { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IClearingMember1 : IIsoComponent
     [IsoId("_F264AJXaEeaEh9L5Y0ZaKQ")]
     [DisplayName("Membership Valid To")]
     [IsoXmlTag("MmbshVldTo")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MembershipValidTo { get; }
 
     /// <summary>
@@ -73,5 +77,6 @@ public interface IClearingMember1 : IIsoComponent
     [IsoId("__bi88KclEeaGcf8_qtd8Yw")]
     [DisplayName("Clearing Account Owner")]
     [IsoXmlTag("ClrAcctOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IClearingAccount1> ClearingAccountOwner { get; }
 }

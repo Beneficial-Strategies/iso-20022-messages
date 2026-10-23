@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a payment against a purchase order.
 /// </summary>
 [IsoId("_ToDCydp-Ed-ak6NoX_4Aeg_-314950341")]
+[IsoDisplayName(@"Report Line")]
 public interface IReportLine1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportLine1 : IIsoComponent
     [IsoId("_ToMMsNp-Ed-ak6NoX_4Aeg_-80376411")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification73Choice;
 /// </summary>
 [IsoId("_XthjsIKPEeKmtdhZXgREOQ")]
 [IsoXmlTag("PtyId")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification : IPartyIdentification73Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IPartyIdentification : IPartyIdentification73Choice, IIsoChoice
     [IsoId("_MtaPwIKQEeKmtdhZXgREOQ")]
     [DisplayName("Party Name")]
     [IsoXmlTag("PtyNm")]
+    [IsoSimpleType(IsoSimpleType.Max34Text)]
+    [StringLength(34, MinimumLength = 1)]
     Max34Text? PartyName { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IPartyIdentification : IPartyIdentification73Choice, IIsoChoice
     [IsoId("_vbjUsIKOEeKmtdhZXgREOQ")]
     [DisplayName("Account Number")]
     [IsoXmlTag("AcctNb")]
+    [IsoSimpleType(IsoSimpleType.Max34Text)]
+    [StringLength(34, MinimumLength = 1)]
     Max34Text? AccountNumber { get; }
 
     /// <summary>
@@ -42,6 +47,8 @@ public interface IPartyIdentification : IPartyIdentification73Choice, IIsoChoice
     [IsoId("_nGNk8IKPEeKmtdhZXgREOQ")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? Address { get; }
 
     /// <summary>
@@ -58,5 +65,6 @@ public interface IPartyIdentification : IPartyIdentification73Choice, IIsoChoice
     [IsoId("_HxyqUIKQEeKmtdhZXgREOQ")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 }

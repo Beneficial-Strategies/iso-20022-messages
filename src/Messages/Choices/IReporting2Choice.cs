@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the reporting type.
 /// </summary>
 [IsoId("_Qs45Mtp-Ed-ak6NoX_4Aeg_-349062494")]
+[IsoDisplayName(@"Reporting 2 Choice")]
 public interface IReporting2Choice : IIsoChoice { }

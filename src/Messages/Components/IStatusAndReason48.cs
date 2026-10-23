@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status And Reason48.
 /// </summary>
 [IsoId("_x9e7cYcSEe-U27oWwgmhCQ")]
+[IsoDisplayName(@"Status And Reason48")]
 public interface IStatusAndReason48 : IIsoComponent
 {
     /// <summary>

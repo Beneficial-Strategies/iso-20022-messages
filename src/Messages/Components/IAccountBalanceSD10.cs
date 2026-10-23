@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).
 /// </summary>
 [IsoId("_hn-gQb5YEeexmbB7KsjCwA")]
+[IsoDisplayName(@"Account Balance SD")]
 public interface IAccountBalanceSD10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountBalanceSD10 : IIsoComponent
     [IsoId("_h5PPYb5YEeexmbB7KsjCwA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IAccountBalanceSD10 : IIsoComponent
     [IsoId("_h5PPa75YEeexmbB7KsjCwA")]
     [DisplayName("Contra Participant Number")]
     [IsoXmlTag("ContraPtcptNb")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? ContraParticipantNumber { get; }
 }

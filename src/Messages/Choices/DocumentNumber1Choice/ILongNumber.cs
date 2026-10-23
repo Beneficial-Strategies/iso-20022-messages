@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber1Choice;
 /// MX Message identifier of the referenced document.
 /// </summary>
 [IsoId("_QzcNKNp-Ed-ak6NoX_4Aeg_-229707560")]
+[IsoDisplayName(@"Long Number")]
 public interface ILongNumber : IDocumentNumber1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ILongNumber : IDocumentNumber1Choice, IIsoChoiceVariant
     /// ISO 20022 Message identifier of an MX message.
     /// </summary>
     [IsoXmlTag("LngNb")]
+    [IsoSimpleType(IsoSimpleType.ISO20022MessageIdentificationText)]
     ISO20022MessageIdentificationText Value { get; }
 }

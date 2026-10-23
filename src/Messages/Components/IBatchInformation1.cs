@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the underlying batches.
 /// </summary>
 [IsoId("_RUE1CNp-Ed-ak6NoX_4Aeg_408833196")]
+[IsoDisplayName(@"Batch Information")]
 public interface IBatchInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBatchInformation1 : IIsoComponent
     [IsoId("_RUOmANp-Ed-ak6NoX_4Aeg_1422452073")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IBatchInformation1 : IIsoComponent
     [IsoId("_RUOmAdp-Ed-ak6NoX_4Aeg_1307010927")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -33,5 +38,6 @@ public interface IBatchInformation1 : IIsoComponent
     [IsoId("_RUOmAtp-Ed-ak6NoX_4Aeg_1792782508")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? NumberOfTransactions { get; }
 }

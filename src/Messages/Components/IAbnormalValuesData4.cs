@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed information about derivatives that were received on the day of generation of the report with action type ‘New’, ‘Position component’, ‘Modification’ or ‘Correction’ whose notional amount is greater than a threshold for that class of derivatives.
 /// </summary>
 [IsoId("_x5wPZ1yGEe24CqbZJK5XxA")]
+[IsoDisplayName(@"Abnormal Values Data")]
 public interface IAbnormalValuesData4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IAbnormalValuesData4 : IIsoComponent
     [IsoId("_x6yxM1yGEe24CqbZJK5XxA")]
     [DisplayName("Number Of Derivatives Reported")]
     [IsoXmlTag("NbOfDerivsRptd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfDerivativesReported { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IAbnormalValuesData4 : IIsoComponent
     [IsoId("_x6yxNVyGEe24CqbZJK5XxA")]
     [DisplayName("Number Of Derivatives Reported With Outliers")]
     [IsoXmlTag("NbOfDerivsRptdWthOtlrs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfDerivativesReportedWithOutliers { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IAbnormalValuesData4 : IIsoComponent
     [IsoId("_x6yxN1yGEe24CqbZJK5XxA")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAbnormalValuesTransactionData2> TransactionDetails { get; }
 }

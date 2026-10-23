@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the balance details.
 /// </summary>
 [IsoId("_74nutaMgEeCJ6YNENx4h-w_-431996980")]
+[IsoDisplayName(@"Balance Type 8 Choice")]
 public interface IBalanceType8Choice : IIsoChoice { }

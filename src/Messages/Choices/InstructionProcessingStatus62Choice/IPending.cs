@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus62Cho
 
 /// <summary>Instruction has not been completed.</summary>
 [IsoId("_H9hea68wEfCx2aBifPEdRg")]
+[IsoDisplayName(@"Pending")]
 public interface IPending : IInstructionProcessingStatus62Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

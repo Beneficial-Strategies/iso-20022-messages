@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account And Parties3.
 /// </summary>
 [IsoId("_8eTYyW48EeiU9cctagi5ow")]
+[IsoDisplayName(@"Account And Parties3")]
 public interface IAccountAndParties3 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IAccountAndParties3 : IIsoComponent
     /// </summary>
     [DisplayName("Authority Request Type")]
     [IsoXmlTag("AuthrtyReqTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorityRequestType1> AuthorityRequestType { get; }
 }

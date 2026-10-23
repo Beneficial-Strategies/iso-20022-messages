@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the designation of a currency.
 /// </summary>
 [IsoId("_k2wBgQdzEeSPHJIdUs1USg")]
+[IsoDisplayName(@"Currency Designation")]
 public interface ICurrencyDesignation1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface ICurrencyDesignation1 : IIsoComponent
     [IsoId("_dhnVEAd1EeSPHJIdUs1USg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

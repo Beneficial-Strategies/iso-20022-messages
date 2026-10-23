@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party Identification274.
 /// </summary>
 [IsoId("_y6rThTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Party Identification274")]
 public interface IPartyIdentification274 : IIsoComponent
 {
     /// <summary>

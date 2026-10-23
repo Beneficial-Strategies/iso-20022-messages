@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction to be cancelled.
 /// </summary>
 [IsoId("_eqOH0RuUEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Cancel Instruction")]
 public interface ICancelInstruction3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICancelInstruction3 : IIsoComponent
     [IsoId("_fAboYRuUEeyhRdHRjakS2w")]
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SingleInstructionIdentification { get; }
 
     /// <summary>

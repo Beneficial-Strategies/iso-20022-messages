@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the inquiry response message.
 /// </summary>
 [IsoId("_i4m8MYaZEeuSbct6WWD-Ng")]
+[IsoDisplayName(@"Inquiry Response")]
 public interface IInquiryResponse2 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface IInquiryResponse2 : IIsoComponent
     [IsoId("_i84_SYaZEeuSbct6WWD-Ng")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10KHexBinaryText)]
     Max10KHexBinaryText? ICCRelatedData { get; }
 
     /// <summary>
@@ -66,6 +68,7 @@ public interface IInquiryResponse2 : IIsoComponent
     [IsoId("_i84_S4aZEeuSbct6WWD-Ng")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -74,5 +77,6 @@ public interface IInquiryResponse2 : IIsoComponent
     [IsoId("_i84_TYaZEeuSbct6WWD-Ng")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice;
 /// Value of the data expressed in BASE-64 encoded binary form.
 /// </summary>
 [IsoId("_4EhKp5aNEemfCcEf5rVTyg")]
+[IsoDisplayName(@"Binary Value")]
 public interface IBinaryValue : IVerificationValue1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBinaryValue : IVerificationValue1Choice, IIsoChoiceVariant
     /// Specifies a binary string with a maximum length of 5000 binary bytes.
     /// </summary>
     [IsoXmlTag("BinryVal")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary Value { get; }
 }

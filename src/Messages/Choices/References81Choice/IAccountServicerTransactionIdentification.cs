@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References81Choice;
 /// <summary>
 /// Account Servicer Transaction Identification.
 /// </summary>
+[IsoDisplayName(@"Account Servicer Transaction Identification")]
 public interface IAccountServicerTransactionIdentification : IReferences81Choice, IIsoChoiceVariant
 {
     /// <summary>

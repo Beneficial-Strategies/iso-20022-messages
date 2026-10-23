@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClaimNonReceiptRejectReason1Choi
 /// Reason for the rejection, in a coded form.
 /// </summary>
 [IsoId("_LafiFItuEee-OJ-wXSj3YQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IClaimNonReceiptRejectReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

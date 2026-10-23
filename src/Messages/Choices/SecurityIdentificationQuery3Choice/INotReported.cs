@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery3Choi
 /// Field can be queried for not reported value.
 /// </summary>
 [IsoId("_P-19C9GgEeaQk737TH1Fzw")]
+[IsoDisplayName(@"Not Reported")]
 public interface INotReported : ISecurityIdentificationQuery3Choice, IIsoChoiceVariant
 {
     /// <summary>

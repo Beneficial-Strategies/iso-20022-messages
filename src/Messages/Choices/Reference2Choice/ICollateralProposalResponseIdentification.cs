@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference2Choice;
 /// Unique identifier of the collateral proposal response.
 /// </summary>
 [IsoId("_TYW3kqerEeCq2KR6DaC1kQ_-2112953758")]
+[IsoDisplayName(@"Collateral Proposal Response Identification")]
 public interface ICollateralProposalResponseIdentification : IReference2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ICollateralProposalResponseIdentification : IReference2Choice, 
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("CollPrpslRspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

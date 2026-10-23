@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format method applied to a lending transaction.
 /// </summary>
 [IsoId("_AXB1YNokEeC60axPepSq7g_713665433")]
+[IsoDisplayName(@"Lending Transaction Method 1 Choice")]
 public interface ILendingTransactionMethod1Choice : IIsoChoice { }

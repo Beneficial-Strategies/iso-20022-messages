@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification1Choice
 /// </summary>
 [IsoId("_pq7S4K7LEemZxoEFHjN-AQ")]
 [IsoXmlTag("MrgnRptg")]
+[IsoDisplayName(@"Margin Reporting")]
 public interface IMarginReporting : ITransactionIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,5 +35,7 @@ public interface IMarginReporting : ITransactionIdentification1Choice, IIsoChoic
     [IsoId("_URsPAa7MEemZxoEFHjN-AQ")]
     [DisplayName("Collateral Portfolio Identification")]
     [IsoXmlTag("CollPrtflId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text CollateralPortfolioIdentification { get; }
 }

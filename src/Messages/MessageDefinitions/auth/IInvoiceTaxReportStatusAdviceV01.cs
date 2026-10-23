@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "InvcTaxRptStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:auth.038.001.01"
 )]
+[Description(@"The InvoiceTaxReportStatusAdvice message is sent by the matching application to the party from which it received a message.|This message is used to acknowledge the InvoiceTaxReport message.")]
+[IsoDisplayName(@"Invoice Tax Report Status Advice V")]
 public interface IInvoiceTaxReportStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface IInvoiceTaxReportStatusAdviceV01 : IOuterRecord
     [IsoId("_PM8n8E54Eeaine-lsNAGsA")]
     [DisplayName("Transaction Status")]
     [IsoXmlTag("TxSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvoiceTaxReportTransactionStatus1> TransactionStatus { get; }
 
     /// <summary>
@@ -42,5 +45,6 @@ public interface IInvoiceTaxReportStatusAdviceV01 : IOuterRecord
     [IsoId("_XlusIE2ZEea-HpmqkM55Lg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

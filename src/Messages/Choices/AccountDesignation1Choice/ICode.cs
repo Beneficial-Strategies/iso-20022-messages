@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountDesignation1Choice;
 /// Account designation expressed as a code.
 /// </summary>
 [IsoId("_l6enkCCzEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAccountDesignation1Choice, IIsoChoiceVariant
 {
     /// <summary>

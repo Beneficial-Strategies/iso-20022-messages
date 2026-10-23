@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus16Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_Do2eQTw6EeW3QqUkIQtIUA")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : ICancellationStatus16Choice, IIsoChoiceVariant
 {
     /// <summary>

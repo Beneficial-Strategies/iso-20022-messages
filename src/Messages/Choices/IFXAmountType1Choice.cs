@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of different FX amount types.
 /// </summary>
 [IsoId("_Z-9lgwN2Ee2-vqzwMUAewg")]
+[IsoDisplayName(@"FX Amount Type 1 Choice")]
 public interface IFXAmountType1Choice : IIsoChoice { }

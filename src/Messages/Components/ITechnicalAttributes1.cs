@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies technical attributes of the message.
 /// </summary>
 [IsoId("_tEyDAISIEeW47-F5RGn37Q")]
+[IsoDisplayName(@"Technical Attributes")]
 public interface ITechnicalAttributes1 : IIsoComponent
 {
     /// <summary>

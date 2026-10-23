@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType39Choice;
 /// <summary>
 /// Deletion.
 /// </summary>
+[IsoDisplayName(@"Deletion")]
 public interface IDeletion : IUpdateType39Choice, IIsoChoiceVariant
 {
     /// <summary>

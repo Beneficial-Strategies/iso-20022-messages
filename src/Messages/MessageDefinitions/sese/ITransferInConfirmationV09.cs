@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_aqouUZDhEem7fvtoGpNpow")]
 [IsoMessage("sese.007.001.09", "TrfInConf", "urn:iso:std:iso:20022:tech:xsd:sese.007.001.09")]
+[Description(@"Scope|The TransferInConfirmation message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to confirm the receipt of a financial instrument, free of payment, on a given date, from a specified party.|This message may also be used to confirm the receipt of a financial instrument, free of payment, from another of the instructing parties own accounts or from a third party.|This message may also be used as an advice, that is, the message is used to provide account information.|Usage|The TransferInConfirmation message is used to confirm receipt of a financial instrument, either from another account owned by the instructing party or from a third party. The reference of the transfer confirmation is identified in TransferConfirmationReference.|The reference of the original transfer instruction is specified in TransferReference. The message identification of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.")]
+[IsoDisplayName(@"Transfer In Confirmation V")]
 public interface ITransferInConfirmationV09 : IOuterRecord
 {
     /// <summary>
@@ -66,6 +68,8 @@ public interface ITransferInConfirmationV09 : IOuterRecord
     [IsoId("_aqouYZDhEem7fvtoGpNpow")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -74,6 +78,7 @@ public interface ITransferInConfirmationV09 : IOuterRecord
     [IsoId("_aqouY5DhEem7fvtoGpNpow")]
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransfer37> TransferDetails { get; }
 
     /// <summary>
@@ -114,5 +119,6 @@ public interface ITransferInConfirmationV09 : IOuterRecord
     [IsoId("_aqoubZDhEem7fvtoGpNpow")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

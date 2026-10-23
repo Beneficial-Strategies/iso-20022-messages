@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies a payment instruction by a set of characteristics which provides an unambiguous identification of the instruction.
 /// </summary>
 [IsoId("_5ur8IQKxEe2rHs6fbn9-0A")]
+[IsoDisplayName(@"Long Payment Identification")]
 public interface ILongPaymentIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILongPaymentIdentification3 : IIsoComponent
     [IsoId("_6Zt2IwKxEe2rHs6fbn9-0A")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ILongPaymentIdentification3 : IIsoComponent
     [IsoId("_6Zt2JQKxEe2rHs6fbn9-0A")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? UETR { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ILongPaymentIdentification3 : IIsoComponent
     [IsoId("_6Zt2KQKxEe2rHs6fbn9-0A")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate InterbankSettlementDate { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ILongPaymentIdentification3 : IIsoComponent
     [IsoId("_6Zt2MQKxEe2rHs6fbn9-0A")]
     [DisplayName("Entry Type")]
     [IsoXmlTag("NtryTp")]
+    [IsoSimpleType(IsoSimpleType.EntryTypeIdentifier)]
     EntryTypeIdentifier? EntryType { get; }
 
     /// <summary>
@@ -81,5 +87,7 @@ public interface ILongPaymentIdentification3 : IIsoComponent
     [IsoId("_6Zt2MwKxEe2rHs6fbn9-0A")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 }

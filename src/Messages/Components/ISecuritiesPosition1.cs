@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide security position details.
 /// </summary>
 [IsoId("_jKPqh-5NEeCisYr99QEiWA_1769802046")]
+[IsoDisplayName(@"Securities Position")]
 public interface ISecuritiesPosition1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesPosition1 : IIsoComponent
     [IsoId("_jKZbgO5NEeCisYr99QEiWA_-1820329742")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText Type { get; }
 
     /// <summary>

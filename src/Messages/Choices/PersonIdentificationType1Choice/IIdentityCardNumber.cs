@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice;
 /// Number assigned by a national authority to an identity card.
 /// </summary>
 [IsoId("_QEW5mNp-Ed-ak6NoX_4Aeg_-1180195933")]
+[IsoDisplayName(@"Identity Card Number")]
 public interface IIdentityCardNumber : IPersonIdentificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IIdentityCardNumber : IPersonIdentificationType1Choice, IIsoCho
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("IdntyCardNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

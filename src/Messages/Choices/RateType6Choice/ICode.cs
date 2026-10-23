@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType6Choice;
 /// Standard code to specify the type of rate.
 /// </summary>
 [IsoId("_Q2kZo9p-Ed-ak6NoX_4Aeg_-382627273")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRateType6Choice, IIsoChoiceVariant
 {
     /// <summary>

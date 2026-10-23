@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_fptHIG6qEeaUkthD_kt0tA")]
 [IsoMessage("pain.017.001.01", "MndtCpyReq", "urn:iso:std:iso:20022:tech:xsd:pain.017.001.01")]
+[Description(@"Scope|The MandateCopyRequest message is sent by the initiator of the request to his agent. The initiator can either be the debtor or the creditor.|The MandateCopyRequest message is forwarded by the agent of the initiator to the agent of the counterparty.|A MandateCopyRequest message is used to request a copy of an existing mandate. If accepted, the mandate copy can be sent using the MandateAcceptanceReport message.|Usage|The MandateCopyRequest message can contain one or more copy requests.|The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.|The message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.|The MandateCopyRequest message can be used in domestic and cross-border scenarios.|")]
+[IsoDisplayName(@"Mandate Copy Request V")]
 public interface IMandateCopyRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -37,6 +39,7 @@ public interface IMandateCopyRequestV01 : IOuterRecord
     [IsoId("_WQnekG6vEeaUkthD_kt0tA")]
     [DisplayName("Underlying Copy Request Details")]
     [IsoXmlTag("UndrlygCpyReqDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMandateCopy1> UnderlyingCopyRequestDetails { get; }
 
     /// <summary>
@@ -45,5 +48,6 @@ public interface IMandateCopyRequestV01 : IOuterRecord
     [IsoId("_eHtPQW6yEeaUkthD_kt0tA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

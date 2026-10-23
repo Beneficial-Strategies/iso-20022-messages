@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money for which goods or services are offered, sold, or bought.
 /// </summary>
 [IsoId("_-MUIYdLGEeiN28wlpBQScw")]
+[IsoDisplayName(@"Price Information")]
 public interface IPriceInformation20 : IIsoComponent
 {
     /// <summary>

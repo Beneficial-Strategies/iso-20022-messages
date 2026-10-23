@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financing information and status.
 /// </summary>
 [IsoId("_RYGZYtp-Ed-ak6NoX_4Aeg_645590457")]
+[IsoDisplayName(@"Financing Information And Status")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IFinancingInformationAndStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +27,6 @@ public interface IFinancingInformationAndStatus1 : IIsoComponent
     [IsoId("_RYGZZNp-Ed-ak6NoX_4Aeg_1262872441")]
     [DisplayName("Invoice Financing Details")]
     [IsoXmlTag("InvcFincgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvoiceFinancingDetails1> InvoiceFinancingDetails { get; }
 }

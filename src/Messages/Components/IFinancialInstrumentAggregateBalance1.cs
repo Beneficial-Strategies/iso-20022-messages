@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Aggregated position of holdings held in a securities account for a specified financial instrument.
 /// </summary>
 [IsoId("_1TSje4jiEeONZKAAW4pOaQ")]
+[IsoDisplayName(@"Financial Instrument Aggregate Balance")]
 public interface IFinancialInstrumentAggregateBalance1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancialInstrumentAggregateBalance1 : IIsoComponent
     [IsoId("_1TSjfIjiEeONZKAAW4pOaQ")]
     [DisplayName("Item Date")]
     [IsoXmlTag("ItmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ItemDate { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IFinancialInstrumentAggregateBalance1 : IIsoComponent
     [IsoId("_KMa34TywEeSBD_ZW60GwCQ")]
     [DisplayName("Price")]
     [IsoXmlTag("Pric")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPrice6> Price { get; }
 }

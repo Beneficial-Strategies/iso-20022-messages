@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Describes frequency of payments for interest rates, either using term notation or a proprietary notation.
 /// </summary>
 [IsoId("_61uTH1fREeqqKf65rDYWYw")]
+[IsoDisplayName(@"Interest Rate Frequency 3 Choice")]
 public interface IInterestRateFrequency3Choice : IIsoChoice { }

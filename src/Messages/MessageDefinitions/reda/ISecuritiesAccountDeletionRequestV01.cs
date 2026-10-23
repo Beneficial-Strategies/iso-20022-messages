@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "SctiesAcctDeltnReq",
     "urn:iso:std:iso:20022:tech:xsd:reda.032.001.01"
 )]
+[Description(@"The SecuritiesAccountDeletionRequest message is sent by an instructing party to the executing party to request for the deletion of a securities account from the securities account reference data defined in the system of the executing party.||Usage: |It aims at instructing the deletion of an existing securities account providing securities account identification.|The result of the deletion is provided through a SecuritiesAccountStatusAdvice message.")]
+[IsoDisplayName(@"Securities Account Deletion Request V")]
 public interface ISecuritiesAccountDeletionRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface ISecuritiesAccountDeletionRequestV01 : IOuterRecord
     [IsoId("_KAu-q52fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

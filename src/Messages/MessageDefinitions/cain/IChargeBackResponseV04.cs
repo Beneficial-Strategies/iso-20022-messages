@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_6DcNAROHEfC1ZfCQz0xB3g")]
 [IsoMessage("cain.028.001.04", "ChrgBckRspn", "urn:iso:std:iso:20022:tech:xsd:cain.028.001.04")]
+[IsoDisplayName(@"Charge Back Response V04")]
 public interface IChargeBackResponseV04 : IOuterRecord
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IChargeBackResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode6> Programme { get; }
 
     /// <summary>
@@ -179,6 +181,7 @@ public interface IChargeBackResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -193,6 +196,7 @@ public interface IChargeBackResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Dispute Data")]
     [IsoXmlTag("DsptData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeData5> DisputeData { get; }
 
     /// <summary>
@@ -200,6 +204,7 @@ public interface IChargeBackResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Documentation")]
     [IsoXmlTag("Dcmnttn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeDocumentation2> Documentation { get; }
 
     /// <summary>
@@ -214,6 +219,7 @@ public interface IChargeBackResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -221,6 +227,7 @@ public interface IChargeBackResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -228,6 +235,7 @@ public interface IChargeBackResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

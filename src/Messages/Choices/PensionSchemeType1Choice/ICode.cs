@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PensionSchemeType1Choice;
 /// Type of pension policy, plan or scheme expressed as a code.
 /// </summary>
 [IsoId("_JZwpYE4OEeiQHa-q1Uephw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPensionSchemeType1Choice, IIsoChoiceVariant
 {
     /// <summary>

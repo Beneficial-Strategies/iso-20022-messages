@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of the verification processing.
 /// </summary>
 [IsoId("_l00s8fBlEeesZ516Jn5sHw")]
+[IsoDisplayName(@"Result Data")]
 public interface IResultData6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IResultData6 : IIsoComponent
     [IsoId("_mBeB0_BlEeesZ516Jn5sHw")]
     [DisplayName("Other Result")]
     [IsoXmlTag("OthrRslt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherResult { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IResultData6 : IIsoComponent
     [IsoId("_mBeB1fBlEeesZ516Jn5sHw")]
     [DisplayName("Result Details")]
     [IsoXmlTag("RsltDtls")]
+    [IsoSimpleType(IsoSimpleType.Exact2AlphaNumericText)]
     Exact2AlphaNumericText ResultDetails { get; }
 
     /// <summary>
@@ -42,6 +46,8 @@ public interface IResultData6 : IIsoComponent
     [IsoId("_mBeB1_BlEeesZ516Jn5sHw")]
     [DisplayName("Other Result Details")]
     [IsoXmlTag("OthrRsltDtls")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherResultDetails { get; }
 
     /// <summary>
@@ -50,5 +56,6 @@ public interface IResultData6 : IIsoComponent
     [IsoId("_mBeB2fBlEeesZ516Jn5sHw")]
     [DisplayName("Additional Result Information")]
     [IsoXmlTag("AddtlRsltInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalResultInformation { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Card payment transaction choice between cancellation, authorisation request and authorisation response.
 /// </summary>
 [IsoId("_KJfv0S5BEeunNvJlR_vCbg")]
+[IsoDisplayName(@"Card Payment Data Set Transaction 9 Choice")]
 public interface ICardPaymentDataSetTransaction9Choice : IIsoChoice { }

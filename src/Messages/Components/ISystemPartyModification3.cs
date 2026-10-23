@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// System Party Modification3.
 /// </summary>
 [IsoId("_Y6_ygTE_Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"System Party Modification3")]
 public interface ISystemPartyModification3 : IIsoComponent
 {
     /// <summary>

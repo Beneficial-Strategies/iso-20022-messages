@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the mandate to be cancelled.
 /// </summary>
 [IsoId("_tlX48lkyEeGeoaLUQk__nA_1031601865")]
+[IsoDisplayName(@"Mandate Cancellation")]
 public interface IMandateCancellation2 : IIsoComponent
 {
     /// <summary>

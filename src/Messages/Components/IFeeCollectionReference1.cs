@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains fee collection reference details.
 /// </summary>
 [IsoId("_0yDt0SxMEeyg-aG5nXcnfg")]
+[IsoDisplayName(@"Fee Collection Reference")]
 public interface IFeeCollectionReference1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IFeeCollectionReference1 : IIsoComponent
     [IsoId("_04o28SxMEeyg-aG5nXcnfg")]
     [DisplayName("Other Assigner Entity")]
     [IsoXmlTag("OthrAssgnrNtty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherAssignerEntity { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IFeeCollectionReference1 : IIsoComponent
     [IsoId("_04o28yxMEeyg-aG5nXcnfg")]
     [DisplayName("Fee Collection Identification")]
     [IsoXmlTag("FeeColltnId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFeeCollectionIdentification1> FeeCollectionIdentification { get; }
 }

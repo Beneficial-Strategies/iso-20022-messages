@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action General Information172.
 /// </summary>
 [IsoId("_r_TYQUmyEe-NocYul3BKXQ")]
+[IsoDisplayName(@"Corporate Action General Information172")]
 public interface ICorporateActionGeneralInformation172 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,6 @@ public interface ICorporateActionGeneralInformation172 : IIsoComponent
     /// </summary>
     [DisplayName("Underlying Security")]
     [IsoXmlTag("UndrlygScty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentAttributes126> UnderlyingSecurity { get; }
 }

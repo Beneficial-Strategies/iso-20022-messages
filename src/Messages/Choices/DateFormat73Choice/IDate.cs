@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat73Choice;
 
 /// <summary>Date expressed as an ISO Date.</summary>
 [IsoId("_GUHFRatmEfCqjuqNaaNXgw")]
+[IsoDisplayName(@"Date")]
 public interface IDate : IDateFormat73Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

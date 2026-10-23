@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original Payment Information10.
 /// </summary>
 [IsoId("_5jIOMTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Original Payment Information10")]
 public interface IOriginalPaymentInformation10 : IIsoComponent
 {
     /// <summary>

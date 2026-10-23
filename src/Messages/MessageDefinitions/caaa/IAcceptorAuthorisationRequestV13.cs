@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrAuthstnReq",
     "urn:iso:std:iso:20022:tech:xsd:caaa.001.001.13"
 )]
+[IsoDisplayName(@"Acceptor Authorisation Request V13")]
 public interface IAcceptorAuthorisationRequestV13 : IOuterRecord
 {
     /// <summary>

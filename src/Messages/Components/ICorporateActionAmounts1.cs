@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies amounts in the framework of a corporate action event.
 /// </summary>
 [IsoId("_TeEAUtp-Ed-ak6NoX_4Aeg_1803502106")]
+[IsoDisplayName(@"Corporate Action Amounts")]
 public interface ICorporateActionAmounts1 : IIsoComponent
 {
     /// <summary>

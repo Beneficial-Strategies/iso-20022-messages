@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the type of product and the assets to be transferred.
 /// </summary>
 [IsoId("_8u6kdSPvEeWQjryFgN2ITg")]
+[IsoDisplayName(@"ISA Transfer")]
 public interface IISATransfer24 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IISATransfer24 : IIsoComponent
     [IsoId("_9MFBoSPvEeWQjryFgN2ITg")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson8> OtherIndividualInvestor { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IISATransfer24 : IIsoComponent
     [IsoId("_9MFBpyPvEeWQjryFgN2ITg")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation21> OtherCorporateInvestor { get; }
 
     /// <summary>
@@ -89,6 +92,7 @@ public interface IISATransfer24 : IIsoComponent
     [IsoId("_ky2vYSYdEeWJkOUkQWu90g")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary34> IntermediaryInformation { get; }
 
     /// <summary>
@@ -113,5 +117,6 @@ public interface IISATransfer24 : IIsoComponent
     [IsoId("_9MFBsyPvEeWQjryFgN2ITg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a subscription bulk order.
 /// </summary>
 [IsoId("_UzJj9dp-Ed-ak6NoX_4Aeg_-1522841407")]
+[IsoDisplayName(@"Subscription Bulk Order Instruction")]
 public interface ISubscriptionBulkOrderInstruction1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,9 @@ public interface ISubscriptionBulkOrderInstruction1 : IIsoComponent
     [IsoId("_UzJj99p-Ed-ak6NoX_4Aeg_-474644886")]
     [DisplayName("Intermediary Details")]
     [IsoXmlTag("IntrmyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary4> IntermediaryDetails { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ISubscriptionBulkOrderInstruction1 : IIsoComponent
     [IsoId("_UzJj-dp-Ed-ak6NoX_4Aeg_-830968388")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

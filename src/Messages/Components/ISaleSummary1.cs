@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Summary information about the sale
 /// </summary>
 [IsoId("_rYJ6FvJoEeiJn9rM2Znz2w")]
+[IsoDisplayName(@"Sale Summary")]
 public interface ISaleSummary1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISaleSummary1 : IIsoComponent
     [IsoId("_rYJ6G_JoEeiJn9rM2Znz2w")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SummaryCommodityIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ISaleSummary1 : IIsoComponent
     [IsoId("_rYJ6GfJoEeiJn9rM2Znz2w")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment9> Adjustment { get; }
 }

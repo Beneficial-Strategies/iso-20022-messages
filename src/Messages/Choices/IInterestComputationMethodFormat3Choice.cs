@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of interest computation method.
 /// </summary>
 [IsoId("_AbzApdokEeC60axPepSq7g_-1161845137")]
+[IsoDisplayName(@"Interest Computation Method Format 3 Choice")]
 public interface IInterestComputationMethodFormat3Choice : IIsoChoice { }

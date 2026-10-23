@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllocationStatus1Choice;
 /// </summary>
 [IsoId("_cFIB8N_-EeiVRbNQx5-Vhg")]
 [IsoXmlTag("FullyAllctd")]
+[IsoDisplayName(@"Fully Allocated")]
 public interface IFullyAllocated : IAllocationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IFullyAllocated : IAllocationStatus1Choice, IIsoChoiceVariant
     [IsoId("_RA3_Wzp5EeWVrPy0StzzSg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

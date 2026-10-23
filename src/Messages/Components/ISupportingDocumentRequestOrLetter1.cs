@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency control related document or letter supporting the contract registration.
 /// </summary>
 [IsoId("_qW0AENnSEeS--7IJLPC9lw")]
+[IsoDisplayName(@"Supporting Document Request Or Letter")]
 public interface ISupportingDocumentRequestOrLetter1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISupportingDocumentRequestOrLetter1 : IIsoComponent
     [IsoId("_utQb4NnSEeS--7IJLPC9lw")]
     [DisplayName("Request Or Letter Identification")]
     [IsoXmlTag("ReqOrLttrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RequestOrLetterIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ISupportingDocumentRequestOrLetter1 : IIsoComponent
     [IsoId("_w7As4NnSEeS--7IJLPC9lw")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ISupportingDocumentRequestOrLetter1 : IIsoComponent
     [IsoId("_A5Ac0dniEeS--7IJLPC9lw")]
     [DisplayName("Original References")]
     [IsoXmlTag("OrgnlRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalMessage2> OriginalReferences { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface ISupportingDocumentRequestOrLetter1 : IIsoComponent
     [IsoId("_XZjuENnhEeS--7IJLPC9lw")]
     [DisplayName("Subject")]
     [IsoXmlTag("Sbjt")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Subject { get; }
 
     /// <summary>
@@ -73,6 +80,8 @@ public interface ISupportingDocumentRequestOrLetter1 : IIsoComponent
     [IsoId("_QExR0NnhEeS--7IJLPC9lw")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? Description { get; }
 
     /// <summary>
@@ -82,6 +91,7 @@ public interface ISupportingDocumentRequestOrLetter1 : IIsoComponent
     [IsoId("_ShTwQNniEeS--7IJLPC9lw")]
     [DisplayName("Response Required")]
     [IsoXmlTag("RspnReqrd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator ResponseRequired { get; }
 
     /// <summary>
@@ -90,6 +100,7 @@ public interface ISupportingDocumentRequestOrLetter1 : IIsoComponent
     [IsoId("_pXGm0NnjEeS--7IJLPC9lw")]
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DueDate { get; }
 
     /// <summary>
@@ -98,6 +109,7 @@ public interface ISupportingDocumentRequestOrLetter1 : IIsoComponent
     [IsoId("_2Tf2sdnhEeS--7IJLPC9lw")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation3> Attachment { get; }
 
     /// <summary>
@@ -106,5 +118,6 @@ public interface ISupportingDocumentRequestOrLetter1 : IIsoComponent
     [IsoId("_IET-8TmzEeWDb47rJ6ki4Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

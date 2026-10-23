@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// References of a switch leg.
 /// </summary>
 [IsoId("26ce5ad0-6918-4ef6-96de-e3e0bec8798b")]
+[IsoDisplayName(@"Switch Leg References3")]
 public interface ISwitchLegReferences3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ISwitchLegReferences3 : IIsoComponent
     [IsoId("26ce5ad0-rprd-0001-0003-e3e0bec8798b")]
     [DisplayName("Repaired Fee")]
     [IsoXmlTag("RprdFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFee12> RepairedFee { get; }
 
     /// <summary>

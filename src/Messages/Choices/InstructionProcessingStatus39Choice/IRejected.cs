@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus39Cho
 /// Provides status information related to an instruction request rejected for further processing due to system reasons.
 /// </summary>
 [IsoId("_Pl7SVAVSEeqjd8n6wD9JVw")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IInstructionProcessingStatus39Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

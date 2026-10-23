@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionType1Choice;
 /// Type of corporate action event.
 /// </summary>
 [IsoId("_RF4ZcAf_EeSaceXTzyiZRg")]
+[IsoDisplayName(@"Corporate Action Type")]
 public interface ICorporateActionType : ITransactionType1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

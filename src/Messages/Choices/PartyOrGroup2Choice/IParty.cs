@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrGroup2Choice;
 /// </summary>
 [IsoId("_DDQTg249EeiU9cctagi5ow")]
 [IsoXmlTag("Pty")]
+[IsoDisplayName(@"Party")]
 public interface IParty : IPartyOrGroup2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -24,5 +25,6 @@ public interface IParty : IPartyOrGroup2Choice, IIsoChoiceVariant
     [IsoId("_DOvKw249EeiU9cctagi5ow")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
     Max10KBinary? Certificate { get; }
 }

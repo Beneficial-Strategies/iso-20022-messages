@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRightThreshold2Choice;
 /// <summary>
 /// Additional Right Threshold.
 /// </summary>
+[IsoDisplayName(@"Additional Right Threshold")]
 public interface IAdditionalRightThreshold : IAdditionalRightThreshold2Choice, IIsoChoiceVariant
 {
     /// <summary>

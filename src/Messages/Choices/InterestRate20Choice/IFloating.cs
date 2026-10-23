@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate20Choice;
 /// </summary>
 [IsoId("_hFv8E6x2Eem81-uIvTF5rQ")]
 [IsoXmlTag("Fltg")]
+[IsoDisplayName(@"Floating")]
 public interface IFloating : IInterestRate20Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface IFloating : IInterestRate20Choice, IIsoChoiceVariant
     [IsoId("_hJxgeax2Eem81-uIvTF5rQ")]
     [DisplayName("Basis Point Spread")]
     [IsoXmlTag("BsisPtSprd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? BasisPointSpread { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface IFloating : IInterestRate20Choice, IIsoChoiceVariant
     [IsoId("_wWAosctEEemlLfTG-WCXxw")]
     [DisplayName("Rate Adjustment")]
     [IsoXmlTag("RateAdjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAdjustment1> RateAdjustment { get; }
 
     /// <summary>

@@ -27,6 +27,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesStsOrStmtQryStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:sese.022.001.06"
 )]
+[Description(@"Scope|An account servicer sends a SecuritiesStatusOrStatementQueryStatusAdvice to an account owner to advise the status of a status query or statement query previously sent by the account owner.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Status Or Statement Query Status Advice V")]
 public interface ISecuritiesStatusOrStatementQueryStatusAdviceV06 : IOuterRecord
 {
     /// <summary>
@@ -83,5 +85,6 @@ public interface ISecuritiesStatusOrStatementQueryStatusAdviceV06 : IOuterRecord
     [IsoId("_yoyk8ygSEeym1_Zp1BTvEw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Customer Profile6.
 /// </summary>
 [IsoId("_iVZ6QajzEe--FqfI7l8ySw")]
+[IsoDisplayName(@"ATM Customer Profile6")]
 public interface IATMCustomerProfile6 : IIsoComponent
 {
     /// <summary>

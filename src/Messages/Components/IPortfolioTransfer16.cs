@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Type of product and assets to be transferred.
 /// </summary>
 [IsoId("f6b41e2c-7075-4b02-9766-0dddeb9aae33")]
+[IsoDisplayName(@"Portfolio Transfer16")]
 public interface IPortfolioTransfer16 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IPortfolioTransfer16 : IIsoComponent
     [IsoId("934edb6f-5eed-4929-88b4-00c8003ca390")]
     [DisplayName("Residual Cash")]
     [IsoXmlTag("RsdlCsh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IResidualCash1> ResidualCash { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface IPortfolioTransfer16 : IIsoComponent
     [IsoId("f22de23a-f875-4f1e-a707-1ca88a6fa263")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument110> FinancialInstrumentAssetForTransfer { get; }
 
     /// <summary>
@@ -81,5 +84,6 @@ public interface IPortfolioTransfer16 : IIsoComponent
     [IsoId("d8cd66b9-15c0-4e60-b9a4-6b66d83d3e8b")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesSttlmTxQry",
     "urn:iso:std:iso:20022:tech:xsd:semt.026.001.01"
 )]
+[IsoDisplayName(@"Securities Settlement Transaction Query V01")]
 public interface ISecuritiesSettlementTransactionQueryV01 : IOuterRecord
 {
     /// <summary>
@@ -29,5 +30,6 @@ public interface ISecuritiesSettlementTransactionQueryV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

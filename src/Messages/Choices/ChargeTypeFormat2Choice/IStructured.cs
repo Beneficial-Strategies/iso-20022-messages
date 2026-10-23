@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeTypeFormat2Choice;
 /// Specifies the type of charge in a structured form.
 /// </summary>
 [IsoId("_UyQMGdp-Ed-ak6NoX_4Aeg_2129381722")]
+[IsoDisplayName(@"Structured")]
 public interface IStructured : IChargeTypeFormat2Choice, IIsoChoiceVariant
 {
     /// <summary>

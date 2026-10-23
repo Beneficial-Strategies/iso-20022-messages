@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a code and proprietary format for a collateral status reason.</summary>
 [IsoId("_nLSClKkxEeynsLtPxJMJTQ")]
+[IsoDisplayName(@"Status Reason 7 Choice")]
 public interface IStatusReason7Choice : IIsoChoice { }

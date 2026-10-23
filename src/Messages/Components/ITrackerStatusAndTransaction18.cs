@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information on the transaction and its status to be updated in the tracker.
 /// </summary>
 [IsoId("_PmaSkUN8Ee-QZYT2pcGFZw")]
+[IsoDisplayName(@"Tracker Status And Transaction18")]
 public interface ITrackerStatusAndTransaction18 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ITrackerStatusAndTransaction18 : IIsoComponent
     [IsoId("_PtkDdUN8Ee-QZYT2pcGFZw")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITrackerPaymentTransaction14> Transaction { get; }
 }

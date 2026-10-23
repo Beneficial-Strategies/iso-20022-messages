@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Deal amount details.
 /// </summary>
 [IsoId("_k9T14RIlEeyLzJfz3xPQNA")]
+[IsoDisplayName(@"Collateral Amount")]
 public interface ICollateralAmount14 : IIsoComponent
 {
     /// <summary>

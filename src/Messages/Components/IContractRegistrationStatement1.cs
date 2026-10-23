@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statement of the journal entries for all activities related to the registered currency control contract.
 /// </summary>
 [IsoId("_M2smkNnREeS--7IJLPC9lw")]
+[IsoDisplayName(@"Contract Registration Statement")]
 public interface IContractRegistrationStatement1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContractRegistrationStatement1 : IIsoComponent
     [IsoId("_UdiaUdoMEeS--7IJLPC9lw")]
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StatementIdentification { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IContractRegistrationStatement1 : IIsoComponent
     [IsoId("_VScq4NnREeS--7IJLPC9lw")]
     [DisplayName("Transaction Journal")]
     [IsoXmlTag("TxJrnl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionCertificate1> TransactionJournal { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IContractRegistrationStatement1 : IIsoComponent
     [IsoId("_WxgC0NnREeS--7IJLPC9lw")]
     [DisplayName("Supporting Document Journal")]
     [IsoXmlTag("SpprtgDocJrnl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupportingDocument1> SupportingDocumentJournal { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface IContractRegistrationStatement1 : IIsoComponent
     [IsoId("_cJCvQNnREeS--7IJLPC9lw")]
     [DisplayName("Additional Supporting Document Journal")]
     [IsoXmlTag("AddtlSpprtgDocJrnl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupportingDocument1> AdditionalSupportingDocumentJournal { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface IContractRegistrationStatement1 : IIsoComponent
     [IsoId("_eqWOYNnREeS--7IJLPC9lw")]
     [DisplayName("Regulatory Rule Validation")]
     [IsoXmlTag("RgltryRuleVldtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericValidationRuleIdentification1> RegulatoryRuleValidation { get; }
 
     /// <summary>
@@ -97,5 +104,6 @@ public interface IContractRegistrationStatement1 : IIsoComponent
     [IsoId("_qPwb8QtNEeWkxvNyFrBT8Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

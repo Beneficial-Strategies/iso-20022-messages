@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of instruction requested by the submitter by means of a code.
 /// </summary>
 [IsoId("_RJpGotp-Ed-ak6NoX_4Aeg_-1074370626")]
+[IsoDisplayName(@"Instruction Type")]
 public interface IInstructionType3 : IIsoComponent
 {
     /// <summary>

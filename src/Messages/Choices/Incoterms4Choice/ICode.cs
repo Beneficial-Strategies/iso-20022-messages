@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Incoterms4Choice;
 /// Specifies the applicable Incoterm by means of a code.
 /// </summary>
 [IsoId("_S5ezYQEcEeCQm6a_G2yO_w_-666365163")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IIncoterms4Choice, IIsoChoiceVariant
 {
     /// <summary>

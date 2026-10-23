@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Instruction has been rejected for further processing.
 /// </summary>
 [IsoId("_T_zx8RIwEeydmIVkS03esw")]
+[IsoDisplayName(@"Rejection Status 34 Choice")]
 public interface IRejectionStatus34Choice : IIsoChoice { }

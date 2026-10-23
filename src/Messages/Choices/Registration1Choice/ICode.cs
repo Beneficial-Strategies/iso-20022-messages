@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Registration1Choice;
 /// Registration information expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_QwBFtdp-Ed-ak6NoX_4Aeg_-783909014")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRegistration1Choice, IIsoChoiceVariant
 {
     /// <summary>

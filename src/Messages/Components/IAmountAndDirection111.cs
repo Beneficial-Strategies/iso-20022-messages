@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount And Direction111.
 /// </summary>
 [IsoId("_cWbQAZ9TEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Amount And Direction111")]
 public interface IAmountAndDirection111 : IIsoComponent
 {
     /// <summary>

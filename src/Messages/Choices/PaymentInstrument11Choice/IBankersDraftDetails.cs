@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument11Choice;
 /// </summary>
 [IsoId("_SBhw5tp-Ed-ak6NoX_4Aeg_2000876344")]
 [IsoXmlTag("BkrsDrftDtls")]
+[IsoDisplayName(@"Bankers Draft Details")]
 public interface IBankersDraftDetails : IPaymentInstrument11Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IBankersDraftDetails : IPaymentInstrument11Choice, IIsoChoiceVa
     [IsoId("_QbdK_Np-Ed-ak6NoX_4Aeg_-241775366")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Number { get; }
 
     /// <summary>

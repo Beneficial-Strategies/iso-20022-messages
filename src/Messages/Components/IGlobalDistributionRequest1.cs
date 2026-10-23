@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the global distribution.
 /// </summary>
 [IsoId("_UKdzVdp-Ed-ak6NoX_4Aeg_-227934218")]
+[IsoDisplayName(@"Global Distribution Request")]
 public interface IGlobalDistributionRequest1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IGlobalDistributionRequest1 : IIsoComponent
     [IsoId("_UKdzVtp-Ed-ak6NoX_4Aeg_-2123921749")]
     [DisplayName("Preadvice Indicator")]
     [IsoXmlTag("PradvcInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PreadviceIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IGlobalDistributionRequest1 : IIsoComponent
     [IsoId("_UKdzV9p-Ed-ak6NoX_4Aeg_85141205")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText OptionNumber { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IGlobalDistributionRequest1 : IIsoComponent
     [IsoId("_UKdzW9p-Ed-ak6NoX_4Aeg_1979460314")]
     [DisplayName("Securities Movement")]
     [IsoXmlTag("SctiesMvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityMovement1> SecuritiesMovement { get; }
 
     /// <summary>
@@ -65,5 +69,6 @@ public interface IGlobalDistributionRequest1 : IIsoComponent
     [IsoId("_UKnkUNp-Ed-ak6NoX_4Aeg_1970224157")]
     [DisplayName("Cash Movement")]
     [IsoXmlTag("CshMvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashMovement1> CashMovement { get; }
 }

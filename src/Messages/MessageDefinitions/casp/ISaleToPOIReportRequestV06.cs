@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// </summary>
 [IsoId("_ns7c8ZUwEe62CMB9luireQ")]
 [IsoMessage("casp.009.001.06", "SaleToPOIRptReq", "urn:iso:std:iso:20022:tech:xsd:casp.009.001.06")]
+[IsoDisplayName(@"Sale To POI Report Request V06")]
 public interface ISaleToPOIReportRequestV06 : IOuterRecord
 {
     /// <summary>

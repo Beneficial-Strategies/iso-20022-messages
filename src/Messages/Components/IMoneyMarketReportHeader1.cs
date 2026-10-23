@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the money market statistical report instrument related header details.
 /// </summary>
 [IsoId("_MVvycJfiEeSfnc-VXAEapg")]
+[IsoDisplayName(@"Money Market Report Header")]
 public interface IMoneyMarketReportHeader1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMoneyMarketReportHeader1 : IIsoComponent
     [IsoId("_ziweIJfaEeS92bWS8Fjfig")]
     [DisplayName("Reporting Agent")]
     [IsoXmlTag("RptgAgt")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier ReportingAgent { get; }
 
     /// <summary>

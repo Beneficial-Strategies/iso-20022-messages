@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateCode32Choice;
 /// Date expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_5mw3vZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDateCode32Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitReportOrError5Choice;
 /// <summary>
 /// Business Report.
 /// </summary>
+[IsoDisplayName(@"Business Report")]
 public interface IBusinessReport : ILimitReportOrError5Choice, IIsoChoiceVariant
 {
     /// <summary>

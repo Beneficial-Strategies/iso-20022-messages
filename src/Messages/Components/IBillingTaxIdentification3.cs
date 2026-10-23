@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Billing Tax Identification3.
 /// </summary>
 [IsoId("_YgExIzE_Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Billing Tax Identification3")]
 public interface IBillingTaxIdentification3 : IIsoComponent
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
 /// <summary>
 /// Not Specified Rate.
 /// </summary>
+[IsoDisplayName(@"Not Specified Rate")]
 public interface INotSpecifiedRate : IInterestRateUsedForPaymentFormat11Choice, IIsoChoiceVariant
 {
     /// <summary>

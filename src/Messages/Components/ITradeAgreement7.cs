@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date and identification of a trade.
 /// </summary>
 [IsoId("_etyaUR3aEeKXIbeXfdPzuw")]
+[IsoDisplayName(@"Trade Agreement")]
 public interface ITradeAgreement7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeAgreement7 : IIsoComponent
     [IsoId("_e6D7xR3aEeKXIbeXfdPzuw")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITradeAgreement7 : IIsoComponent
     [IsoId("_e6D7yR3aEeKXIbeXfdPzuw")]
     [DisplayName("Originator Reference")]
     [IsoXmlTag("OrgtrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginatorReference { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface ITradeAgreement7 : IIsoComponent
     [IsoId("_e6D7zR3aEeKXIbeXfdPzuw")]
     [DisplayName("Common Reference")]
     [IsoXmlTag("CmonRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonReference { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface ITradeAgreement7 : IIsoComponent
     [IsoId("_e6D70R3aEeKXIbeXfdPzuw")]
     [DisplayName("Operation Type")]
     [IsoXmlTag("OprTp")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? OperationType { get; }
 
     /// <summary>
@@ -49,6 +57,8 @@ public interface ITradeAgreement7 : IIsoComponent
     [IsoId("_e6D71R3aEeKXIbeXfdPzuw")]
     [DisplayName("Operation Scope")]
     [IsoXmlTag("OprScp")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? OperationScope { get; }
 
     /// <summary>
@@ -57,5 +67,6 @@ public interface ITradeAgreement7 : IIsoComponent
     [IsoId("_jjT-0h3aEeKXIbeXfdPzuw")]
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SettlementSessionIdentifier { get; }
 }

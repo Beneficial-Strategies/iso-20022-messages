@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of search criteria for the financial investigation.
 /// </summary>
 [IsoId("_sxyTUDv7EeGKuZXNQxGH3g")]
+[IsoDisplayName(@"Search Criteria 1 Choice")]
 public interface ISearchCriteria1Choice : IIsoChoice { }

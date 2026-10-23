@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateStatus3Choice;
 /// Standard code to specify the status of the rate.
 /// </summary>
 [IsoId("_VJurI0EIEeWVgfuHGaKtRQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRateStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

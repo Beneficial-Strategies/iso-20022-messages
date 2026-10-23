@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indication that the reports subject of reconciliation do not match.
 /// </summary>
 [IsoId("_AxRVRcK3EeuFNp8LZAnorg")]
+[IsoDisplayName(@"Reconciliation Result")]
 public interface IReconciliationResult10 : IIsoComponent
 {
     /// <summary>

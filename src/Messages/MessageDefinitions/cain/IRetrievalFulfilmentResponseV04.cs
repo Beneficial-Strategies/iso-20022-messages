@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_jEl2MROIEfC1ZfCQz0xB3g")]
 [IsoMessage("cain.015.001.04", "RtrvlFlfmtRspn", "urn:iso:std:iso:20022:tech:xsd:cain.015.001.04")]
+[IsoDisplayName(@"Retrieval Fulfilment Response V04")]
 public interface IRetrievalFulfilmentResponseV04 : IOuterRecord
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IRetrievalFulfilmentResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode6> Programme { get; }
 
     /// <summary>
@@ -158,6 +160,7 @@ public interface IRetrievalFulfilmentResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -179,6 +182,7 @@ public interface IRetrievalFulfilmentResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -193,6 +197,7 @@ public interface IRetrievalFulfilmentResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Dispute Data")]
     [IsoXmlTag("DsptData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeData5> DisputeData { get; }
 
     /// <summary>
@@ -200,6 +205,7 @@ public interface IRetrievalFulfilmentResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Retrieval Fulfilment Instructions")]
     [IsoXmlTag("RtrvlFlfmtInstrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> RetrievalFulfilmentInstructions { get; }
 
     /// <summary>
@@ -221,6 +227,7 @@ public interface IRetrievalFulfilmentResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -228,6 +235,7 @@ public interface IRetrievalFulfilmentResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -235,6 +243,7 @@ public interface IRetrievalFulfilmentResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Certificate against which all currency control transactions are registered.
 /// </summary>
 [IsoId("_IXbngNLiEeSdq5yU2aaSNw")]
+[IsoDisplayName(@"Transaction Certificate")]
 public interface ITransactionCertificate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionCertificate1 : IIsoComponent
     [IsoId("_f7w0gNLiEeSdq5yU2aaSNw")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ITransactionCertificate1 : IIsoComponent
     [IsoId("_IfapYNLjEeSdq5yU2aaSNw")]
     [DisplayName("Certificate Record")]
     [IsoXmlTag("CertRcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionCertificateRecord1> CertificateRecord { get; }
 
     /// <summary>
@@ -65,5 +69,6 @@ public interface ITransactionCertificate1 : IIsoComponent
     [IsoId("_Uu73cTmzEeWDb47rJ6ki4Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

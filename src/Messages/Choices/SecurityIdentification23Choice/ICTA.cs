@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice;
 /// Identifier of a security assigned by the Consolidated Tape Association.
 /// </summary>
 [IsoId("_CSq4PyGQEeW7gKYhAMEFCw")]
+[IsoDisplayName(@"CTA")]
 public interface ICTA : ISecurityIdentification23Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ICTA : ISecurityIdentification23Choice, IIsoChoiceVariant
     /// Identifier of a security assigned by the Consolidated Tape Association.
     /// </summary>
     [IsoXmlTag("CTA")]
+    [IsoSimpleType(IsoSimpleType.ConsolidatedTapeAssociationIdentifier)]
     ConsolidatedTapeAssociationIdentifier Value { get; }
 }

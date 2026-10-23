@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Pending Reason32.
 /// </summary>
 [IsoId("_xvVKsYcSEe-U27oWwgmhCQ")]
+[IsoDisplayName(@"Pending Reason32")]
 public interface IPendingReason32 : IIsoComponent
 {
     /// <summary>

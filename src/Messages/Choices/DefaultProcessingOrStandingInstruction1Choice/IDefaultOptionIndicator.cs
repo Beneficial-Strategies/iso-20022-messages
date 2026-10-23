@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DefaultProcessingOrStandingInstr
 /// Indicates whether the option, for example, currency option, will be selected by default if no instruction is provided by the account owner.
 /// </summary>
 [IsoId("_Q0VlA9p-Ed-ak6NoX_4Aeg_-887513505")]
+[IsoDisplayName(@"Default Option Indicator")]
 public interface IDefaultOptionIndicator
     : IDefaultProcessingOrStandingInstruction1Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IDefaultOptionIndicator
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("DfltOptnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

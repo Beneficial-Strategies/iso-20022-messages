@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Source of a price quotation when it is not the local market.
 /// </summary>
 [IsoId("_Qebmfdp-Ed-ak6NoX_4Aeg_-24723485")]
+[IsoDisplayName(@"Price Source")]
 public interface IPriceSource : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,7 @@ public interface IPriceSource : IIsoComponent
     [IsoId("_QelXcdp-Ed-ak6NoX_4Aeg_404714109")]
     [DisplayName("Narrative")]
     [IsoXmlTag("Nrrtv")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Narrative { get; }
 }

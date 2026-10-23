@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("74011c13-f378-449b-98f8-1b323e24a79b")]
 [IsoMessage("reda.001.001.05", "PricRpt", "urn:iso:std:iso:20022:tech:xsd:reda.001.001.05")]
+[IsoDisplayName(@"Price Report V05")]
 public interface IPriceReportV05 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +33,7 @@ public interface IPriceReportV05 : IOuterRecord
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference10> PreviousReference { get; }
 
     /// <summary>
@@ -53,6 +55,8 @@ public interface IPriceReportV05 : IOuterRecord
     /// </summary>
     [DisplayName("Price Report Identification")]
     [IsoXmlTag("PricRptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PriceReportIdentification { get; }
 
     /// <summary>
@@ -67,6 +71,8 @@ public interface IPriceReportV05 : IOuterRecord
     /// </summary>
     [DisplayName("Cancellation Identification")]
     [IsoXmlTag("CxlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationIdentification { get; }
 
     /// <summary>
@@ -74,6 +80,7 @@ public interface IPriceReportV05 : IOuterRecord
     /// </summary>
     [DisplayName("Price Valuation Details")]
     [IsoXmlTag("PricValtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceValuation5> PriceValuationDetails { get; }
 
     /// <summary>
@@ -81,5 +88,6 @@ public interface IPriceReportV05 : IOuterRecord
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

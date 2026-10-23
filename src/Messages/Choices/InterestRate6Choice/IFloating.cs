@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate6Choice;
 /// </summary>
 [IsoId("_nf6kwyc1EeaCIe3n1Gx9ug")]
 [IsoXmlTag("Fltg")]
+[IsoDisplayName(@"Floating")]
 public interface IFloating : IInterestRate6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -36,5 +37,6 @@ public interface IFloating : IInterestRate6Choice, IIsoChoiceVariant
     [IsoId("_XhGXpSc1EeaCIe3n1Gx9ug")]
     [DisplayName("Basis Point Spread")]
     [IsoXmlTag("BsisPtSprd")]
+    [IsoSimpleType(IsoSimpleType.Max5Number)]
     Max5Number BasisPointSpread { get; }
 }

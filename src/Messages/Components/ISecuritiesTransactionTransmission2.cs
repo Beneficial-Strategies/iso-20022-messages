@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the securities order transmission attributes.
 /// </summary>
 [IsoId("_gW374OqLEeSsk6KxwbYJ9w")]
+[IsoDisplayName(@"Securities Transaction Transmission")]
 public interface ISecuritiesTransactionTransmission2 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ISecuritiesTransactionTransmission2 : IIsoComponent
     [IsoId("_N4TSUOqMEeSsk6KxwbYJ9w")]
     [DisplayName("Transmission Indicator")]
     [IsoXmlTag("TrnsmssnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator TransmissionIndicator { get; }
 
     /// <summary>
@@ -27,6 +29,7 @@ public interface ISecuritiesTransactionTransmission2 : IIsoComponent
     [IsoId("_9VEUEeqMEeSsk6KxwbYJ9w")]
     [DisplayName("Transmitting Buyer")]
     [IsoXmlTag("TrnsmttgBuyr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? TransmittingBuyer { get; }
 
     /// <summary>
@@ -36,5 +39,6 @@ public interface ISecuritiesTransactionTransmission2 : IIsoComponent
     [IsoId("_1GQfkOqMEeSsk6KxwbYJ9w")]
     [DisplayName("Transmitting Seller")]
     [IsoXmlTag("TrnsmttgSellr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? TransmittingSeller { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyIdentification3Choic
 /// </summary>
 [IsoId("_ZxnU18EcEea7jLfvGi1PDw")]
 [IsoXmlTag("SctrAndLctn")]
+[IsoDisplayName(@"Sector And Location")]
 public interface ISectorAndLocation : ICounterpartyIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ISectorAndLocation : ICounterpartyIdentification3Choice, IIsoCh
     [IsoId("_oLh_0JfdEeSfnc-VXAEapg")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoSimpleType(IsoSimpleType.SNA2008SectorIdentifier)]
     SNA2008SectorIdentifier Sector { get; }
 
     /// <summary>

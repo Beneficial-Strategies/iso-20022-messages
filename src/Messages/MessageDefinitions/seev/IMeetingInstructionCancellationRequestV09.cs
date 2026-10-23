@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_nIzHgzQ7Ee22Z83HpR5E8w")]
 [IsoMessage("seev.005.001.09", "MtgInstrCxlReq", "urn:iso:std:iso:20022:tech:xsd:seev.005.001.09")]
+[Description(@"Scope|The MeetingInstructionCancellationRequest message is sent by the same party that sent the|MeetingInstruction message. It is sent to request the cancellation of one, some or all of the instructions included in the original MeetingInstruction message.|Usage|This message must be answered by a MeetingInstructionStatus message. |This message definition is intended for use with the Business Application Header (BAH).")]
+[IsoDisplayName(@"Meeting Instruction Cancellation Request V")]
 public interface IMeetingInstructionCancellationRequestV09 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +27,8 @@ public interface IMeetingInstructionCancellationRequestV09 : IOuterRecord
     [IsoId("_nIzHjTQ7Ee22Z83HpR5E8w")]
     [DisplayName("Meeting Instruction Identification")]
     [IsoXmlTag("MtgInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MeetingInstructionIdentification { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IMeetingInstructionCancellationRequestV09 : IOuterRecord
     [IsoId("_nIzHkzQ7Ee22Z83HpR5E8w")]
     [DisplayName("To Be Cancelled Instruction")]
     [IsoXmlTag("ToBeCancInstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICancelInstruction4> ToBeCancelledInstruction { get; }
 
     /// <summary>
@@ -57,5 +62,6 @@ public interface IMeetingInstructionCancellationRequestV09 : IOuterRecord
     [IsoId("_nIzHlTQ7Ee22Z83HpR5E8w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

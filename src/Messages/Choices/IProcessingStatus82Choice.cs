@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the status of an instruction.
 /// </summary>
 [IsoId("_FNlTwRIwEeydmIVkS03esw")]
+[IsoDisplayName(@"Processing Status 82 Choice")]
 public interface IProcessingStatus82Choice : IIsoChoice { }

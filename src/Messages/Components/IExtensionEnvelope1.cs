@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Technical component that contains the validated extension information. This technical envelope allows to segregate the extension information from any other information.
 /// </summary>
 [IsoId("_QzJSM9p-Ed-ak6NoX_4Aeg_-1719963560")]
+[IsoDisplayName(@"Extension Envelope")]
 public interface IExtensionEnvelope1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketType4Choice;
 /// Market type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_Qwm7mNp-Ed-ak6NoX_4Aeg_-1515935124")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMarketType4Choice, IIsoChoiceVariant
 {
     /// <summary>

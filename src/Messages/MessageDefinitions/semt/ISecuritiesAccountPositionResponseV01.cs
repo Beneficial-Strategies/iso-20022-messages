@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesAcctPosRspn",
     "urn:iso:std:iso:20022:tech:xsd:semt.040.001.01"
 )]
+[IsoDisplayName(@"Securities Account Position Response V01")]
 public interface ISecuritiesAccountPositionResponseV01 : IOuterRecord
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface ISecuritiesAccountPositionResponseV01 : IOuterRecord
     /// </summary>
     [DisplayName("Balances")]
     [IsoXmlTag("Bals")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalance30> Balances { get; }
 
     /// <summary>

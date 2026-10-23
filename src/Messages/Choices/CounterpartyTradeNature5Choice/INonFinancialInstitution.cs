@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature5Choice;
 /// </summary>
 [IsoId("_97ZDE7sAEea-m5tPqiasmQ")]
 [IsoXmlTag("NFI")]
+[IsoDisplayName(@"Non Financial Institution")]
 public interface INonFinancialInstitution : ICounterpartyTradeNature5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface INonFinancialInstitution : ICounterpartyTradeNature5Choice, IIs
     [IsoId("_Q2aJAcDyEeW6TPUXKSV6dQ")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoSimpleType(IsoSimpleType.NACEDomainIdentifier)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<NACEDomainIdentifier> Sector { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface INonFinancialInstitution : ICounterpartyTradeNature5Choice, IIs
     [IsoId("_Q2aJBcDyEeW6TPUXKSV6dQ")]
     [DisplayName("Clearing Threshold")]
     [IsoXmlTag("ClrThrshld")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ClearingThreshold { get; }
 
     /// <summary>
@@ -34,5 +38,6 @@ public interface INonFinancialInstitution : ICounterpartyTradeNature5Choice, IIs
     [IsoId("_Q2aJB8DyEeW6TPUXKSV6dQ")]
     [DisplayName("Directly Linked Activity")]
     [IsoXmlTag("DrctlyLkdActvty")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DirectlyLinkedActivity { get; }
 }

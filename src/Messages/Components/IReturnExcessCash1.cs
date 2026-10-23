@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the return excess cash type and the collateral currency.
 /// </summary>
 [IsoId("_hAr8AALpEeutW5-TpeYJhA")]
+[IsoDisplayName(@"Return Excess Cash")]
 public interface IReturnExcessCash1 : IIsoComponent
 {
     /// <summary>

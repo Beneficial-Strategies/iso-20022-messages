@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action details.
 /// </summary>
 [IsoId("_cj6Cwb-zEeeb2ZBoAlSG1Q")]
+[IsoDisplayName(@"Corporate Action SD")]
 public interface ICorporateActionSD20 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionSD20 : IIsoComponent
     [IsoId("_czxDsb-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICorporateActionSD20 : IIsoComponent
     [IsoId("_czxDs7-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Lottery Sequence Number")]
     [IsoXmlTag("LtrySeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? LotterySequenceNumber { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ICorporateActionSD20 : IIsoComponent
     [IsoId("_czxDtb-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Lottery Date")]
     [IsoXmlTag("LtryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LotteryDate { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface ICorporateActionSD20 : IIsoComponent
     [IsoId("_czxDvb-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Process To Date")]
     [IsoXmlTag("PrcToDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ProcessToDate { get; }
 }

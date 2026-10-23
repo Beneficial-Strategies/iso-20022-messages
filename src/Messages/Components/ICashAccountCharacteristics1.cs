@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the characteristics of the cash account.
 /// </summary>
 [IsoId("_6RmCfpqlEeGSON8vddiWzQ_-1885901268")]
+[IsoDisplayName(@"Cash Account Characteristics")]
 public interface ICashAccountCharacteristics1 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ICashAccountCharacteristics1 : IIsoComponent
     [IsoId("_6RvMZpqlEeGSON8vddiWzQ_1345625765")]
     [DisplayName("Delayed Debit Date")]
     [IsoXmlTag("DelydDbtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DelayedDebitDate { get; }
 
     /// <summary>
@@ -73,6 +75,8 @@ public interface ICashAccountCharacteristics1 : IIsoComponent
     [IsoId("_6RvMZ5qlEeGSON8vddiWzQ_717549851")]
     [DisplayName("Settlement Advice")]
     [IsoXmlTag("SttlmAdvc")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? SettlementAdvice { get; }
 
     /// <summary>

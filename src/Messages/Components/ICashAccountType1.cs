@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the cash account.
 /// </summary>
 [IsoId("_VJzJZdp-Ed-ak6NoX_4Aeg_-1239141267")]
+[IsoDisplayName(@"Cash Account Type")]
 public interface ICashAccountType1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICashAccountType1 : IIsoComponent
     [IsoId("_VJzJZ9p-Ed-ak6NoX_4Aeg_-1141250703")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

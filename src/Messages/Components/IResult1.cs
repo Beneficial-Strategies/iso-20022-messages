@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Summation of the call amounts either due to A or due to B.
 /// </summary>
 [IsoId("_UlvaEtp-Ed-ak6NoX_4Aeg_1884281908")]
+[IsoDisplayName(@"Result")]
 public interface IResult1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IResult1 : IIsoComponent
     [IsoId("_UlvaFdp-Ed-ak6NoX_4Aeg_903687993")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the Consolidated Tape Provider (CTP) report header.
 /// </summary>
 [IsoId("_MpVqYQJ4EfGh4rQVEvIxOg")]
+[IsoDisplayName(@"Securities Market Report Header5")]
 public interface ISecuritiesMarketReportHeader5 : IIsoComponent
 {
     /// <summary>

@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctMndtMntncAmdmntReq",
     "urn:iso:std:iso:20022:tech:xsd:acmt.018.001.03"
 )]
+[Description(@"The AccountMandateMaintenanceAmendmentRequest message is sent from an organisation to a financial institution as part of the account maintenance process. It is sent in response to a request from the financial institution to send additional information. Usage: this update is only about mandate information. |If modification codes are not used: the organisation will specify under the “Mandate” and “Group” tags the complete information as it should be in the financial institution’s records after processing the update request. |If modification codes are used (in that case, they must be used everywhere): the organisation will specify under the “Mandate” and “Group” tags which elements must be added, deleted, modified, or if they are unchanged.|It is not possible to update the account characteristics or organisation information with this message.|")]
+[IsoDisplayName(@"Account Mandate Maintenance Amendment Request V")]
 public interface IAccountMandateMaintenanceAmendmentRequestV03 : IOuterRecord
 {
     /// <summary>
@@ -60,6 +62,7 @@ public interface IAccountMandateMaintenanceAmendmentRequestV03 : IOuterRecord
     [IsoId("_bf9RJW2PEei3KuUgpx7Xcw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountForAction1> AccountIdentification { get; }
 
     /// <summary>
@@ -84,6 +87,7 @@ public interface IAccountMandateMaintenanceAmendmentRequestV03 : IOuterRecord
     [IsoId("_bf9RK22PEei3KuUgpx7Xcw")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOperationMandate5> Mandate { get; }
 
     /// <summary>
@@ -92,6 +96,7 @@ public interface IAccountMandateMaintenanceAmendmentRequestV03 : IOuterRecord
     [IsoId("_bf9RLW2PEei3KuUgpx7Xcw")]
     [DisplayName("Group")]
     [IsoXmlTag("Grp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGroup3> Group { get; }
 
     /// <summary>
@@ -100,6 +105,7 @@ public interface IAccountMandateMaintenanceAmendmentRequestV03 : IOuterRecord
     [IsoId("_bf9RL22PEei3KuUgpx7Xcw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature3> DigitalSignature { get; }
 
     /// <summary>
@@ -108,5 +114,6 @@ public interface IAccountMandateMaintenanceAmendmentRequestV03 : IOuterRecord
     [IsoId("_bf9RMW2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

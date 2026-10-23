@@ -24,6 +24,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnEvtPrcgStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.032.002.08"
 )]
+[Description(@"Scope|An account servicer sends the CorporateActionEventProcessingStatusAdvice message to an account owner or its designated agent to report processing status of a corporate action event.||The account servicer uses this message to provide a reason as to why a corporate action event has not been completed by the announced payment dates.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), |using the relevant elements in the business application header (BAH).")]
+[IsoDisplayName(@"Corporate Action Event Processing Status Advice 002 V")]
 public interface ICorporateActionEventProcessingStatusAdvice002V08 : IOuterRecord
 {
     /// <summary>
@@ -40,6 +42,7 @@ public interface ICorporateActionEventProcessingStatusAdvice002V08 : IOuterRecor
     [IsoId("_i6LFuh9PEeuFz_FaCzCLgQ")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification34> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -56,6 +59,7 @@ public interface ICorporateActionEventProcessingStatusAdvice002V08 : IOuterRecor
     [IsoId("_i6LswR9PEeuFz_FaCzCLgQ")]
     [DisplayName("Event Processing Status")]
     [IsoXmlTag("EvtPrcgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEventProcessingStatus6Choice> EventProcessingStatus { get; }
 
     /// <summary>
@@ -72,5 +76,6 @@ public interface ICorporateActionEventProcessingStatusAdvice002V08 : IOuterRecor
     [IsoId("_i6LsxR9PEeuFz_FaCzCLgQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification182Choice;
 /// Number assigned by a tax authority to an entity.
 /// </summary>
 [IsoId("_NkXrR5TJEemqYPWMBuVawg")]
+[IsoDisplayName(@"Tax Identification Number")]
 public interface ITaxIdentificationNumber : IPartyIdentification182Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ITaxIdentificationNumber : IPartyIdentification182Choice, IIsoC
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("TaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

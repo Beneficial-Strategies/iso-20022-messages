@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to uniquely and unambiguously identify a financial institution or a branch of a financial institution.
 /// </summary>
 [IsoId("_TFB1RNp-Ed-ak6NoX_4Aeg_-736060150")]
+[IsoDisplayName(@"Branch And Financial Institution Identification")]
 public interface IBranchAndFinancialInstitutionIdentification4 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Ratio expressed as amount per quantity.
 /// </summary>
 [IsoId("_UH8Dxtp-Ed-ak6NoX_4Aeg_1587658520")]
+[IsoDisplayName(@"Amount And Quantity Ratio")]
 public interface IAmountAndQuantityRatio1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IAmountAndQuantityRatio1 : IIsoComponent
     [IsoId("_UH8DyNp-Ed-ak6NoX_4Aeg_1641222331")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Quantity { get; }
 }

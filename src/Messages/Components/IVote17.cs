@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vote expressed for one resolution.
 /// </summary>
 [IsoId("_K1MqoTUGEe2tRf29bleifQ")]
+[IsoDisplayName(@"Vote")]
 public interface IVote17 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVote17 : IIsoComponent
     [IsoId("_LMABEzUGEe2tRf29bleifQ")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IVote17 : IIsoComponent
     [IsoId("_IZCKMTUGEe2tRf29bleifQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IItemDescription1> Description { get; }
 
     /// <summary>
@@ -137,6 +141,9 @@ public interface IVote17 : IIsoComponent
     [IsoId("_LMABLTUGEe2tRf29bleifQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [MinLength(0)]
+    [MaxLength(4)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryVote2> Proprietary { get; }
 
     /// <summary>
@@ -145,5 +152,6 @@ public interface IVote17 : IIsoComponent
     [IsoId("_LMABLzUGEe2tRf29bleifQ")]
     [DisplayName("Withdrawn")]
     [IsoXmlTag("Wdrwn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Withdrawn { get; }
 }

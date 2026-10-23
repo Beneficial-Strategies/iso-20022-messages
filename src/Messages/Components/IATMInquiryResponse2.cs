@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the response of an ATM inquiry from an ATM manager.
 /// </summary>
 [IsoId("_iDudca4WEeW_TaP-ygI0SQ")]
+[IsoDisplayName(@"ATM Inquiry Response")]
 public interface IATMInquiryResponse2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party and its role.
 /// </summary>
 [IsoId("_C0fGQSFYEeWgV9SQSyaAog")]
+[IsoDisplayName(@"Intermediary")]
 public interface IIntermediary33 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IIntermediary33 : IIsoComponent
     [IsoId("_k811ASOwEeW1B5IyTFlYMA")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 
     /// <summary>

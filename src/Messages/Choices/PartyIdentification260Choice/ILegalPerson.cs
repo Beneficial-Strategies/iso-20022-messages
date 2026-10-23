@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification260Choice;
 /// <summary>
 /// Legal Person.
 /// </summary>
+[IsoDisplayName(@"Legal Person")]
 public interface ILegalPerson : IPartyIdentification260Choice, IIsoChoiceVariant
 {
     /// <summary>

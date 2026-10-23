@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Proprietary vote type and quantity voted.
 /// </summary>
 [IsoId("_EarWo7qLEemCAOifqHrKJw")]
+[IsoDisplayName(@"Proprietary Vote")]
 public interface IProprietaryVote2 : IIsoComponent
 {
     /// <summary>

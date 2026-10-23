@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Aim of the non financial request.
 /// </summary>
 [IsoId("_Oxa80bX7EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Non Financial Request Content Component6")]
 public interface INonFinancialRequestContentComponent6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INonFinancialRequestContentComponent6 : IIsoComponent
     [IsoId("_Oyc3lbX7EfCUZfsQO4rYeA")]
     [DisplayName("Non Financial Request Type")]
     [IsoXmlTag("NonFinReqTp")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<NonFinancialRequestType2Code> NonFinancialRequestType { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface INonFinancialRequestContentComponent6 : IIsoComponent
     [IsoId("_Oyc3obX7EfCUZfsQO4rYeA")]
     [DisplayName("Additional Request")]
     [IsoXmlTag("AddtlReq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExternallyDefinedData5> AdditionalRequest { get; }
 }

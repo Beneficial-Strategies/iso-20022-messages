@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification34Choice;
 /// </summary>
 [IsoId("_cdRpFZKQEeWHWpTQn1FFVg")]
 [IsoXmlTag("AcctsList")]
+[IsoDisplayName(@"Accounts List")]
 public interface IAccountsList : IAccountIdentification34Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IAccountsList : IAccountIdentification34Choice, IIsoChoiceVaria
     [IsoId("_cdRpJZKQEeWHWpTQn1FFVg")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINXMax35Text SafekeepingAccount { get; }
 
     /// <summary>

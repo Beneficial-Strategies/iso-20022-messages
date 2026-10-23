@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "IntraBalMvmntPdgRpt",
     "urn:iso:std:iso:20022:tech:xsd:camt.085.001.01"
 )]
+[Description(@"This IntraBalanceMovementPendingReport message is sent from a settlement infrastructure to an account owner/request to report the intra-balance movement instructions, previously sent by the account owner, that have a pending status.||The message may also be used to: |-	re-send a message sent by the account owner to the account servicer (the sub-function of the message is ""Duplicate"") |-	provide a third party with a copy of a message being sent by the account owner for information (the sub-function of the message is ""Copy"") |-	- re-send to a third party a copy of a message being sent by the account owner for information (the sub-function of the message is ""Copy Duplicate"").")]
+[IsoDisplayName(@"Intra Balance Movement Pending Report V")]
 public interface IIntraBalanceMovementPendingReportV01 : IOuterRecord
 {
     /// <summary>
@@ -77,5 +79,6 @@ public interface IIntraBalanceMovementPendingReportV01 : IOuterRecord
     [IsoId("_DLtLMTncEem7JZMuWtwtsg")]
     [DisplayName("Movements")]
     [IsoXmlTag("Mvmnts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalancePending5> Movements { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Formal document used to record a fact and used as proof of the fact that goods have been insured under an insurance policy.
 /// </summary>
 [IsoId("_Tm2v9tp-Ed-ak6NoX_4Aeg_888710434")]
+[IsoDisplayName(@"Insurance Data Set")]
 public interface IInsuranceDataSet1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IInsuranceDataSet1 : IIsoComponent
     [IsoId("_Tm2v-dp-Ed-ak6NoX_4Aeg_1545335745")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate IssueDate { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IInsuranceDataSet1 : IIsoComponent
     [IsoId("_Tm2v-tp-Ed-ak6NoX_4Aeg_1571192429")]
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EffectiveDate { get; }
 
     /// <summary>
@@ -57,6 +60,8 @@ public interface IInsuranceDataSet1 : IIsoComponent
     [IsoId("_Tm2v_Np-Ed-ak6NoX_4Aeg_1786375668")]
     [DisplayName("Insurance Document Identification")]
     [IsoXmlTag("InsrncDocId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InsuranceDocumentIdentification { get; }
 
     /// <summary>
@@ -81,6 +86,8 @@ public interface IInsuranceDataSet1 : IIsoComponent
     [IsoId("_Tm_54tp-Ed-ak6NoX_4Aeg_-88042726")]
     [DisplayName("Insured Goods Description")]
     [IsoXmlTag("InsrdGoodsDesc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? InsuredGoodsDescription { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface IInsuranceDataSet1 : IIsoComponent
     [IsoId("_Tm_549p-Ed-ak6NoX_4Aeg_515013339")]
     [DisplayName("Insurance Conditions")]
     [IsoXmlTag("InsrncConds")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> InsuranceConditions { get; }
 
     /// <summary>
@@ -97,6 +105,7 @@ public interface IInsuranceDataSet1 : IIsoComponent
     [IsoId("_Tm_55Np-Ed-ak6NoX_4Aeg_812386949")]
     [DisplayName("Insurance Clauses")]
     [IsoXmlTag("InsrncClauses")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<InsuranceClauses1Code> InsuranceClauses { get; }
 
     /// <summary>

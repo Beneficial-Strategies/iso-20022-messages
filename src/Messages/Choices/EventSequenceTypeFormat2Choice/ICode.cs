@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventSequenceTypeFormat2Choice;
 /// Type of an event sequence, in a coded format.
 /// </summary>
 [IsoId("_6UsaIfyVEeiKOe8GCUL1Lg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IEventSequenceTypeFormat2Choice, IIsoChoiceVariant
 {
     /// <summary>

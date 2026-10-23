@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to a proxy  identification of the account.
 /// </summary>
 [IsoId("_luR59Xh2EeidzqjNEfehPg")]
+[IsoDisplayName(@"Proxy Account Identification")]
 public interface IProxyAccountIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IProxyAccountIdentification1 : IIsoComponent
     [IsoId("_luR593h2EeidzqjNEfehPg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text Identification { get; }
 }

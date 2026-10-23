@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification263Choice;
 
 /// <summary>Unique and unambiguous identification of a person, for example a passport.</summary>
 [IsoId("_EnMLR63pEfCN-rGCydxGUA")]
+[IsoDisplayName(@"Individual Owner Identification")]
 public interface IIndividualOwnerIdentification : IPartyIdentification263Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

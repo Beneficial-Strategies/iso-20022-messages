@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the identification of a person.
 /// </summary>
 [IsoId("_eNbcAVyuEeWBopJHIRjb4g")]
+[IsoDisplayName(@"Person Identification")]
 public interface IPersonIdentification12 : IIsoComponent
 {
     /// <summary>

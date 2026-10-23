@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "InvstmtFndRptReq",
     "urn:iso:std:iso:20022:tech:xsd:reda.005.001.03"
 )]
+[Description(@"Scope|The InvestmentFundReportRequest message is sent by a report user, for example, a professional investor, investment fund distributor, market data provider, regulator or other interested party to the report provider, for example, a fund promoter, fund management company, transfer agent, or market data provider to request a report.|The Investment Fund Report Request message can be used to request one or many fund reference data report messages.|Usage|If the InvestmentFundReportRequest message is used to request a fund reference data report then the request can specify the financial instrument for which the report is requested. Other appropriate parameters can also be included. It is also possible to indicate that the request is an open request, that is, there is no specific criteria for the report requested. For example, a request for a fund reference data report that is specified as ""no criteria"" means that the request is a request for a reference data report messages for all funds.")]
+[IsoDisplayName(@"Investment Fund Report Request V")]
 public interface IInvestmentFundReportRequestV03 : IOuterRecord
 {
     /// <summary>
@@ -52,5 +54,6 @@ public interface IInvestmentFundReportRequestV03 : IOuterRecord
     [IsoId("_qIk6aWolEeipaMTLlhaKMQ")]
     [DisplayName("Report Request")]
     [IsoXmlTag("RptReq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundParameters4Choice> ReportRequest { get; }
 }

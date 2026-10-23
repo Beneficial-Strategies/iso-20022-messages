@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the index used to define the rate and optionaly the basis point spread.
 /// </summary>
 [IsoId("_Qkr_dtp-Ed-ak6NoX_4Aeg_1444401531")]
+[IsoDisplayName(@"Variable Interest 1 Rate")]
 public interface IVariableInterest1Rate : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVariableInterest1Rate : IIsoComponent
     [IsoId("_Qk1wcNp-Ed-ak6NoX_4Aeg_-276733537")]
     [DisplayName("Index")]
     [IsoXmlTag("Indx")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Index { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IVariableInterest1Rate : IIsoComponent
     [IsoId("_Qk1wcdp-Ed-ak6NoX_4Aeg_-1323070567")]
     [DisplayName("Basis Point Spread")]
     [IsoXmlTag("BsisPtSprd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? BasisPointSpread { get; }
 }

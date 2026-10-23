@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument28Choice;
 
 /// <summary>Credit transfer details.</summary>
 [IsoId("d5197593-8e5c-46ce-bce6-c747be5f33fb")]
+[IsoDisplayName(@"Credit Transfer Details")]
 public interface ICreditTransferDetails : IPaymentInstrument28Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

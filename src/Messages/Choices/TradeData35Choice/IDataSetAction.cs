@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData35Choice;
 /// Where no transaction was concluded, this field should be set so that a valid transaction data file can be submitted to ESMA as per daily submission requirements.
 /// </summary>
 [IsoId("_hSAnIcK4EeuFNp8LZAnorg")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : ITradeData35Choice, IIsoChoiceVariant
 {
     /// <summary>

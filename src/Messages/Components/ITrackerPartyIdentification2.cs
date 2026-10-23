@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the identification of a person or an organisation or a financial institution in the tracker.
 /// </summary>
 [IsoId("_qEoGKGOSEeq5Ar_w98FvsA")]
+[IsoDisplayName(@"Tracker Party Identification")]
 public interface ITrackerPartyIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITrackerPartyIdentification2 : IIsoComponent
     [IsoId("_qEoGKmOSEeq5Ar_w98FvsA")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>

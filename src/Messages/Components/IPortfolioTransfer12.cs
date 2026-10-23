@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Type of product and assets to be transferred.
 /// </summary>
 [IsoId("_YsEbzelqEeuvhrZwLF0fDg")]
+[IsoDisplayName(@"Portfolio Transfer")]
 public interface IPortfolioTransfer12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPortfolioTransfer12 : IIsoComponent
     [IsoId("_ZCbGQ-lqEeuvhrZwLF0fDg")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPortfolioTransfer12 : IIsoComponent
     [IsoId("_ZCbGRelqEeuvhrZwLF0fDg")]
     [DisplayName("Transfer Identification")]
     [IsoXmlTag("TrfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IPortfolioTransfer12 : IIsoComponent
     [IsoId("_ZCbGSelqEeuvhrZwLF0fDg")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument101> FinancialInstrumentAssetForTransfer { get; }
 
     /// <summary>
@@ -49,5 +55,6 @@ public interface IPortfolioTransfer12 : IIsoComponent
     [IsoId("_ZCbGS-lqEeuvhrZwLF0fDg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

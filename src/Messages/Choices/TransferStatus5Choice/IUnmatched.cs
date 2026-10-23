@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus5Choice;
 /// Status of the transfer is unmatched.
 /// </summary>
 [IsoId("_WY1VReijEeuLe8v4JEtDDg")]
+[IsoDisplayName(@"Unmatched")]
 public interface IUnmatched : ITransferStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

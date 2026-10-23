@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the first leg in a two leg transaction process.
 /// </summary>
 [IsoId("_Athp0NokEeC60axPepSq7g_480086930")]
+[IsoDisplayName(@"Two Leg Transaction Details")]
 public interface ITwoLegTransactionDetails1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITwoLegTransactionDetails1 : IIsoComponent
     [IsoId("_Atra0dokEeC60axPepSq7g_769169945")]
     [DisplayName("Opening Leg Identification")]
     [IsoXmlTag("OpngLegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OpeningLegIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ITwoLegTransactionDetails1 : IIsoComponent
     [IsoId("_Atra0tokEeC60axPepSq7g_991534697")]
     [DisplayName("Closing Leg Identification")]
     [IsoXmlTag("ClsgLegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClosingLegIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ITwoLegTransactionDetails1 : IIsoComponent
     [IsoId("_Atra1NokEeC60axPepSq7g_1134902269")]
     [DisplayName("Other Amounts")]
     [IsoXmlTag("OthrAmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherAmounts16> OtherAmounts { get; }
 
     /// <summary>
@@ -57,6 +63,8 @@ public interface ITwoLegTransactionDetails1 : IIsoComponent
     [IsoId("_Atra1dokEeC60axPepSq7g_301140228")]
     [DisplayName("Second Leg Narrative")]
     [IsoXmlTag("ScndLegNrrtv")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SecondLegNarrative { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters to communicate with a host.
 /// </summary>
 [IsoId("_ghX0oQ0WEeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Network Parameters")]
 public interface INetworkParameters7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INetworkParameters7 : IIsoComponent
     [IsoId("_gsopcQ0WEeqUVL7sB4m7NA")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetworkParameters9> Address { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface INetworkParameters7 : IIsoComponent
     [IsoId("_gsopcw0WEeqUVL7sB4m7NA")]
     [DisplayName("User Name")]
     [IsoXmlTag("UsrNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? UserName { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface INetworkParameters7 : IIsoComponent
     [IsoId("_gsopdQ0WEeqUVL7sB4m7NA")]
     [DisplayName("Access Code")]
     [IsoXmlTag("AccsCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary? AccessCode { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface INetworkParameters7 : IIsoComponent
     [IsoId("_gsopdw0WEeqUVL7sB4m7NA")]
     [DisplayName("Server Certificate")]
     [IsoXmlTag("SvrCert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10KBinary> ServerCertificate { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface INetworkParameters7 : IIsoComponent
     [IsoId("_gsopeQ0WEeqUVL7sB4m7NA")]
     [DisplayName("Server Certificate Identifier")]
     [IsoXmlTag("SvrCertIdr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max140Binary> ServerCertificateIdentifier { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface INetworkParameters7 : IIsoComponent
     [IsoId("_gspQgQ0WEeqUVL7sB4m7NA")]
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10KBinary> ClientCertificate { get; }
 
     /// <summary>
@@ -65,5 +73,7 @@ public interface INetworkParameters7 : IIsoComponent
     [IsoId("_gspQgw0WEeqUVL7sB4m7NA")]
     [DisplayName("Security Profile")]
     [IsoXmlTag("SctyPrfl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecurityProfile { get; }
 }

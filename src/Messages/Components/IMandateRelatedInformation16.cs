@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details related to a direct debit mandate signed between the creditor and the debtor.
 /// </summary>
 [IsoId("_wJuO0TEyEe6g-ffJsqGiSA")]
+[Description(@"Provides further details related to a direct debit mandate signed between the creditor and the debtor.")]
+[IsoDisplayName(@"Mandate Related Information16")]
 public interface IMandateRelatedInformation16 : IIsoComponent
 {
     /// <summary>

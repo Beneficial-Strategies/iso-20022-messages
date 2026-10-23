@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Formal document used to record a fact and used as proof of the fact, in the context of a commercial trade transaction.
 /// </summary>
 [IsoId("_2LOxkTANEeOKib24wnHaFg")]
+[IsoDisplayName(@"Certificate Data Set")]
 public interface ICertificateDataSet2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICertificateDataSet2 : IIsoComponent
     [IsoId("_2nSbdTANEeOKib24wnHaFg")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItemAndPOIdentification1> LineItem { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ICertificateDataSet2 : IIsoComponent
     [IsoId("_2nSbeTANEeOKib24wnHaFg")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate IssueDate { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface ICertificateDataSet2 : IIsoComponent
     [IsoId("_2nSbgTANEeOKib24wnHaFg")]
     [DisplayName("Authorised Inspector Indicator")]
     [IsoXmlTag("AuthrsdInspctrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AuthorisedInspectorIndicator { get; }
 
     /// <summary>
@@ -89,6 +93,8 @@ public interface ICertificateDataSet2 : IIsoComponent
     [IsoId("_2nSbgzANEeOKib24wnHaFg")]
     [DisplayName("Certificate Identification")]
     [IsoXmlTag("CertId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CertificateIdentification { get; }
 
     /// <summary>
@@ -105,6 +111,8 @@ public interface ICertificateDataSet2 : IIsoComponent
     [IsoId("_2nSbhzANEeOKib24wnHaFg")]
     [DisplayName("Goods Description")]
     [IsoXmlTag("GoodsDesc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? GoodsDescription { get; }
 
     /// <summary>
@@ -137,5 +145,6 @@ public interface ICertificateDataSet2 : IIsoComponent
     [IsoId("_2nSbjzANEeOKib24wnHaFg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> AdditionalInformation { get; }
 }

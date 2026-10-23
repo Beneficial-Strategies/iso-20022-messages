@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient15Choice;
 /// <summary>
 /// Key Identifier.
 /// </summary>
+[IsoDisplayName(@"Key Identifier")]
 public interface IKeyIdentifier : IRecipient15Choice, IIsoChoiceVariant
 {
     /// <summary>

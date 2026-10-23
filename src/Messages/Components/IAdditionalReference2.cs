@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// References a related message or provides another reference, such as a pool reference, linking a set of messages. The party which issued the related reference may be the Sender of the referenced message or a party other than the Sender.
 /// </summary>
 [IsoId("_RNE1Kdp-Ed-ak6NoX_4Aeg_-577369889")]
+[IsoDisplayName(@"Additional Reference")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IAdditionalReference2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IAdditionalReference2 : IIsoComponent
     [IsoId("_RNE1Ktp-Ed-ak6NoX_4Aeg_-248596875")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Reference { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IAdditionalReference2 : IIsoComponent
     [IsoId("_RNE1LNp-Ed-ak6NoX_4Aeg_-248596012")]
     [DisplayName("Message Name")]
     [IsoXmlTag("MsgNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageName { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Shipping or Courier Service delivery.
 /// </summary>
 [IsoId("_ScxsW_cjEeiW-auGnDPZIw")]
+[IsoDisplayName(@"Shipping Data")]
 public interface IShippingData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IShippingData1 : IIsoComponent
     [IsoId("_ScxsXvcjEeiW-auGnDPZIw")]
     [DisplayName("Invoice Number")]
     [IsoXmlTag("InvcNb")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? InvoiceNumber { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IShippingData1 : IIsoComponent
     [IsoId("_ScyTYfcjEeiW-auGnDPZIw")]
     [DisplayName("Invoice Creation Date Time")]
     [IsoXmlTag("InvcCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? InvoiceCreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IShippingData1 : IIsoComponent
     [IsoId("_ScyTYPcjEeiW-auGnDPZIw")]
     [DisplayName("Service Descriptor Code")]
     [IsoXmlTag("SvcDscrptrCd")]
+    [IsoSimpleType(IsoSimpleType.Max40Text)]
+    [StringLength(40, MinimumLength = 1)]
     Max40Text? ServiceDescriptorCode { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IShippingData1 : IIsoComponent
     [IsoId("_1YnHo_ckEeiW-auGnDPZIw")]
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? InsuranceIndicator { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IShippingData1 : IIsoComponent
     [IsoId("_ScxsYPcjEeiW-auGnDPZIw")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax33> Tax { get; }
 
     /// <summary>
@@ -89,6 +97,8 @@ public interface IShippingData1 : IIsoComponent
     [IsoId("_ScxsY_cjEeiW-auGnDPZIw")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SummaryCommodityIdentification { get; }
 
     /// <summary>
@@ -97,6 +107,7 @@ public interface IShippingData1 : IIsoComponent
     [IsoId("_ScxsYvcjEeiW-auGnDPZIw")]
     [DisplayName("Number Of Packages")]
     [IsoXmlTag("NbOfPackgs")]
+    [IsoSimpleType(IsoSimpleType.Max6NumericText)]
     Max6NumericText? NumberOfPackages { get; }
 
     /// <summary>
@@ -105,6 +116,7 @@ public interface IShippingData1 : IIsoComponent
     [IsoId("_ScxsXPcjEeiW-auGnDPZIw")]
     [DisplayName("Package")]
     [IsoXmlTag("Packg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IShippingPackage1> Package { get; }
 
     /// <summary>
@@ -113,5 +125,7 @@ public interface IShippingData1 : IIsoComponent
     [IsoId("_ScxsXfcjEeiW-auGnDPZIw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

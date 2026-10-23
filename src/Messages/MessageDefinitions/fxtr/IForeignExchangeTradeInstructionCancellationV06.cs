@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// </summary>
 [IsoId("_zZM64UjqEe-KhcStGV4xTg")]
 [IsoMessage("fxtr.016.001.06", "FXTradInstrCxl", "urn:iso:std:iso:20022:tech:xsd:fxtr.016.001.06")]
+[IsoDisplayName(@"Foreign Exchange Trade Instruction Cancellation V06")]
 public interface IForeignExchangeTradeInstructionCancellationV06 : IOuterRecord
 {
     /// <summary>
@@ -95,5 +96,6 @@ public interface IForeignExchangeTradeInstructionCancellationV06 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

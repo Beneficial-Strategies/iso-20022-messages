@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrStatement13Choice;
 /// <summary>
 /// Status Advice.
 /// </summary>
+[IsoDisplayName(@"Status Advice")]
 public interface IStatusAdvice : IStatusOrStatement13Choice, IIsoChoiceVariant
 {
     /// <summary>

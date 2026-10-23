@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a BIC, name and address or a LEI to identify a party.
 /// </summary>
 [IsoId("_BSSs4QN1Ee2-vqzwMUAewg")]
+[IsoDisplayName(@"Party Identification 242 Choice")]
 public interface IPartyIdentification242Choice : IIsoChoice { }

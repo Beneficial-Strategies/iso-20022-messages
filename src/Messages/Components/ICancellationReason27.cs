@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason why the instruction or request is cancelled.
 /// </summary>
 [IsoId("_XGEdy_fZEeiNZp_PtLohLw")]
+[IsoDisplayName(@"Cancellation Reason")]
 public interface ICancellationReason27 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICancellationReason27 : IIsoComponent
     [IsoId("_XGEd1ffZEeiNZp_PtLohLw")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINMax16Text? CorporateActionEventIdentification { get; }
 }

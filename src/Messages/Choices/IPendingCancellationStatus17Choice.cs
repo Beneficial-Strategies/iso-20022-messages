@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a reason or no reason for the corporate action instruction cancellation pending cancellation status.</summary>
 [IsoId("_dUzoYd8QEe-NrtAAlrBEgQ")]
+[IsoDisplayName(@"Pending Cancellation Status 17 Choice")]
 public interface IPendingCancellationStatus17Choice : IIsoChoice { }

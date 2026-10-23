@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a message previously sent.
 /// </summary>
 [IsoId("_-Cue8nltEeG7BsjMvd1mEw_1352240882")]
+[IsoDisplayName(@"Original Message")]
 public interface IOriginalMessage1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalMessage1 : IIsoComponent
     [IsoId("_-Cue83ltEeG7BsjMvd1mEw_-699317533")]
     [DisplayName("Message Definition Identifier")]
     [IsoXmlTag("MsgDefIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageDefinitionIdentifier { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IOriginalMessage1 : IIsoComponent
     [IsoId("_-Cue9nltEeG7BsjMvd1mEw_-2054731857")]
     [DisplayName("Business Message Identifier")]
     [IsoXmlTag("BizMsgIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text BusinessMessageIdentifier { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IOriginalMessage1 : IIsoComponent
     [IsoId("_-C4P8HltEeG7BsjMvd1mEw_1720315394")]
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
+    [IsoSimpleType(IsoSimpleType.ISONormalisedDateTime)]
     ISONormalisedDateTime CreationDate { get; }
 
     /// <summary>

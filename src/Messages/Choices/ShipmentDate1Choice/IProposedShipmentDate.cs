@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentDate1Choice;
 /// Proposed date on which the goods should be shipped.
 /// </summary>
 [IsoId("_yoVq4DATEeOKib24wnHaFg")]
+[IsoDisplayName(@"Proposed Shipment Date")]
 public interface IProposedShipmentDate : IShipmentDate1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IProposedShipmentDate : IShipmentDate1Choice, IIsoChoiceVariant
     /// A particular point in the progression of time in a calendar year expressed in the YYYY-MM-DD format. This representation is defined in &quot;XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004&quot; which is aligned with ISO 8601.
     /// </summary>
     [IsoXmlTag("PropsdShipmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Value { get; }
 }

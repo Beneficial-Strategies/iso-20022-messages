@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party50Choice;
 /// <summary>
 /// Party.
 /// </summary>
+[IsoDisplayName(@"Party")]
 public interface IParty : IParty50Choice, IIsoChoiceVariant
 {
     /// <summary>

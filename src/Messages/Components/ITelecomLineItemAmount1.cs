@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of a telecom line item.
 /// </summary>
 [IsoId("_aRwo0VXaEfC0lMwgjvMClw")]
+[IsoDisplayName(@"Telecom Line Item Amount1")]
 public interface ITelecomLineItemAmount1 : IIsoComponent
 {
     /// <summary>

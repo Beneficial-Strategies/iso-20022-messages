@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_V-l6VVW1EeeiG_nL4vgKnQ")]
 [IsoMessage("cain.020.001.01", "Amdmnt", "urn:iso:std:iso:20022:tech:xsd:cain.020.001.01")]
+[Description(@"The Amendment message can be initiated by any party and received by any party (acquirer, agent or issuer). ||This message is used to inform the originator that the original message has been corrected/amended and then forwarded to the destination on behalf of the originator. It contains a copy of the original message and any errors found. It may also contain any corrections and/or amendments that were made to the original message.|")]
+[IsoDisplayName(@"Amendment V")]
 public interface IAmendmentV01 : IOuterRecord
 {
     /// <summary>

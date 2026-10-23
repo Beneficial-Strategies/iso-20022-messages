@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the parties specific to the individual transaction.
 /// </summary>
 [IsoId("_tXz-EFkyEeGeoaLUQk__nA_1460422523")]
+[IsoDisplayName(@"Transaction Parties")]
 public interface ITransactionParties3 : IIsoComponent
 {
     /// <summary>
@@ -81,5 +82,6 @@ public interface ITransactionParties3 : IIsoComponent
     [IsoId("_tYHgEVkyEeGeoaLUQk__nA_1272737457")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryParty3> Proprietary { get; }
 }

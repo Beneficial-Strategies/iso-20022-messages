@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxableIncomePerShareCalculated2
 /// Taxable income per share (TIS) calculated expressed as a code.
 /// </summary>
 [IsoId("_wmTxcThgEeamLZQeccJa7w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITaxableIncomePerShareCalculated2Choice, IIsoChoiceVariant
 {
     /// <summary>

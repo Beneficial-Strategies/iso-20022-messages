@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investment fund transactions that result in cash movements out of a fund, eg, redemption, switch-out.
 /// </summary>
 [IsoId("_UwBXetp-Ed-ak6NoX_4Aeg_-853943641")]
+[IsoDisplayName(@"Investment Fund Transaction Out Type")]
 public interface IInvestmentFundTransactionOutType1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IInvestmentFundTransactionOutType1 : IIsoComponent
     [IsoId("_UwKhYNp-Ed-ak6NoX_4Aeg_-567650920")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

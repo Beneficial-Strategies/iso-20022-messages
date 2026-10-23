@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Type of instruction.
 /// </summary>
 [IsoId("_RCWL1Np-Ed-ak6NoX_4Aeg_869239445")]
+[IsoDisplayName(@"Instruction Type 1 Choice")]
 public interface IInstructionType1Choice : IIsoChoice { }

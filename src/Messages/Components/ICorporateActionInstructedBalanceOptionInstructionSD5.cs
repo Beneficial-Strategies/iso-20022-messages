@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action instructed balance details at option level.
 /// </summary>
 [IsoId("_F90zIVB9Ee2KGNXAcFL5RA")]
+[IsoDisplayName(@"Corporate Action Instructed Balance Option Instruction SD")]
 public interface ICorporateActionInstructedBalanceOptionInstructionSD5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionInstructedBalanceOptionInstructionSD5 : IIsoCom
     [IsoId("_GXc0EVB9Ee2KGNXAcFL5RA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICorporateActionInstructedBalanceOptionInstructionSD5 : IIsoCom
     [IsoId("_GXc0G1B9Ee2KGNXAcFL5RA")]
     [DisplayName("Protect Identification")]
     [IsoXmlTag("PrtctId")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text? ProtectIdentification { get; }
 
     /// <summary>
@@ -65,5 +70,8 @@ public interface ICorporateActionInstructedBalanceOptionInstructionSD5 : IIsoCom
     [IsoId("_IaSOgVB9Ee2KGNXAcFL5RA")]
     [DisplayName("Tax Category")]
     [IsoXmlTag("TaxCtgy")]
+    [MinLength(0)]
+    [MaxLength(99)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCategory2> TaxCategory { get; }
 }

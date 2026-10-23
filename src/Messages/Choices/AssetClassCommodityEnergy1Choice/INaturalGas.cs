@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy1Choice
 /// </summary>
 [IsoId("_pBoTag2nEeW72qLtWESimw")]
 [IsoXmlTag("NtrlGas")]
+[IsoDisplayName(@"Natural Gas")]
 public interface INaturalGas : IAssetClassCommodityEnergy1Choice, IIsoChoiceVariant
 {
     /// <summary>

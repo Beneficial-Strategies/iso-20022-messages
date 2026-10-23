@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// </summary>
 [IsoId("_ehb1cNEuEd-BzquC8wXy7w_-1298261091")]
 [IsoMessage("pacs.008.001.01", "pacs.008.001.01", "urn:iso:std:iso:20022:tech:xsd:pacs.008.001.01")]
+[Description(@"Scope|The FinancialInstitutionToFinancialInstitutionCustomerCreditTransfer message is sent by the debtor agent to the creditor agent, directly or through other agents and/or a payment clearing and settlement system. It is used to move funds from a debtor account to a creditor.|Usage|The FIToFICustomerCreditTransfer message is exchanged between agents and can contain one or more customer credit transfer instructions.|The FIToFICustomerCreditTransfer message does not allow for grouping: a CreditTransferTransactionInformation block must be present for each credit transfer transaction.|The FIToFICustomerCreditTransfer message can be used in different ways:|- If the instructing agent and the instructed agent wish to use their direct account relationship in the currency of the transfer then the message contains both the funds for the customer transfer(s) as well as the payment details;|- If the instructing agent and the instructed agent have no direct account relationship in the currency of the transfer, or do not wish to use their account relationship, then other (reimbursement) agents will be involved to cover for the customer transfer(s). The FIToFICustomerCreditTransfer contains only the payment details and the instructing agent must cover the customer transfer by sending a FinancialInstitutionCreditTransfer to a reimbursement agent. This payment method is called the Cover method;|- If more than two financial institutions are involved in the payment chain and if the FIToFICustomerCreditTransfer is sent from one financial institution to the next financial institution in the payment chain, then the payment method is called the Serial method.|The FIToFICustomerCreditTransfer message can be used in domestic and cross-border scenarios.|")]
+[IsoDisplayName(@"FI To FI Customer Credit Transfer V")]
 public interface IFIToFICustomerCreditTransferV01 : IOuterRecord
 {
     /// <summary>
@@ -38,5 +40,6 @@ public interface IFIToFICustomerCreditTransferV01 : IOuterRecord
     [IsoId("_ehb1ctEuEd-BzquC8wXy7w_-1296415574")]
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICreditTransferTransactionInformation2> CreditTransferTransactionInformation { get; }
 }

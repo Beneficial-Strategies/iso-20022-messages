@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Clearing data at batch level. Allows clearing in different currencies.
 /// </summary>
 [IsoId("_MCJ34FA6EeedyPuM0kK2EQ")]
+[IsoDisplayName(@"Clearing Batch Data")]
 public interface IClearingBatchData1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IClearingBatchData1 : IIsoComponent
     [IsoId("_6cTJkFA7EeedyPuM0kK2EQ")]
     [DisplayName("Other Clearing Method")]
     [IsoXmlTag("OthrClrMtd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherClearingMethod { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IClearingBatchData1 : IIsoComponent
     [IsoId("__8ATgFA7EeedyPuM0kK2EQ")]
     [DisplayName("Clearing Priority")]
     [IsoXmlTag("ClrPrty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClearingPriority { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IClearingBatchData1 : IIsoComponent
     [IsoId("_Fof8QFA8EeedyPuM0kK2EQ")]
     [DisplayName("Clearing Date")]
     [IsoXmlTag("ClrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClearingDate { get; }
 
     /// <summary>

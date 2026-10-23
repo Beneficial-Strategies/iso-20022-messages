@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to report on limit.
 /// </summary>
 [IsoId("_76joYqMgEeCJ6YNENx4h-w_915944242")]
+[IsoDisplayName(@"Limit Return Criteria")]
 public interface ILimitReturnCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILimitReturnCriteria2 : IIsoComponent
     [IsoId("_76joY6MgEeCJ6YNENx4h-w_1532338031")]
     [DisplayName("Start Date Time Indicator")]
     [IsoXmlTag("StartDtTmInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? StartDateTimeIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ILimitReturnCriteria2 : IIsoComponent
     [IsoId("_76joZKMgEeCJ6YNENx4h-w_2002414441")]
     [DisplayName("Status Indicator")]
     [IsoXmlTag("StsInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? StatusIndicator { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ILimitReturnCriteria2 : IIsoComponent
     [IsoId("_76joZaMgEeCJ6YNENx4h-w_-611823697")]
     [DisplayName("Used Amount Indicator")]
     [IsoXmlTag("UsdAmtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? UsedAmountIndicator { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ILimitReturnCriteria2 : IIsoComponent
     [IsoId("_76joZqMgEeCJ6YNENx4h-w_1711979106")]
     [DisplayName("Used Percentage Indicator")]
     [IsoXmlTag("UsdPctgInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? UsedPercentageIndicator { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketType19Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IMarketType19Choice, IIsoChoiceVariant
 {
     /// <summary>

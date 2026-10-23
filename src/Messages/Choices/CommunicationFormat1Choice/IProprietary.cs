@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommunicationFormat1Choice;
 /// Unique and unambiguous identification of communication format using a proprietary identification scheme.
 /// </summary>
 [IsoId("_nBnOQA1eEeKGXqvMN6jpiw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICommunicationFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : ICommunicationFormat1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

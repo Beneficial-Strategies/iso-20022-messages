@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Knowledge and/or experience of an investor.
 /// </summary>
 [IsoId("_40olsDcNEeiIxKQErQxblg")]
+[IsoDisplayName(@"Investor Knowledge")]
 public interface IInvestorKnowledge1 : IIsoComponent
 {
     /// <summary>
@@ -58,5 +59,6 @@ public interface IInvestorKnowledge1 : IIsoComponent
     [IsoId("_uChRgDcOEeiIxKQErQxblg")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherTargetMarketInvestorKnowledge1> Other { get; }
 }

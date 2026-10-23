@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus7Choice;
 /// <summary>
 /// Reconciled.
 /// </summary>
+[IsoDisplayName(@"Reconciled")]
 public interface IReconciled : IEventProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>

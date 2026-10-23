@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform1Choice;
 /// </summary>
 [IsoId("_57p-oNuREeiB5uLfkg9ZJA")]
 [IsoXmlTag("LltyReq")]
+[IsoDisplayName(@"Loyalty Request")]
 public interface ILoyaltyRequest : ITransactionToPerform1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,5 +35,6 @@ public interface ILoyaltyRequest : ITransactionToPerform1Choice, IIsoChoiceVaria
     [IsoId("_dN7BINuMEeiB5uLfkg9ZJA")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyRequestData1> Data { get; }
 }

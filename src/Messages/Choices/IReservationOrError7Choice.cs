@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reports either on the reservation or on a business error.
 /// </summary>
 [IsoId("_T0LEt5liEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Reservation Or Error 7 Choice")]
 public interface IReservationOrError7Choice : IIsoChoice { }

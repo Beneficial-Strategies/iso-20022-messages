@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Outcome of the processing of the batch.
 /// </summary>
 [IsoId("_Rq4CoFA0EeedyPuM0kK2EQ")]
+[IsoDisplayName(@"Processing Result")]
 public interface IProcessingResult3 : IIsoComponent
 {
     /// <summary>

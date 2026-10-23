@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Party Or Group3Choice.
 /// </summary>
 [IsoId("_ya3yGTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Party Or Group3Choice")]
 public interface IPartyOrGroup3Choice : IIsoChoice { }

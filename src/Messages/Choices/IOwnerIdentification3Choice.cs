@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of individual or organisation details.
 /// </summary>
 [IsoId("_B1IjUZTREemC09f0MxYkRg")]
+[IsoDisplayName(@"Owner Identification 3 Choice")]
 public interface IOwnerIdentification3Choice : IIsoChoice { }

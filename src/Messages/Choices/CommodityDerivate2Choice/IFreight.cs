@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommodityDerivate2Choice;
 /// </summary>
 [IsoId("_zwLKwWlHEeaLAKoEUNsD9g")]
 [IsoXmlTag("Frght")]
+[IsoDisplayName(@"Freight")]
 public interface IFreight : ICommodityDerivate2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IFreight : ICommodityDerivate2Choice, IIsoChoiceVariant
     [IsoId("_z5EBAWlHEeaLAKoEUNsD9g")]
     [DisplayName("Size")]
     [IsoXmlTag("Sz")]
+    [IsoSimpleType(IsoSimpleType.Max25Text)]
+    [StringLength(25, MinimumLength = 1)]
     Max25Text Size { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IFreight : ICommodityDerivate2Choice, IIsoChoiceVariant
     [IsoId("_z5EBA2lHEeaLAKoEUNsD9g")]
     [DisplayName("Average Time Charter")]
     [IsoXmlTag("AvrgTmChrtr")]
+    [IsoSimpleType(IsoSimpleType.Max25Text)]
+    [StringLength(25, MinimumLength = 1)]
     Max25Text AverageTimeCharter { get; }
 }

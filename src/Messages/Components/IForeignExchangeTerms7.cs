@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information needed to process a currency exchange or conversion.
 /// </summary>
 [IsoId("_QLD-idp-Ed-ak6NoX_4Aeg_1423691963")]
+[IsoDisplayName(@"Foreign Exchange Terms")]
 public interface IForeignExchangeTerms7 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IForeignExchangeTerms7 : IIsoComponent
     [IsoId("_QLNvgtp-Ed-ak6NoX_4Aeg_1432003053")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate ExchangeRate { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IForeignExchangeTerms7 : IIsoComponent
     [IsoId("_QLNvg9p-Ed-ak6NoX_4Aeg_1432003636")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? QuotationDate { get; }
 
     /// <summary>

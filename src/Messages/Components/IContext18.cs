@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context in which the card payment transaction is performed.
 /// </summary>
 [IsoId("_uGFQkTNIEeylu6lH-gut-A")]
+[IsoDisplayName(@"Context")]
 public interface IContext18 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IContext18 : IIsoComponent
     [IsoId("_uNL-JTNIEeylu6lH-gut-A")]
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerification5> Verification { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IContext18 : IIsoComponent
     [IsoId("_uNL-JzNIEeylu6lH-gut-A")]
     [DisplayName("Risk Context")]
     [IsoXmlTag("RskCntxt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRiskContext2> RiskContext { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface IContext18 : IIsoComponent
     [IsoId("_6DFOETNIEeylu6lH-gut-A")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 }

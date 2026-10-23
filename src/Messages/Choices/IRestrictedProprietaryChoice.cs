@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies a service level restricted to the proprietary element.
 /// </summary>
 [IsoId("_QJa_z9p-Ed-ak6NoX_4Aeg_1495589549")]
+[IsoDisplayName(@"Restricted Proprietary Choice")]
 public interface IRestrictedProprietaryChoice : IIsoChoice { }

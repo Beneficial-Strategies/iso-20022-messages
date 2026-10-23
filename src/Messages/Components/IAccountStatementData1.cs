@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statement information of an account.
 /// </summary>
 [IsoId("_HJDAdPGgEeiGNursv3uE_g")]
+[IsoDisplayName(@"Account Statement Data")]
 public interface IAccountStatementData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAccountStatementData1 : IIsoComponent
     [IsoId("_HJDAdfGgEeiGNursv3uE_g")]
     [DisplayName("Statement Date")]
     [IsoXmlTag("StmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StatementDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAccountStatementData1 : IIsoComponent
     [IsoId("_HJDngfGgEeiGNursv3uE_g")]
     [DisplayName("Statement Time")]
     [IsoXmlTag("StmtTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? StatementTime { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IAccountStatementData1 : IIsoComponent
     [IsoId("_HJDngPGgEeiGNursv3uE_g")]
     [DisplayName("Account Statement")]
     [IsoXmlTag("AcctStmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountStatementDetails1> AccountStatement { get; }
 }

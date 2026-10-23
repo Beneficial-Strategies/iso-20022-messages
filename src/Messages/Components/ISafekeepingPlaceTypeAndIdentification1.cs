@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the type of place of safekeeping expressed as a code and a BIC.
 /// </summary>
 [IsoId("_Wjinw7XEEeiTob_PrFFUxA")]
+[IsoDisplayName(@"Safekeeping Place Type And Identification")]
 public interface ISafekeepingPlaceTypeAndIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ISafekeepingPlaceTypeAndIdentification1 : IIsoComponent
     [IsoId("_W1QC07XEEeiTob_PrFFUxA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier Identification { get; }
 }

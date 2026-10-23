@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
     "NtfctnOfCaseAssgnmt",
     "urn:iso:std:iso:20022:tech:xsd:camt.030.001.06"
 )]
+[IsoDisplayName(@"Notification Of Case Assignment V06")]
 public interface INotificationOfCaseAssignmentV06 : IOuterRecord
 {
     /// <summary>
@@ -50,5 +51,6 @@ public interface INotificationOfCaseAssignmentV06 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

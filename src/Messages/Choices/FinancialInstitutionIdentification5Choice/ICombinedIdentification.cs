@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 /// </summary>
 [IsoId("_TFnrItp-Ed-ak6NoX_4Aeg_1781480692")]
 [IsoXmlTag("CmbndId")]
+[IsoDisplayName(@"Combined Identification")]
 public interface ICombinedIdentification
     : IFinancialInstitutionIdentification5Choice,
         IIsoChoiceVariant
@@ -20,6 +21,7 @@ public interface ICombinedIdentification
     [IsoId("_TFehMdp-Ed-ak6NoX_4Aeg_696920663")]
     [DisplayName("BIC")]
     [IsoXmlTag("BIC")]
+    [IsoSimpleType(IsoSimpleType.BICIdentifier)]
     BICIdentifier? BIC { get; }
 
     /// <summary>
@@ -36,6 +38,8 @@ public interface ICombinedIdentification
     [IsoId("_TFehM9p-Ed-ak6NoX_4Aeg_696922156")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>

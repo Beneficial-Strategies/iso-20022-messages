@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Requested Modification11.
 /// </summary>
 [IsoId("_9aqIITEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Requested Modification11")]
 public interface IRequestedModification11 : IIsoComponent
 {
     /// <summary>
@@ -170,6 +171,7 @@ public interface IRequestedModification11 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>
@@ -177,6 +179,7 @@ public interface IRequestedModification11 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent3> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -184,6 +187,7 @@ public interface IRequestedModification11 : IIsoComponent
     /// </summary>
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation8> RelatedRemittanceInformation { get; }
 
     /// <summary>

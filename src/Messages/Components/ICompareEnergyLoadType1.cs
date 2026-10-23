@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a energy load type.
 /// </summary>
 [IsoId("_95CA8E6cEeyEpI66tm807w")]
+[IsoDisplayName(@"Compare Energy Load Type")]
 public interface ICompareEnergyLoadType1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the terminal performing the transaction.
 /// </summary>
 [IsoId("_tyJtsECOEeeXpbqDpLawug")]
+[IsoDisplayName(@"Terminal Identification")]
 public interface ITerminalIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ITerminalIdentification1 : IIsoComponent
     [IsoId("_CTMv4ECPEeeXpbqDpLawug")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text Identification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface ITerminalIdentification1 : IIsoComponent
     [IsoId("_TokgQECPEeeXpbqDpLawug")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Assigner { get; }
 
     /// <summary>
@@ -34,6 +39,7 @@ public interface ITerminalIdentification1 : IIsoComponent
     [IsoId("_7xYfgEqQEeenp6hmNprBHg")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
     Min2Max3AlphaText? Country { get; }
 
     /// <summary>
@@ -42,5 +48,7 @@ public interface ITerminalIdentification1 : IIsoComponent
     [IsoId("_Abp2QEqREeenp6hmNprBHg")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 }

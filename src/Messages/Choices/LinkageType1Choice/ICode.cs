@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkageType1Choice;
 /// Linkage type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_QtyREtp-Ed-ak6NoX_4Aeg_-1832047280")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ILinkageType1Choice, IIsoChoiceVariant
 {
     /// <summary>

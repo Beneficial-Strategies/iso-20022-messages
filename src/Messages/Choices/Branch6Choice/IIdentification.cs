@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Branch6Choice;
 /// Identification of the branch office of a reporting counterparty.
 /// </summary>
 [IsoId("_qhzzwcg4Eeu4ecZgAYuz5w")]
+[IsoDisplayName(@"Identification")]
 public interface IIdentification : IBranch6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

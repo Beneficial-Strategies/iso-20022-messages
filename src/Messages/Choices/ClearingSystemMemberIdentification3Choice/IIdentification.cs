@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Identification for a clearing system member, identified in the list of clearing system member identifications published externally.
 /// </summary>
 [IsoId("_TMehGtp-Ed-ak6NoX_4Aeg_-1564562062")]
+[IsoDisplayName(@"Identification")]
 public interface IIdentification : IClearingSystemMemberIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>

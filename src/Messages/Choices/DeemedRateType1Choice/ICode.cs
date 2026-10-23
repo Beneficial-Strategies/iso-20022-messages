@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeemedRateType1Choice;
 /// Standard code to specify the type of deemed rate.
 /// </summary>
 [IsoId("_D-CdNZSmEeeh5JjedkaA_g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDeemedRateType1Choice, IIsoChoiceVariant
 {
     /// <summary>

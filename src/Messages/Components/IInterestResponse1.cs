@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the reponse to the interest payment request.
 /// </summary>
 [IsoId("_Qki1hNp-Ed-ak6NoX_4Aeg_1044109408")]
+[IsoDisplayName(@"Interest Response")]
 public interface IInterestResponse1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IInterestResponse1 : IIsoComponent
     [IsoId("_Qki1h9p-Ed-ak6NoX_4Aeg_-1579101885")]
     [DisplayName("Rejection Reason Information")]
     [IsoXmlTag("RjctnRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? RejectionReasonInformation { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IInterestResponse1 : IIsoComponent
     [IsoId("_Qki1iNp-Ed-ak6NoX_4Aeg_1472856857")]
     [DisplayName("Interest Payment Request Identification")]
     [IsoXmlTag("IntrstPmtReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InterestPaymentRequestIdentification { get; }
 }

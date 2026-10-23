@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unencrypted sensitive data of a token.
 /// </summary>
 [IsoId("_aMY2QEaoEeeIjf8aP9KbJA")]
+[IsoDisplayName(@"Token")]
 public interface IToken1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IToken1 : IIsoComponent
     [IsoId("_AGbkkEapEeeIjf8aP9KbJA")]
     [DisplayName("Payment Token")]
     [IsoXmlTag("PmtTkn")]
+    [IsoSimpleType(IsoSimpleType.Max19NumericText)]
     Max19NumericText? PaymentToken { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IToken1 : IIsoComponent
     [IsoId("_aGyjMfGoEeiGNursv3uE_g")]
     [DisplayName("Token Expiry Date")]
     [IsoXmlTag("TknXpryDt")]
+    [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
     Exact4NumericText? TokenExpiryDate { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IToken1 : IIsoComponent
     [IsoId("_ZQAboEaqEeeIjf8aP9KbJA")]
     [DisplayName("Token Requestor Identification")]
     [IsoXmlTag("TknRqstrId")]
+    [IsoSimpleType(IsoSimpleType.Max11NumericText)]
     Max11NumericText? TokenRequestorIdentification { get; }
 
     /// <summary>
@@ -42,6 +46,8 @@ public interface IToken1 : IIsoComponent
     [IsoId("_iTVdUEaqEeeIjf8aP9KbJA")]
     [DisplayName("Token Assurance Data")]
     [IsoXmlTag("TknAssrncData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TokenAssuranceData { get; }
 
     /// <summary>
@@ -50,6 +56,7 @@ public interface IToken1 : IIsoComponent
     [IsoId("_z4Zf8sR0EeeA1oP8xzmLQg")]
     [DisplayName("Token Assurance Method")]
     [IsoXmlTag("TknAssrncMtd")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? TokenAssuranceMethod { get; }
 
     /// <summary>
@@ -58,5 +65,6 @@ public interface IToken1 : IIsoComponent
     [IsoId("_aGpUsJKHEempjNUC7bi_Ng")]
     [DisplayName("Token Initiated Indicator")]
     [IsoXmlTag("TknInittdInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TokenInitiatedIndicator { get; }
 }

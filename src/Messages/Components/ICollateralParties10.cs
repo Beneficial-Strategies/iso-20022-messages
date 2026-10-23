@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice of format for the trading capacity.
 /// </summary>
 [IsoId("_YgDQfSs-EeySlt9bF77XfA")]
+[IsoDisplayName(@"Collateral Parties")]
 public interface ICollateralParties10 : IIsoComponent
 {
     /// <summary>

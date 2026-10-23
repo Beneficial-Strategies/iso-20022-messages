@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information such as the contribution account identification or the requirement amount.
 /// </summary>
 [IsoId("_UqzgRdp-Ed-ak6NoX_4Aeg_-225785581")]
+[IsoDisplayName(@"Contribution")]
 public interface IContribution1 : IIsoComponent
 {
     /// <summary>

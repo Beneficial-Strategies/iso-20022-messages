@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status is suspended.
 /// </summary>
 [IsoId("_UzSt59p-Ed-ak6NoX_4Aeg_-1626734948")]
+[IsoDisplayName(@"Suspended Status")]
 public interface ISuspendedStatus1 : IIsoComponent
 {
     /// <summary>

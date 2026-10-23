@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information requested against money laundering for a transfer transaction.
 /// </summary>
 [IsoId("_jG3qgHs-EeSTS7uHCe8FPQ")]
+[IsoDisplayName(@"Anti Money Laundering")]
 public interface IAntiMoneyLaundering1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAntiMoneyLaundering1 : IIsoComponent
     [IsoId("_ynk_UHs-EeSTS7uHCe8FPQ")]
     [DisplayName("Sender Name")]
     [IsoXmlTag("SndrNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SenderName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IAntiMoneyLaundering1 : IIsoComponent
     [IsoId("_JJhs0HtAEeSTS7uHCe8FPQ")]
     [DisplayName("Sender National Identifier")]
     [IsoXmlTag("SndrNtlIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SenderNationalIdentifier { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IAntiMoneyLaundering1 : IIsoComponent
     [IsoId("_OnaR0HtAEeSTS7uHCe8FPQ")]
     [DisplayName("National Identifier Country")]
     [IsoXmlTag("NtlIdrCtry")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
     Min2Max3AlphaText? NationalIdentifierCountry { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IAntiMoneyLaundering1 : IIsoComponent
     [IsoId("_R-MAYHtAEeSTS7uHCe8FPQ")]
     [DisplayName("Sender Passport Number")]
     [IsoXmlTag("SndrPsptNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SenderPassportNumber { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IAntiMoneyLaundering1 : IIsoComponent
     [IsoId("_VDe9YHtAEeSTS7uHCe8FPQ")]
     [DisplayName("Passport Issuing Country")]
     [IsoXmlTag("PsptIssgCtry")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
     Min2Max3AlphaText? PassportIssuingCountry { get; }
 
     /// <summary>
@@ -65,6 +74,8 @@ public interface IAntiMoneyLaundering1 : IIsoComponent
     [IsoId("_bkH_4HtAEeSTS7uHCe8FPQ")]
     [DisplayName("Sender Tax Identifier")]
     [IsoXmlTag("SndrTaxIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SenderTaxIdentifier { get; }
 
     /// <summary>
@@ -73,6 +84,7 @@ public interface IAntiMoneyLaundering1 : IIsoComponent
     [IsoId("_fQduwHtAEeSTS7uHCe8FPQ")]
     [DisplayName("Tax Country")]
     [IsoXmlTag("TaxCtry")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
     Min2Max3AlphaText? TaxCountry { get; }
 
     /// <summary>
@@ -81,6 +93,8 @@ public interface IAntiMoneyLaundering1 : IIsoComponent
     [IsoId("_nfe-oHtAEeSTS7uHCe8FPQ")]
     [DisplayName("Sender Customer Identifier")]
     [IsoXmlTag("SndrCstmrIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SenderCustomerIdentifier { get; }
 
     /// <summary>
@@ -97,6 +111,8 @@ public interface IAntiMoneyLaundering1 : IIsoComponent
     [IsoId("_xrSrUHtAEeSTS7uHCe8FPQ")]
     [DisplayName("Receiver Name")]
     [IsoXmlTag("RcvrNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ReceiverName { get; }
 
     /// <summary>
@@ -105,5 +121,7 @@ public interface IAntiMoneyLaundering1 : IIsoComponent
     [IsoId("_4Q5GUHtAEeSTS7uHCe8FPQ")]
     [DisplayName("Transaction Reference")]
     [IsoXmlTag("TxRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionReference { get; }
 }

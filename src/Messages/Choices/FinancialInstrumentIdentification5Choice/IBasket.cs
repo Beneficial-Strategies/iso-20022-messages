@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
 /// </summary>
 [IsoId("_HQWTw35aEea2k7EBUopqxw")]
 [IsoXmlTag("Bskt")]
+[IsoDisplayName(@"Basket")]
 public interface IBasket : IFinancialInstrumentIdentification5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IBasket : IFinancialInstrumentIdentification5Choice, IIsoChoice
     [IsoId("_a46r4fBqEeWTAY6i--T_aA")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISINOct2015Identifier> ISIN { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IBasket : IFinancialInstrumentIdentification5Choice, IIsoChoice
     [IsoId("_a46r4vBqEeWTAY6i--T_aA")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<LEIIdentifier> LEI { get; }
 }

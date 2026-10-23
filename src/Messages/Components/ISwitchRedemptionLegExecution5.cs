@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a redemption leg of a switch order.
 /// </summary>
 [IsoId("f3cc386a-dadf-4691-afd6-1c60f6402f94")]
+[IsoDisplayName(@"Switch Redemption Leg Execution5")]
 public interface ISwitchRedemptionLegExecution5 : IIsoComponent
 {
     /// <summary>
@@ -97,6 +98,7 @@ public interface ISwitchRedemptionLegExecution5 : IIsoComponent
     [IsoId("f3cc386a-infp-0001-0011-1c60f6402f94")]
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice22> InformativePriceDetails { get; }
 
     /// <summary>

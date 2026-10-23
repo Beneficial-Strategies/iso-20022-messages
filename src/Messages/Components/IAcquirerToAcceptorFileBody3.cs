@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Messages that can be exchanged between an acquirer and an acceptor.
 /// </summary>
 [IsoId("_8my8QbX2EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Acquirer To Acceptor File Body3")]
 public interface IAcquirerToAcceptorFileBody3 : IIsoComponent
 {
     /// <summary>

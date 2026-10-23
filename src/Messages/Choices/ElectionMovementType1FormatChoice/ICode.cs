@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionMovementType1FormatChoic
 /// Standard code to specify the effect on the holdings of electing a Corporate Action option.
 /// </summary>
 [IsoId("_RmjsINp-Ed-ak6NoX_4Aeg_2024835239")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IElectionMovementType1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative2Choice;
 /// </summary>
 [IsoId("_Bv9MQ2kwEeaLAKoEUNsD9g")]
 [IsoXmlTag("IntrstRate")]
+[IsoDisplayName(@"Interest Rate")]
 public interface IInterestRate : IDerivative2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -42,6 +43,7 @@ public interface IInterestRate : IDerivative2Choice, IIsoChoiceVariant
     [IsoId("_xSfx92lIEeaLAKoEUNsD9g")]
     [DisplayName("Underlying Swap Maturity Date")]
     [IsoXmlTag("UndrlygSwpMtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? UnderlyingSwapMaturityDate { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeDate8Choice;
 /// Date expressed as an ISO date.
 /// </summary>
 [IsoId("_vt4vcbPuEeelzbgsFa3sqQ")]
+[IsoDisplayName(@"Date")]
 public interface IDate : ITradeDate8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Driver In Party3.
 /// </summary>
 [IsoId("_gN5CUXTgEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Driver In Party3")]
 public interface IDriverInParty3 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface IDriverInParty3 : IIsoComponent
     /// </summary>
     [DisplayName("Driver Credential")]
     [IsoXmlTag("DrvrCrdntl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITravelDocument2> DriverCredential { get; }
 
     /// <summary>

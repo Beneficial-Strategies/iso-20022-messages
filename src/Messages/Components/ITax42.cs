@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax applicable to the investment fund order.
 /// </summary>
 [IsoId("c1c36ba1-72f2-4518-9304-b6e05bdf3942")]
+[IsoDisplayName(@"Tax42")]
 public interface ITax42 : IIsoComponent
 {
     /// <summary>

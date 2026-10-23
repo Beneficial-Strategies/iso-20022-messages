@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details about business information related to a system.
 /// </summary>
 [IsoId("_Mg4IJZlgEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"General Business Information")]
 public interface IGeneralBusinessInformation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IGeneralBusinessInformation1 : IIsoComponent
     [IsoId("_MpLIg5lgEeeE1Ya-LgRsuQ")]
     [DisplayName("Subject")]
     [IsoXmlTag("Sbjt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Subject { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IGeneralBusinessInformation1 : IIsoComponent
     [IsoId("_MpLIhZlgEeeE1Ya-LgRsuQ")]
     [DisplayName("Subject Details")]
     [IsoXmlTag("SbjtDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? SubjectDetails { get; }
 }

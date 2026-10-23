@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice;
 
 /// <summary>Committee on Uniform Securities Identification Procedures (CUSIP) identifier.</summary>
 [IsoId("b9b0e0ad-2b61-4ac3-afb6-61bf36464ac2")]
+[IsoDisplayName(@"CUSIP")]
 public interface ICUSIP : ISecurityIdentification46Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

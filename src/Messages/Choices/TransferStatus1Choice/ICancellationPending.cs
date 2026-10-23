@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice;
 /// </summary>
 [IsoId("_o1CqsBwkEeOIveEnnb_1-A")]
 [IsoXmlTag("CxlPdg")]
+[IsoDisplayName(@"Cancellation Pending")]
 public interface ICancellationPending : ITransferStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICancellationPending : ITransferStatus1Choice, IIsoChoiceVarian
     [IsoId("_RSb2Q9p-Ed-ak6NoX_4Aeg_1032897423")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Reason { get; }
 
     /// <summary>

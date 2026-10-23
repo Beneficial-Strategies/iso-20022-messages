@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the report level status advice.
 /// </summary>
 [IsoId("_CUoXKdGdEeaQk737TH1Fzw")]
+[IsoDisplayName(@"Status Advice Report")]
 public interface IStatusAdviceReport3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IStatusAdviceReport3 : IIsoComponent
     [IsoId("_CduBs9GdEeaQk737TH1Fzw")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericValidationRuleIdentification1> ValidationRule { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IStatusAdviceReport3 : IIsoComponent
     [IsoId("_CduBtdGdEeaQk737TH1Fzw")]
     [DisplayName("Message Date")]
     [IsoXmlTag("MsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MessageDate { get; }
 
     /// <summary>

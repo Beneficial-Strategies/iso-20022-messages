@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat64Choice;
 /// </summary>
 [IsoId("_HuURORuyEeyhRdHRjakS2w")]
 [IsoXmlTag("AmtPricPerAmt")]
+[IsoDisplayName(@"Amount Price Per Amount")]
 public interface IAmountPricePerAmount : IPriceFormat64Choice, IIsoChoiceVariant
 {
     /// <summary>

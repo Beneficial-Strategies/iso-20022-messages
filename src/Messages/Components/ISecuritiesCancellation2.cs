@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the transactions in the report.
 /// </summary>
 [IsoId("_pP7JweSmEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Securities Cancellation2")]
 public interface ISecuritiesCancellation2 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,7 @@ public interface ISecuritiesCancellation2 : IIsoComponent
     [IsoId("_pX6BHeSmEe-qVZLXW4RRBw")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesCancellationTransaction2> Cancellation { get; }
 }

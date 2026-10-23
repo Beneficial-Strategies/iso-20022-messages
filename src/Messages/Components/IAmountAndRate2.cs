@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Change amount and rate.
 /// </summary>
 [IsoId("_nAOYZvNBEeCuA5Tr22BnwA_-1763287912")]
+[IsoDisplayName(@"Amount And Rate")]
 public interface IAmountAndRate2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IAmountAndRate2 : IIsoComponent
     [IsoId("_nAOYaPNBEeCuA5Tr22BnwA_905937363")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 }

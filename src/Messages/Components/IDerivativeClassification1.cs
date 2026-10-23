@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Hierarchy of classification of a derivative.
 /// </summary>
 [IsoId("_B4WEgMhtEeadgvwNGwK05w")]
+[IsoDisplayName(@"Derivative Classification")]
 public interface IDerivativeClassification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDerivativeClassification1 : IIsoComponent
     [IsoId("_ImD5sMhtEeadgvwNGwK05w")]
     [DisplayName("Asset Class")]
     [IsoXmlTag("AsstClss")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AssetClass { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IDerivativeClassification1 : IIsoComponent
     [IsoId("_Jb1rIMhtEeadgvwNGwK05w")]
     [DisplayName("Base Product")]
     [IsoXmlTag("BasePdct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BaseProduct { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IDerivativeClassification1 : IIsoComponent
     [IsoId("_KRGfMMhtEeadgvwNGwK05w")]
     [DisplayName("Sub Product")]
     [IsoXmlTag("SubPdct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubProduct { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IDerivativeClassification1 : IIsoComponent
     [IsoId("_MFkGcMhtEeadgvwNGwK05w")]
     [DisplayName("Sub Commodity")]
     [IsoXmlTag("SubCmmdty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubCommodity { get; }
 
     /// <summary>
@@ -49,5 +58,7 @@ public interface IDerivativeClassification1 : IIsoComponent
     [IsoId("_M9Kc0MhtEeadgvwNGwK05w")]
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionType { get; }
 }

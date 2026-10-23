@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between different instruction cancellation request statuses.
 /// </summary>
 [IsoId("_1TcqZtx4EeqESbVR5AloZQ")]
+[IsoDisplayName(@"Market Claim Cancellation Request Status 1 Choice")]
 public interface IMarketClaimCancellationRequestStatus1Choice : IIsoChoice { }

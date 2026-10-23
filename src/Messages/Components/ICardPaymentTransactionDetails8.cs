@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transaction in the authorisation request.
 /// </summary>
 [IsoId("_Y-phEPwLEeGHDMP28rpT3g_1109146762")]
+[IsoDisplayName(@"Card Payment Transaction Details")]
 public interface ICardPaymentTransactionDetails8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardPaymentTransactionDetails8 : IIsoComponent
     [IsoId("_Y-phEfwLEeGHDMP28rpT3g_-629455657")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardAmountAndCurrencyExchange1> Amount { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ICardPaymentTransactionDetails8 : IIsoComponent
     [IsoId("_Y-phEvwLEeGHDMP28rpT3g_-739980496")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? ICCRelatedData { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface ICardPaymentTransactionDetails8 : IIsoComponent
     [IsoId("_Y-yrAPwLEeGHDMP28rpT3g_-832794042")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Min3Max4Text)]
+    [StringLength(4, MinimumLength = 3)]
     Min3Max4Text? MerchantCategoryCode { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ICardPaymentTransactionDetails8 : IIsoComponent
     [IsoId("_Y-yrAfwLEeGHDMP28rpT3g_990760651")]
     [DisplayName("Transaction Date Time")]
     [IsoXmlTag("TxDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TransactionDateTime { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface ICardPaymentTransactionDetails8 : IIsoComponent
     [IsoId("_Y-yrAvwLEeGHDMP28rpT3g_183251499")]
     [DisplayName("Sale Reference Number")]
     [IsoXmlTag("SaleRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceNumber { get; }
 
     /// <summary>
@@ -81,5 +90,7 @@ public interface ICardPaymentTransactionDetails8 : IIsoComponent
     [IsoId("_Y-8cAPwLEeGHDMP28rpT3g_-454629875")]
     [DisplayName("Transaction Reference")]
     [IsoXmlTag("TxRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionReference { get; }
 }

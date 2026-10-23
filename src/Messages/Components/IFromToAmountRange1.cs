@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Range of amount values.
 /// </summary>
 [IsoId("_jomKS5ljEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"From To Amount Range")]
 public interface IFromToAmountRange1 : IIsoComponent
 {
     /// <summary>

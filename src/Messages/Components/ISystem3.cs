@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// System3.
 /// </summary>
 [IsoId("_1uCzDzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"System3")]
 public interface ISystem3 : IIsoComponent
 {
     /// <summary>

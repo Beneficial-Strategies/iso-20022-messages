@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines a list of party management registration and guarantee requests.
 /// </summary>
 [IsoId("_OTgzMTk1-AOSNFX-8224490")]
+[IsoDisplayName(@"Financing Agreement List")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IFinancingAgreementList1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IFinancingAgreementList1 : IIsoComponent
     [IsoId("_OTgzMzQ4-AOSNFX-8224501")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identifier { get; }
 
     /// <summary>
@@ -25,6 +29,7 @@ public interface IFinancingAgreementList1 : IIsoComponent
     [IsoId("_OTgzMzQ5-AOSNFX-8224501")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Date { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IFinancingAgreementList1 : IIsoComponent
     [IsoId("_OTgzMzUw-AOSNFX-8224501")]
     [DisplayName("Related Document")]
     [IsoXmlTag("RltdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> RelatedDocument { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface IFinancingAgreementList1 : IIsoComponent
     [IsoId("_OTgzMzU1-AOSNFX-8224501")]
     [DisplayName("Notification Information")]
     [IsoXmlTag("NtfctnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancingNotificationParties1> NotificationInformation { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface IFinancingAgreementList1 : IIsoComponent
     [IsoId("_OTgzMzU3-AOSNFX-8224501")]
     [DisplayName("Item")]
     [IsoXmlTag("Itm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancingAgreementItem1> Item { get; }
 
     /// <summary>
@@ -97,6 +105,7 @@ public interface IFinancingAgreementList1 : IIsoComponent
     [IsoId("_OTgzMzU4-AOSNFX-8224501")]
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText ItemCount { get; }
 
     /// <summary>
@@ -105,6 +114,7 @@ public interface IFinancingAgreementList1 : IIsoComponent
     [IsoId("_OTgzMzU5-AOSNFX-8224501")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -113,6 +123,8 @@ public interface IFinancingAgreementList1 : IIsoComponent
     [IsoId("_OTgzMzYw-AOSNFX-8224501")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [StringLength(2000, MinimumLength = 1)]
     Max2000Text? AdditionalInformation { get; }
 
     /// <summary>

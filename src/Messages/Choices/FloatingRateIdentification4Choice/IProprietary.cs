@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FloatingRateIdentification4Choic
 /// Defines a floating rate which is not included in the list of predefined floating curves.
 /// </summary>
 [IsoId("_MBEjcyjFEeuKKc2MztSwPw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IFloatingRateIdentification4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IFloatingRateIdentification4Choice, IIsoChoiceVa
     /// Specifies a character string with a maximum length of 350 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Value { get; }
 }

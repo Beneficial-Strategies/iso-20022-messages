@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action reorganisation instruction details.
 /// </summary>
 [IsoId("_3WR4AQ-tEeuE0Pnt-OcNOA")]
+[IsoDisplayName(@"Reorganisation Instruction SD")]
 public interface IReorganisationInstructionSD10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReorganisationInstructionSD10 : IIsoComponent
     [IsoId("_3rjkcQ-tEeuE0Pnt-OcNOA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,9 @@ public interface IReorganisationInstructionSD10 : IIsoComponent
     [IsoId("_3rjkdQ-tEeuE0Pnt-OcNOA")]
     [DisplayName("Transaction Sequence")]
     [IsoXmlTag("TxSeq")]
+    [MinLength(0)]
+    [MaxLength(99)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionsTransactionsSequence1> TransactionSequence { get; }
 
     /// <summary>
@@ -65,6 +71,8 @@ public interface IReorganisationInstructionSD10 : IIsoComponent
     [IsoId("_3rjkfQ-tEeuE0Pnt-OcNOA")]
     [DisplayName("User Reference Number")]
     [IsoXmlTag("UsrRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text? UserReferenceNumber { get; }
 
     /// <summary>
@@ -83,6 +91,7 @@ public interface IReorganisationInstructionSD10 : IIsoComponent
     [IsoId("_3rjkgQ-tEeuE0Pnt-OcNOA")]
     [DisplayName("Non Exempt Instructions Allowed Indicator")]
     [IsoXmlTag("NonXmptInstrsAllwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NonExemptInstructionsAllowedIndicator { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the valuation details per exposure type aggregation.
 /// </summary>
 [IsoId("_Ml-goSs9EeySlt9bF77XfA")]
+[IsoDisplayName(@"Exposure Type Aggregation")]
 public interface IExposureTypeAggregation3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IExposureTypeAggregation3 : IIsoComponent
     [IsoId("_M90Y1Ss9EeySlt9bF77XfA")]
     [DisplayName("Valuation Amounts")]
     [IsoXmlTag("ValtnAmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralAmount16> ValuationAmounts { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IExposureTypeAggregation3 : IIsoComponent
     [IsoId("_M90Y1ys9EeySlt9bF77XfA")]
     [DisplayName("Margin Rate")]
     [IsoXmlTag("MrgnRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? MarginRate { get; }
 
     /// <summary>

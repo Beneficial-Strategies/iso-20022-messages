@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of change to a number.
 /// </summary>
 [IsoId("_WtsIMA4sEeK3IMoVvcTkkg")]
+[IsoDisplayName(@"Number Modification")]
 public interface INumberModification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface INumberModification1 : IIsoComponent
     [IsoId("_gko_MA4sEeK3IMoVvcTkkg")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText Number { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of an investment plan.
 /// </summary>
 [IsoId("_iMh2EF8-Eeicg40_9gK9vQ")]
+[IsoDisplayName(@"Investment Plan Characteristics")]
 public interface IInvestmentPlanCharacteristics1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IInvestmentPlanCharacteristics1 : IIsoComponent
     [IsoId("_2xB4EV9CEeicg40_9gK9vQ")]
     [DisplayName("Total Number Of Instalments")]
     [IsoXmlTag("TtlNbOfInstlmts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberOfInstalments { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IInvestmentPlanCharacteristics1 : IIsoComponent
     [IsoId("_MO0PUF9DEeicg40_9gK9vQ")]
     [DisplayName("Plan Continuation")]
     [IsoXmlTag("PlanConttn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PlanContinuation { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IInvestmentPlanCharacteristics1 : IIsoComponent
     [IsoId("_lmY7kF9DEeicg40_9gK9vQ")]
     [DisplayName("Additional Subscription")]
     [IsoXmlTag("AddtlSbcpt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AdditionalSubscription { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IInvestmentPlanCharacteristics1 : IIsoComponent
     [IsoId("_CyIdAF9EEeicg40_9gK9vQ")]
     [DisplayName("Additional Subscription Function")]
     [IsoXmlTag("AddtlSbcptFctn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AdditionalSubscriptionFunction { get; }
 
     /// <summary>
@@ -73,5 +78,6 @@ public interface IInvestmentPlanCharacteristics1 : IIsoComponent
     [IsoId("_qpMmsWAKEeiNMJ262H2pWg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

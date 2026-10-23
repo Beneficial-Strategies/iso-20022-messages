@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes how interest rates are reported.
 /// </summary>
 [IsoId("_sCwFwexREeakeva4q26Yqg")]
+[IsoDisplayName(@"Interest Rate Contract Term")]
 public interface IInterestRateContractTerm3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IInterestRateContractTerm3 : IIsoComponent
     [IsoId("_sO0L0-xREeakeva4q26Yqg")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? Value { get; }
 }

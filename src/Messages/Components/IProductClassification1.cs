@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies attributes of a derivative based on Final ISDA Taxonomy v1.0 and Final ISDA Taxonomy v2.0 (https://www.isda.org/2018/02/20/final-isda-taxonomy-v1-0-and-final-isda-taxonomy-v2-0/).
 /// </summary>
 [IsoId("_M00DgDXHEemdWfjs3tykFQ")]
+[IsoDisplayName(@"Product Classification")]
 public interface IProductClassification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProductClassification1 : IIsoComponent
     [IsoId("_WPDJUDXHEemdWfjs3tykFQ")]
     [DisplayName("Asset Class")]
     [IsoXmlTag("AsstClss")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AssetClass { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IProductClassification1 : IIsoComponent
     [IsoId("_YzAT0DXHEemdWfjs3tykFQ")]
     [DisplayName("Base Product")]
     [IsoXmlTag("BasePdct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BaseProduct { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IProductClassification1 : IIsoComponent
     [IsoId("_bSfOADXHEemdWfjs3tykFQ")]
     [DisplayName("Sub Product")]
     [IsoXmlTag("SubPdct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubProduct { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IProductClassification1 : IIsoComponent
     [IsoId("_d65asDXHEemdWfjs3tykFQ")]
     [DisplayName("Sub Commodity")]
     [IsoXmlTag("SubCmmdty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubCommodity { get; }
 
     /// <summary>
@@ -49,5 +58,7 @@ public interface IProductClassification1 : IIsoComponent
     [IsoId("_gLqjcDXHEemdWfjs3tykFQ")]
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionType { get; }
 }

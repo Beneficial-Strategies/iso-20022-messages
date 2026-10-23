@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkCurveName13Choice;
 /// Specifies the reference rate or basis rate on which a variable rate is base as a code.
 /// </summary>
 [IsoId("_hUVZgRIkEeyLzJfz3xPQNA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBenchmarkCurveName13Choice, IIsoChoiceVariant
 {
     /// <summary>

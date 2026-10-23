@@ -28,6 +28,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesSttlmAllgmtRmvlAdvc",
     "urn:iso:std:iso:20022:tech:xsd:sese.029.001.06"
 )]
+[Description(@"Scope|An account servicer sends a SecuritiesSettlementAllegementRemovalAdvice to an account owner to acknowledge that a previously sent allegement is no longer outstanding, because the alleged party sent its instruction.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Settlement Allegement Removal Advice V")]
 public interface ISecuritiesSettlementAllegementRemovalAdviceV06 : IOuterRecord
 {
     /// <summary>
@@ -44,6 +46,8 @@ public interface ISecuritiesSettlementAllegementRemovalAdviceV06 : IOuterRecord
     [IsoId("_QyntASgYEey2k_sfZmJz4g")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -52,6 +56,8 @@ public interface ISecuritiesSettlementAllegementRemovalAdviceV06 : IOuterRecord
     [IsoId("_WDFhASgYEey2k_sfZmJz4g")]
     [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
     [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -92,5 +98,6 @@ public interface ISecuritiesSettlementAllegementRemovalAdviceV06 : IOuterRecord
     [IsoId("_QyntCSgYEey2k_sfZmJz4g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

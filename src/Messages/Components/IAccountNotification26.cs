@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the account notification.
 /// </summary>
 [IsoId("4410df66-25fb-4c90-86bb-92526a3afa33")]
+[IsoDisplayName(@"Account Notification26")]
 public interface IAccountNotification26 : IIsoComponent
 {
     /// <summary>
@@ -97,5 +98,7 @@ public interface IAccountNotification26 : IIsoComponent
     [IsoId("26611e4a-06dc-4581-9c0f-4ff09c4542f8")]
     [DisplayName("Item")]
     [IsoXmlTag("Itm")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INotificationItem10> Item { get; }
 }

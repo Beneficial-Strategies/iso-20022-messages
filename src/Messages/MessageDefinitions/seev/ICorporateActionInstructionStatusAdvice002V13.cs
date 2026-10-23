@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnInstrStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.034.002.13"
 )]
+[Description(@"Scope|The CorporateActionInstructionStatusAdvice message is sent by an account servicer to an account owner or its designated agent, to report the status of a received corporate action election instruction.||This message is used to advise the status, or a change in status, of a corporate action-related transaction previously instructed by, or executed on behalf of, the account owner. This will include the acknowledgement/rejection of a corporate action instruction.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).")]
+[IsoDisplayName(@"Corporate Action Instruction Status Advice 002 V")]
 public interface ICorporateActionInstructionStatusAdvice002V13 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +41,7 @@ public interface ICorporateActionInstructionStatusAdvice002V13 : IOuterRecord
     [IsoId("_piIFXji7Eeydid5dcNPKvg")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification34> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -55,6 +58,7 @@ public interface ICorporateActionInstructionStatusAdvice002V13 : IOuterRecord
     [IsoId("_piIFYji7Eeydid5dcNPKvg")]
     [DisplayName("Instruction Processing Status")]
     [IsoXmlTag("InstrPrcgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionProcessingStatus49Choice> InstructionProcessingStatus { get; }
 
     /// <summary>
@@ -87,5 +91,6 @@ public interface ICorporateActionInstructionStatusAdvice002V13 : IOuterRecord
     [IsoId("_piIFaji7Eeydid5dcNPKvg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

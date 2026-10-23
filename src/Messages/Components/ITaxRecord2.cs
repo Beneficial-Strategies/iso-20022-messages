@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to define the tax record.
 /// </summary>
 [IsoId("_yKFWd69fEeen6L7OP7lnvg")]
+[IsoDisplayName(@"Tax Record")]
 public interface ITaxRecord2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITaxRecord2 : IIsoComponent
     [IsoId("_yeA_A69fEeen6L7OP7lnvg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITaxRecord2 : IIsoComponent
     [IsoId("_yeA_Ba9fEeen6L7OP7lnvg")]
     [DisplayName("Category")]
     [IsoXmlTag("Ctgy")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Category { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITaxRecord2 : IIsoComponent
     [IsoId("_yeA_B69fEeen6L7OP7lnvg")]
     [DisplayName("Category Details")]
     [IsoXmlTag("CtgyDtls")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CategoryDetails { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITaxRecord2 : IIsoComponent
     [IsoId("_yeA_Ca9fEeen6L7OP7lnvg")]
     [DisplayName("Debtor Status")]
     [IsoXmlTag("DbtrSts")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DebtorStatus { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface ITaxRecord2 : IIsoComponent
     [IsoId("_yeA_C69fEeen6L7OP7lnvg")]
     [DisplayName("Certificate Identification")]
     [IsoXmlTag("CertId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CertificateIdentification { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface ITaxRecord2 : IIsoComponent
     [IsoId("_yeA_Da9fEeen6L7OP7lnvg")]
     [DisplayName("Forms Code")]
     [IsoXmlTag("FrmsCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FormsCode { get; }
 
     /// <summary>
@@ -81,5 +94,7 @@ public interface ITaxRecord2 : IIsoComponent
     [IsoId("_yeA_E69fEeen6L7OP7lnvg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalInformation { get; }
 }

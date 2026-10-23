@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the corrective interbank transaction, to which the resolution message refers.
 /// </summary>
 [IsoId("_tP338dizEeq5MfBBxQig1Q")]
+[IsoDisplayName(@"Corrective Interbank Transaction")]
 public interface ICorrectiveInterbankTransaction3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICorrectiveInterbankTransaction3 : IIsoComponent
     [IsoId("_tRlvNdizEeq5MfBBxQig1Q")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICorrectiveInterbankTransaction3 : IIsoComponent
     [IsoId("_tRlvN9izEeq5MfBBxQig1Q")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ICorrectiveInterbankTransaction3 : IIsoComponent
     [IsoId("_tRlvOdizEeq5MfBBxQig1Q")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface ICorrectiveInterbankTransaction3 : IIsoComponent
     [IsoId("_tRlvO9izEeq5MfBBxQig1Q")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? UETR { get; }
 
     /// <summary>
@@ -65,5 +73,6 @@ public interface ICorrectiveInterbankTransaction3 : IIsoComponent
     [IsoId("_tRlvP9izEeq5MfBBxQig1Q")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate InterbankSettlementDate { get; }
 }

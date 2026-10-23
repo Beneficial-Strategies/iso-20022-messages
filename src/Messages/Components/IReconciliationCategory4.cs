@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reconciliation Category4.
 /// </summary>
 [IsoId("_x8xuBa-8Ee69JssYImngCA")]
+[IsoDisplayName(@"Reconciliation Category4")]
 public interface IReconciliationCategory4 : IIsoComponent
 {
     /// <summary>

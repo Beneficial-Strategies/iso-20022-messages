@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
 /// </summary>
 [IsoId("_3LNs2eEAEd-udr336SN7mQ")]
+[IsoDisplayName(@"Settlement Details")]
 public interface ISettlementDetails28 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISettlementDetails28 : IIsoComponent
     [IsoId("_3LNs3eEAEd-udr336SN7mQ")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementTransactionCondition6Choice> SettlementTransactionCondition { get; }
 
     /// <summary>

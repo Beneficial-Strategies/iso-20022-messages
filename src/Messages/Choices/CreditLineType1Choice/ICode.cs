@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditLineType1Choice;
 /// Type of the credit line, as published in an external purpose code list.
 /// </summary>
 [IsoId("_2T3LxYZ5Eee8r9VKRbnJSg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICreditLineType1Choice, IIsoChoiceVariant
 {
     /// <summary>

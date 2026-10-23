@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General information about the corporate action event.
 /// </summary>
 [IsoId("_I6CkwaNaEfC9id413JK-Ig")]
+[IsoDisplayName(@"Corporate Action General Information196")]
 public interface ICorporateActionGeneralInformation196 : IIsoComponent
 {
     /// <summary>
@@ -73,5 +74,7 @@ public interface ICorporateActionGeneralInformation196 : IIsoComponent
     [IsoId("_JBLHu6NaEfC9id413JK-Ig")]
     [DisplayName("Underlying Security")]
     [IsoXmlTag("UndrlygScty")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentAttributes126> UnderlyingSecurity { get; }
 }

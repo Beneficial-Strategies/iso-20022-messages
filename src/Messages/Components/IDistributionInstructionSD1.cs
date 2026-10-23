@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action distribution instruction details.
 /// </summary>
 [IsoId("_N_uCcFB8Ee2KGNXAcFL5RA")]
+[IsoDisplayName(@"Distribution Instruction SD")]
 public interface IDistributionInstructionSD1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,8 @@ public interface IDistributionInstructionSD1 : IIsoComponent
     [IsoId("_WZM14VB8Ee2KGNXAcFL5RA")]
     [DisplayName("Tax Category")]
     [IsoXmlTag("TaxCtgy")]
+    [MinLength(0)]
+    [MaxLength(99)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCategory2> TaxCategory { get; }
 }

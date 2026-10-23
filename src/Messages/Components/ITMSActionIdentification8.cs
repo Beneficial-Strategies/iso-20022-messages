@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of an individual terminal management action by the point of interaction.
 /// </summary>
 [IsoId("_ZSf7YVEtEeyApZmLzm74zA")]
+[IsoDisplayName(@"TMS Action Identification")]
 public interface ITMSActionIdentification8 : IIsoComponent
 {
     /// <summary>

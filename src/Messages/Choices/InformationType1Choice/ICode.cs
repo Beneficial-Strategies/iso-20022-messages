@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InformationType1Choice;
 /// Type of additional information in a coded form.
 /// </summary>
 [IsoId("_RYGZYNp-Ed-ak6NoX_4Aeg_598842184")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInformationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

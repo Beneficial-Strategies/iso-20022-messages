@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrackerParty2Choice;
 /// </summary>
 [IsoId("_dtxow2OTEeq5Ar_w98FvsA")]
 [IsoXmlTag("OrgId")]
+[IsoDisplayName(@"Organisation Identification")]
 public interface IOrganisationIdentification : ITrackerParty2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IOrganisationIdentification : ITrackerParty2Choice, IIsoChoiceV
     [IsoId("_6emK0248EeiU9cctagi5ow")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier? AnyBIC { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IOrganisationIdentification : ITrackerParty2Choice, IIsoChoiceV
     [IsoId("_XzdQ4XRwEeiH1ZOt2UD8vQ")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface IOrganisationIdentification : ITrackerParty2Choice, IIsoChoiceV
     [IsoId("_6emK1W48EeiU9cctagi5ow")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericOrganisationIdentification1> Other { get; }
 }

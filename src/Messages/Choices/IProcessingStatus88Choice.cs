@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a processing status.
 /// </summary>
 [IsoId("_g5IR4StXEeyhipY4f42fZQ")]
+[IsoDisplayName(@"Processing Status 88 Choice")]
 public interface IProcessingStatus88Choice : IIsoChoice { }

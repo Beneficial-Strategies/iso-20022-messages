@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice21Choi
 /// <summary>
 /// Percentage.
 /// </summary>
+[IsoDisplayName(@"Percentage")]
 public interface IPercentage : ISecuritiesTransactionPrice21Choice, IIsoChoiceVariant
 {
     /// <summary>

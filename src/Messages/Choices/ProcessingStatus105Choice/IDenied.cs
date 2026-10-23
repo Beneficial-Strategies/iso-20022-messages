@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus105Choice;
 
 /// <summary>Specifies the denied status.</summary>
 [IsoId("_u9CdcaodEfCG2_q2WT-90w")]
+[IsoDisplayName(@"Denied")]
 public interface IDenied : IProcessingStatus105Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

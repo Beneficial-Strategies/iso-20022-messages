@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxCreditRateFormat1Choice;
 /// Value of the rate not specified.
 /// </summary>
 [IsoId("_UOfXsdp-Ed-ak6NoX_4Aeg_465503304")]
+[IsoDisplayName(@"Not Specified Rate")]
 public interface INotSpecifiedRate : ITaxCreditRateFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

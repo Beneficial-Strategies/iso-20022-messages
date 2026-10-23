@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a cash asset.
 /// </summary>
 [IsoId("_T1_yMaPvEemf4IaGqCtquA")]
+[IsoDisplayName(@"Cash Asset")]
 public interface ICashAsset3 : IIsoComponent
 {
     /// <summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CcyCtrlReqOrLttr",
     "urn:iso:std:iso:20022:tech:xsd:auth.026.001.01"
 )]
+[Description(@"The CurrencyControlRequestOrLetter message is sent by the reporting party (respectively the registration agent) to the registration agent (respectively the reporting party) to send a currency control related letter or to request for supporting documents.")]
+[IsoDisplayName(@"Currency Control Request Or Letter V")]
 public interface ICurrencyControlRequestOrLetterV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface ICurrencyControlRequestOrLetterV01 : IOuterRecord
     [IsoId("_ioRR9dnQEeS--7IJLPC9lw")]
     [DisplayName("Request Or Letter")]
     [IsoXmlTag("ReqOrLttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupportingDocumentRequestOrLetter1> RequestOrLetter { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface ICurrencyControlRequestOrLetterV01 : IOuterRecord
     [IsoId("_rp31UdnQEeS--7IJLPC9lw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

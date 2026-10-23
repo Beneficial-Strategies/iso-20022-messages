@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a paper derivative of type recovered paper.
 /// </summary>
 [IsoId("_bXBNUFryEeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Paper Commodity Recovered Paper")]
 public interface IPaperCommodityRecoveredPaper1 : IIsoComponent
 {
     /// <summary>

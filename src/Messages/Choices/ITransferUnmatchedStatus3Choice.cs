@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for the unmatched status.
 /// </summary>
 [IsoId("_duzpkSY4EeW_ZNn8gbfY7Q")]
+[IsoDisplayName(@"Transfer Unmatched Status 3 Choice")]
 public interface ITransferUnmatchedStatus3Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the elements used to uniquely identify a standing order.
 /// </summary>
 [IsoId("_Hv82tW4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Standing Order Identification")]
 public interface IStandingOrderIdentification5 : IIsoComponent
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule2Choice;
 /// </summary>
 [IsoId("_0ZWmkefHEeKNfc-Rw_dPYg")]
 [IsoXmlTag("ShipmntDtRg")]
+[IsoDisplayName(@"Shipment Date Range")]
 public interface IShipmentDateRange : IShipmentSchedule2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IShipmentDateRange : IShipmentSchedule2Choice, IIsoChoiceVarian
     [IsoId("_Sp5_g9p-Ed-ak6NoX_4Aeg_-1349221863")]
     [DisplayName("Earliest Shipment Date")]
     [IsoXmlTag("EarlstShipmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EarliestShipmentDate { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface IShipmentDateRange : IShipmentSchedule2Choice, IIsoChoiceVarian
     [IsoId("_Sp5_hNp-Ed-ak6NoX_4Aeg_-1302121318")]
     [DisplayName("Latest Shipment Date")]
     [IsoXmlTag("LatstShipmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LatestShipmentDate { get; }
 }

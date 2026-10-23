@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Limit Criteria7Choice.
 /// </summary>
 [IsoId("_zTuFoTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Limit Criteria7Choice")]
 public interface ILimitCriteria7Choice : IIsoChoice { }

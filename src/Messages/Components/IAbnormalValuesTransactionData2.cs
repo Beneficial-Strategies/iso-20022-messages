@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed information about derivatives that were received on the day of generation of the report with action type ‘New’, ‘Position component’, ‘Modification’ or ‘Correction’ whose notional amount is greater than a threshold for that class of derivatives.
 /// </summary>
 [IsoId("_x6yxOVyGEe24CqbZJK5XxA")]
+[IsoDisplayName(@"Abnormal Values Transaction Data")]
 public interface IAbnormalValuesTransactionData2 : IIsoComponent
 {
     /// <summary>

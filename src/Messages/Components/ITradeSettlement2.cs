@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade settlement details for this invoice which involves the payment of an outstanding debt, account, or charge.
 /// </summary>
 [IsoId("_OFO6gVm5EeOQYsoJizpkVw")]
+[IsoDisplayName(@"Trade Settlement")]
 public interface ITradeSettlement2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITradeSettlement2 : IIsoComponent
     [IsoId("_JESTsFm6EeOQYsoJizpkVw")]
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DueDate { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ITradeSettlement2 : IIsoComponent
     [IsoId("_fcGEIKtdEeSqWL9DOn1OKw")]
     [DisplayName("Delivery Date")]
     [IsoXmlTag("DlvryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DeliveryDate { get; }
 
     /// <summary>
@@ -73,6 +76,8 @@ public interface ITradeSettlement2 : IIsoComponent
     [IsoId("_p8ZTIKuqEeSmE8_WfXaYYg")]
     [DisplayName("Exemption Reason Code")]
     [IsoXmlTag("XmptnRsnCd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? ExemptionReasonCode { get; }
 
     /// <summary>
@@ -81,6 +86,8 @@ public interface ITradeSettlement2 : IIsoComponent
     [IsoId("_FU2aQFnKEeOQYsoJizpkVw")]
     [DisplayName("Exemption Reason")]
     [IsoXmlTag("XmptnRsn")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? ExemptionReason { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface ITradeSettlement2 : IIsoComponent
     [IsoId("_OSxAbVm5EeOQYsoJizpkVw")]
     [DisplayName("Sub Total Calculated Tax")]
     [IsoXmlTag("SubTtlClctdTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementSubTotalCalculatedTax2> SubTotalCalculatedTax { get; }
 
     /// <summary>
@@ -97,5 +105,6 @@ public interface ITradeSettlement2 : IIsoComponent
     [IsoId("_osa_kEWmEeWZBsWfSGYWYg")]
     [DisplayName("Early Payments")]
     [IsoXmlTag("EarlyPmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEarlyPayment1> EarlyPayments { get; }
 }

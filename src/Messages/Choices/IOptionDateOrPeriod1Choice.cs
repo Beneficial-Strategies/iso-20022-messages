@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the exercise date or notice period for a call/put option.
 /// </summary>
 [IsoId("_FBT61jU7EeWITbq5W8H-2w")]
+[IsoDisplayName(@"Option Date Or Period 1 Choice")]
 public interface IOptionDateOrPeriod1Choice : IIsoChoice { }

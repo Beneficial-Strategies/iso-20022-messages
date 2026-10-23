@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Nature or use of the account.
 /// </summary>
 [IsoId("_sb6WgFkyEeGeoaLUQk__nA_1768299331")]
+[IsoDisplayName(@"Cash Account Type 2 Choice")]
 public interface ICashAccountType2Choice : IIsoChoice { }

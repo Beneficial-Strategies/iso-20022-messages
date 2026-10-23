@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash Account Data1.
 /// </summary>
 [IsoId("_3340ZTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Cash Account Data1")]
 public interface ICashAccountData1 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ICashAccountData1 : IIsoComponent
     /// </summary>
     [DisplayName("Multilateral Balance")]
     [IsoXmlTag("MulBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance13> MultilateralBalance { get; }
 
     /// <summary>
@@ -72,6 +74,7 @@ public interface ICashAccountData1 : IIsoComponent
     /// </summary>
     [DisplayName("Current Bilateral Limit")]
     [IsoXmlTag("CurBilLmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBilateralLimit4> CurrentBilateralLimit { get; }
 
     /// <summary>
@@ -79,5 +82,6 @@ public interface ICashAccountData1 : IIsoComponent
     /// </summary>
     [DisplayName("Standing Order")]
     [IsoXmlTag("StgOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStandingOrder11> StandingOrder { get; }
 }

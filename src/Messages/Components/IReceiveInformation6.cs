@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.
 /// </summary>
 [IsoId("_BFx3sfpjEeCG_oUHBFcYXA")]
+[IsoDisplayName(@"Receive Information")]
 public interface IReceiveInformation6 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IReceiveInformation6 : IIsoComponent
     [IsoId("_BF7Bt_pjEeCG_oUHBFcYXA")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge20> ChargeDetails { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IReceiveInformation6 : IIsoComponent
     [IsoId("_BF7Bu_pjEeCG_oUHBFcYXA")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission12> CommissionDetails { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IReceiveInformation6 : IIsoComponent
     [IsoId("_BF7Bv_pjEeCG_oUHBFcYXA")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax15> TaxDetails { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the party name entity through  the valid short and long names of the party within the system.
 /// </summary>
 [IsoId("_5LPDsWSzEeifFbri5DlfYA")]
+[IsoDisplayName(@"Party Name")]
 public interface IPartyName4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPartyName4 : IIsoComponent
     [IsoId("_5apYsWSzEeifFbri5DlfYA")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidFrom { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IPartyName4 : IIsoComponent
     [IsoId("_5apYs2SzEeifFbri5DlfYA")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IPartyName4 : IIsoComponent
     [IsoId("_5apYtWSzEeifFbri5DlfYA")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 }

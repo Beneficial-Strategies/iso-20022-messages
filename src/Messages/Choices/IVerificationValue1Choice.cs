@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Contains the data to be authenticated or verified.
 /// </summary>
 [IsoId("_4EhKpZaNEemfCcEf5rVTyg")]
+[IsoDisplayName(@"Verification Value 1 Choice")]
 public interface IVerificationValue1Choice : IIsoChoice { }

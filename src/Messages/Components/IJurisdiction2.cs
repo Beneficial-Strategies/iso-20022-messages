@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains information that identifies or is specific to a transaction jurisdiction.
 /// </summary>
 [IsoId("_uh9kAMVaEeuips4fuphvoQ")]
+[IsoDisplayName(@"Jurisdiction")]
 public interface IJurisdiction2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IJurisdiction2 : IIsoComponent
     [IsoId("_YK-ecMVbEeuips4fuphvoQ")]
     [DisplayName("Domestic Indicator")]
     [IsoXmlTag("DmstInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DomesticIndicator { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface IJurisdiction2 : IIsoComponent
     [IsoId("_eot98MVbEeuips4fuphvoQ")]
     [DisplayName("Domestic Qualification")]
     [IsoXmlTag("DmstQlfctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DomesticQualification { get; }
 }

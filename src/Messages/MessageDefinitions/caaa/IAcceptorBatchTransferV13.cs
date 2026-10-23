@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_11kvcZUsEe62CMB9luireQ")]
 [IsoMessage("caaa.011.001.13", "AccptrBtchTrf", "urn:iso:std:iso:20022:tech:xsd:caaa.011.001.13")]
+[IsoDisplayName(@"Acceptor Batch Transfer V13")]
 public interface IAcceptorBatchTransferV13 : IOuterRecord
 {
     /// <summary>

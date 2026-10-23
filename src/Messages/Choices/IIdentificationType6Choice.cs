@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code and a data source scheme to specify the type of alternate identification.
 /// </summary>
 [IsoId("_QmCDQtp-Ed-ak6NoX_4Aeg_-1758873433")]
+[IsoDisplayName(@"Identification Type 6 Choice")]
 public interface IIdentificationType6Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the securities trades that make up the payment.
 /// </summary>
 [IsoId("15df450f-df3b-4230-9d9a-8fba15b89a4e")]
+[IsoDisplayName(@"Securities Attributes1")]
 public interface ISecuritiesAttributes1 : IIsoComponent
 {
     /// <summary>

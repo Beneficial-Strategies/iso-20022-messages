@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the message number and the query identification.
 /// </summary>
 [IsoId("_gBHMvDi8Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Document Identification")]
 public interface IDocumentIdentification55 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IDocumentIdentification55 : IIsoComponent
     [IsoId("_gBHMwDi8Eeydid5dcNPKvg")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Reference { get; }
 }

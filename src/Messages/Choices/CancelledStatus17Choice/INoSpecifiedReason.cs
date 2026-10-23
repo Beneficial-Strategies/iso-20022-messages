@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledStatus17Choice;
 /// <summary>
 /// No Specified Reason.
 /// </summary>
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : ICancelledStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>

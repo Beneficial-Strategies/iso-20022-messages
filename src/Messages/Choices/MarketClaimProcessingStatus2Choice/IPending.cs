@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus2Choi
 
 /// <summary>Instruction processing is pending.</summary>
 [IsoId("_G1D_ObMaEfCEXew4g5B5oA")]
+[IsoDisplayName(@"Pending")]
 public interface IPending : IMarketClaimProcessingStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

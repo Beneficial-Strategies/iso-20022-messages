@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccount2Choice;
 
 /// <summary>Single securities account identified by its identifier.</summary>
 [IsoId("_4H1_o-GBEeWCAvUNsZ5u6g")]
+[IsoDisplayName(@"Account")]
 public interface IAccount : ISecuritiesAccount2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

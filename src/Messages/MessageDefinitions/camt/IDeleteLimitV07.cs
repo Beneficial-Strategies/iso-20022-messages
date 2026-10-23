@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_jwlbTxbvEeiyVv5j1vf1VQ")]
 [IsoMessage("camt.012.001.07", "DelLmt", "urn:iso:std:iso:20022:tech:xsd:camt.012.001.07")]
+[Description(@"Scope|The DeleteLimit message is sent by a member to the transaction administrator.|It is used to request the deletion of one particular, several or all limits set by the member and managed by the transaction administrator.|The DeleteLimit message may delete several types of current limits (risk or liquidity management limit), based on a multiple requests.|Usage|The member will submit a DeleteLimit message identifying which limit(s) it wants to delete (current limit risk/liquidity limit concepts have been merged) based on following criteria:|- type of limit(s) (current/default)|- value of the limit(s) (default and/or current limit(s))|- identification of the counterparty (bilateral limit)|Based on the criteria received within the DeleteLimit message, the transaction administrator will execute or reject the requested modifications.|The transaction administrator may send a Receipt message as a reply to the DeleteLimit request.|To verify the outcome of the request, the member may submit a GetLimit message with the appropriate search criteria.")]
+[IsoDisplayName(@"Delete Limit V")]
 public interface IDeleteLimitV07 : IOuterRecord
 {
     /// <summary>
@@ -47,5 +49,6 @@ public interface IDeleteLimitV07 : IOuterRecord
     [IsoId("_jwlbVRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

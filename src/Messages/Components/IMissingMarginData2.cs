@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed information about the outstanding derivatives for which no margin or outdated margin information has been reported.
 /// </summary>
 [IsoId("_rtPOiVowEe23K4GXSpBSeg")]
+[IsoDisplayName(@"Missing Margin Data")]
 public interface IMissingMarginData2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IMissingMarginData2 : IIsoComponent
     [IsoId("_rud9k1owEe23K4GXSpBSeg")]
     [DisplayName("Number Of Outstanding Derivatives")]
     [IsoXmlTag("NbOfOutsdngDerivs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfOutstandingDerivatives { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IMissingMarginData2 : IIsoComponent
     [IsoId("_rud9lVowEe23K4GXSpBSeg")]
     [DisplayName("Number Of Outstanding Derivatives With No Margin Information")]
     [IsoXmlTag("NbOfOutsdngDerivsWthNoMrgnInf")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfOutstandingDerivativesWithNoMarginInformation { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IMissingMarginData2 : IIsoComponent
     [IsoId("_rud9l1owEe23K4GXSpBSeg")]
     [DisplayName("Number Of Outstanding Derivatives With Outdated Margin Information")]
     [IsoXmlTag("NbOfOutsdngDerivsWthOutdtdMrgnInf")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfOutstandingDerivativesWithOutdatedMarginInformation { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IMissingMarginData2 : IIsoComponent
     [IsoId("_rud9mVowEe23K4GXSpBSeg")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMissingMarginTransactionData2> TransactionDetails { get; }
 }

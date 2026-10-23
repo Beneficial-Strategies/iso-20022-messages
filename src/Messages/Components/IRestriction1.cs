@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Restriction on capability or operations allowed.
 /// </summary>
 [IsoId("_PUhYHtp-Ed-ak6NoX_4Aeg_-335182924")]
+[IsoDisplayName(@"Restriction")]
 public interface IRestriction1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IRestriction1 : IIsoComponent
     [IsoId("_PUhYINp-Ed-ak6NoX_4Aeg_736440027")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ValidFrom { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IRestriction1 : IIsoComponent
     [IsoId("_PUrJENp-Ed-ak6NoX_4Aeg_1733310129")]
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ValidUntil { get; }
 }

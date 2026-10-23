@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the reporting exemption of a counterparty.
 /// </summary>
 [IsoId("_F10woBaIEe27wrM4RUjLog")]
+[IsoDisplayName(@"Reporting Exemption")]
 public interface IReportingExemption1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportingExemption1 : IIsoComponent
     [IsoId("_VXP3IBaIEe27wrM4RUjLog")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text Reason { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IReportingExemption1 : IIsoComponent
     [IsoId("_afNPcBaIEe27wrM4RUjLog")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? Description { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the processing request.
 /// </summary>
 [IsoId("_qWuLAZXcEeaYkf5FCqYMeA")]
+[IsoDisplayName(@"Request Details")]
 public interface IRequestDetails19 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRequestDetails19 : IIsoComponent
     [IsoId("_qh5gQZXcEeaYkf5FCqYMeA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IRequestDetails19 : IIsoComponent
     [IsoId("_gaPZ0JwpEeahw7LV9elg3w")]
     [DisplayName("Additional Request Information")]
     [IsoXmlTag("AddtlReqInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> AdditionalRequestInformation { get; }
 }

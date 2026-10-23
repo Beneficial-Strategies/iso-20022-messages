@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the dispute details.
 /// </summary>
 [IsoId("_Ulb4Ftp-Ed-ak6NoX_4Aeg_1250324083")]
+[IsoDisplayName(@"Dispute")]
 public interface IDispute1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDispute1 : IIsoComponent
     [IsoId("_Ulb4F9p-Ed-ak6NoX_4Aeg_-1356799575")]
     [DisplayName("Margin Call Request Identification")]
     [IsoXmlTag("MrgnCallReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MarginCallRequestIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IDispute1 : IIsoComponent
     [IsoId("_UllpENp-Ed-ak6NoX_4Aeg_686253594")]
     [DisplayName("Dispute Date")]
     [IsoXmlTag("DsptDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate DisputeDate { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies prices related to a corporate action option.
 /// </summary>
 [IsoId("_M6nGkfo1EeCqjOT-vUu2sQ")]
+[IsoDisplayName(@"Corporate Action Price")]
 public interface ICorporateActionPrice26 : IIsoComponent
 {
     /// <summary>

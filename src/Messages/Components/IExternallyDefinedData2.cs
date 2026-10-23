@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data container to exchange data elements defined by another standard.
 /// </summary>
 [IsoId("_XOg3sS8lEeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Externally Defined Data")]
 public interface IExternallyDefinedData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IExternallyDefinedData2 : IIsoComponent
     [IsoId("_XbuNQS8lEeu125Ip9zFcsQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IExternallyDefinedData2 : IIsoComponent
     [IsoId("_XbuNQy8lEeu125Ip9zFcsQ")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary? Value { get; }
 
     /// <summary>
@@ -41,5 +45,7 @@ public interface IExternallyDefinedData2 : IIsoComponent
     [IsoId("_XbuNRy8lEeu125Ip9zFcsQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? Type { get; }
 }

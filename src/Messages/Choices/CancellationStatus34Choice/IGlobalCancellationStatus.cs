@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus34Choice;
 
 /// <summary>Status applicable globally to the meeting instruction cancellation request message.</summary>
 [IsoId("_c87iYa8uEfCx2aBifPEdRg")]
+[IsoDisplayName(@"Global Cancellation Status")]
 public interface IGlobalCancellationStatus : ICancellationStatus34Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

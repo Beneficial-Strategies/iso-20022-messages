@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountAuditTrailOrOpe
 /// </summary>
 [IsoId("_A6gAsTp0Eemk2e6qGBk8IQ")]
 [IsoXmlTag("SctiesAcctAudtTrlRpt")]
+[IsoDisplayName(@"Securities Account Audit Trail Report")]
 public interface ISecuritiesAccountAuditTrailReport
     : ISecuritiesAccountAuditTrailOrOperationalError3Choice,
         IIsoChoiceVariant

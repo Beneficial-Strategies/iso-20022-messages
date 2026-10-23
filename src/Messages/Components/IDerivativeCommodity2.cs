@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the details of a commodity derivative.
 /// </summary>
 [IsoId("_e-bjmXvyEeanCNPcMT7sSg")]
+[IsoDisplayName(@"Derivative Commodity")]
 public interface IDerivativeCommodity2 : IIsoComponent
 {
     /// <summary>

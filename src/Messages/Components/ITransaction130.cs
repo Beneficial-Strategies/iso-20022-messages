@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fraud reporting transaction.
 /// </summary>
 [IsoId("_S466AYv3EeumSPwlS1PkxQ")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction130 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransaction130 : IIsoComponent
     [IsoId("_S-Ft4Yv3EeumSPwlS1PkxQ")]
     [DisplayName("Fraud Transaction Identification")]
     [IsoXmlTag("FrdTxId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text FraudTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ITransaction130 : IIsoComponent
     [IsoId("_S-Ft64v3EeumSPwlS1PkxQ")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee2> AdditionalFee { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ITransaction130 : IIsoComponent
     [IsoId("_S-Ft7Yv3EeumSPwlS1PkxQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation22> AdditionalInformation { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ITransaction130 : IIsoComponent
     [IsoId("_S-Ft74v3EeumSPwlS1PkxQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 
     /// <summary>

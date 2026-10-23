@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the original notification, to which the cancellation advice refers.
 /// </summary>
 [IsoId("_shR-sVkyEeGeoaLUQk__nA_-557588212")]
+[IsoDisplayName(@"Original Notification")]
 public interface IOriginalNotification6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalNotification6 : IIsoComponent
     [IsoId("_shR-slkyEeGeoaLUQk__nA_1294874473")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IOriginalNotification6 : IIsoComponent
     [IsoId("_shR-s1kyEeGeoaLUQk__nA_1821870416")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IOriginalNotification6 : IIsoComponent
     [IsoId("_shbIoFkyEeGeoaLUQk__nA_-2061208998")]
     [DisplayName("Original Notification Identification")]
     [IsoXmlTag("OrgnlNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalNotificationIdentification { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IOriginalNotification6 : IIsoComponent
     [IsoId("_shbIoVkyEeGeoaLUQk__nA_473989568")]
     [DisplayName("Notification Cancellation")]
     [IsoXmlTag("NtfctnCxl")]
+    [IsoSimpleType(IsoSimpleType.GroupCancellationIndicator)]
     GroupCancellationIndicator? NotificationCancellation { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface IOriginalNotification6 : IIsoComponent
     [IsoId("_shbIolkyEeGeoaLUQk__nA_-1228197400")]
     [DisplayName("Original Notification Reference")]
     [IsoXmlTag("OrgnlNtfctnRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalNotificationReference4> OriginalNotificationReference { get; }
 }

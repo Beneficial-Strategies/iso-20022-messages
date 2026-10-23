@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the number of occurrences of a particular event and the maximum number of times this event may occur.
 /// </summary>
 [IsoId("_RJpGpNp-Ed-ak6NoX_4Aeg_-234268618")]
+[IsoDisplayName(@"Limit")]
 public interface ILimit1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILimit1 : IIsoComponent
     [IsoId("_RJpGpdp-Ed-ak6NoX_4Aeg_-195483682")]
     [DisplayName("Current")]
     [IsoXmlTag("Cur")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText Current { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ILimit1 : IIsoComponent
     [IsoId("_RJpGptp-Ed-ak6NoX_4Aeg_78802724")]
     [DisplayName("Limit")]
     [IsoXmlTag("Lmt")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText Limit { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates if the debit authorisation is granted or not.
 /// </summary>
 [IsoId("_T9WkaNp-Ed-ak6NoX_4Aeg_2085142381")]
+[IsoDisplayName(@"Debit Authorisation Confirmation")]
 public interface IDebitAuthorisationConfirmation : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDebitAuthorisationConfirmation : IIsoComponent
     [IsoId("_T9Wkadp-Ed-ak6NoX_4Aeg_2126703723")]
     [DisplayName("Debit Authorisation")]
     [IsoXmlTag("DbtAuthstn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator DebitAuthorisation { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IDebitAuthorisationConfirmation : IIsoComponent
     [IsoId("_T9Wka9p-Ed-ak6NoX_4Aeg_884935673")]
     [DisplayName("Value Date To Debit")]
     [IsoXmlTag("ValDtToDbt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValueDateToDebit { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IDebitAuthorisationConfirmation : IIsoComponent
     [IsoId("_T9WkbNp-Ed-ak6NoX_4Aeg_-1553869979")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Reason { get; }
 }

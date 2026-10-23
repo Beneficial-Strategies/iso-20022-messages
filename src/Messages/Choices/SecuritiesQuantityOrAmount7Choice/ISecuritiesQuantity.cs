@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount7Choic
 /// </summary>
 [IsoId("_pizbYTi7Eeydid5dcNPKvg")]
 [IsoXmlTag("SctiesQty")]
+[IsoDisplayName(@"Securities Quantity")]
 public interface ISecuritiesQuantity : ISecuritiesQuantityOrAmount7Choice, IIsoChoiceVariant
 {
     /// <summary>

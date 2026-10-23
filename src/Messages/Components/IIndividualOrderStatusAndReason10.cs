@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of an individual order of a bulk or multiple or switch order cancellation instruction that was previously received.
 /// </summary>
 [IsoId("4a601ee9-a3e8-41ed-b9f1-030ed7ed2ec5")]
+[IsoDisplayName(@"Individual Order Status And Reason10")]
 public interface IIndividualOrderStatusAndReason10 : IIsoComponent
 {
     /// <summary>

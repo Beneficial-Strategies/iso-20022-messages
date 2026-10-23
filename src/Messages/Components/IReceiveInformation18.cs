@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_BUbtQ4fuEeevKP8c-ilVhA")]
+[IsoDisplayName(@"Receive Information")]
 public interface IReceiveInformation18 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IReceiveInformation18 : IIsoComponent
     [IsoId("_BlF_bYfuEeevKP8c-ilVhA")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary41> IntermediaryInformation { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IReceiveInformation18 : IIsoComponent
     [IsoId("_BlF_b4fuEeevKP8c-ilVhA")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IReceiveInformation18 : IIsoComponent
     [IsoId("_NgrPcYjREeeiYZ2e3mpBRA")]
     [DisplayName("Fees")]
     [IsoXmlTag("Fees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFees1> Fees { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface IReceiveInformation18 : IIsoComponent
     [IsoId("_RmOvkYjREeeiYZ2e3mpBRA")]
     [DisplayName("Individual Tax")]
     [IsoXmlTag("IndvTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax34> IndividualTax { get; }
 
     /// <summary>
@@ -106,6 +111,7 @@ public interface IReceiveInformation18 : IIsoComponent
     [IsoId("_BlF_f4fuEeevKP8c-ilVhA")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms33> ForeignExchangeDetails { get; }
 
     /// <summary>

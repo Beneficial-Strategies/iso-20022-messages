@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Price Information29.
 /// </summary>
 [IsoId("_XMZxYYVYEe-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Price Information29")]
 public interface IPriceInformation29 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unencrypted sensitive data of a token.
 /// </summary>
 [IsoId("_vbKOYZF8EeukDPgU2BMkjQ")]
+[IsoDisplayName(@"Token")]
 public interface IToken2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IToken2 : IIsoComponent
     [IsoId("_vhjxUZF8EeukDPgU2BMkjQ")]
     [DisplayName("Payment Token")]
     [IsoXmlTag("PmtTkn")]
+    [IsoSimpleType(IsoSimpleType.Max19NumericText)]
     Max19NumericText? PaymentToken { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IToken2 : IIsoComponent
     [IsoId("_vhjxU5F8EeukDPgU2BMkjQ")]
     [DisplayName("Token Expiry Date")]
     [IsoXmlTag("TknXpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? TokenExpiryDate { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IToken2 : IIsoComponent
     [IsoId("_vhjxVZF8EeukDPgU2BMkjQ")]
     [DisplayName("Token Requestor Identification")]
     [IsoXmlTag("TknRqstrId")]
+    [IsoSimpleType(IsoSimpleType.Max11NumericText)]
     Max11NumericText? TokenRequestorIdentification { get; }
 
     /// <summary>
@@ -42,6 +46,8 @@ public interface IToken2 : IIsoComponent
     [IsoId("_vhjxV5F8EeukDPgU2BMkjQ")]
     [DisplayName("Token Assurance Data")]
     [IsoXmlTag("TknAssrncData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TokenAssuranceData { get; }
 
     /// <summary>
@@ -50,6 +56,7 @@ public interface IToken2 : IIsoComponent
     [IsoId("_vhjxWZF8EeukDPgU2BMkjQ")]
     [DisplayName("Token Assurance Method")]
     [IsoXmlTag("TknAssrncMtd")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? TokenAssuranceMethod { get; }
 
     /// <summary>
@@ -58,6 +65,7 @@ public interface IToken2 : IIsoComponent
     [IsoId("_vhjxW5F8EeukDPgU2BMkjQ")]
     [DisplayName("Token Initiated Indicator")]
     [IsoXmlTag("TknInittdInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TokenInitiatedIndicator { get; }
 
     /// <summary>
@@ -74,6 +82,8 @@ public interface IToken2 : IIsoComponent
     [IsoId("_RjZpEJyAEeuo7tDc4CDHXg")]
     [DisplayName("Other Storage Location")]
     [IsoXmlTag("OthrStorgLctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherStorageLocation { get; }
 
     /// <summary>
@@ -90,6 +100,8 @@ public interface IToken2 : IIsoComponent
     [IsoId("_oN2LQJyBEeuo7tDc4CDHXg")]
     [DisplayName("Other Protection Method")]
     [IsoXmlTag("OthrPrtcnMtd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherProtectionMethod { get; }
 
     /// <summary>
@@ -98,5 +110,6 @@ public interface IToken2 : IIsoComponent
     [IsoId("_uAZ_wJyBEeuo7tDc4CDHXg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

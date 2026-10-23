@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRightThreshold1Choice;
 /// Additional right granted to specify the minimum stake in share capital or cash value or number of security holders required to table resolutions.
 /// </summary>
 [IsoId("_RDrolNp-Ed-ak6NoX_4Aeg_2143895546")]
+[IsoDisplayName(@"Additional Right Threshold")]
 public interface IAdditionalRightThreshold : IAdditionalRightThreshold1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IAdditionalRightThreshold : IAdditionalRightThreshold1Choice, I
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("AddtlRghtThrshld")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }
