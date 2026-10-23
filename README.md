@@ -1,12 +1,8 @@
-# BeneficialStrategies.Iso20022.Interfaces
+![Beneficial Strategies](https://raw.githubusercontent.com/Beneficial-Strategies/iso-20022-messages/main/.beneficial/logo.png)
 
-An interface for every ISO 20022 message, component and choice: the **shape** of each type, with no implementation. Write against the shape, and decide separately what supplies the objects: a class of your own, the ready-made records, or classes made for you at run time.
+# BeneficialStrategies.Iso20022.Messages
 
-```
-dotnet add package BeneficialStrategies.Iso20022.Interfaces --version 0.7.0-alpha
-```
-
-The package depends only on [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives) (the types of the members: `Max35Text`, the code sets, the amounts). The packages are in alpha, so the commands name the version.
+An interface for every ISO 20022 message, component and choice, with the verbatim ISO descriptions: the contract that readers, validators and implementations are written against.
 
 ## Why this package is the nucleus
 
@@ -22,43 +18,57 @@ Because the interface is the contract and the implementation is interchangeable,
 
 Everything else in this family implements this package or builds on it; it is the nucleus of the implementation of the standard.
 
-Three examples, each a step further. Each uses nothing but this package.
+## Install
 
-## 1. Your own class
+```
+dotnet add package BeneficialStrategies.Iso20022.Messages --prerelease
+```
+
+The package depends only on [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives) (the types of the members: `Max35Text`, the code sets, the amounts), and targets netstandard2.0 (.NET Framework 4.6.1+, Mono, Unity), net8.0 and net10.0. The package is in alpha, so the command asks for a prerelease version. Three examples follow, each a step further, each using nothing but this package.
+
+## How to use
+
+### Your own class
 
 An interface is plain C#. Implement one in a class of your own (an entity, a DTO, a type of another message framework), and everything written against the interface works with it:
 
+<!-- snippet: examples/01-your-own-class/MyIdentification.cs#class -->
 ```csharp
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.SimpleTypes;
-
 public sealed class MyIdentification : IGenericIdentification3
 {
     public Max35Text Identification => "MINE-1";
     public Max35Text? Issuer => null;
 }
+```
+<!-- /snippet -->
 
+<!-- snippet: examples/01-your-own-class/Program.cs#use -->
+```csharp
 static string Describe(IGenericIdentification3 id) => $"{id.Identification} / {id.Issuer?.ToString() ?? "no issuer"}";
 
 Console.WriteLine(Describe(new MyIdentification()));      // MINE-1 / no issuer
 ```
+<!-- /snippet -->
 
 `Max35Text` is a primitive type that holds at most 35 characters, so you cannot build a value that is too long (`"MINE-1"` converts to it implicitly). A member that is **required** is not nullable (`Identification`), one that is **optional** is (`Issuer`), and one that **may repeat** is an `IEnumerable<T>`.
 
-## 2. A choice, and its variants
+Try the [project](https://github.com/Beneficial-Strategies/iso-20022-messages/tree/main/examples/01-your-own-class) yourself.
+
+### A choice, and its variants
 
 ISO 20022 has choices: an account is identified *either* by an IBAN *or* by some other identification. A choice is an interface (`IAccountIdentification4Choice`), and each variant is an interface of its own, in a namespace named for the choice, that also derives from it. Test for a variant with a type pattern:
 
+<!-- snippet: examples/02-a-choice/MyIban.cs#variant -->
 ```csharp
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice;
-using BeneficialStrategies.Iso20022.SimpleTypes;
-
 public sealed class MyIban : IIBAN
 {
     public IBAN2007Identifier Value => "DE89370400440532013000";
 }
+```
+<!-- /snippet -->
 
+<!-- snippet: examples/02-a-choice/Program.cs#choice -->
+```csharp
 static string DescribeAccount(IAccountIdentification4Choice account) => account switch
 {
     IIBAN iban => $"IBAN {iban.Value}",
@@ -68,18 +78,18 @@ static string DescribeAccount(IAccountIdentification4Choice account) => account 
 
 Console.WriteLine(DescribeAccount(new MyIban()));      // IBAN DE89370400440532013000
 ```
+<!-- /snippet -->
 
 A choice can hold only one variant, and the type says so: an object is an `IIBAN` or an `IOther`, and you ask which.
 
-## 3. A message, and what a reader needs to know about it
+Try the [project](https://github.com/Beneficial-Strategies/iso-20022-messages/tree/main/examples/02-a-choice) yourself.
+
+### A message, and what a reader needs to know about it
 
 A message interface (`IFIToFICustomerCreditTransferV14`, ISO's `pacs.008.001.14`) is shaped like a component, and also says how the message is read and written: its identifier, the XML element that holds it and the namespace of its document. A reader or writer needs nothing else, so it works with **any** class that implements the interface:
 
+<!-- snippet: examples/03-a-message/Program.cs#message -->
 ```csharp
-using BeneficialStrategies.Iso20022;
-using BeneficialStrategies.Iso20022.Framework;
-using BeneficialStrategies.Iso20022.pacs;
-
 var message = IsoMessageAttribute.Find(typeof(IFIToFICustomerCreditTransferV14))!;
 Console.WriteLine($"{message.IsoIdentifier}  <{message.XmlTag}>  {message.DocumentNamespace}");
 // pacs.008.001.14  <FIToFICstmrCdtTrf>  urn:iso:std:iso:20022:tech:xsd:pacs.008.001.14
@@ -89,22 +99,30 @@ Console.WriteLine(Iso.KindOf(typeof(IGenericIdentification3)));            // Co
 Console.WriteLine(Iso.KindOf(typeof(IAccountIdentification4Choice)));      // Choice
 Console.WriteLine(Iso.KindOf(typeof(IIBAN)));                              // ChoiceVariant
 ```
+<!-- /snippet -->
 
 `Iso.KindOf(Type)` tells the kind of any type of the model, and an interface carries a marker of its kind (`IIsoComponent`, `IIsoChoice`, `IIsoChoiceVariant`, and `IOuterRecord` for a message).
 
-## Where the objects come from
+Try the [project](https://github.com/Beneficial-Strategies/iso-20022-messages/tree/main/examples/03-a-message) yourself.
+
+## More
+
+* Documentation, release notes and issues: https://github.com/Beneficial-Strategies/iso-20022-messages
+* License: MIT. Status: alpha.
+
+### Where the objects come from
 
 The interfaces are only the shape. Something has to implement them, and the packages of the family differ in what:
 
 | You want | Package | |
 |---|---|---|
-| a class of your own | this package | examples 1 to 3 |
+| a class of your own | this package | the examples above |
 | a ready-made class for every message, component and choice | [BeneficialStrategies.Iso20022](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) | the records implement these interfaces, with XML and JSON serialization |
 | classes made for you, on the fly, as you ask for an interface | [BeneficialStrategies.Iso20022.Factory](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Factory) | no implementation library needed |
 | the rules the types cannot express, checked on anything that implements the interface | [BeneficialStrategies.Iso20022.FluentValidation](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation) | written for these interfaces |
 | valid and invalid objects to use in tests | `BeneficialStrategies.Iso20022.Samples` | built through the Factory |
 
-## How the interfaces are shaped
+### How the interfaces are shaped
 
 * **Namespaces are those of the records:** `IGroupHeader93` is in `BeneficialStrategies.Iso20022.Components`, a message such as `IFIToFICustomerCreditTransferV14` in its business area (`BeneficialStrategies.Iso20022.pacs`), a choice in `BeneficialStrategies.Iso20022.Choices`.
 * **An interface is flat:** it lists every member of its own version and inherits nothing but the marker of its kind.
@@ -113,3 +131,16 @@ The interfaces are only the shape. Something has to implement them, and the pack
 * **Primitive types** (`Max35Text`, code sets, amounts) are those of [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives).
 
 Targets netstandard2.0 (.NET Framework 4.6.1+, Mono, Unity), net8.0 and net10.0.
+
+<!-- end of package readme -->
+
+## Building and contributing
+
+```
+dotnet build -c Release
+dotnet test -c Release --no-build
+tools/run-examples.sh              # packs the package, then builds and runs every example against it
+python3 tools/sync-readme.py       # fills the code blocks above from the examples
+```
+
+The interfaces are generated: every file carries a header that says so, and a change to the model is made where they are generated from, not by hand. The .NET Framework 4.8 tests run on Windows only. A bug report or a change starts with an issue; a bug fix names the test that failed before it. See CONTRIBUTING.md.
