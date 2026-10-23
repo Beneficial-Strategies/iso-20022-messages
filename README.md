@@ -8,8 +8,8 @@ An interface for every ISO 20022 message, component and choice, with the verbati
 
 This is the contract of the family. Almost every other tool is built on **the interfaces of the ISO 20022 message shapes, not on any one implementation of them**:
 
-* the **validators** ([FluentValidation](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation)) are written for `IValidator<IGroupHeader131>`, so they judge anything that implements the interface;
-* the **readers** (the XML and JSON serializers, [FluentValidation.Xml](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation.Xml) and [FluentValidation.Payloads](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation.Payloads)) read a document *into an interface*, with objects the [Factory](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Factory) makes for it;
+* the **validators** ([Messages.Validation](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Messages.Validation)) are written for `IValidator<IGroupHeader131>`, so they judge anything that implements the interface;
+* the **readers** (the XML and JSON serializers, [Validation.Xml](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Validation.Xml) and [Validation.Xml.Payloads](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Validation.Xml.Payloads)) read a document *into an interface*, with objects the [Factory](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Factory) makes for it;
 * the **Factory** writes the classes that implement them, and the **Samples** build their objects against them;
 * the **saga toolkit** consumes and publishes messages typed by these interfaces;
 * the **ready-made records** of [BeneficialStrategies.Iso20022](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) are just one implementation, a convenient one, and nothing above depends on them.
@@ -119,7 +119,7 @@ The interfaces are only the shape. Something has to implement them, and the pack
 | a class of your own | this package | the examples above |
 | a ready-made class for every message, component and choice | [BeneficialStrategies.Iso20022](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) | the records implement these interfaces, with XML and JSON serialization |
 | classes made for you, on the fly, as you ask for an interface | [BeneficialStrategies.Iso20022.Factory](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Factory) | no implementation library needed |
-| the rules the types cannot express, checked on anything that implements the interface | [BeneficialStrategies.Iso20022.FluentValidation](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation) | written for these interfaces |
+| the rules the types cannot express, checked on anything that implements the interface | [BeneficialStrategies.Iso20022.Messages.Validation](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Messages.Validation) | written for these interfaces |
 | valid and invalid objects to use in tests | `BeneficialStrategies.Iso20022.Samples` | built through the Factory |
 
 ### How the interfaces are shaped
