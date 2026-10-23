@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides references to the transactions both for the matching application and for the user.
 /// </summary>
 [IsoId("_RaCTGNp-Ed-ak6NoX_4Aeg_-1149247875")]
+[IsoDisplayName(@"Data Set Submission References")]
 public interface IDataSetSubmissionReferences4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDataSetSubmissionReferences4 : IIsoComponent
     [IsoId("_RaMEENp-Ed-ak6NoX_4Aeg_-1149247814")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,9 @@ public interface IDataSetSubmissionReferences4 : IIsoComponent
     [IsoId("_RaMEEtp-Ed-ak6NoX_4Aeg_-1149247504")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IDataSetSubmissionReferences4 : IIsoComponent
     [IsoId("_RaMEE9p-Ed-ak6NoX_4Aeg_-23474760")]
     [DisplayName("Forced Match")]
     [IsoXmlTag("ForcdMtch")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ForcedMatch { get; }
 
     /// <summary>

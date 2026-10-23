@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash details for amount  assigned as collateral position.
 /// </summary>
 [IsoId("_rRyqwRIwEeydmIVkS03esw")]
+[IsoDisplayName(@"Cash Balance")]
 public interface ICashBalance15 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface ICashBalance15 : IIsoComponent
     [IsoId("_rn_kORIwEeydmIVkS03esw")]
     [DisplayName("Transaction Lot Number")]
     [IsoXmlTag("TxLotNb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification178> TransactionLotNumber { get; }
 }

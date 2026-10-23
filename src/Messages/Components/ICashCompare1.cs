@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data specific to cash and related fields used as a collateral.
 /// </summary>
 [IsoId("_kl1m0dMGEem1A4OOmCK97A")]
+[IsoDisplayName(@"Cash Compare")]
 public interface ICashCompare1 : IIsoComponent
 {
     /// <summary>

@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_sk60AK4FEeWL1uap3dNhCQ")]
 [IsoMessage("catp.013.001.01", "ATMDpstRspn", "urn:iso:std:iso:20022:tech:xsd:catp.013.001.01")]
+[Description(@"The ATMDepositResponse message is sent by an ATM manager or its agent to inform the ATM of the approval or decline of the deposit transaction.")]
+[IsoDisplayName(@"ATM Deposit Response V")]
 public interface IATMDepositResponseV01 : IOuterRecord
 {
     /// <summary>

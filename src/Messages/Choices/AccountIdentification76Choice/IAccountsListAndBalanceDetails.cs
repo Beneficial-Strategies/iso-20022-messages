@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification76Choice;
 /// <summary>
 /// Accounts List And Balance Details.
 /// </summary>
+[IsoDisplayName(@"Accounts List And Balance Details")]
 public interface IAccountsListAndBalanceDetails : IAccountIdentification76Choice, IIsoChoiceVariant
 {
     /// <summary>

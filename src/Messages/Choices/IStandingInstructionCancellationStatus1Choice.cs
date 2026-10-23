@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides information about the status of a standing instruction cancellation request.
 /// </summary>
 [IsoId("_RirRstp-Ed-ak6NoX_4Aeg_-1572447804")]
+[IsoDisplayName(@"Standing Instruction Cancellation Status 1 Choice")]
 public interface IStandingInstructionCancellationStatus1Choice : IIsoChoice { }

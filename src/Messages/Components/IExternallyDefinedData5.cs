@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Externally Defined Data5.
 /// </summary>
 [IsoId("_82uV0ZB9Ee6FLLjWp95ntQ")]
+[IsoDisplayName(@"Externally Defined Data5")]
 public interface IExternallyDefinedData5 : IIsoComponent
 {
     /// <summary>

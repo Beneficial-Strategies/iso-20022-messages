@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data specific to commodities and related fields used as a collateral.
 /// </summary>
 [IsoId("_EvTYIdR8EemZdYGWu384Zw")]
+[IsoDisplayName(@"Commodity")]
 public interface ICommodity21 : IIsoComponent
 {
     /// <summary>

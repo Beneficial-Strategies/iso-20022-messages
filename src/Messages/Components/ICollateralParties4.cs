@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the collateral counterparty(ies) of Party A with his eligibility set profile.
 /// </summary>
 [IsoId("_WfxEk_osEeiAfJEqh4xF_Q")]
+[IsoDisplayName(@"Collateral Parties")]
 public interface ICollateralParties4 : IIsoComponent
 {
     /// <summary>

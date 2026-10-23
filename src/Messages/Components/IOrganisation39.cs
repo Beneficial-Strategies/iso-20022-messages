@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.
 /// </summary>
 [IsoId("_mDHs1ZQ_EemqYPWMBuVawg")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation39 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrganisation39 : IIsoComponent
     [IsoId("_mWdfk5Q_EemqYPWMBuVawg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOrganisation39 : IIsoComponent
     [IsoId("_mWdflZQ_EemqYPWMBuVawg")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IOrganisation39 : IIsoComponent
     [IsoId("_mWdfmZQ_EemqYPWMBuVawg")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IOrganisation39 : IIsoComponent
     [IsoId("_mWdfm5Q_EemqYPWMBuVawg")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Purpose { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IOrganisation39 : IIsoComponent
     [IsoId("_mWdfn5Q_EemqYPWMBuVawg")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 
     /// <summary>
@@ -73,6 +82,9 @@ public interface IOrganisation39 : IIsoComponent
     [IsoId("_mWdfoZQ_EemqYPWMBuVawg")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress21> PostalAddress { get; }
 
     /// <summary>
@@ -89,5 +101,6 @@ public interface IOrganisation39 : IIsoComponent
     [IsoId("_mWdfpZQ_EemqYPWMBuVawg")]
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<MICIdentifier> PlaceOfListing { get; }
 }

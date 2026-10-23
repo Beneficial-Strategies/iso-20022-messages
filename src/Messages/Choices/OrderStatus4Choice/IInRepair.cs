@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus4Choice;
 /// Status of the switch order is in repair.
 /// </summary>
 [IsoId("_9wxHy0H8EeaV3ab_pHzFIQ")]
+[IsoDisplayName(@"In Repair")]
 public interface IInRepair : IOrderStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the elements of an entry in the report.
 /// </summary>
 [IsoId("_T73WoNp-Ed-ak6NoX_4Aeg_-125433999")]
+[IsoDisplayName(@"Notification Entry")]
 public interface INotificationEntry1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface INotificationEntry1 : IIsoComponent
     [IsoId("_T73Wo9p-Ed-ak6NoX_4Aeg_-125433907")]
     [DisplayName("Reversal Indicator")]
     [IsoXmlTag("RvslInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReversalIndicator { get; }
 
     /// <summary>
@@ -65,6 +67,8 @@ public interface INotificationEntry1 : IIsoComponent
     [IsoId("_T73Wp9p-Ed-ak6NoX_4Aeg_-125433846")]
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerReference { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface INotificationEntry1 : IIsoComponent
     [IsoId("_T73WqNp-Ed-ak6NoX_4Aeg_-125433413")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalanceAvailability1> Availability { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface INotificationEntry1 : IIsoComponent
     [IsoId("_T8BHoNp-Ed-ak6NoX_4Aeg_-125433876")]
     [DisplayName("Commission Waiver Indicator")]
     [IsoXmlTag("ComssnWvrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CommissionWaiverIndicator { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface INotificationEntry1 : IIsoComponent
     [IsoId("_T8BHotp-Ed-ak6NoX_4Aeg_-125433012")]
     [DisplayName("Batch")]
     [IsoXmlTag("Btch")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBatchInformation1> Batch { get; }
 
     /// <summary>
@@ -121,6 +128,7 @@ public interface INotificationEntry1 : IIsoComponent
     [IsoId("_T8BHpNp-Ed-ak6NoX_4Aeg_-125433382")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChargesInformation3> Charges { get; }
 
     /// <summary>
@@ -129,6 +137,7 @@ public interface INotificationEntry1 : IIsoComponent
     [IsoId("_T8BHpdp-Ed-ak6NoX_4Aeg_-125433321")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionInterest1> Interest { get; }
 
     /// <summary>
@@ -137,6 +146,7 @@ public interface INotificationEntry1 : IIsoComponent
     [IsoId("_T8BHptp-Ed-ak6NoX_4Aeg_-125433290")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEntryTransaction1> TransactionDetails { get; }
 
     /// <summary>
@@ -145,5 +155,7 @@ public interface INotificationEntry1 : IIsoComponent
     [IsoId("_T8BHp9p-Ed-ak6NoX_4Aeg_-125433938")]
     [DisplayName("Additional Entry Information")]
     [IsoXmlTag("AddtlNtryInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalEntryInformation { get; }
 }

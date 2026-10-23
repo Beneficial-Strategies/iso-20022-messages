@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of a bulk or multiple or switch order that was previously received.
 /// </summary>
 [IsoId("_RMBsRNp-Ed-ak6NoX_4Aeg_-571096042")]
+[IsoDisplayName(@"Order Status And Reason")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IOrderStatusAndReason7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IOrderStatusAndReason7 : IIsoComponent
     [IsoId("_RMBsRdp-Ed-ak6NoX_4Aeg_1226343818")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -49,6 +53,9 @@ public interface IOrderStatusAndReason7 : IIsoComponent
     [IsoId("_RMBsSdp-Ed-ak6NoX_4Aeg_-569247483")]
     [DisplayName("Rejected")]
     [IsoXmlTag("Rjctd")]
+    [MinLength(1)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectedStatus6> Rejected { get; }
 
     /// <summary>

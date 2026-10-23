@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fraud reporting type information
 /// </summary>
 [IsoId("_Nfi6oZjCEeefZKJHxQTztg")]
+[IsoDisplayName(@"Reported Fraud")]
 public interface IReportedFraud2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IReportedFraud2 : IIsoComponent
     [IsoId("_NtFnY5jCEeefZKJHxQTztg")]
     [DisplayName("Other Fraud Type")]
     [IsoXmlTag("OthrFrdTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherFraudType { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IReportedFraud2 : IIsoComponent
     [IsoId("_NtFnZ5jCEeefZKJHxQTztg")]
     [DisplayName("Other Fraud Reporting Action")]
     [IsoXmlTag("OthrFrdRptgActn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherFraudReportingAction { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface IReportedFraud2 : IIsoComponent
     [IsoId("_NtFna5jCEeefZKJHxQTztg")]
     [DisplayName("Other Reporting Entity")]
     [IsoXmlTag("OthrRptgNtty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherReportingEntity { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface IReportedFraud2 : IIsoComponent
     [IsoId("_NtFnc5jCEeefZKJHxQTztg")]
     [DisplayName("Submitter Case Reference")]
     [IsoXmlTag("SubmitrCaseRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubmitterCaseReference { get; }
 
     /// <summary>
@@ -73,5 +82,7 @@ public interface IReportedFraud2 : IIsoComponent
     [IsoId("_NtFneZjCEeefZKJHxQTztg")]
     [DisplayName("Case Reference")]
     [IsoXmlTag("CaseRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CaseReference { get; }
 }

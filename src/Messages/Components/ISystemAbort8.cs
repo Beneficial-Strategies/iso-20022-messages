@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// System Abort8.
 /// </summary>
 [IsoId("_vPij8aEoEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"System Abort8")]
 public interface ISystemAbort8 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface ISystemAbort8 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

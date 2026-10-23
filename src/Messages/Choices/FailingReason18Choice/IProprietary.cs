@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingReason18Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IFailingReason18Choice, IIsoChoiceVariant
 {
     /// <summary>

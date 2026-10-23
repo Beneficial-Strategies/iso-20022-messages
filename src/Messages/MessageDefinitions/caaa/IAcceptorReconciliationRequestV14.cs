@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrRcncltnReq",
     "urn:iso:std:iso:20022:tech:xsd:caaa.009.001.14"
 )]
+[IsoDisplayName(@"Acceptor Reconciliation Request V14")]
 public interface IAcceptorReconciliationRequestV14 : IOuterRecord
 {
     /// <summary>

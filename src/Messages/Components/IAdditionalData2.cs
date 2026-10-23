@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains additional data.
 /// </summary>
 [IsoId("_EFgcoTNGEeylu6lH-gut-A")]
+[IsoDisplayName(@"Additional Data")]
 public interface IAdditionalData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAdditionalData2 : IIsoComponent
     [IsoId("_EO5pMTNGEeylu6lH-gut-A")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IAdditionalData2 : IIsoComponent
     [IsoId("_MhSWIDNGEeylu6lH-gut-A")]
     [DisplayName("Details")]
     [IsoXmlTag("Dtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> Details { get; }
 }

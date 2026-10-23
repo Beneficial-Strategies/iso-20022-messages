@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCharacteristics1Choice;
 /// </summary>
 [IsoId("_RbrR1Np-Ed-ak6NoX_4Aeg_1622931729")]
 [IsoXmlTag("StrdPdctChrtcs")]
+[IsoDisplayName(@"Structured Product Characteristics")]
 public interface IStructuredProductCharacteristics
     : IProductCharacteristics1Choice,
         IIsoChoiceVariant
@@ -28,5 +29,7 @@ public interface IStructuredProductCharacteristics
     [IsoId("_T5L2Ftp-Ed-ak6NoX_4Aeg_1319095231")]
     [DisplayName("Characteristics")]
     [IsoXmlTag("Chrtcs")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Characteristics { get; }
 }

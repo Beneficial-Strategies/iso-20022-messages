@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of missing information.
 /// </summary>
 [IsoId("_7O3D59jKEeq5MfBBxQig1Q")]
+[IsoDisplayName(@"Unable To Apply Missing")]
 public interface IUnableToApplyMissing2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IUnableToApplyMissing2 : IIsoComponent
     [IsoId("_7RUiA9jKEeq5MfBBxQig1Q")]
     [DisplayName("Additional Missing Information")]
     [IsoXmlTag("AddtlMssngInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalMissingInformation { get; }
 }

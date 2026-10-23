@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote15Choice;
 /// Vote instruction is provided individually for each agenda resolution.
 /// </summary>
 [IsoId("_9WxvEfNXEeqRfth943bvEA")]
+[IsoDisplayName(@"Vote Per Agenda Resolution")]
 public interface IVotePerAgendaResolution : IVote15Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

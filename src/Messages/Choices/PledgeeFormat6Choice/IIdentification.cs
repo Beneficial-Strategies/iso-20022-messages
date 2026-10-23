@@ -10,12 +10,15 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat6Choice;
 /// </summary>
 [IsoId("_Z07snffVEeiNZp_PtLohLw")]
 [IsoXmlTag("Id")]
+[IsoDisplayName(@"Identification")]
 public interface IIdentification : IPledgeeFormat6Choice, IIsoChoiceVariant
 {
     /// <summary>
     /// Additional information about the entity to which the financial instruments are pledged.
     /// </summary>
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax30Text)]
+    [StringLength(30, MinimumLength = 1)]
     RestrictedFINMax30Text? Value { get; }
 
     /// <summary>

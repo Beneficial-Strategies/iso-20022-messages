@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalBusinessProcessFormat2
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IAdditionalBusinessProcessFormat23Choice, IIsoChoiceVariant
 {
     /// <summary>

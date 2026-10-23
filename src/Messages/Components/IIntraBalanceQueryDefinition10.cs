@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Intra Balance Query Definition10.
 /// </summary>
 [IsoId("_5LCeUTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Intra Balance Query Definition10")]
 public interface IIntraBalanceQueryDefinition10 : IIsoComponent
 {
     /// <summary>

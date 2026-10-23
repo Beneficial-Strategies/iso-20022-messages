@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash Option106.
 /// </summary>
 [IsoId("_2dVQQ4V4Ee-oeNhl-Tk6YQ")]
+[IsoDisplayName(@"Cash Option106")]
 public interface ICashOption106 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface ICashOption106 : IIsoComponent
     /// </summary>
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat55Choice> WithholdingTaxRate { get; }
 
     /// <summary>

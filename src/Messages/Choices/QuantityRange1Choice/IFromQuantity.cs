@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityRange1Choice;
 
 /// <summary>Specifies the from quantity.</summary>
 [IsoId("_jtRfEO5NEeCisYr99QEiWA_-377163681")]
+[IsoDisplayName(@"From Quantity")]
 public interface IFromQuantity : IQuantityRange1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

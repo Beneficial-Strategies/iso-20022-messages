@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates one of the constraints of a range of business values.
 /// </summary>
 [IsoId("_Q7yQ0dp-Ed-ak6NoX_4Aeg_528848853")]
+[IsoDisplayName(@"Term")]
 public interface ITerm1 : IIsoComponent
 {
     /// <summary>

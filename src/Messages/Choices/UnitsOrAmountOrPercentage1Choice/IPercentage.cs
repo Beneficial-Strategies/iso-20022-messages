@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitsOrAmountOrPercentage1Choice
 /// Percentage of cash amount.
 /// </summary>
 [IsoId("_B1SlYQjdEeS5F6qHcKOrew")]
+[IsoDisplayName(@"Percentage")]
 public interface IPercentage : IUnitsOrAmountOrPercentage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPercentage : IUnitsOrAmountOrPercentage1Choice, IIsoChoiceVari
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("Pctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

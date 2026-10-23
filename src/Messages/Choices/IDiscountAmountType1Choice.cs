@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the amount type.
 /// </summary>
 [IsoId("_tlhp9FkyEeGeoaLUQk__nA_1969856985")]
+[IsoDisplayName(@"Discount Amount Type 1 Choice")]
 public interface IDiscountAmountType1Choice : IIsoChoice { }

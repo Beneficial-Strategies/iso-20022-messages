@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vote20.
 /// </summary>
 [IsoId("_PcEnwVxyEe6fgZt44_IqFA")]
+[IsoDisplayName(@"Vote20")]
 public interface IVote20 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IVote20 : IIsoComponent
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IItemDescription2> Description { get; }
 
     /// <summary>
@@ -128,5 +130,6 @@ public interface IVote20 : IIsoComponent
     /// </summary>
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryVote2> Proprietary { get; }
 }

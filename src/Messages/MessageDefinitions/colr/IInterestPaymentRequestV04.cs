@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_CRyfcYFsEeWtPe6Crjmeug")]
 [IsoMessage("colr.013.001.04", "IntrstPmtReq", "urn:iso:std:iso:20022:tech:xsd:colr.013.001.04")]
+[Description(@"Scope|The InterestPaymentRequest message is sent by either;|- the collateral taker or its collateral manager to the collateral giver or its collateral manager, or|- the collateral giver or its collateral manager to the collateral taker or its collateral manager|It is used to request payment or advise the amount due for interest calculated for a specified period. The interest is based on the amount of collateral that has been held during the calculation period. It is possible to send these messages on a bi-lateral basis for matching.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|The InterestPaymentRequest message is used to advise the interest amount calculated for a specific period or request payment for an interest amount for a specific period.")]
+[IsoDisplayName(@"Interest Payment Request V")]
 public interface IInterestPaymentRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +31,8 @@ public interface IInterestPaymentRequestV04 : IOuterRecord
     [IsoId("_CRyfc4FsEeWtPe6Crjmeug")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -77,5 +81,6 @@ public interface IInterestPaymentRequestV04 : IOuterRecord
     [IsoId("_CRyff4FsEeWtPe6Crjmeug")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

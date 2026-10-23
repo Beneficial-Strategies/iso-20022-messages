@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statement information of an account.
 /// </summary>
 [IsoId("_1dwnkIq7EeSHjtO_wHA7PQ")]
+[IsoDisplayName(@"ATM Account Statement")]
 public interface IATMAccountStatement1 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IATMAccountStatement1 : IIsoComponent
     [IsoId("_LL9ZYIq8EeSHjtO_wHA7PQ")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AccountName { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface IATMAccountStatement1 : IIsoComponent
     [IsoId("_XaRwYIq8EeSHjtO_wHA7PQ")]
     [DisplayName("Account Statement")]
     [IsoXmlTag("AcctStmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMAccountStatement2> AccountStatement { get; }
 }

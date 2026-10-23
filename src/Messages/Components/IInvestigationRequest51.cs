@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of an investigation request, including identification and type.
 /// </summary>
 [IsoId("97cd2d16-d844-46d8-8996-23ce5c14b883")]
+[IsoDisplayName(@"Investigation Request51")]
 public interface IInvestigationRequest51 : IIsoComponent
 {
     /// <summary>
@@ -121,5 +122,6 @@ public interface IInvestigationRequest51 : IIsoComponent
     [IsoId("6c864e83-495c-4490-abca-3d3e0f29d0dd")]
     [DisplayName("Service Level")]
     [IsoXmlTag("SvcLvl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestigationServiceLevel1Choice> ServiceLevel { get; }
 }

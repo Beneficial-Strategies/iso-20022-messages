@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3ESGjEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.105.001.02", "ChrgsPmtNtfctn", "urn:iso:std:iso:20022:tech:xsd:camt.105.001.02")]
+[IsoDisplayName(@"Charges Payment Notification V02")]
 public interface IChargesPaymentNotificationV02 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +33,6 @@ public interface IChargesPaymentNotificationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

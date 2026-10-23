@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes of a fleet vehicle.
 /// </summary>
 [IsoId("_EQmW3_iqEeiJaN6-Lf-c_w")]
+[IsoDisplayName(@"Vehicle")]
 public interface IVehicle5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IVehicle5 : IIsoComponent
     [IsoId("_EQmW4_iqEeiJaN6-Lf-c_w")]
     [DisplayName("Vehicle Number")]
     [IsoXmlTag("VhclNb")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? VehicleNumber { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IVehicle5 : IIsoComponent
     [IsoId("_hiSvQPiqEeiJaN6-Lf-c_w")]
     [DisplayName("Vehicle Identification Number")]
     [IsoXmlTag("VhclIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? VehicleIdentificationNumber { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IVehicle5 : IIsoComponent
     [IsoId("_mFyIkPiqEeiJaN6-Lf-c_w")]
     [DisplayName("Fleet Number")]
     [IsoXmlTag("FleetNb")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? FleetNumber { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IVehicle5 : IIsoComponent
     [IsoId("_qP28UPiqEeiJaN6-Lf-c_w")]
     [DisplayName("Sub Fleet Number")]
     [IsoXmlTag("SubFleetNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubFleetNumber { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IVehicle5 : IIsoComponent
     [IsoId("_EQmW5_iqEeiJaN6-Lf-c_w")]
     [DisplayName("Unit Number")]
     [IsoXmlTag("UnitNb")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? UnitNumber { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IVehicle5 : IIsoComponent
     [IsoId("_EQmW4PiqEeiJaN6-Lf-c_w")]
     [DisplayName("Trailer Number")]
     [IsoXmlTag("TrlrNb")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? TrailerNumber { get; }
 
     /// <summary>
@@ -65,6 +74,8 @@ public interface IVehicle5 : IIsoComponent
     [IsoId("_EQmW5fiqEeiJaN6-Lf-c_w")]
     [DisplayName("Vehicle Tag")]
     [IsoXmlTag("VhclTag")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? VehicleTag { get; }
 
     /// <summary>
@@ -81,6 +92,7 @@ public interface IVehicle5 : IIsoComponent
     [IsoId("_EQmW7fiqEeiJaN6-Lf-c_w")]
     [DisplayName("Replacement Vehicle Indicator")]
     [IsoXmlTag("RplcmntVhclInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReplacementVehicleIndicator { get; }
 
     /// <summary>
@@ -89,6 +101,7 @@ public interface IVehicle5 : IIsoComponent
     [IsoId("_EQmW5PiqEeiJaN6-Lf-c_w")]
     [DisplayName("Odometer")]
     [IsoXmlTag("Odmtr")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? Odometer { get; }
 
     /// <summary>
@@ -97,6 +110,7 @@ public interface IVehicle5 : IIsoComponent
     [IsoId("_EQmW7PiqEeiJaN6-Lf-c_w")]
     [DisplayName("Hubometer")]
     [IsoXmlTag("Hbmtr")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? Hubometer { get; }
 
     /// <summary>
@@ -105,6 +119,8 @@ public interface IVehicle5 : IIsoComponent
     [IsoId("_EQmW6_iqEeiJaN6-Lf-c_w")]
     [DisplayName("Maintenance Identification")]
     [IsoXmlTag("MntncId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MaintenanceIdentification { get; }
 
     /// <summary>
@@ -121,5 +137,6 @@ public interface IVehicle5 : IIsoComponent
     [IsoId("_EQmW6PiqEeiJaN6-Lf-c_w")]
     [DisplayName("Additional Vehicle Data")]
     [IsoXmlTag("AddtlVhclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVehicle2> AdditionalVehicleData { get; }
 }

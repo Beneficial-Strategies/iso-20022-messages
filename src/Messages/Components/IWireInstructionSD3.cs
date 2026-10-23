@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment wire instruction details.
 /// </summary>
 [IsoId("_5SM54b5YEeexmbB7KsjCwA")]
+[IsoDisplayName(@"Wire Instruction SD")]
 public interface IWireInstructionSD3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IWireInstructionSD3 : IIsoComponent
     [IsoId("_5iuCIb5YEeexmbB7KsjCwA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IWireInstructionSD3 : IIsoComponent
     [IsoId("_5iuCK75YEeexmbB7KsjCwA")]
     [DisplayName("Bank Name")]
     [IsoXmlTag("BkNm")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text BankName { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IWireInstructionSD3 : IIsoComponent
     [IsoId("_5iuCM75YEeexmbB7KsjCwA")]
     [DisplayName("Bank Address")]
     [IsoXmlTag("BkAdr")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text BankAddress { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IWireInstructionSD3 : IIsoComponent
     [IsoId("_5iuCO75YEeexmbB7KsjCwA")]
     [DisplayName("Bank City")]
     [IsoXmlTag("BkCity")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text BankCity { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IWireInstructionSD3 : IIsoComponent
     [IsoId("_5iuCS75YEeexmbB7KsjCwA")]
     [DisplayName("Bank Attention To")]
     [IsoXmlTag("BkAttnTo")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text BankAttentionTo { get; }
 
     /// <summary>
@@ -73,6 +80,8 @@ public interface IWireInstructionSD3 : IIsoComponent
     [IsoId("_5iuCU75YEeexmbB7KsjCwA")]
     [DisplayName("Bank Comments")]
     [IsoXmlTag("BkCmnts")]
+    [IsoSimpleType(IsoSimpleType.Max60Text)]
+    [StringLength(60, MinimumLength = 1)]
     Max60Text BankComments { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface IWireInstructionSD3 : IIsoComponent
     [IsoId("_5iuCW75YEeexmbB7KsjCwA")]
     [DisplayName("Beneficiary Account")]
     [IsoXmlTag("BnfcryAcct")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text BeneficiaryAccount { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface IWireInstructionSD3 : IIsoComponent
     [IsoId("_5iuCY75YEeexmbB7KsjCwA")]
     [DisplayName("Beneficiary Account Identification")]
     [IsoXmlTag("BnfcryAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text BeneficiaryAccountIdentification { get; }
 
     /// <summary>
@@ -97,5 +108,6 @@ public interface IWireInstructionSD3 : IIsoComponent
     [IsoId("_5iuCa75YEeexmbB7KsjCwA")]
     [DisplayName("Beneficiary Account Comments")]
     [IsoXmlTag("BnfcryAcctCmnts")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text BeneficiaryAccountComments { get; }
 }

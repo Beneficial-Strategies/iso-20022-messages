@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Modification on the value of goods and / or services. For example: rebate, discount, surcharge.
 /// </summary>
 [IsoId("_SpKYqdp-Ed-ak6NoX_4Aeg_1141917187")]
+[IsoDisplayName(@"Adjustment")]
 public interface IAdjustment4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAdjustment4 : IIsoComponent
     [IsoId("_SpKYq9p-Ed-ak6NoX_4Aeg_1141917222")]
     [DisplayName("Other Adjustment Type")]
     [IsoXmlTag("OthrAdjstmntTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OtherAdjustmentType { get; }
 
     /// <summary>

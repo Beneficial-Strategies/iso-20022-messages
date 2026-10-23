@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the statement entry for the resolution of the investigation.
 /// </summary>
 [IsoId("_T854ctp-Ed-ak6NoX_4Aeg_-1096123728")]
+[IsoDisplayName(@"Statement Resolution Entry")]
 public interface IStatementResolutionEntry1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IStatementResolutionEntry1 : IIsoComponent
     [IsoId("_T854dNp-Ed-ak6NoX_4Aeg_280847062")]
     [DisplayName("Original Statement Identification")]
     [IsoXmlTag("OrgnlStmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalStatementIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IStatementResolutionEntry1 : IIsoComponent
     [IsoId("_T854ddp-Ed-ak6NoX_4Aeg_83871841")]
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerReference { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IStatementResolutionEntry1 : IIsoComponent
     [IsoId("_T854d9p-Ed-ak6NoX_4Aeg_-1096122317")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChargesInformation6> Charges { get; }
 
     /// <summary>

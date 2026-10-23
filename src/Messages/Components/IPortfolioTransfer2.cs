@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Type of product and assets to be transferred.
 /// </summary>
 [IsoId("_PWwCsU4CEeiQHa-q1Uephw")]
+[IsoDisplayName(@"Portfolio Transfer")]
 public interface IPortfolioTransfer2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPortfolioTransfer2 : IIsoComponent
     [IsoId("_Pm9o804CEeiQHa-q1Uephw")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPortfolioTransfer2 : IIsoComponent
     [IsoId("_Pm9o9U4CEeiQHa-q1Uephw")]
     [DisplayName("Transfer Identification")]
     [IsoXmlTag("TrfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPortfolioTransfer2 : IIsoComponent
     [IsoId("_Pm9o904CEeiQHa-q1Uephw")]
     [DisplayName("Transfer Confirmation Identification")]
     [IsoXmlTag("TrfConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransferConfirmationIdentification { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IPortfolioTransfer2 : IIsoComponent
     [IsoId("_ZZeaUaFQEei_VZq-6SQkuQ")]
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TaxDate { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IPortfolioTransfer2 : IIsoComponent
     [IsoId("_Pm9o_04CEeiQHa-q1Uephw")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument68> FinancialInstrumentAssetForTransfer { get; }
 
     /// <summary>
@@ -89,5 +98,6 @@ public interface IPortfolioTransfer2 : IIsoComponent
     [IsoId("_VcKYIZClEeiQvr1XXv37hw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

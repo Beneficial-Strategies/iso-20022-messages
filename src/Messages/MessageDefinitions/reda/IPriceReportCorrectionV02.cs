@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_Zs3dytEvEd-BzquC8wXy7w_-233980086")]
 [IsoMessage("reda.003.001.02", "reda.003.001.02", "urn:iso:std:iso:20022:tech:xsd:reda.003.001.02")]
+[Description(@"Scope|The PriceReportCorrection message is sent by a report provider, eg, a fund accountant, transfer agent, market data provider, or any other interested party, to a report user, eg, a fund management company, a transfer agent, market data provider, regulator or any other interested party.|The message is used to correct at least one of the prices, of a financial instrument, that was quoted in a previously sent PriceReport message.|Usage|The PriceReportCorrection message is used to correct information in a PriceReport message that was previously sent by the fund accountant. If an entire PriceReport message must be corrected, eg, due to an incorrect trade date, it is recommended that a PriceReportCancellation message is used to cancel the entire PriceReport message and a new PriceReport message is sent.")]
+[IsoDisplayName(@"Price Report Correction V")]
 public interface IPriceReportCorrectionV02 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface IPriceReportCorrectionV02 : IOuterRecord
     [IsoId("_Zs3dzdEvEd-BzquC8wXy7w_292430358")]
     [DisplayName("Price Correction Details")]
     [IsoXmlTag("PricCrrctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceCorrection2> PriceCorrectionDetails { get; }
 }

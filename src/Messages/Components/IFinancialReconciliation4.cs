@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains financial reconciliation data.
 /// </summary>
 [IsoId("_eU-S8WP5EfCX7uJiAWHfoQ")]
+[IsoDisplayName(@"Financial Reconciliation4")]
 public interface IFinancialReconciliation4 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of the processing.
 /// </summary>
 [IsoId("_sCyUUcsXEeuNe7RtB4qFHw")]
+[IsoDisplayName(@"Result Data")]
 public interface IResultData10 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IResultData10 : IIsoComponent
     [IsoId("_sHues8sXEeuNe7RtB4qFHw")]
     [DisplayName("Other Result")]
     [IsoXmlTag("OthrRslt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherResult { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IResultData10 : IIsoComponent
     [IsoId("_nthSUcsZEeuNe7RtB4qFHw")]
     [DisplayName("Other Result Details")]
     [IsoXmlTag("OthrRsltDtls")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherResultDetails { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IResultData10 : IIsoComponent
     [IsoId("_sHuet8sXEeuNe7RtB4qFHw")]
     [DisplayName("Additional Result Information")]
     [IsoXmlTag("AddtlRsltInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalResultInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Diagnostic response from the acquirer.
 /// </summary>
 [IsoId("_p4UxYWpBEeS4VPLpYyQgxQ")]
+[IsoDisplayName(@"Acceptor Diagnostic Response")]
 public interface IAcceptorDiagnosticResponse4 : IIsoComponent
 {
     /// <summary>

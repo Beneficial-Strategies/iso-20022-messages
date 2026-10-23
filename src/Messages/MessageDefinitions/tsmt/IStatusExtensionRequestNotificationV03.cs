@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "StsXtnsnReqNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.036.001.03"
 )]
+[Description(@"Scope|The StatusExtensionRequestNotification message is sent by the matching application to the party requested to accept or reject a request to extend the status of a transaction.|This message is used to notify the request to extend the status of a transaction.|Usage|The StatusExtensionRequestNotification message can be sent by the matching application to pass on information about the request to extend the status of a transaction that it has obtained through the receipt of a StatusExtensionRequest message.")]
+[IsoDisplayName(@"Status Extension Request Notification V")]
 public interface IStatusExtensionRequestNotificationV03 : IOuterRecord
 {
     /// <summary>
@@ -52,6 +54,9 @@ public interface IStatusExtensionRequestNotificationV03 : IOuterRecord
     [IsoId("_zU2RptE8Ed-BzquC8wXy7w_883783295")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

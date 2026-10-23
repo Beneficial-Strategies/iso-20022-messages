@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines a frequency in terms on counts per period for a specific period type.
 /// </summary>
 [IsoId("_B0q0IR7zEeSxevWRRWxNAg")]
+[IsoDisplayName(@"Frequency Period")]
 public interface IFrequencyPeriod1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IFrequencyPeriod1 : IIsoComponent
     [IsoId("_OPlVUB72EeSxevWRRWxNAg")]
     [DisplayName("Count Per Period")]
     [IsoXmlTag("CntPerPrd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber CountPerPeriod { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to request a Batch service.
 /// </summary>
 [IsoId("_3uU-gS8QEeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Batch Request")]
 public interface IBatchRequest3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IBatchRequest3 : IIsoComponent
     [IsoId("_36DtYS8QEeu125Ip9zFcsQ")]
     [DisplayName("Remove All Flag")]
     [IsoXmlTag("RmvAllFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RemoveAllFlag { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IBatchRequest3 : IIsoComponent
     [IsoId("_36DtYy8QEeu125Ip9zFcsQ")]
     [DisplayName("Transaction To Perform")]
     [IsoXmlTag("TxToPrfrm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionToPerform3Choice> TransactionToPerform { get; }
 }

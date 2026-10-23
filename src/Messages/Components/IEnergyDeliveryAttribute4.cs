@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to energy derivatives attributes.
 /// </summary>
 [IsoId("_HJBv0YeIEei3PYANOK_QWA")]
+[IsoDisplayName(@"Energy Delivery Attribute")]
 public interface IEnergyDeliveryAttribute4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IEnergyDeliveryAttribute4 : IIsoComponent
     [IsoId("_HWlqsYeIEei3PYANOK_QWA")]
     [DisplayName("Delivery Interval")]
     [IsoXmlTag("DlvryIntrvl")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? DeliveryInterval { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IEnergyDeliveryAttribute4 : IIsoComponent
     [IsoId("_Ue8oEIeIEei3PYANOK_QWA")]
     [DisplayName("Delivery Time")]
     [IsoXmlTag("DlvryTm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITimePeriodDetails1> DeliveryTime { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IEnergyDeliveryAttribute4 : IIsoComponent
     [IsoId("_HWlqt4eIEei3PYANOK_QWA")]
     [DisplayName("Week Day")]
     [IsoXmlTag("WkDay")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<WeekDay3Code> WeekDay { get; }
 
     /// <summary>
@@ -73,5 +77,6 @@ public interface IEnergyDeliveryAttribute4 : IIsoComponent
     [IsoId("_HWlqvYeIEei3PYANOK_QWA")]
     [DisplayName("Price Time Interval Quantity")]
     [IsoXmlTag("PricTmIntrvlQty")]
+    [IsoSimpleType(IsoSimpleType.LongFraction21DecimalNumber)]
     LongFraction21DecimalNumber? PriceTimeIntervalQuantity { get; }
 }

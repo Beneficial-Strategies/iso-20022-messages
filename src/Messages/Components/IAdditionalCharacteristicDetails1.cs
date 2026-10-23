@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the specific classification or details.
 /// </summary>
 [IsoId("_0ywmlPJYEeiJn9rM2Znz2w")]
+[IsoDisplayName(@"Additional Characteristic Details")]
 public interface IAdditionalCharacteristicDetails1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAdditionalCharacteristicDetails1 : IIsoComponent
     [IsoId("_0ywml_JYEeiJn9rM2Znz2w")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IAdditionalCharacteristicDetails1 : IIsoComponent
     [IsoId("_0ywmlfJYEeiJn9rM2Znz2w")]
     [DisplayName("Provided By")]
     [IsoXmlTag("PrvddBy")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProvidedBy { get; }
 }

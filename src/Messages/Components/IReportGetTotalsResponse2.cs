@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report Get Totals Response2.
 /// </summary>
 [IsoId("_-zdYAZ9rEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Report Get Totals Response2")]
 public interface IReportGetTotalsResponse2 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IReportGetTotalsResponse2 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Totals Set")]
     [IsoXmlTag("TxTtlsSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotalsSet2> TransactionTotalsSet { get; }
 }

@@ -25,6 +25,8 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_-hxndaMOEeCojJW5vEuTEQ_-1836673720")]
 [IsoMessage("secl.005.001.02", "MrgnRpt", "urn:iso:std:iso:20022:tech:xsd:secl.005.001.02")]
+[Description(@"Scope|The MarginReport message is sent by the central counterparty (CCP) to a clearing member to report on:|- the exposure resulting from the trade positions|- the value of the collateral held by the CCP (market value of this collateral) and|- the resulting difference representing the risk encountered by the CCP.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|There are four possibilities to report the above information. Indeed, the margin report may be structured as follows:|- per clearing member: the report will only show the information for the clearing member, or|- per clearing member and per financial instrument: the report will show the information for the clearing member, structured by security identification, or|- per clearing member and per non clearing member: the report will show the information for the clearing member (that is for global clearing member only) structured by non clearing member(s), or|- per clearing member and per non clearing member and per security identification: the report will show the information for the clearing member (global clearing member only) structured by non clearing member(s) and by security identification.")]
+[IsoDisplayName(@"Margin Report V")]
 public interface IMarginReportV02 : IOuterRecord
 {
     /// <summary>
@@ -65,6 +67,7 @@ public interface IMarginReportV02 : IOuterRecord
     [IsoId("_-h7Yc6MOEeCojJW5vEuTEQ_963665572")]
     [DisplayName("Report Details")]
     [IsoXmlTag("RptDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMarginReport2> ReportDetails { get; }
 
     /// <summary>
@@ -73,5 +76,6 @@ public interface IMarginReportV02 : IOuterRecord
     [IsoId("_-h7YdKMOEeCojJW5vEuTEQ_-33406781")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

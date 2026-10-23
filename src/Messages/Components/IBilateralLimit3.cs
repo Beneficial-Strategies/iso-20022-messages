@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics and values set for a bilateral limit, including the counterparty upon which the limit applies.
 /// </summary>
 [IsoId("_FuKlIW4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Bilateral Limit")]
 public interface IBilateralLimit3 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IBilateralLimit3 : IIsoComponent
     [IsoId("_F3jKqW4-EeiU9cctagi5ow")]
     [DisplayName("Bilateral Balance")]
     [IsoXmlTag("BilBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance11> BilateralBalance { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KeyValue3Choice;
 
 /// <summary>Encrypted value of the cryptographic key.</summary>
 [IsoId("_Pa-OMcPzEfCTf8R2j0RpdQ")]
+[IsoDisplayName(@"Encrypted Key Value")]
 public interface IEncryptedKeyValue : IKeyValue3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

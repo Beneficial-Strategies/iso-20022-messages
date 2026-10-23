@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice;
 /// Identifier of a security assigned by the Bloomberg organisation.
 /// </summary>
 [IsoId("_CSq4PSGQEeW7gKYhAMEFCw")]
+[IsoDisplayName(@"Bloomberg")]
 public interface IBloomberg : ISecurityIdentification23Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBloomberg : ISecurityIdentification23Choice, IIsoChoiceVariant
     /// An identifier of a security assigned by the Bloomberg organisation.
     /// </summary>
     [IsoXmlTag("Blmbrg")]
+    [IsoSimpleType(IsoSimpleType.BloombergIdentifier)]
     BloombergIdentifier Value { get; }
 }

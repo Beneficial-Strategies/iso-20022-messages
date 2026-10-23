@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the settlement failure reason as defined in the relevant regulation.
 /// </summary>
 [IsoId("_MQiA0TOmEeqX8uoQQ3KffQ")]
+[IsoDisplayName(@"Settlement Daily Failure Reason")]
 public interface ISettlementDailyFailureReason3 : IIsoComponent
 {
     /// <summary>

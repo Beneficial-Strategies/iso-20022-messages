@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the penalty rate data if the securities is subject to penalties.
 /// </summary>
 [IsoId("_8Ch2YDkZEem897H7zB2RJg")]
+[IsoDisplayName(@"Penalty Rate1")]
 public interface IPenaltyRate1 : IIsoComponent
 {
     /// <summary>

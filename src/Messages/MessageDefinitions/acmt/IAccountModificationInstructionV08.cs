@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_nayxoZDiEem7fvtoGpNpow")]
 [IsoMessage("acmt.003.001.08", "AcctModInstr", "urn:iso:std:iso:20022:tech:xsd:acmt.003.001.08")]
+[Description(@"Scope|The AccountModificationInstruction message is sent by an account owner, for example, an investor or its designated agent to the account servicer, for example, a registrar, transfer agent, custodian bank or securities depository to modify, that is, create, update or delete specific details of an existing account.|Usage|The AccountModificationInstruction message is used to modify the details of an existing account.|The AccountModificationInstruction message can be used to:|- maintain/update any of the existing account details, for example, to update the address of the beneficiary or modify the preference to income from distribution to capitalisation, or,|- add/create specific details to the existing account when these details were not yet recorded at the time of account creation, for example, to add a second address or to establish new cash settlement standing instructions, or,|- delete specific account details, for example, delete cash standing instructions, or,|- instruct a change to the status of the account, for example, instruct the closure of the account.|The usage of this message may be subject to service level agreement (SLA) between the counterparties.|Execution of the AccountModificationInstruction is confirmed via an AccountDetailsConfirmation message.")]
+[IsoDisplayName(@"Account Modification Instruction V")]
 public interface IAccountModificationInstructionV08 : IOuterRecord
 {
     /// <summary>
@@ -70,6 +72,7 @@ public interface IAccountModificationInstructionV08 : IOuterRecord
     [IsoId("_nayxr5DiEem7fvtoGpNpow")]
     [DisplayName("Modified Account Parties")]
     [IsoXmlTag("ModfdAcctPties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountParties18> ModifiedAccountParties { get; }
 
     /// <summary>
@@ -78,6 +81,7 @@ public interface IAccountModificationInstructionV08 : IOuterRecord
     [IsoId("_nayxsZDiEem7fvtoGpNpow")]
     [DisplayName("Modified Intermediaries")]
     [IsoXmlTag("ModfdIntrmies")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope40> ModifiedIntermediaries { get; }
 
     /// <summary>
@@ -102,6 +106,9 @@ public interface IAccountModificationInstructionV08 : IOuterRecord
     [IsoId("_nayxt5DiEem7fvtoGpNpow")]
     [DisplayName("Modified Savings Investment Plan")]
     [IsoXmlTag("ModfdSvgsInvstmtPlan")]
+    [MinLength(0)]
+    [MaxLength(50)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope41> ModifiedSavingsInvestmentPlan { get; }
 
     /// <summary>
@@ -110,6 +117,9 @@ public interface IAccountModificationInstructionV08 : IOuterRecord
     [IsoId("_nayxuZDiEem7fvtoGpNpow")]
     [DisplayName("Modified Withdrawal Investment Plan")]
     [IsoXmlTag("ModfdWdrwlInvstmtPlan")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope41> ModifiedWithdrawalInvestmentPlan { get; }
 
     /// <summary>
@@ -118,6 +128,9 @@ public interface IAccountModificationInstructionV08 : IOuterRecord
     [IsoId("_nayxu5DiEem7fvtoGpNpow")]
     [DisplayName("Modified Cash Settlement")]
     [IsoXmlTag("ModfdCshSttlm")]
+    [MinLength(0)]
+    [MaxLength(8)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashSettlement4> ModifiedCashSettlement { get; }
 
     /// <summary>
@@ -126,6 +139,9 @@ public interface IAccountModificationInstructionV08 : IOuterRecord
     [IsoId("_nayxvZDiEem7fvtoGpNpow")]
     [DisplayName("Modified Service Level Agreement")]
     [IsoXmlTag("ModfdSvcLvlAgrmt")]
+    [MinLength(0)]
+    [MaxLength(30)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope44> ModifiedServiceLevelAgreement { get; }
 
     /// <summary>
@@ -134,6 +150,7 @@ public interface IAccountModificationInstructionV08 : IOuterRecord
     [IsoId("_nayxv5DiEem7fvtoGpNpow")]
     [DisplayName("Modified Additional Information")]
     [IsoXmlTag("ModfdAddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope45> ModifiedAdditionalInformation { get; }
 
     /// <summary>
@@ -150,5 +167,6 @@ public interface IAccountModificationInstructionV08 : IOuterRecord
     [IsoId("_nayxw5DiEem7fvtoGpNpow")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

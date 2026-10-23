@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a data set.
 /// </summary>
 [IsoId("_wt31kY3IEeWjkqXgn_0Imw")]
+[IsoDisplayName(@"Data Set Identification")]
 public interface IDataSetIdentification5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDataSetIdentification5 : IIsoComponent
     [IsoId("_w45Z0Y3IEeWjkqXgn_0Imw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IDataSetIdentification5 : IIsoComponent
     [IsoId("_w45Z1Y3IEeWjkqXgn_0Imw")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Version { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface IDataSetIdentification5 : IIsoComponent
     [IsoId("_w45Z143IEeWjkqXgn_0Imw")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 }

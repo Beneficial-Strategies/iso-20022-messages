@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Plan3.
 /// </summary>
 [IsoId("_KYvZYXG-Ee60F8I8TAMKmg")]
+[IsoDisplayName(@"Plan3")]
 public interface IPlan3 : IIsoComponent
 {
     /// <summary>
@@ -86,6 +87,7 @@ public interface IPlan3 : IIsoComponent
     /// </summary>
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateDetails2> InterestRate { get; }
 
     /// <summary>
@@ -156,6 +158,7 @@ public interface IPlan3 : IIsoComponent
     /// </summary>
     [DisplayName("Amount Details")]
     [IsoXmlTag("AmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalmentAmountDetails3> AmountDetails { get; }
 
     /// <summary>
@@ -170,5 +173,6 @@ public interface IPlan3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

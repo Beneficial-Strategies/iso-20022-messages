@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report Query Criteria3.
 /// </summary>
 [IsoId("_6c02UTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Report Query Criteria3")]
 public interface IReportQueryCriteria3 : IIsoComponent
 {
     /// <summary>

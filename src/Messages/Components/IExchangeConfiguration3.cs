@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration parameters of data exchanges.
 /// </summary>
 [IsoId("_38NMwR3pEeKWfegf-2AeBQ")]
+[IsoDisplayName(@"Exchange Configuration")]
 public interface IExchangeConfiguration3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IExchangeConfiguration3 : IIsoComponent
     [IsoId("_4IG6xR3pEeKWfegf-2AeBQ")]
     [DisplayName("Exchange Policy")]
     [IsoXmlTag("XchgPlcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ExchangePolicy1Code> ExchangePolicy { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IExchangeConfiguration3 : IIsoComponent
     [IsoId("_4IG6zB3pEeKWfegf-2AeBQ")]
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumNumber { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IExchangeConfiguration3 : IIsoComponent
     [IsoId("_WMDPgB3qEeKWfegf-2AeBQ")]
     [DisplayName("Exchange Failed")]
     [IsoXmlTag("XchgFaild")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ExchangeFailed { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface IExchangeConfiguration3 : IIsoComponent
     [IsoId("_QdDP4B3rEeKWfegf-2AeBQ")]
     [DisplayName("Exchange Declined")]
     [IsoXmlTag("XchgDclnd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ExchangeDeclined { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of an EU capital gain type.
 /// </summary>
 [IsoId("f26bb989-1ff2-44c7-9138-732039689e4c")]
+[IsoDisplayName(@"EU Capital Gain Type 4 Choice")]
 public interface IEUCapitalGainType4Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data elements contained in the original message. ISO 8583:1987 bit 90 and ISO 8583 1993/2003 bit 56.
 /// </summary>
 [IsoId("_CDI5QRUOEfC_aaedwHHlmw")]
+[IsoDisplayName(@"Original Data Elements5")]
 public interface IOriginalDataElements5 : IIsoComponent
 {
     /// <summary>

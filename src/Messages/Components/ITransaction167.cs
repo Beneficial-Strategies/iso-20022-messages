@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the transaction.
 /// </summary>
 [IsoId("_oVV_S5aPEfC2_67yGLymgA")]
+[IsoDisplayName(@"Transaction167")]
 public interface ITransaction167 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ITransaction167 : IIsoComponent
     [IsoId("_oXVjU5aPEfC2_67yGLymgA")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TradeIdentification { get; }
 
     /// <summary>
@@ -169,5 +171,6 @@ public interface ITransaction167 : IIsoComponent
     [IsoId("_oXVjfZaPEfC2_67yGLymgA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

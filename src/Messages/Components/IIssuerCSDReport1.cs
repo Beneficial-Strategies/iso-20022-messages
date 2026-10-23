@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies each issuer CSD (central securities depository) included in the report.
 /// </summary>
 [IsoId("_2_qZ9-3rEeaWjpoyrnG6Rw")]
+[IsoDisplayName(@"Issuer CSD Report")]
 public interface IIssuerCSDReport1 : IIsoComponent
 {
     /// <summary>

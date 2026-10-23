@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a reason or no reason for the corporate action instruction processing accepted status.
 /// </summary>
 [IsoId("_4ZLV0UGUEeWqy4niLuXETA")]
+[IsoDisplayName(@"Accepted Status 8 Choice")]
 public interface IAcceptedStatus8Choice : IIsoChoice { }

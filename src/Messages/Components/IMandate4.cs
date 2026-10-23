@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that serves as a basis to debit an account.
 /// </summary>
 [IsoId("_hAPPcSmeEeKdFJmzhTDOvQ")]
+[IsoDisplayName(@"Mandate")]
 public interface IMandate4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMandate4 : IIsoComponent
     [IsoId("_hv6__SmeEeKdFJmzhTDOvQ")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IMandate4 : IIsoComponent
     [IsoId("_hv7AASmeEeKdFJmzhTDOvQ")]
     [DisplayName("Mandate Request Identification")]
     [IsoXmlTag("MndtReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MandateRequestIdentification { get; }
 
     /// <summary>
@@ -145,5 +150,6 @@ public interface IMandate4 : IIsoComponent
     [IsoId("_pSRXECmeEeKdFJmzhTDOvQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

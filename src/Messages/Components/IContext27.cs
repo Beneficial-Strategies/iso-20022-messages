@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context in which the card payment transaction is performed.
 /// </summary>
 [IsoId("_qUbLQSnUEfCD0_iZ8tw-zA")]
+[IsoDisplayName(@"Context27")]
 public interface IContext27 : IIsoComponent
 {
     /// <summary>
@@ -257,6 +258,7 @@ public interface IContext27 : IIsoComponent
     [IsoId("_qXJIoSnUEfCD0_iZ8tw-zA")]
     [DisplayName("Security Characteristics")]
     [IsoXmlTag("SctyChrtcs")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<SecurityCharacteristics2Code> SecurityCharacteristics { get; }
 
     /// <summary>
@@ -289,6 +291,7 @@ public interface IContext27 : IIsoComponent
     [IsoId("_hPunkq8eEfCnL-2fAG0ssA")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -297,5 +300,6 @@ public interface IContext27 : IIsoComponent
     [IsoId("_hPunk68eEfCnL-2fAG0ssA")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> NationalData { get; }
 }

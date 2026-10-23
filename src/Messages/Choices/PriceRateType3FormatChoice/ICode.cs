@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateType3FormatChoice;
 /// Standard code to specify the type of price rate.
 /// </summary>
 [IsoId("_RnAYFNp-Ed-ak6NoX_4Aeg_-1976498594")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPriceRateType3FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

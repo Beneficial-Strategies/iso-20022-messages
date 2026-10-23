@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_SMNVeNE_Ed-BzquC8wXy7w_-723419751")]
 [IsoMessage("camt.033.001.03", "ReqForDplct", "urn:iso:std:iso:20022:tech:xsd:camt.033.001.03")]
+[Description(@"Scope|The Request For Duplicate message is sent by the case assignee to the case creator or case assigner.|This message is used to request a copy of the original payment instruction considered in the case.|Usage|The Request For Duplicate message:|- must be answered with a Duplicate message|- must be used when a case assignee requests a copy of the original payment instruction. This occurs, for example, when the case assignee cannot trace the payment instruction based on the elements mentioned in the case assignment message|- covers one and only one instruction at a time. If several payment instruction copies are needed by the case assignee, then multiple Request For Duplicate messages must be sent|- must be used exclusively between the case assignee and its case creator/case assigner.")]
+[IsoDisplayName(@"Request For Duplicate V")]
 public interface IRequestForDuplicateV03 : IOuterRecord
 {
     /// <summary>

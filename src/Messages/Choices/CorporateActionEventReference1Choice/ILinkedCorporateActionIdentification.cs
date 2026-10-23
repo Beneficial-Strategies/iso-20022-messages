@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventReference1Ch
 /// Reference assigned by the account servicer to unambiguously identify a related corporate action event.
 /// </summary>
 [IsoId("_QxXJgNp-Ed-ak6NoX_4Aeg_-1898428206")]
+[IsoDisplayName(@"Linked Corporate Action Identification")]
 public interface ILinkedCorporateActionIdentification
     : ICorporateActionEventReference1Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ILinkedCorporateActionIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("LkdCorpActnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

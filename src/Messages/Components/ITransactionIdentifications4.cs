@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique identifier of a document, message or transaction.
 /// </summary>
 [IsoId("_QsJSUtp-Ed-ak6NoX_4Aeg_-2060321970")]
+[IsoDisplayName(@"Transaction Identifications")]
 public interface ITransactionIdentifications4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionIdentifications4 : IIsoComponent
     [IsoId("_QsJSU9p-Ed-ak6NoX_4Aeg_1123733907")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransactionIdentifications4 : IIsoComponent
     [IsoId("_QsJSVNp-Ed-ak6NoX_4Aeg_126661554")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information describing the high level details of a split trade.
 /// </summary>
 [IsoId("_Li4wUaAiEea9x5aZm6UTkw")]
+[IsoDisplayName(@"Split Trade Details")]
 public interface ISplitTradeDetails3 : IIsoComponent
 {
     /// <summary>

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPAvlblFinRsrcsRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.064.001.02"
 )]
+[IsoDisplayName(@"CCP Available Financial Resources Report V02")]
 public interface ICCPAvailableFinancialResourcesReportV02 : IOuterRecord
 {
     /// <summary>
@@ -36,5 +37,6 @@ public interface ICCPAvailableFinancialResourcesReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

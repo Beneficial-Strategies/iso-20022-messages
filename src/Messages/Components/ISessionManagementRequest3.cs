@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// This component define the type of Session management service to be used with this message.
 /// </summary>
 [IsoId("_BkhG0Q1WEeqjM-rxn3HuXQ")]
+[IsoDisplayName(@"Session Management Request")]
 public interface ISessionManagementRequest3 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,6 @@ public interface ISessionManagementRequest3 : IIsoComponent
     [IsoId("_BwEPjQ1WEeqjM-rxn3HuXQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Single terminal management action to be performed by the point of interaction.
 /// </summary>
 [IsoId("_7FMksWpPEeSR-ZWLvO-1dg")]
+[IsoDisplayName(@"TMS Action")]
 public interface ITMSAction4 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ITMSAction4 : IIsoComponent
     [IsoId("_PYYF0GpXEeSR-ZWLvO-1dg")]
     [DisplayName("TMS Protocol")]
     [IsoXmlTag("TMSPrtcol")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TMSProtocol { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface ITMSAction4 : IIsoComponent
     [IsoId("_RCeQIGpXEeSR-ZWLvO-1dg")]
     [DisplayName("TMS Protocol Version")]
     [IsoXmlTag("TMSPrtcolVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TMSProtocolVersion { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ITMSAction4 : IIsoComponent
     [IsoId("_wTMhEGpXEeSR-ZWLvO-1dg")]
     [DisplayName("Component Type")]
     [IsoXmlTag("CmpntTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<DataSetCategory4Code> ComponentType { get; }
 
     /// <summary>
@@ -73,6 +79,8 @@ public interface ITMSAction4 : IIsoComponent
     [IsoId("_6uR_4GpXEeSR-ZWLvO-1dg")]
     [DisplayName("Parameters Subset Identification")]
     [IsoXmlTag("ParamsSubsetId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ParametersSubsetIdentification { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface ITMSAction4 : IIsoComponent
     [IsoId("_DzkwcGpYEeSR-ZWLvO-1dg")]
     [DisplayName("Parameters Subset Definition")]
     [IsoXmlTag("ParamsSubsetDef")]
+    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
     Max3000Binary? ParametersSubsetDefinition { get; }
 
     /// <summary>
@@ -89,6 +98,7 @@ public interface ITMSAction4 : IIsoComponent
     [IsoId("_MsNlEGpYEeSR-ZWLvO-1dg")]
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary? DelegationProof { get; }
 
     /// <summary>
@@ -113,6 +123,7 @@ public interface ITMSAction4 : IIsoComponent
     [IsoId("_7Rt9yWpPEeSR-ZWLvO-1dg")]
     [DisplayName("Additional Process")]
     [IsoXmlTag("AddtlPrc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; }
 
     /// <summary>
@@ -137,6 +148,7 @@ public interface ITMSAction4 : IIsoComponent
     [IsoId("_7Rt9z2pPEeSR-ZWLvO-1dg")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? TMChallenge { get; }
 
     /// <summary>
@@ -145,6 +157,7 @@ public interface ITMSAction4 : IIsoComponent
     [IsoId("_7Rt90WpPEeSR-ZWLvO-1dg")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10KBinary> KeyEnciphermentCertificate { get; }
 
     /// <summary>
@@ -153,6 +166,7 @@ public interface ITMSAction4 : IIsoComponent
     [IsoId("_7Rt902pPEeSR-ZWLvO-1dg")]
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorAction2> ErrorAction { get; }
 
     /// <summary>
@@ -161,5 +175,6 @@ public interface ITMSAction4 : IIsoComponent
     [IsoId("_n_nr4GpYEeSR-ZWLvO-1dg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max3000Binary> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Discounts or waivers to charges and commissions.
 /// </summary>
 [IsoId("_CXqF4YjMEeeqaMoyJI1HbA")]
+[IsoDisplayName(@"Charge Or Commission Discount")]
 public interface IChargeOrCommissionDiscount2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IChargeOrCommissionDiscount2 : IIsoComponent
     [IsoId("_CmiPZYjMEeeqaMoyJI1HbA")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>

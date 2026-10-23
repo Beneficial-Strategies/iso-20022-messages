@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_YZ-Mk4cPEe-m68RYMhvgvg")]
 [IsoMessage("secl.010.001.04", "SttlmOblgtnRpt", "urn:iso:std:iso:20022:tech:xsd:secl.010.001.04")]
+[IsoDisplayName(@"Settlement Obligation Report V04")]
 public interface ISettlementObligationReportV04 : IOuterRecord
 {
     /// <summary>
@@ -53,6 +54,7 @@ public interface ISettlementObligationReportV04 : IOuterRecord
     /// </summary>
     [DisplayName("Report Details")]
     [IsoXmlTag("RptDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReport7> ReportDetails { get; }
 
     /// <summary>
@@ -67,5 +69,6 @@ public interface ISettlementObligationReportV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

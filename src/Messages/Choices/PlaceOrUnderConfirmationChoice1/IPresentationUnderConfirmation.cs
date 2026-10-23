@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOrUnderConfirmationChoice1;
 /// Place of presentation when there is a confirmation.
 /// </summary>
 [IsoId("_97kuFHltEeG7BsjMvd1mEw_1998762195")]
+[IsoDisplayName(@"Presentation Under Confirmation")]
 public interface IPresentationUnderConfirmation
     : IPlaceOrUnderConfirmationChoice1,
         IIsoChoiceVariant

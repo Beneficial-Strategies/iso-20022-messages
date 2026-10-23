@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Correspondence Notification1.
 /// </summary>
 [IsoId("_s8JQ4LksEe68nbz8Nl_hLQ")]
+[IsoDisplayName(@"Correspondence Notification1")]
 public interface ICorrespondenceNotification1 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface ICorrespondenceNotification1 : IIsoComponent
     /// </summary>
     [DisplayName("Notification Narrative")]
     [IsoXmlTag("NtfctnNrrtv")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max2000Text> NotificationNarrative { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface ICorrespondenceNotification1 : IIsoComponent
     /// </summary>
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument15> EnclosedFile { get; }
 
     /// <summary>
@@ -51,5 +54,6 @@ public interface ICorrespondenceNotification1 : IIsoComponent
     /// </summary>
     [DisplayName("Related Notification Data")]
     [IsoXmlTag("RltdNtfctnData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRelatedNotificationData1> RelatedNotificationData { get; }
 }

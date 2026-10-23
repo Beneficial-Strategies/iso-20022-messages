@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform7Choice;
 /// <summary>
 /// Loyalty Request.
 /// </summary>
+[IsoDisplayName(@"Loyalty Request")]
 public interface ILoyaltyRequest : ITransactionToPerform7Choice, IIsoChoiceVariant
 {
     /// <summary>

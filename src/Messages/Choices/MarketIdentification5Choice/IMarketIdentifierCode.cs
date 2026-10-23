@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentification5Choice;
 /// <summary>
 /// Market Identifier Code.
 /// </summary>
+[IsoDisplayName(@"Market Identifier Code")]
 public interface IMarketIdentifierCode : IMarketIdentification5Choice, IIsoChoiceVariant
 {
     /// <summary>

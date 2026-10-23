@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a cryptographic algorithm and parameters for the MAC computation.
 /// </summary>
 [IsoId("__YZO0WkIEeS7zPBpvm732w")]
+[IsoDisplayName(@"Algorithm Identification")]
 public interface IAlgorithmIdentification15 : IIsoComponent
 {
     /// <summary>

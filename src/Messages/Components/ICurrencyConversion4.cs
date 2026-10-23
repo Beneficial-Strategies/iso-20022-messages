@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency conversion accepted by the customer, either to convert the amount to dispense in the base currency of the ATM, or to convert the total requested amount in the currency of the customer (so called dynamic currency conversion).
 /// </summary>
 [IsoId("_Exik0YomEeSaAcF2oE2GNQ")]
+[IsoDisplayName(@"Currency Conversion")]
 public interface ICurrencyConversion4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICurrencyConversion4 : IIsoComponent
     [IsoId("_E-Nu4YomEeSaAcF2oE2GNQ")]
     [DisplayName("Currency Conversion Identification")]
     [IsoXmlTag("CcyConvsId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CurrencyConversionIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICurrencyConversion4 : IIsoComponent
     [IsoId("_E-Nu54omEeSaAcF2oE2GNQ")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate ExchangeRate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICurrencyConversion4 : IIsoComponent
     [IsoId("_E-Nu6YomEeSaAcF2oE2GNQ")]
     [DisplayName("Exchange Rate Decimal")]
     [IsoXmlTag("XchgRateDcml")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ExchangeRateDecimal { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ICurrencyConversion4 : IIsoComponent
     [IsoId("_E-Nu64omEeSaAcF2oE2GNQ")]
     [DisplayName("Inverted Exchange Rate")]
     [IsoXmlTag("NvrtdXchgRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? InvertedExchangeRate { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface ICurrencyConversion4 : IIsoComponent
     [IsoId("_E-Nu7YomEeSaAcF2oE2GNQ")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? QuotationDate { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface ICurrencyConversion4 : IIsoComponent
     [IsoId("_E-Nu74omEeSaAcF2oE2GNQ")]
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ValidUntil { get; }
 
     /// <summary>
@@ -97,6 +105,7 @@ public interface ICurrencyConversion4 : IIsoComponent
     [IsoId("_E-Nu9YomEeSaAcF2oE2GNQ")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission19> CommissionDetails { get; }
 
     /// <summary>
@@ -105,6 +114,7 @@ public interface ICurrencyConversion4 : IIsoComponent
     [IsoId("_E-Nu94omEeSaAcF2oE2GNQ")]
     [DisplayName("Mark Up Details")]
     [IsoXmlTag("MrkUpDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission18> MarkUpDetails { get; }
 
     /// <summary>
@@ -113,5 +123,7 @@ public interface ICurrencyConversion4 : IIsoComponent
     [IsoId("_E-Nu-YomEeSaAcF2oE2GNQ")]
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? DeclarationDetails { get; }
 }

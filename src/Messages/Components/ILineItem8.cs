@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Calculation of the current situation of a baseline as a result of the submission of a commercial data set.
 /// </summary>
 [IsoId("_RaVOCNp-Ed-ak6NoX_4Aeg_1564459654")]
+[IsoDisplayName(@"Line Item")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ILineItem8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface ILineItem8 : IIsoComponent
     [IsoId("_Rae_ANp-Ed-ak6NoX_4Aeg_1565380180")]
     [DisplayName("Line Item Details")]
     [IsoXmlTag("LineItmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItemDetails8> LineItemDetails { get; }
 
     /// <summary>

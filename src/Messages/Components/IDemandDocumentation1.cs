@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Document presented for examination.
 /// </summary>
 [IsoId("_-Eq_uHltEeG7BsjMvd1mEw_-538829885")]
+[IsoDisplayName(@"Demand Documentation")]
 public interface IDemandDocumentation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDemandDocumentation1 : IIsoComponent
     [IsoId("_-E0JoHltEeG7BsjMvd1mEw_-572404369")]
     [DisplayName("Complete Indicator")]
     [IsoXmlTag("CmpltInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CompleteIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IDemandDocumentation1 : IIsoComponent
     [IsoId("_-E0JoXltEeG7BsjMvd1mEw_-1669522883")]
     [DisplayName("Completion Information")]
     [IsoXmlTag("CmpltnInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [StringLength(2000, MinimumLength = 1)]
     Max2000Text? CompletionInformation { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IDemandDocumentation1 : IIsoComponent
     [IsoId("_-E0JonltEeG7BsjMvd1mEw_32400156")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument9> EnclosedFile { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface IDemandDocumentation1 : IIsoComponent
     [IsoId("_-E0Jo3ltEeG7BsjMvd1mEw_370931401")]
     [DisplayName("Demand Narrative")]
     [IsoXmlTag("DmndNrrtv")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text? DemandNarrative { get; }
 }

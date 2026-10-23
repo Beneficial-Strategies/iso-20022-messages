@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate2Choice;
 /// Unique identification, as assigned by the creditor, to unambiguously identify the original mandate.
 /// </summary>
 [IsoId("_to8xYlkyEeGeoaLUQk__nA_-657534883")]
+[IsoDisplayName(@"Original Mandate Identification")]
 public interface IOriginalMandateIdentification : IOriginalMandate2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOriginalMandateIdentification : IOriginalMandate2Choice, IIsoC
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("OrgnlMndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for an investment need.
 /// </summary>
 [IsoId("_FFLMcDcdEeidBoT_PugKiA")]
+[IsoDisplayName(@"Investment Need 1 Choice")]
 public interface IInvestmentNeed1Choice : IIsoChoice { }

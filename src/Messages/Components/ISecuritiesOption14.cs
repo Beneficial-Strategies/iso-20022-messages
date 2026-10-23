@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action security option.
 /// </summary>
 [IsoId("_oc_1reEJEd-udr336SN7mQ")]
+[IsoDisplayName(@"Securities Option")]
 public interface ISecuritiesOption14 : IIsoComponent
 {
     /// <summary>

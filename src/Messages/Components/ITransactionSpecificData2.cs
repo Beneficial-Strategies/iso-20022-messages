@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Addendum data structure applicable to certain merchant verticals that require industry-specific data within transaction messages.
 /// </summary>
 [IsoId("_v8xEwUYYEfCQAqQ9lolFUg")]
+[IsoDisplayName(@"Transaction Specific Data2")]
 public interface ITransactionSpecificData2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITransactionSpecificData2 : IIsoComponent
     [IsoId("_v_MGoUYYEfCQAqQ9lolFUg")]
     [DisplayName("Fleet Line Item")]
     [IsoXmlTag("FleetLineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFleetLineItem6> FleetLineItem { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITransactionSpecificData2 : IIsoComponent
     [IsoId("_zxWwskYYEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ITransactionSpecificData2 : IIsoComponent
     [IsoId("_zxWws0YYEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

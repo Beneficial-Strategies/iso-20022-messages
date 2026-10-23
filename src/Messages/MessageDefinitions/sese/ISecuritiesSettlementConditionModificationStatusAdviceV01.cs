@@ -28,6 +28,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesSttlmCondModStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:sese.031.001.01"
 )]
+[Description(@"Scope|An account servicer sends a SecuritiesSettlementConditionsModificationStatusAdvice to an account owner to advise the status of a modification request previously instructed by the account owner.||The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or |- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|A SecuritiesSettlementConditionsModificatioRequest may contain requests on multiple transactions. However, one SecuritiesSettlementConditionsModificationStatusAdvice must be sent per transaction modified unless the SecuritiesSettlementConditionsModificationRequest is rejected as a whole.			||The message may also be used to: ||- re-send a message previously sent (the sub-function of the message is Duplicate) ||- provide a third party with a copy of a message for information (the sub-function of the message is Copy) ||- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).|ISO 15022 - 20022 Coexistence|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.|.")]
+[IsoDisplayName(@"Securities Settlement Condition Modification Status Advice V")]
 public interface ISecuritiesSettlementConditionModificationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -100,5 +102,6 @@ public interface ISecuritiesSettlementConditionModificationStatusAdviceV01 : IOu
     [IsoId("_1M3DhdE5Ed-BzquC8wXy7w_-1483229932")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension2> Extension { get; }
 }

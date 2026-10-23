@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding notification general information details.
 /// </summary>
 [IsoId("_1kgnZjL3EeKU9IrkkToqcw_1609699363")]
+[IsoDisplayName(@"Corporate Action Notification SD")]
 public interface ICorporateActionNotificationSD6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionNotificationSD6 : IIsoComponent
     [IsoId("_1k9TUDL3EeKU9IrkkToqcw_612627010")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICorporateActionNotificationSD6 : IIsoComponent
     [IsoId("_1lGdQTL3EeKU9IrkkToqcw_-395544120")]
     [DisplayName("Approved Date")]
     [IsoXmlTag("ApprvdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ApprovedDate { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICorporateActionNotificationSD6 : IIsoComponent
     [IsoId("_1lGdQjL3EeKU9IrkkToqcw_-1506455539")]
     [DisplayName("Match Date")]
     [IsoXmlTag("MtchDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MatchDate { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ICorporateActionNotificationSD6 : IIsoComponent
     [IsoId("_1lGdQzL3EeKU9IrkkToqcw_908206117")]
     [DisplayName("Active Until Date")]
     [IsoXmlTag("ActvUntilDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ActiveUntilDate { get; }
 
     /// <summary>
@@ -65,5 +71,7 @@ public interface ICorporateActionNotificationSD6 : IIsoComponent
     [IsoId("_1lQOQDL3EeKU9IrkkToqcw_-1256134176")]
     [DisplayName("Validation Not Supported Reason")]
     [IsoXmlTag("VldtnNotSpprtdRsn")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText? ValidationNotSupportedReason { get; }
 }

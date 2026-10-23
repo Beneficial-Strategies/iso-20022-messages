@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General characteristics of the report.
 /// </summary>
 [IsoId("_m_exhfNBEeCuA5Tr22BnwA_1065800194")]
+[IsoDisplayName(@"Report")]
 public interface IReport4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IReport4 : IIsoComponent
     [IsoId("_m_exhvNBEeCuA5Tr22BnwA_1065800718")]
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? ReportNumber { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IReport4 : IIsoComponent
     [IsoId("_m_exh_NBEeCuA5Tr22BnwA_2072309707")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryReference { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IReport4 : IIsoComponent
     [IsoId("_m_exiPNBEeCuA5Tr22BnwA_1065800233")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReportIdentification { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface IReport4 : IIsoComponent
     [IsoId("_m_xscPNBEeCuA5Tr22BnwA_1065800748")]
     [DisplayName("Audited Indicator")]
     [IsoXmlTag("AudtdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AuditedIndicator { get; }
 
     /// <summary>
@@ -113,5 +120,6 @@ public interface IReport4 : IIsoComponent
     [IsoId("_m_xscfNBEeCuA5Tr22BnwA_1065800439")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ActivityIndicator { get; }
 }

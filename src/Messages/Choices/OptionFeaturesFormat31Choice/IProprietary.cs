@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionFeaturesFormat31Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IOptionFeaturesFormat31Choice, IIsoChoiceVariant
 {
     /// <summary>

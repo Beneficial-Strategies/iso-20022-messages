@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of a drawdown tranche.
 /// </summary>
 [IsoId("b207a4a1-9b3d-4b69-a7eb-5cb6fafb08dd")]
+[IsoDisplayName(@"Drawdown04")]
 public interface IDrawdown04 : IIsoComponent
 {
     /// <summary>
@@ -145,5 +146,6 @@ public interface IDrawdown04 : IIsoComponent
     [IsoId("13cd82ac-e442-4d9f-854e-6407bd93d5b9")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

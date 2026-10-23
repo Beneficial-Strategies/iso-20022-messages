@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action option securities movement details.
 /// </summary>
 [IsoId("_B30Wwb5XEeexmbB7KsjCwA")]
+[IsoDisplayName(@"Securities Option SD")]
 public interface ISecuritiesOptionSD9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesOptionSD9 : IIsoComponent
     [IsoId("_CH4zEb5XEeexmbB7KsjCwA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ISecuritiesOptionSD9 : IIsoComponent
     [IsoId("_CH4zFb5XEeexmbB7KsjCwA")]
     [DisplayName("DTC Pay Method")]
     [IsoXmlTag("DTCPayMtd")]
+    [IsoSimpleType(IsoSimpleType.Max3Text)]
+    [StringLength(3, MinimumLength = 1)]
     Max3Text? DTCPayMethod { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ISecuritiesOptionSD9 : IIsoComponent
     [IsoId("_CH4zHb5XEeexmbB7KsjCwA")]
     [DisplayName("DTC Pay Order")]
     [IsoXmlTag("DTCPayOrdr")]
+    [IsoSimpleType(IsoSimpleType.Max3Text)]
+    [StringLength(3, MinimumLength = 1)]
     Max3Text? DTCPayOrder { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface ISecuritiesOptionSD9 : IIsoComponent
     [IsoId("_CH4zRb5XEeexmbB7KsjCwA")]
     [DisplayName("Charge Flag")]
     [IsoXmlTag("ChrgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChargeFlag { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface ISecuritiesOptionSD9 : IIsoComponent
     [IsoId("_CH4zTb5XEeexmbB7KsjCwA")]
     [DisplayName("Protect Charge Flag")]
     [IsoXmlTag("PrtctChrgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ProtectChargeFlag { get; }
 
     /// <summary>
@@ -97,6 +106,7 @@ public interface ISecuritiesOptionSD9 : IIsoComponent
     [IsoId("_CH4zVb5XEeexmbB7KsjCwA")]
     [DisplayName("Estimated Price Flag")]
     [IsoXmlTag("EstmtdPricFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EstimatedPriceFlag { get; }
 
     /// <summary>
@@ -121,5 +131,6 @@ public interface ISecuritiesOptionSD9 : IIsoComponent
     [IsoId("_CH4zbb5XEeexmbB7KsjCwA")]
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
     Exact32AlphaNumericText? RDPReferenceNumber { get; }
 }

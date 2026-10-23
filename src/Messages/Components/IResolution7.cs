@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Resolution7.
 /// </summary>
 [IsoId("_PkHwo1xyEe6fgZt44_IqFA")]
+[IsoDisplayName(@"Resolution7")]
 public interface IResolution7 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IResolution7 : IIsoComponent
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IItemDescription2> Description { get; }
 
     /// <summary>
@@ -79,6 +81,7 @@ public interface IResolution7 : IIsoComponent
     /// </summary>
     [DisplayName("Vote Instruction Type")]
     [IsoXmlTag("VoteInstrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVoteInstructionType1> VoteInstructionType { get; }
 
     /// <summary>
@@ -107,6 +110,7 @@ public interface IResolution7 : IIsoComponent
     /// </summary>
     [DisplayName("Voting Rights Threshold For Approval")]
     [IsoXmlTag("VtngRghtsThrshldForApprvl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVotingRightsThreshold1> VotingRightsThresholdForApproval { get; }
 
     /// <summary>

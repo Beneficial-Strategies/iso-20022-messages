@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for maturity redemption type.
 /// </summary>
 [IsoId("_d8mHheLxEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Maturity Redemption Type 3 Choice")]
 public interface IMaturityRedemptionType3Choice : IIsoChoice { }

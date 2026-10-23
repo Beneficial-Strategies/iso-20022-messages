@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Travel Agency Package2.
 /// </summary>
 [IsoId("_a4o5UXQ6Ee6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Travel Agency Package2")]
 public interface ITravelAgencyPackage2 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface ITravelAgencyPackage2 : IIsoComponent
     /// </summary>
     [DisplayName("Customer Reference")]
     [IsoXmlTag("CstmrRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomerReference1> CustomerReference { get; }
 
     /// <summary>

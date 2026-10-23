@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the authorisation initiation message.
 /// </summary>
 [IsoId("_KnK6MYEKEeu6D49Gi-ZPwQ")]
+[IsoDisplayName(@"Authorisation Initiation")]
 public interface IAuthorisationInitiation2 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface IAuthorisationInitiation2 : IIsoComponent
     [IsoId("_KsgGK4EKEeu6D49Gi-ZPwQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10KHexBinaryText)]
     Max10KHexBinaryText? ICCRelatedData { get; }
 
     /// <summary>
@@ -66,6 +68,7 @@ public interface IAuthorisationInitiation2 : IIsoComponent
     [IsoId("_KsgGLYEKEeu6D49Gi-ZPwQ")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -74,5 +77,6 @@ public interface IAuthorisationInitiation2 : IIsoComponent
     [IsoId("_KsgGL4EKEeu6D49Gi-ZPwQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

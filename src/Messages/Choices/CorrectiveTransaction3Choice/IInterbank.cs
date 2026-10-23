@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction3Choice;
 /// </summary>
 [IsoId("_9GWT466UEeexrtTFgmVD3Q")]
 [IsoXmlTag("IntrBk")]
+[IsoDisplayName(@"Interbank")]
 public interface IInterbank : ICorrectiveTransaction3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IInterbank : ICorrectiveTransaction3Choice, IIsoChoiceVariant
     [IsoId("_P7HeCdp-Ed-ak6NoX_4Aeg_99760064")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IInterbank : ICorrectiveTransaction3Choice, IIsoChoiceVariant
     [IsoId("_P7RPANp-Ed-ak6NoX_4Aeg_99760124")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>
@@ -42,6 +47,8 @@ public interface IInterbank : ICorrectiveTransaction3Choice, IIsoChoiceVariant
     [IsoId("_P7RPAdp-Ed-ak6NoX_4Aeg_99760146")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -58,5 +65,6 @@ public interface IInterbank : ICorrectiveTransaction3Choice, IIsoChoiceVariant
     [IsoId("_P7RPA9p-Ed-ak6NoX_4Aeg_99760207")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate InterbankSettlementDate { get; }
 }

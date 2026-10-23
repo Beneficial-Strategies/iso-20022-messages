@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original Transaction3.
 /// </summary>
 [IsoId("_kQt7IXpdEe6YlIMyoxWMJA")]
+[IsoDisplayName(@"Original Transaction3")]
 public interface IOriginalTransaction3 : IIsoComponent
 {
     /// <summary>
@@ -107,6 +108,7 @@ public interface IOriginalTransaction3 : IIsoComponent
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExchangeRateInformation5> ExchangeRate { get; }
 
     /// <summary>
@@ -121,6 +123,7 @@ public interface IOriginalTransaction3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAmounts4> AdditionalAmount { get; }
 
     /// <summary>
@@ -142,6 +145,7 @@ public interface IOriginalTransaction3 : IIsoComponent
     /// </summary>
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent16> POIComponent { get; }
 
     /// <summary>
@@ -198,6 +202,7 @@ public interface IOriginalTransaction3 : IIsoComponent
     /// </summary>
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerification7> Verification { get; }
 
     /// <summary>
@@ -205,6 +210,7 @@ public interface IOriginalTransaction3 : IIsoComponent
     /// </summary>
     [DisplayName("Risk")]
     [IsoXmlTag("Rsk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRiskContext3> Risk { get; }
 
     /// <summary>
@@ -212,6 +218,7 @@ public interface IOriginalTransaction3 : IIsoComponent
     /// </summary>
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialProgrammeQualification2> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -219,6 +226,7 @@ public interface IOriginalTransaction3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalService2> AdditionalService { get; }
 
     /// <summary>
@@ -233,6 +241,7 @@ public interface IOriginalTransaction3 : IIsoComponent
     /// </summary>
     [DisplayName("Deposit Details")]
     [IsoXmlTag("DpstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDepositDetails3> DepositDetails { get; }
 
     /// <summary>
@@ -254,6 +263,7 @@ public interface IOriginalTransaction3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -268,6 +278,7 @@ public interface IOriginalTransaction3 : IIsoComponent
     /// </summary>
     [DisplayName("Dispute Data")]
     [IsoXmlTag("DsptData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeData4> DisputeData { get; }
 
     /// <summary>
@@ -275,6 +286,7 @@ public interface IOriginalTransaction3 : IIsoComponent
     /// </summary>
     [DisplayName("Documentation")]
     [IsoXmlTag("Dcmnttn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeDocumentation1> Documentation { get; }
 
     /// <summary>

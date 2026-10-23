@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat55Choice;
 /// <summary>
 /// Digital Ledger Identification.
 /// </summary>
+[IsoDisplayName(@"Digital Ledger Identification")]
 public interface IDigitalLedgerIdentification : ISafekeepingPlaceFormat55Choice, IIsoChoiceVariant
 {
     /// <summary>

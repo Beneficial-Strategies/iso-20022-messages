@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingIdentification2Choice;
 /// Underlying of any other type of transaction.
 /// </summary>
 [IsoId("_Ky7eQ4G-EeaalK9UbuVGFw")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IUnderlyingIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

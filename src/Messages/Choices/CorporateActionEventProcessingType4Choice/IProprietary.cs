@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventProcessingTy
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICorporateActionEventProcessingType4Choice, IIsoChoiceVariant
 {
     /// <summary>

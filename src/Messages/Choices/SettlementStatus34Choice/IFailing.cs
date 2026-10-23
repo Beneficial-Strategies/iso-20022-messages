@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus34Choice;
 
 /// <summary>Settlement status expressed as a failing status.</summary>
 [IsoId("_XtOZ--SkEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Failing")]
 public interface IFailing : ISettlementStatus34Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

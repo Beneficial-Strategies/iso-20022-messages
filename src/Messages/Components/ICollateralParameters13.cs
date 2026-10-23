@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters which explicitly state the conditions that must be fulfilled before a particular triparty collateral instruction/transaction  can be confirmed. These parameters are defined by the instructing party in compliance with triparty collateral rules in the market the instruction/transaction will take place.
 /// </summary>
 [IsoId("_MOvFUSs9EeySlt9bF77XfA")]
+[IsoDisplayName(@"Collateral Parameters")]
 public interface ICollateralParameters13 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ICollateralParameters13 : IIsoComponent
     [IsoId("_Ml-gmSs9EeySlt9bF77XfA")]
     [DisplayName("Automatic Allocation")]
     [IsoXmlTag("AutomtcAllcn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AutomaticAllocation { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ICollateralParameters13 : IIsoComponent
     [IsoId("_Ml-gmys9EeySlt9bF77XfA")]
     [DisplayName("Collateral Approved")]
     [IsoXmlTag("CollApprvd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CollateralApproved { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ICollateralParameters13 : IIsoComponent
     [IsoId("_Ml-gnSs9EeySlt9bF77XfA")]
     [DisplayName("Settlement Approved")]
     [IsoXmlTag("SttlmApprvd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SettlementApproved { get; }
 
     /// <summary>

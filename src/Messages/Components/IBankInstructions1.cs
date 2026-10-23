@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the instructions from the bank.
 /// </summary>
 [IsoId("_-E96onltEeG7BsjMvd1mEw_-1962266357")]
+[IsoDisplayName(@"Bank Instructions")]
 public interface IBankInstructions1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,10 @@ public interface IBankInstructions1 : IIsoComponent
     [IsoId("_-E96o3ltEeG7BsjMvd1mEw_-327246160")]
     [DisplayName("Text")]
     [IsoXmlTag("Txt")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Text { get; }
 
     /// <summary>
@@ -25,5 +30,6 @@ public interface IBankInstructions1 : IIsoComponent
     [IsoId("_-E96pHltEeG7BsjMvd1mEw_878374168")]
     [DisplayName("Last Date For Response")]
     [IsoXmlTag("LastDtForRspn")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LastDateForResponse { get; }
 }

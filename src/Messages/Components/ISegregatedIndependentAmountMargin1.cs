@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Elements used to calculate the collateral margin call for the segregated independent amount.
 /// </summary>
 [IsoId("_UnXxwNp-Ed-ak6NoX_4Aeg_-1126124883")]
+[IsoDisplayName(@"Segregated Independent Amount Margin")]
 public interface ISegregatedIndependentAmountMargin1 : IIsoComponent
 {
     /// <summary>

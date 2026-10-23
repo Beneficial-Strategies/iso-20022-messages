@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information on the occurred settlement time(s) of the payment transaction.
 /// </summary>
 [IsoId("_QIYeB9p-Ed-ak6NoX_4Aeg_-498720410")]
+[IsoDisplayName(@"Settlement Date Time Indication")]
 public interface ISettlementDateTimeIndication1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementDateTimeIndication1 : IIsoComponent
     [IsoId("_QIhn4Np-Ed-ak6NoX_4Aeg_-425762310")]
     [DisplayName("Debit Date Time")]
     [IsoXmlTag("DbtDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DebitDateTime { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ISettlementDateTimeIndication1 : IIsoComponent
     [IsoId("_QIhn4dp-Ed-ak6NoX_4Aeg_-356497199")]
     [DisplayName("Credit Date Time")]
     [IsoXmlTag("CdtDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CreditDateTime { get; }
 }

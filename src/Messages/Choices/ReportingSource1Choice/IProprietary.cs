@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingSource1Choice;
 /// Reporting source, in a proprietary form.
 /// </summary>
 [IsoId("_RqIkk9p-Ed-ak6NoX_4Aeg_-1706426860")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IReportingSource1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IReportingSource1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

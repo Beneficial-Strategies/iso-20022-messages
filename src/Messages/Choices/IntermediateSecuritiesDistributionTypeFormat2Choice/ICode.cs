@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntermediateSecuritiesDistributi
 /// Standard code to specify the type of intermediate security distribution.
 /// </summary>
 [IsoId("_Q0L0A9p-Ed-ak6NoX_4Aeg_-917179307")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IIntermediateSecuritiesDistributionTypeFormat2Choice, IIsoChoiceVariant
 {
     /// <summary>

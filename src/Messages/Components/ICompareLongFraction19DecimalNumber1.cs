@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a number field represented as a 19 decimals.
 /// </summary>
 [IsoId("_7PX6cExUEeywvc16MwOPfw")]
+[IsoDisplayName(@"Compare Long Fraction 19 Decimal Number")]
 public interface ICompareLongFraction19DecimalNumber1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICompareLongFraction19DecimalNumber1 : IIsoComponent
     [IsoId("_VYZ40ExVEeywvc16MwOPfw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
+    [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
     LongFraction19DecimalNumber? Value1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICompareLongFraction19DecimalNumber1 : IIsoComponent
     [IsoId("_Xjug4ExVEeywvc16MwOPfw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
+    [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
     LongFraction19DecimalNumber? Value2 { get; }
 }

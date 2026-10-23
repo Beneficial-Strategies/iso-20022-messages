@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Option SD16.
 /// </summary>
 [IsoId("_UwK-YYbrEe--EK81FcmyRA")]
+[IsoDisplayName(@"Corporate Action Option SD16")]
 public interface ICorporateActionOptionSD16 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ICorporateActionOptionSD16 : IIsoComponent
     /// </summary>
     [DisplayName("Extended Option Features")]
     [IsoXmlTag("XtndedOptnFeatrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ExtendedOptionFeature2Code> ExtendedOptionFeatures { get; }
 
     /// <summary>
@@ -107,6 +109,7 @@ public interface ICorporateActionOptionSD16 : IIsoComponent
     /// </summary>
     [DisplayName("Tax Category")]
     [IsoXmlTag("TaxCtgy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCategory1> TaxCategory { get; }
 
     /// <summary>
@@ -128,6 +131,7 @@ public interface ICorporateActionOptionSD16 : IIsoComponent
     /// </summary>
     [DisplayName("Option Conditions")]
     [IsoXmlTag("OptnConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOptionConditions1> OptionConditions { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details specific to the individual direct debit transaction(s) included in the message.
 /// </summary>
 [IsoId("a6fc8316-6307-4582-89c4-560440222204")]
+[IsoDisplayName(@"Direct Debit Transaction Information35")]
 public interface IDirectDebitTransactionInformation35 : IIsoComponent
 {
     /// <summary>
@@ -89,6 +90,7 @@ public interface IDirectDebitTransactionInformation35 : IIsoComponent
     [IsoId("83f499ae-fc36-4303-843e-abc10c8d62d7")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges16> ChargesInformation { get; }
 
     /// <summary>
@@ -273,6 +275,7 @@ public interface IDirectDebitTransactionInformation35 : IIsoComponent
     [IsoId("39ded4a0-08b6-4aa9-9929-e57171a527bc")]
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting10> RegulatoryReporting { get; }
 
     /// <summary>
@@ -281,6 +284,7 @@ public interface IDirectDebitTransactionInformation35 : IIsoComponent
     [IsoId("7e5b7c39-859e-44d8-a733-84d1ca59b677")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation8> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -297,5 +301,6 @@ public interface IDirectDebitTransactionInformation35 : IIsoComponent
     [IsoId("e280f2eb-fb24-4e64-86f6-3caf8b8e37df")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

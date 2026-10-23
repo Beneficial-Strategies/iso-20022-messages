@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Debit Authorisation Confirmation3.
 /// </summary>
 [IsoId("_1TU1Ua6uEe2PjM01bHafYg")]
+[IsoDisplayName(@"Debit Authorisation Confirmation3")]
 public interface IDebitAuthorisationConfirmation3 : IIsoComponent
 {
     /// <summary>

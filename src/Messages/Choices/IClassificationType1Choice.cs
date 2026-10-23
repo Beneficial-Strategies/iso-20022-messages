@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the classification.
 /// </summary>
 [IsoId("_RdUQk9p-Ed-ak6NoX_4Aeg_-538549826")]
+[IsoDisplayName(@"Classification Type 1 Choice")]
 public interface IClassificationType1Choice : IIsoChoice { }

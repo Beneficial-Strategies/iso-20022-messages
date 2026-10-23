@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Description of the financial instrument.
 /// </summary>
 [IsoId("_vCfLgSqiEeObprHJy8Zrxg")]
+[IsoDisplayName(@"Financial Instrument Attributes")]
 public interface IFinancialInstrumentAttributes49 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IFinancialInstrumentAttributes49 : IIsoComponent
     [IsoId("_vZ17ySqiEeObprHJy8Zrxg")]
     [DisplayName("Next Coupon Date")]
     [IsoXmlTag("NxtCpnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NextCouponDate { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface IFinancialInstrumentAttributes49 : IIsoComponent
     [IsoId("_vZ170SqiEeObprHJy8Zrxg")]
     [DisplayName("Floating Rate Fixing Date")]
     [IsoXmlTag("FltgRateFxgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FloatingRateFixingDate { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IFinancialInstrumentAttributes49 : IIsoComponent
     [IsoId("_vZ172SqiEeObprHJy8Zrxg")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface IFinancialInstrumentAttributes49 : IIsoComponent
     [IsoId("_vZ174SqiEeObprHJy8Zrxg")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IssueDate { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface IFinancialInstrumentAttributes49 : IIsoComponent
     [IsoId("_vZ176SqiEeObprHJy8Zrxg")]
     [DisplayName("Next Callable Date")]
     [IsoXmlTag("NxtCllblDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NextCallableDate { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface IFinancialInstrumentAttributes49 : IIsoComponent
     [IsoId("_vZ178SqiEeObprHJy8Zrxg")]
     [DisplayName("Putable Date")]
     [IsoXmlTag("PutblDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PutableDate { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface IFinancialInstrumentAttributes49 : IIsoComponent
     [IsoId("_vZ17-SqiEeObprHJy8Zrxg")]
     [DisplayName("Dated Date")]
     [IsoXmlTag("DtdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DatedDate { get; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public interface IFinancialInstrumentAttributes49 : IIsoComponent
     [IsoId("_vZ18ASqiEeObprHJy8Zrxg")]
     [DisplayName("Conversion Date")]
     [IsoXmlTag("ConvsDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ConversionDate { get; }
 
     /// <summary>

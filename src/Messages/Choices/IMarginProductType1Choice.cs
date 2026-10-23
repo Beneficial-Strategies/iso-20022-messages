@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides specification for the underlying product of the margin.
 /// </summary>
 [IsoId("_Qk_hdNp-Ed-ak6NoX_4Aeg_1848984262")]
+[IsoDisplayName(@"Margin Product Type 1 Choice")]
 public interface IMarginProductType1Choice : IIsoChoice { }

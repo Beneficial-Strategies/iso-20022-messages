@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique identifier of a document, message or transaction.
 /// </summary>
 [IsoId("_jXXgg-5NEeCisYr99QEiWA_-1933272172")]
+[IsoDisplayName(@"Transaction Identifications")]
 public interface ITransactionIdentifications24 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionIdentifications24 : IIsoComponent
     [IsoId("_jXXghO5NEeCisYr99QEiWA_-1344682884")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransactionIdentifications24 : IIsoComponent
     [IsoId("_jXXghe5NEeCisYr99QEiWA_1640105019")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransactionIdentifications24 : IIsoComponent
     [IsoId("_jXXghu5NEeCisYr99QEiWA_-1714709457")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -41,5 +48,7 @@ public interface ITransactionIdentifications24 : IIsoComponent
     [IsoId("_jXgqcO5NEeCisYr99QEiWA_1427663389")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessorTransactionIdentification { get; }
 }

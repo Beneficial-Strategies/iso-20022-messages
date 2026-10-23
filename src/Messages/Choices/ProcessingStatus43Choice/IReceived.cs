@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus43Choice;
 /// </summary>
 [IsoId("_T_H5oVhGEeOMYfRGLS0NbA")]
 [IsoXmlTag("Rcvd")]
+[IsoDisplayName(@"Received")]
 public interface IReceived : IProcessingStatus43Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IReceived : IProcessingStatus43Choice, IIsoChoiceVariant
     [IsoId("_Kak_C1j7EeOgwYxfAV02bg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

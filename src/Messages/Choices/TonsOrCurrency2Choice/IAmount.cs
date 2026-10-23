@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TonsOrCurrency2Choice;
 /// </summary>
 [IsoId("_aCdOY2lSEeaLAKoEUNsD9g")]
 [IsoXmlTag("Amt")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount : ITonsOrCurrency2Choice, IIsoChoiceVariant
 {
     /// <summary>

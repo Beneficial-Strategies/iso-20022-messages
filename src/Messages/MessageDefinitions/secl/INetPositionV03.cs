@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_9C7fsS0lEeSRe9rElPHBfg")]
 [IsoMessage("secl.004.001.03", "NetPos", "urn:iso:std:iso:20022:tech:xsd:secl.004.001.03")]
+[Description(@"Scope|The Net Position Report message is sent by the central counterparty (CCP) to a clearing member to confirm the net position of all trade legs reported during the day.||The message definition is intended for use with the ISO 20022 Business Application Header.||Usage|The central counterparty (CCP) nets all the positions per clearing account and sends the Net Position report message to the Clearing member.")]
+[IsoDisplayName(@"Net Position V")]
 public interface INetPositionV03 : IOuterRecord
 {
     /// <summary>
@@ -59,6 +61,7 @@ public interface INetPositionV03 : IOuterRecord
     [IsoId("_9C7fuy0lEeSRe9rElPHBfg")]
     [DisplayName("Net Position Report")]
     [IsoXmlTag("NetPosRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetPosition3> NetPositionReport { get; }
 
     /// <summary>
@@ -67,5 +70,6 @@ public interface INetPositionV03 : IOuterRecord
     [IsoId("_9C7fvS0lEeSRe9rElPHBfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

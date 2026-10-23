@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information on the suspension reason.
 /// </summary>
 [IsoId("_Sk3nS249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Mandate Suspension Reason")]
 public interface IMandateSuspensionReason2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IMandateSuspensionReason2 : IIsoComponent
     [IsoId("_SvTVpW49EeiU9cctagi5ow")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

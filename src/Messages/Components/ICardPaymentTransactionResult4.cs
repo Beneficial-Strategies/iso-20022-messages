@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of the transaction.
 /// </summary>
 [IsoId("_jXhzoS5DEeunNvJlR_vCbg")]
+[IsoDisplayName(@"Card Payment Transaction Result")]
 public interface ICardPaymentTransactionResult4 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface ICardPaymentTransactionResult4 : IIsoComponent
     [IsoId("_jjAq5S5DEeunNvJlR_vCbg")]
     [DisplayName("Authorisation Code")]
     [IsoXmlTag("AuthstnCd")]
+    [IsoSimpleType(IsoSimpleType.Min6Max8Text)]
+    [StringLength(8, MinimumLength = 6)]
     Min6Max8Text? AuthorisationCode { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice;
 /// <summary>
 /// Party Identification.
 /// </summary>
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification : ISystemPartyModification3Choice, IIsoChoiceVariant
 {
     /// <summary>

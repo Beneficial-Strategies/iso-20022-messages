@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionFeaturesFormat32Choice;
 
 /// <summary>Proprietary identification of the features that may apply to a corporate action option.</summary>
 [IsoId("6815f721-35ee-4796-9ec2-efe38e5c96eb")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IOptionFeaturesFormat32Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

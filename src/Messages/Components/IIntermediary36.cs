@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party and its role.
 /// </summary>
 [IsoId("_Ma9zBSCBEeWhHbfCMWc1cw")]
+[IsoDisplayName(@"Intermediary")]
 public interface IIntermediary36 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IIntermediary36 : IIsoComponent
     [IsoId("_6BavMSCIEeWJd9HF2tO7BA")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IIntermediary36 : IIsoComponent
     [IsoId("_M3JYtyCBEeWhHbfCMWc1cw")]
     [DisplayName("Waived Trailer Commission Indicator")]
     [IsoXmlTag("WvdTrlrComssnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? WaivedTrailerCommissionIndicator { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IIntermediary36 : IIsoComponent
     [IsoId("_M3JYuyCBEeWhHbfCMWc1cw")]
     [DisplayName("Primary Communication Address")]
     [IsoXmlTag("PmryComAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommunicationAddress6> PrimaryCommunicationAddress { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IIntermediary36 : IIsoComponent
     [IsoId("_M3JYvSCBEeWhHbfCMWc1cw")]
     [DisplayName("Secondary Communication Address")]
     [IsoXmlTag("ScndryComAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommunicationAddress6> SecondaryCommunicationAddress { get; }
 
     /// <summary>

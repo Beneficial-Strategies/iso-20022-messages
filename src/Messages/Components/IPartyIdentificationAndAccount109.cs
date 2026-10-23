@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party and account details.
 /// </summary>
 [IsoId("_B77aJx5gEeWE3PufGMdJ3w")]
+[IsoDisplayName(@"Party Identification And Account")]
 public interface IPartyIdentificationAndAccount109 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPartyIdentificationAndAccount109 : IIsoComponent
     [IsoId("_LDfJ0GzMEeWAUO-90GtZEg")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface IPartyIdentificationAndAccount109 : IIsoComponent
     [IsoId("_CbwwpR5gEeWE3PufGMdJ3w")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessingIdentification { get; }
 
     /// <summary>

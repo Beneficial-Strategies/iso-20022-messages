@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details on the settlement fails split per intra-CSD and cross-CSD instructions.
 /// </summary>
 [IsoId("_MTNhaTOmEeqX8uoQQ3KffQ")]
+[IsoDisplayName(@"Settlement Fails Daily CSD")]
 public interface ISettlementFailsDailyCSD3 : IIsoComponent
 {
     /// <summary>

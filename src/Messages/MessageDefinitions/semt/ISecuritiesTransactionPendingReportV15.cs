@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("1805316d-164b-4aa1-806a-24ca06896315")]
 [IsoMessage("semt.018.001.15", "SctiesTxPdgRpt", "urn:iso:std:iso:20022:tech:xsd:semt.018.001.15")]
+[IsoDisplayName(@"Securities Transaction Pending Report V15")]
 public interface ISecuritiesTransactionPendingReportV15 : IOuterRecord
 {
     /// <summary>
@@ -53,6 +54,7 @@ public interface ISecuritiesTransactionPendingReportV15 : IOuterRecord
     /// </summary>
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusAndReason49> Status { get; }
 
     /// <summary>
@@ -60,5 +62,6 @@ public interface ISecuritiesTransactionPendingReportV15 : IOuterRecord
     /// </summary>
     [DisplayName("Transactions")]
     [IsoXmlTag("Txs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransaction164> Transactions { get; }
 }

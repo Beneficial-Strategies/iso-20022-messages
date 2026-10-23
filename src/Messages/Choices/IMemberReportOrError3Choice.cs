@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// It is used to provide information on transactions and booked entries held at the transaction administrator.
 /// </summary>
 [IsoId("_isPSsZlCEee-Zps0fZQaFQ")]
+[IsoDisplayName(@"Member Report Or Error 3 Choice")]
 public interface IMemberReportOrError3Choice : IIsoChoice { }

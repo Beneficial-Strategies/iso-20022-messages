@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a paper derivative of type newsprint.
 /// </summary>
 [IsoId("_MIeJURZaEe2QNcZTDeoKnQ")]
+[IsoDisplayName(@"Paper Commodity Newsprint")]
 public interface IPaperCommodityNewsprint2 : IIsoComponent
 {
     /// <summary>

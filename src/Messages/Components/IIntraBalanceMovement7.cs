@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Intra Balance Movement7.
 /// </summary>
 [IsoId("_3vAlMTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Intra Balance Movement7")]
 public interface IIntraBalanceMovement7 : IIsoComponent
 {
     /// <summary>

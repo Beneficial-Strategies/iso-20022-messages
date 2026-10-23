@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a cryptographic algorithm and parameters for digital signatures.
 /// </summary>
 [IsoId("_L656AdtbEee9e6xduATmQg")]
+[IsoDisplayName(@"Algorithm Identification")]
 public interface IAlgorithmIdentification20 : IIsoComponent
 {
     /// <summary>

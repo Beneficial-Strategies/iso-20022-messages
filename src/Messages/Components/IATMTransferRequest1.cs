@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the request of a fund transfer from an ATM.
 /// </summary>
 [IsoId("_KJLG0K4sEeWLdt0vLARX2Q")]
+[IsoDisplayName(@"ATM Transfer Request")]
 public interface IATMTransferRequest1 : IIsoComponent
 {
     /// <summary>

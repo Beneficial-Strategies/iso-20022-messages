@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a payment against a purchase order.
 /// </summary>
 [IsoId("_ToDCxNp-Ed-ak6NoX_4Aeg_1044270844")]
+[IsoDisplayName(@"Report Line")]
 public interface IReportLine2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportLine2 : IIsoComponent
     [IsoId("_ToDCxdp-Ed-ak6NoX_4Aeg_1044270846")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IReportLine2 : IIsoComponent
     [IsoId("_ToDCx9p-Ed-ak6NoX_4Aeg_1398433973")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment4> Adjustment { get; }
 
     /// <summary>

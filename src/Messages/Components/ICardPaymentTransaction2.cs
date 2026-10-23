@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction information in the authorisation response.
 /// </summary>
 [IsoId("_TE9DmgEcEeCQm6a_G2yO_w_1015310936")]
+[IsoDisplayName(@"Card Payment Transaction")]
 public interface ICardPaymentTransaction2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICardPaymentTransaction2 : IIsoComponent
     [IsoId("_TE9DnAEcEeCQm6a_G2yO_w_311259364")]
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RecipientTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICardPaymentTransaction2 : IIsoComponent
     [IsoId("_TE9DnQEcEeCQm6a_G2yO_w_1451788064")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ICardPaymentTransaction2 : IIsoComponent
     [IsoId("_TE9DngEcEeCQm6a_G2yO_w_1116760785")]
     [DisplayName("Interchange Data")]
     [IsoXmlTag("IntrchngData")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InterchangeData { get; }
 
     /// <summary>

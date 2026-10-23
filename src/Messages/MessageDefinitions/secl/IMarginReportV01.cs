@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_slKNRmtdEeCY4-KZ9JEyUQ_151465254")]
 [IsoMessage("secl.005.001.01", "MrgnRpt", "urn:iso:std:iso:20022:tech:xsd:secl.005.001.01")]
+[IsoDisplayName(@"Margin Report V01")]
 public interface IMarginReportV01 : IOuterRecord
 {
     /// <summary>
@@ -46,6 +47,7 @@ public interface IMarginReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Report Details")]
     [IsoXmlTag("RptDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMarginReport1> ReportDetails { get; }
 
     /// <summary>
@@ -53,5 +55,6 @@ public interface IMarginReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the retrieval response message.</summary>
 [IsoId("_kNBjy27-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Retrieval Response")]
 public interface IRetrievalResponse : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Preliminary Advice Type4.
 /// </summary>
 [IsoId("_68dvkWHNEe6yt_d72zQZeQ")]
+[IsoDisplayName(@"Corporate Action Preliminary Advice Type4")]
 public interface ICorporateActionPreliminaryAdviceType4 : IIsoComponent
 {
     /// <summary>

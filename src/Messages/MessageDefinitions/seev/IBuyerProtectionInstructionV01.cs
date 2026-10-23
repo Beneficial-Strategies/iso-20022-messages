@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_PRLXQLbcEe-NMoTZ6Byg6A")]
 [IsoMessage("seev.060.001.01", "BuyrPrtcnInstr", "urn:iso:std:iso:20022:tech:xsd:seev.060.001.01")]
+[IsoDisplayName(@"Buyer Protection Instruction V01")]
 public interface IBuyerProtectionInstructionV01 : IOuterRecord
 {
     /// <summary>
@@ -46,5 +47,6 @@ public interface IBuyerProtectionInstructionV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

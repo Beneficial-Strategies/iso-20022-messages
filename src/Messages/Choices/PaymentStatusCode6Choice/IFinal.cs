@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusCode6Choice;
 /// Qualifies further the final status.
 /// </summary>
 [IsoId("_phD1BRbzEeOy-PlRuFSUzQ")]
+[IsoDisplayName(@"Final")]
 public interface IFinal : IPaymentStatusCode6Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reservation Query6.
 /// </summary>
 [IsoId("_zqcjkTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Reservation Query6")]
 public interface IReservationQuery6 : IIsoComponent
 {
     /// <summary>

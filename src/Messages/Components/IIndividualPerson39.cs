@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Human entity, as distinguished from a corporate entity (which is sometimes referred to as an &apos;artificial person&apos;).
 /// </summary>
 [IsoId("_fQtPUa-SEemJ1NnLPsTFaw")]
+[IsoDisplayName(@"Individual Person")]
 public interface IIndividualPerson39 : IIsoComponent
 {
     /// <summary>

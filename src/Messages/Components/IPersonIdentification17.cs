@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous way to identify a person.
 /// </summary>
 [IsoId("_dbeBZ-EpEemRzcIkmUETeA")]
+[IsoDisplayName(@"Person Identification")]
 public interface IPersonIdentification17 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPersonIdentification17 : IIsoComponent
     [IsoId("_mV-eQeEpEemRzcIkmUETeA")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IPersonIdentification17 : IIsoComponent
     [IsoId("_dpOwleEpEemRzcIkmUETeA")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericPersonIdentification1> Other { get; }
 }

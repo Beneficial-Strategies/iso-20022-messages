@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of the captured set of transactions.
 /// </summary>
 [IsoId("_NmosEbX4EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Card Payment Data Set42")]
 public interface ICardPaymentDataSet42 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,8 @@ public interface ICardPaymentDataSet42 : IIsoComponent
     [IsoId("_NngO3bX4EfCUZfsQO4rYeA")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotals12> TransactionTotals { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ICardPaymentDataSet42 : IIsoComponent
     [IsoId("_NngO47X4EfCUZfsQO4rYeA")]
     [DisplayName("Rejected Transaction")]
     [IsoXmlTag("RjctdTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet41> RejectedTransaction { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ICardPaymentDataSet42 : IIsoComponent
     [IsoId("_NngO6bX4EfCUZfsQO4rYeA")]
     [DisplayName("Suspended Transaction")]
     [IsoXmlTag("SspdTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet41> SuspendedTransaction { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ICardPaymentDataSet42 : IIsoComponent
     [IsoId("_NngO77X4EfCUZfsQO4rYeA")]
     [DisplayName("Resumed Approval")]
     [IsoXmlTag("RsmdApprvl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet41> ResumedApproval { get; }
 
     /// <summary>
@@ -81,5 +87,6 @@ public interface ICardPaymentDataSet42 : IIsoComponent
     [IsoId("_NngO9bX4EfCUZfsQO4rYeA")]
     [DisplayName("Resumed Rejection")]
     [IsoXmlTag("RsmdRjctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet41> ResumedRejection { get; }
 }

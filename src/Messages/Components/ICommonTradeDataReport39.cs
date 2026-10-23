@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to contract and transaction details.
 /// </summary>
 [IsoId("_phGVqQ1LEeqV4s5SpzR1dQ")]
+[IsoDisplayName(@"Common Trade Data Report")]
 public interface ICommonTradeDataReport39 : IIsoComponent
 {
     /// <summary>

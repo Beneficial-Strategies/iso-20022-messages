@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Removal1Choice;
 /// Specifies the removal processing change requested expressed as a code.
 /// </summary>
 [IsoId("_xeEJoPkREeicy5Zn42b9bg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRemoval1Choice, IIsoChoiceVariant
 {
     /// <summary>

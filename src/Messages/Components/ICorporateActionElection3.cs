@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about a corporate action election.
 /// </summary>
 [IsoId("_UJ39d9p-Ed-ak6NoX_4Aeg_-1634086378")]
+[IsoDisplayName(@"Corporate Action Election")]
 public interface ICorporateActionElection3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICorporateActionElection3 : IIsoComponent
     [IsoId("_UKBHYdp-Ed-ak6NoX_4Aeg_-1591604434")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? OptionNumber { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ICorporateActionElection3 : IIsoComponent
     [IsoId("_UKBHZNp-Ed-ak6NoX_4Aeg_101209579")]
     [DisplayName("Proposed Rate")]
     [IsoXmlTag("PropsdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ProposedRate { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ICorporateActionElection3 : IIsoComponent
     [IsoId("_UKBHZdp-Ed-ak6NoX_4Aeg_-1328972579")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionCashMovements2> CashMovementDetails { get; }
 
     /// <summary>
@@ -73,5 +77,6 @@ public interface ICorporateActionElection3 : IIsoComponent
     [IsoId("_UKBHZtp-Ed-ak6NoX_4Aeg_-1078102161")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionSecuritiesMovement2> SecuritiesMovementDetails { get; }
 }

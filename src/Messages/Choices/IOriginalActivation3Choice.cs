@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Original Activation3Choice.
 /// </summary>
 [IsoId("_wdEBmzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Original Activation3Choice")]
 public interface IOriginalActivation3Choice : IIsoChoice { }

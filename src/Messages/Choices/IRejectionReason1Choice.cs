@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Allows the sender of the rejection message to indicate only one rejection reason that applies to the entire rejected message.
 /// </summary>
 [IsoId("_RJ8ooNp-Ed-ak6NoX_4Aeg_891683676")]
+[IsoDisplayName(@"Rejection Reason 1 Choice")]
 public interface IRejectionReason1Choice : IIsoChoice { }

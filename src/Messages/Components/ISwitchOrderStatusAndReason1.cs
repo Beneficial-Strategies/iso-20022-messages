@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of the individual orders of a bulk or multiple order that was previously received.
 /// </summary>
 [IsoId("_TRsYQ9p-Ed-ak6NoX_4Aeg_-871439677")]
+[IsoDisplayName(@"Switch Order Status And Reason")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISwitchOrderStatusAndReason1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ISwitchOrderStatusAndReason1 : IIsoComponent
     [IsoId("_TRsYRNp-Ed-ak6NoX_4Aeg_492338280")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +29,8 @@ public interface ISwitchOrderStatusAndReason1 : IIsoComponent
     [IsoId("_TRsYRdp-Ed-ak6NoX_4Aeg_-871439617")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -33,6 +39,8 @@ public interface ISwitchOrderStatusAndReason1 : IIsoComponent
     [IsoId("_TRsYRtp-Ed-ak6NoX_4Aeg_492338323")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -41,6 +49,8 @@ public interface ISwitchOrderStatusAndReason1 : IIsoComponent
     [IsoId("_TRsYR9p-Ed-ak6NoX_4Aeg_-921439186")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DealReference { get; }
 
     /// <summary>
@@ -49,6 +59,8 @@ public interface ISwitchOrderStatusAndReason1 : IIsoComponent
     [IsoId("_TRsYSNp-Ed-ak6NoX_4Aeg_1867873909")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -81,6 +93,9 @@ public interface ISwitchOrderStatusAndReason1 : IIsoComponent
     [IsoId("_TR2JQ9p-Ed-ak6NoX_4Aeg_-871439184")]
     [DisplayName("Rejected")]
     [IsoXmlTag("Rjctd")]
+    [MinLength(1)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectedStatus6> Rejected { get; }
 
     /// <summary>
@@ -113,6 +128,7 @@ public interface ISwitchOrderStatusAndReason1 : IIsoComponent
     [IsoId("_TR2JR9p-Ed-ak6NoX_4Aeg_-31894611")]
     [DisplayName("Leg Information")]
     [IsoXmlTag("LegInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchLegReferences1> LegInformation { get; }
 
     /// <summary>

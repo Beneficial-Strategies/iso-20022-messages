@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between previous reference and other reference for additional references.</summary>
 [IsoId("392d4318-696c-43fe-93d4-6de1e67e2ebf")]
+[IsoDisplayName(@"References 87 Choice")]
 public interface IReferences87Choice : IIsoChoice { }

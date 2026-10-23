@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
 /// </summary>
 [IsoId("_cteB1ZKQEeWHWpTQn1FFVg")]
 [IsoXmlTag("RateTpAndAmtAndRateSts")]
+[IsoDisplayName(@"Rate Type And Amount And Rate Status")]
 public interface IRateTypeAndAmountAndRateStatus
     : IInterestRateUsedForPaymentFormat10Choice,
         IIsoChoiceVariant

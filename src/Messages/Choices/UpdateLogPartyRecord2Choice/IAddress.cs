@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice;
 /// <summary>
 /// Address.
 /// </summary>
+[IsoDisplayName(@"Address")]
 public interface IAddress : IUpdateLogPartyRecord2Choice, IIsoChoiceVariant
 {
     /// <summary>

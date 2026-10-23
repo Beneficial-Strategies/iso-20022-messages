@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security or other asset.
 /// </summary>
 [IsoId("_QN2MiUyGEeir2sRRVd9XhA")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument69 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrument69 : IIsoComponent
     [IsoId("__11KQEyHEeir2sRRVd9XhA")]
     [DisplayName("Line Identification")]
     [IsoXmlTag("LineId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LineIdentification { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IFinancialInstrument69 : IIsoComponent
     [IsoId("_INYoIaFYEei_VZq-6SQkuQ")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit11> UnitsDetails { get; }
 
     /// <summary>
@@ -130,6 +134,7 @@ public interface IFinancialInstrument69 : IIsoComponent
     [IsoId("_M8XzoejREeifCsigq7uLaQ")]
     [DisplayName("Requested Transfer Date")]
     [IsoXmlTag("ReqdTrfDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedTransferDate { get; }
 
     /// <summary>
@@ -138,6 +143,7 @@ public interface IFinancialInstrument69 : IIsoComponent
     [IsoId("_kkKDIE3XEeidB49bWZiS0g")]
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedTradeDate { get; }
 
     /// <summary>
@@ -146,6 +152,7 @@ public interface IFinancialInstrument69 : IIsoComponent
     [IsoId("_mpA20E3XEeidB49bWZiS0g")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>
@@ -186,5 +193,6 @@ public interface IFinancialInstrument69 : IIsoComponent
     [IsoId("_Q-2UMHVaEeiiHo4Gse0d2w")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

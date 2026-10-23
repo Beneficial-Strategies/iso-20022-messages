@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies rates related to a corporate action option.
 /// </summary>
 [IsoId("_TYZdOtp-Ed-ak6NoX_4Aeg_-1791515077")]
+[IsoDisplayName(@"Corporate Action Rate")]
 public interface ICorporateActionRate5 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ICorporateActionRate5 : IIsoComponent
     [IsoId("_TYjONdp-Ed-ak6NoX_4Aeg_-1791514458")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGrossDividendRateFormat1Choice> GrossDividendRate { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface ICorporateActionRate5 : IIsoComponent
     [IsoId("_TYjOONp-Ed-ak6NoX_4Aeg_-1791514044")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateUsedForPaymentFormat1Choice> InterestRateUsedForPayment { get; }
 
     /// <summary>
@@ -89,6 +92,7 @@ public interface ICorporateActionRate5 : IIsoComponent
     [IsoId("_TYjOOdp-Ed-ak6NoX_4Aeg_-1791513598")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetDividendRateFormat1Choice> NetDividendRate { get; }
 
     /// <summary>
@@ -121,6 +125,7 @@ public interface ICorporateActionRate5 : IIsoComponent
     [IsoId("_TYsYI9p-Ed-ak6NoX_4Aeg_781413201")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCreditRateFormat1Choice> TaxCreditRate { get; }
 
     /// <summary>
@@ -201,6 +206,7 @@ public interface ICorporateActionRate5 : IIsoComponent
     [IsoId("_TY2JI9p-Ed-ak6NoX_4Aeg_-1783204586")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateTypeAndAmountAndStatus6> TaxRelatedRate { get; }
 
     /// <summary>

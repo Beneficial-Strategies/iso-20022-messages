@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to report on business information.
 /// </summary>
 [IsoId("_1mEoCZlZEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"General Business Information Return Criteria")]
 public interface IGeneralBusinessInformationReturnCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IGeneralBusinessInformationReturnCriteria1 : IIsoComponent
     [IsoId("_1t_N4ZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("Qualifier Indicator")]
     [IsoXmlTag("QlfrInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? QualifierIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IGeneralBusinessInformationReturnCriteria1 : IIsoComponent
     [IsoId("_1t_N45lZEeeE1Ya-LgRsuQ")]
     [DisplayName("Subject Indicator")]
     [IsoXmlTag("SbjtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? SubjectIndicator { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IGeneralBusinessInformationReturnCriteria1 : IIsoComponent
     [IsoId("_1t_N5ZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("Subject Details Indicator")]
     [IsoXmlTag("SbjtDtlsInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? SubjectDetailsIndicator { get; }
 }

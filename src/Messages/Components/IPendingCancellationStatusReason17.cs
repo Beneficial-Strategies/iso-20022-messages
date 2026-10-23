@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies reasons for the pending cancellation status.
 /// </summary>
 [IsoId("_JnvIAa8xEfCx2aBifPEdRg")]
+[IsoDisplayName(@"Pending Cancellation Status Reason17")]
 public interface IPendingCancellationStatusReason17 : IIsoComponent
 {
     /// <summary>

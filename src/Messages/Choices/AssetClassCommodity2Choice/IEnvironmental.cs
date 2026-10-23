@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity2Choice;
 /// Code list for environmental type of commodities.
 /// </summary>
 [IsoId("_BzEmPiYyEeWHeosc_5RQEw")]
+[IsoDisplayName(@"Environmental")]
 public interface IEnvironmental : IAssetClassCommodity2Choice, IIsoChoiceVariant
 {
     /// <summary>

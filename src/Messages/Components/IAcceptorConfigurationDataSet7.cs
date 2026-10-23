@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data set containing the acceptor parameters of a point of interaction (POI).
 /// </summary>
 [IsoId("_wIUhkbZzEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Acceptor Configuration Data Set7")]
 public interface IAcceptorConfigurationDataSet7 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IAcceptorConfigurationDataSet7 : IIsoComponent
     [IsoId("_wJPHp7ZzEfCUZfsQO4rYeA")]
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification176> POIIdentification { get; }
 
     /// <summary>

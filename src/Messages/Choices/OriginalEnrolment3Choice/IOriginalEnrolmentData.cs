@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalEnrolment3Choice;
 /// <summary>
 /// Original Enrolment Data.
 /// </summary>
+[IsoDisplayName(@"Original Enrolment Data")]
 public interface IOriginalEnrolmentData : IOriginalEnrolment3Choice, IIsoChoiceVariant
 {
     /// <summary>

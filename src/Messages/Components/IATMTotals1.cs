@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Current totals of the ATM.
 /// </summary>
 [IsoId("_XPWq4IqdEeS4a4abTJTSSw")]
+[IsoDisplayName(@"ATM Totals")]
 public interface IATMTotals1 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IATMTotals1 : IIsoComponent
     [IsoId("_uaqecIqeEeS4a4abTJTSSw")]
     [DisplayName("ATM Balance Number")]
     [IsoXmlTag("ATMBalNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ATMBalanceNumber { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IATMTotals1 : IIsoComponent
     [IsoId("_yIVqEIqeEeS4a4abTJTSSw")]
     [DisplayName("ATM Current Number")]
     [IsoXmlTag("ATMCurNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ATMCurrentNumber { get; }
 }

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnMvmntPrlimryAdvcCxlAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.044.002.13"
 )]
+[IsoDisplayName(@"Corporate Action Movement Preliminary Advice Cancellation Advice002V13")]
 public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V13 : IOuterRecord
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V
     /// </summary>
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V
     /// </summary>
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> PayingAgent { get; }
 
     /// <summary>
@@ -64,6 +67,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V
     /// </summary>
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -78,6 +82,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V
     /// </summary>
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> ResellingAgent { get; }
 
     /// <summary>
@@ -99,6 +104,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V
     /// </summary>
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> SolicitationAgent { get; }
 
     /// <summary>
@@ -113,5 +119,6 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

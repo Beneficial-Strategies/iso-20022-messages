@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Login Response message.
 /// </summary>
 [IsoId("_XxarES8SEeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Login Response")]
 public interface ILoginResponse3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILoginResponse3 : IIsoComponent
     [IsoId("_X9MdQS8SEeu125Ip9zFcsQ")]
     [DisplayName("POI Date Time")]
     [IsoXmlTag("POIDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime POIDateTime { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ILoginResponse3 : IIsoComponent
     [IsoId("_X9MdQy8SEeu125Ip9zFcsQ")]
     [DisplayName("POI Software")]
     [IsoXmlTag("POISftwr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent11> POISoftware { get; }
 
     /// <summary>

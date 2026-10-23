@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitIdentification3Choice;
 /// <summary>
 /// All Current.
 /// </summary>
+[IsoDisplayName(@"All Current")]
 public interface IAllCurrent : ILimitIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>

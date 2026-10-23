@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the characteristics of a portfolio.
 /// </summary>
 [IsoId("_TUra39p-Ed-ak6NoX_4Aeg_208948486")]
+[IsoDisplayName(@"Portfolio")]
 public interface IPortfolio1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,9 @@ public interface IPortfolio1 : IIsoComponent
     [IsoId("_TU0kwNp-Ed-ak6NoX_4Aeg_501703515")]
     [DisplayName("Portfolio Information")]
     [IsoXmlTag("PrtflInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> PortfolioInformation { get; }
 }

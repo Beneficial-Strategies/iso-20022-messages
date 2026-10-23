@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to request a loyalty service. A Loyalty request contents : the loyalty transaction request and the loyalty data if any.
 /// </summary>
 [IsoId("_unaLkS83Eeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Loyalty Request")]
 public interface ILoyaltyRequest3 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ILoyaltyRequest3 : IIsoComponent
     [IsoId("_u0BrRS83Eeu125Ip9zFcsQ")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyRequestData2> Data { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProfileType1Choice;
 /// Type of profile expressed as a code.
 /// </summary>
 [IsoId("_wl30cCDNEeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProfileType1Choice, IIsoChoiceVariant
 {
     /// <summary>

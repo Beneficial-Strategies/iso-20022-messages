@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation4Choice;
 /// <summary>
 /// Person.
 /// </summary>
+[IsoDisplayName(@"Person")]
 public interface IPerson : IPersonOrOrganisation4Choice, IIsoChoiceVariant
 {
     /// <summary>

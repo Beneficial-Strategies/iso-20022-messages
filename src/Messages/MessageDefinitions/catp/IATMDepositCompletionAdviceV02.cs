@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.catp;
     "ATMDpstCmpltnAdvc",
     "urn:iso:std:iso:20022:tech:xsd:catp.014.001.02"
 )]
+[IsoDisplayName(@"ATM Deposit Completion Advice V02")]
 public interface IATMDepositCompletionAdviceV02 : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShareRanking1FormatChoice;
 /// Standard code to specify the share ranking.
 /// </summary>
 [IsoId("_Ro8RxNp-Ed-ak6NoX_4Aeg_1569147900")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IShareRanking1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

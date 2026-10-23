@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to linkages between transactions.
 /// </summary>
 [IsoId("e4b43370-aa8a-4163-a51a-8816d9b059ff")]
+[IsoDisplayName(@"Linkages79")]
 public interface ILinkages79 : IIsoComponent
 {
     /// <summary>

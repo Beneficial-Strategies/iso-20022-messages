@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CategoryPurpose1Choice;
 /// Category purpose, as published in an external category purpose code list.
 /// </summary>
 [IsoId("_THaa5dp-Ed-ak6NoX_4Aeg_1223014481")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICategoryPurpose1Choice, IIsoChoiceVariant
 {
     /// <summary>

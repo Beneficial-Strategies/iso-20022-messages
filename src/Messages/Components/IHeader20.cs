@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the protocol management on a segment of the path from the ATM to the acquirer.
 /// </summary>
 [IsoId("_47_isYnvEeS9F4Qrq_eaVA")]
+[IsoDisplayName(@"Header")]
 public interface IHeader20 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IHeader20 : IIsoComponent
     [IsoId("_5I_c44nvEeS9F4Qrq_eaVA")]
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text ProtocolVersion { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IHeader20 : IIsoComponent
     [IsoId("_5I_c5YnvEeS9F4Qrq_eaVA")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText ExchangeIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IHeader20 : IIsoComponent
     [IsoId("_5I_c54nvEeS9F4Qrq_eaVA")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IHeader20 : IIsoComponent
     [IsoId("_5I_c6YnvEeS9F4Qrq_eaVA")]
     [DisplayName("Initiating Party")]
     [IsoXmlTag("InitgPty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InitiatingParty { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface IHeader20 : IIsoComponent
     [IsoId("_5I_c64nvEeS9F4Qrq_eaVA")]
     [DisplayName("Recipient Party")]
     [IsoXmlTag("RcptPty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RecipientParty { get; }
 
     /// <summary>
@@ -65,6 +74,8 @@ public interface IHeader20 : IIsoComponent
     [IsoId("_45fdgIqNEeSRT5rEzcAHEw")]
     [DisplayName("Process State")]
     [IsoXmlTag("PrcStat")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessState { get; }
 
     /// <summary>
@@ -73,5 +84,6 @@ public interface IHeader20 : IIsoComponent
     [IsoId("_5I_c7YnvEeS9F4Qrq_eaVA")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITraceability4> Traceability { get; }
 }

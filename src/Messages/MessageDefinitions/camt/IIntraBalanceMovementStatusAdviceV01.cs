@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "IntraBalMvmntStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:camt.067.001.01"
 )]
+[Description(@"The IntraBalanceMovementStatusAdvice message is sent from a settlement infrastructure to an account owner/requestor to advise the status of an intra-balance movement instruction previously sent by the account owner/requestor.||Usage: |The message may be used to: |- re-send a message previously sent (the sub-function of the message is ""Duplicate"")|- provide a third party with a copy of a message for information (the sub-function of the message is ""Copy"")|- re-send to a third party a copy of a message for information (the sub-function of the message is ""CopyDuplicate"").")]
+[IsoDisplayName(@"Intra Balance Movement Status Advice V")]
 public interface IIntraBalanceMovementStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -88,5 +90,6 @@ public interface IIntraBalanceMovementStatusAdviceV01 : IOuterRecord
     [IsoId("_DLtLhTncEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

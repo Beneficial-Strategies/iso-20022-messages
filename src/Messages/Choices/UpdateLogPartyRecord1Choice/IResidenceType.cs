@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// </summary>
 [IsoId("_xPtUfmjNEeiRg5NzP0jkQg")]
 [IsoXmlTag("ResTp")]
+[IsoDisplayName(@"Residence Type")]
 public interface IResidenceType : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

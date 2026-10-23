@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the requested modifications.
 /// </summary>
 [IsoId("_PgTKQdp-Ed-ak6NoX_4Aeg_-1564522942")]
+[IsoDisplayName(@"Requested Modification")]
 public interface IRequestedModification : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRequestedModification : IIsoComponent
     [IsoId("_PgTKQtp-Ed-ak6NoX_4Aeg_242959100")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RelatedReference { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IRequestedModification : IIsoComponent
     [IsoId("_PgTKRdp-Ed-ak6NoX_4Aeg_243879322")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedExecutionDate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IRequestedModification : IIsoComponent
     [IsoId("_PgTKRtp-Ed-ak6NoX_4Aeg_243879382")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValueDate { get; }
 
     /// <summary>
@@ -161,5 +166,9 @@ public interface IRequestedModification : IIsoComponent
     [IsoId("_PgmFMNp-Ed-ak6NoX_4Aeg_1533975985")]
     [DisplayName("Sender To Receiver Information")]
     [IsoXmlTag("SndrToRcvrInf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(6)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> SenderToReceiverInformation { get; }
 }

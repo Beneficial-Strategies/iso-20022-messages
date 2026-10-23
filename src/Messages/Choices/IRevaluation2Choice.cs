@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an indicator or a data source scheme to determine the revaluation.
 /// </summary>
 [IsoId("_AYz-ENokEeC60axPepSq7g_1301308501")]
+[IsoDisplayName(@"Revaluation 2 Choice")]
 public interface IRevaluation2Choice : IIsoChoice { }

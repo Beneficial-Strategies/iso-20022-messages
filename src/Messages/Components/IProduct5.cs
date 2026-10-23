@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Product to purchase.
 /// </summary>
 [IsoId("_lPknoZVaEeWuuIjj4l7kpg")]
+[IsoDisplayName(@"Product")]
 public interface IProduct5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProduct5 : IIsoComponent
     [IsoId("_lbSIY5VaEeWuuIjj4l7kpg")]
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text ProductCode { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IProduct5 : IIsoComponent
     [IsoId("_lbSIZZVaEeWuuIjj4l7kpg")]
     [DisplayName("Additional Product Code")]
     [IsoXmlTag("AddtlPdctCd")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalProductCode { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IProduct5 : IIsoComponent
     [IsoId("_lbSIaZVaEeWuuIjj4l7kpg")]
     [DisplayName("Quantity Limit")]
     [IsoXmlTag("QtyLmt")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? QuantityLimit { get; }
 
     /// <summary>

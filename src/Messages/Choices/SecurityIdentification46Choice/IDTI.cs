@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice;
 
 /// <summary>Digital Token Identifier, as defined in ISO 24165.</summary>
 [IsoId("9c6723a3-b418-4887-8927-6a251d1c4f20")]
+[IsoDisplayName(@"DTI")]
 public interface IDTI : ISecurityIdentification46Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

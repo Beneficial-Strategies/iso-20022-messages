@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the eligibility of outturn resources.
 /// </summary>
 [IsoId("_cthE85KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Non Eligible Proceeds Indicator 4 Choice")]
 public interface INonEligibleProceedsIndicator4Choice : IIsoChoice { }

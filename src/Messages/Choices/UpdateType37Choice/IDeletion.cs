@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType37Choice;
 /// </summary>
 [IsoId("_iPrt0yglEey2k_sfZmJz4g")]
 [IsoXmlTag("Deltn")]
+[IsoDisplayName(@"Deletion")]
 public interface IDeletion : IUpdateType37Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IDeletion : IUpdateType37Choice, IIsoChoiceVariant
     [IsoId("_ioa98yglEey2k_sfZmJz4g")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages40> Linkages { get; }
 
     /// <summary>
@@ -130,5 +132,6 @@ public interface IDeletion : IUpdateType37Choice, IIsoChoiceVariant
     [IsoId("_ioa-DSglEey2k_sfZmJz4g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

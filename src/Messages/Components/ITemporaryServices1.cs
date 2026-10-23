@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information regarding the billing for services rendered on a temporary or contract basis. The component provides information such as the employee job performed, timekeeping, and billing rates.
 /// </summary>
 [IsoId("_QbcTNPfSEei89sMSHxl1ew")]
+[IsoDisplayName(@"Temporary Services")]
 public interface ITemporaryServices1 : IIsoComponent
 {
     /// <summary>
@@ -42,6 +43,7 @@ public interface ITemporaryServices1 : IIsoComponent
     [IsoId("_QbcTN_fSEei89sMSHxl1ew")]
     [DisplayName("Flat Rate Indicator")]
     [IsoXmlTag("FlatRateInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? FlatRateIndicator { get; }
 
     /// <summary>
@@ -58,6 +60,8 @@ public interface ITemporaryServices1 : IIsoComponent
     [IsoId("_QbcTNffSEei89sMSHxl1ew")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SummaryCommodityIdentification { get; }
 
     /// <summary>
@@ -74,6 +78,7 @@ public interface ITemporaryServices1 : IIsoComponent
     [IsoId("_bvgYsPfjEei89sMSHxl1ew")]
     [DisplayName("Miscellaneous Expenses")]
     [IsoXmlTag("MiscExpnss")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount13> MiscellaneousExpenses { get; }
 
     /// <summary>
@@ -90,6 +95,7 @@ public interface ITemporaryServices1 : IIsoComponent
     [IsoId("_1iAGYPfjEei89sMSHxl1ew")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax33> Tax { get; }
 
     /// <summary>
@@ -98,5 +104,7 @@ public interface ITemporaryServices1 : IIsoComponent
     [IsoId("_QbcTOPfSEei89sMSHxl1ew")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

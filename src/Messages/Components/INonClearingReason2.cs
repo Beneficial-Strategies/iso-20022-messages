@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the reason for which the contract has not been cleared.
 /// </summary>
 [IsoId("_Ak0bdZPuEey0rJ3Gl6WZVA")]
+[IsoDisplayName(@"Non Clearing Reason")]
 public interface INonClearingReason2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INonClearingReason2 : IIsoComponent
     [IsoId("_AmE_sZPuEey0rJ3Gl6WZVA")]
     [DisplayName("Clearing Exemption Exception")]
     [IsoXmlTag("ClrXmptnXcptn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ClearingExemptionException1Code> ClearingExemptionException { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface INonClearingReason2 : IIsoComponent
     [IsoId("_AmE_s5PuEey0rJ3Gl6WZVA")]
     [DisplayName("Non Clearing Reason Information")]
     [IsoXmlTag("NonClrRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonClearingReasonInformation { get; }
 }

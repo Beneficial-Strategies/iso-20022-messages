@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of an asset.
 /// </summary>
 [IsoId("_mW7mF5NBEemQB_8XA98K0Q")]
+[IsoDisplayName(@"Other Asset")]
 public interface IOtherAsset2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IOtherAsset2 : IIsoComponent
     [IsoId("_mrKws5NBEemQB_8XA98K0Q")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IOtherAsset2 : IIsoComponent
     [IsoId("_mrKwtZNBEemQB_8XA98K0Q")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IOtherAsset2 : IIsoComponent
     [IsoId("_syYKoP8dEemiJ7i9El0LvQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Description { get; }
 
     /// <summary>
@@ -49,6 +56,10 @@ public interface IOtherAsset2 : IIsoComponent
     [IsoId("_mrKwt5NBEemQB_8XA98K0Q")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> OtherIdentification { get; }
 
     /// <summary>
@@ -57,5 +68,6 @@ public interface IOtherAsset2 : IIsoComponent
     [IsoId("_mrKwuZNBEemQB_8XA98K0Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

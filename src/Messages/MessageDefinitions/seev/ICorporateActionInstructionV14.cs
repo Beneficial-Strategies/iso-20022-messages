@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_9dBqoa3oEfCN-rGCydxGUA")]
 [IsoMessage("seev.033.001.14", "CorpActnInstr", "urn:iso:std:iso:20022:tech:xsd:seev.033.001.14")]
+[IsoDisplayName(@"Corporate Action Instruction V14")]
 public interface ICorporateActionInstructionV14 : IOuterRecord
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICorporateActionInstructionV14 : IOuterRecord
     /// </summary>
     [DisplayName("Change Instruction Indicator")]
     [IsoXmlTag("ChngInstrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChangeInstructionIndicator { get; }
 
     /// <summary>
@@ -39,6 +41,7 @@ public interface ICorporateActionInstructionV14 : IOuterRecord
     /// </summary>
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification32> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -46,6 +49,7 @@ public interface ICorporateActionInstructionV14 : IOuterRecord
     /// </summary>
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventReference3> EventsLinkage { get; }
 
     /// <summary>
@@ -67,6 +71,7 @@ public interface ICorporateActionInstructionV14 : IOuterRecord
     /// </summary>
     [DisplayName("Beneficial Owner Details")]
     [IsoXmlTag("BnfclOwnrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification340> BeneficialOwnerDetails { get; }
 
     /// <summary>
@@ -95,5 +100,6 @@ public interface ICorporateActionInstructionV14 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

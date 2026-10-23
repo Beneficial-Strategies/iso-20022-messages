@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria5Choice;
 /// <summary>
 /// New Criteria.
 /// </summary>
+[IsoDisplayName(@"New Criteria")]
 public interface INewCriteria : IStandingOrderCriteria5Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSelection1Choice;
 /// Unique and unambiguous identification for the account between the account owner and the account servicer.
 /// </summary>
 [IsoId("_RjijYiFSEeWgV9SQSyaAog")]
+[IsoDisplayName(@"Account Identification")]
 public interface IAccountIdentification : IAccountSelection1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IAccountIdentification : IAccountSelection1Choice, IIsoChoiceVa
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

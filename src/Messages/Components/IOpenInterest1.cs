@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Measure of the current stock of a financial instrument that has been traded on an exchange or cleared via a central counterparty.
 /// </summary>
 [IsoId("_XEpRcLVZEeadLcJesEbkTQ")]
+[IsoDisplayName(@"Open Interest")]
 public interface IOpenInterest1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IOpenInterest1 : IIsoComponent
     [IsoId("_nF1dILVZEeadLcJesEbkTQ")]
     [DisplayName("Number Of Lots")]
     [IsoXmlTag("NbOfLots")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? NumberOfLots { get; }
 }

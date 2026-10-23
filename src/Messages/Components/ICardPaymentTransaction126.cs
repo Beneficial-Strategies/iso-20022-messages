@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the original transaction.
 /// </summary>
 [IsoId("_M7ozIXGVEe2TbaNWBpRZpQ")]
+[IsoDisplayName(@"Card Payment Transaction")]
 public interface ICardPaymentTransaction126 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICardPaymentTransaction126 : IIsoComponent
     [IsoId("_NJXtIXGVEe2TbaNWBpRZpQ")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceIdentification { get; }
 
     /// <summary>

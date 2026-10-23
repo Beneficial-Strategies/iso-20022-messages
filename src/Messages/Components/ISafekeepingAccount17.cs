@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Safekeeping Account17.
 /// </summary>
 [IsoId("_wukNFVx7Ee6fgZt44_IqFA")]
+[IsoDisplayName(@"Safekeeping Account17")]
 public interface ISafekeepingAccount17 : IIsoComponent
 {
     /// <summary>

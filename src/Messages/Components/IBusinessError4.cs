@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the business error details.
 /// </summary>
 [IsoId("_P7y45ZJKEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Business Error")]
 public interface IBusinessError4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IBusinessError4 : IIsoComponent
     [IsoId("_P-BGc5JKEeuAlLVx8pyt3w")]
     [DisplayName("Business Error")]
     [IsoXmlTag("BizErr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorHandling5> BusinessError { get; }
 }

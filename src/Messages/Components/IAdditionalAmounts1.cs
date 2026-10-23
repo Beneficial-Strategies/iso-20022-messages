@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ISO 8583 bit 54
 /// </summary>
 [IsoId("_IQWjUESLEeeb1MmUPTrSMw")]
+[IsoDisplayName(@"Additional Amounts")]
 public interface IAdditionalAmounts1 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IAdditionalAmounts1 : IIsoComponent
     [IsoId("_Hr-D5USLEeeb1MmUPTrSMw")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -42,5 +45,7 @@ public interface IAdditionalAmounts1 : IIsoComponent
     [IsoId("_Hr-D50SLEeeb1MmUPTrSMw")]
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Label { get; }
 }

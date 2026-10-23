@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EnergyQuantityUnit2Choice;
 /// Energy quantity unit, when energy unit code is not available, in a proprietary format.
 /// </summary>
 [IsoId("_sTr98yi_EeuKKc2MztSwPw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IEnergyQuantityUnit2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IEnergyQuantityUnit2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 52 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Value { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrName2Choice;
 /// </summary>
 [IsoId("_XO3YeNp-Ed-ak6NoX_4Aeg_-1288656582")]
 [IsoXmlTag("RateNm")]
+[IsoDisplayName(@"Rate Name")]
 public interface IRateName : IRateOrName2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,11 +19,15 @@ public interface IRateName : IRateOrName2Choice, IIsoChoiceVariant
     [IsoId("_XO3YdNp-Ed-ak6NoX_4Aeg_-5894558")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax8Text)]
+    [StringLength(8, MinimumLength = 1)]
     RestrictedFINXMax8Text? Issuer { get; }
 
     /// <summary>
     /// Rate Name specifies the reference rate or basis rate on which a variable rate is based (ex: EONIA, EURIBOR, LIBOR, FEFUND, EURREPO).
     /// </summary>
     [IsoXmlTag("RateNm")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax24Text)]
+    [StringLength(24, MinimumLength = 1)]
     RestrictedFINXMax24Text Value { get; }
 }

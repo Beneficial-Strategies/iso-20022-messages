@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity46Choice;
 /// Quantity of delivery.
 /// </summary>
 [IsoId("_28-GQZCuEeic-NeLxeO3hQ")]
+[IsoDisplayName(@"Quantity")]
 public interface IQuantity : IQuantity46Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IQuantity : IQuantity46Choice, IIsoChoiceVariant
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("Qty")]
+    [IsoSimpleType(IsoSimpleType.LongFraction21DecimalNumber)]
     LongFraction21DecimalNumber Value { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateType2Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IDateType2Choice, IIsoChoiceVariant
 {
     /// <summary>

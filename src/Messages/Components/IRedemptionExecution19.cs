@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a redemption order.
 /// </summary>
 [IsoId("26b051e4-d422-4551-8f59-d543f6d011ce")]
+[IsoDisplayName(@"Redemption Execution19")]
 public interface IRedemptionExecution19 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IRedemptionExecution19 : IIsoComponent
     [IsoId("972bc70d-ca43-4135-86ab-aef6371f2b30")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType4Choice> OrderType { get; }
 
     /// <summary>
@@ -129,6 +131,7 @@ public interface IRedemptionExecution19 : IIsoComponent
     [IsoId("7330d21e-499d-4ced-83dc-0c2200d6e83a")]
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice22> InformativePriceDetails { get; }
 
     /// <summary>
@@ -193,6 +196,7 @@ public interface IRedemptionExecution19 : IIsoComponent
     [IsoId("7067b9a3-9993-4f35-b087-78f376a98324")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms37> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -313,6 +317,7 @@ public interface IRedemptionExecution19 : IIsoComponent
     [IsoId("05b37b0f-a773-4066-8d5c-60b9320c2d5f")]
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; }
 
     /// <summary>
@@ -353,6 +358,7 @@ public interface IRedemptionExecution19 : IIsoComponent
     [IsoId("16e031e6-a14b-4d05-aa15-dbb9a4680ee5")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary49> RelatedPartyDetails { get; }
 
     /// <summary>

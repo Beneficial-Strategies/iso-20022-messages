@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification30Choice;
 /// PAN of the card identifying the account.
 /// </summary>
 [IsoId("_ASh-UHs9EeSTS7uHCe8FPQ")]
+[IsoDisplayName(@"Card")]
 public interface ICard : IAccountIdentification30Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ICard : IAccountIdentification30Choice, IIsoChoiceVariant
     /// Specifies a numeric string with a minimum length of 8 digits, and a maximum length of 28 digits.
     /// </summary>
     [IsoXmlTag("Card")]
+    [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
     Min8Max28NumericText Value { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the transaction-out type.
 /// </summary>
 [IsoId("_SxyAcRMJEeSopak1K45eVQ")]
+[IsoDisplayName(@"Investment Fund Transaction Out Type 1 Choice")]
 public interface IInvestmentFundTransactionOutType1Choice : IIsoChoice { }

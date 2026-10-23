@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original Data Elements4.
 /// </summary>
 [IsoId("_nt-iMZgXEe6OBt2eQPMPsQ")]
+[IsoDisplayName(@"Original Data Elements4")]
 public interface IOriginalDataElements4 : IIsoComponent
 {
     /// <summary>

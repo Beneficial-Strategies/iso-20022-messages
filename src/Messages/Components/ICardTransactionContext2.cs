@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the card transaction.
 /// </summary>
 [IsoId("_q3WpQHsHEeSR68OJvMfxJQ")]
+[IsoDisplayName(@"Card Transaction Context")]
 public interface ICardTransactionContext2 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICardTransactionContext2 : IIsoComponent
     [IsoId("_1Z6pEHsHEeSR68OJvMfxJQ")]
     [DisplayName("Card Present")]
     [IsoXmlTag("CardPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardPresent { get; }
 
     /// <summary>
@@ -27,6 +29,7 @@ public interface ICardTransactionContext2 : IIsoComponent
     [IsoId("_Cx2TgHsIEeSR68OJvMfxJQ")]
     [DisplayName("Cardholder Present")]
     [IsoXmlTag("CrdhldrPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardholderPresent { get; }
 
     /// <summary>
@@ -96,6 +99,7 @@ public interface ICardTransactionContext2 : IIsoComponent
     [IsoId("_tOOvIHsJEeSR68OJvMfxJQ")]
     [DisplayName("Supported Option")]
     [IsoXmlTag("SpprtdOptn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<SupportedPaymentOption1Code> SupportedOption { get; }
 
     /// <summary>
@@ -104,6 +108,7 @@ public interface ICardTransactionContext2 : IIsoComponent
     [IsoId("_-BLu8HsJEeSR68OJvMfxJQ")]
     [DisplayName("Special Conditions")]
     [IsoXmlTag("SpclConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardTransactionCondition1> SpecialConditions { get; }
 
     /// <summary>
@@ -112,5 +117,6 @@ public interface ICardTransactionContext2 : IIsoComponent
     [IsoId("_vLIrQHsKEeSR68OJvMfxJQ")]
     [DisplayName("Risk Indicator")]
     [IsoXmlTag("RskInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardTransactionRiskIndicator1> RiskIndicator { get; }
 }

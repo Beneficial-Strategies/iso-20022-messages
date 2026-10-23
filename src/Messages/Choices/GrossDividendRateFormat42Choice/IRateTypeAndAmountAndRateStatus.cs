@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat42Choice;
 /// </summary>
 [IsoId("_bZ_lJQVTEeqjd8n6wD9JVw")]
 [IsoXmlTag("RateTpAndAmtAndRateSts")]
+[IsoDisplayName(@"Rate Type And Amount And Rate Status")]
 public interface IRateTypeAndAmountAndRateStatus
     : IGrossDividendRateFormat42Choice,
         IIsoChoiceVariant

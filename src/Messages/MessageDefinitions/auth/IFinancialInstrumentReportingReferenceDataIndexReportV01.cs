@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgRefDataIndxRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.043.001.01"
 )]
+[Description(@"This FinancialInstrumentReportingReferenceDataIndexReport message is sent by National Competent Authorities to express an interest in receiving data on European indices.")]
+[IsoDisplayName(@"Financial Instrument Reporting Reference Data Index Report V")]
 public interface IFinancialInstrumentReportingReferenceDataIndexReportV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IFinancialInstrumentReportingReferenceDataIndexReportV01 : IOut
     [IsoId("_4LUGNURNEee7JdgA9zPESA")]
     [DisplayName("Index Data")]
     [IsoXmlTag("IndxData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesIndexReport1> IndexData { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IFinancialInstrumentReportingReferenceDataIndexReportV01 : IOut
     [IsoId("_4LUGN0RNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

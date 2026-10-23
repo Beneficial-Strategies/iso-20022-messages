@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the type of account.
 /// </summary>
 [IsoId("_cyOI8SC7EeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Account Type 2 Choice")]
 public interface IAccountType2Choice : IIsoChoice { }

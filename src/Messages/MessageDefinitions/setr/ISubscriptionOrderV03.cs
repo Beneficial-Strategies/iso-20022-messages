@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("_5KY-KNE7Ed-BzquC8wXy7w_215603327")]
 [IsoMessage("setr.010.001.03", "SbcptOrdrV03", "urn:iso:std:iso:20022:tech:xsd:setr.010.001.03")]
+[Description(@"Scope|An instructing party, for example, an investment manager or its authorised representative, sends the SubscriptionOrder message to the executing party, for example, a transfer agent, to instruct the subscription of one or more financial instruments for one investment fund account.|Usage|The SubscriptionOrder message is used to instruct single subscription orders, that is, a message containing one order for one financial instrument and related to one investment account. The SubscriptionOrder message may also be used for multiple orders, that is, a message containing several orders related to the same investment account for different financial instruments.|For a single subscription order, the SubscriptionOrder message, not the SubscriptionBulkOrder message, must be used.|If there are subscription orders for the same financial instrument but for different accounts, then the SubscriptionBulkOrder message must be used.")]
+[IsoDisplayName(@"Subscription Order V")]
 public interface ISubscriptionOrderV03 : IOuterRecord
 {
     /// <summary>
@@ -41,6 +43,7 @@ public interface ISubscriptionOrderV03 : IOuterRecord
     [IsoId("_5KiIENE7Ed-BzquC8wXy7w_1077249505")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -57,6 +60,9 @@ public interface ISubscriptionOrderV03 : IOuterRecord
     [IsoId("_5KiIEtE7Ed-BzquC8wXy7w_943996646")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary8> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -73,5 +79,6 @@ public interface ISubscriptionOrderV03 : IOuterRecord
     [IsoId("_5KiIFNE7Ed-BzquC8wXy7w_1005871643")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

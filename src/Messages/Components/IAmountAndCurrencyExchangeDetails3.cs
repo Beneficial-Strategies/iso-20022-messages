@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the original amount and currency exchange.
 /// </summary>
 [IsoId("_SV76qNp-Ed-ak6NoX_4Aeg_1857747132")]
+[IsoDisplayName(@"Amount And Currency Exchange Details")]
 public interface IAmountAndCurrencyExchangeDetails3 : IIsoComponent
 {
     /// <summary>

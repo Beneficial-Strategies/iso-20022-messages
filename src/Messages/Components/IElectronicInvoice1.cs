@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies details of the electronic invoice.
 /// </summary>
 [IsoId("_7qk3ikWdEempSe_3C1a9EQ")]
+[IsoDisplayName(@"Electronic Invoice")]
 public interface IElectronicInvoice1 : IIsoComponent
 {
     /// <summary>

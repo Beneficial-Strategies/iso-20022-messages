@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information identifying the disclosure request for shareholders identification published by the issuer or third party nominated by the issuer in order to receive the disclosure responses from intermediaries in the custody chain.
 /// </summary>
 [IsoId("_im8pMDqgEemL_ewJY9QP1g")]
+[IsoDisplayName(@"Disclosure Request Identification")]
 public interface IDisclosureRequestIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDisclosureRequestIdentification1 : IIsoComponent
     [IsoId("_O-niQzqhEemL_ewJY9QP1g")]
     [DisplayName("Issuer Disclosure Request Identification")]
     [IsoXmlTag("IssrDsclsrReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerDisclosureRequestIdentification { get; }
 
     /// <summary>

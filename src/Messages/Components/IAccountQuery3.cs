@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the query criteria.
 /// </summary>
 [IsoId("_PTgkR249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Account Query")]
 public interface IAccountQuery3 : IIsoComponent
 {
     /// <summary>

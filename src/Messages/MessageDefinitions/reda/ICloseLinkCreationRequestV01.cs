@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_CZKC0bDEEe-g3p7goNrabg")]
 [IsoMessage("reda.027.001.01", "ClsLkCreReq", "urn:iso:std:iso:20022:tech:xsd:reda.027.001.01")]
+[IsoDisplayName(@"Close Link Creation Request V01")]
 public interface ICloseLinkCreationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +33,6 @@ public interface ICloseLinkCreationRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

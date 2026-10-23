@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Party Audit Trail Or Error3Choice.
 /// </summary>
 [IsoId("_YlNvwTE_Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Party Audit Trail Or Error3Choice")]
 public interface IPartyAuditTrailOrError3Choice : IIsoChoice { }

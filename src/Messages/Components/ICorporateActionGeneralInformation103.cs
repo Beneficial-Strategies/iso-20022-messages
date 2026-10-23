@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General information about the corporate action event.
 /// </summary>
 [IsoId("_c47qaZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Corporate Action General Information")]
 public interface ICorporateActionGeneralInformation103 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionGeneralInformation103 : IIsoComponent
     [IsoId("_c47qb5KQEeWHWpTQn1FFVg")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text CorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICorporateActionGeneralInformation103 : IIsoComponent
     [IsoId("_c47qd5KQEeWHWpTQn1FFVg")]
     [DisplayName("Official Corporate Action Event Identification")]
     [IsoXmlTag("OffclCorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ICorporateActionGeneralInformation103 : IIsoComponent
     [IsoId("_c47qf5KQEeWHWpTQn1FFVg")]
     [DisplayName("Class Action Number")]
     [IsoXmlTag("ClssActnNb")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ClassActionNumber { get; }
 
     /// <summary>

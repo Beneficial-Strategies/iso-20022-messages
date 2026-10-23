@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus7Choi
 /// </summary>
 [IsoId("_A5TcBNokEeC60axPepSq7g_161099171")]
 [IsoXmlTag("InRpr")]
+[IsoDisplayName(@"In Repair")]
 public interface IInRepair : IReplacementProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IInRepair : IReplacementProcessingStatus7Choice, IIsoChoiceVari
     [IsoId("_UatOxtp-Ed-ak6NoX_4Aeg_-1133156666")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Exception Advice2.
 /// </summary>
 [IsoId("_BpG-caE4Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Exception Advice2")]
 public interface IATMExceptionAdvice2 : IIsoComponent
 {
     /// <summary>

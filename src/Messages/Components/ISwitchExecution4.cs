@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a switch order.
 /// </summary>
 [IsoId("_SLzuSNp-Ed-ak6NoX_4Aeg_1493111261")]
+[IsoDisplayName(@"Switch Execution")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISwitchExecution4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ISwitchExecution4 : IIsoComponent
     [IsoId("_SLzuSdp-Ed-ak6NoX_4Aeg_-1713227853")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +29,7 @@ public interface ISwitchExecution4 : IIsoComponent
     [IsoId("_SLzuStp-Ed-ak6NoX_4Aeg_1493111287")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ISwitchExecution4 : IIsoComponent
     [IsoId("_SLzuTNp-Ed-ak6NoX_4Aeg_1493111303")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DealReference { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ISwitchExecution4 : IIsoComponent
     [IsoId("_SLzuTdp-Ed-ak6NoX_4Aeg_1493111321")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface ISwitchExecution4 : IIsoComponent
     [IsoId("_SL9fQNp-Ed-ak6NoX_4Aeg_-424660134")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -81,6 +92,9 @@ public interface ISwitchExecution4 : IIsoComponent
     [IsoId("_SL9fQ9p-Ed-ak6NoX_4Aeg_736746595")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary9> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -89,6 +103,7 @@ public interface ISwitchExecution4 : IIsoComponent
     [IsoId("_SL9fRNp-Ed-ak6NoX_4Aeg_1095438285")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedFutureTradeDate { get; }
 
     /// <summary>
@@ -121,6 +136,7 @@ public interface ISwitchExecution4 : IIsoComponent
     [IsoId("_SL9fSNp-Ed-ak6NoX_4Aeg_2067777223")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CashSettlementDate { get; }
 
     /// <summary>
@@ -145,6 +161,7 @@ public interface ISwitchExecution4 : IIsoComponent
     [IsoId("_SMGpMdp-Ed-ak6NoX_4Aeg_1493112217")]
     [DisplayName("Redemption Leg Details")]
     [IsoXmlTag("RedLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchRedemptionLegExecution3> RedemptionLegDetails { get; }
 
     /// <summary>
@@ -153,6 +170,7 @@ public interface ISwitchExecution4 : IIsoComponent
     [IsoId("_SMGpMtp-Ed-ak6NoX_4Aeg_1493111880")]
     [DisplayName("Subscription Leg Details")]
     [IsoXmlTag("SbcptLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchSubscriptionLegExecution3> SubscriptionLegDetails { get; }
 
     /// <summary>
@@ -169,6 +187,7 @@ public interface ISwitchExecution4 : IIsoComponent
     [IsoId("_SMGpNNp-Ed-ak6NoX_4Aeg_1494032267")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms7> ForeignExchangeDetails { get; }
 
     /// <summary>

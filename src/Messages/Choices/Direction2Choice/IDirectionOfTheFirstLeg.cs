@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Direction2Choice;
 /// Identifies whether the reporting counterparty is the payer (Taker) or the receiver (Maker) of the first leg as determined at the time of transaction.
 /// </summary>
 [IsoId("_oKFn0Xg-Eeu3kecHd7QKUQ")]
+[IsoDisplayName(@"Direction Of The First Leg")]
 public interface IDirectionOfTheFirstLeg : IDirection2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account to or from which a cash entry is made.
 /// </summary>
 [IsoId("_fFDdVdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Cash Account")]
 public interface ICashAccount42 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICashAccount42 : IIsoComponent
     [IsoId("_fGg149cZEeqRFcf2R4bPBw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ICashAccount42 : IIsoComponent
     [IsoId("_fGg18dcZEeqRFcf2R4bPBw")]
     [DisplayName("Multilateral Balance")]
     [IsoXmlTag("MulBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance13> MultilateralBalance { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface ICashAccount42 : IIsoComponent
     [IsoId("_fGg189cZEeqRFcf2R4bPBw")]
     [DisplayName("Current Bilateral Limit")]
     [IsoXmlTag("CurBilLmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBilateralLimit3> CurrentBilateralLimit { get; }
 
     /// <summary>
@@ -89,5 +94,6 @@ public interface ICashAccount42 : IIsoComponent
     [IsoId("_fGg19dcZEeqRFcf2R4bPBw")]
     [DisplayName("Standing Order")]
     [IsoXmlTag("StgOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStandingOrder9> StandingOrder { get; }
 }

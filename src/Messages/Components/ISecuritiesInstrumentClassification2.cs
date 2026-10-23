@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details an individuation of the classification type of the financial instrument.
 /// </summary>
 [IsoId("_NHRMYX5xEeasY4u9QTizPQ")]
+[IsoDisplayName(@"Securities Instrument Classification")]
 public interface ISecuritiesInstrumentClassification2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecuritiesInstrumentClassification2 : IIsoComponent
     [IsoId("_NP5j8X5xEeasY4u9QTizPQ")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier Identifier { get; }
 
     /// <summary>
@@ -43,5 +45,6 @@ public interface ISecuritiesInstrumentClassification2 : IIsoComponent
     [IsoId("_NP5j935xEeasY4u9QTizPQ")]
     [DisplayName("Last Updated")]
     [IsoXmlTag("LastUpdtd")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LastUpdated { get; }
 }

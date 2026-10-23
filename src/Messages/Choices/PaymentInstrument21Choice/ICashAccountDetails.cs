@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument21Choice;
 /// </summary>
 [IsoId("_4MizGTbsEead9bDRE_1DAQ")]
 [IsoXmlTag("CshAcctDtls")]
+[IsoDisplayName(@"Cash Account Details")]
 public interface ICashAccountDetails : IPaymentInstrument21Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICashAccountDetails : IPaymentInstrument21Choice, IIsoChoiceVar
     [IsoId("_5DKXFThiEeamLZQeccJa7w")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>

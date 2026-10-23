@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationReason7Choice
 /// Pending reason specified as a code.
 /// </summary>
 [IsoId("_ccJAQbKjEemux5trsZcCpw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPendingCancellationReason7Choice, IIsoChoiceVariant
 {
     /// <summary>

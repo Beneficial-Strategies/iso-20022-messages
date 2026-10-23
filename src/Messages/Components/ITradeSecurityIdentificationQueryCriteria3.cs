@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the query criteria related to securities.
 /// </summary>
 [IsoId("_GO0zUZNeEeytjZlcgApf6A")]
+[IsoDisplayName(@"Trade Security Identification Query Criteria")]
 public interface ITradeSecurityIdentificationQueryCriteria3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITradeSecurityIdentificationQueryCriteria3 : IIsoComponent
     [IsoId("_GQzJRZNeEeytjZlcgApf6A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentificationQueryCriteria1> Identification { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITradeSecurityIdentificationQueryCriteria3 : IIsoComponent
     [IsoId("_kgZXkJNiEeytjZlcgApf6A")]
     [DisplayName("Contract Type")]
     [IsoXmlTag("CtrctTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<FinancialInstrumentContractType2Code> ContractType { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ITradeSecurityIdentificationQueryCriteria3 : IIsoComponent
     [IsoId("_1sYF8JNjEeytjZlcgApf6A")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IISINQueryCriteria1> ISIN { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ITradeSecurityIdentificationQueryCriteria3 : IIsoComponent
     [IsoId("_567KAJNjEeytjZlcgApf6A")]
     [DisplayName("Unique Product Identifier")]
     [IsoXmlTag("UnqPdctIdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUPIQueryCriteria1> UniqueProductIdentifier { get; }
 
     /// <summary>
@@ -57,5 +62,6 @@ public interface ITradeSecurityIdentificationQueryCriteria3 : IIsoComponent
     [IsoId("_GQzJR5NeEeytjZlcgApf6A")]
     [DisplayName("Underlying Instrument Identification")]
     [IsoXmlTag("UndrlygInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentificationQuery4Choice> UnderlyingInstrumentIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Ancillary Purchase3.
 /// </summary>
 [IsoId("_kAOWYXTeEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Ancillary Purchase3")]
 public interface IAncillaryPurchase3 : IIsoComponent
 {
     /// <summary>
@@ -86,6 +87,7 @@ public interface IAncillaryPurchase3 : IIsoComponent
     /// </summary>
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax41> Tax { get; }
 
     /// <summary>
@@ -93,5 +95,6 @@ public interface IAncillaryPurchase3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

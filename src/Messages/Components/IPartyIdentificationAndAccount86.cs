@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party and account details.
 /// </summary>
 [IsoId("_J5tvfP_gEeC27a3ZXklkPA")]
+[IsoDisplayName(@"Party Identification And Account")]
 public interface IPartyIdentificationAndAccount86 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IPartyIdentificationAndAccount86 : IIsoComponent
     [IsoId("_J5tvpP_gEeC27a3ZXklkPA")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessingIdentification { get; }
 
     /// <summary>

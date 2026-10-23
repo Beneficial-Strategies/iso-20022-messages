@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantitySearch2Choice;
 
 /// <summary>Specifies the original and current face.</summary>
 [IsoId("_eaw7g2qWEemz04WrKJaMEA")]
+[IsoDisplayName(@"Original And Current Face")]
 public interface IOriginalAndCurrentFace : IQuantitySearch2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

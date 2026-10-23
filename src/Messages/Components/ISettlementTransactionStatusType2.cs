@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice of the securities settlement instruction status type.
 /// </summary>
 [IsoId("_X9rz1eFWEeWIA4E9cYSxxQ")]
+[IsoDisplayName(@"Settlement Transaction Status Type2")]
 public interface ISettlementTransactionStatusType2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementTransactionStatusType2 : IIsoComponent
     [IsoId("_YHDyQeFWEeWIA4E9cYSxxQ")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProcessingStatus70Choice> ProcessingStatus { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISettlementTransactionStatusType2 : IIsoComponent
     [IsoId("_YHDyQ-FWEeWIA4E9cYSxxQ")]
     [DisplayName("Inferred Matching Status")]
     [IsoXmlTag("IfrrdMtchgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMatchingStatus27Choice> InferredMatchingStatus { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISettlementTransactionStatusType2 : IIsoComponent
     [IsoId("_YHDyReFWEeWIA4E9cYSxxQ")]
     [DisplayName("Matching Status")]
     [IsoXmlTag("MtchgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMatchingStatus27Choice> MatchingStatus { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ISettlementTransactionStatusType2 : IIsoComponent
     [IsoId("_YHDyR-FWEeWIA4E9cYSxxQ")]
     [DisplayName("Settlement Status")]
     [IsoXmlTag("SttlmSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementStatus26Choice> SettlementStatus { get; }
 
     /// <summary>

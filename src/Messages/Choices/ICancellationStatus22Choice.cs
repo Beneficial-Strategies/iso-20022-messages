@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Status is cancelled.
 /// </summary>
 [IsoId("_kZs-EEgsEeaD2L_hzZaE0w")]
+[IsoDisplayName(@"Cancellation Status 22 Choice")]
 public interface ICancellationStatus22Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account Notification24.
 /// </summary>
 [IsoId("_ESCXUT3dEe-thIfLZ94a1w")]
+[IsoDisplayName(@"Account Notification24")]
 public interface IAccountNotification24 : IIsoComponent
 {
     /// <summary>
@@ -93,6 +94,7 @@ public interface IAccountNotification24 : IIsoComponent
     /// </summary>
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountInterest4> Interest { get; }
 
     /// <summary>
@@ -107,6 +109,7 @@ public interface IAccountNotification24 : IIsoComponent
     /// </summary>
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportEntry15> Entry { get; }
 
     /// <summary>

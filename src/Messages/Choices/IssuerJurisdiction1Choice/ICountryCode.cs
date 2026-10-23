@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerJurisdiction1Choice;
 /// Jurisdiction of the issuer of the security used as collateral.
 /// </summary>
 [IsoId("_wztkoIfXEeu9_PKSQNOmdg")]
+[IsoDisplayName(@"Country Code")]
 public interface ICountryCode : IIssuerJurisdiction1Choice, IIsoChoiceVariant
 {
     /// <summary>

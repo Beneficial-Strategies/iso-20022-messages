@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Net cash movements to a fund as a result of investment funds transactions.
 /// </summary>
 [IsoId("_VB5xptp-Ed-ak6NoX_4Aeg_906159660")]
+[IsoDisplayName(@"Net Cash Forecast")]
 public interface INetCashForecast1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INetCashForecast1 : IIsoComponent
     [IsoId("_VB5xp9p-Ed-ak6NoX_4Aeg_870568569")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SettlementDate { get; }
 
     /// <summary>

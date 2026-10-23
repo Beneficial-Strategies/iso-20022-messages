@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormatChoice;
 /// </summary>
 [IsoId("_RB5f5dp-Ed-ak6NoX_4Aeg_-334909529")]
 [IsoXmlTag("Id")]
+[IsoDisplayName(@"Identification")]
 public interface IIdentification : ISafekeepingPlaceFormatChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IIdentification : ISafekeepingPlaceFormatChoice, IIsoChoiceVari
     [IsoId("_SfoCJdp-Ed-ak6NoX_4Aeg_-379437396")]
     [DisplayName("Narrative")]
     [IsoXmlTag("Nrrtv")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Narrative { get; }
 
     /// <summary>

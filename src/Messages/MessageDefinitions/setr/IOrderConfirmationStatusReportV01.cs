@@ -35,6 +35,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "OrdrConfStsRptV01",
     "urn:iso:std:iso:20022:tech:xsd:setr.057.001.01"
 )]
+[Description(@"Scope|An instructing party, for example, an investment manager or its authorised representative, sends the OrderConfirmationStatusReport message to the executing party, for example, a transfer agent, to report the status of an order confirmation or an order confirmation amendment.|Usage|The OrderConfirmationStatusReport message is used to report on the status of one or more individual:|- subscription confirmations,|- subscription confirmation amendments,|- redemption confirmations,|- redemption confirmation amendments,|- switch order confirmations,|- switch order confirmation amendments.|One of the following statuses can be reported:|- confirmation rejected, or,|- amendment rejected, or,|- sent to next party, or,|- communication problem with next party, or,|- confirmation accepted, or,|- confirmation received.|It is likely that the OrderConfirmationStatusReport is only sent by the order instructing party to the order executing party to reject an order confirmation or to reject an order confirmation amendment, although if an intermediary party is used, the statuses sent to next party and communication problem with next party are also likely be used. The statuses confirmation accepted and confirmation received would only be used in the event the order executing party sends a RequestForOrderConfirmationStatusReport message and one of the other statuses does not apply.|If the status being reported is either confirmation rejected or amendment rejected, then a reason for the rejection must be given.|The individual order confirmation or confirmation amendment for which the status is given is identified with its order reference. The message identification of the message in which the individual order confirmation or confirmation amendment was conveyed may also be quoted in RelatedReference, but this is not recommended.")]
+[IsoDisplayName(@"Order Confirmation Status Report V")]
 public interface IOrderConfirmationStatusReportV01 : IOuterRecord
 {
     /// <summary>
@@ -51,6 +53,9 @@ public interface IOrderConfirmationStatusReportV01 : IOuterRecord
     [IsoId("_hzzSMtE7Ed-BzquC8wXy7w_-1840795261")]
     [DisplayName("Other Reference")]
     [IsoXmlTag("OthrRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> OtherReference { get; }
 
     /// <summary>
@@ -59,6 +64,9 @@ public interface IOrderConfirmationStatusReportV01 : IOuterRecord
     [IsoId("_hzzSM9E7Ed-BzquC8wXy7w_1545429452")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> RelatedReference { get; }
 
     /// <summary>
@@ -67,6 +75,7 @@ public interface IOrderConfirmationStatusReportV01 : IOuterRecord
     [IsoId("_hzzSNNE7Ed-BzquC8wXy7w_1394750346")]
     [DisplayName("Individual Order Confirmation Details Report")]
     [IsoXmlTag("IndvOrdrConfDtlsRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualOrderConfirmationStatusAndReason1> IndividualOrderConfirmationDetailsReport { get; }
 
     /// <summary>
@@ -75,5 +84,6 @@ public interface IOrderConfirmationStatusReportV01 : IOuterRecord
     [IsoId("_hzzSNdE7Ed-BzquC8wXy7w_1567010081")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

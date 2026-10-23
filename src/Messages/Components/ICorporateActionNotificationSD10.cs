@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Customer security identification reference information.
 /// </summary>
 [IsoId("_ja7hEb5XEeexmbB7KsjCwA")]
+[IsoDisplayName(@"Corporate Action Notification SD")]
 public interface ICorporateActionNotificationSD10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionNotificationSD10 : IIsoComponent
     [IsoId("_jrS4Ub5XEeexmbB7KsjCwA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICorporateActionNotificationSD10 : IIsoComponent
     [IsoId("_jrS4U75XEeexmbB7KsjCwA")]
     [DisplayName("Customer Internal Security Identification")]
     [IsoXmlTag("CstmrIntlSctyId")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? CustomerInternalSecurityIdentification { get; }
 
     /// <summary>

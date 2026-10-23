@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor configuration to be downloaded from the terminal management system.
 /// </summary>
 [IsoId("_t9Kv8S1vEeuZtpnZJ4v-5Q")]
+[IsoDisplayName(@"Acceptor Configuration")]
 public interface IAcceptorConfiguration10 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IAcceptorConfiguration10 : IIsoComponent
     [IsoId("_hFc9MTANEeugIJ3Gvoevmg")]
     [DisplayName("POI Group Identification")]
     [IsoXmlTag("POIGrpId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> POIGroupIdentification { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IAcceptorConfiguration10 : IIsoComponent
     [IsoId("_uKs1oy1vEeuZtpnZJ4v-5Q")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcceptorConfigurationDataSet2> DataSet { get; }
 }

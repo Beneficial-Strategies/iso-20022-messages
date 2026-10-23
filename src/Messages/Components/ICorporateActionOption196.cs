@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action option.
 /// </summary>
 [IsoId("_13syoRn1EeyroI8qKgB7Mg")]
+[IsoDisplayName(@"Corporate Action Option")]
 public interface ICorporateActionOption196 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,8 @@ public interface ICorporateActionOption196 : IIsoComponent
     [IsoId("_2NwiVRn1EeyroI8qKgB7Mg")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SafekeepingAccount { get; }
 
     /// <summary>
@@ -57,6 +60,8 @@ public interface ICorporateActionOption196 : IIsoComponent
     [IsoId("_94DtkSLLEeyNSNrMl2zWxg")]
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? BlockChainAddressOrWallet { get; }
 
     /// <summary>
@@ -137,5 +142,6 @@ public interface ICorporateActionOption196 : IIsoComponent
     [IsoId("_2NwikRn1EeyroI8qKgB7Mg")]
     [DisplayName("Solicitation Dealer Fee Indicator")]
     [IsoXmlTag("SlctnDealrFeeInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SolicitationDealerFeeIndicator { get; }
 }

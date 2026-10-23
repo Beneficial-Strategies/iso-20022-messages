@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a tax reference type.
 /// </summary>
 [IsoId("_PFD38E4REeiQHa-q1Uephw")]
+[IsoDisplayName(@"Tax Reference Type 1 Choice")]
 public interface ITaxReferenceType1Choice : IIsoChoice { }

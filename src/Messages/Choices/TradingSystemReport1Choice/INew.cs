@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingSystemReport1Choice;
 
 /// <summary>Trading system related data report.</summary>
 [IsoId("_EdSKwGFdEfC-1NkZ9TkdKA")]
+[IsoDisplayName(@"New")]
 public interface INew : ITradingSystemReport1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

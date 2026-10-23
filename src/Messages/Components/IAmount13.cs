@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the details of the billing amount
 /// </summary>
 [IsoId("_HOqx5ffjEei89sMSHxl1ew")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAmount13 : IIsoComponent
     [IsoId("_HOqx5vfjEei89sMSHxl1ew")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAmount13 : IIsoComponent
     [IsoId("_HOqx6PfjEei89sMSHxl1ew")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Description { get; }
 
     /// <summary>

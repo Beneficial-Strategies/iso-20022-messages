@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_R2_ZgTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("acmt.013.001.04", "AcctRptReq", "urn:iso:std:iso:20022:tech:xsd:acmt.013.001.04")]
+[IsoDisplayName(@"Account Report Request V04")]
 public interface IAccountReportRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +33,7 @@ public interface IAccountReportRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountForAction1> AccountIdentification { get; }
 
     /// <summary>
@@ -53,6 +55,7 @@ public interface IAccountReportRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature4> DigitalSignature { get; }
 
     /// <summary>
@@ -60,5 +63,6 @@ public interface IAccountReportRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

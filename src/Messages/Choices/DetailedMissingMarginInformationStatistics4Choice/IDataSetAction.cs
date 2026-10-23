@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingMarginInformation
 /// Specifies the type of report activity for a specific reporting period.
 /// </summary>
 [IsoId("_rsDiwVowEe23K4GXSpBSeg")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction
     : IDetailedMissingMarginInformationStatistics4Choice,
         IIsoChoiceVariant

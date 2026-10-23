@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReason1Choice;
 /// Reason why the payment status is unmatched.
 /// </summary>
 [IsoId("_QWOzsdEdEei798TPbKJMuw")]
+[IsoDisplayName(@"Unmatched")]
 public interface IUnmatched : IPaymentStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

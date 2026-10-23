@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_tnnVsZDhEem7fvtoGpNpow")]
 [IsoMessage("sese.018.001.08", "AcctHldgInf", "urn:iso:std:iso:20022:tech:xsd:sese.018.001.08")]
+[Description(@"Scope|The AccountHoldingInformation message is sent by an executing party, for example, a (old) plan manager (transferor), to the instructing party, for example, a (new) plan manager (transferee), to provide information about financial instruments held on behalf of a client.|Usage|The AccountHoldingInformation message is used to provide information on the individual assets held in a client's account. The assets may be part of a tax efficient product, a pension of general investment product.")]
+[IsoDisplayName(@"Account Holding Information V")]
 public interface IAccountHoldingInformationV08 : IOuterRecord
 {
     /// <summary>
@@ -79,6 +81,7 @@ public interface IAccountHoldingInformationV08 : IOuterRecord
     [IsoId("_tnnVx5DhEem7fvtoGpNpow")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson8> OtherIndividualInvestor { get; }
 
     /// <summary>
@@ -103,6 +106,7 @@ public interface IAccountHoldingInformationV08 : IOuterRecord
     [IsoId("_tnnVzZDhEem7fvtoGpNpow")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation36> OtherCorporateInvestor { get; }
 
     /// <summary>
@@ -135,6 +139,7 @@ public interface IAccountHoldingInformationV08 : IOuterRecord
     [IsoId("_tnnV1ZDhEem7fvtoGpNpow")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPortfolioTransfer7> ProductTransfer { get; }
 
     /// <summary>
@@ -151,5 +156,6 @@ public interface IAccountHoldingInformationV08 : IOuterRecord
     [IsoId("_tnnV2ZDhEem7fvtoGpNpow")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

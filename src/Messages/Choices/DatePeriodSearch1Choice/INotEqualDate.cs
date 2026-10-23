@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DatePeriodSearch1Choice;
 /// Specified date to be excluded from the search.
 /// </summary>
 [IsoId("_aQotaYaAEee8r9VKRbnJSg")]
+[IsoDisplayName(@"Not Equal Date")]
 public interface INotEqualDate : IDatePeriodSearch1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INotEqualDate : IDatePeriodSearch1Choice, IIsoChoiceVariant
     /// A particular point in the progression of time in a calendar year expressed in the YYYY-MM-DD format. This representation is defined in &quot;XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004&quot; which is aligned with ISO 8601.
     /// </summary>
     [IsoXmlTag("NEQDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Value { get; }
 }

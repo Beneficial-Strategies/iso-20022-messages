@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReturnExcessCash1Choice;
 /// Return excess cash type expressed as a code.
 /// </summary>
 [IsoId("_UN9QYALpEeutW5-TpeYJhA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IReturnExcessCash1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeliveryReturn4Choice;
 /// Delivery return expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_6dqqN5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDeliveryReturn4Choice, IIsoChoiceVariant
 {
     /// <summary>

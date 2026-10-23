@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an amount or number of units.
 /// </summary>
 [IsoId("_Jb_o8xQcEeKebsB9eKJSkA")]
+[IsoDisplayName(@"Units Or Amount 1 Choice")]
 public interface IUnitsOrAmount1Choice : IIsoChoice { }

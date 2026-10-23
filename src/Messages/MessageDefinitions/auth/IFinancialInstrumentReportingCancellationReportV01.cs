@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgCxlRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.102.001.01"
 )]
+[Description(@"This FinancialInstrumentReportingCancellationReport message is sent by the trading venue to the national competent authority to cancel reference data previously reported by mistake.")]
+[IsoDisplayName(@"Financial Instrument Reporting Cancellation Report V")]
 public interface IFinancialInstrumentReportingCancellationReportV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IFinancialInstrumentReportingCancellationReportV01 : IOuterReco
     [IsoId("_iu4fQGOgEeqrzPlWMq8k6Q")]
     [DisplayName("Cancellation Data")]
     [IsoXmlTag("CxlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesReferenceDataReport7> CancellationData { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IFinancialInstrumentReportingCancellationReportV01 : IOuterReco
     [IsoId("_vRvi4GOgEeqrzPlWMq8k6Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

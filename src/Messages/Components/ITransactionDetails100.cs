@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the transaction.
 /// </summary>
 [IsoId("_sUxoK5wyEeazcsnODTksnQ")]
+[IsoDisplayName(@"Transaction Details")]
 public interface ITransactionDetails100 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransactionDetails100 : IIsoComponent
     [IsoId("_sUxoM5wyEeazcsnODTksnQ")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax16Text> TradeIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITransactionDetails100 : IIsoComponent
     [IsoId("_sUxoN5wyEeazcsnODTksnQ")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? PoolIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface ITransactionDetails100 : IIsoComponent
     [IsoId("_sUxoO5wyEeazcsnODTksnQ")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? CorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface ITransactionDetails100 : IIsoComponent
     [IsoId("_sUxoP5wyEeazcsnODTksnQ")]
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +57,8 @@ public interface ITransactionDetails100 : IIsoComponent
     [IsoId("_sUxoQ5wyEeazcsnODTksnQ")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ClientTripartyCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +67,8 @@ public interface ITransactionDetails100 : IIsoComponent
     [IsoId("_sUxoR5wyEeazcsnODTksnQ")]
     [DisplayName("Client Collateral Instruction Identification")]
     [IsoXmlTag("ClntCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ClientCollateralInstructionIdentification { get; }
 
     /// <summary>
@@ -65,6 +77,8 @@ public interface ITransactionDetails100 : IIsoComponent
     [IsoId("_sUxoSZwyEeazcsnODTksnQ")]
     [DisplayName("Triparty Agent Service Provider Collateral Instruction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; }
 
     /// <summary>
@@ -177,6 +191,7 @@ public interface ITransactionDetails100 : IIsoComponent
     [IsoId("_sUxof5wyEeazcsnODTksnQ")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AcknowledgedStatusTimeStamp { get; }
 
     /// <summary>
@@ -185,6 +200,7 @@ public interface ITransactionDetails100 : IIsoComponent
     [IsoId("_sUxogZwyEeazcsnODTksnQ")]
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? MatchedStatusTimeStamp { get; }
 
     /// <summary>
@@ -249,5 +265,7 @@ public interface ITransactionDetails100 : IIsoComponent
     [IsoId("_sUxon5wyEeazcsnODTksnQ")]
     [DisplayName("Settlement Instruction Processing Additional Details")]
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text? SettlementInstructionProcessingAdditionalDetails { get; }
 }

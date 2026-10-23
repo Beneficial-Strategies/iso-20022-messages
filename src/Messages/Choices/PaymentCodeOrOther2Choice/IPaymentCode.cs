@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentCodeOrOther2Choice;
 /// </summary>
 [IsoId("_R2KHERVgEeOrY9qSHVspCA")]
 [IsoXmlTag("PmtCd")]
+[IsoDisplayName(@"Payment Code")]
 public interface IPaymentCode : IPaymentCodeOrOther2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IPaymentCode : IPaymentCodeOrOther2Choice, IIsoChoiceVariant
     [IsoId("_IRIGgxVgEeOrY9qSHVspCA")]
     [DisplayName("Number Of Days")]
     [IsoXmlTag("NbOfDays")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfDays { get; }
 }

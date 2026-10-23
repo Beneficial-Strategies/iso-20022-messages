@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment token information.
 /// </summary>
 [IsoId("__GUTcGkgEeSTIuB9A-QJ6g")]
+[IsoDisplayName(@"Card Payment Token")]
 public interface ICardPaymentToken1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardPaymentToken1 : IIsoComponent
     [IsoId("_GB7asGkhEeSTIuB9A-QJ6g")]
     [DisplayName("Token Characteristic")]
     [IsoXmlTag("TknChrtc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TokenCharacteristic { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Supporting Document Request Or Letter4.
 /// </summary>
 [IsoId("_44LMsTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Supporting Document Request Or Letter4")]
 public interface ISupportingDocumentRequestOrLetter4 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface ISupportingDocumentRequestOrLetter4 : IIsoComponent
     /// </summary>
     [DisplayName("Original References")]
     [IsoXmlTag("OrgnlRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalMessage6> OriginalReferences { get; }
 
     /// <summary>
@@ -86,6 +88,7 @@ public interface ISupportingDocumentRequestOrLetter4 : IIsoComponent
     /// </summary>
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation5> Attachment { get; }
 
     /// <summary>
@@ -93,5 +96,6 @@ public interface ISupportingDocumentRequestOrLetter4 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

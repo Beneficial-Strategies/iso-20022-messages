@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides a set if identifications to reference to a securities settlement transaction.
 /// </summary>
 [IsoId("_sDQdN9BwEeihG9bKfarOOA")]
+[IsoDisplayName(@"References")]
 public interface IReferences23 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReferences23 : IIsoComponent
     [IsoId("_sU9RA9BwEeihG9bKfarOOA")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IReferences23 : IIsoComponent
     [IsoId("_sU9RB9BwEeihG9bKfarOOA")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IReferences23 : IIsoComponent
     [IsoId("_sU9RC9BwEeihG9bKfarOOA")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IReferences23 : IIsoComponent
     [IsoId("_sU9RD9BwEeihG9bKfarOOA")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IReferences23 : IIsoComponent
     [IsoId("_sU9REdBwEeihG9bKfarOOA")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PoolIdentification { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface IReferences23 : IIsoComponent
     [IsoId("_sU9RFdBwEeihG9bKfarOOA")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonIdentification { get; }
 
     /// <summary>
@@ -65,5 +78,7 @@ public interface IReferences23 : IIsoComponent
     [IsoId("_sU9RGdBwEeihG9bKfarOOA")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? TradeIdentification { get; }
 }

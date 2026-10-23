@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the acceptor configuration.
 /// </summary>
 [IsoId("_CqUosY34EeWRwov1g9WL_A")]
+[IsoDisplayName(@"Acceptor Configuration Content")]
 public interface IAcceptorConfigurationContent5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAcceptorConfigurationContent5 : IIsoComponent
     [IsoId("_RZHYYI34EeWRwov1g9WL_A")]
     [DisplayName("Replace Configuration")]
     [IsoXmlTag("RplcCfgtn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReplaceConfiguration { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAcceptorConfigurationContent5 : IIsoComponent
     [IsoId("_C1WM8Y34EeWRwov1g9WL_A")]
     [DisplayName("TMS Protocol Parameters")]
     [IsoXmlTag("TMSPrtcolParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITMSProtocolParameters2> TMSProtocolParameters { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IAcceptorConfigurationContent5 : IIsoComponent
     [IsoId("_C1WM8434EeWRwov1g9WL_A")]
     [DisplayName("Acquirer Protocol Parameters")]
     [IsoXmlTag("AcqrrPrtcolParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcquirerProtocolParameters9> AcquirerProtocolParameters { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IAcceptorConfigurationContent5 : IIsoComponent
     [IsoId("_C1WM9Y34EeWRwov1g9WL_A")]
     [DisplayName("Merchant Parameters")]
     [IsoXmlTag("MrchntParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMerchantConfigurationParameters2> MerchantParameters { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IAcceptorConfigurationContent5 : IIsoComponent
     [IsoId("_C1WM9434EeWRwov1g9WL_A")]
     [DisplayName("Terminal Parameters")]
     [IsoXmlTag("TermnlParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTerminalParameters3> TerminalParameters { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IAcceptorConfigurationContent5 : IIsoComponent
     [IsoId("_C1WM-Y34EeWRwov1g9WL_A")]
     [DisplayName("Application Parameters")]
     [IsoXmlTag("ApplParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IApplicationParameters5> ApplicationParameters { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IAcceptorConfigurationContent5 : IIsoComponent
     [IsoId("_C1WM-434EeWRwov1g9WL_A")]
     [DisplayName("Host Communication Parameters")]
     [IsoXmlTag("HstComParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHostCommunicationParameter4> HostCommunicationParameters { get; }
 
     /// <summary>
@@ -73,5 +81,6 @@ public interface IAcceptorConfigurationContent5 : IIsoComponent
     [IsoId("_C1WM_Y34EeWRwov1g9WL_A")]
     [DisplayName("Security Parameters")]
     [IsoXmlTag("SctyParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityParameters6> SecurityParameters { get; }
 }

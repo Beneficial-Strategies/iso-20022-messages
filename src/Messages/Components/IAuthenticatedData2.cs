@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Message authentication code (MAC), computed on the data to protect with an encryption key.
 /// </summary>
 [IsoId("_TaKpkQioEeKn9O5oyej_zw")]
+[IsoDisplayName(@"Authenticated Data")]
 public interface IAuthenticatedData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAuthenticatedData2 : IIsoComponent
     [IsoId("_TmgccQioEeKn9O5oyej_zw")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAuthenticatedData2 : IIsoComponent
     [IsoId("_TmgcdQioEeKn9O5oyej_zw")]
     [DisplayName("Recipient")]
     [IsoXmlTag("Rcpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRecipient2Choice> Recipient { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IAuthenticatedData2 : IIsoComponent
     [IsoId("_TmgcgQioEeKn9O5oyej_zw")]
     [DisplayName("MAC")]
     [IsoXmlTag("MAC")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary MAC { get; }
 }

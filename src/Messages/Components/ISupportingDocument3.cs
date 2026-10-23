@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency control document supporting the contract registration.
 /// </summary>
 [IsoId("_jEXpgbGJEeuSTr8k0UEM8A")]
+[IsoDisplayName(@"Supporting Document")]
 public interface ISupportingDocument3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISupportingDocument3 : IIsoComponent
     [IsoId("_jFVS0bGJEeuSTr8k0UEM8A")]
     [DisplayName("Supporting Document Identification")]
     [IsoXmlTag("SpprtgDocId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SupportingDocumentIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISupportingDocument3 : IIsoComponent
     [IsoId("_jFVS07GJEeuSTr8k0UEM8A")]
     [DisplayName("Original Request Identification")]
     [IsoXmlTag("OrgnlReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalRequestIdentification { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ISupportingDocument3 : IIsoComponent
     [IsoId("_jFVS37GJEeuSTr8k0UEM8A")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupportingDocumentEntry2> Entry { get; }
 
     /// <summary>
@@ -81,5 +87,6 @@ public interface ISupportingDocument3 : IIsoComponent
     [IsoId("_jFVS4bGJEeuSTr8k0UEM8A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

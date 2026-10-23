@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the party.
 /// </summary>
 [IsoId("_nRhZ5ZQ_EemqYPWMBuVawg")]
+[IsoDisplayName(@"Party 48 Choice")]
 public interface IParty48Choice : IIsoChoice { }

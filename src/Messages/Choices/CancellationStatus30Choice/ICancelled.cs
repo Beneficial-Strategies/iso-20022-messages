@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus30Choice;
 /// Specifies the reason why the transaction or instruction is cancelled.
 /// </summary>
 [IsoId("_T_qoARIwEeydmIVkS03esw")]
+[IsoDisplayName(@"Cancelled")]
 public interface ICancelled : ICancellationStatus30Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

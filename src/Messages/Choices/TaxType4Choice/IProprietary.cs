@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxType4Choice;
 
 /// <summary>Tax type expressed as a proprietary code.</summary>
 [IsoId("4ebfa512-6c25-4c81-ae2b-7538c904a0e2")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ITaxType4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

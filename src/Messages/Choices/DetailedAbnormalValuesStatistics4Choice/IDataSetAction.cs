@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedAbnormalValuesStatistics
 /// Specifies the type of report activity for a specific reporting period.
 /// </summary>
 [IsoId("_x4ww4VyGEe24CqbZJK5XxA")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : IDetailedAbnormalValuesStatistics4Choice, IIsoChoiceVariant
 {
     /// <summary>

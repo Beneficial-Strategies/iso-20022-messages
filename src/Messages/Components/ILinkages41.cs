@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to a linked transaction.
 /// </summary>
 [IsoId("_G7CU8GaxEeWZev0W8F756g")]
+[IsoDisplayName(@"Linkages")]
 public interface ILinkages41 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ILinkages41 : IIsoComponent
     [IsoId("_XLIfUGaxEeWZev0W8F756g")]
     [DisplayName("Securities Settlement Transaction Identification")]
     [IsoXmlTag("SctiesSttlmTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SecuritiesSettlementTransactionIdentification { get; }
 }

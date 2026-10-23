@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// </remarks>
 [IsoId("_R3QfeTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("pacs.029.001.02", "MulSttlmReq", "urn:iso:std:iso:20022:tech:xsd:pacs.029.001.02")]
+[Description(@"Scope|The MultilateralSettlementRequest message is sent from an instructing agent to a market infrastructure to settle obligations between their participants using accounts held in a settlement service.|Usage|The MultilateralSettlementRequest message can contain one or more settlement instructions with multiple movements between accounts. By default, all movements present in an individual instruction shall be processed as a batch entry rather than a single entry per individual movement.")]
+[IsoDisplayName(@"Multilateral Settlement Request V02")]
 public interface IMultilateralSettlementRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -30,6 +32,7 @@ public interface IMultilateralSettlementRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Settlement Request")]
     [IsoXmlTag("SttlmReq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMultilateralSettlementRequest3> SettlementRequest { get; }
 
     /// <summary>

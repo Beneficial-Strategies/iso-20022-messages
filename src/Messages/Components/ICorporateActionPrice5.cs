@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies prices.
 /// </summary>
 [IsoId("_TWKoldp-Ed-ak6NoX_4Aeg_678070102")]
+[IsoDisplayName(@"Corporate Action Price")]
 public interface ICorporateActionPrice5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICorporateActionPrice5 : IIsoComponent
     [IsoId("_TWKol9p-Ed-ak6NoX_4Aeg_678070564")]
     [DisplayName("Generic Cash Price Received Per Product")]
     [IsoXmlTag("GncCshPricRcvdPerPdct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceFormat7Choice> GenericCashPriceReceivedPerProduct { get; }
 
     /// <summary>

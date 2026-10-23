@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of location of a residence of a party.
 /// </summary>
 [IsoId("_6QsqkpqlEeGSON8vddiWzQ_1947299018")]
+[IsoDisplayName(@"Residence Location 1 Choice")]
 public interface IResidenceLocation1Choice : IIsoChoice { }

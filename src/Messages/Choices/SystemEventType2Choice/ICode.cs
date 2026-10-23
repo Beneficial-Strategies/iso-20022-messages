@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemEventType2Choice;
 /// Type of system event that has occurred, expressed in a coded form.
 /// </summary>
 [IsoId("_72FYEKMgEeCJ6YNENx4h-w_1131843970")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISystemEventType2Choice, IIsoChoiceVariant
 {
     /// <summary>

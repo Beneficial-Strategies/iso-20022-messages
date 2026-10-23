@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType75Choice;
 /// Standard code to specify the type of net dividend rate.
 /// </summary>
 [IsoId("_sk2Ho83wEee5nJBZsW8MFQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRateType75Choice, IIsoChoiceVariant
 {
     /// <summary>

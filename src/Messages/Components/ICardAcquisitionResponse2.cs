@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Card Acquisition Response message.
 /// </summary>
 [IsoId("_MaApkQxtEeqdx6buGpCCQw")]
+[IsoDisplayName(@"Card Acquisition Response")]
 public interface ICardAcquisitionResponse2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardAcquisitionResponse2 : IIsoComponent
     [IsoId("_MkyWMwxtEeqdx6buGpCCQw")]
     [DisplayName("Payment Brand")]
     [IsoXmlTag("PmtBrnd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> PaymentBrand { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICardAcquisitionResponse2 : IIsoComponent
     [IsoId("_MkyWNwxtEeqdx6buGpCCQw")]
     [DisplayName("Loyalty Account")]
     [IsoXmlTag("LltyAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyAccount2> LoyaltyAccount { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface ICardAcquisitionResponse2 : IIsoComponent
     [IsoId("_MkyWOQxtEeqdx6buGpCCQw")]
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomerOrder1> CustomerOrder { get; }
 }

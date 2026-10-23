@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a rate or an absolute value.
 /// </summary>
 [IsoId("_RBTC99p-Ed-ak6NoX_4Aeg_955902350")]
+[IsoDisplayName(@"Rate Or Absolute Value 1 Choice")]
 public interface IRateOrAbsoluteValue1Choice : IIsoChoice { }

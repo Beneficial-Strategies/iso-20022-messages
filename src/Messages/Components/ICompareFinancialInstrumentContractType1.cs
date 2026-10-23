@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a financial instrument contract type.
 /// </summary>
 [IsoId("_Z5cVsExCEeywvc16MwOPfw")]
+[IsoDisplayName(@"Compare Financial Instrument Contract Type")]
 public interface ICompareFinancialInstrumentContractType1 : IIsoComponent
 {
     /// <summary>

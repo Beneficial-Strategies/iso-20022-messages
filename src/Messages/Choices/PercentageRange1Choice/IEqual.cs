@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice;
 /// Exact percentage rate must match to be considered valid.
 /// </summary>
 [IsoId("_7_LCoaMgEeCJ6YNENx4h-w_-73974136")]
+[IsoDisplayName(@"Equal")]
 public interface IEqual : IPercentageRange1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IEqual : IPercentageRange1Choice, IIsoChoiceVariant
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("EQ")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

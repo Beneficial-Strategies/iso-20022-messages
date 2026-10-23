@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type, date and version of the agreement.
 /// </summary>
 [IsoId("_bedvoJUTEea7vKctaoIyEQ")]
+[IsoDisplayName(@"Agreement Conditions")]
 public interface IAgreementConditions1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAgreementConditions1 : IIsoComponent
     [IsoId("_LS4cYJUUEea7vKctaoIyEQ")]
     [DisplayName("Agreement Code")]
     [IsoXmlTag("AgrmtCd")]
+    [IsoSimpleType(IsoSimpleType.Max6AlphaText)]
     Max6AlphaText AgreementCode { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAgreementConditions1 : IIsoComponent
     [IsoId("_6QcZoJUUEea7vKctaoIyEQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IAgreementConditions1 : IIsoComponent
     [IsoId("_-vvPcJUUEea7vKctaoIyEQ")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
     Exact4NumericText? Version { get; }
 }

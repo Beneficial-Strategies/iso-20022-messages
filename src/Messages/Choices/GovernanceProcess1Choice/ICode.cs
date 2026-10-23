@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GovernanceProcess1Choice;
 /// Type of governance process expressed as a code.
 /// </summary>
 [IsoId("_my4H0ID4Eeiw-daIkkmMqQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IGovernanceProcess1Choice, IIsoChoiceVariant
 {
     /// <summary>

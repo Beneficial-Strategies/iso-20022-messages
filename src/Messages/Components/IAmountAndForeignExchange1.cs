@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the invoice amount and the terms of the foreign exchange transaction.
 /// </summary>
 [IsoId("_xIt20Uw0EfCpsI1b9uv5FQ")]
+[IsoDisplayName(@"Amount And Foreign Exchange1")]
 public interface IAmountAndForeignExchange1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the transaction.
 /// </summary>
 [IsoId("_2xlVEyAeEeuyDZ-ukt4YRg")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction119 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVFyAeEeuyDZ-ukt4YRg")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVGyAeEeuyDZ-ukt4YRg")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVHyAeEeuyDZ-ukt4YRg")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVIyAeEeuyDZ-ukt4YRg")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,7 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVJSAeEeuyDZ-ukt4YRg")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax52Text> TradeIdentification { get; }
 
     /// <summary>
@@ -57,6 +67,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVKSAeEeuyDZ-ukt4YRg")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? PoolIdentification { get; }
 
     /// <summary>
@@ -65,6 +77,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVLSAeEeuyDZ-ukt4YRg")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? CommonIdentification { get; }
 
     /// <summary>
@@ -73,6 +87,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVMSAeEeuyDZ-ukt4YRg")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? CorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -81,6 +97,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVNSAeEeuyDZ-ukt4YRg")]
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -89,6 +107,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVOSAeEeuyDZ-ukt4YRg")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ClientTripartyCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -97,6 +117,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVPSAeEeuyDZ-ukt4YRg")]
     [DisplayName("Client Collateral Instruction Identification")]
     [IsoXmlTag("ClntCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ClientCollateralInstructionIdentification { get; }
 
     /// <summary>
@@ -105,6 +127,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVPyAeEeuyDZ-ukt4YRg")]
     [DisplayName("Triparty Agent Service Provider Collateral Instruction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; }
 
     /// <summary>
@@ -113,6 +137,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVQSAeEeuyDZ-ukt4YRg")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINXMax35Text? MasterReference { get; }
 
     /// <summary>
@@ -129,6 +155,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVRSAeEeuyDZ-ukt4YRg")]
     [DisplayName("Account Owner Leg Identification")]
     [IsoXmlTag("AcctOwnrLegId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINXMax35Text? AccountOwnerLegIdentification { get; }
 
     /// <summary>
@@ -137,6 +165,8 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVRyAeEeuyDZ-ukt4YRg")]
     [DisplayName("Account Servicer Leg Identification")]
     [IsoXmlTag("AcctSvcrLegId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINXMax35Text? AccountServicerLegIdentification { get; }
 
     /// <summary>
@@ -153,5 +183,6 @@ public interface ITransaction119 : IIsoComponent
     [IsoId("_2xlVTSAeEeuyDZ-ukt4YRg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

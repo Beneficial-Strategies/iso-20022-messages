@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides a set if identifications to reference to a securities settlement transaction.
 /// </summary>
 [IsoId("_6GVvK5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"References")]
 public interface IReferences21 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReferences21 : IIsoComponent
     [IsoId("_6GVvL5NLEeWGlc8L7oPDIg")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IReferences21 : IIsoComponent
     [IsoId("_6GVvM5NLEeWGlc8L7oPDIg")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IReferences21 : IIsoComponent
     [IsoId("_6GVvN5NLEeWGlc8L7oPDIg")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IReferences21 : IIsoComponent
     [IsoId("_6GVvO5NLEeWGlc8L7oPDIg")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IReferences21 : IIsoComponent
     [IsoId("_6GVvPZNLEeWGlc8L7oPDIg")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? PoolIdentification { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface IReferences21 : IIsoComponent
     [IsoId("_6GVvQZNLEeWGlc8L7oPDIg")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? CommonIdentification { get; }
 
     /// <summary>
@@ -65,5 +78,7 @@ public interface IReferences21 : IIsoComponent
     [IsoId("_6GVvRZNLEeWGlc8L7oPDIg")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? TradeIdentification { get; }
 }

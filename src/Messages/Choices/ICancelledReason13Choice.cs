@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Cancelled Reason13Choice.
 /// </summary>
 [IsoId("_ucE0gZznEe-DHYbvdRjdbA")]
+[IsoDisplayName(@"Cancelled Reason13Choice")]
 public interface ICancelledReason13Choice : IIsoChoice { }

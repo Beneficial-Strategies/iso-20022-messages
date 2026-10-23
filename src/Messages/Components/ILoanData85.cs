@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transaction.
 /// </summary>
 [IsoId("_zCSKIK0mEemlgIolf65eZg")]
+[IsoDisplayName(@"Loan Data")]
 public interface ILoanData85 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILoanData85 : IIsoComponent
     [IsoId("_ErQzA60nEemlgIolf65eZg")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text UniqueTradeIdentifier { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ILoanData85 : IIsoComponent
     [IsoId("_ErQzBK0nEemlgIolf65eZg")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDate { get; }
 
     /// <summary>

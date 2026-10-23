@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the confirmed fraudulent transaction.
 /// </summary>
 [IsoId("_-RODYcsGEeuNe7RtB4qFHw")]
+[IsoDisplayName(@"Fraudulent Transaction Data")]
 public interface IFraudulentTransactionData2 : IIsoComponent
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface IFraudulentTransactionData2 : IIsoComponent
     [IsoId("_-Wlrk8sGEeuNe7RtB4qFHw")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -42,6 +44,7 @@ public interface IFraudulentTransactionData2 : IIsoComponent
     [IsoId("_-WlrlcsGEeuNe7RtB4qFHw")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -50,5 +53,6 @@ public interface IFraudulentTransactionData2 : IIsoComponent
     [IsoId("_-Wlrl8sGEeuNe7RtB4qFHw")]
     [DisplayName("Fraudulent Message")]
     [IsoXmlTag("FrdlntMsg")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary? FraudulentMessage { get; }
 }

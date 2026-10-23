@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantitySearch2Choice;
 
 /// <summary>Specifies the quantity.</summary>
 [IsoId("_eaw7gWqWEemz04WrKJaMEA")]
+[IsoDisplayName(@"Quantity")]
 public interface IQuantity : IQuantitySearch2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

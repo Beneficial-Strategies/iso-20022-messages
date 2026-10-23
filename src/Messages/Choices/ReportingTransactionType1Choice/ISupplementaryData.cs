@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType1Choice;
 /// </summary>
 [IsoId("_J-kCFYG-EeaalK9UbuVGFw")]
 [IsoXmlTag("SplmtryData")]
+[IsoDisplayName(@"Supplementary Data")]
 public interface ISupplementaryData : IReportingTransactionType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -19,6 +20,8 @@ public interface ISupplementaryData : IReportingTransactionType1Choice, IIsoChoi
     [IsoId("_Qn988Np-Ed-ak6NoX_4Aeg_354388497")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>

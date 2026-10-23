@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Regulatory information.
 /// </summary>
 [IsoId("_uvgygxQLEeKCyZtSz_i3FA")]
+[IsoDisplayName(@"Regulatory Information")]
 public interface IRegulatoryInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRegulatoryInformation1 : IIsoComponent
     [IsoId("_CdjqcBQMEeKCyZtSz_i3FA")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Sector { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IRegulatoryInformation1 : IIsoComponent
     [IsoId("_FLAvNRQMEeKCyZtSz_i3FA")]
     [DisplayName("Branch")]
     [IsoXmlTag("Brnch")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Branch { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IRegulatoryInformation1 : IIsoComponent
     [IsoId("_GK8iNxQMEeKCyZtSz_i3FA")]
     [DisplayName("Group")]
     [IsoXmlTag("Grp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Group { get; }
 
     /// <summary>
@@ -41,5 +48,7 @@ public interface IRegulatoryInformation1 : IIsoComponent
     [IsoId("_HCE-iRQMEeKCyZtSz_i3FA")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Other { get; }
 }

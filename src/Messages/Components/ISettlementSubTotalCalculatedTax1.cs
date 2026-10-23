@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the subtotal calculated tax applicable for this settlement.
 /// </summary>
 [IsoId("_S0j3JQEcEeCQm6a_G2yO_w_-1391363136")]
+[IsoDisplayName(@"Settlement Sub Total Calculated Tax")]
 public interface ISettlementSubTotalCalculatedTax1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISettlementSubTotalCalculatedTax1 : IIsoComponent
     [IsoId("_S0j3JgEcEeCQm6a_G2yO_w_894669063")]
     [DisplayName("Type Code")]
     [IsoXmlTag("TpCd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? TypeCode { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISettlementSubTotalCalculatedTax1 : IIsoComponent
     [IsoId("_S0j3JwEcEeCQm6a_G2yO_w_-604171621")]
     [DisplayName("Category Code")]
     [IsoXmlTag("CtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? CategoryCode { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface ISettlementSubTotalCalculatedTax1 : IIsoComponent
     [IsoId("_S0j3KAEcEeCQm6a_G2yO_w_1356444979")]
     [DisplayName("Calculated Amount")]
     [IsoXmlTag("ClctdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> CalculatedAmount { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface ISettlementSubTotalCalculatedTax1 : IIsoComponent
     [IsoId("_S0j3KQEcEeCQm6a_G2yO_w_-878123317")]
     [DisplayName("Basis Amount")]
     [IsoXmlTag("BsisAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> BasisAmount { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface ISettlementSubTotalCalculatedTax1 : IIsoComponent
     [IsoId("_S0j3KgEcEeCQm6a_G2yO_w_-1188081468")]
     [DisplayName("Calculated Rate")]
     [IsoXmlTag("ClctdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? CalculatedRate { get; }
 
     /// <summary>

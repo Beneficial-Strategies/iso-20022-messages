@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementType7Choice;
 
 /// <summary>Statement type expressed as a proprietary code.</summary>
 [IsoId("_wH_J0QJ3EfGAP_FOfstLIw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IStatementType7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

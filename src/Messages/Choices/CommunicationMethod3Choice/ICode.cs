@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommunicationMethod3Choice;
 /// Method of transmission expressed as a code.
 /// </summary>
 [IsoId("_a0TYAggqEeSUG-8hqXsVMQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICommunicationMethod3Choice, IIsoChoiceVariant
 {
     /// <summary>

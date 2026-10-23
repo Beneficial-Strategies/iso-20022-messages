@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountAuditTrailOrOperation
 /// Operational error resulting from a rejection.
 /// </summary>
 [IsoId("_9t1JA-VaEfC90e_m8fMznQ")]
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError
     : ICashAccountAuditTrailOrOperationalError4Choice,
         IIsoChoiceVariant

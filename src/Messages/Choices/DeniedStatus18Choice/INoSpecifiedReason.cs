@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedStatus18Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_6BLiB5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IDeniedStatus18Choice, IIsoChoiceVariant
 {
     /// <summary>

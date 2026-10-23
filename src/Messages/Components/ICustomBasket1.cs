@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of constituents for a basket of indexes.
 /// </summary>
 [IsoId("_EUYF4QFOEeqUa4noT3P56A")]
+[IsoDisplayName(@"Custom Basket")]
 public interface ICustomBasket1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICustomBasket1 : IIsoComponent
     [IsoId("_lQQRIP5yEeqiEZtcZLwc3Q")]
     [DisplayName("Structurer")]
     [IsoXmlTag("Strr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Structurer { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ICustomBasket1 : IIsoComponent
     [IsoId("_EfWm0QFOEeqUa4noT3P56A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Identification { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface ICustomBasket1 : IIsoComponent
     [IsoId("_HI1KgQFOEeqUa4noT3P56A")]
     [DisplayName("Constituents")]
     [IsoXmlTag("Cnsttnts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBasketConstituents1> Constituents { get; }
 }

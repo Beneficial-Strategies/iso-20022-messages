@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice;
 /// </summary>
 [IsoId("_3DBVOTANEeOKib24wnHaFg")]
 [IsoXmlTag("Qty")]
+[IsoDisplayName(@"Quantity")]
 public interface IQuantity : ICertifiedCharacteristics2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IQuantity : ICertifiedCharacteristics2Choice, IIsoChoiceVariant
     [IsoId("_6QbP1xrZEeOVR9VN6fAMUg")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 
     /// <summary>
@@ -34,5 +36,6 @@ public interface IQuantity : ICertifiedCharacteristics2Choice, IIsoChoiceVariant
     [IsoId("_6QbP2RrZEeOVR9VN6fAMUg")]
     [DisplayName("Factor")]
     [IsoXmlTag("Fctr")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? Factor { get; }
 }

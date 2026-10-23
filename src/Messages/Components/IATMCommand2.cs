@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of a maintenance command performed by the ATM.
 /// </summary>
 [IsoId("_srliUYryEeSvuOJS0mmL0g")]
+[IsoDisplayName(@"ATM Command")]
 public interface IATMCommand2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IATMCommand2 : IIsoComponent
     [IsoId("_s5gplYryEeSvuOJS0mmL0g")]
     [DisplayName("Required Date Time")]
     [IsoXmlTag("ReqrdDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? RequiredDateTime { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IATMCommand2 : IIsoComponent
     [IsoId("_YjsNsIr3EeSvuOJS0mmL0g")]
     [DisplayName("Processed Date Time")]
     [IsoXmlTag("PrcdDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ProcessedDateTime { get; }
 
     /// <summary>
@@ -57,5 +60,7 @@ public interface IATMCommand2 : IIsoComponent
     [IsoId("_-cdJoIr3EeSvuOJS0mmL0g")]
     [DisplayName("Additional Error Information")]
     [IsoXmlTag("AddtlErrInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalErrorInformation { get; }
 }

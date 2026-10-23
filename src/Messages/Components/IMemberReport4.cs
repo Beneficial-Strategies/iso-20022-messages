@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reports either on a member or a business error.
 /// </summary>
 [IsoId("_i0a-VZlCEee-Zps0fZQaFQ")]
+[IsoDisplayName(@"Member Report")]
 public interface IMemberReport4 : IIsoComponent
 {
     /// <summary>

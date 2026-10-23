@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason19Choice;
 /// Specifies the reason why the instruction/request has a rejected status.
 /// </summary>
 [IsoId("_8NNHJStXEeyhipY4f42fZQ")]
+[IsoDisplayName(@"Rejection Reason")]
 public interface IRejectionReason : IReason19Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

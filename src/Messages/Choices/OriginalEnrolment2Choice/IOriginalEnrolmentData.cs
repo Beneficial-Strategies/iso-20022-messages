@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalEnrolment2Choice;
 /// </summary>
 [IsoId("_UZbOI-H7Eeqbls7Gk4-ckA")]
 [IsoXmlTag("OrgnlEnrlmntData")]
+[IsoDisplayName(@"Original Enrolment Data")]
 public interface IOriginalEnrolmentData : IOriginalEnrolment2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IOriginalEnrolmentData : IOriginalEnrolment2Choice, IIsoChoiceV
     [IsoId("_Ualrw-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Creditor Trading Name")]
     [IsoXmlTag("CdtrTradgNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? CreditorTradingName { get; }
 
     /// <summary>
@@ -50,6 +53,7 @@ public interface IOriginalEnrolmentData : IOriginalEnrolment2Choice, IIsoChoiceV
     [IsoId("_UalryeH7Eeqbls7Gk4-ckA")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.MerchantCategoryCodeIdentifier)]
     MerchantCategoryCodeIdentifier MerchantCategoryCode { get; }
 
     /// <summary>
@@ -58,5 +62,6 @@ public interface IOriginalEnrolmentData : IOriginalEnrolment2Choice, IIsoChoiceV
     [IsoId("_Ualry-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Creditor Logo")]
     [IsoXmlTag("CdtrLogo")]
+    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
     Max10KBinary? CreditorLogo { get; }
 }

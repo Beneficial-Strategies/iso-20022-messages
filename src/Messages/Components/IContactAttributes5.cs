@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication device number or address used for communication.
 /// </summary>
 [IsoId("_vkaQkTQlEeifw8iDiyZLmQ")]
+[IsoDisplayName(@"Contact Attributes")]
 public interface IContactAttributes5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContactAttributes5 : IIsoComponent
     [IsoId("_v1EiwzQlEeifw8iDiyZLmQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IContactAttributes5 : IIsoComponent
     [IsoId("_v1EixzQlEeifw8iDiyZLmQ")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IContactAttributes5 : IIsoComponent
     [IsoId("_v1EiyTQlEeifw8iDiyZLmQ")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IContactAttributes5 : IIsoComponent
     [IsoId("_v1EiyzQlEeifw8iDiyZLmQ")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface IContactAttributes5 : IIsoComponent
     [IsoId("_v1EizTQlEeifw8iDiyZLmQ")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? URLAddress { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IContactAttributes5 : IIsoComponent
     [IsoId("_y4tS4jQlEeifw8iDiyZLmQ")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier? AnyBIC { get; }
 
     /// <summary>
@@ -73,5 +83,6 @@ public interface IContactAttributes5 : IIsoComponent
     [IsoId("_y4tS4zQlEeifw8iDiyZLmQ")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 }

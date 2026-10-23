@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeUnit3Choice;
 /// Time unit expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_oTL_UeLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITimeUnit3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice;
 /// <summary>
 /// Inflation.
 /// </summary>
+[IsoDisplayName(@"Inflation")]
 public interface IInflation : IAssetClassCommodity7Choice, IIsoChoiceVariant
 {
     /// <summary>

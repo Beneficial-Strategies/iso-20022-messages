@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommodityDerivative2Choice;
 /// </summary>
 [IsoId("_njM5U0-nEeiVsYLJl6hleg")]
 [IsoXmlTag("Nrgy")]
+[IsoDisplayName(@"Energy")]
 public interface IEnergy : ICommodityDerivative2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,7 @@ public interface IEnergy : ICommodityDerivative2Choice, IIsoChoiceVariant
     [IsoId("_0qs7EU-nEeiVsYLJl6hleg")]
     [DisplayName("Settlement Location")]
     [IsoXmlTag("SttlmLctn")]
+    [IsoSimpleType(IsoSimpleType.Max25Text)]
+    [StringLength(25, MinimumLength = 1)]
     Max25Text SettlementLocation { get; }
 }

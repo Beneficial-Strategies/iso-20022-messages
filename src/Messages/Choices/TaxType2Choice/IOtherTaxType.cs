@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxType2Choice;
 /// Specifies types of tax not present in a code list.
 /// </summary>
 [IsoId("_mO0T8BrfEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Other Tax Type")]
 public interface IOtherTaxType : ITaxType2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOtherTaxType : ITaxType2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("OthrTaxTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

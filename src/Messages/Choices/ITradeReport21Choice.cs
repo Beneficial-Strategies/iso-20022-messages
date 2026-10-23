@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides details on the reported trade transactions.
 /// </summary>
 [IsoId("_SJHcgcg2EeuGrNSsxk3B0A")]
+[IsoDisplayName(@"Trade Report 21 Choice")]
 public interface ITradeReport21Choice : IIsoChoice { }

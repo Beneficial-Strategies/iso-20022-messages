@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SolicitationFeeRateFormat11Choic
 /// <summary>
 /// Rate.
 /// </summary>
+[IsoDisplayName(@"Rate")]
 public interface IRate : ISolicitationFeeRateFormat11Choice, IIsoChoiceVariant
 {
     /// <summary>

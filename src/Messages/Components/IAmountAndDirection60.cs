@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.
 /// </summary>
 [IsoId("_5nEY0ZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Amount And Direction")]
 public interface IAmountAndDirection60 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAmountAndDirection60 : IIsoComponent
     [IsoId("_5nEY05NLEeWGlc8L7oPDIg")]
     [DisplayName("Accrued Interest Indicator")]
     [IsoXmlTag("AcrdIntrstInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AccruedInterestIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAmountAndDirection60 : IIsoComponent
     [IsoId("_5nEY15NLEeWGlc8L7oPDIg")]
     [DisplayName("Stamp Duty Indicator")]
     [IsoXmlTag("StmpDtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? StampDutyIndicator { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IAmountAndDirection60 : IIsoComponent
     [IsoId("_5nEY25NLEeWGlc8L7oPDIg")]
     [DisplayName("Brokerage Amount Indicator")]
     [IsoXmlTag("BrkrgAmtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BrokerageAmountIndicator { get; }
 
     /// <summary>

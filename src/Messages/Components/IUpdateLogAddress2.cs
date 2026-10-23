@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Update Log Address2.
 /// </summary>
 [IsoId("_qaN4wzHSEe6Q5sI3912YOA")]
+[IsoDisplayName(@"Update Log Address2")]
 public interface IUpdateLogAddress2 : IIsoComponent
 {
     /// <summary>

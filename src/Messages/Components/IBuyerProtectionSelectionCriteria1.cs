@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Selection criteria for buyer protection query.
 /// </summary>
 [IsoId("_rPgKMN8nEe-NrtAAlrBEgQ")]
+[IsoDisplayName(@"Buyer Protection Selection Criteria1")]
 public interface IBuyerProtectionSelectionCriteria1 : IIsoComponent
 {
     /// <summary>

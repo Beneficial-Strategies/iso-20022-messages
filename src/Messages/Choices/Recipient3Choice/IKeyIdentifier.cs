@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient3Choice;
 /// </summary>
 [IsoId("_c8uDQFc0EeOi-M6GtW0vCQ")]
 [IsoXmlTag("KeyIdr")]
+[IsoDisplayName(@"Key Identifier")]
 public interface IKeyIdentifier : IRecipient3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IKeyIdentifier : IRecipient3Choice, IIsoChoiceVariant
     [IsoId("_Sw1NvAEcEeCQm6a_G2yO_w_-1402944648")]
     [DisplayName("Key Identification")]
     [IsoXmlTag("KeyId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text KeyIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IKeyIdentifier : IRecipient3Choice, IIsoChoiceVariant
     [IsoId("_Sw1NvQEcEeCQm6a_G2yO_w_-792542720")]
     [DisplayName("Key Version")]
     [IsoXmlTag("KeyVrsn")]
+    [IsoSimpleType(IsoSimpleType.Exact10Text)]
     Exact10Text KeyVersion { get; }
 
     /// <summary>
@@ -34,5 +38,6 @@ public interface IKeyIdentifier : IRecipient3Choice, IIsoChoiceVariant
     [IsoId("_Sw1NvgEcEeCQm6a_G2yO_w_-1001700130")]
     [DisplayName("Derivation Identification")]
     [IsoXmlTag("DerivtnId")]
+    [IsoSimpleType(IsoSimpleType.Min5Max16Binary)]
     Min5Max16Binary? DerivationIdentification { get; }
 }

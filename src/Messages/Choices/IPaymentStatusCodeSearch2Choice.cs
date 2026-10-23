@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a list of pending statuses, final statuses or all statuses.
 /// </summary>
 [IsoId("_RGEOMNp-Ed-ak6NoX_4Aeg_396814061")]
+[IsoDisplayName(@"Payment Status Code Search 2 Choice")]
 public interface IPaymentStatusCodeSearch2Choice : IIsoChoice { }

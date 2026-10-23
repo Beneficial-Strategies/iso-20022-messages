@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Value of total holdings reported.
 /// </summary>
 [IsoId("_Q7Cp9tp-Ed-ak6NoX_4Aeg_-277574684")]
+[IsoDisplayName(@"Total Value In Page And Statement")]
 public interface ITotalValueInPageAndStatement : IIsoComponent
 {
     /// <summary>

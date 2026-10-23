@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.
 /// </summary>
 [IsoId("_tLC5R5lVEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Member Criteria Definition 1 Choice")]
 public interface IMemberCriteriaDefinition1Choice : IIsoChoice { }

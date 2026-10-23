@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType105Choic
 /// <summary>
 /// Extended Corporate Event Type.
 /// </summary>
+[IsoDisplayName(@"Extended Corporate Event Type")]
 public interface IExtendedCorporateEventType : ICorporateActionEventType105Choice, IIsoChoiceVariant
 {
     /// <summary>

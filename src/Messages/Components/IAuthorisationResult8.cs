@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Outcome of the authorisation.
 /// </summary>
 [IsoId("_aTE8MXuXEeSVeNXcmBQ4hQ")]
+[IsoDisplayName(@"Authorisation Result")]
 public interface IAuthorisationResult8 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IAuthorisationResult8 : IIsoComponent
     [IsoId("_EJ63QHuYEeSVeNXcmBQ4hQ")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction4> Action { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface IAuthorisationResult8 : IIsoComponent
     [IsoId("_agVVFXuXEeSVeNXcmBQ4hQ")]
     [DisplayName("Authorisation Code")]
     [IsoXmlTag("AuthstnCd")]
+    [IsoSimpleType(IsoSimpleType.Min6Max8Text)]
+    [StringLength(8, MinimumLength = 6)]
     Min6Max8Text? AuthorisationCode { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IAuthorisationResult8 : IIsoComponent
     [IsoId("_qE0V4C-tEeWfYucYWs4iQg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActionMessage3> AdditionalInformation { get; }
 }

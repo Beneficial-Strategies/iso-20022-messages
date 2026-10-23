@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit of deposited media for the customer.
 /// </summary>
 [IsoId("_OVrpka-XEeWJvLRJ8PsD_w")]
+[IsoDisplayName(@"ATM Transaction Amounts")]
 public interface IATMTransactionAmounts9 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IATMTransactionAmounts9 : IIsoComponent
     [IsoId("_Og2-16-XEeWJvLRJ8PsD_w")]
     [DisplayName("Minimum Number")]
     [IsoXmlTag("MinNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MinimumNumber { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IATMTransactionAmounts9 : IIsoComponent
     [IsoId("_Og2-2a-XEeWJvLRJ8PsD_w")]
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumNumber { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IATMTransactionAmounts9 : IIsoComponent
     [IsoId("_h9Ss4K-YEeWJvLRJ8PsD_w")]
     [DisplayName("Display Flag")]
     [IsoXmlTag("DispFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DisplayFlag { get; }
 }

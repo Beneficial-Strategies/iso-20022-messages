@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed statistics for submitted derivatives per action type.
 /// </summary>
 [IsoId("_GQMZcIAsEeirUu_C8Wn_0Q")]
+[IsoDisplayName(@"Statistics Per Action Type")]
 public interface IStatisticsPerActionType1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IStatisticsPerActionType1 : IIsoComponent
     [IsoId("_PBU34IAsEeirUu_C8Wn_0Q")]
     [DisplayName("All")]
     [IsoXmlTag("All")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber All { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IStatisticsPerActionType1 : IIsoComponent
     [IsoId("_QMXusIAsEeirUu_C8Wn_0Q")]
     [DisplayName("New")]
     [IsoXmlTag("New")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber New { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IStatisticsPerActionType1 : IIsoComponent
     [IsoId("_Rh5-QIAsEeirUu_C8Wn_0Q")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber Modification { get; }
 }

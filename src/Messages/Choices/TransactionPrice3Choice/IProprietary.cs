@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionPrice3Choice;
 /// </summary>
 [IsoId("_tqJEMFkyEeGeoaLUQk__nA_1612231068")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ITransactionPrice3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IProprietary : ITransactionPrice3Choice, IIsoChoiceVariant
     [IsoId("_Rpr4pdp-Ed-ak6NoX_4Aeg_1562404617")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>

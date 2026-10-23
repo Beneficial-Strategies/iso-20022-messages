@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment related to elements not reported in dedicated fields.
 /// </summary>
 [IsoId("_KgvEwYjnEeyf7vGW3nM0lg")]
+[IsoDisplayName(@"Other Payment")]
 public interface IOtherPayment5 : IIsoComponent
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface IOtherPayment5 : IIsoComponent
     [IsoId("_KiHk1YjnEeyf7vGW3nM0lg")]
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PaymentDate { get; }
 
     /// <summary>

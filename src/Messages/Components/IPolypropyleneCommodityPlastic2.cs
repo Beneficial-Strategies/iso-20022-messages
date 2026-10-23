@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a polypropylene derivative of type plastic.
 /// </summary>
 [IsoId("_0OYHsRZZEe2QNcZTDeoKnQ")]
+[IsoDisplayName(@"Polypropylene Commodity Plastic")]
 public interface IPolypropyleneCommodityPlastic2 : IIsoComponent
 {
     /// <summary>

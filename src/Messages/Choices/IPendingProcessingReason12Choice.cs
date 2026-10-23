@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the pending processing reason.
 /// </summary>
 [IsoId("_snJgkTq1EeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Pending Processing Reason 12 Choice")]
 public interface IPendingProcessingReason12Choice : IIsoChoice { }

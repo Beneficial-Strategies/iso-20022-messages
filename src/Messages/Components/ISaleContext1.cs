@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sale context in which the transaction is performed.
 /// </summary>
 [IsoId("_SwsDzAEcEeCQm6a_G2yO_w_1953670809")]
+[IsoDisplayName(@"Sale Context")]
 public interface ISaleContext1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISaleContext1 : IIsoComponent
     [IsoId("_SwsDzQEcEeCQm6a_G2yO_w_-1301262192")]
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISaleContext1 : IIsoComponent
     [IsoId("_SwsDzgEcEeCQm6a_G2yO_w_-1321065836")]
     [DisplayName("Sale Reference Number")]
     [IsoXmlTag("SaleRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceNumber { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISaleContext1 : IIsoComponent
     [IsoId("_Sw1NsAEcEeCQm6a_G2yO_w_-1796156354")]
     [DisplayName("Sale Reconciliation Identification")]
     [IsoXmlTag("SaleRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReconciliationIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ISaleContext1 : IIsoComponent
     [IsoId("_Sw1NsQEcEeCQm6a_G2yO_w_1983014102")]
     [DisplayName("Cashier Identification")]
     [IsoXmlTag("CshrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CashierIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,7 @@ public interface ISaleContext1 : IIsoComponent
     [IsoId("_Sw1NsgEcEeCQm6a_G2yO_w_1568063427")]
     [DisplayName("Shift Number")]
     [IsoXmlTag("ShftNb")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? ShiftNumber { get; }
 
     /// <summary>
@@ -57,5 +67,7 @@ public interface ISaleContext1 : IIsoComponent
     [IsoId("_Sw1NswEcEeCQm6a_G2yO_w_842115279")]
     [DisplayName("Additional Sale Data")]
     [IsoXmlTag("AddtlSaleData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalSaleData { get; }
 }

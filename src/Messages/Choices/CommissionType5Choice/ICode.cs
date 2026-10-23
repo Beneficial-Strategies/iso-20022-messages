@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommissionType5Choice;
 /// Commission type expressed as a code.
 /// </summary>
 [IsoId("_ssJ7k2W6EeSHcOWXSsMhqw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICommissionType5Choice, IIsoChoiceVariant
 {
     /// <summary>

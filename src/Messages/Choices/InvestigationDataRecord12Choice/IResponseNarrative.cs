@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord12Choice;
 
 /// <summary>Provides additional information about the response in narrative form.</summary>
 [IsoId("632a9035-b94b-4fb4-95a5-b29c04b0ed30")]
+[IsoDisplayName(@"Response Narrative")]
 public interface IResponseNarrative : IInvestigationDataRecord12Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

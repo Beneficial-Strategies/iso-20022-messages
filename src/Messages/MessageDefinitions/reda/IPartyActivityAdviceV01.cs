@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("__JD_8ZeSEeen_cyMrluY4w")]
 [IsoMessage("reda.041.001.01", "PtyActvtyAdvc", "urn:iso:std:iso:20022:tech:xsd:reda.041.001.01")]
+[Description(@"The PartyActivityReport message is sent by the executing party to an instructing party containing information about changes on party reference data.||Scope and usage:|It aims at informing about the changes occurred during a business date for party reference data.")]
+[IsoDisplayName(@"Party Activity Advice V")]
 public interface IPartyActivityAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -36,5 +38,6 @@ public interface IPartyActivityAdviceV01 : IOuterRecord
     [IsoId("__JD_-5eSEeen_cyMrluY4w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

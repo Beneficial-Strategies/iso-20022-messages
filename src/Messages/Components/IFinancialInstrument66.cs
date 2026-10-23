@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example, dividend option or valuation currency.
 /// </summary>
 [IsoId("_SOTuYTf4Eei6RvewLQWEqw")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument66 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_SerFpzf4Eei6RvewLQWEqw")]
     [DisplayName("Physical Bearer Securities")]
     [IsoXmlTag("PhysBrScties")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PhysicalBearerSecurities { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_SerFqTf4Eei6RvewLQWEqw")]
     [DisplayName("Dematerialised Bearer Securities")]
     [IsoXmlTag("DmtrlsdBrScties")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DematerialisedBearerSecurities { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_SerFqzf4Eei6RvewLQWEqw")]
     [DisplayName("Physical Registered Securities")]
     [IsoXmlTag("PhysRegdScties")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PhysicalRegisteredSecurities { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_SerFrTf4Eei6RvewLQWEqw")]
     [DisplayName("Dematerialised Registered Securities")]
     [IsoXmlTag("DmtrlsdRegdScties")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DematerialisedRegisteredSecurities { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_SerFtzf4Eei6RvewLQWEqw")]
     [DisplayName("Front End Load")]
     [IsoXmlTag("FrntEndLd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FrontEndLoad { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_SerFuTf4Eei6RvewLQWEqw")]
     [DisplayName("Back End Load")]
     [IsoXmlTag("BckEndLd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BackEndLoad { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_SerFuzf4Eei6RvewLQWEqw")]
     [DisplayName("Switch Fee")]
     [IsoXmlTag("SwtchFee")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SwitchFee { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_dbUTUGAOEeiNMJ262H2pWg")]
     [DisplayName("Launch Date")]
     [IsoXmlTag("LnchDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LaunchDate { get; }
 
     /// <summary>
@@ -121,6 +130,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_hlU1oGAOEeiNMJ262H2pWg")]
     [DisplayName("Fund End Date")]
     [IsoXmlTag("FndEndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FundEndDate { get; }
 
     /// <summary>
@@ -129,6 +139,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_nm8Z0GAOEeiNMJ262H2pWg")]
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TerminationDate { get; }
 
     /// <summary>
@@ -137,6 +148,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_sjGKwGAOEeiNMJ262H2pWg")]
     [DisplayName("Initial Offer End Date")]
     [IsoXmlTag("InitlOfferEndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InitialOfferEndDate { get; }
 
     /// <summary>
@@ -145,6 +157,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_0h-s4GAOEeiNMJ262H2pWg")]
     [DisplayName("Suspension Start Date")]
     [IsoXmlTag("SspnsnStartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SuspensionStartDate { get; }
 
     /// <summary>
@@ -153,6 +166,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_4LaRsGAOEeiNMJ262H2pWg")]
     [DisplayName("Suspension End Date")]
     [IsoXmlTag("SspnsnEndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SuspensionEndDate { get; }
 
     /// <summary>
@@ -161,6 +175,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_JolpEYBiEei8Q7I_11BpAQ")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>
@@ -169,6 +184,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_8w-HkGAOEeiNMJ262H2pWg")]
     [DisplayName("Closed End Fund")]
     [IsoXmlTag("ClsdEndFnd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ClosedEndFund { get; }
 
     /// <summary>
@@ -177,6 +193,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_B4yV8GAPEeiNMJ262H2pWg")]
     [DisplayName("Equalisation")]
     [IsoXmlTag("Equlstn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Equalisation { get; }
 
     /// <summary>
@@ -185,6 +202,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_InaKEGAPEeiNMJ262H2pWg")]
     [DisplayName("Tax Efficient Product Eligible")]
     [IsoXmlTag("TaxEffcntPdctElgbl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TaxEfficientProductEligible { get; }
 
     /// <summary>
@@ -193,6 +211,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_McY3kGAPEeiNMJ262H2pWg")]
     [DisplayName("Authorised")]
     [IsoXmlTag("Authrsd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Authorised { get; }
 
     /// <summary>
@@ -201,6 +220,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_QT8X8GAPEeiNMJ262H2pWg")]
     [DisplayName("RDR Compliant")]
     [IsoXmlTag("RDRCmplnt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RDRCompliant { get; }
 
     /// <summary>
@@ -217,6 +237,7 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_pAPSkGAPEeiNMJ262H2pWg")]
     [DisplayName("Performance Fee")]
     [IsoXmlTag("PrfrmncFee")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PerformanceFee { get; }
 
     /// <summary>
@@ -225,5 +246,6 @@ public interface IFinancialInstrument66 : IIsoComponent
     [IsoId("_OKRH8WAKEeiNMJ262H2pWg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

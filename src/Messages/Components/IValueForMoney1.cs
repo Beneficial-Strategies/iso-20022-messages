@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Value For Money1.
 /// </summary>
 [IsoId("_63iJ8CY9Ee6m8LTtAzU6hA")]
+[IsoDisplayName(@"Value For Money1")]
 public interface IValueForMoney1 : IIsoComponent
 {
     /// <summary>

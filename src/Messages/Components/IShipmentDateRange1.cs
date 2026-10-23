@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies an earliest shipment date and a latest shipment date.
 /// </summary>
 [IsoId("_Sp5_gtp-Ed-ak6NoX_4Aeg_-1649364101")]
+[IsoDisplayName(@"Shipment Date Range")]
 public interface IShipmentDateRange1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IShipmentDateRange1 : IIsoComponent
     [IsoId("_Sp5_g9p-Ed-ak6NoX_4Aeg_-1349221863")]
     [DisplayName("Earliest Shipment Date")]
     [IsoXmlTag("EarlstShipmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EarliestShipmentDate { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IShipmentDateRange1 : IIsoComponent
     [IsoId("_Sp5_hNp-Ed-ak6NoX_4Aeg_-1302121318")]
     [DisplayName("Latest Shipment Date")]
     [IsoXmlTag("LatstShipmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LatestShipmentDate { get; }
 }

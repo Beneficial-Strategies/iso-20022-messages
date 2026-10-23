@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Event Context6.
 /// </summary>
 [IsoId("_XNUGYZHvEe6qwqnYOGEReg")]
+[IsoDisplayName(@"Event Context6")]
 public interface IEventContext6 : IIsoComponent
 {
     /// <summary>

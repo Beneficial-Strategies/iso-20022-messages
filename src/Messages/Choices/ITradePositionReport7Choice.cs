@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides details on the relevant action types for trade positions.
 /// </summary>
 [IsoId("_bV7RKRLBEeqctpBfTmLJnw")]
+[IsoDisplayName(@"Trade Position Report 7 Choice")]
 public interface ITradePositionReport7Choice : IIsoChoice { }

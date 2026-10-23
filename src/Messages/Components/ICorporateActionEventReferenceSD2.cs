@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding linkage details.
 /// </summary>
 [IsoId("_1UHa8jL3EeKU9IrkkToqcw_-607146504")]
+[IsoDisplayName(@"Corporate Action Event Reference SD")]
 public interface ICorporateActionEventReferenceSD2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionEventReferenceSD2 : IIsoComponent
     [IsoId("_1UHa8zL3EeKU9IrkkToqcw_-419438120")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICorporateActionEventReferenceSD2 : IIsoComponent
     [IsoId("_1UHa9TL3EeKU9IrkkToqcw_-1708581925")]
     [DisplayName("Link Added Date")]
     [IsoXmlTag("LkAddedDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate LinkAddedDate { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ICorporateActionEventReferenceSD2 : IIsoComponent
     [IsoId("_1UHa9jL3EeKU9IrkkToqcw_1601038639")]
     [DisplayName("Link Modified Date")]
     [IsoXmlTag("LkModfdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LinkModifiedDate { get; }
 }

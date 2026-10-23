@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassAttributes1Choice;
 /// </summary>
 [IsoId("_id4oJu94EeW7gabYEJmWIA")]
 [IsoXmlTag("FX")]
+[IsoDisplayName(@"Foreign Exchange")]
 public interface IForeignExchange : IAssetClassAttributes1Choice, IIsoChoiceVariant
 {
     /// <summary>

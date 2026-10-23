@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional details on the remittance advice.
 /// </summary>
 [IsoId("_-LRmB24-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Remittance Location Data")]
 public interface IRemittanceLocationData1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IRemittanceLocationData1 : IIsoComponent
     [IsoId("_-VaZc24-EeiU9cctagi5ow")]
     [DisplayName("Electronic Address")]
     [IsoXmlTag("ElctrncAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? ElectronicAddress { get; }
 
     /// <summary>

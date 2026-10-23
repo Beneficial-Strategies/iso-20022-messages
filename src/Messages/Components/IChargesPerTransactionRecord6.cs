@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Charges Per Transaction Record6.
 /// </summary>
 [IsoId("_HEdKsT0QEe-thIfLZ94a1w")]
+[IsoDisplayName(@"Charges Per Transaction Record6")]
 public interface IChargesPerTransactionRecord6 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface IChargesPerTransactionRecord6 : IIsoComponent
     /// </summary>
     [DisplayName("Charges Breakdown")]
     [IsoXmlTag("ChrgsBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChargesBreakdown1> ChargesBreakdown { get; }
 
     /// <summary>

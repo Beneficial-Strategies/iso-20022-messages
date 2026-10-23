@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus101Choice;
 
 /// <summary>Specifies the proprietary status.</summary>
 [IsoId("4dd7da73-fdc2-4ed7-a1b7-2e63eb8568a5")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IProcessingStatus101Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

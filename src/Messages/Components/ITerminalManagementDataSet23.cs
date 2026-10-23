@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data set containing the acceptor parameters of a point of interaction (POI).
 /// </summary>
 [IsoId("_wWoDgdqHEeearpaEPXv9UA")]
+[IsoDisplayName(@"Terminal Management Data Set")]
 public interface ITerminalManagementDataSet23 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITerminalManagementDataSet23 : IIsoComponent
     [IsoId("_wfazI9qHEeearpaEPXv9UA")]
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Max9NumericText)]
     Max9NumericText? SequenceCounter { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITerminalManagementDataSet23 : IIsoComponent
     [IsoId("_wfazJdqHEeearpaEPXv9UA")]
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification71> POIIdentification { get; }
 
     /// <summary>

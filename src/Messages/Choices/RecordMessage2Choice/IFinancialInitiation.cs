@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the financial initiation message.</summary>
 [IsoId("_kNBjrW7-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Financial Initiation")]
 public interface IFinancialInitiation : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

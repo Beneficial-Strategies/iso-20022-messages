@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the components of a settlement rate source for a non delvierable trade.
 /// </summary>
 [IsoId("_CldIUJULEeak6e8_Fc5fQg")]
+[IsoDisplayName(@"Settlement Rate Source")]
 public interface ISettlementRateSource1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementRateSource1 : IIsoComponent
     [IsoId("_6mn-oJUMEeak6e8_Fc5fQg")]
     [DisplayName("Rate Source")]
     [IsoXmlTag("RateSrc")]
+    [IsoSimpleType(IsoSimpleType.RateSourceText)]
     RateSourceText RateSource { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISettlementRateSource1 : IIsoComponent
     [IsoId("_UdWPkJUOEeak6e8_Fc5fQg")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
+    [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
     Exact4NumericText? Time { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ISettlementRateSource1 : IIsoComponent
     [IsoId("_1wrG4JUNEeak6e8_Fc5fQg")]
     [DisplayName("Location Code")]
     [IsoXmlTag("LctnCd")]
+    [IsoSimpleType(IsoSimpleType.Exact2AlphaNumericText)]
     Exact2AlphaNumericText? LocationCode { get; }
 }

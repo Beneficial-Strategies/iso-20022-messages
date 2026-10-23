@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice;
 /// </summary>
 [IsoId("_7_BRqaMgEeCJ6YNENx4h-w_-1383081859")]
 [IsoXmlTag("Fr")]
+[IsoDisplayName(@"From")]
 public interface IFrom : IPercentageRange1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IFrom : IPercentageRange1Choice, IIsoChoiceVariant
     [IsoId("_8GekiKMgEeCJ6YNENx4h-w_1727044493")]
     [DisplayName("Boundary Rate")]
     [IsoXmlTag("BdryRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate BoundaryRate { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface IFrom : IPercentageRange1Choice, IIsoChoiceVariant
     [IsoId("_8GekiaMgEeCJ6YNENx4h-w_-1807157650")]
     [DisplayName("Included")]
     [IsoXmlTag("Incl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Included { get; }
 }

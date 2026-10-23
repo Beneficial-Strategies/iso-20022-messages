@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// References of an order confirmation and an order confirmation cancellation.
 /// </summary>
 [IsoId("_13WvMFAYEea5nPE5ezGuuw")]
+[IsoDisplayName(@"Investment Fund Order")]
 public interface IInvestmentFundOrder11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentFundOrder11 : IIsoComponent
     [IsoId("_2ROnwVAYEea5nPE5ezGuuw")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IInvestmentFundOrder11 : IIsoComponent
     [IsoId("_2ROnw1AYEea5nPE5ezGuuw")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IInvestmentFundOrder11 : IIsoComponent
     [IsoId("_5XLFAVAYEea5nPE5ezGuuw")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DealReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IInvestmentFundOrder11 : IIsoComponent
     [IsoId("_2ROnxVAYEea5nPE5ezGuuw")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>

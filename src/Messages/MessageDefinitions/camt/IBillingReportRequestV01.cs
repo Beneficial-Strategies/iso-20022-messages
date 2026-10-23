@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_u3eqcUwoEfCw8OkvsmFlbQ")]
 [IsoMessage("camt.076.001.01", "BllgRptReq", "urn:iso:std:iso:20022:tech:xsd:camt.076.001.01")]
+[IsoDisplayName(@"Billing Report Request V01")]
 public interface IBillingReportRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IBillingReportRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingSearchCriteria3> SearchCriteria { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IBillingReportRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

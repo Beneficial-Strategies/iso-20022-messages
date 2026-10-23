@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Validation Status Reason3.
 /// </summary>
 [IsoId("_3D4kmzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Validation Status Reason3")]
 public interface IValidationStatusReason3 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface IValidationStatusReason3 : IIsoComponent
     /// </summary>
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericValidationRuleIdentification1> ValidationRule { get; }
 
     /// <summary>
@@ -37,5 +39,6 @@ public interface IValidationStatusReason3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

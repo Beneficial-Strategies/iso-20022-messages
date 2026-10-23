@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
 /// </summary>
 [IsoId("838fcf21-82d1-4ad8-acbf-b002be6fc68f")]
+[IsoDisplayName(@"Investment Account81")]
 public interface IInvestmentAccount81 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IInvestmentAccount81 : IIsoComponent
     [IsoId("475598a5-be97-42c0-91c1-e9f12aef33eb")]
     [DisplayName("Owner Identification")]
     [IsoXmlTag("OwnrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification139> OwnerIdentification { get; }
 
     /// <summary>

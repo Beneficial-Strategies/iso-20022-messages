@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient4Choice;
 /// </summary>
 [IsoId("_N1aSoWi0EeS87LmvcA55sg")]
 [IsoXmlTag("KeyTrnsprt")]
+[IsoDisplayName(@"Key Transport")]
 public interface IKeyTransport : IRecipient4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IKeyTransport : IRecipient4Choice, IIsoChoiceVariant
     [IsoId("_fLktMWi0EeS87LmvcA55sg")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -42,5 +44,6 @@ public interface IKeyTransport : IRecipient4Choice, IIsoChoiceVariant
     [IsoId("_fLktN2i0EeS87LmvcA55sg")]
     [DisplayName("Encrypted Key")]
     [IsoXmlTag("NcrptdKey")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary EncryptedKey { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action option cash movement details.
 /// </summary>
 [IsoId("_EZr8wXh6EeOF3uSOaAf1Lg")]
+[IsoDisplayName(@"Cash Option SD")]
 public interface ICashOptionSD7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICashOptionSD7 : IIsoComponent
     [IsoId("_E0BIUXh6EeOF3uSOaAf1Lg")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICashOptionSD7 : IIsoComponent
     [IsoId("_E0BIW3h6EeOF3uSOaAf1Lg")]
     [DisplayName("DTC Pay Method")]
     [IsoXmlTag("DTCPayMtd")]
+    [IsoSimpleType(IsoSimpleType.Max3Text)]
+    [StringLength(3, MinimumLength = 1)]
     Max3Text? DTCPayMethod { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ICashOptionSD7 : IIsoComponent
     [IsoId("_E0BIY3h6EeOF3uSOaAf1Lg")]
     [DisplayName("DTC Pay Order")]
     [IsoXmlTag("DTCPayOrdr")]
+    [IsoSimpleType(IsoSimpleType.Max3Text)]
+    [StringLength(3, MinimumLength = 1)]
     Max3Text? DTCPayOrder { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface ICashOptionSD7 : IIsoComponent
     [IsoId("_E0BIc3h6EeOF3uSOaAf1Lg")]
     [DisplayName("Estimated Rate Flag")]
     [IsoXmlTag("EstmtdRateFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EstimatedRateFlag { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface ICashOptionSD7 : IIsoComponent
     [IsoId("_E0BIe3h6EeOF3uSOaAf1Lg")]
     [DisplayName("NRA Tax Reportable Flag")]
     [IsoXmlTag("NRATaxRptblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NRATaxReportableFlag { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface ICashOptionSD7 : IIsoComponent
     [IsoId("_E0BIg3h6EeOF3uSOaAf1Lg")]
     [DisplayName("Protect Charge Flag")]
     [IsoXmlTag("PrtctChrgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ProtectChargeFlag { get; }
 
     /// <summary>
@@ -98,5 +108,6 @@ public interface ICashOptionSD7 : IIsoComponent
     [IsoId("_Gy7FAXh6EeOF3uSOaAf1Lg")]
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
     Exact32AlphaNumericText? RDPReferenceNumber { get; }
 }

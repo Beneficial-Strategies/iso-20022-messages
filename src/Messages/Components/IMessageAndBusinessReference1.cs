@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the message reference of the message for which the status is requested and the business reference of the transfer instruction.
 /// </summary>
 [IsoId("_VFeqFtp-Ed-ak6NoX_4Aeg_1197711929")]
+[IsoDisplayName(@"Message And Business Reference")]
 public interface IMessageAndBusinessReference1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,7 @@ public interface IMessageAndBusinessReference1 : IIsoComponent
     [IsoId("_VFeqGtp-Ed-ak6NoX_4Aeg_1669629363")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransferReference { get; }
 }

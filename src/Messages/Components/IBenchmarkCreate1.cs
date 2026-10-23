@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the attributes of the benchmark, which is / are being created.
 /// </summary>
 [IsoId("_-mkGetOtEeilDKNlC_3bSg")]
+[IsoDisplayName(@"Benchmark Create")]
 public interface IBenchmarkCreate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBenchmarkCreate1 : IIsoComponent
     [IsoId("_-mkGfdOtEeilDKNlC_3bSg")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -73,5 +76,6 @@ public interface IBenchmarkCreate1 : IIsoComponent
     [IsoId("_-mkGftOtEeilDKNlC_3bSg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

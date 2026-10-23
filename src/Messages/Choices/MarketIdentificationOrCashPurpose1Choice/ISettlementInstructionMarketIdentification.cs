@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentificationOrCashPurpos
 /// </summary>
 [IsoId("_kz-v4EiNEeOdL6nMHefDgg")]
 [IsoXmlTag("SttlmInstrMktId")]
+[IsoDisplayName(@"Settlement Instruction Market Identification")]
 public interface ISettlementInstructionMarketIdentification
     : IMarketIdentificationOrCashPurpose1Choice,
         IIsoChoiceVariant

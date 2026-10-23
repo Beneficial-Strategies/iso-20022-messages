@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrTxLgRptRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.025.001.06"
 )]
+[IsoDisplayName(@"Acceptor Transaction Log Report Response V06")]
 public interface IAcceptorTransactionLogReportResponseV06 : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Manufacturer configuration parameters of the point of interaction (POI).
 /// </summary>
 [IsoId("_C7ZDYdX4Eeia9rtBTv_9KA")]
+[IsoDisplayName(@"Payment Terminal Parameters")]
 public interface IPaymentTerminalParameters6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPaymentTerminalParameters6 : IIsoComponent
     [IsoId("_DFD8w9X4Eeia9rtBTv_9KA")]
     [DisplayName("Vendor Identification")]
     [IsoXmlTag("VndrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? VendorIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPaymentTerminalParameters6 : IIsoComponent
     [IsoId("_DFD8xdX4Eeia9rtBTv_9KA")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Version { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPaymentTerminalParameters6 : IIsoComponent
     [IsoId("_AEfHsdX4Eeia9rtBTv_9KA")]
     [DisplayName("Parameter Format Identifier")]
     [IsoXmlTag("ParamFrmtIdr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? ParameterFormatIdentifier { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IPaymentTerminalParameters6 : IIsoComponent
     [IsoId("_DFD8ydX4Eeia9rtBTv_9KA")]
     [DisplayName("Time Zone Line")]
     [IsoXmlTag("TmZoneLine")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> TimeZoneLine { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IPaymentTerminalParameters6 : IIsoComponent
     [IsoId("_DFD8y9X4Eeia9rtBTv_9KA")]
     [DisplayName("Local Date Time")]
     [IsoXmlTag("LclDtTm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalDateTime1> LocalDateTime { get; }
 
     /// <summary>
@@ -73,5 +82,6 @@ public interface IPaymentTerminalParameters6 : IIsoComponent
     [IsoId("_DFD8zdX4Eeia9rtBTv_9KA")]
     [DisplayName("Other Parameters")]
     [IsoXmlTag("OthrParams")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? OtherParameters { get; }
 }

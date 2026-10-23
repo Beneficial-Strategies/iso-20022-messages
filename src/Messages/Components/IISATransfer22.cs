@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the type of product and the assets to be transferred.
 /// </summary>
 [IsoId("_6ec90SPvEeWQjryFgN2ITg")]
+[IsoDisplayName(@"ISA Transfer")]
 public interface IISATransfer22 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IISATransfer22 : IIsoComponent
     [IsoId("_676VwyPvEeWQjryFgN2ITg")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IISATransfer22 : IIsoComponent
     [IsoId("_676VxSPvEeWQjryFgN2ITg")]
     [DisplayName("Transfer Identification")]
     [IsoXmlTag("TrfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IISATransfer22 : IIsoComponent
     [IsoId("_676VxyPvEeWQjryFgN2ITg")]
     [DisplayName("Transfer Confirmation Identification")]
     [IsoXmlTag("TrfConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransferConfirmationIdentification { get; }
 
     /// <summary>
@@ -97,5 +104,6 @@ public interface IISATransfer22 : IIsoComponent
     [IsoId("_676V0SPvEeWQjryFgN2ITg")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument46> FinancialInstrumentAssetForTransfer { get; }
 }

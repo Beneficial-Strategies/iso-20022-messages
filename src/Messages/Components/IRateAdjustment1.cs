@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the rate adjustments as determined by the rate schedule.
 /// </summary>
 [IsoId("_D6Df4CDwEeahCJeThTBhHA")]
+[IsoDisplayName(@"Rate Adjustment")]
 public interface IRateAdjustment1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRateAdjustment1 : IIsoComponent
     [IsoId("_J3YZ8CDwEeahCJeThTBhHA")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Rate { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IRateAdjustment1 : IIsoComponent
     [IsoId("_OaFwICDwEeahCJeThTBhHA")]
     [DisplayName("Adjustment Date")]
     [IsoXmlTag("AdjstmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate AdjustmentDate { get; }
 }

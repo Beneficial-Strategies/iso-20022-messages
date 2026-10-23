@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "MnyMktOvrnghtIndxSwpsSttstclRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.015.001.02"
 )]
+[Description(@"The MoneyMarketOvernightIndexSwapsStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report the daily overnight index swaps (OIS) transactions.")]
+[IsoDisplayName(@"Money Market Overnight Index Swaps Statistical Report V")]
 public interface IMoneyMarketOvernightIndexSwapsStatisticalReportV02 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface IMoneyMarketOvernightIndexSwapsStatisticalReportV02 : IOuterRec
     [IsoId("_Ap9m18EPEea7jLfvGi1PDw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

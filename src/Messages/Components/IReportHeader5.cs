@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies generic information about an investigation report.
 /// </summary>
 [IsoId("_Dr8EK249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Report Header")]
 public interface IReportHeader5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportHeader5 : IIsoComponent
     [IsoId("_D1oLo249EeiU9cctagi5ow")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IReportHeader5 : IIsoComponent
     [IsoId("_D1oLqW49EeiU9cctagi5ow")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 }

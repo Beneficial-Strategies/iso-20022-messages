@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of lottery.
 /// </summary>
 [IsoId("_cdS3gZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Lottery Type Format 5 Choice")]
 public interface ILotteryTypeFormat5Choice : IIsoChoice { }

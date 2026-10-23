@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General information about the corporate action event.
 /// </summary>
 [IsoId("_BI_0oeXnEemEj48jhmlA0Q")]
+[IsoDisplayName(@"Corporate Action General Information")]
 public interface ICorporateActionGeneralInformation140 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionGeneralInformation140 : IIsoComponent
     [IsoId("_BZEQ9eXnEemEj48jhmlA0Q")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICorporateActionGeneralInformation140 : IIsoComponent
     [IsoId("_BZEQ_eXnEemEj48jhmlA0Q")]
     [DisplayName("Official Corporate Action Event Identification")]
     [IsoXmlTag("OffclCorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OfficialCorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ICorporateActionGeneralInformation140 : IIsoComponent
     [IsoId("_BZERBeXnEemEj48jhmlA0Q")]
     [DisplayName("Class Action Number")]
     [IsoXmlTag("ClssActnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClassActionNumber { get; }
 
     /// <summary>

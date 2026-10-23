@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party8Choice;
 /// </summary>
 [IsoId("_PXDusNp-Ed-ak6NoX_4Aeg_-1912923115")]
 [IsoXmlTag("OrgId")]
+[IsoDisplayName(@"Organisation Identification")]
 public interface IOrganisationIdentification : IParty8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IOrganisationIdentification : IParty8Choice, IIsoChoiceVariant
     [IsoId("_QPrYx9p-Ed-ak6NoX_4Aeg_320818611")]
     [DisplayName("BIC")]
     [IsoXmlTag("BIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier? BIC { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface IOrganisationIdentification : IParty8Choice, IIsoChoiceVariant
     [IsoId("_QPrYyNp-Ed-ak6NoX_4Aeg_-676253742")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericOrganisationIdentification1> Other { get; }
 }

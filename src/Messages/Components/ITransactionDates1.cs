@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements identifying the dates related to the underlying transactions.
 /// </summary>
 [IsoId("_RUrR99p-Ed-ak6NoX_4Aeg_1881477218")]
+[IsoDisplayName(@"Transaction Dates")]
 public interface ITransactionDates1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransactionDates1 : IIsoComponent
     [IsoId("_RUrR-Np-Ed-ak6NoX_4Aeg_-1547227036")]
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AcceptanceDateTime { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITransactionDates1 : IIsoComponent
     [IsoId("_RU0b4Np-Ed-ak6NoX_4Aeg_-963564510")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TradeDate { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITransactionDates1 : IIsoComponent
     [IsoId("_RU0b4dp-Ed-ak6NoX_4Aeg_-2022842250")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ITransactionDates1 : IIsoComponent
     [IsoId("_RU0b4tp-Ed-ak6NoX_4Aeg_-287547761")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ITransactionDates1 : IIsoComponent
     [IsoId("_RU0b49p-Ed-ak6NoX_4Aeg_-287547743")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EndDate { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ITransactionDates1 : IIsoComponent
     [IsoId("_RU0b5Np-Ed-ak6NoX_4Aeg_-1175050973")]
     [DisplayName("Transaction Date Time")]
     [IsoXmlTag("TxDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TransactionDateTime { get; }
 
     /// <summary>
@@ -65,5 +72,6 @@ public interface ITransactionDates1 : IIsoComponent
     [IsoId("_RU0b5dp-Ed-ak6NoX_4Aeg_768963176")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryDate1> Proprietary { get; }
 }

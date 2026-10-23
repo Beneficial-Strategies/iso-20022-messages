@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the failing reason.
 /// </summary>
 [IsoId("_6BKUI5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Failing Reason 11 Choice")]
 public interface IFailingReason11Choice : IIsoChoice { }

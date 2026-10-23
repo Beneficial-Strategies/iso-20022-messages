@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of one or several keys of the request.
 /// </summary>
 [IsoId("_SuwKFgEcEeCQm6a_G2yO_w_-1482671344")]
+[IsoDisplayName(@"Request Details")]
 public interface IRequestDetails4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRequestDetails4 : IIsoComponent
     [IsoId("_SuwKFwEcEeCQm6a_G2yO_w_1787384874")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Key { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IRequestDetails4 : IIsoComponent
     [IsoId("_SuwKGAEcEeCQm6a_G2yO_w_-56014594")]
     [DisplayName("Report Data")]
     [IsoXmlTag("RptData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportParameter1> ReportData { get; }
 }

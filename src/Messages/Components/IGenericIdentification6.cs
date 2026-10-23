@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance expressed with a data source scheme.
 /// </summary>
 [IsoId("_P_luUdp-Ed-ak6NoX_4Aeg_2128666136")]
+[IsoDisplayName(@"Generic Identification")]
 public interface IGenericIdentification6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGenericIdentification6 : IIsoComponent
     [IsoId("_P_luUtp-Ed-ak6NoX_4Aeg_-1713450015")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text Issuer { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IGenericIdentification6 : IIsoComponent
     [IsoId("_P_luU9p-Ed-ak6NoX_4Aeg_-1801508836")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText Information { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IGenericIdentification6 : IIsoComponent
     [IsoId("_P_luVNp-Ed-ak6NoX_4Aeg_-1695902189")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Balance { get; }
 }

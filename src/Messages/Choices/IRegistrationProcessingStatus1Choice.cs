@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the registration processing status.
 /// </summary>
 [IsoId("_UYUpIdp-Ed-ak6NoX_4Aeg_170456881")]
+[IsoDisplayName(@"Registration Processing Status 1 Choice")]
 public interface IRegistrationProcessingStatus1Choice : IIsoChoice { }

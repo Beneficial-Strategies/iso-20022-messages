@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Login Response6.
 /// </summary>
 [IsoId("_lPFGUZFSEe6reqfAp4CunQ")]
+[IsoDisplayName(@"Login Response6")]
 public interface ILoginResponse6 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ILoginResponse6 : IIsoComponent
     /// </summary>
     [DisplayName("POI Software")]
     [IsoXmlTag("POISftwr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent15> POISoftware { get; }
 
     /// <summary>

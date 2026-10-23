@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.
 /// </summary>
 [IsoId("_VNFG4dp-Ed-ak6NoX_4Aeg_-1626718035")]
+[IsoDisplayName(@"Transfer")]
 public interface ITransfer2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransfer2 : IIsoComponent
     [IsoId("_VNFG4tp-Ed-ak6NoX_4Aeg_1313625755")]
     [DisplayName("Transfer Confirmation Reference")]
     [IsoXmlTag("TrfConfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferConfirmationReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransfer2 : IIsoComponent
     [IsoId("_VNFG49p-Ed-ak6NoX_4Aeg_-1943607980")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ITransfer2 : IIsoComponent
     [IsoId("_VNFG5dp-Ed-ak6NoX_4Aeg_-284362116")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ITransfer2 : IIsoComponent
     [IsoId("_VNFG59p-Ed-ak6NoX_4Aeg_1908338067")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit1> UnitsDetails { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ITransfer2 : IIsoComponent
     [IsoId("_VNFG6Np-Ed-ak6NoX_4Aeg_395185349")]
     [DisplayName("Portfolio Transfer Out Rate")]
     [IsoXmlTag("PrtflTrfOutRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PortfolioTransferOutRate { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface ITransfer2 : IIsoComponent
     [IsoId("_VNFG6dp-Ed-ak6NoX_4Aeg_387481252")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator OwnAccountTransferIndicator { get; }
 
     /// <summary>

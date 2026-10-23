@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateCode2Choice;
 /// Standard code to specify the type of date.
 /// </summary>
 [IsoId("_Q5GwQtp-Ed-ak6NoX_4Aeg_-1461432062")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDateCode2Choice, IIsoChoiceVariant
 {
     /// <summary>

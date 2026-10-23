@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason8FormatChoice;
 /// Standard code to specify the reason of a rejection of an election amendment request.
 /// </summary>
 [IsoId("_Roovw9p-Ed-ak6NoX_4Aeg_274039681")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectionReason8FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

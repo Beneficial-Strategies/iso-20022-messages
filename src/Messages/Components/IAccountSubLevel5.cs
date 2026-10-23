@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account and holding of the next sub-level (Level 5).
 /// </summary>
 [IsoId("_KnXN94j3EeONZKAAW4pOaQ")]
+[IsoDisplayName(@"Account Sub Level")]
 public interface IAccountSubLevel5 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IAccountSubLevel5 : IIsoComponent
     [IsoId("_xZr-ETyvEeSBD_ZW60GwCQ")]
     [DisplayName("Beneficial Owner")]
     [IsoXmlTag("BnfclOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficialOwner2> BeneficialOwner { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IAccountSubLevel5 : IIsoComponent
     [IsoId("_KnXN-oj3EeONZKAAW4pOaQ")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateHoldingBalance1> BalanceForAccount { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IAccountSubLevel5 : IIsoComponent
     [IsoId("_KnXN-Yj3EeONZKAAW4pOaQ")]
     [DisplayName("Account Sub Level")]
     [IsoXmlTag("AcctSubLvl6")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountSubLevel6> AccountSubLevel6 { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IAccountSubLevel5 : IIsoComponent
     [IsoId("_KnXN-Ij3EeONZKAAW4pOaQ")]
     [DisplayName("Account Sub Level 6 Difference")]
     [IsoXmlTag("AcctSubLvl6Diff")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateHoldingBalance2> AccountSubLevel6Difference { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface IAccountSubLevel5 : IIsoComponent
     [IsoId("_K4_k0b3OEeO2FLWuu_JIqg")]
     [DisplayName("Agent Code")]
     [IsoXmlTag("AgtCd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary29> AgentCode { get; }
 
     /// <summary>
@@ -81,5 +87,6 @@ public interface IAccountSubLevel5 : IIsoComponent
     [IsoId("_Ms1bkW5HEeSFHPWGV34yZw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

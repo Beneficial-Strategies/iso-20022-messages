@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Margin required to cover the risk because of the price fluctuations occurred on the unsettled exposures towards the central counterparty.
 /// </summary>
 [IsoId("_Uk2CNNp-Ed-ak6NoX_4Aeg_-526751507")]
+[IsoDisplayName(@"Total Variation Margin")]
 public interface ITotalVariationMargin1 : IIsoComponent
 {
     /// <summary>

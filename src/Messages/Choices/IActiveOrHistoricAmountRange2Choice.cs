@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a range of amount values with or without the currency.
 /// </summary>
 [IsoId("_PHbQeZlcEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Active Or Historic Amount Range 2 Choice")]
 public interface IActiveOrHistoricAmountRange2Choice : IIsoChoice { }

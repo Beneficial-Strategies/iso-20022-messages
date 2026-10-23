@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Underlying Transaction34.
 /// </summary>
 [IsoId("_9jlatzEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Underlying Transaction34")]
 public interface IUnderlyingTransaction34 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IUnderlyingTransaction34 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction155> TransactionInformation { get; }
 }

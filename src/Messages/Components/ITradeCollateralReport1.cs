@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of collateral agreement between counterparties.
 /// </summary>
 [IsoId("_NACgIPP5EeS_qLctCs2aRQ")]
+[IsoDisplayName(@"Trade Collateral Report")]
 public interface ITradeCollateralReport1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITradeCollateralReport1 : IIsoComponent
     [IsoId("_YX2F4PP5EeS_qLctCs2aRQ")]
     [DisplayName("Portfolio")]
     [IsoXmlTag("Prtfl")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? Portfolio { get; }
 
     /// <summary>

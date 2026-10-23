@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed ownership information about the shareholding quantity to be disclosed,  or the shareholding quantity not to be disclosed and the shareholding quantity below threshold.
 /// </summary>
 [IsoId("_6J90MMAOEembi_x1QDJfxw")]
+[IsoDisplayName(@"Account Sublevel")]
 public interface IAccountSublevel21 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IAccountSublevel21 : IIsoComponent
     [IsoId("_KKnNUMAPEembi_x1QDJfxw")]
     [DisplayName("Disclosure")]
     [IsoXmlTag("Dsclsr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountSubLevel20> Disclosure { get; }
 }

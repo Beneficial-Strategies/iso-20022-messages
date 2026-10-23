@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a suspended status.
 /// </summary>
 [IsoId("_ocV_UUHlEea8I67lh6qdSQ")]
+[IsoDisplayName(@"Suspended Status Reason 5 Choice")]
 public interface ISuspendedStatusReason5Choice : IIsoChoice { }

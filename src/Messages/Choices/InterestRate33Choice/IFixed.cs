@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate33Choice;
 /// </summary>
 [IsoId("_CRCiESJLEe2zWP9pqvmqdw")]
 [IsoXmlTag("Fxd")]
+[IsoDisplayName(@"Fixed")]
 public interface IFixed : IInterestRate33Choice, IIsoChoiceVariant
 {
     /// <summary>

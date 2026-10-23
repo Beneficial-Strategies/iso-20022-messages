@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a derivative event.
 /// </summary>
 [IsoId("_GaCT4TIGEe2fXedS_ucFOA")]
+[IsoDisplayName(@"Compare Derivative Event")]
 public interface ICompareDerivativeEvent1 : IIsoComponent
 {
     /// <summary>

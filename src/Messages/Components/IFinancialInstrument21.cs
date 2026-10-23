@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example, dividend option or valuation currency.
 /// </summary>
 [IsoId("_SbwOyNp-Ed-ak6NoX_4Aeg_-1299179113")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument21 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrument21 : IIsoComponent
     [IsoId("_SbwOydp-Ed-ak6NoX_4Aeg_1884876764")]
     [DisplayName("Class Type")]
     [IsoXmlTag("ClssTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClassType { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IFinancialInstrument21 : IIsoComponent
     [IsoId("_Sb5Ysdp-Ed-ak6NoX_4Aeg_-1351365069")]
     [DisplayName("Product Group")]
     [IsoXmlTag("PdctGrp")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? ProductGroup { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IFinancialInstrument21 : IIsoComponent
     [IsoId("_Sb5Ystp-Ed-ak6NoX_4Aeg_887804411")]
     [DisplayName("Umbrella Name")]
     [IsoXmlTag("UmbrllNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? UmbrellaName { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IFinancialInstrument21 : IIsoComponent
     [IsoId("_Sb5Yttp-Ed-ak6NoX_4Aeg_2138421400")]
     [DisplayName("Dual Fund Indicator")]
     [IsoXmlTag("DualFndInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DualFundIndicator { get; }
 
     /// <summary>
@@ -97,5 +105,6 @@ public interface IFinancialInstrument21 : IIsoComponent
     [IsoId("_Sb5YuNp-Ed-ak6NoX_4Aeg_-992501229")]
     [DisplayName("Registered Distribution Country")]
     [IsoXmlTag("RegdDstrbtnCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> RegisteredDistributionCountry { get; }
 }

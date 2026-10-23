@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the account expressed with a data source scheme.
 /// </summary>
 [IsoId("_puErAEVnEeS9ytE0W9bgkQ")]
+[IsoDisplayName(@"Account Identification")]
 public interface IAccountIdentification30 : IIsoComponent
 {
     /// <summary>

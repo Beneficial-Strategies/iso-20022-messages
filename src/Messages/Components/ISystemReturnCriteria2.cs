@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to report on a system or a member of the system.
 /// </summary>
 [IsoId("_RD_KlNp-Ed-ak6NoX_4Aeg_5460592")]
+[IsoDisplayName(@"System Return Criteria")]
 public interface ISystemReturnCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISystemReturnCriteria2 : IIsoComponent
     [IsoId("_RD_Kldp-Ed-ak6NoX_4Aeg_5460611")]
     [DisplayName("System Identification Indicator")]
     [IsoXmlTag("SysIdInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? SystemIdentificationIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISystemReturnCriteria2 : IIsoComponent
     [IsoId("_RD_Kltp-Ed-ak6NoX_4Aeg_5460652")]
     [DisplayName("Member Identification Indicator")]
     [IsoXmlTag("MmbIdInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? MemberIdentificationIndicator { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISystemReturnCriteria2 : IIsoComponent
     [IsoId("_RD_Kl9p-Ed-ak6NoX_4Aeg_348086000")]
     [DisplayName("Country Identification Indicator")]
     [IsoXmlTag("CtryIdInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? CountryIdentificationIndicator { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ISystemReturnCriteria2 : IIsoComponent
     [IsoId("_RD_KmNp-Ed-ak6NoX_4Aeg_762169796")]
     [DisplayName("Account Identification Indicator")]
     [IsoXmlTag("AcctIdInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? AccountIdentificationIndicator { get; }
 }

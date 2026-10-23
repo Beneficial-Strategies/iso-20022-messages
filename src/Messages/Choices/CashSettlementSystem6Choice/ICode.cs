@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashSettlementSystem6Choice;
 
 /// <summary>Cash settlement system expressed as an ISO 20022 code.</summary>
 [IsoId("_evTQ1ZZ1EfC2_67yGLymgA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICashSettlementSystem6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

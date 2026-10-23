@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the message reference of the message for which the status is requested and the business reference of the transfer instruction.
 /// </summary>
 [IsoId("_TwcKQR6nEeOolf0-cMYhrw")]
+[IsoDisplayName(@"Message And Business Reference")]
 public interface IMessageAndBusinessReference7 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IMessageAndBusinessReference7 : IIsoComponent
     [IsoId("_UHZ4xR6nEeOolf0-cMYhrw")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IMessageAndBusinessReference7 : IIsoComponent
     [IsoId("_UHZ4xx6nEeOolf0-cMYhrw")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IMessageAndBusinessReference7 : IIsoComponent
     [IsoId("_UHZ4yR6nEeOolf0-cMYhrw")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IMessageAndBusinessReference7 : IIsoComponent
     [IsoId("_UHZ4yx6nEeOolf0-cMYhrw")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>

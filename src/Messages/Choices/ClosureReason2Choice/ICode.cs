@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosureReason2Choice;
 /// Reason the system is closed/not operating, in a coded form.
 /// </summary>
 [IsoId("_72rN8aMgEeCJ6YNENx4h-w_2072167944")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IClosureReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

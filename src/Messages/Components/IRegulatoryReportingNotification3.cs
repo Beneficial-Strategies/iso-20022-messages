@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the regulatory notification.
 /// </summary>
 [IsoId("_o5oMsbGJEeuSTr8k0UEM8A")]
+[IsoDisplayName(@"Regulatory Reporting Notification")]
 public interface IRegulatoryReportingNotification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRegulatoryReportingNotification3 : IIsoComponent
     [IsoId("_o6u_8bGJEeuSTr8k0UEM8A")]
     [DisplayName("Transaction Notification Identification")]
     [IsoXmlTag("TxNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionNotificationIdentification { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IRegulatoryReportingNotification3 : IIsoComponent
     [IsoId("_o6u_97GJEeuSTr8k0UEM8A")]
     [DisplayName("Transaction Certificate")]
     [IsoXmlTag("TxCert")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionCertificate4> TransactionCertificate { get; }
 }

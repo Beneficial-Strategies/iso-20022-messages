@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about identification and account of the party.
 /// </summary>
 [IsoId("_8GkFW_fREeiNZp_PtLohLw")]
+[IsoDisplayName(@"Party Identification And Account")]
 public interface IPartyIdentificationAndAccount173 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPartyIdentificationAndAccount173 : IIsoComponent
     [IsoId("_8GkFaffREeiNZp_PtLohLw")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINXMax35Text? SafekeepingAccount { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPartyIdentificationAndAccount173 : IIsoComponent
     [IsoId("_8GkFcffREeiNZp_PtLohLw")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ProcessingIdentification { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface IPartyIdentificationAndAccount173 : IIsoComponent
     [IsoId("_8GkFeffREeiNZp_PtLohLw")]
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAlternatePartyIdentification9> AlternateIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference3Choice;
 /// Unique identifier of the collateral substitution response.
 /// </summary>
 [IsoId("_d0qV4gLyEeutW5-TpeYJhA")]
+[IsoDisplayName(@"Collateral Substitution Response Identification")]
 public interface ICollateralSubstitutionResponseIdentification
     : IReference3Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ICollateralSubstitutionResponseIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("CollSbstitnRspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

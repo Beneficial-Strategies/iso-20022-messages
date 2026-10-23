@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the identification of the reported party through the name or the sector.
 /// </summary>
 [IsoId("_6MuWYYInEeWA9fc11zJf1Q")]
+[IsoDisplayName(@"Name Or Sector 1 Choice")]
 public interface INameOrSector1Choice : IIsoChoice { }

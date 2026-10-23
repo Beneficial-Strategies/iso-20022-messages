@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus51Choice;
 /// Processing of the instruction/request is pending.
 /// </summary>
 [IsoId("_jWWViTnvEeWfSKvvZlhRKg")]
+[IsoDisplayName(@"Pending Processing")]
 public interface IPendingProcessing : IProcessingStatus51Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

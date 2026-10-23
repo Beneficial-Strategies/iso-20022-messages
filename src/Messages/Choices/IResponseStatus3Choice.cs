@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of response status.
 /// </summary>
 [IsoId("_0j-I4AlIEeGATtfOBToyew_1037532092")]
+[IsoDisplayName(@"Response Status 3 Choice")]
 public interface IResponseStatus3Choice : IIsoChoice { }

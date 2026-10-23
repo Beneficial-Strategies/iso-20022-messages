@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a switch leg that is rejected or repaired.
 /// </summary>
 [IsoId("_Fx2LRTbtEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Switch Leg References")]
 public interface ISwitchLegReferences2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ISwitchLegReferences2 : IIsoComponent
     [IsoId("_GKGTFzbtEead9bDRE_1DAQ")]
     [DisplayName("Leg Rejection Reason")]
     [IsoXmlTag("LegRjctnRsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? LegRejectionReason { get; }
 
     /// <summary>
@@ -33,6 +36,9 @@ public interface ISwitchLegReferences2 : IIsoComponent
     [IsoId("_KVakgUgmEea9YuSvQGoi-w")]
     [DisplayName("Repaired Fee")]
     [IsoXmlTag("RprdFee")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFee3> RepairedFee { get; }
 
     /// <summary>

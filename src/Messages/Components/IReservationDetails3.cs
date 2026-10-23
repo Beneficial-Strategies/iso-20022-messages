@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the reservation details
 /// </summary>
 [IsoId("_tCvU1PPiEeihCvvpsmGI2w")]
+[IsoDisplayName(@"Reservation Details")]
 public interface IReservationDetails3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReservationDetails3 : IIsoComponent
     [IsoId("_tCvU1_PiEeihCvvpsmGI2w")]
     [DisplayName("System")]
     [IsoXmlTag("Sys")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? System { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IReservationDetails3 : IIsoComponent
     [IsoId("_tCvU1vPiEeihCvvpsmGI2w")]
     [DisplayName("Reservation Number")]
     [IsoXmlTag("RsvatnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReservationNumber { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IReservationDetails3 : IIsoComponent
     [IsoId("_tCvU1fPiEeihCvvpsmGI2w")]
     [DisplayName("Original System")]
     [IsoXmlTag("OrgnlSys")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? OriginalSystem { get; }
 
     /// <summary>
@@ -41,5 +48,7 @@ public interface IReservationDetails3 : IIsoComponent
     [IsoId("_1YJEEfPjEeihCvvpsmGI2w")]
     [DisplayName("Original Reservation Number")]
     [IsoXmlTag("OrgnlRsvatnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalReservationNumber { get; }
 }

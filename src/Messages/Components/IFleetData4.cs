@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fleet data pertaining to the payment transaction.
 /// </summary>
 [IsoId("_FceP0RyuEey6gI8SKlv7rg")]
+[IsoDisplayName(@"Fleet Data")]
 public interface IFleetData4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IFleetData4 : IIsoComponent
     [IsoId("_FiO5kxyuEey6gI8SKlv7rg")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFleetLineItem4> LineItem { get; }
 }

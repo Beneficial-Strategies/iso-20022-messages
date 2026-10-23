@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason67Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPendingReason67Choice, IIsoChoiceVariant
 {
     /// <summary>

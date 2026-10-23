@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the Retailer Event message.
 /// </summary>
 [IsoId("_1jcBwQ0tEeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Event Context")]
 public interface IEventContext2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IEventContext2 : IIsoComponent
     [IsoId("_1vObBQ0tEeqUVL7sB4m7NA")]
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleIdentification { get; }
 }

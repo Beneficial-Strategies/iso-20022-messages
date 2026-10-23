@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information that can not be captured in the structured fields and/or any other specific block.
 /// </summary>
 [IsoId("_Q6vvCNp-Ed-ak6NoX_4Aeg_1503007069")]
+[IsoDisplayName(@"Extension")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. No removal date recorded.")]
 public interface IExtension1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IExtension1 : IIsoComponent
     [IsoId("_Q65gANp-Ed-ak6NoX_4Aeg_-1802982859")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -25,5 +29,7 @@ public interface IExtension1 : IIsoComponent
     [IsoId("_Q65gAdp-Ed-ak6NoX_4Aeg_-1661684876")]
     [DisplayName("Text")]
     [IsoXmlTag("Txt")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Text { get; }
 }

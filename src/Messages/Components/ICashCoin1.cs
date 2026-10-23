@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Withdrawal or deposit of an amount of money defined in cash coins.
 /// </summary>
 [IsoId("_lb1etEBcEfCGo6pGJ7j7Eg")]
+[IsoDisplayName(@"Cash Coin1")]
 public interface ICashCoin1 : IIsoComponent
 {
     /// <summary>

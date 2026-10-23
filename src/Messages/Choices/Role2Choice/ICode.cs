@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Role2Choice;
 /// Role of the party in the activity expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_Qwm7lNp-Ed-ak6NoX_4Aeg_-1115232892")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRole2Choice, IIsoChoiceVariant
 {
     /// <summary>

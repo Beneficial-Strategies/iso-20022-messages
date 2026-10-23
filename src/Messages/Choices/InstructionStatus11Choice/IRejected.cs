@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus11Choice;
 /// Status advising on the rejection of the instruction and on the reason for the rejection.
 /// </summary>
 [IsoId("_htjMpRrpEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IInstructionStatus11Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

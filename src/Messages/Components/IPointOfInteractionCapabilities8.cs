@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Capabilities of the POI (Point Of Interaction) performing the transaction.
 /// </summary>
 [IsoId("_Z6U5gdkHEeiojJsa6FYyew")]
+[IsoDisplayName(@"Point Of Interaction Capabilities")]
 public interface IPointOfInteractionCapabilities8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPointOfInteractionCapabilities8 : IIsoComponent
     [IsoId("_aD4eIdkHEeiojJsa6FYyew")]
     [DisplayName("Card Reading Capabilities")]
     [IsoXmlTag("CardRdngCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataReading6Code> CardReadingCapabilities { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPointOfInteractionCapabilities8 : IIsoComponent
     [IsoId("_aD5FMdkHEeiojJsa6FYyew")]
     [DisplayName("Cardholder Verification Capabilities")]
     [IsoXmlTag("CrdhldrVrfctnCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardholderVerificationCapability4Code> CardholderVerificationCapabilities { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPointOfInteractionCapabilities8 : IIsoComponent
     [IsoId("_aD5FM9kHEeiojJsa6FYyew")]
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? PINLengthCapabilities { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IPointOfInteractionCapabilities8 : IIsoComponent
     [IsoId("_aD5FNdkHEeiojJsa6FYyew")]
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? ApprovalCodeLength { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IPointOfInteractionCapabilities8 : IIsoComponent
     [IsoId("_aD5FN9kHEeiojJsa6FYyew")]
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? MaxScriptLength { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IPointOfInteractionCapabilities8 : IIsoComponent
     [IsoId("_aD5FOdkHEeiojJsa6FYyew")]
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardCaptureCapable { get; }
 
     /// <summary>
@@ -73,5 +80,6 @@ public interface IPointOfInteractionCapabilities8 : IIsoComponent
     [IsoId("_aD5FPdkHEeiojJsa6FYyew")]
     [DisplayName("Message Capabilities")]
     [IsoXmlTag("MsgCpblties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisplayCapabilities4> MessageCapabilities { get; }
 }

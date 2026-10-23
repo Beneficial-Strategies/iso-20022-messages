@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the request providing the changes and references of the instruction.
 /// </summary>
 [IsoId("_ZCu2lzneEem7JZMuWtwtsg")]
+[IsoDisplayName(@"Request Details")]
 public interface IRequestDetails22 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IRequestDetails22 : IIsoComponent
     [IsoId("_ZMt4rTneEem7JZMuWtwtsg")]
     [DisplayName("Other Processing")]
     [IsoXmlTag("OthrPrcg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification30> OtherProcessing { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IRequestDetails22 : IIsoComponent
     [IsoId("_ZMt4tTneEem7JZMuWtwtsg")]
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PartialSettlementIndicator { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface IRequestDetails22 : IIsoComponent
     [IsoId("_ZMt4xTneEem7JZMuWtwtsg")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages57> Linkages { get; }
 }

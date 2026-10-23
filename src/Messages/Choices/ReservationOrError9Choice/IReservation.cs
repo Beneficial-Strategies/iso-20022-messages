@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError9Choice;
 /// </summary>
 [IsoId("_RYRzgXhdEeidzqjNEfehPg")]
 [IsoXmlTag("Rsvatn")]
+[IsoDisplayName(@"Reservation")]
 public interface IReservation : IReservationOrError9Choice, IIsoChoiceVariant
 {
     /// <summary>

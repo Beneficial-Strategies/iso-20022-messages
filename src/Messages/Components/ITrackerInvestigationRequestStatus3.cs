@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tracker Investigation Request Status3.
 /// </summary>
 [IsoId("_heHI0Z95Ee6ujbXJ3GcKgA")]
+[IsoDisplayName(@"Tracker Investigation Request Status3")]
 public interface ITrackerInvestigationRequestStatus3 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ITrackerInvestigationRequestStatus3 : IIsoComponent
     /// </summary>
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestigationRequestStatusReason1Choice> StatusReason { get; }
 
     /// <summary>
@@ -86,5 +88,6 @@ public interface ITrackerInvestigationRequestStatus3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

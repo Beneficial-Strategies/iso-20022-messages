@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indicates whether the contract was cleared or not.
 /// </summary>
 [IsoId("_4fWa8ZQPEeiok48Eh9lW9Q")]
+[IsoDisplayName(@"Cleared 9 Choice")]
 public interface ICleared9Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that serves as a basis to debit an account.
 /// </summary>
 [IsoId("_fdUzYdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Mandate")]
 public interface IMandate19 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMandate19 : IIsoComponent
     [IsoId("_feuhldcZEeqRFcf2R4bPBw")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> MandateIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IMandate19 : IIsoComponent
     [IsoId("_feuhl9cZEeqRFcf2R4bPBw")]
     [DisplayName("Mandate Request Identification")]
     [IsoXmlTag("MndtReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MandateRequestIdentification { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IMandate19 : IIsoComponent
     [IsoId("_feuhn9cZEeqRFcf2R4bPBw")]
     [DisplayName("Tracking Indicator")]
     [IsoXmlTag("TrckgInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator TrackingIndicator { get; }
 
     /// <summary>
@@ -177,6 +182,8 @@ public interface IMandate19 : IIsoComponent
     [IsoId("_feuhvdcZEeqRFcf2R4bPBw")]
     [DisplayName("Mandate Reference")]
     [IsoXmlTag("MndtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateReference { get; }
 
     /// <summary>
@@ -185,6 +192,7 @@ public interface IMandate19 : IIsoComponent
     [IsoId("_feuhv9cZEeqRFcf2R4bPBw")]
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferredMandateDocument1> ReferredDocument { get; }
 
     /// <summary>
@@ -193,5 +201,6 @@ public interface IMandate19 : IIsoComponent
     [IsoId("_feuhwdcZEeqRFcf2R4bPBw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

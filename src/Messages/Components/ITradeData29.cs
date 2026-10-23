@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the reported trade transactions.
 /// </summary>
 [IsoId("_hSAnJcK4EeuFNp8LZAnorg")]
+[IsoDisplayName(@"Trade Data")]
 public interface ITradeData29 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeData29 : IIsoComponent
     [IsoId("_hTXSAcK4EeuFNp8LZAnorg")]
     [DisplayName("Report Statistics")]
     [IsoXmlTag("RptSttstcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedReportStatistics5> ReportStatistics { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITradeData29 : IIsoComponent
     [IsoId("_hTXSA8K4EeuFNp8LZAnorg")]
     [DisplayName("Transaction Statistics")]
     [IsoXmlTag("TxSttstcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedTransactionStatistics2Choice> TransactionStatistics { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ITradeData29 : IIsoComponent
     [IsoId("_hTXSBcK4EeuFNp8LZAnorg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

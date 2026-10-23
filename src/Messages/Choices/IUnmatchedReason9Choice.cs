@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the settlement transaction unmatched reason.
 /// </summary>
 [IsoId("_5xWgFf7YEeCtrO5qCU90cA")]
+[IsoDisplayName(@"Unmatched Reason 9 Choice")]
 public interface IUnmatchedReason9Choice : IIsoChoice { }

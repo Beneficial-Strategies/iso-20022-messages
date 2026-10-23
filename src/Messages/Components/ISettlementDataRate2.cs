@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the volume and value percentage rates of settlement instructions.
 /// </summary>
 [IsoId("_vW5JAY0SEemUAO64Q252gQ")]
+[IsoDisplayName(@"Settlement Data Rate")]
 public interface ISettlementDataRate2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementDataRate2 : IIsoComponent
     [IsoId("_vb6L4Y0SEemUAO64Q252gQ")]
     [DisplayName("Volume")]
     [IsoXmlTag("Vol")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Volume { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ISettlementDataRate2 : IIsoComponent
     [IsoId("_vb6L440SEemUAO64Q252gQ")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

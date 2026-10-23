@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrNonFinRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.023.001.05"
 )]
+[IsoDisplayName(@"Acceptor Non Financial Response V05")]
 public interface IAcceptorNonFinancialResponseV05 : IOuterRecord
 {
     /// <summary>

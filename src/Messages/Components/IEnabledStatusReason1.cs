@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for an enabled status.
 /// </summary>
 [IsoId("_tdbsMEy9EeafiMTDrtSnyw")]
+[IsoDisplayName(@"Enabled Status Reason")]
 public interface IEnabledStatusReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IEnabledStatusReason1 : IIsoComponent
     [IsoId("_MI23sEy-EeafiMTDrtSnyw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

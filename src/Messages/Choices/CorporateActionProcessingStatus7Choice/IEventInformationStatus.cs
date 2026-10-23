@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus7
 /// <summary>
 /// Event Information Status.
 /// </summary>
+[IsoDisplayName(@"Event Information Status")]
 public interface IEventInformationStatus
     : ICorporateActionProcessingStatus7Choice,
         IIsoChoiceVariant

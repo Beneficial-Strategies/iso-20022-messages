@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a fertilizer derivative of type sulphur.
 /// </summary>
 [IsoId("_suf94U8REe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Fertilizer Commodity Sulphur")]
 public interface IFertilizerCommoditySulphur2 : IIsoComponent
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation7Choice;
 /// </summary>
 [IsoId("_l0CXoQgMEeSFYfyUKDXKaw")]
 [IsoXmlTag("CxlByTrfInstrDtls")]
+[IsoDisplayName(@"Cancellation By Transfer Instruction Details")]
 public interface ICancellationByTransferInstructionDetails : ICancellation7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface ICancellationByTransferInstructionDetails : ICancellation7Choic
     [IsoId("_mPHxMQgMEeSFYfyUKDXKaw")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson8> OtherIndividualInvestor { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface ICancellationByTransferInstructionDetails : ICancellation7Choic
     [IsoId("_mPHxNwgMEeSFYfyUKDXKaw")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation4> OtherCorporateInvestor { get; }
 
     /// <summary>
@@ -106,5 +109,6 @@ public interface ICancellationByTransferInstructionDetails : ICancellation7Choic
     [IsoId("_mPHxQwgMEeSFYfyUKDXKaw")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the price information related to the underlying transaction.
 /// </summary>
 [IsoId("_Rp1Cl9p-Ed-ak6NoX_4Aeg_997208296")]
+[IsoDisplayName(@"Transaction Price 2 Choice")]
 public interface ITransactionPrice2Choice : IIsoChoice { }

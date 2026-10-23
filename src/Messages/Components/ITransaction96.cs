@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Batch management transaction.
 /// </summary>
 [IsoId("_3xcXwVA5EeedyPuM0kK2EQ")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction96 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface ITransaction96 : IIsoComponent
     [IsoId("_38KaCVA5EeedyPuM0kK2EQ")]
     [DisplayName("Batch Identification")]
     [IsoXmlTag("BtchId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? BatchIdentification { get; }
 
     /// <summary>
@@ -35,6 +38,8 @@ public interface ITransaction96 : IIsoComponent
     [IsoId("_38KaDVA5EeedyPuM0kK2EQ")]
     [DisplayName("Original Batch Identification")]
     [IsoXmlTag("OrgnlBtchId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? OriginalBatchIdentification { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface ITransaction96 : IIsoComponent
     [IsoId("_38KaEVA5EeedyPuM0kK2EQ")]
     [DisplayName("Number Of Messages")]
     [IsoXmlTag("NbOfMsgs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfMessages { get; }
 
     /// <summary>
@@ -58,6 +64,7 @@ public interface ITransaction96 : IIsoComponent
     [IsoId("_38KaFVA5EeedyPuM0kK2EQ")]
     [DisplayName("Batch Checksum")]
     [IsoXmlTag("BtchChcksm")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary? BatchChecksum { get; }
 
     /// <summary>
@@ -68,6 +75,7 @@ public interface ITransaction96 : IIsoComponent
     [IsoId("_38KaF1A5EeedyPuM0kK2EQ")]
     [DisplayName("Request Acknowledgement")]
     [IsoXmlTag("ReqAck")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RequestAcknowledgement { get; }
 
     /// <summary>
@@ -76,6 +84,7 @@ public interface ITransaction96 : IIsoComponent
     [IsoId("_onRW0FA9EeedyPuM0kK2EQ")]
     [DisplayName("Clearing Batch Data")]
     [IsoXmlTag("ClrBtchData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IClearingBatchData1> ClearingBatchData { get; }
 
     /// <summary>
@@ -92,6 +101,7 @@ public interface ITransaction96 : IIsoComponent
     [IsoId("_lwazkFA_EeedyPuM0kK2EQ")]
     [DisplayName("Agent Data")]
     [IsoXmlTag("AgtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation21> AgentData { get; }
 
     /// <summary>
@@ -100,6 +110,7 @@ public interface ITransaction96 : IIsoComponent
     [IsoId("_gh0uIFBHEeedyPuM0kK2EQ")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRecord1> Record { get; }
 
     /// <summary>
@@ -108,5 +119,6 @@ public interface ITransaction96 : IIsoComponent
     [IsoId("_qDF70RqmEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

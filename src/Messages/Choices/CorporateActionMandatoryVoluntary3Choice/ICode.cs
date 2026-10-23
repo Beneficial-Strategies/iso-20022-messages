@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMandatoryVoluntar
 /// Standard code to specify whether the event is mandatory, mandatory with options or voluntary.
 /// </summary>
 [IsoId("_fJ6PcTndEeWLJsP1cO-amg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionMandatoryVoluntary3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the charge tax basis.
 /// </summary>
 [IsoId("_VKcMAZBhEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Charge Tax Basis Type 2 Choice")]
 public interface IChargeTaxBasisType2Choice : IIsoChoice { }

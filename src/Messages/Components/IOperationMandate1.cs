@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information specifying the Mandate.
 /// </summary>
 [IsoId("_PU0TCNp-Ed-ak6NoX_4Aeg_882485355")]
+[IsoDisplayName(@"Operation Mandate")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IOperationMandate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IOperationMandate1 : IIsoComponent
     [IsoId("_PU0TCdp-Ed-ak6NoX_4Aeg_-722803781")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +29,7 @@ public interface IOperationMandate1 : IIsoComponent
     [IsoId("_PU0TCtp-Ed-ak6NoX_4Aeg_282782805")]
     [DisplayName("Required Signature Number")]
     [IsoXmlTag("ReqrdSgntrNb")]
+    [IsoSimpleType(IsoSimpleType.Max15PlusSignedNumericText)]
     Max15PlusSignedNumericText RequiredSignatureNumber { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IOperationMandate1 : IIsoComponent
     [IsoId("_PU0TC9p-Ed-ak6NoX_4Aeg_314180071")]
     [DisplayName("Signature Order Indicator")]
     [IsoXmlTag("SgntrOrdrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SignatureOrderIndicator { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IOperationMandate1 : IIsoComponent
     [IsoId("_PU0TDNp-Ed-ak6NoX_4Aeg_-1242081229")]
     [DisplayName("Mandate Holder")]
     [IsoXmlTag("MndtHldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndCertificate1> MandateHolder { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IOperationMandate1 : IIsoComponent
     [IsoId("_PU0TDdp-Ed-ak6NoX_4Aeg_-375361255")]
     [DisplayName("Bank Operation")]
     [IsoXmlTag("BkOpr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBankTransactionCodeStructure4> BankOperation { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IOperationMandate1 : IIsoComponent
     [IsoId("_PU0TDtp-Ed-ak6NoX_4Aeg_-1787248680")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -65,5 +74,6 @@ public interface IOperationMandate1 : IIsoComponent
     [IsoId("_PU-EANp-Ed-ak6NoX_4Aeg_-1712030691")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EndDate { get; }
 }

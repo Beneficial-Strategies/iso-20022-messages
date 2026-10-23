@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailedSettlementStatus2Choice;
 /// Reason for the failed settlement status.
 /// </summary>
 [IsoId("_DqHjMyY5EeW_ZNn8gbfY7Q")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IFailedSettlementStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IReason : IFailedSettlementStatus2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 350 characters.
     /// </summary>
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Value { get; }
 }

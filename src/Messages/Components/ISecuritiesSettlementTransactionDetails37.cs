@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the update(s) for the settlement transaction.
 /// </summary>
 [IsoId("_VMG4rc32Eee5nJBZsW8MFQ")]
+[IsoDisplayName(@"Securities Settlement Transaction Details")]
 public interface ISecuritiesSettlementTransactionDetails37 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISecuritiesSettlementTransactionDetails37 : IIsoComponent
     [IsoId("_VMG4sc32Eee5nJBZsW8MFQ")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages48> Linkages { get; }
 
     /// <summary>
@@ -137,5 +139,6 @@ public interface ISecuritiesSettlementTransactionDetails37 : IIsoComponent
     [IsoId("_VMG4zc32Eee5nJBZsW8MFQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reports either on the business information or on a business error.
 /// </summary>
 [IsoId("_MP5s5ZlgEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"General Business Report")]
 public interface IGeneralBusinessReport5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGeneralBusinessReport5 : IIsoComponent
     [IsoId("_MYGmo5lgEeeE1Ya-LgRsuQ")]
     [DisplayName("Business Information Reference")]
     [IsoXmlTag("BizInfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text BusinessInformationReference { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party involved in the settlement chain.
 /// </summary>
 [IsoId("_T4ZcCyqSEeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Party Identification And Account")]
 public interface IPartyIdentificationAndAccount200 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPartyIdentificationAndAccount200 : IIsoComponent
     [IsoId("_URSdJSqSEeyR9JrVGfaMKw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPartyIdentificationAndAccount200 : IIsoComponent
     [IsoId("_QTz68SqSEeyR9JrVGfaMKw")]
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? BlockChainAddressOrWallet { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPartyIdentificationAndAccount200 : IIsoComponent
     [IsoId("_URSdJyqSEeyR9JrVGfaMKw")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessingIdentification { get; }
 
     /// <summary>

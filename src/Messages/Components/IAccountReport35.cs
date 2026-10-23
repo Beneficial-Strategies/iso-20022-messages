@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account Report35.
 /// </summary>
 [IsoId("_3zeOdTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Account Report35")]
 public interface IAccountReport35 : IIsoComponent
 {
     /// <summary>

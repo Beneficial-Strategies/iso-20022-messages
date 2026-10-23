@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice;
 /// <summary>
 /// System Party Date.
 /// </summary>
+[IsoDisplayName(@"System Party Date")]
 public interface ISystemPartyDate : ISystemPartyModification3Choice, IIsoChoiceVariant
 {
     /// <summary>

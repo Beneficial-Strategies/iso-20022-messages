@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a underlying instrument.
 /// </summary>
 [IsoId("_eZnNkVo2Ee23K4GXSpBSeg")]
+[IsoDisplayName(@"Compare Underlying Instrument")]
 public interface ICompareUnderlyingInstrument3 : IIsoComponent
 {
     /// <summary>

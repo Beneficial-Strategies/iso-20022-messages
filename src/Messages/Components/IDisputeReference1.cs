@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains dispute reference details.
 /// </summary>
 [IsoId("_sXZCwOCmEee9RadpHmUgYw")]
+[IsoDisplayName(@"Dispute Reference")]
 public interface IDisputeReference1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDisputeReference1 : IIsoComponent
     [IsoId("_krXOYOCqEee9RadpHmUgYw")]
     [DisplayName("Other Assigner Entity")]
     [IsoXmlTag("OthrAssgnrNtty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherAssignerEntity { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IDisputeReference1 : IIsoComponent
     [IsoId("_NvLt4OCnEee9RadpHmUgYw")]
     [DisplayName("Dispute Identification")]
     [IsoXmlTag("DsptId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeIdentification1> DisputeIdentification { get; }
 }

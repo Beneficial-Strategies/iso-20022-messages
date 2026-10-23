@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements to fully identify a proprietary bank transaction code.
 /// </summary>
 [IsoId("_TVRQtdp-Ed-ak6NoX_4Aeg_1519549154")]
+[IsoDisplayName(@"Proprietary Bank Transaction Code Structure")]
 public interface IProprietaryBankTransactionCodeStructure1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProprietaryBankTransactionCodeStructure1 : IIsoComponent
     [IsoId("_TVRQttp-Ed-ak6NoX_4Aeg_1519549163")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Code { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IProprietaryBankTransactionCodeStructure1 : IIsoComponent
     [IsoId("_TVRQt9p-Ed-ak6NoX_4Aeg_2005322670")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

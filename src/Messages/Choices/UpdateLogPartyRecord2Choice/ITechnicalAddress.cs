@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice;
 /// <summary>
 /// Technical Address.
 /// </summary>
+[IsoDisplayName(@"Technical Address")]
 public interface ITechnicalAddress : IUpdateLogPartyRecord2Choice, IIsoChoiceVariant
 {
     /// <summary>

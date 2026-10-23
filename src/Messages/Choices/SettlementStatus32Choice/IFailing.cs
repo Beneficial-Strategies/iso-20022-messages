@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus32Choice;
 /// <summary>
 /// Failing.
 /// </summary>
+[IsoDisplayName(@"Failing")]
 public interface IFailing : ISettlementStatus32Choice, IIsoChoiceVariant
 {
     /// <summary>

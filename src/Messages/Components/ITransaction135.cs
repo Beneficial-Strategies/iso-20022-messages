@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reconciliation transaction
 /// </summary>
 [IsoId("_onnzYYv9EeuC5632vxUfGg")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction135 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ITransaction135 : IIsoComponent
     [IsoId("_MDkJ8CYBEeym0KcvJF9aDQ")]
     [DisplayName("Other Reconciliation Activity Type")]
     [IsoXmlTag("OthrRcncltnActvtyTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherReconciliationActivityType { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface ITransaction135 : IIsoComponent
     [IsoId("_otJMlYv9EeuC5632vxUfGg")]
     [DisplayName("Other Reconciliation Type")]
     [IsoXmlTag("OthrRcncltnTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherReconciliationType { get; }
 
     /// <summary>
@@ -66,6 +71,7 @@ public interface ITransaction135 : IIsoComponent
     [IsoId("_otJMmYv9EeuC5632vxUfGg")]
     [DisplayName("Requested Currency")]
     [IsoXmlTag("ReqdCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Exact3NumericText> RequestedCurrency { get; }
 
     /// <summary>
@@ -74,6 +80,7 @@ public interface ITransaction135 : IIsoComponent
     [IsoId("_otJMm4v9EeuC5632vxUfGg")]
     [DisplayName("Reconciliation Totals")]
     [IsoXmlTag("RcncltnTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotals13> ReconciliationTotals { get; }
 
     /// <summary>
@@ -82,6 +89,7 @@ public interface ITransaction135 : IIsoComponent
     [IsoId("_otJzoYv9EeuC5632vxUfGg")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee2> AdditionalFee { get; }
 
     /// <summary>
@@ -90,5 +98,6 @@ public interface ITransaction135 : IIsoComponent
     [IsoId("_otJzo4v9EeuC5632vxUfGg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

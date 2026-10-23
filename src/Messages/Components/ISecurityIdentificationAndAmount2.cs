@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security Identification And Amount2.
 /// </summary>
 [IsoId("_OJbUwYrZEe-RMan1tLkKgA")]
+[IsoDisplayName(@"Security Identification And Amount2")]
 public interface ISecurityIdentificationAndAmount2 : IIsoComponent
 {
     /// <summary>

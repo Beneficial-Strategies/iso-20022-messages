@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the billing rate.
 /// </summary>
 [IsoId("_6QGNppqlEeGSON8vddiWzQ_1919554496")]
+[IsoDisplayName(@"Billing Rate")]
 public interface IBillingRate1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IBillingRate1 : IIsoComponent
     [IsoId("_6QP-oZqlEeGSON8vddiWzQ_-1751808782")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IBillingRate1 : IIsoComponent
     [IsoId("_6QP-opqlEeGSON8vddiWzQ_-1641402761")]
     [DisplayName("Days In Period")]
     [IsoXmlTag("DaysInPrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? DaysInPeriod { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IBillingRate1 : IIsoComponent
     [IsoId("_6QP-o5qlEeGSON8vddiWzQ_-1276728980")]
     [DisplayName("Days In Year")]
     [IsoXmlTag("DaysInYr")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? DaysInYear { get; }
 }

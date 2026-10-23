@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details specific to the individual transaction(s) included in the message.
 /// </summary>
 [IsoId("_eyUN4XePEfCdoODv2ypKfw")]
+[IsoDisplayName(@"Credit Transfer Transaction80")]
 public interface ICreditTransferTransaction80 : IIsoComponent
 {
     /// <summary>
@@ -281,6 +282,7 @@ public interface ICreditTransferTransaction80 : IIsoComponent
     [IsoId("_e6138nePEfCdoODv2ypKfw")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent3> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -289,6 +291,7 @@ public interface ICreditTransferTransaction80 : IIsoComponent
     [IsoId("_e6139HePEfCdoODv2ypKfw")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>
@@ -305,6 +308,7 @@ public interface ICreditTransferTransaction80 : IIsoComponent
     [IsoId("_UcuTEXePEfCdoODv2ypKfw")]
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting10> RegulatoryReporting { get; }
 
     /// <summary>
@@ -321,5 +325,6 @@ public interface ICreditTransferTransaction80 : IIsoComponent
     [IsoId("_e613-nePEfCdoODv2ypKfw")]
     [DisplayName("Underlying Allocation")]
     [IsoXmlTag("UndrlygAllcn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionAllocation2> UnderlyingAllocation { get; }
 }

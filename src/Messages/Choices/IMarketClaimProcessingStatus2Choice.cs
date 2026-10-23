@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between different instruction processing statuses.</summary>
 [IsoId("_GjbckbMaEfCEXew4g5B5oA")]
+[IsoDisplayName(@"Market Claim Processing Status 2 Choice")]
 public interface IMarketClaimProcessingStatus2Choice : IIsoChoice { }

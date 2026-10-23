@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of an initial amount or number of pre-paid instalments.
 /// </summary>
 [IsoId("_Ru9ewCDaEeWCLu74WLgP4w")]
+[IsoDisplayName(@"Initial Amount 1 Choice")]
 public interface IInitialAmount1Choice : IIsoChoice { }

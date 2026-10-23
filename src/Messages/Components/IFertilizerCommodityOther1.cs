@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other fertlizer commodity derivative.
 /// </summary>
 [IsoId("_U_dt8bv7EeiLRYqS-r-R-A")]
+[IsoDisplayName(@"Fertilizer Commodity Other")]
 public interface IFertilizerCommodityOther1 : IIsoComponent
 {
     /// <summary>

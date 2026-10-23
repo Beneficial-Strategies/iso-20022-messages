@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies a correction has occurred.
 /// </summary>
 [IsoId("_H32DoJb3Eeuc6pwKtqbEVQ")]
+[IsoDisplayName(@"Correction Identification")]
 public interface ICorrectionIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorrectionIdentification1 : IIsoComponent
     [IsoId("_6niOsJb3Eeuc6pwKtqbEVQ")]
     [DisplayName("Indicator")]
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? Indicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICorrectionIdentification1 : IIsoComponent
     [IsoId("_ObTUIJb4Eeuc6pwKtqbEVQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ICorrectionIdentification1 : IIsoComponent
     [IsoId("_Tm2zAJb4Eeuc6pwKtqbEVQ")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? Time { get; }
 }

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a payment against a commercial invoice.
 /// </summary>
 [IsoId("_Tn5Ry9p-Ed-ak6NoX_4Aeg_-104260942")]
+[IsoDisplayName(@"Report Line")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IReportLine4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface IReportLine4 : IIsoComponent
     [IsoId("_ToDCwdp-Ed-ak6NoX_4Aeg_1409515872")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment4> Adjustment { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IReportLine4 : IIsoComponent
     [IsoId("_ToDCw9p-Ed-ak6NoX_4Aeg_202348166")]
     [DisplayName("Breakdown By Purchase Order")]
     [IsoXmlTag("BrkdwnByPurchsOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportLine2> BreakdownByPurchaseOrder { get; }
 }

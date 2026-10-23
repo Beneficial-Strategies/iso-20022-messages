@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesBalanceType1Choice;
 /// Balance reason in free text form.
 /// </summary>
 [IsoId("_U11Eh9p-Ed-ak6NoX_4Aeg_1406670923")]
+[IsoDisplayName(@"Unstructured")]
 public interface IUnstructured : ISecuritiesBalanceType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IUnstructured : ISecuritiesBalanceType1Choice, IIsoChoiceVarian
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Ustrd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

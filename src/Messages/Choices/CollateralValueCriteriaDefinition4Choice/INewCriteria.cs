@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueCriteriaDefinitio
 /// <summary>
 /// New Criteria.
 /// </summary>
+[IsoDisplayName(@"New Criteria")]
 public interface INewCriteria : ICollateralValueCriteriaDefinition4Choice, IIsoChoiceVariant
 {
     /// <summary>

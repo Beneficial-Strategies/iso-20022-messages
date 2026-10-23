@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the replacement processing status.
 /// </summary>
 [IsoId("_m8gS4TqqEeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Replacement Processing Status 8 Choice")]
 public interface IReplacementProcessingStatus8Choice : IIsoChoice { }

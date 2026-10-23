@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_OTgzNTEy-AOSNFX-8224507")]
 [IsoMessage("tsmt.055.001.01", "PtyEvtAdvc", "urn:iso:std:iso:20022:tech:xsd:tsmt.055.001.01")]
+[Description(@"The PartyEventAdvice message can be sent by any party to any other party. It is used for business letters containing information for which treatment is not formally defined in order to keep partners informed and to maintain business traces, for example confirmations of information exchanged out-of band such as announcing a postal letter, confirming a telephone call or the exchange of contractual information. It can also be sent to verify the technical interoperability of the communicating IT-systems.|The message can reference other message and include data from referenced messages.|The message can report several events.|The message can carry digital signatures if required by context.")]
+[IsoDisplayName(@"Party Event Advice V")]
 public interface IPartyEventAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -31,6 +33,7 @@ public interface IPartyEventAdviceV01 : IOuterRecord
     [IsoId("_OTgzNTE0-AOSNFX-8224507")]
     [DisplayName("Event Notice")]
     [IsoXmlTag("EvtNtce")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEventDescription1> EventNotice { get; }
 
     /// <summary>
@@ -39,6 +42,7 @@ public interface IPartyEventAdviceV01 : IOuterRecord
     [IsoId("_OTgzNTE1-AOSNFX-8224507")]
     [DisplayName("Event Count")]
     [IsoXmlTag("EvtCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? EventCount { get; }
 
     /// <summary>
@@ -47,5 +51,6 @@ public interface IPartyEventAdviceV01 : IOuterRecord
     [IsoId("_OTgzNTE2-AOSNFX-8224507")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncapsulatedBusinessMessage1> AttachedMessage { get; }
 }

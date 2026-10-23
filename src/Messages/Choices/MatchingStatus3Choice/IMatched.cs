@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus3Choice;
 /// </summary>
 [IsoId("_UWF0hdp-Ed-ak6NoX_4Aeg_-506961813")]
 [IsoXmlTag("Mtchd")]
+[IsoDisplayName(@"Matched")]
 public interface IMatched : IMatchingStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

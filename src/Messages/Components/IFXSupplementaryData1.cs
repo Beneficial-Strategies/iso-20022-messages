@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// FX Supplementary Data1.
 /// </summary>
 [IsoId("_IIORwOKDEe2QzKqbsy1xHQ")]
+[IsoDisplayName(@"FX Supplementary Data1")]
 public interface IFXSupplementaryData1 : IIsoComponent
 {
     /// <summary>

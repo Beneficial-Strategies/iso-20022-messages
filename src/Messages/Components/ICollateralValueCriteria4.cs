@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Collateral Value Criteria4.
 /// </summary>
 [IsoId("_x2suBTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Collateral Value Criteria4")]
 public interface ICollateralValueCriteria4 : IIsoComponent
 {
     /// <summary>

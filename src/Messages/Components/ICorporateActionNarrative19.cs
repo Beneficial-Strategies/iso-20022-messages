@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information such as the information conditions.
 /// </summary>
 [IsoId("_WbKDmNp-Ed-ak6NoX_4Aeg_1685038746")]
+[IsoDisplayName(@"Corporate Action Narrative")]
 public interface ICorporateActionNarrative19 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionNarrative19 : IIsoComponent
     [IsoId("_WbKDmdp-Ed-ak6NoX_4Aeg_-309105960")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax350Text> AdditionalText { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICorporateActionNarrative19 : IIsoComponent
     [IsoId("_WbKDmtp-Ed-ak6NoX_4Aeg_2105555696")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax350Text> PartyContactNarrative { get; }
 }

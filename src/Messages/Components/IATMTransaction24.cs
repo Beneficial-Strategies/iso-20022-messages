@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transfer information for the transaction.
 /// </summary>
 [IsoId("_Ez0uka4zEeWpsoxRhdX-8A")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction24 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IATMTransaction24 : IIsoComponent
     [IsoId("_E_40pa4zEeWpsoxRhdX-8A")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IATMTransaction24 : IIsoComponent
     [IsoId("_E_40p64zEeWpsoxRhdX-8A")]
     [DisplayName("Creditor Label")]
     [IsoXmlTag("CdtrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CreditorLabel { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IATMTransaction24 : IIsoComponent
     [IsoId("_E_40qa4zEeWpsoxRhdX-8A")]
     [DisplayName("Debtor Label")]
     [IsoXmlTag("DbtrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DebtorLabel { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IATMTransaction24 : IIsoComponent
     [IsoId("_dSkVYK4zEeWpsoxRhdX-8A")]
     [DisplayName("Transfer Identifier")]
     [IsoXmlTag("TrfIdr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? TransferIdentifier { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface IATMTransaction24 : IIsoComponent
     [IsoId("_E_40q64zEeWpsoxRhdX-8A")]
     [DisplayName("Payment Reference")]
     [IsoXmlTag("PmtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentReference { get; }
 
     /// <summary>
@@ -73,6 +84,7 @@ public interface IATMTransaction24 : IIsoComponent
     [IsoId("_smZr0K4zEeWpsoxRhdX-8A")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction7> Action { get; }
 
     /// <summary>
@@ -97,6 +109,7 @@ public interface IATMTransaction24 : IIsoComponent
     [IsoId("_E_40sa4zEeWpsoxRhdX-8A")]
     [DisplayName("Account To")]
     [IsoXmlTag("AcctTo")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardAccount13> AccountTo { get; }
 
     /// <summary>
@@ -137,6 +150,7 @@ public interface IATMTransaction24 : IIsoComponent
     [IsoId("_vu1m8K40EeWpsoxRhdX-8A")]
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount18> AdditionalCharge { get; }
 
     /// <summary>
@@ -153,6 +167,7 @@ public interface IATMTransaction24 : IIsoComponent
     [IsoId("_E_40ua4zEeWpsoxRhdX-8A")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedExecutionDate { get; }
 
     /// <summary>
@@ -161,6 +176,7 @@ public interface IATMTransaction24 : IIsoComponent
     [IsoId("_RhPxgK41EeWpsoxRhdX-8A")]
     [DisplayName("Proposed Execution Date")]
     [IsoXmlTag("PropsdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ProposedExecutionDate { get; }
 
     /// <summary>
@@ -169,6 +185,8 @@ public interface IATMTransaction24 : IIsoComponent
     [IsoId("_E_40u64zEeWpsoxRhdX-8A")]
     [DisplayName("Instant Transfer Program")]
     [IsoXmlTag("InstntTrfPrgm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstantTransferProgram { get; }
 
     /// <summary>
@@ -193,6 +211,7 @@ public interface IATMTransaction24 : IIsoComponent
     [IsoId("_E_40wa4zEeWpsoxRhdX-8A")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 
     /// <summary>
@@ -201,5 +220,6 @@ public interface IATMTransaction24 : IIsoComponent
     [IsoId("_irfP8K41EeWpsoxRhdX-8A")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 }

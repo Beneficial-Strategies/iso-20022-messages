@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Missing Cover6.
 /// </summary>
 [IsoId("_x9c2QTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Missing Cover6")]
 public interface IMissingCover6 : IIsoComponent
 {
     /// <summary>

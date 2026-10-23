@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contract Registration Statement Request3.
 /// </summary>
 [IsoId("_2zxE8TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Contract Registration Statement Request3")]
 public interface IContractRegistrationStatementRequest3 : IIsoComponent
 {
     /// <summary>
@@ -58,5 +59,6 @@ public interface IContractRegistrationStatementRequest3 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

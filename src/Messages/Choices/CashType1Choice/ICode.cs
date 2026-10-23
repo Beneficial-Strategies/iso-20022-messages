@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashType1Choice;
 
 /// <summary>Cash type as published in an external cash type code set.</summary>
 [IsoId("_R9pcZVDeEfCRhs5qxCujTw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICashType1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

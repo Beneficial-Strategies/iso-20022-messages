@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains additional charges related to or during transit (e.g., baggage fee, in-flight purchase). These are separate from the original ticket purchase.
 /// </summary>
 [IsoId("_6Uul0UiDEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Ancillary Purchase4")]
 public interface IAncillaryPurchase4 : IIsoComponent
 {
     /// <summary>
@@ -97,6 +98,7 @@ public interface IAncillaryPurchase4 : IIsoComponent
     [IsoId("_6XdJxUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> Tax { get; }
 
     /// <summary>
@@ -105,6 +107,7 @@ public interface IAncillaryPurchase4 : IIsoComponent
     [IsoId("_3OdYckiDEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -113,5 +116,6 @@ public interface IAncillaryPurchase4 : IIsoComponent
     [IsoId("_3OdYc0iDEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> NationalData { get; }
 }

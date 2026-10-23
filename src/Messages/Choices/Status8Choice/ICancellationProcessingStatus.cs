@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status8Choice;
 /// Provides the status of a cancellation request.
 /// </summary>
 [IsoId("_w2B8AUABEeCaq78Ig8ATcA")]
+[IsoDisplayName(@"Cancellation Processing Status")]
 public interface ICancellationProcessingStatus : IStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

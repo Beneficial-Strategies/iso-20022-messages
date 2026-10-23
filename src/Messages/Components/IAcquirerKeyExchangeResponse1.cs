@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the response to a key exchange.
 /// </summary>
 [IsoId("_HDOPwHvREeS2PZh7wUMQog")]
+[IsoDisplayName(@"Acquirer Key Exchange Response")]
 public interface IAcquirerKeyExchangeResponse1 : IIsoComponent
 {
     /// <summary>

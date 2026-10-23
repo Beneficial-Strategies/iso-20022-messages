@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of performed verifications for the transaction.
 /// </summary>
 [IsoId("_0RdhAWjkEeSDR-pyia6Xtg")]
+[IsoDisplayName(@"Transaction Verification Result")]
 public interface ITransactionVerificationResult3 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,7 @@ public interface ITransactionVerificationResult3 : IIsoComponent
     [IsoId("_EP4vwGjpEeSDR-pyia6Xtg")]
     [DisplayName("Additional Result")]
     [IsoXmlTag("AddtlRslt")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalResult { get; }
 }

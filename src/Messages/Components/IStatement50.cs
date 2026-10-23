@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the statement.
 /// </summary>
 [IsoId("_5TFs1ZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Statement")]
 public interface IStatement50 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStatement50 : IIsoComponent
     [IsoId("_5TFs15NLEeWGlc8L7oPDIg")]
     [DisplayName("Counterparty Portfolio Transfer Notification Reference")]
     [IsoXmlTag("CtrPtyPrtflTrfNtfctnRef")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? CounterpartyPortfolioTransferNotificationReference { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IStatement50 : IIsoComponent
     [IsoId("_5TFs4ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? StatementIdentification { get; }
 
     /// <summary>
@@ -57,5 +62,6 @@ public interface IStatement50 : IIsoComponent
     [IsoId("_5TFs85NLEeWGlc8L7oPDIg")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 }

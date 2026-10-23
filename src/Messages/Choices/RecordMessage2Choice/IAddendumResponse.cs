@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the addendum response message.</summary>
 [IsoId("_kNBjk27-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Addendum Response")]
 public interface IAddendumResponse : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

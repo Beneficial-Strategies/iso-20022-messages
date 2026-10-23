@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card transaction for which the financial authorisation is requested.
 /// </summary>
 [IsoId("_H1_E8YIdEeSvPp7yXrNQIw")]
+[IsoDisplayName(@"Card Transaction")]
 public interface ICardTransaction5 : IIsoComponent
 {
     /// <summary>
@@ -27,6 +28,7 @@ public interface ICardTransaction5 : IIsoComponent
     [IsoId("_ICgeA4IdEeSvPp7yXrNQIw")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardPaymentServiceType8Code> AdditionalService { get; }
 
     /// <summary>
@@ -45,6 +47,7 @@ public interface ICardTransaction5 : IIsoComponent
     [IsoId("_ICgeB4IdEeSvPp7yXrNQIw")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Min3Max4NumericText)]
     Min3Max4NumericText? MerchantCategoryCode { get; }
 
     /// <summary>
@@ -62,6 +65,7 @@ public interface ICardTransaction5 : IIsoComponent
     [IsoId("_ICgeC4IdEeSvPp7yXrNQIw")]
     [DisplayName("Acceptor Transaction Date Time")]
     [IsoXmlTag("AccptrTxDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime AcceptorTransactionDateTime { get; }
 
     /// <summary>
@@ -70,6 +74,8 @@ public interface ICardTransaction5 : IIsoComponent
     [IsoId("_ICgeDYIdEeSvPp7yXrNQIw")]
     [DisplayName("Acceptor Transaction Identification")]
     [IsoXmlTag("AccptrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AcceptorTransactionIdentification { get; }
 
     /// <summary>
@@ -78,6 +84,8 @@ public interface ICardTransaction5 : IIsoComponent
     [IsoId("_ICgeD4IdEeSvPp7yXrNQIw")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InitiatorTransactionIdentification { get; }
 
     /// <summary>
@@ -86,6 +94,8 @@ public interface ICardTransaction5 : IIsoComponent
     [IsoId("_ICgeEYIdEeSvPp7yXrNQIw")]
     [DisplayName("Transaction Life Cycle Identification")]
     [IsoXmlTag("TxLifeCyclId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionLifeCycleIdentification { get; }
 
     /// <summary>
@@ -95,6 +105,7 @@ public interface ICardTransaction5 : IIsoComponent
     [IsoId("_ICgeE4IdEeSvPp7yXrNQIw")]
     [DisplayName("Transaction Life Cycle Sequence Number")]
     [IsoXmlTag("TxLifeCyclSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TransactionLifeCycleSequenceNumber { get; }
 
     /// <summary>
@@ -103,6 +114,7 @@ public interface ICardTransaction5 : IIsoComponent
     [IsoId("_ICgeFYIdEeSvPp7yXrNQIw")]
     [DisplayName("Transaction Life Cycle Sequence Counter")]
     [IsoXmlTag("TxLifeCyclSeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TransactionLifeCycleSequenceCounter { get; }
 
     /// <summary>
@@ -111,6 +123,7 @@ public interface ICardTransaction5 : IIsoComponent
     [IsoId("_aTYsQC7jEeWc7f-D6ByqMg")]
     [DisplayName("Acquirer Transaction Reference")]
     [IsoXmlTag("AcqrrTxRef")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? AcquirerTransactionReference { get; }
 
     /// <summary>
@@ -119,6 +132,8 @@ public interface ICardTransaction5 : IIsoComponent
     [IsoId("_6l4QUC7wEeWc7f-D6ByqMg")]
     [DisplayName("Card Issuer Reference Data")]
     [IsoXmlTag("CardIssrRefData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? CardIssuerReferenceData { get; }
 
     /// <summary>

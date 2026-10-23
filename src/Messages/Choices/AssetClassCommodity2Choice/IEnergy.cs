@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity2Choice;
 /// Code list for energy type of commodities.
 /// </summary>
 [IsoId("_BzEmOiYyEeWHeosc_5RQEw")]
+[IsoDisplayName(@"Energy")]
 public interface IEnergy : IAssetClassCommodity2Choice, IIsoChoiceVariant
 {
     /// <summary>

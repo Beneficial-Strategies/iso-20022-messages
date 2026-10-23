@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Session Management Request8.
 /// </summary>
 [IsoId("_-tOvEaEqEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Session Management Request8")]
 public interface ISessionManagementRequest8 : IIsoComponent
 {
     /// <summary>
@@ -58,5 +59,6 @@ public interface ISessionManagementRequest8 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

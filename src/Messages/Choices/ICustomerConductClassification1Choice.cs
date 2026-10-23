@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the customer conduct classification.
 /// </summary>
 [IsoId("_E0HGsxdwEeKYM7Bc71nDlA")]
+[IsoDisplayName(@"Customer Conduct Classification 1 Choice")]
 public interface ICustomerConductClassification1Choice : IIsoChoice { }

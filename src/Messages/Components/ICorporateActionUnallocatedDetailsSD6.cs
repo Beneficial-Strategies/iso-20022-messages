@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding the corporate action event.
 /// </summary>
 [IsoId("_QeZTYb-8Eeeb2ZBoAlSG1Q")]
+[IsoDisplayName(@"Corporate Action Unallocated Details SD")]
 public interface ICorporateActionUnallocatedDetailsSD6 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICorporateActionUnallocatedDetailsSD6 : IIsoComponent
     [IsoId("_QvgRjb-8Eeeb2ZBoAlSG1Q")]
     [DisplayName("Unallocated Securities Transaction Details")]
     [IsoXmlTag("UallctdSctiesTxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionUnallocatedSecuritiesTransactionDetailsSD7> UnallocatedSecuritiesTransactionDetails { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface ICorporateActionUnallocatedDetailsSD6 : IIsoComponent
     [IsoId("_QvgRlb-8Eeeb2ZBoAlSG1Q")]
     [DisplayName("Unallocated Cash Transaction Details")]
     [IsoXmlTag("UallctdCshTxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionUnallocatedCashTransactionDetailsSD6> UnallocatedCashTransactionDetails { get; }
 }

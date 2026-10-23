@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status19Choice;
 /// Provides the status of a cancellation request.
 /// </summary>
 [IsoId("_9HwpqTqpEeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Cancellation Processing Status")]
 public interface ICancellationProcessingStatus : IStatus19Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

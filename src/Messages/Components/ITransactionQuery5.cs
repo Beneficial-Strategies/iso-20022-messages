@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the query criteria.
 /// </summary>
 [IsoId("_OHgrZ249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Transaction Query")]
 public interface ITransactionQuery5 : IIsoComponent
 {
     /// <summary>

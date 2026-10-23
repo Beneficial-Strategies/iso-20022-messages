@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("_wWrFyNE7Ed-BzquC8wXy7w_-1373686594")]
 [IsoMessage("setr.018.001.02", "setr.018.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.018.001.02")]
+[Description(@"Scope|The RequestForOrderStatusReport is sent by an instructing party, eg, an investment manager or its authorised representative, to the executing party, eg, a transfer agent. There may be one or more intermediary parties between the instructing party and the executing party.|This message requests the status of one or several order instruction or order cancellation messages.|Usage|The RequestForOrderStatusReport message is used to request the status of:|- one or several order messages,|- one or several cancellation messages,|- one or several individual orders within a bulk or multiple order message.|If the RequestForOrderStatusReport message is used to request the status of several messages, then the instructing party will receive several reply messages from the executing party, ie, several OrderInstructionStatusReport messages and/or OrderCancellationStatusReport messages. The number of reply messages will match the number of references stated in the RequestForOrderStatusReport message.|The RequestForOrderStatusReport message may not be used to request the status of an investment account, a transfer or the status of a financial instrument.")]
+[IsoDisplayName(@"Request For Order Status Report V")]
 public interface IRequestForOrderStatusReportV02 : IOuterRecord
 {
     /// <summary>
@@ -29,5 +31,6 @@ public interface IRequestForOrderStatusReportV02 : IOuterRecord
     [IsoId("_wWrFydE7Ed-BzquC8wXy7w_93958643")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageAndBusinessReference2> RequestDetails { get; }
 }

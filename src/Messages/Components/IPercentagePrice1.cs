@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Price expressed as a percentage price.
 /// </summary>
 [IsoId("_QaQ4Ktp-Ed-ak6NoX_4Aeg_724274037")]
+[IsoDisplayName(@"Percentage Price")]
 public interface IPercentagePrice1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPercentagePrice1 : IIsoComponent
     [IsoId("_QaaCEdp-Ed-ak6NoX_4Aeg_724274080")]
     [DisplayName("Price Value")]
     [IsoXmlTag("PricVal")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate PriceValue { get; }
 }

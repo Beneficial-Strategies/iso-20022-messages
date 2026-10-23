@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security by its symbol.
 /// </summary>
 [IsoId("_el9wcID3EeSQoe-8fZQlpA")]
+[IsoDisplayName(@"Security Identification")]
 public interface ISecurityIdentification18 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ISecurityIdentification18 : IIsoComponent
     [IsoId("_vO8fcID4EeSQoe-8fZQlpA")]
     [DisplayName("Security Identification")]
     [IsoXmlTag("SctyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SecurityIdentification { get; }
 }

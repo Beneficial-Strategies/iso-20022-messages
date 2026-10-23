@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about an undertaking.
 /// </summary>
 [IsoId("_-GAcc3ltEeG7BsjMvd1mEw_-1484271946")]
+[IsoDisplayName(@"Undertaking")]
 public interface IUndertaking7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IUndertaking7 : IIsoComponent
     [IsoId("_-GAcdHltEeG7BsjMvd1mEw_-383989964")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

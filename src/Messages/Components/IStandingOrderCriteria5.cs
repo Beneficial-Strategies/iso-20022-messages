@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Standing Order Criteria5.
 /// </summary>
 [IsoId("_0qxYJTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Standing Order Criteria5")]
 public interface IStandingOrderCriteria5 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IStandingOrderCriteria5 : IIsoComponent
     /// </summary>
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStandingOrderSearchCriteria5> SearchCriteria { get; }
 
     /// <summary>

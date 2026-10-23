@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance types related to an unallocated redemption payment.
 /// </summary>
 [IsoId("_npjhEcnxEee6kIhZjMqQ2Q")]
+[IsoDisplayName(@"Corporate Action Unallocated Balance SD")]
 public interface ICorporateActionUnallocatedBalanceSD4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionUnallocatedBalanceSD4 : IIsoComponent
     [IsoId("_n69aIcnxEee6kIhZjMqQ2Q")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>

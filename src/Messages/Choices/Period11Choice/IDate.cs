@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period11Choice;
 /// <summary>
 /// Date.
 /// </summary>
+[IsoDisplayName(@"Date")]
 public interface IDate : IPeriod11Choice, IIsoChoiceVariant
 {
     /// <summary>

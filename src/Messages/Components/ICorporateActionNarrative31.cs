@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information such as the taxation conditions.
 /// </summary>
 [IsoId("_5X-ooWLLEeWR9ZSfjmHwUA")]
+[IsoDisplayName(@"Corporate Action Narrative")]
 public interface ICorporateActionNarrative31 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionNarrative31 : IIsoComponent
     [IsoId("_5rUbaWLLEeWR9ZSfjmHwUA")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> AdditionalText { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICorporateActionNarrative31 : IIsoComponent
     [IsoId("_5rUbcWLLEeWR9ZSfjmHwUA")]
     [DisplayName("Narrative Version")]
     [IsoXmlTag("NrrtvVrsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> NarrativeVersion { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICorporateActionNarrative31 : IIsoComponent
     [IsoId("_5rUbkWLLEeWR9ZSfjmHwUA")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> PartyContactNarrative { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ICorporateActionNarrative31 : IIsoComponent
     [IsoId("_5rUbmWLLEeWR9ZSfjmHwUA")]
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> TaxationConditions { get; }
 }

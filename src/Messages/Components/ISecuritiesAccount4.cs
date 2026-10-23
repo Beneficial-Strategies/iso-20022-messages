@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account to or from which a securities entry is made.
 /// </summary>
 [IsoId("_QT2uIdp-Ed-ak6NoX_4Aeg_-1963844796")]
+[IsoDisplayName(@"Securities Account")]
 public interface ISecuritiesAccount4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ISecuritiesAccount4 : IIsoComponent
     [IsoId("_QT2uI9p-Ed-ak6NoX_4Aeg_-1963844693")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ISecuritiesAccount4 : IIsoComponent
     [IsoId("_QT2uJNp-Ed-ak6NoX_4Aeg_-1963844580")]
     [DisplayName("Financial Instrument Supplementary Identification")]
     [IsoXmlTag("FinInstrmSplmtryId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FinancialInstrumentSupplementaryIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface ISecuritiesAccount4 : IIsoComponent
     [IsoId("_QT2uJtp-Ed-ak6NoX_4Aeg_-1963844623")]
     [DisplayName("Financial Instrument Name")]
     [IsoXmlTag("FinInstrmNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FinancialInstrumentName { get; }
 
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment2Choice;
 /// <summary>
 /// Unsecured Cash Deposit.
 /// </summary>
+[IsoDisplayName(@"Unsecured Cash Deposit")]
 public interface IUnsecuredCashDeposit : IInvestment2Choice, IIsoChoiceVariant
 {
     /// <summary>

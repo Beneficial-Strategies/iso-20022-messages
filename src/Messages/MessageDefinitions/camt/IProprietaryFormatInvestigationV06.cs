@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
     "PrtryFrmtInvstgtn",
     "urn:iso:std:iso:20022:tech:xsd:camt.035.001.06"
 )]
+[IsoDisplayName(@"Proprietary Format Investigation V06")]
 public interface IProprietaryFormatInvestigationV06 : IOuterRecord
 {
     /// <summary>
@@ -43,5 +44,6 @@ public interface IProprietaryFormatInvestigationV06 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

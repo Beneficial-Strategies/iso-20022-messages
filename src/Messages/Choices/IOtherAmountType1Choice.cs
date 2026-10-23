@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between formats for a type of amount.
 /// </summary>
 [IsoId("_WLNL4I2NEeeNN9vGwZc5aA")]
+[IsoDisplayName(@"Other Amount Type 1 Choice")]
 public interface IOtherAmountType1Choice : IIsoChoice { }

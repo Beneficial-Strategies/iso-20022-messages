@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_0MRo6NE8Ed-BzquC8wXy7w_2103710287")]
 [IsoMessage("tsmt.035.001.03", "StsXtnsnReq", "urn:iso:std:iso:20022:tech:xsd:tsmt.035.001.03")]
+[Description(@"Scope|The StatusExtensionRequest message is sent by either party involved in a transaction to the matching application.|This message is used to request the extension of the status of a transaction.|Usage|The StatusExtensionRequest message can be sent by either party involved in a transaction to the matching application to request the extension of the status of a transaction.|The matching application will pass on the request by sending a StatusExtensionRequestNotification message to the counterparty which can accept or reject the status extension request by sending a StatusExtensionAcceptance or StatusExtensionRejection message.")]
+[IsoDisplayName(@"Status Extension Request V")]
 public interface IStatusExtensionRequestV03 : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor configuration to be downloaded from the terminal management system.
 /// </summary>
 [IsoId("_aLzn8Y32EeWRwov1g9WL_A")]
+[IsoDisplayName(@"Acceptor Configuration")]
 public interface IAcceptorConfiguration5 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IAcceptorConfiguration5 : IIsoComponent
     [IsoId("_aX4VFY32EeWRwov1g9WL_A")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITerminalManagementDataSet19> DataSet { get; }
 }

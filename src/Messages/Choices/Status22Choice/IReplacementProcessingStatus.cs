@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status22Choice;
 /// Provides the processing status of the replacement request.
 /// </summary>
 [IsoId("_8QboN5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Replacement Processing Status")]
 public interface IReplacementProcessingStatus : IStatus22Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

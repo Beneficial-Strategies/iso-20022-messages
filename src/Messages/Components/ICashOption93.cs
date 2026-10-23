@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash Option93.
 /// </summary>
 [IsoId("_hvMsgWHmEe6yt_d72zQZeQ")]
+[IsoDisplayName(@"Cash Option93")]
 public interface ICashOption93 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface ICashOption93 : IIsoComponent
     /// </summary>
     [DisplayName("Other Income Type")]
     [IsoXmlTag("OthrIncmTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification30> OtherIncomeType { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface ICashOption93 : IIsoComponent
     /// </summary>
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification30> ExemptionType { get; }
 
     /// <summary>

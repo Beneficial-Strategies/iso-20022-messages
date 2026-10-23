@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity20Choice;
 /// Quantity of financial instrument in units, original face amount or current face amount.
 /// </summary>
 [IsoId("_BX0hTUGUEeWqy4niLuXETA")]
+[IsoDisplayName(@"Quantity")]
 public interface IQuantity : IQuantity20Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

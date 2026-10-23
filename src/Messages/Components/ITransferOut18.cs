@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a transfer out transaction.
 /// </summary>
 [IsoId("_A3mRISPwEeWQjryFgN2ITg")]
+[IsoDisplayName(@"Transfer Out")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2017-03-02.")]
 public interface ITransferOut18 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ITransferOut18 : IIsoComponent
     [IsoId("_BTuMYSPwEeWQjryFgN2ITg")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -25,5 +29,6 @@ public interface ITransferOut18 : IIsoComponent
     [IsoId("_BTuMYyPwEeWQjryFgN2ITg")]
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransfer30> TransferDetails { get; }
 }

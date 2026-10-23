@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Withdrawal fees, accepted by the customer.
 /// </summary>
 [IsoId("_EftDYYolEeSaAcF2oE2GNQ")]
+[IsoDisplayName(@"Detailed Amount")]
 public interface IDetailedAmount13 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IDetailedAmount13 : IIsoComponent
     [IsoId("_Es38s4olEeSaAcF2oE2GNQ")]
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Label { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_ZoITsSSBEeWWV-wpfEW00A")]
+[IsoDisplayName(@"Deliver Information")]
 public interface IDeliverInformation17 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IDeliverInformation17 : IIsoComponent
     [IsoId("_Gg_9hSU4EeWI0orciOKunQ")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary34> IntermediaryInformation { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IDeliverInformation17 : IIsoComponent
     [IsoId("_aFb6qSSBEeWWV-wpfEW00A")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IDeliverInformation17 : IIsoComponent
     [IsoId("_aFb6sySBEeWWV-wpfEW00A")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge29> ChargeDetails { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface IDeliverInformation17 : IIsoComponent
     [IsoId("_aFb6tSSBEeWWV-wpfEW00A")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission23> CommissionDetails { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface IDeliverInformation17 : IIsoComponent
     [IsoId("_aFb6tySBEeWWV-wpfEW00A")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax28> TaxDetails { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface IDeliverInformation17 : IIsoComponent
     [IsoId("_aFb6uSSBEeWWV-wpfEW00A")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms26> ForeignExchangeDetails { get; }
 
     /// <summary>

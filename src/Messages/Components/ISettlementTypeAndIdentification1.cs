@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides transaction type and identification information.
 /// </summary>
 [IsoId("_Ui6IjNp-Ed-ak6NoX_4Aeg_419282003")]
+[IsoDisplayName(@"Settlement Type And Identification")]
 public interface ISettlementTypeAndIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISettlementTypeAndIdentification1 : IIsoComponent
     [IsoId("_UjDScNp-Ed-ak6NoX_4Aeg_305442937")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISettlementTypeAndIdentification1 : IIsoComponent
     [IsoId("_UjDScdp-Ed-ak6NoX_4Aeg_-691629416")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISettlementTypeAndIdentification1 : IIsoComponent
     [IsoId("_UjDSctp-Ed-ak6NoX_4Aeg_520139859")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface ISettlementTypeAndIdentification1 : IIsoComponent
     [IsoId("_UjDSddp-Ed-ak6NoX_4Aeg_-1688701769")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonIdentification { get; }
 
     /// <summary>
@@ -65,6 +74,8 @@ public interface ISettlementTypeAndIdentification1 : IIsoComponent
     [IsoId("_UjDSdtp-Ed-ak6NoX_4Aeg_-943443262")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PoolIdentification { get; }
 
     /// <summary>
@@ -73,5 +84,7 @@ public interface ISettlementTypeAndIdentification1 : IIsoComponent
     [IsoId("_UjDSd9p-Ed-ak6NoX_4Aeg_1918461782")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CorporateActionEventIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the original notification and to provide the status.
 /// </summary>
 [IsoId("_b49UwdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Original Notification")]
 public interface IOriginalNotification13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalNotification13 : IIsoComponent
     [IsoId("_b6SxgdcZEeqRFcf2R4bPBw")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IOriginalNotification13 : IIsoComponent
     [IsoId("_b6Sxg9cZEeqRFcf2R4bPBw")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IOriginalNotification13 : IIsoComponent
     [IsoId("_b6SxhdcZEeqRFcf2R4bPBw")]
     [DisplayName("Original Notification Identification")]
     [IsoXmlTag("OrgnlNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalNotificationIdentification { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IOriginalNotification13 : IIsoComponent
     [IsoId("_b6SxidcZEeqRFcf2R4bPBw")]
     [DisplayName("Additional Status Information")]
     [IsoXmlTag("AddtlStsInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalStatusInformation { get; }
 
     /// <summary>
@@ -57,5 +65,6 @@ public interface IOriginalNotification13 : IIsoComponent
     [IsoId("_b6Sxi9cZEeqRFcf2R4bPBw")]
     [DisplayName("Original Notification Reference")]
     [IsoXmlTag("OrgnlNtfctnRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalNotificationReference11> OriginalNotificationReference { get; }
 }

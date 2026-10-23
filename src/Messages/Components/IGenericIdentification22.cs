@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Proprietary information related to a balance.
 /// </summary>
 [IsoId("_P-Pqhtp-Ed-ak6NoX_4Aeg_-224345407")]
+[IsoDisplayName(@"Generic Identification")]
 public interface IGenericIdentification22 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IGenericIdentification22 : IIsoComponent
     [IsoId("_P-Pqh9p-Ed-ak6NoX_4Aeg_-338184473")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText Identification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IGenericIdentification22 : IIsoComponent
     [IsoId("_P-PqiNp-Ed-ak6NoX_4Aeg_-1221417760")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Issuer { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IGenericIdentification22 : IIsoComponent
     [IsoId("_P-ZbgNp-Ed-ak6NoX_4Aeg_-1043299088")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SchemeName { get; }
 
     /// <summary>
@@ -41,5 +47,6 @@ public interface IGenericIdentification22 : IIsoComponent
     [IsoId("_P-Zbgdp-Ed-ak6NoX_4Aeg_2076477183")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Balance { get; }
 }

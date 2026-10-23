@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkCurveName7Choice;
 /// Benchmark curve name expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_HjJ1weLwEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBenchmarkCurveName7Choice, IIsoChoiceVariant
 {
     /// <summary>

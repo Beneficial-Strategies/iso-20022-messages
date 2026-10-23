@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice;
 /// <summary>
 /// Opening Date.
 /// </summary>
+[IsoDisplayName(@"Opening Date")]
 public interface IOpeningDate : IUpdateLogPartyRecord2Choice, IIsoChoiceVariant
 {
     /// <summary>

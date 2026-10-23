@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegalStructure1Choice;
 /// Legal structure of the financial instrument expressed as a code.
 /// </summary>
 [IsoId("_nv7r0DQeEeifw8iDiyZLmQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ILegalStructure1Choice, IIsoChoiceVariant
 {
     /// <summary>

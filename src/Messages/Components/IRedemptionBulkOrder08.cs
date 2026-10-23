@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction from an investor to sell investment fund units back to the fund.
 /// </summary>
 [IsoId("d68e304c-a9ed-4f64-a365-aeb8fd627c4f")]
+[IsoDisplayName(@"Redemption Bulk Order08")]
 public interface IRedemptionBulkOrder08 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,8 @@ public interface IRedemptionBulkOrder08 : IIsoComponent
     [IsoId("15524a9f-2c91-43a5-91c5-2ea4cee3a101")]
     [DisplayName("Individual Order Details")]
     [IsoXmlTag("IndvOrdrDtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRedemptionOrder17> IndividualOrderDetails { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Diagnostic request from an acceptor.
 /// </summary>
 [IsoId("_sW0_AY3XEeW56qaqQ8B0kQ")]
+[IsoDisplayName(@"Acceptor Diagnostic Request")]
 public interface IAcceptorDiagnosticRequest5 : IIsoComponent
 {
     /// <summary>

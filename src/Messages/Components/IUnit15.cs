@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about units to transfer.
 /// </summary>
 [IsoId("607716b7-1b36-4700-a221-9e3cd96f2f1f")]
+[IsoDisplayName(@"Unit15")]
 public interface IUnit15 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IUnit15 : IIsoComponent
     [IsoId("22d6590d-9c91-4e64-b02b-ff655513bb53")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CertificateNumber { get; }
 
     /// <summary>

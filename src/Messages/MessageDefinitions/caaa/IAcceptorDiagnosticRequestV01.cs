@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_VxGmFaMVEeCJ6YNENx4h-w_-1426270091")]
 [IsoMessage("caaa.013.001.01", "AccptrDgnstcReq", "urn:iso:std:iso:20022:tech:xsd:caaa.013.001.01")]
+[Description(@"Scope|The AcceptorDiagnosticRequest message is sent by the card acceptor to the acquirer to ensure the availability of the acquirer. An agent never forwards the message.|Usage|The AcceptorDiagnosticRequest message is used to:|- test the availability of the acquirer;|- validate the security of the exchanges with the acquirer;|- validate the version of the configuration parameters.")]
+[IsoDisplayName(@"Acceptor Diagnostic Request V")]
 public interface IAcceptorDiagnosticRequestV01 : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for an active or historic currency and amount and direction.
 /// </summary>
 [IsoId("_pOI_EExTEeywvc16MwOPfw")]
+[IsoDisplayName(@"Compare Amount And Direction")]
 public interface ICompareAmountAndDirection3 : IIsoComponent
 {
     /// <summary>

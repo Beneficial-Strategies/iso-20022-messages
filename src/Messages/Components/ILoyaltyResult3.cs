@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the result of a processed loyalty transaction.
 /// </summary>
 [IsoId("_foxFoU7XEeyGi9JAv6wq7Q")]
+[IsoDisplayName(@"Loyalty Result")]
 public interface ILoyaltyResult3 : IIsoComponent
 {
     /// <summary>

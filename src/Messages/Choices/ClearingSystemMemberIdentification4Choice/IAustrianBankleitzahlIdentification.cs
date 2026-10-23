@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Austrian Bankleitzahl - identifies Austrian financial institutions on the Austrian national clearing system.
 /// </summary>
 [IsoId("_VwSCdbNIEeejueAciesPMA")]
+[IsoDisplayName(@"Austrian Bankleitzahl Identification")]
 public interface IAustrianBankleitzahlIdentification
     : IClearingSystemMemberIdentification4Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IAustrianBankleitzahlIdentification
     /// Austrian Bankleitzahl. Identifies Austrian financial institutions on the Austrian national clearing system.
     /// </summary>
     [IsoXmlTag("ATBLZ")]
+    [IsoSimpleType(IsoSimpleType.AustrianBankleitzahlIdentifier)]
     AustrianBankleitzahlIdentifier Value { get; }
 }

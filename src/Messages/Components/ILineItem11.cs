@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Commercial details of a trade transaction between a buyer and a seller.
 /// </summary>
 [IsoId("_nxeDkefIEeKNfc-Rw_dPYg")]
+[IsoDisplayName(@"Line Item")]
 public interface ILineItem11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILineItem11 : IIsoComponent
     [IsoId("_oNFomefIEeKNfc-Rw_dPYg")]
     [DisplayName("Goods Description")]
     [IsoXmlTag("GoodsDesc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? GoodsDescription { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ILineItem11 : IIsoComponent
     [IsoId("_oNFom-fIEeKNfc-Rw_dPYg")]
     [DisplayName("Partial Shipment")]
     [IsoXmlTag("PrtlShipmnt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PartialShipment { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ILineItem11 : IIsoComponent
     [IsoId("_oNFonefIEeKNfc-Rw_dPYg")]
     [DisplayName("Trans Shipment")]
     [IsoXmlTag("TrnsShipmnt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TransShipment { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ILineItem11 : IIsoComponent
     [IsoId("_oNFooefIEeKNfc-Rw_dPYg")]
     [DisplayName("Line Item Details")]
     [IsoXmlTag("LineItmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItemDetails10> LineItemDetails { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface ILineItem11 : IIsoComponent
     [IsoId("_oNFoqefIEeKNfc-Rw_dPYg")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment7> Adjustment { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface ILineItem11 : IIsoComponent
     [IsoId("_oNForefIEeKNfc-Rw_dPYg")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax23> Tax { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface ILineItem11 : IIsoComponent
     [IsoId("_oNFosefIEeKNfc-Rw_dPYg")]
     [DisplayName("Buyer Defined Information")]
     [IsoXmlTag("BuyrDfndInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUserDefinedInformation1> BuyerDefinedInformation { get; }
 
     /// <summary>
@@ -121,5 +130,6 @@ public interface ILineItem11 : IIsoComponent
     [IsoId("_oNFos-fIEeKNfc-Rw_dPYg")]
     [DisplayName("Seller Defined Information")]
     [IsoXmlTag("SellrDfndInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUserDefinedInformation1> SellerDefinedInformation { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria2Choice;
 /// <summary>
 /// Account.
 /// </summary>
+[IsoDisplayName(@"Account")]
 public interface IAccount : ISearchCriteria2Choice, IIsoChoiceVariant
 {
     /// <summary>

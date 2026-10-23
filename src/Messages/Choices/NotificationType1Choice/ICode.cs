@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationType1Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : INotificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

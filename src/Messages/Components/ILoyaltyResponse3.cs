@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response data to a loyalty service request.
 /// </summary>
 [IsoId("_vPHvcU7XEeyGi9JAv6wq7Q")]
+[IsoDisplayName(@"Loyalty Response")]
 public interface ILoyaltyResponse3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ILoyaltyResponse3 : IIsoComponent
     [IsoId("_vVVsNU7XEeyGi9JAv6wq7Q")]
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? POIReconciliationIdentification { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ILoyaltyResponse3 : IIsoComponent
     [IsoId("_vVVsN07XEeyGi9JAv6wq7Q")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyResult3> Result { get; }
 }

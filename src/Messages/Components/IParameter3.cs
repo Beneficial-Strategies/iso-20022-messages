@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters associated to a mask generator cryptographic function.
 /// </summary>
 [IsoId("_X5JB8QurEeK6BpGAixa3eA")]
+[IsoDisplayName(@"Parameter")]
 public interface IParameter3 : IIsoComponent
 {
     /// <summary>

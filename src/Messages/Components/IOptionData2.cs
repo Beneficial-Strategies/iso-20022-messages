@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of data which contains the link to a previously notified option trade.
 /// </summary>
 [IsoId("_U8r6ddp-Ed-ak6NoX_4Aeg_254982681")]
+[IsoDisplayName(@"Option Data")]
 public interface IOptionData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IOptionData2 : IIsoComponent
     [IsoId("_U8r6dtp-Ed-ak6NoX_4Aeg_254982700")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IOptionData2 : IIsoComponent
     [IsoId("_U8r6d9p-Ed-ak6NoX_4Aeg_254982734")]
     [DisplayName("Notification Identification")]
     [IsoXmlTag("NtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text NotificationIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IOptionData2 : IIsoComponent
     [IsoId("_U8r6eNp-Ed-ak6NoX_4Aeg_254982716")]
     [DisplayName("Common Reference")]
     [IsoXmlTag("CmonRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonReference { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface IOptionData2 : IIsoComponent
     [IsoId("_U8r6edp-Ed-ak6NoX_4Aeg_254982776")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RelatedReference { get; }
 
     /// <summary>
@@ -49,6 +57,8 @@ public interface IOptionData2 : IIsoComponent
     [IsoId("_U81EYNp-Ed-ak6NoX_4Aeg_254982759")]
     [DisplayName("Amend Or Cancel Reason")]
     [IsoXmlTag("AmdOrCclRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AmendOrCancelReason { get; }
 
     /// <summary>

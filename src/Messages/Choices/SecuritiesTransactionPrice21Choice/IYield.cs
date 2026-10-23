@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice21Choi
 /// <summary>
 /// Yield.
 /// </summary>
+[IsoDisplayName(@"Yield")]
 public interface IYield : ISecuritiesTransactionPrice21Choice, IIsoChoiceVariant
 {
     /// <summary>

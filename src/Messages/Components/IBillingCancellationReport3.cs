@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report on cancelled billing data.
 /// </summary>
 [IsoId("_2oUp8TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Billing Cancellation Report3")]
 public interface IBillingCancellationReport3 : IIsoComponent
 {
     /// <summary>

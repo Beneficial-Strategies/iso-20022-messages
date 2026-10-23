@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument103Choice;
 
 /// <summary>Identification of the security.</summary>
 [IsoId("93c88c7f-3a87-478e-9f5a-f9a87587a4c3")]
+[IsoDisplayName(@"Security")]
 public interface ISecurity : IFinancialInstrument103Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

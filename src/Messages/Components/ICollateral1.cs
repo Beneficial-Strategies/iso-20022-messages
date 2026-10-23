@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the collateral against variation margin and optionally the segregated independent amount.
 /// </summary>
 [IsoId("_UoRJqtp-Ed-ak6NoX_4Aeg_1673012479")]
+[IsoDisplayName(@"Collateral")]
 public interface ICollateral1 : IIsoComponent
 {
     /// <summary>

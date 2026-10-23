@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction4Choice;
 /// </summary>
 [IsoId("_hbH5EYKZEee7hrXqLO3yQg")]
 [IsoXmlTag("Initn")]
+[IsoDisplayName(@"Initiation")]
 public interface IInitiation : IUnderlyingTransaction4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IInitiation : IUnderlyingTransaction4Choice, IIsoChoiceVariant
     [IsoId("_8NjBd66FEeexrtTFgmVD3Q")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalPaymentInformationIdentification { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IInitiation : IUnderlyingTransaction4Choice, IIsoChoiceVariant
     [IsoId("_8NjBea6FEeexrtTFgmVD3Q")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -42,6 +47,8 @@ public interface IInitiation : IUnderlyingTransaction4Choice, IIsoChoiceVariant
     [IsoId("_8NjBe66FEeexrtTFgmVD3Q")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -66,6 +73,7 @@ public interface IInitiation : IUnderlyingTransaction4Choice, IIsoChoiceVariant
     [IsoId("_8NjBga6FEeexrtTFgmVD3Q")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of other identification.
 /// </summary>
 [IsoId("_S_Cxr0HLEeWeNKJ6kJGSFw")]
+[IsoDisplayName(@"Other Identification 4 Choice")]
 public interface IOtherIdentification4Choice : IIsoChoice { }

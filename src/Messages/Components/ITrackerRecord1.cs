@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the agent specific tracking system information of a payment transaction.
 /// </summary>
 [IsoId("_2db_MIW5EeiDBOVr6AJAFA")]
+[IsoDisplayName(@"Tracker Record")]
 public interface ITrackerRecord1 : IIsoComponent
 {
     /// <summary>

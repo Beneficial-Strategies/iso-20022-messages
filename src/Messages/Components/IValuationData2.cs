@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of data which contains the link to the opening of the non deliverable trade and supplementary information on its valuation.
 /// </summary>
 [IsoId("_TIKBxNp-Ed-ak6NoX_4Aeg_-1153647347")]
+[IsoDisplayName(@"Valuation Data")]
 public interface IValuationData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IValuationData2 : IIsoComponent
     [IsoId("_TIKBxdp-Ed-ak6NoX_4Aeg_-1153647330")]
     [DisplayName("Valuation Reference")]
     [IsoXmlTag("ValtnRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ValuationReference { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IValuationData2 : IIsoComponent
     [IsoId("_TIKBx9p-Ed-ak6NoX_4Aeg_-1153647295")]
     [DisplayName("Additional Valuation Information")]
     [IsoXmlTag("AddtlValtnInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalValuationInformation { get; }
 
     /// <summary>

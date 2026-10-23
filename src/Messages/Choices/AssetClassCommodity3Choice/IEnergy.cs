@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity3Choice;
 /// Energy commodities.
 /// </summary>
 [IsoId("_lThdY3vyEeanCNPcMT7sSg")]
+[IsoDisplayName(@"Energy")]
 public interface IEnergy : IAssetClassCommodity3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

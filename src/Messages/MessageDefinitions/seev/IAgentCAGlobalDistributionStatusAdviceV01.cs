@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "AgtCAGblDstrbtnStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.018.001.01"
 )]
+[Description(@"Scope|This message is sent by an issuer (or its agent) to the CSD to authorise/prohibit the CSD to process the entitlement movements.|Usage|This message is used to authorise/prohibit the CSD to process the movements requested in the Global Distribution Authorisation Request message.|Once the amendment request has been accepted by the issuer (or its agent), the CSD will process any resource movement and send an Agent Corporate Action Election Advice message with the function, option change, to confirm that the amendment has been booked at the CSD.|The issuer (or its agent) can provide the status in 2 different ways:|- Provide a global status, in which case the building block Global Movement Status must be present; or|- Provide a status by individual movements, in which case, the building block Individual Movement Status must be present. An individual movement cannot be rejected.")]
+[IsoDisplayName(@"Agent CA Global Distribution Status Advice V")]
 public interface IAgentCAGlobalDistributionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -63,5 +65,6 @@ public interface IAgentCAGlobalDistributionStatusAdviceV01 : IOuterRecord
     [IsoId("_TN5ZytEwEd-BzquC8wXy7w_-1885018018")]
     [DisplayName("Individual Movement Status")]
     [IsoXmlTag("IndvMvmntSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualMovementStatus1> IndividualMovementStatus { get; }
 }

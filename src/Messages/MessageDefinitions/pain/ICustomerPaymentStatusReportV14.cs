@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_R3H8fTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("pain.002.001.14", "CstmrPmtStsRpt", "urn:iso:std:iso:20022:tech:xsd:pain.002.001.14")]
+[IsoDisplayName(@"Customer Payment Status Report V14")]
 public interface ICustomerPaymentStatusReportV14 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +33,7 @@ public interface ICustomerPaymentStatusReportV14 : IOuterRecord
     /// </summary>
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalPaymentInstruction51> OriginalPaymentInformationAndStatus { get; }
 
     /// <summary>
@@ -39,5 +41,6 @@ public interface ICustomerPaymentStatusReportV14 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics used to describe a hypothetical scenario designed to test the value of a portfolio of financial instruments under such hypothetical scenario.
 /// </summary>
 [IsoId("_b-6ZMKsrEeayv9XxdmMwKQ")]
+[IsoDisplayName(@"Scenario Definition")]
 public interface IScenarioDefinition1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,9 @@ public interface IScenarioDefinition1 : IIsoComponent
     [IsoId("_2AzGYKsuEeayv9XxdmMwKQ")]
     [DisplayName("Stress Item")]
     [IsoXmlTag("StrssItm")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStressItem1> StressItem { get; }
 
     /// <summary>
@@ -49,5 +53,7 @@ public interface IScenarioDefinition1 : IIsoComponent
     [IsoId("_QIx0kMBnEeak3I7j2hsibw")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [StringLength(2000, MinimumLength = 1)]
     Max2000Text? Description { get; }
 }

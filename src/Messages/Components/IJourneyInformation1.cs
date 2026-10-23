@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the journey before or after the rental.
 /// </summary>
 [IsoId("_fEn7AF1mEeeu75xdwwAXQw")]
+[IsoDisplayName(@"Journey Information")]
 public interface IJourneyInformation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IJourneyInformation1 : IIsoComponent
     [IsoId("_-v9rYF1mEeeu75xdwwAXQw")]
     [DisplayName("Journey Data")]
     [IsoXmlTag("JrnyData")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? JourneyData { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IJourneyInformation1 : IIsoComponent
     [IsoId("_dQ-EsF1pEeeu75xdwwAXQw")]
     [DisplayName("Date And Time")]
     [IsoXmlTag("DtAndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DateAndTime { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between elements indicating the direction of the derivative transaction.
 /// </summary>
 [IsoId("_ZdjwgS0WEe2ZUuvBHegNNg")]
+[IsoDisplayName(@"Direction 4 Choice")]
 public interface IDirection4Choice : IIsoChoice { }

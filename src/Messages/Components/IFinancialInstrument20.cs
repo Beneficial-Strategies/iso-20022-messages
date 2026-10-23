@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.
 /// </summary>
 [IsoId("_ScDJsNp-Ed-ak6NoX_4Aeg_159174189")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument20 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancialInstrument20 : IIsoComponent
     [IsoId("_ScDJsdp-Ed-ak6NoX_4Aeg_1592322274")]
     [DisplayName("Physical Bearer Securities")]
     [IsoXmlTag("PhysBrScties")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalBearerSecurities { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IFinancialInstrument20 : IIsoComponent
     [IsoId("_ScDJstp-Ed-ak6NoX_4Aeg_-1417437996")]
     [DisplayName("Dematerialised Bearer Securities")]
     [IsoXmlTag("DmtrlsdBrScties")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator DematerialisedBearerSecurities { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IFinancialInstrument20 : IIsoComponent
     [IsoId("_ScDJs9p-Ed-ak6NoX_4Aeg_-542520058")]
     [DisplayName("Physical Registered Securities")]
     [IsoXmlTag("PhysRegdScties")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalRegisteredSecurities { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IFinancialInstrument20 : IIsoComponent
     [IsoId("_ScDJtNp-Ed-ak6NoX_4Aeg_24760581")]
     [DisplayName("Dematerialised Registered Securities")]
     [IsoXmlTag("DmtrlsdRegdScties")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator DematerialisedRegisteredSecurities { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IFinancialInstrument20 : IIsoComponent
     [IsoId("_ScM6sNp-Ed-ak6NoX_4Aeg_159175198")]
     [DisplayName("Front End Load")]
     [IsoXmlTag("FrntEndLd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator FrontEndLoad { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface IFinancialInstrument20 : IIsoComponent
     [IsoId("_ScM6sdp-Ed-ak6NoX_4Aeg_159175229")]
     [DisplayName("Back End Load")]
     [IsoXmlTag("BckEndLd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator BackEndLoad { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface IFinancialInstrument20 : IIsoComponent
     [IsoId("_ScM6stp-Ed-ak6NoX_4Aeg_159175259")]
     [DisplayName("Switch Fee")]
     [IsoXmlTag("SwtchFee")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SwitchFee { get; }
 
     /// <summary>

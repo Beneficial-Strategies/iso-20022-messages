@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Obligations of a clearing member with respect to a central counterparty that are calculated based on intraday positions.
 /// </summary>
 [IsoId("_vFk_wKp1EeamNLogr5TkIQ")]
+[IsoDisplayName(@"Intra Day Requirement")]
 public interface IIntraDayRequirement1 : IIsoComponent
 {
     /// <summary>

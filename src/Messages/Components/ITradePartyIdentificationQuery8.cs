@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Query of a trade party based on the identification.
 /// </summary>
 [IsoId("_FHEpEZQTEeiok48Eh9lW9Q")]
+[IsoDisplayName(@"Trade Party Identification Query")]
 public interface ITradePartyIdentificationQuery8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradePartyIdentificationQuery8 : IIsoComponent
     [IsoId("_FS0mEZQTEeiok48Eh9lW9Q")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<LEIIdentifier> LEI { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITradePartyIdentificationQuery8 : IIsoComponent
     [IsoId("_FS0mE5QTEeiok48Eh9lW9Q")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<AnyBICDec2014Identifier> AnyBIC { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITradePartyIdentificationQuery8 : IIsoComponent
     [IsoId("_FS0mFZQTEeiok48Eh9lW9Q")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max50Text> ClientIdentification { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action reorganisation instruction details.
 /// </summary>
 [IsoId("_dbQNhcY1EeesocHIuVGr7g")]
+[IsoDisplayName(@"Reorganisation Instruction Details SD")]
 public interface IReorganisationInstructionDetailsSD4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReorganisationInstructionDetailsSD4 : IIsoComponent
     [IsoId("_dbQNjMY1EeesocHIuVGr7g")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IReorganisationInstructionDetailsSD4 : IIsoComponent
     [IsoId("_dbQNicY1EeesocHIuVGr7g")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IReorganisationInstructionDetailsSD4 : IIsoComponent
     [IsoId("_dbQNiMY1EeesocHIuVGr7g")]
     [DisplayName("Transaction Sequence Number")]
     [IsoXmlTag("TxSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? TransactionSequenceNumber { get; }
 
     /// <summary>
@@ -65,6 +71,9 @@ public interface IReorganisationInstructionDetailsSD4 : IIsoComponent
     [IsoId("_dbQNjcY1EeesocHIuVGr7g")]
     [DisplayName("Rejection Reason")]
     [IsoXmlTag("RjctnRsn")]
+    [MinLength(0)]
+    [MaxLength(6)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<InstructionRejectionReason1Code> RejectionReason { get; }
 
     /// <summary>
@@ -73,6 +82,8 @@ public interface IReorganisationInstructionDetailsSD4 : IIsoComponent
     [IsoId("_dbQNmcY1EeesocHIuVGr7g")]
     [DisplayName("Protect Identification")]
     [IsoXmlTag("PrtctId")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text ProtectIdentification { get; }
 
     /// <summary>
@@ -81,6 +92,8 @@ public interface IReorganisationInstructionDetailsSD4 : IIsoComponent
     [IsoId("_ptMpIeZTEeewObBhnieI_A")]
     [DisplayName("Protect Safekeeping Account")]
     [IsoXmlTag("PrtctSfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINMax35Text? ProtectSafekeepingAccount { get; }
 
     /// <summary>
@@ -105,6 +118,7 @@ public interface IReorganisationInstructionDetailsSD4 : IIsoComponent
     [IsoId("_dbQNkcY1EeesocHIuVGr7g")]
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? CustomerReferenceIdentification { get; }
 
     /// <summary>
@@ -113,6 +127,8 @@ public interface IReorganisationInstructionDetailsSD4 : IIsoComponent
     [IsoId("_dbQNj8Y1EeesocHIuVGr7g")]
     [DisplayName("User Reference Number")]
     [IsoXmlTag("UsrRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text? UserReferenceNumber { get; }
 
     /// <summary>
@@ -121,5 +137,6 @@ public interface IReorganisationInstructionDetailsSD4 : IIsoComponent
     [IsoId("_dbQNksY1EeesocHIuVGr7g")]
     [DisplayName("Transaction Record Number")]
     [IsoXmlTag("TxRcrdNb")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? TransactionRecordNumber { get; }
 }

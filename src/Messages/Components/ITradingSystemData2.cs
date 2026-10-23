@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the trade system.
 /// </summary>
 [IsoId("_xHmvsWGBEfCFsvrouDJO7g")]
+[IsoDisplayName(@"Trading System Data2")]
 public interface ITradingSystemData2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference8Choice;
 /// Reference of the linked message at the trade/block level which identifies a centrally matched transaction.
 /// </summary>
 [IsoId("_AcPskNokEeC60axPepSq7g_-634475795")]
+[IsoDisplayName(@"Block Identification")]
 public interface IBlockIdentification : IIdentificationReference8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IBlockIdentification : IIdentificationReference8Choice, IIsoCho
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("BlckId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice of format for the transfer reason.
 /// </summary>
 [IsoId("_kgcvYPr5EeCu2Z1WwxJVWA")]
+[IsoDisplayName(@"Transfer Reason")]
 public interface ITransferReason1 : IIsoComponent
 {
     /// <summary>

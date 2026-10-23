@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReceivedReason2Choice;
 /// Reason for the received status expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_2y5NyFj6EeOgwYxfAV02bg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IReceivedReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

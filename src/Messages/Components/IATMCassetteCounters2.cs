@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Counters of media inside an ATM cassette.
 /// </summary>
 [IsoId("_2nkHEYqhEeS4a4abTJTSSw")]
+[IsoDisplayName(@"ATM Cassette Counters")]
 public interface IATMCassetteCounters2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IATMCassetteCounters2 : IIsoComponent
     [IsoId("_ON_wYIqjEeS4a4abTJTSSw")]
     [DisplayName("Added Number")]
     [IsoXmlTag("AddedNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? AddedNumber { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IATMCassetteCounters2 : IIsoComponent
     [IsoId("_RFb3kIqjEeS4a4abTJTSSw")]
     [DisplayName("Removed Number")]
     [IsoXmlTag("RmvdNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? RemovedNumber { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IATMCassetteCounters2 : IIsoComponent
     [IsoId("_UN3BEIqjEeS4a4abTJTSSw")]
     [DisplayName("Dispensed Number")]
     [IsoXmlTag("DspnsdNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? DispensedNumber { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IATMCassetteCounters2 : IIsoComponent
     [IsoId("_XPbUoIqjEeS4a4abTJTSSw")]
     [DisplayName("Deposit Number")]
     [IsoXmlTag("DpstNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? DepositNumber { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IATMCassetteCounters2 : IIsoComponent
     [IsoId("_aA59wIqjEeS4a4abTJTSSw")]
     [DisplayName("Recycled Number")]
     [IsoXmlTag("RcycldNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? RecycledNumber { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IATMCassetteCounters2 : IIsoComponent
     [IsoId("_dBk5cIqjEeS4a4abTJTSSw")]
     [DisplayName("Retracted Number")]
     [IsoXmlTag("RtrctdNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? RetractedNumber { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IATMCassetteCounters2 : IIsoComponent
     [IsoId("_gIzwIIqjEeS4a4abTJTSSw")]
     [DisplayName("Rejected Number")]
     [IsoXmlTag("RjctdNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? RejectedNumber { get; }
 
     /// <summary>
@@ -81,5 +89,6 @@ public interface IATMCassetteCounters2 : IIsoComponent
     [IsoId("_jF-r4IqjEeS4a4abTJTSSw")]
     [DisplayName("Presented Number")]
     [IsoXmlTag("PresntdNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? PresentedNumber { get; }
 }

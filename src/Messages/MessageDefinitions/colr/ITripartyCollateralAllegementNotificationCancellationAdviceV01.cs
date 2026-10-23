@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.colr;
     "TrptyCollAllgmtNtfctnCxlAdvc",
     "urn:iso:std:iso:20022:tech:xsd:colr.024.001.01"
 )]
+[Description(@"Scope:|Triparty agent sends a TripartyCollateralAllegementNotificationCancellationAdvice to the collateral giver or the collateral taker to inform of the cancellation of an allegement notification message previously sent by the triparty agent. ||The collateral giver and the collateral taker are participants of the triparty agents. In the frame of ECMS the collateral taker will be a central bank.||The previously sent message is a TripartyCollateralAllegementNotification")]
+[IsoDisplayName(@"Triparty Collateral Allegement Notification Cancellation Advice V")]
 public interface ITripartyCollateralAllegementNotificationCancellationAdviceV01 : IOuterRecord
 {
     /// <summary>

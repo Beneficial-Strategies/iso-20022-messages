@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Modification Status Reason3.
 /// </summary>
 [IsoId("_1da9ETEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Modification Status Reason3")]
 public interface IModificationStatusReason3 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IModificationStatusReason3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

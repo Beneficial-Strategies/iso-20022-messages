@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reversal card transaction.
 /// </summary>
 [IsoId("_P39iAXu0EeS2Z_kGi7H1VQ")]
+[IsoDisplayName(@"Card Transaction")]
 public interface ICardTransaction7 : IIsoComponent
 {
     /// <summary>
@@ -35,6 +36,7 @@ public interface ICardTransaction7 : IIsoComponent
     [IsoId("_QEVKG3u0EeS2Z_kGi7H1VQ")]
     [DisplayName("Acceptor Transaction Date Time")]
     [IsoXmlTag("AccptrTxDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime AcceptorTransactionDateTime { get; }
 
     /// <summary>
@@ -43,6 +45,8 @@ public interface ICardTransaction7 : IIsoComponent
     [IsoId("_QEVKHXu0EeS2Z_kGi7H1VQ")]
     [DisplayName("Acceptor Transaction Identification")]
     [IsoXmlTag("AccptrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AcceptorTransactionIdentification { get; }
 
     /// <summary>
@@ -51,6 +55,8 @@ public interface ICardTransaction7 : IIsoComponent
     [IsoId("_QEVKH3u0EeS2Z_kGi7H1VQ")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InitiatorTransactionIdentification { get; }
 
     /// <summary>
@@ -59,6 +65,8 @@ public interface ICardTransaction7 : IIsoComponent
     [IsoId("_QEVKIXu0EeS2Z_kGi7H1VQ")]
     [DisplayName("Transaction Life Cycle Identification")]
     [IsoXmlTag("TxLifeCyclId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionLifeCycleIdentification { get; }
 
     /// <summary>
@@ -68,6 +76,7 @@ public interface ICardTransaction7 : IIsoComponent
     [IsoId("_QEVKI3u0EeS2Z_kGi7H1VQ")]
     [DisplayName("Transaction Life Cycle Sequence Number")]
     [IsoXmlTag("TxLifeCyclSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TransactionLifeCycleSequenceNumber { get; }
 
     /// <summary>
@@ -76,6 +85,7 @@ public interface ICardTransaction7 : IIsoComponent
     [IsoId("_2lVLkIITEeSvPp7yXrNQIw")]
     [DisplayName("Transaction Life Cycle Sequence Counter")]
     [IsoXmlTag("TxLifeCyclSeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TransactionLifeCycleSequenceCounter { get; }
 
     /// <summary>
@@ -84,6 +94,7 @@ public interface ICardTransaction7 : IIsoComponent
     [IsoId("_hNwdYC7jEeWc7f-D6ByqMg")]
     [DisplayName("Acquirer Transaction Reference")]
     [IsoXmlTag("AcqrrTxRef")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? AcquirerTransactionReference { get; }
 
     /// <summary>
@@ -92,6 +103,8 @@ public interface ICardTransaction7 : IIsoComponent
     [IsoId("_Iw0FAC7xEeWc7f-D6ByqMg")]
     [DisplayName("Card Issuer Reference Data")]
     [IsoXmlTag("CardIssrRefData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? CardIssuerReferenceData { get; }
 
     /// <summary>

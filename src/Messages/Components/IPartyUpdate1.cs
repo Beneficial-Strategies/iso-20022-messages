@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the attributes of the party, which are / are being updated.
 /// </summary>
 [IsoId("_oZdVsPH1Eeaz_YGUGLjP6A")]
+[IsoDisplayName(@"Party Update")]
 public interface IPartyUpdate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyUpdate1 : IIsoComponent
     [IsoId("_3j8_ITbvEeeYhaZ6bvG1Xg")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IPartyUpdate1 : IIsoComponent
     [IsoId("_IffBgPH3Eeaz_YGUGLjP6A")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusDetail1> Status { get; }
 
     /// <summary>
@@ -65,5 +69,6 @@ public interface IPartyUpdate1 : IIsoComponent
     [IsoId("_5O9IYTbvEeeYhaZ6bvG1Xg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "SctiesFincgRptgRcncltnStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:auth.080.001.01"
 )]
+[Description(@"The SecuritesFinancingReportingReconciliationStatusAdvice message is sent by the trade repositories (TRs) ) to other TR and to the authority or made available to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, to provide a status advice for reconciliation.")]
+[IsoDisplayName(@"Securities Financing Reporting Reconciliation Status Advice V")]
 public interface ISecuritiesFinancingReportingReconciliationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +34,6 @@ public interface ISecuritiesFinancingReportingReconciliationStatusAdviceV01 : IO
     [IsoId("_2zvMBwuAEeqVvtu9Ny8FDA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

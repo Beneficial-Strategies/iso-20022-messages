@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the identification of the reported party through the name and the location.
 /// </summary>
 [IsoId("_ZxnU2cEcEea7jLfvGi1PDw")]
+[IsoDisplayName(@"Name And Location")]
 public interface INameAndLocation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INameAndLocation1 : IIsoComponent
     [IsoId("_x2XHQcEcEea7jLfvGi1PDw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Name { get; }
 
     /// <summary>

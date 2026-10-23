@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus25Choice;
 /// </summary>
 [IsoId("_04af4Tp4EeWVrPy0StzzSg")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IMatchingStatus25Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IProprietary : IMatchingStatus25Choice, IIsoChoiceVariant
     [IsoId("_y0OagTp4EeWVrPy0StzzSg")]
     [DisplayName("Proprietary Reason")]
     [IsoXmlTag("PrtryRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryReason4> ProprietaryReason { get; }
 }

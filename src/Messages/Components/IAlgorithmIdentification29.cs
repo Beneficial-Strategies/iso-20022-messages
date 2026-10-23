@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cryptographic algorithm and parameters for the protection of the transported key.
 /// </summary>
 [IsoId("_CZaA8QxlEeqEbo60f0v6aw")]
+[IsoDisplayName(@"Algorithm Identification")]
 public interface IAlgorithmIdentification29 : IIsoComponent
 {
     /// <summary>

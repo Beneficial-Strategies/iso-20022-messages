@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further information required for the account switch.
 /// </summary>
 [IsoId("_AU8gYUz5EeepdbMfWGyv3Q")]
+[IsoDisplayName(@"Transfer Instruction")]
 public interface ITransferInstruction1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ITransferInstruction1 : IIsoComponent
     [IsoId("_e2fXIEz5EeepdbMfWGyv3Q")]
     [DisplayName("Transfer Indicator")]
     [IsoXmlTag("TrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TransferIndicator { get; }
 
     /// <summary>
@@ -26,6 +28,8 @@ public interface ITransferInstruction1 : IIsoComponent
     [IsoId("_AjO0AUz5EeepdbMfWGyv3Q")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Code { get; }
 
     /// <summary>
@@ -34,6 +38,8 @@ public interface ITransferInstruction1 : IIsoComponent
     [IsoId("_AjO0A0z5EeepdbMfWGyv3Q")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Proprietary { get; }
 
     /// <summary>
@@ -42,6 +48,7 @@ public interface ITransferInstruction1 : IIsoComponent
     [IsoId("_AjO0B0z5EeepdbMfWGyv3Q")]
     [DisplayName("Start Date Time")]
     [IsoXmlTag("StartDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StartDateTime { get; }
 
     /// <summary>
@@ -50,6 +57,7 @@ public interface ITransferInstruction1 : IIsoComponent
     [IsoId("_AjO0CUz5EeepdbMfWGyv3Q")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -58,5 +66,7 @@ public interface ITransferInstruction1 : IIsoComponent
     [IsoId("_AjO0C0z5EeepdbMfWGyv3Q")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Description { get; }
 }

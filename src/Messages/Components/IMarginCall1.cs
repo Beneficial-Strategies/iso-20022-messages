@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the margin call request.
 /// </summary>
 [IsoId("_Uk_MJdp-Ed-ak6NoX_4Aeg_138884862")]
+[IsoDisplayName(@"Margin Call")]
 public interface IMarginCall1 : IIsoComponent
 {
     /// <summary>

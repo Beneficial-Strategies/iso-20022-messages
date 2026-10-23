@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConditionallyAcceptedStatusReaso
 /// Conditionally accepted reason expressed as a code.
 /// </summary>
 [IsoId("_JgUNAEHaEeamVPoS58KxXA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IConditionallyAcceptedStatusReason3Choice, IIsoChoiceVariant
 {
     /// <summary>

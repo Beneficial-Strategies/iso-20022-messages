@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_Q2jcwKdBEeqY6dwgI6s5vg")]
 [IsoMessage("camt.106.001.01", "ChrgsPmtReq", "urn:iso:std:iso:20022:tech:xsd:camt.106.001.01")]
+[Description(@"The ChargesPaymentRequest message is sent by a financial institution to another financial institution to request the payment of charges, interest and/or other expenses which are previously unknown to the receiver.")]
+[IsoDisplayName(@"Charges Payment Request V")]
 public interface IChargesPaymentRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -28,6 +30,7 @@ public interface IChargesPaymentRequestV01 : IOuterRecord
     [IsoId("_5ShVQKdBEeqY6dwgI6s5vg")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChargesRecord5> Charges { get; }
 
     /// <summary>
@@ -36,5 +39,6 @@ public interface IChargesPaymentRequestV01 : IOuterRecord
     [IsoId("_fu1SMbR_Eeq3lpO-mRtrig")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

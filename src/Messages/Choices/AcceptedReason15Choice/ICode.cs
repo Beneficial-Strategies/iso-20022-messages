@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedReason15Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IAcceptedReason15Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics related to a cheque instruction, such as cheque type or cheque number.
 /// </summary>
 [IsoId("_tcJEcFkyEeGeoaLUQk__nA_-387134073")]
+[IsoDisplayName(@"Cheque")]
 public interface ICheque7 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICheque7 : IIsoComponent
     [IsoId("_tcJEclkyEeGeoaLUQk__nA_-1044651388")]
     [DisplayName("Cheque Number")]
     [IsoXmlTag("ChqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ChequeNumber { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ICheque7 : IIsoComponent
     [IsoId("_tcSOY1kyEeGeoaLUQk__nA_-1432691134")]
     [DisplayName("Cheque Maturity Date")]
     [IsoXmlTag("ChqMtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ChequeMaturityDate { get; }
 
     /// <summary>
@@ -73,6 +77,8 @@ public interface ICheque7 : IIsoComponent
     [IsoId("_tcSOZFkyEeGeoaLUQk__nA_1601985680")]
     [DisplayName("Forms Code")]
     [IsoXmlTag("FrmsCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FormsCode { get; }
 
     /// <summary>
@@ -81,6 +87,10 @@ public interface ICheque7 : IIsoComponent
     [IsoId("_tcb_YFkyEeGeoaLUQk__nA_-631615173")]
     [DisplayName("Memo Field")]
     [IsoXmlTag("MemoFld")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> MemoField { get; }
 
     /// <summary>
@@ -89,6 +99,8 @@ public interface ICheque7 : IIsoComponent
     [IsoId("_tcb_YVkyEeGeoaLUQk__nA_200714969")]
     [DisplayName("Regional Clearing Zone")]
     [IsoXmlTag("RgnlClrZone")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegionalClearingZone { get; }
 
     /// <summary>
@@ -97,6 +109,8 @@ public interface ICheque7 : IIsoComponent
     [IsoId("_tcb_YlkyEeGeoaLUQk__nA_-1913299118")]
     [DisplayName("Print Location")]
     [IsoXmlTag("PrtLctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PrintLocation { get; }
 
     /// <summary>
@@ -105,5 +119,9 @@ public interface ICheque7 : IIsoComponent
     [IsoId("_tcb_Y1kyEeGeoaLUQk__nA_-667422494")]
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Signature { get; }
 }

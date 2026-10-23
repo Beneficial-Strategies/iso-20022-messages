@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CRSSource1Choice;
 /// Source of the Common Reporting Standard (CRS) status expressed as a code.
 /// </summary>
 [IsoId("_J3oBAUNfEeamLdeYEZm56w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICRSSource1Choice, IIsoChoiceVariant
 {
     /// <summary>

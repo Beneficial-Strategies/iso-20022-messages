@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus54Cho
 /// <summary>
 /// Pending.
 /// </summary>
+[IsoDisplayName(@"Pending")]
 public interface IPending : IInstructionProcessingStatus54Choice, IIsoChoiceVariant
 {
     /// <summary>

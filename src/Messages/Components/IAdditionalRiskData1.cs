@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional data related to risk assessment of the transaction.
 /// </summary>
 [IsoId("_QlXxgEbQEeeIjf8aP9KbJA")]
+[IsoDisplayName(@"Additional Risk Data")]
 public interface IAdditionalRiskData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAdditionalRiskData1 : IIsoComponent
     [IsoId("_neNxgEbQEeeIjf8aP9KbJA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IAdditionalRiskData1 : IIsoComponent
     [IsoId("_wBlgwEbQEeeIjf8aP9KbJA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max10KText)]
+    [StringLength(10000, MinimumLength = 1)]
     Max10KText Value { get; }
 }

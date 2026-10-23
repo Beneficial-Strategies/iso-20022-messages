@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Address of a party expressed in a formal structure, usually according to the country&apos;s postal services specifications.
 /// </summary>
 [IsoId("_QGckRNp-Ed-ak6NoX_4Aeg_829983721")]
+[IsoDisplayName(@"Structured Long Postal Address")]
 public interface IStructuredLongPostalAddress1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStructuredLongPostalAddress1 : IIsoComponent
     [IsoId("_QGckRdp-Ed-ak6NoX_4Aeg_1005453911")]
     [DisplayName("Building Name")]
     [IsoXmlTag("BldgNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BuildingName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IStructuredLongPostalAddress1 : IIsoComponent
     [IsoId("_QGckRtp-Ed-ak6NoX_4Aeg_1005453819")]
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StreetName { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IStructuredLongPostalAddress1 : IIsoComponent
     [IsoId("_QGluMNp-Ed-ak6NoX_4Aeg_1005453850")]
     [DisplayName("Street Building Identification")]
     [IsoXmlTag("StrtBldgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StreetBuildingIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IStructuredLongPostalAddress1 : IIsoComponent
     [IsoId("_QGluMdp-Ed-ak6NoX_4Aeg_1005454212")]
     [DisplayName("Floor")]
     [IsoXmlTag("Flr")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? Floor { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IStructuredLongPostalAddress1 : IIsoComponent
     [IsoId("_QGluMtp-Ed-ak6NoX_4Aeg_1005453881")]
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TownName { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface IStructuredLongPostalAddress1 : IIsoComponent
     [IsoId("_QGluM9p-Ed-ak6NoX_4Aeg_1005453964")]
     [DisplayName("District Name")]
     [IsoXmlTag("DstrctNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DistrictName { get; }
 
     /// <summary>
@@ -65,6 +78,8 @@ public interface IStructuredLongPostalAddress1 : IIsoComponent
     [IsoId("_QGluNNp-Ed-ak6NoX_4Aeg_1005454644")]
     [DisplayName("Region Identification")]
     [IsoXmlTag("RgnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegionIdentification { get; }
 
     /// <summary>
@@ -73,6 +88,8 @@ public interface IStructuredLongPostalAddress1 : IIsoComponent
     [IsoId("_QGluNdp-Ed-ak6NoX_4Aeg_1005454674")]
     [DisplayName("State")]
     [IsoXmlTag("Stat")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? State { get; }
 
     /// <summary>
@@ -81,6 +98,8 @@ public interface IStructuredLongPostalAddress1 : IIsoComponent
     [IsoId("_QGluNtp-Ed-ak6NoX_4Aeg_1005453942")]
     [DisplayName("County Identification")]
     [IsoXmlTag("CtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CountyIdentification { get; }
 
     /// <summary>
@@ -97,6 +116,8 @@ public interface IStructuredLongPostalAddress1 : IIsoComponent
     [IsoId("_QGluONp-Ed-ak6NoX_4Aeg_1005453789")]
     [DisplayName("Post Code Identification")]
     [IsoXmlTag("PstCdId")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text PostCodeIdentification { get; }
 
     /// <summary>
@@ -105,5 +126,7 @@ public interface IStructuredLongPostalAddress1 : IIsoComponent
     [IsoId("_QGluOdp-Ed-ak6NoX_4Aeg_1005454273")]
     [DisplayName("Post Office Box")]
     [IsoXmlTag("POB")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? PostOfficeBox { get; }
 }

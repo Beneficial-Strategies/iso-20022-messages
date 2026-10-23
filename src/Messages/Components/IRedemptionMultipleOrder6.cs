@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction from an investor to sell investment fund units back to the fund.
 /// </summary>
 [IsoId("_7RE7JTbsEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Redemption Multiple Order")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IRedemptionMultipleOrder6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IRedemptionMultipleOrder6 : IIsoComponent
     [IsoId("_7rQ8vTbsEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IRedemptionMultipleOrder6 : IIsoComponent
     [IsoId("_7rQ8wTbsEead9bDRE_1DAQ")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IRedemptionMultipleOrder6 : IIsoComponent
     [IsoId("_7rQ8xTbsEead9bDRE_1DAQ")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedFutureTradeDate { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface IRedemptionMultipleOrder6 : IIsoComponent
     [IsoId("_7rQ8zTbsEead9bDRE_1DAQ")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson32> BeneficiaryDetails { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IRedemptionMultipleOrder6 : IIsoComponent
     [IsoId("_7rQ8zzbsEead9bDRE_1DAQ")]
     [DisplayName("Individual Order Details")]
     [IsoXmlTag("IndvOrdrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRedemptionOrder14> IndividualOrderDetails { get; }
 
     /// <summary>

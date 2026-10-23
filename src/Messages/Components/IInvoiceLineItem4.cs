@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Item purchased with the transaction.
 /// </summary>
 [IsoId("_sPe2UUhrEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Invoice Line Item4")]
 public interface IInvoiceLineItem4 : IIsoComponent
 {
     /// <summary>
@@ -177,6 +178,7 @@ public interface IInvoiceLineItem4 : IIsoComponent
     [IsoId("_sSJI6UhrEfCMZJtj4J7UGQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> Tax { get; }
 
     /// <summary>
@@ -217,6 +219,7 @@ public interface IInvoiceLineItem4 : IIsoComponent
     [IsoId("_luufEkhrEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -225,5 +228,6 @@ public interface IInvoiceLineItem4 : IIsoComponent
     [IsoId("_luufE0hrEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

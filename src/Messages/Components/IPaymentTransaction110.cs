@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the original transactions, to which the status report message refers.
 /// </summary>
 [IsoId("_4uMx2XL-EeidQ_AAdEzxQA")]
+[IsoDisplayName(@"Payment Transaction")]
 public interface IPaymentTransaction110 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentTransaction110 : IIsoComponent
     [IsoId("_447bE3L-EeidQ_AAdEzxQA")]
     [DisplayName("Status Identification")]
     [IsoXmlTag("StsId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StatusIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPaymentTransaction110 : IIsoComponent
     [IsoId("_447bF3L-EeidQ_AAdEzxQA")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPaymentTransaction110 : IIsoComponent
     [IsoId("_447bGXL-EeidQ_AAdEzxQA")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IPaymentTransaction110 : IIsoComponent
     [IsoId("_447bG3L-EeidQ_AAdEzxQA")]
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +66,7 @@ public interface IPaymentTransaction110 : IIsoComponent
     [IsoId("_Wz-M4XreEeidVZmeoasaWQ")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? OriginalUETR { get; }
 
     /// <summary>
@@ -73,6 +83,7 @@ public interface IPaymentTransaction110 : IIsoComponent
     [IsoId("_447bH3L-EeidQ_AAdEzxQA")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation12> StatusReasonInformation { get; }
 
     /// <summary>
@@ -81,6 +92,7 @@ public interface IPaymentTransaction110 : IIsoComponent
     [IsoId("_447bIXL-EeidQ_AAdEzxQA")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges7> ChargesInformation { get; }
 
     /// <summary>
@@ -89,6 +101,7 @@ public interface IPaymentTransaction110 : IIsoComponent
     [IsoId("_447bI3L-EeidQ_AAdEzxQA")]
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AcceptanceDateTime { get; }
 
     /// <summary>
@@ -105,6 +118,8 @@ public interface IPaymentTransaction110 : IIsoComponent
     [IsoId("_447bJXL-EeidQ_AAdEzxQA")]
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerReference { get; }
 
     /// <summary>
@@ -113,6 +128,8 @@ public interface IPaymentTransaction110 : IIsoComponent
     [IsoId("_447bJ3L-EeidQ_AAdEzxQA")]
     [DisplayName("Clearing System Reference")]
     [IsoXmlTag("ClrSysRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClearingSystemReference { get; }
 
     /// <summary>
@@ -145,5 +162,6 @@ public interface IPaymentTransaction110 : IIsoComponent
     [IsoId("_447bL3L-EeidQ_AAdEzxQA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

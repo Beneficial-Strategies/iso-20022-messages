@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider.
 /// </summary>
 [IsoId("_yiVD8a_aEeaepNKtQMrGAQ")]
+[IsoDisplayName(@"Currency Conversion")]
 public interface ICurrencyConversion13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICurrencyConversion13 : IIsoComponent
     [IsoId("_yua_Ma_aEeaepNKtQMrGAQ")]
     [DisplayName("Accepted By Cardholder")]
     [IsoXmlTag("AccptdByCrdhldr")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AcceptedByCardholder { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RenounceableStatus1FormatChoice;
 /// Standard code to specify the renounceable status.
 /// </summary>
 [IsoId("_Roygwdp-Ed-ak6NoX_4Aeg_-576437300")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRenounceableStatus1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

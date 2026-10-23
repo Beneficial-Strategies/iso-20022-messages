@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cafm;
 /// </summary>
 [IsoId("_ncLnMZB6Ee6TWIDarRgYow")]
 [IsoMessage("cafm.002.001.03", "FileActnRspn", "urn:iso:std:iso:20022:tech:xsd:cafm.002.001.03")]
+[IsoDisplayName(@"File Action Response V03")]
 public interface IFileActionResponseV03 : IOuterRecord
 {
     /// <summary>
@@ -165,6 +166,7 @@ public interface IFileActionResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent16> POIComponent { get; }
 
     /// <summary>
@@ -228,6 +230,7 @@ public interface IFileActionResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -242,6 +245,7 @@ public interface IFileActionResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -256,6 +260,7 @@ public interface IFileActionResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -263,6 +268,7 @@ public interface IFileActionResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

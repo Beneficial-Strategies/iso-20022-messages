@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InflationIndex1Choice;
 /// Standardised name of the index.
 /// </summary>
 [IsoId("_ZyZ21yS2EeWsI5Sp3-B3zg")]
+[IsoDisplayName(@"Name")]
 public interface IName : IInflationIndex1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IName : IInflationIndex1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 25 characters.
     /// </summary>
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max25Text)]
+    [StringLength(25, MinimumLength = 1)]
     Max25Text Value { get; }
 }

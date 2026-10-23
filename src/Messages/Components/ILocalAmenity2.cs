@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains additional information about the fuel location, such as hours of operation and Interstate Access/Exit Number, etc.
 /// </summary>
 [IsoId("_UL3KoXbhEfCmC4yYaU27Kg")]
+[IsoDisplayName(@"Local Amenity2")]
 public interface ILocalAmenity2 : IIsoComponent
 {
     /// <summary>

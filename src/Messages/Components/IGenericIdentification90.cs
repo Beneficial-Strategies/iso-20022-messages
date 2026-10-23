@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of an entity.
 /// </summary>
 [IsoId("_rkfJ4Y0YEeWRYffwL7E13A")]
+[IsoDisplayName(@"Generic Identification")]
 public interface IGenericIdentification90 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGenericIdentification90 : IIsoComponent
     [IsoId("_rvGecY0YEeWRYffwL7E13A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IGenericIdentification90 : IIsoComponent
     [IsoId("_rvGed40YEeWRYffwL7E13A")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
     Min2Max3AlphaText? Country { get; }
 
     /// <summary>
@@ -49,5 +53,7 @@ public interface IGenericIdentification90 : IIsoComponent
     [IsoId("_rvGeeY0YEeWRYffwL7E13A")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 }

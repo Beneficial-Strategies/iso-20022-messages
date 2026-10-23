@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor parameters dedicated to the acquirer protocol.
 /// </summary>
 [IsoId("_KsqnwH1DEeCF8NjrBemJWQ_748699006")]
+[IsoDisplayName(@"Acquirer Protocol Parameters")]
 public interface IAcquirerProtocolParameters1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAcquirerProtocolParameters1 : IIsoComponent
     [IsoId("_KsqnwX1DEeCF8NjrBemJWQ_-1297060321")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification32> AcquirerIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAcquirerProtocolParameters1 : IIsoComponent
     [IsoId("_Ksqnwn1DEeCF8NjrBemJWQ_-2090866337")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ApplicationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IAcquirerProtocolParameters1 : IIsoComponent
     [IsoId("_Ksqnw31DEeCF8NjrBemJWQ_1104861220")]
     [DisplayName("Host")]
     [IsoXmlTag("Hst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcquirerHostConfiguration1> Host { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IAcquirerProtocolParameters1 : IIsoComponent
     [IsoId("_Ksqnx31DEeCF8NjrBemJWQ_226394548")]
     [DisplayName("Reconciliation By Acquirer")]
     [IsoXmlTag("RcncltnByAcqrr")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReconciliationByAcquirer { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface IAcquirerProtocolParameters1 : IIsoComponent
     [IsoId("_KsqnyH1DEeCF8NjrBemJWQ_-1958782800")]
     [DisplayName("Totals Per Currency")]
     [IsoXmlTag("TtlsPerCcy")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TotalsPerCurrency { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface IAcquirerProtocolParameters1 : IIsoComponent
     [IsoId("_KszxsH1DEeCF8NjrBemJWQ_-1428276857")]
     [DisplayName("Batch Transfer Content")]
     [IsoXmlTag("BtchTrfCntt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<BatchTransactionType1Code> BatchTransferContent { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface IAcquirerProtocolParameters1 : IIsoComponent
     [IsoId("_KszxsX1DEeCF8NjrBemJWQ_-717374790")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageItemCondition1> MessageItem { get; }
 
     /// <summary>
@@ -97,5 +105,6 @@ public interface IAcquirerProtocolParameters1 : IIsoComponent
     [IsoId("_Kszxsn1DEeCF8NjrBemJWQ_1543671091")]
     [DisplayName("Protect Card Data")]
     [IsoXmlTag("PrtctCardData")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator ProtectCardData { get; }
 }

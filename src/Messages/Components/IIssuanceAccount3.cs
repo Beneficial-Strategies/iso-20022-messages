@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Issuance Account3.
 /// </summary>
 [IsoId("_FBrNIeFTEe6zNorB_Q2tDg")]
+[IsoDisplayName(@"Issuance Account3")]
 public interface IIssuanceAccount3 : IIsoComponent
 {
     /// <summary>

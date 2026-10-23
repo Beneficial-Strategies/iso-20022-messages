@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.canm;
 /// </summary>
 [IsoId("_xPdQMZLMEe6TWIDarRgYow")]
 [IsoMessage("canm.001.001.04", "NtwkMgmtInitn", "urn:iso:std:iso:20022:tech:xsd:canm.001.001.04")]
+[IsoDisplayName(@"Network Management Initiation V04")]
 public interface INetworkManagementInitiationV04 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +40,7 @@ public interface INetworkManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -46,6 +48,7 @@ public interface INetworkManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -116,6 +119,7 @@ public interface INetworkManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -137,6 +141,7 @@ public interface INetworkManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -158,6 +163,7 @@ public interface INetworkManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

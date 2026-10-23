@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Outcome of the processing of the authorisation.
 /// </summary>
 [IsoId("_vver8ahOEeuOaMA1YOy5YQ")]
+[IsoDisplayName(@"Processing Result")]
 public interface IProcessingResult10 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IProcessingResult10 : IIsoComponent
     [IsoId("_gq8gACFTEey8XKHwKquEQw")]
     [DisplayName("Approval Code")]
     [IsoXmlTag("ApprvlCd")]
+    [IsoSimpleType(IsoSimpleType.Exact6AlphaNumericText)]
     Exact6AlphaNumericText? ApprovalCode { get; }
 
     /// <summary>
@@ -59,6 +61,7 @@ public interface IProcessingResult10 : IIsoComponent
     [IsoId("_v0w0l6hOEeuOaMA1YOy5YQ")]
     [DisplayName("Action Required")]
     [IsoXmlTag("ActnReqrd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ActionRequired { get; }
 
     /// <summary>
@@ -67,6 +70,7 @@ public interface IProcessingResult10 : IIsoComponent
     [IsoId("_v0w0mahOEeuOaMA1YOy5YQ")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction13> Action { get; }
 
     /// <summary>
@@ -75,6 +79,7 @@ public interface IProcessingResult10 : IIsoComponent
     [IsoId("_v0w0m6hOEeuOaMA1YOy5YQ")]
     [DisplayName("Additional Action")]
     [IsoXmlTag("AddtlActn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAction1> AdditionalAction { get; }
 
     /// <summary>
@@ -84,5 +89,6 @@ public interface IProcessingResult10 : IIsoComponent
     [IsoId("_v0w0nahOEeuOaMA1YOy5YQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation29> AdditionalInformation { get; }
 }

@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "StsXtnsnRjctnNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.034.001.03"
 )]
+[Description(@"Scope|The StatusExtensionRejectionNotification message is sent by the matching application to the submitter of a request to extend the status of a transaction.|This message is used to inform about the rejection of a request to extend the status of a transaction.|Usage|The StatusExtensionRejectionNotification message can be sent by the matching application to pass on information about the rejection of a request to extend the status of a transaction that it has obtained through the receipt of a StatusExtensionRejection message.|In order to pass on information about the acceptance of a request to extend the status of a transaction the matching application sends a StatusExtensionNotification message.")]
+[IsoDisplayName(@"Status Extension Rejection Notification V")]
 public interface IStatusExtensionRejectionNotificationV03 : IOuterRecord
 {
     /// <summary>
@@ -61,6 +63,9 @@ public interface IStatusExtensionRejectionNotificationV03 : IOuterRecord
     [IsoId("_yZ_L4tE8Ed-BzquC8wXy7w_474409823")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

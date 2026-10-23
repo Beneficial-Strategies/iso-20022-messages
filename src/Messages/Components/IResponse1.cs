@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the margin call, that is a description and a response type.
 /// </summary>
 [IsoId("_QnYHEdp-Ed-ak6NoX_4Aeg_596730700")]
+[IsoDisplayName(@"Response")]
 public interface IResponse1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IResponse1 : IIsoComponent
     [IsoId("_QnYHEtp-Ed-ak6NoX_4Aeg_-119884462")]
     [DisplayName("Response Type Details")]
     [IsoXmlTag("RspnTpDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IResponseType1Choice> ResponseTypeDetails { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface IResponse1 : IIsoComponent
     [IsoId("_QnYHE9p-Ed-ak6NoX_4Aeg_719911987")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

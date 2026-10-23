@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRightCode1Choice;
 /// Identifies the additional right code.
 /// </summary>
 [IsoId("_RDYtpNp-Ed-ak6NoX_4Aeg_1133173418")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAdditionalRightCode1Choice, IIsoChoiceVariant
 {
     /// <summary>

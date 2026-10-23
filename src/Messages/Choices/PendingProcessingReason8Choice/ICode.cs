@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessingReason8Choice;
 /// Reason for the pending status expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_Ooypv1jsEeOnqqBHs8Gasw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPendingProcessingReason8Choice, IIsoChoiceVariant
 {
     /// <summary>

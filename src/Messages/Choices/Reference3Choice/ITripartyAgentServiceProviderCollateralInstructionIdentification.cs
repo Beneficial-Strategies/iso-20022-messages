@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference3Choice;
 /// Reference assigned to the instruction by the triparty-agent/service-provider.
 /// </summary>
 [IsoId("_sW8TgQLyEeutW5-TpeYJhA")]
+[IsoDisplayName(@"Triparty Agent Service Provider Collateral Instruction Identification")]
 public interface ITripartyAgentServiceProviderCollateralInstructionIdentification
     : IReference3Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ITripartyAgentServiceProviderCollateralInstructionIdentificatio
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

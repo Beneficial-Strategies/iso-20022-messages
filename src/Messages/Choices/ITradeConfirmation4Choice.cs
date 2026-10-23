@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Trade Confirmation4Choice.
 /// </summary>
 [IsoId("_-DShYY-SEe6Ojt1b3tfu9Q")]
+[IsoDisplayName(@"Trade Confirmation4Choice")]
 public interface ITradeConfirmation4Choice : IIsoChoice { }

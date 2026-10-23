@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party and related security certificate.
 /// </summary>
 [IsoId("_RpGNURg6EeKnW4lR85q-0A")]
+[IsoDisplayName(@"Party And Certificate")]
 public interface IPartyAndCertificate3 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IPartyAndCertificate3 : IIsoComponent
     [IsoId("_R-Zu_Bg6EeKnW4lR85q-0A")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
     Max10KBinary? Certificate { get; }
 }

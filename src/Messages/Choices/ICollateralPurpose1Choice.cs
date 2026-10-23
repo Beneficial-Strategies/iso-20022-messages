@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code and a proprietary code for collateral purpose.
 /// </summary>
 [IsoId("_Qkr_c9p-Ed-ak6NoX_4Aeg_1939659282")]
+[IsoDisplayName(@"Collateral Purpose 1 Choice")]
 public interface ICollateralPurpose1Choice : IIsoChoice { }

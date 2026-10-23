@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the file action to be performed.
 /// </summary>
 [IsoId("_7LN-oFD3Eee94_dUz-hvgw")]
+[IsoDisplayName(@"File Action Details")]
 public interface IFileActionDetails1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IFileActionDetails1 : IIsoComponent
     [IsoId("_Ddn5sFD4Eee94_dUz-hvgw")]
     [DisplayName("File Name")]
     [IsoXmlTag("FileNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text FileName { get; }
 
     /// <summary>
@@ -27,6 +30,7 @@ public interface IFileActionDetails1 : IIsoComponent
     [IsoId("_j2qysFD6Eee94_dUz-hvgw")]
     [DisplayName("Data Record")]
     [IsoXmlTag("DataRcrd")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary DataRecord { get; }
 
     /// <summary>
@@ -36,6 +40,7 @@ public interface IFileActionDetails1 : IIsoComponent
     [IsoId("_shNg8FD6Eee94_dUz-hvgw")]
     [DisplayName("Action Date")]
     [IsoXmlTag("ActnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ActionDate { get; }
 
     /// <summary>
@@ -45,5 +50,7 @@ public interface IFileActionDetails1 : IIsoComponent
     [IsoId("_U60dcFEFEee94_dUz-hvgw")]
     [DisplayName("File Security Code")]
     [IsoXmlTag("FileSctyCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FileSecurityCode { get; }
 }

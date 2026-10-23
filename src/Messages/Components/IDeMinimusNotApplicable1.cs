@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Conditions applicable when the investor is not covered by the &quot;de minimis&quot; exemption.
 /// </summary>
 [IsoId("_RSI7WNp-Ed-ak6NoX_4Aeg_88957855")]
+[IsoDisplayName(@"De Minimus Not Applicable")]
 public interface IDeMinimusNotApplicable1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface IDeMinimusNotApplicable1 : IIsoComponent
     [IsoId("_RSI7Wdp-Ed-ak6NoX_4Aeg_491616181")]
     [DisplayName("Restricted Person Reason")]
     [IsoXmlTag("RstrctdPrsnRsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text RestrictedPersonReason { get; }
 }

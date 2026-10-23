@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.pain;
     "CdtrPmtActvtnReq",
     "urn:iso:std:iso:20022:tech:xsd:pain.013.001.01"
 )]
+[Description(@"Scope|This message is sent by the Creditor sending party to the Debtor receiving party, directly or through agents.|It is used to initiate a creditor payment activation request.")]
+[IsoDisplayName(@"Creditor Payment Activation Request V")]
 public interface ICreditorPaymentActivationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -34,5 +36,6 @@ public interface ICreditorPaymentActivationRequestV01 : IOuterRecord
     [IsoId("_GWSDl9EvEd-BzquC8wXy7w_1980087289")]
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstruction5> PaymentInformation { get; }
 }

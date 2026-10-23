@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrAmount2Choice;
 /// </summary>
 [IsoId("_wXH_kweCEe2fOITqoTnSLQ")]
 [IsoXmlTag("Amt")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount : IQuantityOrAmount2Choice, IIsoChoiceVariant
 {
     /// <summary>

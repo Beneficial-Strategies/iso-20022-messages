@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details information on the original transactions, to which the status report message refers.
 /// </summary>
 [IsoId("_sobvkFkyEeGeoaLUQk__nA_-413898569")]
+[IsoDisplayName(@"Original Payment Instruction")]
 public interface IOriginalPaymentInstruction1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalPaymentInstruction1 : IIsoComponent
     [IsoId("_sobvkVkyEeGeoaLUQk__nA_-2107629744")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalPaymentInformationIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IOriginalPaymentInstruction1 : IIsoComponent
     [IsoId("_sobvklkyEeGeoaLUQk__nA_177380694")]
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? OriginalNumberOfTransactions { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IOriginalPaymentInstruction1 : IIsoComponent
     [IsoId("_sobvk1kyEeGeoaLUQk__nA_704376637")]
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? OriginalControlSum { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IOriginalPaymentInstruction1 : IIsoComponent
     [IsoId("_sok5gVkyEeGeoaLUQk__nA_1702211545")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation9> StatusReasonInformation { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IOriginalPaymentInstruction1 : IIsoComponent
     [IsoId("_sok5glkyEeGeoaLUQk__nA_323528602")]
     [DisplayName("Number Of Transactions Per Status")]
     [IsoXmlTag("NbOfTxsPerSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfTransactionsPerStatus3> NumberOfTransactionsPerStatus { get; }
 
     /// <summary>
@@ -65,5 +72,6 @@ public interface IOriginalPaymentInstruction1 : IIsoComponent
     [IsoId("_souqgFkyEeGeoaLUQk__nA_1658379449")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction32> TransactionInformationAndStatus { get; }
 }

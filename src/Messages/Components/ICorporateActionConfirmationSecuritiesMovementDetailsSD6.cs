@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action confirmation securities movement details.
 /// </summary>
 [IsoId("_o27Tkb-zEeeb2ZBoAlSG1Q")]
+[IsoDisplayName(@"Corporate Action Confirmation Securities Movement Details SD")]
 public interface ICorporateActionConfirmationSecuritiesMovementDetailsSD6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionConfirmationSecuritiesMovementDetailsSD6 : IIso
     [IsoId("_pFzdEb-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -65,6 +68,8 @@ public interface ICorporateActionConfirmationSecuritiesMovementDetailsSD6 : IIso
     [IsoId("_pFzdL7-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Contra Participant Number")]
     [IsoXmlTag("ContraPtcptNb")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? ContraParticipantNumber { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ICorporateActionConfirmationSecuritiesMovementDetailsSD6 : IIso
     [IsoId("_pFzdN7-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface ICorporateActionConfirmationSecuritiesMovementDetailsSD6 : IIso
     [IsoId("_pFzdR7-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Tax Adjustment Rate")]
     [IsoXmlTag("TaxAdjstmntRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TaxAdjustmentRate { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface ICorporateActionConfirmationSecuritiesMovementDetailsSD6 : IIso
     [IsoId("_pFzdSb-zEeeb2ZBoAlSG1Q")]
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
     Exact32AlphaNumericText? RDPReferenceNumber { get; }
 
     /// <summary>
@@ -105,5 +113,6 @@ public interface ICorporateActionConfirmationSecuritiesMovementDetailsSD6 : IIso
     [IsoId("_pFzdS7-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Rounding Factor")]
     [IsoXmlTag("RndgFctr")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? RoundingFactor { get; }
 }

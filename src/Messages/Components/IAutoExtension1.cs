@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Automatic extension information.
 /// </summary>
 [IsoId("_95V5dnltEeG7BsjMvd1mEw_1894661864")]
+[IsoDisplayName(@"Auto Extension")]
 public interface IAutoExtension1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IAutoExtension1 : IIsoComponent
     [IsoId("_95V5eHltEeG7BsjMvd1mEw_-211951579")]
     [DisplayName("Final Expiry Date")]
     [IsoXmlTag("FnlXpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FinalExpiryDate { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IAutoExtension1 : IIsoComponent
     [IsoId("_95V5eXltEeG7BsjMvd1mEw_-1641257680")]
     [DisplayName("Non Extension Notification")]
     [IsoXmlTag("NonXtnsnNtfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INonExtension1> NonExtensionNotification { get; }
 }

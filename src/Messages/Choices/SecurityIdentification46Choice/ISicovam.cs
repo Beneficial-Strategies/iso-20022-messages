@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice;
 
 /// <summary>French Sicovam identifier.</summary>
 [IsoId("81d4d2d3-38cc-47aa-8e85-9216a8bfcf5c")]
+[IsoDisplayName(@"Sicovam")]
 public interface ISicovam : ISecurityIdentification46Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

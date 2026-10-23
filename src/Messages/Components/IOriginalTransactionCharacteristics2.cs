@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the transaction characteristics of original transaction.
 /// </summary>
 [IsoId("_PJug8UiTEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Original Transaction Characteristics2")]
 public interface IOriginalTransactionCharacteristics2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IOriginalTransactionCharacteristics2 : IIsoComponent
     [IsoId("_PMVJC0iTEfCMZJtj4J7UGQ")]
     [DisplayName("Transaction Attribute")]
     [IsoXmlTag("TxAttr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TransactionAttribute3Code> TransactionAttribute { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IOriginalTransactionCharacteristics2 : IIsoComponent
     [IsoId("_PMVJD0iTEfCMZJtj4J7UGQ")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IOriginalTransactionCharacteristics2 : IIsoComponent
     [IsoId("_PMVJHUiTEfCMZJtj4J7UGQ")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface IOriginalTransactionCharacteristics2 : IIsoComponent
     [IsoId("_DzZfskiEEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -81,5 +86,6 @@ public interface IOriginalTransactionCharacteristics2 : IIsoComponent
     [IsoId("_DzZfs0iEEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

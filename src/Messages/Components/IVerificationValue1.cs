@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Verification Value1.
 /// </summary>
 [IsoId("_otO6UHG4Ee60F8I8TAMKmg")]
+[IsoDisplayName(@"Verification Value1")]
 public interface IVerificationValue1 : IIsoComponent
 {
     /// <summary>

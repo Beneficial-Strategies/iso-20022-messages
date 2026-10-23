@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Used to report between the party reference data or an operational error.
 /// </summary>
 [IsoId("_QgdAwZ9uEee7Qpz45yWJJw")]
+[IsoDisplayName(@"Party Audit Trail Or Error 1 Choice")]
 public interface IPartyAuditTrailOrError1Choice : IIsoChoice { }

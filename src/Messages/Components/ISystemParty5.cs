@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// This entity shall store the parties from the first three levels: the system operator, the central securities depositaries, the participants of the central securities depositaries, the national central banks and payment banks.
 /// </summary>
 [IsoId("_0NEVZYwXEei289CGNqs21g")]
+[IsoDisplayName(@"System Party")]
 public interface ISystemParty5 : IIsoComponent
 {
     /// <summary>
@@ -35,6 +36,7 @@ public interface ISystemParty5 : IIsoComponent
     [IsoId("_CiEaI4waEei289CGNqs21g")]
     [DisplayName("Contact Details")]
     [IsoXmlTag("CtctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContact5> ContactDetails { get; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public interface ISystemParty5 : IIsoComponent
     [IsoId("_0XDX0YwXEei289CGNqs21g")]
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OpeningDate { get; }
 
     /// <summary>
@@ -51,6 +54,7 @@ public interface ISystemParty5 : IIsoComponent
     [IsoId("_0XDX04wXEei289CGNqs21g")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClosingDate { get; }
 
     /// <summary>
@@ -67,6 +71,7 @@ public interface ISystemParty5 : IIsoComponent
     [IsoId("_0XDX14wXEei289CGNqs21g")]
     [DisplayName("Technical Address")]
     [IsoXmlTag("TechAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITechnicalIdentification2Choice> TechnicalAddress { get; }
 
     /// <summary>
@@ -75,6 +80,7 @@ public interface ISystemParty5 : IIsoComponent
     [IsoId("_0XDX2YwXEei289CGNqs21g")]
     [DisplayName("Market Specific Attribute")]
     [IsoXmlTag("MktSpcfcAttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMarketSpecificAttribute1> MarketSpecificAttribute { get; }
 
     /// <summary>
@@ -107,5 +113,6 @@ public interface ISystemParty5 : IIsoComponent
     [IsoId("_0XDX4YwXEei289CGNqs21g")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemRestriction1> Restriction { get; }
 }

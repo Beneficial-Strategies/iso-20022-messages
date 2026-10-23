@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General information about the reason of the rejection.
 /// </summary>
 [IsoId("_UsSuA9p-Ed-ak6NoX_4Aeg_-521235445")]
+[IsoDisplayName(@"Rejection Reason")]
 public interface IRejectionReason2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRejectionReason2 : IIsoComponent
     [IsoId("_UsSuBNp-Ed-ak6NoX_4Aeg_-153673413")]
     [DisplayName("Rejecting Party Reason")]
     [IsoXmlTag("RjctgPtyRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RejectingPartyReason { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IRejectionReason2 : IIsoComponent
     [IsoId("_UsSuBdp-Ed-ak6NoX_4Aeg_-897575826")]
     [DisplayName("Rejection Date Time")]
     [IsoXmlTag("RjctnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? RejectionDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IRejectionReason2 : IIsoComponent
     [IsoId("_UsSuBtp-Ed-ak6NoX_4Aeg_-147208766")]
     [DisplayName("Error Location")]
     [IsoXmlTag("ErrLctn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? ErrorLocation { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface IRejectionReason2 : IIsoComponent
     [IsoId("_UsSuB9p-Ed-ak6NoX_4Aeg_-90876576")]
     [DisplayName("Reason Description")]
     [IsoXmlTag("RsnDesc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? ReasonDescription { get; }
 
     /// <summary>
@@ -49,5 +57,7 @@ public interface IRejectionReason2 : IIsoComponent
     [IsoId("_UsSuCNp-Ed-ak6NoX_4Aeg_-53011612")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text? AdditionalData { get; }
 }

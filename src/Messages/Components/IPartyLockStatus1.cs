@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Lock status of the party for processing in the system.
 /// </summary>
 [IsoId("_JfSv1mjMEeiRg5NzP0jkQg")]
+[IsoDisplayName(@"Party Lock Status")]
 public interface IPartyLockStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPartyLockStatus1 : IIsoComponent
     [IsoId("_WiPMQGjNEeiRg5NzP0jkQg")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidFrom { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IPartyLockStatus1 : IIsoComponent
     [IsoId("_JfT99GjMEeiRg5NzP0jkQg")]
     [DisplayName("Lock Reason")]
     [IsoXmlTag("LckRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> LockReason { get; }
 }

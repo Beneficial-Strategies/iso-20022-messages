@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionReport8Choice;
 /// </summary>
 [IsoId("_bRuGkRLBEeqctpBfTmLJnw")]
 [IsoXmlTag("New")]
+[IsoDisplayName(@"New")]
 public interface INew : ITradeTransactionReport8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,9 @@ public interface INew : ITradeTransactionReport8Choice, IIsoChoiceVariant
     [IsoId("_VsJZ4Q1KEeqV4s5SpzR1dQ")]
     [DisplayName("Counterparty Specific Data")]
     [IsoXmlTag("CtrPtySpcfcData")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICounterpartySpecificData24> CounterpartySpecificData { get; }
 
     /// <summary>
@@ -42,5 +46,6 @@ public interface INew : ITradeTransactionReport8Choice, IIsoChoiceVariant
     [IsoId("_VsJZ5w1KEeqV4s5SpzR1dQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

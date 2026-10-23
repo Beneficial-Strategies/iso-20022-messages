@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
 /// </summary>
 [IsoId("_A1IGoNokEeC60axPepSq7g_1106734346")]
+[IsoDisplayName(@"Settlement Details")]
 public interface ISettlementDetails43 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISettlementDetails43 : IIsoComponent
     [IsoId("_A1R3odokEeC60axPepSq7g_109661993")]
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? HoldIndicator { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ISettlementDetails43 : IIsoComponent
     [IsoId("_A1R3pNokEeC60axPepSq7g_-1998321779")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementTransactionCondition11Choice> SettlementTransactionCondition { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ISettlementDetails43 : IIsoComponent
     [IsoId("_A1R3pdokEeC60axPepSq7g_1591530902")]
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PartialSettlementIndicator { get; }
 
     /// <summary>
@@ -193,6 +197,7 @@ public interface ISettlementDetails43 : IIsoComponent
     [IsoId("_A1ujktokEeC60axPepSq7g_-2011565005")]
     [DisplayName("Stamp Duty Indicator")]
     [IsoXmlTag("StmpDtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? StampDutyIndicator { get; }
 
     /// <summary>
@@ -233,6 +238,7 @@ public interface ISettlementDetails43 : IIsoComponent
     [IsoId("_A13tgNokEeC60axPepSq7g_-1919806158")]
     [DisplayName("Return Leg")]
     [IsoXmlTag("RtrLeg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ReturnLeg { get; }
 
     /// <summary>
@@ -249,5 +255,6 @@ public interface ISettlementDetails43 : IIsoComponent
     [IsoId("_A13tgtokEeC60axPepSq7g_-1230888609")]
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EligibleForCollateral { get; }
 }

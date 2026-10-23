@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amendment identification.
 /// </summary>
 [IsoId("_9_mScXltEeG7BsjMvd1mEw_288000024")]
+[IsoDisplayName(@"Amendment")]
 public interface IAmendment8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAmendment8 : IIsoComponent
     [IsoId("_9_mScnltEeG7BsjMvd1mEw_1620458309")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAmendment8 : IIsoComponent
     [IsoId("_9_mSc3ltEeG7BsjMvd1mEw_913627548")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText SequenceNumber { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IAmendment8 : IIsoComponent
     [IsoId("_9_mSdHltEeG7BsjMvd1mEw_2054865214")]
     [DisplayName("Beneficiary Reference Number")]
     [IsoXmlTag("BnfcryRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BeneficiaryReferenceNumber { get; }
 
     /// <summary>

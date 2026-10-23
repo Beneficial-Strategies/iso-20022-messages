@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of a drawdown tranche.
 /// </summary>
 [IsoId("_Zv-yMZN5EembCsVG-3f_AA")]
+[IsoDisplayName(@"Drawdown")]
 public interface IDrawdown2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDrawdown2 : IIsoComponent
     [IsoId("_ufZVUDOPEeqjy7_SkdcoGg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Identification { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IDrawdown2 : IIsoComponent
     [IsoId("_aFHUtpN5EembCsVG-3f_AA")]
     [DisplayName("Percentage Of Total Transfer Value")]
     [IsoXmlTag("PctgOfTtlTrfVal")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfTotalTransferValue { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IDrawdown2 : IIsoComponent
     [IsoId("_aFHUupN5EembCsVG-3f_AA")]
     [DisplayName("Additional Funds Designated")]
     [IsoXmlTag("AddtlFndsDsgntd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AdditionalFundsDesignated { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IDrawdown2 : IIsoComponent
     [IsoId("_aFHUwJN5EembCsVG-3f_AA")]
     [DisplayName("Pension Commencement Lump Sum Date")]
     [IsoXmlTag("PnsnCmcmntLumpSumDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PensionCommencementLumpSumDate { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface IDrawdown2 : IIsoComponent
     [IsoId("_aFHUwpN5EembCsVG-3f_AA")]
     [DisplayName("Multiple Pension Commencement Lump Sums")]
     [IsoXmlTag("MltplPnsnCmcmntLumpSums")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? MultiplePensionCommencementLumpSums { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface IDrawdown2 : IIsoComponent
     [IsoId("_aFHUxJN5EembCsVG-3f_AA")]
     [DisplayName("Lifetime Allowance")]
     [IsoXmlTag("LftmAllwnc")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? LifetimeAllowance { get; }
 
     /// <summary>
@@ -105,6 +113,7 @@ public interface IDrawdown2 : IIsoComponent
     [IsoId("_aFHUxpN5EembCsVG-3f_AA")]
     [DisplayName("Recipient Of Drawdown Indicator")]
     [IsoXmlTag("RcptOfDrwdwnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RecipientOfDrawdownIndicator { get; }
 
     /// <summary>
@@ -129,6 +138,7 @@ public interface IDrawdown2 : IIsoComponent
     [IsoId("_aFHUzJN5EembCsVG-3f_AA")]
     [DisplayName("Flexible Drawdown Triggered Date")]
     [IsoXmlTag("FlxblDrwdwnTrggrdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FlexibleDrawdownTriggeredDate { get; }
 
     /// <summary>
@@ -137,5 +147,6 @@ public interface IDrawdown2 : IIsoComponent
     [IsoId("_aFHUzpN5EembCsVG-3f_AA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

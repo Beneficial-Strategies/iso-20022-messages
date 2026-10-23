@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account involved in the card transaction.
 /// </summary>
 [IsoId("_tCyOgXuVEeSVeNXcmBQ4hQ")]
+[IsoDisplayName(@"Card Account")]
 public interface ICardAccount2 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface ICardAccount2 : IIsoComponent
     [IsoId("_tPJ2lXuVEeSVeNXcmBQ4hQ")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AccountName { get; }
 
     /// <summary>
@@ -74,5 +77,6 @@ public interface ICardAccount2 : IIsoComponent
     [IsoId("_b05wwHuWEeSVeNXcmBQ4hQ")]
     [DisplayName("Balance Date")]
     [IsoXmlTag("BalDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BalanceDate { get; }
 }

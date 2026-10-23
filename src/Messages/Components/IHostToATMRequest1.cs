@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the request to an ATM to contact the ATM manager.
 /// </summary>
 [IsoId("_nkIKwItqEeSDLd7nI4Quzw")]
+[IsoDisplayName(@"Host To ATM Request")]
 public interface IHostToATMRequest1 : IIsoComponent
 {
     /// <summary>

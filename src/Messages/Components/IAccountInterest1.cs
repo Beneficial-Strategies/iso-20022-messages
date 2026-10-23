@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides general interest information that applies to the account at a particular moment in time.
 /// </summary>
 [IsoId("_SRxMUNp-Ed-ak6NoX_4Aeg_-808808918")]
+[IsoDisplayName(@"Account Interest")]
 public interface IAccountInterest1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IAccountInterest1 : IIsoComponent
     [IsoId("_SRxMUtp-Ed-ak6NoX_4Aeg_124611606")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRate1> Rate { get; }
 
     /// <summary>
@@ -41,5 +43,7 @@ public interface IAccountInterest1 : IIsoComponent
     [IsoId("_SRxMVNp-Ed-ak6NoX_4Aeg_-447711170")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reason { get; }
 }

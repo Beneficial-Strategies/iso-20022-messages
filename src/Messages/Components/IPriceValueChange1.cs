@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Value given to a positive or negative price change.
 /// </summary>
 [IsoId("_QajzFNp-Ed-ak6NoX_4Aeg_-1357819098")]
+[IsoDisplayName(@"Price Value Change")]
 public interface IPriceValueChange1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPriceValueChange1 : IIsoComponent
     [IsoId("_QajzFtp-Ed-ak6NoX_4Aeg_-1314414014")]
     [DisplayName("Amount Sign")]
     [IsoXmlTag("AmtSgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? AmountSign { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IPriceValueChange1 : IIsoComponent
     [IsoId("_QajzF9p-Ed-ak6NoX_4Aeg_-1357819056")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the ownership of an investment account.
 /// </summary>
 [IsoId("_GYTrkQhDEeSUPbC7DbLJpQ")]
+[IsoDisplayName(@"Investment Account Ownership Information")]
 public interface IInvestmentAccountOwnershipInformation11 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IInvestmentAccountOwnershipInformation11 : IIsoComponent
     [IsoId("_Gzhn9whDEeSUPbC7DbLJpQ")]
     [DisplayName("Ownership Beneficiary Rate")]
     [IsoXmlTag("OwnrshBnfcryRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OwnershipBeneficiaryRate { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface IInvestmentAccountOwnershipInformation11 : IIsoComponent
     [IsoId("_Gzhn-QhDEeSUPbC7DbLJpQ")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientIdentification { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IInvestmentAccountOwnershipInformation11 : IIsoComponent
     [IsoId("_Gzhn-whDEeSUPbC7DbLJpQ")]
     [DisplayName("Fiscal Exemption")]
     [IsoXmlTag("FsclXmptn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FiscalExemption { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IInvestmentAccountOwnershipInformation11 : IIsoComponent
     [IsoId("_Gzhn_QhDEeSUPbC7DbLJpQ")]
     [DisplayName("Signatory Right Indicator")]
     [IsoXmlTag("SgntryRghtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SignatoryRightIndicator { get; }
 
     /// <summary>
@@ -65,6 +71,9 @@ public interface IInvestmentAccountOwnershipInformation11 : IIsoComponent
     [IsoId("_Gzhn_whDEeSUPbC7DbLJpQ")]
     [DisplayName("Modified Investor Profile Validation")]
     [IsoXmlTag("ModfdInvstrPrflVldtn")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope19> ModifiedInvestorProfileValidation { get; }
 
     /// <summary>
@@ -89,6 +98,7 @@ public interface IInvestmentAccountOwnershipInformation11 : IIsoComponent
     [IsoId("_Vs-NYQjQEeS5F6qHcKOrew")]
     [DisplayName("FATCA Form Type")]
     [IsoXmlTag("FATCAFormTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFATCAForm1Choice> FATCAFormType { get; }
 
     /// <summary>
@@ -97,5 +107,6 @@ public interface IInvestmentAccountOwnershipInformation11 : IIsoComponent
     [IsoId("_TrvjMQjVEeS5F6qHcKOrew")]
     [DisplayName("FATCA Status")]
     [IsoXmlTag("FATCASts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFATCAStatus1> FATCAStatus { get; }
 }

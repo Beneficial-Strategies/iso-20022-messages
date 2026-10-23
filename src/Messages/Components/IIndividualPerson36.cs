@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Human entity, as distinguished from a corporate entity (which is sometimes referred to as an &apos;artificial person&apos;).
 /// </summary>
 [IsoId("_-rUYBW4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Individual Person")]
 public interface IIndividualPerson36 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IIndividualPerson36 : IIsoComponent
     [IsoId("_-2MLQ24-EeiU9cctagi5ow")]
     [DisplayName("Previous Name")]
     [IsoXmlTag("PrvsNm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPersonNameLong2> PreviousName { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IIndividualPerson36 : IIsoComponent
     [IsoId("_-2MLSW4-EeiU9cctagi5ow")]
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BirthDate { get; }
 
     /// <summary>
@@ -65,6 +68,8 @@ public interface IIndividualPerson36 : IIsoComponent
     [IsoId("_-2MLTW4-EeiU9cctagi5ow")]
     [DisplayName("Province Of Birth")]
     [IsoXmlTag("PrvcOfBirth")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProvinceOfBirth { get; }
 
     /// <summary>
@@ -73,6 +78,8 @@ public interface IIndividualPerson36 : IIsoComponent
     [IsoId("_-2MLT24-EeiU9cctagi5ow")]
     [DisplayName("City Of Birth")]
     [IsoXmlTag("CityOfBirth")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CityOfBirth { get; }
 
     /// <summary>
@@ -97,6 +104,8 @@ public interface IIndividualPerson36 : IIsoComponent
     [IsoId("_-2MLVW4-EeiU9cctagi5ow")]
     [DisplayName("Social Security Number")]
     [IsoXmlTag("SclSctyNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SocialSecurityNumber { get; }
 
     /// <summary>
@@ -105,6 +114,7 @@ public interface IIndividualPerson36 : IIsoComponent
     [IsoId("_-2MLV24-EeiU9cctagi5ow")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress24> PostalAddress { get; }
 
     /// <summary>
@@ -113,6 +123,7 @@ public interface IIndividualPerson36 : IIsoComponent
     [IsoId("_-2MLWW4-EeiU9cctagi5ow")]
     [DisplayName("Citizenship Information")]
     [IsoXmlTag("CtznshInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICitizenshipInformation1> CitizenshipInformation { get; }
 
     /// <summary>
@@ -137,6 +148,7 @@ public interface IIndividualPerson36 : IIsoComponent
     [IsoId("_-2MLX24-EeiU9cctagi5ow")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification44> OtherIdentification { get; }
 
     /// <summary>
@@ -145,5 +157,6 @@ public interface IIndividualPerson36 : IIsoComponent
     [IsoId("_-2MLYW4-EeiU9cctagi5ow")]
     [DisplayName("Other Details")]
     [IsoXmlTag("OthrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransferInstruction1> OtherDetails { get; }
 }

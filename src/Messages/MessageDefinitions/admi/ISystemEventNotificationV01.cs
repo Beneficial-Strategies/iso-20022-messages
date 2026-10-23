@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// </summary>
 [IsoId("_9C_8iNE9Ed-BzquC8wXy7w_-8125339")]
 [IsoMessage("admi.004.001.01", "SysEvtNtfctn", "urn:iso:std:iso:20022:tech:xsd:admi.004.001.01")]
+[IsoDisplayName(@"System Event Notification V01")]
 public interface ISystemEventNotificationV01 : IOuterRecord
 {
     /// <summary>

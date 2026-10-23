@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus6Choice;
 /// <summary>
 /// Confirmation.
 /// </summary>
+[IsoDisplayName(@"Confirmation")]
 public interface IConfirmation : IInvestigationStatus6Choice, IIsoChoiceVariant
 {
     /// <summary>

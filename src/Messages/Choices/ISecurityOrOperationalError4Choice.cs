@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the financial instruments details or the operational error details.
 /// </summary>
 [IsoId("_P3wGYZJKEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Security Or Operational Error 4 Choice")]
 public interface ISecurityOrOperationalError4Choice : IIsoChoice { }

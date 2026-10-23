@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money associated with a service.
 /// </summary>
 [IsoId("_ouYtsTk2EeapUO0vUIo9Xw")]
+[IsoDisplayName(@"Fee")]
 public interface IFee3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IFee3 : IIsoComponent
     [IsoId("_K_CTdzk3EeapUO0vUIo9Xw")]
     [DisplayName("Repaired Standard Rate")]
     [IsoXmlTag("RprdStdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? RepairedStandardRate { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IFee3 : IIsoComponent
     [IsoId("_K_CTeTk3EeapUO0vUIo9Xw")]
     [DisplayName("Repaired Discount Rate")]
     [IsoXmlTag("RprdDscntRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? RepairedDiscountRate { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IFee3 : IIsoComponent
     [IsoId("_925m8XBJEeaE8MrXjRZ50Q")]
     [DisplayName("Repaired Requested Rate")]
     [IsoXmlTag("RprdReqdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? RepairedRequestedRate { get; }
 
     /// <summary>
@@ -73,6 +77,8 @@ public interface IFee3 : IIsoComponent
     [IsoId("_kNZZUjk3EeapUO0vUIo9Xw")]
     [DisplayName("Commercial Agreement Reference")]
     [IsoXmlTag("ComrclAgrmtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommercialAgreementReference { get; }
 
     /// <summary>
@@ -81,5 +87,6 @@ public interface IFee3 : IIsoComponent
     [IsoId("_kNZZUzk3EeapUO0vUIo9Xw")]
     [DisplayName("New Commercial Agreement Reference Indicator")]
     [IsoXmlTag("NewComrclAgrmtRefInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NewCommercialAgreementReferenceIndicator { get; }
 }

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
     "IntraBalMvmntPdgRpt",
     "urn:iso:std:iso:20022:tech:xsd:camt.085.001.02"
 )]
+[IsoDisplayName(@"Intra Balance Movement Pending Report V02")]
 public interface IIntraBalanceMovementPendingReportV02 : IOuterRecord
 {
     /// <summary>
@@ -64,5 +65,6 @@ public interface IIntraBalanceMovementPendingReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Movements")]
     [IsoXmlTag("Mvmnts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalancePending5> Movements { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Sound Request message.
 /// </summary>
 [IsoId("_GGvxgN6-Eeiwsev40qZGEQ")]
+[IsoDisplayName(@"Device Play Sound Request")]
 public interface IDevicePlaySoundRequest1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IDevicePlaySoundRequest1 : IIsoComponent
     [IsoId("_xG7TMN6-Eeiwsev40qZGEQ")]
     [DisplayName("Sound Volume")]
     [IsoXmlTag("SoundVol")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? SoundVolume { get; }
 
     /// <summary>

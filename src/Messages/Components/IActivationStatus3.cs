@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Activation Status3.
 /// </summary>
 [IsoId("_6YV-8TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Activation Status3")]
 public interface IActivationStatus3 : IIsoComponent
 {
     /// <summary>
@@ -51,5 +52,6 @@ public interface IActivationStatus3 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

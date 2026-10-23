@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the EU dividend status type.
 /// </summary>
 [IsoId("_PfdboTh8EeaH-93K5JKmzw")]
+[IsoDisplayName(@"EU Dividend Status Type 2 Choice")]
 public interface IEUDividendStatusType2Choice : IIsoChoice { }

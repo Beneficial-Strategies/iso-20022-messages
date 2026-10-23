@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further specific details on the direct debit transaction and the related mandate.
 /// </summary>
 [IsoId("_s3kkUWk2Eeanu6HLe77Rkg")]
+[IsoDisplayName(@"Direct Debit Transaction")]
 public interface IDirectDebitTransaction9 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IDirectDebitTransaction9 : IIsoComponent
     [IsoId("_tAWFd2k2Eeanu6HLe77Rkg")]
     [DisplayName("Pre Notification Identification")]
     [IsoXmlTag("PreNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PreNotificationIdentification { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IDirectDebitTransaction9 : IIsoComponent
     [IsoId("_tAWFeWk2Eeanu6HLe77Rkg")]
     [DisplayName("Pre Notification Date")]
     [IsoXmlTag("PreNtfctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PreNotificationDate { get; }
 }

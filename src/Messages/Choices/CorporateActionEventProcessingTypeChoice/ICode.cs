@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventProcessingTy
 /// Standard code to specify the processing type of a corporate action event.
 /// </summary>
 [IsoId("_Q4g6adp-Ed-ak6NoX_4Aeg_1391652199")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionEventProcessingTypeChoice, IIsoChoiceVariant
 {
     /// <summary>

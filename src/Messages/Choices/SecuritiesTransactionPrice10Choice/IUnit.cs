@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice10Choi
 /// Indicates that price is expressed in units.
 /// </summary>
 [IsoId("_QtVs4f9iEea3W_f2lS_aiw")]
+[IsoDisplayName(@"Unit")]
 public interface IUnit : ISecuritiesTransactionPrice10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IUnit : ISecuritiesTransactionPrice10Choice, IIsoChoiceVariant
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.LongFraction21DecimalNumber)]
     LongFraction21DecimalNumber Value { get; }
 }

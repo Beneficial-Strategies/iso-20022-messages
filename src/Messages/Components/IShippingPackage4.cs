@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the details of the package.
 /// </summary>
 [IsoId("_tGSrEUiCEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Shipping Package4")]
 public interface IShippingPackage4 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IShippingPackage4 : IIsoComponent
     [IsoId("_pqQpGUiCEfCMZJtj4J7UGQ")]
     [DisplayName("Supplier Local Data")]
     [IsoXmlTag("SpplrLclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData20> SupplierLocalData { get; }
 
     /// <summary>
@@ -177,6 +179,7 @@ public interface IShippingPackage4 : IIsoComponent
     [IsoId("_tIpbo0iCEfCMZJtj4J7UGQ")]
     [DisplayName("Product")]
     [IsoXmlTag("Pdct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProduct8> Product { get; }
 
     /// <summary>

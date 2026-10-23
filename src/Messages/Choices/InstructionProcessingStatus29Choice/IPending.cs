@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus29Cho
 /// Provides status information related to a pending instruction.
 /// </summary>
 [IsoId("_GxRCS4lqEeavwKddCbm3hg")]
+[IsoDisplayName(@"Pending")]
 public interface IPending : IInstructionProcessingStatus29Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

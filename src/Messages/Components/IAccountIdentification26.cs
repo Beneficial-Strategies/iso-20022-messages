@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique identifier of an account, as assigned by the account servicer.
 /// </summary>
 [IsoId("_ku_soSxxEeKgiYs1KJCQUg")]
+[IsoDisplayName(@"Account Identification")]
 public interface IAccountIdentification26 : IIsoComponent
 {
     /// <summary>

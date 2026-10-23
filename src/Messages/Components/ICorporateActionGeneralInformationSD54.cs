@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action general information.
 /// </summary>
 [IsoId("_-Ou_ETDrEey2N-DB7H7A5A")]
+[IsoDisplayName(@"Corporate Action General Information SD")]
 public interface ICorporateActionGeneralInformationSD54 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionGeneralInformationSD54 : IIsoComponent
     [IsoId("_-kfMoTDrEey2N-DB7H7A5A")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>

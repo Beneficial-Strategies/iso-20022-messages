@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria to be used to extract.
 /// </summary>
 [IsoId("_U3jIcQzWEemZov7BpFCU4Q")]
+[IsoDisplayName(@"Billing Search Criteria3")]
 public interface IBillingSearchCriteria3 : IIsoComponent
 {
     /// <summary>

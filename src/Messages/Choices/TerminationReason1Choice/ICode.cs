@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TerminationReason1Choice;
 /// Termination reason.
 /// </summary>
 [IsoId("_932rsnltEeG7BsjMvd1mEw_1025821698")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITerminationReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

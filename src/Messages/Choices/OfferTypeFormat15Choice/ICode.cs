@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OfferTypeFormat15Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IOfferTypeFormat15Choice, IIsoChoiceVariant
 {
     /// <summary>

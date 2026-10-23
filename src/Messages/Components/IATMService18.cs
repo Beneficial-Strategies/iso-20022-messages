@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Service provided by the ATM inside the session.
 /// </summary>
 [IsoId("_hV3nAa4YEeW_TaP-ygI0SQ")]
+[IsoDisplayName(@"ATM Service")]
 public interface IATMService18 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMService18 : IIsoComponent
     [IsoId("_hhgPQa4YEeW_TaP-ygI0SQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IATMService18 : IIsoComponent
     [IsoId("_hhgPQ64YEeW_TaP-ygI0SQ")]
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Label { get; }
 }

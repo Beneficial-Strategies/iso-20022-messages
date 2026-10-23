@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConfirmationType1Choice;
 /// Confirmation type expressed as a code.
 /// </summary>
 [IsoId("_tv-sYUzLEeafiMTDrtSnyw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IConfirmationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

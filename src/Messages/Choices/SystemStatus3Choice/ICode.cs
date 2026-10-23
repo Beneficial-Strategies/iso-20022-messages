@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemStatus3Choice;
 /// Status of the system, in a coded form.
 /// </summary>
 [IsoId("_1iyv8YpbEeiaB-4Hjqs8aw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISystemStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

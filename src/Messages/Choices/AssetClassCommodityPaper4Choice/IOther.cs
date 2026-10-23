@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper4Choice;
 /// </summary>
 [IsoId("_FsdvORZaEe2QNcZTDeoKnQ")]
 [IsoXmlTag("Othr")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IAssetClassCommodityPaper4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmount6Choice;
 
 /// <summary>Specifies the price as a rate.</summary>
 [IsoId("_5hF8kWeiEeqY_MU7lK4HCA")]
+[IsoDisplayName(@"Rate")]
 public interface IRate : IPriceRateOrAmount6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

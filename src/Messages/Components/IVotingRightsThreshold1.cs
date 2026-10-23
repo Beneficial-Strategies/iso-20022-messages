@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a threshold level and a threshold basis for passing resolutions at general meetings.
 /// </summary>
 [IsoId("_IyKJABuMEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Voting Rights Threshold")]
 public interface IVotingRightsThreshold1 : IIsoComponent
 {
     /// <summary>

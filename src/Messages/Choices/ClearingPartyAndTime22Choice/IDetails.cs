@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingPartyAndTime22Choice;
 /// </summary>
 [IsoId("_mlkJoxZOEe2QNcZTDeoKnQ")]
 [IsoXmlTag("Dtls")]
+[IsoDisplayName(@"Details")]
 public interface IDetails : IClearingPartyAndTime22Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IDetails : IClearingPartyAndTime22Choice, IIsoChoiceVariant
     [IsoId("_vmHkJRZOEe2QNcZTDeoKnQ")]
     [DisplayName("Clearing Receipt Date Time")]
     [IsoXmlTag("ClrRctDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ClearingReceiptDateTime { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface IDetails : IClearingPartyAndTime22Choice, IIsoChoiceVariant
     [IsoId("_vmHkJxZOEe2QNcZTDeoKnQ")]
     [DisplayName("Clearing Date Time")]
     [IsoXmlTag("ClrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ClearingDateTime { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the multimodal or the individual transport of goods.
 /// </summary>
 [IsoId("_kRLuUdQtEeK0PPbKncCqzA")]
+[IsoDisplayName(@"Transport Means")]
 public interface ITransportMeans4 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Certificate issuer name (see X.509).
 /// </summary>
 [IsoId("_Sw--vQEcEeCQm6a_G2yO_w_152932975")]
+[IsoDisplayName(@"Certificate Issuer")]
 public interface ICertificateIssuer1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface ICertificateIssuer1 : IIsoComponent
     [IsoId("_SxIvsAEcEeCQm6a_G2yO_w_1329577257")]
     [DisplayName("Relative Distinguished Name")]
     [IsoXmlTag("RltvDstngshdNm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRelativeDistinguishedName1> RelativeDistinguishedName { get; }
 }

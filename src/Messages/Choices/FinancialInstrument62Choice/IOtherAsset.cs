@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument62Choice;
 /// </summary>
 [IsoId("_qD51dZy1Eem54rMzia0iag")]
 [IsoXmlTag("OthrAsst")]
+[IsoDisplayName(@"Other Asset")]
 public interface IOtherAsset : IFinancialInstrument62Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IOtherAsset : IFinancialInstrument62Choice, IIsoChoiceVariant
     [IsoId("_mrKws5NBEemQB_8XA98K0Q")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IOtherAsset : IFinancialInstrument62Choice, IIsoChoiceVariant
     [IsoId("_mrKwtZNBEemQB_8XA98K0Q")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -42,6 +47,8 @@ public interface IOtherAsset : IFinancialInstrument62Choice, IIsoChoiceVariant
     [IsoId("_syYKoP8dEemiJ7i9El0LvQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Description { get; }
 
     /// <summary>
@@ -50,6 +57,11 @@ public interface IOtherAsset : IFinancialInstrument62Choice, IIsoChoiceVariant
     [IsoId("_mrKwt5NBEemQB_8XA98K0Q")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [StringLength(35, MinimumLength = 1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> OtherIdentification { get; }
 
     /// <summary>
@@ -58,5 +70,6 @@ public interface IOtherAsset : IFinancialInstrument62Choice, IIsoChoiceVariant
     [IsoId("_mrKwuZNBEemQB_8XA98K0Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

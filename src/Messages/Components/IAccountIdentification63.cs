@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account information and detailed account holdings information report for corporate action events.
 /// </summary>
 [IsoId("_pfx79Ti7Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Account Identification")]
 public interface IAccountIdentification63 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountIdentification63 : IIsoComponent
     [IsoId("_pfx8ATi7Eeydid5dcNPKvg")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINXMax35Text? SafekeepingAccount { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAccountIdentification63 : IIsoComponent
     [IsoId("_pfx8CTi7Eeydid5dcNPKvg")]
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text? BlockChainAddressOrWallet { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IAccountIdentification63 : IIsoComponent
     [IsoId("_pfx8Gzi7Eeydid5dcNPKvg")]
     [DisplayName("Corporate Action Event And Balance")]
     [IsoXmlTag("CorpActnEvtAndBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventAndBalance23> CorporateActionEventAndBalance { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFrequency1Choice;
 /// Settlement frequency expressed as a code.
 /// </summary>
 [IsoId("_nkfPUCDUEeWCLu74WLgP4w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlementFrequency1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "IntraPosMvmntPstngRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.016.001.10"
 )]
+[IsoDisplayName(@"Intra Position Movement Posting Report V10")]
 public interface IIntraPositionMovementPostingReportV10 : IOuterRecord
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IIntraPositionMovementPostingReportV10 : IOuterRecord
     /// </summary>
     [DisplayName("Financial Instrument")]
     [IsoXmlTag("FinInstrm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentDetails47> FinancialInstrument { get; }
 }

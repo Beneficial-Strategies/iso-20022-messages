@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date of last revision.
 /// </summary>
 [IsoId("_RfGZQ9p-Ed-ak6NoX_4Aeg_-651747461")]
+[IsoDisplayName(@"Updated Date")]
 public interface IUpdatedDate : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IUpdatedDate : IIsoComponent
     [IsoId("_RfGZRNp-Ed-ak6NoX_4Aeg_-590794644")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Date { get; }
 }

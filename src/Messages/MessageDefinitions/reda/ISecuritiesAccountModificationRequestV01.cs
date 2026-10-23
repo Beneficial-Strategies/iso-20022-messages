@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "SctiesAcctModReq",
     "urn:iso:std:iso:20022:tech:xsd:reda.023.001.01"
 )]
+[Description(@"The SecuritiesAccountModificationRequest message is sent by an instructing party to the executing party to instruct the update of an existing securities account by amending its existing attributes or by providing additional attibutes details.||Usage:|Processing and confirmation of the securities account creation request message are provided via a SecuritiesAccountStatusAdvice message.")]
+[IsoDisplayName(@"Securities Account Modification Request V")]
 public interface ISecuritiesAccountModificationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -43,6 +45,7 @@ public interface ISecuritiesAccountModificationRequestV01 : IOuterRecord
     [IsoId("_KAu-vZ2fEem_Be8NuxvF7Q")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesAccountModification2> Modification { get; }
 
     /// <summary>
@@ -51,5 +54,6 @@ public interface ISecuritiesAccountModificationRequestV01 : IOuterRecord
     [IsoId("_KAu-v52fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

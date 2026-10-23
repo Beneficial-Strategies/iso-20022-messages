@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the number of voting rights cast to a resolution.
 /// </summary>
 [IsoId("_1cUF0V64EeSjaerr_EM7AQ")]
+[IsoDisplayName(@"Vote")]
 public interface IVote7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVote7 : IIsoComponent
     [IsoId("_14JGM164EeSjaerr_EM7AQ")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IVote7 : IIsoComponent
     [IsoId("_14JGN164EeSjaerr_EM7AQ")]
     [DisplayName("For")]
     [IsoXmlTag("For")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? For { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IVote7 : IIsoComponent
     [IsoId("_14JGOV64EeSjaerr_EM7AQ")]
     [DisplayName("Against")]
     [IsoXmlTag("Agnst")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Against { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IVote7 : IIsoComponent
     [IsoId("_14JGO164EeSjaerr_EM7AQ")]
     [DisplayName("Abstain")]
     [IsoXmlTag("Abstn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Abstain { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IVote7 : IIsoComponent
     [IsoId("_14JGPV64EeSjaerr_EM7AQ")]
     [DisplayName("Withhold")]
     [IsoXmlTag("Wthhld")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Withhold { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IVote7 : IIsoComponent
     [IsoId("_VwKY816_EeSjaerr_EM7AQ")]
     [DisplayName("One Year")]
     [IsoXmlTag("OneYr")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? OneYear { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IVote7 : IIsoComponent
     [IsoId("_VwKY9F6_EeSjaerr_EM7AQ")]
     [DisplayName("Two Years")]
     [IsoXmlTag("TwoYrs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TwoYears { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface IVote7 : IIsoComponent
     [IsoId("_VwKY9V6_EeSjaerr_EM7AQ")]
     [DisplayName("Three Years")]
     [IsoXmlTag("ThreeYrs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ThreeYears { get; }
 
     /// <summary>
@@ -89,5 +99,6 @@ public interface IVote7 : IIsoComponent
     [IsoId("_14JGP164EeSjaerr_EM7AQ")]
     [DisplayName("No Action")]
     [IsoXmlTag("NoActn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NoAction { get; }
 }

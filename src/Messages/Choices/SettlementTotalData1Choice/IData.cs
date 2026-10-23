@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTotalData1Choice;
 /// </summary>
 [IsoId("_hwwPwB2nEeqF2P5v-Rtejg")]
 [IsoXmlTag("Data")]
+[IsoDisplayName(@"Data")]
 public interface IData : ISettlementTotalData1Choice, IIsoChoiceVariant
 {
     /// <summary>

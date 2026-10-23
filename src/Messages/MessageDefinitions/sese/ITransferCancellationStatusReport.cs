@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_HFtUYNE6Ed-BzquC8wXy7w_1729523466")]
 [IsoMessage("sese.010.001.01", "sese.010.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.010.001.01")]
+[Description(@"Scope|The TransferCancellationStatusReport message is sent by an executing party to the instructing party.|The message gives the status of a transfer cancellation instruction that was previously sent by the instructing party.|Usage|The TransferCancellationStatusReport message is sent by an executing party to the instructing party. The message can be used to report that either|- the cancellation has been acted upon or|- the cancellation is rejected.|In both cases, the reason must be specified using either a code or unstructured information.")]
+[IsoDisplayName(@"Transfer Cancellation Status Report")]
 public interface ITransferCancellationStatusReport : IOuterRecord
 {
     /// <summary>
@@ -27,6 +29,9 @@ public interface ITransferCancellationStatusReport : IOuterRecord
     [IsoId("_HFtUYdE6Ed-BzquC8wXy7w_1157267444")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference2> RelatedReference { get; }
 
     /// <summary>

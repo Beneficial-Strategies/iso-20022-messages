@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
 /// </summary>
 [IsoId("_RxbfZ9p-Ed-ak6NoX_4Aeg_-2016735960")]
+[IsoDisplayName(@"Investment Account")]
 public interface IInvestmentAccount29 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentAccount29 : IIsoComponent
     [IsoId("_RxbfaNp-Ed-ak6NoX_4Aeg_-2016735934")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IInvestmentAccount29 : IIsoComponent
     [IsoId("_Rxbfadp-Ed-ak6NoX_4Aeg_-2016735918")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Designation { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IInvestmentAccount29 : IIsoComponent
     [IsoId("_Rxbfatp-Ed-ak6NoX_4Aeg_-2016735883")]
     [DisplayName("Fund Type")]
     [IsoXmlTag("FndTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FundType { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IInvestmentAccount29 : IIsoComponent
     [IsoId("_Rxbfa9p-Ed-ak6NoX_4Aeg_-2016735617")]
     [DisplayName("Fund Family Name")]
     [IsoXmlTag("FndFmlyNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FundFamilyName { get; }
 
     /// <summary>
@@ -73,6 +82,9 @@ public interface IInvestmentAccount29 : IIsoComponent
     [IsoId("_RxlQY9p-Ed-ak6NoX_4Aeg_-2016735376")]
     [DisplayName("Intermediary")]
     [IsoXmlTag("Intrmy")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary7> Intermediary { get; }
 
     /// <summary>

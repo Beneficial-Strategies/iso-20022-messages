@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InformationTypeFormat4Choice;
 /// Standard code to specify the information type required.
 /// </summary>
 [IsoId("_gr8cAUEGEeWVgfuHGaKtRQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInformationTypeFormat4Choice, IIsoChoiceVariant
 {
     /// <summary>

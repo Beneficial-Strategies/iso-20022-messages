@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_7A0N0WNmEeSIWbZ6by9dnA")]
 [IsoMessage("colr.012.001.03", "CollSbstitnConf", "urn:iso:std:iso:20022:tech:xsd:colr.012.001.03")]
+[Description(@"Scope|This CollateralSubstitutionConfirmation message is sent by:|- the collateral taker or its collateral manager to the collateral giver or its collateral manager, or|- the collateral giver or its collateral manager to the collateral taker or its collateral manager.|This message confirms the collateral delivery. The collateral taker will only release the return of collateral when the new piece of collateral is received. The collateral giver sends the collateral taker the notification that the collateral substitution (that is new piece(s) of collateral) have been released. In the event that multiple pieces of collateral are being delivered in place of the collateral due to be returned by the giver, this message should only be generated once all collateral pieces have been agreed between both parties. Then the taker confirms that the collateral substitution (that is all pieces have been received) and acknowledges return of collateral.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|This message confirms the collateral delivery. The collateral taker will only release the return of collateral when the new piece of collateral is received. The collateral giver sends the collateral taker the notification that the collateral substitution (that is new piece(s) of collateral) have been released.")]
+[IsoDisplayName(@"Collateral Substitution Confirmation V")]
 public interface ICollateralSubstitutionConfirmationV03 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +31,8 @@ public interface ICollateralSubstitutionConfirmationV03 : IOuterRecord
     [IsoId("_7A0N02NmEeSIWbZ6by9dnA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -61,5 +65,6 @@ public interface ICollateralSubstitutionConfirmationV03 : IOuterRecord
     [IsoId("_7A0N4WNmEeSIWbZ6by9dnA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

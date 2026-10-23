@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderBreakdownType1Choice;
 /// Order breakdown type expressed as a code.
 /// </summary>
 [IsoId("_4Ff_gjhjEeamLZQeccJa7w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOrderBreakdownType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// </summary>
 [IsoId("_MqOLESGnEeKjd4jizyIDGA")]
 [IsoMessage("pacs.004.001.04", "PmtRtr", "urn:iso:std:iso:20022:tech:xsd:pacs.004.001.04")]
+[Description(@"Scope|The PaymentReturn message is sent by an agent to the previous agent in the payment chain to undo a payment previously settled.|Usage|The PaymentReturn message is exchanged between agents to return funds after settlement of credit transfer instructions (i.e. FIToFICustomerCreditTransfer message and FinancialInstitutionCreditTransfer message) or direct debit instructions (FIToFICustomerDirectDebit message).|The PaymentReturn message should not be used between agents and non-financial institution customers. Non-financial institution customers will be informed about a debit or a credit on their account(s) through a BankToCustomerDebitCreditNotification message ('notification') and/or BankToCustomerAccountReport/BankToCustomerStatement message ('statement').|The PaymentReturn message can be used to return single instructions or multiple instructions from one or different files.|The PaymentReturn message can be used in domestic and cross-border scenarios.|The PaymentReturn message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.")]
+[IsoDisplayName(@"Payment Return V")]
 public interface IPaymentReturnV04 : IOuterRecord
 {
     /// <summary>
@@ -43,6 +45,7 @@ public interface IPaymentReturnV04 : IOuterRecord
     [IsoId("_MqOLTyGnEeKjd4jizyIDGA")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction44> TransactionInformation { get; }
 
     /// <summary>
@@ -51,5 +54,6 @@ public interface IPaymentReturnV04 : IOuterRecord
     [IsoId("_MqOLVyGnEeKjd4jizyIDGA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

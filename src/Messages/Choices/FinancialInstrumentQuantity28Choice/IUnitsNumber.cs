@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity28Cho
 /// Number of investment fund units redeemed.
 /// </summary>
 [IsoId("_ZipfAThUEeaRwdGFv45qTQ")]
+[IsoDisplayName(@"Units Number")]
 public interface IUnitsNumber : IFinancialInstrumentQuantity28Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IUnitsNumber : IFinancialInstrumentQuantity28Choice, IIsoChoice
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("UnitsNb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 }

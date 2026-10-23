@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fraud reporting type information
 /// </summary>
 [IsoId("_CTB3kcVXEeuips4fuphvoQ")]
+[IsoDisplayName(@"Reported Fraud")]
 public interface IReportedFraud3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IReportedFraud3 : IIsoComponent
     [IsoId("_CYltA8VXEeuips4fuphvoQ")]
     [DisplayName("Other Fraud Type")]
     [IsoXmlTag("OthrFrdTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherFraudType { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IReportedFraud3 : IIsoComponent
     [IsoId("_CYltB8VXEeuips4fuphvoQ")]
     [DisplayName("Other Fraud Reporting Action")]
     [IsoXmlTag("OthrFrdRptgActn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherFraudReportingAction { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface IReportedFraud3 : IIsoComponent
     [IsoId("_CYltC8VXEeuips4fuphvoQ")]
     [DisplayName("Other Reporting Entity")]
     [IsoXmlTag("OthrRptgNtty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherReportingEntity { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IReportedFraud3 : IIsoComponent
     [IsoId("_CYltDcVXEeuips4fuphvoQ")]
     [DisplayName("Compromised Credential")]
     [IsoXmlTag("CmprmsdCrdntl")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<AuthenticationMethod12Code> CompromisedCredential { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IReportedFraud3 : IIsoComponent
     [IsoId("_CYltD8VXEeuips4fuphvoQ")]
     [DisplayName("Cardholder Reporting Date")]
     [IsoXmlTag("CrdhldrRptgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CardholderReportingDate { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface IReportedFraud3 : IIsoComponent
     [IsoId("_CYltEcVXEeuips4fuphvoQ")]
     [DisplayName("Confirmation Reporting Date")]
     [IsoXmlTag("ConfRptgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ConfirmationReportingDate { get; }
 
     /// <summary>
@@ -89,6 +99,8 @@ public interface IReportedFraud3 : IIsoComponent
     [IsoId("_CYltE8VXEeuips4fuphvoQ")]
     [DisplayName("Submitter Case Reference")]
     [IsoXmlTag("SubmitrCaseRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubmitterCaseReference { get; }
 
     /// <summary>
@@ -105,5 +117,7 @@ public interface IReportedFraud3 : IIsoComponent
     [IsoId("_CYltF8VXEeuips4fuphvoQ")]
     [DisplayName("Fraud Investigation Status")]
     [IsoXmlTag("FrdInvstgtnSts")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? FraudInvestigationStatus { get; }
 }

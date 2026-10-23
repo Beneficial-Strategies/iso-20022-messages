@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// This component define the type of admin service to be used with this message.
 /// </summary>
 [IsoId("_RlB9EQ1WEeqjM-rxn3HuXQ")]
+[IsoDisplayName(@"Session Management Response")]
 public interface ISessionManagementResponse3 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,6 @@ public interface ISessionManagementResponse3 : IIsoComponent
     [IsoId("_RwjQnQ1WEeqjM-rxn3HuXQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

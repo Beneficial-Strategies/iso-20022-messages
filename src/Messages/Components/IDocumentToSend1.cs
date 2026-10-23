@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Determine the type of document and the type of communication method to be used to notify a Party.
 /// </summary>
 [IsoId("_RTCTPtp-Ed-ak6NoX_4Aeg_436078909")]
+[IsoDisplayName(@"Document To Send")]
 public interface IDocumentToSend1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDocumentToSend1 : IIsoComponent
     [IsoId("_RTCTP9p-Ed-ak6NoX_4Aeg_1009585509")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Type { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IDocumentToSend1 : IIsoComponent
     [IsoId("_RTLdINp-Ed-ak6NoX_4Aeg_-506656279")]
     [DisplayName("Extended Method Of Transmission")]
     [IsoXmlTag("XtndedMtdOfTrnsmssn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedMethodOfTransmission { get; }
 }

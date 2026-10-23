@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// This component define the type of system service to be used with this message.
 /// </summary>
 [IsoId("_NxxdES5MEeunNvJlR_vCbg")]
+[IsoDisplayName(@"System Abort")]
 public interface ISystemAbort4 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface ISystemAbort4 : IIsoComponent
     [IsoId("_N_UJ1y5MEeunNvJlR_vCbg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

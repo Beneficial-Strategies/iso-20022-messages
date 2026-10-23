@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Media item that are deposited.
 /// </summary>
 [IsoId("_udWnMK4DEeWL1uap3dNhCQ")]
+[IsoDisplayName(@"ATM Deposited Media")]
 public interface IATMDepositedMedia2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IATMDepositedMedia2 : IIsoComponent
     [IsoId("_3qVUIK4DEeWL1uap3dNhCQ")]
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Count { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface IATMDepositedMedia2 : IIsoComponent
     [IsoId("_reFkQK4EEeWL1uap3dNhCQ")]
     [DisplayName("Code Line")]
     [IsoXmlTag("CdLine")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CodeLine { get; }
 
     /// <summary>
@@ -65,5 +69,6 @@ public interface IATMDepositedMedia2 : IIsoComponent
     [IsoId("_1aimUK4EEeWL1uap3dNhCQ")]
     [DisplayName("Confidence Level")]
     [IsoXmlTag("CnfdncLvl")]
+    [IsoSimpleType(IsoSimpleType.Percentage)]
     Percentage? ConfidenceLevel { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_Tcg_Tfr3EeCJc7cZxzE2fg")]
+[IsoDisplayName(@"Transfer")]
 public interface ITransfer16 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,9 @@ public interface ITransfer16 : IIsoComponent
     [IsoId("_VVnWNfu4EeC3VvXpH76gow")]
     [DisplayName("Holdings Plan Type")]
     [IsoXmlTag("HldgsPlanTp")]
+    [MinLength(0)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<HoldingsPlanType1Code> HoldingsPlanType { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ITransfer16 : IIsoComponent
     [IsoId("_TcqwTfr3EeCJc7cZxzE2fg")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OwnAccountTransferIndicator { get; }
 
     /// <summary>
@@ -57,5 +62,7 @@ public interface ITransfer16 : IIsoComponent
     [IsoId("_TcqwUfr3EeCJc7cZxzE2fg")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 }

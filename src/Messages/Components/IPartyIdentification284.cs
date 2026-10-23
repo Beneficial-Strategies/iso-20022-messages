@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party Identification284.
 /// </summary>
 [IsoId("_IsQoIZB4Ee6TWIDarRgYow")]
+[IsoDisplayName(@"Party Identification284")]
 public interface IPartyIdentification284 : IIsoComponent
 {
     /// <summary>
@@ -205,5 +206,6 @@ public interface IPartyIdentification284 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

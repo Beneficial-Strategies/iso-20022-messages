@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous way to identify a person.
 /// </summary>
 [IsoId("_QENImdp-Ed-ak6NoX_4Aeg_1939129475")]
+[IsoDisplayName(@"Person Identification")]
 public interface IPersonIdentification6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPersonIdentification6 : IIsoComponent
     [IsoId("_QENImtp-Ed-ak6NoX_4Aeg_1939130030")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 
     /// <summary>

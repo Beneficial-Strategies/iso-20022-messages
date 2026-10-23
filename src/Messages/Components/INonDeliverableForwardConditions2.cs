@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the opening and valuation conditions for the non deliverable forward.
 /// </summary>
 [IsoId("_dPfNQaZqEea16Jw8SEVrDQ")]
+[IsoDisplayName(@"Non Deliverable Forward Conditions")]
 public interface INonDeliverableForwardConditions2 : IIsoComponent
 {
     /// <summary>

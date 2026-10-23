@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference of a transfer instruction cancellation.
 /// </summary>
 [IsoId("_SwnEetp-Ed-ak6NoX_4Aeg_63934446")]
+[IsoDisplayName(@"Transfer Reference")]
 public interface ITransferReference3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransferReference3 : IIsoComponent
     [IsoId("_Sww1cNp-Ed-ak6NoX_4Aeg_716567294")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface ITransferReference3 : IIsoComponent
     [IsoId("_Sww1cdp-Ed-ak6NoX_4Aeg_-1130016572")]
     [DisplayName("Transfer References")]
     [IsoXmlTag("TrfRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransferReference4> TransferReferences { get; }
 }

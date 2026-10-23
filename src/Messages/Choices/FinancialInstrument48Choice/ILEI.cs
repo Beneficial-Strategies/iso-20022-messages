@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument48Choice;
 /// The LEI code of the issuer where the instrument is referring to an issuer rather than one single instrument.
 /// </summary>
 [IsoId("_HYrJU35aEea2k7EBUopqxw")]
+[IsoDisplayName(@"LEI")]
 public interface ILEI : IFinancialInstrument48Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ILEI : IFinancialInstrument48Choice, IIsoChoiceVariant
     /// Legal Entity Identifier is a code allocated to a party as described in ISO 17442 &quot;Financial Services - Legal Entity Identifier (LEI)&quot;.
     /// </summary>
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Value { get; }
 }

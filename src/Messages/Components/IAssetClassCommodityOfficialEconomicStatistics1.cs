@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity attributes of a derivative where the type is official economic statistics.
 /// </summary>
 [IsoId("_c2me0Fr0EeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Asset Class Commodity Official Economic Statistics")]
 public interface IAssetClassCommodityOfficialEconomicStatistics1 : IIsoComponent
 {
     /// <summary>

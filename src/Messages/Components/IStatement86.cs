@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statement86.
 /// </summary>
 [IsoId("_o6uPAZIWEe-HRNGM304Vlw")]
+[IsoDisplayName(@"Statement86")]
 public interface IStatement86 : IIsoComponent
 {
     /// <summary>

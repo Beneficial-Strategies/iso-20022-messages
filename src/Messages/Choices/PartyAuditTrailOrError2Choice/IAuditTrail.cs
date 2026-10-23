@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError2Choice;
 /// </summary>
 [IsoId("_HK0lEWjHEeiCUdTMLdZoIg")]
 [IsoXmlTag("AudtTrl")]
+[IsoDisplayName(@"Audit Trail")]
 public interface IAuditTrail : IPartyAuditTrailOrError2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IAuditTrail : IPartyAuditTrailOrError2Choice, IIsoChoiceVariant
     [IsoId("_GLdVoWjOEeiRg5NzP0jkQg")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdateLogPartyRecord1Choice> Record { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IAuditTrail : IPartyAuditTrailOrError2Choice, IIsoChoiceVariant
     [IsoId("_HZNmZ2jHEeiCUdTMLdZoIg")]
     [DisplayName("Operation Time Stamp")]
     [IsoXmlTag("OprTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime OperationTimeStamp { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IAuditTrail : IPartyAuditTrailOrError2Choice, IIsoChoiceVariant
     [IsoId("_HZNmaWjHEeiCUdTMLdZoIg")]
     [DisplayName("Instructing User")]
     [IsoXmlTag("InstgUsr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text InstructingUser { get; }
 
     /// <summary>
@@ -42,5 +47,7 @@ public interface IAuditTrail : IPartyAuditTrailOrError2Choice, IIsoChoiceVariant
     [IsoId("_HZNma2jHEeiCUdTMLdZoIg")]
     [DisplayName("Approving User")]
     [IsoXmlTag("ApprvgUsr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? ApprovingUser { get; }
 }

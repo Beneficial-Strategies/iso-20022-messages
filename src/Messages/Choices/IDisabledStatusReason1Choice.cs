@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a disabled status reason.
 /// </summary>
 [IsoId("_RfDOYUzAEeafiMTDrtSnyw")]
+[IsoDisplayName(@"Disabled Status Reason 1 Choice")]
 public interface IDisabledStatusReason1Choice : IIsoChoice { }

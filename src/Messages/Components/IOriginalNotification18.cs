@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the original notification, to which the cancellation advice refers.
 /// </summary>
 [IsoId("698216e6-8441-43df-8600-27592010f500")]
+[IsoDisplayName(@"Original Notification18")]
 public interface IOriginalNotification18 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IOriginalNotification18 : IIsoComponent
     [IsoId("25e263e1-0651-43c1-ab70-d951f413fb63")]
     [DisplayName("Original Notification Reference")]
     [IsoXmlTag("OrgnlNtfctnRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalNotificationReference16> OriginalNotificationReference { get; }
 }

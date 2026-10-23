@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_OIOBdPfUEei89sMSHxl1ew")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification210 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyIdentification210 : IIsoComponent
     [IsoId("_OIOBdffUEei89sMSHxl1ew")]
     [DisplayName("Personal Identification")]
     [IsoXmlTag("PrsnlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PersonalIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IPartyIdentification210 : IIsoComponent
     [IsoId("_OIOBd_fUEei89sMSHxl1ew")]
     [DisplayName("Employee Identification")]
     [IsoXmlTag("MplyeeId")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? EmployeeIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IPartyIdentification210 : IIsoComponent
     [IsoId("_OIOBdvfUEei89sMSHxl1ew")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -41,5 +47,7 @@ public interface IPartyIdentification210 : IIsoComponent
     [IsoId("_h0HkUPfUEei89sMSHxl1ew")]
     [DisplayName("Professional Level")]
     [IsoXmlTag("PrfssnlLvl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProfessionalLevel { get; }
 }

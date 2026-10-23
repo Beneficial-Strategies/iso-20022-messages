@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the mobile of stakeholder.
 /// </summary>
 [IsoId("_G1x6EQxvEeqdx6buGpCCQw")]
+[IsoDisplayName(@"Mobile Data")]
 public interface IMobileData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMobileData2 : IIsoComponent
     [IsoId("_HCfgYQxvEeqdx6buGpCCQw")]
     [DisplayName("Mobile Country Code")]
     [IsoXmlTag("MobCtryCd")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
     Min2Max3AlphaText? MobileCountryCode { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IMobileData2 : IIsoComponent
     [IsoId("_HCfgYwxvEeqdx6buGpCCQw")]
     [DisplayName("Mobile Network Code")]
     [IsoXmlTag("MobNtwkCd")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
     Min2Max3NumericText? MobileNetworkCode { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IMobileData2 : IIsoComponent
     [IsoId("_HCfgZQxvEeqdx6buGpCCQw")]
     [DisplayName("Mobile Masked MSISDN")]
     [IsoXmlTag("MobMskdMSISDN")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MobileMaskedMSISDN { get; }
 
     /// <summary>

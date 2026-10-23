@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus3Choice;
 /// Status applying globally to the instruction received. The instruction is identified by the InstructionIdentification.
 /// </summary>
 [IsoId("_RCpGw9p-Ed-ak6NoX_4Aeg_1721093163")]
+[IsoDisplayName(@"Global Instruction Status")]
 public interface IGlobalInstructionStatus : IInstructionStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

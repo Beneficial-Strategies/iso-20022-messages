@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesOrCash1Choice;
 /// </summary>
 [IsoId("_v5oPQDchEeOA3chqL9a4Rw")]
 [IsoXmlTag("SctiesDtls")]
+[IsoDisplayName(@"Securities Details")]
 public interface ISecuritiesDetails : ISecuritiesOrCash1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface ISecuritiesDetails : ISecuritiesOrCash1Choice, IIsoChoiceVarian
     [IsoId("_HjKEoNQiEeKvJeoOII0e7w")]
     [DisplayName("Local Market Identification")]
     [IsoXmlTag("LclMktId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification49> LocalMarketIdentification { get; }
 
     /// <summary>

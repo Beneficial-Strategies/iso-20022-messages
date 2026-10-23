@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Message Status Response Data9.
 /// </summary>
 [IsoId("_DcwT4aEYEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Message Status Response Data9")]
 public interface IMessageStatusResponseData9 : IIsoComponent
 {
     /// <summary>

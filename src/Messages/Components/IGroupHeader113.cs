@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Group Header113.
 /// </summary>
 [IsoId("_yfTmITEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Group Header113")]
 public interface IGroupHeader113 : IIsoComponent
 {
     /// <summary>

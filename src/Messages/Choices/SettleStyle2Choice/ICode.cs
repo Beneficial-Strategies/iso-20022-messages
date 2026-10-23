@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettleStyle2Choice;
 /// Settle style expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_ra2T0eLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettleStyle2Choice, IIsoChoiceVariant
 {
     /// <summary>

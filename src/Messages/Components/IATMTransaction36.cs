@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Transaction36.
 /// </summary>
 [IsoId("_S9Nu8aBFEe-mUP79iiSLcw")]
+[IsoDisplayName(@"ATM Transaction36")]
 public interface IATMTransaction36 : IIsoComponent
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IATMTransaction36 : IIsoComponent
     /// </summary>
     [DisplayName("Reconciliation Operation")]
     [IsoXmlTag("RcncltnOpr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMReconciliationOperation1> ReconciliationOperation { get; }
 }

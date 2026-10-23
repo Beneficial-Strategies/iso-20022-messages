@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action87.
 /// </summary>
 [IsoId("_nLeBUZt3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Corporate Action87")]
 public interface ICorporateAction87 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface ICorporateAction87 : IIsoComponent
     /// </summary>
     [DisplayName("Coupon Number")]
     [IsoXmlTag("CpnNb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIdentificationFormat4Choice> CouponNumber { get; }
 
     /// <summary>
@@ -142,6 +144,7 @@ public interface ICorporateAction87 : IIsoComponent
     /// </summary>
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOfferTypeFormat16Choice> OfferType { get; }
 
     /// <summary>
@@ -156,6 +159,7 @@ public interface ICorporateAction87 : IIsoComponent
     /// </summary>
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventStageFormat20Choice> EventStage { get; }
 
     /// <summary>
@@ -163,6 +167,7 @@ public interface ICorporateAction87 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBusinessProcessFormat22Choice> AdditionalBusinessProcessIndicator { get; }
 
     /// <summary>
@@ -170,6 +175,7 @@ public interface ICorporateAction87 : IIsoComponent
     /// </summary>
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionChangeTypeFormat8Choice> ChangeType { get; }
 
     /// <summary>
@@ -233,6 +239,7 @@ public interface ICorporateAction87 : IIsoComponent
     /// </summary>
     [DisplayName("Tax On Non Distributed Proceeds Indicator")]
     [IsoXmlTag("TaxOnNonDstrbtdPrcdsInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification47> TaxOnNonDistributedProceedsIndicator { get; }
 
     /// <summary>

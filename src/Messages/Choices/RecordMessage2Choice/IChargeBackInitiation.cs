@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the charge back initiation message.</summary>
 [IsoId("_kNBjn27-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Charge Back Initiation")]
 public interface IChargeBackInitiation : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

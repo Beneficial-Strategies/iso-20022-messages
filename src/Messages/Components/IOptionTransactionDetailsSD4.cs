@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action movement option details.
 /// </summary>
 [IsoId("_xO9Vgb-zEeeb2ZBoAlSG1Q")]
+[IsoDisplayName(@"Option Transaction Details SD")]
 public interface IOptionTransactionDetailsSD4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOptionTransactionDetailsSD4 : IIsoComponent
     [IsoId("_xebU4b-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOptionTransactionDetailsSD4 : IIsoComponent
     [IsoId("_xebU47-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text TransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IOptionTransactionDetailsSD4 : IIsoComponent
     [IsoId("_xebU5b-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Transaction Sequence Number")]
     [IsoXmlTag("TxSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? TransactionSequenceNumber { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IOptionTransactionDetailsSD4 : IIsoComponent
     [IsoId("_xebU57-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Transaction Identification Date")]
     [IsoXmlTag("TxIdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TransactionIdentificationDate { get; }
 
     /// <summary>
@@ -153,6 +160,7 @@ public interface IOptionTransactionDetailsSD4 : IIsoComponent
     [IsoId("_xebVB7-zEeeb2ZBoAlSG1Q")]
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? CustomerReferenceIdentification { get; }
 
     /// <summary>
@@ -169,5 +177,7 @@ public interface IOptionTransactionDetailsSD4 : IIsoComponent
     [IsoId("_xXngcL_uEeeb2ZBoAlSG1Q")]
     [DisplayName("Instruction Comments")]
     [IsoXmlTag("InstrCmnts")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? InstructionComments { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on transaction and conducting counterparty.
 /// </summary>
 [IsoId("_mdZxga7MEemZxoEFHjN-AQ")]
+[IsoDisplayName(@"Trade Transaction Identification")]
 public interface ITradeTransactionIdentification9 : IIsoComponent
 {
     /// <summary>

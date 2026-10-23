@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the type of consent.
 /// </summary>
 [IsoId("_His4MJTTEemC09f0MxYkRg")]
+[IsoDisplayName(@"GDPR Data Consent 1 Choice")]
 public interface IGDPRDataConsent1Choice : IIsoChoice { }

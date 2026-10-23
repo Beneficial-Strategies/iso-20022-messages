@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reporting per financial instrument.
 /// </summary>
 [IsoId("_RshAwRQ0EeKOSJdKMJK1cg")]
+[IsoDisplayName(@"Financial Instrument Details")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-05-04.")]
 public interface IFinancialInstrumentDetails14 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +35,6 @@ public interface IFinancialInstrumentDetails14 : IIsoComponent
     [IsoId("_SCROaRQ0EeKOSJdKMJK1cg")]
     [DisplayName("Sub Balance")]
     [IsoXmlTag("SubBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraPositionDetails28> SubBalance { get; }
 }

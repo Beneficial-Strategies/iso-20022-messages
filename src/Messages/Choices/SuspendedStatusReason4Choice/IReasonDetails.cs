@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SuspendedStatusReason4Choice;
 /// </summary>
 [IsoId("_aSlPVUHlEea8I67lh6qdSQ")]
 [IsoXmlTag("RsnDtls")]
+[IsoDisplayName(@"Reason Details")]
 public interface IReasonDetails : ISuspendedStatusReason4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IReasonDetails : ISuspendedStatusReason4Choice, IIsoChoiceVaria
     [IsoId("_eO6sk0HmEea8I67lh6qdSQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "ReqForAcctMgmtStsRptV02",
     "urn:iso:std:iso:20022:tech:xsd:acmt.005.001.02"
 )]
+[Description(@"Scope|An account owner, for example, an investor or its designated agent, sends the RequestForAccountManagementStatusReport message to the account servicer, for example, a registrar, transfer agent or custodian bank to request the status of an AccountOpeningInstruction or an AccountModificationInstruction.|Usage|The RequestForAccountManagementStatusReport message is used to request the processing status of a previously sent AccountOpeningInstruction message or AccountModificationInstruction message for which a AccountDetailsConfirmation message has not yet been received.")]
+[IsoDisplayName(@"Request For Account Management Status Report V")]
 public interface IRequestForAccountManagementStatusReportV02 : IOuterRecord
 {
     /// <summary>

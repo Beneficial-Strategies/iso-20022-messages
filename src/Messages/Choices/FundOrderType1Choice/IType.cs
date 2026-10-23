@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundOrderType1Choice;
 /// Order type expressed as a code.
 /// </summary>
 [IsoId("_RY2UhRHcEeKVqeHljBM1MQ")]
+[IsoDisplayName(@"Type")]
 public interface IType : IFundOrderType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies additional information about the processed instruction.
 /// </summary>
 [IsoId("_6BK62ZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Acknowledgement Reason")]
 public interface IAcknowledgementReason15 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IAcknowledgementReason15 : IIsoComponent
     [IsoId("_6BLh15NLEeWGlc8L7oPDIg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
+    [StringLength(210, MinimumLength = 1)]
     RestrictedFINXMax210Text? AdditionalReasonInformation { get; }
 }

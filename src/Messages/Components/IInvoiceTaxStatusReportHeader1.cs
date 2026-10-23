@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the Invoice tax status report header details.
 /// </summary>
 [IsoId("_I_Tr4U52Eeaine-lsNAGsA")]
+[IsoDisplayName(@"Invoice Tax Status Report Header")]
 public interface IInvoiceTaxStatusReportHeader1 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IInvoiceTaxStatusReportHeader1 : IIsoComponent
     [IsoId("_JIHCl052Eeaine-lsNAGsA")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericValidationRuleIdentification1> ValidationRule { get; }
 }

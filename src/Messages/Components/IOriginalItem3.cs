@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the original notification item, to which the cancellation advice refers.
 /// </summary>
 [IsoId("_tA3dsFkyEeGeoaLUQk__nA_-1717957034")]
+[IsoDisplayName(@"Original Item")]
 public interface IOriginalItem3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalItem3 : IIsoComponent
     [IsoId("_tA3dsVkyEeGeoaLUQk__nA_-2021013549")]
     [DisplayName("Original Item Identification")]
     [IsoXmlTag("OrgnlItmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalItemIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalItem3 : IIsoComponent
     [IsoId("_tBBOsFkyEeGeoaLUQk__nA_-1260248396")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IOriginalItem3 : IIsoComponent
     [IsoId("_tBBOslkyEeGeoaLUQk__nA_-1735338914")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedValueDate { get; }
 
     /// <summary>

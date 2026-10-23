@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about total instructed balance.
 /// </summary>
 [IsoId("_wSkDc-aqEemtTOaHuc_63w")]
+[IsoDisplayName(@"Instructed Balance")]
 public interface IInstructedBalance11 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,6 @@ public interface IInstructedBalance11 : IIsoComponent
     [IsoId("_wj-jHeaqEemtTOaHuc_63w")]
     [DisplayName("Option Details")]
     [IsoXmlTag("OptnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructedCorporateActionOption12> OptionDetails { get; }
 }

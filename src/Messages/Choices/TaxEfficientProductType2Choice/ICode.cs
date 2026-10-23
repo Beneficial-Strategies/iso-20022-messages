@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxEfficientProductType2Choice;
 /// Type of tax efficient product expressed as a code.
 /// </summary>
 [IsoId("_U2DS0ZNNEemQB_8XA98K0Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITaxEfficientProductType2Choice, IIsoChoiceVariant
 {
     /// <summary>

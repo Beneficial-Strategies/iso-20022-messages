@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateAndPeriod1Choice;
 /// Period for the statement.
 /// </summary>
 [IsoId("_Qqpdi9p-Ed-ak6NoX_4Aeg_-1766941598")]
+[IsoDisplayName(@"Statement Period")]
 public interface IStatementPeriod : IDateAndPeriod1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

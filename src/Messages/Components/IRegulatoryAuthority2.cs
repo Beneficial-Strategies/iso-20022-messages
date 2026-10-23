@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Entity requiring the regulatory reporting information.
 /// </summary>
 [IsoId("_Pc3bxNp-Ed-ak6NoX_4Aeg_-1526379440")]
+[IsoDisplayName(@"Regulatory Authority")]
 public interface IRegulatoryAuthority2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRegulatoryAuthority2 : IIsoComponent
     [IsoId("_Pc3bxdp-Ed-ak6NoX_4Aeg_-1526379192")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>

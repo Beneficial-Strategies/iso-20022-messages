@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice;
 /// Country of origin of the goods, as proven by the certificate.
 /// </summary>
 [IsoId("_3DBVMTANEeOKib24wnHaFg")]
+[IsoDisplayName(@"Origin")]
 public interface IOrigin : ICertifiedCharacteristics2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// </summary>
 [IsoId("_JckzONE8Ed-BzquC8wXy7w_-1127631553")]
 [IsoMessage("trea.005.001.02", "AmdNDFValtnV02", "urn:iso:std:iso:20022:tech:xsd:trea.005.001.02")]
+[Description(@"Scope|The AmendNonDeliverableForwardValuation message is sent by a participant to a central system or to a counterparty to notify the amendment of the valuation of a non deliverable trade previously confirmed by the sender.|Usage|The message is sent from a participant to a central settlement system to advise of the update of a previously sent notification and it contains a ""Related Reference"" to link it to the previous notification.")]
+[IsoDisplayName(@"Amend Non Deliverable Forward Valuation V")]
 public interface IAmendNonDeliverableForwardValuationV02 : IOuterRecord
 {
     /// <summary>

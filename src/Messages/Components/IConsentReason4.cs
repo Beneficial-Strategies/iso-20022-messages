@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the underlying reason for the status of an object.
 /// </summary>
 [IsoId("_oftdyzzpEeWeNtT0s2RbkQ")]
+[IsoDisplayName(@"Consent Reason")]
 public interface IConsentReason4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IConsentReason4 : IIsoComponent
     [IsoId("_pASbQzzpEeWeNtT0s2RbkQ")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

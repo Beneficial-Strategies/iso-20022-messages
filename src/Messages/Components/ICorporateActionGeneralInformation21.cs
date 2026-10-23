@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General information about the corporate action event.
 /// </summary>
 [IsoId("_O2WmceaUEd-q8fx_Zl_34A")]
+[IsoDisplayName(@"Corporate Action General Information")]
 public interface ICorporateActionGeneralInformation21 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionGeneralInformation21 : IIsoComponent
     [IsoId("_O2Wmc-aUEd-q8fx_Zl_34A")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICorporateActionGeneralInformation21 : IIsoComponent
     [IsoId("_O2WmdeaUEd-q8fx_Zl_34A")]
     [DisplayName("Official Corporate Action Event Identification")]
     [IsoXmlTag("OffclCorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OfficialCorporateActionEventIdentification { get; }
 
     /// <summary>

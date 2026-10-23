@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the Awaiting Affirmation reason.
 /// </summary>
 [IsoId("_mpdBZQd3Ee2fOITqoTnSLQ")]
+[IsoDisplayName(@"Awaiting Affirmation Reason 2 Choice")]
 public interface IAwaitingAffirmationReason2Choice : IIsoChoice { }

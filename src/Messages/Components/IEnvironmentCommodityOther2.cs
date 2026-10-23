@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other environment commodity derivative.
 /// </summary>
 [IsoId("_IShTkU8SEe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Environment Commodity Other")]
 public interface IEnvironmentCommodityOther2 : IIsoComponent
 {
     /// <summary>

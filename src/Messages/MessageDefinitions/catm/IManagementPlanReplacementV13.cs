@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// </summary>
 [IsoId("_fbvDQaFEEe-MRKYsaX6JDg")]
 [IsoMessage("catm.002.001.13", "MgmtPlanRplcmnt", "urn:iso:std:iso:20022:tech:xsd:catm.002.001.13")]
+[IsoDisplayName(@"Management Plan Replacement V13")]
 public interface IManagementPlanReplacementV13 : IOuterRecord
 {
     /// <summary>

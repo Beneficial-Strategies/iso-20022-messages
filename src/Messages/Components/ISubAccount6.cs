@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.
 /// </summary>
 [IsoId("_J7nc8UdAEeaBWtcfqEyXyw")]
+[IsoDisplayName(@"Sub Account")]
 public interface ISubAccount6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISubAccount6 : IIsoComponent
     [IsoId("_KVNBoUdAEeaBWtcfqEyXyw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISubAccount6 : IIsoComponent
     [IsoId("_KVNBo0dAEeaBWtcfqEyXyw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISubAccount6 : IIsoComponent
     [IsoId("_KVNBpUdAEeaBWtcfqEyXyw")]
     [DisplayName("Characteristic")]
     [IsoXmlTag("Chrtc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Characteristic { get; }
 
     /// <summary>
@@ -41,5 +48,7 @@ public interface ISubAccount6 : IIsoComponent
     [IsoId("_Pz4Q0UdAEeaBWtcfqEyXyw")]
     [DisplayName("Account Designation")]
     [IsoXmlTag("AcctDsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountDesignation { get; }
 }

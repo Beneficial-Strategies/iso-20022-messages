@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters2Choice;
 /// Parameters to be used by the security scheme update command.
 /// </summary>
 [IsoId("_3rN4AItHEeSxlKlAGYErFg")]
+[IsoDisplayName(@"Required Security Scheme")]
 public interface IRequiredSecurityScheme : IATMCommandParameters2Choice, IIsoChoiceVariant
 {
     /// <summary>

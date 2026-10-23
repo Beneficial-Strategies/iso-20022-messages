@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party involved in the settlement chain.
 /// </summary>
 [IsoId("_4PLC5SPvEeWQjryFgN2ITg")]
+[IsoDisplayName(@"Party Identification And Account")]
 public interface IPartyIdentificationAndAccount125 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPartyIdentificationAndAccount125 : IIsoComponent
     [IsoId("_4rvp8yPvEeWQjryFgN2ITg")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>

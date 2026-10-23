@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to qualify the interest rate.
 /// </summary>
 [IsoId("_SR69Udp-Ed-ak6NoX_4Aeg_-59286801")]
+[IsoDisplayName(@"Rate")]
 public interface IRate3 : IIsoComponent
 {
     /// <summary>

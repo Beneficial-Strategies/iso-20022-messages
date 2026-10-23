@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseProcessingStatus1Choice;
 /// The received message or the multipart received report (sent with pagination in multiple messages) is rejected.
 /// </summary>
 [IsoId("_mjD0wIeUEemJ1cSJJmVYRQ")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IResponseProcessingStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

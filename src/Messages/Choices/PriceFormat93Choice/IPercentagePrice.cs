@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat93Choice;
 /// <summary>
 /// Percentage Price.
 /// </summary>
+[IsoDisplayName(@"Percentage Price")]
 public interface IPercentagePrice : IPriceFormat93Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionType48Choic
 /// Securities transaction type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_vZ5mIddqEeispNOuywCdbA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISecuritiesTransactionType48Choice, IIsoChoiceVariant
 {
     /// <summary>

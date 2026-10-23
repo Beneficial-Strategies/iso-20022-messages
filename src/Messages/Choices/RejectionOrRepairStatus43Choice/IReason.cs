@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionOrRepairStatus43Choice;
 /// </summary>
 [IsoId("_D6DTeytXEeyhipY4f42fZQ")]
 [IsoXmlTag("Rsn")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IRejectionOrRepairStatus43Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IReason : IRejectionOrRepairStatus43Choice, IIsoChoiceVariant
     [IsoId("_ET1FaytXEeyhipY4f42fZQ")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice;
 /// <summary>
 /// Restriction.
 /// </summary>
+[IsoDisplayName(@"Restriction")]
 public interface IRestriction : IUpdateLogPartyRecord2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPIncmStmtAndCptlAdqcyRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.059.001.01"
 )]
+[Description(@"The CCPIncomeStatementAndCapitalAdequacyReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the financial performance and regulatory capital holdings of the central counterparty.")]
+[IsoDisplayName(@"CCP Income Statement And Capital Adequacy Report V")]
 public interface ICCPIncomeStatementAndCapitalAdequacyReportV01 : IOuterRecord
 {
     /// <summary>
@@ -56,6 +58,7 @@ public interface ICCPIncomeStatementAndCapitalAdequacyReportV01 : IOuterRecord
     [IsoId("_DzbYgeUUEem3X-64-NKdqg")]
     [DisplayName("Hypothetical Capital Measure")]
     [IsoXmlTag("HpthtclCptlMeasr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHypotheticalCapitalMeasure1> HypotheticalCapitalMeasure { get; }
 
     /// <summary>
@@ -64,5 +67,6 @@ public interface ICCPIncomeStatementAndCapitalAdequacyReportV01 : IOuterRecord
     [IsoId("_DzbYg-UUEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

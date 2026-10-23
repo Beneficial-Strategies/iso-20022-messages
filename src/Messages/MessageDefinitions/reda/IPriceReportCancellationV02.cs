@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_Zski2NEvEd-BzquC8wXy7w_-1589707882")]
 [IsoMessage("reda.002.001.02", "reda.002.001.02", "urn:iso:std:iso:20022:tech:xsd:reda.002.001.02")]
+[Description(@"Scope|The PriceReportCancellation message is sent by a report provider, eg, a fund accountant, transfer agent, market data provider, or any other interested party, to a report user, eg, a fund management company, a transfer agent, market data provider, regulator or any other interested party.|The message is used to cancel a previously sent PriceReport message.|Usage|The PriceReportCancellation message is used to cancel an entire PriceReport message that was previously sent by the report provider. If only a part of the information needs to be cancelled and replaced, the PriceReportCorrection message must be used.|This message must contain the reference of the message to be cancelled. This message may also contain details of the message to be cancelled, but this is not recommended.")]
+[IsoDisplayName(@"Price Report Cancellation V")]
 public interface IPriceReportCancellationV02 : IOuterRecord
 {
     /// <summary>

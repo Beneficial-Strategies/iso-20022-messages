@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities trade.
 /// </summary>
 [IsoId("_CdTFoaUtEee4_75LDmHZiQ")]
+[IsoDisplayName(@"Securities Trade Details")]
 public interface ISecuritiesTradeDetails71 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesTradeDetails71 : IIsoComponent
     [IsoId("_DStDsaUtEee4_75LDmHZiQ")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISecuritiesTradeDetails71 : IIsoComponent
     [IsoId("_DStDtaUtEee4_75LDmHZiQ")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISecuritiesTradeDetails71 : IIsoComponent
     [IsoId("_DStDuaUtEee4_75LDmHZiQ")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ISecuritiesTradeDetails71 : IIsoComponent
     [IsoId("_DStDvaUtEee4_75LDmHZiQ")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,7 @@ public interface ISecuritiesTradeDetails71 : IIsoComponent
     [IsoId("_DStDv6UtEee4_75LDmHZiQ")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TradeIdentification { get; }
 
     /// <summary>
@@ -57,6 +67,8 @@ public interface ISecuritiesTradeDetails71 : IIsoComponent
     [IsoId("_DStDw6UtEee4_75LDmHZiQ")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonIdentification { get; }
 
     /// <summary>
@@ -65,6 +77,8 @@ public interface ISecuritiesTradeDetails71 : IIsoComponent
     [IsoId("_DStDx6UtEee4_75LDmHZiQ")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PoolIdentification { get; }
 
     /// <summary>
@@ -73,6 +87,7 @@ public interface ISecuritiesTradeDetails71 : IIsoComponent
     [IsoId("_DStDy6UtEee4_75LDmHZiQ")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -145,6 +160,7 @@ public interface ISecuritiesTradeDetails71 : IIsoComponent
     [IsoId("_DStD76UtEee4_75LDmHZiQ")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -169,6 +185,7 @@ public interface ISecuritiesTradeDetails71 : IIsoComponent
     [IsoId("_DStD-6UtEee4_75LDmHZiQ")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition5Choice> TradeTransactionCondition { get; }
 
     /// <summary>
@@ -249,5 +266,6 @@ public interface ISecuritiesTradeDetails71 : IIsoComponent
     [IsoId("_DStEI6UtEee4_75LDmHZiQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

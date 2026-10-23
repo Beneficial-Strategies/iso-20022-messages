@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Rental Details3.
 /// </summary>
 [IsoId("_e2J2gXTkEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Rental Details3")]
 public interface IRentalDetails3 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface IRentalDetails3 : IIsoComponent
     /// </summary>
     [DisplayName("Time Period")]
     [IsoXmlTag("TmPrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<PeriodUnit2Code> TimePeriod { get; }
 
     /// <summary>

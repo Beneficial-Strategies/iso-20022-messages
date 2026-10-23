@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice;
 /// Number assigned by a government agency to identify foreign nationals.
 /// </summary>
 [IsoId("_QEW5l9p-Ed-ak6NoX_4Aeg_-1180196117")]
+[IsoDisplayName(@"Alien Registration Number")]
 public interface IAlienRegistrationNumber : IPersonIdentificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IAlienRegistrationNumber : IPersonIdentificationType1Choice, II
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("AlnRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

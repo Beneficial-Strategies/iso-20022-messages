@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides a set of identifications to reference to a securities settlement transaction.
 /// </summary>
 [IsoId("_Izn2geSmEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"References32")]
 public interface IReferences32 : IIsoComponent
 {
     /// <summary>

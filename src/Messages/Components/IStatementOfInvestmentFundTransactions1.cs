@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a statement of investment fund transactions.
 /// </summary>
 [IsoId("_U2krYNp-Ed-ak6NoX_4Aeg_1424253677")]
+[IsoDisplayName(@"Statement Of Investment Fund Transactions")]
 public interface IStatementOfInvestmentFundTransactions1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IStatementOfInvestmentFundTransactions1 : IIsoComponent
     [IsoId("_U2krZNp-Ed-ak6NoX_4Aeg_-2082346451")]
     [DisplayName("Transaction On Account")]
     [IsoXmlTag("TxOnAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundTransactionsByFund1> TransactionOnAccount { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IStatementOfInvestmentFundTransactions1 : IIsoComponent
     [IsoId("_U2krZtp-Ed-ak6NoX_4Aeg_730156025")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

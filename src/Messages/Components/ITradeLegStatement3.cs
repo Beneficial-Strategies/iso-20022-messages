@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the trade leg statement details.
 /// </summary>
 [IsoId("_dEWFES6XEeSQQqw1BT_aMg")]
+[IsoDisplayName(@"Trade Leg Statement")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ITradeLegStatement3 : IIsoComponent
 {
     /// <summary>
@@ -42,5 +44,6 @@ public interface ITradeLegStatement3 : IIsoComponent
     [IsoId("_dXY85y6XEeSQQqw1BT_aMg")]
     [DisplayName("Trade Legs Details")]
     [IsoXmlTag("TradLegsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeLeg9> TradeLegsDetails { get; }
 }

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of a movement record requested in a single settlement instruction.
 /// </summary>
 [IsoId("_0BP6ATEyEe6g-ffJsqGiSA")]
+[Description(@"Details of a movement record requested in a single settlement instruction.")]
+[IsoDisplayName(@"Movement Record2")]
 public interface IMovementRecord2 : IIsoComponent
 {
     /// <summary>

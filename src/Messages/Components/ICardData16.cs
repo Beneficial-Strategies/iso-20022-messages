@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Non-protected sensitive data associated with the card or payment token performing the transaction.
 /// </summary>
 [IsoId("_UIQRQR7iEfCkq6-p7S3J1Q")]
+[IsoDisplayName(@"Card Data16")]
 public interface ICardData16 : IIsoComponent
 {
     /// <summary>
@@ -177,6 +178,7 @@ public interface ICardData16 : IIsoComponent
     [IsoId("_0dvOQkVXEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -185,5 +187,6 @@ public interface ICardData16 : IIsoComponent
     [IsoId("_0dvOQ0VXEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> NationalData { get; }
 }

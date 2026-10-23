@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "IntraPosMvmntConf",
     "urn:iso:std:iso:20022:tech:xsd:semt.015.001.10"
 )]
+[IsoDisplayName(@"Intra Position Movement Confirmation V10")]
 public interface IIntraPositionMovementConfirmationV10 : IOuterRecord
 {
     /// <summary>
@@ -85,5 +86,6 @@ public interface IIntraPositionMovementConfirmationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

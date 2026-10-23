@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractBalanceType1Choice;
 /// Specifies the nature of a balance, in a coded form.
 /// </summary>
 [IsoId("_n3S3IwtKEeWkxvNyFrBT8Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IContractBalanceType1Choice, IIsoChoiceVariant
 {
     /// <summary>

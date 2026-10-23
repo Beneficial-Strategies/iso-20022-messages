@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics that apply to the credit side of the payment transactions included in the direct debit initiation.
 /// </summary>
 [IsoId("_sr23AFkyEeGeoaLUQk__nA_788351870")]
+[IsoDisplayName(@"Payment Instruction")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IPaymentInstruction7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IPaymentInstruction7 : IIsoComponent
     [IsoId("_sr23AVkyEeGeoaLUQk__nA_815624050")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IPaymentInstruction7 : IIsoComponent
     [IsoId("_ssAoAVkyEeGeoaLUQk__nA_-1287227415")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
+    [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
     BatchBookingIndicator? BatchBooking { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IPaymentInstruction7 : IIsoComponent
     [IsoId("_ssAoAlkyEeGeoaLUQk__nA_-760231472")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? NumberOfTransactions { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IPaymentInstruction7 : IIsoComponent
     [IsoId("_ssAoA1kyEeGeoaLUQk__nA_415136542")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IPaymentInstruction7 : IIsoComponent
     [IsoId("_ssJx8VkyEeGeoaLUQk__nA_1451870292")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate RequestedCollectionDate { get; }
 
     /// <summary>
@@ -145,5 +153,6 @@ public interface IPaymentInstruction7 : IIsoComponent
     [IsoId("_sscs4lkyEeGeoaLUQk__nA_-647271213")]
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDirectDebitTransactionInformation11> DirectDebitTransactionInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates to the card issuer the level of risk associated with the transaction.
 /// </summary>
 [IsoId("_3jBj0EbOEeeIjf8aP9KbJA")]
+[IsoDisplayName(@"Risk Assessment")]
 public interface IRiskAssessment1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IRiskAssessment1 : IIsoComponent
     [IsoId("_2qiKsOCfEee9RadpHmUgYw")]
     [DisplayName("Risk Assessment Type")]
     [IsoXmlTag("RskAssmntTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RiskAssessmentType { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IRiskAssessment1 : IIsoComponent
     [IsoId("_0lY4kEbPEeeIjf8aP9KbJA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> Reason { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface IRiskAssessment1 : IIsoComponent
     [IsoId("_AwSvMEbQEeeIjf8aP9KbJA")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Result { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IRiskAssessment1 : IIsoComponent
     [IsoId("_6vP9UEbQEeeIjf8aP9KbJA")]
     [DisplayName("Additional Risk Data")]
     [IsoXmlTag("AddtlRskData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalRiskData1> AdditionalRiskData { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IRiskAssessment1 : IIsoComponent
     [IsoId("_DacL0EbREeeIjf8aP9KbJA")]
     [DisplayName("Recommended Action")]
     [IsoXmlTag("RcmmnddActn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActionType8Code> RecommendedAction { get; }
 
     /// <summary>
@@ -65,6 +73,8 @@ public interface IRiskAssessment1 : IIsoComponent
     [IsoId("_PWwM0EbREeeIjf8aP9KbJA")]
     [DisplayName("Other Recommended Action")]
     [IsoXmlTag("OthrRcmmnddActn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherRecommendedAction { get; }
 
     /// <summary>
@@ -73,5 +83,7 @@ public interface IRiskAssessment1 : IIsoComponent
     [IsoId("_mYtFgOCgEee9RadpHmUgYw")]
     [DisplayName("Recommended Action Details")]
     [IsoXmlTag("RcmmnddActnDtls")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? RecommendedActionDetails { get; }
 }

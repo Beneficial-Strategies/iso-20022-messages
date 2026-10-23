@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Terminal Package Type5.
 /// </summary>
 [IsoId("_BogXkZHjEe6qwqnYOGEReg")]
+[IsoDisplayName(@"Terminal Package Type5")]
 public interface ITerminalPackageType5 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface ITerminalPackageType5 : IIsoComponent
     /// </summary>
     [DisplayName("POI Component Identification")]
     [IsoXmlTag("POICmpntId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponentIdentification2> POIComponentIdentification { get; }
 
     /// <summary>
@@ -23,5 +25,6 @@ public interface ITerminalPackageType5 : IIsoComponent
     /// </summary>
     [DisplayName("Package")]
     [IsoXmlTag("Packg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPackageType5> Package { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError10
 /// <summary>
 /// Cancellations.
 /// </summary>
+[IsoDisplayName(@"Cancellations")]
 public interface ICancellations : IIntraBalanceOrOperationalError10Choice, IIsoChoiceVariant
 {
     /// <summary>

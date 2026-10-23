@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberCount1Choice;
 /// </summary>
 [IsoId("_Qrsmadp-Ed-ak6NoX_4Aeg_-2040702072")]
 [IsoXmlTag("TtlNb")]
+[IsoDisplayName(@"Total Number")]
 public interface ITotalNumber : INumberCount1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ITotalNumber : INumberCount1Choice, IIsoChoiceVariant
     [IsoId("_Qr_hWdp-Ed-ak6NoX_4Aeg_-2082263388")]
     [DisplayName("Current Instruction Number")]
     [IsoXmlTag("CurInstrNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText CurrentInstructionNumber { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface ITotalNumber : INumberCount1Choice, IIsoChoiceVariant
     [IsoId("_Qr_hWtp-Ed-ak6NoX_4Aeg_-1935589206")]
     [DisplayName("Total Of Linked Instructions")]
     [IsoXmlTag("TtlOfLkdInstrs")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText TotalOfLinkedInstructions { get; }
 }

@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.trck;
     "PmtStsCstmrTrckrRpt",
     "urn:iso:std:iso:20022:tech:xsd:trck.004.001.03"
 )]
+[Description(@"The PaymentStatusCustomerTrackerReport message is sent by a tracking facility or any authorised party to relevant parties involved in the business transaction to report on the progress of one or more business transaction(s) and obtain transparency on the status.")]
+[IsoDisplayName(@"Payment Status Customer Tracker Report V03")]
 public interface IPaymentStatusCustomerTrackerReportV03 : IOuterRecord
 {
     /// <summary>
@@ -31,6 +33,8 @@ public interface IPaymentStatusCustomerTrackerReportV03 : IOuterRecord
     [IsoId("_--KG7UN7Ee-QZYT2pcGFZw")]
     [DisplayName("Tracker Status And Transaction")]
     [IsoXmlTag("TrckrStsAndTx")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITrackerStatusAndTransaction18> TrackerStatusAndTransaction { get; }
 
     /// <summary>
@@ -39,5 +43,6 @@ public interface IPaymentStatusCustomerTrackerReportV03 : IOuterRecord
     [IsoId("_--KG70N7Ee-QZYT2pcGFZw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

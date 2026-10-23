@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details the non-working days of an entity.
 /// </summary>
 [IsoId("_zms14Gw0EeWD9e8QDBgUOw")]
+[IsoDisplayName(@"Securities Non Trading Day Report")]
 public interface ISecuritiesNonTradingDayReport1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ISecuritiesNonTradingDayReport1 : IIsoComponent
     [IsoId("_BieD0GxOEeWD9e8QDBgUOw")]
     [DisplayName("Non Working Day")]
     [IsoXmlTag("NonWorkgDay")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesNonTradingDay1> NonWorkingDay { get; }
 }

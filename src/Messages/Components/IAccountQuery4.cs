@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account Query4.
 /// </summary>
 [IsoId("_6Kcs4TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Account Query4")]
 public interface IAccountQuery4 : IIsoComponent
 {
     /// <summary>

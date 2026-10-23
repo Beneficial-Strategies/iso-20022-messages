@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a type of investment plan.
 /// </summary>
 [IsoId("_UxNjoF9CEeicg40_9gK9vQ")]
+[IsoDisplayName(@"Investment Fund Plan Type 1 Choice")]
 public interface IInvestmentFundPlanType1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the details of the transaction.
 /// </summary>
 [IsoId("_oKLSAdxKEd-tnM7aRm4nqg")]
+[IsoDisplayName(@"Transaction Details")]
 public interface ITransactionDetails22 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransactionDetails22 : IIsoComponent
     [IsoId("_oKLSA9xKEd-tnM7aRm4nqg")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TradeIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITransactionDetails22 : IIsoComponent
     [IsoId("_oKLSBdxKEd-tnM7aRm4nqg")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PoolIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface ITransactionDetails22 : IIsoComponent
     [IsoId("_oKLSB9xKEd-tnM7aRm4nqg")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface ITransactionDetails22 : IIsoComponent
     [IsoId("_oKLSCdxKEd-tnM7aRm4nqg")]
     [DisplayName("Triparty Agent Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripartyAgentCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +57,8 @@ public interface ITransactionDetails22 : IIsoComponent
     [IsoId("_oKLSC9xKEd-tnM7aRm4nqg")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientTripartyCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface ITransactionDetails22 : IIsoComponent
     [IsoId("_oKLSFdxKEd-tnM7aRm4nqg")]
     [DisplayName("Place Of Clearing")]
     [IsoXmlTag("PlcOfClr")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier? PlaceOfClearing { get; }
 
     /// <summary>
@@ -217,5 +228,7 @@ public interface ITransactionDetails22 : IIsoComponent
     [IsoId("_oKLSNdxKEd-tnM7aRm4nqg")]
     [DisplayName("Settlement Instruction Processing Additional Details")]
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? SettlementInstructionProcessingAdditionalDetails { get; }
 }

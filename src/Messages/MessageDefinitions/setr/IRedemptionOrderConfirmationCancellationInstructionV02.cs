@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "RedOrdrConfCxlInstr",
     "urn:iso:std:iso:20022:tech:xsd:setr.051.001.02"
 )]
+[Description(@"Scope|The RedemptionOrderConfirmationCancellationInstruction message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent RedemptionOrderConfirmation.|Usage|To request the cancellation of one or more individual order executions, the order reference and deal reference of each individual order execution in the original RedemptionOrderConfirmation are specified in the order reference and deal reference elements respectively. The message identification of the RedemptionOrderConfirmation message in which the individual order execution was conveyed may also be quoted in PreviousReference but this is not recommended. The AmendmentIndicator is used to specify whether the redemption order confirmation cancellation is to be followed by an amendment An amendment of a redemption order confirmation is carried out by sending a RedemptionOrderConfirmation message in which the AmendmentIndicator contains the value ‘true’.")]
+[IsoDisplayName(@"Redemption Order Confirmation Cancellation Instruction V")]
 public interface IRedemptionOrderConfirmationCancellationInstructionV02 : IOuterRecord
 {
     /// <summary>
@@ -43,6 +45,7 @@ public interface IRedemptionOrderConfirmationCancellationInstructionV02 : IOuter
     [IsoId("_Aab7vTbLEead9bDRE_1DAQ")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference8> PreviousReference { get; }
 
     /// <summary>
@@ -59,6 +62,7 @@ public interface IRedemptionOrderConfirmationCancellationInstructionV02 : IOuter
     [IsoId("_lKwZk1AZEea5nPE5ezGuuw")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AmendmentIndicator { get; }
 
     /// <summary>
@@ -67,6 +71,8 @@ public interface IRedemptionOrderConfirmationCancellationInstructionV02 : IOuter
     [IsoId("_lKwZlFAZEea5nPE5ezGuuw")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -75,6 +81,7 @@ public interface IRedemptionOrderConfirmationCancellationInstructionV02 : IOuter
     [IsoId("_lKwZlVAZEea5nPE5ezGuuw")]
     [DisplayName("Order References")]
     [IsoXmlTag("OrdrRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundOrder11> OrderReferences { get; }
 
     /// <summary>

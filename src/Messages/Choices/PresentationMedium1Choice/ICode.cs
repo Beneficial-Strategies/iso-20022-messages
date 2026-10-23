@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PresentationMedium1Choice;
 /// Presentation medium.
 /// </summary>
 [IsoId("_93_1pHltEeG7BsjMvd1mEw_1115260938")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPresentationMedium1Choice, IIsoChoiceVariant
 {
     /// <summary>

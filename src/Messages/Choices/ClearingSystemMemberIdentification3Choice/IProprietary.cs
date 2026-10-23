@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Identification Code for a clearing system, that has not yet been identified in the list of clearing systems.
 /// </summary>
 [IsoId("_TMehG9p-Ed-ak6NoX_4Aeg_-1563638498")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IClearingSystemMemberIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IClearingSystemMemberIdentification3Choice, IIso
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit of amounts for the customer.
 /// </summary>
 [IsoId("_P9_OEa18EeWMg5rOByfExw")]
+[IsoDisplayName(@"ATM Transaction Amounts")]
 public interface IATMTransactionAmounts6 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IATMTransactionAmounts6 : IIsoComponent
     [IsoId("__lqC0K19EeWMg5rOByfExw")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMTransactionAmounts7> AdditionalAmount { get; }
 }

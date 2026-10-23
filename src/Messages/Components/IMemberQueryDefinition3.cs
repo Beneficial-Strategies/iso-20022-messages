@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the query criteria.
 /// </summary>
 [IsoId("_tCLRIZlVEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Member Query Definition")]
 public interface IMemberQueryDefinition3 : IIsoComponent
 {
     /// <summary>

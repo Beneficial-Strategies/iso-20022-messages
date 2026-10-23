@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters to communicate with a host.
 /// </summary>
 [IsoId("_lpCy4WpUEeSR-ZWLvO-1dg")]
+[IsoDisplayName(@"Network Parameters")]
 public interface INetworkParameters4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface INetworkParameters4 : IIsoComponent
     [IsoId("_BalAIGpVEeSR-ZWLvO-1dg")]
     [DisplayName("Address Value")]
     [IsoXmlTag("AdrVal")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text AddressValue { get; }
 }

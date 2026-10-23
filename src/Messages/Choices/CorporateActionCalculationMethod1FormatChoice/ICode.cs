@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionCalculationMethod
 /// Standard code to specify the calculation method for drawings.
 /// </summary>
 [IsoId("_Rl9PNNp-Ed-ak6NoX_4Aeg_-550005822")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionCalculationMethod1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

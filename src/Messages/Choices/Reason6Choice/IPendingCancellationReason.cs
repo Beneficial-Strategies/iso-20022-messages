@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason6Choice;
 /// Specifies the reason why the cancellation request is pending.
 /// </summary>
 [IsoId("_itAn2kAAEeCaq78Ig8ATcA")]
+[IsoDisplayName(@"Pending Cancellation Reason")]
 public interface IPendingCancellationReason : IReason6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters of a physical delivery.
 /// </summary>
 [IsoId("_VMU4_9p-Ed-ak6NoX_4Aeg_-1776273308")]
+[IsoDisplayName(@"Delivery Parameters")]
 public interface IDeliveryParameters2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDeliveryParameters2 : IIsoComponent
     [IsoId("_VMU5ANp-Ed-ak6NoX_4Aeg_-1646980441")]
     [DisplayName("Registered Address Indicator")]
     [IsoXmlTag("RegdAdrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator RegisteredAddressIndicator { get; }
 
     /// <summary>

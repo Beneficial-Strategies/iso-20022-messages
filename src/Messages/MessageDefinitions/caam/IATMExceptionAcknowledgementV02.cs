@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// </summary>
 [IsoId("_46x7YaFCEe-MRKYsaX6JDg")]
 [IsoMessage("caam.012.001.02", "ATMXcptnAck", "urn:iso:std:iso:20022:tech:xsd:caam.012.001.02")]
+[IsoDisplayName(@"ATM Exception Acknowledgement V02")]
 public interface IATMExceptionAcknowledgementV02 : IOuterRecord
 {
     /// <summary>

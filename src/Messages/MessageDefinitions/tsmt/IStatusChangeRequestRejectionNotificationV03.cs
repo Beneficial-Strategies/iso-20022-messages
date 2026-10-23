@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "StsChngReqRjctnNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.030.001.03"
 )]
+[Description(@"Scope|The StatusChangeRequestRejectionNotification message is sent by the matching application to the submitter of a request to change the status of a transaction.|This message is used to inform about the rejection of a request to change the status of a transaction.|Usage|The StatusChangeRequestRejectionNotification message can be sent by the matching application to pass on information about the rejection of a request to change the status of a transaction that it has obtained through the receipt of a StatusChangeRequestRejection message.|In order to pass on information about the acceptance of a request to change the status of a transaction the matching application sends a StatusChangeNotification message.")]
+[IsoDisplayName(@"Status Change Request Rejection Notification V")]
 public interface IStatusChangeRequestRejectionNotificationV03 : IOuterRecord
 {
     /// <summary>
@@ -61,6 +63,9 @@ public interface IStatusChangeRequestRejectionNotificationV03 : IOuterRecord
     [IsoId("_wtWq99E8Ed-BzquC8wXy7w_233635858")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

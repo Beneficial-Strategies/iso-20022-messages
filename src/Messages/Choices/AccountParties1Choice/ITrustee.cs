@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties1Choice;
 /// </summary>
 [IsoId("_5n7tlhdAEeK5g-3oYI0_9Q")]
 [IsoXmlTag("Trstee")]
+[IsoDisplayName(@"Trustee")]
 public interface ITrustee : IAccountParties1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface ITrustee : IAccountParties1Choice, IIsoChoiceVariant
     [IsoId("_KdgCQROAEeKjmvxNCObNeQ")]
     [DisplayName("Investor Profile Validation")]
     [IsoXmlTag("InvstrPrflVldtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyProfileInformation2> InvestorProfileValidation { get; }
 
     /// <summary>
@@ -42,6 +44,7 @@ public interface ITrustee : IAccountParties1Choice, IIsoChoiceVariant
     [IsoId("_KdgCRROAEeKjmvxNCObNeQ")]
     [DisplayName("Ownership Beneficiary Rate")]
     [IsoXmlTag("OwnrshBnfcryRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OwnershipBeneficiaryRate { get; }
 
     /// <summary>
@@ -50,6 +53,8 @@ public interface ITrustee : IAccountParties1Choice, IIsoChoiceVariant
     [IsoId("_KdgCSROAEeKjmvxNCObNeQ")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientIdentification { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface ITrustee : IAccountParties1Choice, IIsoChoiceVariant
     [IsoId("_KdgCTROAEeKjmvxNCObNeQ")]
     [DisplayName("Fiscal Exemption")]
     [IsoXmlTag("FsclXmptn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FiscalExemption { get; }
 
     /// <summary>
@@ -66,6 +72,7 @@ public interface ITrustee : IAccountParties1Choice, IIsoChoiceVariant
     [IsoId("_KdgCUROAEeKjmvxNCObNeQ")]
     [DisplayName("Signatory Right Indicator")]
     [IsoXmlTag("SgntryRghtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SignatoryRightIndicator { get; }
 
     /// <summary>

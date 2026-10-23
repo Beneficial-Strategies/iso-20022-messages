@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of the individual orders of a bulk or multiple order that was previously received.
 /// </summary>
 [IsoId("_Uu1Eptp-Ed-ak6NoX_4Aeg_-1083249158")]
+[IsoDisplayName(@"Individual Order Status And Reason")]
 public interface IIndividualOrderStatusAndReason1 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,8 @@ public interface IIndividualOrderStatusAndReason1 : IIsoComponent
     [IsoId("_Uu-Ok9p-Ed-ak6NoX_4Aeg_-1083249081")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>

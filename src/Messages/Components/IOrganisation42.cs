@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organisation42.
 /// </summary>
 [IsoId("_02SEkTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Organisation42")]
 public interface IOrganisation42 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface IOrganisation42 : IIsoComponent
     /// </summary>
     [DisplayName("Representative Officer")]
     [IsoXmlTag("RprtvOffcr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification274> RepresentativeOfficer { get; }
 
     /// <summary>
@@ -93,6 +95,7 @@ public interface IOrganisation42 : IIsoComponent
     /// </summary>
     [DisplayName("Main Mandate Holder")]
     [IsoXmlTag("MainMndtHldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification274> MainMandateHolder { get; }
 
     /// <summary>
@@ -100,6 +103,7 @@ public interface IOrganisation42 : IIsoComponent
     /// </summary>
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification274> Sender { get; }
 
     /// <summary>
@@ -107,5 +111,6 @@ public interface IOrganisation42 : IIsoComponent
     /// </summary>
     [DisplayName("Legal Representative")]
     [IsoXmlTag("LglRprtv")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification274> LegalRepresentative { get; }
 }

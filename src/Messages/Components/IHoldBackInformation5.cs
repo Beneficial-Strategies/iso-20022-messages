@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about hold back and gating.
 /// </summary>
 [IsoId("a8f6c80c-8497-4934-8e3d-7e5edc56e263")]
+[IsoDisplayName(@"Hold Back Information5")]
 public interface IHoldBackInformation5 : IIsoComponent
 {
     /// <summary>

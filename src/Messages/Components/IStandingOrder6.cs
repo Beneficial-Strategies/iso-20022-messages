@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the detailed attributes of a standing order.
 /// </summary>
 [IsoId("_87o_m249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Standing Order")]
 public interface IStandingOrder6 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,8 @@ public interface IStandingOrder6 : IIsoComponent
     [IsoId("_9GXo7W49EeiU9cctagi5ow")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reference { get; }
 
     /// <summary>
@@ -97,6 +100,8 @@ public interface IStandingOrder6 : IIsoComponent
     [IsoId("_9GXo9249EeiU9cctagi5ow")]
     [DisplayName("Link Set Identification")]
     [IsoXmlTag("LkSetId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LinkSetIdentification { get; }
 
     /// <summary>
@@ -105,6 +110,8 @@ public interface IStandingOrder6 : IIsoComponent
     [IsoId("_9GXo-W49EeiU9cctagi5ow")]
     [DisplayName("Link Set Order Identification")]
     [IsoXmlTag("LkSetOrdrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LinkSetOrderIdentification { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface IStandingOrder6 : IIsoComponent
     [IsoId("_9GXo-249EeiU9cctagi5ow")]
     [DisplayName("Link Set Order Sequence")]
     [IsoXmlTag("LkSetOrdrSeq")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LinkSetOrderSequence { get; }
 
     /// <summary>
@@ -169,5 +177,6 @@ public interface IStandingOrder6 : IIsoComponent
     [IsoId("_9GXpBW49EeiU9cctagi5ow")]
     [DisplayName("Zero Sweep Indicator")]
     [IsoXmlTag("ZeroSweepInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ZeroSweepIndicator { get; }
 }

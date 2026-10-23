@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyIdentification2Choic
 /// </summary>
 [IsoId("_Qveap3vSEeWrWYBng3OpVw")]
 [IsoXmlTag("Othr")]
+[IsoDisplayName(@"Other")]
 public interface IOther : ICounterpartyIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

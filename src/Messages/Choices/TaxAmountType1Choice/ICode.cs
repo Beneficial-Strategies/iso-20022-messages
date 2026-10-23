@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxAmountType1Choice;
 /// Specifies the amount type, in a coded form.
 /// </summary>
 [IsoId("_tsra01kyEeGeoaLUQk__nA_1392476130")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITaxAmountType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the underlying statement entry, to which the investigation message refers.
 /// </summary>
 [IsoId("_CXmpX1RtEe23M4WgERMsYw")]
+[IsoDisplayName(@"Underlying Statement Entry")]
 public interface IUnderlyingStatementEntry4 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IUnderlyingStatementEntry4 : IIsoComponent
     [IsoId("_CXmpYlRtEe23M4WgERMsYw")]
     [DisplayName("Original Statement Identification")]
     [IsoXmlTag("OrgnlStmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalStatementIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IUnderlyingStatementEntry4 : IIsoComponent
     [IsoId("_CXmpY1RtEe23M4WgERMsYw")]
     [DisplayName("Original Entry Identification")]
     [IsoXmlTag("OrgnlNtryId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEntryIdentification { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IUnderlyingStatementEntry4 : IIsoComponent
     [IsoId("_CXmpZFRtEe23M4WgERMsYw")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? OriginalUETR { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat70Choice;
 /// <summary>
 /// Rate.
 /// </summary>
+[IsoDisplayName(@"Rate")]
 public interface IRate : IRateAndAmountFormat70Choice, IIsoChoiceVariant
 {
     /// <summary>

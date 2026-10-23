@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the collateral proposal response for the variation margin and optionaly the segregated independent amount.
 /// </summary>
 [IsoId("_wJv8XWTUEeSSTJlMfOKFsA")]
+[IsoDisplayName(@"Collateral Proposal Response")]
 public interface ICollateralProposalResponse2 : IIsoComponent
 {
     /// <summary>

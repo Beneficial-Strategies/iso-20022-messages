@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Loan offered by a group of lenders (called a syndicate) who work together to lend an amount of money to a single borrower.
 /// </summary>
 [IsoId("_JtldpW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Syndicated Loan")]
 public interface ISyndicatedLoan2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ISyndicatedLoan2 : IIsoComponent
     [IsoId("_J3au-W49EeiU9cctagi5ow")]
     [DisplayName("Share")]
     [IsoXmlTag("Shr")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Share { get; }
 
     /// <summary>

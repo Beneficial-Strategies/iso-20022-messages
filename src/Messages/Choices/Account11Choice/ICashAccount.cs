@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Account11Choice;
 /// <summary>
 /// Cash Account.
 /// </summary>
+[IsoDisplayName(@"Cash Account")]
 public interface ICashAccount : IAccount11Choice, IIsoChoiceVariant
 {
     /// <summary>

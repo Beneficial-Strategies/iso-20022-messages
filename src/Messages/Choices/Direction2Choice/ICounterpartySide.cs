@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Direction2Choice;
 /// Identifies whether the reporting counterparty is the buyer or the seller as determined at the time of transaction.|
 /// </summary>
 [IsoId("_oKFn03g-Eeu3kecHd7QKUQ")]
+[IsoDisplayName(@"Counterparty Side")]
 public interface ICounterpartySide : IDirection2Choice, IIsoChoiceVariant
 {
     /// <summary>

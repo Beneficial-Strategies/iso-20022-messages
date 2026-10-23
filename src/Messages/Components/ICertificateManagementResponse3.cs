@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the result of the certificate management request.
 /// </summary>
 [IsoId("_Zacc8XI0Ee299ZbWCkdR_w")]
+[IsoDisplayName(@"Certificate Management Response")]
 public interface ICertificateManagementResponse3 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,8 @@ public interface ICertificateManagementResponse3 : IIsoComponent
     [IsoId("_Zhe5GXI0Ee299ZbWCkdR_w")]
     [DisplayName("Security Profile")]
     [IsoXmlTag("SctyPrfl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecurityProfile { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ICertificateManagementResponse3 : IIsoComponent
     [IsoId("_dcdrcHI1Ee299ZbWCkdR_w")]
     [DisplayName("POI Challenge Value")]
     [IsoXmlTag("POIChllngVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary POIChallengeValue { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ICertificateManagementResponse3 : IIsoComponent
     [IsoId("_-rifcHI1Ee299ZbWCkdR_w")]
     [DisplayName("TMS Date Time")]
     [IsoXmlTag("TMSDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TMSDateTime { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ICertificateManagementResponse3 : IIsoComponent
     [IsoId("_Zhe5G3I0Ee299ZbWCkdR_w")]
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
+    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
     Max3000Binary? ClientCertificate { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface ICertificateManagementResponse3 : IIsoComponent
     [IsoId("_ZhhVUXI0Ee299ZbWCkdR_w")]
     [DisplayName("Client Certificate Path")]
     [IsoXmlTag("ClntCertPth")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10KBinary> ClientCertificatePath { get; }
 
     /// <summary>
@@ -89,5 +96,6 @@ public interface ICertificateManagementResponse3 : IIsoComponent
     [IsoId("_ZhhVU3I0Ee299ZbWCkdR_w")]
     [DisplayName("Server Certificate Path")]
     [IsoXmlTag("SvrCertPth")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10KBinary> ServerCertificatePath { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a related settlement instruction.
 /// </summary>
 [IsoId("_l77MsLbjEe-NMoTZ6Byg6A")]
+[IsoDisplayName(@"Related Settlement Instruction3")]
 public interface IRelatedSettlementInstruction3 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References19Choice;
 /// Identification of the transaction assigned by the processor of the instruction other than the account owner, the account servicer and the market infrastructure.
 /// </summary>
 [IsoId("_y7L_LkADEeC4mKrqv7wPJQ")]
+[IsoDisplayName(@"Processor Transaction Identification")]
 public interface IProcessorTransactionIdentification : IReferences19Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProcessorTransactionIdentification : IReferences19Choice, IIso
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code or a data source scheme to determine the business process type.
 /// </summary>
 [IsoId("_0hNQAZBgEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Business Process Type 2 Choice")]
 public interface IBusinessProcessType2Choice : IIsoChoice { }

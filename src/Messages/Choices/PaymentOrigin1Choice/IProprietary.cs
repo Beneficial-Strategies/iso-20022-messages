@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentOrigin1Choice;
 /// Specifies that the payment was included in a proprietary format message.
 /// </summary>
 [IsoId("_RIwV19p-Ed-ak6NoX_4Aeg_2038039429")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPaymentOrigin1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IPaymentOrigin1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

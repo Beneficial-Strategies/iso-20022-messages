@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the original notification item and to provide the status.
 /// </summary>
 [IsoId("25699087-895a-48af-a7d1-b1de9efec3dd")]
+[IsoDisplayName(@"Original Item And Status9")]
 public interface IOriginalItemAndStatus9 : IIsoComponent
 {
     /// <summary>

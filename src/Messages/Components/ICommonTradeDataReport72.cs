@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Common Trade Data Report72.
 /// </summary>
 [IsoId("_5yJBy5BBEe6Ojt1b3tfu9Q")]
+[IsoDisplayName(@"Common Trade Data Report72")]
 public interface ICommonTradeDataReport72 : IIsoComponent
 {
     /// <summary>

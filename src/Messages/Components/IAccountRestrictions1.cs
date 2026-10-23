@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Restrictions that may be applied to an account or investment plan.
 /// </summary>
 [IsoId("_F1IoQCFiEeW9XJWqfgXIIA")]
+[IsoDisplayName(@"Account Restrictions")]
 public interface IAccountRestrictions1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountRestrictions1 : IIsoComponent
     [IsoId("_OkFVYCFiEeW9XJWqfgXIIA")]
     [DisplayName("Limitation")]
     [IsoXmlTag("Lmttn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Limitation { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAccountRestrictions1 : IIsoComponent
     [IsoId("_VAAP8CFiEeW9XJWqfgXIIA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IAccountRestrictions1 : IIsoComponent
     [IsoId("_ZUWaACFiEeW9XJWqfgXIIA")]
     [DisplayName("Account Validation")]
     [IsoXmlTag("AcctVldtn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AccountValidation { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IAccountRestrictions1 : IIsoComponent
     [IsoId("_cQ4ckCFiEeW9XJWqfgXIIA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>

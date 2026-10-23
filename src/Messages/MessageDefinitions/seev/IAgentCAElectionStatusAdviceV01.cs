@@ -25,6 +25,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "AgtCAElctnStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.015.001.01"
 )]
+[Description(@"Scope|This message is sent by an issuer (or its agent) to the CSD to report the status, or a change in status, of:|- a corporate action election advice;|- an election cancellation request; or|- an election amendment request.|Usage|This message must be sent in response to an:|- Agent Corporation Action Election Advice to provide the status of an election advice in the case of a rejection. However, it may also be used in all other situations, in which case, the building blocks Election Advice Identification and the Election Advice Status must be present.|- Agent Corporation Action Election Cancellation Request to provide the status of the cancellation request, in which case, the building blocks Election Cancellation Request Identification and the Election Cancellation Request Status must be present.|- Agent Corporation Action Election Amendment Request to provide the status of the amendment request, in which case, the building blocks Election Amendment Request Identification and the Election Amendment Request Status must be present.")]
+[IsoDisplayName(@"Agent CA Election Status Advice V")]
 public interface IAgentCAElectionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>

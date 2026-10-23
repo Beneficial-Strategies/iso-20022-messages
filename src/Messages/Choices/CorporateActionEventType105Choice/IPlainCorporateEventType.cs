@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType105Choic
 /// <summary>
 /// Plain Corporate Event Type.
 /// </summary>
+[IsoDisplayName(@"Plain Corporate Event Type")]
 public interface IPlainCorporateEventType : ICorporateActionEventType105Choice, IIsoChoiceVariant
 {
     /// <summary>

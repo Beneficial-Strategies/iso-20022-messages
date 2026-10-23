@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NDFOpeningFixing1Choice;
 /// Reference of the opening confirmation provided on an NDF fixing instruction to link back to the original NDF opening confirmation.
 /// </summary>
 [IsoId("_cR-bwJUJEeak6e8_Fc5fQg")]
+[IsoDisplayName(@"Opening Confirmation Reference")]
 public interface IOpeningConfirmationReference : INDFOpeningFixing1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOpeningConfirmationReference : INDFOpeningFixing1Choice, IIsoC
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("OpngConfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

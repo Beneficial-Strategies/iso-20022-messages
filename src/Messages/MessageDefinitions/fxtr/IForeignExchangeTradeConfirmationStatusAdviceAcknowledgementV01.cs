@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.fxtr;
     "FXTradConfStsAdvcAck",
     "urn:iso:std:iso:20022:tech:xsd:fxtr.038.001.01"
 )]
+[Description(@"Scope|The ForeignExchangeTradeConfirmationStatusAdviceAcknowledgement message is sent from a market participant to a Central matching utility (CMU) in response to the FXTradeConfirmationStatusAdvice previously sent by the CMU in the scenario of trades matched by both participants.||Usage|The acknowledgement is sent by the trading member to the CMU after they received the confirmation status advice. |Note that one confirmation status advice acknowledgement responds to one confirmation status advice.")]
+[IsoDisplayName(@"Foreign Exchange Trade Confirmation Status Advice Acknowledgement V")]
 public interface IForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 : IOuterRecord
 {
     /// <summary>
@@ -45,6 +47,7 @@ public interface IForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01
     [IsoId("_TqsBUESAEeStEe_B2dcrqg")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -53,6 +56,8 @@ public interface IForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01
     [IsoId("_qe6B0IsSEeS_1fMypAW06w")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TradeIdentification { get; }
 
     /// <summary>
@@ -101,5 +106,6 @@ public interface IForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01
     [IsoId("_1wlvYKHlEeS69KkQis5bYg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

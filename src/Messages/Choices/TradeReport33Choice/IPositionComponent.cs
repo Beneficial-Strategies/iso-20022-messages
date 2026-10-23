@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice;
 /// <summary>
 /// Position Component.
 /// </summary>
+[IsoDisplayName(@"Position Component")]
 public interface IPositionComponent : ITradeReport33Choice, IIsoChoiceVariant
 {
     /// <summary>

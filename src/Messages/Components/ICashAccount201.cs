@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of an account.
 /// </summary>
 [IsoId("_tkpXgYirEeefvMoXmllHqg")]
+[IsoDisplayName(@"Cash Account")]
 public interface ICashAccount201 : IIsoComponent
 {
     /// <summary>

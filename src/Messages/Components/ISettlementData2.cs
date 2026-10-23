@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the settlement of a treasury trade.
 /// </summary>
 [IsoId("_TJMjldp-Ed-ak6NoX_4Aeg_1219011122")]
+[IsoDisplayName(@"Settlement Data")]
 public interface ISettlementData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISettlementData2 : IIsoComponent
     [IsoId("_TJMjltp-Ed-ak6NoX_4Aeg_1219011217")]
     [DisplayName("Cash Flow Unique Reference")]
     [IsoXmlTag("CshFlowUnqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CashFlowUniqueReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISettlementData2 : IIsoComponent
     [IsoId("_TJMjl9p-Ed-ak6NoX_4Aeg_1219011546")]
     [DisplayName("Settlement System Unique Reference")]
     [IsoXmlTag("SttlmSysUnqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SettlementSystemUniqueReference { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ISettlementData2 : IIsoComponent
     [IsoId("_TJWUlNp-Ed-ak6NoX_4Aeg_1219011139")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate SettlementDate { get; }
 
     /// <summary>
@@ -89,6 +95,8 @@ public interface ISettlementData2 : IIsoComponent
     [IsoId("_TJWUltp-Ed-ak6NoX_4Aeg_1219011564")]
     [DisplayName("Extended Settlement Status")]
     [IsoXmlTag("XtndedSttlmSts")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedSettlementStatus { get; }
 
     /// <summary>
@@ -97,6 +105,8 @@ public interface ISettlementData2 : IIsoComponent
     [IsoId("_TJWUl9p-Ed-ak6NoX_4Aeg_1219011174")]
     [DisplayName("Settlement Status Sub Type")]
     [IsoXmlTag("SttlmStsSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SettlementStatusSubType { get; }
 
     /// <summary>
@@ -105,6 +115,7 @@ public interface ISettlementData2 : IIsoComponent
     [IsoId("_TJWUmNp-Ed-ak6NoX_4Aeg_1219011234")]
     [DisplayName("Suspended")]
     [IsoXmlTag("Sspd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Suspended { get; }
 
     /// <summary>
@@ -113,5 +124,6 @@ public interface ISettlementData2 : IIsoComponent
     [IsoId("_TJWUmdp-Ed-ak6NoX_4Aeg_1219011469")]
     [DisplayName("Pending")]
     [IsoXmlTag("Pdg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Pending { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Dates determining the entitlement.
 /// </summary>
 [IsoId("_TmHJHdp-Ed-ak6NoX_4Aeg_742278644")]
+[IsoDisplayName(@"Eligibility Dates")]
 public interface IEligibilityDates1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IEligibilityDates1 : IIsoComponent
     [IsoId("_TmHJHtp-Ed-ak6NoX_4Aeg_-1095795436")]
     [DisplayName("Entitlement Fixing Date")]
     [IsoXmlTag("EntitlmntFxgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EntitlementFixingDate { get; }
 }

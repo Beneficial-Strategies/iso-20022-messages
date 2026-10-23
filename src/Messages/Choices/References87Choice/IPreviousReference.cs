@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References87Choice;
 
 /// <summary>Specifies the previous reference.</summary>
 [IsoId("2fb7d904-23b3-493e-8127-9f3966c4a9db")]
+[IsoDisplayName(@"Previous Reference")]
 public interface IPreviousReference : IReferences87Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

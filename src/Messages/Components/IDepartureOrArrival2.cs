@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains departure or arrival information.
 /// </summary>
 [IsoId("_Hqx1RfcWEeiW-auGnDPZIw")]
+[IsoDisplayName(@"Departure Or Arrival")]
 public interface IDepartureOrArrival2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDepartureOrArrival2 : IIsoComponent
     [IsoId("_Hqx1SfcWEeiW-auGnDPZIw")]
     [DisplayName("Carrier Code")]
     [IsoXmlTag("CrrierCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CarrierCode { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IDepartureOrArrival2 : IIsoComponent
     [IsoId("_Hqx1SPcWEeiW-auGnDPZIw")]
     [DisplayName("Route Number")]
     [IsoXmlTag("RouteNb")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? RouteNumber { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IDepartureOrArrival2 : IIsoComponent
     [IsoId("_Hqx1R_cWEeiW-auGnDPZIw")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface IDepartureOrArrival2 : IIsoComponent
     [IsoId("_Hqx1RvcWEeiW-auGnDPZIw")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? Time { get; }
 }

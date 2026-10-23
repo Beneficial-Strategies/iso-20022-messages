@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the error message.</summary>
 [IsoId("_kNBjo27-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Error")]
 public interface IError : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information on the cash amount and haircut or margin.
 /// </summary>
 [IsoId("_3b8rIP_-Eemefbt-QjTNnA")]
+[IsoDisplayName(@"Amount Haircut Margin")]
 public interface IAmountHaircutMargin1 : IIsoComponent
 {
     /// <summary>
@@ -27,5 +28,6 @@ public interface IAmountHaircutMargin1 : IIsoComponent
     [IsoId("_QrRaUP__Eemefbt-QjTNnA")]
     [DisplayName("Haircut Or Margin")]
     [IsoXmlTag("HrcutOrMrgn")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? HaircutOrMargin { get; }
 }

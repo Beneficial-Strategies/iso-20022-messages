@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the collateral valuation such as the collateral amount, the market value.
 /// </summary>
 [IsoId("_vWhlQ6MOEeCojJW5vEuTEQ_1855607436")]
+[IsoDisplayName(@"Collateral Amount")]
 public interface ICollateralAmount1 : IIsoComponent
 {
     /// <summary>

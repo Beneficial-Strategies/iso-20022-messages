@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction from an investor to sell investment fund units back to the fund.
 /// </summary>
 [IsoId("_Vc32aNp-Ed-ak6NoX_4Aeg_-1089349595")]
+[IsoDisplayName(@"Redemption Bulk Order")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IRedemptionBulkOrder2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface IRedemptionBulkOrder2 : IIsoComponent
     [IsoId("_Vc32atp-Ed-ak6NoX_4Aeg_1997589258")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IRedemptionBulkOrder2 : IIsoComponent
     [IsoId("_Vc32a9p-Ed-ak6NoX_4Aeg_-1187278681")]
     [DisplayName("Expiry Date Time")]
     [IsoXmlTag("XpryDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ExpiryDateTime { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IRedemptionBulkOrder2 : IIsoComponent
     [IsoId("_VdBAUdp-Ed-ak6NoX_4Aeg_-1089347717")]
     [DisplayName("Individual Order Details")]
     [IsoXmlTag("IndvOrdrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRedemptionOrder3> IndividualOrderDetails { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.
 /// </summary>
 [IsoId("41f45edb-b794-450d-b6d0-63ff93e72ea6")]
+[IsoDisplayName(@"Payment Instruction48")]
 public interface IPaymentInstruction48 : IIsoComponent
 {
     /// <summary>
@@ -121,5 +122,7 @@ public interface IPaymentInstruction48 : IIsoComponent
     [IsoId("aeb80889-10be-4db8-8e6c-3fdaa46bbb2d")]
     [DisplayName("Credit Transfer Transaction")]
     [IsoXmlTag("CdtTrfTx")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICreditTransferTransaction74> CreditTransferTransaction { get; }
 }

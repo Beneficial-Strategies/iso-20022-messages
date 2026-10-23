@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the letter of credit or bank guarantee, or other collateral, posted as collateral.
 /// </summary>
 [IsoId("_fSaWdSqUEeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Other Collateral")]
 public interface IOtherCollateral11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherCollateral11 : IIsoComponent
     [IsoId("_fqZYgSqUEeyR9JrVGfaMKw")]
     [DisplayName("Collateral Identification")]
     [IsoXmlTag("CollId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CollateralIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOtherCollateral11 : IIsoComponent
     [IsoId("_fqZYgyqUEeyR9JrVGfaMKw")]
     [DisplayName("Asset Number")]
     [IsoXmlTag("AsstNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AssetNumber { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IOtherCollateral11 : IIsoComponent
     [IsoId("_fqZYhSqUEeyR9JrVGfaMKw")]
     [DisplayName("Letter Of Credit Identification")]
     [IsoXmlTag("LttrOfCdtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LetterOfCreditIdentification { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IOtherCollateral11 : IIsoComponent
     [IsoId("_fqZYkSqUEeyR9JrVGfaMKw")]
     [DisplayName("Limited Coverage Indicator")]
     [IsoXmlTag("LtdCvrgInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LimitedCoverageIndicator { get; }
 
     /// <summary>
@@ -97,6 +105,7 @@ public interface IOtherCollateral11 : IIsoComponent
     [IsoId("_fqZYlSqUEeyR9JrVGfaMKw")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValueDate { get; }
 
     /// <summary>
@@ -105,6 +114,7 @@ public interface IOtherCollateral11 : IIsoComponent
     [IsoId("_fqZYlyqUEeyR9JrVGfaMKw")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ExchangeRate { get; }
 
     /// <summary>
@@ -121,6 +131,7 @@ public interface IOtherCollateral11 : IIsoComponent
     [IsoId("_fqZYmyqUEeyR9JrVGfaMKw")]
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Haircut { get; }
 
     /// <summary>

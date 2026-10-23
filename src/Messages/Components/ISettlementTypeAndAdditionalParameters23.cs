@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement Type And Additional Parameters23.
 /// </summary>
 [IsoId("_uHXTcYVnEe-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Settlement Type And Additional Parameters23")]
 public interface ISettlementTypeAndAdditionalParameters23 : IIsoComponent
 {
     /// <summary>

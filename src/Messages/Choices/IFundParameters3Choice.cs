@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of fund parameters.
 /// </summary>
 [IsoId("_Q6l-ANp-Ed-ak6NoX_4Aeg_36568283")]
+[IsoDisplayName(@"Fund Parameters 3 Choice")]
 public interface IFundParameters3Choice : IIsoChoice { }

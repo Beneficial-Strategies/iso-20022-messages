@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the rates related to securities movement.
 /// </summary>
 [IsoId("_qPQ3XUEEEeWVgfuHGaKtRQ")]
+[IsoDisplayName(@"Rate Details")]
 public interface IRateDetails22 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IRateDetails22 : IIsoComponent
     [IsoId("_qb6MMUEEEeWVgfuHGaKtRQ")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGrossDividendRateFormat20Choice> GrossDividendRate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IRateDetails22 : IIsoComponent
     [IsoId("_qb6MM0EEEeWVgfuHGaKtRQ")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateUsedForPaymentFormat8Choice> InterestRateUsedForPayment { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IRateDetails22 : IIsoComponent
     [IsoId("_qb6MN0EEEeWVgfuHGaKtRQ")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat41Choice> WithholdingTaxRate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IRateDetails22 : IIsoComponent
     [IsoId("_mzguAWXjEeWht50_j0HXAQ")]
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat41Choice> SecondLevelTax { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface IRateDetails22 : IIsoComponent
     [IsoId("_qb6MRUEEEeWVgfuHGaKtRQ")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetDividendRateFormat22Choice> NetDividendRate { get; }
 
     /// <summary>
@@ -129,6 +135,7 @@ public interface IRateDetails22 : IIsoComponent
     [IsoId("_qcDWF0EEEeWVgfuHGaKtRQ")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCreditRateFormat8Choice> TaxCreditRate { get; }
 
     /// <summary>

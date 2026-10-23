@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration parameters to communicate with a host.
 /// </summary>
 [IsoId("_bHh5QbZ8EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Host Communication Parameter8")]
 public interface IHostCommunicationParameter8 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IHostCommunicationParameter8 : IIsoComponent
     [IsoId("_bIcfV7Z8EfCUZfsQO4rYeA")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICryptographicKey19> Key { get; }
 
     /// <summary>

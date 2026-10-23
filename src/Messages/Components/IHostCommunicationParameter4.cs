@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration parameters to communicate with a host.
 /// </summary>
 [IsoId("_PDwmYY3_EeWRwov1g9WL_A")]
+[IsoDisplayName(@"Host Communication Parameter")]
 public interface IHostCommunicationParameter4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IHostCommunicationParameter4 : IIsoComponent
     [IsoId("_POMUwY3_EeWRwov1g9WL_A")]
     [DisplayName("Host Identification")]
     [IsoXmlTag("HstId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text HostIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IHostCommunicationParameter4 : IIsoComponent
     [IsoId("_POMUxY3_EeWRwov1g9WL_A")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IKEKIdentifier5> Key { get; }
 
     /// <summary>

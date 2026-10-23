@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between amount expressed as an absolute value or as a percentage rate related to another reference amount.
 /// </summary>
 [IsoId("_RXzecNp-Ed-ak6NoX_4Aeg_-2069508751")]
+[IsoDisplayName(@"Financing Rate Or Amount Choice")]
 public interface IFinancingRateOrAmountChoice : IIsoChoice { }

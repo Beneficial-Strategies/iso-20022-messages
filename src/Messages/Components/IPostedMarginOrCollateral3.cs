@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information on the posted margin or collateral of the transaction.
 /// </summary>
 [IsoId("_6UHOsayGEem81-uIvTF5rQ")]
+[IsoDisplayName(@"Posted Margin Or Collateral")]
 public interface IPostedMarginOrCollateral3 : IIsoComponent
 {
     /// <summary>

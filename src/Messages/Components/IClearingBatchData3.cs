@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Clearing Batch Data3.
 /// </summary>
 [IsoId("_2snkEY1IEe6S0_1AaJzQCA")]
+[IsoDisplayName(@"Clearing Batch Data3")]
 public interface IClearingBatchData3 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed information on statistics per combination of counterparties.
 /// </summary>
 [IsoId("_MYzuUVfdEeqZr5K1Woax-g")]
+[IsoDisplayName(@"Detailed Statistics Per Counterparty")]
 public interface IDetailedStatisticsPerCounterparty6 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IDetailedStatisticsPerCounterparty6 : IIsoComponent
     [IsoId("_MweAZ1fdEeqZr5K1Woax-g")]
     [DisplayName("Competent Authority")]
     [IsoXmlTag("CmptntAuthrty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompetentAuthority1> CompetentAuthority { get; }
 }

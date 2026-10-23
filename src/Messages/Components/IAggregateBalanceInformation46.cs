@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Aggregate Balance Information46.
 /// </summary>
 [IsoId("_W2ghr4S2Ee-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Aggregate Balance Information46")]
 public interface IAggregateBalanceInformation46 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface IAggregateBalanceInformation46 : IIsoComponent
     /// </summary>
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceInformation29> PriceDetails { get; }
 
     /// <summary>
@@ -86,6 +88,7 @@ public interface IAggregateBalanceInformation46 : IIsoComponent
     /// </summary>
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms34> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -114,6 +117,7 @@ public interface IAggregateBalanceInformation46 : IIsoComponent
     /// </summary>
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQuantityBreakdown57> QuantityBreakdown { get; }
 
     /// <summary>
@@ -121,6 +125,7 @@ public interface IAggregateBalanceInformation46 : IIsoComponent
     /// </summary>
     [DisplayName("Balance Breakdown")]
     [IsoXmlTag("BalBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubBalanceInformation20> BalanceBreakdown { get; }
 
     /// <summary>
@@ -128,6 +133,7 @@ public interface IAggregateBalanceInformation46 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Balance Breakdown")]
     [IsoXmlTag("AddtlBalBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBalanceInformation20> AdditionalBalanceBreakdown { get; }
 
     /// <summary>
@@ -135,6 +141,7 @@ public interface IAggregateBalanceInformation46 : IIsoComponent
     /// </summary>
     [DisplayName("Balance At Safekeeping Place")]
     [IsoXmlTag("BalAtSfkpgPlc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateBalancePerSafekeepingPlace43> BalanceAtSafekeepingPlace { get; }
 
     /// <summary>
@@ -149,5 +156,6 @@ public interface IAggregateBalanceInformation46 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

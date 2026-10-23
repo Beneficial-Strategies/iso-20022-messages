@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of transaction type or corporation action event type.
 /// </summary>
 [IsoId("_DDQMMAf_EeSaceXTzyiZRg")]
+[IsoDisplayName(@"Transaction Type 1 Choice")]
 public interface ITransactionType1Choice : IIsoChoice { }

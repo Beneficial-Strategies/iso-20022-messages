@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amounts linked to a securities balance, for example, holding value.
 /// </summary>
 [IsoId("_SVywsdp-Ed-ak6NoX_4Aeg_-1968542123")]
+[IsoDisplayName(@"Balance Amounts")]
 public interface IBalanceAmounts2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
 /// </summary>
 [IsoId("_G57u8RRAEeOKWo1NF21OVw")]
+[IsoDisplayName(@"Investment Account")]
 public interface IInvestmentAccount39 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentAccount39 : IIsoComponent
     [IsoId("_HRiWpRRAEeOKWo1NF21OVw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IInvestmentAccount39 : IIsoComponent
     [IsoId("_HRiWpxRAEeOKWo1NF21OVw")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Designation { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface IInvestmentAccount39 : IIsoComponent
     [IsoId("_L33okRRAEeOKWo1NF21OVw")]
     [DisplayName("Reinvestment Details")]
     [IsoXmlTag("RinvstmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReinvestment1> ReinvestmentDetails { get; }
 
     /// <summary>
@@ -113,6 +119,8 @@ public interface IInvestmentAccount39 : IIsoComponent
     [IsoId("_HRi9uxRAEeOKWo1NF21OVw")]
     [DisplayName("Accumulation Right Reference")]
     [IsoXmlTag("AcmltnRghtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccumulationRightReference { get; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public interface IInvestmentAccount39 : IIsoComponent
     [IsoId("_HRi9vRRAEeOKWo1NF21OVw")]
     [DisplayName("Required Signatories Number")]
     [IsoXmlTag("ReqrdSgntriesNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? RequiredSignatoriesNumber { get; }
 
     /// <summary>
@@ -129,6 +138,8 @@ public interface IInvestmentAccount39 : IIsoComponent
     [IsoId("_HRi9vxRAEeOKWo1NF21OVw")]
     [DisplayName("Fund Family Name")]
     [IsoXmlTag("FndFmlyNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FundFamilyName { get; }
 
     /// <summary>
@@ -137,6 +148,7 @@ public interface IInvestmentAccount39 : IIsoComponent
     [IsoId("_HRi9wRRAEeOKWo1NF21OVw")]
     [DisplayName("Modified Fund Details")]
     [IsoXmlTag("ModfdFndDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope13> ModifiedFundDetails { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RetrievalDeliveryMethod1Choice;
 /// Method actually used to convey the transaction information.
 /// </summary>
 [IsoId("_-v7SRewhEeiMkKo2clXHdQ")]
+[IsoDisplayName(@"Actual Delivery Method")]
 public interface IActualDeliveryMethod : IRetrievalDeliveryMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IActualDeliveryMethod : IRetrievalDeliveryMethod1Choice, IIsoCh
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("ActlDlvryMtd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

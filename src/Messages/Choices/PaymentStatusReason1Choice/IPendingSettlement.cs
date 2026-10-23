@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReason1Choice;
 /// Reason why the payment status is pending (settlement).
 /// </summary>
 [IsoId("_QWOzudEdEei798TPbKJMuw")]
+[IsoDisplayName(@"Pending Settlement")]
 public interface IPendingSettlement : IPaymentStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

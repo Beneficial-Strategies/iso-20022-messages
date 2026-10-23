@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Return criteria for information to be returned in the report deriving from a query about securities account reference data.
 /// </summary>
 [IsoId("_X5rHEeX3EeWawO9uAAThyQ")]
+[IsoDisplayName(@"Securities Account Return Criteria")]
 public interface ISecuritiesAccountReturnCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecuritiesAccountReturnCriteria1 : IIsoComponent
     [IsoId("_YDWAceX3EeWawO9uAAThyQ")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? AccountIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecuritiesAccountReturnCriteria1 : IIsoComponent
     [IsoId("_YDWAc-X3EeWawO9uAAThyQ")]
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? PartyIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISecuritiesAccountReturnCriteria1 : IIsoComponent
     [IsoId("_YDWAdeX3EeWawO9uAAThyQ")]
     [DisplayName("Party Type")]
     [IsoXmlTag("PtyTp")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? PartyType { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ISecuritiesAccountReturnCriteria1 : IIsoComponent
     [IsoId("_YDWAd-X3EeWawO9uAAThyQ")]
     [DisplayName("Account Servicer")]
     [IsoXmlTag("AcctSvcr")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? AccountServicer { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ISecuritiesAccountReturnCriteria1 : IIsoComponent
     [IsoId("_YDWAeeX3EeWawO9uAAThyQ")]
     [DisplayName("Account Type")]
     [IsoXmlTag("AcctTp")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? AccountType { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ISecuritiesAccountReturnCriteria1 : IIsoComponent
     [IsoId("_YDWAe-X3EeWawO9uAAThyQ")]
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? OpeningDate { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ISecuritiesAccountReturnCriteria1 : IIsoComponent
     [IsoId("_YDWAfeX3EeWawO9uAAThyQ")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? ClosingDate { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface ISecuritiesAccountReturnCriteria1 : IIsoComponent
     [IsoId("_YDWAf-X3EeWawO9uAAThyQ")]
     [DisplayName("End Investor Flag")]
     [IsoXmlTag("EndInvstrFlg")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? EndInvestorFlag { get; }
 
     /// <summary>
@@ -81,5 +90,6 @@ public interface ISecuritiesAccountReturnCriteria1 : IIsoComponent
     [IsoId("_YDWAgeX3EeWawO9uAAThyQ")]
     [DisplayName("Pricing Scheme")]
     [IsoXmlTag("PricgSchme")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? PricingScheme { get; }
 }

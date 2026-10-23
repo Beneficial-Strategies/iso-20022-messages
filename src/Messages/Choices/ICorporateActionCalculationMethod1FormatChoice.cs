@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the calculation method for drawings.
 /// </summary>
 [IsoId("_Rl9PM9p-Ed-ak6NoX_4Aeg_-384222870")]
+[IsoDisplayName(@"Corporate Action Calculation Method 1 Format Choice")]
 public interface ICorporateActionCalculationMethod1FormatChoice : IIsoChoice { }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// </summary>
 [IsoId("_yJhSpYv-Eei289CGNqs21g")]
 [IsoXmlTag("PtyNm")]
+[IsoDisplayName(@"Party Name")]
 public interface IPartyName : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IPartyName : ISystemPartyModification2Choice, IIsoChoiceVariant
     [IsoId("_kmfmFO5NEeCisYr99QEiWA_-682796825")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidFrom { get; }
 
     /// <summary>
@@ -26,6 +28,8 @@ public interface IPartyName : ISystemPartyModification2Choice, IIsoChoiceVariant
     [IsoId("_kmfmFe5NEeCisYr99QEiWA_-1679869178")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -34,5 +38,7 @@ public interface IPartyName : ISystemPartyModification2Choice, IIsoChoiceVariant
     [IsoId("_kmpXEO5NEeCisYr99QEiWA_1695064466")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 }

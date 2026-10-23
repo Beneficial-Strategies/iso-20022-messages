@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Entry Details14.
 /// </summary>
 [IsoId("_D-XNaT3dEe-thIfLZ94a1w")]
+[IsoDisplayName(@"Entry Details14")]
 public interface IEntryDetails14 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IEntryDetails14 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEntryTransaction15> TransactionDetails { get; }
 }

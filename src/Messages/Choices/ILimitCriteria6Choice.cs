@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.
 /// </summary>
 [IsoId("_FDP_524-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Limit Criteria 6 Choice")]
 public interface ILimitCriteria6Choice : IIsoChoice { }

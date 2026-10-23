@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of conversion.
 /// </summary>
 [IsoId("_Q3wscNp-Ed-ak6NoX_4Aeg_759734385")]
+[IsoDisplayName(@"Conversion Type Format 1 Choice")]
 public interface IConversionTypeFormat1Choice : IIsoChoice { }

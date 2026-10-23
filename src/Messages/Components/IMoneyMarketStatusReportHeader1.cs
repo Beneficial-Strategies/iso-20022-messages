@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the money market statistical status report header details.
 /// </summary>
 [IsoId("_olkndNjLEeSD0e0ybx5L5Q")]
+[IsoDisplayName(@"Money Market Status Report Header")]
 public interface IMoneyMarketStatusReportHeader1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMoneyMarketStatusReportHeader1 : IIsoComponent
     [IsoId("_oluYcNjLEeSD0e0ybx5L5Q")]
     [DisplayName("Reporting Agent")]
     [IsoXmlTag("RptgAgt")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier ReportingAgent { get; }
 
     /// <summary>
@@ -42,5 +44,6 @@ public interface IMoneyMarketStatusReportHeader1 : IIsoComponent
     [IsoId("_Bqe1sd7HEeSaBeqd_btViQ")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericValidationRuleIdentification1> ValidationRule { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation5Choice;
 /// </summary>
 [IsoId("_GxfqExYAEeOBE-jZfcm4KQ")]
 [IsoXmlTag("TrfInDtls")]
+[IsoDisplayName(@"Transfer In Details")]
 public interface ITransferInDetails : ICancellation5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface ITransferInDetails : ICancellation5Choice, IIsoChoiceVariant
     [IsoId("_bONKIS7_EeO59oUFO5eLvw")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface ITransferInDetails : ICancellation5Choice, IIsoChoiceVariant
     [IsoId("_jdwlgS7_EeO59oUFO5eLvw")]
     [DisplayName("Transfer And References")]
     [IsoXmlTag("TrfAndRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransferIn11> TransferAndReferences { get; }
 
     /// <summary>
@@ -58,5 +62,6 @@ public interface ITransferInDetails : ICancellation5Choice, IIsoChoiceVariant
     [IsoId("_QsUUexYAEeOBE-jZfcm4KQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

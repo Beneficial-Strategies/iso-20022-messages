@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional details on the remittance advice.
 /// </summary>
 [IsoId("_0KjnBTEyEe6g-ffJsqGiSA")]
+[Description(@"Provides additional details on the remittance advice.")]
+[IsoDisplayName(@"Remittance Location Data2")]
 public interface IRemittanceLocationData2 : IIsoComponent
 {
     /// <summary>

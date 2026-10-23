@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAdditionalIdentification2Ch
 /// </summary>
 [IsoId("_Qo3U09p-Ed-ak6NoX_4Aeg_136820808")]
 [IsoXmlTag("RegnId")]
+[IsoDisplayName(@"Registration Identification")]
 public interface IRegistrationIdentification
     : IPartyAdditionalIdentification2Choice,
         IIsoChoiceVariant
@@ -20,6 +21,8 @@ public interface IRegistrationIdentification
     [IsoId("_QP1Jwdp-Ed-ak6NoX_4Aeg_-1308997280")]
     [DisplayName("Registration Number")]
     [IsoXmlTag("RegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RegistrationNumber { get; }
 
     /// <summary>
@@ -28,5 +31,7 @@ public interface IRegistrationIdentification
     [IsoId("_QP1Jwtp-Ed-ak6NoX_4Aeg_-1209035067")]
     [DisplayName("Register Name")]
     [IsoXmlTag("RegrNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegisterName { get; }
 }

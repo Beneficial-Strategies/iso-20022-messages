@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Net position of a segregated holding of a single security within the overall position held in the securities account, eg, sub-balance per status.
 /// </summary>
 [IsoId("_QYxDU9p-Ed-ak6NoX_4Aeg_-421841192")]
+[IsoDisplayName(@"Holding Balance")]
 public interface IHoldingBalance5 : IIsoComponent
 {
     /// <summary>

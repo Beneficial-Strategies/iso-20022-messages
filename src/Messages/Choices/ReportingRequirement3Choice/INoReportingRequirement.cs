@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingRequirement3Choice;
 /// <summary>
 /// No Reporting Requirement.
 /// </summary>
+[IsoDisplayName(@"No Reporting Requirement")]
 public interface INoReportingRequirement : IReportingRequirement3Choice, IIsoChoiceVariant
 {
     /// <summary>

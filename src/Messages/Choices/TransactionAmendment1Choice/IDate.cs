@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice;
 /// <summary>
 /// Date.
 /// </summary>
+[IsoDisplayName(@"Date")]
 public interface IDate : ITransactionAmendment1Choice, IIsoChoiceVariant
 {
     /// <summary>

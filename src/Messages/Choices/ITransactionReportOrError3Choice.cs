@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between transactions and booked entries held at the transaction administrator or an operational error when the requested data cannot be retrieved.
 /// </summary>
 [IsoId("_MwAZAZlPEee-Zps0fZQaFQ")]
+[IsoDisplayName(@"Transaction Report Or Error 3 Choice")]
 public interface ITransactionReportOrError3Choice : IIsoChoice { }

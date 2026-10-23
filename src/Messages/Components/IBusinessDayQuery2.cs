@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the query criteria.
 /// </summary>
 [IsoId("_x03f5ZlcEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Business Day Query")]
 public interface IBusinessDayQuery2 : IIsoComponent
 {
     /// <summary>

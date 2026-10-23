@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("19beff8e-0f2e-46d6-9ea4-8e1932a4ae2b")]
 [IsoMessage("sese.018.001.10", "AcctHldgInf", "urn:iso:std:iso:20022:tech:xsd:sese.018.001.10")]
+[Description(@"Scope|The AccountHoldingInformation message is sent by an executing party, for example, a (old) plan manager (transferor), to the instructing party, for example, a (new) plan manager (transferee), to provide information about financial instruments held on behalf of a client.|Usage|The AccountHoldingInformation message is used to provide information on the individual assets held in a client's account. The assets may be part of a tax efficient product, a pension of general investment product.")]
+[IsoDisplayName(@"Account Holding Information V10")]
 public interface IAccountHoldingInformationV10 : IOuterRecord
 {
     /// <summary>
@@ -71,6 +73,7 @@ public interface IAccountHoldingInformationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson8> OtherIndividualInvestor { get; }
 
     /// <summary>
@@ -92,6 +95,7 @@ public interface IAccountHoldingInformationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation36> OtherCorporateInvestor { get; }
 
     /// <summary>
@@ -120,6 +124,7 @@ public interface IAccountHoldingInformationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPortfolioTransfer16> ProductTransfer { get; }
 
     /// <summary>
@@ -134,5 +139,6 @@ public interface IAccountHoldingInformationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

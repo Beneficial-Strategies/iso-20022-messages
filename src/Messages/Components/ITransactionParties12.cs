@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Parties12.
 /// </summary>
 [IsoId("_75dzcTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Transaction Parties12")]
 public interface ITransactionParties12 : IIsoComponent
 {
     /// <summary>
@@ -72,5 +73,6 @@ public interface ITransactionParties12 : IIsoComponent
     /// </summary>
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryParty6> Proprietary { get; }
 }

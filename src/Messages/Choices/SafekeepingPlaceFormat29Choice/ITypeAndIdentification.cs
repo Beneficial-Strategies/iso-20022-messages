@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat29Choice;
 /// </summary>
 [IsoId("_XqXF8bXEEeiTob_PrFFUxA")]
 [IsoXmlTag("TpAndId")]
+[IsoDisplayName(@"Type And Identification")]
 public interface ITypeAndIdentification : ISafekeepingPlaceFormat29Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface ITypeAndIdentification : ISafekeepingPlaceFormat29Choice, IIsoC
     [IsoId("_W1QC07XEEeiTob_PrFFUxA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier Identification { get; }
 }

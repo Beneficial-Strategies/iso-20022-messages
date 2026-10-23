@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType4Choice;
 /// Update type expressed in coded form.
 /// </summary>
 [IsoId("_m_7dc_NBEeCuA5Tr22BnwA_238148282")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IUpdateType4Choice, IIsoChoiceVariant
 {
     /// <summary>

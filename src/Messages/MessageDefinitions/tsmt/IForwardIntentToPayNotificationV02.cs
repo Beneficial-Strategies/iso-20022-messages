@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "FwdInttToPayNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.045.001.02"
 )]
+[Description(@"Scope|The ForwardIntentToPayNotification message is forwarded by the matching application from one primary bank to the other primary bank in order to provide details about a future payment.|This message contains details about an intention to pay a certain amount, on a certain date, in relation to one or several transactions known to the matching application.|Usage|The ForwardIntentToPayNotification message is a copy of the IntentToPayNotification message received by the matching application and forwarded to the other primary bank for information. No response is expected.")]
+[IsoDisplayName(@"Forward Intent To Pay Notification V")]
 public interface IForwardIntentToPayNotificationV02 : IOuterRecord
 {
     /// <summary>
@@ -60,6 +62,9 @@ public interface IForwardIntentToPayNotificationV02 : IOuterRecord
     [IsoId("_hEp5SxVaEeOCqpkCrPgk4g")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BreakDown1Choice;
 /// </summary>
 [IsoId("_2goZwBrYEeOVR9VN6fAMUg")]
 [IsoXmlTag("ByPurchsOrdr")]
+[IsoDisplayName(@"By Purchase Order")]
 public interface IByPurchaseOrder : IBreakDown1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IByPurchaseOrder : IBreakDown1Choice, IIsoChoiceVariant
     [IsoId("_982JIxrXEeOVR9VN6fAMUg")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment6> Adjustment { get; }
 
     /// <summary>

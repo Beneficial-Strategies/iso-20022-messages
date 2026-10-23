@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Authorisation request from an acceptor.
 /// </summary>
 [IsoId("_mHmykWixEeS87LmvcA55sg")]
+[IsoDisplayName(@"Acceptor Authorisation Request")]
 public interface IAcceptorAuthorisationRequest4 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IAcceptorAuthorisationRequest4 : IIsoComponent
     [IsoId("_PQdJIGkIEeS7zPBpvm732w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

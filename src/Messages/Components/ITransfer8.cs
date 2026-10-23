@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_QVyn29p-Ed-ak6NoX_4Aeg_-407926262")]
+[IsoDisplayName(@"Transfer")]
 public interface ITransfer8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransfer8 : IIsoComponent
     [IsoId("_QVyn3Np-Ed-ak6NoX_4Aeg_-20047875")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransfer8 : IIsoComponent
     [IsoId("_QVyn3dp-Ed-ak6NoX_4Aeg_-407006159")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransfer8 : IIsoComponent
     [IsoId("_QV8Y0Np-Ed-ak6NoX_4Aeg_23357601")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface ITransfer8 : IIsoComponent
     [IsoId("_QV8Y09p-Ed-ak6NoX_4Aeg_-407006230")]
     [DisplayName("Portfolio Transfer Out Rate")]
     [IsoXmlTag("PrtflTrfOutRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate PortfolioTransferOutRate { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface ITransfer8 : IIsoComponent
     [IsoId("_QV8Y1Np-Ed-ak6NoX_4Aeg_-407006115")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit3> UnitsDetails { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface ITransfer8 : IIsoComponent
     [IsoId("_QV8Y1tp-Ed-ak6NoX_4Aeg_-407006212")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OwnAccountTransferIndicator { get; }
 
     /// <summary>
@@ -97,5 +107,7 @@ public interface ITransfer8 : IIsoComponent
     [IsoId("_QWFiwNp-Ed-ak6NoX_4Aeg_-485218343")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 }

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status of the transfer cancellation is rejected.
 /// </summary>
 [IsoId("_RQf8kNp-Ed-ak6NoX_4Aeg_1498754509")]
+[IsoDisplayName(@"Transfer Cancellation Rejected Status")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ITransferCancellationRejectedStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITransferCancellationRejectedStatus1 : IIsoComponent
     [IsoId("_RQf8ktp-Ed-ak6NoX_4Aeg_1498754551")]
     [DisplayName("Extended Reason")]
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedReason { get; }
 
     /// <summary>
@@ -33,5 +37,8 @@ public interface ITransferCancellationRejectedStatus1 : IIsoComponent
     [IsoId("_RQf8k9p-Ed-ak6NoX_4Aeg_1498757014")]
     [DisplayName("Data Source Scheme")]
     [IsoXmlTag("DataSrcSchme")]
+    [MinLength(1)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification1> DataSourceScheme { get; }
 }

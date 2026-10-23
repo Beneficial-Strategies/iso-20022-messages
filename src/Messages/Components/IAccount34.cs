@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.
 /// </summary>
 [IsoId("_jHbk4XzhEeuEHsEB8Johfw")]
+[IsoDisplayName(@"Account")]
 public interface IAccount34 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccount34 : IIsoComponent
     [IsoId("_jeW3I3zhEeuEHsEB8Johfw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAccount34 : IIsoComponent
     [IsoId("_sMUs0HzhEeuEHsEB8Johfw")]
     [DisplayName("Account Designation")]
     [IsoXmlTag("AcctDsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountDesignation { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IAccount34 : IIsoComponent
     [IsoId("_sMUs0XzhEeuEHsEB8Johfw")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountName { get; }
 
     /// <summary>

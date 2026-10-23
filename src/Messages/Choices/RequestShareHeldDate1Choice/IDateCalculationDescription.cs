@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RequestShareHeldDate1Choice;
 /// Provides the description on how the date from which the shares have been held should be determined and communicated.
 /// </summary>
 [IsoId("_3b5pQFSTEempisJfoIfvvQ")]
+[IsoDisplayName(@"Date Calculation Description")]
 public interface IDateCalculationDescription : IRequestShareHeldDate1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IDateCalculationDescription : IRequestShareHeldDate1Choice, IIs
     /// Specifies a character string with a maximum length of 350 characters.
     /// </summary>
     [IsoXmlTag("DtClctnDesc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Value { get; }
 }

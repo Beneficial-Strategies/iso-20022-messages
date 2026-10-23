@@ -25,6 +25,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesBalTrnsprncyRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.041.001.02"
 )]
+[Description(@"Scope|The SecuritiesBalanceTransparencyReport message is sent by an account servicer, such as a custodian, central securities depository or international central securities depository, to the account owner to provide holdings information for the accounts that it services, to disclose underlying details of holdings on an omnibus account that the sender owns or operates at the receiver. The receiver may also be a custodian, central securities depository, international central securities depository, and the ultimate receiver may be a registrar, transfer agent, fund company, official agent of the reported instrument(s) and/or other parties.|The SecuritiesBalanceTransparencyReport message provides transparency of holdings through layers of custody chains in a consolidated statement, to allow for an efficient gathering of investor data, which, in turn, may be used to measure marketing effectiveness, validation of compliance with prospectuses and regulatory requirements, and the calculation of trailer fees and other retrocessions.|Usage|The SecuritiesBalanceTransparencyReport message is used to provide aggregated holdings information and a breakdown of holdings information.|A sender of the SecuritiesBalanceTransparencyReport message will identify its own safekeeping account (for example, an omnibus account in the ledger of the receiver) and holdings information at the level of account(s) for which the sender is the account servicer (that is, in the ledger of the sender). When relevant, the sender will aggregate its holdings information with holdings information of one or more sub levels and sub-sub levels of accounts, that is, with holdings information the sender has received from the owner(s) of the account(s) for which the sender is the account servicer.|A sender of the SecuritiesBalanceTransparencyReport message may also use it to send statements to its account owning customers, and these can be enrichments of statements that the respective account owners have previously provided to the sender.|Ultimately, the statement reaches the relevant fund company, for example, the transfer agent, that may use it for obtaining information about the custodians, distributors and commercial agreement references associated with holdings on an omnibus account at the ultimate place of safekeeping, for example, a central securities depository (CSD) or a register of shareholders.|When the message is sent by the owner of the account specified in SafekeepingAccountAndHoldings/AccountIdentification, the message will disclose holding details of the underlying owner(s) of the sender’s holdings with the receiver. This direction is commonly referred to as ‘downstream’. |When the sender is the account servicer of an account owned by the receiver, for example, the account in AccountSubLevel1/AccountIdentification or AccountSubLevel2/AccountIdentification, the message is providing a statement of the receiver’s holdings with sender. This direction is commonly referred to as ‘upstream’, and the safekeeping account should identify the ultimate place of safekeeping (for example, an account in a transfer agent's register of shareholders).")]
+[IsoDisplayName(@"Securities Balance Transparency Report V")]
 public interface ISecuritiesBalanceTransparencyReportV02 : IOuterRecord
 {
     /// <summary>
@@ -73,6 +75,7 @@ public interface ISecuritiesBalanceTransparencyReportV02 : IOuterRecord
     [IsoId("_LMa23VTQEeatgN-VQ0eFlQ")]
     [DisplayName("Safekeeping Account And Holdings")]
     [IsoXmlTag("SfkpgAcctAndHldgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISafekeepingAccount7> SafekeepingAccountAndHoldings { get; }
 
     /// <summary>
@@ -81,5 +84,6 @@ public interface ISecuritiesBalanceTransparencyReportV02 : IOuterRecord
     [IsoId("_LMa231TQEeatgN-VQ0eFlQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

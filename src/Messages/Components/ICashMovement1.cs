@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the cash movement.
 /// </summary>
 [IsoId("_UI-lk9p-Ed-ak6NoX_4Aeg_1684857484")]
+[IsoDisplayName(@"Cash Movement")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2019-03-02.")]
 public interface ICashMovement1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ICashMovement1 : IIsoComponent
     [IsoId("_UI-llNp-Ed-ak6NoX_4Aeg_-1914698065")]
     [DisplayName("Movement Identification")]
     [IsoXmlTag("MvmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MovementIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICashMovement1 : IIsoComponent
     [IsoId("_UI-ll9p-Ed-ak6NoX_4Aeg_1122249828")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges1> Charges { get; }
 
     /// <summary>
@@ -49,5 +54,8 @@ public interface ICashMovement1 : IIsoComponent
     [IsoId("_UI-lmNp-Ed-ak6NoX_4Aeg_-802817583")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount18> AccountDetails { get; }
 }

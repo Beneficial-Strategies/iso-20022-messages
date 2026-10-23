@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Safe Keeping Place5.
 /// </summary>
 [IsoId("_PERT24-4Ee-nyIlugK8fOQ")]
+[IsoDisplayName(@"Safe Keeping Place5")]
 public interface ISafeKeepingPlace5 : IIsoComponent
 {
     /// <summary>

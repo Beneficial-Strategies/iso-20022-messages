@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for warrant style.
 /// </summary>
 [IsoId("_qwaaSeLbEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Warrant Style 3 Choice")]
 public interface IWarrantStyle3Choice : IIsoChoice { }

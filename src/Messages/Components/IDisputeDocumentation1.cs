@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Dispute Documentation1.
 /// </summary>
 [IsoId("_SZJaMZg5Ee6OBt2eQPMPsQ")]
+[IsoDisplayName(@"Dispute Documentation1")]
 public interface IDisputeDocumentation1 : IIsoComponent
 {
     /// <summary>

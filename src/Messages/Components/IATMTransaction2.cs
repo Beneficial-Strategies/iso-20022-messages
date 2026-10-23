@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response to the withdrawal transaction request.
 /// </summary>
 [IsoId("_xrLCMYp4EeS3NqNpgnMh2w")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IATMTransaction2 : IIsoComponent
     [IsoId("_x3F-VYp4EeS3NqNpgnMh2w")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IATMTransaction2 : IIsoComponent
     [IsoId("_bDl74Ip5EeS3NqNpgnMh2w")]
     [DisplayName("Completion Required")]
     [IsoXmlTag("CmpltnReqrd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CompletionRequired { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface IATMTransaction2 : IIsoComponent
     [IsoId("_6vQKkCyGEeWFrdXv6dBUzw")]
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount13> AdditionalCharge { get; }
 
     /// <summary>
@@ -105,6 +110,8 @@ public interface IATMTransaction2 : IIsoComponent
     [IsoId("_x3F-YYp4EeS3NqNpgnMh2w")]
     [DisplayName("Mix Type")]
     [IsoXmlTag("MixTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MixType { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface IATMTransaction2 : IIsoComponent
     [IsoId("_x3F-Y4p4EeS3NqNpgnMh2w")]
     [DisplayName("Mix")]
     [IsoXmlTag("Mix")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMMediaMix1> Mix { get; }
 
     /// <summary>
@@ -129,6 +137,7 @@ public interface IATMTransaction2 : IIsoComponent
     [IsoId("_x3F-Z4p4EeS3NqNpgnMh2w")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 
     /// <summary>
@@ -137,5 +146,6 @@ public interface IATMTransaction2 : IIsoComponent
     [IsoId("_NI69gIqJEeSRT5rEzcAHEw")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand1> Command { get; }
 }

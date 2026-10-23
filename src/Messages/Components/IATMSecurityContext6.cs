@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to security commands.
 /// </summary>
 [IsoId("_HuPQsbZ5EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"ATM Security Context6")]
 public interface IATMSecurityContext6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IATMSecurityContext6 : IIsoComponent
     [IsoId("_HvJPo7Z5EfCUZfsQO4rYeA")]
     [DisplayName("Security Scheme Capabilities")]
     [IsoXmlTag("SctySchmeCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATMSecurityScheme4Code> SecuritySchemeCapabilities { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IATMSecurityContext6 : IIsoComponent
     [IsoId("_HvJPp7Z5EfCUZfsQO4rYeA")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICryptographicKey20> Key { get; }
 
     /// <summary>

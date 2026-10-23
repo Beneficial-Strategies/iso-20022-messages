@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmountChoice;
 /// Price expressed as a rate, that is percentage.
 /// </summary>
 [IsoId("_QajzENp-Ed-ak6NoX_4Aeg_-1700140458")]
+[IsoDisplayName(@"Rate")]
 public interface IRate : IPriceRateOrAmountChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IRate : IPriceRateOrAmountChoice, IIsoChoiceVariant
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

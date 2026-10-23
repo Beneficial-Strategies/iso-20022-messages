@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "FndDtldEstmtdCshFcstRptV03",
     "urn:iso:std:iso:20022:tech:xsd:camt.042.001.03"
 )]
+[Description(@"Scope|A report provider, such as a transfer agent, sends the FundDetailedEstimatedCashForecastReport message to the report user, such as an investment manager, to report the estimated cash incomings and outgoings, sorted by country, institution name or other criteria defined by the user of one or more investment funds on one or more trade dates.|The cash movements may result from, for example, redemption, subscription, switch transactions or reinvestment of dividends.|Usage|The FundDetailedEstimatedCashForecastReport is used to provide estimated cash movements, i.e., it is sent prior to the cut-off time and/or the price valuation of the fund. If the price is definitive, then the FundDetailedConfirmedCashForecastReport message must be used.|The FundDetailedEstimatedCashForecastReport message is used to report cash movements in or out of a fund, organised by party, such as fund management company, country, currency or by some other criteria defined by the report provider. If the report is used to give the cash-in and cash-out for a party, then additional criteria, such as currency and country, can be specified.|In addition, the underlying transaction type for the cash-in or cash-out movement can be specified, as well as information about the cash movement's underlying orders, such as commission and charges.")]
+[IsoDisplayName(@"Fund Detailed Estimated Cash Forecast Report V")]
 public interface IFundDetailedEstimatedCashForecastReportV03 : IOuterRecord
 {
     /// <summary>
@@ -46,6 +48,7 @@ public interface IFundDetailedEstimatedCashForecastReportV03 : IOuterRecord
     [IsoId("_dYVFFdE-Ed-BzquC8wXy7w_1332733556")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -54,6 +57,7 @@ public interface IFundDetailedEstimatedCashForecastReportV03 : IOuterRecord
     [IsoId("_dYVFFtE-Ed-BzquC8wXy7w_1334582479")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> RelatedReference { get; }
 
     /// <summary>
@@ -70,6 +74,7 @@ public interface IFundDetailedEstimatedCashForecastReportV03 : IOuterRecord
     [IsoId("_dYePANE-Ed-BzquC8wXy7w_82163480")]
     [DisplayName("Estimated Fund Cash Forecast Details")]
     [IsoXmlTag("EstmtdFndCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEstimatedFundCashForecast4> EstimatedFundCashForecastDetails { get; }
 
     /// <summary>
@@ -86,5 +91,6 @@ public interface IFundDetailedEstimatedCashForecastReportV03 : IOuterRecord
     [IsoId("_dYePAtE-Ed-BzquC8wXy7w_-1975912921")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a number of maximum 3 digits.
 /// </summary>
 [IsoId("_Ayd-Qa5iEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Compare Number")]
 public interface ICompareNumber5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICompareNumber5 : IIsoComponent
     [IsoId("_BBhG4a5iEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? Value1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICompareNumber5 : IIsoComponent
     [IsoId("_BBhG465iEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? Value2 { get; }
 }

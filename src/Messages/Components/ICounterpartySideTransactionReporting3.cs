@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Counterparty Side Transaction Reporting3.
 /// </summary>
 [IsoId("_F7ysVUjrEe-KhcStGV4xTg")]
+[IsoDisplayName(@"Counterparty Side Transaction Reporting3")]
 public interface ICounterpartySideTransactionReporting3 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface ICounterpartySideTransactionReporting3 : IIsoComponent
     /// </summary>
     [DisplayName("Counterparty Side Unique Transaction Identifier")]
     [IsoXmlTag("CtrPtySdUnqTxIdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUniqueTransactionIdentifier3> CounterpartySideUniqueTransactionIdentifier { get; }
 }

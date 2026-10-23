@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Proprietary identification of the reason related to a status.
 /// </summary>
 [IsoId("_UatOxNp-Ed-ak6NoX_4Aeg_497607860")]
+[IsoDisplayName(@"Proprietary Reason")]
 public interface IProprietaryReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IProprietaryReason1 : IIsoComponent
     [IsoId("_UatOxtp-Ed-ak6NoX_4Aeg_-1133156666")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

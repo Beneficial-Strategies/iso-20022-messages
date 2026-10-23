@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProrationBelowMinimumQuantity2Ch
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IProrationBelowMinimumQuantity2Choice, IIsoChoiceVariant
 {
     /// <summary>

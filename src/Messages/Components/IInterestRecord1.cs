@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides transaction specific interest information that applies to the underlying transaction.
 /// </summary>
 [IsoId("_txS1EVkyEeGeoaLUQk__nA_677183117")]
+[IsoDisplayName(@"Interest Record")]
 public interface IInterestRecord1 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,8 @@ public interface IInterestRecord1 : IIsoComponent
     [IsoId("_txcmE1kyEeGeoaLUQk__nA_-1661916758")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reason { get; }
 
     /// <summary>

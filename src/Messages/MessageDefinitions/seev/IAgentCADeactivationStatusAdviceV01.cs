@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "AgtCADeactvtnStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.030.001.01"
 )]
+[Description(@"Scope|This message is sent by a CSD to an issuer (or its agent) to report the status, or a change in status, of a corporate action deactivation instruction or the status of a deactivation cancellation request.|Usage|This message is used to provide a status on the deactivation instruction, especially to confirm the deactivation of a Corporate Action event or option.")]
+[IsoDisplayName(@"Agent CA Deactivation Status Advice V")]
 public interface IAgentCADeactivationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -59,6 +61,7 @@ public interface IAgentCADeactivationStatusAdviceV01 : IOuterRecord
     [IsoId("_TMaMA9EwEd-BzquC8wXy7w_861232790")]
     [DisplayName("Deactivation Instruction Status")]
     [IsoXmlTag("DeactvtnInstrSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionDeactivationInstructionStatus1> DeactivationInstructionStatus { get; }
 
     /// <summary>

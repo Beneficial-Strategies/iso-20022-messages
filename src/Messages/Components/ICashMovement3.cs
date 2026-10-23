@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the cash movement.
 /// </summary>
 [IsoId("_UI00l9p-Ed-ak6NoX_4Aeg_-1613745533")]
+[IsoDisplayName(@"Cash Movement")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2019-03-02.")]
 public interface ICashMovement3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICashMovement3 : IIsoComponent
     [IsoId("_UI00mdp-Ed-ak6NoX_4Aeg_-799199475")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValueDate { get; }
 
     /// <summary>
@@ -41,5 +44,8 @@ public interface ICashMovement3 : IIsoComponent
     [IsoId("_UI00m9p-Ed-ak6NoX_4Aeg_-1623608416")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount18> AccountDetails { get; }
 }

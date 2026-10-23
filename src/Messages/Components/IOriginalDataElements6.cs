@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data elements contained in the original message. ISO 8583:1987 bit 90 and ISO 8583 1993/2003 bit 56.
 /// </summary>
 [IsoId("_U0bLwSH4EfCkq6-p7S3J1Q")]
+[IsoDisplayName(@"Original Data Elements6")]
 public interface IOriginalDataElements6 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IOriginalDataElements6 : IIsoComponent
     [IsoId("_U2-JhyH4EfCkq6-p7S3J1Q")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>

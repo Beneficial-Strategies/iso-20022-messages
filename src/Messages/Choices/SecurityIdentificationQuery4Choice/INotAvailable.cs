@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery4Choi
 /// Usage: N/A means that value was not available at the time of the reporting.
 /// </summary>
 [IsoId("_PJPwpZNeEeytjZlcgApf6A")]
+[IsoDisplayName(@"Not Available")]
 public interface INotAvailable : ISecurityIdentificationQuery4Choice, IIsoChoiceVariant
 {
     /// <summary>

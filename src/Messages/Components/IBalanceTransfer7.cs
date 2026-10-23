@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that enables any payments made in connection with the fulfilment of an account switch to be reconciled by the relevant account servicer with the associated request.
 /// </summary>
 [IsoId("_GLrBkXeKEfCdoODv2ypKfw")]
+[IsoDisplayName(@"Balance Transfer7")]
 public interface IBalanceTransfer7 : IIsoComponent
 {
     /// <summary>

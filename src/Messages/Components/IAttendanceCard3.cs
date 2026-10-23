@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies details related to the attendance card.
 /// </summary>
 [IsoId("_SFL9OfNrEeqRfth943bvEA")]
+[IsoDisplayName(@"Attendance Card")]
 public interface IAttendanceCard3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAttendanceCard3 : IIsoComponent
     [IsoId("_SZHl1fNrEeqRfth943bvEA")]
     [DisplayName("Attendance Card Labelling")]
     [IsoXmlTag("AttndncCardLbllg")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? AttendanceCardLabelling { get; }
 
     /// <summary>

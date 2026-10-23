@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details for taxes.
 /// </summary>
 [IsoId("_DeEyifsYEemYNq6Sxm5nlg")]
+[IsoDisplayName(@"Billing Tax Record2")]
 public interface IBillingTaxRecord2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IBillingTaxRecord2 : IIsoComponent
     [IsoId("_MNH7YfsaEemYNq6Sxm5nlg")]
     [DisplayName("Tax Exemption")]
     [IsoXmlTag("TaxXmptn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxExemption1> TaxExemption { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IBillingTaxRecord2 : IIsoComponent
     [IsoId("_GzYhcvsYEemYNq6Sxm5nlg")]
     [DisplayName("Charges And Fees")]
     [IsoXmlTag("ChrgsAndFees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingFeeRecord1> ChargesAndFees { get; }
 }

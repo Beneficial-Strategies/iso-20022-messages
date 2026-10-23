@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the authority request type.
 /// </summary>
 [IsoId("_1uJfwPG1EeGldvY3i8Fbvw")]
+[IsoDisplayName(@"Authority Request Type")]
 public interface IAuthorityRequestType1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAuthorityRequestType1 : IIsoComponent
     [IsoId("_8kjW4PG1EeGldvY3i8Fbvw")]
     [DisplayName("Message Name Identification")]
     [IsoXmlTag("MsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageNameIdentification { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IAuthorityRequestType1 : IIsoComponent
     [IsoId("_FsZFIPG2EeGldvY3i8Fbvw")]
     [DisplayName("Message Name")]
     [IsoXmlTag("MsgNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? MessageName { get; }
 }

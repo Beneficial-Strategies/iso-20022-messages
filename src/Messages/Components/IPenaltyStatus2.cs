@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the penalty status.
 /// </summary>
 [IsoId("_uogXgx-DEeuwwezkzufkMw")]
+[IsoDisplayName(@"Penalty Status2")]
 public interface IPenaltyStatus2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPenaltyStatus2 : IIsoComponent
     [IsoId("_u3iR8x-DEeuwwezkzufkMw")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPenaltyStatusReason2> Reason { get; }
 }

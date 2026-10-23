@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation2Choice;
 /// </summary>
 [IsoId("_-GX-RQkiEeWGouz230Xp5Q")]
 [IsoXmlTag("Prsn")]
+[IsoDisplayName(@"Person")]
 public interface IPerson : IPersonOrOrganisation2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IPerson : IPersonOrOrganisation2Choice, IIsoChoiceVariant
     [IsoId("_AifA0vPZEeS_qLctCs2aRQ")]
     [DisplayName("First Name")]
     [IsoXmlTag("FrstNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text FirstName { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IPerson : IPersonOrOrganisation2Choice, IIsoChoiceVariant
     [IsoId("_AifA0_PZEeS_qLctCs2aRQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>
@@ -34,6 +39,7 @@ public interface IPerson : IPersonOrOrganisation2Choice, IIsoChoiceVariant
     [IsoId("_BzRTQfPZEeS_qLctCs2aRQ")]
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate BirthDate { get; }
 
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty15Choic
 /// </summary>
 [IsoId("_cFghI1ovEe23K4GXSpBSeg")]
 [IsoXmlTag("Rpt")]
+[IsoDisplayName(@"Report")]
 public interface IReport : IStatisticsPerCounterparty15Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IReport : IStatisticsPerCounterparty15Choice, IIsoChoiceVariant
     [IsoId("_cHFOcVovEe23K4GXSpBSeg")]
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ReferenceDate { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface IReport : IStatisticsPerCounterparty15Choice, IIsoChoiceVariant
     [IsoId("_cHFOdVovEe23K4GXSpBSeg")]
     [DisplayName("Total Number Of Transactions")]
     [IsoXmlTag("TtlNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberOfTransactions { get; }
 
     /// <summary>
@@ -42,5 +45,6 @@ public interface IReport : IStatisticsPerCounterparty15Choice, IIsoChoiceVariant
     [IsoId("_cHFOd1ovEe23K4GXSpBSeg")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReconciliationCounterpartyPairStatistics6> TransactionDetails { get; }
 }

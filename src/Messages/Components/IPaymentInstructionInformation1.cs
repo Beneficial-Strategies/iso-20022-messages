@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics that apply to the debit side of the payment transactions included in the credit transfer transaction initiation.
 /// </summary>
 [IsoId("_PhfdE9p-Ed-ak6NoX_4Aeg_-259128313")]
+[IsoDisplayName(@"Payment Instruction Information")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IPaymentInstructionInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IPaymentInstructionInformation1 : IIsoComponent
     [IsoId("_PhfdFNp-Ed-ak6NoX_4Aeg_545264123")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IPaymentInstructionInformation1 : IIsoComponent
     [IsoId("_PhfdF9p-Ed-ak6NoX_4Aeg_-259128294")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate RequestedExecutionDate { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IPaymentInstructionInformation1 : IIsoComponent
     [IsoId("_PhfdGNp-Ed-ak6NoX_4Aeg_-2061588794")]
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PoolingAdjustmentDate { get; }
 
     /// <summary>
@@ -121,5 +127,6 @@ public interface IPaymentInstructionInformation1 : IIsoComponent
     [IsoId("_PhonB9p-Ed-ak6NoX_4Aeg_-259127416")]
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICreditTransferTransactionInformation1> CreditTransferTransactionInformation { get; }
 }

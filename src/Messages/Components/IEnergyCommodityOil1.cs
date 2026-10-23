@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an energy derivative of type oil.
 /// </summary>
 [IsoId("_NEqcxA2oEeW72qLtWESimw")]
+[IsoDisplayName(@"Energy Commodity Oil")]
 public interface IEnergyCommodityOil1 : IIsoComponent
 {
     /// <summary>

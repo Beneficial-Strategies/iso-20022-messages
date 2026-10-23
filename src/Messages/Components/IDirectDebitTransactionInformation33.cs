@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details specific to the individual direct debit transaction(s) included in the message.
 /// </summary>
 [IsoId("_69BZlTEyEe6g-ffJsqGiSA")]
+[Description(@"Provides further details specific to the individual direct debit transaction(s) included in the message.")]
+[IsoDisplayName(@"Direct Debit Transaction Information33")]
 public interface IDirectDebitTransactionInformation33 : IIsoComponent
 {
     /// <summary>

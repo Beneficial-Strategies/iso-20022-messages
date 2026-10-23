@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the derogation related data of settlement fails instructions.
 /// </summary>
 [IsoId("_N2mR1L6ZEemHTLTzJg7M-A")]
+[IsoDisplayName(@"Settlement Fails Derogation")]
 public interface ISettlementFailsDerogation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementFailsDerogation1 : IIsoComponent
     [IsoId("_N2mR176ZEemHTLTzJg7M-A")]
     [DisplayName("Eligibility Indicator")]
     [IsoXmlTag("ElgbltyInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator EligibilityIndicator { get; }
 
     /// <summary>

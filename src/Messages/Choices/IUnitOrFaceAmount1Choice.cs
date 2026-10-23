@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a unit in decimal number or a face amount in currency and amount.
 /// </summary>
 [IsoId("_SoRAwdp-Ed-ak6NoX_4Aeg_-514701328")]
+[IsoDisplayName(@"Unit Or Face Amount 1 Choice")]
 public interface IUnitOrFaceAmount1Choice : IIsoChoice { }

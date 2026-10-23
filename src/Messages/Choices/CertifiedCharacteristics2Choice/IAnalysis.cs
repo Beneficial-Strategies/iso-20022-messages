@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice;
 /// Analysis of the goods, as proven by the certificate.
 /// </summary>
 [IsoId("_3DBVNTANEeOKib24wnHaFg")]
+[IsoDisplayName(@"Analysis")]
 public interface IAnalysis : ICertifiedCharacteristics2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IAnalysis : ICertifiedCharacteristics2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 70characters.
     /// </summary>
     [IsoXmlTag("Anlys")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Value { get; }
 }

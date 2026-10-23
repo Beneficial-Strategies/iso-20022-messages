@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the settlement date.
 /// </summary>
 [IsoId("_5TmBm83yEee5nJBZsW8MFQ")]
+[IsoDisplayName(@"Settlement Date 22 Choice")]
 public interface ISettlementDate22Choice : IIsoChoice { }

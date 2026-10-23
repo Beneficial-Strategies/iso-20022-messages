@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the type of changes.
 /// </summary>
 [IsoId("_Rl9PNtp-Ed-ak6NoX_4Aeg_-146388602")]
+[IsoDisplayName(@"Corporate Action Change Type 1 Format Choice")]
 public interface ICorporateActionChangeType1FormatChoice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides status of the deactivation instruction.
 /// </summary>
 [IsoId("_RjRuptp-Ed-ak6NoX_4Aeg_491823442")]
+[IsoDisplayName(@"Corporate Action Deactivation Instruction Status")]
 public interface ICorporateActionDeactivationInstructionStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICorporateActionDeactivationInstructionStatus1 : IIsoComponent
     [IsoId("_RjbfoNp-Ed-ak6NoX_4Aeg_-5830390")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? OptionNumber { get; }
 
     /// <summary>

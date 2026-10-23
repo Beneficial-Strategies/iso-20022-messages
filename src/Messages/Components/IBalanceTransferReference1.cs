@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference to enable the receiving account servicer to reconcile the payment with the message.
 /// </summary>
 [IsoId("_60SyMQ2aEeSNWNtJlXOAhg")]
+[IsoDisplayName(@"Balance Transfer Reference")]
 public interface IBalanceTransferReference1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface IBalanceTransferReference1 : IIsoComponent
     [IsoId("_-1hL8A2aEeSNWNtJlXOAhg")]
     [DisplayName("Balance Transfer Reference")]
     [IsoXmlTag("BalTrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text BalanceTransferReference { get; }
 }

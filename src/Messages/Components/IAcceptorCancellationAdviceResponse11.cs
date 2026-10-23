@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cancellation advice response from the acquirer.
 /// </summary>
 [IsoId("_hWpnQXJwEe299ZbWCkdR_w")]
+[IsoDisplayName(@"Acceptor Cancellation Advice Response")]
 public interface IAcceptorCancellationAdviceResponse11 : IIsoComponent
 {
     /// <summary>

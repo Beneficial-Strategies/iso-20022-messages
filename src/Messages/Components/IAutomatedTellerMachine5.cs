@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM information.
 /// </summary>
 [IsoId("_kjrhsYrfEeSvuOJS0mmL0g")]
+[IsoDisplayName(@"Automated Teller Machine")]
 public interface IAutomatedTellerMachine5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAutomatedTellerMachine5 : IIsoComponent
     [IsoId("_kwfOoYrfEeSvuOJS0mmL0g")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAutomatedTellerMachine5 : IIsoComponent
     [IsoId("_kwfOo4rfEeSvuOJS0mmL0g")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IAutomatedTellerMachine5 : IIsoComponent
     [IsoId("_kwfOpYrfEeSvuOJS0mmL0g")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SequenceNumber { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IAutomatedTellerMachine5 : IIsoComponent
     [IsoId("_kwfOsYrfEeSvuOJS0mmL0g")]
     [DisplayName("Out Of Service Device")]
     [IsoXmlTag("OutOfSvcDvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATMDevice2Code> OutOfServiceDevice { get; }
 
     /// <summary>

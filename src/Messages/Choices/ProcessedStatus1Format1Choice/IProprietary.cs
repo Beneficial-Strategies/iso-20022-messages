@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessedStatus1Format1Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IProcessedStatus1Format1Choice, IIsoChoiceVariant
 {
     /// <summary>

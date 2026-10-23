@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies elements related to the notification (or warn) sent by the central counterparty to the clearing member in the context of the buy in process.
 /// </summary>
 [IsoId("_UpAwgNp-Ed-ak6NoX_4Aeg_-2773741")]
+[IsoDisplayName(@"Buy In1")]
+[Obsolete(@"Obsolete per ISO 20022 specification.")]
 public interface IBuyIn1 : IIsoComponent
 {
     /// <summary>

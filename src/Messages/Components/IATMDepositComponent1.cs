@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Deposit Component1.
 /// </summary>
 [IsoId("_y8Q3kJ2qEe-4seDr3Li2Ew")]
+[IsoDisplayName(@"ATM Deposit Component1")]
 public interface IATMDepositComponent1 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IATMDepositComponent1 : IIsoComponent
     /// </summary>
     [DisplayName("Account Data")]
     [IsoXmlTag("AcctData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardAccount21> AccountData { get; }
 
     /// <summary>
@@ -30,6 +32,7 @@ public interface IATMDepositComponent1 : IIsoComponent
     /// </summary>
     [DisplayName("Protected Account Data")]
     [IsoXmlTag("PrtctdAcctData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContentInformationType10> ProtectedAccountData { get; }
 
     /// <summary>
@@ -37,6 +40,7 @@ public interface IATMDepositComponent1 : IIsoComponent
     /// </summary>
     [DisplayName("Detailed Requested Amount")]
     [IsoXmlTag("DtldReqdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount16> DetailedRequestedAmount { get; }
 
     /// <summary>
@@ -44,5 +48,6 @@ public interface IATMDepositComponent1 : IIsoComponent
     /// </summary>
     [DisplayName("Deposited Media")]
     [IsoXmlTag("DpstdMdia")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMDepositedMedia4> DepositedMedia { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action options date details.
 /// </summary>
 [IsoId("_9sUmsb5WEeexmbB7KsjCwA")]
+[IsoDisplayName(@"Corporate Action Date SD")]
 public interface ICorporateActionDateSD9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionDateSD9 : IIsoComponent
     [IsoId("_981u8b5WEeexmbB7KsjCwA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>

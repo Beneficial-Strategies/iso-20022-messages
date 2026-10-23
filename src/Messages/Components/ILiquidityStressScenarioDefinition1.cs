@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes and information that describe a scenario used to test whether a legal entity or other financial construct has sufficient liquid resources to meet its obligations as they arise.
 /// </summary>
 [IsoId("_ERnlwLDDEeaSl6vJk5Bd8w")]
+[IsoDisplayName(@"Liquidity Stress Scenario Definition")]
 public interface ILiquidityStressScenarioDefinition1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ILiquidityStressScenarioDefinition1 : IIsoComponent
     [IsoId("_RlWFoLDDEeaSl6vJk5Bd8w")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [StringLength(2000, MinimumLength = 1)]
     Max2000Text Description { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ILiquidityStressScenarioDefinition1 : IIsoComponent
     [IsoId("_duPKELDDEeaSl6vJk5Bd8w")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>

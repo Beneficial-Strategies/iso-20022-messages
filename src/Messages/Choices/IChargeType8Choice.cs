@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a type of cost or charge.
 /// </summary>
 [IsoId("_qPIXQZ9BEeqxTNfi5y7ywQ")]
+[IsoDisplayName(@"Charge Type 8 Choice")]
 public interface IChargeType8Choice : IIsoChoice { }

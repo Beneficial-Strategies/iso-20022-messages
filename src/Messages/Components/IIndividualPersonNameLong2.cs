@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// First name of a person.
 /// </summary>
 [IsoId("_xEB5Ic4IEeiRUq1z_PF1Sw")]
+[IsoDisplayName(@"Individual Person Name Long")]
 public interface IIndividualPersonNameLong2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IIndividualPersonNameLong2 : IIsoComponent
     [IsoId("_xTGP484IEeiRUq1z_PF1Sw")]
     [DisplayName("Surname")]
     [IsoXmlTag("Srnm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Surname { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IIndividualPersonNameLong2 : IIsoComponent
     [IsoId("_xTGP5c4IEeiRUq1z_PF1Sw")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? GivenName { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IIndividualPersonNameLong2 : IIsoComponent
     [IsoId("_xTGP584IEeiRUq1z_PF1Sw")]
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MiddleName { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IIndividualPersonNameLong2 : IIsoComponent
     [IsoId("_xTGP6c4IEeiRUq1z_PF1Sw")]
     [DisplayName("Initials")]
     [IsoXmlTag("Initls")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text? Initials { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface IIndividualPersonNameLong2 : IIsoComponent
     [IsoId("_xTGP684IEeiRUq1z_PF1Sw")]
     [DisplayName("Name Suffix")]
     [IsoXmlTag("NmSfx")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NameSuffix { get; }
 
     /// <summary>
@@ -65,6 +76,8 @@ public interface IIndividualPersonNameLong2 : IIsoComponent
     [IsoId("_xTGP7c4IEeiRUq1z_PF1Sw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -73,6 +86,7 @@ public interface IIndividualPersonNameLong2 : IIsoComponent
     [IsoId("_xTGP784IEeiRUq1z_PF1Sw")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -81,5 +95,6 @@ public interface IIndividualPersonNameLong2 : IIsoComponent
     [IsoId("_xTGP8c4IEeiRUq1z_PF1Sw")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EndDate { get; }
 }

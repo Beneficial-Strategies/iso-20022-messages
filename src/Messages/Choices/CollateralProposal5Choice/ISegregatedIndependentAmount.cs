@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralProposal5Choice;
 /// </summary>
 [IsoId("_rpS7A4pIEeaNTaanBSMWmg")]
 [IsoXmlTag("SgrtdIndpdntAmt")]
+[IsoDisplayName(@"Segregated Independent Amount")]
 public interface ISegregatedIndependentAmount : ICollateralProposal5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface ISegregatedIndependentAmount : ICollateralProposal5Choice, IIso
     [IsoId("_sHMX84pIEeaNTaanBSMWmg")]
     [DisplayName("Movement Direction")]
     [IsoXmlTag("MvmntDrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralMovement5Choice> MovementDirection { get; }
 }

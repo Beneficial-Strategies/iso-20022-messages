@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
 /// </summary>
 [IsoId("_nS_4URX-EeOBE-jZfcm4KQ")]
+[IsoDisplayName(@"Investment Account")]
 public interface IInvestmentAccount40 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInvestmentAccount40 : IIsoComponent
     [IsoId("_nwwyYxX-EeOBE-jZfcm4KQ")]
     [DisplayName("Owner Identification")]
     [IsoXmlTag("OwnrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification2Choice> OwnerIdentification { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IInvestmentAccount40 : IIsoComponent
     [IsoId("_nwwyZxX-EeOBE-jZfcm4KQ")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountName { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface IInvestmentAccount40 : IIsoComponent
     [IsoId("_nwwyaRX-EeOBE-jZfcm4KQ")]
     [DisplayName("Account Designation")]
     [IsoXmlTag("AcctDsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountDesignation { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IInvestmentAccount40 : IIsoComponent
     [IsoId("_nwwyaxX-EeOBE-jZfcm4KQ")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary25> IntermediaryInformation { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IInvestmentAccount40 : IIsoComponent
     [IsoId("_nwwybxX-EeOBE-jZfcm4KQ")]
     [DisplayName("Dematerialised Indicator")]
     [IsoXmlTag("DmtrlsdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DematerialisedIndicator { get; }
 
     /// <summary>

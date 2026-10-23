@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the reason of the amendment of the creditor enrolment.
 /// </summary>
 [IsoId("_ULNL8eH7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Debtor Activation Amendment Reason")]
 public interface IDebtorActivationAmendmentReason2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IDebtorActivationAmendmentReason2 : IIsoComponent
     [IsoId("_UMdwNeH7Eeqbls7Gk4-ckA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

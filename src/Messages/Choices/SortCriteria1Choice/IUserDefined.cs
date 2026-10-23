@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SortCriteria1Choice;
 /// User-defined way of indicating how the information is broken down.
 /// </summary>
 [IsoId("_U1-1htp-Ed-ak6NoX_4Aeg_1863721996")]
+[IsoDisplayName(@"User Defined")]
 public interface IUserDefined : ISortCriteria1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

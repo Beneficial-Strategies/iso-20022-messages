@@ -28,6 +28,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesSttlmTxConf",
     "urn:iso:std:iso:20022:tech:xsd:sese.025.002.07"
 )]
+[Description(@"Scope|An account servicer sends a SecuritiesSettlementTransactionConfirmation to an account owner to confirm the partial or full delivery or receipt of financial instruments, free or against of payment, physically or by book-entry.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information.|using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Settlement Transaction Confirmation 002 V")]
 public interface ISecuritiesSettlementTransactionConfirmation002V07 : IOuterRecord
 {
     /// <summary>
@@ -164,5 +166,6 @@ public interface ISecuritiesSettlementTransactionConfirmation002V07 : IOuterReco
     [IsoId("__NTvhZwyEeazcsnODTksnQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

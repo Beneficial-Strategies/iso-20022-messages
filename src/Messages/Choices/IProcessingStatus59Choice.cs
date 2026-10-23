@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the status of a transaction.
 /// </summary>
 [IsoId("_6HV0_ZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Processing Status 59 Choice")]
 public interface IProcessingStatus59Choice : IIsoChoice { }

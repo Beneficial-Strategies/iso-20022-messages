@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType1CodeCho
 /// Corporate action event type in a structured format.
 /// </summary>
 [IsoId("_UyZ9Gdp-Ed-ak6NoX_4Aeg_983611068")]
+[IsoDisplayName(@"Structured")]
 public interface IStructured : ICorporateActionEventType1CodeChoice, IIsoChoiceVariant
 {
     /// <summary>

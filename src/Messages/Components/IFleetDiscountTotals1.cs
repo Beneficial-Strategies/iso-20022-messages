@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the discount information pertaining to the fleet transaction.
 /// </summary>
 [IsoId("_G9Oy1vjDEeiJaN6-Lf-c_w")]
+[IsoDisplayName(@"Fleet Discount Totals")]
 public interface IFleetDiscountTotals1 : IIsoComponent
 {
     /// <summary>

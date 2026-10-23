@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data specific to counterparties and related fields.
 /// </summary>
 [IsoId("_x_vqwUk2EeyrgKBCkF1_RQ")]
+[IsoDisplayName(@"Counterparty Data")]
 public interface ICounterpartyData91 : IIsoComponent
 {
     /// <summary>

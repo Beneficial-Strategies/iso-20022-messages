@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_rM_TIQgpEeSUG-8hqXsVMQ")]
 [IsoMessage("acmt.003.001.05", "AcctModInstr", "urn:iso:std:iso:20022:tech:xsd:acmt.003.001.05")]
+[Description(@"Scope|An account owner, for example, an investor or its designated agent, sends the AccountModificationInstruction message to the account servicer, for example, a registrar, transfer agent or custodian bank to modify, that is, create, update or delete specific details of an existing investment fund account.|Usage|The AccountModificationInstruction message is used to modify the details of an existing account.|The AccountModificationInstruction message has three specific uses:|- to maintain/update any of the existing account details, for example, to update the address of the beneficiary or modify the preference to income from distribution to capitalisation, or,|- to add/create specific details to the existing account when these details were not yet recorded at the time of account creation, for example, to add a second address or to establish new cash settlement standing instructions, or,|- to delete specific account details, for example, delete cash standing instructions.|This message cannot be used to delete an entire account, as institution specific and regulatory rules pertaining to account deletion are diverse.|The usage of this message may be subject to service level agreement (SLA) between the counterparties.|Execution of the AccountModificationInstruction is confirmed via an AccountDetailsConfirmation message.")]
+[IsoDisplayName(@"Account Modification Instruction V")]
 public interface IAccountModificationInstructionV05 : IOuterRecord
 {
     /// <summary>
@@ -70,6 +72,9 @@ public interface IAccountModificationInstructionV05 : IOuterRecord
     [IsoId("_rM_TOwgpEeSUG-8hqXsVMQ")]
     [DisplayName("Modified Account Parties")]
     [IsoXmlTag("ModfdAcctPties")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountParties11> ModifiedAccountParties { get; }
 
     /// <summary>
@@ -78,6 +83,9 @@ public interface IAccountModificationInstructionV05 : IOuterRecord
     [IsoId("_rM_TPQgpEeSUG-8hqXsVMQ")]
     [DisplayName("Modified Intermediaries")]
     [IsoXmlTag("ModfdIntrmies")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope20> ModifiedIntermediaries { get; }
 
     /// <summary>
@@ -102,6 +110,9 @@ public interface IAccountModificationInstructionV05 : IOuterRecord
     [IsoId("_rM_TQwgpEeSUG-8hqXsVMQ")]
     [DisplayName("Modified Savings Investment Plan")]
     [IsoXmlTag("ModfdSvgsInvstmtPlan")]
+    [MinLength(0)]
+    [MaxLength(50)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope25> ModifiedSavingsInvestmentPlan { get; }
 
     /// <summary>
@@ -110,6 +121,9 @@ public interface IAccountModificationInstructionV05 : IOuterRecord
     [IsoId("_rM_TRQgpEeSUG-8hqXsVMQ")]
     [DisplayName("Modified Withdrawal Investment Plan")]
     [IsoXmlTag("ModfdWdrwlInvstmtPlan")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope25> ModifiedWithdrawalInvestmentPlan { get; }
 
     /// <summary>
@@ -118,6 +132,9 @@ public interface IAccountModificationInstructionV05 : IOuterRecord
     [IsoId("_rM_TRwgpEeSUG-8hqXsVMQ")]
     [DisplayName("Modified Cash Settlement")]
     [IsoXmlTag("ModfdCshSttlm")]
+    [MinLength(0)]
+    [MaxLength(8)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundCashSettlementInformation8> ModifiedCashSettlement { get; }
 
     /// <summary>
@@ -126,6 +143,9 @@ public interface IAccountModificationInstructionV05 : IOuterRecord
     [IsoId("_rM_TSQgpEeSUG-8hqXsVMQ")]
     [DisplayName("Modified Service Level Agreement")]
     [IsoXmlTag("ModfdSvcLvlAgrmt")]
+    [MinLength(0)]
+    [MaxLength(30)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope22> ModifiedServiceLevelAgreement { get; }
 
     /// <summary>
@@ -142,5 +162,6 @@ public interface IAccountModificationInstructionV05 : IOuterRecord
     [IsoId("_rM_TTQgpEeSUG-8hqXsVMQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

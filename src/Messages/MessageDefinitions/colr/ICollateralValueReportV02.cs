@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_R3GHRTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("colr.002.001.02", "CollValRpt", "urn:iso:std:iso:20022:tech:xsd:colr.002.001.02")]
+[IsoDisplayName(@"Collateral Value Report V02")]
 public interface ICollateralValueReportV02 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +33,6 @@ public interface ICollateralValueReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

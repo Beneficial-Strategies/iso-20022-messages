@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderType2Choice;
 /// Order type expressed as a code.
 /// </summary>
 [IsoId("_dOFRwVxUEeWvPv3PXpS3fw")]
+[IsoDisplayName(@"Type")]
 public interface IType : IOrderType2Choice, IIsoChoiceVariant
 {
     /// <summary>

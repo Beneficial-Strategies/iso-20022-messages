@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data specific to securities being subject to the transaction.
 /// </summary>
 [IsoId("_FF_rwdR6EemZdYGWu384Zw")]
+[IsoDisplayName(@"Security")]
 public interface ISecurity17 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface ISecurity17 : IIsoComponent
     [IsoId("_FLf229R6EemZdYGWu384Zw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareSecuritiesLendingType2> Type { get; }
 
     /// <summary>

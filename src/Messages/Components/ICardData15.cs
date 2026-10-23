@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card Data15.
 /// </summary>
 [IsoId("_Fg5xUZB2Ee6TWIDarRgYow")]
+[IsoDisplayName(@"Card Data15")]
 public interface ICardData15 : IIsoComponent
 {
     /// <summary>
@@ -100,5 +101,6 @@ public interface ICardData15 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

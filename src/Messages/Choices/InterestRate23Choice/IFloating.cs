@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate23Choice;
 /// </summary>
 [IsoId("_6ao5k1fREeqqKf65rDYWYw")]
 [IsoXmlTag("Fltg")]
+[IsoDisplayName(@"Floating")]
 public interface IFloating : IInterestRate23Choice, IIsoChoiceVariant
 {
     /// <summary>

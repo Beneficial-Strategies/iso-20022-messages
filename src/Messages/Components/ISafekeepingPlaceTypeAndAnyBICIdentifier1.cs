@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Place identification of the place of safekeeping expressed as a code and a BIC.
 /// </summary>
 [IsoId("_Shax4tp-Ed-ak6NoX_4Aeg_1122224444")]
+[IsoDisplayName(@"Safekeeping Place Type And Any BIC Identifier")]
 public interface ISafekeepingPlaceTypeAndAnyBICIdentifier1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ISafekeepingPlaceTypeAndAnyBICIdentifier1 : IIsoComponent
     [IsoId("_Shax5Np-Ed-ak6NoX_4Aeg_1122224574")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier Identification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TerminationDate6Choice;
 /// Closing date/time or maturity date/time of the transaction expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_hUd9b7PvEeelzbgsFa3sqQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITerminationDate6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

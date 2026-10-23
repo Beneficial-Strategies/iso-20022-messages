@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of an instrument report either as a new report or as a cancellation report.</summary>
 [IsoId("_FXkpwGFSEfC91ZUW7iS7ww")]
+[IsoDisplayName(@"Instrument Report 1 Choice")]
 public interface IInstrumentReport1Choice : IIsoChoice { }

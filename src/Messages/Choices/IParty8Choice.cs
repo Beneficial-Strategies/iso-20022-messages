@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Nature or use of the account.
 /// </summary>
 [IsoId("_PW59uNp-Ed-ak6NoX_4Aeg_-1799084049")]
+[IsoDisplayName(@"Party 8 Choice")]
 public interface IParty8Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Position Set Metrics14.
 /// </summary>
 [IsoId("_7JD5QRTuEe61h9tfoUrWyw")]
+[IsoDisplayName(@"Position Set Metrics14")]
 public interface IPositionSetMetrics14 : IIsoComponent
 {
     /// <summary>

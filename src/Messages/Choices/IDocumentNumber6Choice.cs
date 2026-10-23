@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a short document number, a long document number or a proprietary document number.
 /// </summary>
 [IsoId("_celQ0ZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Document Number 6 Choice")]
 public interface IDocumentNumber6Choice : IIsoChoice { }

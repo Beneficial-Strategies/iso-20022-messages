@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount23.
 /// </summary>
 [IsoId("_xF2YkXc-Ee6YlIMyoxWMJA")]
+[IsoDisplayName(@"Amount23")]
 public interface IAmount23 : IIsoComponent
 {
     /// <summary>

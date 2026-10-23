@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investigation Response9.
 /// </summary>
 [IsoId("_muTP8TrQEe-thIfLZ94a1w")]
+[IsoDisplayName(@"Investigation Response9")]
 public interface IInvestigationResponse9 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IInvestigationResponse9 : IIsoComponent
     /// </summary>
     [DisplayName("Investigation Data")]
     [IsoXmlTag("InvstgtnData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestigationData6> InvestigationData { get; }
 }

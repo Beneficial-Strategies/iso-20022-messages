@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.tsin;
     "PtyRegnAndGrntReq",
     "urn:iso:std:iso:20022:tech:xsd:tsin.009.001.01"
 )]
+[Description(@"The message PartyRegistrationAndGuaranteeRequest is sent by a factoring client either to a financial service or a guarantee issuer. The message can also be sent from a financial service to a guarantee issuer. Furthermore, the message can be sent to an interested party for example a fiscal authority. When the message is sent to a guarantee issuer, the factoring client or financial service provider requests a guarantee for the factoring agreement concerning the indicated trade party. When the message is sent to a financial service, the financial client requests an agreement to execute assignments of financial items. The financial client may request the guarantee amount to be obtained in case of insolvency of the trade partner for a corresponding account receivable directly from the financial service. Alternatively and depending on the contractual and product definition, the financial client may be required to include a copy of a guarantee status received from a guarantee issuer.|The message can carry digital signatures if required by context.")]
+[IsoDisplayName(@"Party Registration And Guarantee Request V")]
 public interface IPartyRegistrationAndGuaranteeRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface IPartyRegistrationAndGuaranteeRequestV01 : IOuterRecord
     [IsoId("_OTgzNDY1-AOSNFX-8224506")]
     [DisplayName("Agreement List")]
     [IsoXmlTag("AgrmtList")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancingAgreementList1> AgreementList { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IPartyRegistrationAndGuaranteeRequestV01 : IOuterRecord
     [IsoId("_OTgzNDY2-AOSNFX-8224506")]
     [DisplayName("Agreement Count")]
     [IsoXmlTag("AgrmtCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? AgreementCount { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IPartyRegistrationAndGuaranteeRequestV01 : IOuterRecord
     [IsoId("_OTgzNDY3-AOSNFX-8224506")]
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? ItemCount { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IPartyRegistrationAndGuaranteeRequestV01 : IOuterRecord
     [IsoId("_OTgzNDY4-AOSNFX-8224506")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -65,5 +71,6 @@ public interface IPartyRegistrationAndGuaranteeRequestV01 : IOuterRecord
     [IsoId("_OTgzNDY5-AOSNFX-8224506")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncapsulatedBusinessMessage1> AttachedMessage { get; }
 }

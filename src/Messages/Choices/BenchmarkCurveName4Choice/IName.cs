@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkCurveName4Choice;
 /// Where no identifier exists, standardized name of the index, including its term (such as ‘EURIBOR6M’, ‘LIBOR3M’).
 /// </summary>
 [IsoId("_1yco4wnVEeWa7rBfPECYsw")]
+[IsoDisplayName(@"Name")]
 public interface IName : IBenchmarkCurveName4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IName : IBenchmarkCurveName4Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 25 characters.
     /// </summary>
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max25Text)]
+    [StringLength(25, MinimumLength = 1)]
     Max25Text Value { get; }
 }

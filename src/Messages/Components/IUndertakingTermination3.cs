@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the notification of the termination of an undertaking.
 /// </summary>
 [IsoId("_98BaAHltEeG7BsjMvd1mEw_969313560")]
+[IsoDisplayName(@"Undertaking Termination")]
 public interface IUndertakingTermination3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IUndertakingTermination3 : IIsoComponent
     [IsoId("_98BaAXltEeG7BsjMvd1mEw_-27758793")]
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EffectiveDate { get; }
 
     /// <summary>
@@ -33,5 +35,9 @@ public interface IUndertakingTermination3 : IIsoComponent
     [IsoId("_98BaA3ltEeG7BsjMvd1mEw_-1993406674")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

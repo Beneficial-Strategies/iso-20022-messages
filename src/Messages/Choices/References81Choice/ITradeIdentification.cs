@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References81Choice;
 /// <summary>
 /// Trade Identification.
 /// </summary>
+[IsoDisplayName(@"Trade Identification")]
 public interface ITradeIdentification : IReferences81Choice, IIsoChoiceVariant
 {
     /// <summary>

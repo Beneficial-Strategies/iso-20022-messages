@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the security instrument by its name and typical characteristics.
 /// </summary>
 [IsoId("_hepx8ZiqEe2f7NHvXATP5g")]
+[IsoDisplayName(@"Security Instrument Description")]
 public interface ISecurityInstrumentDescription23 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityInstrumentDescription23 : IIsoComponent
     [IsoId("_hhBJcZiqEe2f7NHvXATP5g")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? Identification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecurityInstrumentDescription23 : IIsoComponent
     [IsoId("_k7vj4JiqEe2f7NHvXATP5g")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherIdentification1> OtherIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ISecurityInstrumentDescription23 : IIsoComponent
     [IsoId("_hhBJc5iqEe2f7NHvXATP5g")]
     [DisplayName("Full Name")]
     [IsoXmlTag("FullNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text FullName { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ISecurityInstrumentDescription23 : IIsoComponent
     [IsoId("_hhBJdZiqEe2f7NHvXATP5g")]
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier ClassificationType { get; }
 
     /// <summary>

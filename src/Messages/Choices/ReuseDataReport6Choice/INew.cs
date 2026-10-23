@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport6Choice;
 /// </summary>
 [IsoId("_MzHkQcK8EeuMhqg3CsEu6Q")]
 [IsoXmlTag("New")]
+[IsoDisplayName(@"New")]
 public interface INew : IReuseDataReport6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface INew : IReuseDataReport6Choice, IIsoChoiceVariant
     [IsoId("_M0kVwcK8EeuMhqg3CsEu6Q")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface INew : IReuseDataReport6Choice, IIsoChoiceVariant
     [IsoId("_M0kVw8K8EeuMhqg3CsEu6Q")]
     [DisplayName("Reporting Date Time")]
     [IsoXmlTag("RptgDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ReportingDateTime { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface INew : IReuseDataReport6Choice, IIsoChoiceVariant
     [IsoId("_M0kVx8K8EeuMhqg3CsEu6Q")]
     [DisplayName("Collateral Component")]
     [IsoXmlTag("CollCmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralType19> CollateralComponent { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface INew : IReuseDataReport6Choice, IIsoChoiceVariant
     [IsoId("_M0kVycK8EeuMhqg3CsEu6Q")]
     [DisplayName("Event Day")]
     [IsoXmlTag("EvtDay")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDay { get; }
 
     /// <summary>
@@ -58,6 +64,7 @@ public interface INew : IReuseDataReport6Choice, IIsoChoiceVariant
     [IsoId("_M0kVy8K8EeuMhqg3CsEu6Q")]
     [DisplayName("Funding Source")]
     [IsoXmlTag("FndgSrc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundingSource3> FundingSource { get; }
 
     /// <summary>
@@ -66,5 +73,6 @@ public interface INew : IReuseDataReport6Choice, IIsoChoiceVariant
     [IsoId("_M0kVzcK8EeuMhqg3CsEu6Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a type of discount or a type of charge.
 /// </summary>
 [IsoId("_St2yMAEcEeCQm6a_G2yO_w_-1902647807")]
+[IsoDisplayName(@"Discount Or Charge Type 1 Choice")]
 public interface IDiscountOrChargeType1Choice : IIsoChoice { }

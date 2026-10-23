@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus28Choice;
 /// Instruction is pending. Settlement at the instructed settlement date is still possible.
 /// </summary>
 [IsoId("_BVp3MwpIEeup4r-PFG2T5Q")]
+[IsoDisplayName(@"Pending")]
 public interface IPending : ISettlementStatus28Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

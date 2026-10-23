@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a reporting level type.
 /// </summary>
 [IsoId("_UBV0oa5nEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Compare Reporting Level Type")]
 public interface ICompareReportingLevelType3 : IIsoComponent
 {
     /// <summary>

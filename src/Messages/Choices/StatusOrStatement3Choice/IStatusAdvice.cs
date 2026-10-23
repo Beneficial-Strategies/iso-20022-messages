@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrStatement3Choice;
 /// </summary>
 [IsoId("_CEn-0fJlEd-DocZblYEqZw")]
 [IsoXmlTag("StsAdvc")]
+[IsoDisplayName(@"Status Advice")]
 public interface IStatusAdvice : IStatusOrStatement3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IStatusAdvice : IStatusOrStatement3Choice, IIsoChoiceVariant
     [IsoId("_D2Ul9fJlEd-DocZblYEqZw")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIdentification7> References { get; }
 }

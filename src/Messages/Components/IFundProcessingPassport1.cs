@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fund Processing Passsport (FPP) is a fully harmonised document with all key operational information that fund promoters should provide on their investment funds in order to facilitate their trading.
 /// </summary>
 [IsoId("_Q5ZrMtp-Ed-ak6NoX_4Aeg_1497334338")]
+[IsoDisplayName(@"Fund Processing Passport")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IFundProcessingPassport1 : IIsoComponent
 {
     /// <summary>
@@ -91,6 +93,7 @@ public interface IFundProcessingPassport1 : IIsoComponent
     [IsoId("_Q5jcMtp-Ed-ak6NoX_4Aeg_-1685996653")]
     [DisplayName("Settlement Details")]
     [IsoXmlTag("SttlmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount22> SettlementDetails { get; }
 
     /// <summary>
@@ -99,6 +102,7 @@ public interface IFundProcessingPassport1 : IIsoComponent
     [IsoId("_Q5jcM9p-Ed-ak6NoX_4Aeg_4177264")]
     [DisplayName("Local Market Annex")]
     [IsoXmlTag("LclMktAnx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalMarketAnnex2> LocalMarketAnnex { get; }
 
     /// <summary>
@@ -107,5 +111,6 @@ public interface IFundProcessingPassport1 : IIsoComponent
     [IsoId("_Q5jcNNp-Ed-ak6NoX_4Aeg_113830738")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

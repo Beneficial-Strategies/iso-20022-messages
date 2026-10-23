@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DataRecord1Choice;
 /// Contains the data record in Binary format.
 /// </summary>
 [IsoId("_hWEYMJb8Eeuc6pwKtqbEVQ")]
+[IsoDisplayName(@"Binary")]
 public interface IBinary : IDataRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBinary : IDataRecord1Choice, IIsoChoiceVariant
     /// Binary data of 20 megabytes (20 Mb) maximum.
     /// </summary>
     [IsoXmlTag("Binry")]
+    [IsoSimpleType(IsoSimpleType.Max20MbBinary)]
     Max20MbBinary Value { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the legal jurisdiction.
 /// </summary>
 [IsoId("_93jww3ltEeG7BsjMvd1mEw_-652907596")]
+[IsoDisplayName(@"Country Subdivision 1 Choice")]
 public interface ICountrySubdivision1Choice : IIsoChoice { }

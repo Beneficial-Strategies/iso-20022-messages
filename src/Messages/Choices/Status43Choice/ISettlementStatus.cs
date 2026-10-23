@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status43Choice;
 
 /// <summary>Status expressed as a settlement status.</summary>
 [IsoId("d5d33296-f90a-4cd0-89d9-fc603ec9d6a3")]
+[IsoDisplayName(@"Settlement Status")]
 public interface ISettlementStatus : IStatus43Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

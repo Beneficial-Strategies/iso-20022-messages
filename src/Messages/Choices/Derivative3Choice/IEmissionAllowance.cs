@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative3Choice;
 /// Details specific for emission allowance derivatives
 /// </summary>
 [IsoId("_xH-zbSe0Eei12pGEsJIAeQ")]
+[IsoDisplayName(@"Emission Allowance")]
 public interface IEmissionAllowance : IDerivative3Choice, IIsoChoiceVariant
 {
     /// <summary>

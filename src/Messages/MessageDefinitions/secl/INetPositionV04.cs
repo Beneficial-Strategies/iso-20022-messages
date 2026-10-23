@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_YZ-MgYcPEe-m68RYMhvgvg")]
 [IsoMessage("secl.004.001.04", "NetPos", "urn:iso:std:iso:20022:tech:xsd:secl.004.001.04")]
+[IsoDisplayName(@"Net Position V04")]
 public interface INetPositionV04 : IOuterRecord
 {
     /// <summary>
@@ -46,6 +47,7 @@ public interface INetPositionV04 : IOuterRecord
     /// </summary>
     [DisplayName("Net Position Report")]
     [IsoXmlTag("NetPosRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetPosition4> NetPositionReport { get; }
 
     /// <summary>
@@ -53,5 +55,6 @@ public interface INetPositionV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

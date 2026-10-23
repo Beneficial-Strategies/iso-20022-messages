@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification80Choice;
 /// <summary>
 /// UPIC.
 /// </summary>
+[IsoDisplayName(@"UPIC")]
 public interface IUPIC : IAccountIdentification80Choice, IIsoChoiceVariant
 {
     /// <summary>

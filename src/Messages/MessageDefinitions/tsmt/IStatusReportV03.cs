@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_1C-AWNE8Ed-BzquC8wXy7w_-145028832")]
 [IsoMessage("tsmt.037.001.03", "StsRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.037.001.03")]
+[Description(@"Scope|The StatusReport message is sent by the matching application to the requester of a status report.|This message is used to report on the status of transactions registered in the matching application.|Usage|The StatusReport message can be sent by the matching application to report on the status and sub-status of all transactions that the requester of the report is involved in. The message can be sent in response to a StatusReportRequest message.")]
+[IsoDisplayName(@"Status Report V")]
 public interface IStatusReportV03 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface IStatusReportV03 : IOuterRecord
     [IsoId("_1C-AW9E8Ed-BzquC8wXy7w_-145028829")]
     [DisplayName("Reported Items")]
     [IsoXmlTag("RptdItms")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReportItems2> ReportedItems { get; }
 }

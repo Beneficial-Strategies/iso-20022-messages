@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies elements related to the response sent by the clearing member to the central counterparty in the context of the buy in process.
 /// </summary>
 [IsoId("_Uo3mk9p-Ed-ak6NoX_4Aeg_392375521")]
+[IsoDisplayName(@"Buy In")]
 public interface IBuyIn3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBuyIn3 : IIsoComponent
     [IsoId("_Uo3mlNp-Ed-ak6NoX_4Aeg_903405859")]
     [DisplayName("Buy In Notification Identification")]
     [IsoXmlTag("BuyInNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text BuyInNotificationIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IBuyIn3 : IIsoComponent
     [IsoId("_Uo3mldp-Ed-ak6NoX_4Aeg_-1794174189")]
     [DisplayName("Request For Delay Indicator")]
     [IsoXmlTag("ReqForDelyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator RequestForDelayIndicator { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IBuyIn3 : IIsoComponent
     [IsoId("_Uo3mltp-Ed-ak6NoX_4Aeg_755179045")]
     [DisplayName("Number Of Days")]
     [IsoXmlTag("NbOfDays")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfDays { get; }
 
     /// <summary>

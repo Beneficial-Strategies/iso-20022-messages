@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus2Choi
 
 /// <summary>Provides the matching status of the instruction.</summary>
 [IsoId("_G1D_QbMaEfCEXew4g5B5oA")]
+[IsoDisplayName(@"Matching Status")]
 public interface IMatchingStatus : IMarketClaimProcessingStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

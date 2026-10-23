@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account to or from which a cash entry is made.
 /// </summary>
 [IsoId("_77E8gSCpEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Cash Account")]
 public interface ICashAccount33 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ICashAccount33 : IIsoComponent
     [IsoId("_8WdQ-yCpEeWJd9HF2tO7BA")]
     [DisplayName("Account Owner Other Identification")]
     [IsoXmlTag("AcctOwnrOthrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification82> AccountOwnerOtherIdentification { get; }
 
     /// <summary>
@@ -105,5 +107,6 @@ public interface ICashAccount33 : IIsoComponent
     [IsoId("_GasKcSC0EeWJd9HF2tO7BA")]
     [DisplayName("Dividend Percentage")]
     [IsoXmlTag("DvddPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageBoundedRate)]
     PercentageBoundedRate? DividendPercentage { get; }
 }

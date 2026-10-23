@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party and related authorisation.
 /// </summary>
 [IsoId("_9khXQQ4eEeK3IMoVvcTkkg")]
+[IsoDisplayName(@"Party And Authorisation")]
 public interface IPartyAndAuthorisation3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IPartyAndAuthorisation3 : IIsoComponent
     [IsoId("_96bV3A4eEeK3IMoVvcTkkg")]
     [DisplayName("Signature Order")]
     [IsoXmlTag("SgntrOrdr")]
+    [IsoSimpleType(IsoSimpleType.Max15PlusSignedNumericText)]
     Max15PlusSignedNumericText? SignatureOrder { get; }
 
     /// <summary>

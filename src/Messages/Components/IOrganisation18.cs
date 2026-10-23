@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card acceptor performing the transaction.
 /// </summary>
 [IsoId("_HX5psXrpEeSz_of_1TY14A")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation18 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IOrganisation18 : IIsoComponent
     [IsoId("_HkkMs3rpEeSz_of_1TY14A")]
     [DisplayName("Common Name")]
     [IsoXmlTag("CmonNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text CommonName { get; }
 
     /// <summary>
@@ -51,5 +54,7 @@ public interface IOrganisation18 : IIsoComponent
     [IsoId("_zEKcAHruEeSz_of_1TY14A")]
     [DisplayName("Scheme Data")]
     [IsoXmlTag("SchmeData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SchemeData { get; }
 }

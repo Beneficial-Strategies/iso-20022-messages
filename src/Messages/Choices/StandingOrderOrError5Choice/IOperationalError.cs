@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError5Choice;
 /// </summary>
 [IsoId("_COWPU24-EeiU9cctagi5ow")]
 [IsoXmlTag("OprlErr")]
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : IStandingOrderOrError5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IOperationalError : IStandingOrderOrError5Choice, IIsoChoiceVar
     [IsoId("_RA_783hdEeidzqjNEfehPg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

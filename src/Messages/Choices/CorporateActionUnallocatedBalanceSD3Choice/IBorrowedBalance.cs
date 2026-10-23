@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
 /// </summary>
 [IsoId("_ujGeL8STEeeRJJtE9TSlkw")]
 [IsoXmlTag("BrrwdBal")]
+[IsoDisplayName(@"Borrowed Balance")]
 public interface IBorrowedBalance : ICorporateActionUnallocatedBalanceSD3Choice, IIsoChoiceVariant
 {
     /// <summary>

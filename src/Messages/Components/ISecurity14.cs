@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of security used as collateral.
 /// </summary>
 [IsoId("_wBMu18peEem6kd3Y9uIDqg")]
+[IsoDisplayName(@"Security")]
 public interface ISecurity14 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurity14 : IIsoComponent
     [IsoId("_wFEiMcpeEem6kd3Y9uIDqg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? Identification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecurity14 : IIsoComponent
     [IsoId("_wFEiM8peEem6kd3Y9uIDqg")]
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier? ClassificationType { get; }
 
     /// <summary>
@@ -59,6 +62,7 @@ public interface ISecurity14 : IIsoComponent
     [IsoId("_wFEiO8peEem6kd3Y9uIDqg")]
     [DisplayName("Haircut Or Margin")]
     [IsoXmlTag("HrcutOrMrgn")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? HaircutOrMargin { get; }
 
     /// <summary>
@@ -75,6 +79,7 @@ public interface ISecurity14 : IIsoComponent
     [IsoId("_wFEiP8peEem6kd3Y9uIDqg")]
     [DisplayName("Maturity")]
     [IsoXmlTag("Mtrty")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Maturity { get; }
 
     /// <summary>
@@ -99,5 +104,6 @@ public interface ISecurity14 : IIsoComponent
     [IsoId("_wFEiRcpeEem6kd3Y9uIDqg")]
     [DisplayName("Available For Collateral Reuse")]
     [IsoXmlTag("AvlblForCollReuse")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AvailableForCollateralReuse { get; }
 }

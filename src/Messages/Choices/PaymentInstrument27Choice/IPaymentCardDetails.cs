@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument27Choice;
 /// <summary>
 /// Payment Card Details.
 /// </summary>
+[IsoDisplayName(@"Payment Card Details")]
 public interface IPaymentCardDetails : IPaymentInstrument27Choice, IIsoChoiceVariant
 {
     /// <summary>

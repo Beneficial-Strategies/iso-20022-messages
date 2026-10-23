@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action option.
 /// </summary>
 [IsoId("_OFdycZShEeeh5JjedkaA_g")]
+[IsoDisplayName(@"Corporate Action Option")]
 public interface ICorporateActionOption138 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionOption138 : IIsoComponent
     [IsoId("_OXeIfZShEeeh5JjedkaA_g")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText OptionNumber { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICorporateActionOption138 : IIsoComponent
     [IsoId("_OXeIlZShEeeh5JjedkaA_g")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOfferTypeFormat10Choice> OfferType { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICorporateActionOption138 : IIsoComponent
     [IsoId("_OXeInZShEeeh5JjedkaA_g")]
     [DisplayName("Option Features")]
     [IsoXmlTag("OptnFeatrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOptionFeaturesFormat22Choice> OptionFeatures { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ICorporateActionOption138 : IIsoComponent
     [IsoId("_OXeIrZShEeeh5JjedkaA_g")]
     [DisplayName("Certification Breakdown Type")]
     [IsoXmlTag("CertfctnBrkdwnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficiaryCertificationType9Choice> CertificationBreakdownType { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ICorporateActionOption138 : IIsoComponent
     [IsoId("_OXeItZShEeeh5JjedkaA_g")]
     [DisplayName("Non Domicile Country")]
     [IsoXmlTag("NonDmclCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> NonDomicileCountry { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface ICorporateActionOption138 : IIsoComponent
     [IsoId("_OXeIvZShEeeh5JjedkaA_g")]
     [DisplayName("Valid Domicile Country")]
     [IsoXmlTag("VldDmclCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> ValidDomicileCountry { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface ICorporateActionOption138 : IIsoComponent
     [IsoId("_OXeI1ZShEeeh5JjedkaA_g")]
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChargesAppliedIndicator { get; }
 
     /// <summary>
@@ -115,6 +123,7 @@ public interface ICorporateActionOption138 : IIsoComponent
     [IsoId("_OXeI3ZShEeeh5JjedkaA_g")]
     [DisplayName("Certification Breakdown Indicator")]
     [IsoXmlTag("CertfctnBrkdwnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CertificationBreakdownIndicator { get; }
 
     /// <summary>
@@ -123,6 +132,7 @@ public interface ICorporateActionOption138 : IIsoComponent
     [IsoId("_OXeI5ZShEeeh5JjedkaA_g")]
     [DisplayName("Withdrawal Allowed Indicator")]
     [IsoXmlTag("WdrwlAllwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? WithdrawalAllowedIndicator { get; }
 
     /// <summary>
@@ -131,6 +141,7 @@ public interface ICorporateActionOption138 : IIsoComponent
     [IsoId("_OXeI7ZShEeeh5JjedkaA_g")]
     [DisplayName("Change Allowed Indicator")]
     [IsoXmlTag("ChngAllwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChangeAllowedIndicator { get; }
 
     /// <summary>
@@ -139,6 +150,7 @@ public interface ICorporateActionOption138 : IIsoComponent
     [IsoId("_OXeI9ZShEeeh5JjedkaA_g")]
     [DisplayName("Applied Option Indicator")]
     [IsoXmlTag("ApldOptnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AppliedOptionIndicator { get; }
 
     /// <summary>
@@ -195,6 +207,7 @@ public interface ICorporateActionOption138 : IIsoComponent
     [IsoId("_OXeJJ5ShEeeh5JjedkaA_g")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesOption64> SecuritiesMovementDetails { get; }
 
     /// <summary>
@@ -203,6 +216,7 @@ public interface ICorporateActionOption138 : IIsoComponent
     [IsoId("_OXeJL5ShEeeh5JjedkaA_g")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOption56> CashMovementDetails { get; }
 
     /// <summary>

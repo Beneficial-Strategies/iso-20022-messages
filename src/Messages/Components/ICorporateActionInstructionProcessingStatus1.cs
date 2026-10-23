@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provide processing status information of an election advice.
 /// </summary>
 [IsoId("_Rknyd9p-Ed-ak6NoX_4Aeg_-1100180300")]
+[IsoDisplayName(@"Corporate Action Instruction Processing Status")]
 public interface ICorporateActionInstructionProcessingStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICorporateActionInstructionProcessingStatus1 : IIsoComponent
     [IsoId("_Rkw8YNp-Ed-ak6NoX_4Aeg_-744625301")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

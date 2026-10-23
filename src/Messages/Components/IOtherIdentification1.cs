@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other accepted financial instrument&apos;s identification than ISIN.
 /// </summary>
 [IsoId("_UokEk9p-Ed-ak6NoX_4Aeg_462750527")]
+[IsoDisplayName(@"Other Identification")]
 public interface IOtherIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherIdentification1 : IIsoComponent
     [IsoId("_UokElNp-Ed-ak6NoX_4Aeg_-843603921")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOtherIdentification1 : IIsoComponent
     [IsoId("_UokEldp-Ed-ak6NoX_4Aeg_-130667248")]
     [DisplayName("Suffix")]
     [IsoXmlTag("Sfx")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? Suffix { get; }
 
     /// <summary>

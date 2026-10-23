@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Source of funding
 /// </summary>
 [IsoId("_xJXl8EUUEeea-M6VZkEPUw")]
+[IsoDisplayName(@"Funding Source")]
 public interface IFundingSource2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IFundingSource2 : IIsoComponent
     [IsoId("_21b7cEUVEeea-M6VZkEPUw")]
     [DisplayName("Other Source Type")]
     [IsoXmlTag("OthrSrcTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherSourceType { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IFundingSource2 : IIsoComponent
     [IsoId("_8T0PsEUVEeea-M6VZkEPUw")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reference { get; }
 }

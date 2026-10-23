@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a fixed rate and a variable rate.
 /// </summary>
 [IsoId("_H7ydeX5aEea2k7EBUopqxw")]
+[IsoDisplayName(@"Interest Rate 8 Choice")]
 public interface IInterestRate8Choice : IIsoChoice { }

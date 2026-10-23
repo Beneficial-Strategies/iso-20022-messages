@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesBalanceType6Choice;
 /// Sub-balance expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_q5Z-oTnsEeWfSKvvZlhRKg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISecuritiesBalanceType6Choice, IIsoChoiceVariant
 {
     /// <summary>

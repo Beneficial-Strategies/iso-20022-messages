@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification expressed as a proprietary type and narrative description.
 /// </summary>
 [IsoId("_ARqNNdokEeC60axPepSq7g_82406988")]
+[IsoDisplayName(@"Generic Identification")]
 public interface IGenericIdentification38 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IGenericIdentification38 : IIsoComponent
     [IsoId("_ARz-MNokEeC60axPepSq7g_1535322318")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText Identification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IGenericIdentification38 : IIsoComponent
     [IsoId("_ARz-MdokEeC60axPepSq7g_-757724104")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Issuer { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IGenericIdentification38 : IIsoComponent
     [IsoId("_ARz-MtokEeC60axPepSq7g_-109945117")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SchemeName { get; }
 }

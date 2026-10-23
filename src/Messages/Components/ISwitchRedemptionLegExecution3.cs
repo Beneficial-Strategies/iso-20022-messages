@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of the redemption part, in a switch between investment funds or investment fund classes.
 /// </summary>
 [IsoId("_R2Wbsdp-Ed-ak6NoX_4Aeg_-1694554730")]
+[IsoDisplayName(@"Switch Redemption Leg Execution")]
 public interface ISwitchRedemptionLegExecution3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISwitchRedemptionLegExecution3 : IIsoComponent
     [IsoId("_R2Wbstp-Ed-ak6NoX_4Aeg_-1694554704")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISwitchRedemptionLegExecution3 : IIsoComponent
     [IsoId("_R2Wbs9p-Ed-ak6NoX_4Aeg_-1694554436")]
     [DisplayName("Leg Execution Identification")]
     [IsoXmlTag("LegExctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegExecutionIdentification { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ISwitchRedemptionLegExecution3 : IIsoComponent
     [IsoId("_R2gMo9p-Ed-ak6NoX_4Aeg_-1694554376")]
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? HoldingsRedemptionRate { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface ISwitchRedemptionLegExecution3 : IIsoComponent
     [IsoId("_R2gMqNp-Ed-ak6NoX_4Aeg_-1694554281")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -177,6 +184,7 @@ public interface ISwitchRedemptionLegExecution3 : IIsoComponent
     [IsoId("_R2pWmNp-Ed-ak6NoX_4Aeg_-1694553860")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>
@@ -193,6 +201,8 @@ public interface ISwitchRedemptionLegExecution3 : IIsoComponent
     [IsoId("_R2zHkNp-Ed-ak6NoX_4Aeg_-84978414")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>

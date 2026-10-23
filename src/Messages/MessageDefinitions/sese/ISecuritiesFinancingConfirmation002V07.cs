@@ -26,6 +26,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_dkgFU5w1EeazcsnODTksnQ")]
 [IsoMessage("sese.035.002.07", "SctiesFincgConf", "urn:iso:std:iso:20022:tech:xsd:sese.035.002.07")]
+[Description(@"Scope|A securities financing transaction account servicer sends a SecuritiesFinancingConfirmation to an account owner to confirm or advise of the partial or full settlement of the opening or closing leg of a securities financing transaction. ||The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure managing securities financing transactions on behalf of their participants|- an agent (sub-custodian) managing securities financing transactions on behalf of their global custodian customer, or |- a custodian managing securities financing transactions on behalf of an investment management institution or a broker/dealer.|||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Financing Confirmation 002 V")]
 public interface ISecuritiesFinancingConfirmation002V07 : IOuterRecord
 {
     /// <summary>
@@ -154,5 +156,6 @@ public interface ISecuritiesFinancingConfirmation002V07 : IOuterRecord
     [IsoId("_dkgFfZw1EeazcsnODTksnQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

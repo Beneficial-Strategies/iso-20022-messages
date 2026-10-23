@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of leg.
 /// </summary>
 [IsoId("_r7QIIEglEea9YuSvQGoi-w")]
+[IsoDisplayName(@"Leg Identification 1 Choice")]
 public interface ILegIdentification1Choice : IIsoChoice { }

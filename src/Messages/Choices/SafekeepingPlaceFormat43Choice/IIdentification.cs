@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat43Choice;
 /// <summary>
 /// Identification.
 /// </summary>
+[IsoDisplayName(@"Identification")]
 public interface IIdentification : ISafekeepingPlaceFormat43Choice, IIsoChoiceVariant
 {
     /// <summary>

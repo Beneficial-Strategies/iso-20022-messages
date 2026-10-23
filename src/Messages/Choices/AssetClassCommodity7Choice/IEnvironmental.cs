@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice;
 /// <summary>
 /// Environmental.
 /// </summary>
+[IsoDisplayName(@"Environmental")]
 public interface IEnvironmental : IAssetClassCommodity7Choice, IIsoChoiceVariant
 {
     /// <summary>

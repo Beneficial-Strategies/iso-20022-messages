@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Encrypted Data Element2.
 /// </summary>
 [IsoId("_sJJtsXdBEe6YlIMyoxWMJA")]
+[IsoDisplayName(@"Encrypted Data Element2")]
 public interface IEncryptedDataElement2 : IIsoComponent
 {
     /// <summary>

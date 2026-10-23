@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details to specify the frequency, pattern and other items to allow for the communication of a series of payments to be made to the same recipient over a period of time.
 /// </summary>
 [IsoId("_QUNr4Q2lEeSNWNtJlXOAhg")]
+[IsoDisplayName(@"Frequency")]
 public interface IFrequency1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFrequency1 : IIsoComponent
     [IsoId("_eeziUA2lEeSNWNtJlXOAhg")]
     [DisplayName("Sequence")]
     [IsoXmlTag("Seq")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? Sequence { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IFrequency1 : IIsoComponent
     [IsoId("_g4fWgA2lEeSNWNtJlXOAhg")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate StartDate { get; }
 
     /// <summary>

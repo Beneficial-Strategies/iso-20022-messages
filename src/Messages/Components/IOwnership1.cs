@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides ownership details  of a person on an asset.
 /// </summary>
 [IsoId("_6_92AIzzEemXJvzC2Wyt1g")]
+[IsoDisplayName(@"Ownership")]
 public interface IOwnership1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IOwnership1 : IIsoComponent
     [IsoId("_jeCnUIz0EemXJvzC2Wyt1g")]
     [DisplayName("Ownership Percentage")]
     [IsoXmlTag("OwnrshPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OwnershipPercentage { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IOwnership1 : IIsoComponent
     [IsoId("_8KqSEIz0EemXJvzC2Wyt1g")]
     [DisplayName("Usufruct Percentage")]
     [IsoXmlTag("UsfrctPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? UsufructPercentage { get; }
 }

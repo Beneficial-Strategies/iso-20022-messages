@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the identification of an individual person.
 /// </summary>
 [IsoId("_5uE1YSGZEeWKAaDJcYGKLw")]
+[IsoDisplayName(@"Individual Person Identification 2 Choice")]
 public interface IIndividualPersonIdentification2Choice : IIsoChoice { }

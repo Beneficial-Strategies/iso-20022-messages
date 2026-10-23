@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice;
 /// <summary>
 /// Error.
 /// </summary>
+[IsoDisplayName(@"Error")]
 public interface IError : ITradeReport33Choice, IIsoChoiceVariant
 {
     /// <summary>

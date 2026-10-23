@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the underlying transaction.
 /// </summary>
 [IsoId("_RmlaF249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Transaction References")]
 public interface ITransactionReferences5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionReferences5 : IIsoComponent
     [IsoId("_RwkcgW49EeiU9cctagi5ow")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransactionReferences5 : IIsoComponent
     [IsoId("_Rwkcg249EeiU9cctagi5ow")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransactionReferences5 : IIsoComponent
     [IsoId("_RwkchW49EeiU9cctagi5ow")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text EndToEndIdentification { get; }
 
     /// <summary>
@@ -43,6 +50,8 @@ public interface ITransactionReferences5 : IIsoComponent
     [IsoId("_Rwkch249EeiU9cctagi5ow")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -51,6 +60,7 @@ public interface ITransactionReferences5 : IIsoComponent
     [IsoId("_gCX-cXuUEeivKIBRHeTQRQ")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? UETR { get; }
 
     /// <summary>
@@ -59,6 +69,8 @@ public interface ITransactionReferences5 : IIsoComponent
     [IsoId("_RwkciW49EeiU9cctagi5ow")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 
     /// <summary>

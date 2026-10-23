@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information to display, print or store.
 /// </summary>
 [IsoId("_xQalMXuYEeSVeNXcmBQ4hQ")]
+[IsoDisplayName(@"Action Message")]
 public interface IActionMessage2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IActionMessage2 : IIsoComponent
     [IsoId("_xdYDI3uYEeSVeNXcmBQ4hQ")]
     [DisplayName("Message Content")]
     [IsoXmlTag("MsgCntt")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text MessageContent { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IActionMessage2 : IIsoComponent
     [IsoId("_xdYDJXuYEeSVeNXcmBQ4hQ")]
     [DisplayName("Message Content Signature")]
     [IsoXmlTag("MsgCnttSgntr")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? MessageContentSignature { get; }
 }

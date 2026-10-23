@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the payment terms of the underlying transaction.
 /// </summary>
 [IsoId("_ZXBQcRVgEeOrY9qSHVspCA")]
+[IsoDisplayName(@"Payment Terms")]
 public interface IPaymentTerms5 : IIsoComponent
 {
     /// <summary>

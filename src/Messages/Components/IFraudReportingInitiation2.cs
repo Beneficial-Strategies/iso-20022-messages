@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the  fraud reporting initiation message.
 /// </summary>
 [IsoId("_D-81EYv3EeumSPwlS1PkxQ")]
+[IsoDisplayName(@"Fraud Reporting Initiation")]
 public interface IFraudReportingInitiation2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IFraudReportingInitiation2 : IIsoComponent
     [IsoId("_EFLY54v3EeumSPwlS1PkxQ")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface IFraudReportingInitiation2 : IIsoComponent
     [IsoId("_EFLY6Yv3EeumSPwlS1PkxQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

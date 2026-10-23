@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provide information about the reason for the modification and about the application request which triggered this modification.
 /// </summary>
 [IsoId("_qtE6YQjhEeSI9qETkJHgqw")]
+[IsoDisplayName(@"Investment Account Modification")]
 public interface IInvestmentAccountModification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentAccountModification1 : IIsoComponent
     [IsoId("_rImYwQjhEeSI9qETkJHgqw")]
     [DisplayName("Modification Reason")]
     [IsoXmlTag("ModRsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? ModificationReason { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IInvestmentAccountModification1 : IIsoComponent
     [IsoId("_rImYwwjhEeSI9qETkJHgqw")]
     [DisplayName("Account Application Identification")]
     [IsoXmlTag("AcctApplId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountApplicationIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IInvestmentAccountModification1 : IIsoComponent
     [IsoId("_bOgTkgjhEeSI9qETkJHgqw")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>

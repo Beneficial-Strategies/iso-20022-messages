@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Recurrent query criteria.
 /// </summary>
 [IsoId("_QH0wdYeAEei-Poi-FosJdw")]
+[IsoDisplayName(@"Trade Recurrent Query")]
 public interface ITradeRecurrentQuery3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeRecurrentQuery3 : IIsoComponent
     [IsoId("_QV1XQYeAEei-Poi-FosJdw")]
     [DisplayName("Query Type")]
     [IsoXmlTag("QryTp")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text QueryType { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ITradeRecurrentQuery3 : IIsoComponent
     [IsoId("_QV1XRYeAEei-Poi-FosJdw")]
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValidUntil { get; }
 }

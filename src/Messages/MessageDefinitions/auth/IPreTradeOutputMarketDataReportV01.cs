@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "PreTradOutptMktDataRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.123.001.01"
 )]
+[Description(@"The PreTradeOutputMarketDataReport message is sent by the Consolidated Tape Provider, based on data submitted by Trading Venues, in accordance with local regulations. The message contains consolidated pre-trade transparency data for financial instruments, including aggregated bid and ask prices, order sizes, type of auction, and timestamps.")]
+[IsoDisplayName(@"Pre Trade Output Market Data Report V01")]
 public interface IPreTradeOutputMarketDataReportV01 : IOuterRecord
 {
     /// <summary>
@@ -31,6 +33,8 @@ public interface IPreTradeOutputMarketDataReportV01 : IOuterRecord
     [IsoId("_6rf-AGIUEfCeoPFCHQnhvA")]
     [DisplayName("Output Data Report")]
     [IsoXmlTag("OutptDataRpt")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPreTradeOutputReport1Choice> OutputDataReport { get; }
 
     /// <summary>
@@ -39,5 +43,6 @@ public interface IPreTradeOutputMarketDataReportV01 : IOuterRecord
     [IsoId("_1JfuAGIUEfCeoPFCHQnhvA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

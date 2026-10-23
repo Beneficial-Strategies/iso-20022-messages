@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the applicable Incoterm and associated location.
 /// </summary>
 [IsoId("_S5VCYwEcEeCQm6a_G2yO_w_154174815")]
+[IsoDisplayName(@"Incoterms")]
 public interface IIncoterms3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IIncoterms3 : IIsoComponent
     [IsoId("_S5VCZQEcEeCQm6a_G2yO_w_-956736604")]
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Location { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information on the cassette of an ATM.
 /// </summary>
 [IsoId("_-ZZzEIqeEeS4a4abTJTSSw")]
+[IsoDisplayName(@"ATM Cassette")]
 public interface IATMCassette1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMCassette1 : IIsoComponent
     [IsoId("_LdNnoIqfEeS4a4abTJTSSw")]
     [DisplayName("Physical Identification")]
     [IsoXmlTag("PhysId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PhysicalIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMCassette1 : IIsoComponent
     [IsoId("_OFwXMIqfEeS4a4abTJTSSw")]
     [DisplayName("Logical Identification")]
     [IsoXmlTag("LogclId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text LogicalIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IATMCassette1 : IIsoComponent
     [IsoId("_gIIiEIqgEeS4a4abTJTSSw")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATMNoteType1Code> SubType { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface IATMCassette1 : IIsoComponent
     [IsoId("_2CdEUIqgEeS4a4abTJTSSw")]
     [DisplayName("Media Counters")]
     [IsoXmlTag("MdiaCntrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCassetteCounters1> MediaCounters { get; }
 }

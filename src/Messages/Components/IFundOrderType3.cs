@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the category of the investment fund order.
 /// </summary>
 [IsoId("_TSu6Etp-Ed-ak6NoX_4Aeg_1141291305")]
+[IsoDisplayName(@"Fund Order Type")]
 public interface IFundOrderType3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IFundOrderType3 : IIsoComponent
     [IsoId("_TSu6FNp-Ed-ak6NoX_4Aeg_1141291995")]
     [DisplayName("Extended Order Type")]
     [IsoXmlTag("XtndedOrdrTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedOrderType { get; }
 }

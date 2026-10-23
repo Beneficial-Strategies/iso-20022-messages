@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status of an account.
 /// </summary>
 [IsoId("_ljU4MEzEEeafiMTDrtSnyw")]
+[IsoDisplayName(@"Other Account Status")]
 public interface IOtherAccountStatus1 : IIsoComponent
 {
     /// <summary>

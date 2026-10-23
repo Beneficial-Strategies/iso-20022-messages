@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus10Cho
 /// </summary>
 [IsoId("_Rhhu_weDEe2fOITqoTnSLQ")]
 [IsoXmlTag("RcvdAtStockXchg")]
+[IsoDisplayName(@"Received At Stock Exchange")]
 public interface IReceivedAtStockExchange : IReplacementProcessingStatus10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IReceivedAtStockExchange : IReplacementProcessingStatus10Choice
     [IsoId("_RA3_Wzp5EeWVrPy0StzzSg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

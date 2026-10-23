@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the underlying transaction.
 /// </summary>
 [IsoId("_zyC1UYXMEeiDBOVr6AJAFA")]
+[IsoDisplayName(@"Transaction References")]
 public interface ITransactionReferences6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-Vk44XMEeiDBOVr6AJAFA")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-Vk5YXMEeiDBOVr6AJAFA")]
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-Vk54XMEeiDBOVr6AJAFA")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-Vk6YXMEeiDBOVr6AJAFA")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-Vk64XMEeiDBOVr6AJAFA")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>
@@ -57,6 +68,7 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_22Cx0YXMEeiDBOVr6AJAFA")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? UETR { get; }
 
     /// <summary>
@@ -65,6 +77,8 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-Vk7YXMEeiDBOVr6AJAFA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -73,6 +87,8 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-Vk74XMEeiDBOVr6AJAFA")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 
     /// <summary>
@@ -81,6 +97,8 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-Vk8YXMEeiDBOVr6AJAFA")]
     [DisplayName("Cheque Number")]
     [IsoXmlTag("ChqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ChequeNumber { get; }
 
     /// <summary>
@@ -89,6 +107,8 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-Vk84XMEeiDBOVr6AJAFA")]
     [DisplayName("Clearing System Reference")]
     [IsoXmlTag("ClrSysRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClearingSystemReference { get; }
 
     /// <summary>
@@ -97,6 +117,8 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-Vk9YXMEeiDBOVr6AJAFA")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -105,6 +127,8 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-Vk_YXMEeiDBOVr6AJAFA")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -113,6 +137,8 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-VlBYXMEeiDBOVr6AJAFA")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -121,6 +147,8 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-VlDYXMEeiDBOVr6AJAFA")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessingIdentification { get; }
 
     /// <summary>
@@ -129,5 +157,6 @@ public interface ITransactionReferences6 : IIsoComponent
     [IsoId("_z-VlD4XMEeiDBOVr6AJAFA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryReference1> Proprietary { get; }
 }

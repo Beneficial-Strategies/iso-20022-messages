@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntermediateSecuritiesDistributi
 
 /// <summary>Standard code specifying the type of intermediate securities distribution.</summary>
 [IsoId("_qdHOxaRKEfC9EJoPPbbyNQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IIntermediateSecuritiesDistributionTypeFormat19Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

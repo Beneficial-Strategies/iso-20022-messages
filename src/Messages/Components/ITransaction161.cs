@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction161.
 /// </summary>
 [IsoId("_xbjuMYYOEe-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Transaction161")]
 public interface ITransaction161 : IIsoComponent
 {
     /// <summary>
@@ -149,5 +150,6 @@ public interface ITransaction161 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

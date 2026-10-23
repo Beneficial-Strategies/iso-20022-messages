@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the authority entity.
 /// </summary>
 [IsoId("_th7UgKd4EeuEcqP2FGAFaA")]
+[IsoDisplayName(@"Authority")]
 public interface IAuthority1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface IAuthority1 : IIsoComponent
     [IsoId("_y8RfYBvOEey2RdTw-AkXzg")]
     [DisplayName("Country Sub Division Major Name")]
     [IsoXmlTag("CtrySubDvsnMjrNm")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? CountrySubDivisionMajorName { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IAuthority1 : IIsoComponent
     [IsoId("_sdTQ0BvOEey2RdTw-AkXzg")]
     [DisplayName("Country Sub Division Minor Name")]
     [IsoXmlTag("CtrySubDvsnMnrNm")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? CountrySubDivisionMinorName { get; }
 
     /// <summary>
@@ -57,5 +62,7 @@ public interface IAuthority1 : IIsoComponent
     [IsoId("_4LtrwKd6EeuEcqP2FGAFaA")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? Name { get; }
 }

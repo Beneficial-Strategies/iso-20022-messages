@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Credit Transfer Transaction65.
 /// </summary>
 [IsoId("_9qIHszEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Credit Transfer Transaction65")]
 public interface ICreditTransferTransaction65 : IIsoComponent
 {
     /// <summary>
@@ -135,6 +136,7 @@ public interface ICreditTransferTransaction65 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent3> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -149,6 +151,7 @@ public interface ICreditTransferTransaction65 : IIsoComponent
     /// </summary>
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting3> RegulatoryReporting { get; }
 
     /// <summary>
@@ -163,6 +166,7 @@ public interface ICreditTransferTransaction65 : IIsoComponent
     /// </summary>
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation8> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -177,6 +181,7 @@ public interface ICreditTransferTransaction65 : IIsoComponent
     /// </summary>
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument15> EnclosedFile { get; }
 
     /// <summary>
@@ -184,5 +189,6 @@ public interface ICreditTransferTransaction65 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about an undertaking.
 /// </summary>
 [IsoId("_-FthiHltEeG7BsjMvd1mEw_-1983093565")]
+[IsoDisplayName(@"Undertaking")]
 public interface IUndertaking8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IUndertaking8 : IIsoComponent
     [IsoId("_-F3SgHltEeG7BsjMvd1mEw_-9844509")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IUndertaking8 : IIsoComponent
     [IsoId("_-F3SgnltEeG7BsjMvd1mEw_1980172388")]
     [DisplayName("Applicant Reference Number")]
     [IsoXmlTag("ApplcntRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ApplicantReferenceNumber { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface IUndertaking8 : IIsoComponent
     [IsoId("_-F3Sg3ltEeG7BsjMvd1mEw_1024554528")]
     [DisplayName("Beneficiary Reference Number")]
     [IsoXmlTag("BnfcryRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BeneficiaryReferenceNumber { get; }
 }

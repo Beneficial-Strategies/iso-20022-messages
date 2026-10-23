@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferReason1Choice;
 /// Transfer reason expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_hvAgYa51EeeMy7TnJ3e__g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITransferReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

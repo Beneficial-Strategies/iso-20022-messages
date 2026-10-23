@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification152Choice;
 /// </summary>
 [IsoId("_3YMtZ_1REeixXcHVEYIW2g")]
 [IsoXmlTag("NmAndAdr")]
+[IsoDisplayName(@"Name And Address")]
 public interface INameAndAddress : IPartyIdentification152Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface INameAndAddress : IPartyIdentification152Choice, IIsoChoiceVari
     [IsoId("_WK6oINp-Ed-ak6NoX_4Aeg_1542098115")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINMax35Text Name { get; }
 
     /// <summary>

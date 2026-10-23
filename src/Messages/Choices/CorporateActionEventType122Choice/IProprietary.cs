@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType122Choic
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICorporateActionEventType122Choice, IIsoChoiceVariant
 {
     /// <summary>

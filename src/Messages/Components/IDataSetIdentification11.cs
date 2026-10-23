@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data Set Identification11.
 /// </summary>
 [IsoId("_FXSyEJ9kEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Data Set Identification11")]
 public interface IDataSetIdentification11 : IIsoComponent
 {
     /// <summary>

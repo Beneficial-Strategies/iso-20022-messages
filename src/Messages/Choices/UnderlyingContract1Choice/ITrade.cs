@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract1Choice;
 /// </summary>
 [IsoId("_x2Ue89LJEeSdq5yU2aaSNw")]
 [IsoXmlTag("Trad")]
+[IsoDisplayName(@"Trade")]
 public interface ITrade : IUnderlyingContract1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface ITrade : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_RZltc9NDEeSDLevdaFPXHw")]
     [DisplayName("Buyer")]
     [IsoXmlTag("Buyr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty2> Buyer { get; }
 
     /// <summary>
@@ -42,6 +44,7 @@ public interface ITrade : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_RZltdNNDEeSDLevdaFPXHw")]
     [DisplayName("Seller")]
     [IsoXmlTag("Sellr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty2> Seller { get; }
 
     /// <summary>
@@ -50,6 +53,7 @@ public interface ITrade : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_r21y4NNEEeSDLevdaFPXHw")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -58,6 +62,7 @@ public interface ITrade : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_wrZHANNEEeSDLevdaFPXHw")]
     [DisplayName("Prolongation Flag")]
     [IsoXmlTag("PrlngtnFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator ProlongationFlag { get; }
 
     /// <summary>
@@ -66,6 +71,7 @@ public interface ITrade : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_y6NvANNEEeSDLevdaFPXHw")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate StartDate { get; }
 
     /// <summary>
@@ -106,5 +112,6 @@ public interface ITrade : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_HyjhwdNDEeSDLevdaFPXHw")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation3> Attachment { get; }
 }

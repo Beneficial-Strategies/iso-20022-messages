@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "ShrhldrsIdDsclsrReq",
     "urn:iso:std:iso:20022:tech:xsd:seev.045.001.02"
 )]
+[Description(@"The ShareholdersIdentificationDisclosureRequest message is sent by an issuer or by a third party nominated by the issuer (such as an issuer's agent) to the first intermediaries in a custody chain or is sent by any intermediaries in a custody chain to the next intermediary down the chain of intermediaries (towards the investor side of the chain) in order to request the disclosure of shareholders identity and provides information on the receiving party to whom responses must be sent, on the financial instrument concerned and on the deadline to respond.")]
+[IsoDisplayName(@"Shareholders Identification Disclosure Request V")]
 public interface IShareholdersIdentificationDisclosureRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,8 @@ public interface IShareholdersIdentificationDisclosureRequestV02 : IOuterRecord
     [IsoId("_bt4YCTkqEequeo9XmZe9AQ")]
     [DisplayName("Issuer Disclosure Request Identification")]
     [IsoXmlTag("IssrDsclsrReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerDisclosureRequestIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IShareholdersIdentificationDisclosureRequestV02 : IOuterRecord
     [IsoId("_bt4YDTkqEequeo9XmZe9AQ")]
     [DisplayName("Forward Request Indicator")]
     [IsoXmlTag("FwdReqInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ForwardRequestIndicator { get; }
 
     /// <summary>
@@ -51,6 +56,7 @@ public interface IShareholdersIdentificationDisclosureRequestV02 : IOuterRecord
     [IsoId("_bt4YDzkqEequeo9XmZe9AQ")]
     [DisplayName("Response Through Chain Indicator")]
     [IsoXmlTag("RspnThrghChainInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ResponseThroughChainIndicator { get; }
 
     /// <summary>
@@ -59,6 +65,7 @@ public interface IShareholdersIdentificationDisclosureRequestV02 : IOuterRecord
     [IsoId("_xPh7kTkqEequeo9XmZe9AQ")]
     [DisplayName("Shareholder Rights Directive Indicator")]
     [IsoXmlTag("ShrhldrRghtsDrctvInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ShareholderRightsDirectiveIndicator { get; }
 
     /// <summary>
@@ -83,6 +90,7 @@ public interface IShareholdersIdentificationDisclosureRequestV02 : IOuterRecord
     [IsoId("_bt4YFTkqEequeo9XmZe9AQ")]
     [DisplayName("Shares Quantity Threshold")]
     [IsoXmlTag("ShrsQtyThrshld")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? SharesQuantityThreshold { get; }
 
     /// <summary>
@@ -131,5 +139,6 @@ public interface IShareholdersIdentificationDisclosureRequestV02 : IOuterRecord
     [IsoId("_bt4YITkqEequeo9XmZe9AQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

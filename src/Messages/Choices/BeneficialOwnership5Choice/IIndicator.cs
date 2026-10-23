@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficialOwnership5Choice;
 /// Specifies whether there is change of beneficial ownership.
 /// </summary>
 [IsoId("_5m6A5ZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Indicator")]
 public interface IIndicator : IBeneficialOwnership5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIndicator : IBeneficialOwnership5Choice, IIsoChoiceVariant
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

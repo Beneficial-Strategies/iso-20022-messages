@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data pertaining to the approval of the transaction.
 /// </summary>
 [IsoId("_7fkbkEVSEeea-M6VZkEPUw")]
+[IsoDisplayName(@"Approval Data")]
 public interface IApprovalData1 : IIsoComponent
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IApprovalData1 : IIsoComponent
     [IsoId("_cvMpMEVTEeea-M6VZkEPUw")]
     [DisplayName("Approval Code")]
     [IsoXmlTag("ApprvlCd")]
+    [IsoSimpleType(IsoSimpleType.Exact6AlphaNumericText)]
     Exact6AlphaNumericText? ApprovalCode { get; }
 }

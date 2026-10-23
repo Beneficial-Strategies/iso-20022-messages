@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Net position of a segregated holding, in a single security, within the overall position held in a securities account at a specified place of safekeeping.
 /// </summary>
 [IsoId("_P3Lkwag2EfCXwLUUylXgrQ")]
+[IsoDisplayName(@"Aggregate Balance Per Safekeeping Place44")]
 public interface IAggregateBalancePerSafekeepingPlace44 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IAggregateBalancePerSafekeepingPlace44 : IIsoComponent
     [IsoId("_P50CS6g2EfCXwLUUylXgrQ")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceInformation20> PriceDetails { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface IAggregateBalancePerSafekeepingPlace44 : IIsoComponent
     [IsoId("_P50CV6g2EfCXwLUUylXgrQ")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms34> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -105,6 +108,7 @@ public interface IAggregateBalancePerSafekeepingPlace44 : IIsoComponent
     [IsoId("_P50Ch6g2EfCXwLUUylXgrQ")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQuantityBreakdown54> QuantityBreakdown { get; }
 
     /// <summary>
@@ -121,6 +125,7 @@ public interface IAggregateBalancePerSafekeepingPlace44 : IIsoComponent
     [IsoId("_P50Cmag2EfCXwLUUylXgrQ")]
     [DisplayName("Balance Breakdown")]
     [IsoXmlTag("BalBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubBalanceInformation18> BalanceBreakdown { get; }
 
     /// <summary>
@@ -129,6 +134,7 @@ public interface IAggregateBalancePerSafekeepingPlace44 : IIsoComponent
     [IsoId("_P50Cpag2EfCXwLUUylXgrQ")]
     [DisplayName("Additional Balance Breakdown")]
     [IsoXmlTag("AddtlBalBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBalanceBreakdown1> AdditionalBalanceBreakdown { get; }
 
     /// <summary>

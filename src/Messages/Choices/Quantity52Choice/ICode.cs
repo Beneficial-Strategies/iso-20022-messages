@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity52Choice;
 /// Standard code to specify quantity of a financial instrument.
 /// </summary>
 [IsoId("_OovFkRuyEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IQuantity52Choice, IIsoChoiceVariant
 {
     /// <summary>

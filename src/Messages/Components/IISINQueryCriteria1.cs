@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the product through ISIN.
 /// </summary>
 [IsoId("_ZSH2YJNkEeytjZlcgApf6A")]
+[IsoDisplayName(@"ISIN Query Criteria")]
 public interface IISINQueryCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IISINQueryCriteria1 : IIsoComponent
     [IsoId("_kIBo8JNkEeytjZlcgApf6A")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISINOct2015Identifier> Identifier { get; }
 
     /// <summary>

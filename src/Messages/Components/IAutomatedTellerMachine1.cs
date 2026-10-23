@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM information.
 /// </summary>
 [IsoId("_4kERQIn3EeShMpas3885ww")]
+[IsoDisplayName(@"Automated Teller Machine")]
 public interface IAutomatedTellerMachine1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAutomatedTellerMachine1 : IIsoComponent
     [IsoId("_A5NXQIn4EeShMpas3885ww")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAutomatedTellerMachine1 : IIsoComponent
     [IsoId("_NO13MIn4EeShMpas3885ww")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IAutomatedTellerMachine1 : IIsoComponent
     [IsoId("_Q4L8cIn4EeShMpas3885ww")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SequenceNumber { get; }
 
     /// <summary>

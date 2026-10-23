@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestComputationMethodFormat1
 /// Standard code to specify the method used to compute accruing interest of a financial instrument.
 /// </summary>
 [IsoId("_Q4NYbNp-Ed-ak6NoX_4Aeg_893786945")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInterestComputationMethodFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

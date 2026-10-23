@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration parameters to communicate with a host.
 /// </summary>
 [IsoId("_xeuz0UeTEeODR7vDcYOqmg")]
+[IsoDisplayName(@"Network Parameters")]
 public interface INetworkParameters2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INetworkParameters2 : IIsoComponent
     [IsoId("_qiiBQEeUEeODR7vDcYOqmg")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Address { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface INetworkParameters2 : IIsoComponent
     [IsoId("_c3emgEeUEeODR7vDcYOqmg")]
     [DisplayName("Port Number")]
     [IsoXmlTag("PortNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? PortNumber { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface INetworkParameters2 : IIsoComponent
     [IsoId("_QxlywEeUEeODR7vDcYOqmg")]
     [DisplayName("Delay")]
     [IsoXmlTag("Dely")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? Delay { get; }
 }

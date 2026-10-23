@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Securities financing transaction identification information, type (repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing) and other parameters.
 /// </summary>
 [IsoId("_yfjfATwNEeW3QqUkIQtIUA")]
+[IsoDisplayName(@"Transaction Type And Additional Parameters")]
 public interface ITransactionTypeAndAdditionalParameters9 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ITransactionTypeAndAdditionalParameters9 : IIsoComponent
     [IsoId("_zAlIgzwNEeW3QqUkIQtIUA")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonIdentification { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ITransactionTypeAndAdditionalParameters9 : IIsoComponent
     [IsoId("_zAlIizwNEeW3QqUkIQtIUA")]
     [DisplayName("Reconciliation Indicator")]
     [IsoXmlTag("RcncltnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ReconciliationIndicator { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the aggregated data of settlement instructions.
 /// </summary>
 [IsoId("_oVUHMI0TEemUAO64Q252gQ")]
+[IsoDisplayName(@"Settlement Total Data")]
 public interface ISettlementTotalData1 : IIsoComponent
 {
     /// <summary>

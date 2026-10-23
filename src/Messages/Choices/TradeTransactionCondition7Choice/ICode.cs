@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionCondition7Choice
 /// Trade transaction condition expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_XQEckeLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITradeTransactionCondition7Choice, IIsoChoiceVariant
 {
     /// <summary>

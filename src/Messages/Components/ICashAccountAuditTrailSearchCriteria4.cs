@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes search criteria for cash account audit trail query.
 /// </summary>
 [IsoId("_mgXTYeTXEfC01pKpYIyMTA")]
+[IsoDisplayName(@"Cash Account Audit Trail Search Criteria4")]
 public interface ICashAccountAuditTrailSearchCriteria4 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for legal restrictions.
 /// </summary>
 [IsoId("_J_DnkeLcEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Legal Restrictions 4 Choice")]
 public interface ILegalRestrictions4Choice : IIsoChoice { }

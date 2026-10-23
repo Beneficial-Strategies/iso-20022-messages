@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Key exchange response message record.
 /// </summary>
 [IsoId("_QmhwsRs8EeqrvK3udMUsNQ")]
+[IsoDisplayName(@"Key Exchange Response")]
 public interface IKeyExchangeResponse : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IKeyExchangeResponse : IRecordMessage1Choice, IIsoChoiceVariant
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("KeyXchgRspn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

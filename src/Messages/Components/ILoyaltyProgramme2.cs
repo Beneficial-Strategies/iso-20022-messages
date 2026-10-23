@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Loyalty programme information
 /// </summary>
 [IsoId("_R1YN9PJpEeiJn9rM2Znz2w")]
+[IsoDisplayName(@"Loyalty Programme")]
 public interface ILoyaltyProgramme2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILoyaltyProgramme2 : IIsoComponent
     [IsoId("_R1YN9fJpEeiJn9rM2Znz2w")]
     [DisplayName("Programme Type")]
     [IsoXmlTag("PrgrmmTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProgrammeType { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ILoyaltyProgramme2 : IIsoComponent
     [IsoId("_R1YN9vJpEeiJn9rM2Znz2w")]
     [DisplayName("Program Identification")]
     [IsoXmlTag("PrgmId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ProgramIdentification { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface ILoyaltyProgramme2 : IIsoComponent
     [IsoId("_R1YN9_JpEeiJn9rM2Znz2w")]
     [DisplayName("Participant Identification")]
     [IsoXmlTag("PtcptId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ParticipantIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the old and new values for the type of a system party.
 /// </summary>
 [IsoId("_5Lc0Q2jTEeiRg5NzP0jkQg")]
+[IsoDisplayName(@"Update Log System Party Type")]
 public interface IUpdateLogSystemPartyType1 : IIsoComponent
 {
     /// <summary>

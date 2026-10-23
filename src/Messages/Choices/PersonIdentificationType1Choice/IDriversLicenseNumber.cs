@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice;
 /// Number assigned by a license authority to a driver&apos;s license.
 /// </summary>
 [IsoId("_QEW5ltp-Ed-ak6NoX_4Aeg_-1181116211")]
+[IsoDisplayName(@"Drivers License Number")]
 public interface IDriversLicenseNumber : IPersonIdentificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IDriversLicenseNumber : IPersonIdentificationType1Choice, IIsoC
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("DrvrsLicNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

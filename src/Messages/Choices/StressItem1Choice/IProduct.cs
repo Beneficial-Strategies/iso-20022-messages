@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressItem1Choice;
 /// </summary>
 [IsoId("_t5WBoKsvEeayv9XxdmMwKQ")]
 [IsoXmlTag("Pdct")]
+[IsoDisplayName(@"Product")]
 public interface IProduct : IStressItem1Choice, IIsoChoiceVariant
 {
     /// <summary>

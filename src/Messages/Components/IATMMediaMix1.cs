@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Media mix selected.
 /// </summary>
 [IsoId("_E2lAYIonEeSaAcF2oE2GNQ")]
+[IsoDisplayName(@"ATM Media Mix")]
 public interface IATMMediaMix1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IATMMediaMix1 : IIsoComponent
     [IsoId("_Sk_RIIonEeSaAcF2oE2GNQ")]
     [DisplayName("Cash Unit Number")]
     [IsoXmlTag("CshUnitNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? CashUnitNumber { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IATMMediaMix1 : IIsoComponent
     [IsoId("_YNkqQIonEeSaAcF2oE2GNQ")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Number { get; }
 
     /// <summary>

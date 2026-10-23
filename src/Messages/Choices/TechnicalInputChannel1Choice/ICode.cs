@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TechnicalInputChannel1Choice;
 /// Technical input channel, as published in an external technical input channel code list.
 /// </summary>
 [IsoId("_Rpr4otp-Ed-ak6NoX_4Aeg_-968156368")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITechnicalInputChannel1Choice, IIsoChoiceVariant
 {
     /// <summary>

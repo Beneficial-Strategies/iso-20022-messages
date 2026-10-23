@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle.
 /// </summary>
 [IsoId("7967c9b0-ad21-45bd-ac67-2629422408f5")]
+[IsoDisplayName(@"Remittance Information27")]
 public interface IRemittanceInformation27 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IRemittanceInformation27 : IIsoComponent
     [IsoId("1a43acbe-d278-4a26-96fb-0cb5ba5a64fe")]
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max140Text> Unstructured { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IRemittanceInformation27 : IIsoComponent
     [IsoId("03ea57df-269f-4102-bf4e-0dcc1629f4c0")]
     [DisplayName("Structured")]
     [IsoXmlTag("Strd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStructuredRemittanceInformation22> Structured { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Range of percentage rates.
 /// </summary>
 [IsoId("_7_BRpaMgEeCJ6YNENx4h-w_873727815")]
+[IsoDisplayName(@"From To Percentage Range")]
 public interface IFromToPercentageRange1 : IIsoComponent
 {
     /// <summary>

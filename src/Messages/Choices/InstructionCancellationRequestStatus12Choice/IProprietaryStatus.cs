@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
 /// </summary>
 [IsoId("_86aSv5wtEeazcsnODTksnQ")]
 [IsoXmlTag("PrtrySts")]
+[IsoDisplayName(@"Proprietary Status")]
 public interface IProprietaryStatus
     : IInstructionCancellationRequestStatus12Choice,
         IIsoChoiceVariant
@@ -26,5 +27,6 @@ public interface IProprietaryStatus
     [IsoId("_cemex5KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary Reason")]
     [IsoXmlTag("PrtryRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryReason5> ProprietaryReason { get; }
 }

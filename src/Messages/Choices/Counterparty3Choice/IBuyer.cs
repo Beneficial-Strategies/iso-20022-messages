@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Counterparty3Choice;
 /// </summary>
 [IsoId("_K14CY-aOEd-q8fx_Zl_34A")]
 [IsoXmlTag("Buyr")]
+[IsoDisplayName(@"Buyer")]
 public interface IBuyer : ICounterparty3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -50,6 +51,8 @@ public interface IBuyer : ICounterparty3Choice, IIsoChoiceVariant
     [IsoId("_K14CWeaOEd-q8fx_Zl_34A")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessingIdentification { get; }
 
     /// <summary>

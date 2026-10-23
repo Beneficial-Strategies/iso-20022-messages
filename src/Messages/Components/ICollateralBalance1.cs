@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the collateral held by party A and/or B.
 /// </summary>
 [IsoId("_UmfA9tp-Ed-ak6NoX_4Aeg_1045581242")]
+[IsoDisplayName(@"Collateral Balance")]
 public interface ICollateralBalance1 : IIsoComponent
 {
     /// <summary>

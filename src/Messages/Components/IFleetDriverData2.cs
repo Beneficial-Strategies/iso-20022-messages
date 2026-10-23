@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fleet vehicle driver.
 /// </summary>
 [IsoId("_5r7WYVN5EfC0lMwgjvMClw")]
+[IsoDisplayName(@"Fleet Driver Data2")]
 public interface IFleetDriverData2 : IIsoComponent
 {
     /// <summary>
@@ -137,6 +138,7 @@ public interface IFleetDriverData2 : IIsoComponent
     [IsoId("_5ugJX1N5EfC0lMwgjvMClw")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITravelDocument3> AdditionalIdentification { get; }
 
     /// <summary>
@@ -153,6 +155,7 @@ public interface IFleetDriverData2 : IIsoComponent
     [IsoId("_5ugJY1N5EfC0lMwgjvMClw")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -161,5 +164,6 @@ public interface IFleetDriverData2 : IIsoComponent
     [IsoId("_5ugJZVN5EfC0lMwgjvMClw")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

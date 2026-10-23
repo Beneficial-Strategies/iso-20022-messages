@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityCommodity7Choice;
 /// </summary>
 [IsoId("_Ul6y88gyEeuGrNSsxk3B0A")]
 [IsoXmlTag("Cmmdty")]
+[IsoDisplayName(@"Commodity")]
 public interface ICommodity : ISecurityCommodity7Choice, IIsoChoiceVariant
 {
     /// <summary>

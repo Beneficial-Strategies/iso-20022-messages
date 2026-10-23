@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information on interest rates related to the transaction.
 /// </summary>
 [IsoId("_oLE7E8g6Eeu4ecZgAYuz5w")]
+[IsoDisplayName(@"Interest Rate")]
 public interface IInterestRate6 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that locates and identifies a party.
 /// </summary>
 [IsoId("_0MzpxzEyEe6g-ffJsqGiSA")]
+[Description(@"Information that locates and identifies a party.")]
+[IsoDisplayName(@"Name And Address18")]
 public interface INameAndAddress18 : IIsoComponent
 {
     /// <summary>

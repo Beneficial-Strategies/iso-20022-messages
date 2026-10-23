@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM information.
 /// </summary>
 [IsoId("_nmv2ka4VEeW_TaP-ygI0SQ")]
+[IsoDisplayName(@"Automated Teller Machine")]
 public interface IAutomatedTellerMachine10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAutomatedTellerMachine10 : IIsoComponent
     [IsoId("_nyEVwa4VEeW_TaP-ygI0SQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAutomatedTellerMachine10 : IIsoComponent
     [IsoId("_nyEVw64VEeW_TaP-ygI0SQ")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IAutomatedTellerMachine10 : IIsoComponent
     [IsoId("_nyEVxa4VEeW_TaP-ygI0SQ")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SequenceNumber { get; }
 
     /// <summary>
@@ -81,5 +88,6 @@ public interface IAutomatedTellerMachine10 : IIsoComponent
     [IsoId("_nyEV0a4VEeW_TaP-ygI0SQ")]
     [DisplayName("Available Device")]
     [IsoXmlTag("AvlblDvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATMDevice2Code> AvailableDevice { get; }
 }

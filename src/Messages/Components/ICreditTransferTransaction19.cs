@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details specific to the individual transaction(s) included in the message.
 /// </summary>
 [IsoId("_eMUsmx77EeSxevWRRWxNAg")]
+[IsoDisplayName(@"Credit Transfer Transaction")]
 public interface ICreditTransferTransaction19 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICreditTransferTransaction19 : IIsoComponent
     [IsoId("_edrifR77EeSxevWRRWxNAg")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface ICreditTransferTransaction19 : IIsoComponent
     [IsoId("_edrihR77EeSxevWRRWxNAg")]
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AcceptanceDateTime { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface ICreditTransferTransaction19 : IIsoComponent
     [IsoId("_edrihx77EeSxevWRRWxNAg")]
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PoolingAdjustmentDate { get; }
 
     /// <summary>
@@ -98,6 +102,7 @@ public interface ICreditTransferTransaction19 : IIsoComponent
     [IsoId("_edriix77EeSxevWRRWxNAg")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ExchangeRate { get; }
 
     /// <summary>
@@ -114,6 +119,7 @@ public interface ICreditTransferTransaction19 : IIsoComponent
     [IsoId("_edrijx77EeSxevWRRWxNAg")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges2> ChargesInformation { get; }
 
     /// <summary>
@@ -290,6 +296,7 @@ public interface ICreditTransferTransaction19 : IIsoComponent
     [IsoId("_edriux77EeSxevWRRWxNAg")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent1> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -298,6 +305,7 @@ public interface ICreditTransferTransaction19 : IIsoComponent
     [IsoId("_edrivR77EeSxevWRRWxNAg")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>
@@ -314,6 +322,9 @@ public interface ICreditTransferTransaction19 : IIsoComponent
     [IsoId("_edriwR77EeSxevWRRWxNAg")]
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting3> RegulatoryReporting { get; }
 
     /// <summary>
@@ -330,6 +341,9 @@ public interface ICreditTransferTransaction19 : IIsoComponent
     [IsoId("_edriwx77EeSxevWRRWxNAg")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation4> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -346,5 +360,6 @@ public interface ICreditTransferTransaction19 : IIsoComponent
     [IsoId("_edrixx77EeSxevWRRWxNAg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

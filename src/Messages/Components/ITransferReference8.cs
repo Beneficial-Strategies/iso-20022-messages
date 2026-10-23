@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference of a transfer and of a transfer cancellation.
 /// </summary>
 [IsoId("_fzKUUS8FEeO59oUFO5eLvw")]
+[IsoDisplayName(@"Transfer Reference")]
 public interface ITransferReference8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransferReference8 : IIsoComponent
     [IsoId("_gJeiky8FEeO59oUFO5eLvw")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransferReference8 : IIsoComponent
     [IsoId("_gJeily8FEeO59oUFO5eLvw")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface ITransferReference8 : IIsoComponent
     [IsoId("_joC7MS8FEeO59oUFO5eLvw")]
     [DisplayName("Transfer Confirmation Reference")]
     [IsoXmlTag("TrfConfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransferConfirmationReference { get; }
 }

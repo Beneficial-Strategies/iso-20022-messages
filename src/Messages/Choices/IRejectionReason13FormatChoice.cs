@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the reason of a rejection of a movement.
 /// </summary>
 [IsoId("_RoMq4tp-Ed-ak6NoX_4Aeg_-549911598")]
+[IsoDisplayName(@"Rejection Reason 13 Format Choice")]
 public interface IRejectionReason13FormatChoice : IIsoChoice { }

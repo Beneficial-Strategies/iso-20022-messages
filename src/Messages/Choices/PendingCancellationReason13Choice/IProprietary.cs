@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationReason13Choic
 
 /// <summary>Proprietary identification of the reason why a cancellation request sent for the related instruction is pending.</summary>
 [IsoId("_J1blua8xEfCx2aBifPEdRg")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPendingCancellationReason13Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

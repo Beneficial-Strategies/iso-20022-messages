@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Action15.
 /// </summary>
 [IsoId("_FotEkZFJEe6reqfAp4CunQ")]
+[IsoDisplayName(@"Action15")]
 public interface IAction15 : IIsoComponent
 {
     /// <summary>

@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnInstrStmtRpt",
     "urn:iso:std:iso:20022:tech:xsd:seev.042.001.04"
 )]
+[Description(@"Scope|An account servicer sends the CorporateActionInstructionStatementReport message to an account owner or its designated agent to report balances at the safekeeping account level for one or more corporate action events or at the corporate action event level for one or more safekeeping accounts.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),|using the relevant elements in the business application header (BAH).|ISO 15022 - 20022 COEXISTENCE|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
+[IsoDisplayName(@"Corporate Action Instruction Statement Report V")]
 public interface ICorporateActionInstructionStatementReportV04 : IOuterRecord
 {
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICorporateActionInstructionStatementReportV04 : IOuterRecord
     [IsoId("_XmgyKwx1EeKMmbvHOtE4SA")]
     [DisplayName("Account And Statement Details")]
     [IsoXmlTag("AcctAndStmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentification25> AccountAndStatementDetails { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface ICorporateActionInstructionStatementReportV04 : IOuterRecord
     [IsoId("_XmgyLwx1EeKMmbvHOtE4SA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

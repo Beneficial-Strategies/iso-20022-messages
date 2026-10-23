@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains information related to benefit (healthcare, employee benefit, etc.)
 /// </summary>
 [IsoId("_LarakCq-EfCD0_iZ8tw-zA")]
+[IsoDisplayName(@"Benefit Supporting Data1")]
 public interface IBenefitSupportingData1 : IIsoComponent
 {
     /// <summary>

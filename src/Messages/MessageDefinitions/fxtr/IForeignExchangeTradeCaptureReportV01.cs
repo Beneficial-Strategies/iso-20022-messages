@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// </summary>
 [IsoId("_OqvAMkRZEeSWxNI5mwqKGQ")]
 [IsoMessage("fxtr.031.001.01", "FXTradCaptrRpt", "urn:iso:std:iso:20022:tech:xsd:fxtr.031.001.01")]
+[Description(@"Scope|The ForeignExchangeTradeCaptureReport message is sent by a trading system to a participant for notification and providing details of a treasury trade.|Usage|The report is sent by the trading system to the two trading parties after their trade has been executed. |The report can also be sent by the trading system to a trading parties to respond their inquiry (TradeCaptureRequest). |Note that multiple reports can be sent to respond one inquiry message.|The message may contains trade details and trading parties' information.")]
+[IsoDisplayName(@"Foreign Exchange Trade Capture Report V")]
 public interface IForeignExchangeTradeCaptureReportV01 : IOuterRecord
 {
     /// <summary>
@@ -74,6 +76,7 @@ public interface IForeignExchangeTradeCaptureReportV01 : IOuterRecord
     [IsoId("__yMKoEU0EeS7YamWDFxbDA")]
     [DisplayName("Request Responder")]
     [IsoXmlTag("ReqRspndr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator RequestResponder { get; }
 
     /// <summary>
@@ -82,6 +85,7 @@ public interface IForeignExchangeTradeCaptureReportV01 : IOuterRecord
     [IsoId("_E2SWoEU1EeS7YamWDFxbDA")]
     [DisplayName("Request Rejected")]
     [IsoXmlTag("ReqRjctd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RequestRejected { get; }
 
     /// <summary>
@@ -90,6 +94,8 @@ public interface IForeignExchangeTradeCaptureReportV01 : IOuterRecord
     [IsoId("_HyozAEU1EeS7YamWDFxbDA")]
     [DisplayName("Query Reject Reason")]
     [IsoXmlTag("QryRjctRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryRejectReason { get; }
 
     /// <summary>
@@ -98,6 +104,7 @@ public interface IForeignExchangeTradeCaptureReportV01 : IOuterRecord
     [IsoId("_4M2w8EU0EeS7YamWDFxbDA")]
     [DisplayName("Total Number Trades")]
     [IsoXmlTag("TtlNbTrds")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberTrades { get; }
 
     /// <summary>
@@ -106,6 +113,7 @@ public interface IForeignExchangeTradeCaptureReportV01 : IOuterRecord
     [IsoId("_71d2YEU0EeS7YamWDFxbDA")]
     [DisplayName("Last Report Requested")]
     [IsoXmlTag("LastRptReqd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LastReportRequested { get; }
 
     /// <summary>
@@ -114,5 +122,6 @@ public interface IForeignExchangeTradeCaptureReportV01 : IOuterRecord
     [IsoId("_IoQyQKHhEeS69KkQis5bYg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

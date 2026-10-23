@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transfer from one investment fund/fund class to another investment fund or investment fund class by the investor. A switch is composed of one or several subscription legs, and one or several redemption legs.
 /// </summary>
 [IsoId("_2qDsoTbsEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Switch Order")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface ISwitchOrder7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ISwitchOrder7 : IIsoComponent
     [IsoId("_3CmvkTbsEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +29,7 @@ public interface ISwitchOrder7 : IIsoComponent
     [IsoId("_3CmvkzbsEead9bDRE_1DAQ")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ISwitchOrder7 : IIsoComponent
     [IsoId("_3CmvlTbsEead9bDRE_1DAQ")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ISwitchOrder7 : IIsoComponent
     [IsoId("_3CmvlzbsEead9bDRE_1DAQ")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -65,6 +74,9 @@ public interface ISwitchOrder7 : IIsoComponent
     [IsoId("_3CmvrTbsEead9bDRE_1DAQ")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary40> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -73,6 +85,7 @@ public interface ISwitchOrder7 : IIsoComponent
     [IsoId("_3CmvnzbsEead9bDRE_1DAQ")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedFutureTradeDate { get; }
 
     /// <summary>
@@ -89,6 +102,7 @@ public interface ISwitchOrder7 : IIsoComponent
     [IsoId("_3CmvozbsEead9bDRE_1DAQ")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CashSettlementDate { get; }
 
     /// <summary>
@@ -129,6 +143,7 @@ public interface ISwitchOrder7 : IIsoComponent
     [IsoId("_3CmvszbsEead9bDRE_1DAQ")]
     [DisplayName("Redemption Leg Details")]
     [IsoXmlTag("RedLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchRedemptionLegOrder6> RedemptionLegDetails { get; }
 
     /// <summary>
@@ -137,6 +152,7 @@ public interface ISwitchOrder7 : IIsoComponent
     [IsoId("_3CmvtTbsEead9bDRE_1DAQ")]
     [DisplayName("Subscription Leg Details")]
     [IsoXmlTag("SbcptLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchSubscriptionLegOrder6> SubscriptionLegDetails { get; }
 
     /// <summary>

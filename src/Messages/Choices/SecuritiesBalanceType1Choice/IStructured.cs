@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesBalanceType1Choice;
 /// Balance reason in structured format.
 /// </summary>
 [IsoId("_U11Ehtp-Ed-ak6NoX_4Aeg_1393739597")]
+[IsoDisplayName(@"Structured")]
 public interface IStructured : ISecuritiesBalanceType1Choice, IIsoChoiceVariant
 {
     /// <summary>

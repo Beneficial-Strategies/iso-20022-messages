@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an amount or an unspecified rate.
 /// </summary>
 [IsoId("_ckCYvpKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Tax Credit Rate Format 9 Choice")]
 public interface ITaxCreditRateFormat9Choice : IIsoChoice { }

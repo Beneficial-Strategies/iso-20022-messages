@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementOrIntraPosition3Choice
 
 /// <summary>Settlement transaction details.</summary>
 [IsoId("_TgJxc2p9EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Settlement Transaction")]
 public interface ISettlementTransaction : ISettlementOrIntraPosition3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

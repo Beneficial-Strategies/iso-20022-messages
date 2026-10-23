@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Previous employment information.
 /// </summary>
 [IsoId("_YJCEAHzpEeuEHsEB8Johfw")]
+[IsoDisplayName(@"Employment Details")]
 public interface IEmploymentDetails1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IEmploymentDetails1 : IIsoComponent
     [IsoId("_2hDV4HzqEeuEHsEB8Johfw")]
     [DisplayName("Other Tax Code Indicator")]
     [IsoXmlTag("OthrTaxCdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OtherTaxCodeIndicator { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IEmploymentDetails1 : IIsoComponent
     [IsoId("_8YYLEHzpEeuEHsEB8Johfw")]
     [DisplayName("Cumulative Tax Indicator")]
     [IsoXmlTag("CmltvTaxInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CumulativeTaxIndicator { get; }
 
     /// <summary>
@@ -73,5 +76,6 @@ public interface IEmploymentDetails1 : IIsoComponent
     [IsoId("_9IAbwHzqEeuEHsEB8Johfw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting.
 /// </summary>
 [IsoId("_TKPsc9p-Ed-ak6NoX_4Aeg_1339167407")]
+[IsoDisplayName(@"Meeting")]
 public interface IMeeting3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IMeeting3 : IIsoComponent
     [IsoId("_TKPsdtp-Ed-ak6NoX_4Aeg_1339167561")]
     [DisplayName("Quorum Required")]
     [IsoXmlTag("QrmReqrd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator QuorumRequired { get; }
 
     /// <summary>
@@ -41,6 +43,9 @@ public interface IMeeting3 : IIsoComponent
     [IsoId("_TKPsd9p-Ed-ak6NoX_4Aeg_1339167932")]
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocationFormat1Choice> Location { get; }
 
     /// <summary>

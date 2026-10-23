@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingStatus13Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_-H8CkSW-EeygjNFjAlVoPA")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IFailingStatus13Choice, IIsoChoiceVariant
 {
     /// <summary>

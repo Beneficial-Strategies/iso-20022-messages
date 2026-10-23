@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument10Choice;
 /// </summary>
 [IsoId("_VKY_Sdp-Ed-ak6NoX_4Aeg_734057953")]
 [IsoXmlTag("DrctDbtDtls")]
+[IsoDisplayName(@"Direct Debit Details")]
 public interface IDirectDebitDetails : IPaymentInstrument10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -58,6 +59,8 @@ public interface IDirectDebitDetails : IPaymentInstrument10Choice, IIsoChoiceVar
     [IsoId("_VMep_Np-Ed-ak6NoX_4Aeg_-615142354")]
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegistrationIdentification { get; }
 
     /// <summary>
@@ -66,5 +69,7 @@ public interface IDirectDebitDetails : IPaymentInstrument10Choice, IIsoChoiceVar
     [IsoId("_VMoa8Np-Ed-ak6NoX_4Aeg_-615142337")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 }

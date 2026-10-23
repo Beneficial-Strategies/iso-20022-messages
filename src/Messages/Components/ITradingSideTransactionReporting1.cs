@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// This is regulatory transaction reporting information from the Trading Side party.
 /// </summary>
 [IsoId("_fZgLUU4LEeOHYs5EqIAeTw")]
+[IsoDisplayName(@"Trading Side Transaction Reporting")]
 public interface ITradingSideTransactionReporting1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradingSideTransactionReporting1 : IIsoComponent
     [IsoId("_mnlioU4LEeOHYs5EqIAeTw")]
     [DisplayName("Reporting Jurisdiction")]
     [IsoXmlTag("RptgJursdctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReportingJurisdiction { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ITradingSideTransactionReporting1 : IIsoComponent
     [IsoId("_qaB5gU4LEeOHYs5EqIAeTw")]
     [DisplayName("Trading Side Unique Transaction Identifier")]
     [IsoXmlTag("TradgSdUnqTxIdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUniqueTransactionIdentifier2> TradingSideUniqueTransactionIdentifier { get; }
 }

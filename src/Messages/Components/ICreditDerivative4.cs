@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related specifically to credit derivatives attributes.
 /// </summary>
 [IsoId("_pAsKEZjeEeqkLZLH6DK3UQ")]
+[IsoDisplayName(@"Credit Derivative")]
 public interface ICreditDerivative4 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ICreditDerivative4 : IIsoComponent
     [IsoId("_pBSnB5jeEeqkLZLH6DK3UQ")]
     [DisplayName("Calculation Basis")]
     [IsoXmlTag("ClctnBsis")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CalculationBasis { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICreditDerivative4 : IIsoComponent
     [IsoId("_pBSnCZjeEeqkLZLH6DK3UQ")]
     [DisplayName("Series")]
     [IsoXmlTag("Srs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Series { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ICreditDerivative4 : IIsoComponent
     [IsoId("_pBSnC5jeEeqkLZLH6DK3UQ")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -66,6 +71,7 @@ public interface ICreditDerivative4 : IIsoComponent
     [IsoId("_pBSnDZjeEeqkLZLH6DK3UQ")]
     [DisplayName("Index Factor")]
     [IsoXmlTag("IndxFctr")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? IndexFactor { get; }
 
     /// <summary>

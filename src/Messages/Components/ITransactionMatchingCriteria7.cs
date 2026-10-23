@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Matching Criteria7.
 /// </summary>
 [IsoId("_BWq7d5BIEe6Ojt1b3tfu9Q")]
+[IsoDisplayName(@"Transaction Matching Criteria7")]
 public interface ITransactionMatchingCriteria7 : IIsoComponent
 {
     /// <summary>
@@ -142,6 +143,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> SettlementDate { get; }
 
     /// <summary>
@@ -163,6 +165,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Price Schedule Unadjusted Effective Date")]
     [IsoXmlTag("PricSchdlUadjstdFctvDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> PriceScheduleUnadjustedEffectiveDate { get; }
 
     /// <summary>
@@ -170,6 +173,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Price Schedule Unadjusted End Date")]
     [IsoXmlTag("PricSchdlUadjstdEndDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> PriceScheduleUnadjustedEndDate { get; }
 
     /// <summary>
@@ -177,6 +181,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Schedule Price")]
     [IsoXmlTag("TxSchdlPric")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareUnitPrice5> TransactionSchedulePrice { get; }
 
     /// <summary>
@@ -198,6 +203,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Notional Amount First Leg Unadjusted Effective Date")]
     [IsoXmlTag("NtnlAmtFrstLegUadjstdFctvDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> NotionalAmountFirstLegUnadjustedEffectiveDate { get; }
 
     /// <summary>
@@ -205,6 +211,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Notional Amount First Leg Unadjusted End Date")]
     [IsoXmlTag("NtnlAmtFrstLegUadjstdEndDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> NotionalAmountFirstLegUnadjustedEndDate { get; }
 
     /// <summary>
@@ -212,6 +219,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Notional Amount First Leg Schedule Amount")]
     [IsoXmlTag("NtnlAmtFrstLegSchdlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareAmountAndDirection3> NotionalAmountFirstLegScheduleAmount { get; }
 
     /// <summary>
@@ -226,6 +234,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Notional Quantity First Leg Unadjusted Effective Date")]
     [IsoXmlTag("NtnlQtyFrstLegUadjstdFctvDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> NotionalQuantityFirstLegUnadjustedEffectiveDate { get; }
 
     /// <summary>
@@ -233,6 +242,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Notional Quantity First Leg Unadjusted End Date")]
     [IsoXmlTag("NtnlQtyFrstLegUadjstdEndDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> NotionalQuantityFirstLegUnadjustedEndDate { get; }
 
     /// <summary>
@@ -240,6 +250,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Notional Quantity First Leg Schedule Quantity")]
     [IsoXmlTag("NtnlQtyFrstLegSchdlQty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareLongFraction19DecimalNumber1> NotionalQuantityFirstLegScheduleQuantity { get; }
 
     /// <summary>
@@ -254,6 +265,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Notional Amount Second Leg Unadjusted Effective Date")]
     [IsoXmlTag("NtnlAmtScndLegUadjstdFctvDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> NotionalAmountSecondLegUnadjustedEffectiveDate { get; }
 
     /// <summary>
@@ -261,6 +273,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Notional Amount Second Leg Unadjusted End Date")]
     [IsoXmlTag("NtnlAmtScndLegUadjstdEndDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> NotionalAmountSecondLegUnadjustedEndDate { get; }
 
     /// <summary>
@@ -268,6 +281,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Notional Amount Second Leg Schedule Amount")]
     [IsoXmlTag("NtnlAmtScndLegSchdlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareAmountAndDirection3> NotionalAmountSecondLegScheduleAmount { get; }
 
     /// <summary>
@@ -282,6 +296,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Notional Quantity Second Leg Unadjusted Effective Date")]
     [IsoXmlTag("NtnlQtyScndLegUadjstdFctvDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> NotionalQuantitySecondLegUnadjustedEffectiveDate { get; }
 
     /// <summary>
@@ -289,6 +304,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Notional Quantity Second Leg Unadjusted End Date")]
     [IsoXmlTag("NtnlQtyScndLegUadjstdEndDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> NotionalQuantitySecondLegUnadjustedEndDate { get; }
 
     /// <summary>
@@ -296,6 +312,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Notional Quantity Second Leg Schedule Quantity")]
     [IsoXmlTag("NtnlQtyScndLegSchdlQty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareLongFraction19DecimalNumber1> NotionalQuantitySecondLegScheduleQuantity { get; }
 
     /// <summary>
@@ -303,6 +320,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Other Payment")]
     [IsoXmlTag("OthrPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareOtherPayment1> OtherPayment { get; }
 
     /// <summary>
@@ -555,6 +573,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Energy Delivery Point Or Zone")]
     [IsoXmlTag("NrgyDlvryPtOrZone")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDeliveryInterconnectionPoint1> EnergyDeliveryPointOrZone { get; }
 
     /// <summary>
@@ -576,6 +595,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Delivery Attribute")]
     [IsoXmlTag("DlvryAttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareEnergyDeliveryAttribute1> DeliveryAttribute { get; }
 
     /// <summary>
@@ -590,6 +610,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Option Exercise Style")]
     [IsoXmlTag("OptnExrcStyle")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareOptionStyle1> OptionExerciseStyle { get; }
 
     /// <summary>
@@ -604,6 +625,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Option Strike Price Schedule Unadjusted Effective Date")]
     [IsoXmlTag("OptnStrkPricSchdlUadjstdFctvDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> OptionStrikePriceScheduleUnadjustedEffectiveDate { get; }
 
     /// <summary>
@@ -611,6 +633,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Option Strike Price Schedule Unadjusted End Date")]
     [IsoXmlTag("OptnStrkPricSchdlUadjstdEndDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareDate3> OptionStrikePriceScheduleUnadjustedEndDate { get; }
 
     /// <summary>
@@ -618,6 +641,7 @@ public interface ITransactionMatchingCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Option Strike Price Schedule Amount")]
     [IsoXmlTag("OptnStrkPricSchdlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareUnitPrice4> OptionStrikePriceScheduleAmount { get; }
 
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.nvlp;
 /// </summary>
 [IsoId("_HcxQAbMcEe-OHY85tcOC5w")]
 [IsoMessage("nvlp.001.001.02", "BizMsgEnvlp", "urn:iso:std:iso:20022:tech:xsd:nvlp.001.001.02")]
+[IsoDisplayName(@"Business Message Envelope V02")]
 public interface IBusinessMessageEnvelopeV02 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +33,6 @@ public interface IBusinessMessageEnvelopeV02 : IOuterRecord
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferenceData1> Reference { get; }
 }

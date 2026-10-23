@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementType3Choice;
 /// Settlement type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_2f4SEeLbEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlementType3Choice, IIsoChoiceVariant
 {
     /// <summary>

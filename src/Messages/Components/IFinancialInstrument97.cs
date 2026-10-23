@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tangible items of value to a business.
 /// </summary>
 [IsoId("_MQz4EZJOEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument97 : IIsoComponent
 {
     /// <summary>

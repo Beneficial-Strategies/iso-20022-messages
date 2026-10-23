@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the Amendment message.
 /// </summary>
 [IsoId("_EmVXet3pEeieV46qhAnbyQ")]
+[IsoDisplayName(@"Amendment")]
 public interface IAmendment10 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IAmendment10 : IIsoComponent
     [IsoId("_EmV-g93pEeieV46qhAnbyQ")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface IAmendment10 : IIsoComponent
     [IsoId("_EmV-iN3pEeieV46qhAnbyQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

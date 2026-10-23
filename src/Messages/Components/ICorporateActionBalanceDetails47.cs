@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Balance Details47.
 /// </summary>
 [IsoId("_v78-0KD4Ee-4O7NbwmwJkQ")]
+[IsoDisplayName(@"Corporate Action Balance Details47")]
 public interface ICorporateActionBalanceDetails47 : IIsoComponent
 {
     /// <summary>

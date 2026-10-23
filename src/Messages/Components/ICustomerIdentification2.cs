@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Customer Identification2.
 /// </summary>
 [IsoId("_83etz248EeiU9cctagi5ow")]
+[IsoDisplayName(@"Customer Identification2")]
 public interface ICustomerIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface ICustomerIdentification2 : IIsoComponent
     /// </summary>
     [DisplayName("Authority Request")]
     [IsoXmlTag("AuthrtyReq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorityInvestigation2> AuthorityRequest { get; }
 }

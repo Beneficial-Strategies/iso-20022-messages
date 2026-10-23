@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment card performing the transaction.
 /// </summary>
 [IsoId("_pCCQUapyEeanIZ10Ka8PnA")]
+[IsoDisplayName(@"Payment Card")]
 public interface IPaymentCard27 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IPaymentCard27 : IIsoComponent
     [IsoId("_pNEbpapyEeanIZ10Ka8PnA")]
     [DisplayName("Payment Account Reference")]
     [IsoXmlTag("PmtAcctRef")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? PaymentAccountReference { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IPaymentCard27 : IIsoComponent
     [IsoId("_pNEbp6pyEeanIZ10Ka8PnA")]
     [DisplayName("Masked PAN")]
     [IsoXmlTag("MskdPAN")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? MaskedPAN { get; }
 
     /// <summary>
@@ -49,6 +53,8 @@ public interface IPaymentCard27 : IIsoComponent
     [IsoId("_pNEbqapyEeanIZ10Ka8PnA")]
     [DisplayName("Card Brand")]
     [IsoXmlTag("CardBrnd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardBrand { get; }
 
     /// <summary>
@@ -65,5 +71,7 @@ public interface IPaymentCard27 : IIsoComponent
     [IsoId("_3A70IKpyEeanIZ10Ka8PnA")]
     [DisplayName("Card Product Sub Type")]
     [IsoXmlTag("CardPdctSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardProductSubType { get; }
 }

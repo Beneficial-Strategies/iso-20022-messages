@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the different types of freight charges associated with goods.
 /// </summary>
 [IsoId("_hrK_ERreEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Charge")]
 public interface ICharge24 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICharge24 : IIsoComponent
     [IsoId("_iDTyQxreEeOVR9VN6fAMUg")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChargesDetails3> Charges { get; }
 }

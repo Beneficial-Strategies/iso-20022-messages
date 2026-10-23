@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a proxy appointed to represent a party authorised to vote at a shareholders meeting and proxy vote.
 /// </summary>
 [IsoId("_ww1xRRrfEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Proxy")]
 public interface IProxy12 : IIsoComponent
 {
     /// <summary>

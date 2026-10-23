@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies additional parameters to the message or transaction.
 /// </summary>
 [IsoId("_4JM7kRHjEeKZDu0wgTyXpA")]
+[IsoDisplayName(@"Additional Parameters")]
 public interface IAdditionalParameters18 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IAdditionalParameters18 : IIsoComponent
     [IsoId("_4gv4_RHjEeKZDu0wgTyXpA")]
     [DisplayName("Previous Partial Confirmation Identification")]
     [IsoXmlTag("PrvsPrtlConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PreviousPartialConfirmationIdentification { get; }
 }

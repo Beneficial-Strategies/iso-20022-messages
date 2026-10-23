@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice between ISIN and an alternative format for the identification of a security. ISIN is the preferred format.
 /// </summary>
 [IsoId("_QdZErtp-Ed-ak6NoX_4Aeg_-2112411865")]
+[IsoDisplayName(@"Security Identification")]
 public interface ISecurityIdentification7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityIdentification7 : IIsoComponent
     [IsoId("_QdZEr9p-Ed-ak6NoX_4Aeg_-2112411847")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINIdentifier)]
     ISINIdentifier ISIN { get; }
 
     /// <summary>
@@ -33,5 +35,7 @@ public interface ISecurityIdentification7 : IIsoComponent
     [IsoId("_QdZEsdp-Ed-ak6NoX_4Aeg_-1321876969")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

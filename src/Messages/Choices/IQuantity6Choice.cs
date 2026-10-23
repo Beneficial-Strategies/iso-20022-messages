@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the quantity.
 /// </summary>
 [IsoId("_Sotss9p-Ed-ak6NoX_4Aeg_502290625")]
+[IsoDisplayName(@"Quantity 6 Choice")]
 public interface IQuantity6Choice : IIsoChoice { }

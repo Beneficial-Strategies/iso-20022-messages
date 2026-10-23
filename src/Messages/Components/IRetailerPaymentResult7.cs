@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Retailer Payment Result7.
 /// </summary>
 [IsoId("_-odGIaEREe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Retailer Payment Result7")]
 public interface IRetailerPaymentResult7 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IRetailerPaymentResult7 : IIsoComponent
     /// </summary>
     [DisplayName("Payment Instrument")]
     [IsoXmlTag("PmtInstrm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<PaymentInstrumentType2Code> PaymentInstrument { get; }
 
     /// <summary>
@@ -37,6 +39,7 @@ public interface IRetailerPaymentResult7 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CardPaymentServiceType9Code> AdditionalService { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IRetailerPaymentResult7 : IIsoComponent
     /// </summary>
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomerOrder1> CustomerOrder { get; }
 
     /// <summary>

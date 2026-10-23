@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Card Payment Data Set Transaction12Choice.
 /// </summary>
 [IsoId("_sgQV0ZQvEe6HYLAajyhWIQ")]
+[IsoDisplayName(@"Card Payment Data Set Transaction12Choice")]
 public interface ICardPaymentDataSetTransaction12Choice : IIsoChoice { }

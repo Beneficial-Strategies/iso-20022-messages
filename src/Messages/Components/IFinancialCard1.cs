@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card used to represent a financial account for the purpose of payment settlement.
 /// </summary>
 [IsoId("_Sp--1gEcEeCQm6a_G2yO_w_-1939966628")]
+[IsoDisplayName(@"Financial Card")]
 public interface IFinancialCard1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancialCard1 : IIsoComponent
     [IsoId("_Sp--1wEcEeCQm6a_G2yO_w_-447801115")]
     [DisplayName("Credit Limit Amount")]
     [IsoXmlTag("CdtLmtAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> CreditLimitAmount { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IFinancialCard1 : IIsoComponent
     [IsoId("_Sp--2AEcEeCQm6a_G2yO_w_-496515812")]
     [DisplayName("Credit Available Amount")]
     [IsoXmlTag("CdtAvlblAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> CreditAvailableAmount { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IFinancialCard1 : IIsoComponent
     [IsoId("_Sp--2QEcEeCQm6a_G2yO_w_1183955283")]
     [DisplayName("Interest Rate Percent")]
     [IsoXmlTag("IntrstRatePct")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? InterestRatePercent { get; }
 }

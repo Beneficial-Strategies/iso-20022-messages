@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification5Choice;
 /// Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held.
 /// </summary>
 [IsoId("_Pdd4tdp-Ed-ak6NoX_4Aeg_1308294587")]
+[IsoDisplayName(@"Domestic Account")]
 public interface IDomesticAccount : IAccountIdentification5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IDomesticAccount : IAccountIdentification5Choice, IIsoChoiceVar
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("DmstAcct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Information about number of transactions accepted and rejected and the reasons of the rejections.
 /// </summary>
 [IsoId("_hTXSB8K4EeuFNp8LZAnorg")]
+[IsoDisplayName(@"Detailed Transaction Statistics 2 Choice")]
 public interface IDetailedTransactionStatistics2Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statistical data related to the price change of a security.
 /// </summary>
 [IsoId("_SeuqT9p-Ed-ak6NoX_4Aeg_578731261")]
+[IsoDisplayName(@"Valuation Statistics")]
 public interface IValuationStatistics3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IValuationStatistics3 : IIsoComponent
     [IsoId("_Se4bQNp-Ed-ak6NoX_4Aeg_578731519")]
     [DisplayName("Yield")]
     [IsoXmlTag("Yld")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Yield { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IValuationStatistics3 : IIsoComponent
     [IsoId("_Se4bQtp-Ed-ak6NoX_4Aeg_579651898")]
     [DisplayName("By User Defined Time Period")]
     [IsoXmlTag("ByUsrDfndTmPrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatisticsByUserDefinedTimePeriod2> ByUserDefinedTimePeriod { get; }
 }

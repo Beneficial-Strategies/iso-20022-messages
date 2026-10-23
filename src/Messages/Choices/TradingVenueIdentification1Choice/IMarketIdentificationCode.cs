@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingVenueIdentification1Choic
 /// Identification used where reporting entity uses a market identification code (MIC).
 /// </summary>
 [IsoId("_3sh9ExtGEeWhp-Wous5jzA")]
+[IsoDisplayName(@"Market Identification Code")]
 public interface IMarketIdentificationCode : ITradingVenueIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IMarketIdentificationCode : ITradingVenueIdentification1Choice,
     /// Market Identifier Code. The identification of a financial market, as stipulated in the norm ISO 10383 &apos;Codes for exchanges and market identifications&apos;.
     /// </summary>
     [IsoXmlTag("MktIdCd")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier Value { get; }
 }

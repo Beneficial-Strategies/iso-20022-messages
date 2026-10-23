@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the reconciliation response message.
 /// </summary>
 [IsoId("_PWuXEVUIEeetiruPyDPo0Q")]
+[IsoDisplayName(@"Reconciliation Response")]
 public interface IReconciliationResponse2 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IReconciliationResponse2 : IIsoComponent
     [IsoId("_iY1ocdXxEee5XtaG1wqDfQ")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IReconciliationResponse2 : IIsoComponent
     [IsoId("_bNmocaK6EeeQobSgLcPRvA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

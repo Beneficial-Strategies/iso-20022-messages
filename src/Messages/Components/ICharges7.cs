@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the charges related to the payment transaction.
 /// </summary>
 [IsoId("_-9uzLW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Charges")]
 public interface ICharges7 : IIsoComponent
 {
     /// <summary>

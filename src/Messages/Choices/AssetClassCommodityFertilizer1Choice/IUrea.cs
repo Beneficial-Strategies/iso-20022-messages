@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer1Ch
 /// </summary>
 [IsoId("_vGXI8Fr2EeWN79Bl6BUd3g")]
 [IsoXmlTag("Urea")]
+[IsoDisplayName(@"Urea")]
 public interface IUrea : IAssetClassCommodityFertilizer1Choice, IIsoChoiceVariant
 {
     /// <summary>

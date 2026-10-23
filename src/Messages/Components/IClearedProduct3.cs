@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial instrument cleared by a central counterparty, with cleared gross notional amount.
 /// </summary>
 [IsoId("_AAMeAdDzEfCCRJ-TKQa7sQ")]
+[IsoDisplayName(@"Cleared Product3")]
 public interface IClearedProduct3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IClearedProduct3 : IIsoComponent
     [IsoId("_AHfY0dDzEfCCRJ-TKQa7sQ")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<MICIdentifier> TradingVenue { get; }
 
     /// <summary>

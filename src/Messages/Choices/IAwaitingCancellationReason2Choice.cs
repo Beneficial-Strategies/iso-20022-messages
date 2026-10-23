@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the allegment reason.
 /// </summary>
 [IsoId("_mYibFQd4Ee2fOITqoTnSLQ")]
+[IsoDisplayName(@"Awaiting Cancellation Reason 2 Choice")]
 public interface IAwaitingCancellationReason2Choice : IIsoChoice { }

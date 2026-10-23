@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UndertakingDocumentType2Choice;
 /// Document type.
 /// </summary>
 [IsoId("_we6lhjPGEeKaav-uUgD4RA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IUndertakingDocumentType2Choice, IIsoChoiceVariant
 {
     /// <summary>

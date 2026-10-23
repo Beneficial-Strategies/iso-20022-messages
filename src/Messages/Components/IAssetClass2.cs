@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Structure for defining asset class specific details of a derivative to be declared.
 /// </summary>
 [IsoId("_Hq0pRX5aEea2k7EBUopqxw")]
+[IsoDisplayName(@"Asset Class")]
 public interface IAssetClass2 : IIsoComponent
 {
     /// <summary>

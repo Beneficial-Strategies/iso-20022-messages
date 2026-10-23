@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType1CodeCho
 /// Corporate action event type in free text form.
 /// </summary>
 [IsoId("_UyZ9Gtp-Ed-ak6NoX_4Aeg_983611878")]
+[IsoDisplayName(@"Unstructured")]
 public interface IUnstructured : ICorporateActionEventType1CodeChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IUnstructured : ICorporateActionEventType1CodeChoice, IIsoChoic
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Ustrd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

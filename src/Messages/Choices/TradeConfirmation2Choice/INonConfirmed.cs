@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeConfirmation2Choice;
 /// </summary>
 [IsoId("_qo0sYwFXEeaDfK-zDSyB6A")]
 [IsoXmlTag("NonConfd")]
+[IsoDisplayName(@"Non Confirmed")]
 public interface INonConfirmed : ITradeConfirmation2Choice, IIsoChoiceVariant
 {
     /// <summary>

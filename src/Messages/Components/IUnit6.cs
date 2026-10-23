@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the units to settle.
 /// </summary>
 [IsoId("_TW_CkSVmEeWV8IT-SD_UOg")]
+[IsoDisplayName(@"Unit")]
 public interface IUnit6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IUnit6 : IIsoComponent
     [IsoId("_TzjCxSVmEeWV8IT-SD_UOg")]
     [DisplayName("Acquisition Date")]
     [IsoXmlTag("AcqstnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? AcquisitionDate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IUnit6 : IIsoComponent
     [IsoId("_TzjCxyVmEeWV8IT-SD_UOg")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CertificateNumber { get; }
 
     /// <summary>

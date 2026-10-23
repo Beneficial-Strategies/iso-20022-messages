@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a country by its code or its name.
 /// </summary>
 [IsoId("_SuJtKQEcEeCQm6a_G2yO_w_1027665844")]
+[IsoDisplayName(@"Country Code And Name")]
 public interface ICountryCodeAndName1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICountryCodeAndName1 : IIsoComponent
     [IsoId("_SuJtKwEcEeCQm6a_G2yO_w_-1022463879")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 }

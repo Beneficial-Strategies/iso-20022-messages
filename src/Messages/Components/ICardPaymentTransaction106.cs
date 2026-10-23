@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the original transaction.
 /// </summary>
 [IsoId("_pwFRIS5DEeunNvJlR_vCbg")]
+[IsoDisplayName(@"Card Payment Transaction")]
 public interface ICardPaymentTransaction106 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICardPaymentTransaction106 : IIsoComponent
     [IsoId("_p7U30S5DEeunNvJlR_vCbg")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ICardPaymentTransaction106 : IIsoComponent
     [IsoId("_p7U31y5DEeunNvJlR_vCbg")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InitiatorTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface ICardPaymentTransaction106 : IIsoComponent
     [IsoId("_p7U32S5DEeunNvJlR_vCbg")]
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? RecipientTransactionIdentification { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ICardPaymentTransaction106 : IIsoComponent
     [IsoId("_p7U33S5DEeunNvJlR_vCbg")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardPaymentServiceType9Code> AdditionalService { get; }
 
     /// <summary>

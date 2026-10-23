@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transaction in the authorisation request in a batch.
 /// </summary>
 [IsoId("_gbA6oTKLEeOqyZqt0rCZLg")]
+[IsoDisplayName(@"Card Payment Transaction Details")]
 public interface ICardPaymentTransactionDetails16 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ICardPaymentTransactionDetails16 : IIsoComponent
     [IsoId("_gqL_GTKLEeOqyZqt0rCZLg")]
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidityDate { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface ICardPaymentTransactionDetails16 : IIsoComponent
     [IsoId("_gqL_HTKLEeOqyZqt0rCZLg")]
     [DisplayName("Unattended Level Category")]
     [IsoXmlTag("UattnddLvlCtgy")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? UnattendedLevelCategory { get; }
 
     /// <summary>
@@ -97,6 +100,7 @@ public interface ICardPaymentTransactionDetails16 : IIsoComponent
     [IsoId("_gqL_IzKLEeOqyZqt0rCZLg")]
     [DisplayName("Product")]
     [IsoXmlTag("Pdct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProduct1> Product { get; }
 
     /// <summary>
@@ -113,5 +117,6 @@ public interface ICardPaymentTransactionDetails16 : IIsoComponent
     [IsoId("_gqL_JTKLEeOqyZqt0rCZLg")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

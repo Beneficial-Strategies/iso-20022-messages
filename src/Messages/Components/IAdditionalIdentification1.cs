@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains additional identification details of additional card acceptor data.
 /// </summary>
 [IsoId("_0eiKZPJVEeiJn9rM2Znz2w")]
+[IsoDisplayName(@"Additional Identification")]
 public interface IAdditionalIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAdditionalIdentification1 : IIsoComponent
     [IsoId("_0eiKZfJVEeiJn9rM2Znz2w")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IAdditionalIdentification1 : IIsoComponent
     [IsoId("_0eiKZ_JVEeiJn9rM2Znz2w")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

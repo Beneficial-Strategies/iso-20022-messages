@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason70Choice;
 
 /// <summary>Specifies the code.</summary>
 [IsoId("_Eah7AajVEfCzuLlmLrhIvA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectedReason70Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

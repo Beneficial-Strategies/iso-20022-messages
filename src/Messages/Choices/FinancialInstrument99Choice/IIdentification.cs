@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument99Choice;
 /// <summary>
 /// Identification.
 /// </summary>
+[IsoDisplayName(@"Identification")]
 public interface IIdentification : IFinancialInstrument99Choice, IIsoChoiceVariant
 {
     /// <summary>

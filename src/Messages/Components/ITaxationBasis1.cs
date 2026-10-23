@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the taxation basis.
 /// </summary>
 [IsoId("_VSvC8tp-Ed-ak6NoX_4Aeg_526119979")]
+[IsoDisplayName(@"Taxation Basis")]
 public interface ITaxationBasis1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITaxationBasis1 : IIsoComponent
     [IsoId("_VSvC9Np-Ed-ak6NoX_4Aeg_-792339705")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

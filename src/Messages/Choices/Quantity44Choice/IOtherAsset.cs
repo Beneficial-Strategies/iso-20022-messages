@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity44Choice;
 /// Quantity of asset to be transferred.
 /// </summary>
 [IsoId("_cMLhAE3WEeidB49bWZiS0g")]
+[IsoDisplayName(@"Other Asset")]
 public interface IOtherAsset : IQuantity44Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOtherAsset : IQuantity44Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("OthrAsst")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

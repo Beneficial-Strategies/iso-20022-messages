@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare related to payment data attributes not reported in dedicated fields.
 /// </summary>
 [IsoId("_5w6zAYpbEeyVdPSarESe_A")]
+[IsoDisplayName(@"Compare Other Payment")]
 public interface ICompareOtherPayment1 : IIsoComponent
 {
     /// <summary>

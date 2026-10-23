@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed description of the items that correspond to the parameters set in a request and for which a report has been generated.
 /// </summary>
 [IsoId("_Pcav1tp-Ed-ak6NoX_4Aeg_-340644138")]
+[IsoDisplayName(@"Transaction Report Items")]
 public interface ITransactionReportItems3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionReportItems3 : IIsoComponent
     [IsoId("_Pcav19p-Ed-ak6NoX_4Aeg_-340643903")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,9 @@ public interface ITransactionReportItems3 : IIsoComponent
     [IsoId("_Pckg0dp-Ed-ak6NoX_4Aeg_-340643309")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface ITransactionReportItems3 : IIsoComponent
     [IsoId("_Pckg2dp-Ed-ak6NoX_4Aeg_244469562")]
     [DisplayName("Obligor Bank")]
     [IsoXmlTag("OblgrBk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> ObligorBank { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface ITransactionReportItems3 : IIsoComponent
     [IsoId("_PcuR0Np-Ed-ak6NoX_4Aeg_600025147")]
     [DisplayName("Submitting Bank")]
     [IsoXmlTag("SubmitgBk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> SubmittingBank { get; }
 
     /// <summary>
@@ -137,5 +145,6 @@ public interface ITransactionReportItems3 : IIsoComponent
     [IsoId("_PcuR09p-Ed-ak6NoX_4Aeg_-340643379")]
     [DisplayName("Pending Request For Action")]
     [IsoXmlTag("PdgReqForActn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPendingActivity2> PendingRequestForAction { get; }
 }

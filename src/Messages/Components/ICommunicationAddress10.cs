@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication device number or electronic address used for communication.
 /// </summary>
 [IsoId("_-U528XhhEeidzqjNEfehPg")]
+[IsoDisplayName(@"Communication Address")]
 public interface ICommunicationAddress10 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICommunicationAddress10 : IIsoComponent
     [IsoId("_-fad03hhEeidzqjNEfehPg")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber PhoneNumber { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICommunicationAddress10 : IIsoComponent
     [IsoId("_-fad1XhhEeidzqjNEfehPg")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface ICommunicationAddress10 : IIsoComponent
     [IsoId("_-fad13hhEeidzqjNEfehPg")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? EmailAddress { get; }
 }

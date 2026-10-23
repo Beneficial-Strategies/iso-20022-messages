@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_R3P4bzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("pain.017.001.04", "MndtCpyReq", "urn:iso:std:iso:20022:tech:xsd:pain.017.001.04")]
+[IsoDisplayName(@"Mandate Copy Request V04")]
 public interface IMandateCopyRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IMandateCopyRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Underlying Copy Request Details")]
     [IsoXmlTag("UndrlygCpyReqDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMandateCopy4> UnderlyingCopyRequestDetails { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IMandateCopyRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

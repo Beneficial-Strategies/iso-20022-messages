@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice18Choi
 /// Used to express differences in interest rates, for example, a difference of 0.10% is equivalent to a change of 10 basis points.
 /// </summary>
 [IsoId("_-NZycMgpEeuGrNSsxk3B0A")]
+[IsoDisplayName(@"Basis Points")]
 public interface IBasisPoints : ISecuritiesTransactionPrice18Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBasisPoints : ISecuritiesTransactionPrice18Choice, IIsoChoiceV
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("BsisPts")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 }

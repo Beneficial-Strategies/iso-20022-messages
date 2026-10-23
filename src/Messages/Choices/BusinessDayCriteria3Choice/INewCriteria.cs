@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayCriteria3Choice;
 /// </summary>
 [IsoId("_yFXaBZlcEeeE1Ya-LgRsuQ")]
 [IsoXmlTag("NewCrit")]
+[IsoDisplayName(@"New Criteria")]
 public interface INewCriteria : IBusinessDayCriteria3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface INewCriteria : IBusinessDayCriteria3Choice, IIsoChoiceVariant
     [IsoId("_yNYGg5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NewQueryName { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface INewCriteria : IBusinessDayCriteria3Choice, IIsoChoiceVariant
     [IsoId("_yNYGhZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBusinessDaySearchCriteria2> SearchCriteria { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about identification and account of the party.
 /// </summary>
 [IsoId("_PY13Zdp-Ed-ak6NoX_4Aeg_-1168152079")]
+[IsoDisplayName(@"Party Identification And Account")]
 public interface IPartyIdentificationAndAccount14 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPartyIdentificationAndAccount14 : IIsoComponent
     [IsoId("_PY13Z9p-Ed-ak6NoX_4Aeg_-1168152018")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SafekeepingAccount { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPartyIdentificationAndAccount14 : IIsoComponent
     [IsoId("_PY13aNp-Ed-ak6NoX_4Aeg_1704860331")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessingIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPartyIdentificationAndAccount14 : IIsoComponent
     [IsoId("_PY13adp-Ed-ak6NoX_4Aeg_-1629644221")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface IPartyIdentificationAndAccount14 : IIsoComponent
     [IsoId("_PY13atp-Ed-ak6NoX_4Aeg_-1168151586")]
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAlternatePartyIdentification2> AlternateIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity46Choice;
 /// Textual description of the delivery quantity.
 /// </summary>
 [IsoId("_28-GQ5CuEeic-NeLxeO3hQ")]
+[IsoDisplayName(@"Description")]
 public interface IDescription : IQuantity46Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IDescription : IQuantity46Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 52 characters.
     /// </summary>
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Value { get; }
 }

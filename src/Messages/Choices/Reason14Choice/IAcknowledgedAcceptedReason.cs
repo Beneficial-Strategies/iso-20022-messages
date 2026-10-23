@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason14Choice;
 /// Specifies additional information about the processed instruction.
 /// </summary>
 [IsoId("_ux5oLVhpEeS8HfHHd4stCA")]
+[IsoDisplayName(@"Acknowledged Accepted Reason")]
 public interface IAcknowledgedAcceptedReason : IReason14Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

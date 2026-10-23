@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Rejected Reason62Choice.
 /// </summary>
 [IsoId("_UqcwWXSdEe6VWZz2tTgENw")]
+[IsoDisplayName(@"Rejected Reason62Choice")]
 public interface IRejectedReason62Choice : IIsoChoice { }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Charges5Choice;
 /// <summary>
 /// Single.
 /// </summary>
+[IsoDisplayName(@"Single")]
 public interface ISingle : ICharges5Choice, IIsoChoiceVariant
 {
     /// <summary>

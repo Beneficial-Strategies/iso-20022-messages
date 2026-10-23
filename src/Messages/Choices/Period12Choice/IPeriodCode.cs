@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period12Choice;
 
 /// <summary>Specifies the period as a code.</summary>
 [IsoId("_qUrwi6tmEfCqjuqNaaNXgw")]
+[IsoDisplayName(@"Period Code")]
 public interface IPeriodCode : IPeriod12Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

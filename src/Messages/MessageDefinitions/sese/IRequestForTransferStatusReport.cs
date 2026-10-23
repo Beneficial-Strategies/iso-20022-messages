@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_nnEjSNE5Ed-BzquC8wXy7w_-788060154")]
 [IsoMessage("sese.009.001.01", "sese.009.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.009.001.01")]
+[Description(@"Scope|The RequestForTransferStatusReport is sent by an instructing party to the executing party.|This message requests the status of a transfer instruction or the status of a transfer cancellation instruction.|Usage|The RequestForTransferStatusReport is sent by an instructing party to the executing party to request|- the status of one or several transfer instructions or|- the status of one or several transfer cancellation instructions.")]
+[IsoDisplayName(@"Request For Transfer Status Report")]
 public interface IRequestForTransferStatusReport : IOuterRecord
 {
     /// <summary>
@@ -26,5 +28,6 @@ public interface IRequestForTransferStatusReport : IOuterRecord
     [IsoId("_nnEjSdE5Ed-BzquC8wXy7w_-359483453")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageAndBusinessReference1> RequestDetails { get; }
 }

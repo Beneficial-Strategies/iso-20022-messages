@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code and or a data source scheme to determine the account type.
 /// </summary>
 [IsoId("_XN-Akdp-Ed-ak6NoX_4Aeg_-1420247134")]
+[IsoDisplayName(@"Purpose Code 3 Choice")]
 public interface IPurposeCode3Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance Inquiry Request8.
 /// </summary>
 [IsoId("_ipCGgaEUEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Balance Inquiry Request8")]
 public interface IBalanceInquiryRequest8 : IIsoComponent
 {
     /// <summary>

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgentDocumentIdentificationAndSt
 
 /// <summary>Identification of the linked Agent CA Notification Cancellation Request for which a status is given.</summary>
 [IsoId("f32375ec-55d1-45cd-83a6-b96133925c9c")]
+[IsoDisplayName(@"Agent CA Notification Cancellation Request Identification And Status")]
 public interface IAgentCANotificationCancellationRequestIdentificationAndStatus
     : IAgentDocumentIdentificationAndStatus2Choice,
         IIsoChoiceVariant

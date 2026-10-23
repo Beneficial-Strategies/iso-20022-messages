@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification239Choice;
 /// Unique and unambiguous way to identify an organisation using the country code, using the country code.
 /// </summary>
 [IsoId("_dtAnFytKEeyOa655cLd-DQ")]
+[IsoDisplayName(@"Country")]
 public interface ICountry : IPartyIdentification239Choice, IIsoChoiceVariant
 {
     /// <summary>

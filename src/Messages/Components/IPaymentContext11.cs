@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment context in which the transaction is performed.
 /// </summary>
 [IsoId("_yOE7cWl9EeSxgrJ0GX4SQQ")]
+[IsoDisplayName(@"Payment Context")]
 public interface IPaymentContext11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPaymentContext11 : IIsoComponent
     [IsoId("_ybUtQWl9EeSxgrJ0GX4SQQ")]
     [DisplayName("Card Present")]
     [IsoXmlTag("CardPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardPresent { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPaymentContext11 : IIsoComponent
     [IsoId("_ybUtQ2l9EeSxgrJ0GX4SQQ")]
     [DisplayName("Cardholder Present")]
     [IsoXmlTag("CrdhldrPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardholderPresent { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPaymentContext11 : IIsoComponent
     [IsoId("_ybUtRWl9EeSxgrJ0GX4SQQ")]
     [DisplayName("On Line Context")]
     [IsoXmlTag("OnLineCntxt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? OnLineContext { get; }
 
     /// <summary>

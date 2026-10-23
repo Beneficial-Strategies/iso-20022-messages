@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fleet Data6.
 /// </summary>
 [IsoId("_XZUnwXNTEe6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Fleet Data6")]
 public interface IFleetData6 : IIsoComponent
 {
     /// <summary>
@@ -100,6 +101,7 @@ public interface IFleetData6 : IIsoComponent
     /// </summary>
     [DisplayName("Local Amenity")]
     [IsoXmlTag("LclAmnty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalAmenity1> LocalAmenity { get; }
 
     /// <summary>
@@ -107,6 +109,7 @@ public interface IFleetData6 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Related Data")]
     [IsoXmlTag("TxRltdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFleetTransactionDetail1> TransactionRelatedData { get; }
 
     /// <summary>
@@ -121,5 +124,6 @@ public interface IFleetData6 : IIsoComponent
     /// </summary>
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFleetLineItem5> LineItem { get; }
 }

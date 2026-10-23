@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Receiving Parties And Account22.
 /// </summary>
 [IsoId("_3ZkX25IOEe-HRNGM304Vlw")]
+[IsoDisplayName(@"Receiving Parties And Account22")]
 public interface IReceivingPartiesAndAccount22 : IIsoComponent
 {
     /// <summary>

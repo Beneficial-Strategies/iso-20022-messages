@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DebtorActivationAmendmentReason1
 /// Reason, as published in an external reason code list.
 /// </summary>
 [IsoId("_bjMUcPGAEemQ7oqCO5NTQw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDebtorActivationAmendmentReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

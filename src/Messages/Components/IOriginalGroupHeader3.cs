@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the original group, to which the message refers.
 /// </summary>
 [IsoId("_sinbcFkyEeGeoaLUQk__nA_1576775271")]
+[IsoDisplayName(@"Original Group Header")]
 public interface IOriginalGroupHeader3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalGroupHeader3 : IIsoComponent
     [IsoId("_sixMcFkyEeGeoaLUQk__nA_-27077641")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalGroupHeader3 : IIsoComponent
     [IsoId("_sixMcVkyEeGeoaLUQk__nA_1981964200")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageNameIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IOriginalGroupHeader3 : IIsoComponent
     [IsoId("_sixMclkyEeGeoaLUQk__nA_101658560")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -41,5 +47,6 @@ public interface IOriginalGroupHeader3 : IIsoComponent
     [IsoId("_sixMc1kyEeGeoaLUQk__nA_-1858915827")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReversalReason7> ReversalReasonInformation { get; }
 }

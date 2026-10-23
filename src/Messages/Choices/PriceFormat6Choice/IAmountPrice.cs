@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat6Choice;
 /// </summary>
 [IsoId("_Q1ro3tp-Ed-ak6NoX_4Aeg_633562053")]
 [IsoXmlTag("AmtPric")]
+[IsoDisplayName(@"Amount Price")]
 public interface IAmountPrice : IPriceFormat6Choice, IIsoChoiceVariant
 {
     /// <summary>

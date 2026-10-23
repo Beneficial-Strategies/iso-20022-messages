@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Sets of elements to identify a name of the organisation identification scheme.
 /// </summary>
 [IsoId("_WgEDQRBBEeGyZLI6olyk-Q")]
+[IsoDisplayName(@"Organisation Identification Scheme Name 2 Choice")]
 public interface IOrganisationIdentificationSchemeName2Choice : IIsoChoice { }

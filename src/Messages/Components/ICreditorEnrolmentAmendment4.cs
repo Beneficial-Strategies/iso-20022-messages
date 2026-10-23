@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that serves as a basis to debit an account.
 /// </summary>
 [IsoId("_zxUwC-H5Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Creditor Enrolment Amendment")]
 public interface ICreditorEnrolmentAmendment4 : IIsoComponent
 {
     /// <summary>

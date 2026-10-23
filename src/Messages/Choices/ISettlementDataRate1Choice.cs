@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the volume and value percentage rates of settlement instructions.
 /// </summary>
 [IsoId("_yFQMA8s0EemSav3hRKzWyg")]
+[IsoDisplayName(@"Settlement Data Rate 1 Choice")]
 public interface ISettlementDataRate1Choice : IIsoChoice { }

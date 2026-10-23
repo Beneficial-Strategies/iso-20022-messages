@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of the captured set of transactions.
 /// </summary>
 [IsoId("_TDd12AEcEeCQm6a_G2yO_w_1905755664")]
+[IsoDisplayName(@"Card Payment Data Set")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ICardPaymentDataSet2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICardPaymentDataSet2 : IIsoComponent
     [IsoId("_TDd12wEcEeCQm6a_G2yO_w_311897814")]
     [DisplayName("Remove Data Set")]
     [IsoXmlTag("RmvDataSet")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator RemoveDataSet { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICardPaymentDataSet2 : IIsoComponent
     [IsoId("_TDd13QEcEeCQm6a_G2yO_w_-242186047")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotals1> TransactionTotals { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface ICardPaymentDataSet2 : IIsoComponent
     [IsoId("_TDd13gEcEeCQm6a_G2yO_w_-154960259")]
     [DisplayName("Rejected Transaction")]
     [IsoXmlTag("RjctdTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet3> RejectedTransaction { get; }
 }

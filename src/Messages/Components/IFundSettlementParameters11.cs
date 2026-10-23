@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security.
 /// </summary>
 [IsoId("_0UrwwzbsEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Fund Settlement Parameters")]
 public interface IFundSettlementParameters11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFundSettlementParameters11 : IIsoComponent
     [IsoId("_0ubGYTbsEead9bDRE_1DAQ")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SettlementDate { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface IFundSettlementParameters11 : IIsoComponent
     [IsoId("_0ubGZzbsEead9bDRE_1DAQ")]
     [DisplayName("Securities Settlement System Identification")]
     [IsoXmlTag("SctiesSttlmSysId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecuritiesSettlementSystemIdentification { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IFundSettlementParameters11 : IIsoComponent
     [IsoId("_DOcXIl-mEeavlvCtut5bgg")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition8Choice> TradeTransactionCondition { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IFundSettlementParameters11 : IIsoComponent
     [IsoId("_fcOBMUdMEeaBWtcfqEyXyw")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementTransactionCondition30Choice> SettlementTransactionCondition { get; }
 
     /// <summary>

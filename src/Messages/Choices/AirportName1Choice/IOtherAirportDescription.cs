@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AirportName1Choice;
 /// </summary>
 [IsoId("_SsSlJdp-Ed-ak6NoX_4Aeg_-564217545")]
 [IsoXmlTag("OthrAirprtDesc")]
+[IsoDisplayName(@"Other Airport Description")]
 public interface IOtherAirportDescription : IAirportName1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOtherAirportDescription : IAirportName1Choice, IIsoChoiceVaria
     [IsoId("_SsSlIdp-Ed-ak6NoX_4Aeg_-1352905988")]
     [DisplayName("Town")]
     [IsoXmlTag("Twn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Town { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IOtherAirportDescription : IAirportName1Choice, IIsoChoiceVaria
     [IsoId("_SsSlItp-Ed-ak6NoX_4Aeg_-1308575071")]
     [DisplayName("Airport Name")]
     [IsoXmlTag("AirprtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AirportName { get; }
 }

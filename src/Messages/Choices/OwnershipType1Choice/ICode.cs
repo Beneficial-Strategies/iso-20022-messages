@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OwnershipType1Choice;
 /// Ownership type expressed as a code.
 /// </summary>
 [IsoId("_3QQL0Bc9EeK5g-3oYI0_9Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOwnershipType1Choice, IIsoChoiceVariant
 {
     /// <summary>

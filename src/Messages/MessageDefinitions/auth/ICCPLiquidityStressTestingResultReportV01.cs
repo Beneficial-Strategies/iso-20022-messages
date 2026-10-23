@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPLqdtyStrssTstgRsltRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.063.001.01"
 )]
+[Description(@"The CCPLiquidityStressTestingResultReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the results of the liquidity stress tests.")]
+[IsoDisplayName(@"CCP Liquidity Stress Testing Result Report V")]
 public interface ICCPLiquidityStressTestingResultReportV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface ICCPLiquidityStressTestingResultReportV01 : IOuterRecord
     [IsoId("_FO6maeUREem3X-64-NKdqg")]
     [DisplayName("Liquidity Stress Test Result")]
     [IsoXmlTag("LqdtyStrssTstRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILiquidityStressTestResult1> LiquidityStressTestResult { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface ICCPLiquidityStressTestingResultReportV01 : IOuterRecord
     [IsoId("_FO6ma-UREem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

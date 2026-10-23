@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnInstrCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:seev.040.001.01"
 )]
+[Description(@"Scope|An account owner sends the CorporateActionInstructionCancellationRequest message to an account servicer to request cancellation of a previously sent corporate action election instruction.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).|ISO 15022 - 20022 COEXISTENCE|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
+[IsoDisplayName(@"Corporate Action Instruction Cancellation Request V")]
 public interface ICorporateActionInstructionCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -86,5 +88,6 @@ public interface ICorporateActionInstructionCancellationRequestV01 : IOuterRecor
     [IsoId("_TWGThNEwEd-BzquC8wXy7w_342767527")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension2> Extension { get; }
 }

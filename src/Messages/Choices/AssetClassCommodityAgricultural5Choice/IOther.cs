@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural5
 /// </summary>
 [IsoId("_TJOrQLveEeiLRYqS-r-R-A")]
 [IsoXmlTag("Othr")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IAssetClassCommodityAgricultural5Choice, IIsoChoiceVariant
 {
     /// <summary>

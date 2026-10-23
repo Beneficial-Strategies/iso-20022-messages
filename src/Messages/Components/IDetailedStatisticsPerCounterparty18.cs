@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed information on statistics per combination of counterparties.
 /// </summary>
 [IsoId("_x82mtVyGEe24CqbZJK5XxA")]
+[IsoDisplayName(@"Detailed Statistics Per Counterparty")]
 public interface IDetailedStatisticsPerCounterparty18 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDetailedStatisticsPerCounterparty18 : IIsoComponent
     [IsoId("_x9xMsVyGEe24CqbZJK5XxA")]
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ReferenceDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IDetailedStatisticsPerCounterparty18 : IIsoComponent
     [IsoId("_x9xMs1yGEe24CqbZJK5XxA")]
     [DisplayName("Total Number Of Reports")]
     [IsoXmlTag("TtlNbOfRpts")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfReports { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IDetailedStatisticsPerCounterparty18 : IIsoComponent
     [IsoId("_x9xMtVyGEe24CqbZJK5XxA")]
     [DisplayName("Total Number Of Reports Accepted")]
     [IsoXmlTag("TtlNbOfRptsAccptd")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfReportsAccepted { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IDetailedStatisticsPerCounterparty18 : IIsoComponent
     [IsoId("_x9xMt1yGEe24CqbZJK5XxA")]
     [DisplayName("Total Number Of Reports Rejected")]
     [IsoXmlTag("TtlNbOfRptsRjctd")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfReportsRejected { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IDetailedStatisticsPerCounterparty18 : IIsoComponent
     [IsoId("_x9xMuVyGEe24CqbZJK5XxA")]
     [DisplayName("Total Number Of Transactions")]
     [IsoXmlTag("TtlNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfTransactions { get; }
 
     /// <summary>
@@ -81,5 +87,6 @@ public interface IDetailedStatisticsPerCounterparty18 : IIsoComponent
     [IsoId("_x9xMwVyGEe24CqbZJK5XxA")]
     [DisplayName("Rejection Statistics")]
     [IsoXmlTag("RjctnSttstcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionStatistics8> RejectionStatistics { get; }
 }

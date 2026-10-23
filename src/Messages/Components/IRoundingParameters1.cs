@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to a fractional number.
 /// </summary>
 [IsoId("_QRxDcNp-Ed-ak6NoX_4Aeg_-1749123923")]
+[IsoDisplayName(@"Rounding Parameters")]
 public interface IRoundingParameters1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRoundingParameters1 : IIsoComponent
     [IsoId("_QRxDcdp-Ed-ak6NoX_4Aeg_-1749123921")]
     [DisplayName("Rounding Modulus")]
     [IsoXmlTag("RndgMdlus")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? RoundingModulus { get; }
 
     /// <summary>

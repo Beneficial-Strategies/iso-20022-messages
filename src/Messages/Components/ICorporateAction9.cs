@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// An event determined by a corporation&apos;s board of directors, that changes the existing corporate capital structure or financial condition.
 /// </summary>
 [IsoId("_t20OQVkyEeGeoaLUQk__nA_-1416100338")]
+[IsoDisplayName(@"Corporate Action")]
 public interface ICorporateAction9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateAction9 : IIsoComponent
     [IsoId("_t20OQlkyEeGeoaLUQk__nA_1767955539")]
     [DisplayName("Event Type")]
     [IsoXmlTag("EvtTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text EventType { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ICorporateAction9 : IIsoComponent
     [IsoId("_t20OQ1kyEeGeoaLUQk__nA_2048814500")]
     [DisplayName("Event Identification")]
     [IsoXmlTag("EvtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text EventIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that locates and identifies a specific address, as defined by postal services.
 /// </summary>
 [IsoId("_QHMLJdp-Ed-ak6NoX_4Aeg_1886908463")]
+[IsoDisplayName(@"Postal Address")]
 public interface IPostalAddress3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPostalAddress3 : IIsoComponent
     [IsoId("_QHMLJ9p-Ed-ak6NoX_4Aeg_1886909609")]
     [DisplayName("Mailing Indicator")]
     [IsoXmlTag("MlngInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator MailingIndicator { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IPostalAddress3 : IIsoComponent
     [IsoId("_QHMLKNp-Ed-ak6NoX_4Aeg_1886909661")]
     [DisplayName("Registration Address Indicator")]
     [IsoXmlTag("RegnAdrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator RegistrationAddressIndicator { get; }
 
     /// <summary>

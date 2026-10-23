@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information which describes the organisation.
 /// </summary>
 [IsoId("_uUtoMQ39EeKGXqvMN6jpiw")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation14 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrganisation14 : IIsoComponent
     [IsoId("_uqec1Q39EeKGXqvMN6jpiw")]
     [DisplayName("Full Legal Name")]
     [IsoXmlTag("FullLglNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FullLegalName { get; }
 
     /// <summary>

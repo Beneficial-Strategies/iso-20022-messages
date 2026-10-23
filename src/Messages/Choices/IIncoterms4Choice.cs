@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the applicable Incoterm and associated location.
 /// </summary>
 [IsoId("_S5ezYAEcEeCQm6a_G2yO_w_-552526097")]
+[IsoDisplayName(@"Incoterms 4 Choice")]
 public interface IIncoterms4Choice : IIsoChoice { }

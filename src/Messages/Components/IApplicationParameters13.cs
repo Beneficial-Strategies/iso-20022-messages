@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Application Parameters13.
 /// </summary>
 [IsoId("_8uEKEZByEe6FLLjWp95ntQ")]
+[IsoDisplayName(@"Application Parameters13")]
 public interface IApplicationParameters13 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IApplicationParameters13 : IIsoComponent
     /// </summary>
     [DisplayName("Parameters")]
     [IsoXmlTag("Params")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max100KBinary> Parameters { get; }
 
     /// <summary>

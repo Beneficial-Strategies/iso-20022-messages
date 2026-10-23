@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the status reason of the investigation request.
 /// </summary>
 [IsoId("_xMmO4XbnEe2GR4CRzIB77g")]
+[IsoDisplayName(@"Investigation Request Status Reason 1 Choice")]
 public interface IInvestigationRequestStatusReason1Choice : IIsoChoice { }

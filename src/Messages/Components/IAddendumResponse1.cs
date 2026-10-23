@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Addendum message is used in conjunction with an authorisation or financial message to provide supplemental data above that required to complete an authorisation initiation or financial initiation.
 /// </summary>
 [IsoId("_QmeFQf5mEeiLerArw36g0w")]
+[IsoDisplayName(@"Addendum Response")]
 public interface IAddendumResponse1 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IAddendumResponse1 : IIsoComponent
     [IsoId("_Qxpaif5mEeiLerArw36g0w")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IAddendumResponse1 : IIsoComponent
     [IsoId("_Qxpai_5mEeiLerArw36g0w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

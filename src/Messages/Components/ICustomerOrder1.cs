@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Customer order attached to a customer, recorded in the POI system.
 /// </summary>
 [IsoId("_R4AvQNuAEeiXqq0XHEoNUA")]
+[IsoDisplayName(@"Customer Order")]
 public interface ICustomerOrder1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICustomerOrder1 : IIsoComponent
     [IsoId("_Z4JOkNuAEeiXqq0XHEoNUA")]
     [DisplayName("Customer Order Identification")]
     [IsoXmlTag("CstmrOrdrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CustomerOrderIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICustomerOrder1 : IIsoComponent
     [IsoId("_ewpOkNuAEeiXqq0XHEoNUA")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SaleReferenceIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface ICustomerOrder1 : IIsoComponent
     [IsoId("_pcoQINuAEeiXqq0XHEoNUA")]
     [DisplayName("Open Order State")]
     [IsoXmlTag("OpnOrdrStat")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? OpenOrderState { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface ICustomerOrder1 : IIsoComponent
     [IsoId("_vD5aoNuAEeiXqq0XHEoNUA")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime StartDate { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface ICustomerOrder1 : IIsoComponent
     [IsoId("_yyOtkNuAEeiXqq0XHEoNUA")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? EndDate { get; }
 
     /// <summary>
@@ -89,6 +97,8 @@ public interface ICustomerOrder1 : IIsoComponent
     [IsoId("_HYXEENuBEeiXqq0XHEoNUA")]
     [DisplayName("Accessed By")]
     [IsoXmlTag("AccsdBy")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccessedBy { get; }
 
     /// <summary>
@@ -97,5 +107,7 @@ public interface ICustomerOrder1 : IIsoComponent
     [IsoId("_KkheENuBEeiXqq0XHEoNUA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? AdditionalInformation { get; }
 }

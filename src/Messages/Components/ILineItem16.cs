@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line items.
 /// </summary>
 [IsoId("_QD8hYcNPEeWGDrnsYu2p6g")]
+[IsoDisplayName(@"Line Item")]
 public interface ILineItem16 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRW0cNPEeWGDrnsYu2p6g")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRW2cNPEeWGDrnsYu2p6g")]
     [DisplayName("Purchase Accounting Account")]
     [IsoXmlTag("PurchsAcctgAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountingAccount1> PurchaseAccountingAccount { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRW28NPEeWGDrnsYu2p6g")]
     [DisplayName("Net Price")]
     [IsoXmlTag("NetPric")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> NetPrice { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRW38NPEeWGDrnsYu2p6g")]
     [DisplayName("Net Price Allowance Charge")]
     [IsoXmlTag("NetPricAllwncChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItemAllowanceCharge2> NetPriceAllowanceCharge { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRW48NPEeWGDrnsYu2p6g")]
     [DisplayName("Gross Price")]
     [IsoXmlTag("GrssPric")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> GrossPrice { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRW6cNPEeWGDrnsYu2p6g")]
     [DisplayName("Logistics Charge")]
     [IsoXmlTag("LogstcsChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChargesDetails4> LogisticsCharge { get; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRW68NPEeWGDrnsYu2p6g")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItemTax1> Tax { get; }
 
     /// <summary>
@@ -129,6 +138,7 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRW7cNPEeWGDrnsYu2p6g")]
     [DisplayName("Allowance Charge")]
     [IsoXmlTag("AllwncChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItemAllowanceCharge2> AllowanceCharge { get; }
 
     /// <summary>
@@ -137,6 +147,7 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRW78NPEeWGDrnsYu2p6g")]
     [DisplayName("Financial Adjustment")]
     [IsoXmlTag("FinAdjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment6> FinancialAdjustment { get; }
 
     /// <summary>
@@ -153,6 +164,7 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRW88NPEeWGDrnsYu2p6g")]
     [DisplayName("Package Quantity")]
     [IsoXmlTag("PackgQty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? PackageQuantity { get; }
 
     /// <summary>
@@ -169,6 +181,7 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRW98NPEeWGDrnsYu2p6g")]
     [DisplayName("Packaging")]
     [IsoXmlTag("Packgng")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPackaging1> Packaging { get; }
 
     /// <summary>
@@ -201,6 +214,7 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRW_8NPEeWGDrnsYu2p6g")]
     [DisplayName("Measure Date Time Start")]
     [IsoXmlTag("MeasrDtTmStart")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? MeasureDateTimeStart { get; }
 
     /// <summary>
@@ -209,6 +223,7 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRXAcNPEeWGDrnsYu2p6g")]
     [DisplayName("Measure Date Time End")]
     [IsoXmlTag("MeasrDtTmEnd")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? MeasureDateTimeEnd { get; }
 
     /// <summary>
@@ -233,6 +248,7 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRXB8NPEeWGDrnsYu2p6g")]
     [DisplayName("Delivery Date Time")]
     [IsoXmlTag("DlvryDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DeliveryDateTime { get; }
 
     /// <summary>
@@ -257,5 +273,6 @@ public interface ILineItem16 : IIsoComponent
     [IsoId("_QTRXDcNPEeWGDrnsYu2p6g")]
     [DisplayName("Included Note")]
     [IsoXmlTag("InclNote")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation1> IncludedNote { get; }
 }

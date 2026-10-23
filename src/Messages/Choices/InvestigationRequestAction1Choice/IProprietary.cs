@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationRequestAction1Choic
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IInvestigationRequestAction1Choice, IIsoChoiceVariant
 {
     /// <summary>

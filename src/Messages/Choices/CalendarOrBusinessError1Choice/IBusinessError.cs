@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalendarOrBusinessError1Choice;
 /// </summary>
 [IsoId("_dVcQ2om7Eeipw6hHPgB4Sw")]
 [IsoXmlTag("BizErr")]
+[IsoDisplayName(@"Business Error")]
 public interface IBusinessError : ICalendarOrBusinessError1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IBusinessError : ICalendarOrBusinessError1Choice, IIsoChoiceVar
     [IsoId("_jXcINRbvEeOy-PlRuFSUzQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

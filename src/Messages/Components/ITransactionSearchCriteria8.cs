@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria which are used to search for a payment transaction.
 /// </summary>
 [IsoId("_O2c0zW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Transaction Search Criteria")]
 public interface ITransactionSearchCriteria8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransactionSearchCriteria8 : IIsoComponent
     [IsoId("_PEwWgW49EeiU9cctagi5ow")]
     [DisplayName("Payment To")]
     [IsoXmlTag("PmtTo")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemSearch4> PaymentTo { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITransactionSearchCriteria8 : IIsoComponent
     [IsoId("_PEwWg249EeiU9cctagi5ow")]
     [DisplayName("Payment From")]
     [IsoXmlTag("PmtFr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemSearch4> PaymentFrom { get; }
 
     /// <summary>

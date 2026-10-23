@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio2Choice;
 /// </summary>
 [IsoId("_pEam0U4aEeiQHa-q1Uephw")]
 [IsoXmlTag("TaxEffcntPdct")]
+[IsoDisplayName(@"Tax Efficient Product")]
 public interface ITaxEfficientProduct : IFundPortfolio2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -27,6 +28,7 @@ public interface ITaxEfficientProduct : IFundPortfolio2Choice, IIsoChoiceVariant
     [IsoId("_7XtYB04aEeiQHa-q1Uephw")]
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CashComponentIndicator { get; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public interface ITaxEfficientProduct : IFundPortfolio2Choice, IIsoChoiceVariant
     [IsoId("_pznNQV2_EeiFXdiLi_Nf4A")]
     [DisplayName("Date Of First Subscription")]
     [IsoXmlTag("DtOfFrstSbcpt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfFirstSubscription { get; }
 
     /// <summary>
@@ -59,6 +62,7 @@ public interface ITaxEfficientProduct : IFundPortfolio2Choice, IIsoChoiceVariant
     [IsoId("_uXXFQl2_EeiFXdiLi_Nf4A")]
     [DisplayName("Bonus Or Withdrawal")]
     [IsoXmlTag("BnsOrWdrwl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBonusWithdrawal1> BonusOrWithdrawal { get; }
 
     /// <summary>
@@ -75,6 +79,7 @@ public interface ITaxEfficientProduct : IFundPortfolio2Choice, IIsoChoiceVariant
     [IsoId("_71Xu8E4bEeiQHa-q1Uephw")]
     [DisplayName("Investments To Follow Value")]
     [IsoXmlTag("InvstmtsToFllwVal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDateAndAmount2> InvestmentsToFollowValue { get; }
 
     /// <summary>
@@ -83,6 +88,7 @@ public interface ITaxEfficientProduct : IFundPortfolio2Choice, IIsoChoiceVariant
     [IsoId("_FGYnUE4cEeiQHa-q1Uephw")]
     [DisplayName("Innovative Finance")]
     [IsoXmlTag("InnvtvFinc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInnovativeFinance1> InnovativeFinance { get; }
 
     /// <summary>
@@ -131,5 +137,6 @@ public interface ITaxEfficientProduct : IFundPortfolio2Choice, IIsoChoiceVariant
     [IsoId("_GY9CcE4cEeiQHa-q1Uephw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction163.
 /// </summary>
 [IsoId("_ISAsEYYQEe-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Transaction163")]
 public interface ITransaction163 : IIsoComponent
 {
     /// <summary>
@@ -121,5 +122,6 @@ public interface ITransaction163 : IIsoComponent
     /// </summary>
     [DisplayName("Status And Reason")]
     [IsoXmlTag("StsAndRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatus38Choice> StatusAndReason { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDateCode9Choice;
 /// Settlement date expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_5TGUvZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlementDateCode9Choice, IIsoChoiceVariant
 {
     /// <summary>

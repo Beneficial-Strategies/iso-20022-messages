@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the details on the settlement fails split per intra-CSD and cross-CSD instructions or explicit no data report.
 /// </summary>
 [IsoId("_OxcU0zOaEeqBfed1bmSPqg")]
+[IsoDisplayName(@"Settlement Fails Daily CSD 1 Choice")]
 public interface ISettlementFailsDailyCSD1Choice : IIsoChoice { }

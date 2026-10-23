@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Closing balance for the statement period (final closing balance) or of this page (intermediary closing balance).
 /// </summary>
 [IsoId("_BRKdmyp8EeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Closing Balance")]
 public interface IClosingBalance5 : IIsoComponent
 {
     /// <summary>

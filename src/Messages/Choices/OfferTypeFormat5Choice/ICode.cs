@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OfferTypeFormat5Choice;
 /// Standard code to specify the conditions that apply to the offer.
 /// </summary>
 [IsoId("_QTHDgSHjEeOQ7qT4JUI53A")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOfferTypeFormat5Choice, IIsoChoiceVariant
 {
     /// <summary>

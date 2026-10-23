@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Unique identifier of an account as assigned by the account servicer.
 /// </summary>
 [IsoId("_enyf0QatEe2phaVG0lYKTw")]
+[IsoDisplayName(@"Account Identification 55 Choice")]
 public interface IAccountIdentification55Choice : IIsoChoice { }

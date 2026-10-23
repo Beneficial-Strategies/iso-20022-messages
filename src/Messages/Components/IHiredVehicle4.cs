@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vehicle for hire for passenger transport - excludes vehicles driven by a renter.
 /// </summary>
 [IsoId("_pF1jUVN4EfC0lMwgjvMClw")]
+[IsoDisplayName(@"Hired Vehicle4")]
 public interface IHiredVehicle4 : IIsoComponent
 {
     /// <summary>

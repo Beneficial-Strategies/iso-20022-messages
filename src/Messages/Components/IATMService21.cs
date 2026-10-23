@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Service provided by the ATM inside the session.
 /// </summary>
 [IsoId("_Mi7cMa4bEeW_TaP-ygI0SQ")]
+[IsoDisplayName(@"ATM Service")]
 public interface IATMService21 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMService21 : IIsoComponent
     [IsoId("_MvTEQa4bEeW_TaP-ygI0SQ")]
     [DisplayName("Service Reference")]
     [IsoXmlTag("SvcRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ServiceReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMService21 : IIsoComponent
     [IsoId("_MvTEQ64bEeW_TaP-ygI0SQ")]
     [DisplayName("ATM Service Code")]
     [IsoXmlTag("ATMSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ATMServiceCode { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IATMService21 : IIsoComponent
     [IsoId("_MvTERa4bEeW_TaP-ygI0SQ")]
     [DisplayName("Host Service Code")]
     [IsoXmlTag("HstSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? HostServiceCode { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface IATMService21 : IIsoComponent
     [IsoId("_UK-ysK4bEeW_TaP-ygI0SQ")]
     [DisplayName("Service Variant Identification")]
     [IsoXmlTag("SvcVarntId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ServiceVariantIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DistributionTypeFormat1Choice;
 /// Standard code to specify whether the proceeds of the event will be distributed on a rolling basis rather than on a specific date.
 /// </summary>
 [IsoId("_Q3nihtp-Ed-ak6NoX_4Aeg_2019414254")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDistributionTypeFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provide processing status information of a standing instruction cancellation request.
 /// </summary>
 [IsoId("_Rk6tYdp-Ed-ak6NoX_4Aeg_-1104222810")]
+[IsoDisplayName(@"Corporate Action Standing Instruction Cancellation Processing Status")]
 public interface ICorporateActionStandingInstructionCancellationProcessingStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICorporateActionStandingInstructionCancellationProcessingStatus
     [IsoId("_Rk6tY9p-Ed-ak6NoX_4Aeg_1118099524")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

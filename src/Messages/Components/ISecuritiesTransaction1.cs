@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the reported transaction.
 /// </summary>
 [IsoId("_b-7A0OzTEeSBf_ghFpb9rQ")]
+[IsoDisplayName(@"Securities Transaction")]
 public interface ISecuritiesTransaction1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecuritiesTransaction1 : IIsoComponent
     [IsoId("_75dDwuzTEeSBf_ghFpb9rQ")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TradeDate { get; }
 
     /// <summary>
@@ -75,6 +77,7 @@ public interface ISecuritiesTransaction1 : IIsoComponent
     [IsoId("_y28dQOzaEeSBf_ghFpb9rQ")]
     [DisplayName("Trade Venue")]
     [IsoXmlTag("TradVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier TradeVenue { get; }
 
     /// <summary>
@@ -103,6 +106,8 @@ public interface ISecuritiesTransaction1 : IIsoComponent
     [IsoId("_dpLgMuqDEeSsk6KxwbYJ9w")]
     [DisplayName("Trade Place Matching Identification")]
     [IsoXmlTag("TradPlcMtchgId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? TradePlaceMatchingIdentification { get; }
 
     /// <summary>
@@ -113,5 +118,7 @@ public interface ISecuritiesTransaction1 : IIsoComponent
     [IsoId("_b_5AIQktEeWGouz230Xp5Q")]
     [DisplayName("Complex Trade Component Identification")]
     [IsoXmlTag("CmplxTradCmpntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ComplexTradeComponentIdentification { get; }
 }

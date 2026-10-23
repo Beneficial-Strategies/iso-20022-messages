@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the terms of the contract in case of fixed or open interest rates.
 /// </summary>
 [IsoId("_xsKXZa5qEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Fixed Open Term Contract")]
 public interface IFixedOpenTermContract2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFixedOpenTermContract2 : IIsoComponent
     [IsoId("_x8jj0a5qEeuo-IflVgGqiA")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>

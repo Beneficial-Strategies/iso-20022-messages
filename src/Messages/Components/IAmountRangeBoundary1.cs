@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit for an amount range.
 /// </summary>
 [IsoId("_T4ItO9p-Ed-ak6NoX_4Aeg_-1155989003")]
+[IsoDisplayName(@"Amount Range Boundary")]
 public interface IAmountRangeBoundary1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IAmountRangeBoundary1 : IIsoComponent
     [IsoId("_T4SeMNp-Ed-ak6NoX_4Aeg_-1036855240")]
     [DisplayName("Included")]
     [IsoXmlTag("Incl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Included { get; }
 }

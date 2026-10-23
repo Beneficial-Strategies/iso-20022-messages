@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides accepted with warning status information for a notification advice.
 /// </summary>
 [IsoId("_rZVzIaUeEfCnE_wCEfCqTA")]
+[IsoDisplayName(@"Notification Accepted With Warning Status1")]
 public interface INotificationAcceptedWithWarningStatus1 : IIsoComponent
 {
     /// <summary>

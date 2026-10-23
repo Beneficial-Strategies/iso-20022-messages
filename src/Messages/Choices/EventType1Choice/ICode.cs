@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventType1Choice;
 /// Type of the event, in a coded form as published in an external list.
 /// </summary>
 [IsoId("_71C2R6MgEeCJ6YNENx4h-w_-773786340")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IEventType1Choice, IIsoChoiceVariant
 {
     /// <summary>

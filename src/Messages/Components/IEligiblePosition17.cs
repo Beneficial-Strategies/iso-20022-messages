@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a securities position and rights holders.
 /// </summary>
 [IsoId("_SSRLHDUEEe2tRf29bleifQ")]
+[IsoDisplayName(@"Eligible Position")]
 public interface IEligiblePosition17 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IEligiblePosition17 : IIsoComponent
     [IsoId("_SSRLJDUEEe2tRf29bleifQ")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IEligiblePosition17 : IIsoComponent
     [IsoId("_SSRLIDUEEe2tRf29bleifQ")]
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? BlockChainAddressOrWallet { get; }
 
     /// <summary>
@@ -41,5 +46,8 @@ public interface IEligiblePosition17 : IIsoComponent
     [IsoId("_SSRLIjUEEe2tRf29bleifQ")]
     [DisplayName("Holding Balance")]
     [IsoXmlTag("HldgBal")]
+    [MinLength(1)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHoldingBalance13> HoldingBalance { get; }
 }

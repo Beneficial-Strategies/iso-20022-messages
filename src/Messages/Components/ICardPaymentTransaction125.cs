@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction information in the completion advice message.
 /// </summary>
 [IsoId("_TSZawXDuEe2MCaKO5AtGsA")]
+[IsoDisplayName(@"Card Payment Transaction")]
 public interface ICardPaymentTransaction125 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRkXDuEe2MCaKO5AtGsA")]
     [DisplayName("Transaction Capture")]
     [IsoXmlTag("TxCaptr")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TransactionCapture { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRlXDuEe2MCaKO5AtGsA")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardPaymentServiceType9Code> AdditionalService { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRmXDuEe2MCaKO5AtGsA")]
     [DisplayName("Last Transaction Flag")]
     [IsoXmlTag("LastTxFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? LastTransactionFlag { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRm3DuEe2MCaKO5AtGsA")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Min3Max4Text)]
+    [StringLength(4, MinimumLength = 3)]
     Min3Max4Text? MerchantCategoryCode { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRnXDuEe2MCaKO5AtGsA")]
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CustomerConsent { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRn3DuEe2MCaKO5AtGsA")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CardProgrammeProposed { get; }
 
     /// <summary>
@@ -81,6 +89,8 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRoXDuEe2MCaKO5AtGsA")]
     [DisplayName("Card Programme Applied")]
     [IsoXmlTag("CardPrgrmmApld")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardProgrammeApplied { get; }
 
     /// <summary>
@@ -89,6 +99,8 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRo3DuEe2MCaKO5AtGsA")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceIdentification { get; }
 
     /// <summary>
@@ -113,6 +125,7 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRqXDuEe2MCaKO5AtGsA")]
     [DisplayName("Transaction Success")]
     [IsoXmlTag("TxSucss")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator TransactionSuccess { get; }
 
     /// <summary>
@@ -121,6 +134,7 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRq3DuEe2MCaKO5AtGsA")]
     [DisplayName("Reversal")]
     [IsoXmlTag("Rvsl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? Reversal { get; }
 
     /// <summary>
@@ -129,6 +143,7 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRrXDuEe2MCaKO5AtGsA")]
     [DisplayName("Merchant Override")]
     [IsoXmlTag("MrchntOvrrd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MerchantOverride { get; }
 
     /// <summary>
@@ -137,6 +152,7 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRr3DuEe2MCaKO5AtGsA")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<FailureReason3Code> FailureReason { get; }
 
     /// <summary>
@@ -145,6 +161,8 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRsXDuEe2MCaKO5AtGsA")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InitiatorTransactionIdentification { get; }
 
     /// <summary>
@@ -153,6 +171,8 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRs3DuEe2MCaKO5AtGsA")]
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? RecipientTransactionIdentification { get; }
 
     /// <summary>
@@ -161,6 +181,8 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRtXDuEe2MCaKO5AtGsA")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -169,6 +191,8 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRt3DuEe2MCaKO5AtGsA")]
     [DisplayName("Interchange Data")]
     [IsoXmlTag("IntrchngData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InterchangeData { get; }
 
     /// <summary>
@@ -177,6 +201,8 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRuXDuEe2MCaKO5AtGsA")]
     [DisplayName("Issuer CIT Identification")]
     [IsoXmlTag("IssrCITId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? IssuerCITIdentification { get; }
 
     /// <summary>
@@ -185,6 +211,8 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRu3DuEe2MCaKO5AtGsA")]
     [DisplayName("Merchant CIT Identification")]
     [IsoXmlTag("MrchntCITId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? MerchantCITIdentification { get; }
 
     /// <summary>
@@ -209,6 +237,7 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRwXDuEe2MCaKO5AtGsA")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionVerificationResult4> TransactionVerificationResult { get; }
 
     /// <summary>
@@ -217,6 +246,8 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRw3DuEe2MCaKO5AtGsA")]
     [DisplayName("Merchant Reference Data")]
     [IsoXmlTag("MrchntRefData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? MerchantReferenceData { get; }
 
     /// <summary>
@@ -241,5 +272,6 @@ public interface ICardPaymentTransaction125 : IIsoComponent
     [IsoId("_TZFRyXDuEe2MCaKO5AtGsA")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AdditionalTransactionData { get; }
 }

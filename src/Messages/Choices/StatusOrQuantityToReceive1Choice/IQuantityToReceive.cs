@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrQuantityToReceive1Choice
 /// Quantity of the benefits that the account owner wants to receive, for example, as a result of dividend reinvestment.
 /// </summary>
 [IsoId("_UGvw8dp-Ed-ak6NoX_4Aeg_1067930324")]
+[IsoDisplayName(@"Quantity To Receive")]
 public interface IQuantityToReceive : IStatusOrQuantityToReceive1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

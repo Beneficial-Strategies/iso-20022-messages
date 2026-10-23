@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reinvestment information.
 /// </summary>
 [IsoId("_y8Y6uyC6EeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Reinvestment")]
 public interface IReinvestment2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IReinvestment2 : IIsoComponent
     [IsoId("_zarZBSC6EeWPMvNwVtiMsA")]
     [DisplayName("Reinvestment Percentage")]
     [IsoXmlTag("RinvstmtPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate ReinvestmentPercentage { get; }
 }

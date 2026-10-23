@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceType6Choice;
 
 /// <summary>Specifies the price type as a code.</summary>
 [IsoId("15c2c360-0023-4dd4-b806-3d33e47f66cd")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPriceType6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

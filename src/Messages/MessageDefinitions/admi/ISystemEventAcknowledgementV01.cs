@@ -13,6 +13,8 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// </summary>
 [IsoId("_-4fJISzhEeKZfox_pyYpTA")]
 [IsoMessage("admi.011.001.01", "SysEvtAck", "urn:iso:std:iso:20022:tech:xsd:admi.011.001.01")]
+[Description(@"The SystemEventAcknowledgement message is sent by a participant of a central system to the central system to acknowledge the notification of an occurrence of an event in a central system.|")]
+[IsoDisplayName(@"System Event Acknowledgement V")]
 public interface ISystemEventAcknowledgementV01 : IOuterRecord
 {
     /// <summary>
@@ -21,6 +23,8 @@ public interface ISystemEventAcknowledgementV01 : IOuterRecord
     [IsoId("_38ITWTp8EeKXK8qRvydwAw")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -29,6 +33,8 @@ public interface ISystemEventAcknowledgementV01 : IOuterRecord
     [IsoId("_-PT44DqNEeKXK8qRvydwAw")]
     [DisplayName("Originator Reference")]
     [IsoXmlTag("OrgtrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginatorReference { get; }
 
     /// <summary>
@@ -37,6 +43,7 @@ public interface ISystemEventAcknowledgementV01 : IOuterRecord
     [IsoId("_Pq-14zqfEeKqTf3MbquCbA")]
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SettlementSessionIdentifier { get; }
 
     /// <summary>
@@ -53,5 +60,6 @@ public interface ISystemEventAcknowledgementV01 : IOuterRecord
     [IsoId("_E4uhVy53EeKwTrPDLMbLxA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

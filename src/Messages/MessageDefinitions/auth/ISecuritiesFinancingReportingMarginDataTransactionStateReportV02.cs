@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "SctiesFincgRptgMrgnDataTxStatRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.085.001.02"
 )]
+[Description(@"The SecuritiesFinancingReportingMarginDataTransactionStateReport message is sent by the trade repository (TR) to the competent authority or made available to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, containing latest state of the margins exchanged in relation to the CCP-cleared securities financing transactions.")]
+[IsoDisplayName(@"Securities Financing Reporting Margin Data Transaction State Report V")]
 public interface ISecuritiesFinancingReportingMarginDataTransactionStateReportV02 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +34,6 @@ public interface ISecuritiesFinancingReportingMarginDataTransactionStateReportV0
     [IsoId("_WA-jVcKuEeuzU9S_IANlog")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

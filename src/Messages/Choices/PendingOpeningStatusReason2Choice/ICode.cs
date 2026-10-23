@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingOpeningStatusReason2Choic
 /// Reason for the pending account opening status expressed as a code.
 /// </summary>
 [IsoId("_xb8YQWCJEeabZtzjEVWYCQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPendingOpeningStatusReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

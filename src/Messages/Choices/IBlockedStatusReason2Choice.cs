@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a blocked status reason.
 /// </summary>
 [IsoId("_8TcccV1LEeagR5I1rq5oaw")]
+[IsoDisplayName(@"Blocked Status Reason 2 Choice")]
 public interface IBlockedStatusReason2Choice : IIsoChoice { }

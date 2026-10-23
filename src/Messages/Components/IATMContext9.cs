@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context in which the transaction is performed.
 /// </summary>
 [IsoId("_dpejIa17EeWMg5rOByfExw")]
+[IsoDisplayName(@"ATM Context")]
 public interface IATMContext9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMContext9 : IIsoComponent
     [IsoId("_d1tBQa17EeWMg5rOByfExw")]
     [DisplayName("Session Reference")]
     [IsoXmlTag("SsnRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SessionReference { get; }
 
     /// <summary>

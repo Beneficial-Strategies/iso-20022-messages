@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_X-6wYtE-Ed-BzquC8wXy7w_654549647")]
 [IsoMessage("camt.034.001.03", "Dplct", "urn:iso:std:iso:20022:tech:xsd:camt.034.001.03")]
+[Description(@"Scope|The Duplicate message is used by financial institutions, with their own offices, and/or with other financial institutions with which they have established bilateral agreements. It allows to exchange duplicate payment instructions.|Usage|This message must be sent in response to a Request For Duplicate message.|The Duplicate Data element must contain a well formed XML document. This means XML special characters such as '<' must be used in a way that is consistent with XML well-formedness criteria.|.")]
+[IsoDisplayName(@"Duplicate V")]
 public interface IDuplicateV03 : IOuterRecord
 {
     /// <summary>

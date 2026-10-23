@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_E2tqILSIEeq3lpO-mRtrig")]
 [IsoMessage("camt.108.001.01", "ChqCxlOrStopReq", "urn:iso:std:iso:20022:tech:xsd:camt.108.001.01")]
+[Description(@"The ChequeCancellationOrStopRequest message is sent by a drawer bank, or a bank acting on behalf of the drawer bank, to the agent on which a cheque has been drawn (the drawee bank) to request for the cancellation of the presentment and/or stop the payment of the cheque referred to in the message.")]
+[IsoDisplayName(@"Cheque Cancellation Or Stop Request V")]
 public interface IChequeCancellationOrStopRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -28,6 +30,7 @@ public interface IChequeCancellationOrStopRequestV01 : IOuterRecord
     [IsoId("_euIoobtuEeq_cfXrH83Rcw")]
     [DisplayName("Cheque")]
     [IsoXmlTag("Chq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICheque15> Cheque { get; }
 
     /// <summary>
@@ -36,5 +39,6 @@ public interface IChequeCancellationOrStopRequestV01 : IOuterRecord
     [IsoId("_U-kiI7tlEeq_cfXrH83Rcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Time span defined by a start date and time, and an end date and time.
 /// </summary>
 [IsoId("_T57c8tp-Ed-ak6NoX_4Aeg_-1888965198")]
+[IsoDisplayName(@"Period")]
 public interface IPeriod1 : IIsoComponent
 {
     /// <summary>

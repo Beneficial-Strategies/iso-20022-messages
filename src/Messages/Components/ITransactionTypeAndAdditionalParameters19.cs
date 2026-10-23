@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the conditions under which the order/trade is to be settled.
 /// </summary>
 [IsoId("_dkgFgZw1EeazcsnODTksnQ")]
+[IsoDisplayName(@"Transaction Type And Additional Parameters")]
 public interface ITransactionTypeAndAdditionalParameters19 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionTypeAndAdditionalParameters19 : IIsoComponent
     [IsoId("_dkgFhZw1EeazcsnODTksnQ")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransactionTypeAndAdditionalParameters19 : IIsoComponent
     [IsoId("_dkgFjZw1EeazcsnODTksnQ")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface ITransactionTypeAndAdditionalParameters19 : IIsoComponent
     [IsoId("_dkgFrZw1EeazcsnODTksnQ")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? CommonIdentification { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface ITransactionTypeAndAdditionalParameters19 : IIsoComponent
     [IsoId("_dkgFtZw1EeazcsnODTksnQ")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? PoolIdentification { get; }
 
     /// <summary>
@@ -73,5 +82,7 @@ public interface ITransactionTypeAndAdditionalParameters19 : IIsoComponent
     [IsoId("_dkgFvZw1EeazcsnODTksnQ")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? CorporateActionEventIdentification { get; }
 }

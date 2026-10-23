@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information for the MTM to build or include delegated actions in the management plan of the POI.
 /// </summary>
 [IsoId("_lSlREbYFEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Maintenance Delegate Action11")]
 public interface IMaintenanceDelegateAction11 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IMaintenanceDelegateAction11 : IIsoComponent
     [IsoId("_lTbly7YFEfCUZfsQO4rYeA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max3000Binary> AdditionalInformation { get; }
 
     /// <summary>
@@ -73,5 +75,6 @@ public interface IMaintenanceDelegateAction11 : IIsoComponent
     [IsoId("_lTbl0bYFEfCUZfsQO4rYeA")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITMSAction14> Action { get; }
 }

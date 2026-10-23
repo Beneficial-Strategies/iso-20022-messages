@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateClassification1Choice;
 /// Category purpose, as published in an external category purpose code list.
 /// </summary>
 [IsoId("_JThthWoDEearR-CA7eRZXQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMandateClassification1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a redemption order.
 /// </summary>
 [IsoId("_VXgOOdp-Ed-ak6NoX_4Aeg_1399796950")]
+[IsoDisplayName(@"Redemption Multiple Execution")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IRedemptionMultipleExecution2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface IRedemptionMultipleExecution2 : IIsoComponent
     [IsoId("_VXp_MNp-Ed-ak6NoX_4Aeg_1399796968")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IRedemptionMultipleExecution2 : IIsoComponent
     [IsoId("_VXp_M9p-Ed-ak6NoX_4Aeg_1399797354")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRedemptionExecution4> IndividualExecutionDetails { get; }
 
     /// <summary>

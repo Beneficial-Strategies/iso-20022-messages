@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a price report.
 /// </summary>
 [IsoId("_RLuxUtp-Ed-ak6NoX_4Aeg_166863578")]
+[IsoDisplayName(@"Price Report")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-08-07.")]
 public interface IPriceReport2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IPriceReport2 : IIsoComponent
     [IsoId("_RLuxU9p-Ed-ak6NoX_4Aeg_167787161")]
     [DisplayName("Price Valuation Details")]
     [IsoXmlTag("PricValtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceValuation3> PriceValuationDetails { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IPriceReport2 : IIsoComponent
     [IsoId("_RLuxVNp-Ed-ak6NoX_4Aeg_166864214")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

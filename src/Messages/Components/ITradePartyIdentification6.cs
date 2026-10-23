@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Entity involved in an activity.
 /// </summary>
 [IsoId("_rbRD8SjaEeK1Sbo8NpBROA")]
+[IsoDisplayName(@"Trade Party Identification")]
 public interface ITradePartyIdentification6 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ITradePartyIdentification6 : IIsoComponent
     [IsoId("_rou4QSjaEeK1Sbo8NpBROA")]
     [DisplayName("Fund Identification")]
     [IsoXmlTag("FndId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundIdentification4> FundIdentification { get; }
 }

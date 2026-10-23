@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code or a proprietary code for a deadline code.
 /// </summary>
 [IsoId("_cfssk5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Deadline Code 4 Choice")]
 public interface IDeadlineCode4Choice : IIsoChoice { }

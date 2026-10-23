@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification68Choice;
 /// Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
 /// </summary>
 [IsoId("_AUMj1NokEeC60axPepSq7g_-257660170")]
+[IsoDisplayName(@"BIC")]
 public interface IBIC : IPartyIdentification68Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBIC : IPartyIdentification68Choice, IIsoChoiceVariant
     /// Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
     /// </summary>
     [IsoXmlTag("BIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier Value { get; }
 }

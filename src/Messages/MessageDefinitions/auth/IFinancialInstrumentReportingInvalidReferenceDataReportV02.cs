@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgInvldRefDataRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.042.001.02"
 )]
+[Description(@"The FinancialInstrumentReportingInvalidReferenceDataReport message is sent by the trading venue to the national competent authority to report on all records that have become invalid based on updates that have been received or that have passed the termination date original set for the instrument.")]
+[IsoDisplayName(@"Financial Instrument Reporting Invalid Reference Data Report V")]
 public interface IFinancialInstrumentReportingInvalidReferenceDataReportV02 : IOuterRecord
 {
     /// <summary>
@@ -34,6 +36,7 @@ public interface IFinancialInstrumentReportingInvalidReferenceDataReportV02 : IO
     [IsoId("_vXohpSdoEei12pGEsJIAeQ")]
     [DisplayName("Number Of Records")]
     [IsoXmlTag("NbOfRcrds")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfRecords { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface IFinancialInstrumentReportingInvalidReferenceDataReportV02 : IO
     [IsoId("_vXohpydoEei12pGEsJIAeQ")]
     [DisplayName("Financial Instruments")]
     [IsoXmlTag("FinInstrms")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesInvalidReferenceDataReport4> FinancialInstruments { get; }
 
     /// <summary>
@@ -50,5 +54,6 @@ public interface IFinancialInstrumentReportingInvalidReferenceDataReportV02 : IO
     [IsoId("_vXohqSdoEei12pGEsJIAeQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

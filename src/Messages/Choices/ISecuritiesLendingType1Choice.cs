@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the securities lending type.
 /// </summary>
 [IsoId("_AYXSItokEeC60axPepSq7g_-214940639")]
+[IsoDisplayName(@"Securities Lending Type 1 Choice")]
 public interface ISecuritiesLendingType1Choice : IIsoChoice { }

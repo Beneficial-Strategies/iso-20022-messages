@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// </summary>
 [IsoId("_7aOnsWjNEeiRg5NzP0jkQg")]
 [IsoXmlTag("Othr")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOther : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
     [IsoId("_LituOWjOEeiRg5NzP0jkQg")]
     [DisplayName("Field Name")]
     [IsoXmlTag("FldNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text FieldName { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IOther : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
     [IsoId("_LituPmjOEeiRg5NzP0jkQg")]
     [DisplayName("Old Field Value")]
     [IsoXmlTag("OdFldVal")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text OldFieldValue { get; }
 
     /// <summary>
@@ -34,5 +39,7 @@ public interface IOther : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
     [IsoId("_LituPGjOEeiRg5NzP0jkQg")]
     [DisplayName("New Field Value")]
     [IsoXmlTag("NewFldVal")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text NewFieldValue { get; }
 }

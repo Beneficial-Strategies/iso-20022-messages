@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Value of the public component of a RSA key.
 /// </summary>
 [IsoId("_Ol9RQItPEeSxlKlAGYErFg")]
+[IsoDisplayName(@"Public RSA Key")]
 public interface IPublicRSAKey1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPublicRSAKey1 : IIsoComponent
     [IsoId("_eGY5QItPEeSxlKlAGYErFg")]
     [DisplayName("Modulus")]
     [IsoXmlTag("Mdlus")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary Modulus { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IPublicRSAKey1 : IIsoComponent
     [IsoId("_ifpYgItPEeSxlKlAGYErFg")]
     [DisplayName("Exponent")]
     [IsoXmlTag("Expnt")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary Exponent { get; }
 }

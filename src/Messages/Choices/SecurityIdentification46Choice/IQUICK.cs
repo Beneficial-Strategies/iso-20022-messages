@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice;
 
 /// <summary>QUICK identifier assigned by the Tokyo Stock Exchange.</summary>
 [IsoId("de032459-0f5c-466c-9c83-322f87ed7fce")]
+[IsoDisplayName(@"QUICK")]
 public interface IQUICK : ISecurityIdentification46Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

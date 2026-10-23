@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References86Choice;
 
 /// <summary>Specifies the securities settlement transaction identification.</summary>
 [IsoId("51e8fcea-4a11-4244-bfb4-bcf488ca3288")]
+[IsoDisplayName(@"Securities Settlement Transaction Identification")]
 public interface ISecuritiesSettlementTransactionIdentification
     : IReferences86Choice,
         IIsoChoiceVariant

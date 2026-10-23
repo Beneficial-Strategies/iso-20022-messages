@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security or other asset.
 /// </summary>
 [IsoId("9a000949-ebff-4c34-b739-60976197b1fb")]
+[IsoDisplayName(@"Financial Instrument112")]
 public interface IFinancialInstrument112 : IIsoComponent
 {
     /// <summary>
@@ -89,6 +90,7 @@ public interface IFinancialInstrument112 : IIsoComponent
     [IsoId("dce79f07-c851-44e6-ad02-1da687102e43")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit14> UnitsDetails { get; }
 
     /// <summary>
@@ -177,6 +179,7 @@ public interface IFinancialInstrument112 : IIsoComponent
     [IsoId("212d4bed-0605-48d0-99bd-367268a60195")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary43> IntermediaryInformation { get; }
 
     /// <summary>
@@ -225,6 +228,7 @@ public interface IFinancialInstrument112 : IIsoComponent
     [IsoId("f47b49e5-8447-460b-99af-56de12e8e0ad")]
     [DisplayName("Crystallisation Details")]
     [IsoXmlTag("CrstllstnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICrystallisation2> CrystallisationDetails { get; }
 
     /// <summary>
@@ -265,5 +269,6 @@ public interface IFinancialInstrument112 : IIsoComponent
     [IsoId("716b39e5-e5e7-458f-b3b7-2a83728e03d2")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

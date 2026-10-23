@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Exchange Rate Component1.
 /// </summary>
 [IsoId("_GtUHkJ2oEe-4seDr3Li2Ew")]
+[IsoDisplayName(@"ATM Exchange Rate Component1")]
 public interface IATMExchangeRateComponent1 : IIsoComponent
 {
     /// <summary>

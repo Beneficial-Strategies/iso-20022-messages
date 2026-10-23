@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Supplies additional transaction information for fleet transactions.
 /// </summary>
 [IsoId("_rPO3If5nEeiLerArw36g0w")]
+[IsoDisplayName(@"Fleet Line Item")]
 public interface IFleetLineItem2 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface IFleetLineItem2 : IIsoComponent
     [IsoId("_arjM8P5oEeiLerArw36g0w")]
     [DisplayName("Allowed Item Indicator")]
     [IsoXmlTag("AllwdItmInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AllowedItemIndicator { get; }
 
     /// <summary>
@@ -43,6 +45,8 @@ public interface IFleetLineItem2 : IIsoComponent
     [IsoId("_rYjySf5nEeiLerArw36g0w")]
     [DisplayName("Fleet Product Category")]
     [IsoXmlTag("FleetPdctCtgy")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FleetProductCategory { get; }
 
     /// <summary>
@@ -51,6 +55,8 @@ public interface IFleetLineItem2 : IIsoComponent
     [IsoId("_rYjyR_5nEeiLerArw36g0w")]
     [DisplayName("Fleet Product Code")]
     [IsoXmlTag("FleetPdctCd")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text? FleetProductCode { get; }
 
     /// <summary>
@@ -67,6 +73,7 @@ public interface IFleetLineItem2 : IIsoComponent
     [IsoId("_rYjyV_5nEeiLerArw36g0w")]
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
+    [IsoSimpleType(IsoSimpleType.Max12NumericText)]
     Max12NumericText? ProductQuantity { get; }
 
     /// <summary>

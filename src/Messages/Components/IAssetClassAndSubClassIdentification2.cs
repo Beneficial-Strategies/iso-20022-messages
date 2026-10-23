@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a non-equity asset-class and sub-class.
 /// </summary>
 [IsoId("_b_iE8aaUEeqZmriXpMtonA")]
+[IsoDisplayName(@"Asset Class And Sub Class Identification")]
 public interface IAssetClassAndSubClassIdentification2 : IIsoComponent
 {
     /// <summary>

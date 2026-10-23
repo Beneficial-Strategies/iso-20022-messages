@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the response of a batch transfer initiation message.
 /// </summary>
 [IsoId("_70c0cZMrEeuleeHpFMMhmQ")]
+[IsoDisplayName(@"Batch Transfer Response")]
 public interface IBatchTransferResponse2 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IBatchTransferResponse2 : IIsoComponent
     [IsoId("_76xe6ZMrEeuleeHpFMMhmQ")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IBatchTransferResponse2 : IIsoComponent
     [IsoId("_76xe65MrEeuleeHpFMMhmQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

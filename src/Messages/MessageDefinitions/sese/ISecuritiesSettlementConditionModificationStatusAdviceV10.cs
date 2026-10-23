@@ -28,6 +28,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesSttlmCondModStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:sese.031.001.10"
 )]
+[Description(@"Scope|An account servicer sends a SecuritiesSettlementConditionsModificationStatusAdvice to an account owner to advise the status of a modification request previously instructed by the account owner.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|A SecuritiesSettlementConditionsModificationRequest may contain requests on multiple transactions. However, one SecuritiesSettlementConditionsModificationStatusAdvice must be sent per transaction modified unless the SecuritiesSettlementConditionsModificationRequest is rejected as a whole.|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Settlement Condition Modification Status Advice V10")]
 public interface ISecuritiesSettlementConditionModificationStatusAdviceV10 : IOuterRecord
 {
     /// <summary>
@@ -77,5 +79,6 @@ public interface ISecuritiesSettlementConditionModificationStatusAdviceV10 : IOu
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

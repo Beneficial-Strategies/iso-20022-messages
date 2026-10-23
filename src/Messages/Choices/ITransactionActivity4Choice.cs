@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the transaction activity identification.
 /// </summary>
 [IsoId("_8VKXSZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Transaction Activity 4 Choice")]
 public interface ITransactionActivity4Choice : IIsoChoice { }

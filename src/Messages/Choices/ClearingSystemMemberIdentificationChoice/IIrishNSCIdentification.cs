@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Irish National Sorting Code - identifies Irish financial institutions on the Irish national clearing system. The code is assigned by the Irish Payments Services Organisation (IPSO).
 /// </summary>
 [IsoId("_TDY2gNp-Ed-ak6NoX_4Aeg_-896562604")]
+[IsoDisplayName(@"Irish NSC Identification")]
 public interface IIrishNSCIdentification
     : IClearingSystemMemberIdentificationChoice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IIrishNSCIdentification
     /// Irish National Sorting Code. Identifies Irish financial institutions on the Irish national clearing system.
     /// </summary>
     [IsoXmlTag("IENSC")]
+    [IsoSimpleType(IsoSimpleType.IrishNSCIdentifier)]
     IrishNSCIdentifier Value { get; }
 }

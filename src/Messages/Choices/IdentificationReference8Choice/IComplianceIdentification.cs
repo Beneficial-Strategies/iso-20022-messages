@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference8Choice;
 /// Identification used to represent this transaction for compliance purposes.
 /// </summary>
 [IsoId("_AcPsltokEeC60axPepSq7g_2061313578")]
+[IsoDisplayName(@"Compliance Identification")]
 public interface IComplianceIdentification : IIdentificationReference8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IComplianceIdentification : IIdentificationReference8Choice, II
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("CmplcId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

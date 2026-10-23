@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus2Choice;
 /// Instruction has been acknowledged by the account servicer.
 /// </summary>
 [IsoId("_o9uv8ukGEemm4qhb2yFPOw")]
+[IsoDisplayName(@"Acknowledged Accepted")]
 public interface IAcknowledgedAccepted : IPortfolioTransferStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

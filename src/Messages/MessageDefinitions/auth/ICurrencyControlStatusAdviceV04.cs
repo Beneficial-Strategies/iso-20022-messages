@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_R3HVWTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("auth.027.001.04", "CcyCtrlStsAdvc", "urn:iso:std:iso:20022:tech:xsd:auth.027.001.04")]
+[IsoDisplayName(@"Currency Control Status Advice V04")]
 public interface ICurrencyControlStatusAdviceV04 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICurrencyControlStatusAdviceV04 : IOuterRecord
     /// </summary>
     [DisplayName("Group Status")]
     [IsoXmlTag("GrpSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICurrencyControlGroupStatus3> GroupStatus { get; }
 
     /// <summary>
@@ -32,6 +34,7 @@ public interface ICurrencyControlStatusAdviceV04 : IOuterRecord
     /// </summary>
     [DisplayName("Package Status")]
     [IsoXmlTag("PackgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICurrencyControlPackageStatus3> PackageStatus { get; }
 
     /// <summary>
@@ -39,5 +42,6 @@ public interface ICurrencyControlStatusAdviceV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

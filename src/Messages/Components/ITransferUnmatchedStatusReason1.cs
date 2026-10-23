@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for an unmatched status.
 /// </summary>
 [IsoId("_UzmP49p-Ed-ak6NoX_4Aeg_413742327")]
+[IsoDisplayName(@"Transfer Unmatched Status Reason")]
 public interface ITransferUnmatchedStatusReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITransferUnmatchedStatusReason1 : IIsoComponent
     [IsoId("_UzmP5dp-Ed-ak6NoX_4Aeg_744365217")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

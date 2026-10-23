@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus59Cho
 
 /// <summary>Proprietary status related to an instruction.</summary>
 [IsoId("_j-yrwd75Ee-NrtAAlrBEgQ")]
+[IsoDisplayName(@"Proprietary Status")]
 public interface IProprietaryStatus : IInstructionProcessingStatus59Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

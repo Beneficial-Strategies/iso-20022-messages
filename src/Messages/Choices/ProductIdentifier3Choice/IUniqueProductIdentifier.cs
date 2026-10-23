@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductIdentifier3Choice;
 /// <summary>
 /// Unique Product Identifier.
 /// </summary>
+[IsoDisplayName(@"Unique Product Identifier")]
 public interface IUniqueProductIdentifier : IProductIdentifier3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason16Choice;
 /// Specifies the reason why the modification request is pending.
 /// </summary>
 [IsoId("_kYkAiTnvEeWfSKvvZlhRKg")]
+[IsoDisplayName(@"Pending Modification Reason")]
 public interface IPendingModificationReason : IReason16Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

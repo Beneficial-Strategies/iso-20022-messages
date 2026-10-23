@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References74Choice;
 /// Unambiguous identification of the transaction as known by the account servicer.
 /// </summary>
 [IsoId("_SiFNiSgaEey2k_sfZmJz4g")]
+[IsoDisplayName(@"Account Servicer Transaction Identification")]
 public interface IAccountServicerTransactionIdentification : IReferences74Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IAccountServicerTransactionIdentification : IReferences74Choice
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

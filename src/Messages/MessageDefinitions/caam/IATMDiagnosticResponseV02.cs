@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// </summary>
 [IsoId("_mBmd4a46EeWRfYPBaeOY8w")]
 [IsoMessage("caam.006.001.02", "ATMDgnstcRspn", "urn:iso:std:iso:20022:tech:xsd:caam.006.001.02")]
+[Description(@"The ATMDiagnosticResponse message is sent by an acquirer to an ATM in response to an ATMDiagnosticRequest message ensuring the availability and the validity of the parameters.")]
+[IsoDisplayName(@"ATM Diagnostic Response V")]
 public interface IATMDiagnosticResponseV02 : IOuterRecord
 {
     /// <summary>

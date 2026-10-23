@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus58Cho
 /// <summary>
 /// Standing Instruction.
 /// </summary>
+[IsoDisplayName(@"Standing Instruction")]
 public interface IStandingInstruction : IInstructionProcessingStatus58Choice, IIsoChoiceVariant
 {
     /// <summary>

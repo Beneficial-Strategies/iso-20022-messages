@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Net cash movement to a fund as a result of investment funds transactions.
 /// </summary>
 [IsoId("_Si5_pdp-Ed-ak6NoX_4Aeg_1538517625")]
+[IsoDisplayName(@"Net Cash Forecast")]
 public interface INetCashForecast3 : IIsoComponent
 {
     /// <summary>

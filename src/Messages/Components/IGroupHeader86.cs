@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the characteristics shared by all individual transactions included in the message.
 /// </summary>
 [IsoId("_RILm0W49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Group Header")]
 public interface IGroupHeader86 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGroupHeader86 : IIsoComponent
     [IsoId("_RSKpQW49EeiU9cctagi5ow")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IGroupHeader86 : IIsoComponent
     [IsoId("_RSKpQ249EeiU9cctagi5ow")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>

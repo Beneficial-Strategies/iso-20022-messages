@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed amounts associated with the total amount of transaction.
 /// </summary>
 [IsoId("_oYS84Y0nEeWzoK7sd7oTyw")]
+[IsoDisplayName(@"Detailed Amount")]
 public interface IDetailedAmount14 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IDetailedAmount14 : IIsoComponent
     [IsoId("_okGkQ40nEeWzoK7sd7oTyw")]
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime DateTime { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IDetailedAmount14 : IIsoComponent
     [IsoId("_okGkR40nEeWzoK7sd7oTyw")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 
     /// <summary>
@@ -49,5 +52,7 @@ public interface IDetailedAmount14 : IIsoComponent
     [IsoId("_okGkSY0nEeWzoK7sd7oTyw")]
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Label { get; }
 }

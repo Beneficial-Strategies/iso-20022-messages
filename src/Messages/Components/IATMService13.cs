@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Deposit service provided by the ATM inside the session.
 /// </summary>
 [IsoId("_4TAcsa4OEeWZgJQOa6iKCQ")]
+[IsoDisplayName(@"ATM Service")]
 public interface IATMService13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMService13 : IIsoComponent
     [IsoId("_4dlVAa4OEeWZgJQOa6iKCQ")]
     [DisplayName("Service Reference")]
     [IsoXmlTag("SvcRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ServiceReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMService13 : IIsoComponent
     [IsoId("_4dlVA64OEeWZgJQOa6iKCQ")]
     [DisplayName("ATM Service Code")]
     [IsoXmlTag("ATMSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ATMServiceCode { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IATMService13 : IIsoComponent
     [IsoId("_4dlVBa4OEeWZgJQOa6iKCQ")]
     [DisplayName("Host Service Code")]
     [IsoXmlTag("HstSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? HostServiceCode { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IATMService13 : IIsoComponent
     [IsoId("_4dlVCa4OEeWZgJQOa6iKCQ")]
     [DisplayName("Service Variant Identification")]
     [IsoXmlTag("SvcVarntId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ServiceVariantIdentification { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IATMService13 : IIsoComponent
     [IsoId("_4dlVC64OEeWZgJQOa6iKCQ")]
     [DisplayName("Cash Back")]
     [IsoXmlTag("CshBck")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CashBack { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IATMService13 : IIsoComponent
     [IsoId("_4dlVDa4OEeWZgJQOa6iKCQ")]
     [DisplayName("Multi Account")]
     [IsoXmlTag("MultiAcct")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MultiAccount { get; }
 
     /// <summary>
@@ -73,5 +83,6 @@ public interface IATMService13 : IIsoComponent
     [IsoId("_BovdAK4PEeWZgJQOa6iKCQ")]
     [DisplayName("Partial Deposit")]
     [IsoXmlTag("PrtlDpst")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PartialDeposit { get; }
 }

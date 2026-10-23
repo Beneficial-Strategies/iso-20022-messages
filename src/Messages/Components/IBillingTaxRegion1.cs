@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax region that levies a tax on the services in a statement.
 /// </summary>
 [IsoId("_6Th8IpqlEeGSON8vddiWzQ_1934585019")]
+[IsoDisplayName(@"Billing Tax Region")]
 public interface IBillingTaxRegion1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBillingTaxRegion1 : IIsoComponent
     [IsoId("_6Th8I5qlEeGSON8vddiWzQ_1296791674")]
     [DisplayName("Region Number")]
     [IsoXmlTag("RgnNb")]
+    [IsoSimpleType(IsoSimpleType.Max40Text)]
+    [StringLength(40, MinimumLength = 1)]
     Max40Text RegionNumber { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IBillingTaxRegion1 : IIsoComponent
     [IsoId("_6Th8JJqlEeGSON8vddiWzQ_-485782008")]
     [DisplayName("Region Name")]
     [IsoXmlTag("RgnNm")]
+    [IsoSimpleType(IsoSimpleType.Max40Text)]
+    [StringLength(40, MinimumLength = 1)]
     Max40Text RegionName { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IBillingTaxRegion1 : IIsoComponent
     [IsoId("_6Th8JZqlEeGSON8vddiWzQ_-1539060367")]
     [DisplayName("Customer Tax Identification")]
     [IsoXmlTag("CstmrTaxId")]
+    [IsoSimpleType(IsoSimpleType.Max40Text)]
+    [StringLength(40, MinimumLength = 1)]
     Max40Text CustomerTaxIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface IBillingTaxRegion1 : IIsoComponent
     [IsoId("_6Th8JpqlEeGSON8vddiWzQ_-1887349622")]
     [DisplayName("Point Date")]
     [IsoXmlTag("PtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PointDate { get; }
 
     /// <summary>
@@ -57,6 +65,8 @@ public interface IBillingTaxRegion1 : IIsoComponent
     [IsoId("_6Th8KJqlEeGSON8vddiWzQ_-1496589094")]
     [DisplayName("Invoice Number")]
     [IsoXmlTag("InvcNb")]
+    [IsoSimpleType(IsoSimpleType.Max40Text)]
+    [StringLength(40, MinimumLength = 1)]
     Max40Text? InvoiceNumber { get; }
 
     /// <summary>

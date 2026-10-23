@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cancelled Status Reason17.
 /// </summary>
 [IsoId("_uVJtKZznEe-DHYbvdRjdbA")]
+[IsoDisplayName(@"Cancelled Status Reason17")]
 public interface ICancelledStatusReason17 : IIsoComponent
 {
     /// <summary>

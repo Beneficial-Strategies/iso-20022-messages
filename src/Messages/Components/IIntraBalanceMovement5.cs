@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the intra-balance movements data.
 /// </summary>
 [IsoId("_YN1OfzneEem7JZMuWtwtsg")]
+[IsoDisplayName(@"Intra Balance Movement")]
 public interface IIntraBalanceMovement5 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,8 @@ public interface IIntraBalanceMovement5 : IIsoComponent
     [IsoId("_YX0Q7zneEem7JZMuWtwtsg")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +60,8 @@ public interface IIntraBalanceMovement5 : IIsoComponent
     [IsoId("_YX0Q9zneEem7JZMuWtwtsg")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -65,6 +70,8 @@ public interface IIntraBalanceMovement5 : IIsoComponent
     [IsoId("_YX0Q_zneEem7JZMuWtwtsg")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -73,6 +80,8 @@ public interface IIntraBalanceMovement5 : IIsoComponent
     [IsoId("_YX0RBzneEem7JZMuWtwtsg")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -81,6 +90,8 @@ public interface IIntraBalanceMovement5 : IIsoComponent
     [IsoId("_YX0RCTneEem7JZMuWtwtsg")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PoolIdentification { get; }
 
     /// <summary>
@@ -89,6 +100,8 @@ public interface IIntraBalanceMovement5 : IIsoComponent
     [IsoId("_YX0RETneEem7JZMuWtwtsg")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CorporateActionEventIdentification { get; }
 
     /// <summary>

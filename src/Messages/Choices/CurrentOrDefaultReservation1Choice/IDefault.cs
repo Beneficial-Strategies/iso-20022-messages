@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation1Choi
 /// </summary>
 [IsoId("_8IjoJqMgEeCJ6YNENx4h-w_-508539744")]
 [IsoXmlTag("Dflt")]
+[IsoDisplayName(@"Default")]
 public interface IDefault : ICurrentOrDefaultReservation1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IDefault : ICurrentOrDefaultReservation1Choice, IIsoChoiceVaria
     [IsoId("_8IQtMKMgEeCJ6YNENx4h-w_996988035")]
     [DisplayName("Reservation Identification")]
     [IsoXmlTag("RsvatnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReservationIdentification { get; }
 
     /// <summary>

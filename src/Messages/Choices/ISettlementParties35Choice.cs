@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides details on either the delivering or receiving parties.
 /// </summary>
 [IsoId("_TJKXdyqSEeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Settlement Parties 35 Choice")]
 public interface ISettlementParties35Choice : IIsoChoice { }

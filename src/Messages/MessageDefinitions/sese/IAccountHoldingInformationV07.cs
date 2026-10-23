@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_14iFkUyFEeir2sRRVd9XhA")]
 [IsoMessage("sese.018.001.07", "AcctHldgInf", "urn:iso:std:iso:20022:tech:xsd:sese.018.001.07")]
+[Description(@"Scope|The AccountHoldingInformation message is sent by an executing party, for example, a (old) plan manager (transferor), to the instructing party, for example, a (new) plan manager (transferee), to provide information about financial instruments held on behalf of a client.|Usage|The AccountHoldingInformation message is used to provide information the individual assets held in a client's account. The assets may be part of a tax efficient product, a pension of general investment product.")]
+[IsoDisplayName(@"Account Holding Information V")]
 public interface IAccountHoldingInformationV07 : IOuterRecord
 {
     /// <summary>
@@ -79,6 +81,7 @@ public interface IAccountHoldingInformationV07 : IOuterRecord
     [IsoId("_14iFrUyFEeir2sRRVd9XhA")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson8> OtherIndividualInvestor { get; }
 
     /// <summary>
@@ -103,6 +106,7 @@ public interface IAccountHoldingInformationV07 : IOuterRecord
     [IsoId("_14iFs0yFEeir2sRRVd9XhA")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation36> OtherCorporateInvestor { get; }
 
     /// <summary>
@@ -135,6 +139,7 @@ public interface IAccountHoldingInformationV07 : IOuterRecord
     [IsoId("_14iFu0yFEeir2sRRVd9XhA")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPortfolioTransfer2> ProductTransfer { get; }
 
     /// <summary>
@@ -151,5 +156,6 @@ public interface IAccountHoldingInformationV07 : IOuterRecord
     [IsoId("_14iFv0yFEeir2sRRVd9XhA")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

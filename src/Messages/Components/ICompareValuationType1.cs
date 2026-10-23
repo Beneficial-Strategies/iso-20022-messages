@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a valuation method.
 /// </summary>
 [IsoId("_PmW3IExUEeywvc16MwOPfw")]
+[IsoDisplayName(@"Compare Valuation Type")]
 public interface ICompareValuationType1 : IIsoComponent
 {
     /// <summary>

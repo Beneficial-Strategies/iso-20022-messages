@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card Payment Transaction138.
 /// </summary>
 [IsoId("_w_4ewZ88Ee-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Card Payment Transaction138")]
 public interface ICardPaymentTransaction138 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface ICardPaymentTransaction138 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CardPaymentServiceType9Code> AdditionalService { get; }
 
     /// <summary>

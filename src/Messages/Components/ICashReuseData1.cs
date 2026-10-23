@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the type and amount of the cash reinvestment in a given currency and on the cash reinvestment rate.
 /// </summary>
 [IsoId("_ANAEgI67EeaxxtxaoOwzAg")]
+[IsoDisplayName(@"Cash Reuse Data")]
 public interface ICashReuseData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICashReuseData1 : IIsoComponent
     [IsoId("_P73YgJLiEeelrYORFsXWZg")]
     [DisplayName("Reinvested Cash")]
     [IsoXmlTag("RinvstdCsh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReinvestedCashTypeAndAmount1> ReinvestedCash { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICashReuseData1 : IIsoComponent
     [IsoId("_AgOw8JLiEeelrYORFsXWZg")]
     [DisplayName("Cash Reinvestment Rate")]
     [IsoXmlTag("CshRinvstmtRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate CashReinvestmentRate { get; }
 }

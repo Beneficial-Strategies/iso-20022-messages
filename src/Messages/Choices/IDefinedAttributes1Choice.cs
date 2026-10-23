@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the choice between different types of derivative.
 /// </summary>
 [IsoId("_wa3m8OPJEea7_eMQH225xA")]
+[IsoDisplayName(@"Defined Attributes 1 Choice")]
 public interface IDefinedAttributes1Choice : IIsoChoice { }

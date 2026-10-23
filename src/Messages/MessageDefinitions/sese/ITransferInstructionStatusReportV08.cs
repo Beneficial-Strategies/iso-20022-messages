@@ -31,6 +31,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_kFCMMZDhEem7fvtoGpNpow")]
 [IsoMessage("sese.011.001.08", "TrfInstrStsRpt", "urn:iso:std:iso:20022:tech:xsd:sese.011.001.08")]
+[Description(@"Scope||The TransferInstructionStatusReport message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received request for holdings information, portfolio transfer or transfer instruction.| It may also be used to report the status of an event related to the asset being transferred or provide additional information.||Usage||The TransferInstructionStatusReport message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received request for holdings information, portfolio transfer or transfer instruction. It may also be used to report the status of an event related to the asset being transferred or provide additional information.|The message identification of the transfer instruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.||One of the following statuses can be reported:||- an accepted status, or,||- an already executed status, or,||- a sent to next party status, or,||- a matched status, or,||- a settled status, or,||- a delayed status, or, |- a pending settlement status and the reason for the status, or,||- an unmatched status and the reason for the status, or,||- an in-repair status and the reason for the status, or,||- a rejected status and the reason for the status, or,||- a failed settlement status and the reason for the status, or,||- a cancelled status and the reason for the status, or,||- a cancelled status and the reason for the status, or,||- a cancellation pending status and the reason for the status.")]
+[IsoDisplayName(@"Transfer Instruction Status Report V")]
 public interface ITransferInstructionStatusReportV08 : IOuterRecord
 {
     /// <summary>
@@ -79,5 +81,6 @@ public interface ITransferInstructionStatusReportV08 : IOuterRecord
     [IsoId("_kFCMQZDhEem7fvtoGpNpow")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

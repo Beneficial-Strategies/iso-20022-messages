@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the Consolidated Tape Provider.
 /// </summary>
 [IsoId("_gBfUUGImEfCeoPFCHQnhvA")]
+[IsoDisplayName(@"Consolidated Tape Provider Data1")]
 public interface IConsolidatedTapeProviderData1 : IIsoComponent
 {
     /// <summary>

@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// </summary>
 [IsoId("_Vk6qOTDmEey2N-DB7H7A5A")]
 [IsoMessage("supl.006.001.11", "DTCCCACNSD1", "urn:iso:std:iso:20022:tech:xsd:supl.006.001.11")]
+[Description(@"The DTCCCACNSD1 message extends ISO corporate action cancellation advice (CACN) message with DTCC corporate action elements not covered in the standard message.")]
+[IsoDisplayName(@"DTCCCACNSD 1 V")]
 public interface IDTCCCACNSD1V11 : IOuterRecord
 {
     /// <summary>
@@ -52,6 +54,7 @@ public interface IDTCCCACNSD1V11 : IOuterRecord
     [IsoId("_Vk6qQzDmEey2N-DB7H7A5A")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionCancellationSD3> EventsLinkage { get; }
 
     /// <summary>

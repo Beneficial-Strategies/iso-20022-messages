@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the request of a PIN management from an ATM.
 /// </summary>
 [IsoId("_lJ1JQIq_EeSgLpgNvMAP2g")]
+[IsoDisplayName(@"ATMPIN Management Request")]
 public interface IATMPINManagementRequest1 : IIsoComponent
 {
     /// <summary>

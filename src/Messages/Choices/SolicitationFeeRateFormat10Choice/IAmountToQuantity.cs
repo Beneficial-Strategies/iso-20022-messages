@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SolicitationFeeRateFormat10Choic
 /// </summary>
 [IsoId("_ctoZQZKQEeWHWpTQn1FFVg")]
 [IsoXmlTag("AmtToQty")]
+[IsoDisplayName(@"Amount To Quantity")]
 public interface IAmountToQuantity : ISolicitationFeeRateFormat10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IAmountToQuantity : ISolicitationFeeRateFormat10Choice, IIsoCho
     [IsoId("_ckCYnJKQEeWHWpTQn1FFVg")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
     RestrictedFINDecimalNumber Quantity { get; }
 }

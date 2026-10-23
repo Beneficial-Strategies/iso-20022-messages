@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a new or a cancellation transaction.
 /// </summary>
 [IsoId("_6c12MZicEe2f7NHvXATP5g")]
+[IsoDisplayName(@"Reporting Transaction Type 3 Choice")]
 public interface IReportingTransactionType3Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeliveryInterconnectionPoint1Cho
 /// Identification of delivery/interconnection point or zone in a proprietary format.
 /// </summary>
 [IsoId("_s36_sIOsEeWqmeP8QNJBew")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IDeliveryInterconnectionPoint1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IDeliveryInterconnectionPoint1Choice, IIsoChoice
     /// Specifies a character string with a maximum length of 52 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Value { get; }
 }

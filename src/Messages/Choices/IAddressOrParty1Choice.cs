@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of either address, or name and address.
 /// </summary>
 [IsoId("_-EhOtHltEeG7BsjMvd1mEw_136442454")]
+[IsoDisplayName(@"Address Or Party 1 Choice")]
 public interface IAddressOrParty1Choice : IIsoChoice { }

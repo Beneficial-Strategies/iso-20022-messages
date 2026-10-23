@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform8Choice;
 
 /// <summary>Transaction to perform expressed as a loyalty request.</summary>
 [IsoId("_By-kR7ZaEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Loyalty Request")]
 public interface ILoyaltyRequest : ITransactionToPerform8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

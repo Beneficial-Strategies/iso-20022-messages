@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Media mix selected.
 /// </summary>
 [IsoId("_SOOfEYq4EeSIDtZ76p6McQ")]
+[IsoDisplayName(@"ATM Media Mix")]
 public interface IATMMediaMix2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IATMMediaMix2 : IIsoComponent
     [IsoId("_SbVuA4q4EeSIDtZ76p6McQ")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Number { get; }
 
     /// <summary>

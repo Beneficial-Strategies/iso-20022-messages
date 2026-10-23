@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the Know Your Customer (KYC) check type.
 /// </summary>
 [IsoId("_HadL0RRxEeOKWo1NF21OVw")]
+[IsoDisplayName(@"KYC Check Type 1 Choice")]
 public interface IKYCCheckType1Choice : IIsoChoice { }

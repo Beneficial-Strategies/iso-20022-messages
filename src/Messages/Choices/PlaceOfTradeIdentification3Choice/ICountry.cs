@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification3Choic
 /// Country in which the transaction is executed.
 /// </summary>
 [IsoId("_WNmIsNp-Ed-ak6NoX_4Aeg_1213217874")]
+[IsoDisplayName(@"Country")]
 public interface ICountry : IPlaceOfTradeIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>

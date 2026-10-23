@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus51Cho
 /// <summary>
 /// Proprietary Status.
 /// </summary>
+[IsoDisplayName(@"Proprietary Status")]
 public interface IProprietaryStatus : IInstructionProcessingStatus51Choice, IIsoChoiceVariant
 {
     /// <summary>

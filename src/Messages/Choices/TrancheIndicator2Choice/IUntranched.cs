@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator2Choice;
 /// Indicates that derivative contract is untranched.
 /// </summary>
 [IsoId("_523O0byOEeaUov4jN5X9Qw")]
+[IsoDisplayName(@"Untranched")]
 public interface IUntranched : ITrancheIndicator2Choice, IIsoChoiceVariant
 {
     /// <summary>

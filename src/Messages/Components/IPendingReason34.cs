@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason why the instruction or request has a pending status.
 /// </summary>
 [IsoId("_X5OOkeSkEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Pending Reason34")]
 public interface IPendingReason34 : IIsoComponent
 {
     /// <summary>

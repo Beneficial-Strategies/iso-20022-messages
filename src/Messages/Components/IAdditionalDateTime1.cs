@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Series of additional dates related to the payment.
 /// </summary>
 [IsoId("_e2UX0G9ZEe-Mlpx0N5T4gg")]
+[Description(@"Series of additional dates related to the payment.")]
+[IsoDisplayName(@"Additional Date Time1")]
 public interface IAdditionalDateTime1 : IIsoComponent
 {
     /// <summary>

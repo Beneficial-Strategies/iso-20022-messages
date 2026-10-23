@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies target dates dates related to account opening and closing.
 /// </summary>
 [IsoId("_UkGbYdp-Ed-ak6NoX_4Aeg_197946061")]
+[IsoDisplayName(@"Account Contract")]
 public interface IAccountContract4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAccountContract4 : IIsoComponent
     [IsoId("_UkPlQNp-Ed-ak6NoX_4Aeg_-621007620")]
     [DisplayName("Target Closing Date")]
     [IsoXmlTag("TrgtClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TargetClosingDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAccountContract4 : IIsoComponent
     [IsoId("_UkPlQdp-Ed-ak6NoX_4Aeg_-1796198645")]
     [DisplayName("Urgency Flag")]
     [IsoXmlTag("UrgcyFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? UrgencyFlag { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IAccountContract4 : IIsoComponent
     [IsoId("_UkPlQtp-Ed-ak6NoX_4Aeg_-1964414832")]
     [DisplayName("Removal Indicator")]
     [IsoXmlTag("RmvlInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RemovalIndicator { get; }
 }

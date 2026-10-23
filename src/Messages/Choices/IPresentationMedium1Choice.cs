@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the presentation medium.
 /// </summary>
 [IsoId("_93_1o3ltEeG7BsjMvd1mEw_-1462896243")]
+[IsoDisplayName(@"Presentation Medium 1 Choice")]
 public interface IPresentationMedium1Choice : IIsoChoice { }

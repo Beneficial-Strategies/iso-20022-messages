@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationSchemeName1C
 /// Name of the identification scheme, in a coded form as published in an external list.
 /// </summary>
 [IsoId("_P_4pRNp-Ed-ak6NoX_4Aeg_2056543161")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPersonIdentificationSchemeName1Choice, IIsoChoiceVariant
 {
     /// <summary>

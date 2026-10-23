@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the status report.
 /// </summary>
 [IsoId("_C7Z94Q0tEeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Status Report Content")]
 public interface IStatusReportContent9 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IStatusReportContent9 : IIsoComponent
     [IsoId("_DHAw8w0tEeqUVL7sB4m7NA")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent10> POIComponent { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IStatusReportContent9 : IIsoComponent
     [IsoId("_DHAw9w0tEeqUVL7sB4m7NA")]
     [DisplayName("POI Date Time")]
     [IsoXmlTag("POIDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime POIDateTime { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IStatusReportContent9 : IIsoComponent
     [IsoId("_DHAw-Q0tEeqUVL7sB4m7NA")]
     [DisplayName("Data Set Required")]
     [IsoXmlTag("DataSetReqrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDataSetRequest1> DataSetRequired { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IStatusReportContent9 : IIsoComponent
     [IsoId("_DHAw-w0tEeqUVL7sB4m7NA")]
     [DisplayName("Event")]
     [IsoXmlTag("Evt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITMSEvent7> Event { get; }
 
     /// <summary>
@@ -65,5 +70,6 @@ public interface IStatusReportContent9 : IIsoComponent
     [IsoId("_DHAw_Q0tEeqUVL7sB4m7NA")]
     [DisplayName("Errors")]
     [IsoXmlTag("Errs")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max140Text> Errors { get; }
 }

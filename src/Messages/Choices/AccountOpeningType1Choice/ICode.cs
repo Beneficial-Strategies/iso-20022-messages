@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOpeningType1Choice;
 /// Type of account opening instruction expressed as a code.
 /// </summary>
 [IsoId("_3Et5EUzJEeafiMTDrtSnyw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAccountOpeningType1Choice, IIsoChoiceVariant
 {
     /// <summary>

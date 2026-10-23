@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details on the original group, to which the message refers.
 /// </summary>
 [IsoId("_sevoEFkyEeGeoaLUQk__nA_1903063845")]
+[IsoDisplayName(@"Original Group Header")]
 public interface IOriginalGroupHeader5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalGroupHeader5 : IIsoComponent
     [IsoId("_sevoEVkyEeGeoaLUQk__nA_1828154802")]
     [DisplayName("Original Group Cancellation Identification")]
     [IsoXmlTag("OrgnlGrpCxlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalGroupCancellationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IOriginalGroupHeader5 : IIsoComponent
     [IsoId("_se5ZEFkyEeGeoaLUQk__nA_-2073459261")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IOriginalGroupHeader5 : IIsoComponent
     [IsoId("_sfCjAFkyEeGeoaLUQk__nA_-1546463318")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageNameIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IOriginalGroupHeader5 : IIsoComponent
     [IsoId("_sfCjAVkyEeGeoaLUQk__nA_-769709024")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IOriginalGroupHeader5 : IIsoComponent
     [IsoId("_sfCjAlkyEeGeoaLUQk__nA_-1365213817")]
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? OriginalNumberOfTransactions { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IOriginalGroupHeader5 : IIsoComponent
     [IsoId("_sfCjA1kyEeGeoaLUQk__nA_1049447839")]
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? OriginalControlSum { get; }
 
     /// <summary>
@@ -81,6 +91,7 @@ public interface IOriginalGroupHeader5 : IIsoComponent
     [IsoId("_sfMUAVkyEeGeoaLUQk__nA_746391324")]
     [DisplayName("Cancellation Status Reason Information")]
     [IsoXmlTag("CxlStsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICancellationStatusReason2> CancellationStatusReasonInformation { get; }
 
     /// <summary>
@@ -89,5 +100,6 @@ public interface IOriginalGroupHeader5 : IIsoComponent
     [IsoId("_sfMUAlkyEeGeoaLUQk__nA_-1790738466")]
     [DisplayName("Number Of Transactions Per Cancellation Status")]
     [IsoXmlTag("NbOfTxsPerCxlSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfTransactionsPerStatus1> NumberOfTransactionsPerCancellationStatus { get; }
 }

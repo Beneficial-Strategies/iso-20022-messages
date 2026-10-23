@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the amendment.
 /// </summary>
 [IsoId("_9-Q1snltEeG7BsjMvd1mEw_-687774575")]
+[IsoDisplayName(@"Amendment")]
 public interface IAmendment2 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,8 @@ public interface IAmendment2 : IIsoComponent
     [IsoId("_9-Z_o3ltEeG7BsjMvd1mEw_1663412254")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [MinLength(0)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature2> DigitalSignature { get; }
 }

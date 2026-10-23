@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the status of a trade.
 /// </summary>
 [IsoId("_SvM2BAEcEeCQm6a_G2yO_w_-47074384")]
+[IsoDisplayName(@"Trade Data")]
 public interface ITradeData5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeData5 : IIsoComponent
     [IsoId("_SvM2BQEcEeCQm6a_G2yO_w_-1044146737")]
     [DisplayName("Matching System Unique Reference")]
     [IsoXmlTag("MtchgSysUnqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MatchingSystemUniqueReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITradeData5 : IIsoComponent
     [IsoId("_SvM2BgEcEeCQm6a_G2yO_w_-160913450")]
     [DisplayName("Notification Identification")]
     [IsoXmlTag("NtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NotificationIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITradeData5 : IIsoComponent
     [IsoId("_SvM2BwEcEeCQm6a_G2yO_w_-766998321")]
     [DisplayName("Matching System Matching Reference")]
     [IsoXmlTag("MtchgSysMtchgRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MatchingSystemMatchingReference { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface ITradeData5 : IIsoComponent
     [IsoId("_SvM2CAEcEeCQm6a_G2yO_w_1678438019")]
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CurrentStatusDateTime { get; }
 
     /// <summary>
@@ -49,5 +57,7 @@ public interface ITradeData5 : IIsoComponent
     [IsoId("_SvM2CQEcEeCQm6a_G2yO_w_709682600")]
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProductType { get; }
 }

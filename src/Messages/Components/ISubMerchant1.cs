@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Merchant using the payment services of the card acceptor. The submerchant is not acting as the card acceptor.
 /// </summary>
 [IsoId("_FraPARTjEfC_aaedwHHlmw")]
+[IsoDisplayName(@"Sub Merchant1")]
 public interface ISubMerchant1 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface ISubMerchant1 : IIsoComponent
     [IsoId("_TvldUl6CEfCoP_h9uwd39Q")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -89,6 +91,7 @@ public interface ISubMerchant1 : IIsoComponent
     [IsoId("_TvldU16CEfCoP_h9uwd39Q")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>
@@ -97,5 +100,6 @@ public interface ISubMerchant1 : IIsoComponent
     [IsoId("_FyXyvxTjEfC_aaedwHHlmw")]
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData20> LocalData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details related to a direct debit mandate signed between the creditor and the debtor.
 /// </summary>
 [IsoId("_tfkL4VkyEeGeoaLUQk__nA_2034090441")]
+[IsoDisplayName(@"Mandate Related Information")]
 public interface IMandateRelatedInformation9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMandateRelatedInformation9 : IIsoComponent
     [IsoId("_tfkL4lkyEeGeoaLUQk__nA_2067250210")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IMandateRelatedInformation9 : IIsoComponent
     [IsoId("_tfkL41kyEeGeoaLUQk__nA_692325198")]
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfSignature { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IMandateRelatedInformation9 : IIsoComponent
     [IsoId("_tft84FkyEeGeoaLUQk__nA_1146412467")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AmendmentIndicator { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IMandateRelatedInformation9 : IIsoComponent
     [IsoId("_tft84lkyEeGeoaLUQk__nA_-1487209636")]
     [DisplayName("Electronic Signature")]
     [IsoXmlTag("ElctrncSgntr")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? ElectronicSignature { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IMandateRelatedInformation9 : IIsoComponent
     [IsoId("_tft841kyEeGeoaLUQk__nA_-2128519285")]
     [DisplayName("First Collection Date")]
     [IsoXmlTag("FrstColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FirstCollectionDate { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IMandateRelatedInformation9 : IIsoComponent
     [IsoId("_tf3G0FkyEeGeoaLUQk__nA_-1367754132")]
     [DisplayName("Final Collection Date")]
     [IsoXmlTag("FnlColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FinalCollectionDate { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original Group Header23.
 /// </summary>
 [IsoId("_73Gb8TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Original Group Header23")]
 public interface IOriginalGroupHeader23 : IIsoComponent
 {
     /// <summary>
@@ -72,6 +73,7 @@ public interface IOriginalGroupHeader23 : IIsoComponent
     /// </summary>
     [DisplayName("Cancellation Status Reason Information")]
     [IsoXmlTag("CxlStsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICancellationStatusReason5> CancellationStatusReasonInformation { get; }
 
     /// <summary>
@@ -79,5 +81,6 @@ public interface IOriginalGroupHeader23 : IIsoComponent
     /// </summary>
     [DisplayName("Number Of Transactions Per Cancellation Status")]
     [IsoXmlTag("NbOfTxsPerCxlSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfTransactionsPerStatus1> NumberOfTransactionsPerCancellationStatus { get; }
 }

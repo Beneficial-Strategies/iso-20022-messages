@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_3UoYMYoxEeaNTaanBSMWmg")]
 [IsoMessage("colr.007.001.05", "CollPrpsl", "urn:iso:std:iso:20022:tech:xsd:colr.007.001.05")]
+[Description(@"Scope|The CollateralProposal message is sent by the collateral giver or its collateral manager to the collateral taker or its collateral manager, to propose the collateral to be delivered. This message is sent once the Margin Call is agreed or partially agreed and can be used for new collateral at the initiation of an exposure or for additional collateral for variation of an existing exposure. This message is used for both initial collateral proposal and subsequent counter proposals.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|This message is sent once the Margin Call is agreed or partially agreed and can be used for new collateral at the initiation of an exposure or for additional collateral for variation of an existing exposure. The collateral proposal can include securities, cash and other types of collateral.")]
+[IsoDisplayName(@"Collateral Proposal V")]
 public interface ICollateralProposalV05 : IOuterRecord
 {
     /// <summary>
@@ -26,6 +28,8 @@ public interface ICollateralProposalV05 : IOuterRecord
     [IsoId("_3UoYM4oxEeaNTaanBSMWmg")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -58,5 +62,6 @@ public interface ICollateralProposalV05 : IOuterRecord
     [IsoId("_3UoYO4oxEeaNTaanBSMWmg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

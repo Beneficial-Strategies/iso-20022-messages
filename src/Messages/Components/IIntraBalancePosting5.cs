@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the transactions in the report.
 /// </summary>
 [IsoId("_ZMt4zTneEem7JZMuWtwtsg")]
+[IsoDisplayName(@"Intra Balance Posting")]
 public interface IIntraBalancePosting5 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IIntraBalancePosting5 : IIsoComponent
     [IsoId("_ZXSw6TneEem7JZMuWtwtsg")]
     [DisplayName("Movement")]
     [IsoXmlTag("Mvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalancePosting6> Movement { get; }
 }

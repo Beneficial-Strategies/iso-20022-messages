@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information from the underlying payment instruction which cannot be transferred in a regular statement message.
 /// </summary>
 [IsoId("_PgmFMdp-Ed-ak6NoX_4Aeg_-1588306924")]
+[IsoDisplayName(@"Payment Complementary Information")]
 public interface IPaymentComplementaryInformation : IIsoComponent
 {
     /// <summary>
@@ -113,5 +114,9 @@ public interface IPaymentComplementaryInformation : IIsoComponent
     [IsoId("_PgvPJNp-Ed-ak6NoX_4Aeg_1618675914")]
     [DisplayName("Sender To Receiver Information")]
     [IsoXmlTag("SndrToRcvrInf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(6)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> SenderToReceiverInformation { get; }
 }

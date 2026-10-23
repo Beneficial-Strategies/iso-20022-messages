@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for a suspended status.
 /// </summary>
 [IsoId("_Uzce5dp-Ed-ak6NoX_4Aeg_-1152969325")]
+[IsoDisplayName(@"Suspended Status Reason")]
 public interface ISuspendedStatusReason1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,9 @@ public interface ISuspendedStatusReason1 : IIsoComponent
     [IsoId("_Uzce5tp-Ed-ak6NoX_4Aeg_-1152969306")]
     [DisplayName("Structured")]
     [IsoXmlTag("Strd")]
+    [MinLength(1)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<SuspendedStatusReason2Code> Structured { get; }
 
     /// <summary>
@@ -25,5 +29,7 @@ public interface ISuspendedStatusReason1 : IIsoComponent
     [IsoId("_Uzce59p-Ed-ak6NoX_4Aeg_-1152969265")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

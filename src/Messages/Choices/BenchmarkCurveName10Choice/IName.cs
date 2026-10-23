@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkCurveName10Choice;
 /// Provides the name that should be used where no ISIN or standardised name of the index exists, including its term.
 /// </summary>
 [IsoId("_CWO6w6x2Eem81-uIvTF5rQ")]
+[IsoDisplayName(@"Name")]
 public interface IName : IBenchmarkCurveName10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IName : IBenchmarkCurveName10Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 350 characters.
     /// </summary>
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Value { get; }
 }

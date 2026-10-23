@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cafr;
 /// </summary>
 [IsoId("_7EMyoZLKEe6TWIDarRgYow")]
 [IsoMessage("cafr.004.001.03", "FrdDspstnRspn", "urn:iso:std:iso:20022:tech:xsd:cafr.004.001.03")]
+[IsoDisplayName(@"Fraud Disposition Response V03")]
 public interface IFraudDispositionResponseV03 : IOuterRecord
 {
     /// <summary>
@@ -116,6 +117,7 @@ public interface IFraudDispositionResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -130,6 +132,7 @@ public interface IFraudDispositionResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -151,6 +154,7 @@ public interface IFraudDispositionResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -158,6 +162,7 @@ public interface IFraudDispositionResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

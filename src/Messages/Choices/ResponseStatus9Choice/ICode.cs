@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus9Choice;
 /// Specifies the status of the response expressed as a code.
 /// </summary>
 [IsoId("_OIky8LzdEeivTd4NUfCi2g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IResponseStatus9Choice, IIsoChoiceVariant
 {
     /// <summary>

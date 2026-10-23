@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OwnerIdentification1Choice;
 /// Identification of an organisation.
 /// </summary>
 [IsoId("_qe1hwwgrEeSqp5OpJ0aMmw")]
+[IsoDisplayName(@"Organisation Owner Identification")]
 public interface IOrganisationOwnerIdentification : IOwnerIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

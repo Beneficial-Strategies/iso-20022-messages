@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosingBalance7Choice;
 /// Sum of the opening balance and all entries booked to the account at the close of the statement period.
 /// </summary>
 [IsoId("_gJxajTi8Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Final")]
 public interface IFinal : IClosingBalance7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

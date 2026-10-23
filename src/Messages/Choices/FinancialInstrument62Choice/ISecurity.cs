@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument62Choice;
 /// </summary>
 [IsoId("_qD51cZy1Eem54rMzia0iag")]
 [IsoXmlTag("Scty")]
+[IsoDisplayName(@"Security")]
 public interface ISecurity : IFinancialInstrument62Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface ISecurity : IFinancialInstrument62Choice, IIsoChoiceVariant
     [IsoId("_ymDctZy1Eem54rMzia0iag")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface ISecurity : IFinancialInstrument62Choice, IIsoChoiceVariant
     [IsoId("_ymDct5y1Eem54rMzia0iag")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface ISecurity : IFinancialInstrument62Choice, IIsoChoiceVariant
     [IsoId("_ojOQYJy2Eem54rMzia0iag")]
     [DisplayName("Restricted Indicator")]
     [IsoXmlTag("RstrctdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RestrictedIndicator { get; }
 
     /// <summary>
@@ -58,5 +64,6 @@ public interface ISecurity : IFinancialInstrument62Choice, IIsoChoiceVariant
     [IsoId("_4-IZEJy1Eem54rMzia0iag")]
     [DisplayName("Alternate Security")]
     [IsoXmlTag("AltrnScty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentIdentification4> AlternateSecurity { get; }
 }

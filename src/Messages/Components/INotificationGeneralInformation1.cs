@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Event notification type and status.
 /// </summary>
 [IsoId("_9QWS-67OEemG7MmivSuE5g")]
+[IsoDisplayName(@"Notification General Information")]
 public interface INotificationGeneralInformation1 : IIsoComponent
 {
     /// <summary>

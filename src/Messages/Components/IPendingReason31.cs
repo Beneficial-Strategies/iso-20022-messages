@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason why the instruction or request has a pending status.
 /// </summary>
 [IsoId("_f99MKTi8Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Pending Reason")]
 public interface IPendingReason31 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IPendingReason31 : IIsoComponent
     [IsoId("_f99MMzi8Eeydid5dcNPKvg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
+    [StringLength(210, MinimumLength = 1)]
     RestrictedFINXMax210Text? AdditionalReasonInformation { get; }
 }

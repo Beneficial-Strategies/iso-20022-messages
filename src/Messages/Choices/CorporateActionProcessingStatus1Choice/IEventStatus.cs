@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus1
 /// </summary>
 [IsoId("_Q1O85dp-Ed-ak6NoX_4Aeg_109671588")]
 [IsoXmlTag("EvtSts")]
+[IsoDisplayName(@"Event Status")]
 public interface IEventStatus : ICorporateActionProcessingStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money for which goods or services are offered, sold, or bought.
 /// </summary>
 [IsoId("a787f63f-e868-4065-ad2e-ac35bd273aa3")]
+[IsoDisplayName(@"Unit Price24")]
 public interface IUnitPrice24 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IUnitPrice24 : IIsoComponent
     [IsoId("a866a433-7c0e-4d6f-834c-833cb8b4c6a8")]
     [DisplayName("Value In Investment Currency")]
     [IsoXmlTag("ValInInvstmtCcy")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceValue1> ValueInInvestmentCurrency { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IUnitPrice24 : IIsoComponent
     [IsoId("1b447b2f-5e09-4bf9-a8be-b05cd035be70")]
     [DisplayName("Value In Alternative Currency")]
     [IsoXmlTag("ValInAltrntvCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceValue1> ValueInAlternativeCurrency { get; }
 
     /// <summary>
@@ -121,6 +125,7 @@ public interface IUnitPrice24 : IIsoComponent
     [IsoId("78b4af1c-d518-476c-ad8f-903d221edde1")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge33> ChargeDetails { get; }
 
     /// <summary>
@@ -129,6 +134,7 @@ public interface IUnitPrice24 : IIsoComponent
     [IsoId("d22f22f4-4d27-4d1e-83af-94a2d0b239c1")]
     [DisplayName("Tax Liability Details")]
     [IsoXmlTag("TaxLbltyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax43> TaxLiabilityDetails { get; }
 
     /// <summary>
@@ -137,5 +143,6 @@ public interface IUnitPrice24 : IIsoComponent
     [IsoId("af010d17-5a30-428a-9b50-d6a90a8471c0")]
     [DisplayName("Tax Refund Details")]
     [IsoXmlTag("TaxRfndDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax43> TaxRefundDetails { get; }
 }

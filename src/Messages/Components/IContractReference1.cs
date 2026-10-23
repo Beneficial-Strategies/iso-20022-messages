@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reference for the identification of an underlying contract.
 /// </summary>
 [IsoId("_gxMLOs--EemV7s8E008B2w")]
+[IsoDisplayName(@"Contract Reference")]
 public interface IContractReference1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IContractReference1 : IIsoComponent
     [IsoId("_eou0cM-_EemV7s8E008B2w")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text Reference { get; }
 }

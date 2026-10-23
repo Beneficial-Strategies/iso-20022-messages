@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Card management response message record.
 /// </summary>
 [IsoId("_qIiuEFZYEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Card Management Response")]
 public interface ICardManagementResponse : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ICardManagementResponse : IRecordMessage1Choice, IIsoChoiceVari
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("CardMgmtRspn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

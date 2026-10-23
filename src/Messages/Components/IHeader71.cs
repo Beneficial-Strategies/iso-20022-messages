@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Header71.
 /// </summary>
 [IsoId("_6rd9wWxjEe6wzr2RagRERg")]
+[IsoDisplayName(@"Header71")]
 public interface IHeader71 : IIsoComponent
 {
     /// <summary>
@@ -72,6 +73,7 @@ public interface IHeader71 : IIsoComponent
     /// </summary>
     [DisplayName("Trace Data")]
     [IsoXmlTag("TracData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> TraceData { get; }
 
     /// <summary>
@@ -79,5 +81,6 @@ public interface IHeader71 : IIsoComponent
     /// </summary>
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITraceability10> Traceability { get; }
 }

@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.canm;
 /// </summary>
 [IsoId("_mpuu1lWdEeeiG_nL4vgKnQ")]
 [IsoMessage("canm.004.001.02", "KeyXchgRspn", "urn:iso:std:iso:20022:tech:xsd:canm.004.001.02")]
+[Description(@"The KeyExchangeResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a KeyExchangeInitiation message.|||")]
+[IsoDisplayName(@"Key Exchange Response V")]
 public interface IKeyExchangeResponseV02 : IOuterRecord
 {
     /// <summary>

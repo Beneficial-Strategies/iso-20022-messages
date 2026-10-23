@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the reservation query criteria.
 /// </summary>
 [IsoId("_Dqby124-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Reservation Query")]
 public interface IReservationQuery3 : IIsoComponent
 {
     /// <summary>

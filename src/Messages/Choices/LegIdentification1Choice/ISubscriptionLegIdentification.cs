@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegIdentification1Choice;
 /// Unique technical identifier for the instance of the leg within a switch.
 /// </summary>
 [IsoId("_1CxGQ0glEea9YuSvQGoi-w")]
+[IsoDisplayName(@"Subscription Leg Identification")]
 public interface ISubscriptionLegIdentification : ILegIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ISubscriptionLegIdentification : ILegIdentification1Choice, IIs
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("SbcptLegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

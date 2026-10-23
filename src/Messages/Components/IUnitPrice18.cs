@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money for which goods or services are offered, sold, or bought.
 /// </summary>
 [IsoId("_ClxUsRrbEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Unit Price")]
 public interface IUnitPrice18 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IUnitPrice18 : IIsoComponent
     [IsoId("_C9KhCRrbEeOVR9VN6fAMUg")]
     [DisplayName("Factor")]
     [IsoXmlTag("Fctr")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? Factor { get; }
 }

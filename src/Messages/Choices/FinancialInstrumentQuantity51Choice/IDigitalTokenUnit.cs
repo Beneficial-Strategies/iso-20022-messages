@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity51Cho
 
 /// <summary>Quantity expressed as a number of digital token units.</summary>
 [IsoId("dafcf91a-d3d6-46fd-b572-e0cfb2cf9857")]
+[IsoDisplayName(@"Digital Token Unit")]
 public interface IDigitalTokenUnit : IFinancialInstrumentQuantity51Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

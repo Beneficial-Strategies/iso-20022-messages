@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Specifies the cash type.</summary>
 [IsoId("_R9pcY1DeEfCRhs5qxCujTw")]
+[IsoDisplayName(@"Cash Type 1 Choice")]
 public interface ICashType1Choice : IIsoChoice { }

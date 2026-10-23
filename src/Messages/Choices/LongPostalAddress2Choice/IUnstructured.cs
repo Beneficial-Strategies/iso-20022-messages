@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LongPostalAddress2Choice;
 /// Information that locates and identifies a specific address, as defined by postal services, that is presented in free format text.
 /// </summary>
 [IsoId("_RVRH2Np-Ed-ak6NoX_4Aeg_-1296060100")]
+[IsoDisplayName(@"Unstructured")]
 public interface IUnstructured : ILongPostalAddress2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IUnstructured : ILongPostalAddress2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 350 characters.
     /// </summary>
     [IsoXmlTag("Ustrd")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card writing capability of the terminal performing the transaction.
 /// </summary>
 [IsoId("_BQxRQTEvEeyjbpgZW6G1Fg")]
+[IsoDisplayName(@"Card Writing Capabilities")]
 public interface ICardWritingCapabilities1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICardWritingCapabilities1 : IIsoComponent
     [IsoId("_BWRcXzEvEeyjbpgZW6G1Fg")]
     [DisplayName("Other Capability")]
     [IsoXmlTag("OthrCpblty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherCapability { get; }
 }

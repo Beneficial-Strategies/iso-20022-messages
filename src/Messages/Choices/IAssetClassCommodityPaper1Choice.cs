@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines commodity attributes of a derivative where the type is paper.
 /// </summary>
 [IsoId("_0bsBIFrxEeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Asset Class Commodity Paper 1 Choice")]
 public interface IAssetClassCommodityPaper1Choice : IIsoChoice { }

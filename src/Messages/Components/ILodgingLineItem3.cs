@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Lodging Line Item3.
 /// </summary>
 [IsoId("_3IKvQXTsEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Lodging Line Item3")]
 public interface ILodgingLineItem3 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface ILodgingLineItem3 : IIsoComponent
     /// </summary>
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax41> Tax { get; }
 
     /// <summary>
@@ -86,5 +88,6 @@ public interface ILodgingLineItem3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

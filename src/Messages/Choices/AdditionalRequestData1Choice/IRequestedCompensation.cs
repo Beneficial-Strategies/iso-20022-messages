@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRequestData1Choice;
 /// <summary>
 /// Requested Compensation.
 /// </summary>
+[IsoDisplayName(@"Requested Compensation")]
 public interface IRequestedCompensation : IAdditionalRequestData1Choice, IIsoChoiceVariant
 {
     /// <summary>

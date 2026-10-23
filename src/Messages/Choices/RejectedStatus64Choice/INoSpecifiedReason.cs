@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus64Choice;
 
 /// <summary>Specifies no specified reason for the rejected status.</summary>
 [IsoId("_5CDhAaKsEfCHi7w3_0pcpw")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IRejectedStatus64Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

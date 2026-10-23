@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Passenger ticket information for the cardholder.
 /// </summary>
 [IsoId("_FSx7sUhsEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Passenger Transport4")]
 public interface IPassengerTransport4 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IPassengerTransport4 : IIsoComponent
     [IsoId("_FVeqcUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Customer Reference")]
     [IsoXmlTag("CstmrRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomerReference1> CustomerReference { get; }
 
     /// <summary>
@@ -89,6 +91,7 @@ public interface IPassengerTransport4 : IIsoComponent
     [IsoId("_FVeqc0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Passenger")]
     [IsoXmlTag("Pssngr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomer10> Passenger { get; }
 
     /// <summary>
@@ -121,6 +124,7 @@ public interface IPassengerTransport4 : IIsoComponent
     [IsoId("_FVeqe0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Total Amount")]
     [IsoXmlTag("TtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountAndTax1> TotalAmount { get; }
 
     /// <summary>
@@ -145,6 +149,7 @@ public interface IPassengerTransport4 : IIsoComponent
     [IsoId("_FVeqgUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Trip Leg")]
     [IsoXmlTag("TripLeg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITripLeg4> TripLeg { get; }
 
     /// <summary>
@@ -153,6 +158,7 @@ public interface IPassengerTransport4 : IIsoComponent
     [IsoId("_FVeqg0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Ancillary Purchase")]
     [IsoXmlTag("AncllryPurchs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAncillaryPurchase4> AncillaryPurchase { get; }
 
     /// <summary>
@@ -161,6 +167,7 @@ public interface IPassengerTransport4 : IIsoComponent
     [IsoId("_FVeqhUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Hired Vehicle Details")]
     [IsoXmlTag("HirdVhclDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHiredVehicle4> HiredVehicleDetails { get; }
 
     /// <summary>
@@ -169,6 +176,7 @@ public interface IPassengerTransport4 : IIsoComponent
     [IsoId("_7p588khrEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -177,5 +185,6 @@ public interface IPassengerTransport4 : IIsoComponent
     [IsoId("_7p5880hrEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

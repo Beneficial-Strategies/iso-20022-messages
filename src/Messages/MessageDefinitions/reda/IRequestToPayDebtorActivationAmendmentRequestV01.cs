@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "ReqToPayDbtrActvtnAmdmntReq",
     "urn:iso:std:iso:20022:tech:xsd:reda.071.001.01"
 )]
+[Description(@"The RequestToPayDebtorActivationAmendmentRequest message is sent by the debtor RTP (Request To Pay) provider to the creditor RTP provider and optionally from the debtor to its RTP provider and from the creditor RTP provider to the creditor to request for the amendment of the debtor activation of the RTP service with that specific creditor.")]
+[IsoDisplayName(@"Request To Pay Debtor Activation Amendment Request V")]
 public interface IRequestToPayDebtorActivationAmendmentRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IRequestToPayDebtorActivationAmendmentRequestV01 : IOuterRecord
     [IsoId("_rNNBv-HzEeqbls7Gk4-ckA")]
     [DisplayName("Amendment Data")]
     [IsoXmlTag("AmdmntData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDebtorActivationAmendment3> AmendmentData { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IRequestToPayDebtorActivationAmendmentRequestV01 : IOuterRecord
     [IsoId("_rNNBweHzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

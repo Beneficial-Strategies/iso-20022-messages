@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Summary of a collateral valuation.
 /// </summary>
 [IsoId("_0AdHJygtEeyB747fKu7_rw")]
+[IsoDisplayName(@"Summary")]
 public interface ISummary3 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ISummary3 : IIsoComponent
     [IsoId("_0Yl6XSgtEeyB747fKu7_rw")]
     [DisplayName("Valuation Date Time")]
     [IsoXmlTag("ValtnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ValuationDateTime { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface ISummary3 : IIsoComponent
     [IsoId("_0Yl6XygtEeyB747fKu7_rw")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>

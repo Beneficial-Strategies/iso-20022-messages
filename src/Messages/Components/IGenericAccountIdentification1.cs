@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to a generic account identification.
 /// </summary>
 [IsoId("_P_u4Rdp-Ed-ak6NoX_4Aeg_2078050796")]
+[IsoDisplayName(@"Generic Account Identification")]
 public interface IGenericAccountIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGenericAccountIdentification1 : IIsoComponent
     [IsoId("_P_u4Rtp-Ed-ak6NoX_4Aeg_2078970799")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max34Text)]
+    [StringLength(34, MinimumLength = 1)]
     Max34Text Identification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IGenericAccountIdentification1 : IIsoComponent
     [IsoId("_P_u4SNp-Ed-ak6NoX_4Aeg_-2119026269")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

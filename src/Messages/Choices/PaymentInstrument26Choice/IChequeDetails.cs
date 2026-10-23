@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument26Choice;
 /// <summary>
 /// Cheque Details.
 /// </summary>
+[IsoDisplayName(@"Cheque Details")]
 public interface IChequeDetails : IPaymentInstrument26Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information specific to the individual transaction(s) included in the message.
 /// </summary>
 [IsoId("_lb9OQSHGEeK1OvoXgbVMNg")]
+[IsoDisplayName(@"Credit Transfer Transaction")]
 public interface ICreditTransferTransaction6 : IIsoComponent
 {
     /// <summary>
@@ -161,6 +162,7 @@ public interface ICreditTransferTransaction6 : IIsoComponent
     [IsoId("_lyKIQyHGEeK1OvoXgbVMNg")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent1> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -169,6 +171,8 @@ public interface ICreditTransferTransaction6 : IIsoComponent
     [IsoId("_lyKIRyHGEeK1OvoXgbVMNg")]
     [DisplayName("Instruction For Debtor Agent")]
     [IsoXmlTag("InstrForDbtrAgt")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InstructionForDebtorAgent { get; }
 
     /// <summary>
@@ -185,6 +189,9 @@ public interface ICreditTransferTransaction6 : IIsoComponent
     [IsoId("_lyKIUyHGEeK1OvoXgbVMNg")]
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting3> RegulatoryReporting { get; }
 
     /// <summary>
@@ -201,6 +208,9 @@ public interface ICreditTransferTransaction6 : IIsoComponent
     [IsoId("_lyKIWyHGEeK1OvoXgbVMNg")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation2> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -217,5 +227,6 @@ public interface ICreditTransferTransaction6 : IIsoComponent
     [IsoId("_t5whAyHGEeK1OvoXgbVMNg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

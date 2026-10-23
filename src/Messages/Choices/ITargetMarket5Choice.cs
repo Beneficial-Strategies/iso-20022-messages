@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of how a financial product is in scope of a target market parameter.
 /// </summary>
 [IsoId("_xLdncbVLEeqkjqDuFVh1-A")]
+[IsoDisplayName(@"Target Market 5 Choice")]
 public interface ITargetMarket5Choice : IIsoChoice { }

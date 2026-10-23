@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditorEnrolmentCancellationRea
 /// Reason, as published in an external reason code list.
 /// </summary>
 [IsoId("_pQ9Sy_DBEemsS_0xy2XRug")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICreditorEnrolmentCancellationReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide reference and status information on the original transactions, included in the original instruction, to which the cancellation request message applies.
 /// </summary>
 [IsoId("_rZu7ax72EeSxevWRRWxNAg")]
+[IsoDisplayName(@"Payment Transaction")]
 public interface IPaymentTransaction58 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentTransaction58 : IIsoComponent
     [IsoId("_rreLsR72EeSxevWRRWxNAg")]
     [DisplayName("Cancellation Identification")]
     [IsoXmlTag("CxlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPaymentTransaction58 : IIsoComponent
     [IsoId("_rreLtR72EeSxevWRRWxNAg")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPaymentTransaction58 : IIsoComponent
     [IsoId("_rreLtx72EeSxevWRRWxNAg")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -58,6 +65,7 @@ public interface IPaymentTransaction58 : IIsoComponent
     [IsoId("_rreLux72EeSxevWRRWxNAg")]
     [DisplayName("Original Requested Execution Date")]
     [IsoXmlTag("OrgnlReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OriginalRequestedExecutionDate { get; }
 
     /// <summary>
@@ -66,6 +74,7 @@ public interface IPaymentTransaction58 : IIsoComponent
     [IsoId("_rreLvR72EeSxevWRRWxNAg")]
     [DisplayName("Original Requested Collection Date")]
     [IsoXmlTag("OrgnlReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OriginalRequestedCollectionDate { get; }
 
     /// <summary>
@@ -74,6 +83,7 @@ public interface IPaymentTransaction58 : IIsoComponent
     [IsoId("_rreLvx72EeSxevWRRWxNAg")]
     [DisplayName("Cancellation Reason Information")]
     [IsoXmlTag("CxlRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentCancellationReason2> CancellationReasonInformation { get; }
 
     /// <summary>
@@ -90,5 +100,6 @@ public interface IPaymentTransaction58 : IIsoComponent
     [IsoId("_rreLwx72EeSxevWRRWxNAg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

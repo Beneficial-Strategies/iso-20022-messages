@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the fraud disposition initiation message.</summary>
 [IsoId("_kNBjsW7-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Fraud Disposition Initiation")]
 public interface IFraudDispositionInitiation : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

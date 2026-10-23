@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_bXUntaMVEeCJ6YNENx4h-w_-227867844")]
 [IsoMessage("caaa.006.001.01", "AccptrCxlRspn", "urn:iso:std:iso:20022:tech:xsd:caaa.006.001.01")]
+[Description(@"Scope|The AcceptorCancellationResponse message is sent by the acquirer to inform the card acceptor of the outcome of the cancellation process. The message can be sent directly to the acceptor or through an agent.|Usage|The AcceptorCancellationResponse message is used to indicate one of the possible outcomes of a cancellation process:|- a successful cancellation;|- a rejection from the acquirer for financial reasons;|- a rejection from the acquirer for technical reasons.")]
+[IsoDisplayName(@"Acceptor Cancellation Response V")]
 public interface IAcceptorCancellationResponseV01 : IOuterRecord
 {
     /// <summary>

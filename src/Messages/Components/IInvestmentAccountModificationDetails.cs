@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provide information about the reason for the modification and about the application request which triggered this modification.
 /// </summary>
 [IsoId("_REb2gdp-Ed-ak6NoX_4Aeg_691417052")]
+[IsoDisplayName(@"Investment Account Modification Details")]
 public interface IInvestmentAccountModificationDetails : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentAccountModificationDetails : IIsoComponent
     [IsoId("_REb2gtp-Ed-ak6NoX_4Aeg_-1729726619")]
     [DisplayName("Modification Reason")]
     [IsoXmlTag("ModRsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? ModificationReason { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IInvestmentAccountModificationDetails : IIsoComponent
     [IsoId("_REb2g9p-Ed-ak6NoX_4Aeg_-1729726542")]
     [DisplayName("Account Application Identification")]
     [IsoXmlTag("AcctApplId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountApplicationIdentification { get; }
 }

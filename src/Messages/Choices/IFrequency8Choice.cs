@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the frequency.
 /// </summary>
 [IsoId("_m_xsdfNBEeCuA5Tr22BnwA_2080535464")]
+[IsoDisplayName(@"Frequency 8 Choice")]
 public interface IFrequency8Choice : IIsoChoice { }

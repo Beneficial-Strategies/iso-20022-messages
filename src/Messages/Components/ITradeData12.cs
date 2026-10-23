@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the status of a trade.
 /// </summary>
 [IsoId("_7KIJAZR3Eeak6e8_Fc5fQg")]
+[IsoDisplayName(@"Trade Data")]
 public interface ITradeData12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeData12 : IIsoComponent
     [IsoId("_7WM2I5R3Eeak6e8_Fc5fQg")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITradeData12 : IIsoComponent
     [IsoId("_7WM2JZR3Eeak6e8_Fc5fQg")]
     [DisplayName("Status Originator")]
     [IsoXmlTag("StsOrgtr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StatusOriginator { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ITradeData12 : IIsoComponent
     [IsoId("_7WM2K5R3Eeak6e8_Fc5fQg")]
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CurrentStatusDateTime { get; }
 
     /// <summary>
@@ -73,6 +79,8 @@ public interface ITradeData12 : IIsoComponent
     [IsoId("_7WM2MZR3Eeak6e8_Fc5fQg")]
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProductType { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface ITradeData12 : IIsoComponent
     [IsoId("_HDIpMZU6EeaYkf5FCqYMeA")]
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SettlementSessionIdentifier { get; }
 
     /// <summary>
@@ -89,5 +98,7 @@ public interface ITradeData12 : IIsoComponent
     [IsoId("_V88rQJR4Eeak6e8_Fc5fQg")]
     [DisplayName("Linked Report Identification")]
     [IsoXmlTag("LkdRptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LinkedReportIdentification { get; }
 }

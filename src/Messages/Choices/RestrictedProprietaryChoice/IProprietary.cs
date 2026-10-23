@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RestrictedProprietaryChoice;
 /// Proprietary identification of a pre-agreed level of service between the parties.
 /// </summary>
 [IsoId("_QJkwwNp-Ed-ak6NoX_4Aeg_1495592134")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IRestrictedProprietaryChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IRestrictedProprietaryChoice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

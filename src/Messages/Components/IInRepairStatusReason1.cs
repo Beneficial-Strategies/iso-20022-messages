@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for a status in repair.
 /// </summary>
 [IsoId("_Ut7sx9p-Ed-ak6NoX_4Aeg_-41189078")]
+[IsoDisplayName(@"In Repair Status Reason")]
 public interface IInRepairStatusReason1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface IInRepairStatusReason1 : IIsoComponent
     [IsoId("_UuFdwNp-Ed-ak6NoX_4Aeg_-41189059")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text AdditionalInformation { get; }
 }

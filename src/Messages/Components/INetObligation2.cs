@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the amount, direction and parties involved in a payment obligation between two participants (and their netting group or trading party) of a netting service.
 /// </summary>
 [IsoId("_Chfq8QN1Ee2-vqzwMUAewg")]
+[IsoDisplayName(@"Net Obligation")]
 public interface INetObligation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INetObligation2 : IIsoComponent
     [IsoId("_CnI_9QN1Ee2-vqzwMUAewg")]
     [DisplayName("Obligation Identification")]
     [IsoXmlTag("OblgtnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ObligationIdentification { get; }
 
     /// <summary>
@@ -73,5 +76,6 @@ public interface INetObligation2 : IIsoComponent
     [IsoId("_CnJAAwN1Ee2-vqzwMUAewg")]
     [DisplayName("Transactions Number")]
     [IsoXmlTag("TxsNb")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? TransactionsNumber { get; }
 }

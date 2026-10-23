@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the amendment.
 /// </summary>
 [IsoId("_9_dIgXltEeG7BsjMvd1mEw_2073465972")]
+[IsoDisplayName(@"Amendment")]
 public interface IAmendment7 : IIsoComponent
 {
     /// <summary>

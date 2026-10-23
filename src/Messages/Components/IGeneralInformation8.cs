@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information concerning the negotiation process leading to a treasury trade.
 /// </summary>
 [IsoId("_BjP6AQN1Ee2-vqzwMUAewg")]
+[IsoDisplayName(@"General Information")]
 public interface IGeneralInformation8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IGeneralInformation8 : IIsoComponent
     [IsoId("_BowsIQN1Ee2-vqzwMUAewg")]
     [DisplayName("Block Indicator")]
     [IsoXmlTag("BlckInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BlockIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IGeneralInformation8 : IIsoComponent
     [IsoId("_BowsIwN1Ee2-vqzwMUAewg")]
     [DisplayName("Related Trade Reference")]
     [IsoXmlTag("RltdTradRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RelatedTradeReference { get; }
 
     /// <summary>
@@ -49,6 +53,8 @@ public interface IGeneralInformation8 : IIsoComponent
     [IsoId("_BowsKQN1Ee2-vqzwMUAewg")]
     [DisplayName("Counterparty Reference")]
     [IsoXmlTag("CtrPtyRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CounterpartyReference { get; }
 
     /// <summary>
@@ -65,6 +71,8 @@ public interface IGeneralInformation8 : IIsoComponent
     [IsoId("_BowsLQN1Ee2-vqzwMUAewg")]
     [DisplayName("Sender To Receiver Information")]
     [IsoXmlTag("SndrToRcvrInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? SenderToReceiverInformation { get; }
 
     /// <summary>
@@ -105,6 +113,7 @@ public interface IGeneralInformation8 : IIsoComponent
     [IsoId("_BowsNwN1Ee2-vqzwMUAewg")]
     [DisplayName("Definitions Year")]
     [IsoXmlTag("DefsYr")]
+    [IsoSimpleType(IsoSimpleType.ISOYear)]
     ISOYear? DefinitionsYear { get; }
 
     /// <summary>
@@ -113,5 +122,7 @@ public interface IGeneralInformation8 : IIsoComponent
     [IsoId("_BowsOQN1Ee2-vqzwMUAewg")]
     [DisplayName("Brokers Reference")]
     [IsoXmlTag("BrkrsRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BrokersReference { get; }
 }

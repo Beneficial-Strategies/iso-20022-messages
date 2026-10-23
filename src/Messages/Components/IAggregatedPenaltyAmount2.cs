@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the aggregated penalties amounts per party.
 /// </summary>
 [IsoId("_MwslMDkMEem897H7zB2RJg")]
+[IsoDisplayName(@"Aggregated Penalty Amount2")]
 public interface IAggregatedPenaltyAmount2 : IIsoComponent
 {
     /// <summary>

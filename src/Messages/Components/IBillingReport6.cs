@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report on specific billing data.
 /// </summary>
 [IsoId("_2jks1zEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Billing Report6")]
 public interface IBillingReport6 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface IBillingReport6 : IIsoComponent
     [IsoId("_2mCyDzEyEe6g-ffJsqGiSA")]
     [DisplayName("Account Invoice Totals")]
     [IsoXmlTag("AcctInvcTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvoiceTotals8> AccountInvoiceTotals { get; }
 
     /// <summary>
@@ -89,5 +91,6 @@ public interface IBillingReport6 : IIsoComponent
     [IsoId("_2mCyEzEyEe6g-ffJsqGiSA")]
     [DisplayName("Service Category Totals")]
     [IsoXmlTag("SvcCtgyTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IServiceCategoryTotals8> ServiceCategoryTotals { get; }
 }

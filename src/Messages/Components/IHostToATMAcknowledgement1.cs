@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the acknowledgement from an ATM to contact the ATM manager.
 /// </summary>
 [IsoId("_8rvoQItrEeSDLd7nI4Quzw")]
+[IsoDisplayName(@"Host To ATM Acknowledgement")]
 public interface IHostToATMAcknowledgement1 : IIsoComponent
 {
     /// <summary>

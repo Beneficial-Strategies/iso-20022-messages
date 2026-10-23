@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vehicle Rental Agreement3.
 /// </summary>
 [IsoId("_xUZv8XTjEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Vehicle Rental Agreement3")]
 public interface IVehicleRentalAgreement3 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IVehicleRentalAgreement3 : IIsoComponent
     /// </summary>
     [DisplayName("Pickup Location")]
     [IsoXmlTag("PckpLctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAddress2> PickupLocation { get; }
 
     /// <summary>
@@ -121,6 +123,7 @@ public interface IVehicleRentalAgreement3 : IIsoComponent
     /// </summary>
     [DisplayName("Rental Rate")]
     [IsoXmlTag("RntlRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRentalRate2> RentalRate { get; }
 
     /// <summary>
@@ -142,6 +145,7 @@ public interface IVehicleRentalAgreement3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount21> AdditionalAmount { get; }
 
     /// <summary>
@@ -149,6 +153,7 @@ public interface IVehicleRentalAgreement3 : IIsoComponent
     /// </summary>
     [DisplayName("Estimated Tax")]
     [IsoXmlTag("EstmtdTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax41> EstimatedTax { get; }
 
     /// <summary>
@@ -156,6 +161,7 @@ public interface IVehicleRentalAgreement3 : IIsoComponent
     /// </summary>
     [DisplayName("Discount Programme")]
     [IsoXmlTag("DscntPrgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDiscount3> DiscountProgramme { get; }
 
     /// <summary>
@@ -163,5 +169,6 @@ public interface IVehicleRentalAgreement3 : IIsoComponent
     /// </summary>
     [DisplayName("Loyalty Programme")]
     [IsoXmlTag("LltyPrgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyProgramme5> LoyaltyProgramme { get; }
 }

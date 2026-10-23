@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account details of the report item.
 /// </summary>
 [IsoId("_Xtn_QU1oEeSvz4A_x0ui8g")]
+[IsoDisplayName(@"Report Item")]
 public interface IReportItem1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IReportItem1 : IIsoComponent
     [IsoId("_kotgMU1pEeSvz4A_x0ui8g")]
     [DisplayName("Item Date")]
     [IsoXmlTag("ItmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ItemDate { get; }
 }

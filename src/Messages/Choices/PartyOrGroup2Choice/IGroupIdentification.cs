@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrGroup2Choice;
 /// Specifies the identification of a group of parties.
 /// </summary>
 [IsoId("_DDQTgW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Group Identification")]
 public interface IGroupIdentification : IPartyOrGroup2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IGroupIdentification : IPartyOrGroup2Choice, IIsoChoiceVariant
     /// Specifies an alphanumeric string with a maximum length of 4 characters.
     /// </summary>
     [IsoXmlTag("GrpId")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText Value { get; }
 }

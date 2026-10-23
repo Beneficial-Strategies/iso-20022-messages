@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details of a component report on a trade position.
 /// </summary>
 [IsoId("_BmwjgQ1LEeqV4s5SpzR1dQ")]
+[IsoDisplayName(@"Trade Position Component")]
 public interface ITradePositionComponent5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,9 @@ public interface ITradePositionComponent5 : IIsoComponent
     [IsoId("_BngxcQ1LEeqV4s5SpzR1dQ")]
     [DisplayName("Counterparty Specific Data")]
     [IsoXmlTag("CtrPtySpcfcData")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICounterpartySpecificData24> CounterpartySpecificData { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ITradePositionComponent5 : IIsoComponent
     [IsoId("_Bngxdw1LEeqV4s5SpzR1dQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

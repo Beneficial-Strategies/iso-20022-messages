@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference8Choice;
 /// Reference of the linked message at the allocation level which identifies a centrally matched transaction.
 /// </summary>
 [IsoId("_AcPskdokEeC60axPepSq7g_-256644124")]
+[IsoDisplayName(@"Allocation Identification")]
 public interface IAllocationIdentification : IIdentificationReference8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IAllocationIdentification : IIdentificationReference8Choice, II
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("AllcnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

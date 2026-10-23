@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingMarginInformation
 /// </summary>
 [IsoId("_rsDiw1owEe23K4GXSpBSeg")]
 [IsoXmlTag("Rpt")]
+[IsoDisplayName(@"Report")]
 public interface IReport : IDetailedMissingMarginInformationStatistics4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IReport : IDetailedMissingMarginInformationStatistics4Choice, I
     [IsoId("_rtPOgVowEe23K4GXSpBSeg")]
     [DisplayName("Number Of Outstanding Derivatives")]
     [IsoXmlTag("NbOfOutsdngDerivs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfOutstandingDerivatives { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IReport : IDetailedMissingMarginInformationStatistics4Choice, I
     [IsoId("_rtPOg1owEe23K4GXSpBSeg")]
     [DisplayName("Number Of Outstanding Derivatives With No Margin Information")]
     [IsoXmlTag("NbOfOutsdngDerivsWthNoMrgnInf")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfOutstandingDerivativesWithNoMarginInformation { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IReport : IDetailedMissingMarginInformationStatistics4Choice, I
     [IsoId("_rtPOhVowEe23K4GXSpBSeg")]
     [DisplayName("Number Of Outstanding Derivatives With Outdated Margin Information")]
     [IsoXmlTag("NbOfOutsdngDerivsWthOutdtdMrgnInf")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfOutstandingDerivativesWithOutdatedMarginInformation { get; }
 
     /// <summary>
@@ -42,5 +46,6 @@ public interface IReport : IDetailedMissingMarginInformationStatistics4Choice, I
     [IsoId("_rtPOh1owEe23K4GXSpBSeg")]
     [DisplayName("Warnings")]
     [IsoXmlTag("Wrnngs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMissingMarginData2> Warnings { get; }
 }

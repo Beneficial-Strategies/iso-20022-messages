@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the authorised tax paying party.
 /// </summary>
 [IsoId("_Pc3bx9p-Ed-ak6NoX_4Aeg_-197973580")]
+[IsoDisplayName(@"Tax Authorisation")]
 public interface ITaxAuthorisation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITaxAuthorisation1 : IIsoComponent
     [IsoId("_Pc3byNp-Ed-ak6NoX_4Aeg_-197973519")]
     [DisplayName("Title")]
     [IsoXmlTag("Titl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Title { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ITaxAuthorisation1 : IIsoComponent
     [IsoId("_PdBMwNp-Ed-ak6NoX_4Aeg_-197973549")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 }

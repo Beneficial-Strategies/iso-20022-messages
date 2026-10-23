@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerOrInvestor2Choice;
 /// <summary>
 /// Issuer CSD.
 /// </summary>
+[IsoDisplayName(@"Issuer CSD")]
 public interface IIssuerCSD : IIssuerOrInvestor2Choice, IIsoChoiceVariant
 {
     /// <summary>

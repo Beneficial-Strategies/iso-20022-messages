@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus31Choice;
 /// </summary>
 [IsoId("_f99MCTi8Eeydid5dcNPKvg")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ISettlementStatus31Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IProprietary : ISettlementStatus31Choice, IIsoChoiceVariant
     [IsoId("_cemex5KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary Reason")]
     [IsoXmlTag("PrtryRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryReason5> ProprietaryReason { get; }
 }

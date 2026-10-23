@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies rates related to a corporate action option.
 /// </summary>
 [IsoId("_DrsSIc3yEee5nJBZsW8MFQ")]
+[IsoDisplayName(@"Corporate Action Rate")]
 public interface ICorporateActionRate97 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICorporateActionRate97 : IIsoComponent
     [IsoId("_DrsSP83yEee5nJBZsW8MFQ")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGrossDividendRateFormat33Choice> GrossDividendRate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICorporateActionRate97 : IIsoComponent
     [IsoId("_DrsSR83yEee5nJBZsW8MFQ")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetDividendRateFormat35Choice> NetDividendRate { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICorporateActionRate97 : IIsoComponent
     [IsoId("_DrsSUc3yEee5nJBZsW8MFQ")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateUsedForPaymentFormat10Choice> InterestRateUsedForPayment { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface ICorporateActionRate97 : IIsoComponent
     [IsoId("_DrsSac3yEee5nJBZsW8MFQ")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat47Choice> WithholdingTaxRate { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface ICorporateActionRate97 : IIsoComponent
     [IsoId("_DrsScc3yEee5nJBZsW8MFQ")]
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat47Choice> SecondLevelTax { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface ICorporateActionRate97 : IIsoComponent
     [IsoId("_DrsSc83yEee5nJBZsW8MFQ")]
     [DisplayName("Taxable Income Per Dividend Share")]
     [IsoXmlTag("TaxblIncmPerDvddShr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateTypeAndAmountAndStatus33> TaxableIncomePerDividendShare { get; }
 
     /// <summary>

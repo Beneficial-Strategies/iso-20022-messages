@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType26Choice;
 /// </summary>
 [IsoId("_JfG635w3EeazcsnODTksnQ")]
 [IsoXmlTag("Mod")]
+[IsoDisplayName(@"Modification")]
 public interface IModification : IUpdateType26Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IModification : IUpdateType26Choice, IIsoChoiceVariant
     [IsoId("_Jf2r_5w3EeazcsnODTksnQ")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages48> Linkages { get; }
 
     /// <summary>
@@ -138,5 +140,6 @@ public interface IModification : IUpdateType26Choice, IIsoChoiceVariant
     [IsoId("_Jf2sG5w3EeazcsnODTksnQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

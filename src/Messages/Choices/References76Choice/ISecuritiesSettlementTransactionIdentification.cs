@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References76Choice;
 /// Unambiguous identification of a securities settlement transaction as known by the account owner (or instructing party acting on its behalf).
 /// </summary>
 [IsoId("_diXStTi8Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Securities Settlement Transaction Identification")]
 public interface ISecuritiesSettlementTransactionIdentification
     : IReferences76Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ISecuritiesSettlementTransactionIdentification
     /// Specifies a character string with a maximum length of 16 characters. It has a pattern that disables the use of characters that is not part of the character set X, that is, that is not a-z A-Z / - ? : ( ) . , ‘ + , and disable the use of slash &quot;/&quot; at the beginning and end of line and double slash &quot;//&quot; within the line.
     /// </summary>
     [IsoXmlTag("SctiesSttlmTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text Value { get; }
 }

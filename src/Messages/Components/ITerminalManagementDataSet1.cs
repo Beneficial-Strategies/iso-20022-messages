@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the status report of a point of interaction (POI).
 /// </summary>
 [IsoId("_K9WvI31DEeCF8NjrBemJWQ_550700798")]
+[IsoDisplayName(@"Terminal Management Data Set")]
 public interface ITerminalManagementDataSet1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITerminalManagementDataSet1 : IIsoComponent
     [IsoId("_K9WvJX1DEeCF8NjrBemJWQ_607652482")]
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Max9NumericText)]
     Max9NumericText? SequenceCounter { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_Tp4sqPPWEeihCvvpsmGI2w")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification207 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyIdentification207 : IIsoComponent
     [IsoId("_Tp6h1vPWEeihCvvpsmGI2w")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Code { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPartyIdentification207 : IIsoComponent
     [IsoId("_Tp6h1PPWEeihCvvpsmGI2w")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Assigner { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPartyIdentification207 : IIsoComponent
     [IsoId("_Tp6h0fPWEeihCvvpsmGI2w")]
     [DisplayName("IATA Code")]
     [IsoXmlTag("IATACd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? IATACode { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IPartyIdentification207 : IIsoComponent
     [IsoId("_Nw8t4_PXEeihCvvpsmGI2w")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IPartyIdentification207 : IIsoComponent
     [IsoId("_Nw8t4vPXEeihCvvpsmGI2w")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>

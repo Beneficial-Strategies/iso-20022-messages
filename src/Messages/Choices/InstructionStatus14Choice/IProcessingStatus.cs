@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus14Choice;
 
 /// <summary>Status advising on the processing of the instruction.</summary>
 [IsoId("_EFISwajVEfCzuLlmLrhIvA")]
+[IsoDisplayName(@"Processing Status")]
 public interface IProcessingStatus : IInstructionStatus14Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

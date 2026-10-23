@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockedStatusReason2Choice;
 /// </summary>
 [IsoId("_8t7ZA11LEeagR5I1rq5oaw")]
 [IsoXmlTag("Rsn")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IBlockedStatusReason2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,12 +27,14 @@ public interface IReason : IBlockedStatusReason2Choice, IIsoChoiceVariant
     [IsoId("_E6gY4V1MEeagR5I1rq5oaw")]
     [DisplayName("Blocked")]
     [IsoXmlTag("Blckd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Blocked { get; }
 
     /// <summary>
     /// Reason for the blocked status.
     /// </summary>
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBlockedReason2Choice> Value { get; }
 
     /// <summary>
@@ -40,5 +43,7 @@ public interface IReason : IBlockedStatusReason2Choice, IIsoChoiceVariant
     [IsoId("__4jh9V1LEeagR5I1rq5oaw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text AdditionalInformation { get; }
 }

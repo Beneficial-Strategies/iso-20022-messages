@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_xDAOX1tcEeSwKe7KuKvXhg")]
 [IsoMessage("seev.001.001.05", "MtgNtfctn", "urn:iso:std:iso:20022:tech:xsd:seev.001.001.05")]
+[Description(@"Scope|A notifying party, for example, an issuer, its agent or an intermediary, sends the MeetingNotification message to a party holding the right to vote, to announce a shareholders meeting.|Usage|The MeetingNotification message is used to announce a shareholders meeting, for example, it provides information on the participation details and requirements for the meeting, the vote parameters and the resolutions. The MeetingNotification message may also be used to announce an update.|To notify an update, the Amendment building block must be filled in. Any building block that is modified must be included in the amendment message. The information previously notified and not repeated in the amendment message remains valid.|To update the resolutions of the agenda, the complete list of resolutions must be repeated in the amendment message. The resolutions that are deleted should be assigned the status Withdrawn.|This message definition is intended for use with the Business Application Header.")]
+[IsoDisplayName(@"Meeting Notification V")]
 public interface IMeetingNotificationV05 : IOuterRecord
 {
     /// <summary>
@@ -50,6 +52,9 @@ public interface IMeetingNotificationV05 : IOuterRecord
     [IsoId("_xDJ_C1tcEeSwKe7KuKvXhg")]
     [DisplayName("Meeting Details")]
     [IsoXmlTag("MtgDtls")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeeting4> MeetingDetails { get; }
 
     /// <summary>
@@ -66,6 +71,9 @@ public interface IMeetingNotificationV05 : IOuterRecord
     [IsoId("_xDJ_EVtcEeSwKe7KuKvXhg")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIssuerAgent2> IssuerAgent { get; }
 
     /// <summary>
@@ -74,6 +82,9 @@ public interface IMeetingNotificationV05 : IOuterRecord
     [IsoId("_xDJ_E1tcEeSwKe7KuKvXhg")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition8> Security { get; }
 
     /// <summary>
@@ -82,6 +93,9 @@ public interface IMeetingNotificationV05 : IOuterRecord
     [IsoId("_xDJ_FVtcEeSwKe7KuKvXhg")]
     [DisplayName("Resolution")]
     [IsoXmlTag("Rsltn")]
+    [MinLength(0)]
+    [MaxLength(1000)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IResolution3> Resolution { get; }
 
     /// <summary>
@@ -122,5 +136,6 @@ public interface IMeetingNotificationV05 : IOuterRecord
     [IsoId("_dkX0oVtoEeSwKe7KuKvXhg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

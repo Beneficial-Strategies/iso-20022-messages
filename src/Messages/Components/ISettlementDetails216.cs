@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement Details216.
 /// </summary>
 [IsoId("_WZToo4S2Ee-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Settlement Details216")]
 public interface ISettlementDetails216 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ISettlementDetails216 : IIsoComponent
     /// </summary>
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementTransactionCondition34Choice> SettlementTransactionCondition { get; }
 
     /// <summary>

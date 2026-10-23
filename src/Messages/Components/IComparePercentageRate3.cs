@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a percentage rate.
 /// </summary>
 [IsoId("_AFgVIa5jEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Compare Percentage Rate")]
 public interface IComparePercentageRate3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IComparePercentageRate3 : IIsoComponent
     [IsoId("_AVJ6sa5jEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Value1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IComparePercentageRate3 : IIsoComponent
     [IsoId("_AVJ6s65jEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Value2 { get; }
 }

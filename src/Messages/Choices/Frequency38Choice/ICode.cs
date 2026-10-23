@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency38Choice;
 /// Frequency expressed in coded form.
 /// </summary>
 [IsoId("_zRGl6zrwEeuD7rm9md9zvg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IFrequency38Choice, IIsoChoiceVariant
 {
     /// <summary>

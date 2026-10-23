@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or a proprietary code to specify the type of fraction disposition.
 /// </summary>
 [IsoId("_Q08B8Np-Ed-ak6NoX_4Aeg_-1812394474")]
+[IsoDisplayName(@"Fraction Disposition Type 4 Choice")]
 public interface IFractionDispositionType4Choice : IIsoChoice { }

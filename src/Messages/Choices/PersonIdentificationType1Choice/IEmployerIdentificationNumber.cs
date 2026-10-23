@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice;
 /// Number assigned to an employer by a registration authority.
 /// </summary>
 [IsoId("_QEW5ldp-Ed-ak6NoX_4Aeg_-1180195685")]
+[IsoDisplayName(@"Employer Identification Number")]
 public interface IEmployerIdentificationNumber : IPersonIdentificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IEmployerIdentificationNumber : IPersonIdentificationType1Choic
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("MplyrIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

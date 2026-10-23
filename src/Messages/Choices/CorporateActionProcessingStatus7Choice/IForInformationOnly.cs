@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus7
 /// <summary>
 /// For Information Only.
 /// </summary>
+[IsoDisplayName(@"For Information Only")]
 public interface IForInformationOnly : ICorporateActionProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>

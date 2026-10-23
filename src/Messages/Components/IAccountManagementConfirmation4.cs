@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the type of request or instruction.
 /// </summary>
 [IsoId("_ax-xUUzLEeafiMTDrtSnyw")]
+[IsoDisplayName(@"Account Management Confirmation")]
 public interface IAccountManagementConfirmation4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAccountManagementConfirmation4 : IIsoComponent
     [IsoId("_bMBB80zLEeafiMTDrtSnyw")]
     [DisplayName("Account Application Identification")]
     [IsoXmlTag("AcctApplId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountApplicationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IAccountManagementConfirmation4 : IIsoComponent
     [IsoId("_bMBB9UzLEeafiMTDrtSnyw")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IAccountManagementConfirmation4 : IIsoComponent
     [IsoId("_bMBB-UzLEeafiMTDrtSnyw")]
     [DisplayName("Existing Account Identification")]
     [IsoXmlTag("ExstgAcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccount23> ExistingAccountIdentification { get; }
 }

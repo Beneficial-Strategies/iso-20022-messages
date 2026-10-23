@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies a document by a unique identification and a date of issue.
 /// </summary>
 [IsoId("_RaVOAtp-Ed-ak6NoX_4Aeg_905732542")]
+[IsoDisplayName(@"Invoice Identification")]
 public interface IInvoiceIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvoiceIdentification1 : IIsoComponent
     [IsoId("_RaVOA9p-Ed-ak6NoX_4Aeg_905732551")]
     [DisplayName("Invoice Number")]
     [IsoXmlTag("InvcNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InvoiceNumber { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IInvoiceIdentification1 : IIsoComponent
     [IsoId("_RaVOBNp-Ed-ak6NoX_4Aeg_905732603")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate IssueDate { get; }
 }

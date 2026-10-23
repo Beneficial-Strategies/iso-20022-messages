@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Price expressed as an actual amount.
 /// </summary>
 [IsoId("_IvBp0dBYEee0mNiKMkpGNQ")]
+[IsoDisplayName(@"Amount Price")]
 public interface IAmountPrice7 : IIsoComponent
 {
     /// <summary>

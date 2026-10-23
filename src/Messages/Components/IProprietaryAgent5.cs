@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Proprietary Agent5.
 /// </summary>
 [IsoId("_xmnquTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Proprietary Agent5")]
 public interface IProprietaryAgent5 : IIsoComponent
 {
     /// <summary>

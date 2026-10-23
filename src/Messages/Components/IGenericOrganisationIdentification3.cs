@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Generic Organisation Identification3.
 /// </summary>
 [IsoId("_bM2KRzFIEe651u5xu3f5iw")]
+[IsoDisplayName(@"Generic Organisation Identification3")]
 public interface IGenericOrganisationIdentification3 : IIsoComponent
 {
     /// <summary>

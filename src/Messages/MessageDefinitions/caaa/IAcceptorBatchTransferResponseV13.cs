@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrBtchTrfRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.012.001.13"
 )]
+[IsoDisplayName(@"Acceptor Batch Transfer Response V13")]
 public interface IAcceptorBatchTransferResponseV13 : IOuterRecord
 {
     /// <summary>

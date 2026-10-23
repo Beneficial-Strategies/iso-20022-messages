@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the identification of a person or an organisation within the RTP (Request To Pay) service.
 /// </summary>
 [IsoId("_UMdwN-H7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"RTP Party Identification")]
 public interface IRTPPartyIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRTPPartyIdentification1 : IIsoComponent
     [IsoId("_UNr4M-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>

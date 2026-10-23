@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DiscountOrChargeType1Choice;
 /// Type of discount.
 /// </summary>
 [IsoId("_St2yMgEcEeCQm6a_G2yO_w_1552852069")]
+[IsoDisplayName(@"Discount Type")]
 public interface IDiscountType : IDiscountOrChargeType1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

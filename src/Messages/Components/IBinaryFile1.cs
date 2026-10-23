@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Computer file stored in a binary format.
 /// </summary>
 [IsoId("_SuAjOgEcEeCQm6a_G2yO_w_2121992872")]
+[IsoDisplayName(@"Binary File")]
 public interface IBinaryFile1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBinaryFile1 : IIsoComponent
     [IsoId("_SuAjOwEcEeCQm6a_G2yO_w_267897468")]
     [DisplayName("MIME Type")]
     [IsoXmlTag("MIMETp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MIMEType { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IBinaryFile1 : IIsoComponent
     [IsoId("_SuAjPAEcEeCQm6a_G2yO_w_-122688032")]
     [DisplayName("Encoding Type")]
     [IsoXmlTag("NcodgTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EncodingType { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IBinaryFile1 : IIsoComponent
     [IsoId("_SuAjPQEcEeCQm6a_G2yO_w_-1899360630")]
     [DisplayName("Character Set")]
     [IsoXmlTag("CharSet")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CharacterSet { get; }
 
     /// <summary>
@@ -41,5 +48,6 @@ public interface IBinaryFile1 : IIsoComponent
     [IsoId("_SuAjPgEcEeCQm6a_G2yO_w_-1127180314")]
     [DisplayName("Included Binary Object")]
     [IsoXmlTag("InclBinryObjct")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary? IncludedBinaryObject { get; }
 }

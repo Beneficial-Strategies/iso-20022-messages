@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.fxtr;
     "FXTradConfReqCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:fxtr.036.001.01"
 )]
+[Description(@"Scope|The ForeignExchangeTradeConfirmationRequestCancellationRequest message is sent from a market participant to a Central matching utility (CMU) to amend the ForeignExchangeTradeConfirmationRequest previously sent.||Usage|The request is sent by the market participants to the CMU after the confirmation is requested.")]
+[IsoDisplayName(@"Foreign Exchange Trade Confirmation Request Cancellation Request V")]
 public interface IForeignExchangeTradeConfirmationRequestCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -60,6 +62,8 @@ public interface IForeignExchangeTradeConfirmationRequestCancellationRequestV01 
     [IsoId("_wvgd8IHiEeSY3ulMDfpmvA")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TradeIdentification { get; }
 
     /// <summary>
@@ -76,5 +80,6 @@ public interface IForeignExchangeTradeConfirmationRequestCancellationRequestV01 
     [IsoId("_m-4V8KHiEeS69KkQis5bYg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

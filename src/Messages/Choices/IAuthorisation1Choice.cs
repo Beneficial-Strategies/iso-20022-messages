@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the details on the user identification or any user key that allows to check if the initiating party is allowed to issue the transaction.
 /// </summary>
 [IsoId("_RD1Zltp-Ed-ak6NoX_4Aeg_-955120203")]
+[IsoDisplayName(@"Authorisation 1 Choice")]
 public interface IAuthorisation1Choice : IIsoChoice { }

@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_k8erYHu5EeSLmfFG0DG7zQ")]
 [IsoMessage("cain.007.001.01", "RcncltnInitn", "urn:iso:std:iso:20022:tech:xsd:cain.007.001.01")]
+[Description(@"The ReconciliationInitiation message is sent by an acquirer or an agent to an issuer or an agent, to initiate an exchange of totals to be reconciled for debits, credits, chargebacks and other transactions.")]
+[IsoDisplayName(@"Reconciliation Initiation")]
 public interface IReconciliationInitiation : IOuterRecord
 {
     /// <summary>

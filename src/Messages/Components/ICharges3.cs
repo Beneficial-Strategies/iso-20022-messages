@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the charges related to the payment transaction.
 /// </summary>
 [IsoId("_tisYa1kyEeGeoaLUQk__nA_-1567404898")]
+[IsoDisplayName(@"Charges")]
 public interface ICharges3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICharges3 : IIsoComponent
     [IsoId("_ti2JYVkyEeGeoaLUQk__nA_313328146")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChargesRecord1> Record { get; }
 }

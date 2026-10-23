@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Account Or Business Error6Choice.
 /// </summary>
 [IsoId("_31p_xTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Account Or Business Error6Choice")]
 public interface IAccountOrBusinessError6Choice : IIsoChoice { }

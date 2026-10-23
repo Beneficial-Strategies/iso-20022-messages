@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the original payment transaction, to which the remittance message applies.
 /// </summary>
 [IsoId("_Ka3F-ZRpEeazAtAtDSg0Nw")]
+[IsoDisplayName(@"Original Payment Information")]
 public interface IOriginalPaymentInformation7 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IOriginalPaymentInformation7 : IIsoComponent
     [IsoId("_KrhYK5RpEeazAtAtDSg0Nw")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 
     /// <summary>

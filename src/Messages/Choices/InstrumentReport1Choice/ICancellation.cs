@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentReport1Choice;
 
 /// <summary>Cancellation of a previously sent report, probably because of erroneous data.</summary>
 [IsoId("_fc83MGFSEfC91ZUW7iS7ww")]
+[IsoDisplayName(@"Cancellation")]
 public interface ICancellation : IInstrumentReport1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

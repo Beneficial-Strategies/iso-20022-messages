@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for initial physical form.
 /// </summary>
 [IsoId("_UjitceLxEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Initial Physical Form 4 Choice")]
 public interface IInitialPhysicalForm4Choice : IIsoChoice { }

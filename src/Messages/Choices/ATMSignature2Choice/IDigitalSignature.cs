@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMSignature2Choice;
 /// </summary>
 [IsoId("_iFHDYbTwEeeQy4o2AayYHg")]
 [IsoXmlTag("DgtlSgntr")]
+[IsoDisplayName(@"Digital Signature")]
 public interface IDigitalSignature : IATMSignature2Choice, IIsoChoiceVariant
 {
     /// <summary>

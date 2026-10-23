@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification3Choice
 /// </summary>
 [IsoId("_hY22A8K4EeuFNp8LZAnorg")]
 [IsoXmlTag("MrgnRptg")]
+[IsoDisplayName(@"Margin Reporting")]
 public interface IMarginReporting : ITransactionIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IMarginReporting : ITransactionIdentification3Choice, IIsoChoic
     [IsoId("_Ecgq4M3OEeuiU4QSC_BouQ")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -50,5 +53,7 @@ public interface IMarginReporting : ITransactionIdentification3Choice, IIsoChoic
     [IsoId("_haIoZcK4EeuFNp8LZAnorg")]
     [DisplayName("Collateral Portfolio Identification")]
     [IsoXmlTag("CollPrtflId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? CollateralPortfolioIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further information related to the processing of the charges instruction that may need to be acted upon by the instructed agent. The instruction may relate to an instruction that has to be executed by the instructed agent, or may be information required by the instructed agent.
 /// </summary>
 [IsoId("_8wlHkbt5Eeq_cfXrH83Rcw")]
+[IsoDisplayName(@"Instruction For Instructed Agent")]
 public interface IInstructionForInstructedAgent1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IInstructionForInstructedAgent1 : IIsoComponent
     [IsoId("_8xrTw7t5Eeq_cfXrH83Rcw")]
     [DisplayName("Instruction Information")]
     [IsoXmlTag("InstrInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InstructionInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics related to the reject of a transaction.
 /// </summary>
 [IsoId("_Ns0VYWp3EeSojYXQbRlLzA")]
+[IsoDisplayName(@"Header")]
 public interface IHeader16 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IHeader16 : IIsoComponent
     [IsoId("_ecq94Gp3EeSojYXQbRlLzA")]
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text ProtocolVersion { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IHeader16 : IIsoComponent
     [IsoId("_N6FVVWp3EeSojYXQbRlLzA")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? ExchangeIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IHeader16 : IIsoComponent
     [IsoId("_N6FVV2p3EeSojYXQbRlLzA")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>

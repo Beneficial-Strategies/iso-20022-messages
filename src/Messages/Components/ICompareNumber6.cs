@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a number of maximum 5 digits.
 /// </summary>
 [IsoId("_Nifesa5jEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Compare Number")]
 public interface ICompareNumber6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICompareNumber6 : IIsoComponent
     [IsoId("_NxsYUa5jEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
+    [IsoSimpleType(IsoSimpleType.Max5Number)]
     Max5Number? Value1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICompareNumber6 : IIsoComponent
     [IsoId("_NxsYU65jEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
+    [IsoSimpleType(IsoSimpleType.Max5Number)]
     Max5Number? Value2 { get; }
 }

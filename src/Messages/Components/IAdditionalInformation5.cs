@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains additional information related to the message.
 /// </summary>
 [IsoId("_Qoao5dp-Ed-ak6NoX_4Aeg_478592239")]
+[IsoDisplayName(@"Additional Information")]
 public interface IAdditionalInformation5 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface IAdditionalInformation5 : IIsoComponent
     [IsoId("_Qoao5tp-Ed-ak6NoX_4Aeg_1159536818")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Information { get; }
 }

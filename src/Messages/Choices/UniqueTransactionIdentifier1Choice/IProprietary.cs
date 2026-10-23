@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueTransactionIdentifier1Choi
 /// </summary>
 [IsoId("_yq1bcQxeEeuoAcnnpX2x_w")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IUniqueTransactionIdentifier1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IProprietary : IUniqueTransactionIdentifier1Choice, IIsoChoiceV
     [IsoId("_fe2HtQxeEeuoAcnnpX2x_w")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Identification { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IProprietary : IUniqueTransactionIdentifier1Choice, IIsoChoiceV
     [IsoId("_fe2HtAxeEeuoAcnnpX2x_w")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

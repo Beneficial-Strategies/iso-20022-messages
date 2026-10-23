@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountAuditTrailOrOperation
 /// Report information about cash account reference data.
 /// </summary>
 [IsoId("_9t1JAeVaEfC90e_m8fMznQ")]
+[IsoDisplayName(@"Cash Account Audit Trail Report")]
 public interface ICashAccountAuditTrailReport
     : ICashAccountAuditTrailOrOperationalError4Choice,
         IIsoChoiceVariant

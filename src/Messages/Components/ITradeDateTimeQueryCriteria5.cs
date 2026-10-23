@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date and time query criteria.
 /// </summary>
 [IsoId("_np2jIWE3Ee2S65ml6YCOtA")]
+[IsoDisplayName(@"Trade Date Time Query Criteria")]
 public interface ITradeDateTimeQueryCriteria5 : IIsoComponent
 {
     /// <summary>

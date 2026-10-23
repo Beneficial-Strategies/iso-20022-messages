@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money for which goods or services are offered, sold, or bought.
 /// </summary>
 [IsoId("_QfLNU9p-Ed-ak6NoX_4Aeg_1382237696")]
+[IsoDisplayName(@"Unit Price")]
 public interface IUnitPrice11 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IUnitPrice11 : IIsoComponent
     [IsoId("_QfLNVdp-Ed-ak6NoX_4Aeg_-1892239581")]
     [DisplayName("Extended Type")]
     [IsoXmlTag("XtndedTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedType { get; }
 
     /// <summary>

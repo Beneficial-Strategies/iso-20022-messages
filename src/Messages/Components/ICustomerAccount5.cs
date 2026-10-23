@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account owned by a customer.
 /// </summary>
 [IsoId("_NYe7IQ1iEeKGXqvMN6jpiw")]
+[IsoDisplayName(@"Customer Account")]
 public interface ICustomerAccount5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICustomerAccount5 : IIsoComponent
     [IsoId("_NtycwQ1iEeKGXqvMN6jpiw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentification4Choice> Identification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ICustomerAccount5 : IIsoComponent
     [IsoId("_NtycxQ1iEeKGXqvMN6jpiw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface ICustomerAccount5 : IIsoComponent
     [IsoId("_Ntyc3Q1iEeKGXqvMN6jpiw")]
     [DisplayName("Monthly Transaction Number")]
     [IsoXmlTag("MnthlyTxNb")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? MonthlyTransactionNumber { get; }
 
     /// <summary>
@@ -89,6 +94,8 @@ public interface ICustomerAccount5 : IIsoComponent
     [IsoId("_Ntyc5Q1iEeKGXqvMN6jpiw")]
     [DisplayName("Account Purpose")]
     [IsoXmlTag("AcctPurp")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AccountPurpose { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface ICustomerAccount5 : IIsoComponent
     [IsoId("_Ntyc8Q1iEeKGXqvMN6jpiw")]
     [DisplayName("Statement Frequency And Format")]
     [IsoXmlTag("StmtFrqcyAndFrmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatementFrequencyAndForm1> StatementFrequencyAndFormat { get; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public interface ICustomerAccount5 : IIsoComponent
     [IsoId("_Ntyc9Q1iEeKGXqvMN6jpiw")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClosingDate { get; }
 
     /// <summary>
@@ -129,5 +138,6 @@ public interface ICustomerAccount5 : IIsoComponent
     [IsoId("_Ntyc-Q1iEeKGXqvMN6jpiw")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRestriction1> Restriction { get; }
 }

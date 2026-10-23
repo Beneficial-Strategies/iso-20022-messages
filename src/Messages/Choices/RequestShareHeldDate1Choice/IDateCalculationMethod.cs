@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RequestShareHeldDate1Choice;
 /// Indicates what is the logical method to be used to determine and communicate from which date the shares have been held.
 /// </summary>
 [IsoId("_zKTRMFSTEempisJfoIfvvQ")]
+[IsoDisplayName(@"Date Calculation Method")]
 public interface IDateCalculationMethod : IRequestShareHeldDate1Choice, IIsoChoiceVariant
 {
     /// <summary>

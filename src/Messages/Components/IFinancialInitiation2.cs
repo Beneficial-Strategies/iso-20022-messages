@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the financial initiation message.
 /// </summary>
 [IsoId("_fQ4TsYELEeu6D49Gi-ZPwQ")]
+[IsoDisplayName(@"Financial Initiation")]
 public interface IFinancialInitiation2 : IIsoComponent
 {
     /// <summary>
@@ -66,6 +67,7 @@ public interface IFinancialInitiation2 : IIsoComponent
     [IsoId("_fWqLm4ELEeu6D49Gi-ZPwQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10KHexBinaryText)]
     Max10KHexBinaryText? ICCRelatedData { get; }
 
     /// <summary>
@@ -74,6 +76,7 @@ public interface IFinancialInitiation2 : IIsoComponent
     [IsoId("_fWqLnYELEeu6D49Gi-ZPwQ")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -82,5 +85,6 @@ public interface IFinancialInitiation2 : IIsoComponent
     [IsoId("_fWqLn4ELEeu6D49Gi-ZPwQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

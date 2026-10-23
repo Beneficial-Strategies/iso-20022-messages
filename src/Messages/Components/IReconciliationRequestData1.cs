@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Reconciliation Request message.
 /// </summary>
 [IsoId("__qugkNxdEeioifFt1dhnJA")]
+[IsoDisplayName(@"Reconciliation Request Data")]
 public interface IReconciliationRequestData1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IReconciliationRequestData1 : IIsoComponent
     [IsoId("_lzjRwNxeEeioifFt1dhnJA")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AcquirerIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IReconciliationRequestData1 : IIsoComponent
     [IsoId("_pqqtQNxeEeioifFt1dhnJA")]
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? POIReconciliationIdentification { get; }
 }

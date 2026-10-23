@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPIntrprbltyRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.112.001.01"
 )]
+[IsoDisplayName(@"CCP Interoperability Report V01")]
 public interface ICCPInteroperabilityReportV01 : IOuterRecord
 {
     /// <summary>
@@ -22,6 +23,7 @@ public interface ICCPInteroperabilityReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Interoperability CCP")]
     [IsoXmlTag("IntrprbltyCCP")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInteroperabilityCCP1> InteroperabilityCCP { get; }
 
     /// <summary>
@@ -29,5 +31,6 @@ public interface ICCPInteroperabilityReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status is unmatched.
 /// </summary>
 [IsoId("_U0V2xNp-Ed-ak6NoX_4Aeg_-105274052")]
+[IsoDisplayName(@"Transfer Unmatched Status")]
 public interface ITransferUnmatchedStatus : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the amounts of the referred document.
 /// </summary>
 [IsoId("_SNLNYDH0Ee6BxvG014AZzQ")]
+[Description(@"Provides details on the amounts of the referred document.")]
+[IsoDisplayName(@"Remittance Amount4")]
 public interface IRemittanceAmount4 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +18,7 @@ public interface IRemittanceAmount4 : IIsoComponent
     /// </summary>
     [DisplayName("Remittance Amount And Type")]
     [IsoXmlTag("RmtAmtAndTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentAmount1> RemittanceAmountAndType { get; }
 
     /// <summary>
@@ -23,5 +26,6 @@ public interface IRemittanceAmount4 : IIsoComponent
     /// </summary>
     [DisplayName("Adjustment Amount And Reason")]
     [IsoXmlTag("AdjstmntAmtAndRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentAdjustment1> AdjustmentAmountAndReason { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that serves as a basis to debit an account.
 /// </summary>
 [IsoId("_YkloBx77EeSxevWRRWxNAg")]
+[IsoDisplayName(@"Mandate")]
 public interface IMandate5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMandate5 : IIsoComponent
     [IsoId("_Y12XJx77EeSxevWRRWxNAg")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MandateIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IMandate5 : IIsoComponent
     [IsoId("_Y12XKR77EeSxevWRRWxNAg")]
     [DisplayName("Mandate Request Identification")]
     [IsoXmlTag("MndtReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateRequestIdentification { get; }
 
     /// <summary>
@@ -145,5 +150,6 @@ public interface IMandate5 : IIsoComponent
     [IsoId("_Y12XRR77EeSxevWRRWxNAg")]
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferredDocumentInformation6> ReferredDocument { get; }
 }

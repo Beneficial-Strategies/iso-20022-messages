@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat28Choice;
 /// </summary>
 [IsoId("_ojrGYWpXEeipaMTLlhaKMQ")]
 [IsoXmlTag("Id")]
+[IsoDisplayName(@"Identification")]
 public interface IIdentification : ISafekeepingPlaceFormat28Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -24,5 +25,7 @@ public interface IIdentification : ISafekeepingPlaceFormat28Choice, IIsoChoiceVa
     /// Additional information about the place of safekeeping.
     /// </summary>
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Value { get; }
 }

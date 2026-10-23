@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the details of the transaction.
 /// </summary>
 [IsoId("_87zZoQNrEfG_3cM8uyJ20w")]
+[IsoDisplayName(@"Transaction169")]
 public interface ITransaction169 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface ITransaction169 : IIsoComponent
     [IsoId("_8-ZauQNrEfG_3cM8uyJ20w")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TradeIdentification { get; }
 
     /// <summary>

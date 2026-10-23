@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Bank account used by a central counterparty to concentrate cash funds before or after investment.
 /// </summary>
 [IsoId("_tnsvELIhEeaYqc4G3TTwhA")]
+[IsoDisplayName(@"Concentration Account")]
 public interface IConcentrationAccount1 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IConcentrationAccount1 : IIsoComponent
     [IsoId("_Frc8QBXpEeejf-cbr8l5qw")]
     [DisplayName("Late Payment Confirmation")]
     [IsoXmlTag("LatePmtConf")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText LatePaymentConfirmation { get; }
 }

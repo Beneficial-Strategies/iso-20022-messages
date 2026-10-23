@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DefaultProcessingOrStandingInstr
 /// <summary>
 /// Default Option Indicator.
 /// </summary>
+[IsoDisplayName(@"Default Option Indicator")]
 public interface IDefaultOptionIndicator
     : IDefaultProcessingOrStandingInstruction2Choice,
         IIsoChoiceVariant

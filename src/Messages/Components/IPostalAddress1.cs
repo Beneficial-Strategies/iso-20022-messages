@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that locates and identifies a specific address, as defined by postal services.
 /// </summary>
 [IsoId("_QG4pKNp-Ed-ak6NoX_4Aeg_-839174134")]
+[IsoDisplayName(@"Postal Address")]
 public interface IPostalAddress1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,10 @@ public interface IPostalAddress1 : IIsoComponent
     [IsoId("_QG4pKtp-Ed-ak6NoX_4Aeg_-484540115")]
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AddressLine { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPostalAddress1 : IIsoComponent
     [IsoId("_QG4pK9p-Ed-ak6NoX_4Aeg_-1702876782")]
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? StreetName { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IPostalAddress1 : IIsoComponent
     [IsoId("_QG4pLNp-Ed-ak6NoX_4Aeg_-1628995660")]
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? BuildingNumber { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IPostalAddress1 : IIsoComponent
     [IsoId("_QHCaINp-Ed-ak6NoX_4Aeg_-14467862")]
     [DisplayName("Post Code")]
     [IsoXmlTag("PstCd")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? PostCode { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface IPostalAddress1 : IIsoComponent
     [IsoId("_QHCaIdp-Ed-ak6NoX_4Aeg_15083256")]
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TownName { get; }
 
     /// <summary>
@@ -65,6 +78,8 @@ public interface IPostalAddress1 : IIsoComponent
     [IsoId("_QHCaItp-Ed-ak6NoX_4Aeg_44636499")]
     [DisplayName("Country Sub Division")]
     [IsoXmlTag("CtrySubDvsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CountrySubDivision { get; }
 
     /// <summary>

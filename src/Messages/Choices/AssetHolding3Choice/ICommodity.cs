@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding3Choice;
 /// <summary>
 /// Commodity.
 /// </summary>
+[IsoDisplayName(@"Commodity")]
 public interface ICommodity : IAssetHolding3Choice, IIsoChoiceVariant
 {
     /// <summary>

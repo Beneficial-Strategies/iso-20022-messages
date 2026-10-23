@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient10Choice;
 /// </summary>
 [IsoId("_Wyk0gy8jEeu125Ip9zFcsQ")]
 [IsoXmlTag("KEK")]
+[IsoDisplayName(@"KEK")]
 public interface IKEK : IRecipient10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IKEK : IRecipient10Choice, IIsoChoiceVariant
     [IsoId("_ByuFQQ0yEeqUVL7sB4m7NA")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -42,5 +44,6 @@ public interface IKEK : IRecipient10Choice, IIsoChoiceVariant
     [IsoId("_ByuFRw0yEeqUVL7sB4m7NA")]
     [DisplayName("Encrypted Key")]
     [IsoXmlTag("NcrptdKey")]
+    [IsoSimpleType(IsoSimpleType.Max500Binary)]
     Max500Binary EncryptedKey { get; }
 }

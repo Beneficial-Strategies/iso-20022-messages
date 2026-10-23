@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice;
 /// Source of price quotation is the market, expressed as a Market Identifier Code (MIC).
 /// </summary>
 [IsoId("_RCDQ5Np-Ed-ak6NoX_4Aeg_863703704")]
+[IsoDisplayName(@"Local Market Place")]
 public interface ILocalMarketPlace : IPriceSourceFormatChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ILocalMarketPlace : IPriceSourceFormatChoice, IIsoChoiceVariant
     /// Market Identifier Code. The identification of a financial market, as stipulated in the norm ISO 10383 &apos;Codes for exchanges and market identifications&apos;.
     /// </summary>
     [IsoXmlTag("LclMktPlc")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier Value { get; }
 }

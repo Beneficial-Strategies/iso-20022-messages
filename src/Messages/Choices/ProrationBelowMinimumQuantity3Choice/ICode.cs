@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProrationBelowMinimumQuantity3Ch
 
 /// <summary>Specifies the proration type as a code.</summary>
 [IsoId("_NpRYIaj5EfCG_LQaXOxwew")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProrationBelowMinimumQuantity3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

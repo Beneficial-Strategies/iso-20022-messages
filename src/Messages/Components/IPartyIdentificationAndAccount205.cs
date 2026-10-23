@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about identification and account of the party.
 /// </summary>
 [IsoId("_plZcNzi7Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Party Identification And Account")]
 public interface IPartyIdentificationAndAccount205 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPartyIdentificationAndAccount205 : IIsoComponent
     [IsoId("_plZcSzi7Eeydid5dcNPKvg")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINXMax35Text? SafekeepingAccount { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPartyIdentificationAndAccount205 : IIsoComponent
     [IsoId("_plZcUzi7Eeydid5dcNPKvg")]
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text? BlockChainAddressOrWallet { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPartyIdentificationAndAccount205 : IIsoComponent
     [IsoId("_plZcVTi7Eeydid5dcNPKvg")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ProcessingIdentification { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface IPartyIdentificationAndAccount205 : IIsoComponent
     [IsoId("_plZcXTi7Eeydid5dcNPKvg")]
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAlternatePartyIdentification9> AlternateIdentification { get; }
 }

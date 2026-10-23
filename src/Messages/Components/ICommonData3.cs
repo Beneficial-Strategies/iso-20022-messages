@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data common to all transactions of a data set.
 /// </summary>
 [IsoId("_b3R2QTJ2EeOqyZqt0rCZLg")]
+[IsoDisplayName(@"Common Data")]
 public interface ICommonData3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICommonData3 : IIsoComponent
     [IsoId("_cG5mpzJ2EeOqyZqt0rCZLg")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardPaymentServiceType6Code> AdditionalService { get; }
 
     /// <summary>
@@ -57,6 +59,8 @@ public interface ICommonData3 : IIsoComponent
     [IsoId("_cG5mqzJ2EeOqyZqt0rCZLg")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Min3Max4Text)]
+    [StringLength(4, MinimumLength = 3)]
     Min3Max4Text? MerchantCategoryCode { get; }
 
     /// <summary>
@@ -65,6 +69,8 @@ public interface ICommonData3 : IIsoComponent
     [IsoId("_cG5mrTJ2EeOqyZqt0rCZLg")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>

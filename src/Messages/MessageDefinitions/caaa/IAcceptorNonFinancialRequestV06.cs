@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_jeixUZ_wEfC4Q_xhaK1hdQ")]
 [IsoMessage("caaa.022.001.06", "AccptrNonFinReq", "urn:iso:std:iso:20022:tech:xsd:caaa.022.001.06")]
+[IsoDisplayName(@"Acceptor Non Financial Request V06")]
 public interface IAcceptorNonFinancialRequestV06 : IOuterRecord
 {
     /// <summary>

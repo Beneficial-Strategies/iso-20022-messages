@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount1Cho
 /// </summary>
 [IsoId("_8le6IANhEe2-vqzwMUAewg")]
 [IsoXmlTag("Amt")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount : ICurrencyOrDigitalTokenAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

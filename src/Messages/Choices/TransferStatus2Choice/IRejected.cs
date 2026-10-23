@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus2Choice;
 /// </summary>
 [IsoId("_aQ-GOSY3EeW_ZNn8gbfY7Q")]
 [IsoXmlTag("Rjctd")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : ITransferStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IRejected : ITransferStatus2Choice, IIsoChoiceVariant
     [IsoId("_AMuhOSY3EeW_ZNn8gbfY7Q")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalReasonInformation { get; }
 }

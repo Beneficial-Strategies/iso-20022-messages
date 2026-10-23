@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements for the identification of the message and related references.
 /// </summary>
 [IsoId("_QoQ359p-Ed-ak6NoX_4Aeg_823875605")]
+[IsoDisplayName(@"References")]
 public interface IReferences5 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IReferences5 : IIsoComponent
     [IsoId("_Qoao4tp-Ed-ak6NoX_4Aeg_-1789477840")]
     [DisplayName("Acknowledged Message Identification")]
     [IsoXmlTag("AckdMsgId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageIdentification1> AcknowledgedMessageIdentification { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface IReferences5 : IIsoComponent
     [IsoId("_Qoao49p-Ed-ak6NoX_4Aeg_-17664747")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Status { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface IReferences5 : IIsoComponent
     [IsoId("_Qoao5Np-Ed-ak6NoX_4Aeg_186950521")]
     [DisplayName("Attached Document Name")]
     [IsoXmlTag("AttchdDocNm")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AttachedDocumentName { get; }
 }

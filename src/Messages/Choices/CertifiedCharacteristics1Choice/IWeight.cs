@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics1Choice;
 /// </summary>
 [IsoId("_TnJq7Np-Ed-ak6NoX_4Aeg_815222693")]
 [IsoXmlTag("Wght")]
+[IsoDisplayName(@"Weight")]
 public interface IWeight : ICertifiedCharacteristics1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IWeight : ICertifiedCharacteristics1Choice, IIsoChoiceVariant
     [IsoId("_SqpmZ9p-Ed-ak6NoX_4Aeg_-972518480")]
     [DisplayName("Other Unit Of Measure")]
     [IsoXmlTag("OthrUnitOfMeasr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OtherUnitOfMeasure { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IWeight : ICertifiedCharacteristics1Choice, IIsoChoiceVariant
     [IsoId("_SqpmaNp-Ed-ak6NoX_4Aeg_-972518633")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 
     /// <summary>
@@ -42,5 +46,6 @@ public interface IWeight : ICertifiedCharacteristics1Choice, IIsoChoiceVariant
     [IsoId("_Sqpmadp-Ed-ak6NoX_4Aeg_-972518541")]
     [DisplayName("Factor")]
     [IsoXmlTag("Fctr")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? Factor { get; }
 }

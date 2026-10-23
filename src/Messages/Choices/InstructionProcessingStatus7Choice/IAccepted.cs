@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus7Choi
 /// Provides status information related to an instruction request accepted for further processing.
 /// </summary>
 [IsoId("_U3YuBeJxEd-Q6MzBzY5WkA")]
+[IsoDisplayName(@"Accepted")]
 public interface IAccepted : IInstructionProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

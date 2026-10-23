@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice;
 /// </summary>
 [IsoId("_glq30SJDEe2zWP9pqvmqdw")]
 [IsoXmlTag("Term")]
+[IsoDisplayName(@"Term")]
 public interface ITerm : IQuantityOrTerm1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ITerm : IQuantityOrTerm1Choice, IIsoChoiceVariant
     [IsoId("_n1kXkSJEEe2zWP9pqvmqdw")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
+    [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
     LongFraction19DecimalNumber? Quantity { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface ITerm : IQuantityOrTerm1Choice, IIsoChoiceVariant
     [IsoId("_X_OJ8SJEEe2zWP9pqvmqdw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? Value { get; }
 
     /// <summary>

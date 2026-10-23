@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of change to an amount.
 /// </summary>
 [IsoId("_hZ5eIA4qEeK3IMoVvcTkkg")]
+[IsoDisplayName(@"Amount Modification")]
 public interface IAmountModification1 : IIsoComponent
 {
     /// <summary>

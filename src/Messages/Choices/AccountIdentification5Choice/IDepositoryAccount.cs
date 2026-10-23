@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification5Choice;
 /// Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme.
 /// </summary>
 [IsoId("_Pdd4ttp-Ed-ak6NoX_4Aeg_1488805194")]
+[IsoDisplayName(@"Depository Account")]
 public interface IDepositoryAccount : IAccountIdentification5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IDepositoryAccount : IAccountIdentification5Choice, IIsoChoiceV
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("DpstryAcct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to an account.
 /// </summary>
 [IsoId("_w9aBcO19Eei-V5h0ja04AA")]
+[IsoDisplayName(@"Payment Account")]
 public interface IPaymentAccount2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the terms of the foreign exchange transaction.
 /// </summary>
 [IsoId("_ui8bkQ3WEeW9YKj3GUmIEw")]
+[IsoDisplayName(@"Exchange Rate Basis")]
 public interface IExchangeRateBasis1 : IIsoComponent
 {
     /// <summary>

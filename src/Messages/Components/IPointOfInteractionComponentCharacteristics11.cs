@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Physical and logical characteristics of a POI component (Point of Interaction).
 /// </summary>
 [IsoId("_FYQfgbZzEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Point Of Interaction Component Characteristics11")]
 public interface IPointOfInteractionComponentCharacteristics11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPointOfInteractionComponentCharacteristics11 : IIsoComponent
     [IsoId("_FaNnVbZzEfCUZfsQO4rYeA")]
     [DisplayName("Memory")]
     [IsoXmlTag("Mmry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMemoryCharacteristics1> Memory { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPointOfInteractionComponentCharacteristics11 : IIsoComponent
     [IsoId("_FaNnW7ZzEfCUZfsQO4rYeA")]
     [DisplayName("Communication")]
     [IsoXmlTag("Com")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommunicationCharacteristics5> Communication { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IPointOfInteractionComponentCharacteristics11 : IIsoComponent
     [IsoId("_FaNnbbZzEfCUZfsQO4rYeA")]
     [DisplayName("Security Element")]
     [IsoXmlTag("SctyElmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICryptographicKey19> SecurityElement { get; }
 }

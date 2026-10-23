@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indicates when the amount of money will become available.
 /// </summary>
 [IsoId("_Vf2nGTqwEeWZFYSPlduMhw")]
+[IsoDisplayName(@"Cash Availability Date 1 Choice")]
 public interface ICashAvailabilityDate1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestorRestrictionType3Choice;
 /// Investor restriction type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_dPETIeLxEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInvestorRestrictionType3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentYearType1Choice;
 /// Current year ISA is an ISA that was issued during the current fiscal year.
 /// </summary>
 [IsoId("_3f6cYkXfEeGY6MkiuzuPOA_1268976057")]
+[IsoDisplayName(@"Extended Current Year Type")]
 public interface IExtendedCurrentYearType : ICurrentYearType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IExtendedCurrentYearType : ICurrentYearType1Choice, IIsoChoiceV
     /// Code and / or description for values that are not yet part of the related code list.
     /// </summary>
     [IsoXmlTag("XtndedCurYrTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code Value { get; }
 }

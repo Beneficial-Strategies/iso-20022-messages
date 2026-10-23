@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of a bulk or multiple or switch order that was previously received.
 /// </summary>
 [IsoId("7bf19d06-83dc-4b83-b0c9-5e1b2fe5f345")]
+[IsoDisplayName(@"Order Status And Reason11")]
 public interface IOrderStatusAndReason11 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Supplementary Indicators1.
 /// </summary>
 [IsoId("_w5PS8EnDEe-NocYul3BKXQ")]
+[IsoDisplayName(@"Corporate Action Supplementary Indicators1")]
 public interface ICorporateActionSupplementaryIndicators1 : IIsoComponent
 {
     /// <summary>

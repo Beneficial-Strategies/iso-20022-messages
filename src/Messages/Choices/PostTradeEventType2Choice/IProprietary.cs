@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PostTradeEventType2Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPostTradeEventType2Choice, IIsoChoiceVariant
 {
     /// <summary>

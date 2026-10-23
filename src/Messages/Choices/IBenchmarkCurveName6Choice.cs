@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for benchmark curve name.
 /// </summary>
 [IsoId("_ZHdRcSc1EeaCIe3n1Gx9ug")]
+[IsoDisplayName(@"Benchmark Curve Name 6 Choice")]
 public interface IBenchmarkCurveName6Choice : IIsoChoice { }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_-gvFoKMOEeCojJW5vEuTEQ_228033973")]
 [IsoMessage("secl.008.001.02", "BuyInRspn", "urn:iso:std:iso:20022:tech:xsd:secl.008.001.02")]
+[IsoDisplayName(@"Buy In Response V02")]
 public interface IBuyInResponseV02 : IOuterRecord
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IBuyInResponseV02 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -39,5 +42,6 @@ public interface IBuyInResponseV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

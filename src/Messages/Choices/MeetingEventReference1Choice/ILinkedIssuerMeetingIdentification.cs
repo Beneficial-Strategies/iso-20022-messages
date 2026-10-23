@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MeetingEventReference1Choice;
 /// Official and unique reference assigned by the official central body/ entity within each market at the beginning of a meeting event.
 /// </summary>
 [IsoId("__b3CG67rEemG7MmivSuE5g")]
+[IsoDisplayName(@"Linked Issuer Meeting Identification")]
 public interface ILinkedIssuerMeetingIdentification
     : IMeetingEventReference1Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ILinkedIssuerMeetingIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("LkdIssrMtgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Point of interaction (POI) performing the transaction.
 /// </summary>
 [IsoId("_QXleYbZ0EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Point Of Interaction16")]
 public interface IPointOfInteraction16 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,6 @@ public interface IPointOfInteraction16 : IIsoComponent
     [IsoId("_QcAEebZ0EfCUZfsQO4rYeA")]
     [DisplayName("Component")]
     [IsoXmlTag("Cmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent18> Component { get; }
 }

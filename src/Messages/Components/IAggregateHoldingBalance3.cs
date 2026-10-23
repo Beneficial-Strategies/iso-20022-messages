@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Overall holding position, in a single financial instrument, held in a securities account at a specified place of safekeeping.
 /// </summary>
 [IsoId("_YlFnMVV3Eea1MPROA61PoQ")]
+[IsoDisplayName(@"Aggregate Holding Balance")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IAggregateHoldingBalance3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IAggregateHoldingBalance3 : IIsoComponent
     [IsoId("_g8YpUlV3Eea1MPROA61PoQ")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateHoldingBalance1> BalanceForAccount { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IAggregateHoldingBalance3 : IIsoComponent
     [IsoId("_g8YpU1V3Eea1MPROA61PoQ")]
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary29> Agent { get; }
 }

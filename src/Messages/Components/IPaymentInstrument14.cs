@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment parties for the transfer of cash from the debtor to the creditor.
 /// </summary>
 [IsoId("_fsCM4E3zEeiQHa-q1Uephw")]
+[IsoDisplayName(@"Payment Instrument")]
 public interface IPaymentInstrument14 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentInstrument14 : IIsoComponent
     [IsoId("_oUR1EE3zEeiQHa-q1Uephw")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reference { get; }
 
     /// <summary>

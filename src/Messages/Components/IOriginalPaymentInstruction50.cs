@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original Payment Instruction50.
 /// </summary>
 [IsoId("_9sSqsTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Original Payment Instruction50")]
 public interface IOriginalPaymentInstruction50 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface IOriginalPaymentInstruction50 : IIsoComponent
     /// </summary>
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReversalReason10> ReversalReasonInformation { get; }
 
     /// <summary>
@@ -65,5 +67,6 @@ public interface IOriginalPaymentInstruction50 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction156> TransactionInformation { get; }
 }

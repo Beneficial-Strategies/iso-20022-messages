@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_xjvgaNE8Ed-BzquC8wXy7w_-2117703681")]
 [IsoMessage("tsmt.026.001.02", "StsChngReq", "urn:iso:std:iso:20022:tech:xsd:tsmt.026.001.02")]
+[Description(@"Scope|The StatusChangeRequest message is sent by a party involved in a transaction to the matching application.|This message is used to request a change in the status of a transaction.|Usage|The StatusChangeRequest message can be sent by either party involved in a transaction to the matching application to request a change in the status of a transaction.|The matching application will pass on the request by sending a StatusChangeRequestNotification message to the counterparty which can accept or reject the request by sending a SatausChangeRequestAcceptance or StatusChangeRequestRejection message.")]
+[IsoDisplayName(@"Status Change Request V")]
 public interface IStatusChangeRequestV02 : IOuterRecord
 {
     /// <summary>

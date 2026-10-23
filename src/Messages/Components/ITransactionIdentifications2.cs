@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides transaction type and identification information.
 /// </summary>
 [IsoId("_QsScSNp-Ed-ak6NoX_4Aeg_1318352595")]
+[IsoDisplayName(@"Transaction Identifications")]
 public interface ITransactionIdentifications2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionIdentifications2 : IIsoComponent
     [IsoId("_QsScSdp-Ed-ak6NoX_4Aeg_1204513529")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransactionIdentifications2 : IIsoComponent
     [IsoId("_QsScStp-Ed-ak6NoX_4Aeg_207441176")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransactionIdentifications2 : IIsoComponent
     [IsoId("_QsScS9p-Ed-ak6NoX_4Aeg_-208289346")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -41,5 +48,7 @@ public interface ITransactionIdentifications2 : IIsoComponent
     [IsoId("_QsScTNp-Ed-ak6NoX_4Aeg_-789631177")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonIdentification { get; }
 }

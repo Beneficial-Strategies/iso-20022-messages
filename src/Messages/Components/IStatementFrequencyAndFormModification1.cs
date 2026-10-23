@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of change to statement frequency and form.
 /// </summary>
 [IsoId("_5U5pQA4rEeK3IMoVvcTkkg")]
+[IsoDisplayName(@"Statement Frequency And Form Modification")]
 public interface IStatementFrequencyAndFormModification1 : IIsoComponent
 {
     /// <summary>

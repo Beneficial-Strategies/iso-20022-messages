@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuotationType1Choice;
 /// Type of quotation expressed as a code.
 /// </summary>
 [IsoId("_ZSNVcNK4EeihtcVwfFPNlg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IQuotationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

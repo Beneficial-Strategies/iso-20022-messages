@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the details of the labour performed and associated duration and billing rate.
 /// </summary>
 [IsoId("_4TwEBPfdEei89sMSHxl1ew")]
+[IsoDisplayName(@"Temporary Services Labor")]
 public interface ITemporaryServicesLabor1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITemporaryServicesLabor1 : IIsoComponent
     [IsoId("_4TwEBffdEei89sMSHxl1ew")]
     [DisplayName("Time Sheet Number")]
     [IsoXmlTag("TmSheetNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TimeSheetNumber { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ITemporaryServicesLabor1 : IIsoComponent
     [IsoId("_4TwEBvfdEei89sMSHxl1ew")]
     [DisplayName("Week Ending")]
     [IsoXmlTag("WkEndg")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? WeekEnding { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface ITemporaryServicesLabor1 : IIsoComponent
     [IsoId("_4TwEB_fdEei89sMSHxl1ew")]
     [DisplayName("Charge")]
     [IsoXmlTag("Chrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount12> Charge { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the modification to be applied on the securities account reference data.
 /// </summary>
 [IsoId("_70DO0Tp0Eemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Securities Account Modification")]
 public interface ISecuritiesAccountModification2 : IIsoComponent
 {
     /// <summary>

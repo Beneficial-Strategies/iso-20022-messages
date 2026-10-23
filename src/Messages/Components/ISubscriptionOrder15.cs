@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Order to invest the investor&apos;s principal in an investment fund.
 /// </summary>
 [IsoId("_yCJGbzbsEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Subscription Order")]
 public interface ISubscriptionOrder15 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISubscriptionOrder15 : IIsoComponent
     [IsoId("_yaFsSTbsEead9bDRE_1DAQ")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISubscriptionOrder15 : IIsoComponent
     [IsoId("_yaFsSzbsEead9bDRE_1DAQ")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -33,6 +38,9 @@ public interface ISubscriptionOrder15 : IIsoComponent
     [IsoId("_yaFsTTbsEead9bDRE_1DAQ")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType4Choice> OrderType { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface ISubscriptionOrder15 : IIsoComponent
     [IsoId("_yaFsWTbsEead9bDRE_1DAQ")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CashSettlementDate { get; }
 
     /// <summary>
@@ -97,6 +106,7 @@ public interface ISubscriptionOrder15 : IIsoComponent
     [IsoId("_yaFsYTbsEead9bDRE_1DAQ")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson31> BeneficiaryDetails { get; }
 
     /// <summary>
@@ -122,6 +132,8 @@ public interface ISubscriptionOrder15 : IIsoComponent
     [IsoId("_yaFsZTbsEead9bDRE_1DAQ")]
     [DisplayName("Letter Intent Reference")]
     [IsoXmlTag("LttrInttRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LetterIntentReference { get; }
 
     /// <summary>
@@ -130,6 +142,8 @@ public interface ISubscriptionOrder15 : IIsoComponent
     [IsoId("_yaFsZzbsEead9bDRE_1DAQ")]
     [DisplayName("Accumulation Right Reference")]
     [IsoXmlTag("AcmltnRghtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccumulationRightReference { get; }
 
     /// <summary>
@@ -154,6 +168,7 @@ public interface ISubscriptionOrder15 : IIsoComponent
     [IsoId("_yaFscTbsEead9bDRE_1DAQ")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>
@@ -178,6 +193,8 @@ public interface ISubscriptionOrder15 : IIsoComponent
     [IsoId("_yaFsdzbsEead9bDRE_1DAQ")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>
@@ -186,6 +203,9 @@ public interface ISubscriptionOrder15 : IIsoComponent
     [IsoId("_yaFseTbsEead9bDRE_1DAQ")]
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
+    [MinLength(0)]
+    [MaxLength(4)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; }
 
     /// <summary>
@@ -210,6 +230,9 @@ public interface ISubscriptionOrder15 : IIsoComponent
     [IsoId("_yaFsfzbsEead9bDRE_1DAQ")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary40> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -226,6 +249,7 @@ public interface ISubscriptionOrder15 : IIsoComponent
     [IsoId("_8ZhWYTlIEeaYrqEUdbYZQQ")]
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISourceOfCash1Choice> SourceOfCash { get; }
 
     /// <summary>

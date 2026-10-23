@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a subscription order.
 /// </summary>
 [IsoId("0a13380a-6616-49a0-9182-705b363b5e79")]
+[IsoDisplayName(@"Subscription Execution15")]
 public interface ISubscriptionExecution15 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ISubscriptionExecution15 : IIsoComponent
     [IsoId("bfe84050-c372-44ae-82b3-5052ff8e64d0")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType4Choice> OrderType { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface ISubscriptionExecution15 : IIsoComponent
     [IsoId("33ecbb19-78eb-4139-b58c-c999598e6522")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson31> BeneficiaryDetails { get; }
 
     /// <summary>
@@ -121,6 +124,7 @@ public interface ISubscriptionExecution15 : IIsoComponent
     [IsoId("b41ef508-4ff8-4cde-b82a-9e8309af3219")]
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice22> InformativePriceDetails { get; }
 
     /// <summary>
@@ -185,6 +189,7 @@ public interface ISubscriptionExecution15 : IIsoComponent
     [IsoId("eb5e739b-8343-4811-86c7-3a756a109c1e")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms37> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -257,6 +262,7 @@ public interface ISubscriptionExecution15 : IIsoComponent
     [IsoId("6aa2874f-8524-47e5-8ade-8626c35bb776")]
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; }
 
     /// <summary>
@@ -345,6 +351,7 @@ public interface ISubscriptionExecution15 : IIsoComponent
     [IsoId("cddc4dd3-b1d3-42c2-9798-bb7a65b8c8f0")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary49> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -361,6 +368,7 @@ public interface ISubscriptionExecution15 : IIsoComponent
     [IsoId("aab5e83f-90d2-497e-90a8-66ee38e0fe56")]
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISourceOfCash1Choice> SourceOfCash { get; }
 
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code or a data source scheme to determine the interest computation method.
 /// </summary>
 [IsoId("_4-mnkNopEeCWg-hsBVGrDA_-378245373")]
+[IsoDisplayName(@"Interest Computation Method 2 Choice")]
 public interface IInterestComputationMethod2Choice : IIsoChoice { }

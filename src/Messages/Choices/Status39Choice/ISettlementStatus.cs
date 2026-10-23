@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status39Choice;
 /// Provides the status of settlement of a transaction.
 /// </summary>
 [IsoId("_gEIFfDi8Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Settlement Status")]
 public interface ISettlementStatus : IStatus39Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

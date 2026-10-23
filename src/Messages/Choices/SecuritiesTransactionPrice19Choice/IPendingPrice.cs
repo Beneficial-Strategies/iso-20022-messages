@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice19Choi
 /// Indicates that price is currently not available, but pending.
 /// </summary>
 [IsoId("_4XpDgMgqEeuGrNSsxk3B0A")]
+[IsoDisplayName(@"Pending Price")]
 public interface IPendingPrice : ISecuritiesTransactionPrice19Choice, IIsoChoiceVariant
 {
     /// <summary>

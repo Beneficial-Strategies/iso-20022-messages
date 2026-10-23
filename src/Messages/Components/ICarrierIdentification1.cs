@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of transportation carrier.
 /// </summary>
 [IsoId("_P8RACPQFEeihCvvpsmGI2w")]
+[IsoDisplayName(@"Carrier Identification")]
 public interface ICarrierIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICarrierIdentification1 : IIsoComponent
     [IsoId("_P8RADPQFEeihCvvpsmGI2w")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICarrierIdentification1 : IIsoComponent
     [IsoId("_P8RADvQFEeihCvvpsmGI2w")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Code { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface ICarrierIdentification1 : IIsoComponent
     [IsoId("_P8RADfQFEeihCvvpsmGI2w")]
     [DisplayName("IATA Code")]
     [IsoXmlTag("IATACd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? IATACode { get; }
 }

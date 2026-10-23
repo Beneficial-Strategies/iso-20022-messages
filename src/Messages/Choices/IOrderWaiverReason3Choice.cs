@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for an order waiver reason.
 /// </summary>
 [IsoId("_PJanIToREeabspMEjqY5TQ")]
+[IsoDisplayName(@"Order Waiver Reason 3 Choice")]
 public interface IOrderWaiverReason3Choice : IIsoChoice { }

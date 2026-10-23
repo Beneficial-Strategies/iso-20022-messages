@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Undertaking extend or pay query details.
 /// </summary>
 [IsoId("_-Dxn0nltEeG7BsjMvd1mEw_1814093000")]
+[IsoDisplayName(@"Extend Or Pay Query")]
 public interface IExtendOrPayQuery2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Fee collection response message record
 /// </summary>
 [IsoId("_3kH-4FZXEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Fee Collection Response")]
 public interface IFeeCollectionResponse : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IFeeCollectionResponse : IRecordMessage1Choice, IIsoChoiceVaria
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("FeeColltnRspn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

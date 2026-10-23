@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of final and intermediary balances.
 /// </summary>
 [IsoId("_t8VGsAgHEeSxsfb1OEDVsw")]
+[IsoDisplayName(@"Closing Balance 3 Choice")]
 public interface IClosingBalance3Choice : IIsoChoice { }

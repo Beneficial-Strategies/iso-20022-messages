@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportItemStatus1Choice;
 /// </summary>
 [IsoId("_TKSsQkitEeSlHoYg_EudVQ")]
 [IsoXmlTag("AccptdWthXcptn")]
+[IsoDisplayName(@"Accepted With Exception")]
 public interface IAcceptedWithException : IReportItemStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IAcceptedWithException : IReportItemStatus1Choice, IIsoChoiceVa
     [IsoId("_j5TZgilEEeWwYv6HydV_vw")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface IAcceptedWithException : IReportItemStatus1Choice, IIsoChoiceVa
     [IsoId("_j5TZhClEEeWwYv6HydV_vw")]
     [DisplayName("Report Item")]
     [IsoXmlTag("RptItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportItem1> ReportItem { get; }
 }

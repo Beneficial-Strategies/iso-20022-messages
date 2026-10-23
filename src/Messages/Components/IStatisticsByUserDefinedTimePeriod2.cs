@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statistical data related to the price change of a security.
 /// </summary>
 [IsoId("_Se4bTNp-Ed-ak6NoX_4Aeg_1006320598")]
+[IsoDisplayName(@"Statistics By User Defined Time Period")]
 public interface IStatisticsByUserDefinedTimePeriod2 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IStatisticsByUserDefinedTimePeriod2 : IIsoComponent
     [IsoId("_SfCMQdp-Ed-ak6NoX_4Aeg_1006321142")]
     [DisplayName("Yield")]
     [IsoXmlTag("Yld")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Yield { get; }
 }

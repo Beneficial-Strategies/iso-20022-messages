@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria which are used to search for an account and to report on the account. A name may be given to the new query.
 /// </summary>
 [IsoId("_4GLX15laEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Account Criteria")]
 public interface IAccountCriteria6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountCriteria6 : IIsoComponent
     [IsoId("_4OF9s5laEeeE1Ya-LgRsuQ")]
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NewQueryName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IAccountCriteria6 : IIsoComponent
     [IsoId("_4OF9tZlaEeeE1Ya-LgRsuQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccountSearchCriteria6> SearchCriteria { get; }
 
     /// <summary>

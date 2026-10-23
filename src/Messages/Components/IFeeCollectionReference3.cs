@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains fee collection reference details.
 /// </summary>
 [IsoId("_ipCYYXFbEfC68Y4jZPNEug")]
+[IsoDisplayName(@"Fee Collection Reference3")]
 public interface IFeeCollectionReference3 : IIsoComponent
 {
     /// <summary>

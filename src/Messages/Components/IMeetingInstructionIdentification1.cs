@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the message and individual instruction(s) for which the cancellation was requested.
 /// </summary>
 [IsoId("_KPVWwDUBEe2tRf29bleifQ")]
+[IsoDisplayName(@"Meeting Instruction Identification")]
 public interface IMeetingInstructionIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMeetingInstructionIdentification1 : IIsoComponent
     [IsoId("_TeJ2wDUBEe2tRf29bleifQ")]
     [DisplayName("Meeting Instruction Identification")]
     [IsoXmlTag("MtgInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MeetingInstructionIdentification { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IMeetingInstructionIdentification1 : IIsoComponent
     [IsoId("_XMIkYDUBEe2tRf29bleifQ")]
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SingleInstructionIdentification { get; }
 }

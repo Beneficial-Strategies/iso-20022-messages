@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transfer from one investment fund/fund class to another investment fund or investment fund class by the investor. A switch is composed of one or several subscription legs, and one or several redemption legs.
 /// </summary>
 [IsoId("_VVuFi9p-Ed-ak6NoX_4Aeg_-1360536112")]
+[IsoDisplayName(@"Switch Order")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISwitchOrder2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface ISwitchOrder2 : IIsoComponent
     [IsoId("_VVuFjNp-Ed-ak6NoX_4Aeg_-1824533801")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISwitchOrder2 : IIsoComponent
     [IsoId("_VVuFjdp-Ed-ak6NoX_4Aeg_-1360536094")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ISwitchOrder2 : IIsoComponent
     [IsoId("_VV3Pc9p-Ed-ak6NoX_4Aeg_-1425073053")]
     [DisplayName("Expiry Date Time")]
     [IsoXmlTag("XpryDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ExpiryDateTime { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface ISwitchOrder2 : IIsoComponent
     [IsoId("_VV3Pd9p-Ed-ak6NoX_4Aeg_-1360535454")]
     [DisplayName("Redemption Leg Details")]
     [IsoXmlTag("RedLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchRedemptionLegOrder2> RedemptionLegDetails { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface ISwitchOrder2 : IIsoComponent
     [IsoId("_VWBAcNp-Ed-ak6NoX_4Aeg_-1360535181")]
     [DisplayName("Subscription Leg Details")]
     [IsoXmlTag("SbcptLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchSubscriptionLegOrder2> SubscriptionLegDetails { get; }
 
     /// <summary>

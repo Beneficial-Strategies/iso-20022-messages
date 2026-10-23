@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indetification of a cryptographic Key to use.
 /// </summary>
 [IsoId("_YcLFMSm1EeKIjpr--01h3Q")]
+[IsoDisplayName(@"Cryptographic Key")]
 public interface ICryptographicKey3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICryptographicKey3 : IIsoComponent
     [IsoId("_YoEzNSm1EeKIjpr--01h3Q")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Identification { get; }
 
     /// <summary>
@@ -27,6 +30,7 @@ public interface ICryptographicKey3 : IIsoComponent
     [IsoId("_YoEzPCm1EeKIjpr--01h3Q")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary? AdditionalIdentification { get; }
 
     /// <summary>
@@ -35,5 +39,6 @@ public interface ICryptographicKey3 : IIsoComponent
     [IsoId("_YoEzQym1EeKIjpr--01h3Q")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Exact10Text)]
     Exact10Text Version { get; }
 }

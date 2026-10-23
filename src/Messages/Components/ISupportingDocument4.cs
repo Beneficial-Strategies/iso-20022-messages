@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Supporting Document4.
 /// </summary>
 [IsoId("_xR3ioTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Supporting Document4")]
 public interface ISupportingDocument4 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ISupportingDocument4 : IIsoComponent
     /// </summary>
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupportingDocumentEntry2> Entry { get; }
 
     /// <summary>
@@ -72,5 +74,6 @@ public interface ISupportingDocument4 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

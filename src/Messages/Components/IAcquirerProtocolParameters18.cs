@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor parameters dedicated to the acquirer protocol.
 /// </summary>
 [IsoId("_sKF7AbZ_EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Acquirer Protocol Parameters18")]
 public interface IAcquirerProtocolParameters18 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAcquirerProtocolParameters18 : IIsoComponent
     [IsoId("_sK_5-7Z_EfCUZfsQO4rYeA")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification176> AcquirerIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IAcquirerProtocolParameters18 : IIsoComponent
     [IsoId("_sK_6B7Z_EfCUZfsQO4rYeA")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ApplicationIdentification { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IAcquirerProtocolParameters18 : IIsoComponent
     [IsoId("_sK_6DbZ_EfCUZfsQO4rYeA")]
     [DisplayName("Host")]
     [IsoXmlTag("Hst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcquirerHostConfiguration11> Host { get; }
 
     /// <summary>
@@ -105,6 +110,7 @@ public interface IAcquirerProtocolParameters18 : IIsoComponent
     [IsoId("_sK_6N7Z_EfCUZfsQO4rYeA")]
     [DisplayName("Split Total Criteria")]
     [IsoXmlTag("SpltTtlCrit")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ReconciliationCriteria1Code> SplitTotalCriteria { get; }
 
     /// <summary>
@@ -121,6 +127,7 @@ public interface IAcquirerProtocolParameters18 : IIsoComponent
     [IsoId("_sK_6Q7Z_EfCUZfsQO4rYeA")]
     [DisplayName("Amount Qualifier For Reservation")]
     [IsoXmlTag("AmtQlfrForRsvatn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TypeOfAmount8Code> AmountQualifierForReservation { get; }
 
     /// <summary>
@@ -153,6 +160,7 @@ public interface IAcquirerProtocolParameters18 : IIsoComponent
     [IsoId("_sK_6W7Z_EfCUZfsQO4rYeA")]
     [DisplayName("Batch Transfer Content")]
     [IsoXmlTag("BtchTrfCntt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<BatchTransactionType1Code> BatchTransferContent { get; }
 
     /// <summary>
@@ -177,6 +185,7 @@ public interface IAcquirerProtocolParameters18 : IIsoComponent
     [IsoId("_sK_6bbZ_EfCUZfsQO4rYeA")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageItemCondition2> MessageItem { get; }
 
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError5Cho
 /// </summary>
 [IsoId("_-DiXczpvEemk2e6qGBk8IQ")]
 [IsoXmlTag("OprlErr")]
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : ICollateralValueReportOrError5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IOperationalError : ICollateralValueReportOrError5Choice, IIsoC
     [IsoId("_RA_783hdEeidzqjNEfehPg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

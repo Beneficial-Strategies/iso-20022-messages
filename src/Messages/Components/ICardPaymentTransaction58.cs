@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cancellation response from the acquirer.
 /// </summary>
 [IsoId("_1sM8wY1EEeWsypzzYao74A")]
+[IsoDisplayName(@"Card Payment Transaction")]
 public interface ICardPaymentTransaction58 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICardPaymentTransaction58 : IIsoComponent
     [IsoId("_13FXE41EEeWsypzzYao74A")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction6> Action { get; }
 }

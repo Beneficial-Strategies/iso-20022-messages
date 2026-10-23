@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the governance rules.
 /// </summary>
 [IsoId("_929T0HltEeG7BsjMvd1mEw_-112960495")]
+[IsoDisplayName(@"Governance Identification 1 Choice")]
 public interface IGovernanceIdentification1Choice : IIsoChoice { }

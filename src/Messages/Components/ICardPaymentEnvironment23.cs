@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of the cancellation.
 /// </summary>
 [IsoId("_fxEScTJOEeO58eY-wGOnqw")]
+[IsoDisplayName(@"Card Payment Environment")]
 public interface ICardPaymentEnvironment23 : IIsoComponent
 {
     /// <summary>

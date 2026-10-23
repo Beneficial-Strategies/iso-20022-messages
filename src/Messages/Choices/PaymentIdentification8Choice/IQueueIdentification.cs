@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification8Choice;
 /// <summary>
 /// Queue Identification.
 /// </summary>
+[IsoDisplayName(@"Queue Identification")]
 public interface IQueueIdentification : IPaymentIdentification8Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information if contract results from a post trade risk reduction operation.
 /// </summary>
 [IsoId("_1GhnIfbdEeyInphUKJZxtQ")]
+[IsoDisplayName(@"PTRR Event")]
 public interface IPTRREvent2 : IIsoComponent
 {
     /// <summary>

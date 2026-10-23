@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CtrctRegnClsrReq",
     "urn:iso:std:iso:20022:tech:xsd:auth.020.001.04"
 )]
+[IsoDisplayName(@"Contract Registration Closure Request V04")]
 public interface IContractRegistrationClosureRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface IContractRegistrationClosureRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Registered Contract Closure")]
     [IsoXmlTag("RegdCtrctClsr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegisteredContract19> RegisteredContractClosure { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface IContractRegistrationClosureRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

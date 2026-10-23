@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transfer information for the transaction.
 /// </summary>
 [IsoId("_t-Wk8a4tEeWLdt0vLARX2Q")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction23 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IATMTransaction23 : IIsoComponent
     [IsoId("_uJO_Ra4tEeWLdt0vLARX2Q")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IATMTransaction23 : IIsoComponent
     [IsoId("_GgHqkK4uEeWLdt0vLARX2Q")]
     [DisplayName("Creditor Label")]
     [IsoXmlTag("CdtrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CreditorLabel { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IATMTransaction23 : IIsoComponent
     [IsoId("_JmHLIK4uEeWLdt0vLARX2Q")]
     [DisplayName("Debtor Label")]
     [IsoXmlTag("DbtrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DebtorLabel { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IATMTransaction23 : IIsoComponent
     [IsoId("_QDmzAK4uEeWLdt0vLARX2Q")]
     [DisplayName("Payment Reference")]
     [IsoXmlTag("PmtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentReference { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface IATMTransaction23 : IIsoComponent
     [IsoId("_dtODUK4uEeWLdt0vLARX2Q")]
     [DisplayName("Account To")]
     [IsoXmlTag("AcctTo")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardAccount7> AccountTo { get; }
 
     /// <summary>
@@ -105,6 +115,7 @@ public interface IATMTransaction23 : IIsoComponent
     [IsoId("_RQ724K4wEeWpsoxRhdX-8A")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedExecutionDate { get; }
 
     /// <summary>
@@ -113,6 +124,8 @@ public interface IATMTransaction23 : IIsoComponent
     [IsoId("_WXYMQK4wEeWpsoxRhdX-8A")]
     [DisplayName("Instant Transfer Program")]
     [IsoXmlTag("InstntTrfPrgm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstantTransferProgram { get; }
 
     /// <summary>
@@ -129,6 +142,7 @@ public interface IATMTransaction23 : IIsoComponent
     [IsoId("_uJO_W64tEeWLdt0vLARX2Q")]
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RequestedReceipt { get; }
 
     /// <summary>
@@ -137,5 +151,6 @@ public interface IATMTransaction23 : IIsoComponent
     [IsoId("_uJO_aa4tEeWLdt0vLARX2Q")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

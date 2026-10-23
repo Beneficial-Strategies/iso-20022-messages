@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicators about rate lock.
 /// </summary>
 [IsoId("_vL6cgIZ7EeuSbct6WWD-Ng")]
+[IsoDisplayName(@"Rate Lock")]
 public interface IRateLock1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRateLock1 : IIsoComponent
     [IsoId("_Gd4uMIZ8EeuSbct6WWD-Ng")]
     [DisplayName("Requested Indicator")]
     [IsoXmlTag("ReqdInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RequestedIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IRateLock1 : IIsoComponent
     [IsoId("_epXawIZ8EeuSbct6WWD-Ng")]
     [DisplayName("Eligible Indicator")]
     [IsoXmlTag("ElgblInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? EligibleIndicator { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IRateLock1 : IIsoComponent
     [IsoId("_ja7FQIZ8EeuSbct6WWD-Ng")]
     [DisplayName("Applied Indicator")]
     [IsoXmlTag("ApldInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AppliedIndicator { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of a cash deposit request.
 /// </summary>
 [IsoId("_VHpcgOOsEe-NFYIkYc90gw")]
+[IsoDisplayName(@"Cash Deposit Request1")]
 public interface ICashDepositRequest1 : IIsoComponent
 {
     /// <summary>
@@ -82,6 +83,7 @@ public interface ICashDepositRequest1 : IIsoComponent
     [IsoId("_ggdlYUITEfCzH9mu34Pawg")]
     [DisplayName("Deposit Contact")]
     [IsoXmlTag("DpstCtct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContact13> DepositContact { get; }
 
     /// <summary>

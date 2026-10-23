@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of creditor reference.
 /// </summary>
 [IsoId("_7xH-hTEsEe6GxLzpkVnWYg")]
+[Description(@"Specifies the type of creditor reference.")]
+[IsoDisplayName(@"Creditor Reference Type3")]
 public interface ICreditorReferenceType3 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action General Information SD59.
 /// </summary>
 [IsoId("_QM4U4aMwEe-4O7NbwmwJkQ")]
+[IsoDisplayName(@"Corporate Action General Information SD59")]
 public interface ICorporateActionGeneralInformationSD59 : IIsoComponent
 {
     /// <summary>
@@ -58,5 +59,6 @@ public interface ICorporateActionGeneralInformationSD59 : IIsoComponent
     /// </summary>
     [DisplayName("Unallocated Details")]
     [IsoXmlTag("UallctdDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionUnallocatedDetailsSD7> UnallocatedDetails { get; }
 }

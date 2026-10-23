@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities trade.
 /// </summary>
 [IsoId("6fd54e09-cdfd-45ce-bd4a-2a73b3ba6300")]
+[IsoDisplayName(@"Securities Trade Details152")]
 public interface ISecuritiesTradeDetails152 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ISecuritiesTradeDetails152 : IIsoComponent
     [IsoId("28ac7db4-26f9-46e3-ac82-9bbe93cbeda0")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TradeIdentification { get; }
 
     /// <summary>
@@ -89,6 +91,7 @@ public interface ISecuritiesTradeDetails152 : IIsoComponent
     [IsoId("e2b1f421-1e42-4967-86fb-f7263713320f")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -185,6 +188,7 @@ public interface ISecuritiesTradeDetails152 : IIsoComponent
     [IsoId("ee912099-9d5a-460d-829b-73fff22752fa")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition5Choice> TradeTransactionCondition { get; }
 
     /// <summary>
@@ -257,6 +261,7 @@ public interface ISecuritiesTradeDetails152 : IIsoComponent
     [IsoId("_vJFKkZaUEfC2_67yGLymgA")]
     [DisplayName("Digital Payment Settlement")]
     [IsoXmlTag("DgtlPmtSttlm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDigitalPaymentSettlement1> DigitalPaymentSettlement { get; }
 
     /// <summary>
@@ -273,5 +278,6 @@ public interface ISecuritiesTradeDetails152 : IIsoComponent
     [IsoId("3bae6917-9049-48c4-9de8-d43c96e16c15")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

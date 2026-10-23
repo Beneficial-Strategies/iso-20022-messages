@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice;
 /// Identifier of a security assigned by the Japanese QUICK identification scheme for financial instruments.
 /// </summary>
 [IsoId("_Qdr_l9p-Ed-ak6NoX_4Aeg_-722284921")]
+[IsoDisplayName(@"QUICK")]
 public interface IQUICK : ISecurityIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IQUICK : ISecurityIdentification3Choice, IIsoChoiceVariant
     /// Identifier of a security assigned by the Japanese QUICK identification scheme for financial instruments.
     /// </summary>
     [IsoXmlTag("QUICK")]
+    [IsoSimpleType(IsoSimpleType.QUICKIdentifier)]
     QUICKIdentifier Value { get; }
 }

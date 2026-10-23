@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument26Choice;
 /// <summary>
 /// Bankers Draft Details.
 /// </summary>
+[IsoDisplayName(@"Bankers Draft Details")]
 public interface IBankersDraftDetails : IPaymentInstrument26Choice, IIsoChoiceVariant
 {
     /// <summary>

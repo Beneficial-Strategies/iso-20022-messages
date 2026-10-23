@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeDateCode1Choice;
 /// Trade date expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_QvRe19p-Ed-ak6NoX_4Aeg_1498245170")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITradeDateCode1Choice, IIsoChoiceVariant
 {
     /// <summary>

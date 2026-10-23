@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of requested data set.
 /// </summary>
 [IsoId("_GNEqoY3gEeW32YMP0mBeyw")]
+[IsoDisplayName(@"Terminal Management Data Set")]
 public interface ITerminalManagementDataSet17 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITerminalManagementDataSet17 : IIsoComponent
     [IsoId("_GYGO443gEeW32YMP0mBeyw")]
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? POIChallenge { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITerminalManagementDataSet17 : IIsoComponent
     [IsoId("_GYGO5Y3gEeW32YMP0mBeyw")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? TMChallenge { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ITerminalManagementDataSet17 : IIsoComponent
     [IsoId("_SaGoMI3gEeW32YMP0mBeyw")]
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary? DelegationProof { get; }
 
     /// <summary>

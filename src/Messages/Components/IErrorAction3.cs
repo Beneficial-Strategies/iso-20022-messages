@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Action to perform in case of error on the related action in progress.
 /// </summary>
 [IsoId("_ZzbQcbC6EeamYaqfhG1ZuA")]
+[IsoDisplayName(@"Error Action")]
 public interface IErrorAction3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IErrorAction3 : IIsoComponent
     [IsoId("_Z-TDsbC6EeamYaqfhG1ZuA")]
     [DisplayName("Action Result")]
     [IsoXmlTag("ActnRslt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TerminalManagementActionResult3Code> ActionResult { get; }
 
     /// <summary>

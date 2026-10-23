@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment terminal or ATM performing the transaction
 /// </summary>
 [IsoId("_we-icaH8EeuiuNcvKhXmNQ")]
+[IsoDisplayName(@"Terminal")]
 public interface ITerminal5 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ITerminal5 : IIsoComponent
     [IsoId("_a25eEcWbEeuhguwJmlgagQ")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ITerminal5 : IIsoComponent
     [IsoId("_FC3UkcWcEeuhguwJmlgagQ")]
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
+    [IsoSimpleType(IsoSimpleType.GeographicPointInDecimalDegrees)]
     GeographicPointInDecimalDegrees? GeographicLocation { get; }
 
     /// <summary>
@@ -67,6 +71,7 @@ public interface ITerminal5 : IIsoComponent
     [IsoId("_wkbqN6H8EeuiuNcvKhXmNQ")]
     [DisplayName("Outdoor Indicator")]
     [IsoXmlTag("OutdrInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? OutdoorIndicator { get; }
 
     /// <summary>
@@ -78,6 +83,7 @@ public interface ITerminal5 : IIsoComponent
     [IsoId("_wkbqOaH8EeuiuNcvKhXmNQ")]
     [DisplayName("Off Premises Indicator")]
     [IsoXmlTag("OffPrmissInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? OffPremisesIndicator { get; }
 
     /// <summary>
@@ -88,6 +94,7 @@ public interface ITerminal5 : IIsoComponent
     [IsoId("_wkbqO6H8EeuiuNcvKhXmNQ")]
     [DisplayName("On Board Indicator")]
     [IsoXmlTag("OnBrdInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? OnBoardIndicator { get; }
 
     /// <summary>
@@ -96,5 +103,6 @@ public interface ITerminal5 : IIsoComponent
     [IsoId("_wkbqPaH8EeuiuNcvKhXmNQ")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent13> POIComponent { get; }
 }

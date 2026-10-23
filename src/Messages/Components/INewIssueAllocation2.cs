@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the investment account ownership with respect to new issue allocation for a hedge fund.
 /// </summary>
 [IsoId("_0BdZcQgpEeSUG-8hqXsVMQ")]
+[IsoDisplayName(@"New Issue Allocation")]
 public interface INewIssueAllocation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INewIssueAllocation2 : IIsoComponent
     [IsoId("_0cGHAwgpEeSUG-8hqXsVMQ")]
     [DisplayName("Restricted")]
     [IsoXmlTag("Rstrctd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Restricted { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface INewIssueAllocation2 : IIsoComponent
     [IsoId("_0cGHBQgpEeSUG-8hqXsVMQ")]
     [DisplayName("Exempt Person Reason")]
     [IsoXmlTag("XmptPrsnRsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? ExemptPersonReason { get; }
 
     /// <summary>

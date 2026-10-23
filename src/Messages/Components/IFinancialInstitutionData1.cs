@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to a financial institution required by business or regulation.
 /// </summary>
 [IsoId("_foaBQXSCEfC68Y4jZPNEug")]
+[IsoDisplayName(@"Financial Institution Data1")]
 public interface IFinancialInstitutionData1 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface IFinancialInstitutionData1 : IIsoComponent
     [IsoId("_we_j73SCEfC68Y4jZPNEug")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface IFinancialInstitutionData1 : IIsoComponent
     [IsoId("_we_j8HSCEfC68Y4jZPNEug")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>
@@ -89,5 +92,6 @@ public interface IFinancialInstitutionData1 : IIsoComponent
     [IsoId("_we_j8XSCEfC68Y4jZPNEug")]
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData20> LocalData { get; }
 }

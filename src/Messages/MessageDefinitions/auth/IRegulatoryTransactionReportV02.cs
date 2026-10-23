@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_gKH798IFEeGllrOKQRUTYA_1289680586")]
 [IsoMessage("auth.008.001.02", "RgltryTxRpt", "urn:iso:std:iso:20022:tech:xsd:auth.008.001.02")]
+[Description(@"Scope|A reporting institution, eg, an investment bank, sends the RegulatoryTransactionReport to a regulator or an intermediary (eg a reporting agent), to report the transaction details of a trade that has been executed on or off-exchange.|Usage|The message definition can be used to report more than one transaction. The message definition can also be used to specify, on a trade by trade basis, to which authorities the transaction report(s) need to be sent using the TransactionReportMarker.")]
+[IsoDisplayName(@"Regulatory Transaction Report V")]
 public interface IRegulatoryTransactionReportV02 : IOuterRecord
 {
     /// <summary>
@@ -31,6 +33,7 @@ public interface IRegulatoryTransactionReportV02 : IOuterRecord
     [IsoId("_gKRs8MIFEeGllrOKQRUTYA_1289680605")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionDetails3> TransactionDetails { get; }
 
     /// <summary>
@@ -55,5 +58,6 @@ public interface IRegulatoryTransactionReportV02 : IOuterRecord
     [IsoId("_gKRs88IFEeGllrOKQRUTYA_1289680973")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

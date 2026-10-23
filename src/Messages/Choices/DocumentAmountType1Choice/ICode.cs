@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentAmountType1Choice;
 /// <summary>
 /// Specifies the amount type, as published in an external referred amount code set.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IDocumentAmountType1Choice, IIsoChoiceVariant
 {
     /// <summary>

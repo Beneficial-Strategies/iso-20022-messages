@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Goods or services that are part of a commercial trade agreement.
 /// </summary>
 [IsoId("_L6FU0TckEeSaC-PiOaz_KQ")]
+[IsoDisplayName(@"Commercial Data Set")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ICommercialDataSet5 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +59,7 @@ public interface ICommercialDataSet5 : IIsoComponent
     [IsoId("_MQGoKzckEeSaC-PiOaz_KQ")]
     [DisplayName("Goods")]
     [IsoXmlTag("Goods")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItem15> Goods { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ICommercialDataSet5 : IIsoComponent
     [IsoId("_MQGoLTckEeSaC-PiOaz_KQ")]
     [DisplayName("Payment Terms")]
     [IsoXmlTag("PmtTerms")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTerms4> PaymentTerms { get; }
 
     /// <summary>

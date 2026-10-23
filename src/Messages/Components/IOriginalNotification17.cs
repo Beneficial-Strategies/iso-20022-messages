@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the original notification and to provide the status.
 /// </summary>
 [IsoId("553b9e8f-6f17-4a30-a9cb-6df31d0a49c3")]
+[IsoDisplayName(@"Original Notification17")]
 public interface IOriginalNotification17 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IOriginalNotification17 : IIsoComponent
     [IsoId("e9d84013-024d-47f9-98c5-752f78134880")]
     [DisplayName("Original Notification Reference")]
     [IsoXmlTag("OrgnlNtfctnRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalNotificationReference15> OriginalNotificationReference { get; }
 }

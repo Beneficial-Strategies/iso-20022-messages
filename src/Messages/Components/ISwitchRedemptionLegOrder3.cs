@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Redemption leg, or switch-out, of a switch transaction.
 /// </summary>
 [IsoId("_SK6WYNp-Ed-ak6NoX_4Aeg_-1708950755")]
+[IsoDisplayName(@"Switch Redemption Leg Order")]
 public interface ISwitchRedemptionLegOrder3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISwitchRedemptionLegOrder3 : IIsoComponent
     [IsoId("_SK6WYdp-Ed-ak6NoX_4Aeg_-1708950730")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface ISwitchRedemptionLegOrder3 : IIsoComponent
     [IsoId("_SLEHYNp-Ed-ak6NoX_4Aeg_-1708949298")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge17> ChargeDetails { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface ISwitchRedemptionLegOrder3 : IIsoComponent
     [IsoId("_SLEHYdp-Ed-ak6NoX_4Aeg_-97949453")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission10> CommissionDetails { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface ISwitchRedemptionLegOrder3 : IIsoComponent
     [IsoId("_SLEHYtp-Ed-ak6NoX_4Aeg_438991890")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax16> TaxDetails { get; }
 
     /// <summary>
@@ -113,6 +119,7 @@ public interface ISwitchRedemptionLegOrder3 : IIsoComponent
     [IsoId("_SLEHZNp-Ed-ak6NoX_4Aeg_-1708949980")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>
@@ -129,6 +136,8 @@ public interface ISwitchRedemptionLegOrder3 : IIsoComponent
     [IsoId("_SLEHZtp-Ed-ak6NoX_4Aeg_302899296")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>

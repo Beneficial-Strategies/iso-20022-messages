@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// </summary>
 [IsoId("_-jWs8OQWEeCGktPI9k4Dlw_-1818503267")]
 [IsoMessage("catm.002.001.01", "MgmtPlanRplcmnt", "urn:iso:std:iso:20022:tech:xsd:catm.002.001.01")]
+[Description(@"Scope|The ManagementPlanReplacement message is sent by the master terminal manager or delegated terminal manager to the acceptor system to replace the TMS action list of the POI system.|Usage|The ManagementPlanReplacement message may embed the information required by the acceptor system for the planning of the TMS actions to be performed by the POI including the trigger, time conditions and TMS addresses.")]
+[IsoDisplayName(@"Management Plan Replacement V")]
 public interface IManagementPlanReplacementV01 : IOuterRecord
 {
     /// <summary>

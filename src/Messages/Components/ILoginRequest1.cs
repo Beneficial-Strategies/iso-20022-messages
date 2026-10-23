@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Login Request message.
 /// </summary>
 [IsoId("_0j084N6HEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Login Request")]
 public interface ILoginRequest1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILoginRequest1 : IIsoComponent
     [IsoId("_-tvzMN6HEeiwsev40qZGEQ")]
     [DisplayName("Login Date Time")]
     [IsoXmlTag("LgnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime LoginDateTime { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ILoginRequest1 : IIsoComponent
     [IsoId("_I-ylMN6IEeiwsev40qZGEQ")]
     [DisplayName("Sale Software")]
     [IsoXmlTag("SaleSftwr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent9> SaleSoftware { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ILoginRequest1 : IIsoComponent
     [IsoId("_jD8wMN6IEeiwsev40qZGEQ")]
     [DisplayName("Training Mode Flag")]
     [IsoXmlTag("TrngMdFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TrainingModeFlag { get; }
 
     /// <summary>
@@ -49,6 +53,8 @@ public interface ILoginRequest1 : IIsoComponent
     [IsoId("_mX07wN6IEeiwsev40qZGEQ")]
     [DisplayName("Cashier Identification")]
     [IsoXmlTag("CshrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CashierIdentification { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface ILoginRequest1 : IIsoComponent
     [IsoId("_r0RWUN6IEeiwsev40qZGEQ")]
     [DisplayName("Shift Number")]
     [IsoXmlTag("ShftNb")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? ShiftNumber { get; }
 
     /// <summary>
@@ -97,5 +104,7 @@ public interface ILoginRequest1 : IIsoComponent
     [IsoId("_fMrHMN6JEeiwsev40qZGEQ")]
     [DisplayName("Totals Group Identification")]
     [IsoXmlTag("TtlsGrpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TotalsGroupIdentification { get; }
 }

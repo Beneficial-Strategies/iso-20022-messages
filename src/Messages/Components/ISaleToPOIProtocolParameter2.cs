@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration parameters to communicate with a sale system.
 /// </summary>
 [IsoId("_8pTf0VFMEeyApZmLzm74zA")]
+[IsoDisplayName(@"Sale To POI Protocol Parameter")]
 public interface ISaleToPOIProtocolParameter2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ISaleToPOIProtocolParameter2 : IIsoComponent
     [IsoId("_8vwtJVFMEeyApZmLzm74zA")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Version { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ISaleToPOIProtocolParameter2 : IIsoComponent
     [IsoId("_8vwtJ1FMEeyApZmLzm74zA")]
     [DisplayName("Host Identification")]
     [IsoXmlTag("HstId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text HostIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface ISaleToPOIProtocolParameter2 : IIsoComponent
     [IsoId("_8vwtKVFMEeyApZmLzm74zA")]
     [DisplayName("Merchant POI Identification")]
     [IsoXmlTag("MrchntPOIId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MerchantPOIIdentification { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface ISaleToPOIProtocolParameter2 : IIsoComponent
     [IsoId("_8vwtK1FMEeyApZmLzm74zA")]
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleIdentification { get; }
 
     /// <summary>
@@ -65,5 +74,6 @@ public interface ISaleToPOIProtocolParameter2 : IIsoComponent
     [IsoId("_vrXpwVFMEeyApZmLzm74zA")]
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max1025Text> ExternallyTypeSupported { get; }
 }

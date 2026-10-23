@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_8QuIcRN9EfC1ZfCQz0xB3g")]
 [IsoMessage("caad.008.001.03", "AdmstvInitn", "urn:iso:std:iso:20022:tech:xsd:caad.008.001.03")]
+[IsoDisplayName(@"Administrative Initiation V03")]
 public interface IAdministrativeInitiationV03 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +33,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -39,6 +41,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -53,6 +56,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData17> LocalData { get; }
 
     /// <summary>
@@ -137,6 +141,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardExchangeRate1> ExchangeRate { get; }
 
     /// <summary>
@@ -165,6 +170,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent16> POIComponent { get; }
 
     /// <summary>
@@ -228,6 +234,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Cardholder")]
     [IsoXmlTag("Crdhldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholder23> Cardholder { get; }
 
     /// <summary>
@@ -242,6 +249,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerification8> Verification { get; }
 
     /// <summary>
@@ -249,6 +257,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Risk")]
     [IsoXmlTag("Rsk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRiskContext4> Risk { get; }
 
     /// <summary>
@@ -256,6 +265,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialProgrammeQualification2> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -270,6 +280,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalService3> AdditionalService { get; }
 
     /// <summary>
@@ -291,6 +302,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -312,6 +324,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Original Transaction")]
     [IsoXmlTag("OrgnlTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalTransaction4> OriginalTransaction { get; }
 
     /// <summary>
@@ -319,6 +332,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -326,6 +340,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -333,6 +348,7 @@ public interface IAdministrativeInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

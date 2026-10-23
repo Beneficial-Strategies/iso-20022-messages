@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies settlement parties (delivering/receiving).
 /// </summary>
 [IsoId("_N16I30GLEeWqy4niLuXETA")]
+[IsoDisplayName(@"Settlement Parties")]
 public interface ISettlementParties42 : IIsoComponent
 {
     /// <summary>

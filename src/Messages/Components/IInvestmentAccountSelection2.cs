@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice between a unique account identification and a set of account selection criteria.
 /// </summary>
 [IsoId("_RRsPZ9p-Ed-ak6NoX_4Aeg_-1532088201")]
+[IsoDisplayName(@"Investment Account Selection")]
 public interface IInvestmentAccountSelection2 : IIsoComponent
 {
     /// <summary>

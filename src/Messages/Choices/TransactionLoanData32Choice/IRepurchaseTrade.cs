@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData32Choice;
 /// </summary>
 [IsoId("_KA3wkcz4EeufhKfUxzsnrQ")]
 [IsoXmlTag("RpTrad")]
+[IsoDisplayName(@"Repurchase Trade")]
 public interface IRepurchaseTrade : ITransactionLoanData32Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IRepurchaseTrade : ITransactionLoanData32Choice, IIsoChoiceVari
     [IsoId("_KCPpkcz4EeufhKfUxzsnrQ")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text UniqueTradeIdentifier { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IRepurchaseTrade : ITransactionLoanData32Choice, IIsoChoiceVari
     [IsoId("_KCPpk8z4EeufhKfUxzsnrQ")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDate { get; }
 
     /// <summary>
@@ -34,6 +38,7 @@ public interface IRepurchaseTrade : ITransactionLoanData32Choice, IIsoChoiceVari
     [IsoId("_KCPplcz4EeufhKfUxzsnrQ")]
     [DisplayName("Execution Date Time")]
     [IsoXmlTag("ExctnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ExecutionDateTime { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface IRepurchaseTrade : ITransactionLoanData32Choice, IIsoChoiceVari
     [IsoId("_KCPpmcz4EeufhKfUxzsnrQ")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier TradingVenue { get; }
 
     /// <summary>
@@ -66,6 +72,7 @@ public interface IRepurchaseTrade : ITransactionLoanData32Choice, IIsoChoiceVari
     [IsoId("_KCPpncz4EeufhKfUxzsnrQ")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValueDate { get; }
 
     /// <summary>
@@ -83,6 +90,7 @@ public interface IRepurchaseTrade : ITransactionLoanData32Choice, IIsoChoiceVari
     [IsoId("_KCPpocz4EeufhKfUxzsnrQ")]
     [DisplayName("Delivery By Value")]
     [IsoXmlTag("DlvryByVal")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator DeliveryByValue { get; }
 
     /// <summary>
@@ -99,6 +107,7 @@ public interface IRepurchaseTrade : ITransactionLoanData32Choice, IIsoChoiceVari
     [IsoId("_KCPppcz4EeufhKfUxzsnrQ")]
     [DisplayName("Term")]
     [IsoXmlTag("Term")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContractTerm7Choice> Term { get; }
 
     /// <summary>
@@ -123,6 +132,7 @@ public interface IRepurchaseTrade : ITransactionLoanData32Choice, IIsoChoiceVari
     [IsoId("_KCPpq8z4EeufhKfUxzsnrQ")]
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TerminationDate { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the header for a trade transaction query message.
 /// </summary>
 [IsoId("_hxrf4RZ6Ee27wrM4RUjLog")]
+[IsoDisplayName(@"Trade Report Header")]
 public interface ITradeReportHeader4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeReportHeader4 : IIsoComponent
     [IsoId("_hzTQgRZ6Ee27wrM4RUjLog")]
     [DisplayName("Report Execution Date")]
     [IsoXmlTag("RptExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ReportExecutionDate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITradeReportHeader4 : IIsoComponent
     [IsoId("_hzTQhRZ6Ee27wrM4RUjLog")]
     [DisplayName("Number Records")]
     [IsoXmlTag("NbRcrds")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberRecords { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ITradeReportHeader4 : IIsoComponent
     [IsoId("_hzTQhxZ6Ee27wrM4RUjLog")]
     [DisplayName("Competent Authority")]
     [IsoXmlTag("CmptntAuthrty")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max100Text> CompetentAuthority { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface ITradeReportHeader4 : IIsoComponent
     [IsoId("_Uu4gsCLrEe2KAJot-YBP6w")]
     [DisplayName("Reporting Purpose")]
     [IsoXmlTag("RptgPurp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max100Text> ReportingPurpose { get; }
 }

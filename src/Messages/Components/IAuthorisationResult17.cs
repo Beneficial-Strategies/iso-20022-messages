@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Outcome of the authorisation, and actions to perform.
 /// </summary>
 [IsoId("_4CqUkU7KEeyGi9JAv6wq7Q")]
+[IsoDisplayName(@"Authorisation Result")]
 public interface IAuthorisationResult17 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IAuthorisationResult17 : IIsoComponent
     [IsoId("_4JKlNU7KEeyGi9JAv6wq7Q")]
     [DisplayName("Authorisation Code")]
     [IsoXmlTag("AuthstnCd")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? AuthorisationCode { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IAuthorisationResult17 : IIsoComponent
     [IsoId("_4JKlN07KEeyGi9JAv6wq7Q")]
     [DisplayName("Completion Required")]
     [IsoXmlTag("CmpltnReqrd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CompletionRequired { get; }
 
     /// <summary>

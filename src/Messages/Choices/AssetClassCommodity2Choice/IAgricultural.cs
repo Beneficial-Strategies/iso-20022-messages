@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity2Choice;
 /// Code list for agricultural type of commodities.
 /// </summary>
 [IsoId("_BzEmPyYyEeWHeosc_5RQEw")]
+[IsoDisplayName(@"Agricultural")]
 public interface IAgricultural : IAssetClassCommodity2Choice, IIsoChoiceVariant
 {
     /// <summary>

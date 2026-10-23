@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Statistics per counterparty reporting under the local regulation.
 /// </summary>
 [IsoId("_85s8k0wWEeqwfMIOLcNxbw")]
+[IsoDisplayName(@"Statistics Per Counterparty 2 Choice")]
 public interface IStatisticsPerCounterparty2Choice : IIsoChoice { }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus1Choice;
 /// </summary>
 [IsoId("_RWnLqdp-Ed-ak6NoX_4Aeg_-1745275553")]
 [IsoXmlTag("DtldInstrSts")]
+[IsoDisplayName(@"Detailed Instruction Status")]
 public interface IDetailedInstructionStatus : IInstructionStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IDetailedInstructionStatus : IInstructionStatus1Choice, IIsoCho
     [IsoId("_RWnLoNp-Ed-ak6NoX_4Aeg_-2110986462")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InstructionIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IDetailedInstructionStatus : IInstructionStatus1Choice, IIsoCho
     [IsoId("_RWnLodp-Ed-ak6NoX_4Aeg_1822881804")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface IDetailedInstructionStatus : IInstructionStatus1Choice, IIsoCho
     [IsoId("_RWnLotp-Ed-ak6NoX_4Aeg_-2130380809")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubAccountIdentification { get; }
 
     /// <summary>

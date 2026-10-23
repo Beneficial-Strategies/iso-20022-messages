@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status and quantity information related to a rejected instruction request.
 /// </summary>
 [IsoId("_BkbKsaKtEfCHi7w3_0pcpw")]
+[IsoDisplayName(@"Rejected Status15")]
 public interface IRejectedStatus15 : IIsoComponent
 {
     /// <summary>

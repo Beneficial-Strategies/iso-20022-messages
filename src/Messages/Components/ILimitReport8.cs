@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit Report8.
 /// </summary>
 [IsoId("_5W_PoTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Limit Report8")]
 public interface ILimitReport8 : IIsoComponent
 {
     /// <summary>

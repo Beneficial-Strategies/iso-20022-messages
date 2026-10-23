@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.
 /// </summary>
 [IsoId("228ed14b-2fc2-4f3f-bc8e-47c7306ee6f5")]
+[IsoDisplayName(@"Structured Remittance Information22")]
 public interface IStructuredRemittanceInformation22 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IStructuredRemittanceInformation22 : IIsoComponent
     [IsoId("bca856fd-f648-4226-b434-720e4690a282")]
     [DisplayName("Referred Document Information")]
     [IsoXmlTag("RfrdDocInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferredDocumentInformation8> ReferredDocumentInformation { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface IStructuredRemittanceInformation22 : IIsoComponent
     [IsoId("37a60672-6182-4d2f-aaac-fef4ab894dee")]
     [DisplayName("Securities Data")]
     [IsoXmlTag("SctiesData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesAttributes1> SecuritiesData { get; }
 
     /// <summary>
@@ -81,5 +84,6 @@ public interface IStructuredRemittanceInformation22 : IIsoComponent
     [IsoId("a58c069f-f64a-40e8-bccf-9f64dc1c1edf")]
     [DisplayName("Additional Remittance Information")]
     [IsoXmlTag("AddtlRmtInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max140Text> AdditionalRemittanceInformation { get; }
 }

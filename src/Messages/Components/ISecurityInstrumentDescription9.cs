@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the security instrument by its name and typical characteristics.
 /// </summary>
 [IsoId("_TGvncWXuEeWIGZvepIG8Mg")]
+[IsoDisplayName(@"Security Instrument Description")]
 public interface ISecurityInstrumentDescription9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityInstrumentDescription9 : IIsoComponent
     [IsoId("_TST-QWXuEeWIGZvepIG8Mg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier Identification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ISecurityInstrumentDescription9 : IIsoComponent
     [IsoId("_TST-Q2XuEeWIGZvepIG8Mg")]
     [DisplayName("Full Name")]
     [IsoXmlTag("FullNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text FullName { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface ISecurityInstrumentDescription9 : IIsoComponent
     [IsoId("_TST-RWXuEeWIGZvepIG8Mg")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface ISecurityInstrumentDescription9 : IIsoComponent
     [IsoId("_TST-R2XuEeWIGZvepIG8Mg")]
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier ClassificationType { get; }
 
     /// <summary>
@@ -57,5 +64,6 @@ public interface ISecurityInstrumentDescription9 : IIsoComponent
     [IsoId("_TST-TWXuEeWIGZvepIG8Mg")]
     [DisplayName("Commodity Derivative Indicator")]
     [IsoXmlTag("CmmdtyDerivInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator CommodityDerivativeIndicator { get; }
 }

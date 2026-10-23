@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial instruments evidencing moneys owed by the issuer to the holder on terms as specified.
 /// </summary>
 [IsoId("_MS6w6ZJOEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Debt")]
 public interface IDebt5 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJli5JOEeuAlLVx8pyt3w")]
     [DisplayName("Interest Fixing Date")]
     [IsoXmlTag("IntrstFxgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? InterestFixingDate { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJljZJOEeuAlLVx8pyt3w")]
     [DisplayName("Dated Date")]
     [IsoXmlTag("DtdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DatedDate { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJllZJOEeuAlLVx8pyt3w")]
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? FirstPaymentDate { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJll5JOEeuAlLVx8pyt3w")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? MaturityDate { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJlq5JOEeuAlLVx8pyt3w")]
     [DisplayName("Next Coupon Date")]
     [IsoXmlTag("NxtCpnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? NextCouponDate { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJls5JOEeuAlLVx8pyt3w")]
     [DisplayName("Putable Date")]
     [IsoXmlTag("PutblDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? PutableDate { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJltZJOEeuAlLVx8pyt3w")]
     [DisplayName("Next Callable Date")]
     [IsoXmlTag("NxtCllblDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? NextCallableDate { get; }
 
     /// <summary>
@@ -97,6 +105,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJlt5JOEeuAlLVx8pyt3w")]
     [DisplayName("Next Factor Date")]
     [IsoXmlTag("NxtFctrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? NextFactorDate { get; }
 
     /// <summary>
@@ -105,6 +114,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJluZJOEeuAlLVx8pyt3w")]
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ExpirationDate { get; }
 
     /// <summary>
@@ -113,6 +123,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJlu5JOEeuAlLVx8pyt3w")]
     [DisplayName("Payment Direction Indicator")]
     [IsoXmlTag("PmtDrctnInd")]
+    [IsoSimpleType(IsoSimpleType.PaymentDirectionIndicator)]
     PaymentDirectionIndicator? PaymentDirectionIndicator { get; }
 
     /// <summary>
@@ -121,6 +132,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJlvZJOEeuAlLVx8pyt3w")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? InterestRate { get; }
 
     /// <summary>
@@ -129,6 +141,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJlxZJOEeuAlLVx8pyt3w")]
     [DisplayName("Next Interest Rate")]
     [IsoXmlTag("NxtIntrstRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? NextInterestRate { get; }
 
     /// <summary>
@@ -137,6 +150,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJlx5JOEeuAlLVx8pyt3w")]
     [DisplayName("Odd Coupon Indicator")]
     [IsoXmlTag("OddCpnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OddCouponIndicator { get; }
 
     /// <summary>
@@ -145,6 +159,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJlyZJOEeuAlLVx8pyt3w")]
     [DisplayName("Callable Indicator")]
     [IsoXmlTag("CllblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CallableIndicator { get; }
 
     /// <summary>
@@ -161,6 +176,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJly5JOEeuAlLVx8pyt3w")]
     [DisplayName("CP Program")]
     [IsoXmlTag("CPPrgm")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? CPProgram { get; }
 
     /// <summary>
@@ -169,6 +185,8 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl05JOEeuAlLVx8pyt3w")]
     [DisplayName("CP Registration Type")]
     [IsoXmlTag("CPRegnTp")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? CPRegistrationType { get; }
 
     /// <summary>
@@ -177,6 +195,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl25JOEeuAlLVx8pyt3w")]
     [DisplayName("Interest Accrual Date")]
     [IsoXmlTag("IntrstAcrlDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? InterestAccrualDate { get; }
 
     /// <summary>
@@ -185,6 +204,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl45JOEeuAlLVx8pyt3w")]
     [DisplayName("Putable Indicator")]
     [IsoXmlTag("PutblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PutableIndicator { get; }
 
     /// <summary>
@@ -193,6 +213,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl5ZJOEeuAlLVx8pyt3w")]
     [DisplayName("Pre Funded Indicator")]
     [IsoXmlTag("PreFnddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PreFundedIndicator { get; }
 
     /// <summary>
@@ -201,6 +222,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl55JOEeuAlLVx8pyt3w")]
     [DisplayName("Escrowed Indicator")]
     [IsoXmlTag("EscrwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EscrowedIndicator { get; }
 
     /// <summary>
@@ -209,6 +231,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl6ZJOEeuAlLVx8pyt3w")]
     [DisplayName("Perpetual Indicator")]
     [IsoXmlTag("PerptlInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PerpetualIndicator { get; }
 
     /// <summary>
@@ -217,6 +240,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl65JOEeuAlLVx8pyt3w")]
     [DisplayName("Subordinated Indicator")]
     [IsoXmlTag("SubrdntdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SubordinatedIndicator { get; }
 
     /// <summary>
@@ -225,6 +249,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl7ZJOEeuAlLVx8pyt3w")]
     [DisplayName("Extendible Indicator")]
     [IsoXmlTag("XtndblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ExtendibleIndicator { get; }
 
     /// <summary>
@@ -241,6 +266,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl8ZJOEeuAlLVx8pyt3w")]
     [DisplayName("Variable Rate Indicator")]
     [IsoXmlTag("VarblRateInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? VariableRateIndicator { get; }
 
     /// <summary>
@@ -257,6 +283,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl9ZJOEeuAlLVx8pyt3w")]
     [DisplayName("Over Allotment Rate")]
     [IsoXmlTag("OverAlltmtRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OverAllotmentRate { get; }
 
     /// <summary>
@@ -265,6 +292,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl95JOEeuAlLVx8pyt3w")]
     [DisplayName("Amortisable Indicator")]
     [IsoXmlTag("AmtsblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AmortisableIndicator { get; }
 
     /// <summary>
@@ -273,6 +301,8 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl-ZJOEeuAlLVx8pyt3w")]
     [DisplayName("Interest Calculation Method")]
     [IsoXmlTag("IntrstClctnMtd")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? InterestCalculationMethod { get; }
 
     /// <summary>
@@ -289,6 +319,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl_ZJOEeuAlLVx8pyt3w")]
     [DisplayName("Actual Denomination Amount")]
     [IsoXmlTag("ActlDnmtnAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveCurrencyAndAmount> ActualDenominationAmount { get; }
 
     /// <summary>
@@ -297,6 +328,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJl_5JOEeuAlLVx8pyt3w")]
     [DisplayName("Current Factor")]
     [IsoXmlTag("CurFctr")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? CurrentFactor { get; }
 
     /// <summary>
@@ -305,6 +337,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmAZJOEeuAlLVx8pyt3w")]
     [DisplayName("Next Factor")]
     [IsoXmlTag("NxtFctr")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? NextFactor { get; }
 
     /// <summary>
@@ -313,6 +346,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmA5JOEeuAlLVx8pyt3w")]
     [DisplayName("Previous Factor")]
     [IsoXmlTag("PrvsFctr")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PreviousFactor { get; }
 
     /// <summary>
@@ -321,6 +355,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmBZJOEeuAlLVx8pyt3w")]
     [DisplayName("Pieces")]
     [IsoXmlTag("Pcs")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? Pieces { get; }
 
     /// <summary>
@@ -329,6 +364,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmB5JOEeuAlLVx8pyt3w")]
     [DisplayName("Pools Maximum")]
     [IsoXmlTag("PlsMax")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? PoolsMaximum { get; }
 
     /// <summary>
@@ -337,6 +373,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmCZJOEeuAlLVx8pyt3w")]
     [DisplayName("Pools Per Million")]
     [IsoXmlTag("PlsPerMln")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? PoolsPerMillion { get; }
 
     /// <summary>
@@ -345,6 +382,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmC5JOEeuAlLVx8pyt3w")]
     [DisplayName("Pools Per Lot")]
     [IsoXmlTag("PlsPerLot")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? PoolsPerLot { get; }
 
     /// <summary>
@@ -353,6 +391,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmDZJOEeuAlLVx8pyt3w")]
     [DisplayName("Pools Per Trade")]
     [IsoXmlTag("PlsPerTrad")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? PoolsPerTrade { get; }
 
     /// <summary>
@@ -361,6 +400,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmD5JOEeuAlLVx8pyt3w")]
     [DisplayName("Constant Pre Payment Penalty Indicator")]
     [IsoXmlTag("CstPrePmtPnltyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ConstantPrePaymentPenaltyIndicator { get; }
 
     /// <summary>
@@ -369,6 +409,8 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmEZJOEeuAlLVx8pyt3w")]
     [DisplayName("Lot Identification")]
     [IsoXmlTag("LotId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LotIdentification { get; }
 
     /// <summary>
@@ -377,6 +419,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmE5JOEeuAlLVx8pyt3w")]
     [DisplayName("Constant Pre Payment Yield")]
     [IsoXmlTag("CstPrePmtYld")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ConstantPrePaymentYield { get; }
 
     /// <summary>
@@ -385,6 +428,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmFZJOEeuAlLVx8pyt3w")]
     [DisplayName("Weighted Average Coupon")]
     [IsoXmlTag("WghtdAvrgCpn")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? WeightedAverageCoupon { get; }
 
     /// <summary>
@@ -393,6 +437,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmF5JOEeuAlLVx8pyt3w")]
     [DisplayName("Weighted Average Life")]
     [IsoXmlTag("WghtdAvrgLife")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? WeightedAverageLife { get; }
 
     /// <summary>
@@ -401,6 +446,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmGZJOEeuAlLVx8pyt3w")]
     [DisplayName("Weighted Average Loan")]
     [IsoXmlTag("WghtdAvrgLn")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? WeightedAverageLoan { get; }
 
     /// <summary>
@@ -409,6 +455,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmG5JOEeuAlLVx8pyt3w")]
     [DisplayName("Weighted Average Maturity")]
     [IsoXmlTag("WghtdAvrgMtrty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? WeightedAverageMaturity { get; }
 
     /// <summary>
@@ -417,6 +464,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmHZJOEeuAlLVx8pyt3w")]
     [DisplayName("Insured Indicator")]
     [IsoXmlTag("InsrdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? InsuredIndicator { get; }
 
     /// <summary>
@@ -425,6 +473,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmH5JOEeuAlLVx8pyt3w")]
     [DisplayName("Bank Qualified Indicator")]
     [IsoXmlTag("BkQlfdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BankQualifiedIndicator { get; }
 
     /// <summary>
@@ -433,6 +482,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmIZJOEeuAlLVx8pyt3w")]
     [DisplayName("Yield Calculation")]
     [IsoXmlTag("YldClctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IYieldCalculation6> YieldCalculation { get; }
 
     /// <summary>
@@ -467,6 +517,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmKZJOEeuAlLVx8pyt3w")]
     [DisplayName("Potential Euro System Eligibility")]
     [IsoXmlTag("PotntlEuroSysElgblty")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PotentialEuroSystemEligibility { get; }
 
     /// <summary>
@@ -475,6 +526,8 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmK5JOEeuAlLVx8pyt3w")]
     [DisplayName("Geographics")]
     [IsoXmlTag("Geogcs")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Geographics { get; }
 
     /// <summary>
@@ -499,6 +552,8 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmN5JOEeuAlLVx8pyt3w")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Purpose { get; }
 
     /// <summary>
@@ -507,6 +562,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmOZJOEeuAlLVx8pyt3w")]
     [DisplayName("Alternative Minimum Tax Indicator")]
     [IsoXmlTag("AltrntvMinTaxInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AlternativeMinimumTaxIndicator { get; }
 
     /// <summary>
@@ -515,6 +571,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmO5JOEeuAlLVx8pyt3w")]
     [DisplayName("Auto Reinvestment")]
     [IsoXmlTag("AutoRinvstmt")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? AutoReinvestment { get; }
 
     /// <summary>
@@ -523,6 +580,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmPZJOEeuAlLVx8pyt3w")]
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Haircut { get; }
 
     /// <summary>
@@ -539,6 +597,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmQZJOEeuAlLVx8pyt3w")]
     [DisplayName("Look Back")]
     [IsoXmlTag("LookBck")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LookBack { get; }
 
     /// <summary>
@@ -547,6 +606,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmSZJOEeuAlLVx8pyt3w")]
     [DisplayName("Maximum Substitution")]
     [IsoXmlTag("MaxSbstitn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumSubstitution { get; }
 
     /// <summary>
@@ -571,6 +631,8 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmT5JOEeuAlLVx8pyt3w")]
     [DisplayName("Production")]
     [IsoXmlTag("Pdctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Production { get; }
 
     /// <summary>
@@ -579,6 +641,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmUZJOEeuAlLVx8pyt3w")]
     [DisplayName("Restricted Indicator")]
     [IsoXmlTag("RstrctdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RestrictedIndicator { get; }
 
     /// <summary>
@@ -595,6 +658,8 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmVZJOEeuAlLVx8pyt3w")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Sector { get; }
 
     /// <summary>
@@ -611,6 +676,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmWZJOEeuAlLVx8pyt3w")]
     [DisplayName("Substitution Left")]
     [IsoXmlTag("SbstitnLft")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SubstitutionLeft { get; }
 
     /// <summary>
@@ -619,6 +685,7 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmW5JOEeuAlLVx8pyt3w")]
     [DisplayName("Whole Pool Indicator")]
     [IsoXmlTag("WhlPoolInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? WholePoolIndicator { get; }
 
     /// <summary>
@@ -627,6 +694,8 @@ public interface IDebt5 : IIsoComponent
     [IsoId("_MVJmXZJOEeuAlLVx8pyt3w")]
     [DisplayName("Price Source")]
     [IsoXmlTag("PricSrc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PriceSource { get; }
 
     /// <summary>

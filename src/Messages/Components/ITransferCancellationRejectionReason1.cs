@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for the rejected status.
 /// </summary>
 [IsoId("_U0fAtdp-Ed-ak6NoX_4Aeg_1587150778")]
+[IsoDisplayName(@"Transfer Cancellation Rejection Reason")]
 public interface ITransferCancellationRejectionReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITransferCancellationRejectionReason1 : IIsoComponent
     [IsoId("_U0fAt9p-Ed-ak6NoX_4Aeg_1814337864")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

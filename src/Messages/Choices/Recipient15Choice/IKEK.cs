@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient15Choice;
 /// <summary>
 /// KEK.
 /// </summary>
+[IsoDisplayName(@"KEK")]
 public interface IKEK : IRecipient15Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentType4Choice;
 /// Type, or nature, of the payment, such as express payment.|.
 /// </summary>
 [IsoId("_K7v_8RbwEeOy-PlRuFSUzQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPaymentType4Choice, IIsoChoiceVariant
 {
     /// <summary>

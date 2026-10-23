@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the contact person.
 /// </summary>
 [IsoId("_q1hc0W4_EeiU9cctagi5ow")]
+[IsoDisplayName(@"Contact")]
 public interface IContact4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IContact4 : IIsoComponent
     [IsoId("_q-wRVW4_EeiU9cctagi5ow")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IContact4 : IIsoComponent
     [IsoId("_q-wRV24_EeiU9cctagi5ow")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IContact4 : IIsoComponent
     [IsoId("_q-wRWW4_EeiU9cctagi5ow")]
     [DisplayName("Mobile Number")]
     [IsoXmlTag("MobNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? MobileNumber { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IContact4 : IIsoComponent
     [IsoId("_q-wRW24_EeiU9cctagi5ow")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -57,6 +63,8 @@ public interface IContact4 : IIsoComponent
     [IsoId("_q-wRXW4_EeiU9cctagi5ow")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? EmailAddress { get; }
 
     /// <summary>
@@ -65,6 +73,8 @@ public interface IContact4 : IIsoComponent
     [IsoId("_6a6f0b18Eeiut6mmSKzDFQ")]
     [DisplayName("Email Purpose")]
     [IsoXmlTag("EmailPurp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EmailPurpose { get; }
 
     /// <summary>
@@ -73,6 +83,8 @@ public interface IContact4 : IIsoComponent
     [IsoId("_65ANYXRnEeiH1ZOt2UD8vQ")]
     [DisplayName("Job Title")]
     [IsoXmlTag("JobTitl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? JobTitle { get; }
 
     /// <summary>
@@ -81,6 +93,8 @@ public interface IContact4 : IIsoComponent
     [IsoId("_65ANYnRnEeiH1ZOt2UD8vQ")]
     [DisplayName("Responsibility")]
     [IsoXmlTag("Rspnsblty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Responsibility { get; }
 
     /// <summary>
@@ -89,6 +103,8 @@ public interface IContact4 : IIsoComponent
     [IsoId("_65ANY3RnEeiH1ZOt2UD8vQ")]
     [DisplayName("Department")]
     [IsoXmlTag("Dept")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Department { get; }
 
     /// <summary>
@@ -97,6 +113,7 @@ public interface IContact4 : IIsoComponent
     [IsoId("_A96WInRoEeiH1ZOt2UD8vQ")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherContact1> Other { get; }
 
     /// <summary>

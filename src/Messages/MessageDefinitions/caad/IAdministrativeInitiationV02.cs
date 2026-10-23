@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_SoTSEY7ZEe6S0_1AaJzQCA")]
 [IsoMessage("caad.008.001.02", "AdmstvInitn", "urn:iso:std:iso:20022:tech:xsd:caad.008.001.02")]
+[IsoDisplayName(@"Administrative Initiation V02")]
 public interface IAdministrativeInitiationV02 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +40,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -46,6 +48,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData17> LocalData { get; }
 
     /// <summary>
@@ -144,6 +148,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExchangeRateInformation5> ExchangeRate { get; }
 
     /// <summary>
@@ -165,6 +170,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent16> POIComponent { get; }
 
     /// <summary>
@@ -235,6 +241,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerification6> Verification { get; }
 
     /// <summary>
@@ -242,6 +249,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Risk")]
     [IsoXmlTag("Rsk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRiskContext3> Risk { get; }
 
     /// <summary>
@@ -249,6 +257,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialProgrammeQualification2> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -263,6 +272,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalService2> AdditionalService { get; }
 
     /// <summary>
@@ -284,6 +294,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -305,6 +316,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Original Transaction")]
     [IsoXmlTag("OrgnlTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalTransaction3> OriginalTransaction { get; }
 
     /// <summary>
@@ -312,6 +324,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -319,6 +332,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -326,6 +340,7 @@ public interface IAdministrativeInitiationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

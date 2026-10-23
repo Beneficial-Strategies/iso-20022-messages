@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesTxPstngRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.017.001.13"
 )]
+[IsoDisplayName(@"Securities Transaction Posting Report V13")]
 public interface ISecuritiesTransactionPostingReportV13 : IOuterRecord
 {
     /// <summary>
@@ -57,6 +58,9 @@ public interface ISecuritiesTransactionPostingReportV13 : IOuterRecord
     /// </summary>
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary44> IntermediaryInformation { get; }
 
     /// <summary>
@@ -64,6 +68,7 @@ public interface ISecuritiesTransactionPostingReportV13 : IOuterRecord
     /// </summary>
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentDetails46> FinancialInstrumentDetails { get; }
 
     /// <summary>
@@ -71,5 +76,6 @@ public interface ISecuritiesTransactionPostingReportV13 : IOuterRecord
     /// </summary>
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubAccountIdentification73> SubAccountDetails { get; }
 }

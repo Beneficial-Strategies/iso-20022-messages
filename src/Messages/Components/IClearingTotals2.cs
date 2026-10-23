@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Clearing totals of the batch file.
 /// </summary>
 [IsoId("_vMomEZMwEeuleeHpFMMhmQ")]
+[IsoDisplayName(@"Clearing Totals")]
 public interface IClearingTotals2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IClearingTotals2 : IIsoComponent
     [IsoId("_vRLu4ZMwEeuleeHpFMMhmQ")]
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Count { get; }
 
     /// <summary>

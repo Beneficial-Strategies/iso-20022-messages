@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Authorisation response message record.
 /// </summary>
 [IsoId("_lxf8sFZVEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Authorisation Response")]
 public interface IAuthorisationResponse : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IAuthorisationResponse : IRecordMessage1Choice, IIsoChoiceVaria
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("AuthstnRspn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

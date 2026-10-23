@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPMmbOblgtnsRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.056.001.01"
 )]
+[Description(@"The CCPInvestmentsReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about how the central counterparty invests the cash balances deposited with it as collateral by its clearing members. Details the source and size of the liquidity requirements CCPs are placing on clearing members as a result of their membership of the CCP.")]
+[IsoDisplayName(@"CCP Member Obligations Report V")]
 public interface ICCPMemberObligationsReportV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface ICCPMemberObligationsReportV01 : IOuterRecord
     [IsoId("_YdmheeUUEem3X-64-NKdqg")]
     [DisplayName("Settlement Account")]
     [IsoXmlTag("SttlmAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementAccount1> SettlementAccount { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface ICCPMemberObligationsReportV01 : IOuterRecord
     [IsoId("_Ydmhe-UUEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

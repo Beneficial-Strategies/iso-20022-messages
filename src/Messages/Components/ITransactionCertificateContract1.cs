@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Certificate and contract reference of a transaction.
 /// </summary>
 [IsoId("_TyNBsNLiEeSdq5yU2aaSNw")]
+[IsoDisplayName(@"Transaction Certificate Contract")]
 public interface ITransactionCertificateContract1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ITransactionCertificateContract1 : IIsoComponent
     [IsoId("_n-IZYNLrEeSDLevdaFPXHw")]
     [DisplayName("Expected Shipment Date")]
     [IsoXmlTag("XpctdShipmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedShipmentDate { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ITransactionCertificateContract1 : IIsoComponent
     [IsoId("_EESj4o7KEeWf1u-_S_Mdkg")]
     [DisplayName("Expected Advance Payment Return Date")]
     [IsoXmlTag("XpctdAdvncPmtRtrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedAdvancePaymentReturnDate { get; }
 
     /// <summary>
@@ -49,5 +52,7 @@ public interface ITransactionCertificateContract1 : IIsoComponent
     [IsoId("_szb7cNLrEeSDLevdaFPXHw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? AdditionalInformation { get; }
 }

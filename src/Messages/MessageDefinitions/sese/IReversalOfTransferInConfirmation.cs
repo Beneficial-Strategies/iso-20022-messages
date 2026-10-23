@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_onAWSNE5Ed-BzquC8wXy7w_-1392612737")]
 [IsoMessage("sese.008.001.01", "sese.008.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.008.001.01")]
+[Description(@"Scope|The ReversalOfTransferInConfirmation message is sent by an executing party to the instructing party or the instructing party's designated agent.|This message is used to reverse a TransferInConfirmation that was previously sent by the instructing party.|Usage|The ReversalOfTransferInConfirmation message is sent by an executing party to reverse a previously sent TransferInConfirmation.|This message must contain the reference of the message to be reversed. The message may also contain all the details of the reversed message, but this is not recommended.")]
+[IsoDisplayName(@"Reversal Of Transfer In Confirmation")]
 public interface IReversalOfTransferInConfirmation : IOuterRecord
 {
     /// <summary>

@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_yXBbd6yREemMosWmlQ33EA")]
 [IsoMessage("seev.006.001.06", "MtgInstrSts", "urn:iso:std:iso:20022:tech:xsd:seev.006.001.06")]
+[Description(@"Scope|The MeetingInstructionStatus message is sent by an intermediary to the sender of an instruction to confirm the status of such an instruction. The message gives the status of a complete message or of one or more specific instructions within the message.|The message may also be sent by the Issuer or the intermediary to confirm that a vote has been cast.|Usage|The MeetingInstructionStatus message is used for four purposes.|First, it is used to provide a global processing or rejection status of a MeetingInstruction message.|Second, it provides the status on the processing of a MeetingInstructionCancellationRequest message, for example, whether the request message is rejected or accepted.|Third, it is used to provide a detailed processing or rejection status of one or more instructions within the MeetingInstruction message, for example, for each instruction in the MeetingInstruction message the processing or rejection status is individually reported by using the SingleInstructionIdentification element. This identification allows the receiver of the status message to link the status confirmation to its original instruction.|Fourth, it is used to confirm that the related vote instruction has been confirmed as cast by the issuer or its agent.|This message definition is intended for use with the Business Application Header.")]
+[IsoDisplayName(@"Meeting Instruction Status V")]
 public interface IMeetingInstructionStatusV06 : IOuterRecord
 {
     /// <summary>
@@ -85,5 +87,6 @@ public interface IMeetingInstructionStatusV06 : IOuterRecord
     [IsoId("_yXBbh6yREemMosWmlQ33EA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

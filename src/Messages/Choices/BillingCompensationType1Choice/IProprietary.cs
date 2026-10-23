@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingCompensationType1Choice;
 /// Defines the type of billing compensation, as defined in a proprietary format.
 /// </summary>
 [IsoId("_6Q_lg5qlEeGSON8vddiWzQ_1364627181")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IBillingCompensationType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IBillingCompensationType1Choice, IIsoChoiceVaria
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the settlement failure reason as defined in the relevant regulation or explicit no data report..
 /// </summary>
 [IsoId("_-7zQ0TOkEeqX8uoQQ3KffQ")]
+[IsoDisplayName(@"Settlement Daily Failure Reason 1 Choice")]
 public interface ISettlementDailyFailureReason1Choice : IIsoChoice { }

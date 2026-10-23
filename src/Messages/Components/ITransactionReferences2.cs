@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to identify the underlying transaction.
 /// </summary>
 [IsoId("_P31giNp-Ed-ak6NoX_4Aeg_-1111323404")]
+[IsoDisplayName(@"Transaction References")]
 public interface ITransactionReferences2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionReferences2 : IIsoComponent
     [IsoId("_P31gidp-Ed-ak6NoX_4Aeg_-1111323373")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransactionReferences2 : IIsoComponent
     [IsoId("_P3_RgNp-Ed-ak6NoX_4Aeg_-1111323343")]
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransactionReferences2 : IIsoComponent
     [IsoId("_P3_Rgdp-Ed-ak6NoX_4Aeg_-710513418")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITransactionReferences2 : IIsoComponent
     [IsoId("_P3_Rgtp-Ed-ak6NoX_4Aeg_-1111323251")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface ITransactionReferences2 : IIsoComponent
     [IsoId("_P3_Rg9p-Ed-ak6NoX_4Aeg_-1111322973")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface ITransactionReferences2 : IIsoComponent
     [IsoId("_P3_RhNp-Ed-ak6NoX_4Aeg_-1111322942")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -65,6 +78,8 @@ public interface ITransactionReferences2 : IIsoComponent
     [IsoId("_P3_Rhdp-Ed-ak6NoX_4Aeg_-1111322881")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 
     /// <summary>
@@ -73,6 +88,8 @@ public interface ITransactionReferences2 : IIsoComponent
     [IsoId("_P3_Rhtp-Ed-ak6NoX_4Aeg_-1111322850")]
     [DisplayName("Cheque Number")]
     [IsoXmlTag("ChqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ChequeNumber { get; }
 
     /// <summary>
@@ -81,6 +98,8 @@ public interface ITransactionReferences2 : IIsoComponent
     [IsoId("_P3_Rh9p-Ed-ak6NoX_4Aeg_-1111322827")]
     [DisplayName("Clearing System Reference")]
     [IsoXmlTag("ClrSysRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClearingSystemReference { get; }
 
     /// <summary>

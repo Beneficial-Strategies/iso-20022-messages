@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice;
 /// Committee on Uniform Securities and Identification Procedures (CUSIP). The standards body that created and maintains the securities classification system in the US. The CUSIP is composed of a 9-character number that uniquely identifies a particular security. Non-US securities have a similar number called the CINS number.
 /// </summary>
 [IsoId("_CSq4NyGQEeW7gKYhAMEFCw")]
+[IsoDisplayName(@"CUSIP")]
 public interface ICUSIP : ISecurityIdentification23Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ICUSIP : ISecurityIdentification23Choice, IIsoChoiceVariant
     /// Committee on Uniform Securities and Identification Procedures (CUSIP). The standards body that created and maintains the securities classification system in the US. Non-US securities have a similar number called the CINS number.
     /// </summary>
     [IsoXmlTag("CUSIP")]
+    [IsoSimpleType(IsoSimpleType.CUSIPIdentifier)]
     CUSIPIdentifier Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Underlying financial instrument to which an trade confirmation is related.
 /// </summary>
 [IsoId("_2C-80QhLEe2fOITqoTnSLQ")]
+[IsoDisplayName(@"Underlying Financial Instrument")]
 public interface IUnderlyingFinancialInstrument7 : IIsoComponent
 {
     /// <summary>

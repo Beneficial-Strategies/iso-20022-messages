@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the account notification.
 /// </summary>
 [IsoId("_03T4gTq4EeWZFYSPlduMhw")]
+[IsoDisplayName(@"Original Notification Reference")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IOriginalNotificationReference7 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +59,7 @@ public interface IOriginalNotificationReference7 : IIsoComponent
     [IsoId("_0-dphzq4EeWZFYSPlduMhw")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedValueDate { get; }
 
     /// <summary>
@@ -89,5 +92,6 @@ public interface IOriginalNotificationReference7 : IIsoComponent
     [IsoId("_0-dpjzq4EeWZFYSPlduMhw")]
     [DisplayName("Original Item And Status")]
     [IsoXmlTag("OrgnlItmAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalItemAndStatus5> OriginalItemAndStatus { get; }
 }

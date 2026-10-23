@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Body of the Abort Request message.
 /// </summary>
 [IsoId("_89uIsbZdEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Abort Data7")]
 public interface IAbortData7 : IIsoComponent
 {
     /// <summary>

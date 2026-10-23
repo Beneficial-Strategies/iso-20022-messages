@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the status of a debtor activation.
 /// </summary>
 [IsoId("_Ug_1x-H7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Activation Status")]
 public interface IActivationStatus2 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IActivationStatus2 : IIsoComponent
     [IsoId("_UiH3K-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

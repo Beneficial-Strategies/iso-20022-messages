@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique Transaction Identifier3.
 /// </summary>
 [IsoId("_F1OxV0jrEe-KhcStGV4xTg")]
+[IsoDisplayName(@"Unique Transaction Identifier3")]
 public interface IUniqueTransactionIdentifier3 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IUniqueTransactionIdentifier3 : IIsoComponent
     /// </summary>
     [DisplayName("Prior Unique Transaction Identifier")]
     [IsoXmlTag("PrrUnqTxIdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<UTIIdentifier> PriorUniqueTransactionIdentifier { get; }
 }

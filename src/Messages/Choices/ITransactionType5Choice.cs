@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the order type.
 /// </summary>
 [IsoId("_x6jKoVsJEea4y99eritluQ")]
+[IsoDisplayName(@"Transaction Type 5 Choice")]
 public interface ITransactionType5Choice : IIsoChoice { }

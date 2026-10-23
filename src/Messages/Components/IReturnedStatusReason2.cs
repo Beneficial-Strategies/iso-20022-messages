@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Returned Status Reason2.
 /// </summary>
 [IsoId("_s2Ll2qGqEe-4O7NbwmwJkQ")]
+[IsoDisplayName(@"Returned Status Reason2")]
 public interface IReturnedStatusReason2 : IIsoComponent
 {
     /// <summary>

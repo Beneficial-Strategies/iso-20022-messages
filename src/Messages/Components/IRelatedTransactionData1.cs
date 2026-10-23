@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Related Transaction Data1.
 /// </summary>
 [IsoId("_IdzH4FetEe6G45fhJISx6Q")]
+[IsoDisplayName(@"Related Transaction Data1")]
 public interface IRelatedTransactionData1 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IRelatedTransactionData1 : IIsoComponent
     /// </summary>
     [DisplayName("Sub UETR")]
     [IsoXmlTag("SubUETR")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<UUIDv4Identifier> SubUETR { get; }
 }

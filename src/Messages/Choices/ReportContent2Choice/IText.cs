@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportContent2Choice;
 /// <summary>
 /// Text.
 /// </summary>
+[IsoDisplayName(@"Text")]
 public interface IText : IReportContent2Choice, IIsoChoiceVariant
 {
     /// <summary>

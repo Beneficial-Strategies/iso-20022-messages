@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details of the trade transaction.
 /// </summary>
 [IsoId("_DRVSMXhQEeu3kecHd7QKUQ")]
+[IsoDisplayName(@"Trade Transaction")]
 public interface ITradeTransaction37 : IIsoComponent
 {
     /// <summary>
@@ -36,6 +37,8 @@ public interface ITradeTransaction37 : IIsoComponent
     [IsoId("_Df6gxXhQEeu3kecHd7QKUQ")]
     [DisplayName("Report Tracking Number")]
     [IsoXmlTag("RptTrckgNb")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? ReportTrackingNumber { get; }
 
     /// <summary>
@@ -45,6 +48,7 @@ public interface ITradeTransaction37 : IIsoComponent
     [IsoId("_Df6gx3hQEeu3kecHd7QKUQ")]
     [DisplayName("Platform Identifier")]
     [IsoXmlTag("PltfmIdr")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? PlatformIdentifier { get; }
 
     /// <summary>
@@ -53,6 +57,7 @@ public interface ITradeTransaction37 : IIsoComponent
     [IsoId("_Df6gyXhQEeu3kecHd7QKUQ")]
     [DisplayName("Compression")]
     [IsoXmlTag("Cmprssn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? Compression { get; }
 
     /// <summary>
@@ -70,6 +75,9 @@ public interface ITradeTransaction37 : IIsoComponent
     [IsoId("_Df6gzXhQEeu3kecHd7QKUQ")]
     [DisplayName("Notional Amount")]
     [IsoXmlTag("NtnlAmt")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INotionalAmount1> NotionalAmount { get; }
 
     /// <summary>
@@ -78,6 +86,9 @@ public interface ITradeTransaction37 : IIsoComponent
     [IsoId("_Df6gz3hQEeu3kecHd7QKUQ")]
     [DisplayName("Notional Quantity")]
     [IsoXmlTag("NtnlQty")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INotionalQuantity1> NotionalQuantity { get; }
 
     /// <summary>
@@ -86,6 +97,7 @@ public interface ITradeTransaction37 : IIsoComponent
     [IsoId("_Df6g0XhQEeu3kecHd7QKUQ")]
     [DisplayName("Delta")]
     [IsoXmlTag("Dlta")]
+    [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
     LongFraction19DecimalNumber? Delta { get; }
 
     /// <summary>
@@ -110,6 +122,7 @@ public interface ITradeTransaction37 : IIsoComponent
     [IsoId("_Df6g13hQEeu3kecHd7QKUQ")]
     [DisplayName("Execution Time Stamp")]
     [IsoXmlTag("ExctnTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ExecutionTimeStamp { get; }
 
     /// <summary>
@@ -118,6 +131,7 @@ public interface ITradeTransaction37 : IIsoComponent
     [IsoId("_Df6g2XhQEeu3kecHd7QKUQ")]
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EffectiveDate { get; }
 
     /// <summary>
@@ -129,6 +143,7 @@ public interface ITradeTransaction37 : IIsoComponent
     [IsoId("_Df6g23hQEeu3kecHd7QKUQ")]
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpirationDate { get; }
 
     /// <summary>
@@ -137,6 +152,7 @@ public interface ITradeTransaction37 : IIsoComponent
     [IsoId("_Df6g3XhQEeu3kecHd7QKUQ")]
     [DisplayName("Early Termination Date")]
     [IsoXmlTag("EarlyTermntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EarlyTerminationDate { get; }
 
     /// <summary>
@@ -146,6 +162,7 @@ public interface ITradeTransaction37 : IIsoComponent
     [IsoId("_Df6g33hQEeu3kecHd7QKUQ")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISODate> SettlementDate { get; }
 
     /// <summary>
@@ -226,6 +243,7 @@ public interface ITradeTransaction37 : IIsoComponent
     [IsoId("_Df6g9XhQEeu3kecHd7QKUQ")]
     [DisplayName("Other Payment")]
     [IsoXmlTag("OthrPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherPayment3> OtherPayment { get; }
 
     /// <summary>

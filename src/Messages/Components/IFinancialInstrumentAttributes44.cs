@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Elements characterising a financial instrument.
 /// </summary>
 [IsoId("_gXIANhkMEeKSublfJr3XCg")]
+[IsoDisplayName(@"Financial Instrument Attributes")]
 public interface IFinancialInstrumentAttributes44 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXRwsxkMEeKSublfJr3XCg")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CertificateNumber { get; }
 
     /// <summary>
@@ -105,6 +108,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXRwyBkMEeKSublfJr3XCg")]
     [DisplayName("Coupon Date")]
     [IsoXmlTag("CpnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CouponDate { get; }
 
     /// <summary>
@@ -113,6 +117,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIAnBkMEeKSublfJr3XCg")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpiryDate { get; }
 
     /// <summary>
@@ -121,6 +126,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXRw1BkMEeKSublfJr3XCg")]
     [DisplayName("Floating Rate Fixing Date")]
     [IsoXmlTag("FltgRateFxgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FloatingRateFixingDate { get; }
 
     /// <summary>
@@ -129,6 +135,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIAURkMEeKSublfJr3XCg")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>
@@ -137,6 +144,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIAhxkMEeKSublfJr3XCg")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IssueDate { get; }
 
     /// <summary>
@@ -145,6 +153,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIAZhkMEeKSublfJr3XCg")]
     [DisplayName("Next Callable Date")]
     [IsoXmlTag("NxtCllblDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NextCallableDate { get; }
 
     /// <summary>
@@ -153,6 +162,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXRwqhkMEeKSublfJr3XCg")]
     [DisplayName("Conversion Date")]
     [IsoXmlTag("ConvsDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ConversionDate { get; }
 
     /// <summary>
@@ -161,6 +171,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIA_xkMEeKSublfJr3XCg")]
     [DisplayName("Putable Date")]
     [IsoXmlTag("PutblDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PutableDate { get; }
 
     /// <summary>
@@ -169,6 +180,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIA6hkMEeKSublfJr3XCg")]
     [DisplayName("Dated Date")]
     [IsoXmlTag("DtdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DatedDate { get; }
 
     /// <summary>
@@ -177,6 +189,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIAeBkMEeKSublfJr3XCg")]
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FirstPaymentDate { get; }
 
     /// <summary>
@@ -185,6 +198,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIAmRkMEeKSublfJr3XCg")]
     [DisplayName("Next Factor Date")]
     [IsoXmlTag("NxtFctrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NextFactorDate { get; }
 
     /// <summary>
@@ -193,6 +207,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIArhkMEeKSublfJr3XCg")]
     [DisplayName("Previous Factor")]
     [IsoXmlTag("PrvsFctr")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? PreviousFactor { get; }
 
     /// <summary>
@@ -201,6 +216,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXRwmxkMEeKSublfJr3XCg")]
     [DisplayName("Current Factor")]
     [IsoXmlTag("CurFctr")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? CurrentFactor { get; }
 
     /// <summary>
@@ -209,6 +225,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXRwuRkMEeKSublfJr3XCg")]
     [DisplayName("Next Factor")]
     [IsoXmlTag("NxtFctr")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? NextFactor { get; }
 
     /// <summary>
@@ -217,6 +234,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIAohkMEeKSublfJr3XCg")]
     [DisplayName("End Factor")]
     [IsoXmlTag("EndFctr")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? EndFactor { get; }
 
     /// <summary>
@@ -225,6 +243,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIAjRkMEeKSublfJr3XCg")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? InterestRate { get; }
 
     /// <summary>
@@ -233,6 +252,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIAwxkMEeKSublfJr3XCg")]
     [DisplayName("Next Interest Rate")]
     [IsoXmlTag("NxtIntrstRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? NextInterestRate { get; }
 
     /// <summary>
@@ -241,6 +261,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIA5BkMEeKSublfJr3XCg")]
     [DisplayName("Index Rate Basis")]
     [IsoXmlTag("IndxRateBsis")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? IndexRateBasis { get; }
 
     /// <summary>
@@ -249,6 +270,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIApRkMEeKSublfJr3XCg")]
     [DisplayName("Percentage Of Debt Claims")]
     [IsoXmlTag("PctgOfDebtClms")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfDebtClaims { get; }
 
     /// <summary>
@@ -281,6 +303,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIAbBkMEeKSublfJr3XCg")]
     [DisplayName("Convertible Indicator")]
     [IsoXmlTag("ConvtblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ConvertibleIndicator { get; }
 
     /// <summary>
@@ -289,6 +312,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIAqBkMEeKSublfJr3XCg")]
     [DisplayName("Variable Rate Indicator")]
     [IsoXmlTag("VarblRateInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? VariableRateIndicator { get; }
 
     /// <summary>
@@ -297,6 +321,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIA2xkMEeKSublfJr3XCg")]
     [DisplayName("Covered Indicator")]
     [IsoXmlTag("CvrdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CoveredIndicator { get; }
 
     /// <summary>
@@ -305,6 +330,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIA-RkMEeKSublfJr3XCg")]
     [DisplayName("Callable Indicator")]
     [IsoXmlTag("CllblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CallableIndicator { get; }
 
     /// <summary>
@@ -313,6 +339,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIA8BkMEeKSublfJr3XCg")]
     [DisplayName("Putable Indicator")]
     [IsoXmlTag("PutblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PutableIndicator { get; }
 
     /// <summary>
@@ -321,6 +348,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIA2BkMEeKSublfJr3XCg")]
     [DisplayName("Warrant Attached On Delivery")]
     [IsoXmlTag("WarrtAttchdOnDlvry")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? WarrantAttachedOnDelivery { get; }
 
     /// <summary>
@@ -329,6 +357,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIAchkMEeKSublfJr3XCg")]
     [DisplayName("Odd Coupon Indicator")]
     [IsoXmlTag("OddCpnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OddCouponIndicator { get; }
 
     /// <summary>
@@ -337,6 +366,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIAbxkMEeKSublfJr3XCg")]
     [DisplayName("Redemption Yield Impact")]
     [IsoXmlTag("RedYldImpct")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RedemptionYieldImpact { get; }
 
     /// <summary>
@@ -345,6 +375,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXRwvxkMEeKSublfJr3XCg")]
     [DisplayName("Yield Variance")]
     [IsoXmlTag("YldVar")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? YieldVariance { get; }
 
     /// <summary>
@@ -425,5 +456,7 @@ public interface IFinancialInstrumentAttributes44 : IIsoComponent
     [IsoId("_gXIASxkMEeKSublfJr3XCg")]
     [DisplayName("Financial Instrument Attribute Additional Details")]
     [IsoXmlTag("FinInstrmAttrAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FinancialInstrumentAttributeAdditionalDetails { get; }
 }

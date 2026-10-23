@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a meeting.
 /// </summary>
 [IsoId("_Y866oajNEfCzuLlmLrhIvA")]
+[IsoDisplayName(@"Meeting Reference11")]
 public interface IMeetingReference11 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IMeetingReference11 : IIsoComponent
     [IsoId("_ZD4eS6jNEfCzuLlmLrhIvA")]
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress1> Location { get; }
 
     /// <summary>

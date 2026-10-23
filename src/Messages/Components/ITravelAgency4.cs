@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Travel Agency4.
 /// </summary>
 [IsoId("_R_K-QXQ6Ee6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Travel Agency4")]
 public interface ITravelAgency4 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ITravelAgency4 : IIsoComponent
     /// </summary>
     [DisplayName("Travel Package")]
     [IsoXmlTag("TrvlPackg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITravelAgencyPackage2> TravelPackage { get; }
 
     /// <summary>
@@ -72,5 +74,6 @@ public interface ITravelAgency4 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

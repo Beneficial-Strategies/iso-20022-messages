@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// </summary>
 [IsoId("_9hNGQnltEeG7BsjMvd1mEw_-1297539311")]
 [IsoMessage("tsrv.014.001.01", "XtndOrPayReq", "urn:iso:std:iso:20022:tech:xsd:tsrv.014.001.01")]
+[Description(@"The ExtendOrPayRequest message is sent by the party that issued the undertaking to the party that requested issuance of the undertaking (applicant or obligor), to request the applicant's response to a beneficiary request to extend or pay.")]
+[IsoDisplayName(@"Extend Or Pay Request V")]
 public interface IExtendOrPayRequestV01 : IOuterRecord
 {
     /// <summary>

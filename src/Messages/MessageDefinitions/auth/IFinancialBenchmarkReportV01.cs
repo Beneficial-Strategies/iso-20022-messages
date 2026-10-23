@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_EqCsoPKJEeaz_YGUGLjP6A")]
 [IsoMessage("auth.077.001.01", "FinBchmkRpt", "urn:iso:std:iso:20022:tech:xsd:auth.077.001.01")]
+[Description(@"This FinancialBenchmarkReport message is sent by the competent institution to report benchmarks used for the purpose of the local regulation.")]
+[IsoDisplayName(@"Financial Benchmark Report V")]
 public interface IFinancialBenchmarkReportV01 : IOuterRecord
 {
     /// <summary>
@@ -20,6 +22,7 @@ public interface IFinancialBenchmarkReportV01 : IOuterRecord
     [IsoId("_mm5ioTrVEeedCZZ8dIPp6g")]
     [DisplayName("Benchmark Data")]
     [IsoXmlTag("BchmkData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBenchmarkReport1Choice> BenchmarkData { get; }
 
     /// <summary>
@@ -28,5 +31,6 @@ public interface IFinancialBenchmarkReportV01 : IOuterRecord
     [IsoId("_rFkoUTbuEeeYhaZ6bvG1Xg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

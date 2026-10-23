@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Tracker Party3Choice.
 /// </summary>
 [IsoId("_IYmWMTFKEe651u5xu3f5iw")]
+[IsoDisplayName(@"Tracker Party3Choice")]
 public interface ITrackerParty3Choice : IIsoChoice { }

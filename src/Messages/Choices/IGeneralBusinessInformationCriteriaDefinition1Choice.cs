@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.
 /// </summary>
 [IsoId("_1VwUF5lZEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"General Business Information Criteria Definition 1 Choice")]
 public interface IGeneralBusinessInformationCriteriaDefinition1Choice : IIsoChoice { }

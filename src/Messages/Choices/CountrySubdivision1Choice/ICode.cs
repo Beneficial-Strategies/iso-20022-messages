@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CountrySubdivision1Choice;
 /// Country subdivision of jurisdiction.
 /// </summary>
 [IsoId("_93jwxHltEeG7BsjMvd1mEw_-1401778508")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICountrySubdivision1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ICode : ICountrySubdivision1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

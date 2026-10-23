@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the aggregated data of settlement fails instructions.
 /// </summary>
 [IsoId("_afLKcR2lEeqF2P5v-Rtejg")]
+[IsoDisplayName(@"Settlement Fails Data")]
 public interface ISettlementFailsData3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ISettlementFailsData3 : IIsoComponent
     [IsoId("_ahZ_FR2lEeqF2P5v-Rtejg")]
     [DisplayName("Fails Per Currency")]
     [IsoXmlTag("FlsPerCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementFailsCurrency2> FailsPerCurrency { get; }
 
     /// <summary>

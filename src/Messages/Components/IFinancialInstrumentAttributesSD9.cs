@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding underlying security details.
 /// </summary>
 [IsoId("_Vboa0noCEeO2o_OAyvnbZw")]
+[IsoDisplayName(@"Financial Instrument Attributes SD")]
 public interface IFinancialInstrumentAttributesSD9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrumentAttributesSD9 : IIsoComponent
     [IsoId("_Vboa3noCEeO2o_OAyvnbZw")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>

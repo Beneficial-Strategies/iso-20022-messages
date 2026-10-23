@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters related to the security of software application and application protocol.
 /// </summary>
 [IsoId("_WbiaUbZzEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Security Parameters17")]
 public interface ISecurityParameters17 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface ISecurityParameters17 : IIsoComponent
     [IsoId("_WcdAbbZzEfCUZfsQO4rYeA")]
     [DisplayName("Security Element")]
     [IsoXmlTag("SctyElmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICryptographicKey19> SecurityElement { get; }
 }

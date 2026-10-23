@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Temporary services purchase data.
 /// </summary>
 [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Temporary Services4")]
 public interface ITemporaryServices4 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ITemporaryServices4 : IIsoComponent
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-cpld")]
     [DisplayName("Company Local Data")]
     [IsoXmlTag("CpnyLclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData20> CompanyLocalData { get; }
 
     /// <summary>
@@ -193,6 +195,7 @@ public interface ITemporaryServices4 : IIsoComponent
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-chrt")]
     [DisplayName("Charge Rate")]
     [IsoXmlTag("ChrgRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITemporaryServiceChargeRate1> ChargeRate { get; }
 
     /// <summary>
@@ -201,6 +204,7 @@ public interface ITemporaryServices4 : IIsoComponent
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-msex")]
     [DisplayName("Miscellaneous Expenses")]
     [IsoXmlTag("MiscExpnss")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount13> MiscellaneousExpenses { get; }
 
     /// <summary>
@@ -217,6 +221,7 @@ public interface ITemporaryServices4 : IIsoComponent
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-tax0")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> Tax { get; }
 
     /// <summary>
@@ -233,6 +238,7 @@ public interface ITemporaryServices4 : IIsoComponent
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-pvdt")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -241,5 +247,6 @@ public interface ITemporaryServices4 : IIsoComponent
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-ntdt")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

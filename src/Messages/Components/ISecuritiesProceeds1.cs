@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides securities proceeds information.
 /// </summary>
 [IsoId("_UK6fR9p-Ed-ak6NoX_4Aeg_1911486700")]
+[IsoDisplayName(@"Securities Proceeds")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISecuritiesProceeds1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +35,9 @@ public interface ISecuritiesProceeds1 : IIsoComponent
     [IsoId("_UK6fStp-Ed-ak6NoX_4Aeg_-1386075125")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesAccount10> AccountDetails { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface ISecuritiesProceeds1 : IIsoComponent
     [IsoId("_UK6fS9p-Ed-ak6NoX_4Aeg_1005212096")]
     [DisplayName("Reconciliation Details")]
     [IsoXmlTag("RcncltnDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? ReconciliationDetails { get; }
 }

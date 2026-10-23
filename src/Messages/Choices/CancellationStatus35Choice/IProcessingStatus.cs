@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus35Choice;
 
 /// <summary>Status advising on the processing of the instruction cancellation request.</summary>
 [IsoId("_dFg2oa8uEfCx2aBifPEdRg")]
+[IsoDisplayName(@"Processing Status")]
 public interface IProcessingStatus : ICancellationStatus35Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

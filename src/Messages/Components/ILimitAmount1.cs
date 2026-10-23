@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money characterics used to specify a limit.
 /// </summary>
 [IsoId("_jORO5O5NEeCisYr99QEiWA_-1135919214")]
+[IsoDisplayName(@"Limit Amount")]
 public interface ILimitAmount1 : IIsoComponent
 {
     /// <summary>

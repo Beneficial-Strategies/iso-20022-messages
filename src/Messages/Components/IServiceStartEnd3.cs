@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Service Start End3.
 /// </summary>
 [IsoId("_22SOsXTkEe6h-4AZRg9sVg")]
+[IsoDisplayName(@"Service Start End3")]
 public interface IServiceStartEnd3 : IIsoComponent
 {
     /// <summary>

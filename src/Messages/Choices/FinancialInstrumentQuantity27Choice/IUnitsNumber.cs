@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity27Cho
 /// Number of investment fund units to be subscribed.
 /// </summary>
 [IsoId("_xNYrczhTEeaRwdGFv45qTQ")]
+[IsoDisplayName(@"Units Number")]
 public interface IUnitsNumber : IFinancialInstrumentQuantity27Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IUnitsNumber : IFinancialInstrumentQuantity27Choice, IIsoChoice
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("UnitsNb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 }

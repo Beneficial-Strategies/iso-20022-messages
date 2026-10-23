@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrBusinessError3Choice;
 /// </summary>
 [IsoId("_fowVcZ-WEee28J7y9KlTWg")]
 [IsoXmlTag("Acct")]
+[IsoDisplayName(@"Account")]
 public interface IAccount : IAccountOrBusinessError3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IAccount : IAccountOrBusinessError3Choice, IIsoChoiceVariant
     [IsoId("_fzXqBZ-WEee28J7y9KlTWg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -66,6 +69,7 @@ public interface IAccount : IAccountOrBusinessError3Choice, IIsoChoiceVariant
     [IsoId("_fzYRGZ-WEee28J7y9KlTWg")]
     [DisplayName("Multilateral Balance")]
     [IsoXmlTag("MulBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance10> MultilateralBalance { get; }
 
     /// <summary>
@@ -74,6 +78,7 @@ public interface IAccount : IAccountOrBusinessError3Choice, IIsoChoiceVariant
     [IsoId("_fzYRG5-WEee28J7y9KlTWg")]
     [DisplayName("Current Bilateral Limit")]
     [IsoXmlTag("CurBilLmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBilateralLimit2> CurrentBilateralLimit { get; }
 
     /// <summary>
@@ -82,5 +87,6 @@ public interface IAccount : IAccountOrBusinessError3Choice, IIsoChoiceVariant
     [IsoId("_fzYRHZ-WEee28J7y9KlTWg")]
     [DisplayName("Standing Order")]
     [IsoXmlTag("StgOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStandingOrder2> StandingOrder { get; }
 }

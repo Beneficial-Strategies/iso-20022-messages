@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the service level of the transaction.
 /// </summary>
 [IsoId("_QJkwwdp-Ed-ak6NoX_4Aeg_913208063")]
+[IsoDisplayName(@"Service Level 2 Choice")]
 public interface IServiceLevel2Choice : IIsoChoice { }

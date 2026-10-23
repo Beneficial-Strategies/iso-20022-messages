@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes account taxing parameters.
 /// </summary>
 [IsoId("_6TYLKJqlEeGSON8vddiWzQ_-1311079011")]
+[IsoDisplayName(@"Account Tax")]
 public interface IAccountTax1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAccountTax1 : IIsoComponent
     [IsoId("_6TYLKpqlEeGSON8vddiWzQ_1872976866")]
     [DisplayName("Region")]
     [IsoXmlTag("Rgn")]
+    [IsoSimpleType(IsoSimpleType.Max40Text)]
+    [StringLength(40, MinimumLength = 1)]
     Max40Text? Region { get; }
 
     /// <summary>

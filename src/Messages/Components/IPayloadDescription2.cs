@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payload Description2.
 /// </summary>
 [IsoId("_ZeIjYexNEe6M4Kz-BKMIbA")]
+[IsoDisplayName(@"Payload Description2")]
 public interface IPayloadDescription2 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IPayloadDescription2 : IIsoComponent
     /// </summary>
     [DisplayName("Manifest Data")]
     [IsoXmlTag("MnfstData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IManifestData2> ManifestData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty15Choic
 /// Where no reporting data are available, this field should be set so that a valid reference data file can be submitted to the competent authority as per submission requirements.
 /// </summary>
 [IsoId("_cFghIVovEe23K4GXSpBSeg")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : IStatisticsPerCounterparty15Choice, IIsoChoiceVariant
 {
     /// <summary>

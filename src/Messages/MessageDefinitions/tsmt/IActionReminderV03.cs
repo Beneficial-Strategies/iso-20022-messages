@@ -27,6 +27,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_hnA9-NE8Ed-BzquC8wXy7w_-2083336927")]
 [IsoMessage("tsmt.024.001.03", "ActnRmndr", "urn:iso:std:iso:20022:tech:xsd:tsmt.024.001.03")]
+[Description(@"Scope|The ActionReminder message is sent by the matching application to a party involved in a transaction that it is expecting to take an action.|This message is used to remind a party of an action that it is expected to take.|Usage|The ActionReminder message can be sent by the matching application to remind a party that it is waiting for|- the submission of a transaction initiation message (BaselineReSubmission message),|or|- the acceptance or rejection of mis-matched data sets (MisMatchAcceptance or MisMatchRejection message),|or|- the acceptance or rejection of an amendment request (AmendmentAcceptance or AmendmentRejection message),|or|- the acceptance or rejection of a status change request (StatusChangeRequestAcceptance or StatusChangeRequestRejection message),|or|- the acceptance or rejection of a status extension request (StatusExtensionAcceptance or StatusExtensionRejection message).|- or|- the acceptance or rejection of a request to accept role and baseline (RoleAndBaselineAcceptance or RoleAndBaselineRejection message).")]
+[IsoDisplayName(@"Action Reminder V")]
 public interface IActionReminderV03 : IOuterRecord
 {
     /// <summary>
@@ -67,6 +69,9 @@ public interface IActionReminderV03 : IOuterRecord
     [IsoId("_hnKu8NE8Ed-BzquC8wXy7w_-2083336587")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

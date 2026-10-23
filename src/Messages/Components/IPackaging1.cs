@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Physical packaging of goods for transport.
 /// </summary>
 [IsoId("_S-_lgQEcEeCQm6a_G2yO_w_809159669")]
+[IsoDisplayName(@"Packaging")]
 public interface IPackaging1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IPackaging1 : IIsoComponent
     [IsoId("_S-_lgwEcEeCQm6a_G2yO_w_71439375")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements providing the total sum of entries.
 /// </summary>
 [IsoId("_tsYf4FkyEeGeoaLUQk__nA_492898549")]
+[IsoDisplayName(@"Number And Sum Of Transactions")]
 public interface INumberAndSumOfTransactions3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INumberAndSumOfTransactions3 : IIsoComponent
     [IsoId("_tsYf4VkyEeGeoaLUQk__nA_-718764499")]
     [DisplayName("Number Of Entries")]
     [IsoXmlTag("NbOfNtries")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? NumberOfEntries { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface INumberAndSumOfTransactions3 : IIsoComponent
     [IsoId("_tsYf4lkyEeGeoaLUQk__nA_-1829675918")]
     [DisplayName("Sum")]
     [IsoXmlTag("Sum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? Sum { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface INumberAndSumOfTransactions3 : IIsoComponent
     [IsoId("_tsYf41kyEeGeoaLUQk__nA_181137167")]
     [DisplayName("Total Net Entry Amount")]
     [IsoXmlTag("TtlNetNtryAmt")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? TotalNetEntryAmount { get; }
 
     /// <summary>

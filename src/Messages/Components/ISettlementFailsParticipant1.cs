@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details on the settlement fails per participant.
 /// </summary>
 [IsoId("_dhkbUI0UEemUAO64Q252gQ")]
+[IsoDisplayName(@"Settlement Fails Participant")]
 public interface ISettlementFailsParticipant1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementFailsParticipant1 : IIsoComponent
     [IsoId("_pLGqQY0UEemUAO64Q252gQ")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier LEI { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISettlementFailsParticipant1 : IIsoComponent
     [IsoId("_qNCoYY0UEemUAO64Q252gQ")]
     [DisplayName("Rank")]
     [IsoXmlTag("Rank")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText Rank { get; }
 
     /// <summary>

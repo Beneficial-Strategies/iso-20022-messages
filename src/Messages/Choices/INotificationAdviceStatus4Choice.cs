@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Provides the status of a notification advice.</summary>
 [IsoId("_4sPMkaUeEfCnE_wCEfCqTA")]
+[IsoDisplayName(@"Notification Advice Status 4 Choice")]
 public interface INotificationAdviceStatus4Choice : IIsoChoice { }

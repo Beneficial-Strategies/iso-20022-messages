@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SupervisingAuthorityIdentificati
 /// Unique and unambiguous identifier, as assigned to an institution using an external code list.
 /// </summary>
 [IsoId("_IamycfIAEeaz_YGUGLjP6A")]
+[IsoDisplayName(@"Proprietary Identification")]
 public interface IProprietaryIdentification
     : ISupervisingAuthorityIdentification1Choice,
         IIsoChoiceVariant

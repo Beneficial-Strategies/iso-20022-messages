@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Key encryption key (KEK), encrypted with a previously distributed asymmetric public key.
 /// </summary>
 [IsoId("_KqPFMaRZEeeWXKXf3KjtmQ")]
+[IsoDisplayName(@"Key Transport")]
 public interface IKeyTransport6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IKeyTransport6 : IIsoComponent
     [IsoId("_K1i9UaRZEeeWXKXf3KjtmQ")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IKeyTransport6 : IIsoComponent
     [IsoId("_K1i9V6RZEeeWXKXf3KjtmQ")]
     [DisplayName("Encrypted Key")]
     [IsoXmlTag("NcrptdKey")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary EncryptedKey { get; }
 }

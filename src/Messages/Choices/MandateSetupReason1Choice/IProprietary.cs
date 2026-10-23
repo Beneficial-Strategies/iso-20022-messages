@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateSetupReason1Choice;
 /// Reason for the mandate setup, in a proprietary form.
 /// </summary>
 [IsoId("_iQq8Nz2OEeS6DKIV6SF6gw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IMandateSetupReason1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IMandateSetupReason1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 70characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Value { get; }
 }

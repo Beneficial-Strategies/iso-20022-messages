@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References6Choice;
 /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
 /// </summary>
 [IsoId("_UTGx89p-Ed-ak6NoX_4Aeg_-1346791785")]
+[IsoDisplayName(@"Market Infrastructure Transaction Identification")]
 public interface IMarketInfrastructureTransactionIdentification
     : IReferences6Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface IMarketInfrastructureTransactionIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

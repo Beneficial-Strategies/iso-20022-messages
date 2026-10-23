@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TargetMarket1Choice;
 /// Specifies whether the product is aimed at the target expressed as a code.
 /// </summary>
 [IsoId("_ItKLUDcTEeiIxKQErQxblg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITargetMarket1Choice, IIsoChoiceVariant
 {
     /// <summary>

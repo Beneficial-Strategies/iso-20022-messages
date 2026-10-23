@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementOrCorporateActionEvent
 /// Identifies the type of securities transaction.
 /// </summary>
 [IsoId("_s9qhPgVVEeqjd8n6wD9JVw")]
+[IsoDisplayName(@"Securities Transaction Type")]
 public interface ISecuritiesTransactionType
     : ISettlementOrCorporateActionEvent33Choice,
         IIsoChoiceVariant

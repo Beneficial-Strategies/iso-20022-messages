@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty16Choic
 /// Specifies the type of report activity for a specific reporting period.
 /// </summary>
 [IsoId("_rpsLQVowEe23K4GXSpBSeg")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : IStatisticsPerCounterparty16Choice, IIsoChoiceVariant
 {
     /// <summary>

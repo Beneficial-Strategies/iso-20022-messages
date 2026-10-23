@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Authorisation request from an acceptor.
 /// </summary>
 [IsoId("_shuccTDYEeO9waS4ina8CA")]
+[IsoDisplayName(@"Acceptor Authorisation Request")]
 public interface IAcceptorAuthorisationRequest3 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Transaction47.
 /// </summary>
 [IsoId("_5_SgoaEnEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Transaction47")]
 public interface IATMTransaction47 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface IATMTransaction47 : IIsoComponent
     /// </summary>
     [DisplayName("Incident")]
     [IsoXmlTag("Incdnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<FailureReason9Code> Incident { get; }
 
     /// <summary>
@@ -37,6 +39,7 @@ public interface IATMTransaction47 : IIsoComponent
     /// </summary>
     [DisplayName("Incident Detail")]
     [IsoXmlTag("IncdntDtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max70Text> IncidentDetail { get; }
 
     /// <summary>

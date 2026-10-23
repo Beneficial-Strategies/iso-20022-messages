@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a delivery type.
 /// </summary>
 [IsoId("_-R_SsExbEeywvc16MwOPfw")]
+[IsoDisplayName(@"Compare Delivery Type")]
 public interface ICompareDeliveryType1 : IIsoComponent
 {
     /// <summary>

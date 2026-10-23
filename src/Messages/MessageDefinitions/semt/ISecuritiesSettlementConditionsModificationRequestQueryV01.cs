@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesSttlmCondsModReqQry",
     "urn:iso:std:iso:20022:tech:xsd:semt.030.001.01"
 )]
+[IsoDisplayName(@"Securities Settlement Conditions Modification Request Query V01")]
 public interface ISecuritiesSettlementConditionsModificationRequestQueryV01 : IOuterRecord
 {
     /// <summary>
@@ -29,5 +30,6 @@ public interface ISecuritiesSettlementConditionsModificationRequestQueryV01 : IO
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

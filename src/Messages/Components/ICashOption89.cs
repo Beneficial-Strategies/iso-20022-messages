@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the cash option.
 /// </summary>
 [IsoId("_Wfijml99Ee262vCSVgjImg")]
+[IsoDisplayName(@"Cash Option")]
 public interface ICashOption89 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICashOption89 : IIsoComponent
     [IsoId("_WfijrF99Ee262vCSVgjImg")]
     [DisplayName("Posting Date")]
     [IsoXmlTag("PstngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate PostingDate { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICashOption89 : IIsoComponent
     [IsoId("_WfijtF99Ee262vCSVgjImg")]
     [DisplayName("Original Posting Date")]
     [IsoXmlTag("OrgnlPstngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OriginalPostingDate { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICashOption89 : IIsoComponent
     [IsoId("_Wfijtl99Ee262vCSVgjImg")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValueDate { get; }
 
     /// <summary>

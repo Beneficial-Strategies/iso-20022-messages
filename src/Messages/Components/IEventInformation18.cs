@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Event Information18.
 /// </summary>
 [IsoId("_j2C905t3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Event Information18")]
 public interface IEventInformation18 : IIsoComponent
 {
     /// <summary>

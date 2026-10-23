@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Compares information related to both sides of a loan.
 /// </summary>
 [IsoId("_DBFZsf_oEemm3skPVSMJQg")]
+[IsoDisplayName(@"Loan Matching Criteria")]
 public interface ILoanMatchingCriteria6 : IIsoComponent
 {
     /// <summary>

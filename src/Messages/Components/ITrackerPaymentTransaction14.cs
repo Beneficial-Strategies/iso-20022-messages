@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tracker Payment Transaction14.
 /// </summary>
 [IsoId("_PtkDd0N8Ee-QZYT2pcGFZw")]
+[IsoDisplayName(@"Tracker Payment Transaction14")]
 public interface ITrackerPaymentTransaction14 : IIsoComponent
 {
     /// <summary>
@@ -212,6 +213,7 @@ public interface ITrackerPaymentTransaction14 : IIsoComponent
     /// </summary>
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges7> ChargesInformation { get; }
 
     /// <summary>
@@ -219,6 +221,7 @@ public interface ITrackerPaymentTransaction14 : IIsoComponent
     /// </summary>
     [DisplayName("Tracker Record")]
     [IsoXmlTag("TrckrRcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITrackerRecord8> TrackerRecord { get; }
 
     /// <summary>
@@ -401,6 +404,7 @@ public interface ITrackerPaymentTransaction14 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent3> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -408,6 +412,7 @@ public interface ITrackerPaymentTransaction14 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>
@@ -422,6 +427,7 @@ public interface ITrackerPaymentTransaction14 : IIsoComponent
     /// </summary>
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting3> RegulatoryReporting { get; }
 
     /// <summary>
@@ -436,6 +442,7 @@ public interface ITrackerPaymentTransaction14 : IIsoComponent
     /// </summary>
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation7> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -450,6 +457,7 @@ public interface ITrackerPaymentTransaction14 : IIsoComponent
     /// </summary>
     [DisplayName("Reject Return Reason")]
     [IsoXmlTag("RjctRtrRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentRejectReturnReason1> RejectReturnReason { get; }
 
     /// <summary>

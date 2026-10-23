@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the response of a reversal.
 /// </summary>
 [IsoId("_mdPa4Hu2EeS2Z_kGi7H1VQ")]
+[IsoDisplayName(@"Acquirer Reversal Response")]
 public interface IAcquirerReversalResponse1 : IIsoComponent
 {
     /// <summary>

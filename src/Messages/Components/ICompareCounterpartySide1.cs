@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a counterparty side.
 /// </summary>
 [IsoId("_wx_KQKxcEem81-uIvTF5rQ")]
+[IsoDisplayName(@"Compare Counterparty Side")]
 public interface ICompareCounterpartySide1 : IIsoComponent
 {
     /// <summary>

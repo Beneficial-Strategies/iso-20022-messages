@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus7Cho
 /// Modification request has been rejected for further processing.
 /// </summary>
 [IsoId("_17xaUzp4EeWVrPy0StzzSg")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IModificationProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

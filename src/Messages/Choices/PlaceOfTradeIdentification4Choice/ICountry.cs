@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification4Choic
 /// <summary>
 /// Country.
 /// </summary>
+[IsoDisplayName(@"Country")]
 public interface ICountry : IPlaceOfTradeIdentification4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingSettlementStatus3Choice;
 /// Reason for the settlement pending status.
 /// </summary>
 [IsoId("_LrsCYyY4EeW_ZNn8gbfY7Q")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IPendingSettlementStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

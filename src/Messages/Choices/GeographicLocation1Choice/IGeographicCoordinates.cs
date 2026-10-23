@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeographicLocation1Choice;
 /// </summary>
 [IsoId("_hutYMIn5EeShMpas3885ww")]
 [IsoXmlTag("GeogcCordints")]
+[IsoDisplayName(@"Geographic Coordinates")]
 public interface IGeographicCoordinates : IGeographicLocation1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IGeographicCoordinates : IGeographicLocation1Choice, IIsoChoice
     [IsoId("_WtE2wIn5EeShMpas3885ww")]
     [DisplayName("Latitude")]
     [IsoXmlTag("Lat")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text Latitude { get; }
 
     /// <summary>
@@ -27,5 +30,7 @@ public interface IGeographicCoordinates : IGeographicLocation1Choice, IIsoChoice
     [IsoId("_a-iE4In5EeShMpas3885ww")]
     [DisplayName("Longitude")]
     [IsoXmlTag("Long")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text Longitude { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Classification Type4.
 /// </summary>
 [IsoId("_-66U4eJIEe-5wchdE0oJYw")]
+[IsoDisplayName(@"Classification Type4")]
 public interface IClassificationType4 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IClassificationType4 : IIsoComponent
     /// </summary>
     [DisplayName("Legal Framework")]
     [IsoXmlTag("LglFrmwk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ExternalLegalFramework1Code> LegalFramework { get; }
 
     /// <summary>

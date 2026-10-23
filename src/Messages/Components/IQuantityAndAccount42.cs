@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details on the quantity, account and other related information involved in a transaction.
 /// </summary>
 [IsoId("_rDfX6x5hEeWE3PufGMdJ3w")]
+[IsoDisplayName(@"Quantity And Account")]
 public interface IQuantityAndAccount42 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IQuantityAndAccount42 : IIsoComponent
     [IsoId("_rlaZER5hEeWE3PufGMdJ3w")]
     [DisplayName("Denomination Choice")]
     [IsoXmlTag("DnmtnChc")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? DenominationChoice_ { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IQuantityAndAccount42 : IIsoComponent
     [IsoId("_rlaZMR5hEeWE3PufGMdJ3w")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQuantityBreakdown30> QuantityBreakdown { get; }
 
     /// <summary>

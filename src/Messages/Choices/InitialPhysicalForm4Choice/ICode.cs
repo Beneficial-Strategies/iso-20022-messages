@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InitialPhysicalForm4Choice;
 /// Initial physical form expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_Usd_8eLxEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInitialPhysicalForm4Choice, IIsoChoiceVariant
 {
     /// <summary>

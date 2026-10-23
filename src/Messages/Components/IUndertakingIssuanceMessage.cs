@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contents of the related UndertakingIssuance message or of the related issuance document.
 /// </summary>
 [IsoId("_98U8CHltEeG7BsjMvd1mEw_1927881342")]
+[IsoDisplayName(@"Undertaking Issuance Message")]
 public interface IUndertakingIssuanceMessage : IIsoComponent
 {
     /// <summary>

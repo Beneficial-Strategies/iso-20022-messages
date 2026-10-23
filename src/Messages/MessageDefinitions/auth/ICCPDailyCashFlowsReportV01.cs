@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPDalyCshFlowsRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.060.001.01"
 )]
+[Description(@"The CCPDailyCashFlowsReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority of the operational performance and exposures that occurred in a central counterparty payment system.|")]
+[IsoDisplayName(@"CCP Daily Cash Flows Report V")]
 public interface ICCPDailyCashFlowsReportV01 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICCPDailyCashFlowsReportV01 : IOuterRecord
     [IsoId("_-yhDWeUTEem3X-64-NKdqg")]
     [DisplayName("Concentration Agent")]
     [IsoXmlTag("CncntrtnAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IConcentrationAgent1> ConcentrationAgent { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICCPDailyCashFlowsReportV01 : IOuterRecord
     [IsoId("_-yhDW-UTEem3X-64-NKdqg")]
     [DisplayName("Settlement Agent")]
     [IsoXmlTag("SttlmAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementAgent1> SettlementAgent { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ICCPDailyCashFlowsReportV01 : IOuterRecord
     [IsoId("_-yhDXeUTEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

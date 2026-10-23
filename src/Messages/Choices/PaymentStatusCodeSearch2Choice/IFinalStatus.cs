@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusCodeSearch2Choice;
 /// Qualifies further the final status.
 /// </summary>
 [IsoId("_RGEOMtp-Ed-ak6NoX_4Aeg_396814157")]
+[IsoDisplayName(@"Final Status")]
 public interface IFinalStatus : IPaymentStatusCodeSearch2Choice, IIsoChoiceVariant
 {
     /// <summary>

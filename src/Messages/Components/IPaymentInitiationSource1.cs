@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the source used to initiate the payment (such as an application or a software).
 /// </summary>
 [IsoId("_qBeboMQJEemsic1bQcEtLA")]
+[IsoDisplayName(@"Payment Initiation Source")]
 public interface IPaymentInitiationSource1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentInitiationSource1 : IIsoComponent
     [IsoId("_7F6NAMQJEemsic1bQcEtLA")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPaymentInitiationSource1 : IIsoComponent
     [IsoId("_0kOosMQJEemsic1bQcEtLA")]
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Provider { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IPaymentInitiationSource1 : IIsoComponent
     [IsoId("_ADKKIMQKEemsic1bQcEtLA")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Version { get; }
 }

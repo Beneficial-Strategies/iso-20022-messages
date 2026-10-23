@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat5Choice;
 /// </summary>
 [IsoId("_YxN_4dLGEeiN28wlpBQScw")]
 [IsoXmlTag("TpAndId")]
+[IsoDisplayName(@"Type And Identification")]
 public interface ITypeAndIdentification : IPledgeeFormat5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ITypeAndIdentification : IPledgeeFormat5Choice, IIsoChoiceVaria
     [IsoId("_ZF5PYdLGEeiN28wlpBQScw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier Identification { get; }
 
     /// <summary>

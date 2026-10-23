@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Purpose2Choice;
 /// Purpose, in a proprietary form.
 /// </summary>
 [IsoId("_P6qyINp-Ed-ak6NoX_4Aeg_-1283223318")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPurpose2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IPurpose2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

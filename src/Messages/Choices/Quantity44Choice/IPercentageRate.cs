@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity44Choice;
 /// Percentage rate of assets to be transferred.
 /// </summary>
 [IsoId("_QwEDA03WEeidB49bWZiS0g")]
+[IsoDisplayName(@"Percentage Rate")]
 public interface IPercentageRate : IQuantity44Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPercentageRate : IQuantity44Choice, IIsoChoiceVariant
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("PctgRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     BeneficialStrategies.Iso20022.SimpleTypes.PercentageRate Value { get; }
 }

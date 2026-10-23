@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies an order linked to an account opening.
 /// </summary>
 [IsoId("_TS4rE9p-Ed-ak6NoX_4Aeg_369581700")]
+[IsoDisplayName(@"Investment Fund Order")]
 public interface IInvestmentFundOrder4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentFundOrder4 : IIsoComponent
     [IsoId("_TS4rFNp-Ed-ak6NoX_4Aeg_667878445")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OrderReference { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IInvestmentFundOrder4 : IIsoComponent
     [IsoId("_TS4rFdp-Ed-ak6NoX_4Aeg_669723286")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 }

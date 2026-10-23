@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between additional cash in or resulting cash out.
 /// </summary>
 [IsoId("_hlWuoEG_EeaNEqIb_fgRZg")]
+[IsoDisplayName(@"Additional Amount 1 Choice")]
 public interface IAdditionalAmount1Choice : IIsoChoice { }

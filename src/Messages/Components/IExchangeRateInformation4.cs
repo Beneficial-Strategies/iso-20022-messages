@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Exchange Rate Information4.
 /// </summary>
 [IsoId("_BpTJsOKHEe2QzKqbsy1xHQ")]
+[IsoDisplayName(@"Exchange Rate Information4")]
 public interface IExchangeRateInformation4 : IIsoComponent
 {
     /// <summary>

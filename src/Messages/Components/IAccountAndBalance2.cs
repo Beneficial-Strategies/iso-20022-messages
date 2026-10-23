@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides account and balance information.
 /// </summary>
 [IsoId("_QS9WR9p-Ed-ak6NoX_4Aeg_-2003344061")]
+[IsoDisplayName(@"Account And Balance")]
 public interface IAccountAndBalance2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountAndBalance2 : IIsoComponent
     [IsoId("_QS9WSNp-Ed-ak6NoX_4Aeg_-2003344036")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SafekeepingAccount { get; }
 
     /// <summary>

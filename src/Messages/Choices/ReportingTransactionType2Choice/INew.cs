@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType2Choice;
 /// </summary>
 [IsoId("_XM1TEZ26Eeuwmdq0KtnICg")]
 [IsoXmlTag("New")]
+[IsoDisplayName(@"New")]
 public interface INew : IReportingTransactionType2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface INew : IReportingTransactionType2Choice, IIsoChoiceVariant
     [IsoId("_XjVHgZ26Eeuwmdq0KtnICg")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text TransactionIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface INew : IReportingTransactionType2Choice, IIsoChoiceVariant
     [IsoId("_XjVHg526Eeuwmdq0KtnICg")]
     [DisplayName("Executing Party")]
     [IsoXmlTag("ExctgPty")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier ExecutingParty { get; }
 
     /// <summary>
@@ -34,6 +38,7 @@ public interface INew : IReportingTransactionType2Choice, IIsoChoiceVariant
     [IsoId("_XjVHhZ26Eeuwmdq0KtnICg")]
     [DisplayName("Investment Party Indicator")]
     [IsoXmlTag("InvstmtPtyInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator InvestmentPartyIndicator { get; }
 
     /// <summary>
@@ -42,6 +47,7 @@ public interface INew : IReportingTransactionType2Choice, IIsoChoiceVariant
     [IsoId("_XjVHjZ26Eeuwmdq0KtnICg")]
     [DisplayName("Submitting Party")]
     [IsoXmlTag("SubmitgPty")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier SubmittingParty { get; }
 
     /// <summary>
@@ -123,5 +129,6 @@ public interface INew : IReportingTransactionType2Choice, IIsoChoiceVariant
     [IsoId("_XjVHo526Eeuwmdq0KtnICg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the rates related to securities movement.
 /// </summary>
 [IsoId("_ORdmwOsgEd-b_I-JAnHTUQ")]
+[IsoDisplayName(@"Rate Details")]
 public interface IRateDetails3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IRateDetails3 : IIsoComponent
     [IsoId("_o8yZ4esgEd-b_I-JAnHTUQ")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGrossDividendRateFormat5Choice> GrossDividendRate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IRateDetails3 : IIsoComponent
     [IsoId("_rgGEIesgEd-b_I-JAnHTUQ")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateUsedForPaymentFormat5Choice> InterestRateUsedForPayment { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IRateDetails3 : IIsoComponent
     [IsoId("_vShz8esgEd-b_I-JAnHTUQ")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateTypeAndAmountAndStatus6> TaxRelatedRate { get; }
 
     /// <summary>
@@ -105,6 +109,7 @@ public interface IRateDetails3 : IIsoComponent
     [IsoId("_U8QHIOtJEd-PFJLHKom6FA")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetDividendRateFormat5Choice> NetDividendRate { get; }
 
     /// <summary>
@@ -145,6 +150,7 @@ public interface IRateDetails3 : IIsoComponent
     [IsoId("_c076oOtJEd-PFJLHKom6FA")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCreditRateFormat5Choice> TaxCreditRate { get; }
 
     /// <summary>

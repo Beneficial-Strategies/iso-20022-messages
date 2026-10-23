@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the status of an investigation case.
 /// </summary>
 [IsoId("_T-GLS9p-Ed-ak6NoX_4Aeg_-1949574113")]
+[IsoDisplayName(@"Case Status")]
 public interface ICaseStatus2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICaseStatus2 : IIsoComponent
     [IsoId("_T-GLTNp-Ed-ak6NoX_4Aeg_-1949574096")]
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime DateTime { get; }
 
     /// <summary>
@@ -33,5 +35,7 @@ public interface ICaseStatus2 : IIsoComponent
     [IsoId("_T-P8Qdp-Ed-ak6NoX_4Aeg_-1949574053")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Reason { get; }
 }

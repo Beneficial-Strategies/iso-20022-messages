@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides all information related to a handwritten signature capture.
 /// </summary>
 [IsoId("_dY9X8NxGEeioifFt1dhnJA")]
+[IsoDisplayName(@"Captured Signature")]
 public interface ICapturedSignature1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICapturedSignature1 : IIsoComponent
     [IsoId("_loZekNxGEeioifFt1dhnJA")]
     [DisplayName("Image Format")]
     [IsoXmlTag("ImgFrmt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ImageFormat { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICapturedSignature1 : IIsoComponent
     [IsoId("_pfhhINxGEeioifFt1dhnJA")]
     [DisplayName("Image Data")]
     [IsoXmlTag("ImgData")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary? ImageData { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface ICapturedSignature1 : IIsoComponent
     [IsoId("_tOK9INxGEeioifFt1dhnJA")]
     [DisplayName("Image Reference")]
     [IsoXmlTag("ImgRef")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? ImageReference { get; }
 
     /// <summary>
@@ -41,5 +47,7 @@ public interface ICapturedSignature1 : IIsoComponent
     [IsoId("_xdePINxGEeioifFt1dhnJA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalInformation { get; }
 }

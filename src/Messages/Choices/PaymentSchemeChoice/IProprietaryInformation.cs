@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentSchemeChoice;
 /// Channel that is specific to a user community and is required for use within that user community.||Usage: if the channel is included in the list of codes provided for the payment scheme, the code element should be used instead of the proprietary element.
 /// </summary>
 [IsoId("_QHyBENp-Ed-ak6NoX_4Aeg_-84180804")]
+[IsoDisplayName(@"Proprietary Information")]
 public interface IProprietaryInformation : IPaymentSchemeChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietaryInformation : IPaymentSchemeChoice, IIsoChoiceVaria
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("PrtryInf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

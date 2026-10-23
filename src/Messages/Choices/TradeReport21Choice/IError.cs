@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport21Choice;
 /// </summary>
 [IsoId("_SKn4Y8g2EeuGrNSsxk3B0A")]
 [IsoXmlTag("Err")]
+[IsoDisplayName(@"Error")]
 public interface IError : ITradeReport21Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IError : ITradeReport21Choice, IIsoChoiceVariant
     [IsoId("_aRqQ8cg2EeuGrNSsxk3B0A")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IError : ITradeReport21Choice, IIsoChoiceVariant
     [IsoId("_aRqQ88g2EeuGrNSsxk3B0A")]
     [DisplayName("Reporting Date Time")]
     [IsoXmlTag("RptgDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ReportingDateTime { get; }
 
     /// <summary>
@@ -42,6 +46,8 @@ public interface IError : ITradeReport21Choice, IIsoChoiceVariant
     [IsoId("_aRqQ98g2EeuGrNSsxk3B0A")]
     [DisplayName("Collateral Portfolio Identification")]
     [IsoXmlTag("CollPrtflId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text CollateralPortfolioIdentification { get; }
 
     /// <summary>
@@ -50,5 +56,6 @@ public interface IError : ITradeReport21Choice, IIsoChoiceVariant
     [IsoId("_aRqQ-cg2EeuGrNSsxk3B0A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

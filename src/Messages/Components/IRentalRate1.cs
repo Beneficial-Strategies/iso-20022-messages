@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vehicle rental rate
 /// </summary>
 [IsoId("_jy_0d_S2Eeife6veM7daYw")]
+[IsoDisplayName(@"Rental Rate")]
 public interface IRentalRate1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IRentalRate1 : IIsoComponent
     [IsoId("_jy_0fPS2Eeife6veM7daYw")]
     [DisplayName("Other Period")]
     [IsoXmlTag("OthrPrd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherPeriod { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IRentalRate1 : IIsoComponent
     [IsoId("_jy_0ffS2Eeife6veM7daYw")]
     [DisplayName("Period Count")]
     [IsoXmlTag("PrdCnt")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? PeriodCount { get; }
 }

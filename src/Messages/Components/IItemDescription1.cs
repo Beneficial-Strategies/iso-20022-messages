@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Language, title and textual description in the specified language of an item.
 /// </summary>
 [IsoId("_22xaAPM8EeqRfth943bvEA")]
+[IsoDisplayName(@"Item Description")]
 public interface IItemDescription1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IItemDescription1 : IIsoComponent
     [IsoId("_VNTTkfM9EeqRfth943bvEA")]
     [DisplayName("Title")]
     [IsoXmlTag("Titl")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Title { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IItemDescription1 : IIsoComponent
     [IsoId("_sWfcsfM9EeqRfth943bvEA")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? Description { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information on the type of investors in relation to a corporate action.
 /// </summary>
 [IsoId("_ki8AAKnUEfC5VNwixU6YfQ")]
+[IsoDisplayName(@"Investor Type Identification1")]
 public interface IInvestorTypeIdentification1 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of number count type.
 /// </summary>
 [IsoId("_JBmOYSgdEey2k_sfZmJz4g")]
+[IsoDisplayName(@"Number Count 2 Choice")]
 public interface INumberCount2Choice : IIsoChoice { }

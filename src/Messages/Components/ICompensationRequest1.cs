@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Compensation Request1.
 /// </summary>
 [IsoId("_ON_m8XY3Ee2HyLKFbMrSWQ")]
+[IsoDisplayName(@"Compensation Request1")]
 public interface ICompensationRequest1 : IIsoComponent
 {
     /// <summary>
@@ -51,5 +52,6 @@ public interface ICompensationRequest1 : IIsoComponent
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max140Text> Reason { get; }
 }

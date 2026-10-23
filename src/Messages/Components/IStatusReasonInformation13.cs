@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the status reason of the transaction.
 /// </summary>
 [IsoId("_zyR4BaX_EeynsLtPxJMJTQ")]
+[IsoDisplayName(@"Status Reason Information13")]
 public interface IStatusReasonInformation13 : IIsoComponent
 {
     /// <summary>

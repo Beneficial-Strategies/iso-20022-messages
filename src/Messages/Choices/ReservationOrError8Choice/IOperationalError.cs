@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError8Choice;
 /// </summary>
 [IsoId("_DXEK424-EeiU9cctagi5ow")]
 [IsoXmlTag("OprlErr")]
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : IReservationOrError8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IOperationalError : IReservationOrError8Choice, IIsoChoiceVaria
     [IsoId("_RA_783hdEeidzqjNEfehPg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

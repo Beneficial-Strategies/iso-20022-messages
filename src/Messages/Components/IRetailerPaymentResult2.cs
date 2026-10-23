@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Data Results.
 /// </summary>
 [IsoId("_0MLVEQ1HEeqjM-rxn3HuXQ")]
+[IsoDisplayName(@"Retailer Payment Result")]
 public interface IRetailerPaymentResult2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IRetailerPaymentResult2 : IIsoComponent
     [IsoId("_0X2Zkw1HEeqjM-rxn3HuXQ")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardPaymentServiceType9Code> AdditionalService { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IRetailerPaymentResult2 : IIsoComponent
     [IsoId("_0X2Zmw1HEeqjM-rxn3HuXQ")]
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomerOrder1> CustomerOrder { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IRetailerPaymentResult2 : IIsoComponent
     [IsoId("_0X2ZoQ1HEeqjM-rxn3HuXQ")]
     [DisplayName("Merchant Override Flag")]
     [IsoXmlTag("MrchntOvrrdFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MerchantOverrideFlag { get; }
 
     /// <summary>
@@ -97,5 +101,6 @@ public interface IRetailerPaymentResult2 : IIsoComponent
     [IsoId("_0X2ZpQ1HEeqjM-rxn3HuXQ")]
     [DisplayName("Online Flag")]
     [IsoXmlTag("OnlnFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? OnlineFlag { get; }
 }

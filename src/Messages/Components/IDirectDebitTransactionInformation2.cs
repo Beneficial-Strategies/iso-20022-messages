@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics that apply to the the direct debit transaction(s).
 /// </summary>
 [IsoId("_PvWS4dp-Ed-ak6NoX_4Aeg_-1849559594")]
+[IsoDisplayName(@"Direct Debit Transaction Information")]
 public interface IDirectDebitTransactionInformation2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IDirectDebitTransactionInformation2 : IIsoComponent
     [IsoId("_PvWS5dp-Ed-ak6NoX_4Aeg_-1848635881")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IDirectDebitTransactionInformation2 : IIsoComponent
     [IsoId("_Pvfc0Np-Ed-ak6NoX_4Aeg_-1848635952")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ExchangeRate { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface IDirectDebitTransactionInformation2 : IIsoComponent
     [IsoId("_Pvfc0tp-Ed-ak6NoX_4Aeg_-1847648800")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChargesInformation1> ChargesInformation { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface IDirectDebitTransactionInformation2 : IIsoComponent
     [IsoId("_Pvfc09p-Ed-ak6NoX_4Aeg_-1849559439")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 
     /// <summary>
@@ -257,6 +262,9 @@ public interface IDirectDebitTransactionInformation2 : IIsoComponent
     [IsoId("_Pvy-1dp-Ed-ak6NoX_4Aeg_-1847649198")]
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting2> RegulatoryReporting { get; }
 
     /// <summary>
@@ -265,6 +273,9 @@ public interface IDirectDebitTransactionInformation2 : IIsoComponent
     [IsoId("_Pvy-1tp-Ed-ak6NoX_4Aeg_-1847649387")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation1> RelatedRemittanceInformation { get; }
 
     /// <summary>

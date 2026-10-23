@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Capabilities of the terminal.
 /// </summary>
 [IsoId("_HjX5sEYZEeegp_DADCe7HQ")]
+[IsoDisplayName(@"Capabilities")]
 public interface ICapabilities1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICapabilities1 : IIsoComponent
     [IsoId("_f4hfoEYZEeegp_DADCe7HQ")]
     [DisplayName("Card Reading Capability")]
     [IsoXmlTag("CardRdngCpblty")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataReading7Code> CardReadingCapability { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface ICapabilities1 : IIsoComponent
     [IsoId("_oEHoEEYZEeegp_DADCe7HQ")]
     [DisplayName("Other Card Reading Capabilities")]
     [IsoXmlTag("OthrCardRdngCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> OtherCardReadingCapabilities { get; }
 
     /// <summary>
@@ -35,6 +38,7 @@ public interface ICapabilities1 : IIsoComponent
     [IsoId("_5zlTcEYZEeegp_DADCe7HQ")]
     [DisplayName("Card Writing Capabilities")]
     [IsoXmlTag("CardWrtgCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataWriting1Code> CardWritingCapabilities { get; }
 
     /// <summary>
@@ -43,6 +47,7 @@ public interface ICapabilities1 : IIsoComponent
     [IsoId("_FKeTMEYaEeegp_DADCe7HQ")]
     [DisplayName("Other Card Writing Capabilities")]
     [IsoXmlTag("OthrCardWrtgCpblties")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> OtherCardWritingCapabilities { get; }
 
     /// <summary>
@@ -52,6 +57,7 @@ public interface ICapabilities1 : IIsoComponent
     [IsoId("_R71s4EYaEeegp_DADCe7HQ")]
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? PINLengthCapabilities { get; }
 
     /// <summary>
@@ -61,6 +67,7 @@ public interface ICapabilities1 : IIsoComponent
     [IsoId("_gyFvcEYaEeegp_DADCe7HQ")]
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ApprovalCodeLength { get; }
 
     /// <summary>
@@ -70,6 +77,7 @@ public interface ICapabilities1 : IIsoComponent
     [IsoId("_r_zlEEYaEeegp_DADCe7HQ")]
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaxScriptLength { get; }
 
     /// <summary>
@@ -80,6 +88,7 @@ public interface ICapabilities1 : IIsoComponent
     [IsoId("_fVl-wJo5Eee2tb5MXkS8WQ")]
     [DisplayName("PIN Pad Inoperative")]
     [IsoXmlTag("PINPadInprtv")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PINPadInoperative { get; }
 
     /// <summary>
@@ -91,6 +100,7 @@ public interface ICapabilities1 : IIsoComponent
     [IsoId("_9yTWUEYaEeegp_DADCe7HQ")]
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardCaptureCapable { get; }
 
     /// <summary>
@@ -108,6 +118,7 @@ public interface ICapabilities1 : IIsoComponent
     [IsoId("_Im3aMEYdEeegp_DADCe7HQ")]
     [DisplayName("Message Capabilities")]
     [IsoXmlTag("MsgCpblties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisplayCapabilities6> MessageCapabilities { get; }
 
     /// <summary>
@@ -117,5 +128,6 @@ public interface ICapabilities1 : IIsoComponent
     [IsoId("_25q4kRqZEeqH1IQNpbVpEw")]
     [DisplayName("Cardholder Verification Capability")]
     [IsoXmlTag("CrdhldrVrfctnCpblty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholderVerificationCapabilities1> CardholderVerificationCapability { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxCreditRateFormat7Choice;
 /// </summary>
 [IsoId("_Wf3Xs0EIEeWVgfuHGaKtRQ")]
 [IsoXmlTag("RateTpAndAmtAndRateSts")]
+[IsoDisplayName(@"Rate Type And Amount And Rate Status")]
 public interface IRateTypeAndAmountAndRateStatus : ITaxCreditRateFormat7Choice, IIsoChoiceVariant
 {
     /// <summary>

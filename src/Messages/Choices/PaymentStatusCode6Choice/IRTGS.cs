@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusCode6Choice;
 /// Qualifies further the RTGS status.
 /// </summary>
 [IsoId("_phD1BxbzEeOy-PlRuFSUzQ")]
+[IsoDisplayName(@"RTGS")]
 public interface IRTGS : IPaymentStatusCode6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IRTGS : IPaymentStatusCode6Choice, IIsoChoiceVariant
     /// Specifies an alphanumeric string with a maximum length of 4 characters.
     /// </summary>
     [IsoXmlTag("RTGS")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText Value { get; }
 }

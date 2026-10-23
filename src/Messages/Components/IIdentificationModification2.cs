@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the identification data that is advised to be modified.
 /// </summary>
 [IsoId("_tpZdUlkyEeGeoaLUQk__nA_-1518673695")]
+[IsoDisplayName(@"Identification Modification")]
 public interface IIdentificationModification2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IIdentificationModification2 : IIsoComponent
     [IsoId("_tpZdU1kyEeGeoaLUQk__nA_1779221248")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IIdentificationModification2 : IIsoComponent
     [IsoId("_tpjOUlkyEeGeoaLUQk__nA_-452820477")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalInformation { get; }
 }

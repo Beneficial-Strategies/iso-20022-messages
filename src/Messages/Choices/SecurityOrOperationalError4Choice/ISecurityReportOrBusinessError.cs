@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityOrOperationalError4Choic
 /// Provides the financial instruments details or the business error.
 /// </summary>
 [IsoId("_P5yGsZJKEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Security Report Or Business Error")]
 public interface ISecurityReportOrBusinessError
     : ISecurityOrOperationalError4Choice,
         IIsoChoiceVariant

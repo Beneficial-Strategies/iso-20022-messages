@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3SU1zEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.033.001.07", "ReqForDplct", "urn:iso:std:iso:20022:tech:xsd:camt.033.001.07")]
+[IsoDisplayName(@"Request For Duplicate V07")]
 public interface IRequestForDuplicateV07 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +33,6 @@ public interface IRequestForDuplicateV07 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctMgmtStsRptV02",
     "urn:iso:std:iso:20022:tech:xsd:acmt.006.001.02"
 )]
+[Description(@"Scope|An account servicer, eg, a registrar, transfer agent or custodian bank sends the AccountManagementStatusReport message to an account owner or its designated agent, eg, an investor to report on the receipt or the processing status of a previously received AccountOpeningInstruction or AccountModificationInstruction or GetAccountDetails message.|Usage|The AccountManagementStatusReport message is used to provide the processing status of a previously received AccountOpeningInstruction or of an AccountModificationInstruction message.|The AccountManagementStatusReport message is also used by an account servicer to reject an AccountOpeningInstruction or AccountModificationInstruction or GetAccountDetails message when the message is not compliant with the agreed SLA or when the account cannot be uniquely identified.|The account owner may report that the status of the instruction is either rejected, accepted, that the instruction is being processed or that the instruction has been forwarded to the next intermediary party for further processing.")]
+[IsoDisplayName(@"Account Management Status Report V")]
 public interface IAccountManagementStatusReportV02 : IOuterRecord
 {
     /// <summary>
@@ -37,6 +39,9 @@ public interface IAccountManagementStatusReportV02 : IOuterRecord
     [IsoId("_qqG5odE9Ed-BzquC8wXy7w_1684015362")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> RelatedReference { get; }
 
     /// <summary>

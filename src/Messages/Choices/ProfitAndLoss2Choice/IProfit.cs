@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProfitAndLoss2Choice;
 /// </summary>
 [IsoId("_Nd_nIWYDEeaJx-BUPcSWQA")]
 [IsoXmlTag("Prft")]
+[IsoDisplayName(@"Profit")]
 public interface IProfit : IProfitAndLoss2Choice, IIsoChoiceVariant
 {
     /// <summary>

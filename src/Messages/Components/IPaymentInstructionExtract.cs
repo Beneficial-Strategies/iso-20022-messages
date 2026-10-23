@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of a payment instruction. The information contained in this component is sufficient to retrieve a payment instruction.
 /// </summary>
 [IsoId("_VQgOUtp-Ed-ak6NoX_4Aeg_-769020295")]
+[IsoDisplayName(@"Payment Instruction Extract")]
 public interface IPaymentInstructionExtract : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentInstructionExtract : IIsoComponent
     [IsoId("_VQgOU9p-Ed-ak6NoX_4Aeg_56776664")]
     [DisplayName("Assigner Instruction Identification")]
     [IsoXmlTag("AssgnrInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AssignerInstructionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPaymentInstructionExtract : IIsoComponent
     [IsoId("_VQgOVNp-Ed-ak6NoX_4Aeg_585203601")]
     [DisplayName("Assignee Instruction Identification")]
     [IsoXmlTag("AssgneInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AssigneeInstructionIdentification { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface IPaymentInstructionExtract : IIsoComponent
     [IsoId("_VQgOVtp-Ed-ak6NoX_4Aeg_-659512363")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ValueDate { get; }
 }

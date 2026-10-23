@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the aggregated data and failed rate of internalised settlement instructions.
 /// </summary>
 [IsoId("_WeS9UO3nEeaWjpoyrnG6Rw")]
+[IsoDisplayName(@"Internalisation Data")]
 public interface IInternalisationData1 : IIsoComponent
 {
     /// <summary>

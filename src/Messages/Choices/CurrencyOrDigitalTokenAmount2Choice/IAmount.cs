@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount2Cho
 /// <summary>
 /// Amount.
 /// </summary>
+[IsoDisplayName(@"Amount")]
 public interface IAmount : ICurrencyOrDigitalTokenAmount2Choice, IIsoChoiceVariant
 {
     /// <summary>

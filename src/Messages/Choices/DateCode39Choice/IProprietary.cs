@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateCode39Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IDateCode39Choice, IIsoChoiceVariant
 {
     /// <summary>

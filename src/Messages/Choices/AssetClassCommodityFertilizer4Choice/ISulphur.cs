@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer4Ch
 /// </summary>
 [IsoId("_idnj908REe2PGo0mhYCh1g")]
 [IsoXmlTag("Slphr")]
+[IsoDisplayName(@"Sulphur")]
 public interface ISulphur : IAssetClassCommodityFertilizer4Choice, IIsoChoiceVariant
 {
     /// <summary>

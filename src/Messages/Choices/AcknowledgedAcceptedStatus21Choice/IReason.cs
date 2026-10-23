@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgedAcceptedStatus21Choi
 /// </summary>
 [IsoId("_hQwiCTnvEeWfSKvvZlhRKg")]
 [IsoXmlTag("Rsn")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IAcknowledgedAcceptedStatus21Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IReason : IAcknowledgedAcceptedStatus21Choice, IIsoChoiceVarian
     [IsoId("_hyO3aTnvEeWfSKvvZlhRKg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

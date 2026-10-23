@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Agent Notification Cancellation Identification And Status1.
 /// </summary>
 [IsoId("_CFucIFuKEe6gDOpEK7Q4ig")]
+[IsoDisplayName(@"Agent Notification Cancellation Identification And Status1")]
 public interface IAgentNotificationCancellationIdentificationAndStatus1 : IIsoComponent
 {
     /// <summary>

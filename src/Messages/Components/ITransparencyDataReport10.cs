@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides for reporting details of non-equity instruments as part of transparency calculations.
 /// </summary>
 [IsoId("_ihx5AWkvEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Transparency Data Report")]
 public interface ITransparencyDataReport10 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,8 @@ public interface ITransparencyDataReport10 : IIsoComponent
     [IsoId("_is3HpWkvEeaLAKoEUNsD9g")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -27,6 +30,7 @@ public interface ITransparencyDataReport10 : IIsoComponent
     [IsoId("_is3Hp2kvEeaLAKoEUNsD9g")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier Identification { get; }
 
     /// <summary>
@@ -35,6 +39,8 @@ public interface ITransparencyDataReport10 : IIsoComponent
     [IsoId("_is3HqWkvEeaLAKoEUNsD9g")]
     [DisplayName("Full Name")]
     [IsoXmlTag("FullNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FullName { get; }
 
     /// <summary>
@@ -43,6 +49,7 @@ public interface ITransparencyDataReport10 : IIsoComponent
     [IsoId("_is3Hq2kvEeaLAKoEUNsD9g")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? TradingVenue { get; }
 
     /// <summary>
@@ -51,6 +58,7 @@ public interface ITransparencyDataReport10 : IIsoComponent
     [IsoId("_is3HrWkvEeaLAKoEUNsD9g")]
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ReportingDate { get; }
 
     /// <summary>
@@ -59,6 +67,7 @@ public interface ITransparencyDataReport10 : IIsoComponent
     [IsoId("_is3Hr2kvEeaLAKoEUNsD9g")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>

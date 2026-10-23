@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of an entity involved in an activity.
 /// </summary>
 [IsoId("_Rpl8ceaPEd-q8fx_Zl_34A")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification48 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface IPartyIdentification48 : IIsoComponent
     [IsoId("_RpvtZ-aPEd-q8fx_Zl_34A")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessingIdentification { get; }
 
     /// <summary>

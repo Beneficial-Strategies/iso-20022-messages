@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProfitAndLoss1Choice;
 /// </summary>
 [IsoId("_Q65gCtp-Ed-ak6NoX_4Aeg_-802663966")]
 [IsoXmlTag("Loss")]
+[IsoDisplayName(@"Loss")]
 public interface ILoss : IProfitAndLoss1Choice, IIsoChoiceVariant
 {
     /// <summary>

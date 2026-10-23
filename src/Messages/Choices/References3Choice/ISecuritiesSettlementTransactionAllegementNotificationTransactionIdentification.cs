@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References3Choice;
 /// Unambiguous identification of the allegement notification to be cancelled as know by the account servicer.
 /// </summary>
 [IsoId("_USz3Btp-Ed-ak6NoX_4Aeg_2080550219")]
+[IsoDisplayName(@"Securities Settlement Transaction Allegement Notification Transaction Identification")]
 public interface ISecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
     : IReferences3Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ISecuritiesSettlementTransactionAllegementNotificationTransacti
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("SctiesSttlmTxAllgmtNtfctnTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

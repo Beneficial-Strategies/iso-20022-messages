@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of the individual orders confirmation that was previously received.
 /// </summary>
 [IsoId("e625fe64-e768-4881-b413-a879e4f5713b")]
+[IsoDisplayName(@"Individual Order Confirmation Status And Reason3")]
 public interface IIndividualOrderConfirmationStatusAndReason3 : IIsoComponent
 {
     /// <summary>

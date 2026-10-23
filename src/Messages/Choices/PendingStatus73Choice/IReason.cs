@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus73Choice;
 /// <summary>
 /// Reason.
 /// </summary>
+[IsoDisplayName(@"Reason")]
 public interface IReason : IPendingStatus73Choice, IIsoChoiceVariant
 {
     /// <summary>

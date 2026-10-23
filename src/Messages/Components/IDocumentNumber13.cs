@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a document.
 /// </summary>
 [IsoId("_89qrcUAlEeWE6OHCSJh8BQ")]
+[IsoDisplayName(@"Document Number")]
 public interface IDocumentNumber13 : IIsoComponent
 {
     /// <summary>

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionCondition41
 
 /// <summary>Settlement transaction condition expressed as a proprietary code.</summary>
 [IsoId("_KWsIWfHPEfChCaiL9q1LKg")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ISettlementTransactionCondition41Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

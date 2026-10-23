@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Assessments for the component of the point of interaction.
 /// </summary>
 [IsoId("_0nUakAyQEeKa_56Jbsi1RQ")]
+[IsoDisplayName(@"Point Of Interaction Component Assessment")]
 public interface IPointOfInteractionComponentAssessment1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPointOfInteractionComponentAssessment1 : IIsoComponent
     [IsoId("_L3GT4AyREeKa_56Jbsi1RQ")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Assigner { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPointOfInteractionComponentAssessment1 : IIsoComponent
     [IsoId("_TwUS4AyREeKa_56Jbsi1RQ")]
     [DisplayName("Delivery Date")]
     [IsoXmlTag("DlvryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DeliveryDate { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IPointOfInteractionComponentAssessment1 : IIsoComponent
     [IsoId("_cJlD4AyREeKa_56Jbsi1RQ")]
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ExpirationDate { get; }
 
     /// <summary>
@@ -49,5 +54,7 @@ public interface IPointOfInteractionComponentAssessment1 : IIsoComponent
     [IsoId("_jKL_4AyREeKa_56Jbsi1RQ")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Number { get; }
 }

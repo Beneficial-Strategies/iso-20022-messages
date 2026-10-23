@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date and identification of a trade together with references to previous events in its life.
 /// </summary>
 [IsoId("_WFoGkVN5EeOEi5J12GuNGQ")]
+[IsoDisplayName(@"Trade Agreement")]
 public interface ITradeAgreement12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeAgreement12 : IIsoComponent
     [IsoId("_WVuYE1N5EeOEi5J12GuNGQ")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITradeAgreement12 : IIsoComponent
     [IsoId("_WVuYFVN5EeOEi5J12GuNGQ")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface ITradeAgreement12 : IIsoComponent
     [IsoId("_WVuYF1N5EeOEi5J12GuNGQ")]
     [DisplayName("Originator Reference")]
     [IsoXmlTag("OrgtrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginatorReference { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface ITradeAgreement12 : IIsoComponent
     [IsoId("_WVuYGVN5EeOEi5J12GuNGQ")]
     [DisplayName("Common Reference")]
     [IsoXmlTag("CmonRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonReference { get; }
 
     /// <summary>
@@ -49,6 +57,8 @@ public interface ITradeAgreement12 : IIsoComponent
     [IsoId("_WVuYG1N5EeOEi5J12GuNGQ")]
     [DisplayName("Amend Or Cancel Reason")]
     [IsoXmlTag("AmdOrCclRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AmendOrCancelReason { get; }
 
     /// <summary>
@@ -57,6 +67,8 @@ public interface ITradeAgreement12 : IIsoComponent
     [IsoId("_WVuYHVN5EeOEi5J12GuNGQ")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RelatedReference { get; }
 
     /// <summary>
@@ -65,6 +77,8 @@ public interface ITradeAgreement12 : IIsoComponent
     [IsoId("_WVuYH1N5EeOEi5J12GuNGQ")]
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProductType { get; }
 
     /// <summary>
@@ -73,6 +87,8 @@ public interface ITradeAgreement12 : IIsoComponent
     [IsoId("_WVuYIVN5EeOEi5J12GuNGQ")]
     [DisplayName("Operation Type")]
     [IsoXmlTag("OprTp")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? OperationType { get; }
 
     /// <summary>
@@ -81,6 +97,8 @@ public interface ITradeAgreement12 : IIsoComponent
     [IsoId("_WVuYI1N5EeOEi5J12GuNGQ")]
     [DisplayName("Operation Scope")]
     [IsoXmlTag("OprScp")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? OperationScope { get; }
 
     /// <summary>
@@ -89,6 +107,7 @@ public interface ITradeAgreement12 : IIsoComponent
     [IsoId("_WVuYJVN5EeOEi5J12GuNGQ")]
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SettlementSessionIdentifier { get; }
 
     /// <summary>
@@ -97,6 +116,7 @@ public interface ITradeAgreement12 : IIsoComponent
     [IsoId("_WVuYJ1N5EeOEi5J12GuNGQ")]
     [DisplayName("Split Trade Indicator")]
     [IsoXmlTag("SpltTradInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SplitTradeIndicator { get; }
 
     /// <summary>
@@ -105,5 +125,6 @@ public interface ITradeAgreement12 : IIsoComponent
     [IsoId("_QwZHQVN5EeOEi5J12GuNGQ")]
     [DisplayName("Payment Versus Payment Indicator")]
     [IsoXmlTag("PmtVrssPmtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PaymentVersusPaymentIndicator { get; }
 }

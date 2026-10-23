@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Designates the tax calculation to be applied on a service.
 /// </summary>
 [IsoId("_6RJWjpqlEeGSON8vddiWzQ_-263337197")]
+[IsoDisplayName(@"Service Tax Designation")]
 public interface IServiceTaxDesignation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IServiceTaxDesignation1 : IIsoComponent
     [IsoId("_6RJWkJqlEeGSON8vddiWzQ_115283382")]
     [DisplayName("Region")]
     [IsoXmlTag("Rgn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Region { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IServiceTaxDesignation1 : IIsoComponent
     [IsoId("_6RSgcJqlEeGSON8vddiWzQ_1740386990")]
     [DisplayName("Tax Reason")]
     [IsoXmlTag("TaxRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxReason1> TaxReason { get; }
 }

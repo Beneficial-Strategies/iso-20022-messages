@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides transaction type and identification information.
 /// </summary>
 [IsoId("_8NnkU5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Transaction Identifications")]
 public interface ITransactionIdentifications38 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionIdentifications38 : IIsoComponent
     [IsoId("_8NnkV5NLEeWGlc8L7oPDIg")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransactionIdentifications38 : IIsoComponent
     [IsoId("_8NnkX5NLEeWGlc8L7oPDIg")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransactionIdentifications38 : IIsoComponent
     [IsoId("_8NnkZ5NLEeWGlc8L7oPDIg")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITransactionIdentifications38 : IIsoComponent
     [IsoId("_8Nnkb5NLEeWGlc8L7oPDIg")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface ITransactionIdentifications38 : IIsoComponent
     [IsoId("_8NnkcZNLEeWGlc8L7oPDIg")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? CommonIdentification { get; }
 
     /// <summary>
@@ -57,5 +68,7 @@ public interface ITransactionIdentifications38 : IIsoComponent
     [IsoId("_8NnkeZNLEeWGlc8L7oPDIg")]
     [DisplayName("Netting Service Provider Identification")]
     [IsoXmlTag("NetgSvcPrvdrId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? NettingServiceProviderIdentification { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ServiceCategory1Choice;
 
 /// <summary>Service category expressed as a code.</summary>
 [IsoId("_iY6jQJudEey__7eNd9lW5Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IServiceCategory1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

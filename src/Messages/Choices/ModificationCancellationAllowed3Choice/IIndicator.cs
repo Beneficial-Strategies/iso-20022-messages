@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationCancellationAllowed3
 /// Modification, cancellation allowed information expressed as a indicator.
 /// </summary>
 [IsoId("_AYz-FNokEeC60axPepSq7g_990597313")]
+[IsoDisplayName(@"Indicator")]
 public interface IIndicator : IModificationCancellationAllowed3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIndicator : IModificationCancellationAllowed3Choice, IIsoChoic
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

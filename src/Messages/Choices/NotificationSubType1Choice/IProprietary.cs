@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationSubType1Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : INotificationSubType1Choice, IIsoChoiceVariant
 {
     /// <summary>

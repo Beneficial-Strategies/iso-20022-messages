@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Filter to compute the totals.
 /// </summary>
 [IsoId("_Qu5qgN6TEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Total Filter")]
 public interface ITotalFilter1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITotalFilter1 : IIsoComponent
     [IsoId("_Y6snQN6TEeiwsev40qZGEQ")]
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? POIIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITotalFilter1 : IIsoComponent
     [IsoId("_b2wIsN6TEeiwsev40qZGEQ")]
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITotalFilter1 : IIsoComponent
     [IsoId("_fp-isN6TEeiwsev40qZGEQ")]
     [DisplayName("Cashier Identification")]
     [IsoXmlTag("CshrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CashierIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITotalFilter1 : IIsoComponent
     [IsoId("_idX3YN6TEeiwsev40qZGEQ")]
     [DisplayName("Shift Number")]
     [IsoXmlTag("ShftNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShiftNumber { get; }
 
     /// <summary>
@@ -49,5 +58,7 @@ public interface ITotalFilter1 : IIsoComponent
     [IsoId("_l1j7MN6TEeiwsev40qZGEQ")]
     [DisplayName("Totals Group Identification")]
     [IsoXmlTag("TtlsGrpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TotalsGroupIdentification { get; }
 }

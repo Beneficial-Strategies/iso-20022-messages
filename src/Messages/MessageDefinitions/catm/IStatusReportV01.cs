@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// </summary>
 [IsoId("_8ki24OQWEeCGktPI9k4Dlw_716782601")]
 [IsoMessage("catm.001.001.01", "StsRpt", "urn:iso:std:iso:20022:tech:xsd:catm.001.001.01")]
+[Description(@"Scope|The StatusReport message is sent by the card acceptor to the master terminal manager or delegated terminal manager to inform these entities about the status of the acceptor system.|Usage|The StatusReport message may embed the information required by the master terminal manager or delegated terminal manager for preparing the needed TMS actions in the management plan to be replaced and the acceptor parameters to be updated.")]
+[IsoDisplayName(@"Status Report V")]
 public interface IStatusReportV01 : IOuterRecord
 {
     /// <summary>

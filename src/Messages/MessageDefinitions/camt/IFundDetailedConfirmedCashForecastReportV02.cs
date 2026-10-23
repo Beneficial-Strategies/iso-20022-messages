@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_b0VixdE-Ed-BzquC8wXy7w_1495578419")]
 [IsoMessage("camt.043.001.02", "camt.043.001.02", "urn:iso:std:iso:20022:tech:xsd:camt.043.001.02")]
+[Description(@"Scope|The FundDetailedConfirmedCashForecastReport message is sent by a report provider, such as a transfer agent or a designated agent of the fund, to a report user, such as an investment manager, a fund accountant or any other interested party.|This message is used to report confirmed cash incomings and outgoings, sorted by country, institution or some other criteria defined by the user. This message can be used to report the confirmed cash movements of one or more investment funds, on one or more trade dates. These cash movements may result from, for example, redemption, subscription, switch transactions or dividends.|Usage|The FundDetailedConfirmedCashForecastReport is used to provide definitive cash movements, i.e., it is sent after the cut-off time and/or the price valuation of the fund.")]
+[IsoDisplayName(@"Fund Detailed Confirmed Cash Forecast Report V")]
 public interface IFundDetailedConfirmedCashForecastReportV02 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IFundDetailedConfirmedCashForecastReportV02 : IOuterRecord
     [IsoId("_b0Vix9E-Ed-BzquC8wXy7w_-1583705960")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -40,6 +43,7 @@ public interface IFundDetailedConfirmedCashForecastReportV02 : IOuterRecord
     [IsoId("_b0ViyNE-Ed-BzquC8wXy7w_-1570778354")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> RelatedReference { get; }
 
     /// <summary>
@@ -48,6 +52,7 @@ public interface IFundDetailedConfirmedCashForecastReportV02 : IOuterRecord
     [IsoId("_b0ViydE-Ed-BzquC8wXy7w_1567017889")]
     [DisplayName("Fund Cash Forecast Details")]
     [IsoXmlTag("FndCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundCashForecast2> FundCashForecastDetails { get; }
 
     /// <summary>
@@ -56,5 +61,6 @@ public interface IFundDetailedConfirmedCashForecastReportV02 : IOuterRecord
     [IsoId("_b0ViytE-Ed-BzquC8wXy7w_-439464245")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

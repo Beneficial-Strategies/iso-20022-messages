@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType8Choice;
 /// Cost or charge expressed as a code.
 /// </summary>
 [IsoId("_qk_5gZ9BEeqxTNfi5y7ywQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChargeType8Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide detailed information about the security.
 /// </summary>
 [IsoId("_f2gQwTpyEemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Security Characteristics")]
 public interface ISecurityCharacteristics3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityCharacteristics3 : IIsoComponent
     [IsoId("_gGvsMTpyEemk2e6qGBk8IQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification19> Identification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecurityCharacteristics3 : IIsoComponent
     [IsoId("_gGvsMzpyEemk2e6qGBk8IQ")]
     [DisplayName("Position")]
     [IsoXmlTag("Pos")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesPosition1> Position { get; }
 
     /// <summary>

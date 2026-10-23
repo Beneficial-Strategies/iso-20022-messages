@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the system securities account type.
 /// </summary>
 [IsoId("_bLDjYDp0Eemk2e6qGBk8IQ")]
+[IsoDisplayName(@"System Securities Account Type 1 Choice")]
 public interface ISystemSecuritiesAccountType1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Enrolment Header3.
 /// </summary>
 [IsoId("_yGuHATEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Enrolment Header3")]
 public interface IEnrolmentHeader3 : IIsoComponent
 {
     /// <summary>

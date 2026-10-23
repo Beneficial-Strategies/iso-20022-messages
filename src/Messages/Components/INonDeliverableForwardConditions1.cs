@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the opening and valuation conditions for the non deliverable forward.
 /// </summary>
 [IsoId("_lUCXwJR9Eeak6e8_Fc5fQg")]
+[IsoDisplayName(@"Non Deliverable Forward Conditions")]
 public interface INonDeliverableForwardConditions1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INonDeliverableForwardConditions1 : IIsoComponent
     [IsoId("_OiuGoJR-Eeak6e8_Fc5fQg")]
     [DisplayName("Opening Indicator")]
     [IsoXmlTag("OpngInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator OpeningIndicator { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction information in the cancellation response.
 /// </summary>
 [IsoId("_kQNnAY1EEeWsypzzYao74A")]
+[IsoDisplayName(@"Card Payment Transaction")]
 public interface ICardPaymentTransaction57 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICardPaymentTransaction57 : IIsoComponent
     [IsoId("_kbr3MY1EEeWsypzzYao74A")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICardPaymentTransaction57 : IIsoComponent
     [IsoId("_v6n_sI1EEeWsypzzYao74A")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InitiatorTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ICardPaymentTransaction57 : IIsoComponent
     [IsoId("_kbr3NY1EEeWsypzzYao74A")]
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RecipientTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ICardPaymentTransaction57 : IIsoComponent
     [IsoId("_kbr3N41EEeWsypzzYao74A")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface ICardPaymentTransaction57 : IIsoComponent
     [IsoId("_kbr3OY1EEeWsypzzYao74A")]
     [DisplayName("Interchange Data")]
     [IsoXmlTag("IntrchngData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InterchangeData { get; }
 
     /// <summary>

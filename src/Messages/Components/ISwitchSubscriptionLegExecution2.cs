@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of the subscription part, in a switch between investment funds or investment fund classes.
 /// </summary>
 [IsoId("_VX86K9p-Ed-ak6NoX_4Aeg_-468679588")]
+[IsoDisplayName(@"Switch Subscription Leg Execution")]
 public interface ISwitchSubscriptionLegExecution2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISwitchSubscriptionLegExecution2 : IIsoComponent
     [IsoId("_VX86LNp-Ed-ak6NoX_4Aeg_-468679398")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISwitchSubscriptionLegExecution2 : IIsoComponent
     [IsoId("_VYGrINp-Ed-ak6NoX_4Aeg_-468679380")]
     [DisplayName("Leg Execution Identification")]
     [IsoXmlTag("LegExctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegExecutionIdentification { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface ISwitchSubscriptionLegExecution2 : IIsoComponent
     [IsoId("_VYGrJ9p-Ed-ak6NoX_4Aeg_-468679493")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -153,6 +159,7 @@ public interface ISwitchSubscriptionLegExecution2 : IIsoComponent
     [IsoId("_VYP1Fdp-Ed-ak6NoX_4Aeg_-468679433")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>

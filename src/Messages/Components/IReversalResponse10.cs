@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response data to a reversal request.
 /// </summary>
 [IsoId("_YOl8sbYNEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Reversal Response10")]
 public interface IReversalResponse10 : IIsoComponent
 {
     /// <summary>
@@ -73,5 +74,6 @@ public interface IReversalResponse10 : IIsoComponent
     [IsoId("_YPk0T7YNEfCUZfsQO4rYeA")]
     [DisplayName("Receipt")]
     [IsoXmlTag("Rct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReceipt7> Receipt { get; }
 }

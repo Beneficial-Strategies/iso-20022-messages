@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
 /// <summary>
 /// Pending Cancellation.
 /// </summary>
+[IsoDisplayName(@"Pending Cancellation")]
 public interface IPendingCancellation
     : IInstructionCancellationRequestStatus18Choice,
         IIsoChoiceVariant

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a switch order.
 /// </summary>
 [IsoId("_Uzce69p-Ed-ak6NoX_4Aeg_-530074752")]
+[IsoDisplayName(@"Switch Order Instruction")]
 public interface ISwitchOrderInstruction1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,9 @@ public interface ISwitchOrderInstruction1 : IIsoComponent
     [IsoId("_UzmP4Np-Ed-ak6NoX_4Aeg_-1252533605")]
     [DisplayName("Intermediary Details")]
     [IsoXmlTag("IntrmyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary4> IntermediaryDetails { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ISwitchOrderInstruction1 : IIsoComponent
     [IsoId("_UzmP4tp-Ed-ak6NoX_4Aeg_1159218851")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

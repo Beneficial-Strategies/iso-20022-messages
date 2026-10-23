@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord12Choice;
 
 /// <summary>Specifies the compensation for a valuation request.</summary>
 [IsoId("19eaf331-a2f8-401f-a7b5-e885c6d033d0")]
+[IsoDisplayName(@"Valuation")]
 public interface IValuation : IInvestigationDataRecord12Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

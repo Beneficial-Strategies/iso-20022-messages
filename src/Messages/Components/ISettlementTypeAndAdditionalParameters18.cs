@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides transaction type and identification information.
 /// </summary>
 [IsoId("_62NFvZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Settlement Type And Additional Parameters")]
 public interface ISettlementTypeAndAdditionalParameters18 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ISettlementTypeAndAdditionalParameters18 : IIsoComponent
     [IsoId("_62NF25NLEeWGlc8L7oPDIg")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? CommonIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ISettlementTypeAndAdditionalParameters18 : IIsoComponent
     [IsoId("_62NF45NLEeWGlc8L7oPDIg")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? CorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface ISettlementTypeAndAdditionalParameters18 : IIsoComponent
     [IsoId("_62NF65NLEeWGlc8L7oPDIg")]
     [DisplayName("Reconciliation Indicator")]
     [IsoXmlTag("RcncltnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ReconciliationIndicator { get; }
 }

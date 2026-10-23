@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DerivativePartyIdentification1Ch
 /// Identification of the reference party through Legal entity identifier.
 /// </summary>
 [IsoId("_unMS4EW8EeWaZZ6gWK8UVw")]
+[IsoDisplayName(@"LEI")]
 public interface ILEI : IDerivativePartyIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ILEI : IDerivativePartyIdentification1Choice, IIsoChoiceVariant
     /// Legal Entity Identifier is a code allocated to a party as described in ISO 17442 &quot;Financial Services - Legal Entity Identifier (LEI)&quot;.
     /// </summary>
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Value { get; }
 }

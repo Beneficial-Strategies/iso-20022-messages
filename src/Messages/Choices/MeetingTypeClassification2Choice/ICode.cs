@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MeetingTypeClassification2Choice
 /// Type of meeting expressed as a code.
 /// </summary>
 [IsoId("_e0JEoa7NEemG7MmivSuE5g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMeetingTypeClassification2Choice, IIsoChoiceVariant
 {
     /// <summary>

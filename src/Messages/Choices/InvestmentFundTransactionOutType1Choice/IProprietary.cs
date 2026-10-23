@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentFundTransactionOutType
 /// </summary>
 [IsoId("_TMto8xMJEeSopak1K45eVQ")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IInvestmentFundTransactionOutType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IProprietary : IInvestmentFundTransactionOutType1Choice, IIsoCh
     [IsoId("_ux_-tSb3EeK33eWt3gq4Fg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText Identification { get; }
 
     /// <summary>
@@ -26,6 +28,8 @@ public interface IProprietary : IInvestmentFundTransactionOutType1Choice, IIsoCh
     [IsoId("_ux_-uSb3EeK33eWt3gq4Fg")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText Issuer { get; }
 
     /// <summary>
@@ -34,5 +38,7 @@ public interface IProprietary : IInvestmentFundTransactionOutType1Choice, IIsoCh
     [IsoId("_ux_-vSb3EeK33eWt3gq4Fg")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText? SchemeName { get; }
 }

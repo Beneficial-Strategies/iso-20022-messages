@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification31.
 /// </summary>
 [IsoId("_7TptY4YREe-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Identification31")]
 public interface IIdentification31 : IIsoComponent
 {
     /// <summary>

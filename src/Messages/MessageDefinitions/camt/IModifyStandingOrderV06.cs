@@ -26,6 +26,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_jwlb3RbvEeiyVv5j1vf1VQ")]
 [IsoMessage("camt.024.001.06", "ModfyStgOrdr", "urn:iso:std:iso:20022:tech:xsd:camt.024.001.06")]
+[Description(@"Scope|The ModifyStandingOrder message is sent by a member to the transaction administrator.|It is used to request a change in the features of a permanent order for the transfer of funds between two accounts belonging to the same member and being held at the transaction administrator.|Usage|There should be one standing order per (direct) member and per business day. The ModifyStandingOrder message must not be used to request a transfer of funds between accounts during the working day. The liquidity transfer messages must be used for this purpose. There is no need to have a standing order to empty the settlement account at the end of the day and transfer the funds to the current account. For liquidity savings purposes, systems will effect the necessary transfers automatically when and where relevant.|The ModifyStandingOrder message first identifies the standing order to be modified and then provide the details of the new standing order. The elements that can be modified are:|- amount|- account to be credited|- account to be debited|- account owner (for on behalf scenario)|- frequency of payment|- daytime or overnight processing|- dates when the standing order begins and ceases to be effective|Based on the criteria received within the ModifyStandingOrder message, the transaction administrator will execute or reject the requested modifications.|The transaction administrator may send a Receipt message as a reply to the Modify Standing Order request. To verify the outcome of the request, the member may submit a GetStandingOrder message with the appropriate search criteria.")]
+[IsoDisplayName(@"Modify Standing Order V")]
 public interface IModifyStandingOrderV06 : IOuterRecord
 {
     /// <summary>
@@ -58,5 +60,6 @@ public interface IModifyStandingOrderV06 : IOuterRecord
     [IsoId("_jwlb5xbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

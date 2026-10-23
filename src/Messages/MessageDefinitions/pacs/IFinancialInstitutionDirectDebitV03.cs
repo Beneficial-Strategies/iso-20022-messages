@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// </summary>
 [IsoId("_x0JZC3L4EeidQ_AAdEzxQA")]
 [IsoMessage("pacs.010.001.03", "FIDrctDbt", "urn:iso:std:iso:20022:tech:xsd:pacs.010.001.03")]
+[Description(@"Scope:|The FinancialInstitutionDirectDebit message is sent by an exchange or clearing house, or a financial institution, directly or through another agent, to the DebtorAgent. It is used to instruct the DebtorAgent to move funds from one or more debtor(s) account(s) to one or more creditor(s), where both debtor and creditor are financial institutions.||Usage:|The FinancialInstitutionDirectDebit message is exchanged between agents and can contain one or more financial institution direct debit instruction(s) for one or more creditor(s). The FinancialInstitutionDirectDebit message can be used in domestic and cross-border scenarios.|")]
+[IsoDisplayName(@"Financial Institution Direct Debit V")]
 public interface IFinancialInstitutionDirectDebitV03 : IOuterRecord
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface IFinancialInstitutionDirectDebitV03 : IOuterRecord
     [IsoId("_x0JZEXL4EeidQ_AAdEzxQA")]
     [DisplayName("Credit Instruction")]
     [IsoXmlTag("CdtInstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICreditTransferTransaction38> CreditInstruction { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IFinancialInstitutionDirectDebitV03 : IOuterRecord
     [IsoId("_x0JZE3L4EeidQ_AAdEzxQA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

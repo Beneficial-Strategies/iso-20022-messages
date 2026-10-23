@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReversalReason4Choice;
 /// Reason for the reversal, as published in an external reason code list.
 /// </summary>
 [IsoId("_TRGiYNp-Ed-ak6NoX_4Aeg_-340627868")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IReversalReason4Choice, IIsoChoiceVariant
 {
     /// <summary>

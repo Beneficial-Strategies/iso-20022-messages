@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "AgtCADstrbtnBrkdwnAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.016.001.01"
 )]
+[Description(@"Scope|This message is sent by a CSD to an issuer (or its agent) to provide distribution breakdown information for the proceeds that are to be delivered outside the CSD (e.g. when the proceeds are not eligible in the CSD).|Usage|This message is used to provide distribution breakdown information (securities and/or cash) per account for a specific corporate action option.|Note: the delivery details are sent through the Agent Corporate Action Information Advice.")]
+[IsoDisplayName(@"Agent CA Distribution Breakdown Advice V")]
 public interface IAgentCADistributionBreakdownAdviceV01 : IOuterRecord
 {
     /// <summary>

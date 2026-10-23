@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides selected corporate action events message details extracted from the related custodian messages received.
 /// </summary>
 [IsoId("_1WNFoTL3EeKU9IrkkToqcw_735116614")]
+[IsoDisplayName(@"Related Custodian Message Details SD")]
 public interface IRelatedCustodianMessageDetailsSD1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRelatedCustodianMessageDetailsSD1 : IIsoComponent
     [IsoId("_1WNFojL3EeKU9IrkkToqcw_1873449067")]
     [DisplayName("Received Event Type")]
     [IsoXmlTag("RcvdEvtTp")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText ReceivedEventType { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IRelatedCustodianMessageDetailsSD1 : IIsoComponent
     [IsoId("_1WNFozL3EeKU9IrkkToqcw_-948266421")]
     [DisplayName("Received Mandatory Voluntary Event Type")]
     [IsoXmlTag("RcvdMndtryVlntryEvtTp")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText ReceivedMandatoryVoluntaryEventType { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IRelatedCustodianMessageDetailsSD1 : IIsoComponent
     [IsoId("_1WNFpDL3EeKU9IrkkToqcw_1342648125")]
     [DisplayName("Received Corporate Action Event Identification")]
     [IsoXmlTag("RcvdCorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text ReceivedCorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface IRelatedCustodianMessageDetailsSD1 : IIsoComponent
     [IsoId("_1WNFpTL3EeKU9IrkkToqcw_1703993481")]
     [DisplayName("Received Date")]
     [IsoXmlTag("RcvdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ReceivedDate { get; }
 
     /// <summary>
@@ -49,6 +57,7 @@ public interface IRelatedCustodianMessageDetailsSD1 : IIsoComponent
     [IsoId("_1WWPkDL3EeKU9IrkkToqcw_-1439843261")]
     [DisplayName("Received Time")]
     [IsoXmlTag("RcvdTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? ReceivedTime { get; }
 
     /// <summary>
@@ -57,6 +66,7 @@ public interface IRelatedCustodianMessageDetailsSD1 : IIsoComponent
     [IsoId("_1WWPkTL3EeKU9IrkkToqcw_519445599")]
     [DisplayName("Inbound ISO Message Type")]
     [IsoXmlTag("InbndISOMT")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText InboundISOMessageType { get; }
 
     /// <summary>
@@ -65,6 +75,7 @@ public interface IRelatedCustodianMessageDetailsSD1 : IIsoComponent
     [IsoId("_1WWPkjL3EeKU9IrkkToqcw_1590634510")]
     [DisplayName("Inbound ISO Message Receiver BIC")]
     [IsoXmlTag("InbndISOMsgRcvrBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier InboundISOMessageReceiverBIC { get; }
 
     /// <summary>
@@ -73,6 +84,8 @@ public interface IRelatedCustodianMessageDetailsSD1 : IIsoComponent
     [IsoId("_1WWPkzL3EeKU9IrkkToqcw_-2146269993")]
     [DisplayName("Received Related Reference")]
     [IsoXmlTag("RcvdRltdRef")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text ReceivedRelatedReference { get; }
 
     /// <summary>
@@ -81,6 +94,8 @@ public interface IRelatedCustodianMessageDetailsSD1 : IIsoComponent
     [IsoId("_1WWPlDL3EeKU9IrkkToqcw_-1013529054")]
     [DisplayName("Received Sender Message Reference")]
     [IsoXmlTag("RcvdSndrMsgRef")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text ReceivedSenderMessageReference { get; }
 
     /// <summary>
@@ -89,5 +104,6 @@ public interface IRelatedCustodianMessageDetailsSD1 : IIsoComponent
     [IsoId("_1WWPlTL3EeKU9IrkkToqcw_1794390087")]
     [DisplayName("Inbound ISO Message Sender BIC")]
     [IsoXmlTag("InbndISOMsgSndrBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier InboundISOMessageSenderBIC { get; }
 }

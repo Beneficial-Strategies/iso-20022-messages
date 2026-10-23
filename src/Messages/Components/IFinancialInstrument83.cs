@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security or other asset.
 /// </summary>
 [IsoId("_lvXP3ZNBEemQB_8XA98K0Q")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument83 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrument83 : IIsoComponent
     [IsoId("_mC_9f5NBEemQB_8XA98K0Q")]
     [DisplayName("Line Identification")]
     [IsoXmlTag("LineId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LineIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IFinancialInstrument83 : IIsoComponent
     [IsoId("_x-gfYZQAEemyZbjY08A1Vw")]
     [DisplayName("Partial Instructed Quantity")]
     [IsoXmlTag("PrtlInstdQty")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PartialInstructedQuantity { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IFinancialInstrument83 : IIsoComponent
     [IsoId("_08aOQN7bEem3a9o3PV2p1g")]
     [DisplayName("Original Percentage Instructed")]
     [IsoXmlTag("OrgnlPctgInstd")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OriginalPercentageInstructed { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IFinancialInstrument83 : IIsoComponent
     [IsoId("_rdmGY5QcEemqYPWMBuVawg")]
     [DisplayName("Additional Asset")]
     [IsoXmlTag("AddtlAsst")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AdditionalAsset { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface IFinancialInstrument83 : IIsoComponent
     [IsoId("_rdmGYpQcEemqYPWMBuVawg")]
     [DisplayName("Not Available")]
     [IsoXmlTag("NotAvlbl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NotAvailable { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface IFinancialInstrument83 : IIsoComponent
     [IsoId("_mC_9iZNBEemQB_8XA98K0Q")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit11> UnitsDetails { get; }
 
     /// <summary>
@@ -178,6 +186,7 @@ public interface IFinancialInstrument83 : IIsoComponent
     [IsoId("_H9j-0aIyEem3ELMJcnCmxA")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary43> IntermediaryInformation { get; }
 
     /// <summary>
@@ -186,6 +195,7 @@ public interface IFinancialInstrument83 : IIsoComponent
     [IsoId("_mC_9n5NBEemQB_8XA98K0Q")]
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedTradeDate { get; }
 
     /// <summary>
@@ -194,6 +204,7 @@ public interface IFinancialInstrument83 : IIsoComponent
     [IsoId("_mC_9oZNBEemQB_8XA98K0Q")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>
@@ -226,6 +237,7 @@ public interface IFinancialInstrument83 : IIsoComponent
     [IsoId("_mC_9qZNBEemQB_8XA98K0Q")]
     [DisplayName("Crystallisation Details")]
     [IsoXmlTag("CrstllstnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICrystallisation2> CrystallisationDetails { get; }
 
     /// <summary>
@@ -250,5 +262,6 @@ public interface IFinancialInstrument83 : IIsoComponent
     [IsoId("_mC_9r5NBEemQB_8XA98K0Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

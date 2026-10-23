@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details specific to a market including which market identification and average number of transactions on the venue.
 /// </summary>
 [IsoId("_1Jjy4X5sEeasY4u9QTizPQ")]
+[IsoDisplayName(@"Market Detail")]
 public interface IMarketDetail2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMarketDetail2 : IIsoComponent
     [IsoId("_1WD9035sEeasY4u9QTizPQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier Identification { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IMarketDetail2 : IIsoComponent
     [IsoId("_1WD91X5sEeasY4u9QTizPQ")]
     [DisplayName("Average Daily Number Of Transactions")]
     [IsoXmlTag("AvrgDalyNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? AverageDailyNumberOfTransactions { get; }
 }

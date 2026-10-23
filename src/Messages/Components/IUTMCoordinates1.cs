@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Location on the Earth specified by the Universal Transverse Mercator coordinate system, using the WGS84 geodesic system.
 /// </summary>
 [IsoId("_wETkwIn5EeShMpas3885ww")]
+[IsoDisplayName(@"UTM Coordinates")]
 public interface IUTMCoordinates1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IUTMCoordinates1 : IIsoComponent
     [IsoId("_4AW1UIn5EeShMpas3885ww")]
     [DisplayName("UTM Zone")]
     [IsoXmlTag("UTMZone")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text UTMZone { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IUTMCoordinates1 : IIsoComponent
     [IsoId("_7o5CQIn5EeShMpas3885ww")]
     [DisplayName("UTM Eastward")]
     [IsoXmlTag("UTMEstwrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number UTMEastward { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IUTMCoordinates1 : IIsoComponent
     [IsoId("_--JG0In5EeShMpas3885ww")]
     [DisplayName("UTM Northward")]
     [IsoXmlTag("UTMNrthwrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number UTMNorthward { get; }
 }

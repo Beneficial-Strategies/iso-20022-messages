@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash Account Search Criteria8.
 /// </summary>
 [IsoId("_6RRGmTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Cash Account Search Criteria8")]
 public interface ICashAccountSearchCriteria8 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface ICashAccountSearchCriteria8 : IIsoComponent
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentificationSearchCriteria2Choice> AccountIdentification { get; }
 
     /// <summary>
@@ -23,6 +25,7 @@ public interface ICashAccountSearchCriteria8 : IIsoComponent
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccountType2Choice> Type { get; }
 
     /// <summary>
@@ -30,6 +33,7 @@ public interface ICashAccountSearchCriteria8 : IIsoComponent
     /// </summary>
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyCode> Currency { get; }
 
     /// <summary>
@@ -37,6 +41,7 @@ public interface ICashAccountSearchCriteria8 : IIsoComponent
     /// </summary>
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance14> Balance { get; }
 
     /// <summary>

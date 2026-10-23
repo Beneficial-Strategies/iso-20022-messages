@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information specific to the individual transaction(s) included in the message.
 /// </summary>
 [IsoId("_P6OGJNp-Ed-ak6NoX_4Aeg_1618159966")]
+[IsoDisplayName(@"Credit Transfer Transaction Information")]
 public interface ICreditTransferTransactionInformation12 : IIsoComponent
 {
     /// <summary>

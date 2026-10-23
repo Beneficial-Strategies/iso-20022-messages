@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification4Choic
 /// </summary>
 [IsoId("_7MMKY9jKEeq5MfBBxQig1Q")]
 [IsoXmlTag("MssngOrIncrrctInf")]
+[IsoDisplayName(@"Missing Or Incorrect Information")]
 public interface IMissingOrIncorrectInformation
     : IUnableToApplyJustification4Choice,
         IIsoChoiceVariant
@@ -20,6 +21,7 @@ public interface IMissingOrIncorrectInformation
     [IsoId("_7O3D4djKEeq5MfBBxQig1Q")]
     [DisplayName("Anti Money Laundering Request")]
     [IsoXmlTag("AMLReq")]
+    [IsoSimpleType(IsoSimpleType.AMLIndicator)]
     AMLIndicator? AntiMoneyLaunderingRequest { get; }
 
     /// <summary>
@@ -28,6 +30,9 @@ public interface IMissingOrIncorrectInformation
     [IsoId("_7O3D49jKEeq5MfBBxQig1Q")]
     [DisplayName("Missing Information")]
     [IsoXmlTag("MssngInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnableToApplyMissing2> MissingInformation { get; }
 
     /// <summary>
@@ -36,5 +41,8 @@ public interface IMissingOrIncorrectInformation
     [IsoId("_7O3D5djKEeq5MfBBxQig1Q")]
     [DisplayName("Incorrect Information")]
     [IsoXmlTag("IncrrctInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnableToApplyIncorrect2> IncorrectInformation { get; }
 }

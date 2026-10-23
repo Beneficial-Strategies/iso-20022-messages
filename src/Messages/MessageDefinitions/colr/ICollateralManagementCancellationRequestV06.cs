@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_yXxLsSW0EeyT3chuyX0PgA")]
 [IsoMessage("colr.005.001.06", "CollMgmtCxlReq", "urn:iso:std:iso:20022:tech:xsd:colr.005.001.06")]
+[Description(@"Scope|The CollateralManagementCancellationRequest message is sent by:|- the collateral taker or its collateral manager to the collateral giver or its collateral manager,|- the collateral giver or its collateral manager to the collateral taker or its collateral manager|This message is used to request the cancellation of a previously sent MarginCallRequest message, MarginCallResponse message, CollateralProposal message, CollateralProposalResponse message, MarginCallDisputeNotification message or a CollateralSubstitutionRequest message.|The message definition is intended for use with the ISO20022 Business Application Header.|Usage|The CollateralManagementCancellationRequest message is used to request the cancellation of a collateral message. When requesting the cancellation of a message there must be a cancellation reason specified.|When the CollateralManagementCancellationRequest message is used to cancel a collateral message the reference of the original message must be specified. The rejection or acceptance of a CollateralManagementCancellationRequest message is made using a CollateralManagementCancellationStatus message.")]
+[IsoDisplayName(@"Collateral Management Cancellation Request V")]
 public interface ICollateralManagementCancellationRequestV06 : IOuterRecord
 {
     /// <summary>
@@ -52,5 +54,6 @@ public interface ICollateralManagementCancellationRequestV06 : IOuterRecord
     [IsoId("_yXxLwSW0EeyT3chuyX0PgA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

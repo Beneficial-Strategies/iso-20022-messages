@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_lhzYiNE8Ed-BzquC8wXy7w_-1930237011")]
 [IsoMessage("tsmt.010.001.03", "BaselnMtchRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.010.001.03")]
+[Description(@"Scope|The BaselineMatchReport message is sent by the matching application to the parties involved in the establishment of a transaction.|The message is used to inform about either the successful establishment of a transaction (baseline) or the mis-matches found between two baseline initiation messages.|Usage|The BaselineMatchReport message can be sent by the matching application to|- the parties involved in the establishment of a transaction in the push-through mode, that is the senders of InitialBaselineSubmission and BaselineReSubmission messages including the instruction push-through. In the outlined scenario the message is used to inform either about the successful establishment of a transaction in the matching application or about mis-matches found between two baseline initiation messages,or|- the party establishing a transaction in the lodge mode, that is the sender of an InitialBaselineSubmission message including the instruction lodge. In the outlined scenario the message is used to inform about the successful establishment of a transaction in the matching application.")]
+[IsoDisplayName(@"Baseline Match Report V")]
 public interface IBaselineMatchReportV03 : IOuterRecord
 {
     /// <summary>
@@ -58,6 +60,9 @@ public interface IBaselineMatchReportV03 : IOuterRecord
     [IsoId("_lh9JhNE8Ed-BzquC8wXy7w_-1930236548")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>
@@ -106,6 +111,9 @@ public interface IBaselineMatchReportV03 : IOuterRecord
     [IsoId("_liGTctE8Ed-BzquC8wXy7w_-1930236239")]
     [DisplayName("Compared Document Reference")]
     [IsoXmlTag("CmpardDocRef")]
+    [MinLength(2)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification4> ComparedDocumentReference { get; }
 
     /// <summary>

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationStatus6Choice;
 
 /// <summary>Indicates that there is no reason available or to report.</summary>
 [IsoId("9c99c1cf-19b9-47da-b39b-648871101da7")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IModificationStatus6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

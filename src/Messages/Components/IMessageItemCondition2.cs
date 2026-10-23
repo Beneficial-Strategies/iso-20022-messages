@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Presence condition of a message item.
 /// </summary>
 [IsoId("_NEF-EXDxEe2MCaKO5AtGsA")]
+[IsoDisplayName(@"Message Item Condition")]
 public interface IMessageItemCondition2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMessageItemCondition2 : IIsoComponent
     [IsoId("_NLeYcXDxEe2MCaKO5AtGsA")]
     [DisplayName("Item Identification")]
     [IsoXmlTag("ItmId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text ItemIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IMessageItemCondition2 : IIsoComponent
     [IsoId("_NLeYdXDxEe2MCaKO5AtGsA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max140Text> Value { get; }
 }

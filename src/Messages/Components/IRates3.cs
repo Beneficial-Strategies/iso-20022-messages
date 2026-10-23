@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Interest rate of the loan.
 /// </summary>
 [IsoId("_0_3dUc-nEeufOvGsyZiDWA")]
+[IsoDisplayName(@"Rates")]
 public interface IRates3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRates3 : IIsoComponent
     [IsoId("_1CZz88-nEeufOvGsyZiDWA")]
     [DisplayName("Fixed")]
     [IsoXmlTag("Fxd")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Fixed { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IRates3 : IIsoComponent
     [IsoId("_1CZz9c-nEeufOvGsyZiDWA")]
     [DisplayName("Floating")]
     [IsoXmlTag("Fltg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Floating { get; }
 
     /// <summary>

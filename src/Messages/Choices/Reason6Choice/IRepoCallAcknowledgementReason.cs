@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason6Choice;
 /// Specifies additional information on the repurchase agreement call request acknowledgement.
 /// </summary>
 [IsoId("_itAnwEAAEeCaq78Ig8ATcA")]
+[IsoDisplayName(@"Repo Call Acknowledgement Reason")]
 public interface IRepoCallAcknowledgementReason : IReason6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

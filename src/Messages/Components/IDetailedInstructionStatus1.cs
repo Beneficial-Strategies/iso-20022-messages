@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status applying to individual instructions of a MeetingInstruction.
 /// </summary>
 [IsoId("_RWdaqtp-Ed-ak6NoX_4Aeg_1765622954")]
+[IsoDisplayName(@"Detailed Instruction Status")]
 public interface IDetailedInstructionStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDetailedInstructionStatus1 : IIsoComponent
     [IsoId("_RWnLoNp-Ed-ak6NoX_4Aeg_-2110986462")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InstructionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IDetailedInstructionStatus1 : IIsoComponent
     [IsoId("_RWnLodp-Ed-ak6NoX_4Aeg_1822881804")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IDetailedInstructionStatus1 : IIsoComponent
     [IsoId("_RWnLotp-Ed-ak6NoX_4Aeg_-2130380809")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubAccountIdentification { get; }
 
     /// <summary>

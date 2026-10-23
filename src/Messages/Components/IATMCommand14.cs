@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Command14.
 /// </summary>
 [IsoId("_mzk7cZ8_Ee-nbM0aSPcoiQ")]
+[IsoDisplayName(@"ATM Command14")]
 public interface IATMCommand14 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface IATMCommand14 : IIsoComponent
     /// </summary>
     [DisplayName("Trace Reason")]
     [IsoXmlTag("TracRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATMCommandReason1Code> TraceReason { get; }
 
     /// <summary>

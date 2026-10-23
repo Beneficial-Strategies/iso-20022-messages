@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report of the breakdown of the components for the capital requirement for central counterparty.
 /// </summary>
 [IsoId("_ltqioLIfEeaYqc4G3TTwhA")]
+[IsoDisplayName(@"Capital Requirement")]
 public interface ICapitalRequirement1 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,6 @@ public interface ICapitalRequirement1 : IIsoComponent
     [IsoId("_bslp0LIgEeaYqc4G3TTwhA")]
     [DisplayName("Notification Buffer")]
     [IsoXmlTag("NtfctnBffr")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? NotificationBuffer { get; }
 }

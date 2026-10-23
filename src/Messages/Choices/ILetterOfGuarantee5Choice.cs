@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the letter of guarantee information.
 /// </summary>
 [IsoId("_6ScRhZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Letter Of Guarantee 5 Choice")]
 public interface ILetterOfGuarantee5Choice : IIsoChoice { }

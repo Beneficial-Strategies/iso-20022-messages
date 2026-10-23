@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalBusinessProcessFormat2
 /// Standard code to specify the additional business process &quot;tax refund&quot; linked to a corporate action event.
 /// </summary>
 [IsoId("_plRhFTi7Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAdditionalBusinessProcessFormat20Choice, IIsoChoiceVariant
 {
     /// <summary>

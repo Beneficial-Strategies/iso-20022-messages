@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Service provider parameters of the point of interaction (POI).
 /// </summary>
 [IsoId("_NI6SUXISEe2OqYulmHWukQ")]
+[IsoDisplayName(@"Service Provider Parameters")]
 public interface IServiceProviderParameters3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IServiceProviderParameters3 : IIsoComponent
     [IsoId("_NPs203ISEe2OqYulmHWukQ")]
     [DisplayName("Service Provider Identification")]
     [IsoXmlTag("SvcPrvdrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification176> ServiceProviderIdentification { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IServiceProviderParameters3 : IIsoComponent
     [IsoId("_NPs21XISEe2OqYulmHWukQ")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Version { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IServiceProviderParameters3 : IIsoComponent
     [IsoId("_NPs213ISEe2OqYulmHWukQ")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ApplicationIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IServiceProviderParameters3 : IIsoComponent
     [IsoId("_NPs22XISEe2OqYulmHWukQ")]
     [DisplayName("Host")]
     [IsoXmlTag("Hst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcquirerHostConfiguration9> Host { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface IServiceProviderParameters3 : IIsoComponent
     [IsoId("_NPs223ISEe2OqYulmHWukQ")]
     [DisplayName("Non Financial Action Supported")]
     [IsoXmlTag("NonFinActnSpprtd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<NonFinancialRequestType2Code> NonFinancialActionSupported { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for the rejection or repair status.
 /// </summary>
 [IsoId("_6GXj0ZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Rejection Or Repair Reason")]
 public interface IRejectionOrRepairReason28 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IRejectionOrRepairReason28 : IIsoComponent
     [IsoId("_6GXj25NLEeWGlc8L7oPDIg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
+    [StringLength(210, MinimumLength = 1)]
     RestrictedFINXMax210Text? AdditionalReasonInformation { get; }
 }

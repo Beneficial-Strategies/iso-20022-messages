@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
     "IntraBalMvmntQryRspn",
     "urn:iso:std:iso:20022:tech:xsd:camt.079.001.02"
 )]
+[IsoDisplayName(@"Intra Balance Movement Query Response V02")]
 public interface IIntraBalanceMovementQueryResponseV02 : IOuterRecord
 {
     /// <summary>

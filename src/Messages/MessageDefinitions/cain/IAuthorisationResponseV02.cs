@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_El96hVKoEeeXvpI8ztnTow")]
 [IsoMessage("cain.002.001.02", "AuthstnRspn", "urn:iso:std:iso:20022:tech:xsd:cain.002.001.02")]
+[Description(@"The AuthorisationResponse message is sent by an issuer or an agent to an acquirer in response to an AuthorisationInitiation message.")]
+[IsoDisplayName(@"Authorisation Response V")]
 public interface IAuthorisationResponseV02 : IOuterRecord
 {
     /// <summary>

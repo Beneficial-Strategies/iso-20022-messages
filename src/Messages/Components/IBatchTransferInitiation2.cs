@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Initiation of a batch transfer exchange.
 /// </summary>
 [IsoId("_ZUjRwZMrEeuleeHpFMMhmQ")]
+[IsoDisplayName(@"Batch Transfer Initiation")]
 public interface IBatchTransferInitiation2 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IBatchTransferInitiation2 : IIsoComponent
     [IsoId("_ZbjRqZMrEeuleeHpFMMhmQ")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IBatchTransferInitiation2 : IIsoComponent
     [IsoId("_ZbjRq5MrEeuleeHpFMMhmQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

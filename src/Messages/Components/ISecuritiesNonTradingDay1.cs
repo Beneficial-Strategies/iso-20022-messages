@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details the date and reason for a non working day.
 /// </summary>
 [IsoId("_FHAXAGxNEeWD9e8QDBgUOw")]
+[IsoDisplayName(@"Securities Non Trading Day")]
 public interface ISecuritiesNonTradingDay1 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,8 @@ public interface ISecuritiesNonTradingDay1 : IIsoComponent
     [IsoId("_C4Fo0b7VEeW_FPJ0tzugkw")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -27,6 +30,7 @@ public interface ISecuritiesNonTradingDay1 : IIsoComponent
     [IsoId("_NBJjEGxNEeWD9e8QDBgUOw")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Date { get; }
 
     /// <summary>

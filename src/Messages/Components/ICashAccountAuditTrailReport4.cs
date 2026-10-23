@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report information about cash account reference data.
 /// </summary>
 [IsoId("_9t1JBeVaEfC90e_m8fMznQ")]
+[IsoDisplayName(@"Cash Account Audit Trail Report")]
 public interface ICashAccountAuditTrailReport4 : IIsoComponent
 {
     /// <summary>

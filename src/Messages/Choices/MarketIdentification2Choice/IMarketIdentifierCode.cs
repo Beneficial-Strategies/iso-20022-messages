@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentification2Choice;
 /// ISO 10383 Market Identification Code.
 /// </summary>
 [IsoId("_XK10Edp-Ed-ak6NoX_4Aeg_-1291614933")]
+[IsoDisplayName(@"Market Identifier Code")]
 public interface IMarketIdentifierCode : IMarketIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IMarketIdentifierCode : IMarketIdentification2Choice, IIsoChoic
     /// Market Identifier Code. The identification of a financial market, as stipulated in the norm ISO 10383 &apos;Codes for exchanges and market identifications&apos;.
     /// </summary>
     [IsoXmlTag("MktIdrCd")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier Value { get; }
 }

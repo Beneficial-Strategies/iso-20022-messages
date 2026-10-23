@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional data to be considered for risk assessment.
 /// </summary>
 [IsoId("_0vBqcT1zEfCQAqQ9lolFUg")]
+[IsoDisplayName(@"Risk Input Data3")]
 public interface IRiskInputData3 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action instructed balance details at option protect level.
 /// </summary>
 [IsoId("_Q4PnoQ-0EeuE0Pnt-OcNOA")]
+[IsoDisplayName(@"Corporate Action Instructed Balance Option Protect Instruction SD")]
 public interface ICorporateActionInstructedBalanceOptionProtectInstructionSD4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionInstructedBalanceOptionProtectInstructionSD4 : 
     [IsoId("_RNEoIQ-0EeuE0Pnt-OcNOA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICorporateActionInstructedBalanceOptionProtectInstructionSD4 : 
     [IsoId("_TnpNIQ-0EeuE0Pnt-OcNOA")]
     [DisplayName("Protect Identification")]
     [IsoXmlTag("PrtctId")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text? ProtectIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ICorporateActionInstructedBalanceOptionProtectInstructionSD4 : 
     [IsoId("_RNEoKw-0EeuE0Pnt-OcNOA")]
     [DisplayName("Protect Safekeeping Account")]
     [IsoXmlTag("PrtctSfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINMax35Text? ProtectSafekeepingAccount { get; }
 
     /// <summary>

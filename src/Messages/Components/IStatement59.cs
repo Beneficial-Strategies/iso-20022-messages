@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General characteristics related to a statement which reports information for a precise date.
 /// </summary>
 [IsoId("_oN8KIV10Eea7JNQ75Q3JCw")]
+[IsoDisplayName(@"Statement")]
 public interface IStatement59 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IStatement59 : IIsoComponent
     [IsoId("_ooILx110Eea7JNQ75Q3JCw")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryReference { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IStatement59 : IIsoComponent
     [IsoId("_ooILy110Eea7JNQ75Q3JCw")]
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text StatementIdentification { get; }
 
     /// <summary>
@@ -89,5 +94,6 @@ public interface IStatement59 : IIsoComponent
     [IsoId("_ooIL3V10Eea7JNQ75Q3JCw")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 }

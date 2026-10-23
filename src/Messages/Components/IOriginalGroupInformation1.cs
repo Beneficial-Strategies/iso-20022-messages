@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous identifier of the group of transactions as assigned by the original instructing party.
 /// </summary>
 [IsoId("_Pg5AJ9p-Ed-ak6NoX_4Aeg_312087008")]
+[IsoDisplayName(@"Original Group Information")]
 public interface IOriginalGroupInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalGroupInformation1 : IIsoComponent
     [IsoId("_PhCxINp-Ed-ak6NoX_4Aeg_312087051")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalGroupInformation1 : IIsoComponent
     [IsoId("_PhCxIdp-Ed-ak6NoX_4Aeg_312087103")]
     [DisplayName("Network File Name")]
     [IsoXmlTag("NtwkFileNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text NetworkFileName { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IOriginalGroupInformation1 : IIsoComponent
     [IsoId("_PhCxItp-Ed-ak6NoX_4Aeg_312087145")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageNameIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface IOriginalGroupInformation1 : IIsoComponent
     [IsoId("_PhCxI9p-Ed-ak6NoX_4Aeg_-1531265541")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -49,6 +57,8 @@ public interface IOriginalGroupInformation1 : IIsoComponent
     [IsoId("_PhCxJNp-Ed-ak6NoX_4Aeg_312087552")]
     [DisplayName("File Originator")]
     [IsoXmlTag("FileOrgtr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FileOriginator { get; }
 
     /// <summary>
@@ -57,6 +67,7 @@ public interface IOriginalGroupInformation1 : IIsoComponent
     [IsoId("_PhCxJdp-Ed-ak6NoX_4Aeg_-1131768667")]
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? OriginalNumberOfTransactions { get; }
 
     /// <summary>
@@ -65,6 +76,7 @@ public interface IOriginalGroupInformation1 : IIsoComponent
     [IsoId("_PhCxJtp-Ed-ak6NoX_4Aeg_-1130848635")]
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? OriginalControlSum { get; }
 
     /// <summary>
@@ -81,6 +93,7 @@ public interface IOriginalGroupInformation1 : IIsoComponent
     [IsoId("_PhCxKNp-Ed-ak6NoX_4Aeg_832816360")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation1> StatusReasonInformation { get; }
 
     /// <summary>
@@ -89,5 +102,6 @@ public interface IOriginalGroupInformation1 : IIsoComponent
     [IsoId("_PhCxKdp-Ed-ak6NoX_4Aeg_2049376412")]
     [DisplayName("Number Of Transactions Per Status")]
     [IsoXmlTag("NbOfTxsPerSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfTransactionsPerStatus1> NumberOfTransactionsPerStatus { get; }
 }

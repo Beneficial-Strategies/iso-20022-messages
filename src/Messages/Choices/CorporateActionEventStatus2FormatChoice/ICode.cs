@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventStatus2Forma
 /// Standard code to specify the status of the CA option.
 /// </summary>
 [IsoId("_RmQKItp-Ed-ak6NoX_4Aeg_-1374576221")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionEventStatus2FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusCode6Choice;
 /// Qualifies further the settlement status.
 /// </summary>
 [IsoId("_phD1CRbzEeOy-PlRuFSUzQ")]
+[IsoDisplayName(@"Settlement")]
 public interface ISettlement : IPaymentStatusCode6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ISettlement : IPaymentStatusCode6Choice, IIsoChoiceVariant
     /// Specifies an alphanumeric string with a maximum length of 4 characters.
     /// </summary>
     [IsoXmlTag("Sttlm")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText Value { get; }
 }

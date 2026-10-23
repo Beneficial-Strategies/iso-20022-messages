@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Redemption leg, or switch-out, of a switch transaction.
 /// </summary>
 [IsoId("_VXp_Ptp-Ed-ak6NoX_4Aeg_942132700")]
+[IsoDisplayName(@"Switch Redemption Leg Order")]
 public interface ISwitchRedemptionLegOrder2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISwitchRedemptionLegOrder2 : IIsoComponent
     [IsoId("_VXzwMNp-Ed-ak6NoX_4Aeg_942132795")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ISwitchRedemptionLegOrder2 : IIsoComponent
     [IsoId("_VXzwN9p-Ed-ak6NoX_4Aeg_943054699")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge8> ChargeDetails { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface ISwitchRedemptionLegOrder2 : IIsoComponent
     [IsoId("_VX86INp-Ed-ak6NoX_4Aeg_943054734")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission6> CommissionDetails { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface ISwitchRedemptionLegOrder2 : IIsoComponent
     [IsoId("_VX86Idp-Ed-ak6NoX_4Aeg_943054681")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax6> TaxDetails { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface ISwitchRedemptionLegOrder2 : IIsoComponent
     [IsoId("_VX86I9p-Ed-ak6NoX_4Aeg_942132777")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>

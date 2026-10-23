@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat73Choice;
 /// <summary>
 /// Not Specified Price.
 /// </summary>
+[IsoDisplayName(@"Not Specified Price")]
 public interface INotSpecifiedPrice : IPriceFormat73Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the Modification reason.
 /// </summary>
 [IsoId("_0jrN8glIEeGATtfOBToyew_727548806")]
+[IsoDisplayName(@"Modification Reason 2 Choice")]
 public interface IModificationReason2Choice : IIsoChoice { }

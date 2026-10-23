@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the source of the Foreign Account Tax Compliance Act (FATCA).
 /// </summary>
 [IsoId("_jR2x4QjUEeS5F6qHcKOrew")]
+[IsoDisplayName(@"FATCA Source 1 Choice")]
 public interface IFATCASource1Choice : IIsoChoice { }

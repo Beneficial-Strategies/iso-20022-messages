@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestPaymentSchedule1Choice;
 /// </summary>
 [IsoId("_u7i5ReFWEeSvv6t4Ka7B7A")]
 [IsoXmlTag("SubSchdl")]
+[IsoDisplayName(@"Sub Schedule")]
 public interface ISubSchedule : IInterestPaymentSchedule1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ISubSchedule : IInterestPaymentSchedule1Choice, IIsoChoiceVaria
     [IsoId("_es4FptOJEeSQ_-lmj1tzfw")]
     [DisplayName("Interest Schedule Identification")]
     [IsoXmlTag("IntrstSchdlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InterestScheduleIdentification { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface ISubSchedule : IInterestPaymentSchedule1Choice, IIsoChoiceVaria
     [IsoId("_es4FqNOJEeSQ_-lmj1tzfw")]
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate DueDate { get; }
 
     /// <summary>
@@ -42,5 +46,7 @@ public interface ISubSchedule : IInterestPaymentSchedule1Choice, IIsoChoiceVaria
     [IsoId("_obya8dOJEeSQ_-lmj1tzfw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? AdditionalInformation { get; }
 }

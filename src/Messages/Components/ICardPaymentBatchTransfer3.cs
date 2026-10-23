@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card payment transactions from one or several data set of transactions.
 /// </summary>
 [IsoId("_NvxRsWmFEeS7iYydEtv3Ug")]
+[IsoDisplayName(@"Card Payment Batch Transfer")]
 public interface ICardPaymentBatchTransfer3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardPaymentBatchTransfer3 : IIsoComponent
     [IsoId("_N9gLsWmFEeS7iYydEtv3Ug")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotals3> TransactionTotals { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICardPaymentBatchTransfer3 : IIsoComponent
     [IsoId("_N9gLs2mFEeS7iYydEtv3Ug")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet10> DataSet { get; }
 }

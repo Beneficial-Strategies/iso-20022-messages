@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Swiss Interbank Clearing (SIC) Code - identifies Swiss financial institutions domestically, on the Swiss national clearing system.
 /// </summary>
 [IsoId("_TDingNp-Ed-ak6NoX_4Aeg_-896562586")]
+[IsoDisplayName(@"Swiss SIC Identification")]
 public interface ISwissSICIdentification
     : IClearingSystemMemberIdentificationChoice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface ISwissSICIdentification
     /// Swiss Interbank Clearing (SIC) Code. Identifies Swiss financial institutions domestically, on the Swiss national clearing system.
     /// </summary>
     [IsoXmlTag("CHSIC")]
+    [IsoSimpleType(IsoSimpleType.SwissSICIdentifier)]
     SwissSICIdentifier Value { get; }
 }

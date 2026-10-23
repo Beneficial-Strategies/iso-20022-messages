@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice;
 /// <summary>
 /// BICFI.
 /// </summary>
+[IsoDisplayName(@"BICFI")]
 public interface IBICFI : ITransactionAmendment1Choice, IIsoChoiceVariant
 {
     /// <summary>

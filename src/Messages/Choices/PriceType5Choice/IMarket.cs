@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceType5Choice;
 /// </summary>
 [IsoId("_SKL8Dc3yEee5nJBZsW8MFQ")]
 [IsoXmlTag("Mkt")]
+[IsoDisplayName(@"Market")]
 public interface IMarket : IPriceType5Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains transaction details.
 /// </summary>
 [IsoId("_fUSlgR7aEfCkq6-p7S3J1Q")]
+[IsoDisplayName(@"Transaction Characteristics5")]
 public interface ITransactionCharacteristics5 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ITransactionCharacteristics5 : IIsoComponent
     [IsoId("_fbZ6Kx7aEfCkq6-p7S3J1Q")]
     [DisplayName("Transaction Attribute")]
     [IsoXmlTag("TxAttr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TransactionAttribute3Code> TransactionAttribute { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface ITransactionCharacteristics5 : IIsoComponent
     [IsoId("_fbZ6PR7aEfCkq6-p7S3J1Q")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ITransactionCharacteristics5 : IIsoComponent
     [IsoId("_fbZ6Sx7aEfCkq6-p7S3J1Q")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -105,6 +109,7 @@ public interface ITransactionCharacteristics5 : IIsoComponent
     [IsoId("_s2H5YkYXEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -113,6 +118,7 @@ public interface ITransactionCharacteristics5 : IIsoComponent
     [IsoId("_s2H5Y0YXEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>
@@ -121,5 +127,6 @@ public interface ITransactionCharacteristics5 : IIsoComponent
     [IsoId("_mJgCoV58EfCoP_h9uwd39Q")]
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData22> LocalData { get; }
 }

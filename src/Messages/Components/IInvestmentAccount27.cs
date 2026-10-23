@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
 /// </summary>
 [IsoId("_RyB8X9p-Ed-ak6NoX_4Aeg_462397282")]
+[IsoDisplayName(@"Investment Account")]
 public interface IInvestmentAccount27 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IInvestmentAccount27 : IIsoComponent
     [IsoId("_RyB8Ytp-Ed-ak6NoX_4Aeg_462397384")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IInvestmentAccount27 : IIsoComponent
     [IsoId("_RyLGQNp-Ed-ak6NoX_4Aeg_462397419")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Designation { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface IInvestmentAccount27 : IIsoComponent
     [IsoId("_RyLGQtp-Ed-ak6NoX_4Aeg_462397497")]
     [DisplayName("Extended Type")]
     [IsoXmlTag("XtndedTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedType { get; }
 
     /// <summary>
@@ -73,6 +80,8 @@ public interface IInvestmentAccount27 : IIsoComponent
     [IsoId("_RyLGRNp-Ed-ak6NoX_4Aeg_462397851")]
     [DisplayName("Extended Ownership Type")]
     [IsoXmlTag("XtndedOwnrshTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedOwnershipType { get; }
 
     /// <summary>
@@ -89,6 +98,8 @@ public interface IInvestmentAccount27 : IIsoComponent
     [IsoId("_Ry7UMNp-Ed-ak6NoX_4Aeg_463318150")]
     [DisplayName("Extended Tax Exemption Reason")]
     [IsoXmlTag("XtndedTaxXmptnRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedTaxExemptionReason { get; }
 
     /// <summary>
@@ -105,6 +116,8 @@ public interface IInvestmentAccount27 : IIsoComponent
     [IsoId("_Ry7UMtp-Ed-ak6NoX_4Aeg_1894511217")]
     [DisplayName("Extended Statement Frequency")]
     [IsoXmlTag("XtndedStmtFrqcy")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedStatementFrequency { get; }
 
     /// <summary>
@@ -145,6 +158,8 @@ public interface IInvestmentAccount27 : IIsoComponent
     [IsoId("_RzEeIdp-Ed-ak6NoX_4Aeg_463318038")]
     [DisplayName("Letter Intent Reference")]
     [IsoXmlTag("LttrInttRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LetterIntentReference { get; }
 
     /// <summary>
@@ -153,6 +168,8 @@ public interface IInvestmentAccount27 : IIsoComponent
     [IsoId("_RzEeItp-Ed-ak6NoX_4Aeg_463318073")]
     [DisplayName("Accumulation Right Reference")]
     [IsoXmlTag("AcmltnRghtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccumulationRightReference { get; }
 
     /// <summary>
@@ -161,6 +178,7 @@ public interface IInvestmentAccount27 : IIsoComponent
     [IsoId("_RzEeI9p-Ed-ak6NoX_4Aeg_463318487")]
     [DisplayName("Required Signatories Number")]
     [IsoXmlTag("ReqrdSgntriesNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? RequiredSignatoriesNumber { get; }
 
     /// <summary>
@@ -169,6 +187,8 @@ public interface IInvestmentAccount27 : IIsoComponent
     [IsoId("_RzEeJNp-Ed-ak6NoX_4Aeg_463318522")]
     [DisplayName("Fund Family Name")]
     [IsoXmlTag("FndFmlyNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FundFamilyName { get; }
 
     /// <summary>
@@ -193,6 +213,7 @@ public interface IInvestmentAccount27 : IIsoComponent
     [IsoId("_RzEeJ9p-Ed-ak6NoX_4Aeg_-1605146589")]
     [DisplayName("Funds Details")]
     [IsoXmlTag("FndsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument10> FundsDetails { get; }
 
     /// <summary>
@@ -201,6 +222,9 @@ public interface IInvestmentAccount27 : IIsoComponent
     [IsoId("_RzEeKNp-Ed-ak6NoX_4Aeg_463319497")]
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount12> CashAccount { get; }
 
     /// <summary>
@@ -209,5 +233,8 @@ public interface IInvestmentAccount27 : IIsoComponent
     [IsoId("_RzEeKdp-Ed-ak6NoX_4Aeg_463319557")]
     [DisplayName("Securities Account")]
     [IsoXmlTag("SctiesAcct")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesAccount4> SecuritiesAccount { get; }
 }

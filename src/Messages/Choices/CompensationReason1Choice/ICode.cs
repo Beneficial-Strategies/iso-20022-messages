@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CompensationReason1Choice;
 /// Reason for the payment compensation, in a coded form.
 /// </summary>
 [IsoId("_a-QKsIjYEeeDW7_wB-eK_g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICompensationReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to identify each underlying allocation.
 /// </summary>
 [IsoId("_eH5OcbpXEfCPZvweyV2nEg")]
+[IsoDisplayName(@"Transaction Allocation2")]
 public interface ITransactionAllocation2 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface ITransactionAllocation2 : IIsoComponent
     [IsoId("_eP7wLbpXEfCPZvweyV2nEg")]
     [DisplayName("Related References")]
     [IsoXmlTag("RltdRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferences80Choice> RelatedReferences { get; }
 }

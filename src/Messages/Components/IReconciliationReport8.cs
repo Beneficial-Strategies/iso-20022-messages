@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data on transaction requiring reconciliation or pairing.
 /// </summary>
 [IsoId("_AtBHZ8K3EeuFNp8LZAnorg")]
+[IsoDisplayName(@"Reconciliation Report")]
 public interface IReconciliationReport8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReconciliationReport8 : IIsoComponent
     [IsoId("_AuXyQcK3EeuFNp8LZAnorg")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IReconciliationReport8 : IIsoComponent
     [IsoId("_AuXyRcK3EeuFNp8LZAnorg")]
     [DisplayName("Modified")]
     [IsoXmlTag("Modfd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator Modified { get; }
 
     /// <summary>

@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between types of payment instrument, that is, cheque, credit transfer, direct debit, investment account or payment card.</summary>
 [IsoId("a6bd61f1-eae0-44df-aeb0-bcee442af5df")]
+[IsoDisplayName(@"Payment Instrument 30 Choice")]
 public interface IPaymentInstrument30Choice : IIsoChoice { }

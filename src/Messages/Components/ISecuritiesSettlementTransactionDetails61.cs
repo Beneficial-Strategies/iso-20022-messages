@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the update(s) for the settlement transaction.
 /// </summary>
 [IsoId("_aiiBgZaNEfC2_67yGLymgA")]
+[IsoDisplayName(@"Securities Settlement Transaction Details61")]
 public interface ISecuritiesSettlementTransactionDetails61 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISecuritiesSettlementTransactionDetails61 : IIsoComponent
     [IsoId("_alM7C5aNEfC2_67yGLymgA")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages80> Linkages { get; }
 
     /// <summary>
@@ -121,6 +123,7 @@ public interface ISecuritiesSettlementTransactionDetails61 : IIsoComponent
     [IsoId("_P03k8ZaNEfC2_67yGLymgA")]
     [DisplayName("Digital Payment Settlement")]
     [IsoXmlTag("DgtlPmtSttlm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDigitalPaymentSettlement1> DigitalPaymentSettlement { get; }
 
     /// <summary>
@@ -145,5 +148,6 @@ public interface ISecuritiesSettlementTransactionDetails61 : IIsoComponent
     [IsoId("_alNiU5aNEfC2_67yGLymgA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

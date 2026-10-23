@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Strong Customer Authentication2.
 /// </summary>
 [IsoId("_JHxqYZqHEe6bZt44gtg6XQ")]
+[IsoDisplayName(@"Strong Customer Authentication2")]
 public interface IStrongCustomerAuthentication2 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IStrongCustomerAuthentication2 : IIsoComponent
     /// </summary>
     [DisplayName("Exemption")]
     [IsoXmlTag("Xmptn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExemption2> Exemption { get; }
 
     /// <summary>

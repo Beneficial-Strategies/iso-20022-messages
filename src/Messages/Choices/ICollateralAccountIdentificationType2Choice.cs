@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the identification of the collateral account.
 /// </summary>
 [IsoId("_Y-Lll4FxEeWtPe6Crjmeug")]
+[IsoDisplayName(@"Collateral Account Identification Type 2 Choice")]
 public interface ICollateralAccountIdentificationType2Choice : IIsoChoice { }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument29Choice;
 
 /// <summary>Cash account details.</summary>
 [IsoId("e109de48-2805-493d-a978-354f6d4880a9")]
+[IsoDisplayName(@"Cash Account Details")]
 public interface ICashAccountDetails : IPaymentInstrument29Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

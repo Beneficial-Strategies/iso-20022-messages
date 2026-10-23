@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the cancellation requests data in the report.
 /// </summary>
 [IsoId("_p-rkdTnfEem7JZMuWtwtsg")]
+[IsoDisplayName(@"Intra Balance Cancellation")]
 public interface IIntraBalanceCancellation5 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IIntraBalanceCancellation5 : IIsoComponent
     [IsoId("_qIqm7TnfEem7JZMuWtwtsg")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalanceCancellation6> Cancellation { get; }
 }

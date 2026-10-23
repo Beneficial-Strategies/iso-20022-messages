@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Option240.
 /// </summary>
 [IsoId("_oWlmK5BPEe-COKgew96POA")]
+[IsoDisplayName(@"Corporate Action Option240")]
 public interface ICorporateActionOption240 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface ICorporateActionOption240 : IIsoComponent
     /// </summary>
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesOption80> SecuritiesMovementDetails { get; }
 
     /// <summary>
@@ -37,5 +39,6 @@ public interface ICorporateActionOption240 : IIsoComponent
     /// </summary>
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOption109> CashMovementDetails { get; }
 }

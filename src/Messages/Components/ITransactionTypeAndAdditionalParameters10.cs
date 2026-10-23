@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the conditions under which the order/trade is to be settled.
 /// </summary>
 [IsoId("_KdYsITxFEeW5v6FXICU4Ew")]
+[IsoDisplayName(@"Transaction Type And Additional Parameters")]
 public interface ITransactionTypeAndAdditionalParameters10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionTypeAndAdditionalParameters10 : IIsoComponent
     [IsoId("_K-kGlTxFEeW5v6FXICU4Ew")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransactionTypeAndAdditionalParameters10 : IIsoComponent
     [IsoId("_K-kGnTxFEeW5v6FXICU4Ew")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface ITransactionTypeAndAdditionalParameters10 : IIsoComponent
     [IsoId("_K-kGvTxFEeW5v6FXICU4Ew")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonIdentification { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface ITransactionTypeAndAdditionalParameters10 : IIsoComponent
     [IsoId("_K-kGxTxFEeW5v6FXICU4Ew")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PoolIdentification { get; }
 
     /// <summary>
@@ -73,5 +82,7 @@ public interface ITransactionTypeAndAdditionalParameters10 : IIsoComponent
     [IsoId("_K-kGzTxFEeW5v6FXICU4Ew")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CorporateActionEventIdentification { get; }
 }

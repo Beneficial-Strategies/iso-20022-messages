@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FixedAmountOrUnlimited1Choice;
 /// Unlimited amount.
 /// </summary>
 [IsoId("_MA1JsEqBEeKw5sECfP82rg")]
+[IsoDisplayName(@"Not Limited")]
 public interface INotLimited : IFixedAmountOrUnlimited1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INotLimited : IFixedAmountOrUnlimited1Choice, IIsoChoiceVariant
     /// String of characters equal to UNLIMITED.
     /// </summary>
     [IsoXmlTag("NotLtd")]
+    [IsoSimpleType(IsoSimpleType.Unlimited9Text)]
     Unlimited9Text Value { get; }
 }

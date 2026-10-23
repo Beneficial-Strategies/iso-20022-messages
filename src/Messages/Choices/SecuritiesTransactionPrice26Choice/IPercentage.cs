@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice26Choi
 
 /// <summary>Price expressed as a rate, that is a percentage.</summary>
 [IsoId("_HT_WE62kEfCfRtNoJv1jFQ")]
+[IsoDisplayName(@"Percentage")]
 public interface IPercentage : ISecuritiesTransactionPrice26Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

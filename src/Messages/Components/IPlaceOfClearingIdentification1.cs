@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of infrastructure which may be a component of a clearing house and which facilitates clearing and settlement for its members by standing between the buyer and the seller. It may net transactions and it substitutes itself as settlement counterparty for each position.
 /// </summary>
 [IsoId("_GVozg2wwEeWLq_lbZ2Mhyw")]
+[IsoDisplayName(@"Place Of Clearing Identification")]
 public interface IPlaceOfClearingIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPlaceOfClearingIdentification1 : IIsoComponent
     [IsoId("_GVozhGwwEeWLq_lbZ2Mhyw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier? Identification { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IPlaceOfClearingIdentification1 : IIsoComponent
     [IsoId("_GVozhWwwEeWLq_lbZ2Mhyw")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 }

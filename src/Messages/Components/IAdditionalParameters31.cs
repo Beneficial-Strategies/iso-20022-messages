@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies additional parameters to the message or transaction.
 /// </summary>
 [IsoId("__NTwD5wyEeazcsnODTksnQ")]
+[IsoDisplayName(@"Additional Parameters")]
 public interface IAdditionalParameters31 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IAdditionalParameters31 : IIsoComponent
     [IsoId("__NTwI5wyEeazcsnODTksnQ")]
     [DisplayName("Previous Partial Confirmation Identification")]
     [IsoXmlTag("PrvsPrtlConfId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? PreviousPartialConfirmationIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IAdditionalParameters31 : IIsoComponent
     [IsoId("__NTwK5wyEeazcsnODTksnQ")]
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IAdditionalParameters31 : IIsoComponent
     [IsoId("__NTwM5wyEeazcsnODTksnQ")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ClientTripartyCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface IAdditionalParameters31 : IIsoComponent
     [IsoId("__NTwO5wyEeazcsnODTksnQ")]
     [DisplayName("Client Collateral Instruction Identification")]
     [IsoXmlTag("ClntCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ClientCollateralInstructionIdentification { get; }
 
     /// <summary>
@@ -65,5 +74,7 @@ public interface IAdditionalParameters31 : IIsoComponent
     [IsoId("__NTwPZwyEeazcsnODTksnQ")]
     [DisplayName("Triparty Agent Service Provider Collateral Instruction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; }
 }

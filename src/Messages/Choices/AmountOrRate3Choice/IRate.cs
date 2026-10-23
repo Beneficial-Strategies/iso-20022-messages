@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountOrRate3Choice;
 /// Rate used to calculate the amount.
 /// </summary>
 [IsoId("_vHypAQauEeS3lpTattq7hg")]
+[IsoDisplayName(@"Rate")]
 public interface IRate : IAmountOrRate3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IRate : IAmountOrRate3Choice, IIsoChoiceVariant
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

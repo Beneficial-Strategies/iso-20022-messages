@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionEventType1Choice;
 /// Specifies the type of event for an option using a code.
 /// </summary>
 [IsoId("_BIRnQJR1Eeeymf3kpbtgrA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOptionEventType1Choice, IIsoChoiceVariant
 {
     /// <summary>

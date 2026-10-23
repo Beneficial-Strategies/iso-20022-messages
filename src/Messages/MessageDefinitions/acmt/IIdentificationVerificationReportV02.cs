@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_sZrh4lkyEeGeoaLUQk__nA_91543284")]
 [IsoMessage("acmt.024.001.02", "IdVrfctnRpt", "urn:iso:std:iso:20022:tech:xsd:acmt.024.001.02")]
+[Description(@"Scope|The IdentificationVerificationReport message is sent by an assigner to an assignee. It is used to confirm whether or not the presented party and/or account identification information is correct.|Usage|The IdentificationVerificationReport message is sent as a response to an IdentificationVerificationRequest message.|The IdentificationVerificationReport message can contain one or more reports.|The IdentificationVerificationReport message may include a reason if the presented party and/or account identification information is confirmed to be incorrect.|The IdentificationVerificationReport message may include the correct party and/or account identification information.")]
+[IsoDisplayName(@"Identification Verification Report V")]
 public interface IIdentificationVerificationReportV02 : IOuterRecord
 {
     /// <summary>
@@ -42,6 +44,7 @@ public interface IIdentificationVerificationReportV02 : IOuterRecord
     [IsoId("_sZ0r0VkyEeGeoaLUQk__nA_-1833396589")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerificationReport2> Report { get; }
 
     /// <summary>
@@ -50,5 +53,6 @@ public interface IIdentificationVerificationReportV02 : IOuterRecord
     [IsoId("_sZ-c0FkyEeGeoaLUQk__nA_-2142223267")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

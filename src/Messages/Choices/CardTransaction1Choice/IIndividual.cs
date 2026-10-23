@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction1Choice;
 /// </summary>
 [IsoId("_t6ZGtFkyEeGeoaLUQk__nA_97770603")]
 [IsoXmlTag("Indv")]
+[IsoDisplayName(@"Individual")]
 public interface IIndividual : ICardTransaction1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,8 @@ public interface IIndividual : ICardTransaction1Choice, IIsoChoiceVariant
     [IsoId("_t6FksFkyEeGeoaLUQk__nA_1800136738")]
     [DisplayName("Sale Reconciliation Identification")]
     [IsoXmlTag("SaleRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReconciliationIdentification { get; }
 
     /// <summary>
@@ -42,6 +45,8 @@ public interface IIndividual : ICardTransaction1Choice, IIsoChoiceVariant
     [IsoId("_t6FksVkyEeGeoaLUQk__nA_882698409")]
     [DisplayName("Sale Reference Number")]
     [IsoXmlTag("SaleRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceNumber { get; }
 
     /// <summary>
@@ -50,6 +55,8 @@ public interface IIndividual : ICardTransaction1Choice, IIsoChoiceVariant
     [IsoId("_t6FkslkyEeGeoaLUQk__nA_1131399274")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SequenceNumber { get; }
 
     /// <summary>
@@ -74,6 +81,7 @@ public interface IIndividual : ICardTransaction1Choice, IIsoChoiceVariant
     [IsoId("_t6PVsFkyEeGeoaLUQk__nA_1719363359")]
     [DisplayName("Validation Date")]
     [IsoXmlTag("VldtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidationDate { get; }
 
     /// <summary>
@@ -83,5 +91,7 @@ public interface IIndividual : ICardTransaction1Choice, IIsoChoiceVariant
     [IsoId("_t6PVsVkyEeGeoaLUQk__nA_-667251474")]
     [DisplayName("Validation Sequence Number")]
     [IsoXmlTag("VldtnSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ValidationSequenceNumber { get; }
 }

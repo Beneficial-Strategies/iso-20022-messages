@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount to be authorised by the issuer.
 /// </summary>
 [IsoId("_nuIgAIolEeSaAcF2oE2GNQ")]
+[IsoDisplayName(@"Amount And Currency")]
 public interface IAmountAndCurrency1 : IIsoComponent
 {
     /// <summary>

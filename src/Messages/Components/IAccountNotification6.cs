@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the account notification.
 /// </summary>
 [IsoId("_tlra8lkyEeGeoaLUQk__nA_-1825023044")]
+[IsoDisplayName(@"Account Notification")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IAccountNotification6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IAccountNotification6 : IIsoComponent
     [IsoId("_tlra81kyEeGeoaLUQk__nA_1472871899")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IAccountNotification6 : IIsoComponent
     [IsoId("_tl-V4VkyEeGeoaLUQk__nA_719480501")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedValueDate { get; }
 
     /// <summary>
@@ -97,5 +102,6 @@ public interface IAccountNotification6 : IIsoComponent
     [IsoId("_tmIG4lkyEeGeoaLUQk__nA_1642382703")]
     [DisplayName("Item")]
     [IsoXmlTag("Itm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INotificationItem4> Item { get; }
 }

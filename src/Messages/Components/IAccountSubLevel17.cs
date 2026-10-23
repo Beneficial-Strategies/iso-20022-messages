@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account and holding of the next sub-level (Level 7).
 /// </summary>
 [IsoId("_Wt8dUVjCEea1XpTdyimpLA")]
+[IsoDisplayName(@"Account Sub Level")]
 public interface IAccountSubLevel17 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IAccountSubLevel17 : IIsoComponent
     [IsoId("_XHF9J1jCEea1XpTdyimpLA")]
     [DisplayName("Beneficial Owner")]
     [IsoXmlTag("BnfclOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficialOwner2> BeneficialOwner { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IAccountSubLevel17 : IIsoComponent
     [IsoId("_ZyB5YVjCEea1XpTdyimpLA")]
     [DisplayName("Balance Details")]
     [IsoXmlTag("BalDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateHoldingBalance3> BalanceDetails { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IAccountSubLevel17 : IIsoComponent
     [IsoId("_XHF9K1jCEea1XpTdyimpLA")]
     [DisplayName("Account Sub Level")]
     [IsoXmlTag("AcctSubLvl8")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountSubLevel18> AccountSubLevel8 { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IAccountSubLevel17 : IIsoComponent
     [IsoId("_XHF9LVjCEea1XpTdyimpLA")]
     [DisplayName("Account Sub Level 8 Difference")]
     [IsoXmlTag("AcctSubLvl8Diff")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateHoldingBalance2> AccountSubLevel8Difference { get; }
 
     /// <summary>
@@ -73,5 +78,6 @@ public interface IAccountSubLevel17 : IIsoComponent
     [IsoId("_XHF9MVjCEea1XpTdyimpLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

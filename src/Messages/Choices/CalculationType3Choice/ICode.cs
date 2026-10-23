@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalculationType3Choice;
 /// Calculation type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_M0gcoeLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICalculationType3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "IntraPosMvmntQryRspn",
     "urn:iso:std:iso:20022:tech:xsd:semt.029.001.01"
 )]
+[IsoDisplayName(@"Intra Position Movement Query Response V01")]
 public interface IIntraPositionMovementQueryResponseV01 : IOuterRecord
 {
     /// <summary>
@@ -36,5 +37,6 @@ public interface IIntraPositionMovementQueryResponseV01 : IOuterRecord
     /// </summary>
     [DisplayName("Movements")]
     [IsoXmlTag("Mvmnts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraPositionMovements6> Movements { get; }
 }

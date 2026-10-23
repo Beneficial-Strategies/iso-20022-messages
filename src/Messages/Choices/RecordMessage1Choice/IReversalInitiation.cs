@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Reversal initiation message record.
 /// </summary>
 [IsoId("_f8HBMFZWEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Reversal Initiation")]
 public interface IReversalInitiation : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IReversalInitiation : IRecordMessage1Choice, IIsoChoiceVariant
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("RvslInitn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

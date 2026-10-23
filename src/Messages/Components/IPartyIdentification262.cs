@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_2bH-AR1REey8XKHwKquEQw")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification262 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyIdentification262 : IIsoComponent
     [IsoId("_2ibf4R1REey8XKHwKquEQw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPartyIdentification262 : IIsoComponent
     [IsoId("_2ibf4x1REey8XKHwKquEQw")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Assigner { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPartyIdentification262 : IIsoComponent
     [IsoId("_2ibf5x1REey8XKHwKquEQw")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IPartyIdentification262 : IIsoComponent
     [IsoId("_2ibf6R1REey8XKHwKquEQw")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalIdentification { get; }
 
     /// <summary>
@@ -57,6 +66,7 @@ public interface IPartyIdentification262 : IIsoComponent
     [IsoId("_ep0PgB1SEey8XKHwKquEQw")]
     [DisplayName("Foreign Merchant")]
     [IsoXmlTag("FrgnMrchnt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ForeignMerchant { get; }
 
     /// <summary>

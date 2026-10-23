@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the status of thesecurities movement.
 /// </summary>
 [IsoId("_IeQt0OCzEei2UYJ62ws-Fw")]
+[IsoDisplayName(@"Securities Movement Status 1 Choice")]
 public interface ISecuritiesMovementStatus1Choice : IIsoChoice { }

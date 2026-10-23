@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice;
 /// </summary>
 [IsoId("_o1CqqxwkEeOIveEnnb_1-A")]
 [IsoXmlTag("InRpr")]
+[IsoDisplayName(@"In Repair")]
 public interface IInRepair : ITransferStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IInRepair : ITransferStatus1Choice, IIsoChoiceVariant
     [IsoId("_RR_KUdp-Ed-ak6NoX_4Aeg_1346286799")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Reason { get; }
 
     /// <summary>

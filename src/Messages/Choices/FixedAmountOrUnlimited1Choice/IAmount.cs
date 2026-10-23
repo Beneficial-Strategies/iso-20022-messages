@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FixedAmountOrUnlimited1Choice;
 /// </summary>
 [IsoId("_HfJHMEqBEeKw5sECfP82rg")]
 [IsoXmlTag("Amt")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount : IFixedAmountOrUnlimited1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities trade.
 /// </summary>
 [IsoId("_IXlxUStNEeOgfbujmhmNAA")]
+[IsoDisplayName(@"Securities Trade Details")]
 public interface ISecuritiesTradeDetails38 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISecuritiesTradeDetails38 : IIsoComponent
     [IsoId("_IwSlQytNEeOgfbujmhmNAA")]
     [DisplayName("Place Of Clearing")]
     [IsoXmlTag("PlcOfClr")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier? PlaceOfClearing { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface ISecuritiesTradeDetails38 : IIsoComponent
     [IsoId("_IwSlXytNEeOgfbujmhmNAA")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReporting2Choice> Reporting { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ISecuritiesTradeDetails38 : IIsoComponent
     [IsoId("_IwSlZytNEeOgfbujmhmNAA")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface ISecuritiesTradeDetails38 : IIsoComponent
     [IsoId("_IwSlbytNEeOgfbujmhmNAA")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition1Choice> TradeTransactionCondition { get; }
 
     /// <summary>
@@ -105,6 +110,8 @@ public interface ISecuritiesTradeDetails38 : IIsoComponent
     [IsoId("_IwSlhytNEeOgfbujmhmNAA")]
     [DisplayName("Settlement Instruction Processing Additional Details")]
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? SettlementInstructionProcessingAdditionalDetails { get; }
 
     /// <summary>
@@ -113,5 +120,7 @@ public interface ISecuritiesTradeDetails38 : IIsoComponent
     [IsoId("_IwSljytNEeOgfbujmhmNAA")]
     [DisplayName("FX Additional Details")]
     [IsoXmlTag("FxAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FXAdditionalDetails { get; }
 }

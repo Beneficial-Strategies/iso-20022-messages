@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReversedStatus2Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_bUFeJyY5EeW_ZNn8gbfY7Q")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IReversedStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

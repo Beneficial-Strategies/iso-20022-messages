@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the breakdown of the penalty into sub-amounts.
 /// </summary>
 [IsoId("_iT97kDkbEem897H7zB2RJg")]
+[IsoDisplayName(@"Penalty Amount Breakdown1")]
 public interface IPenaltyAmountBreakdown1 : IIsoComponent
 {
     /// <summary>

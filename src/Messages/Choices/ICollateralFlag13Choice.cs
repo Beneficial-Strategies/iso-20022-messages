@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Data on collateral used for the securities lending transaction.
 /// </summary>
 [IsoId("_J9q9scg5Eeu4ecZgAYuz5w")]
+[IsoDisplayName(@"Collateral Flag 13 Choice")]
 public interface ICollateralFlag13Choice : IIsoChoice { }

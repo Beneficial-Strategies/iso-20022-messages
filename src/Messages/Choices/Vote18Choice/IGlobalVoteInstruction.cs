@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote18Choice;
 
 /// <summary>Instruction specifying a vote instruction per resolution for the entire entitlement.</summary>
 [IsoId("_xMNNVajGEfCzuLlmLrhIvA")]
+[IsoDisplayName(@"Global Vote Instruction")]
 public interface IGlobalVoteInstruction : IVote18Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference information concerning the original payment initiation, to which the investigation message refers.
 /// </summary>
 [IsoId("_PmZyS9p-Ed-ak6NoX_4Aeg_1218179091")]
+[IsoDisplayName(@"Underlying Payment Instruction")]
 public interface IUnderlyingPaymentInstruction1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IUnderlyingPaymentInstruction1 : IIsoComponent
     [IsoId("_PmZyTdp-Ed-ak6NoX_4Aeg_1218179182")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalPaymentInformationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IUnderlyingPaymentInstruction1 : IIsoComponent
     [IsoId("_PmZyTtp-Ed-ak6NoX_4Aeg_1218179491")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IUnderlyingPaymentInstruction1 : IIsoComponent
     [IsoId("_PmjjQNp-Ed-ak6NoX_4Aeg_1218179522")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IUnderlyingPaymentInstruction1 : IIsoComponent
     [IsoId("_PmjjQtp-Ed-ak6NoX_4Aeg_1855141289")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedExecutionDate { get; }
 
     /// <summary>
@@ -65,5 +73,6 @@ public interface IUnderlyingPaymentInstruction1 : IIsoComponent
     [IsoId("_PmjjQ9p-Ed-ak6NoX_4Aeg_1941027271")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 }

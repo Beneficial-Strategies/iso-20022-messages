@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType109Choic
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionEventType109Choice, IIsoChoiceVariant
 {
     /// <summary>

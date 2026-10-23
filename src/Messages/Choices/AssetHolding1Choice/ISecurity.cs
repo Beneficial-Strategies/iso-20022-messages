@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 /// </summary>
 [IsoId("_GHPngK_7EeaE9YROwd69hA")]
 [IsoXmlTag("Scty")]
+[IsoDisplayName(@"Security")]
 public interface ISecurity : IAssetHolding1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ISecurity : IAssetHolding1Choice, IIsoChoiceVariant
     [IsoId("_RK0CoK_7EeaE9YROwd69hA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier Identification { get; }
 
     /// <summary>

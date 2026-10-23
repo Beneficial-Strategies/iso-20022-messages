@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Capabilities of the ATM terminal.
 /// </summary>
 [IsoId("_nwovca1yEeWMg5rOByfExw")]
+[IsoDisplayName(@"Point Of Interaction Capabilities")]
 public interface IPointOfInteractionCapabilities7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPointOfInteractionCapabilities7 : IIsoComponent
     [IsoId("_n8Qwoa1yEeWMg5rOByfExw")]
     [DisplayName("Card Read Data")]
     [IsoXmlTag("CardRdData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataReading4Code> CardReadData { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPointOfInteractionCapabilities7 : IIsoComponent
     [IsoId("_n8Qwo61yEeWMg5rOByfExw")]
     [DisplayName("Card Write Data")]
     [IsoXmlTag("CardWrtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardDataReading4Code> CardWriteData { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPointOfInteractionCapabilities7 : IIsoComponent
     [IsoId("_n8Qwpa1yEeWMg5rOByfExw")]
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardholderVerificationCapability3Code> Authentication { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IPointOfInteractionCapabilities7 : IIsoComponent
     [IsoId("_n8Qwp61yEeWMg5rOByfExw")]
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? PINLengthCapabilities { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IPointOfInteractionCapabilities7 : IIsoComponent
     [IsoId("_n8Qwqa1yEeWMg5rOByfExw")]
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ApprovalCodeLength { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IPointOfInteractionCapabilities7 : IIsoComponent
     [IsoId("_n8Qwq61yEeWMg5rOByfExw")]
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaxScriptLength { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IPointOfInteractionCapabilities7 : IIsoComponent
     [IsoId("_n8Qwra1yEeWMg5rOByfExw")]
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardCaptureCapable { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IPointOfInteractionCapabilities7 : IIsoComponent
     [IsoId("_zXT3oK1yEeWMg5rOByfExw")]
     [DisplayName("Withdrawal Media")]
     [IsoXmlTag("WdrwlMdia")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATMMediaType1Code> WithdrawalMedia { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface IPointOfInteractionCapabilities7 : IIsoComponent
     [IsoId("_432IAK1yEeWMg5rOByfExw")]
     [DisplayName("Deposited Media")]
     [IsoXmlTag("DpstdMdia")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATMMediaType2Code> DepositedMedia { get; }
 
     /// <summary>
@@ -89,5 +99,6 @@ public interface IPointOfInteractionCapabilities7 : IIsoComponent
     [IsoId("_-GjBgK1yEeWMg5rOByfExw")]
     [DisplayName("Message Capabilities")]
     [IsoXmlTag("MsgCpblties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisplayCapabilities5> MessageCapabilities { get; }
 }

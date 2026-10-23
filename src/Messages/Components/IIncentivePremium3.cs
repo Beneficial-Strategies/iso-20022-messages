@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash premium made available if the securities holder consents or participates to an event.
 /// </summary>
 [IsoId("_TjIGidp-Ed-ak6NoX_4Aeg_590255137")]
+[IsoDisplayName(@"Incentive Premium")]
 public interface IIncentivePremium3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IIncentivePremium3 : IIsoComponent
     [IsoId("_TjIGitp-Ed-ak6NoX_4Aeg_590255168")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Description { get; }
 
     /// <summary>

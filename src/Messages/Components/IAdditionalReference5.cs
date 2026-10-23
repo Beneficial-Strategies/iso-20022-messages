@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// References a related message or provides another reference, such as a pool reference, linking a set of messages. The party which issued the related reference may be the Sender of the referenced message or a party other than the Sender.
 /// </summary>
 [IsoId("_WIFWkNp-Ed-ak6NoX_4Aeg_-788758749")]
+[IsoDisplayName(@"Additional Reference")]
 public interface IAdditionalReference5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAdditionalReference5 : IIsoComponent
     [IsoId("_WIFWkdp-Ed-ak6NoX_4Aeg_-788758718")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINMax16Text Reference { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IAdditionalReference5 : IIsoComponent
     [IsoId("_WIFWktp-Ed-ak6NoX_4Aeg_-788758410")]
     [DisplayName("Message Name")]
     [IsoXmlTag("MsgNm")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax15Text)]
+    [StringLength(15, MinimumLength = 1)]
     RestrictedFINMax15Text? MessageName { get; }
 }

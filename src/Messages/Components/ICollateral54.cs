@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the collateral that will be either delivered, returned or both.
 /// </summary>
 [IsoId("_6gAQZSqREeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Collateral")]
 public interface ICollateral54 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICollateral54 : IIsoComponent
     [IsoId("_63jNsSqREeyR9JrVGfaMKw")]
     [DisplayName("Margin Call Request Identification")]
     [IsoXmlTag("MrgnCallReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MarginCallRequestIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICollateral54 : IIsoComponent
     [IsoId("_63jNsyqREeyR9JrVGfaMKw")]
     [DisplayName("Margin Call Response Identification")]
     [IsoXmlTag("MrgnCallRspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarginCallResponseIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ICollateral54 : IIsoComponent
     [IsoId("_63jNtSqREeyR9JrVGfaMKw")]
     [DisplayName("Standard Settlement Instructions")]
     [IsoXmlTag("StdSttlmInstrs")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? StandardSettlementInstructions { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ICollateral54 : IIsoComponent
     [IsoId("_63jNtyqREeyR9JrVGfaMKw")]
     [DisplayName("Collateral Proposal Response Identification")]
     [IsoXmlTag("CollPrpslRspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CollateralProposalResponseIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,7 @@ public interface ICollateral54 : IIsoComponent
     [IsoId("_63jNuSqREeyR9JrVGfaMKw")]
     [DisplayName("Securities Collateral")]
     [IsoXmlTag("SctiesColl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesCollateral10> SecuritiesCollateral { get; }
 
     /// <summary>
@@ -57,6 +67,7 @@ public interface ICollateral54 : IIsoComponent
     [IsoId("_63jNuyqREeyR9JrVGfaMKw")]
     [DisplayName("Cash Collateral")]
     [IsoXmlTag("CshColl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashCollateral2> CashCollateral { get; }
 
     /// <summary>
@@ -65,5 +76,6 @@ public interface ICollateral54 : IIsoComponent
     [IsoId("_63jNvSqREeyR9JrVGfaMKw")]
     [DisplayName("Other Collateral")]
     [IsoXmlTag("OthrColl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherCollateral9> OtherCollateral { get; }
 }

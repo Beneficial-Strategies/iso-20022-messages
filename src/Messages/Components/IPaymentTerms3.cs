@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the payment terms of the underlying transaction.
 /// </summary>
 [IsoId("_TCHyDQEcEeCQm6a_G2yO_w_-1177730425")]
+[IsoDisplayName(@"Payment Terms")]
 public interface IPaymentTerms3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPaymentTerms3 : IIsoComponent
     [IsoId("_TCHyDgEcEeCQm6a_G2yO_w_909551142")]
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DueDate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IPaymentTerms3 : IIsoComponent
     [IsoId("_TCHyEAEcEeCQm6a_G2yO_w_202278077")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max140Text> Description { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IPaymentTerms3 : IIsoComponent
     [IsoId("_TCRjAAEcEeCQm6a_G2yO_w_-716100957")]
     [DisplayName("Partial Payment Percent")]
     [IsoXmlTag("PrtlPmtPct")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PartialPaymentPercent { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IPaymentTerms3 : IIsoComponent
     [IsoId("_TCRjAQEcEeCQm6a_G2yO_w_-1812933723")]
     [DisplayName("Direct Debit Mandate Identification")]
     [IsoXmlTag("DrctDbtMndtId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> DirectDebitMandateIdentification { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IPaymentTerms3 : IIsoComponent
     [IsoId("_TCRjAwEcEeCQm6a_G2yO_w_-774400512")]
     [DisplayName("Discount Percent Rate")]
     [IsoXmlTag("DscntPctRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? DiscountPercentRate { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface IPaymentTerms3 : IIsoComponent
     [IsoId("_TCRjBgEcEeCQm6a_G2yO_w_499443934")]
     [DisplayName("Penalty Percent Rate")]
     [IsoXmlTag("PnltyPctRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PenaltyPercentRate { get; }
 
     /// <summary>

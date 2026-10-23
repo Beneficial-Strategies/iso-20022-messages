@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the derivative instrument.
 /// </summary>
 [IsoId("_1V6QYZ3DEeuwmdq0KtnICg")]
+[IsoDisplayName(@"Derivative Instrument")]
 public interface IDerivativeInstrument9 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface IDerivativeInstrument9 : IIsoComponent
     [IsoId("_1tAhwZ3DEeuwmdq0KtnICg")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpiryDate { get; }
 
     /// <summary>
@@ -28,6 +30,7 @@ public interface IDerivativeInstrument9 : IIsoComponent
     [IsoId("_1tAhw53DEeuwmdq0KtnICg")]
     [DisplayName("Price Multiplier")]
     [IsoXmlTag("PricMltplr")]
+    [IsoSimpleType(IsoSimpleType.NonNegativeDecimalNumber)]
     NonNegativeDecimalNumber PriceMultiplier { get; }
 
     /// <summary>

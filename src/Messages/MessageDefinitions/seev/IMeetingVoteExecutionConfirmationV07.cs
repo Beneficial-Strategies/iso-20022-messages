@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "MtgVoteExctnConf",
     "urn:iso:std:iso:20022:tech:xsd:seev.007.001.07"
 )]
+[Description(@"Scope|The MeetingVoteExecutionConfirmation message is sent by an issuer, its agent or an intermediary to another intermediary, a party holding the right to vote, a registered security holder or to a beneficial holder to confirm, to the Sender of the MeetingInstruction message, that their vote has been recorded and counted by the Issuer.|Usage|This message is sent after the shareholders meeting has taken place. The Sender of this message confirms the execution of the vote at the meeting.|This messages is sent if the Sender of the MeetingInstruction message has requested such a confirmation or if market practice or regulation stipulates the need for a full audit trail.|This message definition is intended for use with the Business Application Header (BAH).")]
+[IsoDisplayName(@"Meeting Vote Execution Confirmation V")]
 public interface IMeetingVoteExecutionConfirmationV07 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +31,8 @@ public interface IMeetingVoteExecutionConfirmationV07 : IOuterRecord
     [IsoId("_sV77Q_EkEeqRfth943bvEA")]
     [DisplayName("Meeting Instruction Identification")]
     [IsoXmlTag("MtgInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MeetingInstructionIdentification { get; }
 
     /// <summary>
@@ -53,6 +57,7 @@ public interface IMeetingVoteExecutionConfirmationV07 : IOuterRecord
     [IsoId("_sV77SfEkEeqRfth943bvEA")]
     [DisplayName("Vote Instructions")]
     [IsoXmlTag("VoteInstrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedInstructionStatus15> VoteInstructions { get; }
 
     /// <summary>
@@ -61,6 +66,8 @@ public interface IMeetingVoteExecutionConfirmationV07 : IOuterRecord
     [IsoId("_sV77S_EkEeqRfth943bvEA")]
     [DisplayName("Vote Instructions Confirmation URL Address")]
     [IsoXmlTag("VoteInstrsConfURLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? VoteInstructionsConfirmationURLAddress { get; }
 
     /// <summary>
@@ -69,5 +76,6 @@ public interface IMeetingVoteExecutionConfirmationV07 : IOuterRecord
     [IsoId("_sV77TfEkEeqRfth943bvEA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

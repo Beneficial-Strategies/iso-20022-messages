@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the balance type.
 /// </summary>
 [IsoId("_5SHcZ5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Securities Balance Type 11 Choice")]
 public interface ISecuritiesBalanceType11Choice : IIsoChoice { }

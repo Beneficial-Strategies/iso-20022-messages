@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties7Choice;
 /// </summary>
 [IsoId("_tf3bEYpIEeaNTaanBSMWmg")]
 [IsoXmlTag("DlvrgSttlmPties")]
+[IsoDisplayName(@"Delivering Settlement Parties")]
 public interface IDeliveringSettlementParties : ISettlementParties7Choice, IIsoChoiceVariant
 {
     /// <summary>

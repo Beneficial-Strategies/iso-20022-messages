@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ISO 8583 bit 54
 /// </summary>
 [IsoId("_tqq6gZMkEeuleeHpFMMhmQ")]
+[IsoDisplayName(@"Additional Amounts")]
 public interface IAdditionalAmounts3 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IAdditionalAmounts3 : IIsoComponent
     [IsoId("_tzLWQ5MkEeuleeHpFMMhmQ")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -42,6 +45,8 @@ public interface IAdditionalAmounts3 : IIsoComponent
     [IsoId("_tzLWR5MkEeuleeHpFMMhmQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Description { get; }
 
     /// <summary>
@@ -50,5 +55,6 @@ public interface IAdditionalAmounts3 : IIsoComponent
     [IsoId("_VuCqELJkEeuy99eCNqlQ3g")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

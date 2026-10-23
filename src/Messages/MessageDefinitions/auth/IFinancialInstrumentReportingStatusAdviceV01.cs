@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:auth.031.001.01"
 )]
+[Description(@"The FinancialInstrumentReportingStatusAdvice message is sent by the national competent authority to the reporting agent to provide a status advice for the correctness, issues or errors that arise from the submitted report.")]
+[IsoDisplayName(@"Financial Instrument Reporting Status Advice V")]
 public interface IFinancialInstrumentReportingStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface IFinancialInstrumentReportingStatusAdviceV01 : IOuterRecord
     [IsoId("_4LUGQ0RNEee7JdgA9zPESA")]
     [DisplayName("Status Advice")]
     [IsoXmlTag("StsAdvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageReportHeader4> StatusAdvice { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface IFinancialInstrumentReportingStatusAdviceV01 : IOuterRecord
     [IsoId("_4LUGRURNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

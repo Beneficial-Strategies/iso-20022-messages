@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide detailed information on the number of transactions that are reported with a specific transaction status.
 /// </summary>
 [IsoId("_Rq4LcNp-Ed-ak6NoX_4Aeg_1400369330")]
+[IsoDisplayName(@"Number Of Transactions Per Status")]
 public interface INumberOfTransactionsPerStatus3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INumberOfTransactionsPerStatus3 : IIsoComponent
     [IsoId("_Rq4Lcdp-Ed-ak6NoX_4Aeg_1400369332")]
     [DisplayName("Detailed Number Of Transactions")]
     [IsoXmlTag("DtldNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText DetailedNumberOfTransactions { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface INumberOfTransactionsPerStatus3 : IIsoComponent
     [IsoId("_Rq4Lc9p-Ed-ak6NoX_4Aeg_1400369391")]
     [DisplayName("Detailed Control Sum")]
     [IsoXmlTag("DtldCtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? DetailedControlSum { get; }
 }

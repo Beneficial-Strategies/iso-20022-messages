@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the details of the transaction.
 /// </summary>
 [IsoId("_Y3sq1zneEem7JZMuWtwtsg")]
+[IsoDisplayName(@"Intra Balance Pending")]
 public interface IIntraBalancePending6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IIntraBalancePending6 : IIsoComponent
     [IsoId("_ZCu2KzneEem7JZMuWtwtsg")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IIntraBalancePending6 : IIsoComponent
     [IsoId("_ZCu2MzneEem7JZMuWtwtsg")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IIntraBalancePending6 : IIsoComponent
     [IsoId("_ZCu2OzneEem7JZMuWtwtsg")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IIntraBalancePending6 : IIsoComponent
     [IsoId("_ZCu2QzneEem7JZMuWtwtsg")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface IIntraBalancePending6 : IIsoComponent
     [IsoId("_ZCu2RTneEem7JZMuWtwtsg")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PoolIdentification { get; }
 
     /// <summary>
@@ -65,6 +76,8 @@ public interface IIntraBalancePending6 : IIsoComponent
     [IsoId("_ZCu2TTneEem7JZMuWtwtsg")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -105,6 +118,7 @@ public interface IIntraBalancePending6 : IIsoComponent
     [IsoId("_ZCu2bzneEem7JZMuWtwtsg")]
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StatusDate { get; }
 
     /// <summary>
@@ -121,6 +135,7 @@ public interface IIntraBalancePending6 : IIsoComponent
     [IsoId("_ZCu2eTneEem7JZMuWtwtsg")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages57> Linkages { get; }
 
     /// <summary>
@@ -145,6 +160,7 @@ public interface IIntraBalancePending6 : IIsoComponent
     [IsoId("_ZCu2hTneEem7JZMuWtwtsg")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -153,6 +169,8 @@ public interface IIntraBalancePending6 : IIsoComponent
     [IsoId("_ZCu2jTneEem7JZMuWtwtsg")]
     [DisplayName("Instruction Processing Additional Details")]
     [IsoXmlTag("InstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? InstructionProcessingAdditionalDetails { get; }
 
     /// <summary>
@@ -161,5 +179,6 @@ public interface IIntraBalancePending6 : IIsoComponent
     [IsoId("_ZCu2lTneEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

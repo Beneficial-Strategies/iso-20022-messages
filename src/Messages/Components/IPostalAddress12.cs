@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Address of a party expressed in a formal structure.
 /// </summary>
 [IsoId("_EIZxODgzEeKfZIj_SwVRwA")]
+[IsoDisplayName(@"Postal Address")]
 public interface IPostalAddress12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPostalAddress12 : IIsoComponent
     [IsoId("_EIZxPjgzEeKfZIj_SwVRwA")]
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TownName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPostalAddress12 : IIsoComponent
     [IsoId("_EIZxQTgzEeKfZIj_SwVRwA")]
     [DisplayName("Country Sub Division")]
     [IsoXmlTag("CtrySubDvsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CountrySubDivision { get; }
 
     /// <summary>

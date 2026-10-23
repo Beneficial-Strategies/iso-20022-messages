@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variables used to quantify the different calculations for position sets.
 /// </summary>
 [IsoId("_oRNJEc9JEeubvZK8CMH-Eg")]
+[IsoDisplayName(@"Position Set Metrics")]
 public interface IPositionSetMetrics12 : IIsoComponent
 {
     /// <summary>
@@ -27,6 +28,7 @@ public interface IPositionSetMetrics12 : IIsoComponent
     [IsoId("_oTj5hc9JEeubvZK8CMH-Eg")]
     [DisplayName("Haircut Or Margin")]
     [IsoXmlTag("HrcutOrMrgn")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? HaircutOrMargin { get; }
 
     /// <summary>

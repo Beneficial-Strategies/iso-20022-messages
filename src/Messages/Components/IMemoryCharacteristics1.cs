@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of a hardware memory module.
 /// </summary>
 [IsoId("_V7AH8Ax0EeKa_56Jbsi1RQ")]
+[IsoDisplayName(@"Memory Characteristics")]
 public interface IMemoryCharacteristics1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMemoryCharacteristics1 : IIsoComponent
     [IsoId("_gEGe4Ax0EeKa_56Jbsi1RQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IMemoryCharacteristics1 : IIsoComponent
     [IsoId("_mRenIAx0EeKa_56Jbsi1RQ")]
     [DisplayName("Total Size")]
     [IsoXmlTag("TtlSz")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber TotalSize { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IMemoryCharacteristics1 : IIsoComponent
     [IsoId("_sxTKQAx0EeKa_56Jbsi1RQ")]
     [DisplayName("Free Size")]
     [IsoXmlTag("FreeSz")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber FreeSize { get; }
 
     /// <summary>

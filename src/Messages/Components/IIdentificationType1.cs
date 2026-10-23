@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the identification type.
 /// </summary>
 [IsoId("_Uu1EoNp-Ed-ak6NoX_4Aeg_616925675")]
+[IsoDisplayName(@"Identification Type")]
 public interface IIdentificationType1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IIdentificationType1 : IIsoComponent
     [IsoId("_Uu1Eotp-Ed-ak6NoX_4Aeg_675108040")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

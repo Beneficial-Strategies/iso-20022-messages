@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References24Choice;
 /// Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.
 /// </summary>
 [IsoId("_H-crcf7uEeCvPoRGOxRobQ")]
+[IsoDisplayName(@"Trade Identification")]
 public interface ITradeIdentification : IReferences24Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ITradeIdentification : IReferences24Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("TradId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

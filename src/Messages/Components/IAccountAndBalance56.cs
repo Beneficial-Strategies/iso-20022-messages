@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides account and balance information.
 /// </summary>
 [IsoId("_YXNPXF99Ee262vCSVgjImg")]
+[IsoDisplayName(@"Account And Balance")]
 public interface IAccountAndBalance56 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountAndBalance56 : IIsoComponent
     [IsoId("_YXNPal99Ee262vCSVgjImg")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINXMax35Text? SafekeepingAccount { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAccountAndBalance56 : IIsoComponent
     [IsoId("_YXNPcl99Ee262vCSVgjImg")]
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text? BlockChainAddressOrWallet { get; }
 
     /// <summary>

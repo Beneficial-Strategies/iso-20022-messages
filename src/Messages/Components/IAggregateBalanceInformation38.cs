@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Overall position, in a single security, held in a securities account at a specified place of safekeeping.
 /// </summary>
 [IsoId("_Z0x7r_fVEeiNZp_PtLohLw")]
+[IsoDisplayName(@"Aggregate Balance Information")]
 public interface IAggregateBalanceInformation38 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface IAggregateBalanceInformation38 : IIsoComponent
     [IsoId("_Z0x76_fVEeiNZp_PtLohLw")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceInformation22> PriceDetails { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface IAggregateBalanceInformation38 : IIsoComponent
     [IsoId("_Z0x78_fVEeiNZp_PtLohLw")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms35> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -89,6 +92,7 @@ public interface IAggregateBalanceInformation38 : IIsoComponent
     [IsoId("_Z0x7-_fVEeiNZp_PtLohLw")]
     [DisplayName("Days Accrued")]
     [IsoXmlTag("DaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? DaysAccrued { get; }
 
     /// <summary>
@@ -121,6 +125,7 @@ public interface IAggregateBalanceInformation38 : IIsoComponent
     [IsoId("_Z0x8G_fVEeiNZp_PtLohLw")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQuantityBreakdown55> QuantityBreakdown { get; }
 
     /// <summary>
@@ -129,6 +134,7 @@ public interface IAggregateBalanceInformation38 : IIsoComponent
     [IsoId("_Z0x8I_fVEeiNZp_PtLohLw")]
     [DisplayName("Balance Breakdown")]
     [IsoXmlTag("BalBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubBalanceInformation16> BalanceBreakdown { get; }
 
     /// <summary>
@@ -137,6 +143,7 @@ public interface IAggregateBalanceInformation38 : IIsoComponent
     [IsoId("_Z0x8K_fVEeiNZp_PtLohLw")]
     [DisplayName("Additional Balance Breakdown")]
     [IsoXmlTag("AddtlBalBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBalanceInformation16> AdditionalBalanceBreakdown { get; }
 
     /// <summary>
@@ -145,6 +152,7 @@ public interface IAggregateBalanceInformation38 : IIsoComponent
     [IsoId("_Z0x8M_fVEeiNZp_PtLohLw")]
     [DisplayName("Balance At Safekeeping Place")]
     [IsoXmlTag("BalAtSfkpgPlc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateBalancePerSafekeepingPlace35> BalanceAtSafekeepingPlace { get; }
 
     /// <summary>
@@ -153,6 +161,8 @@ public interface IAggregateBalanceInformation38 : IIsoComponent
     [IsoId("_Z0x8O_fVEeiNZp_PtLohLw")]
     [DisplayName("Holding Additional Details")]
     [IsoXmlTag("HldgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text? HoldingAdditionalDetails { get; }
 
     /// <summary>
@@ -161,5 +171,6 @@ public interface IAggregateBalanceInformation38 : IIsoComponent
     [IsoId("_Z0x8Q_fVEeiNZp_PtLohLw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

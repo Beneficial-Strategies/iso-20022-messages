@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Event notification type and status.
 /// </summary>
 [IsoId("_P0SfATT_Ee2tRf29bleifQ")]
+[IsoDisplayName(@"Notification General Information")]
 public interface INotificationGeneralInformation4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INotificationGeneralInformation4 : IIsoComponent
     [IsoId("_baXxUDT_Ee2tRf29bleifQ")]
     [DisplayName("Notification Identification")]
     [IsoXmlTag("NtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NotificationIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface INotificationGeneralInformation4 : IIsoComponent
     [IsoId("_QLihcTT_Ee2tRf29bleifQ")]
     [DisplayName("Shareholder Rights Directive Indicator")]
     [IsoXmlTag("ShrhldrRghtsDrctvInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ShareholderRightsDirectiveIndicator { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface INotificationGeneralInformation4 : IIsoComponent
     [IsoId("_QLihczT_Ee2tRf29bleifQ")]
     [DisplayName("Confirmation Of Holding Required")]
     [IsoXmlTag("ConfOfHldgReqrd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ConfirmationOfHoldingRequired { get; }
 }

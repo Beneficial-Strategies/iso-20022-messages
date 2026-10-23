@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a meeting.
 /// </summary>
 [IsoId("_uG79UVuPEeSmO6RkXg92Lg")]
+[IsoDisplayName(@"Meeting Reference")]
 public interface IMeetingReference7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMeetingReference7 : IIsoComponent
     [IsoId("_ujNpo1uPEeSmO6RkXg92Lg")]
     [DisplayName("Meeting Identification")]
     [IsoXmlTag("MtgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MeetingIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IMeetingReference7 : IIsoComponent
     [IsoId("_ujNppVuPEeSmO6RkXg92Lg")]
     [DisplayName("Issuer Meeting Identification")]
     [IsoXmlTag("IssrMtgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? IssuerMeetingIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IMeetingReference7 : IIsoComponent
     [IsoId("_ujNpp1uPEeSmO6RkXg92Lg")]
     [DisplayName("Meeting Date And Time")]
     [IsoXmlTag("MtgDtAndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime MeetingDateAndTime { get; }
 
     /// <summary>
@@ -57,5 +63,8 @@ public interface IMeetingReference7 : IIsoComponent
     [IsoId("_ujNprVuPEeSmO6RkXg92Lg")]
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress1> Location { get; }
 }

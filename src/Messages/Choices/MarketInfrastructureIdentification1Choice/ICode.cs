@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketInfrastructureIdentificati
 /// Infrastructure through which the payment instruction is processed, as published in an external clearing system identification code list.
 /// </summary>
 [IsoId("_8BQtWaMgEeCJ6YNENx4h-w_-1124219834")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMarketInfrastructureIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>

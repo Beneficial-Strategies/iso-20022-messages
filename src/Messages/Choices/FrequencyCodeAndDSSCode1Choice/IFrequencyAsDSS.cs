@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FrequencyCodeAndDSSCode1Choice;
 /// </summary>
 [IsoId("_Q7Vk59p-Ed-ak6NoX_4Aeg_1533373125")]
 [IsoXmlTag("FrqcyAsDSS")]
+[IsoDisplayName(@"Frequency As DSS")]
 public interface IFrequencyAsDSS : IFrequencyCodeAndDSSCode1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IFrequencyAsDSS : IFrequencyCodeAndDSSCode1Choice, IIsoChoiceVa
     [IsoId("_P_luVtp-Ed-ak6NoX_4Aeg_858746211")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text Issuer { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IFrequencyAsDSS : IFrequencyCodeAndDSSCode1Choice, IIsoChoiceVa
     [IsoId("_P_luV9p-Ed-ak6NoX_4Aeg_858746099")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Information { get; }
 }

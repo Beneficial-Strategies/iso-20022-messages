@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the trade type.
 /// </summary>
 [IsoId("_6gAJsZBgEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Trade Type 4 Choice")]
 public interface ITradeType4Choice : IIsoChoice { }

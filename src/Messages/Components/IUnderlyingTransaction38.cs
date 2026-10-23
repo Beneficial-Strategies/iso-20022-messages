@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the request(s) to which the cancellation applies.
 /// </summary>
 [IsoId("_ICIBEHgzEfCdoODv2ypKfw")]
+[IsoDisplayName(@"Underlying Transaction38")]
 public interface IUnderlyingTransaction38 : IIsoComponent
 {
     /// <summary>

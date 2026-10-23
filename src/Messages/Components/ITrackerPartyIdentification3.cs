@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tracker Party Identification3.
 /// </summary>
 [IsoId("_0F6XpTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Tracker Party Identification3")]
 public interface ITrackerPartyIdentification3 : IIsoComponent
 {
     /// <summary>

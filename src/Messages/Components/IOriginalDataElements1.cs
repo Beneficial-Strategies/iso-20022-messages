@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ISO 8583:1987 bit 90 and ISO 8583 1993/2003 bit 56.
 /// </summary>
 [IsoId("_n6z5AESCEeeb1MmUPTrSMw")]
+[IsoDisplayName(@"Original Data Elements")]
 public interface IOriginalDataElements1 : IIsoComponent
 {
     /// <summary>
@@ -27,6 +28,7 @@ public interface IOriginalDataElements1 : IIsoComponent
     [IsoId("_dE_8MRs_EeqrvK3udMUsNQ")]
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
+    [IsoSimpleType(IsoSimpleType.Exact2AlphaNumericText)]
     Exact2AlphaNumericText? TransactionType { get; }
 
     /// <summary>
@@ -36,6 +38,7 @@ public interface IOriginalDataElements1 : IIsoComponent
     [IsoId("_a0c_YESFEeeb1MmUPTrSMw")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
+    [IsoSimpleType(IsoSimpleType.Max11NumericText)]
     Max11NumericText? AcquirerIdentification { get; }
 
     /// <summary>
@@ -45,6 +48,7 @@ public interface IOriginalDataElements1 : IIsoComponent
     [IsoId("_2ME30ESFEeeb1MmUPTrSMw")]
     [DisplayName("Sender Identification")]
     [IsoXmlTag("SndrId")]
+    [IsoSimpleType(IsoSimpleType.Max11NumericText)]
     Max11NumericText? SenderIdentification { get; }
 
     /// <summary>
@@ -54,6 +58,7 @@ public interface IOriginalDataElements1 : IIsoComponent
     [IsoId("_MWoV0ESDEeeb1MmUPTrSMw")]
     [DisplayName("Local Date Time")]
     [IsoXmlTag("LclDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? LocalDateTime { get; }
 
     /// <summary>
@@ -62,6 +67,8 @@ public interface IOriginalDataElements1 : IIsoComponent
     [IsoId("_ZM5doESDEeeb1MmUPTrSMw")]
     [DisplayName("Time Zone")]
     [IsoXmlTag("TmZone")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? TimeZone { get; }
 
     /// <summary>
@@ -70,6 +77,8 @@ public interface IOriginalDataElements1 : IIsoComponent
     [IsoId("_7RwREX7aEeiF_rVYo9MUdg")]
     [DisplayName("Transaction Reference")]
     [IsoXmlTag("TxRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionReference { get; }
 
     /// <summary>
@@ -79,6 +88,7 @@ public interface IOriginalDataElements1 : IIsoComponent
     [IsoId("_oT8VQESDEeeb1MmUPTrSMw")]
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TransmissionDateTime { get; }
 
     /// <summary>
@@ -88,6 +98,7 @@ public interface IOriginalDataElements1 : IIsoComponent
     [IsoId("_zBbysESDEeeb1MmUPTrSMw")]
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
+    [IsoSimpleType(IsoSimpleType.Max12NumericText)]
     Max12NumericText? SystemTraceAuditNumber { get; }
 
     /// <summary>
@@ -97,6 +108,7 @@ public interface IOriginalDataElements1 : IIsoComponent
     [IsoId("_OlWosX7bEeiF_rVYo9MUdg")]
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact12Text)]
     Exact12Text RetrievalReferenceNumber { get; }
 
     /// <summary>
@@ -122,6 +134,8 @@ public interface IOriginalDataElements1 : IIsoComponent
     [IsoId("_bqO0SH7bEeiF_rVYo9MUdg")]
     [DisplayName("Life Cycle Trace Identification Missing")]
     [IsoXmlTag("LifeCyclTracIdMssng")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? LifeCycleTraceIdentificationMissing { get; }
 
     /// <summary>
@@ -130,6 +144,8 @@ public interface IOriginalDataElements1 : IIsoComponent
     [IsoId("_bqO0SX7bEeiF_rVYo9MUdg")]
     [DisplayName("Acquirer Reference Data")]
     [IsoXmlTag("AcqrrRefData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AcquirerReferenceData { get; }
 
     /// <summary>
@@ -139,6 +155,7 @@ public interface IOriginalDataElements1 : IIsoComponent
     [IsoId("_bqO0Sn7bEeiF_rVYo9MUdg")]
     [DisplayName("Acquirer Reference Number")]
     [IsoXmlTag("AcqrrRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max23NumericText)]
     Max23NumericText? AcquirerReferenceNumber { get; }
 
     /// <summary>
@@ -148,5 +165,7 @@ public interface IOriginalDataElements1 : IIsoComponent
     [IsoId("_bqO0S37bEeiF_rVYo9MUdg")]
     [DisplayName("Card Issuer Reference Data")]
     [IsoXmlTag("CardIssrRefData")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? CardIssuerReferenceData { get; }
 }

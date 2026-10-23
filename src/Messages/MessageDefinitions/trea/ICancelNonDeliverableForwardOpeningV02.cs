@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// </summary>
 [IsoId("_L_cYkNE8Ed-BzquC8wXy7w_-895168583")]
 [IsoMessage("trea.003.001.02", "CclNDFOpngV02", "urn:iso:std:iso:20022:tech:xsd:trea.003.001.02")]
+[Description(@"Scope|The CancelNonDeliverableForwardOpening message is sent by a participant to a central system or to a counterparty to notify the cancellation of the opening of a non deliverable trade previously confirmed by the sender.|Usage|The message will contain a Related Reference to link it to the previously sent notification. It may contain a reason for cancellation.")]
+[IsoDisplayName(@"Cancel Non Deliverable Forward Opening V")]
 public interface ICancelNonDeliverableForwardOpeningV02 : IOuterRecord
 {
     /// <summary>

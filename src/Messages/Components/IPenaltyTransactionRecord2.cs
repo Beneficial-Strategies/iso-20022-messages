@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies further details of the transaction for which the penalties apply.
 /// </summary>
 [IsoId("_gkJhQahKEfCXwLUUylXgrQ")]
+[IsoDisplayName(@"Penalty Transaction Record2")]
 public interface IPenaltyTransactionRecord2 : IIsoComponent
 {
     /// <summary>

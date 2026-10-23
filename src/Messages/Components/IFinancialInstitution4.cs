@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to a financial institution required by business or regulation (for example, in money or funds transfer).
 /// </summary>
 [IsoId("_SIxmoEB9EeeXpbqDpLawug")]
+[IsoDisplayName(@"Financial Institution")]
 public interface IFinancialInstitution4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstitution4 : IIsoComponent
     [IsoId("_sUzOoEB9EeeXpbqDpLawug")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IFinancialInstitution4 : IIsoComponent
     [IsoId("_we4CYEB9EeeXpbqDpLawug")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IFinancialInstitution4 : IIsoComponent
     [IsoId("_IsGbYEB-EeeXpbqDpLawug")]
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Email { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IFinancialInstitution4 : IIsoComponent
     [IsoId("_P-j8YEB-EeeXpbqDpLawug")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? URLAddress { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface IFinancialInstitution4 : IIsoComponent
     [IsoId("_YqCewEB-EeeXpbqDpLawug")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PhoneNumber { get; }
 
     /// <summary>
@@ -65,6 +76,8 @@ public interface IFinancialInstitution4 : IIsoComponent
     [IsoId("_gBJ2QEB-EeeXpbqDpLawug")]
     [DisplayName("Customer Service")]
     [IsoXmlTag("CstmrSvc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CustomerService { get; }
 
     /// <summary>
@@ -73,5 +86,7 @@ public interface IFinancialInstitution4 : IIsoComponent
     [IsoId("_pUb_gEB-EeeXpbqDpLawug")]
     [DisplayName("Additional Contact Information")]
     [IsoXmlTag("AddtlCtctInf")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? AdditionalContactInformation { get; }
 }

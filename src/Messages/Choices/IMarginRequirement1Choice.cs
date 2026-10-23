@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the margin requirements for the variation margin and the segregated independent amount, or the segregated independent amount only.
 /// </summary>
 [IsoId("_QmevONp-Ed-ak6NoX_4Aeg_-593475226")]
+[IsoDisplayName(@"Margin Requirement 1 Choice")]
 public interface IMarginRequirement1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Service Provider Parameters4.
 /// </summary>
 [IsoId("_KiXH8Z-UEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Service Provider Parameters4")]
 public interface IServiceProviderParameters4 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IServiceProviderParameters4 : IIsoComponent
     /// </summary>
     [DisplayName("Service Provider Identification")]
     [IsoXmlTag("SvcPrvdrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification176> ServiceProviderIdentification { get; }
 
     /// <summary>
@@ -37,6 +39,7 @@ public interface IServiceProviderParameters4 : IIsoComponent
     /// </summary>
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> ApplicationIdentification { get; }
 
     /// <summary>
@@ -44,6 +47,7 @@ public interface IServiceProviderParameters4 : IIsoComponent
     /// </summary>
     [DisplayName("Host")]
     [IsoXmlTag("Hst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcquirerHostConfiguration10> Host { get; }
 
     /// <summary>
@@ -51,5 +55,6 @@ public interface IServiceProviderParameters4 : IIsoComponent
     /// </summary>
     [DisplayName("Non Financial Action Supported")]
     [IsoXmlTag("NonFinActnSpprtd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<NonFinancialRequestType2Code> NonFinancialActionSupported { get; }
 }

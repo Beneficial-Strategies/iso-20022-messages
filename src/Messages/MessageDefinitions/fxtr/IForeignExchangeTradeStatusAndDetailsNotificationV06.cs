@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
     "FXTradStsAndDtlsNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06"
 )]
+[IsoDisplayName(@"Foreign Exchange Trade Status And Details Notification V06")]
 public interface IForeignExchangeTradeStatusAndDetailsNotificationV06 : IOuterRecord
 {
     /// <summary>
@@ -92,6 +93,7 @@ public interface IForeignExchangeTradeStatusAndDetailsNotificationV06 : IOuterRe
     /// </summary>
     [DisplayName("Split Trade Information")]
     [IsoXmlTag("SpltTradInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISplitTradeDetails5> SplitTradeInformation { get; }
 
     /// <summary>
@@ -113,5 +115,6 @@ public interface IForeignExchangeTradeStatusAndDetailsNotificationV06 : IOuterRe
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

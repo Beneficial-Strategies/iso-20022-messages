@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Type of product and assets to be transferred.
 /// </summary>
 [IsoId("2984a688-e9d8-4f03-990e-ce721af75b18")]
+[IsoDisplayName(@"Portfolio Transfer18")]
 public interface IPortfolioTransfer18 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IPortfolioTransfer18 : IIsoComponent
     [IsoId("df217b38-7074-49fb-abed-c08e1c1f9c2c")]
     [DisplayName("All Other Cash")]
     [IsoXmlTag("AllOthrCsh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAllOtherCash1> AllOtherCash { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface IPortfolioTransfer18 : IIsoComponent
     [IsoId("dc2f3aed-2063-4a70-be1c-5c8250ca54ce")]
     [DisplayName("Cash All")]
     [IsoXmlTag("CshAll")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAll1> CashAll { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface IPortfolioTransfer18 : IIsoComponent
     [IsoId("6668440b-51d7-403d-bf9f-1a4ccfa6a9f7")]
     [DisplayName("Residual Cash")]
     [IsoXmlTag("RsdlCsh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IResidualCash2> ResidualCash { get; }
 
     /// <summary>
@@ -97,6 +101,7 @@ public interface IPortfolioTransfer18 : IIsoComponent
     [IsoId("47772322-15d2-48df-b0a4-0531a3192a7a")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument112> FinancialInstrumentAssetForTransfer { get; }
 
     /// <summary>
@@ -105,5 +110,6 @@ public interface IPortfolioTransfer18 : IIsoComponent
     [IsoId("d61901f4-fa0e-4180-beb9-a5fb1362924b")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

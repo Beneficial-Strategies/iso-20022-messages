@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a cash forecast report.
 /// </summary>
 [IsoId("_RPmku9p-Ed-ak6NoX_4Aeg_-256800213")]
+[IsoDisplayName(@"Fund Detailed Confirmed Cash Forecast Report")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IFundDetailedConfirmedCashForecastReport2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IFundDetailedConfirmedCashForecastReport2 : IIsoComponent
     [IsoId("_RPmkvNp-Ed-ak6NoX_4Aeg_-256800152")]
     [DisplayName("Fund Cash Forecast Details")]
     [IsoXmlTag("FndCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundCashForecast4> FundCashForecastDetails { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IFundDetailedConfirmedCashForecastReport2 : IIsoComponent
     [IsoId("_RPwVsNp-Ed-ak6NoX_4Aeg_-256800194")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

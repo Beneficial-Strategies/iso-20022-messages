@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies an expected date and a due date for the interest payment.
 /// </summary>
 [IsoId("_L71BetOJEeSQ_-lmj1tzfw")]
+[IsoDisplayName(@"Interest Payment Date Range")]
 public interface IInterestPaymentDateRange1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInterestPaymentDateRange1 : IIsoComponent
     [IsoId("_L71BfdOJEeSQ_-lmj1tzfw")]
     [DisplayName("Interest Schedule Identification")]
     [IsoXmlTag("IntrstSchdlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InterestScheduleIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IInterestPaymentDateRange1 : IIsoComponent
     [IsoId("_L71Be9OJEeSQ_-lmj1tzfw")]
     [DisplayName("Expected Date")]
     [IsoXmlTag("XpctdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedDate { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IInterestPaymentDateRange1 : IIsoComponent
     [IsoId("_L71BfNOJEeSQ_-lmj1tzfw")]
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DueDate { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the Identification of the parties settling the contract.
 /// </summary>
 [IsoId("_AvxQobQ0EemI67HK7aviyg")]
+[IsoDisplayName(@"Settlement Parties 32 Choice")]
 public interface ISettlementParties32Choice : IIsoChoice { }

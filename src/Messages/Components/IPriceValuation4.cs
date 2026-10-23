@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Calculation of the net asset value for an investment fund/fund class.
 /// </summary>
 [IsoId("_et2_cRl_EeKxsrht2duUcg")]
+[IsoDisplayName(@"Price Valuation")]
 public interface IPriceValuation4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPriceValuation4 : IIsoComponent
     [IsoId("_fDeDGRl_EeKxsrht2duUcg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IPriceValuation4 : IIsoComponent
     [IsoId("_fDeDLRl_EeKxsrht2duUcg")]
     [DisplayName("Total NAV")]
     [IsoXmlTag("TtlNAV")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyAndAmount> TotalNAV { get; }
 
     /// <summary>
@@ -105,6 +109,7 @@ public interface IPriceValuation4 : IIsoComponent
     [IsoId("_fDeDRRl_EeKxsrht2duUcg")]
     [DisplayName("Official Valuation Indicator")]
     [IsoXmlTag("OffclValtnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator OfficialValuationIndicator { get; }
 
     /// <summary>
@@ -113,6 +118,7 @@ public interface IPriceValuation4 : IIsoComponent
     [IsoId("_fDeDSRl_EeKxsrht2duUcg")]
     [DisplayName("Suspended Indicator")]
     [IsoXmlTag("SspdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SuspendedIndicator { get; }
 
     /// <summary>
@@ -121,6 +127,7 @@ public interface IPriceValuation4 : IIsoComponent
     [IsoId("_fDeDTRl_EeKxsrht2duUcg")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice15> PriceDetails { get; }
 
     /// <summary>
@@ -129,6 +136,7 @@ public interface IPriceValuation4 : IIsoComponent
     [IsoId("_fDeDURl_EeKxsrht2duUcg")]
     [DisplayName("Valuation Statistics")]
     [IsoXmlTag("ValtnSttstcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IValuationStatistics3> ValuationStatistics { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a settlement institution.
 /// </summary>
 [IsoId("_VzJBwXSBEfC68Y4jZPNEug")]
+[IsoDisplayName(@"Settlement Institution Data1")]
 public interface ISettlementInstitutionData1 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ISettlementInstitutionData1 : IIsoComponent
     [IsoId("_8g0Me3SBEfC68Y4jZPNEug")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface ISettlementInstitutionData1 : IIsoComponent
     [IsoId("_8g0MfHSBEfC68Y4jZPNEug")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>
@@ -81,5 +84,6 @@ public interface ISettlementInstitutionData1 : IIsoComponent
     [IsoId("_8g0MfXSBEfC68Y4jZPNEug")]
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData20> LocalData { get; }
 }

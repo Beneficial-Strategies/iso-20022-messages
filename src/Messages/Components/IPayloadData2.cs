@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payload Data2.
 /// </summary>
 [IsoId("_nn0a4exNEe6M4Kz-BKMIbA")]
+[IsoDisplayName(@"Payload Data2")]
 public interface IPayloadData2 : IIsoComponent
 {
     /// <summary>

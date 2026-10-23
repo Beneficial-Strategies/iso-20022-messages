@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Remittance information that provides all remittance address elements, that enables the matching, i.e. reconciliation, of a payment with the items that the transaction in intended to settle.
 /// </summary>
 [IsoId("_QFjMYdp-Ed-ak6NoX_4Aeg_-1561763068")]
+[IsoDisplayName(@"Remittance Location")]
 public interface IRemittanceLocation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRemittanceLocation1 : IIsoComponent
     [IsoId("_QFjMYtp-Ed-ak6NoX_4Aeg_-1560839700")]
     [DisplayName("Remittance Identification")]
     [IsoXmlTag("RmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RemittanceIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IRemittanceLocation1 : IIsoComponent
     [IsoId("_QFjMZNp-Ed-ak6NoX_4Aeg_-1561759732")]
     [DisplayName("Remittance Location Electronic Address")]
     [IsoXmlTag("RmtLctnElctrncAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? RemittanceLocationElectronicAddress { get; }
 
     /// <summary>

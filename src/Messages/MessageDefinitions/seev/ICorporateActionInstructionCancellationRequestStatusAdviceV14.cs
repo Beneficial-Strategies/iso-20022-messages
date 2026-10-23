@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnInstrCxlReqStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.041.001.14"
 )]
+[IsoDisplayName(@"Corporate Action Instruction Cancellation Request Status Advice V14")]
 public interface ICorporateActionInstructionCancellationRequestStatusAdviceV14 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface ICorporateActionInstructionCancellationRequestStatusAdviceV14 :
     /// </summary>
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification33> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public interface ICorporateActionInstructionCancellationRequestStatusAdviceV14 :
     /// </summary>
     [DisplayName("Instruction Cancellation Request Status")]
     [IsoXmlTag("InstrCxlReqSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionCancellationRequestStatus17Choice> InstructionCancellationRequestStatus { get; }
 
     /// <summary>
@@ -71,5 +74,6 @@ public interface ICorporateActionInstructionCancellationRequestStatusAdviceV14 :
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

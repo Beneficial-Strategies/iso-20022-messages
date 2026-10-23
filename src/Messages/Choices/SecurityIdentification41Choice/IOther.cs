@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice;
 /// </summary>
 [IsoId("_idD061o2Ee23K4GXSpBSeg")]
 [IsoXmlTag("Othr")]
+[IsoDisplayName(@"Other")]
 public interface IOther : ISecurityIdentification41Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOther : ISecurityIdentification41Choice, IIsoChoiceVariant
     [IsoId("_D1mToycCEe2BYL6XeAmCWw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text Identification { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IOther : ISecurityIdentification41Choice, IIsoChoiceVariant
     [IsoId("_D1mTpScCEe2BYL6XeAmCWw")]
     [DisplayName("Source")]
     [IsoXmlTag("Src")]
+    [IsoSimpleType(IsoSimpleType.Max100Text)]
+    [StringLength(100, MinimumLength = 1)]
     Max100Text Source { get; }
 }

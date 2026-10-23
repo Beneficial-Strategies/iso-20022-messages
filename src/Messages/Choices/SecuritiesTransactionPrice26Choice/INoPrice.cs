@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice26Choi
 
 /// <summary>Descriptive fields capturing where no strike price is known.</summary>
 [IsoId("_L_nXsK2kEfCfRtNoJv1jFQ")]
+[IsoDisplayName(@"No Price")]
 public interface INoPrice : ISecuritiesTransactionPrice26Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

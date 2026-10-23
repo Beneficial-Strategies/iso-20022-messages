@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Calculation of the net asset value for an investment fund/fund class.
 /// </summary>
 [IsoId("_SbJx2tp-Ed-ak6NoX_4Aeg_-1025425136")]
+[IsoDisplayName(@"Price Valuation")]
 public interface IPriceValuation3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPriceValuation3 : IIsoComponent
     [IsoId("_SbJx29p-Ed-ak6NoX_4Aeg_-1024504079")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IPriceValuation3 : IIsoComponent
     [IsoId("_SbTi0dp-Ed-ak6NoX_4Aeg_-1025424673")]
     [DisplayName("Total NAV")]
     [IsoXmlTag("TtlNAV")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyAndAmount> TotalNAV { get; }
 
     /// <summary>
@@ -105,6 +109,7 @@ public interface IPriceValuation3 : IIsoComponent
     [IsoId("_SbTi19p-Ed-ak6NoX_4Aeg_1135954512")]
     [DisplayName("Official Valuation Indicator")]
     [IsoXmlTag("OffclValtnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator OfficialValuationIndicator { get; }
 
     /// <summary>
@@ -113,6 +118,7 @@ public interface IPriceValuation3 : IIsoComponent
     [IsoId("_SbTi2Np-Ed-ak6NoX_4Aeg_-1025424110")]
     [DisplayName("Suspended Indicator")]
     [IsoXmlTag("SspdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SuspendedIndicator { get; }
 
     /// <summary>
@@ -121,6 +127,7 @@ public interface IPriceValuation3 : IIsoComponent
     [IsoId("_SbTi2dp-Ed-ak6NoX_4Aeg_-1024503551")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice15> PriceDetails { get; }
 
     /// <summary>
@@ -129,6 +136,7 @@ public interface IPriceValuation3 : IIsoComponent
     [IsoId("_SbdT0Np-Ed-ak6NoX_4Aeg_-1024503940")]
     [DisplayName("Valuation Statistics")]
     [IsoXmlTag("ValtnSttstcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IValuationStatistics3> ValuationStatistics { get; }
 
     /// <summary>

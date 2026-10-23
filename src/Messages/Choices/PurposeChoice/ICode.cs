@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PurposeChoice;
 /// Specifies the type of transaction that resulted in the payment initiation in coded form.
 /// </summary>
 [IsoId("_Rbhg19p-Ed-ak6NoX_4Aeg_-1761336447")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPurposeChoice, IIsoChoiceVariant
 {
     /// <summary>

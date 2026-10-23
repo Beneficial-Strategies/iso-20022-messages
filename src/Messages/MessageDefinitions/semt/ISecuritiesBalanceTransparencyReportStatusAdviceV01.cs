@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesBalTrnsprncyRptStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:semt.042.001.01"
 )]
+[Description(@"SCOPE||An account owner, such as a custodian, central securities depository, international securities depository or transfer agent, sends the SecuritiesBalanceTransparencyReportStatusAdvice message in response to a SecuritiesBalanceTransparencyReport, to accept or reject the statement of holdings as sent in a SecuritiesBalanceTransparencyReport.||USAGE|The SecuritiesBalanceTransparencyReportStatusAdvice is used to accept (Accepted), partially accept (Accepted With Exception) or reject (Rejected) a previously received SecuritiesBalanceTransparencyReport.")]
+[IsoDisplayName(@"Securities Balance Transparency Report Status Advice V")]
 public interface ISecuritiesBalanceTransparencyReportStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -69,6 +71,9 @@ public interface ISecuritiesBalanceTransparencyReportStatusAdviceV01 : IOuterRec
     [IsoId("_2EcUQUioEeSlHoYg_EudVQ")]
     [DisplayName("Number Of Items Per Status")]
     [IsoXmlTag("NbOfItmsPerSts")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfItemsPerStatus1> NumberOfItemsPerStatus { get; }
 
     /// <summary>
@@ -77,5 +82,6 @@ public interface ISecuritiesBalanceTransparencyReportStatusAdviceV01 : IOuterRec
     [IsoId("_SOA1I73PEeO2FLWuu_JIqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

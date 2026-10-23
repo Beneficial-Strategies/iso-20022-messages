@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status14Choice;
 /// Status of the account opening instruction or account modification instruction.
 /// </summary>
 [IsoId("_Hri4MR6rEeODgY9qxg6TFA")]
+[IsoDisplayName(@"Status")]
 public interface IStatus : IStatus14Choice, IIsoChoiceVariant
 {
     /// <summary>

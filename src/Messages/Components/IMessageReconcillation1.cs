@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains message reconciliation data.
 /// </summary>
 [IsoId("_rxPTtsyxEeiqqJhU2tqK8A")]
+[IsoDisplayName(@"Message Reconcillation")]
 public interface IMessageReconcillation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IMessageReconcillation1 : IIsoComponent
     [IsoId("_rxPTuMyxEeiqqJhU2tqK8A")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IMessageReconcillation1 : IIsoComponent
     [IsoId("_rxPTucyxEeiqqJhU2tqK8A")]
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Count { get; }
 }

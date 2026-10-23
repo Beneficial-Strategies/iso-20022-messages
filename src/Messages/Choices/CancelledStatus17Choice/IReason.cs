@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledStatus17Choice;
 /// <summary>
 /// Reason.
 /// </summary>
+[IsoDisplayName(@"Reason")]
 public interface IReason : ICancelledStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>

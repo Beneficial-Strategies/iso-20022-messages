@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities4Choice;
 /// <summary>
 /// Original And Current Face Amount.
 /// </summary>
+[IsoDisplayName(@"Original And Current Face Amount")]
 public interface IOriginalAndCurrentFaceAmount : ITransactionQuantities4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the detailed information for the investigation response.
 /// </summary>
 [IsoId("9cb13d85-f189-499e-ae47-75a9c98d16d4")]
+[IsoDisplayName(@"Investigation Data18")]
 public interface IInvestigationData18 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IInvestigationData18 : IIsoComponent
     [IsoId("8dc301f4-d61a-4d30-a8f6-32e2b756d682")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument12> EnclosedFile { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface IInvestigationData18 : IIsoComponent
     [IsoId("34aa4825-a535-46ea-adf1-1fec80834ce4")]
     [DisplayName("Related File Data")]
     [IsoXmlTag("RltdFileData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFileData1> RelatedFileData { get; }
 
     /// <summary>

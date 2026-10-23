@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "PmtRgltryInfNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:auth.024.001.02"
 )]
+[Description(@"The PaymentRegulatoryInformationNotification message is sent by the reporting party to the registration agent to provide details on the transaction, when a payment has to be recorded against the registered currency control contract. ||In some cases, the registration agent may also sent this message to the reporting party.")]
+[IsoDisplayName(@"Payment Regulatory Information Notification V")]
 public interface IPaymentRegulatoryInformationNotificationV02 : IOuterRecord
 {
     /// <summary>
@@ -34,6 +36,7 @@ public interface IPaymentRegulatoryInformationNotificationV02 : IOuterRecord
     [IsoId("_bf9R722PEei3KuUgpx7Xcw")]
     [DisplayName("Transaction Notification")]
     [IsoXmlTag("TxNtfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReportingNotification2> TransactionNotification { get; }
 
     /// <summary>
@@ -42,5 +45,6 @@ public interface IPaymentRegulatoryInformationNotificationV02 : IOuterRecord
     [IsoId("_bf9R8W2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

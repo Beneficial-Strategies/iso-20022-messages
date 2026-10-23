@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of providing the opening conditions or fixing conditions for an NDF instruction.
 /// </summary>
 [IsoId("_1koBMJUIEeak6e8_Fc5fQg")]
+[IsoDisplayName(@"NDF Opening Fixing 1 Choice")]
 public interface INDFOpeningFixing1Choice : IIsoChoice { }

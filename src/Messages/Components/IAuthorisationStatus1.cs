@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Authorisation status about the fraudulent transaction.
 /// </summary>
 [IsoId("_HhcNkHbNEeef9c2nwgY9Xw")]
+[IsoDisplayName(@"Authorisation Status")]
 public interface IAuthorisationStatus1 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface IAuthorisationStatus1 : IIsoComponent
     [IsoId("_yZqtIHbNEeef9c2nwgY9Xw")]
     [DisplayName("Authorisation Indicator")]
     [IsoXmlTag("AuthstnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AuthorisationIndicator { get; }
 
     /// <summary>
@@ -35,5 +37,7 @@ public interface IAuthorisationStatus1 : IIsoComponent
     [IsoId("_jsIsQHbOEeef9c2nwgY9Xw")]
     [DisplayName("Other Authorisation Entity")]
     [IsoXmlTag("OthrAuthstnNtty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherAuthorisationEntity { get; }
 }

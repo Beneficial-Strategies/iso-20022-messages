@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate21Choice;
 /// </summary>
 [IsoId("_GPqvsQ1IEeqV4s5SpzR1dQ")]
 [IsoXmlTag("Fxd")]
+[IsoDisplayName(@"Fixed")]
 public interface IFixed : IInterestRate21Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IFixed : IInterestRate21Choice, IIsoChoiceVariant
     [IsoId("_mY0Z4_OFEeaS7fYULSI4_Q")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>
@@ -26,6 +28,8 @@ public interface IFixed : IInterestRate21Choice, IIsoChoiceVariant
     [IsoId("_mY0Z5fOFEeaS7fYULSI4_Q")]
     [DisplayName("Day Count")]
     [IsoXmlTag("DayCnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DayCount { get; }
 
     /// <summary>

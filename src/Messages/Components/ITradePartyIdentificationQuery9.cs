@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Query of a trade party based on the identification.
 /// </summary>
 [IsoId("_wy740dLlEem1A4OOmCK97A")]
+[IsoDisplayName(@"Trade Party Identification Query")]
 public interface ITradePartyIdentificationQuery9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradePartyIdentificationQuery9 : IIsoComponent
     [IsoId("_w3bXQ9LlEem1A4OOmCK97A")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<LEIIdentifier> LEI { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITradePartyIdentificationQuery9 : IIsoComponent
     [IsoId("_5YHl8dLlEem1A4OOmCK97A")]
     [DisplayName("Country Code")]
     [IsoXmlTag("CtryCd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> CountryCode { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITradePartyIdentificationQuery9 : IIsoComponent
     [IsoId("_w3bXRdLlEem1A4OOmCK97A")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<AnyBICDec2014Identifier> AnyBIC { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ITradePartyIdentificationQuery9 : IIsoComponent
     [IsoId("_w3bXR9LlEem1A4OOmCK97A")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max50Text> ClientIdentification { get; }
 
     /// <summary>

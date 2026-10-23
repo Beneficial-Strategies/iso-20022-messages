@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
 /// </summary>
 [IsoId("_-81ju4ftEeevKP8c-ilVhA")]
+[IsoDisplayName(@"Investment Account")]
 public interface IInvestmentAccount65 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInvestmentAccount65 : IIsoComponent
     [IsoId("__N8h14ftEeevKP8c-ilVhA")]
     [DisplayName("Owner Identification")]
     [IsoXmlTag("OwnrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification113> OwnerIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IInvestmentAccount65 : IIsoComponent
     [IsoId("__N8h2YftEeevKP8c-ilVhA")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IInvestmentAccount65 : IIsoComponent
     [IsoId("__N8h24ftEeevKP8c-ilVhA")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountName { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface IInvestmentAccount65 : IIsoComponent
     [IsoId("__N8h3YftEeevKP8c-ilVhA")]
     [DisplayName("Account Designation")]
     [IsoXmlTag("AcctDsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountDesignation { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IInvestmentAccount65 : IIsoComponent
     [IsoId("__N8h4YftEeevKP8c-ilVhA")]
     [DisplayName("Dematerialised Indicator")]
     [IsoXmlTag("DmtrlsdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DematerialisedIndicator { get; }
 
     /// <summary>

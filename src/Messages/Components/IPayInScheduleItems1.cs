@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.
 /// </summary>
 [IsoId("_SGKyMeKNEeKM3LYZSgb7xw")]
+[IsoDisplayName(@"Pay In Schedule Items")]
 public interface IPayInScheduleItems1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPayInScheduleItems1 : IIsoComponent
     [IsoId("_SkkldeKNEeKM3LYZSgb7xw")]
     [DisplayName("Deadline")]
     [IsoXmlTag("Ddln")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime Deadline { get; }
 }

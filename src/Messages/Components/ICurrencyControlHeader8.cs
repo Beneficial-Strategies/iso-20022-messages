@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency Control Header8.
 /// </summary>
 [IsoId("_zBVVITEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Currency Control Header8")]
 public interface ICurrencyControlHeader8 : IIsoComponent
 {
     /// <summary>

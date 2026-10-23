@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice13Choi
 /// Used to express differences in interest rates, for example, a difference of 0.10% is equivalent to a change of 10 basis points.
 /// </summary>
 [IsoId("_nbz0kQFMEeqUa4noT3P56A")]
+[IsoDisplayName(@"Basis Point Spread")]
 public interface IBasisPointSpread : ISecuritiesTransactionPrice13Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBasisPointSpread : ISecuritiesTransactionPrice13Choice, IIsoCh
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("BsisPtSprd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

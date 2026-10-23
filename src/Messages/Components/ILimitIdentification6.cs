@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the elements used to uniquely identify a risk management limit defined in the system.
 /// </summary>
 [IsoId("__4vC3249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Limit Identification")]
 public interface ILimitIdentification6 : IIsoComponent
 {
     /// <summary>

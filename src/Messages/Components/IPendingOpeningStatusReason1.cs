@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for a pending account opening status.
 /// </summary>
 [IsoId("_nZh4IWCJEeabZtzjEVWYCQ")]
+[IsoDisplayName(@"Pending Opening Status Reason")]
 public interface IPendingOpeningStatusReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IPendingOpeningStatusReason1 : IIsoComponent
     [IsoId("_nyhm82CJEeabZtzjEVWYCQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

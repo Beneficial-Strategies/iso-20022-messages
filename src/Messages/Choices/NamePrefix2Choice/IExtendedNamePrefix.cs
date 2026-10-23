@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NamePrefix2Choice;
 /// Name prefix that is extended.
 /// </summary>
 [IsoId("_PxoK8A2fEeSNWNtJlXOAhg")]
+[IsoDisplayName(@"Extended Name Prefix")]
 public interface IExtendedNamePrefix : INamePrefix2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IExtendedNamePrefix : INamePrefix2Choice, IIsoChoiceVariant
     /// Code and / or description for values that are not yet part of the related code list.
     /// </summary>
     [IsoXmlTag("XtndedNmPrfx")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code Value { get; }
 }

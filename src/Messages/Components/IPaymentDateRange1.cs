@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies expected and due payment date.
 /// </summary>
 [IsoId("_K0tXcdOAEeSQ_-lmj1tzfw")]
+[IsoDisplayName(@"Payment Date Range")]
 public interface IPaymentDateRange1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentDateRange1 : IIsoComponent
     [IsoId("_uqWlEdOAEeSQ_-lmj1tzfw")]
     [DisplayName("Payment Schedule Identification")]
     [IsoXmlTag("PmtSchdlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentScheduleIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IPaymentDateRange1 : IIsoComponent
     [IsoId("_LABPkdOAEeSQ_-lmj1tzfw")]
     [DisplayName("Expected Date")]
     [IsoXmlTag("XpctdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedDate { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IPaymentDateRange1 : IIsoComponent
     [IsoId("_LABPk9OAEeSQ_-lmj1tzfw")]
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DueDate { get; }
 }

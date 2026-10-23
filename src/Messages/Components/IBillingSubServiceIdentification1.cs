@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the identification of a billing subservice.
 /// </summary>
 [IsoId("_6Oww65qlEeGSON8vddiWzQ_-1562075356")]
+[IsoDisplayName(@"Billing Sub Service Identification")]
 public interface IBillingSubServiceIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IBillingSubServiceIdentification1 : IIsoComponent
     [IsoId("_6Oww7ZqlEeGSON8vddiWzQ_83192079")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

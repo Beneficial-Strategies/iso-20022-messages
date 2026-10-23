@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party49Choice;
 /// </summary>
 [IsoId("_dbeBZeEpEemRzcIkmUETeA")]
 [IsoXmlTag("PrvtId")]
+[IsoDisplayName(@"Private Identification")]
 public interface IPrivateIdentification : IParty49Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IPrivateIdentification : IParty49Choice, IIsoChoiceVariant
     [IsoId("_mV-eQeEpEemRzcIkmUETeA")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface IPrivateIdentification : IParty49Choice, IIsoChoiceVariant
     [IsoId("_dpOwleEpEemRzcIkmUETeA")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericPersonIdentification1> Other { get; }
 }

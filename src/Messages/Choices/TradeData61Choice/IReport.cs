@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData61Choice;
 /// <summary>
 /// Report.
 /// </summary>
+[IsoDisplayName(@"Report")]
 public interface IReport : ITradeData61Choice, IIsoChoiceVariant
 {
     /// <summary>

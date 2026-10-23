@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the file action to be performed.
 /// </summary>
 [IsoId("_4VL0wZb7Eeuc6pwKtqbEVQ")]
+[IsoDisplayName(@"File Action Details")]
 public interface IFileActionDetails2 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IFileActionDetails2 : IIsoComponent
     [IsoId("_4bWuMZb7Eeuc6pwKtqbEVQ")]
     [DisplayName("File Name")]
     [IsoXmlTag("FileNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? FileName { get; }
 
     /// <summary>
@@ -44,6 +47,7 @@ public interface IFileActionDetails2 : IIsoComponent
     [IsoId("_4bWuNZb7Eeuc6pwKtqbEVQ")]
     [DisplayName("Action Date")]
     [IsoXmlTag("ActnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ActionDate { get; }
 
     /// <summary>
@@ -53,5 +57,7 @@ public interface IFileActionDetails2 : IIsoComponent
     [IsoId("_4bWuN5b7Eeuc6pwKtqbEVQ")]
     [DisplayName("File Security Code")]
     [IsoXmlTag("FileSctyCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FileSecurityCode { get; }
 }

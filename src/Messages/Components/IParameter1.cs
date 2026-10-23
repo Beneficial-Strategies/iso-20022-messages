@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters associated to a cryptographic algorithm.
 /// </summary>
 [IsoId("_Sw--tQEcEeCQm6a_G2yO_w_1068010819")]
+[IsoDisplayName(@"Parameter")]
 public interface IParameter1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IParameter1 : IIsoComponent
     [IsoId("_Sw--tgEcEeCQm6a_G2yO_w_498114806")]
     [DisplayName("Initialisation Vector")]
     [IsoXmlTag("InitlstnVctr")]
+    [IsoSimpleType(IsoSimpleType.Max500Binary)]
     Max500Binary? InitialisationVector { get; }
 }

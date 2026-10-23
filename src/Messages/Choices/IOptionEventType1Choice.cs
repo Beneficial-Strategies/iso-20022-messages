@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to specify the type of option event.
 /// </summary>
 [IsoId("_8K8KkJR0Eeeymf3kpbtgrA")]
+[IsoDisplayName(@"Option Event Type 1 Choice")]
 public interface IOptionEventType1Choice : IIsoChoice { }

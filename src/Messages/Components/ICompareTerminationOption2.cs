@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a termination option.
 /// </summary>
 [IsoId("_GieqUdSaEemZdYGWu384Zw")]
+[IsoDisplayName(@"Compare Termination Option")]
 public interface ICompareTerminationOption2 : IIsoComponent
 {
     /// <summary>

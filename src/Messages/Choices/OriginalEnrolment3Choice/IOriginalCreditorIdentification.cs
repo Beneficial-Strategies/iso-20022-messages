@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalEnrolment3Choice;
 /// <summary>
 /// Original Creditor Identification.
 /// </summary>
+[IsoDisplayName(@"Original Creditor Identification")]
 public interface IOriginalCreditorIdentification : IOriginalEnrolment3Choice, IIsoChoiceVariant
 {
     /// <summary>

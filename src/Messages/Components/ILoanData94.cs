@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the loan data details in case of a repurchase trade transaction.
 /// </summary>
 [IsoId("_xEREgbOYEemDE9K-I5TT8Q")]
+[IsoDisplayName(@"Loan Data")]
 public interface ILoanData94 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILoanData94 : IIsoComponent
     [IsoId("_xJWY0bOYEemDE9K-I5TT8Q")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text UniqueTradeIdentifier { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ILoanData94 : IIsoComponent
     [IsoId("_xJWY07OYEemDE9K-I5TT8Q")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDate { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ILoanData94 : IIsoComponent
     [IsoId("_xJWY1bOYEemDE9K-I5TT8Q")]
     [DisplayName("Execution Date Time")]
     [IsoXmlTag("ExctnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ExecutionDateTime { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ILoanData94 : IIsoComponent
     [IsoId("_xJWY2bOYEemDE9K-I5TT8Q")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? TradingVenue { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface ILoanData94 : IIsoComponent
     [IsoId("_xJWY3bOYEemDE9K-I5TT8Q")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValueDate { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface ILoanData94 : IIsoComponent
     [IsoId("_xJWY37OYEemDE9K-I5TT8Q")]
     [DisplayName("Minimum Notice Period")]
     [IsoXmlTag("MinNtcePrd")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber? MinimumNoticePeriod { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface ILoanData94 : IIsoComponent
     [IsoId("_xJWY4bOYEemDE9K-I5TT8Q")]
     [DisplayName("Earliest Call Back Date")]
     [IsoXmlTag("EarlstCallBckDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EarliestCallBackDate { get; }
 
     /// <summary>
@@ -97,6 +106,7 @@ public interface ILoanData94 : IIsoComponent
     [IsoId("_xJWY5bOYEemDE9K-I5TT8Q")]
     [DisplayName("Delivery By Value")]
     [IsoXmlTag("DlvryByVal")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DeliveryByValue { get; }
 
     /// <summary>
@@ -113,6 +123,7 @@ public interface ILoanData94 : IIsoComponent
     [IsoId("_xJWY67OYEemDE9K-I5TT8Q")]
     [DisplayName("Term")]
     [IsoXmlTag("Term")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContractTerm3Choice> Term { get; }
 
     /// <summary>
@@ -137,5 +148,6 @@ public interface ILoanData94 : IIsoComponent
     [IsoId("_xJWY77OYEemDE9K-I5TT8Q")]
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TerminationDate { get; }
 }

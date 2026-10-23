@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_2_0twS0lEeSRe9rElPHBfg")]
 [IsoMessage("secl.008.001.03", "BuyInRspn", "urn:iso:std:iso:20022:tech:xsd:secl.008.001.03")]
+[Description(@"Scope|The BuyInResponse message is sent by the clearing member to the central counterparty as a response to the previous buy-in notification message.||The message definition is intended for use with the ISO 20022 Business Application Header.||Usage|The BuyInResponse may be sent in response to the BuyInNotification message. However, the use of this message in the buy in process is optional and depends on the rules set by each central counterparty.")]
+[IsoDisplayName(@"Buy In Response V")]
 public interface IBuyInResponseV03 : IOuterRecord
 {
     /// <summary>
@@ -26,6 +28,8 @@ public interface IBuyInResponseV03 : IOuterRecord
     [IsoId("_2_0twy0lEeSRe9rElPHBfg")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -50,5 +54,6 @@ public interface IBuyInResponseV03 : IOuterRecord
     [IsoId("_2_0tyS0lEeSRe9rElPHBfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

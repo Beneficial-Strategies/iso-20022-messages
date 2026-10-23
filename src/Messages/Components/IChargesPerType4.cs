@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Charges Per Type4.
 /// </summary>
 [IsoId("_6BIY6zEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Charges Per Type4")]
 public interface IChargesPerType4 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface IChargesPerType4 : IIsoComponent
     /// </summary>
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChargesPerTypeRecord4> Record { get; }
 
     /// <summary>

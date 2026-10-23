@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification8Choice;
 /// <summary>
 /// Proprietary Identification.
 /// </summary>
+[IsoDisplayName(@"Proprietary Identification")]
 public interface IProprietaryIdentification : IPaymentIdentification8Choice, IIsoChoiceVariant
 {
     /// <summary>

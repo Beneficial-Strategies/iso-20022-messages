@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentDirection2Choice;
 /// Indicates the direction of payment for asset or mortgage backed securities, ie, whether the repaid capital is distributed (payment direction is down) or capitalized (payment direction is up).
 /// </summary>
 [IsoId("_Qu-j59p-Ed-ak6NoX_4Aeg_1880063525")]
+[IsoDisplayName(@"Indicator")]
 public interface IIndicator : IPaymentDirection2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIndicator : IPaymentDirection2Choice, IIsoChoiceVariant
     /// The direction of capital repayment for asset backed securities.
     /// </summary>
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.PaymentDirectionIndicator)]
     PaymentDirectionIndicator Value { get; }
 }

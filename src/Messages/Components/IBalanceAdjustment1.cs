@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the balance adjustments for a specific service.
 /// </summary>
 [IsoId("_6SVpUpqlEeGSON8vddiWzQ_304866201")]
+[IsoDisplayName(@"Balance Adjustment")]
 public interface IBalanceAdjustment1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IBalanceAdjustment1 : IIsoComponent
     [IsoId("_6SVpVJqlEeGSON8vddiWzQ_1088798456")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text Description { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IBalanceAdjustment1 : IIsoComponent
     [IsoId("_6SVpV5qlEeGSON8vddiWzQ_561802513")]
     [DisplayName("Error Date")]
     [IsoXmlTag("ErrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ErrorDate { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IBalanceAdjustment1 : IIsoComponent
     [IsoId("_6SezQJqlEeGSON8vddiWzQ_-435269840")]
     [DisplayName("Posting Date")]
     [IsoXmlTag("PstngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate PostingDate { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IBalanceAdjustment1 : IIsoComponent
     [IsoId("_6SezQZqlEeGSON8vddiWzQ_1103518602")]
     [DisplayName("Days")]
     [IsoXmlTag("Days")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? Days { get; }
 
     /// <summary>

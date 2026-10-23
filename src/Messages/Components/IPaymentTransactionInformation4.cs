@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference and status information concerning the original transactions, included in the original instruction, to which the reversal message applies.
 /// </summary>
 [IsoId("_Pr6kbtp-Ed-ak6NoX_4Aeg_2146802204")]
+[IsoDisplayName(@"Payment Transaction Information")]
 public interface IPaymentTransactionInformation4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentTransactionInformation4 : IIsoComponent
     [IsoId("_PsEVYNp-Ed-ak6NoX_4Aeg_2146802222")]
     [DisplayName("Reversal Identification")]
     [IsoXmlTag("RvslId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReversalIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPaymentTransactionInformation4 : IIsoComponent
     [IsoId("_PsEVYdp-Ed-ak6NoX_4Aeg_2146802256")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalPaymentInformationIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPaymentTransactionInformation4 : IIsoComponent
     [IsoId("_PsEVYtp-Ed-ak6NoX_4Aeg_2146802516")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IPaymentTransactionInformation4 : IIsoComponent
     [IsoId("_PsEVY9p-Ed-ak6NoX_4Aeg_2146802533")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface IPaymentTransactionInformation4 : IIsoComponent
     [IsoId("_PsEVZ9p-Ed-ak6NoX_4Aeg_-2147244463")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReversalReasonInformation1> ReversalReasonInformation { get; }
 
     /// <summary>

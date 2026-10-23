@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction1Ch
 /// </summary>
 [IsoId("_C46-sC8REeKW5usMQLtzqw")]
 [IsoXmlTag("AuthstnReq")]
+[IsoDisplayName(@"Authorisation Request")]
 public interface IAuthorisationRequest : ICardPaymentDataSetTransaction1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IAuthorisationRequest : ICardPaymentDataSetTransaction1Choice, 
     [IsoId("_uBxblS8OEeKW5usMQLtzqw")]
     [DisplayName("Transaction Sequence Counter")]
     [IsoXmlTag("TxSeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Max9NumericText)]
     Max9NumericText TransactionSequenceCounter { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IAuthorisationRequest : ICardPaymentDataSetTransaction1Choice, 
     [IsoId("_uBxbnC8OEeKW5usMQLtzqw")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITraceability1> Traceability { get; }
 
     /// <summary>

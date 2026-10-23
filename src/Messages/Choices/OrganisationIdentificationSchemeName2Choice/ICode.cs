@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentificationScheme
 /// Name of the identification scheme, in a coded form as published in an external list.
 /// </summary>
 [IsoId("_WgN0RRBBEeGyZLI6olyk-Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOrganisationIdentificationSchemeName2Choice, IIsoChoiceVariant
 {
     /// <summary>

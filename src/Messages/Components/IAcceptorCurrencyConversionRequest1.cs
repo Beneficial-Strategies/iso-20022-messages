@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the currency conversion request.
 /// </summary>
 [IsoId("_GtcD0DTpEeOLr8wG_Q16kw")]
+[IsoDisplayName(@"Acceptor Currency Conversion Request")]
 public interface IAcceptorCurrencyConversionRequest1 : IIsoComponent
 {
     /// <summary>

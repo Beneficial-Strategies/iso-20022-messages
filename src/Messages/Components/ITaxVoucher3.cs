@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies tax vouchers in the framework of a corporate action event.
 /// </summary>
 [IsoId("_XIdOedp-Ed-ak6NoX_4Aeg_913335688")]
+[IsoDisplayName(@"Tax Voucher")]
 public interface ITaxVoucher3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITaxVoucher3 : IIsoComponent
     [IsoId("_XIdOetp-Ed-ak6NoX_4Aeg_-1080809018")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text Identification { get; }
 
     /// <summary>

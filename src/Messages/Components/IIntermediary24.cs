@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party that provides services to investors relating to financial products.
 /// </summary>
 [IsoId("_bNNI4RUGEeOIaq8KyCdIDQ")]
+[IsoDisplayName(@"Intermediary")]
 public interface IIntermediary24 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IIntermediary24 : IIsoComponent
     [IsoId("_br2MuRUGEeOIaq8KyCdIDQ")]
     [DisplayName("Waived Trailer Commission Indicator")]
     [IsoXmlTag("WvdTrlrComssnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? WaivedTrailerCommissionIndicator { get; }
 
     /// <summary>

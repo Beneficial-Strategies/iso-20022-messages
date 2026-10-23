@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData11Choice;
 /// </summary>
 [IsoId("_BO3n864UEemB_csI4yyKLA")]
 [IsoXmlTag("Rpt")]
+[IsoDisplayName(@"Report")]
 public interface IReport : ITradeData11Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IReport : ITradeData11Choice, IIsoChoiceVariant
     [IsoId("_R_kY3u3tEemV1LTEADuPBQ")]
     [DisplayName("Report Statistics")]
     [IsoXmlTag("RptSttstcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedReportStatistics5> ReportStatistics { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IReport : ITradeData11Choice, IIsoChoiceVariant
     [IsoId("_R_kY3-3tEemV1LTEADuPBQ")]
     [DisplayName("Transaction Statistics")]
     [IsoXmlTag("TxSttstcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedTransactionStatistics10> TransactionStatistics { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface IReport : ITradeData11Choice, IIsoChoiceVariant
     [IsoId("_R_kY3e3tEemV1LTEADuPBQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

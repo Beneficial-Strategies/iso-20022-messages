@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters3Choice;
 /// Message to send for the send message command.
 /// </summary>
 [IsoId("_htqcM12aEeekzJIz1JxYSQ")]
+[IsoDisplayName(@"Expected Message Function")]
 public interface IExpectedMessageFunction : IATMCommandParameters3Choice, IIsoChoiceVariant
 {
     /// <summary>

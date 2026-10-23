@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the status reason of the creditor enrolment request.
 /// </summary>
 [IsoId("_Ub7vn-H7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Creditor Enrolment Status Reason")]
 public interface ICreditorEnrolmentStatusReason2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ICreditorEnrolmentStatusReason2 : IIsoComponent
     [IsoId("_UdRMVeH7Eeqbls7Gk4-ckA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

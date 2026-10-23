@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card security code (CSC) associated with the card performing the transaction.
 /// </summary>
 [IsoId("_SqR5xAEcEeCQm6a_G2yO_w_383431093")]
+[IsoDisplayName(@"Card Security Information")]
 public interface ICardSecurityInformation1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICardSecurityInformation1 : IIsoComponent
     [IsoId("_SqR5xgEcEeCQm6a_G2yO_w_494973003")]
     [DisplayName("CSC Value")]
     [IsoXmlTag("CSCVal")]
+    [IsoSimpleType(IsoSimpleType.Min3Max4NumericText)]
     Min3Max4NumericText? CSCValue { get; }
 }

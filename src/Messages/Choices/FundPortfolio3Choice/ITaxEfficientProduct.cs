@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio3Choice;
 /// </summary>
 [IsoId("_U5MVgU7cEeifNrXGwadPmg")]
 [IsoXmlTag("TaxEffcntPdct")]
+[IsoDisplayName(@"Tax Efficient Product")]
 public interface ITaxEfficientProduct : IFundPortfolio3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -27,6 +28,7 @@ public interface ITaxEfficientProduct : IFundPortfolio3Choice, IIsoChoiceVariant
     [IsoId("_kAXwB07cEeifNrXGwadPmg")]
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CashComponentIndicator { get; }
 
     /// <summary>
@@ -51,5 +53,6 @@ public interface ITaxEfficientProduct : IFundPortfolio3Choice, IIsoChoiceVariant
     [IsoId("_c860D07fEeifNrXGwadPmg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementBasis14Choice;
 /// Statement basis expressed as code.
 /// </summary>
 [IsoId("_dOSH0MRyEeij-rSPpvD-Tw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IStatementBasis14Choice, IIsoChoiceVariant
 {
     /// <summary>

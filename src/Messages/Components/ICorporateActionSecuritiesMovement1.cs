@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the securities movements.
 /// </summary>
 [IsoId("_UIYIptp-Ed-ak6NoX_4Aeg_1464286927")]
+[IsoDisplayName(@"Corporate Action Securities Movement")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ICorporateActionSecuritiesMovement1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +43,8 @@ public interface ICorporateActionSecuritiesMovement1 : IIsoComponent
     [IsoId("_UIh5oNp-Ed-ak6NoX_4Aeg_-1695911196")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesAccount8> AccountDetails { get; }
 }

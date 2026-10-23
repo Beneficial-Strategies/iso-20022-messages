@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount4Choice;
 /// <summary>
 /// Increase Amount.
 /// </summary>
+[IsoDisplayName(@"Increase Amount")]
 public interface IIncreaseAmount : IAmount4Choice, IIsoChoiceVariant
 {
     /// <summary>

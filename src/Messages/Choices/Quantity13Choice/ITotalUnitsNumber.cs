@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity13Choice;
 /// </summary>
 [IsoId("_RWwlY_peEeCPwaG9zjUPNQ")]
 [IsoXmlTag("TtlUnitsNb")]
+[IsoDisplayName(@"Total Units Number")]
 public interface ITotalUnitsNumber : IQuantity13Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,6 @@ public interface ITotalUnitsNumber : IQuantity13Choice, IIsoChoiceVariant
     [IsoId("_SoH21dp-Ed-ak6NoX_4Aeg_-1748202212")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Unit { get; }
 }

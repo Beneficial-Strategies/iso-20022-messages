@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountOrPercentage2Choice;
 /// Specifies that the payment conditions apply to a percentage of the amount due.
 /// </summary>
 [IsoId("_8PUYsNP8EeK0PPbKncCqzA")]
+[IsoDisplayName(@"Percentage")]
 public interface IPercentage : IAmountOrPercentage2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPercentage : IAmountOrPercentage2Choice, IIsoChoiceVariant
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("Pctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

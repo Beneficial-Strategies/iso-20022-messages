@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a reference party.
 /// </summary>
 [IsoId("_LCAoYE6oEeyEpI66tm807w")]
+[IsoDisplayName(@"Compare Reference Party")]
 public interface ICompareReferenceParty1 : IIsoComponent
 {
     /// <summary>

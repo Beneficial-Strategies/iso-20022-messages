@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferType1Choice;
 /// Transfer type expressed as a code.
 /// </summary>
 [IsoId("_Yre24E3VEeidB49bWZiS0g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITransferType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the financial institution sending the request.
 /// </summary>
 [IsoId("_Su5UAQEcEeCQm6a_G2yO_w_1332252059")]
+[IsoDisplayName(@"Requestor Details")]
 public interface IRequestorDetails1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRequestorDetails1 : IIsoComponent
     [IsoId("_Su5UAgEcEeCQm6a_G2yO_w_-991672194")]
     [DisplayName("Date Time Stamp")]
     [IsoXmlTag("DtTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime DateTimeStamp { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IRequestorDetails1 : IIsoComponent
     [IsoId("_Su5UAwEcEeCQm6a_G2yO_w_1407581183")]
     [DisplayName("Requestor")]
     [IsoXmlTag("Rqstr")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier Requestor { get; }
 }

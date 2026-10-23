@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.reda;
     "SctyCSDLkStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:reda.047.001.01"
 )]
+[IsoDisplayName(@"Security CSD Link Status Advice V01")]
 public interface ISecurityCSDLinkStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -43,5 +44,6 @@ public interface ISecurityCSDLinkStatusAdviceV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

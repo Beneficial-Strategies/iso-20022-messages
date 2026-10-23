@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Metadata Report5.
 /// </summary>
 [IsoId("_JwtpgfgxEe-yU4gaFULAeA")]
+[IsoDisplayName(@"Metadata Report5")]
 public interface IMetadataReport5 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface IMetadataReport5 : IIsoComponent
     /// </summary>
     [DisplayName("Related Entity")]
     [IsoXmlTag("RltdNtty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification260Choice> RelatedEntity { get; }
 
     /// <summary>
@@ -37,6 +39,7 @@ public interface IMetadataReport5 : IIsoComponent
     /// </summary>
     [DisplayName("Related Product Identifier")]
     [IsoXmlTag("RltdPdctIdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification49> RelatedProductIdentifier { get; }
 
     /// <summary>
@@ -44,6 +47,7 @@ public interface IMetadataReport5 : IIsoComponent
     /// </summary>
     [DisplayName("Regulatory Data Type")]
     [IsoXmlTag("RgltryDataTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IClassificationType4> RegulatoryDataType { get; }
 
     /// <summary>
@@ -51,5 +55,6 @@ public interface IMetadataReport5 : IIsoComponent
     /// </summary>
     [DisplayName("Regulatory Data")]
     [IsoXmlTag("RgltryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument28> RegulatoryData { get; }
 }

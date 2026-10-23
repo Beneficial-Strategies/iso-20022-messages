@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PairedOrTurnedQuantity5Choice;
 /// Quantity of financial instruments of the linked transaction to be turned.
 /// </summary>
 [IsoId("_YcjkuSqHEeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Turned Quantity")]
 public interface ITurnedQuantity : IPairedOrTurnedQuantity5Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

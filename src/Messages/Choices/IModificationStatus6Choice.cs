@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of modification status.</summary>
 [IsoId("fab9457b-4791-44b9-930f-eb7aaa526e40")]
+[IsoDisplayName(@"Modification Status 6 Choice")]
 public interface IModificationStatus6Choice : IIsoChoice { }

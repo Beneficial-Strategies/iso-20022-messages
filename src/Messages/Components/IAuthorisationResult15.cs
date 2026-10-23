@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Outcome of the authorisation.
 /// </summary>
 [IsoId("_XqFccS5AEeunNvJlR_vCbg")]
+[IsoDisplayName(@"Authorisation Result")]
 public interface IAuthorisationResult15 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IAuthorisationResult15 : IIsoComponent
     [IsoId("_X5oUVS5AEeunNvJlR_vCbg")]
     [DisplayName("Authorisation Code")]
     [IsoXmlTag("AuthstnCd")]
+    [IsoSimpleType(IsoSimpleType.Min6Max8Text)]
+    [StringLength(8, MinimumLength = 6)]
     Min6Max8Text? AuthorisationCode { get; }
 }

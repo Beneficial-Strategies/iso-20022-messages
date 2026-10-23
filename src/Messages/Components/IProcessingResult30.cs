@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Outcome of the processing of the transaction.
 /// </summary>
 [IsoId("_sb7D4ROGEfC1ZfCQz0xB3g")]
+[IsoDisplayName(@"Processing Result30")]
 public interface IProcessingResult30 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface IProcessingResult30 : IIsoComponent
     [IsoId("_sjOl4ROGEfC1ZfCQz0xB3g")]
     [DisplayName("Error Detail")]
     [IsoXmlTag("ErrDtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorDetails4> ErrorDetail { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface IProcessingResult30 : IIsoComponent
     [IsoId("_p3edYkVbEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -89,5 +92,6 @@ public interface IProcessingResult30 : IIsoComponent
     [IsoId("_p3edY0VbEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

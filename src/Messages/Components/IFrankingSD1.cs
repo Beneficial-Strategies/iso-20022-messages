@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Franking details.
 /// </summary>
 [IsoId("_UFK5bW99EeKuY41pq1-dog")]
+[IsoDisplayName(@"Franking SD")]
 public interface IFrankingSD1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFrankingSD1 : IIsoComponent
     [IsoId("_UFK5em99EeKuY41pq1-dog")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IFrankingSD1 : IIsoComponent
     [IsoId("_UFK5f299EeKuY41pq1-dog")]
     [DisplayName("Fully Franked Indicator")]
     [IsoXmlTag("FullyFrnkdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FullyFrankedIndicator { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IFrankingSD1 : IIsoComponent
     [IsoId("_UFK5i299EeKuY41pq1-dog")]
     [DisplayName("Franked Percentage")]
     [IsoXmlTag("FrnkdPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? FrankedPercentage { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IFrankingSD1 : IIsoComponent
     [IsoId("_DSjMV7YsEeKtMMQEG6I5fw")]
     [DisplayName("Unfranked Percentage")]
     [IsoXmlTag("UfrnkdPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? UnfrankedPercentage { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IFrankingSD1 : IIsoComponent
     [IsoId("_UFK5kG99EeKuY41pq1-dog")]
     [DisplayName("Corporate Tax Rate For Franking Credit")]
     [IsoXmlTag("CorpTaxRateForFrnkgCdt")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? CorporateTaxRateForFrankingCredit { get; }
 
     /// <summary>

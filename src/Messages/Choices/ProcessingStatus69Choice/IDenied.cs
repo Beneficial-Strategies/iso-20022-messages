@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus69Choice;
 /// Instruction/Request will not be executed.
 /// </summary>
 [IsoId("_1y2tGeF7EeWCAvUNsZ5u6g")]
+[IsoDisplayName(@"Denied")]
 public interface IDenied : IProcessingStatus69Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

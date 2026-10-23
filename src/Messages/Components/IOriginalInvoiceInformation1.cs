@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General information about the invoice contained in the original request.
 /// </summary>
 [IsoId("_ThfHwtp-Ed-ak6NoX_4Aeg_1135889353")]
+[IsoDisplayName(@"Original Invoice Information")]
 public interface IOriginalInvoiceInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalInvoiceInformation1 : IIsoComponent
     [IsoId("_ThfHw9p-Ed-ak6NoX_4Aeg_-710957131")]
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DocumentNumber { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IOriginalInvoiceInformation1 : IIsoComponent
     [IsoId("_ThfHxdp-Ed-ak6NoX_4Aeg_-255658965")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate IssueDate { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IOriginalInvoiceInformation1 : IIsoComponent
     [IsoId("_ThfHxtp-Ed-ak6NoX_4Aeg_696882678")]
     [DisplayName("Payment Due Date")]
     [IsoXmlTag("PmtDueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate PaymentDueDate { get; }
 }

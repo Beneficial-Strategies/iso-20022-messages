@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines a cryptographic digest algorithm and value.
 /// </summary>
 [IsoId("_OTgzMjQw-AOSNFX-8224494")]
+[IsoDisplayName(@"Algorithm And Digest")]
 public interface IAlgorithmAndDigest1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IAlgorithmAndDigest1 : IIsoComponent
     [IsoId("_OTgzMjcz-AOSNFX-8224496")]
     [DisplayName("Digest")]
     [IsoXmlTag("Dgst")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Digest { get; }
 }

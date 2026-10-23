@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Breakdown of the transaction amount.
 /// </summary>
 [IsoId("_1juMQUS7EeiTBYbU3rWV0A")]
+[IsoDisplayName(@"Detailed Amount")]
 public interface IDetailedAmount20 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDetailedAmount20 : IIsoComponent
     [IsoId("_1wqcE0S7EeiTBYbU3rWV0A")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IDetailedAmount20 : IIsoComponent
     [IsoId("_1wqcF0S7EeiTBYbU3rWV0A")]
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Label { get; }
 }

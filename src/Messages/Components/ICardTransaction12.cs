@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Network management transaction.
 /// </summary>
 [IsoId("_xhplsXvFEeSKFIcWw3l4Yw")]
+[IsoDisplayName(@"Card Transaction")]
 public interface ICardTransaction12 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardTransaction12 : IIsoComponent
     [IsoId("_FRBTMIShEeScnfYByhaIWA")]
     [DisplayName("Initiator Date Time")]
     [IsoXmlTag("InitrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? InitiatorDateTime { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICardTransaction12 : IIsoComponent
     [IsoId("_xzrw43vFEeSKFIcWw3l4Yw")]
     [DisplayName("Number Of Messages")]
     [IsoXmlTag("NbOfMsgs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfMessages { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICardTransaction12 : IIsoComponent
     [IsoId("_xzrw5XvFEeSKFIcWw3l4Yw")]
     [DisplayName("Maximum Number Of Messages")]
     [IsoXmlTag("MaxNbOfMsgs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumNumberOfMessages { get; }
 
     /// <summary>

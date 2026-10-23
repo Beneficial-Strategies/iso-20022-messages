@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus1Format1Choice;
 
 /// <summary>Standard code to specify to express the processing status of the notification advice.</summary>
 [IsoId("_pRDGYaUdEfCnE_wCEfCqTA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPendingStatus1Format1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

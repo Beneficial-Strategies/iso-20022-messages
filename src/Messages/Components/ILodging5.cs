@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Lodging provides summary information about lodging accommodations and related expenses for the cardholder.
 /// </summary>
 [IsoId("_UdImAUhsEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Lodging5")]
 public interface ILodging5 : IIsoComponent
 {
     /// <summary>
@@ -97,6 +98,7 @@ public interface ILodging5 : IIsoComponent
     [IsoId("_UqF1OkhyEfCMZJtj4J7UGQ")]
     [DisplayName("Property Local Data")]
     [IsoXmlTag("PrprtyLclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData20> PropertyLocalData { get; }
 
     /// <summary>
@@ -129,6 +131,7 @@ public interface ILodging5 : IIsoComponent
     [IsoId("_UfdhV0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Customer")]
     [IsoXmlTag("Cstmr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomer10> Customer { get; }
 
     /// <summary>
@@ -145,6 +148,7 @@ public interface ILodging5 : IIsoComponent
     [IsoId("_UfdhZUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Room")]
     [IsoXmlTag("Room")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILodgingRoom2> Room { get; }
 
     /// <summary>
@@ -201,6 +205,7 @@ public interface ILodging5 : IIsoComponent
     [IsoId("_Ufdhc0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Total Tax")]
     [IsoXmlTag("TtlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> TotalTax { get; }
 
     /// <summary>
@@ -217,6 +222,7 @@ public interface ILodging5 : IIsoComponent
     [IsoId("_Ufdhd0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Authorised Amount")]
     [IsoXmlTag("AuthrsdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorisedAmount2> AuthorisedAmount { get; }
 
     /// <summary>
@@ -233,6 +239,7 @@ public interface ILodging5 : IIsoComponent
     [IsoId("_Ufdhe0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Loyalty Programme")]
     [IsoXmlTag("LltyPrgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyProgramme4> LoyaltyProgramme { get; }
 
     /// <summary>
@@ -241,6 +248,7 @@ public interface ILodging5 : IIsoComponent
     [IsoId("_MvlrgkhsEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -249,6 +257,7 @@ public interface ILodging5 : IIsoComponent
     [IsoId("_Mvlrg0hsEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>
@@ -257,5 +266,6 @@ public interface ILodging5 : IIsoComponent
     [IsoId("_Ufdhf0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILodgingLineItem4> LineItem { get; }
 }

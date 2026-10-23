@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party33Choice;
 /// </summary>
 [IsoId("_52fY80zQEea8fovz_9xSTQ")]
 [IsoXmlTag("IndvPrsn")]
+[IsoDisplayName(@"Individual Person")]
 public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLhU_pEeaB8-OWTiMVrQ")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? GivenName { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLh0_pEeaB8-OWTiMVrQ")]
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MiddleName { get; }
 
     /// <summary>
@@ -42,6 +47,8 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLiU_pEeaB8-OWTiMVrQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -50,6 +57,8 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLi0_pEeaB8-OWTiMVrQ")]
     [DisplayName("Name Suffix")]
     [IsoXmlTag("NmSfx")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NameSuffix { get; }
 
     /// <summary>
@@ -66,6 +75,7 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLj0_pEeaB8-OWTiMVrQ")]
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BirthDate { get; }
 
     /// <summary>
@@ -82,6 +92,8 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLlU_pEeaB8-OWTiMVrQ")]
     [DisplayName("Province Of Birth")]
     [IsoXmlTag("PrvcOfBirth")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProvinceOfBirth { get; }
 
     /// <summary>
@@ -90,6 +102,8 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLl0_pEeaB8-OWTiMVrQ")]
     [DisplayName("City Of Birth")]
     [IsoXmlTag("CityOfBirth")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CityOfBirth { get; }
 
     /// <summary>
@@ -98,6 +112,8 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLmU_pEeaB8-OWTiMVrQ")]
     [DisplayName("Profession")]
     [IsoXmlTag("Prfssn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Profession { get; }
 
     /// <summary>
@@ -106,6 +122,7 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLm0_pEeaB8-OWTiMVrQ")]
     [DisplayName("Modified Postal Address")]
     [IsoXmlTag("ModfdPstlAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope34> ModifiedPostalAddress { get; }
 
     /// <summary>
@@ -114,6 +131,9 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLnU_pEeaB8-OWTiMVrQ")]
     [DisplayName("Modified Citizenship")]
     [IsoXmlTag("ModfdCtznsh")]
+    [MinLength(0)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope39> ModifiedCitizenship { get; }
 
     /// <summary>
@@ -122,6 +142,8 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLn0_pEeaB8-OWTiMVrQ")]
     [DisplayName("Employing Company")]
     [IsoXmlTag("EmplngCpny")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? EmployingCompany { get; }
 
     /// <summary>
@@ -130,6 +152,8 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLoU_pEeaB8-OWTiMVrQ")]
     [DisplayName("Business Function")]
     [IsoXmlTag("BizFctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BusinessFunction { get; }
 
     /// <summary>
@@ -146,6 +170,7 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLpU_pEeaB8-OWTiMVrQ")]
     [DisplayName("Death Date")]
     [IsoXmlTag("DthDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DeathDate { get; }
 
     /// <summary>
@@ -162,6 +187,8 @@ public interface IIndividualPerson : IParty33Choice, IIsoChoiceVariant
     [IsoId("_5WvLqU_pEeaB8-OWTiMVrQ")]
     [DisplayName("Education Level")]
     [IsoXmlTag("EdctnLvl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EducationLevel { get; }
 
     /// <summary>

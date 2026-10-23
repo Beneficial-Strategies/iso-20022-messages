@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the reference and status of the original transactions, included in the original instruction, to which the cancellation request message applies.
 /// </summary>
 [IsoId("_sjzuQVkyEeGeoaLUQk__nA_2132277443")]
+[IsoDisplayName(@"Original Payment Instruction")]
 public interface IOriginalPaymentInstruction4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalPaymentInstruction4 : IIsoComponent
     [IsoId("_sjzuQlkyEeGeoaLUQk__nA_1829220928")]
     [DisplayName("Payment Cancellation Identification")]
     [IsoXmlTag("PmtCxlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentCancellationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IOriginalPaymentInstruction4 : IIsoComponent
     [IsoId("_sj9fQFkyEeGeoaLUQk__nA_-1656866630")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalPaymentInformationIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IOriginalPaymentInstruction4 : IIsoComponent
     [IsoId("_sj9fQlkyEeGeoaLUQk__nA_-978839933")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? NumberOfTransactions { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IOriginalPaymentInstruction4 : IIsoComponent
     [IsoId("_skGpMFkyEeGeoaLUQk__nA_1500278318")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IOriginalPaymentInstruction4 : IIsoComponent
     [IsoId("_skGpMVkyEeGeoaLUQk__nA_-380027322")]
     [DisplayName("Payment Information Cancellation")]
     [IsoXmlTag("PmtInfCxl")]
+    [IsoSimpleType(IsoSimpleType.GroupCancellationIndicator)]
     GroupCancellationIndicator? PaymentInformationCancellation { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IOriginalPaymentInstruction4 : IIsoComponent
     [IsoId("_skGpMlkyEeGeoaLUQk__nA_-1123621847")]
     [DisplayName("Cancellation Reason Information")]
     [IsoXmlTag("CxlRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentCancellationReason2> CancellationReasonInformation { get; }
 
     /// <summary>
@@ -81,5 +90,6 @@ public interface IOriginalPaymentInstruction4 : IIsoComponent
     [IsoId("_skQaMFkyEeGeoaLUQk__nA_372715529")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction37> TransactionInformation { get; }
 }

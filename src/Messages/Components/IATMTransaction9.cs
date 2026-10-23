@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction for which the service is requested.
 /// </summary>
 [IsoId("_3GixAYrAEeSgLpgNvMAP2g")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction9 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IATMTransaction9 : IIsoComponent
     [IsoId("_fazd4I7FEeSJH5GWXEkEXQ")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IATMTransaction9 : IIsoComponent
     [IsoId("_3TgO-4rAEeSgLpgNvMAP2g")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Margin amount payable by one party to the other party.
 /// </summary>
 [IsoId("_Ul4kBtp-Ed-ak6NoX_4Aeg_-2038049081")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAmount1 : IIsoComponent
     [IsoId("_UmCVANp-Ed-ak6NoX_4Aeg_419184137")]
     [DisplayName("Margin Call Request Identification")]
     [IsoXmlTag("MrgnCallReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MarginCallRequestIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IAmount1 : IIsoComponent
     [IsoId("_UmCVAdp-Ed-ak6NoX_4Aeg_-131236975")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalInformation { get; }
 }

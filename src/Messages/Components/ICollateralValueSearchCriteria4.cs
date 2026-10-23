@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Collateral Value Search Criteria4.
 /// </summary>
 [IsoId("_x48JtzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Collateral Value Search Criteria4")]
 public interface ICollateralValueSearchCriteria4 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ICollateralValueSearchCriteria4 : IIsoComponent
     /// </summary>
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyCode> Currency { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface ICollateralValueSearchCriteria4 : IIsoComponent
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification19> FinancialInstrumentIdentification { get; }
 
     /// <summary>

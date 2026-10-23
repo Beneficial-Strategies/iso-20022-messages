@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action instructed balance details at option level.
 /// </summary>
 [IsoId("_HHDqMb-0Eeeb2ZBoAlSG1Q")]
+[IsoDisplayName(@"Corporate Action Instructed Balance Option Instruction Details SD")]
 public interface ICorporateActionInstructedBalanceOptionInstructionDetailsSD2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionInstructedBalanceOptionInstructionDetailsSD2 : 
     [IsoId("_HW1Lkb-0Eeeb2ZBoAlSG1Q")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICorporateActionInstructedBalanceOptionInstructionDetailsSD2 : 
     [IsoId("_HW1Lm7-0Eeeb2ZBoAlSG1Q")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text TransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ICorporateActionInstructedBalanceOptionInstructionDetailsSD2 : 
     [IsoId("_HW1Lnb-0Eeeb2ZBoAlSG1Q")]
     [DisplayName("Transaction Sequence Number")]
     [IsoXmlTag("TxSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? TransactionSequenceNumber { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ICorporateActionInstructedBalanceOptionInstructionDetailsSD2 : 
     [IsoId("_HW1Ln7-0Eeeb2ZBoAlSG1Q")]
     [DisplayName("Transaction Identification Date")]
     [IsoXmlTag("TxIdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TransactionIdentificationDate { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface ICorporateActionInstructedBalanceOptionInstructionDetailsSD2 : 
     [IsoId("_HW1Lqb-0Eeeb2ZBoAlSG1Q")]
     [DisplayName("Transaction Identification Protect Date")]
     [IsoXmlTag("TxIdPrtctDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TransactionIdentificationProtectDate { get; }
 
     /// <summary>
@@ -97,6 +105,7 @@ public interface ICorporateActionInstructedBalanceOptionInstructionDetailsSD2 : 
     [IsoId("_HW1Lq7-0Eeeb2ZBoAlSG1Q")]
     [DisplayName("Transaction Identification Cover Protect Date")]
     [IsoXmlTag("TxIdCoverPrtctDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TransactionIdentificationCoverProtectDate { get; }
 
     /// <summary>
@@ -121,6 +130,7 @@ public interface ICorporateActionInstructedBalanceOptionInstructionDetailsSD2 : 
     [IsoId("_HW1Lsb-0Eeeb2ZBoAlSG1Q")]
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? CustomerReferenceIdentification { get; }
 
     /// <summary>
@@ -129,5 +139,7 @@ public interface ICorporateActionInstructedBalanceOptionInstructionDetailsSD2 : 
     [IsoId("_-tTSsb_vEeeb2ZBoAlSG1Q")]
     [DisplayName("Instruction Comments")]
     [IsoXmlTag("InstrCmnts")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? InstructionComments { get; }
 }

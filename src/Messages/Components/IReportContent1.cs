@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the content of a report.
 /// </summary>
 [IsoId("_dItHIMlVEeuJ35KoBRZFOg")]
+[IsoDisplayName(@"Report Content")]
 public interface IReportContent1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IReportContent1 : IIsoComponent
     [IsoId("_3xe8kMlVEeuJ35KoBRZFOg")]
     [DisplayName("Report Line Sequence")]
     [IsoXmlTag("RptLineSeq")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? ReportLineSequence { get; }
 
     /// <summary>

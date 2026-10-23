@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investigation Reason2.
 /// </summary>
 [IsoId("_1OAyUWNqEe6rDI7BtgptxA")]
+[IsoDisplayName(@"Investigation Reason2")]
 public interface IInvestigationReason2 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface IInvestigationReason2 : IIsoComponent
     /// </summary>
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument12> EnclosedFile { get; }
 
     /// <summary>
@@ -58,5 +60,6 @@ public interface IInvestigationReason2 : IIsoComponent
     /// </summary>
     [DisplayName("Related File Data")]
     [IsoXmlTag("RltdFileData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFileData1> RelatedFileData { get; }
 }

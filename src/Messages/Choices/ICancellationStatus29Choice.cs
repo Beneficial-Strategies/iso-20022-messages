@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Instruction/Request has been cancelled.
 /// </summary>
 [IsoId("_u2DukOBEEeiVRbNQx5-Vhg")]
+[IsoDisplayName(@"Cancellation Status 29 Choice")]
 public interface ICancellationStatus29Choice : IIsoChoice { }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_tmYxMZDiEem7fvtoGpNpow")]
 [IsoMessage("acmt.006.001.07", "AcctMgmtStsRpt", "urn:iso:std:iso:20022:tech:xsd:acmt.006.001.07")]
+[Description(@"Scope|The AccountManagementStatusReport message is sent by an account servicer, for example, a registrar, transfer agent, custodian bank or securities depository to the account owner or its designated agent, for example, an investor to report on the receipt or the processing status of a previously received account management message.|Usage|The AccountManagementStatusReport message is used to provide the status of a previously received AccountOpeningInstruction, an AccountModificationInstruction or a GetAccountDetails message. It may also be used to report the status of the account. |The AccountManagementStatusReport message is also used to reject an AccountOpeningInstruction, AccountModificationInstruction or GetAccountDetails message when the message is not compliant with the agreed SLA or when the account cannot be uniquely identified.")]
+[IsoDisplayName(@"Account Management Status Report V")]
 public interface IAccountManagementStatusReportV07 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,9 @@ public interface IAccountManagementStatusReportV07 : IOuterRecord
     [IsoId("_tmYxNZDiEem7fvtoGpNpow")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference13> RelatedReference { get; }
 
     /// <summary>
@@ -56,5 +61,6 @@ public interface IAccountManagementStatusReportV07 : IOuterRecord
     [IsoId("_tmYxO5DiEem7fvtoGpNpow")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

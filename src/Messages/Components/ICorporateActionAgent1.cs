@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the agent.
 /// </summary>
 [IsoId("_Pc3bwNp-Ed-ak6NoX_4Aeg_-1605492911")]
+[IsoDisplayName(@"Corporate Action Agent")]
 public interface ICorporateActionAgent1 : IIsoComponent
 {
     /// <summary>

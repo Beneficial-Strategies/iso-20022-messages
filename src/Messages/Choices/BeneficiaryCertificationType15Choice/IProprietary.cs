@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficiaryCertificationType15Ch
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IBeneficiaryCertificationType15Choice, IIsoChoiceVariant
 {
     /// <summary>

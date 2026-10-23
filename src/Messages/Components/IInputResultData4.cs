@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to an Input request.
 /// </summary>
 [IsoId("_F-SBQVFEEeyApZmLzm74zA")]
+[IsoDisplayName(@"Input Result Data")]
 public interface IInputResultData4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IInputResultData4 : IIsoComponent
     [IsoId("_GEkPc1FEEeyApZmLzm74zA")]
     [DisplayName("Confirmed Flag")]
     [IsoXmlTag("ConfdFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ConfirmedFlag { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IInputResultData4 : IIsoComponent
     [IsoId("_GEkPdVFEEeyApZmLzm74zA")]
     [DisplayName("Function Key")]
     [IsoXmlTag("FctnKey")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? FunctionKey { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IInputResultData4 : IIsoComponent
     [IsoId("_GEkPd1FEEeyApZmLzm74zA")]
     [DisplayName("Input Message")]
     [IsoXmlTag("InptMsg")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text? InputMessage { get; }
 
     /// <summary>

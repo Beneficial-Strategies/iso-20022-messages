@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference to a related message or transaction.
 /// </summary>
 [IsoId("_H2CF4ZS9EemqYPWMBuVawg")]
+[IsoDisplayName(@"Additional Reference")]
 public interface IAdditionalReference13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAdditionalReference13 : IIsoComponent
     [IsoId("_IOb-0ZS9EemqYPWMBuVawg")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Reference { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IAdditionalReference13 : IIsoComponent
     [IsoId("_IOb-1ZS9EemqYPWMBuVawg")]
     [DisplayName("Message Name")]
     [IsoXmlTag("MsgNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageName { get; }
 }

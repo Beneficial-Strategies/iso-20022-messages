@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to report on the securities account positions.
 /// </summary>
 [IsoId("_rgEjcQJ3EfGAP_FOfstLIw")]
+[IsoDisplayName(@"Statement89")]
 public interface IStatement89 : IIsoComponent
 {
     /// <summary>

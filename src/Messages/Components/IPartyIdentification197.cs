@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_JA4MkEXkEeegp_DADCe7HQ")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification197 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyIdentification197 : IIsoComponent
     [IsoId("_Ykg5kEXkEeegp_DADCe7HQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPartyIdentification197 : IIsoComponent
     [IsoId("_jFiBQEXkEeegp_DADCe7HQ")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Assigner { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPartyIdentification197 : IIsoComponent
     [IsoId("_J03_4EXlEeegp_DADCe7HQ")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>
@@ -49,5 +56,7 @@ public interface IPartyIdentification197 : IIsoComponent
     [IsoId("_zyHOkBqVEeqH1IQNpbVpEw")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalIdentification { get; }
 }

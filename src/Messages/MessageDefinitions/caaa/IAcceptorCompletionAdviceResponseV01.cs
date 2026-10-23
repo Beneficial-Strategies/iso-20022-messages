@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrCmpltnAdvcRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.004.001.01"
 )]
+[Description(@"Scope|The AcceptorCompletionAdviceResponse message is sent by the acquirer to acknowledge the proper receipt of an AcceptorCompletionAdvice. The message can be sent directly to the card acceptor or through an agent.|Usage|The AcceptorCompletionAdviceResponse message is used to acknowledge the data capture process performed by the acquirer based on the data required to carry out the financial clearing and settlement of the transaction.")]
+[IsoDisplayName(@"Acceptor Completion Advice Response V")]
 public interface IAcceptorCompletionAdviceResponseV01 : IOuterRecord
 {
     /// <summary>

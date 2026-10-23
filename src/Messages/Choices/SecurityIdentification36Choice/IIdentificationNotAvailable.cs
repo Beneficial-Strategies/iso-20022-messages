@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification36Choice;
 /// Indicates that underlying identification is not available.
 /// </summary>
 [IsoId("_POTEq4rpEeq91phomTRDDA")]
+[IsoDisplayName(@"Identification Not Available")]
 public interface IIdentificationNotAvailable : ISecurityIdentification36Choice, IIsoChoiceVariant
 {
     /// <summary>

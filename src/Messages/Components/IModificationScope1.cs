@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Scope of the modification to be applied on an identified set of information.
 /// </summary>
 [IsoId("_REb2h9p-Ed-ak6NoX_4Aeg_1783626539")]
+[IsoDisplayName(@"Modification Scope")]
 public interface IModificationScope1 : IIsoComponent
 {
     /// <summary>

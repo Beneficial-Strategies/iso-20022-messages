@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References37Choice;
 /// Unique identification of the report.
 /// </summary>
 [IsoId("_LL-j4A39EeKN_Y-2Awiamw")]
+[IsoDisplayName(@"Total Portfolio Valuation Report Identification")]
 public interface ITotalPortfolioValuationReportIdentification
     : IReferences37Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ITotalPortfolioValuationReportIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("TtlPrtflValtnRptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

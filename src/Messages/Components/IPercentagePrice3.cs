@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Percentage Price3.
 /// </summary>
 [IsoId("_jiaMUYV6Ee-oeNhl-Tk6YQ")]
+[IsoDisplayName(@"Percentage Price3")]
 public interface IPercentagePrice3 : IIsoComponent
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseValue1Choice;
 /// </summary>
 [IsoId("_RhtAUIxnEeap1-whlAlpOw")]
 [IsoXmlTag("Actl")]
+[IsoDisplayName(@"Actual")]
 public interface IActual : IReuseValue1Choice, IIsoChoiceVariant
 {
     /// <summary>

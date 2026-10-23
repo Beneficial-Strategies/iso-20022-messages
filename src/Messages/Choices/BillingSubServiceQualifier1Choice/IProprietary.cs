@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingSubServiceQualifier1Choic
 /// Specifies the contents of the sub service qualifier, in a free-text form.
 /// </summary>
 [IsoId("_6PphwpqlEeGSON8vddiWzQ_-1045448850")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IBillingSubServiceQualifier1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IBillingSubServiceQualifier1Choice, IIsoChoiceVa
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

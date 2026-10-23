@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Pension scheme tax reference.
 /// </summary>
 [IsoId("_jUsPcE4QEeiQHa-q1Uephw")]
+[IsoDisplayName(@"Tax Reference")]
 public interface ITaxReference1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITaxReference1 : IIsoComponent
     [IsoId("_1V_RsE4QEeiQHa-q1Uephw")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Reference { get; }
 
     /// <summary>

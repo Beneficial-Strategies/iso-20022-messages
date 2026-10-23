@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor Configuration14.
 /// </summary>
 [IsoId("_TYF3waEvEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Acceptor Configuration14")]
 public interface IAcceptorConfiguration14 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IAcceptorConfiguration14 : IIsoComponent
     /// </summary>
     [DisplayName("POI Group Identification")]
     [IsoXmlTag("POIGrpId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> POIGroupIdentification { get; }
 
     /// <summary>
@@ -30,5 +32,6 @@ public interface IAcceptorConfiguration14 : IIsoComponent
     /// </summary>
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcceptorConfigurationDataSet6> DataSet { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of system service to be used with this message.
 /// </summary>
 [IsoId("_SovREXJfEe299ZbWCkdR_w")]
+[IsoDisplayName(@"System Event Notification")]
 public interface ISystemEventNotification6 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface ISystemEventNotification6 : IIsoComponent
     [IsoId("_SwAWt3JfEe299ZbWCkdR_w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus60Cho
 
 /// <summary>Status and quantity information related to a cancelled instruction request.</summary>
 [IsoId("_rt3LEY74EfCbNJ3GwkFTcw")]
+[IsoDisplayName(@"Cancelled")]
 public interface ICancelled : IInstructionProcessingStatus60Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

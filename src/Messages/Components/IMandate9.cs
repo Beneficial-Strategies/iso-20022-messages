@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that serves as a basis to debit an account.
 /// </summary>
 [IsoId("_c4CjZ0jwEeaVLL5QKJ4f-A")]
+[IsoDisplayName(@"Mandate")]
 public interface IMandate9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMandate9 : IIsoComponent
     [IsoId("_dBASJ0jwEeaVLL5QKJ4f-A")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MandateIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IMandate9 : IIsoComponent
     [IsoId("_dBASKUjwEeaVLL5QKJ4f-A")]
     [DisplayName("Mandate Request Identification")]
     [IsoXmlTag("MndtReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateRequestIdentification { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IMandate9 : IIsoComponent
     [IsoId("_Zx4UIGn0EearR-CA7eRZXQ")]
     [DisplayName("Tracking Indicator")]
     [IsoXmlTag("TrckgInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator TrackingIndicator { get; }
 
     /// <summary>
@@ -177,6 +183,8 @@ public interface IMandate9 : IIsoComponent
     [IsoId("_OHvTIGnyEearR-CA7eRZXQ")]
     [DisplayName("Mandate Reference")]
     [IsoXmlTag("MndtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateReference { get; }
 
     /// <summary>
@@ -185,5 +193,6 @@ public interface IMandate9 : IIsoComponent
     [IsoId("_dBASR0jwEeaVLL5QKJ4f-A")]
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferredMandateDocument1> ReferredDocument { get; }
 }

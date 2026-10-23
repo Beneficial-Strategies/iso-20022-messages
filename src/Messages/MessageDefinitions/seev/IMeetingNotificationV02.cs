@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_TrjmKNEwEd-BzquC8wXy7w_-771376471")]
 [IsoMessage("seev.001.001.02", "MtgNtfctn", "urn:iso:std:iso:20022:tech:xsd:seev.001.001.02")]
+[Description(@"Scope|A notifying party, eg, an issuer, its agent or an intermediary, sends the MeetingNotification message to a party holding the right to vote, to announce a shareholders meeting.|Usage|The MeetingNotification message is used to announce a shareholders meeting, ie, it provides information on the participation details and requirements for the meeting, the vote parameters and the resolutions. The MeetingNotification message may also be used to announce an update.|To notify an update, the Amendment building block must be filled in. Any building block that is modified must be included in the amendment message. The information previously notified and not repeated in the amendment message remains valid.|To update the resolutions of the agenda, the complete list of resolutions must be repeated in the amendment message. The resolutions that are deleted should be assigned the status Withdrawn.")]
+[IsoDisplayName(@"Meeting Notification V")]
 public interface IMeetingNotificationV02 : IOuterRecord
 {
     /// <summary>
@@ -57,6 +59,9 @@ public interface IMeetingNotificationV02 : IOuterRecord
     [IsoId("_TrswEtEwEd-BzquC8wXy7w_-771374987")]
     [DisplayName("Meeting Details")]
     [IsoXmlTag("MtgDtls")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeeting2> MeetingDetails { get; }
 
     /// <summary>
@@ -81,6 +86,9 @@ public interface IMeetingNotificationV02 : IOuterRecord
     [IsoId("_TrswFdEwEd-BzquC8wXy7w_-771374584")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIssuerAgent1> IssuerAgent { get; }
 
     /// <summary>
@@ -89,6 +97,9 @@ public interface IMeetingNotificationV02 : IOuterRecord
     [IsoId("_TrswFtEwEd-BzquC8wXy7w_1906308006")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition5> Security { get; }
 
     /// <summary>
@@ -97,6 +108,9 @@ public interface IMeetingNotificationV02 : IOuterRecord
     [IsoId("_TrswF9EwEd-BzquC8wXy7w_-771375978")]
     [DisplayName("Resolution")]
     [IsoXmlTag("Rsltn")]
+    [MinLength(0)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IResolution2> Resolution { get; }
 
     /// <summary>

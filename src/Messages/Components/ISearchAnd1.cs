@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// List of criteria following the AND logic.
 /// </summary>
 [IsoId("_JdNs8N6QEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Search And")]
 public interface ISearchAnd1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISearchAnd1 : IIsoComponent
     [IsoId("_Sh7OsN6QEeiwsev40qZGEQ")]
     [DisplayName("Target")]
     [IsoXmlTag("Trgt")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text Target { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface ISearchAnd1 : IIsoComponent
     [IsoId("_Y_OCQN6QEeiwsev40qZGEQ")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text Value { get; }
 }

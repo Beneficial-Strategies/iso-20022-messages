@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the details of the job or task of the individual working in a temporary capacity.
 /// </summary>
 [IsoId("_blvrpPfWEei89sMSHxl1ew")]
+[IsoDisplayName(@"Temporary Services Job")]
 public interface ITemporaryServicesJob1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITemporaryServicesJob1 : IIsoComponent
     [IsoId("_blvrpvfWEei89sMSHxl1ew")]
     [DisplayName("Job Code")]
     [IsoXmlTag("JobCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? JobCode { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITemporaryServicesJob1 : IIsoComponent
     [IsoId("_blvrp_fWEei89sMSHxl1ew")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Description { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface ITemporaryServicesJob1 : IIsoComponent
     [IsoId("_PZTnI_faEei89sMSHxl1ew")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface ITemporaryServicesJob1 : IIsoComponent
     [IsoId("_PZTnJffaEei89sMSHxl1ew")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? Duration { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface ITemporaryServicesJob1 : IIsoComponent
     [IsoId("_PZTnJPfaEei89sMSHxl1ew")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EndDate { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cardholder21.
 /// </summary>
 [IsoId("_0VCDsZFQEe6reqfAp4CunQ")]
+[IsoDisplayName(@"Cardholder21")]
 public interface ICardholder21 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ICardholder21 : IIsoComponent
     /// </summary>
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholderAuthentication17> Authentication { get; }
 
     /// <summary>
@@ -72,6 +74,7 @@ public interface ICardholder21 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionVerificationResult4> TransactionVerificationResult { get; }
 
     /// <summary>
@@ -86,5 +89,6 @@ public interface ICardholder21 : IIsoComponent
     /// </summary>
     [DisplayName("Mobile Data")]
     [IsoXmlTag("MobData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMobileData6> MobileData { get; }
 }

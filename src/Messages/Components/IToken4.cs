@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unencrypted sensitive data of a token.
 /// </summary>
 [IsoId("_dJ3vMZx7EeuwYeL1lHu9zw")]
+[IsoDisplayName(@"Token")]
 public interface IToken4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IToken4 : IIsoComponent
     [IsoId("_dPa9kZx7EeuwYeL1lHu9zw")]
     [DisplayName("Payment Token")]
     [IsoXmlTag("PmtTkn")]
+    [IsoSimpleType(IsoSimpleType.Max19NumericText)]
     Max19NumericText? PaymentToken { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IToken4 : IIsoComponent
     [IsoId("_dPa9k5x7EeuwYeL1lHu9zw")]
     [DisplayName("Token Expiry Date")]
     [IsoXmlTag("TknXpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? TokenExpiryDate { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IToken4 : IIsoComponent
     [IsoId("_dPa9lZx7EeuwYeL1lHu9zw")]
     [DisplayName("Token Requestor Identification")]
     [IsoXmlTag("TknRqstrId")]
+    [IsoSimpleType(IsoSimpleType.Max11NumericText)]
     Max11NumericText? TokenRequestorIdentification { get; }
 
     /// <summary>
@@ -42,6 +46,8 @@ public interface IToken4 : IIsoComponent
     [IsoId("_dPa9l5x7EeuwYeL1lHu9zw")]
     [DisplayName("Token Assurance Data")]
     [IsoXmlTag("TknAssrncData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TokenAssuranceData { get; }
 
     /// <summary>
@@ -50,6 +56,7 @@ public interface IToken4 : IIsoComponent
     [IsoId("_dPa9mZx7EeuwYeL1lHu9zw")]
     [DisplayName("Token Assurance Method")]
     [IsoXmlTag("TknAssrncMtd")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? TokenAssuranceMethod { get; }
 
     /// <summary>
@@ -58,5 +65,7 @@ public interface IToken4 : IIsoComponent
     [IsoId("_6BoksJx7EeuwYeL1lHu9zw")]
     [DisplayName("Token Reference Identification")]
     [IsoXmlTag("TknRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TokenReferenceIdentification { get; }
 }

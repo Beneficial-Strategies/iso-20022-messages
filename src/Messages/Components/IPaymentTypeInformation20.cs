@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide further details of the type of payment.
 /// </summary>
 [IsoId("_THHf8tp-Ed-ak6NoX_4Aeg_1994885996")]
+[IsoDisplayName(@"Payment Type Information")]
 public interface IPaymentTypeInformation20 : IIsoComponent
 {
     /// <summary>

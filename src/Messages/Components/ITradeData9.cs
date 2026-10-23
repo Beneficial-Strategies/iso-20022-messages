@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the status of a trade.
 /// </summary>
 [IsoId("_c_2KcR3dEeKXIbeXfdPzuw")]
+[IsoDisplayName(@"Trade Data")]
 public interface ITradeData9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeData9 : IIsoComponent
     [IsoId("_dLD79R3dEeKXIbeXfdPzuw")]
     [DisplayName("Matching System Unique Reference")]
     [IsoXmlTag("MtchgSysUnqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MatchingSystemUniqueReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITradeData9 : IIsoComponent
     [IsoId("_dLD7-R3dEeKXIbeXfdPzuw")]
     [DisplayName("Matching System Matching Reference")]
     [IsoXmlTag("MtchgSysMtchgRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MatchingSystemMatchingReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITradeData9 : IIsoComponent
     [IsoId("_ZSc515UJEeKShbaq9ixROw")]
     [DisplayName("Matching System Matched Side Reference")]
     [IsoXmlTag("MtchgSysMtchdSdRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MatchingSystemMatchedSideReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITradeData9 : IIsoComponent
     [IsoId("_dLD7_R3dEeKXIbeXfdPzuw")]
     [DisplayName("Status Originator")]
     [IsoXmlTag("StsOrgtr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StatusOriginator { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface ITradeData9 : IIsoComponent
     [IsoId("_dLD8CR3dEeKXIbeXfdPzuw")]
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CurrentStatusDateTime { get; }
 
     /// <summary>
@@ -81,6 +91,7 @@ public interface ITradeData9 : IIsoComponent
     [IsoId("_dLD8ER3dEeKXIbeXfdPzuw")]
     [DisplayName("Alleged Trade")]
     [IsoXmlTag("AllgdTrad")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AllegedTrade { get; }
 
     /// <summary>

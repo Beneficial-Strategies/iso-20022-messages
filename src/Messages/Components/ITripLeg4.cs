@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Supplies additional transaction information for travel transactions.
 /// </summary>
 [IsoId("_2gCMMUiDEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Trip Leg4")]
 public interface ITripLeg4 : IIsoComponent
 {
     /// <summary>
@@ -265,6 +266,7 @@ public interface ITripLeg4 : IIsoComponent
     [IsoId("_2id1YUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountAndTax1> Amount { get; }
 
     /// <summary>
@@ -297,6 +299,7 @@ public interface ITripLeg4 : IIsoComponent
     [IsoId("_03GfgkiDEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -305,5 +308,6 @@ public interface ITripLeg4 : IIsoComponent
     [IsoId("_03Gfg0iDEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

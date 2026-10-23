@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the transaction for network management.
 /// </summary>
 [IsoId("_yGEF8cWZEeiCfKAZkk6ZAQ")]
+[IsoDisplayName(@"Transaction Identification")]
 public interface ITransactionIdentification12 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ITransactionIdentification12 : IIsoComponent
     [IsoId("_ySq-mcWZEeiCfKAZkk6ZAQ")]
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
+    [IsoSimpleType(IsoSimpleType.Max12NumericText)]
     Max12NumericText SystemTraceAuditNumber { get; }
 
     /// <summary>
@@ -27,6 +29,7 @@ public interface ITransactionIdentification12 : IIsoComponent
     [IsoId("_ySq-l8WZEeiCfKAZkk6ZAQ")]
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TransmissionDateTime { get; }
 
     /// <summary>
@@ -36,6 +39,7 @@ public interface ITransactionIdentification12 : IIsoComponent
     [IsoId("_ySq-m8WZEeiCfKAZkk6ZAQ")]
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact12Text)]
     Exact12Text? RetrievalReferenceNumber { get; }
 
     /// <summary>

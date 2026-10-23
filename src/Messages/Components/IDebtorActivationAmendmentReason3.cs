@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Debtor Activation Amendment Reason3.
 /// </summary>
 [IsoId("_wpEdQTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Debtor Activation Amendment Reason3")]
 public interface IDebtorActivationAmendmentReason3 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IDebtorActivationAmendmentReason3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

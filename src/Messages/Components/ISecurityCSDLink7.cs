@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines how the CSD is linked to the security.
 /// </summary>
 [IsoId("_x-0e8Wc-EemvNLufWGIVOQ")]
+[IsoDisplayName(@"Security CSD Link")]
 public interface ISecurityCSDLink7 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ISecurityCSDLink7 : IIsoComponent
     [IsoId("_yJ6UpWc-EemvNLufWGIVOQ")]
     [DisplayName("Security Maintenance")]
     [IsoXmlTag("SctyMntnc")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SecurityMaintenance { get; }
 
     /// <summary>
@@ -65,5 +67,6 @@ public interface ISecurityCSDLink7 : IIsoComponent
     [IsoId("_yJ6UrWc-EemvNLufWGIVOQ")]
     [DisplayName("Issuance Account")]
     [IsoXmlTag("IssncAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIssuanceAccount2> IssuanceAccount { get; }
 }

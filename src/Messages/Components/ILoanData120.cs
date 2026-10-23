@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the loan data details in case of a repurchase trade transaction.
 /// </summary>
 [IsoId("_3-z26Xz2EeurrJrNxcsszQ")]
+[IsoDisplayName(@"Loan Data")]
 public interface ILoanData120 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILoanData120 : IIsoComponent
     [IsoId("_4AQBUXz2EeurrJrNxcsszQ")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDate { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ILoanData120 : IIsoComponent
     [IsoId("_4AQBU3z2EeurrJrNxcsszQ")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? UniqueTradeIdentifier { get; }
 
     /// <summary>

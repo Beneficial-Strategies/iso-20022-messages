@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reorganisation Instruction SD15.
 /// </summary>
 [IsoId("_assCoXG2Ee6S2Llv74R19w")]
+[IsoDisplayName(@"Reorganisation Instruction SD15")]
 public interface IReorganisationInstructionSD15 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface IReorganisationInstructionSD15 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Sequence")]
     [IsoXmlTag("TxSeq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionsTransactionsSequence2> TransactionSequence { get; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public interface IReorganisationInstructionSD15 : IIsoComponent
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<InstructionReason4Code> Reason { get; }
 
     /// <summary>

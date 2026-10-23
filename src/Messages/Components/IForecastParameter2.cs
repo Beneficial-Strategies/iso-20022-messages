@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters used to report cash movements,eg, country code, currency code, BIC or a user defined parameter.
 /// </summary>
 [IsoId("_UuOnttp-Ed-ak6NoX_4Aeg_215969786")]
+[IsoDisplayName(@"Forecast Parameter")]
 public interface IForecastParameter2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IForecastParameter2 : IIsoComponent
     [IsoId("_UuOnuNp-Ed-ak6NoX_4Aeg_215969960")]
     [DisplayName("Cash In Forecast Details")]
     [IsoXmlTag("CshInFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashInForecast1> CashInForecastDetails { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IForecastParameter2 : IIsoComponent
     [IsoId("_UuYYsNp-Ed-ak6NoX_4Aeg_215969925")]
     [DisplayName("Cash Out Forecast Details")]
     [IsoXmlTag("CshOutFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOutForecast1> CashOutForecastDetails { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IForecastParameter2 : IIsoComponent
     [IsoId("_UuYYsdp-Ed-ak6NoX_4Aeg_215969865")]
     [DisplayName("Net Cash Forecast Details")]
     [IsoXmlTag("NetCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetCashForecast1> NetCashForecastDetails { get; }
 }

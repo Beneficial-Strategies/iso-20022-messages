@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further information related to the processing of the payment instruction that may need to be acted upon by an other agent. The instruction may relate to a level of service, or may be an instruction that has to be executed by the creditor&apos;s agent, or may be information required by the other agent.
 /// </summary>
 [IsoId("_TOHf0dp-Ed-ak6NoX_4Aeg_1118639475")]
+[IsoDisplayName(@"Instruction For Next Agent")]
 public interface IInstructionForNextAgent1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IInstructionForNextAgent1 : IIsoComponent
     [IsoId("_TOHf09p-Ed-ak6NoX_4Aeg_-1086262686")]
     [DisplayName("Instruction Information")]
     [IsoXmlTag("InstrInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InstructionInformation { get; }
 }

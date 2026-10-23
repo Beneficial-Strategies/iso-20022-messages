@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionReportOrError6Choice;
 /// </summary>
 [IsoId("_7tkDowKxEe2rHs6fbn9-0A")]
 [IsoXmlTag("OprlErr")]
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : ITransactionReportOrError6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IOperationalError : ITransactionReportOrError6Choice, IIsoChoic
     [IsoId("_RA_783hdEeidzqjNEfehPg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

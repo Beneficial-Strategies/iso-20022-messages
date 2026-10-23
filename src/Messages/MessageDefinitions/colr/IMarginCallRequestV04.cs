@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_CRyfq4FsEeWtPe6Crjmeug")]
 [IsoMessage("colr.003.001.04", "MrgnCallReq", "urn:iso:std:iso:20022:tech:xsd:colr.003.001.04")]
+[Description(@"Scope|The MarginCallRequest message is sent by the collateral taker or its collateral manager to the collateral giver or its collateral manager|This message is used to request new collateral at the initiation of an exposure or request additional collateral for an existing exposure. It can also be used to recall collateral upon the collateral giver or its collateral manager's request.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|When sent by the collateral taker the MarginCallRequest message is used to:|- request new collateral at the initiation of an exposure|- request additional collateral|When sent by the collateral giver the MarginCallRequest message is used to:|- request the return of collateral.")]
+[IsoDisplayName(@"Margin Call Request V")]
 public interface IMarginCallRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -31,6 +33,8 @@ public interface IMarginCallRequestV04 : IOuterRecord
     [IsoId("_CRyfrYFsEeWtPe6Crjmeug")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -111,6 +115,7 @@ public interface IMarginCallRequestV04 : IOuterRecord
     [IsoId("_JCbdwILVEeWrrO9HojbPQA")]
     [DisplayName("Margin Call Details")]
     [IsoXmlTag("MrgnCallDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMarginCall2> MarginCallDetails { get; }
 
     /// <summary>
@@ -119,5 +124,6 @@ public interface IMarginCallRequestV04 : IOuterRecord
     [IsoId("_CRyfwYFsEeWtPe6Crjmeug")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

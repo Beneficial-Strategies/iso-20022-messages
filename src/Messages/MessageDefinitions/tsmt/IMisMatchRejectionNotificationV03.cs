@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "MisMtchRjctnNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.023.001.03"
 )]
+[Description(@"Scope|The MisMatchRejectionNotification message is sent by the matching application to the parties involved in the transaction.|This message is used to notify the rejection of mis-matched data sets.|Usage|The MisMatchRejectionNotification message can be sent by the matching application to pass on the information about the rejection of mis-matched data sets that it has obtained through the receipt of an MisMatchRejection message.|In order to pass on information about the acceptance of mis-matched data sets the matching application sends an MisMatchAcceptanceNotification message.")]
+[IsoDisplayName(@"Mis Match Rejection Notification V")]
 public interface IMisMatchRejectionNotificationV03 : IOuterRecord
 {
     /// <summary>
@@ -61,6 +63,9 @@ public interface IMisMatchRejectionNotificationV03 : IOuterRecord
     [IsoId("_sB_vEdE8Ed-BzquC8wXy7w_-1828585771")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

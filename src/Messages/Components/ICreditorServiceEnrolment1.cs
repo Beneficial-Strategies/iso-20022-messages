@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the service details for the creditor enrolment.
 /// </summary>
 [IsoId("_BcQ8kEWOEempSe_3C1a9EQ")]
+[IsoDisplayName(@"Creditor Service Enrolment")]
 public interface ICreditorServiceEnrolment1 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface ICreditorServiceEnrolment1 : IIsoComponent
     [IsoId("_JMynsEWQEempSe_3C1a9EQ")]
     [DisplayName("Service Activation Allowed")]
     [IsoXmlTag("SvcActvtnAllwd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator ServiceActivationAllowed { get; }
 
     /// <summary>
@@ -52,6 +54,8 @@ public interface ICreditorServiceEnrolment1 : IIsoComponent
     [IsoId("_aDISsUWQEempSe_3C1a9EQ")]
     [DisplayName("Service Description Link")]
     [IsoXmlTag("SvcDescLk")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? ServiceDescriptionLink { get; }
 
     /// <summary>
@@ -60,5 +64,7 @@ public interface ICreditorServiceEnrolment1 : IIsoComponent
     [IsoId("__L-0oUWQEempSe_3C1a9EQ")]
     [DisplayName("Creditor Service Activation Link")]
     [IsoXmlTag("CdtrSvcActvtnLk")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? CreditorServiceActivationLink { get; }
 }

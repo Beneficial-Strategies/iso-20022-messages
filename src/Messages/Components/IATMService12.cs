@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Deposit service provided by the ATM inside the session.
 /// </summary>
 [IsoId("_fPP98a4GEeWL1uap3dNhCQ")]
+[IsoDisplayName(@"ATM Service")]
 public interface IATMService12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMService12 : IIsoComponent
     [IsoId("_faHxMa4GEeWL1uap3dNhCQ")]
     [DisplayName("Service Reference")]
     [IsoXmlTag("SvcRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ServiceReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMService12 : IIsoComponent
     [IsoId("_faHxM64GEeWL1uap3dNhCQ")]
     [DisplayName("ATM Service Code")]
     [IsoXmlTag("ATMSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ATMServiceCode { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IATMService12 : IIsoComponent
     [IsoId("_oR5qMK4GEeWL1uap3dNhCQ")]
     [DisplayName("Host Service Code")]
     [IsoXmlTag("HstSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? HostServiceCode { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IATMService12 : IIsoComponent
     [IsoId("_faHxN64GEeWL1uap3dNhCQ")]
     [DisplayName("Service Variant Identification")]
     [IsoXmlTag("SvcVarntId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ServiceVariantIdentification { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IATMService12 : IIsoComponent
     [IsoId("_faHxOa4GEeWL1uap3dNhCQ")]
     [DisplayName("Cash Back")]
     [IsoXmlTag("CshBck")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CashBack { get; }
 
     /// <summary>
@@ -65,5 +74,6 @@ public interface IATMService12 : IIsoComponent
     [IsoId("_faHxO64GEeWL1uap3dNhCQ")]
     [DisplayName("Multi Account")]
     [IsoXmlTag("MultiAcct")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MultiAccount { get; }
 }

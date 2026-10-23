@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// </summary>
 [IsoId("_udcZ0aFCEe-MRKYsaX6JDg")]
 [IsoMessage("caam.010.001.03", "ATMRcncltnAck", "urn:iso:std:iso:20022:tech:xsd:caam.010.001.03")]
+[IsoDisplayName(@"ATM Reconciliation Acknowledgement V03")]
 public interface IATMReconciliationAcknowledgementV03 : IOuterRecord
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalAmount1Choice;
 /// </summary>
 [IsoId("_wupB8UG_EeaNEqIb_fgRZg")]
 [IsoXmlTag("RsltgCshOut")]
+[IsoDisplayName(@"Resulting Cash Out")]
 public interface IResultingCashOut : IAdditionalAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

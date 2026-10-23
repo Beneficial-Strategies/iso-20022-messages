@@ -28,6 +28,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "IntraPosMvmntConf",
     "urn:iso:std:iso:20022:tech:xsd:semt.015.002.05"
 )]
+[Description(@"Scope|An account servicer sends a IntraPositionMovementConfirmation to an account owner to confirm the movement of securities within its holding from one sub-balance to another, for example, blocking of securities. |The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or |- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Intra Position Movement Confirmation 002 V")]
 public interface IIntraPositionMovementConfirmation002V05 : IOuterRecord
 {
     /// <summary>
@@ -92,5 +94,6 @@ public interface IIntraPositionMovementConfirmation002V05 : IOuterRecord
     [IsoId("_5NWRM5NLEeWGlc8L7oPDIg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

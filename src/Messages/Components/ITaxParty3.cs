@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details about the entity involved in the tax paid or to be paid.
 /// </summary>
 [IsoId("_SknWoAEcEeCQm6a_G2yO_w_-837981111")]
+[IsoDisplayName(@"Tax Party")]
 public interface ITaxParty3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITaxParty3 : IIsoComponent
     [IsoId("_SknWoQEcEeCQm6a_G2yO_w_1225150116")]
     [DisplayName("Tax Identification")]
     [IsoXmlTag("TaxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITaxParty3 : IIsoComponent
     [IsoId("_SknWogEcEeCQm6a_G2yO_w_1724761612")]
     [DisplayName("Tax Type")]
     [IsoXmlTag("TaxTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxType { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITaxParty3 : IIsoComponent
     [IsoId("_SknWowEcEeCQm6a_G2yO_w_1665746426")]
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegistrationIdentification { get; }
 
     /// <summary>
@@ -41,5 +48,6 @@ public interface ITaxParty3 : IIsoComponent
     [IsoId("_SknWpAEcEeCQm6a_G2yO_w_377116311")]
     [DisplayName("Tax Exemption Reason")]
     [IsoXmlTag("TaxXmptnRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxExemptionReasonFormatChoice> TaxExemptionReason { get; }
 }

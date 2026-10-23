@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of actions to be performed.
 /// </summary>
 [IsoId("_B1YNAEXVEeegp_DADCe7HQ")]
+[IsoDisplayName(@"Action")]
 public interface IAction9 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IAction9 : IIsoComponent
     [IsoId("_ccz-oEXVEeegp_DADCe7HQ")]
     [DisplayName("Other Action Type")]
     [IsoXmlTag("OthrActnTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherActionType { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IAction9 : IIsoComponent
     [IsoId("_nWyY4EXVEeegp_DADCe7HQ")]
     [DisplayName("Action Information")]
     [IsoXmlTag("ActnInf")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ActionInformation { get; }
 }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctClsgAmdmntReq",
     "urn:iso:std:iso:20022:tech:xsd:acmt.020.001.02"
 )]
+[Description(@"The AccountClosingAmendmentRequest message is sent from an organisation to a financial institution as part of the account closing process. It is sent in response to a request from the financial institution to send additional information.")]
+[IsoDisplayName(@"Account Closing Amendment Request V")]
 public interface IAccountClosingAmendmentRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -88,6 +90,7 @@ public interface IAccountClosingAmendmentRequestV02 : IOuterRecord
     [IsoId("_SCcGvw1TEeKGXqvMN6jpiw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature2> DigitalSignature { get; }
 
     /// <summary>
@@ -96,5 +99,6 @@ public interface IAccountClosingAmendmentRequestV02 : IOuterRecord
     [IsoId("_2nRz8A4AEeKGXqvMN6jpiw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Position Set Buyer And Seller2.
 /// </summary>
 [IsoId("_7KNIxRTuEe61h9tfoUrWyw")]
+[IsoDisplayName(@"Position Set Buyer And Seller2")]
 public interface IPositionSetBuyerAndSeller2 : IIsoComponent
 {
     /// <summary>

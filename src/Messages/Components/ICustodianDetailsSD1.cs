@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information regarding custodian service record.
 /// </summary>
 [IsoId("_1Q1ddDL3EeKU9IrkkToqcw_-1224843836")]
+[IsoDisplayName(@"Custodian Details SD")]
 public interface ICustodianDetailsSD1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICustodianDetailsSD1 : IIsoComponent
     [IsoId("_1Q1ddTL3EeKU9IrkkToqcw_-1664439967")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICustodianDetailsSD1 : IIsoComponent
     [IsoId("_1Q_OcDL3EeKU9IrkkToqcw_1455084768")]
     [DisplayName("Custodian Corporate Action Record Identification")]
     [IsoXmlTag("CtdnCorpActnRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CustodianCorporateActionRecordIdentification { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ICustodianDetailsSD1 : IIsoComponent
     [IsoId("_1Q_OdTL3EeKU9IrkkToqcw_948233771")]
     [DisplayName("Receiving BIC")]
     [IsoXmlTag("RcvgBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier ReceivingBIC { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface ICustodianDetailsSD1 : IIsoComponent
     [IsoId("_1Q_OdjL3EeKU9IrkkToqcw_-1028930372")]
     [DisplayName("Originating BIC")]
     [IsoXmlTag("OrgtgBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier OriginatingBIC { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface ICustodianDetailsSD1 : IIsoComponent
     [IsoId("_1RIYYDL3EeKU9IrkkToqcw_914356142")]
     [DisplayName("Composite Not In Subscription Flag")]
     [IsoXmlTag("CmpsitNotInSbcptFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CompositeNotInSubscriptionFlag { get; }
 
     /// <summary>
@@ -89,5 +97,6 @@ public interface ICustodianDetailsSD1 : IIsoComponent
     [IsoId("_1RIYYTL3EeKU9IrkkToqcw_1582463489")]
     [DisplayName("Related Custodian Message Details")]
     [IsoXmlTag("RltdCtdnMsgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRelatedCustodianMessageDetailsSD1> RelatedCustodianMessageDetails { get; }
 }

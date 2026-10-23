@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PoliticallyExposedPersonStatus1C
 /// Status of the politically exposed person expressed as a code.
 /// </summary>
 [IsoId("_ds6esJUiEemC09f0MxYkRg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPoliticallyExposedPersonStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

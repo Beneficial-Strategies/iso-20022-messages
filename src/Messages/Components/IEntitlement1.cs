@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the entitlement.
 /// </summary>
 [IsoId("_UJRggtp-Ed-ak6NoX_4Aeg_-1393093293")]
+[IsoDisplayName(@"Entitlement")]
 public interface IEntitlement1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IEntitlement1 : IIsoComponent
     [IsoId("_UJRghNp-Ed-ak6NoX_4Aeg_-505589086")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IEntitlement1 : IIsoComponent
     [IsoId("_UJRghdp-Ed-ak6NoX_4Aeg_1936794544")]
     [DisplayName("Securities Distribution Details")]
     [IsoXmlTag("SctiesDstrbtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesEntitlement1> SecuritiesDistributionDetails { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IEntitlement1 : IIsoComponent
     [IsoId("_UJRghtp-Ed-ak6NoX_4Aeg_1939563150")]
     [DisplayName("Cash Distribution Details")]
     [IsoXmlTag("CshDstrbtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashEntitlement1> CashDistributionDetails { get; }
 }

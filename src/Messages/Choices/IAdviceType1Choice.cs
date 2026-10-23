@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of advice requested for the transaction.
 /// </summary>
 [IsoId("_u3TXw9omEembTrt_WixjyQ")]
+[IsoDisplayName(@"Advice Type 1 Choice")]
 public interface IAdviceType1Choice : IIsoChoice { }

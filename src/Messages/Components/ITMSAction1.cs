@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Single terminal management action to be performed by the point of interaction.
 /// </summary>
 [IsoId("_KsN70X1DEeCF8NjrBemJWQ_-405240554")]
+[IsoDisplayName(@"TMS Action")]
 public interface ITMSAction1 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,6 @@ public interface ITMSAction1 : IIsoComponent
     [IsoId("_KsN72H1DEeCF8NjrBemJWQ_1120775201")]
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorAction1> ErrorAction { get; }
 }

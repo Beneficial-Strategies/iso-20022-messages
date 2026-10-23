@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money for which goods or services are offered, sold, or bought.
 /// </summary>
 [IsoId("_U4qWFdp-Ed-ak6NoX_4Aeg_-44720744")]
+[IsoDisplayName(@"Unit Price")]
 public interface IUnitPrice6 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IUnitPrice6 : IIsoComponent
     [IsoId("_U4qWGNp-Ed-ak6NoX_4Aeg_-44720684")]
     [DisplayName("Value In Investment Currency")]
     [IsoXmlTag("ValInInvstmtCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceValue1> ValueInInvestmentCurrency { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IUnitPrice6 : IIsoComponent
     [IsoId("_U4qWGdp-Ed-ak6NoX_4Aeg_-44720418")]
     [DisplayName("Value In Alternative Currency")]
     [IsoXmlTag("ValInAltrntvCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceValue1> ValueInAlternativeCurrency { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IUnitPrice6 : IIsoComponent
     [IsoId("_U40HENp-Ed-ak6NoX_4Aeg_-44720393")]
     [DisplayName("For Execution Indicator")]
     [IsoXmlTag("ForExctnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ForExecutionIndicator { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IUnitPrice6 : IIsoComponent
     [IsoId("_U40HEdp-Ed-ak6NoX_4Aeg_-44720358")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IUnitPrice6 : IIsoComponent
     [IsoId("_U40HEtp-Ed-ak6NoX_4Aeg_-144399643")]
     [DisplayName("Calculation Basis")]
     [IsoXmlTag("ClctnBsis")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? CalculationBasis { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface IUnitPrice6 : IIsoComponent
     [IsoId("_U40HE9p-Ed-ak6NoX_4Aeg_-168219132")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface IUnitPrice6 : IIsoComponent
     [IsoId("_U40HFtp-Ed-ak6NoX_4Aeg_-44720322")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge9> ChargeDetails { get; }
 
     /// <summary>
@@ -105,6 +113,7 @@ public interface IUnitPrice6 : IIsoComponent
     [IsoId("_U40HF9p-Ed-ak6NoX_4Aeg_-44720297")]
     [DisplayName("Tax Liability Details")]
     [IsoXmlTag("TaxLbltyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax8> TaxLiabilityDetails { get; }
 
     /// <summary>
@@ -113,5 +122,6 @@ public interface IUnitPrice6 : IIsoComponent
     [IsoId("_U40HGNp-Ed-ak6NoX_4Aeg_-626866032")]
     [DisplayName("Tax Refund Details")]
     [IsoXmlTag("TaxRfndDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax8> TaxRefundDetails { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Taxonomy for financial and non financial counterparties.
 /// </summary>
 [IsoId("_tkArEdGgEeaQk737TH1Fzw")]
+[IsoDisplayName(@"Corporate Sector Criteria")]
 public interface ICorporateSectorCriteria3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateSectorCriteria3 : IIsoComponent
     [IsoId("_ttQGodGgEeaQk737TH1Fzw")]
     [DisplayName("Financial Institution Sector")]
     [IsoXmlTag("FISctr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<FinancialPartySectorType1Code> FinancialInstitutionSector { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICorporateSectorCriteria3 : IIsoComponent
     [IsoId("_ttQGo9GgEeaQk737TH1Fzw")]
     [DisplayName("Non Financial Institution Sector")]
     [IsoXmlTag("NFISctr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<NonFinancialPartySector1Code> NonFinancialInstitutionSector { get; }
 
     /// <summary>

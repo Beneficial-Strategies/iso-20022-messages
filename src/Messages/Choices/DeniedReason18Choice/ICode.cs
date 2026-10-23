@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedReason18Choice;
 /// Specifies additional information about the processed instruction.
 /// </summary>
 [IsoId("_6BLiMZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDeniedReason18Choice, IIsoChoiceVariant
 {
     /// <summary>

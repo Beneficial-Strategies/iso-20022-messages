@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters defining the timing conditions to process an action.
 /// </summary>
 [IsoId("_-WUSYTAREeugIJ3Gvoevmg")]
+[IsoDisplayName(@"Process Timing")]
 public interface IProcessTiming6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IProcessTiming6 : IIsoComponent
     [IsoId("_-njzYTAREeugIJ3Gvoevmg")]
     [DisplayName("Start Time")]
     [IsoXmlTag("StartTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StartTime { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IProcessTiming6 : IIsoComponent
     [IsoId("_-njzYzAREeugIJ3Gvoevmg")]
     [DisplayName("End Time")]
     [IsoXmlTag("EndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? EndTime { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IProcessTiming6 : IIsoComponent
     [IsoId("_-njzZTAREeugIJ3Gvoevmg")]
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
+    [IsoSimpleType(IsoSimpleType.Max9NumericText)]
     Max9NumericText? Period { get; }
 
     /// <summary>

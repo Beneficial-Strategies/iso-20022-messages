@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details specific to the individual direct debit transaction(s) included in the message.
 /// </summary>
 [IsoId("_dZxnhdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Direct Debit Transaction Information")]
 public interface IDirectDebitTransactionInformation27 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IDirectDebitTransactionInformation27 : IIsoComponent
     [IsoId("_dc5MudcZEeqRFcf2R4bPBw")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -113,6 +115,8 @@ public interface IDirectDebitTransactionInformation27 : IIsoComponent
     [IsoId("_dc5My9cZEeqRFcf2R4bPBw")]
     [DisplayName("Instruction For Debtor Agent")]
     [IsoXmlTag("InstrForDbtrAgt")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? InstructionForDebtorAgent { get; }
 
     /// <summary>

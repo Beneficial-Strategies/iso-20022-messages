@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade Query Criteria14.
 /// </summary>
 [IsoId("_hPeV9frgEe2mU4Wi2q3MzQ")]
+[IsoDisplayName(@"Trade Query Criteria14")]
 public interface ITradeQueryCriteria14 : IIsoComponent
 {
     /// <summary>

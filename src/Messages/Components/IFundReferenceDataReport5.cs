@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fund Reference Data Report5.
 /// </summary>
 [IsoId("_qpqxcMQXEe2pvZQ_33Qz1Q")]
+[IsoDisplayName(@"Fund Reference Data Report5")]
 public interface IFundReferenceDataReport5 : IIsoComponent
 {
     /// <summary>
@@ -135,6 +136,7 @@ public interface IFundReferenceDataReport5 : IIsoComponent
     /// </summary>
     [DisplayName("Plan Characteristics")]
     [IsoXmlTag("PlanChrtcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentPlanCharacteristics1> PlanCharacteristics { get; }
 
     /// <summary>
@@ -142,6 +144,7 @@ public interface IFundReferenceDataReport5 : IIsoComponent
     /// </summary>
     [DisplayName("Payment Instrument")]
     [IsoXmlTag("PmtInstrm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstrument16> PaymentInstrument { get; }
 
     /// <summary>
@@ -149,6 +152,7 @@ public interface IFundReferenceDataReport5 : IIsoComponent
     /// </summary>
     [DisplayName("Cash Settlement Details")]
     [IsoXmlTag("CshSttlmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount205> CashSettlementDetails { get; }
 
     /// <summary>
@@ -156,6 +160,7 @@ public interface IFundReferenceDataReport5 : IIsoComponent
     /// </summary>
     [DisplayName("Local Market Annex")]
     [IsoXmlTag("LclMktAnx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalMarketAnnex6> LocalMarketAnnex { get; }
 
     /// <summary>
@@ -177,6 +182,7 @@ public interface IFundReferenceDataReport5 : IIsoComponent
     /// </summary>
     [DisplayName("Costs And Charges")]
     [IsoXmlTag("CostsAndChrgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICostsAndCharges2> CostsAndCharges { get; }
 
     /// <summary>
@@ -198,5 +204,6 @@ public interface IFundReferenceDataReport5 : IIsoComponent
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

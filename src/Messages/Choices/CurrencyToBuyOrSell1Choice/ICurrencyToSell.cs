@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyToBuyOrSell1Choice;
 /// Account servicer is instructed to sell the indicated currency in order to obtain the necessary currency to fund the transaction.
 /// </summary>
 [IsoId("_QsvIM9p-Ed-ak6NoX_4Aeg_-894055934")]
+[IsoDisplayName(@"Currency To Sell")]
 public interface ICurrencyToSell : ICurrencyToBuyOrSell1Choice, IIsoChoiceVariant
 {
     /// <summary>

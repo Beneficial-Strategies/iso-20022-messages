@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateBasis1Choice;
 /// Exchange rate basis expressed in a proprietary notation.
 /// </summary>
 [IsoId("_SG4LkLpqEea_jI1vMH_RbA")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IExchangeRateBasis1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IExchangeRateBasis1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 52 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Value { get; }
 }

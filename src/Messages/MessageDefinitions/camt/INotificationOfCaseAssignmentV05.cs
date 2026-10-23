@@ -31,6 +31,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "NtfctnOfCaseAssgnmt",
     "urn:iso:std:iso:20022:tech:xsd:camt.030.001.05"
 )]
+[Description(@"Scope|The NotificationOfCaseAssignment message is sent by a case assignee to a case creator/case assigner.|This message is used to inform the case assigner that:|- the assignee is reassigning the case to the next agent in the transaction processing chain for further action|- the assignee will work on the case himself, without re-assigning it to another party, and therefore indicating that the re-assignment has reached its end-point|Usage|The NotificationOfCaseAssignment message is used to notify the case creator or case assigner of further action undertaken by the case assignee in a:|- request to cancel payment case;|- request to modify payment case;|- unable to apply case;|- claim non receipt case.|The NotificationOfCaseAssignment message:|- covers one and only one case at a time. If the case assignee needs to inform a case creator or case assigner about several cases, then multiple Notification Of Case Assignment messages must be sent;|- except in the case where it is used to indicate that an agent is doing the correction himself, this message must be forwarded by all subsequent case assigner(s) until it reaches the case creator;|- must not be used in place of a Resolution Of Investigation or a Case Status Report message.|When the assignee does not reassign the case to another party (that is responding with a NotificationOfCaseAssignment message with notification MINE - The case is processed by the assignee), the case assignment should contain the case assignment elements as received in the original query.")]
+[IsoDisplayName(@"Notification Of Case Assignment V")]
 public interface INotificationOfCaseAssignmentV05 : IOuterRecord
 {
     /// <summary>
@@ -72,5 +74,6 @@ public interface INotificationOfCaseAssignmentV05 : IOuterRecord
     [IsoId("_eX_OkW2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

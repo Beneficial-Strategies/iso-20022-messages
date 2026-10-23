@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other agricultural commodity derivative.
 /// </summary>
 [IsoId("_N6JN8U8TEe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Agricultural Commodity Other")]
 public interface IAgriculturalCommodityOther2 : IIsoComponent
 {
     /// <summary>

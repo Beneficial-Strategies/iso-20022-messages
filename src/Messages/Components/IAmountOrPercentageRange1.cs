@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides constrains on a range of business values.
 /// </summary>
 [IsoId("_MVJmYZJOEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Amount Or Percentage Range")]
 public interface IAmountOrPercentageRange1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,8 @@ public interface IAmountOrPercentageRange1 : IIsoComponent
     [IsoId("_MXgV85JOEeuAlLVx8pyt3w")]
     [DisplayName("Term")]
     [IsoXmlTag("Term")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITerm1> Term { get; }
 }

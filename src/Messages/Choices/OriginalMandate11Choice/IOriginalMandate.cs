@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate11Choice;
 /// <summary>
 /// Original Mandate.
 /// </summary>
+[IsoDisplayName(@"Original Mandate")]
 public interface IOriginalMandate : IOriginalMandate11Choice, IIsoChoiceVariant
 {
     /// <summary>

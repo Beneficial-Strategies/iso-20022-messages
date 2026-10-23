@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment transaction invoiced to customer.
 /// </summary>
 [IsoId("_kqBOYVXgEfC0lMwgjvMClw")]
+[IsoDisplayName(@"Fleet Transaction Detail2")]
 public interface IFleetTransactionDetail2 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,6 @@ public interface IFleetTransactionDetail2 : IIsoComponent
     [IsoId("_ksf6rVXgEfC0lMwgjvMClw")]
     [DisplayName("Tax Total")]
     [IsoXmlTag("TaxTtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> TaxTotal { get; }
 }

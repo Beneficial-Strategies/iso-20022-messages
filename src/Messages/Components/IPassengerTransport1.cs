@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Passenger ticket information for the cardholder.
 /// </summary>
 [IsoId("_E2tJY_QcEeihCvvpsmGI2w")]
+[IsoDisplayName(@"Passenger Transport")]
 public interface IPassengerTransport1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPassengerTransport1 : IIsoComponent
     [IsoId("_E2tJZPQcEeihCvvpsmGI2w")]
     [DisplayName("Trip Leg")]
     [IsoXmlTag("TripLeg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITripLeg1> TripLeg { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IPassengerTransport1 : IIsoComponent
     [IsoId("_oA_s4PQcEeihCvvpsmGI2w")]
     [DisplayName("Ancillary Purchase")]
     [IsoXmlTag("AncllryPurchs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAncillaryPurchase1> AncillaryPurchase { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IPassengerTransport1 : IIsoComponent
     [IsoId("_3YFysPQcEeihCvvpsmGI2w")]
     [DisplayName("Hired Vehicle Details")]
     [IsoXmlTag("HirdVhclDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHiredVehicle1> HiredVehicleDetails { get; }
 }

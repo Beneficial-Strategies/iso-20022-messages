@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Type of the event.
 /// </summary>
 [IsoId("_71C2RqMgEeCJ6YNENx4h-w_337125079")]
+[IsoDisplayName(@"Event Type 1 Choice")]
 public interface IEventType1Choice : IIsoChoice { }

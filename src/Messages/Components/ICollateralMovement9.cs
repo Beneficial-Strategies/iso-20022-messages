@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of collateral that will be delivered and the date to be reported.
 /// </summary>
 [IsoId("_WPYN8ILaEeWrrO9HojbPQA")]
+[IsoDisplayName(@"Collateral Movement")]
 public interface ICollateralMovement9 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICollateralMovement9 : IIsoComponent
     [IsoId("_r2gR8ILbEeWrrO9HojbPQA")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 }

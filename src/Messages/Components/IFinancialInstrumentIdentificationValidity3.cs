@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the date from which the financial instrument identification is valid.
 /// </summary>
 [IsoId("_QCL0wZJKEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Financial Instrument Identification Validity")]
 public interface IFinancialInstrumentIdentificationValidity3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IFinancialInstrumentIdentificationValidity3 : IIsoComponent
     [IsoId("_QETUo5JKEeuAlLVx8pyt3w")]
     [DisplayName("ISIN Valid From")]
     [IsoXmlTag("ISINVldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ISINValidFrom { get; }
 }

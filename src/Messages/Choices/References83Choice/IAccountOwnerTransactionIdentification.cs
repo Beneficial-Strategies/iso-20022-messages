@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References83Choice;
 
 /// <summary>Specifies the account owner transaction identification.</summary>
 [IsoId("_WtzlsagzEfCXwLUUylXgrQ")]
+[IsoDisplayName(@"Account Owner Transaction Identification")]
 public interface IAccountOwnerTransactionIdentification : IReferences83Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

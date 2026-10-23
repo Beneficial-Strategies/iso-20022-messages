@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Recommendation Action1.
 /// </summary>
 [IsoId("_OzOSkHG8Ee60F8I8TAMKmg")]
+[IsoDisplayName(@"Recommendation Action1")]
 public interface IRecommendationAction1 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IRecommendationAction1 : IIsoComponent
     /// </summary>
     [DisplayName("Details")]
     [IsoXmlTag("Dtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max256Text> Details { get; }
 }

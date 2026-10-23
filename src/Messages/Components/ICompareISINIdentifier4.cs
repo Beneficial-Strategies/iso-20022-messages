@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for an ISIN (International Securities Identification Number-ISO 6166) Identifier.
 /// </summary>
 [IsoId("_-Sbtoa5lEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Compare ISIN Identifier")]
 public interface ICompareISINIdentifier4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICompareISINIdentifier4 : IIsoComponent
     [IsoId("_-he2Qa5lEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? Value1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICompareISINIdentifier4 : IIsoComponent
     [IsoId("_-he2Q65lEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? Value2 { get; }
 }

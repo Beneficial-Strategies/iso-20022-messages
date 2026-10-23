@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of change to purpose.
 /// </summary>
 [IsoId("_mUmoIA4rEeK3IMoVvcTkkg")]
+[IsoDisplayName(@"Purpose Modification")]
 public interface IPurposeModification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IPurposeModification1 : IIsoComponent
     [IsoId("_voiRoA4rEeK3IMoVvcTkkg")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Purpose { get; }
 }

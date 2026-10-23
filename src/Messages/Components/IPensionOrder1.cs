@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Order attached to a pension.
 /// </summary>
 [IsoId("_HAPJcLTpEeiENt6AoDfPXg")]
+[IsoDisplayName(@"Pension Order")]
 public interface IPensionOrder1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPensionOrder1 : IIsoComponent
     [IsoId("_4z8_ALTqEeiENt6AoDfPXg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

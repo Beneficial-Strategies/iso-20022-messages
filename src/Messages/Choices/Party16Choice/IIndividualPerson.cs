@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party16Choice;
 /// </summary>
 [IsoId("_l9lC0xRkEeOKWo1NF21OVw")]
 [IsoXmlTag("IndvPrsn")]
+[IsoDisplayName(@"Individual Person")]
 public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
     [IsoId("_AulAJRRlEeOKWo1NF21OVw")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text GivenName { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
     [IsoId("_AulAJxRlEeOKWo1NF21OVw")]
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MiddleName { get; }
 
     /// <summary>
@@ -42,6 +47,8 @@ public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
     [IsoId("_AulAKRRlEeOKWo1NF21OVw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -50,6 +57,8 @@ public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
     [IsoId("_AulAKxRlEeOKWo1NF21OVw")]
     [DisplayName("Name Suffix")]
     [IsoXmlTag("NmSfx")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NameSuffix { get; }
 
     /// <summary>
@@ -74,6 +83,7 @@ public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
     [IsoId("_AulANxRlEeOKWo1NF21OVw")]
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate BirthDate { get; }
 
     /// <summary>
@@ -90,6 +100,8 @@ public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
     [IsoId("_AulAQRRlEeOKWo1NF21OVw")]
     [DisplayName("Province Of Birth")]
     [IsoXmlTag("PrvcOfBirth")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProvinceOfBirth { get; }
 
     /// <summary>
@@ -98,6 +110,8 @@ public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
     [IsoId("_AulAQxRlEeOKWo1NF21OVw")]
     [DisplayName("City Of Birth")]
     [IsoXmlTag("CityOfBirth")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CityOfBirth { get; }
 
     /// <summary>
@@ -106,6 +120,8 @@ public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
     [IsoId("_AulARRRlEeOKWo1NF21OVw")]
     [DisplayName("Profession")]
     [IsoXmlTag("Prfssn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Profession { get; }
 
     /// <summary>
@@ -130,6 +146,9 @@ public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
     [IsoId("_AulASxRlEeOKWo1NF21OVw")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress3> PostalAddress { get; }
 
     /// <summary>
@@ -138,6 +157,9 @@ public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
     [IsoId("_AulATRRlEeOKWo1NF21OVw")]
     [DisplayName("Citizenship")]
     [IsoXmlTag("Ctznsh")]
+    [MinLength(1)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICitizenshipInformation> Citizenship { get; }
 
     /// <summary>
@@ -146,6 +168,8 @@ public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
     [IsoId("_AulATxRlEeOKWo1NF21OVw")]
     [DisplayName("Employing Company")]
     [IsoXmlTag("EmplngCpny")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? EmployingCompany { get; }
 
     /// <summary>
@@ -154,6 +178,8 @@ public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
     [IsoId("_AulAURRlEeOKWo1NF21OVw")]
     [DisplayName("Business Function")]
     [IsoXmlTag("BizFctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BusinessFunction { get; }
 
     /// <summary>
@@ -178,6 +204,9 @@ public interface IIndividualPerson : IParty16Choice, IIsoChoiceVariant
     [IsoId("_AulAVxRlEeOKWo1NF21OVw")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification44> OtherIdentification { get; }
 
     /// <summary>

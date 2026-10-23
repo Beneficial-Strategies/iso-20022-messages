@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Maximum amount allowed over a specific period of time.
 /// </summary>
 [IsoId("_Qotj09p-Ed-ak6NoX_4Aeg_540897")]
+[IsoDisplayName(@"Maximum Amount By Period")]
 public interface IMaximumAmountByPeriod1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IMaximumAmountByPeriod1 : IIsoComponent
     [IsoId("_Qotj1dp-Ed-ak6NoX_4Aeg_1020263959")]
     [DisplayName("Number Of Days")]
     [IsoXmlTag("NbOfDays")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText NumberOfDays { get; }
 }

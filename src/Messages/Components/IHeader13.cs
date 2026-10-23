@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics related to the protocol after a rejection.
 /// </summary>
 [IsoId("_Hl7pwWpCEeS4VPLpYyQgxQ")]
+[IsoDisplayName(@"Header")]
 public interface IHeader13 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IHeader13 : IIsoComponent
     [IsoId("_HyTR02pCEeS4VPLpYyQgxQ")]
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text ProtocolVersion { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IHeader13 : IIsoComponent
     [IsoId("_HyTR1WpCEeS4VPLpYyQgxQ")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? ExchangeIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IHeader13 : IIsoComponent
     [IsoId("_HyTR12pCEeS4VPLpYyQgxQ")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -65,5 +70,6 @@ public interface IHeader13 : IIsoComponent
     [IsoId("_HyTR3WpCEeS4VPLpYyQgxQ")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITraceability2> Traceability { get; }
 }

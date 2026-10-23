@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction4Choice;
 /// </summary>
 [IsoId("_3rWFwXuSEeivKIBRHeTQRQ")]
 [IsoXmlTag("Initn")]
+[IsoDisplayName(@"Initiation")]
 public interface IInitiation : ICorrectiveTransaction4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IInitiation : ICorrectiveTransaction4Choice, IIsoChoiceVariant
     [IsoId("_33nAJ3uSEeivKIBRHeTQRQ")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IInitiation : ICorrectiveTransaction4Choice, IIsoChoiceVariant
     [IsoId("_33nAKXuSEeivKIBRHeTQRQ")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -42,6 +47,8 @@ public interface IInitiation : ICorrectiveTransaction4Choice, IIsoChoiceVariant
     [IsoId("_33nAK3uSEeivKIBRHeTQRQ")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>
@@ -50,6 +57,7 @@ public interface IInitiation : ICorrectiveTransaction4Choice, IIsoChoiceVariant
     [IsoId("_1nySkHuSEeivKIBRHeTQRQ")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? UETR { get; }
 
     /// <summary>
@@ -75,5 +83,6 @@ public interface IInitiation : ICorrectiveTransaction4Choice, IIsoChoiceVariant
     [IsoId("_33nAMXuSEeivKIBRHeTQRQ")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment terms and conditions related to a single invoice to be financed.
 /// </summary>
 [IsoId("_PyxaV9p-Ed-ak6NoX_4Aeg_-1837581386")]
+[IsoDisplayName(@"Payment Information")]
 public interface IPaymentInformation15 : IIsoComponent
 {
     /// <summary>

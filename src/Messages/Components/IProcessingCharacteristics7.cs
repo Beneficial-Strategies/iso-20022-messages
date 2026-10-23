@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Processing characteristics linked to a redemption from an investment fund or alternative/hedge fund.
 /// </summary>
 [IsoId("_WX6D4ZjvEemFu85t1CYjSw")]
+[IsoDisplayName(@"Processing Characteristics")]
 public interface IProcessingCharacteristics7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IProcessingCharacteristics7 : IIsoComponent
     [IsoId("_Wvak9ZjvEemFu85t1CYjSw")]
     [DisplayName("Dealing Currency Accepted")]
     [IsoXmlTag("DealgCcyAccptd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveCurrencyCode> DealingCurrencyAccepted { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IProcessingCharacteristics7 : IIsoComponent
     [IsoId("_Wvak-ZjvEemFu85t1CYjSw")]
     [DisplayName("Amount Indicator")]
     [IsoXmlTag("AmtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AmountIndicator { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IProcessingCharacteristics7 : IIsoComponent
     [IsoId("_Wvak-5jvEemFu85t1CYjSw")]
     [DisplayName("Units Indicator")]
     [IsoXmlTag("UnitsInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? UnitsIndicator { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IProcessingCharacteristics7 : IIsoComponent
     [IsoId("_Wvak_5jvEemFu85t1CYjSw")]
     [DisplayName("Percentage Indicator")]
     [IsoXmlTag("PctgInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PercentageIndicator { get; }
 
     /// <summary>
@@ -81,6 +86,8 @@ public interface IProcessingCharacteristics7 : IIsoComponent
     [IsoId("_WvalBZjvEemFu85t1CYjSw")]
     [DisplayName("Dealing Frequency Description")]
     [IsoXmlTag("DealgFrqcyDesc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? DealingFrequencyDescription { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface IProcessingCharacteristics7 : IIsoComponent
     [IsoId("_WvalB5jvEemFu85t1CYjSw")]
     [DisplayName("Dealing Cut Off Time")]
     [IsoXmlTag("DealgCutOffTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? DealingCutOffTime { get; }
 
     /// <summary>
@@ -105,6 +113,7 @@ public interface IProcessingCharacteristics7 : IIsoComponent
     [IsoId("_WvalC5jvEemFu85t1CYjSw")]
     [DisplayName("Deal Confirmation Time")]
     [IsoXmlTag("DealConfTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? DealConfirmationTime { get; }
 
     /// <summary>
@@ -121,6 +130,8 @@ public interface IProcessingCharacteristics7 : IIsoComponent
     [IsoId("_WvalD5jvEemFu85t1CYjSw")]
     [DisplayName("Limited Period")]
     [IsoXmlTag("LtdPrd")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? LimitedPeriod { get; }
 
     /// <summary>
@@ -137,5 +148,6 @@ public interface IProcessingCharacteristics7 : IIsoComponent
     [IsoId("_WvalE5jvEemFu85t1CYjSw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

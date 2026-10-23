@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError4Choice;
 /// </summary>
 [IsoId("_khrGsxbvEeOy-PlRuFSUzQ")]
 [IsoXmlTag("BizErr")]
+[IsoDisplayName(@"Business Error")]
 public interface IBusinessError : IStandingOrderOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IBusinessError : IStandingOrderOrError4Choice, IIsoChoiceVarian
     [IsoId("_jXcINRbvEeOy-PlRuFSUzQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

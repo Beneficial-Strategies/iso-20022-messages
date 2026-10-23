@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of related tax.
 /// </summary>
 [IsoId("_UPYvktp-Ed-ak6NoX_4Aeg_1950331335")]
+[IsoDisplayName(@"Related Tax Type")]
 public interface IRelatedTaxType1 : IIsoComponent
 {
     /// <summary>

@@ -28,6 +28,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesTxCxlReqStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:sese.027.002.06"
 )]
+[Description(@"Scope|An account servicer sends an SecuritiesTransactionCancellationRequestStatusAdvice to an account owner to advise the status of a securities transaction cancellation request previously sent by the account owner.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Transaction Cancellation Request Status Advice 002 V")]
 public interface ISecuritiesTransactionCancellationRequestStatusAdvice002V06 : IOuterRecord
 {
     /// <summary>
@@ -68,5 +70,6 @@ public interface ISecuritiesTransactionCancellationRequestStatusAdvice002V06 : I
     [IsoId("_YTI0jyAeEeuyDZ-ukt4YRg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References14Choice;
 /// Unambiguous identification of a securities settlement transaction as known by the account owner (or instructing party acting on its behalf).
 /// </summary>
 [IsoId("_u7dqI-DgEd-udr336SN7mQ")]
+[IsoDisplayName(@"Securities Settlement Transaction Identification")]
 public interface ISecuritiesSettlementTransactionIdentification
     : IReferences14Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ISecuritiesSettlementTransactionIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("SctiesSttlmTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

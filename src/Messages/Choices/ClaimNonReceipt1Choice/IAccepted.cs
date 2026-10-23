@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClaimNonReceipt1Choice;
 /// </summary>
 [IsoId("_vzbp0IjYEeeDW7_wB-eK_g")]
 [IsoXmlTag("Accptd")]
+[IsoDisplayName(@"Accepted")]
 public interface IAccepted : IClaimNonReceipt1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IAccepted : IClaimNonReceipt1Choice, IIsoChoiceVariant
     [IsoId("_hPoCUItuEee-OJ-wXSj3YQ")]
     [DisplayName("Date Processed")]
     [IsoXmlTag("DtPrcd")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate DateProcessed { get; }
 
     /// <summary>

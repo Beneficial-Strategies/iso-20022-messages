@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines an encapsulated form of an ISO 20022 message and, if present, its associated Business Application Header. The encapsulation guarantees uniqueness of ID/IDREFs though the use of the Prefix element. This element can be added during message preparation to ID/IDREFs. In order to verify the signature in the Hdr element or inside the encapsulated message, for each occurrence of an ID orIDREF that possesses the same value as a prefix, the prefix part is removed before signature verification. This is not done for surrounding signatures.
 /// </summary>
 [IsoId("_OTgzMTky-AOSNFX-8224490")]
+[IsoDisplayName(@"Encapsulated Business Message")]
 public interface IEncapsulatedBusinessMessage1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IEncapsulatedBusinessMessage1 : IIsoComponent
     [IsoId("_NzE0NzI1-AOSNFX-5096924")]
     [DisplayName("Prefix")]
     [IsoXmlTag("Prfx")]
+    [IsoSimpleType(IsoSimpleType.ID)]
     XsdID? Prefix { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IEncapsulatedBusinessMessage1 : IIsoComponent
     [IsoId("_NzE0NzI2-AOSNFX-5096924")]
     [DisplayName("Partial")]
     [IsoXmlTag("Prtl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Partial { get; }
 
     /// <summary>

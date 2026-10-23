@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference16Choice;
 /// <summary>
 /// Compliance Identification.
 /// </summary>
+[IsoDisplayName(@"Compliance Identification")]
 public interface IComplianceIdentification : IIdentificationReference16Choice, IIsoChoiceVariant
 {
     /// <summary>

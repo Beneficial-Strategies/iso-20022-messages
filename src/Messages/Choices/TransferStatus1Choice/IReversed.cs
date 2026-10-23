@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice;
 /// </summary>
 [IsoId("_o1CqrxwkEeOIveEnnb_1-A")]
 [IsoXmlTag("Rvsd")]
+[IsoDisplayName(@"Reversed")]
 public interface IReversed : ITransferStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IReversed : ITransferStatus1Choice, IIsoChoiceVariant
     [IsoId("_RQptltp-Ed-ak6NoX_4Aeg_-1949430313")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Reason { get; }
 
     /// <summary>

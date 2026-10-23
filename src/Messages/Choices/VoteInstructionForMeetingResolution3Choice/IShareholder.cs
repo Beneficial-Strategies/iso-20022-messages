@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionForMeetingResolut
 /// </summary>
 [IsoId("_n0rhBa4dEemG7MmivSuE5g")]
 [IsoXmlTag("Shrhldr")]
+[IsoDisplayName(@"Shareholder")]
 public interface IShareholder : IVoteInstructionForMeetingResolution3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IShareholder : IVoteInstructionForMeetingResolution3Choice, IIs
     [IsoId("_PbrI9tp-Ed-ak6NoX_4Aeg_290283597")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>

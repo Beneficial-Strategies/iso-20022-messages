@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of a telecom billing event.
 /// </summary>
 [IsoId("_Av2xUVXZEfC0lMwgjvMClw")]
+[IsoDisplayName(@"Telecom Billing Event Amount1")]
 public interface ITelecomBillingEventAmount1 : IIsoComponent
 {
     /// <summary>

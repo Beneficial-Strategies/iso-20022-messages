@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of value type.
 /// </summary>
 [IsoId("_UyctRQycEeuG8M5giQ2e0w")]
+[IsoDisplayName(@"Yielded Or Value Type 2 Choice")]
 public interface IYieldedOrValueType2Choice : IIsoChoice { }

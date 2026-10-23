@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationRejectionStatus1Choi
 /// Reason advising the rejection of the instruction cancellation request in the form of a code.
 /// </summary>
 [IsoId("_RCpGwNp-Ed-ak6NoX_4Aeg_1852257292")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICancellationRejectionStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

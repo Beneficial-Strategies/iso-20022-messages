@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Clearing data at batch level. Allows clearing in different currencies.
 /// </summary>
 [IsoId("_SxDRYW79EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Clearing Batch Data4")]
 public interface IClearingBatchData4 : IIsoComponent
 {
     /// <summary>

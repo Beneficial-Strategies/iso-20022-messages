@@ -13,6 +13,8 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// </summary>
 [IsoId("_RC0PQXPXEe2pK6udhxEaHA")]
 [IsoMessage("catm.007.001.06", "CertMgmtReq", "urn:iso:std:iso:20022:tech:xsd:catm.007.001.06")]
+[Description(@"The CertificateManagementRequest message is sent by a POI terminal or any intermediary entity either to a terminal manager acting as a certificate authority for managing X.509 certificate of a public key owned by the initiating party, or for requesting the inclusion or the removal of the POI to a white list of the terminal manager.|")]
+[IsoDisplayName(@"Certificate Management Request V")]
 public interface ICertificateManagementRequestV06 : IOuterRecord
 {
     /// <summary>

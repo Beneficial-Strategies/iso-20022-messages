@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction from an investor to sell investment fund units back to the fund.
 /// </summary>
 [IsoId("_VdBAW9p-Ed-ak6NoX_4Aeg_77313367")]
+[IsoDisplayName(@"Redemption Order")]
 public interface IRedemptionOrder4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRedemptionOrder4 : IIsoComponent
     [IsoId("_VdKxUNp-Ed-ak6NoX_4Aeg_77313376")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IRedemptionOrder4 : IIsoComponent
     [IsoId("_VdKxUdp-Ed-ak6NoX_4Aeg_77313548")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundOrderType1> OrderType { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IRedemptionOrder4 : IIsoComponent
     [IsoId("_VdKxVdp-Ed-ak6NoX_4Aeg_77313453")]
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate HoldingsRedemptionRate { get; }
 
     /// <summary>
@@ -105,6 +110,7 @@ public interface IRedemptionOrder4 : IIsoComponent
     [IsoId("_VdUiUdp-Ed-ak6NoX_4Aeg_77313956")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge8> ChargeDetails { get; }
 
     /// <summary>
@@ -113,6 +119,7 @@ public interface IRedemptionOrder4 : IIsoComponent
     [IsoId("_VdUiUtp-Ed-ak6NoX_4Aeg_77313938")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission6> CommissionDetails { get; }
 
     /// <summary>
@@ -121,6 +128,7 @@ public interface IRedemptionOrder4 : IIsoComponent
     [IsoId("_VdUiU9p-Ed-ak6NoX_4Aeg_77313843")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax6> TaxDetails { get; }
 
     /// <summary>
@@ -137,6 +145,7 @@ public interface IRedemptionOrder4 : IIsoComponent
     [IsoId("_VdUiVdp-Ed-ak6NoX_4Aeg_77313565")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>

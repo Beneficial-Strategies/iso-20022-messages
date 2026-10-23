@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instalment Amount Details3.
 /// </summary>
 [IsoId("_jCT6sXG_Ee60F8I8TAMKmg")]
+[IsoDisplayName(@"Instalment Amount Details3")]
 public interface IInstalmentAmountDetails3 : IIsoComponent
 {
     /// <summary>

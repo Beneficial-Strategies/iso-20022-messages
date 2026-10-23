@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference of the trade transaction.
 /// </summary>
 [IsoId("_S-xcR9p-Ed-ak6NoX_4Aeg_946629114")]
+[IsoDisplayName(@"Transaction Details")]
 public interface ITransactionDetails2 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface ITransactionDetails2 : IIsoComponent
     [IsoId("_S-6mMNp-Ed-ak6NoX_4Aeg_1406541847")]
     [DisplayName("Trade Reference")]
     [IsoXmlTag("TradRef")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text TradeReference { get; }
 }

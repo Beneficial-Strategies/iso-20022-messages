@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentReport1Choice;
 
 /// <summary>Instrument related data report.</summary>
 [IsoId("_ZFrzIGFSEfC91ZUW7iS7ww")]
+[IsoDisplayName(@"New")]
 public interface INew : IInstrumentReport1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_UbvIwX_5Ee-h086v0qPiyQ")]
 [IsoMessage("seev.004.001.10", "MtgInstr", "urn:iso:std:iso:20022:tech:xsd:seev.004.001.10")]
+[IsoDisplayName(@"Meeting Instruction V10")]
 public interface IMeetingInstructionV10 : IOuterRecord
 {
     /// <summary>
@@ -46,6 +47,7 @@ public interface IMeetingInstructionV10 : IOuterRecord
     /// </summary>
     [DisplayName("Instruction Cancellation Request Identification")]
     [IsoXmlTag("InstrCxlReqId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingInstructionCancellation1> InstructionCancellationRequestIdentification { get; }
 
     /// <summary>
@@ -53,6 +55,7 @@ public interface IMeetingInstructionV10 : IOuterRecord
     /// </summary>
     [DisplayName("Cancelled Instruction Identification")]
     [IsoXmlTag("CancInstrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingInstructionIdentification1> CancelledInstructionIdentification { get; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public interface IMeetingInstructionV10 : IOuterRecord
     /// </summary>
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification32> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -67,6 +71,7 @@ public interface IMeetingInstructionV10 : IOuterRecord
     /// </summary>
     [DisplayName("Instruction")]
     [IsoXmlTag("Instr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstruction8> Instruction { get; }
 
     /// <summary>
@@ -74,5 +79,6 @@ public interface IMeetingInstructionV10 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

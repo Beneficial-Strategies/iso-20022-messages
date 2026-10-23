@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about actions that may be taken on an account.
 /// </summary>
 [IsoId("_TCoJUe6SEemVDc1WJaqofw")]
+[IsoDisplayName(@"Investor Profile")]
 public interface IInvestorProfile2 : IIsoComponent
 {
     /// <summary>

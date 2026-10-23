@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional details to clarify response codes.
 /// </summary>
 [IsoId("_W-pnUBE7EeafpqhYGpTDnw")]
+[IsoDisplayName(@"Response Details")]
 public interface IResponseDetails1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IResponseDetails1 : IIsoComponent
     [IsoId("_kLn-8BE7EeafpqhYGpTDnw")]
     [DisplayName("Response Code")]
     [IsoXmlTag("RspnCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ResponseCode { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IResponseDetails1 : IIsoComponent
     [IsoId("_n4DNYBE7EeafpqhYGpTDnw")]
     [DisplayName("Additional Details")]
     [IsoXmlTag("AddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalDetails { get; }
 }

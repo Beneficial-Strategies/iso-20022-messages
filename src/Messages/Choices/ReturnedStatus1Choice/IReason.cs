@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReturnedStatus1Choice;
 /// <summary>
 /// Reason.
 /// </summary>
+[IsoDisplayName(@"Reason")]
 public interface IReason : IReturnedStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

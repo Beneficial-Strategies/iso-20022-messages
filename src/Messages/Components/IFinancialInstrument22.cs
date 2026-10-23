@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example, dividend option or valuation currency.
 /// </summary>
 [IsoId("_Weu8C9p-Ed-ak6NoX_4Aeg_-1232539888")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument22 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrument22 : IIsoComponent
     [IsoId("_Weu8DNp-Ed-ak6NoX_4Aeg_1861417460")]
     [DisplayName("Class Type")]
     [IsoXmlTag("ClssTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClassType { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IFinancialInstrument22 : IIsoComponent
     [IsoId("_We4tAtp-Ed-ak6NoX_4Aeg_173950638")]
     [DisplayName("Product Group")]
     [IsoXmlTag("PdctGrp")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text? ProductGroup { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IFinancialInstrument22 : IIsoComponent
     [IsoId("_We4tA9p-Ed-ak6NoX_4Aeg_-1820194068")]
     [DisplayName("Umbrella Name")]
     [IsoXmlTag("UmbrllNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? UmbrellaName { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IFinancialInstrument22 : IIsoComponent
     [IsoId("_We4tB9p-Ed-ak6NoX_4Aeg_1400662174")]
     [DisplayName("Dual Fund Indicator")]
     [IsoXmlTag("DualFndInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DualFundIndicator { get; }
 
     /// <summary>
@@ -97,5 +105,6 @@ public interface IFinancialInstrument22 : IIsoComponent
     [IsoId("_We4tCdp-Ed-ak6NoX_4Aeg_-369034446")]
     [DisplayName("Registered Distribution Country")]
     [IsoXmlTag("RegdDstrbtnCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> RegisteredDistributionCountry { get; }
 }

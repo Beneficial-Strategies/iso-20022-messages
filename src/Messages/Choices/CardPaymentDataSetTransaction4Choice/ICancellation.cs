@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction4Ch
 /// </summary>
 [IsoId("_U0k2o43MEeWjkqXgn_0Imw")]
 [IsoXmlTag("Cxl")]
+[IsoDisplayName(@"Cancellation")]
 public interface ICancellation : ICardPaymentDataSetTransaction4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICancellation : ICardPaymentDataSetTransaction4Choice, IIsoChoi
     [IsoId("_HlYKEY3PEeWjkqXgn_0Imw")]
     [DisplayName("Transaction Sequence Counter")]
     [IsoXmlTag("TxSeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Max9NumericText)]
     Max9NumericText TransactionSequenceCounter { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface ICancellation : ICardPaymentDataSetTransaction4Choice, IIsoChoi
     [IsoId("_HlYKE43PEeWjkqXgn_0Imw")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITraceability5> Traceability { get; }
 
     /// <summary>

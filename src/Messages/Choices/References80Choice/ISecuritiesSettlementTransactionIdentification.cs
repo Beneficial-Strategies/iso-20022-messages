@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References80Choice;
 /// <summary>
 /// Securities Settlement Transaction Identification.
 /// </summary>
+[IsoDisplayName(@"Securities Settlement Transaction Identification")]
 public interface ISecuritiesSettlementTransactionIdentification
     : IReferences80Choice,
         IIsoChoiceVariant

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Outcome of the processing of the transaction.
 /// </summary>
 [IsoId("_q5sCQZizEeefZKJHxQTztg")]
+[IsoDisplayName(@"Processing Result")]
 public interface IProcessingResult4 : IIsoComponent
 {
     /// <summary>
@@ -34,5 +35,6 @@ public interface IProcessingResult4 : IIsoComponent
     [IsoId("_rG9pSZizEeefZKJHxQTztg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation22> AdditionalInformation { get; }
 }

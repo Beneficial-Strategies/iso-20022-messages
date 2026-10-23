@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Terminal7.
 /// </summary>
 [IsoId("_CYyeUW6fEe6DxcrvCrq6hQ")]
+[IsoDisplayName(@"Terminal7")]
 public interface ITerminal7 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ITerminal7 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalIdentification { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface ITerminal7 : IIsoComponent
     /// </summary>
     [DisplayName("Reading Capability")]
     [IsoXmlTag("RdngCpblty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardReadingCapabilities1> ReadingCapability { get; }
 
     /// <summary>
@@ -51,6 +54,7 @@ public interface ITerminal7 : IIsoComponent
     /// </summary>
     [DisplayName("Writing Capability")]
     [IsoXmlTag("WrtgCpblty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardWritingCapabilities1> WritingCapability { get; }
 
     /// <summary>
@@ -107,6 +111,7 @@ public interface ITerminal7 : IIsoComponent
     /// </summary>
     [DisplayName("Message Capability")]
     [IsoXmlTag("MsgCpblty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisplayCapabilities6> MessageCapability { get; }
 
     /// <summary>
@@ -114,6 +119,7 @@ public interface ITerminal7 : IIsoComponent
     /// </summary>
     [DisplayName("Cardholder Verification Capability")]
     [IsoXmlTag("CrdhldrVrfctnCpblty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholderVerificationCapabilities1> CardholderVerificationCapability { get; }
 
     /// <summary>
@@ -170,6 +176,7 @@ public interface ITerminal7 : IIsoComponent
     /// </summary>
     [DisplayName("Software")]
     [IsoXmlTag("Sftwr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISoftware1> Software { get; }
 
     /// <summary>

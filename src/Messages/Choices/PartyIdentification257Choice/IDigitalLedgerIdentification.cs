@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification257Choice;
 /// <summary>
 /// Digital Ledger Identification.
 /// </summary>
+[IsoDisplayName(@"Digital Ledger Identification")]
 public interface IDigitalLedgerIdentification : IPartyIdentification257Choice, IIsoChoiceVariant
 {
     /// <summary>

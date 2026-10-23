@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides processing status of the movement cancellation request.
 /// </summary>
 [IsoId("_RlNoWNp-Ed-ak6NoX_4Aeg_1529464275")]
+[IsoDisplayName(@"Corporation Action Movement Processing Status")]
 public interface ICorporationActionMovementProcessingStatus2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICorporationActionMovementProcessingStatus2 : IIsoComponent
     [IsoId("_RlXZUdp-Ed-ak6NoX_4Aeg_1888716340")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

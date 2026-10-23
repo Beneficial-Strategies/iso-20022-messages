@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData15Choic
 /// </summary>
 [IsoId("_fMZ5wQAFEeqefbt-QjTNnA")]
 [IsoXmlTag("RpTrad")]
+[IsoDisplayName(@"Repurchase Trade")]
 public interface IRepurchaseTrade : ITransactionCollateralData15Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IRepurchaseTrade : ITransactionCollateralData15Choice, IIsoChoi
     [IsoId("_fRP9gQAFEeqefbt-QjTNnA")]
     [DisplayName("Collateral Value Date")]
     [IsoXmlTag("CollValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CollateralValueDate { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface IRepurchaseTrade : ITransactionCollateralData15Choice, IIsoChoi
     [IsoId("_fRP9hQAFEeqefbt-QjTNnA")]
     [DisplayName("Net Exposure Collateralisation Indicator")]
     [IsoXmlTag("NetXpsrCollstnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NetExposureCollateralisationIndicator { get; }
 
     /// <summary>

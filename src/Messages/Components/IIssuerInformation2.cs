@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous way to identify an organisation.
 /// </summary>
 [IsoId("_YPYKEVthEeSwKe7KuKvXhg")]
+[IsoDisplayName(@"Issuer Information")]
 public interface IIssuerInformation2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IIssuerInformation2 : IIsoComponent
     [IsoId("_YrzAU1thEeSwKe7KuKvXhg")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? URLAddress { get; }
 }

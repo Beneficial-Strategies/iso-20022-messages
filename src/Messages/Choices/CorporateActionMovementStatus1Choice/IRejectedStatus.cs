@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMovementStatus1Ch
 /// </summary>
 [IsoId("_RiPM2Np-Ed-ak6NoX_4Aeg_-1502312147")]
 [IsoXmlTag("RjctdSts")]
+[IsoDisplayName(@"Rejected Status")]
 public interface IRejectedStatus : ICorporateActionMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IRejectedStatus : ICorporateActionMovementStatus1Choice, IIsoCh
     [IsoId("_Rkw8aNp-Ed-ak6NoX_4Aeg_-1516165446")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason13FormatChoice> Reason { get; }
 
     /// <summary>
@@ -26,5 +28,7 @@ public interface IRejectedStatus : ICorporateActionMovementStatus1Choice, IIsoCh
     [IsoId("_Rk6tYNp-Ed-ak6NoX_4Aeg_-1516165445")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

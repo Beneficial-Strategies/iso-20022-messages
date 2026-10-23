@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_R3P4fzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("pain.009.001.08", "MndtInitnReq", "urn:iso:std:iso:20022:tech:xsd:pain.009.001.08")]
+[IsoDisplayName(@"Mandate Initiation Request V08")]
 public interface IMandateInitiationRequestV08 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IMandateInitiationRequestV08 : IOuterRecord
     /// </summary>
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMandate23> Mandate { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IMandateInitiationRequestV08 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

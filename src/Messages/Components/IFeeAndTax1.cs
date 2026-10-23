@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money associated with a service.
 /// </summary>
 [IsoId("_0M-9ITkkEeahTcrfPSjpxA")]
+[IsoDisplayName(@"Fee And Tax")]
 public interface IFeeAndTax1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFeeAndTax1 : IIsoComponent
     [IsoId("_OX0W0XTEEea79aegl3yVYg")]
     [DisplayName("Commercial Agreement Reference")]
     [IsoXmlTag("ComrclAgrmtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommercialAgreementReference { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IFeeAndTax1 : IIsoComponent
     [IsoId("_0lFUGzkkEeahTcrfPSjpxA")]
     [DisplayName("Individual Fee")]
     [IsoXmlTag("IndvFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFee1> IndividualFee { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IFeeAndTax1 : IIsoComponent
     [IsoId("_0lFUHTkkEeahTcrfPSjpxA")]
     [DisplayName("Individual Tax")]
     [IsoXmlTag("IndvTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax30> IndividualTax { get; }
 }

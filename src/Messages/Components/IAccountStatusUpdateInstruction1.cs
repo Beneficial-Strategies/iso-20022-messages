@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction for a change to an account status and reason for the change.
 /// </summary>
 [IsoId("_et6_QHi5EeaRm5xIK6nGuQ")]
+[IsoDisplayName(@"Account Status Update Instruction")]
 public interface IAccountStatusUpdateInstruction1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Market Identification98.
 /// </summary>
 [IsoId("_XVVrG4VYEe-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Market Identification98")]
 public interface IMarketIdentification98 : IIsoComponent
 {
     /// <summary>

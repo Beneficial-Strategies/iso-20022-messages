@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
 /// <summary>
 /// Proprietary Status.
 /// </summary>
+[IsoDisplayName(@"Proprietary Status")]
 public interface IProprietaryStatus
     : IMarketClaimCancellationRequestStatus2Choice,
         IIsoChoiceVariant

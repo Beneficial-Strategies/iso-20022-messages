@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Code of the underlying bank transaction.
 /// </summary>
 [IsoId("_TVRQuNp-Ed-ak6NoX_4Aeg_-1028115455")]
+[IsoDisplayName(@"Bank Transaction Code Structure")]
 public interface IBankTransactionCodeStructure3 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the type of intermediate security distribution.
 /// </summary>
 [IsoId("_Rms2Etp-Ed-ak6NoX_4Aeg_-820578542")]
+[IsoDisplayName(@"Intermediate Security Distribution Type 1 Format Choice")]
 public interface IIntermediateSecurityDistributionType1FormatChoice : IIsoChoice { }

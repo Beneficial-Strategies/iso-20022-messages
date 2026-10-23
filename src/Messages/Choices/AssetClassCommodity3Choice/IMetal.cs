@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity3Choice;
 /// Metal commodities.
 /// </summary>
 [IsoId("_lThdbXvyEeanCNPcMT7sSg")]
+[IsoDisplayName(@"Metal")]
 public interface IMetal : IAssetClassCommodity3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

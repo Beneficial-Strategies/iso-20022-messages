@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to report on business day information.
 /// </summary>
 [IsoId("_75XVlqMgEeCJ6YNENx4h-w_-59874421")]
+[IsoDisplayName(@"Business Day Return Criteria")]
 public interface IBusinessDayReturnCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IBusinessDayReturnCriteria2 : IIsoComponent
     [IsoId("_75XVl6MgEeCJ6YNENx4h-w_-1794151342")]
     [DisplayName("System Date Indicator")]
     [IsoXmlTag("SysDtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? SystemDateIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IBusinessDayReturnCriteria2 : IIsoComponent
     [IsoId("_75XVmKMgEeCJ6YNENx4h-w_-173713487")]
     [DisplayName("System Status Indicator")]
     [IsoXmlTag("SysStsInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? SystemStatusIndicator { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IBusinessDayReturnCriteria2 : IIsoComponent
     [IsoId("_75XVmaMgEeCJ6YNENx4h-w_-734965435")]
     [DisplayName("System Currency Indicator")]
     [IsoXmlTag("SysCcyInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? SystemCurrencyIndicator { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IBusinessDayReturnCriteria2 : IIsoComponent
     [IsoId("_75gfgKMgEeCJ6YNENx4h-w_1130036750")]
     [DisplayName("Closure Period Indicator")]
     [IsoXmlTag("ClsrPrdInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? ClosurePeriodIndicator { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IBusinessDayReturnCriteria2 : IIsoComponent
     [IsoId("_75gfgaMgEeCJ6YNENx4h-w_-1170785840")]
     [DisplayName("Event Indicator")]
     [IsoXmlTag("EvtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? EventIndicator { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IBusinessDayReturnCriteria2 : IIsoComponent
     [IsoId("_75gfgqMgEeCJ6YNENx4h-w_2127109103")]
     [DisplayName("Session Period Indicator")]
     [IsoXmlTag("SsnPrdInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? SessionPeriodIndicator { get; }
 
     /// <summary>
@@ -65,5 +72,6 @@ public interface IBusinessDayReturnCriteria2 : IIsoComponent
     [IsoId("_75gfg6MgEeCJ6YNENx4h-w_-1854786731")]
     [DisplayName("Event Type Indicator")]
     [IsoXmlTag("EvtTpInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? EventTypeIndicator { get; }
 }

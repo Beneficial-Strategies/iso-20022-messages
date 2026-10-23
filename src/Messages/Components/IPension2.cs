@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes of a pension.
 /// </summary>
 [IsoId("_00BtYFKgEeiOGaojF53zIw")]
+[IsoDisplayName(@"Pension")]
 public interface IPension2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IPension2 : IIsoComponent
     [IsoId("_4Nrw11KgEeiOGaojF53zIw")]
     [DisplayName("Tax Reference")]
     [IsoXmlTag("TaxRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxReference1> TaxReference { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface IPension2 : IIsoComponent
     [IsoId("_4Nrw2FKgEeiOGaojF53zIw")]
     [DisplayName("Drawdown Tranche Identification")]
     [IsoXmlTag("DrwdwnTrchId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DrawdownTrancheIdentification { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface IPension2 : IIsoComponent
     [IsoId("_dEiFUFK4EeiSDqv62fL07g")]
     [DisplayName("Block Transfer")]
     [IsoXmlTag("BlckTrf")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BlockTransfer { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IPension2 : IIsoComponent
     [IsoId("_gkMNoFK5EeiSDqv62fL07g")]
     [DisplayName("Tax Free Cash Protection")]
     [IsoXmlTag("TaxFreeCshPrtcn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TaxFreeCashProtection { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface IPension2 : IIsoComponent
     [IsoId("_Lp0sgFK5EeiSDqv62fL07g")]
     [DisplayName("Retirement Age Protection")]
     [IsoXmlTag("RtrmntAgePrtcn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RetirementAgeProtection { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface IPension2 : IIsoComponent
     [IsoId("_Ts388FK5EeiSDqv62fL07g")]
     [DisplayName("Retirement Age")]
     [IsoXmlTag("RtrmntAge")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? RetirementAge { get; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public interface IPension2 : IIsoComponent
     [IsoId("_jpNf0FKjEeiSDqv62fL07g")]
     [DisplayName("Sharing")]
     [IsoXmlTag("Shrg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Sharing { get; }
 
     /// <summary>
@@ -129,6 +138,7 @@ public interface IPension2 : IIsoComponent
     [IsoId("_xJuJULKcEeiXL6Ccd-oU8g")]
     [DisplayName("Lump Sum Type")]
     [IsoXmlTag("LumpSumTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILumpSumType1Choice> LumpSumType { get; }
 
     /// <summary>
@@ -137,6 +147,7 @@ public interface IPension2 : IIsoComponent
     [IsoId("_GV_SkLTpEeiENt6AoDfPXg")]
     [DisplayName("Pension Order")]
     [IsoXmlTag("PnsnOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPensionOrder1> PensionOrder { get; }
 
     /// <summary>
@@ -145,6 +156,7 @@ public interface IPension2 : IIsoComponent
     [IsoId("_NHpqgFK7EeiSDqv62fL07g")]
     [DisplayName("Ring Fenced Drawdown Assets")]
     [IsoXmlTag("RingFncdDrwdwnAssts")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RingFencedDrawdownAssets { get; }
 
     /// <summary>
@@ -161,6 +173,7 @@ public interface IPension2 : IIsoComponent
     [IsoId("_t0J88FK7EeiSDqv62fL07g")]
     [DisplayName("Safeguard Benefit")]
     [IsoXmlTag("SfgrdBnft")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SafeguardBenefit { get; }
 
     /// <summary>
@@ -169,6 +182,7 @@ public interface IPension2 : IIsoComponent
     [IsoId("_1spjMFK7EeiSDqv62fL07g")]
     [DisplayName("Lifetime Allowance Protection")]
     [IsoXmlTag("LftmAllwncPrtcn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LifetimeAllowanceProtection { get; }
 
     /// <summary>
@@ -177,5 +191,6 @@ public interface IPension2 : IIsoComponent
     [IsoId("_4Nrw2VKgEeiOGaojF53zIw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the closing of the securities financing transaction.
 /// </summary>
 [IsoId("_6BMI6ZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Securities Financing Transaction Details")]
 public interface ISecuritiesFinancingTransactionDetails33 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesFinancingTransactionDetails33 : IIsoComponent
     [IsoId("_6BMI75NLEeWGlc8L7oPDIg")]
     [DisplayName("Securities Financing Trade Identification")]
     [IsoXmlTag("SctiesFincgTradId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? SecuritiesFinancingTradeIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISecuritiesFinancingTransactionDetails33 : IIsoComponent
     [IsoId("_6BMI85NLEeWGlc8L7oPDIg")]
     [DisplayName("Closing Leg Identification")]
     [IsoXmlTag("ClsgLegId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ClosingLegIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISecuritiesFinancingTransactionDetails33 : IIsoComponent
     [IsoId("_6BMI95NLEeWGlc8L7oPDIg")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? PoolIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ISecuritiesFinancingTransactionDetails33 : IIsoComponent
     [IsoId("_6BMI-5NLEeWGlc8L7oPDIg")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? CorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface ISecuritiesFinancingTransactionDetails33 : IIsoComponent
     [IsoId("_6BMI_5NLEeWGlc8L7oPDIg")]
     [DisplayName("Triparty Agent Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtCollTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? TripartyAgentCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface ISecuritiesFinancingTransactionDetails33 : IIsoComponent
     [IsoId("_6BMJA5NLEeWGlc8L7oPDIg")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ClientTripartyCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -297,5 +310,7 @@ public interface ISecuritiesFinancingTransactionDetails33 : IIsoComponent
     [IsoId("_6BMJe5NLEeWGlc8L7oPDIg")]
     [DisplayName("Settlement Instruction Processing Additional Details")]
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text? SettlementInstructionProcessingAdditionalDetails { get; }
 }

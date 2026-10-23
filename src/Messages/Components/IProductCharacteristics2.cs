@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Product characteristic applicable to this trade product.
 /// </summary>
 [IsoId("_TACHXAEcEeCQm6a_G2yO_w_369739834")]
+[IsoDisplayName(@"Product Characteristics")]
 public interface IProductCharacteristics2 : IIsoComponent
 {
     /// <summary>

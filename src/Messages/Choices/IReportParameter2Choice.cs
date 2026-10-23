@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between types of reporting parameter.
 /// </summary>
 [IsoId("_U11EiNp-Ed-ak6NoX_4Aeg_-922147524")]
+[IsoDisplayName(@"Report Parameter 2 Choice")]
 public interface IReportParameter2Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information such as the information to comply with.
 /// </summary>
 [IsoId("_WZOJ5Np-Ed-ak6NoX_4Aeg_-455517366")]
+[IsoDisplayName(@"Corporate Action Narrative")]
 public interface ICorporateActionNarrative13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionNarrative13 : IIsoComponent
     [IsoId("_WZOJ5dp-Ed-ak6NoX_4Aeg_1845305224")]
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax350Text> InformationToComplyWith { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICorporateActionNarrative13 : IIsoComponent
     [IsoId("_WZOJ5tp-Ed-ak6NoX_4Aeg_1617142961")]
     [DisplayName("Delivery Details")]
     [IsoXmlTag("DlvryDtls")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax350Text> DeliveryDetails { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICorporateActionNarrative13 : IIsoComponent
     [IsoId("_WZOJ59p-Ed-ak6NoX_4Aeg_-263162679")]
     [DisplayName("Foreign Exchange Instructions Additional Information")]
     [IsoXmlTag("FXInstrsAddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax350Text> ForeignExchangeInstructionsAdditionalInformation { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICorporateActionNarrative13 : IIsoComponent
     [IsoId("_WZOJ6Np-Ed-ak6NoX_4Aeg_-1374074098")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax350Text> Disclaimer { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface ICorporateActionNarrative13 : IIsoComponent
     [IsoId("_WZX64Np-Ed-ak6NoX_4Aeg_-1744370468")]
     [DisplayName("Instruction Additional Information")]
     [IsoXmlTag("InstrAddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax350Text> InstructionAdditionalInformation { get; }
 }

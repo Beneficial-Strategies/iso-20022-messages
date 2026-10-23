@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Request to execute specific instructions, such as participation registration, securities registration or blocking of securities.
 /// </summary>
 [IsoId("_RVH95Np-Ed-ak6NoX_4Aeg_-1758177157")]
+[IsoDisplayName(@"Specific Instruction Request")]
 public interface ISpecificInstructionRequest1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISpecificInstructionRequest1 : IIsoComponent
     [IsoId("_RVH95dp-Ed-ak6NoX_4Aeg_-2054390611")]
     [DisplayName("Participation Registration")]
     [IsoXmlTag("PrtcptnRegn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ParticipationRegistration { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISpecificInstructionRequest1 : IIsoComponent
     [IsoId("_RVH95tp-Ed-ak6NoX_4Aeg_-1707147689")]
     [DisplayName("Blocking Securities")]
     [IsoXmlTag("BlckgScties")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BlockingSecurities { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ISpecificInstructionRequest1 : IIsoComponent
     [IsoId("_RVH959p-Ed-ak6NoX_4Aeg_-1592630247")]
     [DisplayName("Securities Registration")]
     [IsoXmlTag("SctiesRegn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SecuritiesRegistration { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgedAcceptedStatus34Choi
 
 /// <summary>Specifies the reason of the acknowledged accepted status.</summary>
 [IsoId("_XJtf8Y5bEfC_4ZEXsY0Xyg")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IAcknowledgedAcceptedStatus34Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

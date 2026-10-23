@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralInvestmentAccountType1Cho
 /// Type of investment account expressed as a code.
 /// </summary>
 [IsoId("_mog4IF2cEeiFXdiLi_Nf4A")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IGeneralInvestmentAccountType1Choice, IIsoChoiceVariant
 {
     /// <summary>

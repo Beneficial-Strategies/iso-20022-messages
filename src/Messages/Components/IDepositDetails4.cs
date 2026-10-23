@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional functions or services to be performed in conjunction with the transaction.
 /// </summary>
 [IsoId("_rGZAcT_dEfCQAqQ9lolFUg")]
+[IsoDisplayName(@"Deposit Details4")]
 public interface IDepositDetails4 : IIsoComponent
 {
     /// <summary>

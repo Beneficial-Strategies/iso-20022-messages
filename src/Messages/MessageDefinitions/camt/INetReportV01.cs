@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_2YFYQJUlEeaYkf5FCqYMeA")]
 [IsoMessage("camt.088.001.01", "NetRpt", "urn:iso:std:iso:20022:tech:xsd:camt.088.001.01")]
+[Description(@"The Net Report message is sent to a participant by a central system to provide details of the of the bi-lateral payment obligations, calculated by the central system per currency.")]
+[IsoDisplayName(@"Net Report V")]
 public interface INetReportV01 : IOuterRecord
 {
     /// <summary>
@@ -44,6 +46,7 @@ public interface INetReportV01 : IOuterRecord
     [IsoId("_0OAIgJU0EeaYkf5FCqYMeA")]
     [DisplayName("Net Obligation")]
     [IsoXmlTag("NetOblgtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetObligation1> NetObligation { get; }
 
     /// <summary>
@@ -52,5 +55,6 @@ public interface INetReportV01 : IOuterRecord
     [IsoId("_RA5FEJU1EeaYkf5FCqYMeA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties2Choice;
 /// </summary>
 [IsoId("_envDVRdQEeK5g-3oYI0_9Q")]
 [IsoXmlTag("PmryOwnr")]
+[IsoDisplayName(@"Primary Owner")]
 public interface IPrimaryOwner : IAccountParties2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface IPrimaryOwner : IAccountParties2Choice, IIsoChoiceVariant
     [IsoId("_LOyGhROGEeKjmvxNCObNeQ")]
     [DisplayName("Ownership Beneficiary Rate")]
     [IsoXmlTag("OwnrshBnfcryRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OwnershipBeneficiaryRate { get; }
 
     /// <summary>
@@ -42,6 +44,8 @@ public interface IPrimaryOwner : IAccountParties2Choice, IIsoChoiceVariant
     [IsoId("_LOyGiROGEeKjmvxNCObNeQ")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientIdentification { get; }
 
     /// <summary>
@@ -50,6 +54,7 @@ public interface IPrimaryOwner : IAccountParties2Choice, IIsoChoiceVariant
     [IsoId("_LOyGjROGEeKjmvxNCObNeQ")]
     [DisplayName("Fiscal Exemption")]
     [IsoXmlTag("FsclXmptn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FiscalExemption { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface IPrimaryOwner : IAccountParties2Choice, IIsoChoiceVariant
     [IsoId("_LOyGkROGEeKjmvxNCObNeQ")]
     [DisplayName("Signatory Right Indicator")]
     [IsoXmlTag("SgntryRghtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SignatoryRightIndicator { get; }
 
     /// <summary>
@@ -66,6 +72,9 @@ public interface IPrimaryOwner : IAccountParties2Choice, IIsoChoiceVariant
     [IsoId("_LOyGlROGEeKjmvxNCObNeQ")]
     [DisplayName("Modified Investor Profile Validation")]
     [IsoXmlTag("ModfdInvstrPrflVldtn")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope14> ModifiedInvestorProfileValidation { get; }
 
     /// <summary>

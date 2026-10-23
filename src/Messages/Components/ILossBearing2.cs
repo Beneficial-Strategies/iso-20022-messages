@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investor’s ability to bear losses.
 /// </summary>
 [IsoId("_jWdr8bSaEeq-6ssAXwSh-g")]
+[IsoDisplayName(@"Loss Bearing")]
 public interface ILossBearing2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ILossBearing2 : IIsoComponent
     [IsoId("_joeB9bSaEeq-6ssAXwSh-g")]
     [DisplayName("Limited Capital Loss Level")]
     [IsoXmlTag("LtdCptlLossLvl")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? LimitedCapitalLossLevel { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface ILossBearing2 : IIsoComponent
     [IsoId("_joeB-7SaEeq-6ssAXwSh-g")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherTargetMarketLossBearing1> Other { get; }
 }

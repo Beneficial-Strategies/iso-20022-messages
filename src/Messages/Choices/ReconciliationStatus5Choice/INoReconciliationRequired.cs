@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReconciliationStatus5Choice;
 /// Information that no reconciliation is required.
 /// </summary>
 [IsoId("_C1J2gf_oEemm3skPVSMJQg")]
+[IsoDisplayName(@"No Reconciliation Required")]
 public interface INoReconciliationRequired : IReconciliationStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental
 /// </summary>
 [IsoId("_9cj2p08REe2PGo0mhYCh1g")]
 [IsoXmlTag("Othr")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IAssetClassCommodityEnvironmental3Choice, IIsoChoiceVariant
 {
     /// <summary>

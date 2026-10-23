@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitOrError3Choice;
 /// </summary>
 [IsoId("_Rf2uIZlhEeeE1Ya-LgRsuQ")]
 [IsoXmlTag("Lmt")]
+[IsoDisplayName(@"Limit")]
 public interface ILimit : ILimitOrError3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -66,6 +67,7 @@ public interface ILimit : ILimitOrError3Choice, IIsoChoiceVariant
     [IsoId("_Rt38DZlhEeeE1Ya-LgRsuQ")]
     [DisplayName("Used Percentage")]
     [IsoXmlTag("UsdPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? UsedPercentage { get; }
 
     /// <summary>

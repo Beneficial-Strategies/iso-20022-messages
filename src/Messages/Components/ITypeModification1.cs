@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of modification to account type.
 /// </summary>
 [IsoId("_LajR8A4qEeK3IMoVvcTkkg")]
+[IsoDisplayName(@"Type Modification")]
 public interface ITypeModification1 : IIsoComponent
 {
     /// <summary>

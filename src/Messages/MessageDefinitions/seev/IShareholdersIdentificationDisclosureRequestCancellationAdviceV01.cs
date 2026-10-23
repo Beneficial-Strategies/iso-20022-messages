@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "ShrhldrsIdDsclsrReqCxlAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.046.001.01"
 )]
+[Description(@"The ShareholdersIdentificationDisclosureCancellationAdvice message is sent by an issuer or by a third party nominated by the issuer (such as an issuer's agent) to the first intermediaries in a custody chain or is sent by any intermediaries in  a custody chain to the next intermediary down the chain of intermediaries (towards the investor side of the chain) in order to withdraw/cancel the disclosure request of shareholders identity previously sent.")]
+[IsoDisplayName(@"Shareholders Identification Disclosure Request Cancellation Advice V")]
 public interface IShareholdersIdentificationDisclosureRequestCancellationAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -48,5 +50,6 @@ public interface IShareholdersIdentificationDisclosureRequestCancellationAdviceV
     [IsoId("_FGPFkT6LEemPvNTzinB5Vw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

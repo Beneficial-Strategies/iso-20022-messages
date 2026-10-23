@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides transaction type and identification information.
 /// </summary>
 [IsoId("_H4jcIU-2EeCKyoyCaiI0rw")]
+[IsoDisplayName(@"Settlement Type And Identification")]
 public interface ISettlementTypeAndIdentification13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISettlementTypeAndIdentification13 : IIsoComponent
     [IsoId("_H4smFU-2EeCKyoyCaiI0rw")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>

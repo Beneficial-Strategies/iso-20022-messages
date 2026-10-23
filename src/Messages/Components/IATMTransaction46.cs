@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Transaction46.
 /// </summary>
 [IsoId("_YCfF8aEREe-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Transaction46")]
 public interface IATMTransaction46 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface IATMTransaction46 : IIsoComponent
     /// </summary>
     [DisplayName("Selected Mix")]
     [IsoXmlTag("SelctdMix")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMMediaMix1> SelectedMix { get; }
 
     /// <summary>

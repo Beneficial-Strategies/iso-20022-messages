@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide reference and status information on the original transactions, included in the original instruction, to which the cancellation request message applies.
 /// </summary>
 [IsoId("_Qc4TG7PgEeeppqgHuc69jg")]
+[IsoDisplayName(@"Payment Transaction")]
 public interface IPaymentTransaction95 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentTransaction95 : IIsoComponent
     [IsoId("_QlNvwbPgEeeppqgHuc69jg")]
     [DisplayName("Cancellation Identification")]
     [IsoXmlTag("CxlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPaymentTransaction95 : IIsoComponent
     [IsoId("_QlNvxbPgEeeppqgHuc69jg")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPaymentTransaction95 : IIsoComponent
     [IsoId("_QlNvx7PgEeeppqgHuc69jg")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -66,6 +73,7 @@ public interface IPaymentTransaction95 : IIsoComponent
     [IsoId("_QlNvzbPgEeeppqgHuc69jg")]
     [DisplayName("Original Requested Collection Date")]
     [IsoXmlTag("OrgnlReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OriginalRequestedCollectionDate { get; }
 
     /// <summary>
@@ -74,6 +82,7 @@ public interface IPaymentTransaction95 : IIsoComponent
     [IsoId("_QlNvz7PgEeeppqgHuc69jg")]
     [DisplayName("Cancellation Reason Information")]
     [IsoXmlTag("CxlRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentCancellationReason4> CancellationReasonInformation { get; }
 
     /// <summary>
@@ -90,5 +99,6 @@ public interface IPaymentTransaction95 : IIsoComponent
     [IsoId("_QlNv07PgEeeppqgHuc69jg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

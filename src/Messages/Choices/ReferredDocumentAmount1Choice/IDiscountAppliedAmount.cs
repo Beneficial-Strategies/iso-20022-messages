@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice;
 /// </summary>
 [IsoId("_QGJCRNp-Ed-ak6NoX_4Aeg_-888106465")]
 [IsoXmlTag("DscntApldAmt")]
+[IsoDisplayName(@"Discount Applied Amount")]
 public interface IDiscountAppliedAmount : IReferredDocumentAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice26Choi
 
 /// <summary>Price expressed as a monetary value.</summary>
 [IsoId("_HT_WEa2kEfCfRtNoJv1jFQ")]
+[IsoDisplayName(@"Monetary Value")]
 public interface IMonetaryValue : ISecuritiesTransactionPrice26Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

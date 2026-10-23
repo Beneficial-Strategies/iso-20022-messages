@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Device Initialisation Card Reader Response message.
 /// </summary>
 [IsoId("_4gUzkN7HEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Device Initialisation Card Reader Response")]
 public interface IDeviceInitialisationCardReaderResponse1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IDeviceInitialisationCardReaderResponse1 : IIsoComponent
     [IsoId("_40q80O12Eei-V5h0ja04AA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? AdditionalInformation { get; }
 }

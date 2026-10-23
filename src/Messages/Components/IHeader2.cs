@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics related to the protocol.
 /// </summary>
 [IsoId("_SwPX2gEcEeCQm6a_G2yO_w_-2124028495")]
+[IsoDisplayName(@"Header")]
 public interface IHeader2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IHeader2 : IIsoComponent
     [IsoId("_SwPX3AEcEeCQm6a_G2yO_w_1438357442")]
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text ProtocolVersion { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IHeader2 : IIsoComponent
     [IsoId("_SwPX3QEcEeCQm6a_G2yO_w_-934444014")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText ExchangeIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IHeader2 : IIsoComponent
     [IsoId("_SwPX3gEcEeCQm6a_G2yO_w_1318595660")]
     [DisplayName("Re Transmission Counter")]
     [IsoXmlTag("ReTrnsmssnCntr")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? ReTransmissionCounter { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IHeader2 : IIsoComponent
     [IsoId("_SwZI0AEcEeCQm6a_G2yO_w_-230142981")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -73,5 +79,6 @@ public interface IHeader2 : IIsoComponent
     [IsoId("_SwZI0wEcEeCQm6a_G2yO_w_2131610700")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITraceability1> Traceability { get; }
 }

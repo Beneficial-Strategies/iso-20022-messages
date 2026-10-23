@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_wMT98tE9Ed-BzquC8wXy7w_-1760678511")]
 [IsoMessage("acmt.010.001.01", "AcctReqAck", "urn:iso:std:iso:20022:tech:xsd:acmt.010.001.01")]
+[Description(@"Scope|The AccountRequestAcknowledgement message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation. It is sent after the request has been validated from an authentication and authorization point of view. The business content has not yet been validated at this stage.|Usage|This message should only be sent after the request has been validated from an authentication and authorization point of view.")]
+[IsoDisplayName(@"Account Request Acknowledgement V")]
 public interface IAccountRequestAcknowledgementV01 : IOuterRecord
 {
     /// <summary>
@@ -31,6 +33,7 @@ public interface IAccountRequestAcknowledgementV01 : IOuterRecord
     [IsoId("_wMT99NE9Ed-BzquC8wXy7w_-800492608")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountForAction1> AccountIdentification { get; }
 
     /// <summary>
@@ -39,6 +42,7 @@ public interface IAccountRequestAcknowledgementV01 : IOuterRecord
     [IsoId("_wMT99dE9Ed-BzquC8wXy7w_297553784")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisationIdentification6> OrganisationIdentification { get; }
 
     /// <summary>
@@ -55,5 +59,6 @@ public interface IAccountRequestAcknowledgementV01 : IOuterRecord
     [IsoId("_wMT999E9Ed-BzquC8wXy7w_1931364103")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature1> DigitalSignature { get; }
 }

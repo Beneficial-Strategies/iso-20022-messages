@@ -24,6 +24,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "SctiesTradConfCxl",
     "urn:iso:std:iso:20022:tech:xsd:setr.029.001.02"
 )]
+[Description(@"Scope|Sent by an executing party to an instructing party directly or through Central Matching Utility (CMU) to cancel the referenced SecuritiesTradeConfirmation message that was previously sent.|The instructing party is typically the investment manager or an intermediary system/vendor communicating on behalf of the investment manager or of other categories of investors.|The executing party is typically the broker/dealer or an intermediary system/vendor communicating on behalf of the broker/dealer.|It may also be used to cancel the trade confirmation previously sent from an executing party or an instructing party to a custodian or an affirming party directly or through CMU.|The ISO 20022 Business Application Header must be used|Usage|Initiator: Both in local and central matching, the Initiator may be either the Executing Party or Instructing Party.|Respondent: Instructing party, a custodian or an affirming party optionally responds with SecuritiesTradeConfirmationResponse (accept or reject) message.")]
+[IsoDisplayName(@"Securities Trade Confirmation Cancellation V")]
 public interface ISecuritiesTradeConfirmationCancellationV02 : IOuterRecord
 {
     /// <summary>
@@ -40,6 +42,7 @@ public interface ISecuritiesTradeConfirmationCancellationV02 : IOuterRecord
     [IsoId("_q-sQWQNmEe2P7e2qGFFOGg")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages52> References { get; }
 
     /// <summary>
@@ -56,5 +59,6 @@ public interface ISecuritiesTradeConfirmationCancellationV02 : IOuterRecord
     [IsoId("_q-sQXQNmEe2P7e2qGFFOGg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

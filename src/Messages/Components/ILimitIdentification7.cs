@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit Identification7.
 /// </summary>
 [IsoId("_DuabcWdmEemMLeaDfmIfIA")]
+[IsoDisplayName(@"Limit Identification7")]
 public interface ILimitIdentification7 : IIsoComponent
 {
     /// <summary>

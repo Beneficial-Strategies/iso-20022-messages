@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies what to do during shutdown.
 /// </summary>
 [IsoId("_MAEhwXGgEe2TbaNWBpRZpQ")]
+[IsoDisplayName(@"Device Poweroff Card Reader Request")]
 public interface IDevicePoweroffCardReaderRequest5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDevicePoweroffCardReaderRequest5 : IIsoComponent
     [IsoId("_MGTFkXGgEe2TbaNWBpRZpQ")]
     [DisplayName("Power Off Maximum Waiting Time")]
     [IsoXmlTag("PwrOffMaxWtgTm")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? PowerOffMaximumWaitingTime { get; }
 
     /// <summary>

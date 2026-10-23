@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason why the service is taxed.
 /// </summary>
 [IsoId("_6TrGE5qlEeGSON8vddiWzQ_2115552253")]
+[IsoDisplayName(@"Tax Reason")]
 public interface ITaxReason1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITaxReason1 : IIsoComponent
     [IsoId("_6TrGFJqlEeGSON8vddiWzQ_-393693755")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text Code { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ITaxReason1 : IIsoComponent
     [IsoId("_6TrGFZqlEeGSON8vddiWzQ_887562025")]
     [DisplayName("Explanation")]
     [IsoXmlTag("Expltn")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text Explanation { get; }
 }

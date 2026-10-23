@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// GenericInformation exchanged with a name and value.
 /// </summary>
 [IsoId("_b4INoNwJEeeKpa-yxjuKzQ")]
+[IsoDisplayName(@"Generic Information")]
 public interface IGenericInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGenericInformation1 : IIsoComponent
     [IsoId("_toLu4NwJEeeKpa-yxjuKzQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Name { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IGenericInformation1 : IIsoComponent
     [IsoId("_Em5tYNwKEeeKpa-yxjuKzQ")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Value { get; }
 }

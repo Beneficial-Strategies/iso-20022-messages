@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details on the margin report per margin account, and optionally per non-clearing member.
 /// </summary>
 [IsoId("_-eDlF6MOEeCojJW5vEuTEQ_-651188683")]
+[IsoDisplayName(@"Margin Report")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IMarginReport2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IMarginReport2 : IIsoComponent
     [IsoId("_-eDlGKMOEeCojJW5vEuTEQ_1535794841")]
     [DisplayName("Margin Product")]
     [IsoXmlTag("MrgnPdct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMarginProductType1Choice> MarginProduct { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IMarginReport2 : IIsoComponent
     [IsoId("_-eMvAKMOEeCojJW5vEuTEQ_1274385428")]
     [DisplayName("Collateralised Margin Account Indicator")]
     [IsoXmlTag("CollsdMrgnAcctInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CollateralisedMarginAccountIndicator { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IMarginReport2 : IIsoComponent
     [IsoId("_-eMvAaMOEeCojJW5vEuTEQ_-1762100102")]
     [DisplayName("Non Clearing Member")]
     [IsoXmlTag("NonClrMmb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentificationAndAccount31> NonClearingMember { get; }
 
     /// <summary>
@@ -57,5 +62,6 @@ public interface IMarginReport2 : IIsoComponent
     [IsoId("_-eMvA6MOEeCojJW5vEuTEQ_538722488")]
     [DisplayName("Margin Calculation")]
     [IsoXmlTag("MrgnClctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMarginCalculation2> MarginCalculation { get; }
 }

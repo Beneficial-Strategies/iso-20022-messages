@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrBtchTrfRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.012.001.01"
 )]
+[Description(@"Scope|The AcceptorBatchTransferResponse message is sent by the acquirer to the card acceptor to acknowledge the proper reception of the AcceptorBatchTransfer.|Usage|The AcceptorBatchTransferResponse message is used by an acquirer to inform the card acceptor of the card payment transactions that could not be captured in the AcceptorBatchTransfer.")]
+[IsoDisplayName(@"Acceptor Batch Transfer Response V")]
 public interface IAcceptorBatchTransferResponseV01 : IOuterRecord
 {
     /// <summary>
@@ -35,6 +37,7 @@ public interface IAcceptorBatchTransferResponseV01 : IOuterRecord
     [IsoId("_fHr69qMVEeCJ6YNENx4h-w_-71921900")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet2> DataSet { get; }
 
     /// <summary>

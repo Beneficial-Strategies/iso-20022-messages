@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctSwtchPmtRspn",
     "urn:iso:std:iso:20022:tech:xsd:acmt.035.001.01"
 )]
+[Description(@"The AccountSwitchPaymentResponse message is sent by the new account servicer to the old account servicer to confirm whether it will make the requested payment in a request payment message. The AccountSwitchPaymentResponse message is only used to respond to a AccountSwitchRequestPayment message.")]
+[IsoDisplayName(@"Account Switch Payment Response V")]
 public interface IAccountSwitchPaymentResponseV01 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface IAccountSwitchPaymentResponseV01 : IOuterRecord
     [IsoId("_qlOy4A8DEeeJ4ZumUkzG4Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

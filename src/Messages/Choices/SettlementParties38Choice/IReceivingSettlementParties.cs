@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties38Choice;
 /// <summary>
 /// Receiving Settlement Parties.
 /// </summary>
+[IsoDisplayName(@"Receiving Settlement Parties")]
 public interface IReceivingSettlementParties : ISettlementParties38Choice, IIsoChoiceVariant
 {
     /// <summary>

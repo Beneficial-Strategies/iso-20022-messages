@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the error.
 /// </summary>
 [IsoId("_Kc48cUMDEfCQAqQ9lolFUg")]
+[IsoDisplayName(@"Error Details4")]
 public interface IErrorDetails4 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IErrorDetails4 : IIsoComponent
     [IsoId("_KfPF30MDEfCQAqQ9lolFUg")]
     [DisplayName("Data Element In Error")]
     [IsoXmlTag("DataElmtInErr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max4000Text> DataElementInError { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Strong Customer Authentication exemption details.
 /// </summary>
 [IsoId("_7zGJkAMgEeujMs2LsB3mMw")]
+[IsoDisplayName(@"Exemption")]
 public interface IExemption1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IExemption1 : IIsoComponent
     [IsoId("_fNKOcAMhEeujMs2LsB3mMw")]
     [DisplayName("Reason Not Honored")]
     [IsoXmlTag("RsnNotHnrd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? ReasonNotHonored { get; }
 }

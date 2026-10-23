@@ -25,6 +25,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_jTt_tx62Eeu31YsWNiv_cw")]
 [IsoMessage("reda.008.001.01", "SctyCreStsAdvc", "urn:iso:std:iso:20022:tech:xsd:reda.008.001.01")]
+[Description(@"SCOPE|An executing/servicing party sends a SecurityCreationStatusAdvice message to an instructing party to report the status of a SecurityCreationRequest message previously sent by the instructing party. ||The SecurityCreationStatusAdvice message may be sent as a response to the request of the instructing party or not.||The instructing party - executing/servicing party relationship may be:|- Central Securities Depositories (CSD) who would like to publish security static data, or |- a Corporate, or|- a Bank, or|- a Market Infrastructure, or |- a Market Data Provider.||USAGE|Initiator: executing/servicing party.")]
+[IsoDisplayName(@"Security Creation Status Advice V")]
 public interface ISecurityCreationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -57,5 +59,6 @@ public interface ISecurityCreationStatusAdviceV01 : IOuterRecord
     [IsoId("_jTt_0R62Eeu31YsWNiv_cw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

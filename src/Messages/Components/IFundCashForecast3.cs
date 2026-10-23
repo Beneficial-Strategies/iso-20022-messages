@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash movements from or to a fund as a result of investment funds transactions, eg, subscriptions or redemptions.
 /// </summary>
 [IsoId("_SjzXgtp-Ed-ak6NoX_4Aeg_1861205426")]
+[IsoDisplayName(@"Fund Cash Forecast")]
 public interface IFundCashForecast3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFundCashForecast3 : IIsoComponent
     [IsoId("_SjzXg9p-Ed-ak6NoX_4Aeg_-196910243")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IFundCashForecast3 : IIsoComponent
     [IsoId("_Sj8hcNp-Ed-ak6NoX_4Aeg_1862126561")]
     [DisplayName("Total NAV Change Rate")]
     [IsoXmlTag("TtlNAVChngRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TotalNAVChangeRate { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface IFundCashForecast3 : IIsoComponent
     [IsoId("_Sj8hcdp-Ed-ak6NoX_4Aeg_1862126621")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface IFundCashForecast3 : IIsoComponent
     [IsoId("_Sj8hctp-Ed-ak6NoX_4Aeg_1862126663")]
     [DisplayName("Exceptional Net Cash Flow Indicator")]
     [IsoXmlTag("XcptnlNetCshFlowInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ExceptionalNetCashFlowIndicator { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface IFundCashForecast3 : IIsoComponent
     [IsoId("_Sj8hc9p-Ed-ak6NoX_4Aeg_1217473671")]
     [DisplayName("Cash In Forecast Details")]
     [IsoXmlTag("CshInFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashInForecast4> CashInForecastDetails { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface IFundCashForecast3 : IIsoComponent
     [IsoId("_Sj8hdNp-Ed-ak6NoX_4Aeg_2101282754")]
     [DisplayName("Cash Out Forecast Details")]
     [IsoXmlTag("CshOutFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOutForecast4> CashOutForecastDetails { get; }
 
     /// <summary>
@@ -121,5 +129,6 @@ public interface IFundCashForecast3 : IIsoComponent
     [IsoId("_Sj8hddp-Ed-ak6NoX_4Aeg_1862127423")]
     [DisplayName("Net Cash Forecast Details")]
     [IsoXmlTag("NetCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetCashForecast2> NetCashForecastDetails { get; }
 }

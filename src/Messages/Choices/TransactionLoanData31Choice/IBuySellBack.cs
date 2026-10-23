@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData31Choice;
 /// </summary>
 [IsoId("_lod1I8zsEeux2uvSBFU54Q")]
 [IsoXmlTag("BuySellBck")]
+[IsoDisplayName(@"Buy Sell Back")]
 public interface IBuySellBack : ITransactionLoanData31Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IBuySellBack : ITransactionLoanData31Choice, IIsoChoiceVariant
     [IsoId("_pl4F4czsEeux2uvSBFU54Q")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? UniqueTradeIdentifier { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IBuySellBack : ITransactionLoanData31Choice, IIsoChoiceVariant
     [IsoId("_pl4F48zsEeux2uvSBFU54Q")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDate { get; }
 
     /// <summary>
@@ -34,6 +38,7 @@ public interface IBuySellBack : ITransactionLoanData31Choice, IIsoChoiceVariant
     [IsoId("_pl4F5czsEeux2uvSBFU54Q")]
     [DisplayName("Execution Date Time")]
     [IsoXmlTag("ExctnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ExecutionDateTime { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface IBuySellBack : ITransactionLoanData31Choice, IIsoChoiceVariant
     [IsoId("_pl4F6czsEeux2uvSBFU54Q")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? TradingVenue { get; }
 
     /// <summary>
@@ -66,6 +72,7 @@ public interface IBuySellBack : ITransactionLoanData31Choice, IIsoChoiceVariant
     [IsoId("_pl4F7czsEeux2uvSBFU54Q")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValueDate { get; }
 
     /// <summary>
@@ -74,6 +81,7 @@ public interface IBuySellBack : ITransactionLoanData31Choice, IIsoChoiceVariant
     [IsoId("_pl4F78zsEeux2uvSBFU54Q")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>
@@ -106,5 +114,6 @@ public interface IBuySellBack : ITransactionLoanData31Choice, IIsoChoiceVariant
     [IsoId("_pl4F98zsEeux2uvSBFU54Q")]
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TerminationDate { get; }
 }

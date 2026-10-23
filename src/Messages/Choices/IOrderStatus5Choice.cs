@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of status for an order.
 /// </summary>
 [IsoId("_GSNBUEHREeasdbKMiqizqA")]
+[IsoDisplayName(@"Order Status 5 Choice")]
 public interface IOrderStatus5Choice : IIsoChoice { }

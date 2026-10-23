@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details on the margin calculation per financial instrument or per currency.
 /// </summary>
 [IsoId("_-d50FKMOEeCojJW5vEuTEQ_1366752768")]
+[IsoDisplayName(@"Margin Calculation")]
 public interface IMarginCalculation2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IMarginCalculation2 : IIsoComponent
     [IsoId("_-eDlEKMOEeCojJW5vEuTEQ_-2053475098")]
     [DisplayName("Collateral On Deposit")]
     [IsoXmlTag("CollOnDpst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateral6> CollateralOnDeposit { get; }
 
     /// <summary>

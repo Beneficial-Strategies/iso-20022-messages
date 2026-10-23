@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies parameters of the report.
 /// </summary>
 [IsoId("_h8xRgR2yEeqF2P5v-Rtejg")]
+[IsoDisplayName(@"Settlement Fails Report Header")]
 public interface ISettlementFailsReportHeader2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementFailsReportHeader2 : IIsoComponent
     [IsoId("_h-xcoR2yEeqF2P5v-Rtejg")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>

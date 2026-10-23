@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties32Choice;
 /// Legal entity identifier of the indirect participant of the reporting counterparty involved in the transaction.
 /// </summary>
 [IsoId("_Az7-87Q0EemI67HK7aviyg")]
+[IsoDisplayName(@"Indirect Participant")]
 public interface IIndirectParticipant : ISettlementParties32Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

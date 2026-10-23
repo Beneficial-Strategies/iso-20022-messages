@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData14Choic
 /// Data on collateral used for the securities lending transaction.
 /// </summary>
 [IsoId("_kyCmNf_9Eemefbt-QjTNnA")]
+[IsoDisplayName(@"Securities Lending")]
 public interface ISecuritiesLending : ITransactionCollateralData14Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

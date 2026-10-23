@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of exceptions.
 /// </summary>
 [IsoId("_TEtnAa5DEeWCgYcWSNgX5g")]
+[IsoDisplayName(@"ATM Environment")]
 public interface IATMEnvironment16 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IATMEnvironment16 : IIsoComponent
     [IsoId("_TQL3M65DEeWCgYcWSNgX5g")]
     [DisplayName("ATM Manager Identification")]
     [IsoXmlTag("ATMMgrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ATMManagerIdentification { get; }
 
     /// <summary>

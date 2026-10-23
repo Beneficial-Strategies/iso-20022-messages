@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxAmountOrRate4Choice;
 /// </summary>
 [IsoId("_yZwPhTklEeapUO0vUIo9Xw")]
 [IsoXmlTag("Amt")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount : ITaxAmountOrRate4Choice, IIsoChoiceVariant
 {
     /// <summary>

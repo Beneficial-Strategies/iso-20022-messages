@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesSttlmTxQryRspn",
     "urn:iso:std:iso:20022:tech:xsd:semt.027.001.01"
 )]
+[IsoDisplayName(@"Securities Settlement Transaction Query Response V01")]
 public interface ISecuritiesSettlementTransactionQueryResponseV01 : IOuterRecord
 {
     /// <summary>
@@ -36,5 +37,6 @@ public interface ISecuritiesSettlementTransactionQueryResponseV01 : IOuterRecord
     /// </summary>
     [DisplayName("Transactions")]
     [IsoXmlTag("Txs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesSettlementTransactions6> Transactions { get; }
 }

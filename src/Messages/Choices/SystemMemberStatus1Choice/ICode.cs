@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemMemberStatus1Choice;
 /// System member status, in a coded form.
 /// </summary>
 [IsoId("_V4OMxXhhEeidzqjNEfehPg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISystemMemberStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

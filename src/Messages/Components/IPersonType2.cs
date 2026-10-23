@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of customer identification requested for a person.
 /// </summary>
 [IsoId("_zudpQeH5Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Person Type")]
 public interface IPersonType2 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IPersonType2 : IIsoComponent
     [IsoId("_zv3-geH5Eeqbls7Gk4-ckA")]
     [DisplayName("Date And Place Of Birth")]
     [IsoXmlTag("DtAndPlcOfBirth")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? DateAndPlaceOfBirth { get; }
 
     /// <summary>
@@ -27,6 +29,7 @@ public interface IPersonType2 : IIsoComponent
     [IsoId("_1-ZrkeH5Eeqbls7Gk4-ckA")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? EmailAddress { get; }
 
     /// <summary>
@@ -35,5 +38,6 @@ public interface IPersonType2 : IIsoComponent
     [IsoId("_zv3-g-H5Eeqbls7Gk4-ckA")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericPersonType1> Other { get; }
 }

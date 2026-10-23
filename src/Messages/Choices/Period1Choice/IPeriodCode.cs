@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period1Choice;
 /// Standard code to specify the type of period.
 /// </summary>
 [IsoId("_T5xr8Np-Ed-ak6NoX_4Aeg_531796080")]
+[IsoDisplayName(@"Period Code")]
 public interface IPeriodCode : IPeriod1Choice, IIsoChoiceVariant
 {
     /// <summary>

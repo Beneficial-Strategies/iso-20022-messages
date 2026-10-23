@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
 /// <summary>
 /// Proprietary Status.
 /// </summary>
+[IsoDisplayName(@"Proprietary Status")]
 public interface IProprietaryStatus
     : IInstructionCancellationRequestStatus18Choice,
         IIsoChoiceVariant

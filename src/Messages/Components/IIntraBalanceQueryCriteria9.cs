@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria based on which information is included.
 /// </summary>
 [IsoId("_VUPx9Tp9EemwKdP955WBJQ")]
+[IsoDisplayName(@"Intra Balance Query Criteria")]
 public interface IIntraBalanceQueryCriteria9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IIntraBalanceQueryCriteria9 : IIsoComponent
     [IsoId("_Ve-bQTp9EemwKdP955WBJQ")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferences36Choice> References { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IIntraBalanceQueryCriteria9 : IIsoComponent
     [IsoId("_Ve-bTTp9EemwKdP955WBJQ")]
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentificationSearchCriteria2Choice> CashAccount { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IIntraBalanceQueryCriteria9 : IIsoComponent
     [IsoId("_Ve-bSzp9EemwKdP955WBJQ")]
     [DisplayName("Cash Account Owner")]
     [IsoXmlTag("CshAcctOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> CashAccountOwner { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IIntraBalanceQueryCriteria9 : IIsoComponent
     [IsoId("_Ve-bTzp9EemwKdP955WBJQ")]
     [DisplayName("Balance Type")]
     [IsoXmlTag("BalTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalanceType3> BalanceType { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IIntraBalanceQueryCriteria9 : IIsoComponent
     [IsoId("_Ve-bVzp9EemwKdP955WBJQ")]
     [DisplayName("Cash Sub Balance Identification")]
     [IsoXmlTag("CshSubBalId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification37> CashSubBalanceIdentification { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface IIntraBalanceQueryCriteria9 : IIsoComponent
     [IsoId("_Ve-baTp9EemwKdP955WBJQ")]
     [DisplayName("Settlement Currency")]
     [IsoXmlTag("SttlmCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveOrHistoricCurrencyCode> SettlementCurrency { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface IIntraBalanceQueryCriteria9 : IIsoComponent
     [IsoId("_Ve-bezp9EemwKdP955WBJQ")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriorityNumeric4Choice> Priority { get; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public interface IIntraBalanceQueryCriteria9 : IIsoComponent
     [IsoId("_Ve-bgzp9EemwKdP955WBJQ")]
     [DisplayName("Message Originator")]
     [IsoXmlTag("MsgOrgtr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> MessageOriginator { get; }
 
     /// <summary>

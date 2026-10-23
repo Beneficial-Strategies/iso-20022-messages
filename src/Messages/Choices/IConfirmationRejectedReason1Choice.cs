@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a rejection reason for a confirmation.
 /// </summary>
 [IsoId("_-qFdQXZxEeaN2c674jyTxQ")]
+[IsoDisplayName(@"Confirmation Rejected Reason 1 Choice")]
 public interface IConfirmationRejectedReason1Choice : IIsoChoice { }

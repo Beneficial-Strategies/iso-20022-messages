@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "AgtCANtfctnCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:seev.010.001.01"
 )]
+[Description(@"Scope|This message is sent by an issuer (or its agent) to a CSD to request the cancellation of a notification advice message.|Usage|When this message is used to request the cancellation of a notification advice message, the function of the message must be cancellation.|When this message is used to request the withdrawal of a Corporate Action event or option, then the function of the message must be withdrawal.|In both cases, the building block notification advice identification must be present to link this cancellation request to the notification advice that was previously sent.")]
+[IsoDisplayName(@"Agent CA Notification Cancellation Request V")]
 public interface IAgentCANotificationCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

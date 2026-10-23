@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the trade date.
 /// </summary>
 [IsoId("_vej6AbPuEeelzbgsFa3sqQ")]
+[IsoDisplayName(@"Trade Date 8 Choice")]
 public interface ITradeDate8Choice : IIsoChoice { }

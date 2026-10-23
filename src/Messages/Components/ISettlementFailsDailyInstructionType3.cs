@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details on the settlement fails split per instruction types.
 /// </summary>
 [IsoId("_MSd6hTOmEeqX8uoQQ3KffQ")]
+[IsoDisplayName(@"Settlement Fails Daily Instruction Type")]
 public interface ISettlementFailsDailyInstructionType3 : IIsoComponent
 {
     /// <summary>

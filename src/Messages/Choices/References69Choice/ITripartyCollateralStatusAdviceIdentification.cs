@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References69Choice;
 /// Unambiguous identification of the triparty collateral status advice to be cancelled.
 /// </summary>
 [IsoId("_N5uDoAzYEeuUZuaHWzkTew")]
+[IsoDisplayName(@"Triparty Collateral Status Advice Identification")]
 public interface ITripartyCollateralStatusAdviceIdentification
     : IReferences69Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ITripartyCollateralStatusAdviceIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("TrptyCollStsAdvcId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

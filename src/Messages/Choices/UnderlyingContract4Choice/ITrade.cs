@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract4Choice;
 /// <summary>
 /// Trade.
 /// </summary>
+[IsoDisplayName(@"Trade")]
 public interface ITrade : IUnderlyingContract4Choice, IIsoChoiceVariant
 {
     /// <summary>

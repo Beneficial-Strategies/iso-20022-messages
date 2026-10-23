@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the customer device.
 /// </summary>
 [IsoId("_Uy_usYKvEeu4svNQ5N-l6w")]
+[IsoDisplayName(@"Customer Device")]
 public interface ICustomerDevice4 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ICustomerDevice4 : IIsoComponent
     [IsoId("_U4M-1YKvEeu4svNQ5N-l6w")]
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Provider { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface ICustomerDevice4 : IIsoComponent
     [IsoId("_w89vUJfSEeuqNYk2TG3bTg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

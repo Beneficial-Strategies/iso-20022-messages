@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Amendment message record.
 /// </summary>
 [IsoId("_JgxnIFZXEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Amendment")]
 public interface IAmendment : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IAmendment : IRecordMessage1Choice, IIsoChoiceVariant
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("Amdmnt")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

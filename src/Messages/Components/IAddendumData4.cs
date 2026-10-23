@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Addendum data structure is applicable to certain merchant verticals that require industry-specific data within transaction messages.
 /// </summary>
 [IsoId("_D4FAcR1UEey8XKHwKquEQw")]
+[IsoDisplayName(@"Addendum Data")]
 public interface IAddendumData4 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IAddendumData4 : IIsoComponent
     [IsoId("_D-S9Mx1UEey8XKHwKquEQw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

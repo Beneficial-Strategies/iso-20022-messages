@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Basic valuation details of a collateral position.
 /// </summary>
 [IsoId("_UAL1-dp-Ed-ak6NoX_4Aeg_-606746879")]
+[IsoDisplayName(@"Basic Collateral Valuation 1 Details")]
 public interface IBasicCollateralValuation1Details : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IBasicCollateralValuation1Details : IIsoComponent
     [IsoId("_UAL1-tp-Ed-ak6NoX_4Aeg_-606746854")]
     [DisplayName("Valuation Haircut")]
     [IsoXmlTag("ValtnHrcut")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate ValuationHaircut { get; }
 
     /// <summary>

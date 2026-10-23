@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Charge or commission of the original individual order details that have been repaired so that the order can be accepted.
 /// </summary>
 [IsoId("_U3USS9p-Ed-ak6NoX_4Aeg_-1187208577")]
+[IsoDisplayName(@"Repaired Conditions")]
 public interface IRepairedConditions2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,9 @@ public interface IRepairedConditions2 : IIsoComponent
     [IsoId("_U3USTNp-Ed-ak6NoX_4Aeg_-1187208550")]
     [DisplayName("Repaired Charge")]
     [IsoXmlTag("RprdChrg")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge11> RepairedCharge { get; }
 
     /// <summary>
@@ -25,5 +29,8 @@ public interface IRepairedConditions2 : IIsoComponent
     [IsoId("_U3eDQNp-Ed-ak6NoX_4Aeg_-1187208516")]
     [DisplayName("Repaired Commission")]
     [IsoXmlTag("RprdComssn")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission7> RepairedCommission { get; }
 }

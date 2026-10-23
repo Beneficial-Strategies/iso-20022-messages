@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Charges Per Type Record6.
 /// </summary>
 [IsoId("_JG_qMz0QEe-thIfLZ94a1w")]
+[IsoDisplayName(@"Charges Per Type Record6")]
 public interface IChargesPerTypeRecord6 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References43Choice;
 /// Identification of the intra-position movement posting report to be cancelled.
 /// </summary>
 [IsoId("_5pbMbzqnEeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Intra Position Movement Posting Report Identification")]
 public interface IIntraPositionMovementPostingReportIdentification
     : IReferences43Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface IIntraPositionMovementPostingReportIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("IntraPosMvmntPstngRptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

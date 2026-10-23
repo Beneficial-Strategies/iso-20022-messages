@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the login response message.
 /// </summary>
 [IsoId("_ubBUQbZdEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Login Response8")]
 public interface ILoginResponse8 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ILoginResponse8 : IIsoComponent
     [IsoId("_ub7TO7ZdEfCUZfsQO4rYeA")]
     [DisplayName("POI Software")]
     [IsoXmlTag("POISftwr")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent18> POISoftware { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommunicationFormat1Choice;
 /// Unique and unambiguous identification of communication format using a code list.
 /// </summary>
 [IsoId("_icpOQA1eEeKGXqvMN6jpiw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICommunicationFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

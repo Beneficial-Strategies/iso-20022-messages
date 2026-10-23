@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus2Choice;
 /// </summary>
 [IsoId("_5VZh8ukGEemm4qhb2yFPOw")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPortfolioTransferStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IProprietary : IPortfolioTransferStatus2Choice, IIsoChoiceVaria
     [IsoId("_y0OagTp4EeWVrPy0StzzSg")]
     [DisplayName("Proprietary Reason")]
     [IsoXmlTag("PrtryRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryReason4> ProprietaryReason { get; }
 }

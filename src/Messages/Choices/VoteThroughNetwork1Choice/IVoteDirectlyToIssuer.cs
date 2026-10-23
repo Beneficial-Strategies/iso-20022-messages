@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteThroughNetwork1Choice;
 /// Voting is performed by sending a vote message directly to the issuer.
 /// </summary>
 [IsoId("_LM16IDT8Ee2tRf29bleifQ")]
+[IsoDisplayName(@"Vote Directly To Issuer")]
 public interface IVoteDirectlyToIssuer : IVoteThroughNetwork1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IVoteDirectlyToIssuer : IVoteThroughNetwork1Choice, IIsoChoiceV
     /// Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362: 2014 - &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
     /// </summary>
     [IsoXmlTag("VoteDrctlyToIssr")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentType1Choice;
 /// Document type, in a coded form.
 /// </summary>
 [IsoId("_iYH70HiJEeidzqjNEfehPg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDocumentType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Invoice data pertaining to the payment transaction.
 /// </summary>
 [IsoId("_VqOOwcWkEeuhguwJmlgagQ")]
+[IsoDisplayName(@"Invoice")]
 public interface IInvoice2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IInvoice2 : IIsoComponent
     [IsoId("_VuiHA8WkEeuhguwJmlgagQ")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvoiceLineItem2> LineItem { get; }
 }

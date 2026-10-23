@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode6Choice;
 /// <summary>
 /// Margin Portfolio Code.
 /// </summary>
+[IsoDisplayName(@"Margin Portfolio Code")]
 public interface IMarginPortfolioCode : ICollateralPortfolioCode6Choice, IIsoChoiceVariant
 {
     /// <summary>

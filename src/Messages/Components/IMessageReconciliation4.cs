@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains message reconciliation data.
 /// </summary>
 [IsoId("_3TzIAWP5EfCX7uJiAWHfoQ")]
+[IsoDisplayName(@"Message Reconciliation4")]
 public interface IMessageReconciliation4 : IIsoComponent
 {
     /// <summary>

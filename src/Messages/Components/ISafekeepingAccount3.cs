@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// A safekeeping account is an account on which a securities entry is made.
 /// </summary>
 [IsoId("_QT_4Etp-Ed-ak6NoX_4Aeg_599991386")]
+[IsoDisplayName(@"Safekeeping Account")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISafekeepingAccount3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ISafekeepingAccount3 : IIsoComponent
     [IsoId("_QT_4E9p-Ed-ak6NoX_4Aeg_599991403")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,9 @@ public interface ISafekeepingAccount3 : IIsoComponent
     [IsoId("_QT_4Ftp-Ed-ak6NoX_4Aeg_-1611473628")]
     [DisplayName("Instructed Balance")]
     [IsoXmlTag("InstdBal")]
+    [MinLength(1)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHoldingBalance4> InstructedBalance { get; }
 
     /// <summary>
@@ -49,5 +56,8 @@ public interface ISafekeepingAccount3 : IIsoComponent
     [IsoId("_QT_4F9p-Ed-ak6NoX_4Aeg_2115655800")]
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification9Choice> RightsHolder { get; }
 }

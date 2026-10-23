@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the chain of collateral parties of counterparty of Party A.
 /// </summary>
 [IsoId("_SBomESs_EeySlt9bF77XfA")]
+[IsoDisplayName(@"Collateral Parties")]
 public interface ICollateralParties11 : IIsoComponent
 {
     /// <summary>

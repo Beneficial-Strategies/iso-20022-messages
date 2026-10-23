@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the account expressed with a data source scheme.
 /// </summary>
 [IsoId("_PoVr8tp-Ed-ak6NoX_4Aeg_2048303446")]
+[IsoDisplayName(@"Account Identification")]
 public interface IAccountIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAccountIdentification3 : IIsoComponent
     [IsoId("_PoVr9Np-Ed-ak6NoX_4Aeg_2100019973")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text Issuer { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IAccountIdentification3 : IIsoComponent
     [IsoId("_PoVr9dp-Ed-ak6NoX_4Aeg_2100019938")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText Information { get; }
 }

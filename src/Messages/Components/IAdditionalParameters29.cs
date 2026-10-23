@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies additional parameters to the message or transaction.
 /// </summary>
 [IsoId("_dlrxkY7CEeaa5_S8lsRKCQ")]
+[IsoDisplayName(@"Additional Parameters")]
 public interface IAdditionalParameters29 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IAdditionalParameters29 : IIsoComponent
     [IsoId("_d0is_47CEeaa5_S8lsRKCQ")]
     [DisplayName("Previous Partial Confirmation Identification")]
     [IsoXmlTag("PrvsPrtlConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PreviousPartialConfirmationIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IAdditionalParameters29 : IIsoComponent
     [IsoId("_d0itB47CEeaa5_S8lsRKCQ")]
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IAdditionalParameters29 : IIsoComponent
     [IsoId("_d0itD47CEeaa5_S8lsRKCQ")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientTripartyCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface IAdditionalParameters29 : IIsoComponent
     [IsoId("_d0itF47CEeaa5_S8lsRKCQ")]
     [DisplayName("Client Collateral Instruction Identification")]
     [IsoXmlTag("ClntCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientCollateralInstructionIdentification { get; }
 
     /// <summary>
@@ -65,5 +74,7 @@ public interface IAdditionalParameters29 : IIsoComponent
     [IsoId("_d0itGY7CEeaa5_S8lsRKCQ")]
     [DisplayName("Triparty Agent Service Provider Collateral Instruction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; }
 }

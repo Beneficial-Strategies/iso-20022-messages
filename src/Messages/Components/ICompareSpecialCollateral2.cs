@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a collateral code.
 /// </summary>
 [IsoId("_qXFLkdSZEemZdYGWu384Zw")]
+[IsoDisplayName(@"Compare Special Collateral")]
 public interface ICompareSpecialCollateral2 : IIsoComponent
 {
     /// <summary>

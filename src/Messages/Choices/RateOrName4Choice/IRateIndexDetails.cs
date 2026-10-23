@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrName4Choice;
 /// </summary>
 [IsoId("_KwKzkxIlEeyLzJfz3xPQNA")]
 [IsoXmlTag("RateIndxDtls")]
+[IsoDisplayName(@"Rate Index Details")]
 public interface IRateIndexDetails : IRateOrName4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IRateIndexDetails : IRateOrName4Choice, IIsoChoiceVariant
     [IsoId("_LIAr0xIlEeyLzJfz3xPQNA")]
     [DisplayName("Look Back Days")]
     [IsoXmlTag("LookBckDays")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? LookBackDays { get; }
 
     /// <summary>

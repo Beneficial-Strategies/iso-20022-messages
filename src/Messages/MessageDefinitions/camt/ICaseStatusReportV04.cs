@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_sVp9glkyEeGeoaLUQk__nA_-1954850313")]
 [IsoMessage("camt.039.001.04", "CaseStsRpt", "urn:iso:std:iso:20022:tech:xsd:camt.039.001.04")]
+[Description(@"Scope|The Case Status Report message is sent by a case assignee to a case creator or case assigner.|This message is used to report on the status of a case.|Usage|A Case Status Report message is sent in reply to a Case Status Report Request message. This message|- covers one and only one case at a time. (If a case assignee needs to report on several cases, then multiple Case Status Report messages must be sent.)|- may be forwarded to subsequent case assigner(s) until it reaches the end point|- is able to indicate the fact that a case has been assigned to a party downstream in the payment processing chain|- may not be used in place of a Resolution Of Investigation (except for the condition given in the next bullet point) or Notification Of Case Assignment message|- may be skipped and replaced by a Resolution Of Investigation message when the request for a investigation status is received at the time the assigner has resolved the case. (In this case a Resolution Of Investigation message can be sent instead of a Case Status Report and the case may be closed.).")]
+[IsoDisplayName(@"Case Status Report V")]
 public interface ICaseStatusReportV04 : IOuterRecord
 {
     /// <summary>
@@ -61,5 +63,6 @@ public interface ICaseStatusReportV04 : IOuterRecord
     [IsoId("_sV84cVkyEeGeoaLUQk__nA_-686689479")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

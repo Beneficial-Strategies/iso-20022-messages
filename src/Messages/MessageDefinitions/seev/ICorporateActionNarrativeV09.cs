@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_4bkDCX_4Ee-h086v0qPiyQ")]
 [IsoMessage("seev.038.001.09", "CorpActnNrrtv", "urn:iso:std:iso:20022:tech:xsd:seev.038.001.09")]
+[IsoDisplayName(@"Corporate Action Narrative V09")]
 public interface ICorporateActionNarrativeV09 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +40,7 @@ public interface ICorporateActionNarrativeV09 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max8000Text> AdditionalInformation { get; }
 
     /// <summary>
@@ -46,5 +48,6 @@ public interface ICorporateActionNarrativeV09 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

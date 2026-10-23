@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule2Choice;
 /// </summary>
 [IsoId("_0ZWmk-fHEeKNfc-Rw_dPYg")]
 [IsoXmlTag("ShipmntSubSchdl")]
+[IsoDisplayName(@"Shipment Sub Schedule")]
 public interface IShipmentSubSchedule : IShipmentSchedule2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IShipmentSubSchedule : IShipmentSchedule2Choice, IIsoChoiceVari
     [IsoId("_Sp5_htp-Ed-ak6NoX_4Aeg_-1202382015")]
     [DisplayName("Sub Quantity Value")]
     [IsoXmlTag("SubQtyVal")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber SubQuantityValue { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IShipmentSubSchedule : IShipmentSchedule2Choice, IIsoChoiceVari
     [IsoId("_Sp5_h9p-Ed-ak6NoX_4Aeg_-876378095")]
     [DisplayName("Earliest Shipment Date")]
     [IsoXmlTag("EarlstShipmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EarliestShipmentDate { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface IShipmentSubSchedule : IShipmentSchedule2Choice, IIsoChoiceVari
     [IsoId("_SqDwgNp-Ed-ak6NoX_4Aeg_-1202381938")]
     [DisplayName("Latest Shipment Date")]
     [IsoXmlTag("LatstShipmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LatestShipmentDate { get; }
 }

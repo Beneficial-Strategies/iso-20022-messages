@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the type of beneficiary&apos;s certification.
 /// </summary>
 [IsoId("_RlqUR9p-Ed-ak6NoX_4Aeg_-1197168041")]
+[IsoDisplayName(@"Beneficiary Certification Type 1 Format Choice")]
 public interface IBeneficiaryCertificationType1FormatChoice : IIsoChoice { }

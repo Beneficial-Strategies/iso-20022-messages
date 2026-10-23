@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity3Choice;
 /// Paper commodities.
 /// </summary>
 [IsoId("_lThdcXvyEeanCNPcMT7sSg")]
+[IsoDisplayName(@"Paper")]
 public interface IPaper : IAssetClassCommodity3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

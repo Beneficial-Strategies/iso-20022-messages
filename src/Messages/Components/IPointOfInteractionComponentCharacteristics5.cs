@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Physical and logical characteristics of a POI component (Point of Interaction).
 /// </summary>
 [IsoId("_txTnMezgEeiojesOXOKoug")]
+[IsoDisplayName(@"Point Of Interaction Component Characteristics")]
 public interface IPointOfInteractionComponentCharacteristics5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPointOfInteractionComponentCharacteristics5 : IIsoComponent
     [IsoId("_t7znAezgEeiojesOXOKoug")]
     [DisplayName("Memory")]
     [IsoXmlTag("Mmry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMemoryCharacteristics1> Memory { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPointOfInteractionComponentCharacteristics5 : IIsoComponent
     [IsoId("_t7znA-zgEeiojesOXOKoug")]
     [DisplayName("Communication")]
     [IsoXmlTag("Com")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommunicationCharacteristics4> Communication { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPointOfInteractionComponentCharacteristics5 : IIsoComponent
     [IsoId("_t7znBezgEeiojesOXOKoug")]
     [DisplayName("Security Access Modules")]
     [IsoXmlTag("SctyAccsMdls")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SecurityAccessModules { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IPointOfInteractionComponentCharacteristics5 : IIsoComponent
     [IsoId("_t7znB-zgEeiojesOXOKoug")]
     [DisplayName("Subscriber Identity Modules")]
     [IsoXmlTag("SbcbrIdntyMdls")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SubscriberIdentityModules { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IPointOfInteractionComponentCharacteristics5 : IIsoComponent
     [IsoId("_t7znCezgEeiojesOXOKoug")]
     [DisplayName("Security Element")]
     [IsoXmlTag("SctyElmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICryptographicKey13> SecurityElement { get; }
 }

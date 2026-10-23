@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction information in the cancellation advice.
 /// </summary>
 [IsoId("_UtL-kQuaEeqYM5yH99IYQw")]
+[IsoDisplayName(@"Card Payment Transaction")]
 public interface ICardPaymentTransaction95 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICardPaymentTransaction95 : IIsoComponent
     [IsoId("_U4PYAQuaEeqYM5yH99IYQw")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Min3Max4Text)]
+    [StringLength(4, MinimumLength = 3)]
     Min3Max4Text MerchantCategoryCode { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICardPaymentTransaction95 : IIsoComponent
     [IsoId("_U4PYAwuaEeqYM5yH99IYQw")]
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TrueFalseIndicator> CustomerConsent { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ICardPaymentTransaction95 : IIsoComponent
     [IsoId("_U4PYBQuaEeqYM5yH99IYQw")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CardProgrammeProposed { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ICardPaymentTransaction95 : IIsoComponent
     [IsoId("_U4PYBwuaEeqYM5yH99IYQw")]
     [DisplayName("Card Programme Applied")]
     [IsoXmlTag("CardPrgrmmApld")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardProgrammeApplied { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ICardPaymentTransaction95 : IIsoComponent
     [IsoId("_U4PYCQuaEeqYM5yH99IYQw")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceIdentification { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface ICardPaymentTransaction95 : IIsoComponent
     [IsoId("_U4PYDwuaEeqYM5yH99IYQw")]
     [DisplayName("Transaction Success")]
     [IsoXmlTag("TxSucss")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator TransactionSuccess { get; }
 
     /// <summary>
@@ -81,6 +91,7 @@ public interface ICardPaymentTransaction95 : IIsoComponent
     [IsoId("_U4PYEQuaEeqYM5yH99IYQw")]
     [DisplayName("Reversal")]
     [IsoXmlTag("Rvsl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? Reversal { get; }
 
     /// <summary>
@@ -89,6 +100,7 @@ public interface ICardPaymentTransaction95 : IIsoComponent
     [IsoId("_U4PYEwuaEeqYM5yH99IYQw")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<FailureReason3Code> FailureReason { get; }
 
     /// <summary>
@@ -97,6 +109,8 @@ public interface ICardPaymentTransaction95 : IIsoComponent
     [IsoId("_U4PYFQuaEeqYM5yH99IYQw")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InitiatorTransactionIdentification { get; }
 
     /// <summary>
@@ -105,6 +119,8 @@ public interface ICardPaymentTransaction95 : IIsoComponent
     [IsoId("_U4PYFwuaEeqYM5yH99IYQw")]
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? RecipientTransactionIdentification { get; }
 
     /// <summary>
@@ -113,6 +129,8 @@ public interface ICardPaymentTransaction95 : IIsoComponent
     [IsoId("_U4PYGQuaEeqYM5yH99IYQw")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -121,6 +139,8 @@ public interface ICardPaymentTransaction95 : IIsoComponent
     [IsoId("_U4PYGwuaEeqYM5yH99IYQw")]
     [DisplayName("Interchange Data")]
     [IsoXmlTag("IntrchngData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InterchangeData { get; }
 
     /// <summary>
@@ -145,5 +165,6 @@ public interface ICardPaymentTransaction95 : IIsoComponent
     [IsoId("_U4PYIQuaEeqYM5yH99IYQw")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AdditionalTransactionData { get; }
 }

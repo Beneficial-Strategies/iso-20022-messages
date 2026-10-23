@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus5Choice;
 /// </summary>
 [IsoId("_P8YAmkHREeasdbKMiqizqA")]
 [IsoXmlTag("Rjctd")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IOrderStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IRejected : IOrderStatus5Choice, IIsoChoiceVariant
     [IsoId("_IsU1OUHjEea8I67lh6qdSQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

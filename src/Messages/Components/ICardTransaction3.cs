@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// It corresponds to ISO 8583, field number 90 for the version 87, and 56 for the other versions.
 /// </summary>
 [IsoId("_BbVP4XsxEeSTS7uHCe8FPQ")]
+[IsoDisplayName(@"Card Transaction")]
 public interface ICardTransaction3 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface ICardTransaction3 : IIsoComponent
     [IsoId("_Bo-qW3sxEeSTS7uHCe8FPQ")]
     [DisplayName("Acceptor Transaction Date Time")]
     [IsoXmlTag("AccptrTxDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime AcceptorTransactionDateTime { get; }
 
     /// <summary>
@@ -27,6 +29,8 @@ public interface ICardTransaction3 : IIsoComponent
     [IsoId("_Bo-qX3sxEeSTS7uHCe8FPQ")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InitiatorTransactionIdentification { get; }
 
     /// <summary>
@@ -35,5 +39,7 @@ public interface ICardTransaction3 : IIsoComponent
     [IsoId("_QxgIoHsxEeSTS7uHCe8FPQ")]
     [DisplayName("Initiator Identification")]
     [IsoXmlTag("InitrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InitiatorIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason11FormatChoice;
 /// Standard code to specify the reason of a rejection of the notification cancellation request.
 /// </summary>
 [IsoId("_RoC55dp-Ed-ak6NoX_4Aeg_313748819")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectionReason11FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

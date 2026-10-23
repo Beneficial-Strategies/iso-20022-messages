@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
 /// </summary>
 [IsoId("_Rz0FA9p-Ed-ak6NoX_4Aeg_1967129253")]
+[IsoDisplayName(@"Account")]
 public interface IAccount5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccount5 : IIsoComponent
     [IsoId("_Rz0FBNp-Ed-ak6NoX_4Aeg_1967129271")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAccount5 : IIsoComponent
     [IsoId("_Rz0FBdp-Ed-ak6NoX_4Aeg_-925933149")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Designation { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of actions to be performed by the card acceptor.
 /// </summary>
 [IsoId("_6jOVEYqFEeSRT5rEzcAHEw")]
+[IsoDisplayName(@"Action")]
 public interface IAction5 : IIsoComponent
 {
     /// <summary>

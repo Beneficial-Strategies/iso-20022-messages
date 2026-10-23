@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the future status of the transaction by means of a code and a period.
 /// </summary>
 [IsoId("_RbFb9Np-Ed-ak6NoX_4Aeg_-2036389843")]
+[IsoDisplayName(@"Transaction Status")]
 public interface ITransactionStatus5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITransactionStatus5 : IIsoComponent
     [IsoId("_RbFb9tp-Ed-ak6NoX_4Aeg_-2036389782")]
     [DisplayName("Change Date Time")]
     [IsoXmlTag("ChngDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ChangeDateTime { get; }
 
     /// <summary>
@@ -33,5 +35,7 @@ public interface ITransactionStatus5 : IIsoComponent
     [IsoId("_RbFb99p-Ed-ak6NoX_4Aeg_-149402521")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

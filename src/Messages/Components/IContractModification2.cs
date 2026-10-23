@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the action type.
 /// </summary>
 [IsoId("_q0Gzca4FEemB_csI4yyKLA")]
+[IsoDisplayName(@"Contract Modification")]
 public interface IContractModification2 : IIsoComponent
 {
     /// <summary>

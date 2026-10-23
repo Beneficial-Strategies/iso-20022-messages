@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies additional details of the transaction.
 /// </summary>
 [IsoId("_LpZDIWdDEemvNLufWGIVOQ")]
+[IsoDisplayName(@"Intra Position Movement8")]
 public interface IIntraPositionMovement8 : IIsoComponent
 {
     /// <summary>
@@ -113,6 +114,7 @@ public interface IIntraPositionMovement8 : IIsoComponent
     [IsoId("_L2bZX2dDEemvNLufWGIVOQ")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages57> Linkages { get; }
 
     /// <summary>
@@ -169,5 +171,6 @@ public interface IIntraPositionMovement8 : IIsoComponent
     [IsoId("_L2bZf2dDEemvNLufWGIVOQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

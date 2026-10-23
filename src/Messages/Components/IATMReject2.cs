@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the reject of a message from an ATM or an ATM manager.
 /// </summary>
 [IsoId("_RdZ94a42EeWpsoxRhdX-8A")]
+[IsoDisplayName(@"ATM Reject")]
 public interface IATMReject2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMReject2 : IIsoComponent
     [IsoId("_RoSYMa42EeWpsoxRhdX-8A")]
     [DisplayName("Reject Initiator Identification")]
     [IsoXmlTag("RjctInitrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RejectInitiatorIdentification { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IATMReject2 : IIsoComponent
     [IsoId("_RoSYNa42EeWpsoxRhdX-8A")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalInformation { get; }
 
     /// <summary>
@@ -42,6 +47,7 @@ public interface IATMReject2 : IIsoComponent
     [IsoId("_RoSYN642EeWpsoxRhdX-8A")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 
     /// <summary>
@@ -50,5 +56,6 @@ public interface IATMReject2 : IIsoComponent
     [IsoId("_RoSYOa42EeWpsoxRhdX-8A")]
     [DisplayName("Message In Error")]
     [IsoXmlTag("MsgInErr")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary? MessageInError { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Merchant performing the transaction.
 /// </summary>
 [IsoId("__V4_MY0VEeWRYffwL7E13A")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation26 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrganisation26 : IIsoComponent
     [IsoId("__hDtY40VEeWRYffwL7E13A")]
     [DisplayName("Common Name")]
     [IsoXmlTag("CmonNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text CommonName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOrganisation26 : IIsoComponent
     [IsoId("_o5JP4I0WEeWRYffwL7E13A")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Address { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IOrganisation26 : IIsoComponent
     [IsoId("_xl7Z0I0WEeWRYffwL7E13A")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Min3Max4Text)]
+    [StringLength(4, MinimumLength = 3)]
     Min3Max4Text MerchantCategoryCode { get; }
 
     /// <summary>
@@ -49,5 +56,7 @@ public interface IOrganisation26 : IIsoComponent
     [IsoId("_1yBm0I0WEeWRYffwL7E13A")]
     [DisplayName("Registered Identifier")]
     [IsoXmlTag("RegdIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RegisteredIdentifier { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountReportOrError4Choice;
 /// Error that occurred during processing.
 /// </summary>
 [IsoId("_1Pl8cTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Error")]
 public interface IError : IAccountReportOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status22Choice;
 /// Provides the status of a corporate action or the status of a payment.
 /// </summary>
 [IsoId("_8QboKZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Corporate Action Event Processing Status")]
 public interface ICorporateActionEventProcessingStatus : IStatus22Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

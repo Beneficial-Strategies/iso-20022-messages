@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the details of the transaction.
 /// </summary>
 [IsoId("_olCYdR5hEeWE3PufGMdJ3w")]
+[IsoDisplayName(@"Transaction Details")]
 public interface ITransactionDetails78 : IIsoComponent
 {
     /// <summary>
@@ -89,6 +90,7 @@ public interface ITransactionDetails78 : IIsoComponent
     [IsoId("_pFLRER5hEeWE3PufGMdJ3w")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -161,6 +163,7 @@ public interface ITransactionDetails78 : IIsoComponent
     [IsoId("_pFLRNR5hEeWE3PufGMdJ3w")]
     [DisplayName("Reversal Indicator")]
     [IsoXmlTag("RvslInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ReversalIndicator { get; }
 
     /// <summary>
@@ -169,5 +172,7 @@ public interface ITransactionDetails78 : IIsoComponent
     [IsoId("_pFLROR5hEeWE3PufGMdJ3w")]
     [DisplayName("Transaction Additional Details")]
     [IsoXmlTag("TxAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? TransactionAdditionalDetails { get; }
 }

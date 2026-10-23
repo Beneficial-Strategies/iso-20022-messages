@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Account9Choice;
 /// Account to be used for charges if different from the account for payment.
 /// </summary>
 [IsoId("_XY_k0Np-Ed-ak6NoX_4Aeg_-1562428108")]
+[IsoDisplayName(@"Charges Account")]
 public interface IChargesAccount : IAccount9Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

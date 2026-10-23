@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Reversal response message record.
 /// </summary>
 [IsoId("_k5mO4FZWEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Reversal Response")]
 public interface IReversalResponse : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IReversalResponse : IRecordMessage1Choice, IIsoChoiceVariant
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("RvslRspn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

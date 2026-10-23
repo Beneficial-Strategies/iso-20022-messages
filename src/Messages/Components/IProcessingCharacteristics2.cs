@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Processing characteristics linked to the instrument, ie, not to the market.
 /// </summary>
 [IsoId("_UBFN1Np-Ed-ak6NoX_4Aeg_1281373754")]
+[IsoDisplayName(@"Processing Characteristics")]
 public interface IProcessingCharacteristics2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IProcessingCharacteristics2 : IIsoComponent
     [IsoId("_UBFN1dp-Ed-ak6NoX_4Aeg_462420073")]
     [DisplayName("Dealing Currency Accepted")]
     [IsoXmlTag("DealgCcyAccptd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> DealingCurrencyAccepted { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IProcessingCharacteristics2 : IIsoComponent
     [IsoId("_UBFN2Np-Ed-ak6NoX_4Aeg_1459492426")]
     [DisplayName("Amount Indicator")]
     [IsoXmlTag("AmtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AmountIndicator { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IProcessingCharacteristics2 : IIsoComponent
     [IsoId("_UBFN2dp-Ed-ak6NoX_4Aeg_1345653360")]
     [DisplayName("Units Indicator")]
     [IsoXmlTag("UnitsInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator UnitsIndicator { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IProcessingCharacteristics2 : IIsoComponent
     [IsoId("_UBOXwNp-Ed-ak6NoX_4Aeg_-534652280")]
     [DisplayName("Dealing Cut Off Time")]
     [IsoXmlTag("DealgCutOffTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime DealingCutOffTime { get; }
 
     /// <summary>
@@ -89,6 +94,8 @@ public interface IProcessingCharacteristics2 : IIsoComponent
     [IsoId("_UBOXw9p-Ed-ak6NoX_4Aeg_689276281")]
     [DisplayName("Dealing Frequency Description")]
     [IsoXmlTag("DealgFrqcyDesc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text DealingFrequencyDescription { get; }
 
     /// <summary>
@@ -97,6 +104,8 @@ public interface IProcessingCharacteristics2 : IIsoComponent
     [IsoId("_UBOXxNp-Ed-ak6NoX_4Aeg_689276403")]
     [DisplayName("Limited Period")]
     [IsoXmlTag("LtdPrd")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? LimitedPeriod { get; }
 
     /// <summary>

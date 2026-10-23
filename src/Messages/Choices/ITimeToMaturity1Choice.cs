@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the options for the time to maturity.
 /// </summary>
 [IsoId("_r8FOkMVaEeiYpLQka876sg")]
+[IsoDisplayName(@"Time To Maturity 1 Choice")]
 public interface ITimeToMaturity1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReasonCode7Choice;
 /// Reason why the payment status is cancelled.
 /// </summary>
 [IsoId("_Ny9Dw5lPEee-Zps0fZQaFQ")]
+[IsoDisplayName(@"Cancelled")]
 public interface ICancelled : IPaymentStatusReasonCode7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement5Choice;
 /// </summary>
 [IsoId("_sWEhc4pIEeaNTaanBSMWmg")]
 [IsoXmlTag("Rtr")]
+[IsoDisplayName(@"Return")]
 public interface IReturn : ICollateralMovement5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IReturn : ICollateralMovement5Choice, IIsoChoiceVariant
     [IsoId("_XP1SEYpJEeaNTaanBSMWmg")]
     [DisplayName("Margin Call Request Identification")]
     [IsoXmlTag("MrgnCallReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MarginCallRequestIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IReturn : ICollateralMovement5Choice, IIsoChoiceVariant
     [IsoId("_XP1SE4pJEeaNTaanBSMWmg")]
     [DisplayName("Margin Call Response Identification")]
     [IsoXmlTag("MrgnCallRspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarginCallResponseIdentification { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface IReturn : ICollateralMovement5Choice, IIsoChoiceVariant
     [IsoId("_XP1SFYpJEeaNTaanBSMWmg")]
     [DisplayName("Standard Settlement Instructions")]
     [IsoXmlTag("StdSttlmInstrs")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? StandardSettlementInstructions { get; }
 
     /// <summary>
@@ -42,6 +49,8 @@ public interface IReturn : ICollateralMovement5Choice, IIsoChoiceVariant
     [IsoId("_XP1SF4pJEeaNTaanBSMWmg")]
     [DisplayName("Collateral Proposal Response Identification")]
     [IsoXmlTag("CollPrpslRspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CollateralProposalResponseIdentification { get; }
 
     /// <summary>
@@ -50,6 +59,7 @@ public interface IReturn : ICollateralMovement5Choice, IIsoChoiceVariant
     [IsoId("_XP1SGYpJEeaNTaanBSMWmg")]
     [DisplayName("Securities Collateral")]
     [IsoXmlTag("SctiesColl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesCollateral8> SecuritiesCollateral { get; }
 
     /// <summary>
@@ -58,6 +68,7 @@ public interface IReturn : ICollateralMovement5Choice, IIsoChoiceVariant
     [IsoId("_XP1SG4pJEeaNTaanBSMWmg")]
     [DisplayName("Cash Collateral")]
     [IsoXmlTag("CshColl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashCollateral2> CashCollateral { get; }
 
     /// <summary>
@@ -66,5 +77,6 @@ public interface IReturn : ICollateralMovement5Choice, IIsoChoiceVariant
     [IsoId("_XP1SHYpJEeaNTaanBSMWmg")]
     [DisplayName("Other Collateral")]
     [IsoXmlTag("OthrColl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherCollateral5> OtherCollateral { get; }
 }

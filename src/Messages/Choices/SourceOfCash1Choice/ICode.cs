@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SourceOfCash1Choice;
 /// Source of cash expressed as a code.
 /// </summary>
 [IsoId("_otZG0DlEEealR6-8aQ15BA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISourceOfCash1Choice, IIsoChoiceVariant
 {
     /// <summary>

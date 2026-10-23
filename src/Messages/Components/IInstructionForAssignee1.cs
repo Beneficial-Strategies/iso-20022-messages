@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further information related to the processing of the investigation that may need to be acted upon by the assignee.
 /// </summary>
 [IsoId("_cj1mAdA1EeeCAfThR1cp_Q")]
+[IsoDisplayName(@"Instruction For Assignee")]
 public interface IInstructionForAssignee1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IInstructionForAssignee1 : IIsoComponent
     [IsoId("_czjdA9A1EeeCAfThR1cp_Q")]
     [DisplayName("Instruction Information")]
     [IsoXmlTag("InstrInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InstructionInformation { get; }
 }

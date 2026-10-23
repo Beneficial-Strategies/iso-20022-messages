@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberReportOrError8Choice;
 /// </summary>
 [IsoId("_fSe1UdcZEeqRFcf2R4bPBw")]
 [IsoXmlTag("Mmb")]
+[IsoDisplayName(@"Member")]
 public interface IMember : IMemberReportOrError8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IMember : IMemberReportOrError8Choice, IIsoChoiceVariant
     [IsoId("_fUF-4dcZEeqRFcf2R4bPBw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IMember : IMemberReportOrError8Choice, IIsoChoiceVariant
     [IsoId("_fUF-49cZEeqRFcf2R4bPBw")]
     [DisplayName("Return Address")]
     [IsoXmlTag("RtrAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMemberIdentification3Choice> ReturnAddress { get; }
 
     /// <summary>
@@ -34,6 +38,7 @@ public interface IMember : IMemberReportOrError8Choice, IIsoChoiceVariant
     [IsoId("_fUF-5dcZEeqRFcf2R4bPBw")]
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount40> Account { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface IMember : IMemberReportOrError8Choice, IIsoChoiceVariant
     [IsoId("_fUF-69cZEeqRFcf2R4bPBw")]
     [DisplayName("Contact Reference")]
     [IsoXmlTag("CtctRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentificationAndAddress2> ContactReference { get; }
 
     /// <summary>

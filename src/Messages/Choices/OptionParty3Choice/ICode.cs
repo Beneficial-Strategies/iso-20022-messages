@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionParty3Choice;
 /// Option party expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_m-lyAWp7EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOptionParty3Choice, IIsoChoiceVariant
 {
     /// <summary>

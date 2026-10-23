@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original request details and status.
 /// </summary>
 [IsoId("_JRJXgFGoEfC_v5ez7RpMHw")]
+[IsoDisplayName(@"Request Identification And Status1")]
 public interface IRequestIdentificationAndStatus1 : IIsoComponent
 {
     /// <summary>

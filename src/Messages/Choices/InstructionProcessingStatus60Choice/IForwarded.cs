@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus60Cho
 
 /// <summary>Instruction has been accepted and forwarded to the next intermediary in the chain.</summary>
 [IsoId("_rt3LIY74EfCbNJ3GwkFTcw")]
+[IsoDisplayName(@"Forwarded")]
 public interface IForwarded : IInstructionProcessingStatus60Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

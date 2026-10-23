@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice;
 /// <summary>
 /// Official Economic Statistics.
 /// </summary>
+[IsoDisplayName(@"Official Economic Statistics")]
 public interface IOfficialEconomicStatistics : IAssetClassCommodity7Choice, IIsoChoiceVariant
 {
     /// <summary>

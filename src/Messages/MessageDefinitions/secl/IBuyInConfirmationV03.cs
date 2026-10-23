@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_xpFSkS0lEeSRe9rElPHBfg")]
 [IsoMessage("secl.009.001.03", "BuyInConf", "urn:iso:std:iso:20022:tech:xsd:secl.009.001.03")]
+[Description(@"Scope|The Buy In Confirmation message is sent by the central counterparty (CCP) to the clearing member to confirm the details of the transaction resulting from the buy in.||The message definition is intended for use with the ISO 20022 Business Application Header.||Usage|The Buy In Confirmation message is sent by the central counterparty (CCP) to confirm the details of the buy in transaction.")]
+[IsoDisplayName(@"Buy In Confirmation V")]
 public interface IBuyInConfirmationV03 : IOuterRecord
 {
     /// <summary>
@@ -26,6 +28,8 @@ public interface IBuyInConfirmationV03 : IOuterRecord
     [IsoId("_xpFSky0lEeSRe9rElPHBfg")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -58,5 +62,6 @@ public interface IBuyInConfirmationV03 : IOuterRecord
     [IsoId("_xpFSmy0lEeSRe9rElPHBfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

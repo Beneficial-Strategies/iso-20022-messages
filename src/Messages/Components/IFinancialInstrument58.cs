@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies underlying instruments or index a derivative has.
 /// </summary>
 [IsoId("_HYrJV35aEea2k7EBUopqxw")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument58 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancialInstrument58 : IIsoComponent
     [IsoId("_HhTg4X5aEea2k7EBUopqxw")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? ISIN { get; }
 
     /// <summary>

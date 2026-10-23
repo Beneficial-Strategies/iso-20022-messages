@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment transaction with an aggregated amount.
 /// </summary>
 [IsoId("_Yy7UkDDuEeO9waS4ina8CA")]
+[IsoDisplayName(@"Aggregation Transaction")]
 public interface IAggregationTransaction1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAggregationTransaction1 : IIsoComponent
     [IsoId("_j5xGIDDuEeO9waS4ina8CA")]
     [DisplayName("First Payment Date Time")]
     [IsoXmlTag("FrstPmtDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? FirstPaymentDateTime { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAggregationTransaction1 : IIsoComponent
     [IsoId("_typ20DDuEeO9waS4ina8CA")]
     [DisplayName("Last Payment Date Time")]
     [IsoXmlTag("LastPmtDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? LastPaymentDateTime { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IAggregationTransaction1 : IIsoComponent
     [IsoId("_1wf3IDDuEeO9waS4ina8CA")]
     [DisplayName("Number Of Payments")]
     [IsoXmlTag("NbOfPmts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfPayments { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IAggregationTransaction1 : IIsoComponent
     [IsoId("__CQWYDDuEeO9waS4ina8CA")]
     [DisplayName("Individual Payment")]
     [IsoXmlTag("IndvPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount6> IndividualPayment { get; }
 }

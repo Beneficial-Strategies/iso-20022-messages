@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Valuation details for the securities position.
 /// </summary>
 [IsoId("_h4b_UMYeEeiSF9q-coWegA")]
+[IsoDisplayName(@"Valuations Details")]
 public interface IValuationsDetails1 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface IValuationsDetails1 : IIsoComponent
     [IsoId("_jGmV8M39EeiirviLm7P0IA")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -81,5 +83,6 @@ public interface IValuationsDetails1 : IIsoComponent
     [IsoId("_QWBWYM3-EeiirviLm7P0IA")]
     [DisplayName("Quotation Age")]
     [IsoXmlTag("QtnAge")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? QuotationAge { get; }
 }

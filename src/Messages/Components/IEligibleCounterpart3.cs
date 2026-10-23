@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Represents a party to be identified as eligible for the instructing party.
 /// </summary>
 [IsoId("_wlhJsWc-EemvNLufWGIVOQ")]
+[IsoDisplayName(@"Eligible Counterpart3")]
 public interface IEligibleCounterpart3 : IIsoComponent
 {
     /// <summary>

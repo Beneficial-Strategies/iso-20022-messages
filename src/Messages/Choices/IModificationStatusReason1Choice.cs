@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the transaction modification status.
 /// </summary>
 [IsoId("_L89WiYlsEeePr-EGJjGYzQ")]
+[IsoDisplayName(@"Modification Status Reason 1 Choice")]
 public interface IModificationStatusReason1Choice : IIsoChoice { }

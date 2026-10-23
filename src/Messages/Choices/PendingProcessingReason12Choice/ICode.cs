@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessingReason12Choice;
 /// Specifies the reason why the instruction has a pending processing status.
 /// </summary>
 [IsoId("_tGZBQTq1EeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPendingProcessingReason12Choice, IIsoChoiceVariant
 {
     /// <summary>

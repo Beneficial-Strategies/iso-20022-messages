@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
 /// </summary>
 [IsoId("_ujGeZ8STEeeRJJtE9TSlkw")]
 [IsoXmlTag("PdgDlvryBal")]
+[IsoDisplayName(@"Pending Delivery Balance")]
 public interface IPendingDeliveryBalance
     : ICorporateActionUnallocatedBalanceSD3Choice,
         IIsoChoiceVariant

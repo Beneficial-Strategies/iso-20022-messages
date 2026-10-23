@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM cassette counter per unit value or globally.
 /// </summary>
 [IsoId("_k0cdIa4MEeWZgJQOa6iKCQ")]
+[IsoDisplayName(@"ATM Cassette Counters")]
 public interface IATMCassetteCounters3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IATMCassetteCounters3 : IIsoComponent
     [IsoId("_lAXZSa4MEeWZgJQOa6iKCQ")]
     [DisplayName("Current Number")]
     [IsoXmlTag("CurNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number CurrentNumber { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IATMCassetteCounters3 : IIsoComponent
     [IsoId("_lAXZR64MEeWZgJQOa6iKCQ")]
     [DisplayName("Flow Totals")]
     [IsoXmlTag("FlowTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCassetteCounters4> FlowTotals { get; }
 }

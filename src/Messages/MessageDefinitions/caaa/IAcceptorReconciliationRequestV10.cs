@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrRcncltnReq",
     "urn:iso:std:iso:20022:tech:xsd:caaa.009.001.10"
 )]
+[Description(@"The AcceptorReconciliationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to ensure that the debits and credits performed by the acceptor matches the computed balances of the acquirer for the debits and credits performed during the same reconciliation period.|If the acceptor or the acquirer notices a difference in totals, the discrepancy will be resolved by other means, outside the scope of the protocol.")]
+[IsoDisplayName(@"Acceptor Reconciliation Request V")]
 public interface IAcceptorReconciliationRequestV10 : IOuterRecord
 {
     /// <summary>

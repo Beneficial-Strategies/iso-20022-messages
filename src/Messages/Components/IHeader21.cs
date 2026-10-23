@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the protocol management on a segment of the path from the ATM to the acquirer.
 /// </summary>
 [IsoId("_RdTnAYqNEeSRT5rEzcAHEw")]
+[IsoDisplayName(@"Header")]
 public interface IHeader21 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IHeader21 : IIsoComponent
     [IsoId("_RpheE4qNEeSRT5rEzcAHEw")]
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text ProtocolVersion { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IHeader21 : IIsoComponent
     [IsoId("_RpheFYqNEeSRT5rEzcAHEw")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText ExchangeIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IHeader21 : IIsoComponent
     [IsoId("_eAcXcIqNEeSRT5rEzcAHEw")]
     [DisplayName("Re Transmission Counter")]
     [IsoXmlTag("ReTrnsmssnCntr")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ReTransmissionCounter { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IHeader21 : IIsoComponent
     [IsoId("_RpheF4qNEeSRT5rEzcAHEw")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -57,6 +63,8 @@ public interface IHeader21 : IIsoComponent
     [IsoId("_RpheGYqNEeSRT5rEzcAHEw")]
     [DisplayName("Initiating Party")]
     [IsoXmlTag("InitgPty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InitiatingParty { get; }
 
     /// <summary>
@@ -65,6 +73,8 @@ public interface IHeader21 : IIsoComponent
     [IsoId("_RpheG4qNEeSRT5rEzcAHEw")]
     [DisplayName("Recipient Party")]
     [IsoXmlTag("RcptPty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RecipientParty { get; }
 
     /// <summary>
@@ -73,6 +83,8 @@ public interface IHeader21 : IIsoComponent
     [IsoId("_oThw0IqNEeSRT5rEzcAHEw")]
     [DisplayName("Process State")]
     [IsoXmlTag("PrcStat")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessState { get; }
 
     /// <summary>
@@ -81,5 +93,6 @@ public interface IHeader21 : IIsoComponent
     [IsoId("_RpheHYqNEeSRT5rEzcAHEw")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITraceability4> Traceability { get; }
 }

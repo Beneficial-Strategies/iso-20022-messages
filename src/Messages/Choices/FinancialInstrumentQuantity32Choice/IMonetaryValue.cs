@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity32Cho
 /// </summary>
 [IsoId("_Y7YBd5jgEeqkLZLH6DK3UQ")]
 [IsoXmlTag("MntryVal")]
+[IsoDisplayName(@"Monetary Value")]
 public interface IMonetaryValue : IFinancialInstrumentQuantity32Choice, IIsoChoiceVariant
 {
     /// <summary>

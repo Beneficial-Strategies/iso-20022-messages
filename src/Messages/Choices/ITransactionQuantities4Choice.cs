@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Transaction Quantities4Choice.
 /// </summary>
 [IsoId("_CFAMAT3qEe-thIfLZ94a1w")]
+[IsoDisplayName(@"Transaction Quantities4Choice")]
 public interface ITransactionQuantities4Choice : IIsoChoice { }

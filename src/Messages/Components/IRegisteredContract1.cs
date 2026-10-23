@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency control registered contract amendment details.
 /// </summary>
 [IsoId("_nI5VVdL9EeSDLevdaFPXHw")]
+[IsoDisplayName(@"Registered Contract")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IRegisteredContract1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IRegisteredContract1 : IIsoComponent
     [IsoId("_nI5VVtL9EeSDLevdaFPXHw")]
     [DisplayName("Contract Registration Amendment Identification")]
     [IsoXmlTag("CtrctRegnAmdmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ContractRegistrationAmendmentIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IRegisteredContract1 : IIsoComponent
     [IsoId("_nI5VWdL9EeSDLevdaFPXHw")]
     [DisplayName("Registered Contract Amendment")]
     [IsoXmlTag("RegdCtrctAmdmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegisteredContract3> RegisteredContractAmendment { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IRegisteredContract1 : IIsoComponent
     [IsoId("__7OX8TmyEeWDb47rJ6ki4Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

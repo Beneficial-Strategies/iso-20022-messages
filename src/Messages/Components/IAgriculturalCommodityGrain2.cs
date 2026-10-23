@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an agricultural derivative of type grain.
 /// </summary>
 [IsoId("_L3Mesbv3EeiLRYqS-r-R-A")]
+[IsoDisplayName(@"Agricultural Commodity Grain")]
 public interface IAgriculturalCommodityGrain2 : IIsoComponent
 {
     /// <summary>

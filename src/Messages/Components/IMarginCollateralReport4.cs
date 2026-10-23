@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of margin collateral agreement between counterparties.
 /// </summary>
 [IsoId("_1w_vQVosEe23K4GXSpBSeg")]
+[IsoDisplayName(@"Margin Collateral Report")]
 public interface IMarginCollateralReport4 : IIsoComponent
 {
     /// <summary>
@@ -35,5 +36,6 @@ public interface IMarginCollateralReport4 : IIsoComponent
     [IsoId("_1ywp1VosEe23K4GXSpBSeg")]
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TimeStamp { get; }
 }

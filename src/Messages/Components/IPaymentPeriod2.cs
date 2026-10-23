@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the payment terms by means of a code and a period.
 /// </summary>
 [IsoId("_RbrR0Np-Ed-ak6NoX_4Aeg_1806126505")]
+[IsoDisplayName(@"Payment Period")]
 public interface IPaymentPeriod2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPaymentPeriod2 : IIsoComponent
     [IsoId("_RbrR0tp-Ed-ak6NoX_4Aeg_1806126567")]
     [DisplayName("Number Of Days")]
     [IsoXmlTag("NbOfDays")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfDays { get; }
 }

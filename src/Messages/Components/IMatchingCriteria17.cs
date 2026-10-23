@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Matching Criteria17.
 /// </summary>
 [IsoId("_BVxjlZBIEe6Ojt1b3tfu9Q")]
+[IsoDisplayName(@"Matching Criteria17")]
 public interface IMatchingCriteria17 : IIsoComponent
 {
     /// <summary>

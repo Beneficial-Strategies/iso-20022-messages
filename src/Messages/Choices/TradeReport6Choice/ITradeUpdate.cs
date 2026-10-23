@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport6Choice;
 /// </summary>
 [IsoId("_WDTFx607EemojPqsRBB5Lg")]
 [IsoXmlTag("TradUpd")]
+[IsoDisplayName(@"Trade Update")]
 public interface ITradeUpdate : ITradeReport6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ITradeUpdate : ITradeReport6Choice, IIsoChoiceVariant
     [IsoId("_TO_90a4aEemB_csI4yyKLA")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface ITradeUpdate : ITradeReport6Choice, IIsoChoiceVariant
     [IsoId("_TO_9064aEemB_csI4yyKLA")]
     [DisplayName("Reporting Date Time")]
     [IsoXmlTag("RptgDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ReportingDateTime { get; }
 
     /// <summary>
@@ -34,6 +38,7 @@ public interface ITradeUpdate : ITradeReport6Choice, IIsoChoiceVariant
     [IsoId("_TO_91a4aEemB_csI4yyKLA")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDate { get; }
 
     /// <summary>
@@ -50,6 +55,8 @@ public interface ITradeUpdate : ITradeReport6Choice, IIsoChoiceVariant
     [IsoId("_TO_92a4aEemB_csI4yyKLA")]
     [DisplayName("Collateral Portfolio Identification")]
     [IsoXmlTag("CollPrtflId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text CollateralPortfolioIdentification { get; }
 
     /// <summary>
@@ -74,5 +81,6 @@ public interface ITradeUpdate : ITradeReport6Choice, IIsoChoiceVariant
     [IsoId("_TO_9364aEemB_csI4yyKLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

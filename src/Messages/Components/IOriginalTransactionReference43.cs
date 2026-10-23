@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original Transaction Reference43.
 /// </summary>
 [IsoId("_0a0QkTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Original Transaction Reference43")]
 public interface IOriginalTransactionReference43 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IOriginalTransactionReference43 : IIsoComponent
     /// </summary>
     [DisplayName("Original Transaction")]
     [IsoXmlTag("OrgnlTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentIdentification15> OriginalTransaction { get; }
 }

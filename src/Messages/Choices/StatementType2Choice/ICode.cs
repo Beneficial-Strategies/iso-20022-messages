@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementType2Choice;
 /// Statement type expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_QrZrfNp-Ed-ak6NoX_4Aeg_1743322244")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IStatementType2Choice, IIsoChoiceVariant
 {
     /// <summary>

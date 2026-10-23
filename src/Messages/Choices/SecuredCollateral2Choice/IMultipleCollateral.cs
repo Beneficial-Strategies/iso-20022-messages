@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice;
 /// </summary>
 [IsoId("_iZO6A6idEeWHO_l3hf2rlA")]
 [IsoXmlTag("MltplColl")]
+[IsoDisplayName(@"Multiple Collateral")]
 public interface IMultipleCollateral : ISecuredCollateral2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -28,5 +29,6 @@ public interface IMultipleCollateral : ISecuredCollateral2Choice, IIsoChoiceVari
     [IsoId("_i2_NA6idEeWHO_l3hf2rlA")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier ISIN { get; }
 }

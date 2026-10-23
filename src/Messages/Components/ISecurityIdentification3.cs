@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security by its symbol.
 /// </summary>
 [IsoId("_QdiOk9p-Ed-ak6NoX_4Aeg_2006961788")]
+[IsoDisplayName(@"Security Identification")]
 public interface ISecurityIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityIdentification3 : IIsoComponent
     [IsoId("_QdiOlNp-Ed-ak6NoX_4Aeg_2006961823")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINIdentifier)]
     ISINIdentifier ISIN { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecurityIdentification3 : IIsoComponent
     [IsoId("_QdiOldp-Ed-ak6NoX_4Aeg_2007881872")]
     [DisplayName("Ticker Symbol")]
     [IsoXmlTag("TckrSymb")]
+    [IsoSimpleType(IsoSimpleType.TickerIdentifier)]
     TickerIdentifier? TickerSymbol { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISecurityIdentification3 : IIsoComponent
     [IsoId("_QdiOltp-Ed-ak6NoX_4Aeg_2007881992")]
     [DisplayName("CUSIP")]
     [IsoXmlTag("CUSIP")]
+    [IsoSimpleType(IsoSimpleType.CUSIPIdentifier)]
     CUSIPIdentifier? CUSIP { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ISecurityIdentification3 : IIsoComponent
     [IsoId("_QdiOl9p-Ed-ak6NoX_4Aeg_2007882027")]
     [DisplayName("SEDOL")]
     [IsoXmlTag("SEDOL")]
+    [IsoSimpleType(IsoSimpleType.SEDOLIdentifier)]
     SEDOLIdentifier? SEDOL { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ISecurityIdentification3 : IIsoComponent
     [IsoId("_QdiOmNp-Ed-ak6NoX_4Aeg_2007882069")]
     [DisplayName("QUICK")]
     [IsoXmlTag("QUICK")]
+    [IsoSimpleType(IsoSimpleType.QUICKIdentifier)]
     QUICKIdentifier? QUICK { get; }
 
     /// <summary>

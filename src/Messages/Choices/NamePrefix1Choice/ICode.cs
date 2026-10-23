@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NamePrefix1Choice;
 /// Name prefix expressed as a code.
 /// </summary>
 [IsoId("_5MAtECiEEeKVDZ5HKjI6bg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : INamePrefix1Choice, IIsoChoiceVariant
 {
     /// <summary>

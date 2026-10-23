@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Aim of the non financial response.
 /// </summary>
 [IsoId("_IHp2YU0DEeybj420QgWBkA")]
+[IsoDisplayName(@"Non Financial Response Content Component")]
 public interface INonFinancialResponseContentComponent2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface INonFinancialResponseContentComponent2 : IIsoComponent
     [IsoId("_IOwj900DEeybj420QgWBkA")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction12> Action { get; }
 
     /// <summary>

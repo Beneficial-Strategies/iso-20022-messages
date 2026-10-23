@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status8Choice;
 /// Stage in the corporate action event life cycle.
 /// </summary>
 [IsoId("_w2B7pkABEeCaq78Ig8ATcA")]
+[IsoDisplayName(@"Corporate Action Event Stage")]
 public interface ICorporateActionEventStage : IStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

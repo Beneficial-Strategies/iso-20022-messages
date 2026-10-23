@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the obligations of one of the participants to a derivative contract. The obligations may be conceptual or operational only, with settlement of any obligations arising from the derivative contract taking place on a net basis, after the netting of the obligations arising from each leg of the contract.
 /// </summary>
 [IsoId("_zoVNcMhqEeadgvwNGwK05w")]
+[IsoDisplayName(@"Derivative Underlying Leg")]
 public interface IDerivativeUnderlyingLeg1 : IIsoComponent
 {
     /// <summary>

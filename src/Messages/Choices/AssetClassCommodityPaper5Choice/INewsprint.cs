@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper5Choice;
 /// <summary>
 /// Newsprint.
 /// </summary>
+[IsoDisplayName(@"Newsprint")]
 public interface INewsprint : IAssetClassCommodityPaper5Choice, IIsoChoiceVariant
 {
     /// <summary>

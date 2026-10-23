@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Adjustment Request1.
 /// </summary>
 [IsoId("_hWdscRc0Ee6CaqQSK5g6qw")]
+[IsoDisplayName(@"Adjustment Request1")]
 public interface IAdjustmentRequest1 : IIsoComponent
 {
     /// <summary>

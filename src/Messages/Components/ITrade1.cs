@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the treasury trade captured.
 /// </summary>
 [IsoId("_sJMGoAKMEeStmNeY_LieLw")]
+[IsoDisplayName(@"Trade")]
 public interface ITrade1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITrade1 : IIsoComponent
     [IsoId("_FtqxAAKOEeStmNeY_LieLw")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TradeIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ITrade1 : IIsoComponent
     [IsoId("_qpf9AJ-yEeS9JvCuR85TWA")]
     [DisplayName("Date And Time")]
     [IsoXmlTag("DtAndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime DateAndTime { get; }
 
     /// <summary>
@@ -89,6 +93,8 @@ public interface ITrade1 : IIsoComponent
     [IsoId("_5wKMMIceEeSSpbtwQkzChA")]
     [DisplayName("Symbol")]
     [IsoXmlTag("Symb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Symbol { get; }
 
     /// <summary>
@@ -97,6 +103,8 @@ public interface ITrade1 : IIsoComponent
     [IsoId("_8VvYUAKNEeStmNeY_LieLw")]
     [DisplayName("Place Of Confirmation")]
     [IsoXmlTag("PlcOfConf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PlaceOfConfirmation { get; }
 
     /// <summary>
@@ -105,6 +113,7 @@ public interface ITrade1 : IIsoComponent
     [IsoId("_F5UgwIvdEeSJHZdigg3NTg")]
     [DisplayName("Transaction Time")]
     [IsoXmlTag("TxTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TransactionTime { get; }
 
     /// <summary>
@@ -121,6 +130,7 @@ public interface ITrade1 : IIsoComponent
     [IsoId("_ybY9oQ2GEeSw7Op2IIeBeQ")]
     [DisplayName("Swap Leg")]
     [IsoXmlTag("SwpLeg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstrumentLeg6> SwapLeg { get; }
 
     /// <summary>

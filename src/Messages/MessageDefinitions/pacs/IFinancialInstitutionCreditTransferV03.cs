@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// </summary>
 [IsoId("_sB-zkFkyEeGeoaLUQk__nA_-289152134")]
 [IsoMessage("pacs.009.001.03", "FinInstnCdtTrf", "urn:iso:std:iso:20022:tech:xsd:pacs.009.001.03")]
+[Description(@"Scope|The FinancialInstitutionCreditTransfer message is sent by a debtor financial institution to a creditor financial institution, directly or through other agents and/or a payment clearing and settlement system.|It is used to move funds from a debtor account to a creditor, where both debtor and creditor are financial institutions.|Usage|The FinancialInstitutionCreditTransfer message is exchanged between agents and can contain one or more credit transfer instructions where debtor and creditor are both financial institutions.|The FinancialInstitutionCreditTransfer message does not allow for grouping: a CreditTransferTransactionInformation block must be present for each credit transfer transaction.|The FinancialInstitutionCreditTransfer message can be used in domestic and cross-border scenarios.")]
+[IsoDisplayName(@"Financial Institution Credit Transfer V")]
 public interface IFinancialInstitutionCreditTransferV03 : IOuterRecord
 {
     /// <summary>
@@ -34,6 +36,7 @@ public interface IFinancialInstitutionCreditTransferV03 : IOuterRecord
     [IsoId("_sCIkkFkyEeGeoaLUQk__nA_-863147686")]
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICreditTransferTransaction4> CreditTransferTransactionInformation { get; }
 
     /// <summary>
@@ -42,5 +45,6 @@ public interface IFinancialInstitutionCreditTransferV03 : IOuterRecord
     [IsoId("_sCRugFkyEeGeoaLUQk__nA_-1339774506")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be accepted by the cardholder.
 /// </summary>
 [IsoId("_WaxKUEerEeODR7vDcYOqmg")]
+[IsoDisplayName(@"Currency Conversion")]
 public interface ICurrencyConversion1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("_iZT_8EerEeODR7vDcYOqmg")]
     [DisplayName("Currency Conversion Identification")]
     [IsoXmlTag("CcyConvsId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CurrencyConversionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("_BE5HAEetEeODR7vDcYOqmg")]
     [DisplayName("Response Reason")]
     [IsoXmlTag("RspnRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ResponseReason { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("_R98u0EetEeODR7vDcYOqmg")]
     [DisplayName("Target Currency Numeric")]
     [IsoXmlTag("TrgtCcyNmrc")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText TargetCurrencyNumeric { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("_W5SncEetEeODR7vDcYOqmg")]
     [DisplayName("Target Currency Decimal")]
     [IsoXmlTag("TrgtCcyDcml")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number TargetCurrencyDecimal { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("_eAabIEetEeODR7vDcYOqmg")]
     [DisplayName("Target Currency Name")]
     [IsoXmlTag("TrgtCcyNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TargetCurrencyName { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("_qOWXoEetEeODR7vDcYOqmg")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate ExchangeRate { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("_wIbJYEetEeODR7vDcYOqmg")]
     [DisplayName("Inverted Exchange Rate")]
     [IsoXmlTag("NvrtdXchgRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? InvertedExchangeRate { get; }
 
     /// <summary>
@@ -97,6 +108,7 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("_6I698EetEeODR7vDcYOqmg")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? QuotationDate { get; }
 
     /// <summary>
@@ -105,6 +117,7 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("__syPIEetEeODR7vDcYOqmg")]
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ValidUntil { get; }
 
     /// <summary>
@@ -129,6 +142,7 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("_RlVlEEeuEeODR7vDcYOqmg")]
     [DisplayName("Source Currency Decimal")]
     [IsoXmlTag("SrcCcyDcml")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number SourceCurrencyDecimal { get; }
 
     /// <summary>
@@ -137,6 +151,8 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("_YRNnMEeuEeODR7vDcYOqmg")]
     [DisplayName("Source Currency Name")]
     [IsoXmlTag("SrcCcyNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SourceCurrencyName { get; }
 
     /// <summary>
@@ -153,6 +169,7 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("_jvGxYEevEeODR7vDcYOqmg")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission19> CommissionDetails { get; }
 
     /// <summary>
@@ -161,6 +178,7 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("_WkHhUEewEeODR7vDcYOqmg")]
     [DisplayName("Mark Up Details")]
     [IsoXmlTag("MrkUpDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission18> MarkUpDetails { get; }
 
     /// <summary>
@@ -169,5 +187,7 @@ public interface ICurrencyConversion1 : IIsoComponent
     [IsoId("_dbdMkEewEeODR7vDcYOqmg")]
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? DeclarationDetails { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Transaction Report Request message.
 /// </summary>
 [IsoId("_wej3AN6PEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Report Transaction Request")]
 public interface IReportTransactionRequest1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IReportTransactionRequest1 : IIsoComponent
     [IsoId("_4eXmMN6PEeiwsev40qZGEQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISearchCriteria1> SearchCriteria { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IReportTransactionRequest1 : IIsoComponent
     [IsoId("_OLrKsN6REeiwsev40qZGEQ")]
     [DisplayName("Descending Order")]
     [IsoXmlTag("DscndgOrdr")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DescendingOrder { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IReportTransactionRequest1 : IIsoComponent
     [IsoId("_RUyQsN6REeiwsev40qZGEQ")]
     [DisplayName("Block Start")]
     [IsoXmlTag("BlckStart")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? BlockStart { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IReportTransactionRequest1 : IIsoComponent
     [IsoId("_WEN0QN6REeiwsev40qZGEQ")]
     [DisplayName("Block Stop")]
     [IsoXmlTag("BlckStop")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? BlockStop { get; }
 }

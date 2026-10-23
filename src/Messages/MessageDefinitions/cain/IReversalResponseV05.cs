@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_pa3bwROIEfC1ZfCQz0xB3g")]
 [IsoMessage("cain.006.001.05", "RvslRspn", "urn:iso:std:iso:20022:tech:xsd:cain.006.001.05")]
+[IsoDisplayName(@"Reversal Response V05")]
 public interface IReversalResponseV05 : IOuterRecord
 {
     /// <summary>
@@ -107,6 +108,7 @@ public interface IReversalResponseV05 : IOuterRecord
     [IsoId("_pa3b5ROIEfC1ZfCQz0xB3g")]
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode6> Programme { get; }
 
     /// <summary>
@@ -139,6 +141,7 @@ public interface IReversalResponseV05 : IOuterRecord
     [IsoId("_4KxD8UrZEfCMZJtj4J7UGQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> Tax { get; }
 
     /// <summary>
@@ -147,6 +150,7 @@ public interface IReversalResponseV05 : IOuterRecord
     [IsoId("_pa3b8xOIEfC1ZfCQz0xB3g")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAmounts5> AdditionalAmount { get; }
 
     /// <summary>
@@ -195,6 +199,7 @@ public interface IReversalResponseV05 : IOuterRecord
     [IsoId("_pa3cDxOIEfC1ZfCQz0xB3g")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10KHexBinaryText)]
     Max10KHexBinaryText? ICCRelatedData { get; }
 
     /// <summary>
@@ -235,6 +240,7 @@ public interface IReversalResponseV05 : IOuterRecord
     [IsoId("_bND4ITTYEfCLfeKcVPKw8g")]
     [DisplayName("Cardholder")]
     [IsoXmlTag("Crdhldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholder23> Cardholder { get; }
 
     /// <summary>
@@ -243,6 +249,7 @@ public interface IReversalResponseV05 : IOuterRecord
     [IsoId("_ArgHERRBEfC_aaedwHHlmw")]
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerification9> Verification { get; }
 
     /// <summary>
@@ -251,6 +258,7 @@ public interface IReversalResponseV05 : IOuterRecord
     [IsoId("_pa3cExOIEfC1ZfCQz0xB3g")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -275,6 +283,7 @@ public interface IReversalResponseV05 : IOuterRecord
     [IsoId("_pa3cFROIEfC1ZfCQz0xB3g")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalService3> AdditionalService { get; }
 
     /// <summary>
@@ -307,6 +316,7 @@ public interface IReversalResponseV05 : IOuterRecord
     [IsoId("_pa3cGxOIEfC1ZfCQz0xB3g")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -331,6 +341,7 @@ public interface IReversalResponseV05 : IOuterRecord
     [IsoId("_pa3cIxOIEfC1ZfCQz0xB3g")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -339,6 +350,7 @@ public interface IReversalResponseV05 : IOuterRecord
     [IsoId("_4A2GYkYMEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -347,6 +359,7 @@ public interface IReversalResponseV05 : IOuterRecord
     [IsoId("_4A2GY0YMEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

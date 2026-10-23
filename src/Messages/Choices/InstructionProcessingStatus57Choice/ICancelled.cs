@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus57Cho
 /// <summary>
 /// Cancelled.
 /// </summary>
+[IsoDisplayName(@"Cancelled")]
 public interface ICancelled : IInstructionProcessingStatus57Choice, IIsoChoiceVariant
 {
     /// <summary>

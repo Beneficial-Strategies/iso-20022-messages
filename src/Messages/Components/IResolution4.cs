@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Resolutions at the agenda of a meeting and type of resolution.
 /// </summary>
 [IsoId("_v_saca34EemG7MmivSuE5g")]
+[IsoDisplayName(@"Resolution")]
 public interface IResolution4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IResolution4 : IIsoComponent
     [IsoId("_wWwPk634EemG7MmivSuE5g")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IResolution4 : IIsoComponent
     [IsoId("_wWwPla34EemG7MmivSuE5g")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? Description { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IResolution4 : IIsoComponent
     [IsoId("_wWwPl634EemG7MmivSuE5g")]
     [DisplayName("Title")]
     [IsoXmlTag("Titl")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Title { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IResolution4 : IIsoComponent
     [IsoId("_wWwPm634EemG7MmivSuE5g")]
     [DisplayName("For Information Only")]
     [IsoXmlTag("ForInfOnly")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ForInformationOnly { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IResolution4 : IIsoComponent
     [IsoId("_wWwPn634EemG7MmivSuE5g")]
     [DisplayName("Submitted By Security Holder")]
     [IsoXmlTag("SubmittdBySctyHldr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SubmittedBySecurityHolder { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface IResolution4 : IIsoComponent
     [IsoId("_J3mZUK4JEemG7MmivSuE5g")]
     [DisplayName("Vote Instruction Type")]
     [IsoXmlTag("VoteInstrTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVoteInstructionType1> VoteInstructionType { get; }
 
     /// <summary>
@@ -121,5 +131,7 @@ public interface IResolution4 : IIsoComponent
     [IsoId("_39sLwK34EemG7MmivSuE5g")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? URLAddress { get; }
 }

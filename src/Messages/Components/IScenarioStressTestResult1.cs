@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Outcome of the application of a hypothetical scenario on the valuation of a set of portfolios of financial instruments.
 /// </summary>
 [IsoId("_vWmhcKs9Eeayv9XxdmMwKQ")]
+[IsoDisplayName(@"Scenario Stress Test Result")]
 public interface IScenarioStressTestResult1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IScenarioStressTestResult1 : IIsoComponent
     [IsoId("_ZLzBQKs_Eeayv9XxdmMwKQ")]
     [DisplayName("Portfolio Stress Test Result")]
     [IsoXmlTag("PrtflStrssTstRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPortfolioStressTestResult1> PortfolioStressTestResult { get; }
 }

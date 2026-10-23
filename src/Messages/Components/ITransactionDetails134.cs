@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the transaction.
 /// </summary>
 [IsoId("_V6eXUQllEeuQ1MenzX1l-g")]
+[IsoDisplayName(@"Transaction Details")]
 public interface ITransactionDetails134 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransactionDetails134 : IIsoComponent
     [IsoId("_WIAc9wllEeuQ1MenzX1l-g")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max52Text> TradeIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITransactionDetails134 : IIsoComponent
     [IsoId("_WIAc-wllEeuQ1MenzX1l-g")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PoolIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface ITransactionDetails134 : IIsoComponent
     [IsoId("_WIAc_wllEeuQ1MenzX1l-g")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface ITransactionDetails134 : IIsoComponent
     [IsoId("_WIAdAwllEeuQ1MenzX1l-g")]
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +57,8 @@ public interface ITransactionDetails134 : IIsoComponent
     [IsoId("_WIAdBwllEeuQ1MenzX1l-g")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientTripartyCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +67,8 @@ public interface ITransactionDetails134 : IIsoComponent
     [IsoId("_WIAdCwllEeuQ1MenzX1l-g")]
     [DisplayName("Client Collateral Instruction Identification")]
     [IsoXmlTag("ClntCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientCollateralInstructionIdentification { get; }
 
     /// <summary>
@@ -65,6 +77,8 @@ public interface ITransactionDetails134 : IIsoComponent
     [IsoId("_WIAdDQllEeuQ1MenzX1l-g")]
     [DisplayName("Triparty Agent Service Provider Collateral Instruction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; }
 
     /// <summary>
@@ -177,6 +191,7 @@ public interface ITransactionDetails134 : IIsoComponent
     [IsoId("_WIAdQwllEeuQ1MenzX1l-g")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AcknowledgedStatusTimeStamp { get; }
 
     /// <summary>
@@ -185,6 +200,7 @@ public interface ITransactionDetails134 : IIsoComponent
     [IsoId("_WIAdRQllEeuQ1MenzX1l-g")]
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? MatchedStatusTimeStamp { get; }
 
     /// <summary>
@@ -249,5 +265,7 @@ public interface ITransactionDetails134 : IIsoComponent
     [IsoId("_WIAdYwllEeuQ1MenzX1l-g")]
     [DisplayName("Settlement Instruction Processing Additional Details")]
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? SettlementInstructionProcessingAdditionalDetails { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transaction in the cancellation response.
 /// </summary>
 [IsoId("_Jdo5sWl7EeSQMKir9owD5A")]
+[IsoDisplayName(@"Card Payment Transaction Details")]
 public interface ICardPaymentTransactionDetails22 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ICardPaymentTransactionDetails22 : IIsoComponent
     [IsoId("_SqGCMGl7EeSQMKir9owD5A")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

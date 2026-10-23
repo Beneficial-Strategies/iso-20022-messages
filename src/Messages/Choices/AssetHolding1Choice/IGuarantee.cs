@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 /// </summary>
 [IsoId("_yMukYK_7EeaE9YROwd69hA")]
 [IsoXmlTag("Grnt")]
+[IsoDisplayName(@"Guarantee")]
 public interface IGuarantee : IAssetHolding1Choice, IIsoChoiceVariant
 {
     /// <summary>

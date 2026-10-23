@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesSttlmTxGnrtnNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:sese.032.001.04"
 )]
+[Description(@"Scope|An account servicer sends a SecuritiesSettlementTransactionGenerationNotification to an account owner to advise the account owner of a securities settlement transaction that has been generated/created by the account servicer for the account owner. The reason for creation can range from the automatic transformation of pending settlement instructions following a corporate event to the recovery of an account owner transactions' database initiated by its account servicer.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer|||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.||ISO 15022 - 20022 Coexistence|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
+[IsoDisplayName(@"Securities Settlement Transaction Generation Notification V")]
 public interface ISecuritiesSettlementTransactionGenerationNotificationV04 : IOuterRecord
 {
     /// <summary>
@@ -40,6 +42,7 @@ public interface ISecuritiesSettlementTransactionGenerationNotificationV04 : IOu
     [IsoId("_uIR2YQxyEeKMmbvHOtE4SA")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages17> Linkages { get; }
 
     /// <summary>
@@ -72,6 +75,7 @@ public interface ISecuritiesSettlementTransactionGenerationNotificationV04 : IOu
     [IsoId("_uIR2cQxyEeKMmbvHOtE4SA")]
     [DisplayName("Quantity And Account Details")]
     [IsoXmlTag("QtyAndAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQuantityAndAccount25> QuantityAndAccountDetails { get; }
 
     /// <summary>
@@ -144,6 +148,7 @@ public interface ISecuritiesSettlementTransactionGenerationNotificationV04 : IOu
     [IsoId("_uIR2lQxyEeKMmbvHOtE4SA")]
     [DisplayName("Generated Reason")]
     [IsoXmlTag("GnrtdRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGeneratedReason1> GeneratedReason { get; }
 
     /// <summary>
@@ -160,5 +165,6 @@ public interface ISecuritiesSettlementTransactionGenerationNotificationV04 : IOu
     [IsoId("_uIR2nQxyEeKMmbvHOtE4SA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

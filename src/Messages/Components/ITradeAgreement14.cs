@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date and identification of a trade.
 /// </summary>
 [IsoId("_DM9wUZRzEeak6e8_Fc5fQg")]
+[IsoDisplayName(@"Trade Agreement")]
 public interface ITradeAgreement14 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeAgreement14 : IIsoComponent
     [IsoId("_DaTBs5RzEeak6e8_Fc5fQg")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITradeAgreement14 : IIsoComponent
     [IsoId("_DaTBtZRzEeak6e8_Fc5fQg")]
     [DisplayName("Originator Reference")]
     [IsoXmlTag("OrgtrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginatorReference { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface ITradeAgreement14 : IIsoComponent
     [IsoId("_DaTBt5RzEeak6e8_Fc5fQg")]
     [DisplayName("Common Reference")]
     [IsoXmlTag("CmonRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonReference { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface ITradeAgreement14 : IIsoComponent
     [IsoId("_DaTBuZRzEeak6e8_Fc5fQg")]
     [DisplayName("Operation Type")]
     [IsoXmlTag("OprTp")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? OperationType { get; }
 
     /// <summary>
@@ -49,6 +57,8 @@ public interface ITradeAgreement14 : IIsoComponent
     [IsoId("_DaTBu5RzEeak6e8_Fc5fQg")]
     [DisplayName("Operation Scope")]
     [IsoXmlTag("OprScp")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? OperationScope { get; }
 
     /// <summary>
@@ -57,6 +67,8 @@ public interface ITradeAgreement14 : IIsoComponent
     [IsoId("_gShxQZRzEeak6e8_Fc5fQg")]
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProductType { get; }
 
     /// <summary>
@@ -65,6 +77,7 @@ public interface ITradeAgreement14 : IIsoComponent
     [IsoId("_DaTBvZRzEeak6e8_Fc5fQg")]
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SettlementSessionIdentifier { get; }
 
     /// <summary>
@@ -73,5 +86,6 @@ public interface ITradeAgreement14 : IIsoComponent
     [IsoId("_DaTBv5RzEeak6e8_Fc5fQg")]
     [DisplayName("Payment Versus Payment Indicator")]
     [IsoXmlTag("PmtVrssPmtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PaymentVersusPaymentIndicator { get; }
 }

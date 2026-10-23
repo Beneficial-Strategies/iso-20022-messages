@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of update requested. That is addition, deletion or modification.
 /// </summary>
 [IsoId("_cbtx0YyeEeaxLOI-Kq-S4w")]
+[IsoDisplayName(@"Update Type 25 Choice")]
 public interface IUpdateType25Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Asset Holding3.
 /// </summary>
 [IsoId("_EuGbEZh6EeyJwbhKOp9Ehg")]
+[IsoDisplayName(@"Asset Holding3")]
 public interface IAssetHolding3 : IIsoComponent
 {
     /// <summary>

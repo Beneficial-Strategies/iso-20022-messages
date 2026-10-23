@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity6Choi
 /// </summary>
 [IsoId("_SoRAxdp-Ed-ak6NoX_4Aeg_-1931222347")]
 [IsoXmlTag("UnitsNb")]
+[IsoDisplayName(@"Units Number")]
 public interface IUnitsNumber : IFinancialInstrumentQuantity6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,6 @@ public interface IUnitsNumber : IFinancialInstrumentQuantity6Choice, IIsoChoiceV
     [IsoId("_SoH21dp-Ed-ak6NoX_4Aeg_-1748202212")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Unit { get; }
 }

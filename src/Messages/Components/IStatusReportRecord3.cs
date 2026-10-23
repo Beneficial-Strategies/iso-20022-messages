@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the per record status details.
 /// </summary>
 [IsoId("_YZkjQdHEEeaokquJJ-K6uA")]
+[IsoDisplayName(@"Status Report Record")]
 public interface IStatusReportRecord3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStatusReportRecord3 : IIsoComponent
     [IsoId("_Yiw7gdHEEeaokquJJ-K6uA")]
     [DisplayName("Original Record Identification")]
     [IsoXmlTag("OrgnlRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text OriginalRecordIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IStatusReportRecord3 : IIsoComponent
     [IsoId("_Yiw7hdHEEeaokquJJ-K6uA")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericValidationRuleIdentification1> ValidationRule { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IStatusReportRecord3 : IIsoComponent
     [IsoId("_Yiw7h9HEEeaokquJJ-K6uA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

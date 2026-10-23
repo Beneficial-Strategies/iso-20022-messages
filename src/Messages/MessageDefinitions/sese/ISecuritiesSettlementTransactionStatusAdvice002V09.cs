@@ -29,6 +29,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesSttlmTxStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:sese.024.002.09"
 )]
+[Description(@"Scope|An account servicer sends a SecuritiesSettlementTransactionStatusAdvice to an account owner to advise the status of a securities settlement transaction instruction previously sent by the account owner or the status of a settlement transaction existing in the books of the servicer for the account of the owner. The status may be a processing, pending processing, internal matching, matching and/or settlement status.|The status advice may be sent as a response to the request of the account owner or not.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Settlement Transaction Status Advice 002 V")]
 public interface ISecuritiesSettlementTransactionStatusAdvice002V09 : IOuterRecord
 {
     /// <summary>
@@ -93,5 +95,6 @@ public interface ISecuritiesSettlementTransactionStatusAdvice002V09 : IOuterReco
     [IsoId("_vE6o7832Eee5nJBZsW8MFQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

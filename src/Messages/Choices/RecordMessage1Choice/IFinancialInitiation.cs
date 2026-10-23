@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Financial initiation message record.
 /// </summary>
 [IsoId("_rp5TcFZVEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Financial Initiation")]
 public interface IFinancialInitiation : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IFinancialInitiation : IRecordMessage1Choice, IIsoChoiceVariant
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("FinInitn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

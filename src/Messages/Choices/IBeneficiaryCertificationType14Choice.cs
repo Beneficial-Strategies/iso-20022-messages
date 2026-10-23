@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Beneficiary Certification Type14Choice.
 /// </summary>
 [IsoId("_l6TU95t3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Beneficiary Certification Type14Choice")]
 public interface IBeneficiaryCertificationType14Choice : IIsoChoice { }

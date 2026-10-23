@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the cardholder.
 /// </summary>
 [IsoId("_4FI1oZXtEeWMQt4mOczoDw")]
+[IsoDisplayName(@"Cardholder")]
 public interface ICardholder11 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICardholder11 : IIsoComponent
     [IsoId("_4QWnI5XtEeWMQt4mOczoDw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max45Text)]
+    [StringLength(45, MinimumLength = 1)]
     Max45Text? Name { get; }
 
     /// <summary>
@@ -58,6 +61,8 @@ public interface ICardholder11 : IIsoComponent
     [IsoId("_2JkXIJdpEeWUsZL6nqINsQ")]
     [DisplayName("Trip Number")]
     [IsoXmlTag("TripNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripNumber { get; }
 
     /// <summary>
@@ -74,5 +79,7 @@ public interface ICardholder11 : IIsoComponent
     [IsoId("_4QWnJZXtEeWMQt4mOczoDw")]
     [DisplayName("Personal Data")]
     [IsoXmlTag("PrsnlData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? PersonalData { get; }
 }

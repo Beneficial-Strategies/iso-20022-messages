@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// This entity shall store the parties from the first three levels: the system operator, the central securities depositaries, the participants of the central securities depositaries, the national central banks and payment banks.
 /// </summary>
 [IsoId("_kmC6Ie5NEeCisYr99QEiWA_-1914948225")]
+[IsoDisplayName(@"System Party")]
 public interface ISystemParty2 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface ISystemParty2 : IIsoComponent
     [IsoId("_kmC6Iu5NEeCisYr99QEiWA_1131494895")]
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OpeningDate { get; }
 
     /// <summary>
@@ -27,5 +29,6 @@ public interface ISystemParty2 : IIsoComponent
     [IsoId("_kmC6I-5NEeCisYr99QEiWA_-586504225")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClosingDate { get; }
 }

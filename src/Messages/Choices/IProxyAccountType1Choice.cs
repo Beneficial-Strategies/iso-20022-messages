@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the scheme used for the identification of an account alias.
 /// </summary>
 [IsoId("_dyock3h3EeidzqjNEfehPg")]
+[IsoDisplayName(@"Proxy Account Type 1 Choice")]
 public interface IProxyAccountType1Choice : IIsoChoice { }

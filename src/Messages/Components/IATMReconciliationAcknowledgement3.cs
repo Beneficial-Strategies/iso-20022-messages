@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Reconciliation Acknowledgement3.
 /// </summary>
 [IsoId("_DTU9MaE7Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Reconciliation Acknowledgement3")]
 public interface IATMReconciliationAcknowledgement3 : IIsoComponent
 {
     /// <summary>

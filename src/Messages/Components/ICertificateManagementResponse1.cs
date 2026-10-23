@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the result of the certificate management request.
 /// </summary>
 [IsoId("_PATyUI4WEeW6h7rGyYlyTg")]
+[IsoDisplayName(@"Certificate Management Response")]
 public interface ICertificateManagementResponse1 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,8 @@ public interface ICertificateManagementResponse1 : IIsoComponent
     [IsoId("_w4KLoI4YEeW6h7rGyYlyTg")]
     [DisplayName("Security Profile")]
     [IsoXmlTag("SctyPrfl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecurityProfile { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ICertificateManagementResponse1 : IIsoComponent
     [IsoId("_05Ki8I4YEeW6h7rGyYlyTg")]
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
+    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
     Max3000Binary? ClientCertificate { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ICertificateManagementResponse1 : IIsoComponent
     [IsoId("_9dIIEI4YEeW6h7rGyYlyTg")]
     [DisplayName("Client Certificate Path")]
     [IsoXmlTag("ClntCertPth")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10KBinary> ClientCertificatePath { get; }
 
     /// <summary>
@@ -73,5 +78,6 @@ public interface ICertificateManagementResponse1 : IIsoComponent
     [IsoId("_EGwHcI4ZEeW6h7rGyYlyTg")]
     [DisplayName("Server Certificate Path")]
     [IsoXmlTag("SvrCertPth")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10KBinary> ServerCertificatePath { get; }
 }

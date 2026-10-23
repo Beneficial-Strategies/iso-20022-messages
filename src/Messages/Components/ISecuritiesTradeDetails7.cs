@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities trade.
 /// </summary>
 [IsoId("_S-K_Ytp-Ed-ak6NoX_4Aeg_-671661870")]
+[IsoDisplayName(@"Securities Trade Details")]
 public interface ISecuritiesTradeDetails7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesTradeDetails7 : IIsoComponent
     [IsoId("_S-K_Y9p-Ed-ak6NoX_4Aeg_-1034494328")]
     [DisplayName("Notification Sender Transaction Identification")]
     [IsoXmlTag("NtfctnSndrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NotificationSenderTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISecuritiesTradeDetails7 : IIsoComponent
     [IsoId("_S-K_ZNp-Ed-ak6NoX_4Aeg_-912916098")]
     [DisplayName("Notification Receiver Transaction Identification")]
     [IsoXmlTag("NtfctnRcvrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NotificationReceiverTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISecuritiesTradeDetails7 : IIsoComponent
     [IsoId("_S-K_Zdp-Ed-ak6NoX_4Aeg_-748677749")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonIdentification { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface ISecuritiesTradeDetails7 : IIsoComponent
     [IsoId("_S-UwVNp-Ed-ak6NoX_4Aeg_-663353524")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -97,6 +105,7 @@ public interface ISecuritiesTradeDetails7 : IIsoComponent
     [IsoId("_S-UwV9p-Ed-ak6NoX_4Aeg_225095902")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReporting1Choice> Reporting { get; }
 
     /// <summary>
@@ -161,5 +170,6 @@ public interface ISecuritiesTradeDetails7 : IIsoComponent
     [IsoId("_S-d6Rdp-Ed-ak6NoX_4Aeg_-1763846482")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension2> Extension { get; }
 }

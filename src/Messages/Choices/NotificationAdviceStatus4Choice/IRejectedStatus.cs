@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus4Choice;
 
 /// <summary>Provides information about the rejection status.</summary>
 [IsoId("_4z1pY6UeEfCnE_wCEfCqTA")]
+[IsoDisplayName(@"Rejected Status")]
 public interface IRejectedStatus : INotificationAdviceStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

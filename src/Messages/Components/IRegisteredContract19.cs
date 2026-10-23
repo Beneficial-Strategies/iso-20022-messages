@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Registered Contract19.
 /// </summary>
 [IsoId("_6qdpsTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Registered Contract19")]
 public interface IRegisteredContract19 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IRegisteredContract19 : IIsoComponent
     /// </summary>
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation5> Attachment { get; }
 
     /// <summary>
@@ -72,5 +74,6 @@ public interface IRegisteredContract19 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

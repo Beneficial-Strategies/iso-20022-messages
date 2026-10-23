@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification33Choice;
 /// </summary>
 [IsoId("_xKO_Qzq3EeWQ1Y7f8kds2A")]
 [IsoXmlTag("ForAllAccts")]
+[IsoDisplayName(@"For All Accounts")]
 public interface IForAllAccounts : IAccountIdentification33Choice, IIsoChoiceVariant
 {
     /// <summary>

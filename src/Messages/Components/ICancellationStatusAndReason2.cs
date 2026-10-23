@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status of a transfer cancellation instruction and the reason for the status.
 /// </summary>
 [IsoId("_SxzXTNp-Ed-ak6NoX_4Aeg_195934515")]
+[IsoDisplayName(@"Cancellation Status And Reason")]
 public interface ICancellationStatusAndReason2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICancellationStatusAndReason2 : IIsoComponent
     [IsoId("_SxzXTdp-Ed-ak6NoX_4Aeg_272585936")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICancellationStatusAndReason2 : IIsoComponent
     [IsoId("_SxzXTtp-Ed-ak6NoX_4Aeg_272585953")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ICancellationStatusAndReason2 : IIsoComponent
     [IsoId("_SxzXT9p-Ed-ak6NoX_4Aeg_272585988")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ICancellationStatusAndReason2 : IIsoComponent
     [IsoId("_Sx9IQNp-Ed-ak6NoX_4Aeg_272586223")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>

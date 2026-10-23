@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DefinedAttributes1Choice;
 /// </summary>
 [IsoId("__F7tMePJEea7_eMQH225xA")]
 [IsoXmlTag("ValDfndAttrbts")]
+[IsoDisplayName(@"Value Defined Attributes")]
 public interface IValueDefinedAttributes : IDefinedAttributes1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -42,6 +43,8 @@ public interface IValueDefinedAttributes : IDefinedAttributes1Choice, IIsoChoice
     [IsoId("_HF0BMMhoEeadgvwNGwK05w")]
     [DisplayName("Index Unit")]
     [IsoXmlTag("IndxUnit")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IndexUnit { get; }
 
     /// <summary>

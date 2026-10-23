@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity82Choice;
 
 /// <summary>Specifies the transfer rate.</summary>
 [IsoId("ee5ca458-191a-41e0-be61-3a033e1e3974")]
+[IsoDisplayName(@"Transfer Rate")]
 public interface ITransferRate : IQuantity82Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

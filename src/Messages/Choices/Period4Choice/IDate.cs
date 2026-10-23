@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period4Choice;
 /// Date period is limited to a single date.
 /// </summary>
 [IsoId("_EG9hApyhEeSBzu9qI1PCRQ")]
+[IsoDisplayName(@"Date")]
 public interface IDate : IPeriod4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IDate : IPeriod4Choice, IIsoChoiceVariant
     /// A particular point in the progression of time in a calendar year expressed in the YYYY-MM-DD format. This representation is defined in &quot;XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004&quot; which is aligned with ISO 8601.
     /// </summary>
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Value { get; }
 }

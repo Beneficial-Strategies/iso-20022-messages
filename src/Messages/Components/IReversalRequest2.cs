@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to request a Reversal.
 /// </summary>
 [IsoId("_SY3AAQ1REeqjM-rxn3HuXQ")]
+[IsoDisplayName(@"Reversal Request")]
 public interface IReversalRequest2 : IIsoComponent
 {
     /// <summary>

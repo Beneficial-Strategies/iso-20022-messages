@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Structured call details with address.
 /// </summary>
 [IsoId("_VvH_sR1CEey8XKHwKquEQw")]
+[IsoDisplayName(@"Telecom Call Details")]
 public interface ITelecomCallDetails2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITelecomCallDetails2 : IIsoComponent
     [IsoId("_V25box1CEey8XKHwKquEQw")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? OtherType { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITelecomCallDetails2 : IIsoComponent
     [IsoId("_V25bpR1CEey8XKHwKquEQw")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface ITelecomCallDetails2 : IIsoComponent
     [IsoId("_V25bpx1CEey8XKHwKquEQw")]
     [DisplayName("City")]
     [IsoXmlTag("City")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? City { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface ITelecomCallDetails2 : IIsoComponent
     [IsoId("_V25bqR1CEey8XKHwKquEQw")]
     [DisplayName("State")]
     [IsoXmlTag("Stat")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? State { get; }
 
     /// <summary>
@@ -57,6 +65,8 @@ public interface ITelecomCallDetails2 : IIsoComponent
     [IsoId("_V25bqx1CEey8XKHwKquEQw")]
     [DisplayName("Province")]
     [IsoXmlTag("Prvc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Province { get; }
 
     /// <summary>

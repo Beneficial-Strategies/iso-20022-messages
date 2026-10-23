@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provide the processing status information for a deactivation cancellation request.
 /// </summary>
 [IsoId("_RkUQdtp-Ed-ak6NoX_4Aeg_-484009564")]
+[IsoDisplayName(@"Corporate Action Deactivation Cancellation Processing Status")]
 public interface ICorporateActionDeactivationCancellationProcessingStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICorporateActionDeactivationCancellationProcessingStatus1 : IIs
     [IsoId("_RkUQeNp-Ed-ak6NoX_4Aeg_-429521855")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

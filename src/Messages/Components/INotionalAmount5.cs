@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the reference amount from which contractual payments are determined and the schedule applicable to the payments.
 /// </summary>
 [IsoId("_xnQKcT3XEe2uHKhHp3bXyA")]
+[IsoDisplayName(@"Notional Amount")]
 public interface INotionalAmount5 : IIsoComponent
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface INotionalAmount5 : IIsoComponent
     [IsoId("_xoHtIz3XEe2uHKhHp3bXyA")]
     [DisplayName("Schedule Period")]
     [IsoXmlTag("SchdlPrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISchedule11> SchedulePeriod { get; }
 }

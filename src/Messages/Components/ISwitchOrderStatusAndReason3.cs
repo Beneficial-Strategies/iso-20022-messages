@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status of a switch order.
 /// </summary>
 [IsoId("33efad92-9020-40eb-8350-871593f70002")]
+[IsoDisplayName(@"Switch Order Status And Reason3")]
 public interface ISwitchOrderStatusAndReason3 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface ISwitchOrderStatusAndReason3 : IIsoComponent
     [IsoId("33efad92-legi-0001-0008-871593f70002")]
     [DisplayName("Leg Information")]
     [IsoXmlTag("LegInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchLegReferences3> LegInformation { get; }
 
     /// <summary>

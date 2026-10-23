@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the frequency of the trade query execution.
 /// </summary>
 [IsoId("_et5Wt91dEeqxpKDfBZC1vg")]
+[IsoDisplayName(@"Trade Query Execution Frequency")]
 public interface ITradeQueryExecutionFrequency3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITradeQueryExecutionFrequency3 : IIsoComponent
     [IsoId("_evMXOd1dEeqxpKDfBZC1vg")]
     [DisplayName("Delivery Day")]
     [IsoXmlTag("DlvryDay")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<WeekDay3Code> DeliveryDay { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ITradeQueryExecutionFrequency3 : IIsoComponent
     [IsoId("_evMXO91dEeqxpKDfBZC1vg")]
     [DisplayName("Day Of Month")]
     [IsoXmlTag("DayOfMnth")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<DayOfMonthNumber> DayOfMonth { get; }
 }

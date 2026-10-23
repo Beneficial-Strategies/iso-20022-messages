@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportParameter2Choice;
 /// Party for which the estimated cash flow is being reported.
 /// </summary>
 [IsoId("_U1-1gNp-Ed-ak6NoX_4Aeg_-922147102")]
+[IsoDisplayName(@"Party")]
 public interface IParty : IReportParameter2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

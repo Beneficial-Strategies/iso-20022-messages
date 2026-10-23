@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a switch order.
 /// </summary>
 [IsoId("_8EacxzbsEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Switch Execution")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface ISwitchExecution7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface ISwitchExecution7 : IIsoComponent
     [IsoId("_hwj2gVAMEeal4_lvhAnyGQ")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AmendmentIndicator { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISwitchExecution7 : IIsoComponent
     [IsoId("_8d2QOTbsEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ISwitchExecution7 : IIsoComponent
     [IsoId("_8d2QOzbsEead9bDRE_1DAQ")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ISwitchExecution7 : IIsoComponent
     [IsoId("_4HuFYTw6Eea0R-RTP9Wg-Q")]
     [DisplayName("Received Date Time")]
     [IsoXmlTag("RcvdDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ReceivedDateTime { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface ISwitchExecution7 : IIsoComponent
     [IsoId("_8d2QPzbsEead9bDRE_1DAQ")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DealReference { get; }
 
     /// <summary>
@@ -65,6 +74,8 @@ public interface ISwitchExecution7 : IIsoComponent
     [IsoId("_8d2QQTbsEead9bDRE_1DAQ")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -73,6 +84,8 @@ public interface ISwitchExecution7 : IIsoComponent
     [IsoId("_8d2QQzbsEead9bDRE_1DAQ")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -89,6 +102,9 @@ public interface ISwitchExecution7 : IIsoComponent
     [IsoId("_8d2QSTbsEead9bDRE_1DAQ")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary39> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -105,6 +121,7 @@ public interface ISwitchExecution7 : IIsoComponent
     [IsoId("_8d2QSzbsEead9bDRE_1DAQ")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedFutureTradeDate { get; }
 
     /// <summary>
@@ -121,6 +138,7 @@ public interface ISwitchExecution7 : IIsoComponent
     [IsoId("_8d2QUzbsEead9bDRE_1DAQ")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CashSettlementDate { get; }
 
     /// <summary>
@@ -153,6 +171,7 @@ public interface ISwitchExecution7 : IIsoComponent
     [IsoId("_8d2QWTbsEead9bDRE_1DAQ")]
     [DisplayName("Redemption Leg Details")]
     [IsoXmlTag("RedLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchRedemptionLegExecution4> RedemptionLegDetails { get; }
 
     /// <summary>
@@ -161,6 +180,7 @@ public interface ISwitchExecution7 : IIsoComponent
     [IsoId("_8d2QWzbsEead9bDRE_1DAQ")]
     [DisplayName("Subscription Leg Details")]
     [IsoXmlTag("SbcptLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchSubscriptionLegExecution4> SubscriptionLegDetails { get; }
 
     /// <summary>
@@ -187,6 +207,7 @@ public interface ISwitchExecution7 : IIsoComponent
     [IsoId("_8d2QXzbsEead9bDRE_1DAQ")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms33> ForeignExchangeDetails { get; }
 
     /// <summary>

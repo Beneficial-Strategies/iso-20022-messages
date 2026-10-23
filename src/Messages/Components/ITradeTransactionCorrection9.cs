@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates that the report is correcting the erroneous data fields of a previously submitted position.
 /// </summary>
 [IsoId("_0mDKIQAAEeqefbt-QjTNnA")]
+[IsoDisplayName(@"Trade Transaction Correction")]
 public interface ITradeTransactionCorrection9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeTransactionCorrection9 : IIsoComponent
     [IsoId("_0sDrgQAAEeqefbt-QjTNnA")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface ITradeTransactionCorrection9 : IIsoComponent
     [IsoId("_0sDriwAAEeqefbt-QjTNnA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

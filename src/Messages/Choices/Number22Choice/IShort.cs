@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number22Choice;
 /// Number of maximum 3 numeric text.
 /// </summary>
 [IsoId("_HAL_wznEEeWV5sr121Fc8A")]
+[IsoDisplayName(@"Short")]
 public interface IShort : INumber22Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IShort : INumber22Choice, IIsoChoiceVariant
     /// Specifies a numeric string with an exact length of 3 digits.
     /// </summary>
     [IsoXmlTag("Shrt")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatusReason2Choice;
 /// Reason for the status, in a proprietary form.
 /// </summary>
 [IsoId("_t4cl8VkyEeGeoaLUQk__nA_238389866")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICancellationStatusReason2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : ICancellationStatusReason2Choice, IIsoChoiceVari
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

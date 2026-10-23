@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria which are used to report on the payment status.
 /// </summary>
 [IsoId("_RImk0tp-Ed-ak6NoX_4Aeg_-1267402839")]
+[IsoDisplayName(@"Instruction Status Return Criteria")]
 public interface IInstructionStatusReturnCriteria : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInstructionStatusReturnCriteria : IIsoComponent
     [IsoId("_RImk09p-Ed-ak6NoX_4Aeg_-1267402838")]
     [DisplayName("Payment Instruction Status Indicator")]
     [IsoXmlTag("PmtInstrStsInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator PaymentInstructionStatusIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IInstructionStatusReturnCriteria : IIsoComponent
     [IsoId("_RImk1Np-Ed-ak6NoX_4Aeg_-1267402837")]
     [DisplayName("Payment Instruction Status Date Time Indicator")]
     [IsoXmlTag("PmtInstrStsDtTmInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? PaymentInstructionStatusDateTimeIndicator { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IInstructionStatusReturnCriteria : IIsoComponent
     [IsoId("_RImk1dp-Ed-ak6NoX_4Aeg_-1267402836")]
     [DisplayName("Payment Instruction Status Reason Indicator")]
     [IsoXmlTag("PmtInstrStsRsnInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? PaymentInstructionStatusReasonIndicator { get; }
 }

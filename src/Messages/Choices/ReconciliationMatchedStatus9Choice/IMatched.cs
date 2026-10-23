@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReconciliationMatchedStatus9Choi
 /// Indication that the reports subject of reconciliation match.
 /// </summary>
 [IsoId("_AxRVQcK3EeuFNp8LZAnorg")]
+[IsoDisplayName(@"Matched")]
 public interface IMatched : IReconciliationMatchedStatus9Choice, IIsoChoiceVariant
 {
     /// <summary>

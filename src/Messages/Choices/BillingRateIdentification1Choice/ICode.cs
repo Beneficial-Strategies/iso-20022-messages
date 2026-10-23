@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingRateIdentification1Choice
 /// Specifies the billing rate identification code, as defined in an external code list.
 /// </summary>
 [IsoId("_6Q10h5qlEeGSON8vddiWzQ_1326961211")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBillingRateIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>

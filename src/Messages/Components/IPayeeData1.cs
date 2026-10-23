@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a payee.
 /// </summary>
 [IsoId("_Xt_dkSzzEfCD0_iZ8tw-zA")]
+[IsoDisplayName(@"Payee Data1")]
 public interface IPayeeData1 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IPayeeData1 : IIsoComponent
     [IsoId("_XwZRgSzzEfCD0_iZ8tw-zA")]
     [DisplayName("Credentials")]
     [IsoXmlTag("Crdntls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICredentials3> Credentials { get; }
 
     /// <summary>
@@ -161,6 +163,7 @@ public interface IPayeeData1 : IIsoComponent
     [IsoId("_7cwZYkVYEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -169,6 +172,7 @@ public interface IPayeeData1 : IIsoComponent
     [IsoId("_7cwZY0VYEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Numeric variables calculated on the number of transactions or on market exposures.
 /// </summary>
 [IsoId("_d5k5U65MEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Volume Metrics")]
 public interface IVolumeMetrics5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IVolumeMetrics5 : IIsoComponent
     [IsoId("_eIL9Ea5MEeuo-IflVgGqiA")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? NumberOfTransactions { get; }
 
     /// <summary>

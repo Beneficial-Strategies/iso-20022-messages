@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Date and identification of a trade.
 /// </summary>
 [IsoId("_TJ8xgdp-Ed-ak6NoX_4Aeg_290674431")]
+[IsoDisplayName(@"Trade Agreement")]
 public interface ITradeAgreement1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeAgreement1 : IIsoComponent
     [IsoId("_TJ8xgtp-Ed-ak6NoX_4Aeg_290674433")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TradeDate { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITradeAgreement1 : IIsoComponent
     [IsoId("_TJ8xg9p-Ed-ak6NoX_4Aeg_933842643")]
     [DisplayName("Notification Identification")]
     [IsoXmlTag("NtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text NotificationIdentification { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface ITradeAgreement1 : IIsoComponent
     [IsoId("_TJ8xhNp-Ed-ak6NoX_4Aeg_1033584358")]
     [DisplayName("Common Reference")]
     [IsoXmlTag("CmonRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonReference { get; }
 }

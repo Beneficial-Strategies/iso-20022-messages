@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the old and new values for a party log status.
 /// </summary>
 [IsoId("_mm5wc2jSEeiRg5NzP0jkQg")]
+[IsoDisplayName(@"Update Log Party Lock Status")]
 public interface IUpdateLogPartyLockStatus1 : IIsoComponent
 {
     /// <summary>

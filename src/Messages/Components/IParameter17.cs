@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameter17.
 /// </summary>
 [IsoId("_0hv94Y-LEe6oobnCtR50kw")]
+[IsoDisplayName(@"Parameter17")]
 public interface IParameter17 : IIsoComponent
 {
     /// <summary>

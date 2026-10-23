@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the settlement instruction generation.
 /// </summary>
 [IsoId("_AbMjstokEeC60axPepSq7g_-1902988326")]
+[IsoDisplayName(@"Settlement Instruction Generation 1 Choice")]
 public interface ISettlementInstructionGeneration1Choice : IIsoChoice { }

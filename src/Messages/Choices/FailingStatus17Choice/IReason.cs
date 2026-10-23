@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingStatus17Choice;
 
 /// <summary>Specifies the reason of the failing status.</summary>
 [IsoId("_0o3p6eSkEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IFailingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

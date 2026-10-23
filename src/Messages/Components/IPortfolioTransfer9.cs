@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Type of product and assets to be transferred.
 /// </summary>
 [IsoId("_ZS9P4elaEeu9cf4XM82AQQ")]
+[IsoDisplayName(@"Portfolio Transfer")]
 public interface IPortfolioTransfer9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPortfolioTransfer9 : IIsoComponent
     [IsoId("_ZpT6Y-laEeu9cf4XM82AQQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPortfolioTransfer9 : IIsoComponent
     [IsoId("_ZpT6ZelaEeu9cf4XM82AQQ")]
     [DisplayName("Transfer Identification")]
     [IsoXmlTag("TrfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPortfolioTransfer9 : IIsoComponent
     [IsoId("_ZpT6Z-laEeu9cf4XM82AQQ")]
     [DisplayName("Transfer Confirmation Identification")]
     [IsoXmlTag("TrfConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransferConfirmationIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IPortfolioTransfer9 : IIsoComponent
     [IsoId("_ZpT6a-laEeu9cf4XM82AQQ")]
     [DisplayName("Partial Discovery")]
     [IsoXmlTag("PrtlDscvry")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PartialDiscovery { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IPortfolioTransfer9 : IIsoComponent
     [IsoId("_ZpT6belaEeu9cf4XM82AQQ")]
     [DisplayName("Residual Cash")]
     [IsoXmlTag("RsdlCsh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IResidualCash1> ResidualCash { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IPortfolioTransfer9 : IIsoComponent
     [IsoId("_ZpT6b-laEeu9cf4XM82AQQ")]
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TaxDate { get; }
 
     /// <summary>
@@ -73,6 +83,7 @@ public interface IPortfolioTransfer9 : IIsoComponent
     [IsoId("_ZpT6celaEeu9cf4XM82AQQ")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument99> FinancialInstrumentAssetForTransfer { get; }
 
     /// <summary>
@@ -81,5 +92,6 @@ public interface IPortfolioTransfer9 : IIsoComponent
     [IsoId("_ZpT6c-laEeu9cf4XM82AQQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

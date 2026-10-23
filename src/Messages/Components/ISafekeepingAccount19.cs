@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Safekeeping Account19.
 /// </summary>
 [IsoId("_6iIdw4-9Ee-COKgew96POA")]
+[IsoDisplayName(@"Safekeeping Account19")]
 public interface ISafekeepingAccount19 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface ISafekeepingAccount19 : IIsoComponent
     /// </summary>
     [DisplayName("Instructed Balance")]
     [IsoXmlTag("InstdBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHoldingBalance15> InstructedBalance { get; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public interface ISafekeepingAccount19 : IIsoComponent
     /// </summary>
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification246Choice> RightsHolder { get; }
 
     /// <summary>

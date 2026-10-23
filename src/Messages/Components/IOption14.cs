@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Derivative instrument that gives the buyer the right but not the obligation to purchase a set of quantity of a financial instrument at a future date.
 /// </summary>
 [IsoId("_d3DnkchsEeadgvwNGwK05w")]
+[IsoDisplayName(@"Option")]
 public interface IOption14 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,9 @@ public interface IOption14 : IIsoComponent
     [IsoId("_d_smOchsEeadgvwNGwK05w")]
     [DisplayName("Expiration Style")]
     [IsoXmlTag("XprtnStyle")]
+    [MinLength(1)]
+    [MaxLength(4)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<OptionStyle5Code> ExpirationStyle { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IOption14 : IIsoComponent
     [IsoId("_d_smPchsEeadgvwNGwK05w")]
     [DisplayName("Barrier Indicator")]
     [IsoXmlTag("BrrrInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? BarrierIndicator { get; }
 
     /// <summary>

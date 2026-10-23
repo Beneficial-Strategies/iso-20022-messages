@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountOrPercentage1Choice;
 /// </summary>
 [IsoId("_986x6HltEeG7BsjMvd1mEw_-131852339")]
 [IsoXmlTag("PctgAmt")]
+[IsoDisplayName(@"Percentage Amount")]
 public interface IPercentageAmount : IAmountOrPercentage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IPercentageAmount : IAmountOrPercentage1Choice, IIsoChoiceVaria
     [IsoId("_99Ei53ltEeG7BsjMvd1mEw_-1531427799")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Rate { get; }
 
     /// <summary>

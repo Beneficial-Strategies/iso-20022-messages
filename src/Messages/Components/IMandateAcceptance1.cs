@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the mandate, which is being accepted.
 /// </summary>
 [IsoId("_RBmk9tp-Ed-ak6NoX_4Aeg_-1832843790")]
+[IsoDisplayName(@"Mandate Acceptance")]
 public interface IMandateAcceptance1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Numerical representation of the net increases and decreases in an account at a specific point in time. A cash balance is calculated from a sum of cash credits minus a sum of cash debits.
 /// </summary>
 [IsoId("_S3i5sgEcEeCQm6a_G2yO_w_1955726096")]
+[IsoDisplayName(@"Report Data")]
 public interface IReportData3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportData3 : IIsoComponent
     [IsoId("_S3i5swEcEeCQm6a_G2yO_w_1841887030")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IReportData3 : IIsoComponent
     [IsoId("_S3i5tAEcEeCQm6a_G2yO_w_958653743")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValueDate { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IReportData3 : IIsoComponent
     [IsoId("_S3i5tQEcEeCQm6a_G2yO_w_844814677")]
     [DisplayName("Date And Time Stamp")]
     [IsoXmlTag("DtAndTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime DateAndTimeStamp { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IReportData3 : IIsoComponent
     [IsoId("_S3i5twEcEeCQm6a_G2yO_w_-952737875")]
     [DisplayName("Settlement Session")]
     [IsoXmlTag("SttlmSsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SettlementSession { get; }
 }

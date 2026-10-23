@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies individually each leg of a transport of goods.
 /// </summary>
 [IsoId("_StL9Adp-Ed-ak6NoX_4Aeg_-886888907")]
+[IsoDisplayName(@"Single Transport")]
 public interface ISingleTransport3 : IIsoComponent
 {
     /// <summary>

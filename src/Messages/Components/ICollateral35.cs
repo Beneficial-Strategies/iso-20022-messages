@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the security pledged as collateral.
 /// </summary>
 [IsoId("_kyCmOf_9Eemefbt-QjTNnA")]
+[IsoDisplayName(@"Collateral")]
 public interface ICollateral35 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICollateral35 : IIsoComponent
     [IsoId("_k2Zhwf_9Eemefbt-QjTNnA")]
     [DisplayName("Collateral Value Date")]
     [IsoXmlTag("CollValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CollateralValueDate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICollateral35 : IIsoComponent
     [IsoId("_k2Zhxf_9Eemefbt-QjTNnA")]
     [DisplayName("Net Exposure Collateralisation Indicator")]
     [IsoXmlTag("NetXpsrCollstnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NetExposureCollateralisationIndicator { get; }
 
     /// <summary>

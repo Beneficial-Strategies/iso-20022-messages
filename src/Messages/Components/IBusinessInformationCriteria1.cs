@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to search for business information and to report on the business information. A name may be given to the new query.
 /// </summary>
 [IsoId("_1dxAlZlZEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Business Information Criteria")]
 public interface IBusinessInformationCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBusinessInformationCriteria1 : IIsoComponent
     [IsoId("_1mEoA5lZEeeE1Ya-LgRsuQ")]
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NewQueryName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IBusinessInformationCriteria1 : IIsoComponent
     [IsoId("_1mEoBZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGeneralBusinessInformationSearchCriteria1> SearchCriteria { get; }
 
     /// <summary>

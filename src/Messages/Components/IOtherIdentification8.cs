@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other accepted financial instrument's identification than ISIN.
 /// </summary>
 [IsoId("2ef2b67e-a80e-4651-b05b-f40c63edd028")]
+[IsoDisplayName(@"Other Identification8")]
 public interface IOtherIdentification8 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ServiceLevel8Choice;
 /// Specifies a pre-agreed service or level of service between the parties, as published in an external service level code list.
 /// </summary>
 [IsoId("_QJa_zdp-Ed-ak6NoX_4Aeg_1912716972")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IServiceLevel8Choice, IIsoChoiceVariant
 {
     /// <summary>

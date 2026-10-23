@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError7C
 /// </summary>
 [IsoId("_YDGlIzneEem7JZMuWtwtsg")]
 [IsoXmlTag("OprlErr")]
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : IIntraBalanceOrOperationalError7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IOperationalError : IIntraBalanceOrOperationalError7Choice, IIs
     [IsoId("_RA_783hdEeidzqjNEfehPg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

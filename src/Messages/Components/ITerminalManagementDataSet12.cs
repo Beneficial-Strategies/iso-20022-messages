@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of requested data set.
 /// </summary>
 [IsoId("_E38f4WpKEeSR-ZWLvO-1dg")]
+[IsoDisplayName(@"Terminal Management Data Set")]
 public interface ITerminalManagementDataSet12 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITerminalManagementDataSet12 : IIsoComponent
     [IsoId("_FEdR42pKEeSR-ZWLvO-1dg")]
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? POIChallenge { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITerminalManagementDataSet12 : IIsoComponent
     [IsoId("_FEdR5WpKEeSR-ZWLvO-1dg")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? TMChallenge { get; }
 
     /// <summary>

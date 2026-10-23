@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Investigation Data Record7Choice.
 /// </summary>
 [IsoId("_oax_8zrQEe-thIfLZ94a1w")]
+[IsoDisplayName(@"Investigation Data Record7Choice")]
 public interface IInvestigationDataRecord7Choice : IIsoChoice { }

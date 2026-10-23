@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError9Choice;
 /// <summary>
 /// Report.
 /// </summary>
+[IsoDisplayName(@"Report")]
 public interface IReport : IStandingOrderOrError9Choice, IIsoChoiceVariant
 {
     /// <summary>

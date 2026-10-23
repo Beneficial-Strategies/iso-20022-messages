@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification36Choice;
 /// </summary>
 [IsoId("_POTEp4rpEeq91phomTRDDA")]
 [IsoXmlTag("Bskt")]
+[IsoDisplayName(@"Basket")]
 public interface IBasket : ISecurityIdentification36Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IBasket : ISecurityIdentification36Choice, IIsoChoiceVariant
     [IsoId("_lQQRIP5yEeqiEZtcZLwc3Q")]
     [DisplayName("Structurer")]
     [IsoXmlTag("Strr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Structurer { get; }
 
     /// <summary>
@@ -26,6 +28,8 @@ public interface IBasket : ISecurityIdentification36Choice, IIsoChoiceVariant
     [IsoId("_EfWm0QFOEeqUa4noT3P56A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Identification { get; }
 
     /// <summary>
@@ -34,5 +38,6 @@ public interface IBasket : ISecurityIdentification36Choice, IIsoChoiceVariant
     [IsoId("_HI1KgQFOEeqUa4noT3P56A")]
     [DisplayName("Constituents")]
     [IsoXmlTag("Cnsttnts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBasketConstituents1> Constituents { get; }
 }

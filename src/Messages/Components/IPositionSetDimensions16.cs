@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Position Set Dimensions16.
 /// </summary>
 [IsoId("_jRx8FRTjEe61h9tfoUrWyw")]
+[IsoDisplayName(@"Position Set Dimensions16")]
 public interface IPositionSetDimensions16 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Message status Response.
 /// </summary>
 [IsoId("_VigGkXIqEe299ZbWCkdR_w")]
+[IsoDisplayName(@"Message Status Response Data")]
 public interface IMessageStatusResponseData7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMessageStatusResponseData7 : IIsoComponent
     [IsoId("_Vp02kXIqEe299ZbWCkdR_w")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ExchangeIdentification { get; }
 
     /// <summary>

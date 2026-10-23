@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Floating rate related information.
 /// </summary>
 [IsoId("_6ao5lVfREeqqKf65rDYWYw")]
+[IsoDisplayName(@"Floating Rate")]
 public interface IFloatingRate7 : IIsoComponent
 {
     /// <summary>

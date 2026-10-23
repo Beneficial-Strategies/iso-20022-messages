@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Status of the confirmation.
 /// </summary>
 [IsoId("_wK4rIEhCEea8pJjypp-yMQ")]
+[IsoDisplayName(@"Confirmation Status 1 Choice")]
 public interface IConfirmationStatus1Choice : IIsoChoice { }

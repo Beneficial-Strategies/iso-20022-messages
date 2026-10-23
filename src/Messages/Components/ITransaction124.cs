@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transactions reported.
 /// </summary>
 [IsoId("_M9-J0Ss9EeySlt9bF77XfA")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction124 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransaction124 : IIsoComponent
     [IsoId("_NVOMNSs9EeySlt9bF77XfA")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientTripartyCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransaction124 : IIsoComponent
     [IsoId("_NVOMNys9EeySlt9bF77XfA")]
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TripartyAgentServiceProviderCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransaction124 : IIsoComponent
     [IsoId("_NVOMOSs9EeySlt9bF77XfA")]
     [DisplayName("Counterparty Collateral Transaction Reference")]
     [IsoXmlTag("CtrPtyCollTxRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CounterpartyCollateralTransactionReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ITransaction124 : IIsoComponent
     [IsoId("_NVOMOys9EeySlt9bF77XfA")]
     [DisplayName("Common Transaction Identification")]
     [IsoXmlTag("CmonTxId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? CommonTransactionIdentification { get; }
 
     /// <summary>
@@ -121,6 +130,7 @@ public interface ITransaction124 : IIsoComponent
     [IsoId("_NVOMTys9EeySlt9bF77XfA")]
     [DisplayName("Margin Rate")]
     [IsoXmlTag("MrgnRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? MarginRate { get; }
 
     /// <summary>
@@ -130,6 +140,7 @@ public interface ITransaction124 : IIsoComponent
     [IsoId("_NVOMUSs9EeySlt9bF77XfA")]
     [DisplayName("Spread Rate")]
     [IsoXmlTag("SprdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? SpreadRate { get; }
 
     /// <summary>
@@ -146,6 +157,7 @@ public interface ITransaction124 : IIsoComponent
     [IsoId("_NVOMVSs9EeySlt9bF77XfA")]
     [DisplayName("Automatic Allocation")]
     [IsoXmlTag("AutomtcAllcn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AutomaticAllocation { get; }
 
     /// <summary>
@@ -154,6 +166,9 @@ public interface ITransaction124 : IIsoComponent
     [IsoId("_NVOMVys9EeySlt9bF77XfA")]
     [DisplayName("Transaction Status")]
     [IsoXmlTag("TxSts")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionStatus6> TransactionStatus { get; }
 
     /// <summary>
@@ -162,6 +177,7 @@ public interface ITransaction124 : IIsoComponent
     [IsoId("_NVOMWSs9EeySlt9bF77XfA")]
     [DisplayName("Securities Balance")]
     [IsoXmlTag("SctiesBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesBalance3> SecuritiesBalance { get; }
 
     /// <summary>
@@ -170,5 +186,6 @@ public interface ITransaction124 : IIsoComponent
     [IsoId("_NVOMWys9EeySlt9bF77XfA")]
     [DisplayName("Cash Balance")]
     [IsoXmlTag("CshBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance15> CashBalance { get; }
 }

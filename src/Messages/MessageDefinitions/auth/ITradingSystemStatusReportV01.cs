@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_PqPn4GFcEfC-1NkZ9TkdKA")]
 [IsoMessage("auth.121.001.01", "TradgSysStsRpt", "urn:iso:std:iso:20022:tech:xsd:auth.121.001.01")]
+[Description(@"The TradingSystemStatusReport message is sent by the Trading Venue to the Consolidated Tape Provider, which disseminates the data to their users on a consolidated basis. The TradingSystemStatusReport message provides the latest operational status of trading systems operated by each Trading Venue, indicating whether a system is active, experiencing an outage, or undergoing a partial outage.")]
+[IsoDisplayName(@"Trading System Status Report V01")]
 public interface ITradingSystemStatusReportV01 : IOuterRecord
 {
     /// <summary>
@@ -27,6 +29,8 @@ public interface ITradingSystemStatusReportV01 : IOuterRecord
     [IsoId("_oZnrsGFcEfC-1NkZ9TkdKA")]
     [DisplayName("Trading System Report")]
     [IsoXmlTag("TradgSysRpt")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradingSystemReport1Choice> TradingSystemReport { get; }
 
     /// <summary>
@@ -35,5 +39,6 @@ public interface ITradingSystemStatusReportV01 : IOuterRecord
     [IsoId("_rjEv8GFcEfC-1NkZ9TkdKA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

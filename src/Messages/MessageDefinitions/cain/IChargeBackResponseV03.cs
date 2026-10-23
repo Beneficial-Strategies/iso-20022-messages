@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_zDpKIYVkEe6odei_lsRKtw")]
 [IsoMessage("cain.028.001.03", "ChrgBckRspn", "urn:iso:std:iso:20022:tech:xsd:cain.028.001.03")]
+[IsoDisplayName(@"Charge Back Response V03")]
 public interface IChargeBackResponseV03 : IOuterRecord
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IChargeBackResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode5> Programme { get; }
 
     /// <summary>
@@ -158,6 +160,7 @@ public interface IChargeBackResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -172,6 +175,7 @@ public interface IChargeBackResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Dispute Data")]
     [IsoXmlTag("DsptData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeData4> DisputeData { get; }
 
     /// <summary>
@@ -179,6 +183,7 @@ public interface IChargeBackResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Documentation")]
     [IsoXmlTag("Dcmnttn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeDocumentation1> Documentation { get; }
 
     /// <summary>
@@ -193,6 +198,7 @@ public interface IChargeBackResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -200,6 +206,7 @@ public interface IChargeBackResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -207,6 +214,7 @@ public interface IChargeBackResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

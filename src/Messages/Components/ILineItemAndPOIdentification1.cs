@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the line item number and the purchase order.
 /// </summary>
 [IsoId("_RaVOBdp-Ed-ak6NoX_4Aeg_-1742051329")]
+[IsoDisplayName(@"Line Item And PO Identification")]
 public interface ILineItemAndPOIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILineItemAndPOIdentification1 : IIsoComponent
     [IsoId("_RaVOBtp-Ed-ak6NoX_4Aeg_-1638617880")]
     [DisplayName("Line Item Identification")]
     [IsoXmlTag("LineItmId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> LineItemIdentification { get; }
 
     /// <summary>

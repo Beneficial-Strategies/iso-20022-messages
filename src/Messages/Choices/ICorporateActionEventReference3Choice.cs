@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a corporate action identification or a corporate action official identification.
 /// </summary>
 [IsoId("_4VgxsTncEeWLJsP1cO-amg")]
+[IsoDisplayName(@"Corporate Action Event Reference 3 Choice")]
 public interface ICorporateActionEventReference3Choice : IIsoChoice { }

@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "CshDpstOrWdrwlStsUpd",
     "urn:iso:std:iso:20022:tech:xsd:camt.115.001.01"
 )]
+[Description(@"The CashDepositOrWithdrawalStatusUpdate message reports the status of a cash deposit request or cash withdrawal request.|Where reporting on the status of a cash deposit request, it is sent by a cash receiver to a cash sender.|Where reporting on the status of a cash withdrawal request, it is sent by a cash sender to a cash receiver.")]
+[IsoDisplayName(@"Cash Deposit Or Withdrawal Status Update V01")]
 public interface ICashDepositOrWithdrawalStatusUpdateV01 : IOuterRecord
 {
     /// <summary>
@@ -35,6 +37,8 @@ public interface ICashDepositOrWithdrawalStatusUpdateV01 : IOuterRecord
     [IsoId("_pJHOoFGoEfC_v5ez7RpMHw")]
     [DisplayName("Request Information And Status")]
     [IsoXmlTag("ReqInfAndSts")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRequestIdentificationAndStatus1> RequestInformationAndStatus { get; }
 
     /// <summary>
@@ -43,5 +47,6 @@ public interface ICashDepositOrWithdrawalStatusUpdateV01 : IOuterRecord
     [IsoId("_cq-9catiEfC6tbn8zOl_iw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

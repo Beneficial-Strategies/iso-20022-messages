@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_Tid7kNEwEd-BzquC8wXy7w_1341196327")]
 [IsoMessage("seev.031.001.01", "CorpActnNtfctn", "urn:iso:std:iso:20022:tech:xsd:seev.031.001.01")]
+[Description(@"Scope|An account servicer sends the CorporateActionNotification message to an account owner or its designated agent to notify details of a corporate action event and optionally account information, eligible balance and entitlements. It may also include possible elections or choices available to the account owner.|The account servicer can initially send the CorporateActionNotification message as a preliminary advice, subsequently replaced by another CorporateActionNotification message with complete or confirmed information.|It may also be sent to an account owner or its designated agent, to remind of event details and/or of missing or incomplete instructions for a corporate action event.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).|ISO 15022 - 20022 COEXISTENCE|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
+[IsoDisplayName(@"Corporate Action Notification V")]
 public interface ICorporateActionNotificationV01 : IOuterRecord
 {
     /// <summary>
@@ -60,6 +62,7 @@ public interface ICorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tid7ldEwEd-BzquC8wXy7w_445037986")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification13> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -68,6 +71,7 @@ public interface ICorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tid7ltEwEd-BzquC8wXy7w_-389165945")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventReference1> EventsLinkage { get; }
 
     /// <summary>
@@ -108,6 +112,7 @@ public interface ICorporateActionNotificationV01 : IOuterRecord
     [IsoId("_TinFhNEwEd-BzquC8wXy7w_911531207")]
     [DisplayName("Corporate Action Option Details")]
     [IsoXmlTag("CorpActnOptnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionOption3> CorporateActionOptionDetails { get; }
 
     /// <summary>
@@ -140,6 +145,7 @@ public interface ICorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tiw2gNEwEd-BzquC8wXy7w_-1199401353")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -148,6 +154,7 @@ public interface ICorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tiw2gdEwEd-BzquC8wXy7w_-1118133055")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> PayingAgent { get; }
 
     /// <summary>
@@ -156,6 +163,7 @@ public interface ICorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tiw2gtEwEd-BzquC8wXy7w_-1060874704")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -172,6 +180,7 @@ public interface ICorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tiw2hNEwEd-BzquC8wXy7w_1812738203")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> ResellingAgent { get; }
 
     /// <summary>
@@ -196,6 +205,7 @@ public interface ICorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tiw2h9EwEd-BzquC8wXy7w_-727538695")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> SolicitationAgent { get; }
 
     /// <summary>
@@ -212,5 +222,6 @@ public interface ICorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Ti6AcNEwEd-BzquC8wXy7w_-726561126")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension2> Extension { get; }
 }

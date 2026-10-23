@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_Tg-G0dEwEd-BzquC8wXy7w_1485422605")]
 [IsoMessage("seev.038.001.01", "CorpActnNrrtv", "urn:iso:std:iso:20022:tech:xsd:seev.038.001.01")]
+[Description(@"Scope|The CorporateActionNarrative message is sent between an account servicer and an account owner or its designated agent to cater for tax reclaims, restrictions, documentation requirements. This message is bi-directional.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).|ISO 15022 - 20022 COEXISTENCE|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.|.")]
+[IsoDisplayName(@"Corporate Action Narrative V")]
 public interface ICorporateActionNarrativeV01 : IOuterRecord
 {
     /// <summary>
@@ -82,5 +84,6 @@ public interface ICorporateActionNarrativeV01 : IOuterRecord
     [IsoId("_ThH3x9EwEd-BzquC8wXy7w_-1301348994")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension2> Extension { get; }
 }

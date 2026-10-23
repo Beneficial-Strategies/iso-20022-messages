@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account owned by a customer.
 /// </summary>
 [IsoId("_SN5Y99p-Ed-ak6NoX_4Aeg_-1328700496")]
+[IsoDisplayName(@"Customer Account")]
 public interface ICustomerAccount1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICustomerAccount1 : IIsoComponent
     [IsoId("_SOCi4dp-Ed-ak6NoX_4Aeg_920076371")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ICustomerAccount1 : IIsoComponent
     [IsoId("_SOCi59p-Ed-ak6NoX_4Aeg_1908632472")]
     [DisplayName("Monthly Transaction Number")]
     [IsoXmlTag("MnthlyTxNb")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? MonthlyTransactionNumber { get; }
 
     /// <summary>
@@ -89,6 +93,8 @@ public interface ICustomerAccount1 : IIsoComponent
     [IsoId("_SOCi6dp-Ed-ak6NoX_4Aeg_-508141557")]
     [DisplayName("Account Purpose")]
     [IsoXmlTag("AcctPurp")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AccountPurpose { get; }
 
     /// <summary>
@@ -121,6 +127,7 @@ public interface ICustomerAccount1 : IIsoComponent
     [IsoId("_SOMT49p-Ed-ak6NoX_4Aeg_-1192136833")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClosingDate { get; }
 
     /// <summary>
@@ -129,5 +136,6 @@ public interface ICustomerAccount1 : IIsoComponent
     [IsoId("_SOMT5Np-Ed-ak6NoX_4Aeg_-693438831")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRestriction1> Restriction { get; }
 }

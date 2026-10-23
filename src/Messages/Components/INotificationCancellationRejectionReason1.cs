@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides reason of the rejection of a notification cancellation request.
 /// </summary>
 [IsoId("_RkLGg9p-Ed-ak6NoX_4Aeg_881251146")]
+[IsoDisplayName(@"Notification Cancellation Rejection Reason")]
 public interface INotificationCancellationRejectionReason1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INotificationCancellationRejectionReason1 : IIsoComponent
     [IsoId("_RkLGhNp-Ed-ak6NoX_4Aeg_1166618034")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason11FormatChoice> Reason { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface INotificationCancellationRejectionReason1 : IIsoComponent
     [IsoId("_RkLGhdp-Ed-ak6NoX_4Aeg_1166618064")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment card performing the transaction.
 /// </summary>
 [IsoId("_SqR5zwEcEeCQm6a_G2yO_w_-584197886")]
+[IsoDisplayName(@"Payment Card")]
 public interface IPaymentCard1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IPaymentCard1 : IIsoComponent
     [IsoId("_SqbqwgEcEeCQm6a_G2yO_w_937372847")]
     [DisplayName("Card Country Code")]
     [IsoXmlTag("CardCtryCd")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? CardCountryCode { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IPaymentCard1 : IIsoComponent
     [IsoId("_SqbqwwEcEeCQm6a_G2yO_w_2105966354")]
     [DisplayName("Card Product Profile")]
     [IsoXmlTag("CardPdctPrfl")]
+    [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
     Exact4NumericText? CardProductProfile { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IPaymentCard1 : IIsoComponent
     [IsoId("_SqbqxAEcEeCQm6a_G2yO_w_716184634")]
     [DisplayName("Card Brand")]
     [IsoXmlTag("CardBrnd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardBrand { get; }
 
     /// <summary>
@@ -57,5 +62,7 @@ public interface IPaymentCard1 : IIsoComponent
     [IsoId("_SqbqxQEcEeCQm6a_G2yO_w_412422136")]
     [DisplayName("Additional Card Data")]
     [IsoXmlTag("AddtlCardData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalCardData { get; }
 }

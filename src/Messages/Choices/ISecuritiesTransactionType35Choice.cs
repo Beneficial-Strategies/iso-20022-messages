@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the repair reason.
 /// </summary>
 [IsoId("_D5OqYZwyEeazcsnODTksnQ")]
+[IsoDisplayName(@"Securities Transaction Type 35 Choice")]
 public interface ISecuritiesTransactionType35Choice : IIsoChoice { }

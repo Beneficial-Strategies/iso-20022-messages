@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity14Cho
 /// Quantity expressed as an amount representing the face amount, that is, the principal, of a debt instrument.
 /// </summary>
 [IsoId("_Wr_78tp-Ed-ak6NoX_4Aeg_592109587")]
+[IsoDisplayName(@"Face Amount")]
 public interface IFaceAmount : IFinancialInstrumentQuantity14Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

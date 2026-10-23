@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Represents different types of derivative.
 /// </summary>
 [IsoId("_PDS2gWp7EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Derivative")]
 public interface IDerivative4 : IIsoComponent
 {
     /// <summary>

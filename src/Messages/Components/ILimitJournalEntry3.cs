@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit Journal Entry3.
 /// </summary>
 [IsoId("_tr-04ZEhEe-Goq1fIU72qA")]
+[IsoDisplayName(@"Limit Journal Entry3")]
 public interface ILimitJournalEntry3 : IIsoComponent
 {
     /// <summary>

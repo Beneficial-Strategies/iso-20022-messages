@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a reason for no activity and the foreign exchange swaps segment transaction details.
 /// </summary>
 [IsoId("_qc3MAZ2WEeW_58xcYxhewg")]
+[IsoDisplayName(@"Foreign Exchange Swap 2 Choice")]
 public interface IForeignExchangeSwap2Choice : IIsoChoice { }

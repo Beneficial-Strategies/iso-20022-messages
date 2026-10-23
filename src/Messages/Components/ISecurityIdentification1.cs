@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.
 /// </summary>
 [IsoId("_Scf1oNp-Ed-ak6NoX_4Aeg_277096217")]
+[IsoDisplayName(@"Security Identification")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISecurityIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,8 @@ public interface ISecurityIdentification1 : IIsoComponent
     [IsoId("_Scf1otp-Ed-ak6NoX_4Aeg_159174250")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface ISecurityIdentification1 : IIsoComponent
     [IsoId("_Scf1o9p-Ed-ak6NoX_4Aeg_159174311")]
     [DisplayName("Class Type")]
     [IsoXmlTag("ClssTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClassType { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface ISecurityIdentification1 : IIsoComponent
     [IsoId("_Scf1pNp-Ed-ak6NoX_4Aeg_159174342")]
     [DisplayName("Umbrella Name")]
     [IsoXmlTag("UmbrllNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? UmbrellaName { get; }
 
     /// <summary>
@@ -65,5 +73,6 @@ public interface ISecurityIdentification1 : IIsoComponent
     [IsoId("_Scf1p9p-Ed-ak6NoX_4Aeg_159174373")]
     [DisplayName("Registered Distribution Country")]
     [IsoXmlTag("RegdDstrbtnCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> RegisteredDistributionCountry { get; }
 }

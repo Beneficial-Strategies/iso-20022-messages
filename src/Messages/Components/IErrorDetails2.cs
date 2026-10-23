@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the error
 /// </summary>
 [IsoId("_9egA0dBHEeuFC7k3JpyaRA")]
+[IsoDisplayName(@"Error Details")]
 public interface IErrorDetails2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IErrorDetails2 : IIsoComponent
     [IsoId("_9jUPY9BHEeuFC7k3JpyaRA")]
     [DisplayName("Other Message Error Type")]
     [IsoXmlTag("OthrMsgErrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherMessageErrorType { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IErrorDetails2 : IIsoComponent
     [IsoId("_9jUPZdBHEeuFC7k3JpyaRA")]
     [DisplayName("Error Code")]
     [IsoXmlTag("ErrCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ErrorCode { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IErrorDetails2 : IIsoComponent
     [IsoId("_9jUPZ9BHEeuFC7k3JpyaRA")]
     [DisplayName("Error Description")]
     [IsoXmlTag("ErrDesc")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? ErrorDescription { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface IErrorDetails2 : IIsoComponent
     [IsoId("_9jUPadBHEeuFC7k3JpyaRA")]
     [DisplayName("Data Element In Error")]
     [IsoXmlTag("DataElmtInErr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max4000Text> DataElementInError { get; }
 }

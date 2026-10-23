@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.supl;
     "DTCCCANOCSDDataSD1",
     "urn:iso:std:iso:20022:tech:xsd:supl.001.001.18"
 )]
+[Description(@"The DTCCCANOCSDDataSD1 message extends ISO corporate action notification (CANO) asset servicer data message (CSD type) with data elements that are not covered by the standard message, and additionally, with issuer/offeror/market values where DTC corresponding values are mapped to CANO. For example DTCC announced cash rate will be mapped to the CANO and issuer/offeror/market declared cash rate will be extended in this DTCCCANOCSDDataSD1 message.")]
+[IsoDisplayName(@"DTCCCANOCSDDataSD1V18")]
 public interface IDTCCCANOCSDDataSD1V18 : IOuterRecord
 {
     /// <summary>
@@ -86,6 +88,7 @@ public interface IDTCCCANOCSDDataSD1V18 : IOuterRecord
     /// </summary>
     [DisplayName("Option Details")]
     [IsoXmlTag("OptnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionOptionSD16> OptionDetails { get; }
 
     /// <summary>
@@ -93,6 +96,7 @@ public interface IDTCCCANOCSDDataSD1V18 : IOuterRecord
     /// </summary>
     [DisplayName("Option Date Details")]
     [IsoXmlTag("OptnDtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionDateSD11> OptionDateDetails { get; }
 
     /// <summary>
@@ -100,6 +104,7 @@ public interface IDTCCCANOCSDDataSD1V18 : IOuterRecord
     /// </summary>
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesOptionSD9> SecuritiesMovementDetails { get; }
 
     /// <summary>
@@ -107,6 +112,7 @@ public interface IDTCCCANOCSDDataSD1V18 : IOuterRecord
     /// </summary>
     [DisplayName("Securities Movement Security Details")]
     [IsoXmlTag("SctiesMvmntSctyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentAttributesSD16> SecuritiesMovementSecurityDetails { get; }
 
     /// <summary>
@@ -114,6 +120,7 @@ public interface IDTCCCANOCSDDataSD1V18 : IOuterRecord
     /// </summary>
     [DisplayName("Securities Movement Rate Details")]
     [IsoXmlTag("SctiesMvmntRateDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionRateSD12> SecuritiesMovementRateDetails { get; }
 
     /// <summary>
@@ -121,6 +128,7 @@ public interface IDTCCCANOCSDDataSD1V18 : IOuterRecord
     /// </summary>
     [DisplayName("Securities Movement Cash In Lieu Details")]
     [IsoXmlTag("SctiesMvmntCshInLieuDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionPriceSD5> SecuritiesMovementCashInLieuDetails { get; }
 
     /// <summary>
@@ -128,6 +136,7 @@ public interface IDTCCCANOCSDDataSD1V18 : IOuterRecord
     /// </summary>
     [DisplayName("Securities Movement Fraction Disposition")]
     [IsoXmlTag("SctiesMvmntFrctnDspstn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFractionDispositionTypeSD3> SecuritiesMovementFractionDisposition { get; }
 
     /// <summary>
@@ -135,6 +144,7 @@ public interface IDTCCCANOCSDDataSD1V18 : IOuterRecord
     /// </summary>
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOptionSD14> CashMovementDetails { get; }
 
     /// <summary>
@@ -142,6 +152,7 @@ public interface IDTCCCANOCSDDataSD1V18 : IOuterRecord
     /// </summary>
     [DisplayName("New Agent")]
     [IsoXmlTag("NewAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentificationSD5> NewAgent { get; }
 
     /// <summary>
@@ -149,5 +160,6 @@ public interface IDTCCCANOCSDDataSD1V18 : IOuterRecord
     /// </summary>
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentificationSD6> Agent { get; }
 }

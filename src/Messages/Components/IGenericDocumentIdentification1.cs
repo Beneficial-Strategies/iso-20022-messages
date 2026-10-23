@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Generic identification scheme for a document.
 /// </summary>
 [IsoId("_QtVlJNp-Ed-ak6NoX_4Aeg_2133317488")]
+[IsoDisplayName(@"Generic Document Identification")]
 public interface IGenericDocumentIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IGenericDocumentIdentification1 : IIsoComponent
     [IsoId("_QtVlJtp-Ed-ak6NoX_4Aeg_981420472")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

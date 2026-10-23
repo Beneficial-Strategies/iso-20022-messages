@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the continuous order books for the pre-trade output report.
 /// </summary>
 [IsoId("_ei7XgGIZEfCeoPFCHQnhvA")]
+[IsoDisplayName(@"Continuous Order Book Data1")]
 public interface IContinuousOrderBookData1 : IIsoComponent
 {
     /// <summary>

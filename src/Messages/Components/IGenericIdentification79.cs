@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification using a proprietary scheme.
 /// </summary>
 [IsoId("_Vyh485qLEeWcAIE4lEkF_Q")]
+[IsoDisplayName(@"Generic Identification")]
 public interface IGenericIdentification79 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGenericIdentification79 : IIsoComponent
     [IsoId("_Vyh495qLEeWcAIE4lEkF_Q")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax34Text)]
+    [StringLength(34, MinimumLength = 1)]
     RestrictedFINXMax34Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IGenericIdentification79 : IIsoComponent
     [IsoId("_Vyh4-ZqLEeWcAIE4lEkF_Q")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText Issuer { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IGenericIdentification79 : IIsoComponent
     [IsoId("_Vyh4-5qLEeWcAIE4lEkF_Q")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText? SchemeName { get; }
 }

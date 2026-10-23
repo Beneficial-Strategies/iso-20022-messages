@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
 /// </summary>
 [IsoId("_PjgBoydoEei12pGEsJIAeQ")]
 [IsoXmlTag("NewRcrd")]
+[IsoDisplayName(@"New Record")]
 public interface INewRecord : ISecuritiesReferenceDeltaStatusReport3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -20,6 +21,8 @@ public interface INewRecord : ISecuritiesReferenceDeltaStatusReport3Choice, IIso
     [IsoId("_LGQmJSX7EeigZbhgJcrASA")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -36,6 +39,7 @@ public interface INewRecord : ISecuritiesReferenceDeltaStatusReport3Choice, IIso
     [IsoId("_LGQmKSX7EeigZbhgJcrASA")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Issuer { get; }
 
     /// <summary>
@@ -44,6 +48,7 @@ public interface INewRecord : ISecuritiesReferenceDeltaStatusReport3Choice, IIso
     [IsoId("_LGQmKyX7EeigZbhgJcrASA")]
     [DisplayName("Trading Venue Related Attributes")]
     [IsoXmlTag("TradgVnRltdAttrbts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradingVenueAttributes1> TradingVenueRelatedAttributes { get; }
 
     /// <summary>

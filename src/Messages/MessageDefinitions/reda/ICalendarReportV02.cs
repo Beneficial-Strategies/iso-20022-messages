@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_DRJNLFuDEe29lKnE5APnfA")]
 [IsoMessage("reda.065.001.02", "CalRpt", "urn:iso:std:iso:20022:tech:xsd:reda.065.001.02")]
+[Description(@"The CalendarReport message is sent by the system administrator to the system member is to return information on the system status for specific calendar days.")]
+[IsoDisplayName(@"Calendar Report V")]
 public interface ICalendarReportV02 : IOuterRecord
 {
     /// <summary>
@@ -36,5 +38,6 @@ public interface ICalendarReportV02 : IOuterRecord
     [IsoId("_DRJNLluDEe29lKnE5APnfA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

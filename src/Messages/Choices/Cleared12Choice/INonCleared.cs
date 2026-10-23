@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared12Choice;
 /// Indicates that the contract has not been cleared.
 /// </summary>
 [IsoId("_Bemz9exYEemioJdkOVFBdw")]
+[IsoDisplayName(@"Non Cleared")]
 public interface INonCleared : ICleared12Choice, IIsoChoiceVariant
 {
     /// <summary>

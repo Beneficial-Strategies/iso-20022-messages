@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ISO 8583:2003 bit 53 or 50
 /// </summary>
 [IsoId("_pFv0qvGOEeiGNursv3uE_g")]
+[IsoDisplayName(@"MAC Data")]
 public interface IMACData1 : IIsoComponent
 {
     /// <summary>
@@ -22,6 +23,7 @@ public interface IMACData1 : IIsoComponent
     [IsoId("_pFv0q_GOEeiGNursv3uE_g")]
     [DisplayName("Control")]
     [IsoXmlTag("Ctrl")]
+    [IsoSimpleType(IsoSimpleType.Exact1HexBinaryText)]
     Exact1HexBinaryText Control { get; }
 
     /// <summary>
@@ -32,6 +34,7 @@ public interface IMACData1 : IIsoComponent
     [IsoId("_pFv0r_GOEeiGNursv3uE_g")]
     [DisplayName("Key Set Identifier")]
     [IsoXmlTag("KeySetIdr")]
+    [IsoSimpleType(IsoSimpleType.Max8NumericText)]
     Max8NumericText KeySetIdentifier { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface IMACData1 : IIsoComponent
     [IsoId("_pFv0sPGOEeiGNursv3uE_g")]
     [DisplayName("Derived Information")]
     [IsoXmlTag("DrvdInf")]
+    [IsoSimpleType(IsoSimpleType.Max32HexBinaryText)]
     Max32HexBinaryText? DerivedInformation { get; }
 
     /// <summary>
@@ -51,6 +55,7 @@ public interface IMACData1 : IIsoComponent
     [IsoId("_pFv0rfGOEeiGNursv3uE_g")]
     [DisplayName("Algorithm")]
     [IsoXmlTag("Algo")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText Algorithm { get; }
 
     /// <summary>
@@ -60,6 +65,7 @@ public interface IMACData1 : IIsoComponent
     [IsoId("_pFv0rvGOEeiGNursv3uE_g")]
     [DisplayName("Key Length")]
     [IsoXmlTag("KeyLngth")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? KeyLength { get; }
 
     /// <summary>
@@ -69,6 +75,7 @@ public interface IMACData1 : IIsoComponent
     [IsoId("_pFv0rPGOEeiGNursv3uE_g")]
     [DisplayName("Key Protection")]
     [IsoXmlTag("KeyPrtcn")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? KeyProtection { get; }
 
     /// <summary>
@@ -79,6 +86,7 @@ public interface IMACData1 : IIsoComponent
     [IsoId("_pFv0s_GOEeiGNursv3uE_g")]
     [DisplayName("Key Index")]
     [IsoXmlTag("KeyIndx")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? KeyIndex { get; }
 
     /// <summary>
@@ -88,6 +96,7 @@ public interface IMACData1 : IIsoComponent
     [IsoId("_pFv0svGOEeiGNursv3uE_g")]
     [DisplayName("Padding Method")]
     [IsoXmlTag("PddgMtd")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? PaddingMethod { get; }
 
     /// <summary>
@@ -98,5 +107,6 @@ public interface IMACData1 : IIsoComponent
     [IsoId("_pFv0sfGOEeiGNursv3uE_g")]
     [DisplayName("Initialisation Vector")]
     [IsoXmlTag("InitlstnVctr")]
+    [IsoSimpleType(IsoSimpleType.Max32HexBinaryText)]
     Max32HexBinaryText? InitialisationVector { get; }
 }

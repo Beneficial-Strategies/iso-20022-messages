@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details specific to the individual transaction(s) included in the message.
 /// </summary>
 [IsoId("_2D5AYTq4EeWZFYSPlduMhw")]
+[IsoDisplayName(@"Credit Transfer Transaction")]
 public interface ICreditTransferTransaction24 : IIsoComponent
 {
     /// <summary>
@@ -169,6 +170,7 @@ public interface ICreditTransferTransaction24 : IIsoComponent
     [IsoId("_2K2kOTq4EeWZFYSPlduMhw")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent1> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -177,6 +179,7 @@ public interface ICreditTransferTransaction24 : IIsoComponent
     [IsoId("_2K2kOzq4EeWZFYSPlduMhw")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>

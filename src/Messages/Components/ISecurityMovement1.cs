@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the securities movement.
 /// </summary>
 [IsoId("_UIO-tNp-Ed-ak6NoX_4Aeg_1695017809")]
+[IsoDisplayName(@"Security Movement")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISecurityMovement1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ISecurityMovement1 : IIsoComponent
     [IsoId("_UIO-tdp-Ed-ak6NoX_4Aeg_-1539092088")]
     [DisplayName("Movement Identification")]
     [IsoXmlTag("MvmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MovementIdentification { get; }
 
     /// <summary>
@@ -41,5 +45,8 @@ public interface ISecurityMovement1 : IIsoComponent
     [IsoId("_UIO-uNp-Ed-ak6NoX_4Aeg_139176688")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesAccount12> AccountDetails { get; }
 }

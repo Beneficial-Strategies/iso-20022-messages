@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a paper derivative of type container board.
 /// </summary>
 [IsoId("_Jc1CcRZaEe2QNcZTDeoKnQ")]
+[IsoDisplayName(@"Paper Commodity Container Board")]
 public interface IPaperCommodityContainerBoard2 : IIsoComponent
 {
     /// <summary>

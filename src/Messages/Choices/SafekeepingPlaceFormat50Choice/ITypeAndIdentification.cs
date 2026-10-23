@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat50Choice;
 /// <summary>
 /// Type And Identification.
 /// </summary>
+[IsoDisplayName(@"Type And Identification")]
 public interface ITypeAndIdentification : ISafekeepingPlaceFormat50Choice, IIsoChoiceVariant
 {
     /// <summary>

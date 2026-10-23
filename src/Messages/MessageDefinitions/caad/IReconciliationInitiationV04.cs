@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_LEPLMY1OEe6S0_1AaJzQCA")]
 [IsoMessage("caad.005.001.04", "RcncltnInitn", "urn:iso:std:iso:20022:tech:xsd:caad.005.001.04")]
+[IsoDisplayName(@"Reconciliation Initiation V04")]
 public interface IReconciliationInitiationV04 : IOuterRecord
 {
     /// <summary>
@@ -63,6 +64,7 @@ public interface IReconciliationInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Requested Currency")]
     [IsoXmlTag("ReqdCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Exact3NumericText> RequestedCurrency { get; }
 
     /// <summary>
@@ -98,6 +100,7 @@ public interface IReconciliationInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode5> Programme { get; }
 
     /// <summary>
@@ -133,6 +136,7 @@ public interface IReconciliationInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Reconciliation Totals")]
     [IsoXmlTag("RcncltnTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotals14> ReconciliationTotals { get; }
 
     /// <summary>
@@ -154,6 +158,7 @@ public interface IReconciliationInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -168,6 +173,7 @@ public interface IReconciliationInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -182,6 +188,7 @@ public interface IReconciliationInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -189,6 +196,7 @@ public interface IReconciliationInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

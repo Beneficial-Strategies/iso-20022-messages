@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status applying to individual instructions of a MeetingInstruction.
 /// </summary>
 [IsoId("_RDFystp-Ed-ak6NoX_4Aeg_1040851722")]
+[IsoDisplayName(@"Detailed Instruction Status")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IDetailedInstructionStatus9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IDetailedInstructionStatus9 : IIsoComponent
     [IsoId("_RDFys9p-Ed-ak6NoX_4Aeg_1200623428")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InstructionIdentification { get; }
 
     /// <summary>
@@ -25,6 +29,8 @@ public interface IDetailedInstructionStatus9 : IIsoComponent
     [IsoId("_RDFytNp-Ed-ak6NoX_4Aeg_1200623367")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface IDetailedInstructionStatus9 : IIsoComponent
     [IsoId("_RDFyttp-Ed-ak6NoX_4Aeg_1200623397")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubAccountIdentification { get; }
 
     /// <summary>
@@ -49,6 +57,9 @@ public interface IDetailedInstructionStatus9 : IIsoComponent
     [IsoId("_RDFyt9p-Ed-ak6NoX_4Aeg_2005933537")]
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification9Choice> RightsHolder { get; }
 
     /// <summary>
@@ -57,6 +68,7 @@ public interface IDetailedInstructionStatus9 : IIsoComponent
     [IsoId("_RDFyuNp-Ed-ak6NoX_4Aeg_1200623459")]
     [DisplayName("Standing Instruction")]
     [IsoXmlTag("StgInstr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator StandingInstruction { get; }
 
     /// <summary>
@@ -65,5 +77,8 @@ public interface IDetailedInstructionStatus9 : IIsoComponent
     [IsoId("_RDFyudp-Ed-ak6NoX_4Aeg_2089050088")]
     [DisplayName("Vote Per Resolution")]
     [IsoXmlTag("VotePerRsltn")]
+    [MinLength(1)]
+    [MaxLength(1000)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVote4> VotePerResolution { get; }
 }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_R3RGgzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("reda.043.001.02", "PtyAudtTrlRpt", "urn:iso:std:iso:20022:tech:xsd:reda.043.001.02")]
+[IsoDisplayName(@"Party Audit Trail Report V02")]
 public interface IPartyAuditTrailReportV02 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +33,6 @@ public interface IPartyAuditTrailReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

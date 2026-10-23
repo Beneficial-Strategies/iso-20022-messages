@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DutchAuctionTypeFormat2Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IDutchAuctionTypeFormat2Choice, IIsoChoiceVariant
 {
     /// <summary>

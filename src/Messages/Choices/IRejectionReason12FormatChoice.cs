@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the reason of a rejection of a deactivation instruction.
 /// </summary>
 [IsoId("_RoC559p-Ed-ak6NoX_4Aeg_-1828809794")]
+[IsoDisplayName(@"Rejection Reason 12 Format Choice")]
 public interface IRejectionReason12FormatChoice : IIsoChoice { }

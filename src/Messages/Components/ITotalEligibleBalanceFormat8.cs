@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Total eligible balance for the corporate action and full and part way period units.
 /// </summary>
 [IsoId("_LZFc6zq5EeWQ1Y7f8kds2A")]
+[IsoDisplayName(@"Total Eligible Balance Format")]
 public interface ITotalEligibleBalanceFormat8 : IIsoComponent
 {
     /// <summary>

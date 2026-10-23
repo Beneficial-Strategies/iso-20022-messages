@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_UbvIYX_5Ee-h086v0qPiyQ")]
 [IsoMessage("seev.001.001.12", "MtgNtfctn", "urn:iso:std:iso:20022:tech:xsd:seev.001.001.12")]
+[IsoDisplayName(@"Meeting Notification V12")]
 public interface IMeetingNotificationV12 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +40,7 @@ public interface IMeetingNotificationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingEventReference1> EventsLinkage { get; }
 
     /// <summary>
@@ -53,6 +55,9 @@ public interface IMeetingNotificationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Meeting Details")]
     [IsoXmlTag("MtgDtls")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeeting7> MeetingDetails { get; }
 
     /// <summary>
@@ -67,6 +72,9 @@ public interface IMeetingNotificationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIssuerAgent3> IssuerAgent { get; }
 
     /// <summary>
@@ -74,6 +82,9 @@ public interface IMeetingNotificationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition20> Security { get; }
 
     /// <summary>
@@ -81,6 +92,9 @@ public interface IMeetingNotificationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Resolution")]
     [IsoXmlTag("Rsltn")]
+    [MinLength(0)]
+    [MaxLength(1000)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IResolution8> Resolution { get; }
 
     /// <summary>
@@ -109,5 +123,6 @@ public interface IMeetingNotificationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

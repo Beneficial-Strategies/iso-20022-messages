@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency conversion accepted by the customer, either to convert the amount to dispense in the base currency of the ATM, or to convert the total requested amount in the currency of the customer (so called dynamic currency conversion).
 /// </summary>
 [IsoId("_NQ4Zga16EeWMg5rOByfExw")]
+[IsoDisplayName(@"Currency Conversion")]
 public interface ICurrencyConversion9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICurrencyConversion9 : IIsoComponent
     [IsoId("_Ncpkoa16EeWMg5rOByfExw")]
     [DisplayName("Currency Conversion Identification")]
     [IsoXmlTag("CcyConvsId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CurrencyConversionIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICurrencyConversion9 : IIsoComponent
     [IsoId("_Ncpkp616EeWMg5rOByfExw")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate ExchangeRate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICurrencyConversion9 : IIsoComponent
     [IsoId("_Ncpkq616EeWMg5rOByfExw")]
     [DisplayName("Inverted Exchange Rate")]
     [IsoXmlTag("NvrtdXchgRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? InvertedExchangeRate { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ICurrencyConversion9 : IIsoComponent
     [IsoId("_Ncpkra16EeWMg5rOByfExw")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? QuotationDate { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface ICurrencyConversion9 : IIsoComponent
     [IsoId("_Ncpkr616EeWMg5rOByfExw")]
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ValidUntil { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface ICurrencyConversion9 : IIsoComponent
     [IsoId("_Ncpkta16EeWMg5rOByfExw")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission19> CommissionDetails { get; }
 
     /// <summary>
@@ -97,6 +105,7 @@ public interface ICurrencyConversion9 : IIsoComponent
     [IsoId("_Ncpkt616EeWMg5rOByfExw")]
     [DisplayName("Mark Up Details")]
     [IsoXmlTag("MrkUpDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission18> MarkUpDetails { get; }
 
     /// <summary>

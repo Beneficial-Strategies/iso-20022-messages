@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Explains the status of the related request.
 /// </summary>
 [IsoId("_prPCsVhAEeiv7OYKCzUSAg")]
+[IsoDisplayName(@"Request Handling")]
 public interface IRequestHandling2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRequestHandling2 : IIsoComponent
     [IsoId("_p2eCUVhAEeiv7OYKCzUSAg")]
     [DisplayName("Status Code")]
     [IsoXmlTag("StsCd")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText StatusCode { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IRequestHandling2 : IIsoComponent
     [IsoId("_lOq7UFhBEeiv7OYKCzUSAg")]
     [DisplayName("Status Date Time")]
     [IsoXmlTag("StsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StatusDateTime { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IRequestHandling2 : IIsoComponent
     [IsoId("_p2eCU1hAEeiv7OYKCzUSAg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

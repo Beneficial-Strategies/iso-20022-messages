@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// </summary>
 [IsoId("_9hDVQnltEeG7BsjMvd1mEw_2036606327")]
 [IsoMessage("tsrv.013.001.01", "UdrtkgDmnd", "urn:iso:std:iso:20022:tech:xsd:tsrv.013.001.01")]
+[Description(@"The UndertakingDemand message and other required documents are sent by the beneficiary to the party that issued the undertaking, either directly or via a presenting or nominated party. It is a demand for payment and may include a request to extend the undertaking expiry date. The demand itself must be contained in an enclosed file within the message or must be specified as narrative text within the message. It may contain other required documents in addition to the demand.")]
+[IsoDisplayName(@"Undertaking Demand V")]
 public interface IUndertakingDemandV01 : IOuterRecord
 {
     /// <summary>
@@ -28,6 +30,11 @@ public interface IUndertakingDemandV01 : IOuterRecord
     [IsoId("_AIs9UBVIEeKVqNjC36CBuQ")]
     [DisplayName("Bank To Bank Information")]
     [IsoXmlTag("BkToBkInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [StringLength(2000, MinimumLength = 1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> BankToBankInformation { get; }
 
     /// <summary>

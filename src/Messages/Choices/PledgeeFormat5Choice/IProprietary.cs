@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat5Choice;
 /// </summary>
 [IsoId("_YxN_5dLGEeiN28wlpBQScw")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPledgeeFormat5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IProprietary : IPledgeeFormat5Choice, IIsoChoiceVariant
     [IsoId("_9s3YQznZEeWV5sr121Fc8A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 }

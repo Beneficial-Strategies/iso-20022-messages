@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralProposal6Choice;
 /// </summary>
 [IsoId("_5woB4SqREeyR9JrVGfaMKw")]
 [IsoXmlTag("CollPrpslDtls")]
+[IsoDisplayName(@"Collateral Proposal Details")]
 public interface ICollateralProposalDetails : ICollateralProposal6Choice, IIsoChoiceVariant
 {
     /// <summary>

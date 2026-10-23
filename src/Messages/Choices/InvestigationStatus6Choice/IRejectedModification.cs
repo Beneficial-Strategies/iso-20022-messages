@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus6Choice;
 /// <summary>
 /// Rejected Modification.
 /// </summary>
+[IsoDisplayName(@"Rejected Modification")]
 public interface IRejectedModification : IInvestigationStatus6Choice, IIsoChoiceVariant
 {
     /// <summary>

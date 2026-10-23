@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money due to a party as compensation for a service.
 /// </summary>
 [IsoId("_RsXZNtp-Ed-ak6NoX_4Aeg_1316757656")]
+[IsoDisplayName(@"Commission")]
 public interface ICommission11 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICommission11 : IIsoComponent
     [IsoId("_RshKMdp-Ed-ak6NoX_4Aeg_1316758028")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface ICommission11 : IIsoComponent
     [IsoId("_RsqUIdp-Ed-ak6NoX_4Aeg_-488067403")]
     [DisplayName("Extended Type")]
     [IsoXmlTag("XtndedTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedType { get; }
 
     /// <summary>
@@ -49,6 +53,8 @@ public interface ICommission11 : IIsoComponent
     [IsoId("_RsqUItp-Ed-ak6NoX_4Aeg_2125535368")]
     [DisplayName("Commercial Agreement Reference")]
     [IsoXmlTag("ComrclAgrmtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommercialAgreementReference { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface ICommission11 : IIsoComponent
     [IsoId("_RsqUI9p-Ed-ak6NoX_4Aeg_2110760457")]
     [DisplayName("New Commercial Agreement Reference Indicator")]
     [IsoXmlTag("NewComrclAgrmtRefInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NewCommercialAgreementReferenceIndicator { get; }
 }

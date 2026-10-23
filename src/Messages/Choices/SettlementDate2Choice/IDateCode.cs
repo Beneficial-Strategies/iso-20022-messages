@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDate2Choice;
 /// Date and time at which the securities are to be delivered or received.
 /// </summary>
 [IsoId("_Qu0y4Np-Ed-ak6NoX_4Aeg_-691184816")]
+[IsoDisplayName(@"Date Code")]
 public interface IDateCode : ISettlementDate2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

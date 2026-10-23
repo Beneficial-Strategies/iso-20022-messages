@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// References of the original instruction for which an action has been requested.
 /// </summary>
 [IsoId("_jyL0QO5NEeCisYr99QEiWA_53798055")]
+[IsoDisplayName(@"References")]
 public interface IReferences14 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReferences14 : IIsoComponent
     [IsoId("_jyL0Qe5NEeCisYr99QEiWA_-825767186")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IReferences14 : IIsoComponent
     [IsoId("_jyL0Qu5NEeCisYr99QEiWA_-1877643182")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IReferences14 : IIsoComponent
     [IsoId("_jyL0Q-5NEeCisYr99QEiWA_1711117493")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IReferences14 : IIsoComponent
     [IsoId("_jyL0RO5NEeCisYr99QEiWA_171305167")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -49,5 +58,7 @@ public interface IReferences14 : IIsoComponent
     [IsoId("_jyVlQO5NEeCisYr99QEiWA_310609337")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PoolIdentification { get; }
 }

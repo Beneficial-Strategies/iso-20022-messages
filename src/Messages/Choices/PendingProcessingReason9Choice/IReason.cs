@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessingReason9Choice;
 /// Reason for the pending status.
 /// </summary>
 [IsoId("_6LbpKlj1EeOnqqBHs8Gasw")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IPendingProcessingReason9Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

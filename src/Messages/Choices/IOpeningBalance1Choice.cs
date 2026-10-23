@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of opening balance.
 /// </summary>
 [IsoId("_R9Wbh9p-Ed-ak6NoX_4Aeg_-1067705678")]
+[IsoDisplayName(@"Opening Balance 1 Choice")]
 public interface IOpeningBalance1Choice : IIsoChoice { }

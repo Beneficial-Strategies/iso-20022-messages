@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference information concerning the original transaction, to which the investigation message refers.
 /// </summary>
 [IsoId("_hbH5F4KZEee7hrXqLO3yQg")]
+[IsoDisplayName(@"Underlying Payment Transaction")]
 public interface IUnderlyingPaymentTransaction3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IUnderlyingPaymentTransaction3 : IIsoComponent
     [IsoId("_hjKaxYKZEee7hrXqLO3yQg")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IUnderlyingPaymentTransaction3 : IIsoComponent
     [IsoId("_hjKax4KZEee7hrXqLO3yQg")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IUnderlyingPaymentTransaction3 : IIsoComponent
     [IsoId("_hjKayYKZEee7hrXqLO3yQg")]
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IUnderlyingPaymentTransaction3 : IIsoComponent
     [IsoId("_hjKazYKZEee7hrXqLO3yQg")]
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate OriginalInterbankSettlementDate { get; }
 
     /// <summary>

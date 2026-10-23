@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines additional attributes for party reference data.
 /// </summary>
 [IsoId("_klTTQu5NEeCisYr99QEiWA_73724260")]
+[IsoDisplayName(@"Market Specific Attribute")]
 public interface IMarketSpecificAttribute1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMarketSpecificAttribute1 : IIsoComponent
     [IsoId("_klTTQ-5NEeCisYr99QEiWA_1518015458")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Name { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IMarketSpecificAttribute1 : IIsoComponent
     [IsoId("_kldEQO5NEeCisYr99QEiWA_1961003950")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Value { get; }
 }

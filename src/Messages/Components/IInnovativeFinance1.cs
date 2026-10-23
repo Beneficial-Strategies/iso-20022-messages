@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about an innovative finance product.
 /// </summary>
 [IsoId("_lM8GQE7bEeifNrXGwadPmg")]
+[IsoDisplayName(@"Innovative Finance")]
 public interface IInnovativeFinance1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IInnovativeFinance1 : IIsoComponent
     [IsoId("_rBLVwE7bEeifNrXGwadPmg")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Information { get; }
 }

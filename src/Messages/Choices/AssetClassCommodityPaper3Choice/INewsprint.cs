@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper3Choice;
 /// </summary>
 [IsoId("__n-Wg7v7EeiLRYqS-r-R-A")]
 [IsoXmlTag("Nwsprnt")]
+[IsoDisplayName(@"Newsprint")]
 public interface INewsprint : IAssetClassCommodityPaper3Choice, IIsoChoiceVariant
 {
     /// <summary>

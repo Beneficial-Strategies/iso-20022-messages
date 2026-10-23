@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of proxy allowance.
 /// </summary>
 [IsoId("_j7B_sa09EemDtrWpq90Ckg")]
+[IsoDisplayName(@"Proxy 3 Choice")]
 public interface IProxy3Choice : IIsoChoice { }

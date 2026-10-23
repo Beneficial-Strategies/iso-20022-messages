@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the original transactions, to which the status report message refers.
 /// </summary>
 [IsoId("f7d74e7a-eafe-4b68-be3f-295ba7da1349")]
+[IsoDisplayName(@"Payment Transaction169")]
 public interface IPaymentTransaction169 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IPaymentTransaction169 : IIsoComponent
     [IsoId("f500a570-44c3-4acc-9eff-8d918360aec4")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation14> StatusReasonInformation { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface IPaymentTransaction169 : IIsoComponent
     [IsoId("35d69462-a944-490e-8adf-c9b5cfd549c3")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges16> ChargesInformation { get; }
 
     /// <summary>
@@ -121,6 +124,7 @@ public interface IPaymentTransaction169 : IIsoComponent
     [IsoId("28324a40-3052-4857-ba81-b96391951bd8")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument15> EnclosedFile { get; }
 
     /// <summary>
@@ -129,5 +133,6 @@ public interface IPaymentTransaction169 : IIsoComponent
     [IsoId("24fa0581-15d9-4493-b271-48e47c0a3728")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

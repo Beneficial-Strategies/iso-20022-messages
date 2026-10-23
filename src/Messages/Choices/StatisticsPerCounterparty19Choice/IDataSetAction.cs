@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty19Choic
 /// <summary>
 /// Data Set Action.
 /// </summary>
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : IStatisticsPerCounterparty19Choice, IIsoChoiceVariant
 {
     /// <summary>

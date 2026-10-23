@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitsOrAmount1Choice;
 /// </summary>
 [IsoId("_l0iy4BQcEeKebsB9eKJSkA")]
 [IsoXmlTag("Amt")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount : IUnitsOrAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

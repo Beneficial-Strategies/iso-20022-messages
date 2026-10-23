@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature4Choice;
 /// Indicates that reporting party is a central counterparty.
 /// </summary>
 [IsoId("_6j9NNbsAEea-m5tPqiasmQ")]
+[IsoDisplayName(@"Central Counter Party")]
 public interface ICentralCounterParty : ICounterpartyTradeNature4Choice, IIsoChoiceVariant
 {
     /// <summary>

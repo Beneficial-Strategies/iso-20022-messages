@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Magnetic track or equivalent payment card data.
 /// </summary>
 [IsoId("_H0Q5wdkMEeiojJsa6FYyew")]
+[IsoDisplayName(@"Track Data")]
 public interface ITrackData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITrackData2 : IIsoComponent
     [IsoId("_H9ypMdkMEeiojJsa6FYyew")]
     [DisplayName("Track Number")]
     [IsoXmlTag("TrckNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TrackNumber { get; }
 
     /// <summary>
@@ -33,5 +35,7 @@ public interface ITrackData2 : IIsoComponent
     [IsoId("_H9ypM9kMEeiojJsa6FYyew")]
     [DisplayName("Track Value")]
     [IsoXmlTag("TrckVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text TrackValue { get; }
 }

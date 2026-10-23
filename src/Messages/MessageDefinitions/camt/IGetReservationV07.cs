@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_4DhGEQy9Ee2Wmf2RrXviyA")]
 [IsoMessage("camt.046.001.07", "GetRsvatn", "urn:iso:std:iso:20022:tech:xsd:camt.046.001.07")]
+[Description(@"Scope|The GetReservation message is sent by a member to the transaction administrator.|It is used to request information on the details of one or more reservation facilities set by the member and managed by the transaction administrator.|Usage|The member can request reservations information based on the following elements:|- identification of the system;|- identification of the account;|- status of the reservation (default and/or current);|- type of reservation.|This message will be replied to by a ReturnReservation message.")]
+[IsoDisplayName(@"Get Reservation V")]
 public interface IGetReservationV07 : IOuterRecord
 {
     /// <summary>
@@ -45,5 +47,6 @@ public interface IGetReservationV07 : IOuterRecord
     [IsoId("_4DhGGwy9Ee2Wmf2RrXviyA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

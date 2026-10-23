@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CodeOrProprietary1Choice;
 /// Element expressed as an ISO 20022 code from an external list.
 /// </summary>
 [IsoId("_Qotj19p-Ed-ak6NoX_4Aeg_-1924456739")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICodeOrProprietary1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ICode : ICodeOrProprietary1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 4 characters.
     /// </summary>
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text Value { get; }
 }

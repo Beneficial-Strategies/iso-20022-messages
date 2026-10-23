@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Debtor Activation5.
 /// </summary>
 [IsoId("_wfSPJTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Debtor Activation5")]
 public interface IDebtorActivation5 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface IDebtorActivation5 : IIsoComponent
     /// </summary>
     [DisplayName("Customer Identification")]
     [IsoXmlTag("CstmrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IParty53Choice> CustomerIdentification { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface IDebtorActivation5 : IIsoComponent
     /// </summary>
     [DisplayName("Contract Format Type")]
     [IsoXmlTag("CtrctFrmtTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentFormat2Choice> ContractFormatType { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IDebtorActivation5 : IIsoComponent
     /// </summary>
     [DisplayName("Contract Reference")]
     [IsoXmlTag("CtrctRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContractReference1> ContractReference { get; }
 
     /// <summary>

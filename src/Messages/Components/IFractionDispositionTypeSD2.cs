@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action securities movement fraction disposition details.
 /// </summary>
 [IsoId("_1jxAgDL3EeKU9IrkkToqcw_834973272")]
+[IsoDisplayName(@"Fraction Disposition Type SD")]
 public interface IFractionDispositionTypeSD2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFractionDispositionTypeSD2 : IIsoComponent
     [IsoId("_1jxAgTL3EeKU9IrkkToqcw_581476217")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IFractionDispositionTypeSD2 : IIsoComponent
     [IsoId("_1jxAgjL3EeKU9IrkkToqcw_1164122698")]
     [DisplayName("Rounding Factor")]
     [IsoXmlTag("RndgFctr")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? RoundingFactor { get; }
 }

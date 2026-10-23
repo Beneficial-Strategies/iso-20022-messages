@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
     "IntraBalMvmntModReq",
     "urn:iso:std:iso:20022:tech:xsd:camt.072.001.02"
 )]
+[IsoDisplayName(@"Intra Balance Movement Modification Request V02")]
 public interface IIntraBalanceMovementModificationRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface IIntraBalanceMovementModificationRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRequestDetails22> RequestDetails { get; }
 
     /// <summary>
@@ -64,5 +66,6 @@ public interface IIntraBalanceMovementModificationRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment context in which the transaction is performed.
 /// </summary>
 [IsoId("_iRJMQTAOEeOqioR9srQH1g")]
+[IsoDisplayName(@"Payment Context")]
 public interface IPaymentContext5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPaymentContext5 : IIsoComponent
     [IsoId("_ihgjgTAOEeOqioR9srQH1g")]
     [DisplayName("Card Present")]
     [IsoXmlTag("CardPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardPresent { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPaymentContext5 : IIsoComponent
     [IsoId("_ihgjgzAOEeOqioR9srQH1g")]
     [DisplayName("Cardholder Present")]
     [IsoXmlTag("CrdhldrPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardholderPresent { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IPaymentContext5 : IIsoComponent
     [IsoId("_ihgjjTAOEeOqioR9srQH1g")]
     [DisplayName("Attendant Message Capable")]
     [IsoXmlTag("AttndntMsgCpbl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AttendantMessageCapable { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface IPaymentContext5 : IIsoComponent
     [IsoId("_ihgjkzAOEeOqioR9srQH1g")]
     [DisplayName("Fallback Indicator")]
     [IsoXmlTag("FllbckInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? FallbackIndicator { get; }
 
     /// <summary>
@@ -89,5 +94,6 @@ public interface IPaymentContext5 : IIsoComponent
     [IsoId("_yhE-kDAOEeOqioR9srQH1g")]
     [DisplayName("Supported Option")]
     [IsoXmlTag("SpprtdOptn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<SupportedPaymentOption1Code> SupportedOption { get; }
 }

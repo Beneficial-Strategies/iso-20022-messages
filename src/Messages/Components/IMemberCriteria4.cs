@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to search for a member and to report on the member. A name may be given to the new query.
 /// </summary>
 [IsoId("_iwxEdXSbEeiH1ZOt2UD8vQ")]
+[IsoDisplayName(@"Member Criteria")]
 public interface IMemberCriteria4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMemberCriteria4 : IIsoComponent
     [IsoId("_i_D_I3SbEeiH1ZOt2UD8vQ")]
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NewQueryName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IMemberCriteria4 : IIsoComponent
     [IsoId("_i_D_JXSbEeiH1ZOt2UD8vQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMemberSearchCriteria4> SearchCriteria { get; }
 
     /// <summary>

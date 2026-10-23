@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Entitlement1Choice;
 /// Number of votes assigned to one security.
 /// </summary>
 [IsoId("_RDrol9p-Ed-ak6NoX_4Aeg_362471814")]
+[IsoDisplayName(@"Entitlement Ratio")]
 public interface IEntitlementRatio : IEntitlement1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IEntitlementRatio : IEntitlement1Choice, IIsoChoiceVariant
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("EntitlmntRatio")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 }

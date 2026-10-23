@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementDetails1Choice;
 /// Reference to the pay in schedule that is being acknowledged.
 /// </summary>
 [IsoId("_oUQsESzSEeKZfox_pyYpTA")]
+[IsoDisplayName(@"Pay In Schedule Reference")]
 public interface IPayInScheduleReference : IAcknowledgementDetails1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IPayInScheduleReference : IAcknowledgementDetails1Choice, IIsoC
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("PayInSchdlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

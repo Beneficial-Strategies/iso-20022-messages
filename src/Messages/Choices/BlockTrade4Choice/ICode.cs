@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockTrade4Choice;
 /// Block parent or child information expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_2e1tQTqHEeWVrPy0StzzSg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBlockTrade4Choice, IIsoChoiceVariant
 {
     /// <summary>

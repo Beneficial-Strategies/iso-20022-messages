@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Optionally, the client account number can also be provided.
 /// </summary>
 [IsoId("_FOOTEY-1Eeaoj_JbcpWKgg")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification117 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IPartyIdentification117 : IIsoComponent
     [IsoId("_FevbUY-1Eeaoj_JbcpWKgg")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier AnyBIC { get; }
 
     /// <summary>

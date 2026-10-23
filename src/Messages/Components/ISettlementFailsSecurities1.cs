@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the settlement fails and the ranking for a specific financial instrument.
 /// </summary>
 [IsoId("_Bnkxd40bEemUAO64Q252gQ")]
+[IsoDisplayName(@"Settlement Fails Securities")]
 public interface ISettlementFailsSecurities1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ISettlementFailsSecurities1 : IIsoComponent
     [IsoId("_BnlYgY0bEemUAO64Q252gQ")]
     [DisplayName("Rank")]
     [IsoXmlTag("Rank")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText Rank { get; }
 }

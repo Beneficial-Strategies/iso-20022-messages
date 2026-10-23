@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Low level communication of the hardware or software component toward another component or an external entity.
 /// </summary>
 [IsoId("_VHsEkAyIEeKa_56Jbsi1RQ")]
+[IsoDisplayName(@"Communication Characteristics")]
 public interface ICommunicationCharacteristics1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ICommunicationCharacteristics1 : IIsoComponent
     [IsoId("_3TAeYAyIEeKa_56Jbsi1RQ")]
     [DisplayName("Active")]
     [IsoXmlTag("Actv")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator Active { get; }
 }

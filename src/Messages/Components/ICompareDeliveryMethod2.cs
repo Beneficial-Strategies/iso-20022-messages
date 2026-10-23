@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a collateral delivery method.
 /// </summary>
 [IsoId("_Ap1b8dSaEemZdYGWu384Zw")]
+[IsoDisplayName(@"Compare Delivery Method")]
 public interface ICompareDeliveryMethod2 : IIsoComponent
 {
     /// <summary>

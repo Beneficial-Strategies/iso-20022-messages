@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateBasis1Choice;
 /// </summary>
 [IsoId("_PV2OYLpqEea_jI1vMH_RbA")]
 [IsoXmlTag("CcyPair")]
+[IsoDisplayName(@"Currency Pair")]
 public interface ICurrencyPair : IExchangeRateBasis1Choice, IIsoChoiceVariant
 {
     /// <summary>

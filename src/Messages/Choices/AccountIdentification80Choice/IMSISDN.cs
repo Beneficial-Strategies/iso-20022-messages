@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification80Choice;
 /// <summary>
 /// MSISDN.
 /// </summary>
+[IsoDisplayName(@"MSISDN")]
 public interface IMSISDN : IAccountIdentification80Choice, IIsoChoiceVariant
 {
     /// <summary>

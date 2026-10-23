@@ -25,6 +25,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "RvslOfTrfInConfV02",
     "urn:iso:std:iso:20022:tech:xsd:sese.008.001.02"
 )]
+[Description(@"Scope|An executing party, eg, a transfer agent, sends the ReversalOfTransferInConfirmation message to the instructing party, eg, an investment manager or its authorised representative, to cancel a previously sent TransferInConfirmation message.|Usage|The ReversalOfTransferInConfirmation message is used to reverse a previously sent TransferInConfirmation.|There are two ways to specify the reversal of the transfer in confirmation. Either:|- the business references, eg, TransferReference, TransferConfirmationIdentification, of the transfer confirmation are quoted, or,|- all the details of the transfer confirmation (this includes TransferReference and TransferConfirmationIdentification) are quoted but this is not recommended.|The message identification of the TransferInConfirmation message in which the transfer confirmation was conveyed may also be quoted in PreviousReference.|The message reference (MessageIdentification) of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.|It is also possible to request a reversal of a TransferInConfirmation by quoting its message reference (MessageIdentification) in PreviousReference.")]
+[IsoDisplayName(@"Reversal Of Transfer In Confirmation V")]
 public interface IReversalOfTransferInConfirmationV02 : IOuterRecord
 {
     /// <summary>

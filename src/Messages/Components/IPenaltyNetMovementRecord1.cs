@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the attributes when the penalty applies to a net settlement movement.
 /// </summary>
 [IsoId("_Mq3zFQAXEeqIo7-k3pky8Q")]
+[IsoDisplayName(@"Penalty Net Movement Record1")]
 public interface IPenaltyNetMovementRecord1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IPenaltyNetMovementRecord1 : IIsoComponent
     [IsoId("_OHxcpAAcEeqxkL65N306OA")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition5Choice> TradeTransactionCondition { get; }
 
     /// <summary>

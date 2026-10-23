@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemittanceInformation3Choice;
 /// </summary>
 [IsoId("_Rb-MwNp-Ed-ak6NoX_4Aeg_506340239")]
 [IsoXmlTag("Strd")]
+[IsoDisplayName(@"Structured")]
 public interface IStructured : IRemittanceInformation3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IStructured : IRemittanceInformation3Choice, IIsoChoiceVariant
     [IsoId("_QFjMaNp-Ed-ak6NoX_4Aeg_-1151592780")]
     [DisplayName("Referred Document Related Date")]
     [IsoXmlTag("RfrdDocRltdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ReferredDocumentRelatedDate { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface IStructured : IRemittanceInformation3Choice, IIsoChoiceVariant
     [IsoId("_QFsWUNp-Ed-ak6NoX_4Aeg_-479270891")]
     [DisplayName("Referred Document Amount")]
     [IsoXmlTag("RfrdDocAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferredDocumentAmount1Choice> ReferredDocumentAmount { get; }
 
     /// <summary>
@@ -42,6 +45,8 @@ public interface IStructured : IRemittanceInformation3Choice, IIsoChoiceVariant
     [IsoId("_QFsWUdp-Ed-ak6NoX_4Aeg_-1151593080")]
     [DisplayName("Document Reference Number")]
     [IsoXmlTag("DocRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DocumentReferenceNumber { get; }
 
     /// <summary>
@@ -50,6 +55,8 @@ public interface IStructured : IRemittanceInformation3Choice, IIsoChoiceVariant
     [IsoId("_QFsWUtp-Ed-ak6NoX_4Aeg_-521744082")]
     [DisplayName("Creditor Reference")]
     [IsoXmlTag("CdtrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CreditorReference { get; }
 
     /// <summary>

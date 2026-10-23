@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Option243.
 /// </summary>
 [IsoId("_kV6Jo5t3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Corporate Action Option243")]
 public interface ICorporateActionOption243 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface ICorporateActionOption243 : IIsoComponent
     /// </summary>
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionChangeTypeFormat7Choice> ChangeType { get; }
 
     /// <summary>

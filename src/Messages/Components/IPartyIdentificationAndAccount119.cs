@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party and account information.
 /// </summary>
 [IsoId("_o7MJQEUqEeSGWeX3z5zSZQ")]
+[IsoDisplayName(@"Party Identification And Account")]
 public interface IPartyIdentificationAndAccount119 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPartyIdentificationAndAccount119 : IIsoComponent
     [IsoId("_Bl2FIEUrEeSGWeX3z5zSZQ")]
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification90> PartyIdentification { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IPartyIdentificationAndAccount119 : IIsoComponent
     [IsoId("_kNHDAEVKEeSGWeX3z5zSZQ")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentification30> AccountIdentification { get; }
 }

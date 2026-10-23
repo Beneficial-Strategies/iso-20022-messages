@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData1Choice;
 /// </summary>
 [IsoId("_CXmpZlRtEe23M4WgERMsYw")]
 [IsoXmlTag("Acct")]
+[IsoDisplayName(@"Account")]
 public interface IAccount : IUnderlyingData1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -42,6 +43,8 @@ public interface IAccount : IUnderlyingData1Choice, IIsoChoiceVariant
     [IsoId("_awzZ6dcZEeqRFcf2R4bPBw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertificationTypeFormat4Choice;
 /// Standard code to specify the certification format required, that is, physical or electronic format.
 /// </summary>
 [IsoId("_c5WhXZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICertificationTypeFormat4Choice, IIsoChoiceVariant
 {
     /// <summary>

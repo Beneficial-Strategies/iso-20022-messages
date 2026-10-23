@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains encrypted data and the attributes used to encrypt the data using the ISO 13492 methods for data encryption.  The encryption key is not included in the message with this method.
 /// </summary>
 [IsoId("_JP9iYD6UEeq_lLaSkIVjTQ")]
+[IsoDisplayName(@"Encrypted Data")]
 public interface IEncryptedData1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IEncryptedData1 : IIsoComponent
     [IsoId("_V_GHcD6UEeq_lLaSkIVjTQ")]
     [DisplayName("Control")]
     [IsoXmlTag("Ctrl")]
+    [IsoSimpleType(IsoSimpleType.Exact1HexBinaryText)]
     Exact1HexBinaryText? Control { get; }
 
     /// <summary>
@@ -27,6 +29,7 @@ public interface IEncryptedData1 : IIsoComponent
     [IsoId("_lDTGcD6UEeq_lLaSkIVjTQ")]
     [DisplayName("Key Set Identifier")]
     [IsoXmlTag("KeySetIdr")]
+    [IsoSimpleType(IsoSimpleType.Max8NumericText)]
     Max8NumericText? KeySetIdentifier { get; }
 
     /// <summary>
@@ -36,6 +39,7 @@ public interface IEncryptedData1 : IIsoComponent
     [IsoId("_urqu4D6UEeq_lLaSkIVjTQ")]
     [DisplayName("Derived Information")]
     [IsoXmlTag("DrvdInf")]
+    [IsoSimpleType(IsoSimpleType.Max32HexBinaryText)]
     Max32HexBinaryText? DerivedInformation { get; }
 
     /// <summary>
@@ -45,6 +49,7 @@ public interface IEncryptedData1 : IIsoComponent
     [IsoId("_0fAmgD6UEeq_lLaSkIVjTQ")]
     [DisplayName("Algorithm")]
     [IsoXmlTag("Algo")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? Algorithm { get; }
 
     /// <summary>
@@ -54,6 +59,7 @@ public interface IEncryptedData1 : IIsoComponent
     [IsoId("_-EU68D6UEeq_lLaSkIVjTQ")]
     [DisplayName("Key Length")]
     [IsoXmlTag("KeyLngth")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? KeyLength { get; }
 
     /// <summary>
@@ -63,6 +69,7 @@ public interface IEncryptedData1 : IIsoComponent
     [IsoId("_JzhF8D6VEeq_lLaSkIVjTQ")]
     [DisplayName("Key Protection")]
     [IsoXmlTag("KeyPrtcn")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? KeyProtection { get; }
 
     /// <summary>
@@ -72,6 +79,7 @@ public interface IEncryptedData1 : IIsoComponent
     [IsoId("_PGI2ID6VEeq_lLaSkIVjTQ")]
     [DisplayName("Key Index")]
     [IsoXmlTag("KeyIndx")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? KeyIndex { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IEncryptedData1 : IIsoComponent
     [IsoId("_XLGyID6VEeq_lLaSkIVjTQ")]
     [DisplayName("Padding Method")]
     [IsoXmlTag("PddgMtd")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? PaddingMethod { get; }
 
     /// <summary>
@@ -90,6 +99,7 @@ public interface IEncryptedData1 : IIsoComponent
     [IsoId("_gh_pAD6VEeq_lLaSkIVjTQ")]
     [DisplayName("Encrypted Data Format")]
     [IsoXmlTag("NcrptdDataFrmt")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? EncryptedDataFormat { get; }
 
     /// <summary>
@@ -98,5 +108,6 @@ public interface IEncryptedData1 : IIsoComponent
     [IsoId("_r673MD6VEeq_lLaSkIVjTQ")]
     [DisplayName("Encrypted Data Element")]
     [IsoXmlTag("NcrptdDataElmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedDataElement1> EncryptedDataElement { get; }
 }

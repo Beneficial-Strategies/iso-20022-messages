@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason19FormatChoice;
 /// Standard code to specify the reason of a rejection of a global movement authorisation request.
 /// </summary>
 [IsoId("_Rofl0Np-Ed-ak6NoX_4Aeg_216780374")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectionReason19FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

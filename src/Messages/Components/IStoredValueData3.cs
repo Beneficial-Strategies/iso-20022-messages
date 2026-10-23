@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the stored value card.
 /// </summary>
 [IsoId("_Q2b1oRBfEeqgJK7e3n_EXA")]
+[IsoDisplayName(@"Stored Value Data")]
 public interface IStoredValueData3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStoredValueData3 : IIsoComponent
     [IsoId("_RBX6URBfEeqgJK7e3n_EXA")]
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Provider { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IStoredValueData3 : IIsoComponent
     [IsoId("_RBX6WRBfEeqgJK7e3n_EXA")]
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProductCode { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IStoredValueData3 : IIsoComponent
     [IsoId("_RBX6WxBfEeqgJK7e3n_EXA")]
     [DisplayName("EANUPC")]
     [IsoXmlTag("EANUPC")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? EANUPC { get; }
 
     /// <summary>

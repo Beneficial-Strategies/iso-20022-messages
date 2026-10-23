@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about an individual&apos;s consent to use personal data under the General Protection Regulation (GDPR) 2016/679 regulation.
 /// </summary>
 [IsoId("_7r9TsJTSEemC09f0MxYkRg")]
+[IsoDisplayName(@"GDPR Data")]
 public interface IGDPRData1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IGDPRData1 : IIsoComponent
     [IsoId("_6seTAJTaEemC09f0MxYkRg")]
     [DisplayName("Consent Indicator")]
     [IsoXmlTag("CnsntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ConsentIndicator { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IGDPRData1 : IIsoComponent
     [IsoId("_-uSioJTaEemC09f0MxYkRg")]
     [DisplayName("Consent Date")]
     [IsoXmlTag("CnsntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ConsentDate { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice;
 /// <summary>
 /// Metal.
 /// </summary>
+[IsoDisplayName(@"Metal")]
 public interface IMetal : IAssetClassCommodity7Choice, IIsoChoiceVariant
 {
     /// <summary>

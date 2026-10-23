@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statistical data related to the price change of a security.
 /// </summary>
 [IsoId("25810c31-9285-41f8-b37d-9e10b62aac63")]
+[IsoDisplayName(@"Valuation Statistics4")]
 public interface IValuationStatistics4 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IValuationStatistics4 : IIsoComponent
     [IsoId("674d68fd-1d55-47d8-b56f-ac21d02e8fa2")]
     [DisplayName("By User Defined Time Period")]
     [IsoXmlTag("ByUsrDfndTmPrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatisticsByUserDefinedTimePeriod3> ByUserDefinedTimePeriod { get; }
 }

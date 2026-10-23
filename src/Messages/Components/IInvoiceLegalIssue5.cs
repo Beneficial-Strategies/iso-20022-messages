@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.
 /// </summary>
 [IsoId("_2qnwDTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Invoice Legal Issue5")]
 public interface IInvoiceLegalIssue5 : IIsoComponent
 {
     /// <summary>

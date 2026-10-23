@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusReason4Choice;
 /// Reason for the status not catered for by the available codes.
 /// </summary>
 [IsoId("_TPdjp9p-Ed-ak6NoX_4Aeg_46430013")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IStatusReason4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IStatusReason4Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

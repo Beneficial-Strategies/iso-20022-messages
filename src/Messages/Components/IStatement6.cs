@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General characteristics related to a statement which reports information for a precise date.
 /// </summary>
 [IsoId("_ROkC4tp-Ed-ak6NoX_4Aeg_634334074")]
+[IsoDisplayName(@"Statement")]
 public interface IStatement6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStatement6 : IIsoComponent
     [IsoId("_ROkC49p-Ed-ak6NoX_4Aeg_634334076")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Reference { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IStatement6 : IIsoComponent
     [IsoId("_ROtz4Np-Ed-ak6NoX_4Aeg_634334169")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface IStatement6 : IIsoComponent
     [IsoId("_ROtz4tp-Ed-ak6NoX_4Aeg_634334211")]
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? ReportNumber { get; }
 
     /// <summary>
@@ -81,5 +86,6 @@ public interface IStatement6 : IIsoComponent
     [IsoId("_ROtz49p-Ed-ak6NoX_4Aeg_634334229")]
     [DisplayName("Audited Indicator")]
     [IsoXmlTag("AudtdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AuditedIndicator { get; }
 }

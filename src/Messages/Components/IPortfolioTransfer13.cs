@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Portfolio Transfer13.
 /// </summary>
 [IsoId("_BzkVIT6XEe-N3-3e5ejJAw")]
+[IsoDisplayName(@"Portfolio Transfer13")]
 public interface IPortfolioTransfer13 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface IPortfolioTransfer13 : IIsoComponent
     /// </summary>
     [DisplayName("All Other Cash")]
     [IsoXmlTag("AllOthrCsh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAllOtherCash1> AllOtherCash { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface IPortfolioTransfer13 : IIsoComponent
     /// </summary>
     [DisplayName("Cash All")]
     [IsoXmlTag("CshAll")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAll1> CashAll { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IPortfolioTransfer13 : IIsoComponent
     /// </summary>
     [DisplayName("Residual Cash")]
     [IsoXmlTag("RsdlCsh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IResidualCash2> ResidualCash { get; }
 
     /// <summary>
@@ -86,6 +90,7 @@ public interface IPortfolioTransfer13 : IIsoComponent
     /// </summary>
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument105> FinancialInstrumentAssetForTransfer { get; }
 
     /// <summary>
@@ -93,5 +98,6 @@ public interface IPortfolioTransfer13 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

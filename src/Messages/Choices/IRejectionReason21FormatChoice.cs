@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the reason of a rejection of the interest request.
 /// </summary>
 [IsoId("_Qki1gdp-Ed-ak6NoX_4Aeg_172364056")]
+[IsoDisplayName(@"Rejection Reason 21 Format Choice")]
 public interface IRejectionReason21FormatChoice : IIsoChoice { }

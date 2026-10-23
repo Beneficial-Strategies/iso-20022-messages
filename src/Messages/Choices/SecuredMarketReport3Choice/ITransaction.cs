@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredMarketReport3Choice;
 /// </summary>
 [IsoId("_hAas86idEeWHO_l3hf2rlA")]
 [IsoXmlTag("Tx")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction : ISecuredMarketReport3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -28,6 +29,7 @@ public interface ITransaction : ISecuredMarketReport3Choice, IIsoChoiceVariant
     [IsoId("_hc-tJ6idEeWHO_l3hf2rlA")]
     [DisplayName("Branch Identification")]
     [IsoXmlTag("BrnchId")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? BranchIdentification { get; }
 
     /// <summary>
@@ -36,6 +38,8 @@ public interface ITransaction : ISecuredMarketReport3Choice, IIsoChoiceVariant
     [IsoId("_hc-tKaidEeWHO_l3hf2rlA")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? UniqueTransactionIdentifier { get; }
 
     /// <summary>
@@ -44,6 +48,8 @@ public interface ITransaction : ISecuredMarketReport3Choice, IIsoChoiceVariant
     [IsoId("_hc-tK6idEeWHO_l3hf2rlA")]
     [DisplayName("Proprietary Transaction Identification")]
     [IsoXmlTag("PrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text ProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -52,6 +58,8 @@ public interface ITransaction : ISecuredMarketReport3Choice, IIsoChoiceVariant
     [IsoId("_hc-tLaidEeWHO_l3hf2rlA")]
     [DisplayName("Counterparty Proprietary Transaction Identification")]
     [IsoXmlTag("CtrPtyPrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? CounterpartyProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -68,6 +76,7 @@ public interface ITransaction : ISecuredMarketReport3Choice, IIsoChoiceVariant
     [IsoId("_hc-tMaidEeWHO_l3hf2rlA")]
     [DisplayName("Triparty Agent Identification")]
     [IsoXmlTag("TrptyAgtId")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? TripartyAgentIdentification { get; }
 
     /// <summary>
@@ -90,6 +99,7 @@ public interface ITransaction : ISecuredMarketReport3Choice, IIsoChoiceVariant
     [IsoId("_hc-tNaidEeWHO_l3hf2rlA")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate SettlementDate { get; }
 
     /// <summary>
@@ -98,6 +108,7 @@ public interface ITransaction : ISecuredMarketReport3Choice, IIsoChoiceVariant
     [IsoId("_hc-tN6idEeWHO_l3hf2rlA")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -166,5 +177,6 @@ public interface ITransaction : ISecuredMarketReport3Choice, IIsoChoiceVariant
     [IsoId("_hc-tSaidEeWHO_l3hf2rlA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

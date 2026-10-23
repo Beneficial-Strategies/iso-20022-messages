@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Number assigned by a government agency to identify foreign nationals.
 /// </summary>
 [IsoId("_Ax_6INokEeC60axPepSq7g_1367334821")]
+[IsoDisplayName(@"Securities Account")]
 public interface ISecuritiesAccount3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesAccount3 : IIsoComponent
     [IsoId("_Ax_6IdokEeC60axPepSq7g_1253495755")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface ISecuritiesAccount3 : IIsoComponent
     [IsoId("_AyJrINokEeC60axPepSq7g_-626809885")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 }

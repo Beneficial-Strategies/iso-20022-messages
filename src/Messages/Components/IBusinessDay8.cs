@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reports on business day information.
 /// </summary>
 [IsoId("_ODn9JXXyEei3jO6riKEVXg")]
+[IsoDisplayName(@"Business Day")]
 public interface IBusinessDay8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IBusinessDay8 : IIsoComponent
     [IsoId("_ONBJs3XyEei3jO6riKEVXg")]
     [DisplayName("System Identification")]
     [IsoXmlTag("SysId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemIdentification2Choice> SystemIdentification { get; }
 
     /// <summary>

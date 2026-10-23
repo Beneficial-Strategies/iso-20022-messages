@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Transaction42.
 /// </summary>
 [IsoId("_HQ08EaEQEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Transaction42")]
 public interface IATMTransaction42 : IIsoComponent
 {
     /// <summary>

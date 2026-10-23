@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the settlement condition modification request.
 /// </summary>
 [IsoId("_UhHYzNp-Ed-ak6NoX_4Aeg_-52038934")]
+[IsoDisplayName(@"Request Details")]
 public interface IRequestDetails1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IRequestDetails1 : IIsoComponent
     [IsoId("_UhRJwNp-Ed-ak6NoX_4Aeg_198445615")]
     [DisplayName("Retain Indicator")]
     [IsoXmlTag("RtnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RetainIndicator { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IRequestDetails1 : IIsoComponent
     [IsoId("_UhRJw9p-Ed-ak6NoX_4Aeg_688837633")]
     [DisplayName("Other Processing")]
     [IsoXmlTag("OthrPrcg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification20> OtherProcessing { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IRequestDetails1 : IIsoComponent
     [IsoId("_UhRJxNp-Ed-ak6NoX_4Aeg_-187586028")]
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PartialSettlementIndicator { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface IRequestDetails1 : IIsoComponent
     [IsoId("_UhRJxtp-Ed-ak6NoX_4Aeg_-2070646385")]
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? HoldIndicator { get; }
 
     /// <summary>
@@ -105,5 +110,6 @@ public interface IRequestDetails1 : IIsoComponent
     [IsoId("_UhRJydp-Ed-ak6NoX_4Aeg_661474902")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages3> Linkages { get; }
 }

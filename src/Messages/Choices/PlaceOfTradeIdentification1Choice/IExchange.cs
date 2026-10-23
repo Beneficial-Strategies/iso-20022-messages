@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification1Choic
 /// Exchange at which the transaction is executed.
 /// </summary>
 [IsoId("_TCfeodp-Ed-ak6NoX_4Aeg_-1323317101")]
+[IsoDisplayName(@"Exchange")]
 public interface IExchange : IPlaceOfTradeIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IExchange : IPlaceOfTradeIdentification1Choice, IIsoChoiceVaria
     /// Market Identifier Code. The identification of a financial market, as stipulated in the norm ISO 10383 &apos;Codes for exchanges and market identifications&apos;.
     /// </summary>
     [IsoXmlTag("Xchg")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier Value { get; }
 }

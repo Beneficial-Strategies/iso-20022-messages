@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action details.
 /// </summary>
 [IsoId("_6Vj_B3h0EeOF3uSOaAf1Lg")]
+[IsoDisplayName(@"Corporate Action SD")]
 public interface ICorporateActionSD11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_GXh0EeOF3uSOaAf1Lg")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_K3h0EeOF3uSOaAf1Lg")]
     [DisplayName("Number Of Shares To Be Issued")]
     [IsoXmlTag("NbOfShrsToBeIssd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? NumberOfSharesToBeIssued { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_L3h0EeOF3uSOaAf1Lg")]
     [DisplayName("Total Number Of Shares Offered")]
     [IsoXmlTag("TtlNbOfShrsOfferd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? TotalNumberOfSharesOffered { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_Gnh0EeOF3uSOaAf1Lg")]
     [DisplayName("Cut Off Days")]
     [IsoXmlTag("CutOffDays")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? CutOffDays { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_P3h0EeOF3uSOaAf1Lg")]
     [DisplayName("Conditional Payment Applicable Flag")]
     [IsoXmlTag("CondlPmtAplblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ConditionalPaymentApplicableFlag { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_Vnh0EeOF3uSOaAf1Lg")]
     [DisplayName("Solicitation Dealer Fee Flag")]
     [IsoXmlTag("SlctnDealrFeeFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SolicitationDealerFeeFlag { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_I3h0EeOF3uSOaAf1Lg")]
     [DisplayName("DTC Custody Eligible Flag")]
     [IsoXmlTag("DTCCtdyElgblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DTCCustodyEligibleFlag { get; }
 
     /// <summary>
@@ -121,6 +130,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_EXh0EeOF3uSOaAf1Lg")]
     [DisplayName("DTC Reorganisation Custody Eligible Flag")]
     [IsoXmlTag("DTCReorgCtdyElgblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DTCReorganisationCustodyEligibleFlag { get; }
 
     /// <summary>
@@ -129,6 +139,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_M3h0EeOF3uSOaAf1Lg")]
     [DisplayName("DTC Reorganisation Deposit Eligible Flag")]
     [IsoXmlTag("DTCReorgDpstElgblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DTCReorganisationDepositEligibleFlag { get; }
 
     /// <summary>
@@ -137,6 +148,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_N3h0EeOF3uSOaAf1Lg")]
     [DisplayName("Surrender Shares To Agent Flag")]
     [IsoXmlTag("SrrndrShrsToAgtFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SurrenderSharesToAgentFlag { get; }
 
     /// <summary>
@@ -145,6 +157,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_Unh0EeOF3uSOaAf1Lg")]
     [DisplayName("Step Up Privilege Flag")]
     [IsoXmlTag("StepUpPrvlgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? StepUpPrivilegeFlag { get; }
 
     /// <summary>
@@ -153,6 +166,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_Q3h0EeOF3uSOaAf1Lg")]
     [DisplayName("Rights Oversubscription Flag")]
     [IsoXmlTag("RghtsOvrsbcptFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RightsOversubscriptionFlag { get; }
 
     /// <summary>
@@ -161,6 +175,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_O3h0EeOF3uSOaAf1Lg")]
     [DisplayName("Rights Round Up Privilege Flag")]
     [IsoXmlTag("RghtsRndUpPrvlgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RightsRoundUpPrivilegeFlag { get; }
 
     /// <summary>
@@ -169,6 +184,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_Tnh0EeOF3uSOaAf1Lg")]
     [DisplayName("Rights Transferable Flag")]
     [IsoXmlTag("RghtsTrfblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RightsTransferableFlag { get; }
 
     /// <summary>
@@ -177,6 +193,7 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_6Vj_Hnh0EeOF3uSOaAf1Lg")]
     [DisplayName("Certificate Details")]
     [IsoXmlTag("CertDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionSD5> CertificateDetails { get; }
 
     /// <summary>
@@ -194,5 +211,6 @@ public interface ICorporateActionSD11 : IIsoComponent
     [IsoId("_fEF8IHh1EeOF3uSOaAf1Lg")]
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
     Exact32AlphaNumericText? RDPReferenceNumber { get; }
 }

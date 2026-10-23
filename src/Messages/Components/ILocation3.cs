@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Location information.
 /// </summary>
 [IsoId("_EBsPBPNCEei4qfiLgRIZBA")]
+[IsoDisplayName(@"Location")]
 public interface ILocation3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILocation3 : IIsoComponent
     [IsoId("_8CLxkP5UEeirBKKww67A3w")]
     [DisplayName("Location Code")]
     [IsoXmlTag("LctnCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LocationCode { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ILocation3 : IIsoComponent
     [IsoId("_EBsPBvNCEei4qfiLgRIZBA")]
     [DisplayName("Location Name")]
     [IsoXmlTag("LctnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LocationName { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ILocation3 : IIsoComponent
     [IsoId("_EBsPBfNCEei4qfiLgRIZBA")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Description { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ILocation3 : IIsoComponent
     [IsoId("_gqYoEPcDEeiW-auGnDPZIw")]
     [DisplayName("Local Time Zone")]
     [IsoXmlTag("LclTmZone")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? LocalTimeZone { get; }
 
     /// <summary>

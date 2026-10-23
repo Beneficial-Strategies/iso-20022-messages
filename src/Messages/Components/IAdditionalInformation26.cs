@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional specific modification criteria.
 /// </summary>
 [IsoId("_SOAxLSqCEeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Additional Information")]
 public interface IAdditionalInformation26 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAdditionalInformation26 : IIsoComponent
     [IsoId("_Sl2pVSqCEeyR9JrVGfaMKw")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -113,5 +116,6 @@ public interface IAdditionalInformation26 : IIsoComponent
     [IsoId("_Sl2phSqCEeyR9JrVGfaMKw")]
     [DisplayName("Transaction Subject To Buy In")]
     [IsoXmlTag("TxSbjtToBuyIn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TransactionSubjectToBuyIn { get; }
 }

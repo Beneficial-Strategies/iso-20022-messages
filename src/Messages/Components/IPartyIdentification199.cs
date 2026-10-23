@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_fLSzbuwMEeiMkKo2clXHdQ")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification199 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IPartyIdentification199 : IIsoComponent
     [IsoId("_fLSzcewMEeiMkKo2clXHdQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IPartyIdentification199 : IIsoComponent
     [IsoId("_fLSzduwMEeiMkKo2clXHdQ")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Assigner { get; }
 
     /// <summary>
@@ -43,6 +48,8 @@ public interface IPartyIdentification199 : IIsoComponent
     [IsoId("_fLSzb-wMEeiMkKo2clXHdQ")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>
@@ -51,6 +58,8 @@ public interface IPartyIdentification199 : IIsoComponent
     [IsoId("_fLSzeewMEeiMkKo2clXHdQ")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalIdentification { get; }
 
     /// <summary>
@@ -60,6 +69,8 @@ public interface IPartyIdentification199 : IIsoComponent
     [IsoId("_fLSze-wMEeiMkKo2clXHdQ")]
     [DisplayName("Name And Location")]
     [IsoXmlTag("NmAndLctn")]
+    [IsoSimpleType(IsoSimpleType.Max99Text)]
+    [StringLength(99, MinimumLength = 1)]
     Max99Text? NameAndLocation { get; }
 
     /// <summary>
@@ -76,6 +87,8 @@ public interface IPartyIdentification199 : IIsoComponent
     [IsoId("_fLSzcuwMEeiMkKo2clXHdQ")]
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Email { get; }
 
     /// <summary>
@@ -84,6 +97,8 @@ public interface IPartyIdentification199 : IIsoComponent
     [IsoId("_fLSzcOwMEeiMkKo2clXHdQ")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? URLAddress { get; }
 
     /// <summary>
@@ -92,6 +107,8 @@ public interface IPartyIdentification199 : IIsoComponent
     [IsoId("_fLSzc-wMEeiMkKo2clXHdQ")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PhoneNumber { get; }
 
     /// <summary>
@@ -100,6 +117,8 @@ public interface IPartyIdentification199 : IIsoComponent
     [IsoId("_fLSzeuwMEeiMkKo2clXHdQ")]
     [DisplayName("Customer Service")]
     [IsoXmlTag("CstmrSvc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CustomerService { get; }
 
     /// <summary>
@@ -108,6 +127,8 @@ public interface IPartyIdentification199 : IIsoComponent
     [IsoId("_fLSzeOwMEeiMkKo2clXHdQ")]
     [DisplayName("Additional Contact Information")]
     [IsoXmlTag("AddtlCtctInf")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? AdditionalContactInformation { get; }
 
     /// <summary>
@@ -116,5 +137,7 @@ public interface IPartyIdentification199 : IIsoComponent
     [IsoId("_fLSzdewMEeiMkKo2clXHdQ")]
     [DisplayName("Tax Registration Identification")]
     [IsoXmlTag("TaxRegnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxRegistrationIdentification { get; }
 }

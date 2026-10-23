@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// </summary>
 [IsoId("_LAGyq75MEeexmbB7KsjCwA")]
 [IsoMessage("supl.031.001.02", "DTCCCASTSD1", "urn:iso:std:iso:20022:tech:xsd:supl.031.001.02")]
+[Description(@"The DTCCCASTSD1 message extends ISO Corporate Action Instruction Statement Report message with DTCC corporate action elements not covered in the standard message.")]
+[IsoDisplayName(@"DTCCCASTSD 1 V")]
 public interface IDTCCCASTSD1V02 : IOuterRecord
 {
     /// <summary>
@@ -28,6 +30,7 @@ public interface IDTCCCASTSD1V02 : IOuterRecord
     [IsoId("_LAGyr75MEeexmbB7KsjCwA")]
     [DisplayName("Total Instructed Balance Option Balance Details")]
     [IsoXmlTag("TtlInstdBalOptnBalDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionInstructedBalanceOptionBalanceDetailsSD2> TotalInstructedBalanceOptionBalanceDetails { get; }
 
     /// <summary>
@@ -36,6 +39,7 @@ public interface IDTCCCASTSD1V02 : IOuterRecord
     [IsoId("_LAGysb5MEeexmbB7KsjCwA")]
     [DisplayName("Total Instructed Balance Option Instruction Details")]
     [IsoXmlTag("TtlInstdBalOptnInstrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionInstructedBalanceOptionInstructionDetailsSD2> TotalInstructedBalanceOptionInstructionDetails { get; }
 
     /// <summary>
@@ -44,5 +48,6 @@ public interface IDTCCCASTSD1V02 : IOuterRecord
     [IsoId("_LAGys75MEeexmbB7KsjCwA")]
     [DisplayName("Total Instructed Balance Option Protect Instruction Details")]
     [IsoXmlTag("TtlInstdBalOptnPrtctInstrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2> TotalInstructedBalanceOptionProtectInstructionDetails { get; }
 }

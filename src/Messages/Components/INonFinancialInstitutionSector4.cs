@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information concerning non financial counterparties.
 /// </summary>
 [IsoId("_MU138QbWEeqrW7Meu5r3kQ")]
+[IsoDisplayName(@"Non Financial Institution Sector")]
 public interface INonFinancialInstitutionSector4 : IIsoComponent
 {
     /// <summary>

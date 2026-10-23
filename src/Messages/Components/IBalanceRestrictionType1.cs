@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Type providing further information on balance restrictions.
 /// </summary>
 [IsoId("_8H0BRqMgEeCJ6YNENx4h-w_-1462773614")]
+[IsoDisplayName(@"Balance Restriction Type")]
 public interface IBalanceRestrictionType1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IBalanceRestrictionType1 : IIsoComponent
     [IsoId("_8H0BSKMgEeCJ6YNENx4h-w_1112293165")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 
     /// <summary>

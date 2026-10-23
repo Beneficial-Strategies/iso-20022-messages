@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// German Bankleitzahl - identifies German financial institutions on the German national clearing systems.
 /// </summary>
 [IsoId("_VwSCe7NIEeejueAciesPMA")]
+[IsoDisplayName(@"German Bankleitzahl Identification")]
 public interface IGermanBankleitzahlIdentification
     : IClearingSystemMemberIdentification4Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IGermanBankleitzahlIdentification
     /// German Bankleitzahl. Identifies German financial institutions on the German national clearing systems.
     /// </summary>
     [IsoXmlTag("DEBLZ")]
+    [IsoSimpleType(IsoSimpleType.GermanBankleitzahlIdentifier)]
     GermanBankleitzahlIdentifier Value { get; }
 }

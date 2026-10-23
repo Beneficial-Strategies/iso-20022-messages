@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the liquid resources.
 /// </summary>
 [IsoId("_nNjvsESrEemM8-DVOYzdVQ")]
+[IsoDisplayName(@"Liquid Resource Information")]
 public interface ILiquidResourceInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILiquidResourceInformation1 : IIsoComponent
     [IsoId("_xUlDAESrEemM8-DVOYzdVQ")]
     [DisplayName("Counter Party Identification")]
     [IsoXmlTag("CntrPtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CounterPartyIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ILiquidResourceInformation1 : IIsoComponent
     [IsoId("_VvbPcESsEemM8-DVOYzdVQ")]
     [DisplayName("Secured")]
     [IsoXmlTag("Scrd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator Secured { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ILiquidResourceInformation1 : IIsoComponent
     [IsoId("_bFJ-AESsEemM8-DVOYzdVQ")]
     [DisplayName("Asset Encumbered")]
     [IsoXmlTag("AsstNcmbrd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator AssetEncumbered { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ILiquidResourceInformation1 : IIsoComponent
     [IsoId("_gVPXkESsEemM8-DVOYzdVQ")]
     [DisplayName("Qualifying Resource")]
     [IsoXmlTag("QlfygRsrc")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator QualifyingResource { get; }
 
     /// <summary>
@@ -65,5 +71,6 @@ public interface ILiquidResourceInformation1 : IIsoComponent
     [IsoId("_lPmYwESsEemM8-DVOYzdVQ")]
     [DisplayName("Agency Arrangements")]
     [IsoXmlTag("AgcyArrgmnts")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator AgencyArrangements { get; }
 }

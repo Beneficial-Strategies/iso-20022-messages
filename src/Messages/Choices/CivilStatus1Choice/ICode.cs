@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CivilStatus1Choice;
 /// Civil status expressed as a code.
 /// </summary>
 [IsoId("_8saB4CCgEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICivilStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

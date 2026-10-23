@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification and information about a securities account and balance.
 /// </summary>
 [IsoId("_fAboZRuUEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Safekeeping Account")]
 public interface ISafekeepingAccount13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISafekeepingAccount13 : IIsoComponent
     [IsoId("_fV47BxuUEeyhRdHRjakS2w")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ISafekeepingAccount13 : IIsoComponent
     [IsoId("_fV47CxuUEeyhRdHRjakS2w")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubAccountIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,9 @@ public interface ISafekeepingAccount13 : IIsoComponent
     [IsoId("_fV47DRuUEeyhRdHRjakS2w")]
     [DisplayName("Instructed Balance")]
     [IsoXmlTag("InstdBal")]
+    [MinLength(1)]
+    [MaxLength(15)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHoldingBalance10> InstructedBalance { get; }
 
     /// <summary>
@@ -49,5 +57,8 @@ public interface ISafekeepingAccount13 : IIsoComponent
     [IsoId("_fV47DxuUEeyhRdHRjakS2w")]
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
+    [MinLength(0)]
+    [MaxLength(250)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification237Choice> RightsHolder { get; }
 }

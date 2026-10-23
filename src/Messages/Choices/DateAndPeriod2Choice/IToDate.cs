@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateAndPeriod2Choice;
 /// Date at which the range ends.
 /// </summary>
 [IsoId("_76joYaMgEeCJ6YNENx4h-w_1338953670")]
+[IsoDisplayName(@"To Date")]
 public interface IToDate : IDateAndPeriod2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IToDate : IDateAndPeriod2Choice, IIsoChoiceVariant
     /// A particular point in the progression of time in a calendar year expressed in the YYYY-MM-DD format. This representation is defined in &quot;XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004&quot; which is aligned with ISO 8601.
     /// </summary>
     [IsoXmlTag("ToDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Value { get; }
 }

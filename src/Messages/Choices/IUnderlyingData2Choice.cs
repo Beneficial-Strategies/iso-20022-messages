@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Underlying Data2Choice.
 /// </summary>
 [IsoId("_Dl5lwRZ7Ee6d6Ip1Ob2kaQ")]
+[IsoDisplayName(@"Underlying Data2Choice")]
 public interface IUnderlyingData2Choice : IIsoChoice { }

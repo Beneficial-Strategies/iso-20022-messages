@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "ShrhldrIdDsclsrRspnCxlAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.048.001.01"
 )]
+[Description(@"The ShareholdersIdentificationDisclosureResponseCancellationAdvice message is sent by any intermediaries to the recipient designated by the issuer (such as an issuer's agent) in the disclosure request message in order to cancel the shareholder identification disclosure response whether previously sent in a single message or in a set of multipart/paginated response messages.")]
+[IsoDisplayName(@"Shareholder Identification Disclosure Response Cancellation Advice V")]
 public interface IShareholderIdentificationDisclosureResponseCancellationAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +27,8 @@ public interface IShareholderIdentificationDisclosureResponseCancellationAdviceV
     [IsoId("_1ZW-okV9EemRx7jyevcLwg")]
     [DisplayName("Disclosure Response Identification")]
     [IsoXmlTag("DsclsrRspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DisclosureResponseIdentification { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IShareholderIdentificationDisclosureResponseCancellationAdviceV
     [IsoId("_1__BQbRAEem2T48lBgJbww")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

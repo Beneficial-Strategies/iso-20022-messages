@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to be present in a dispute.
 /// </summary>
 [IsoId("_1xe1ccZiEeiCDcGzDHI_9Q")]
+[IsoDisplayName(@"Dispute Data")]
 public interface IDisputeData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDisputeData2 : IIsoComponent
     [IsoId("_18M3scZiEeiCDcGzDHI_9Q")]
     [DisplayName("Presentment Cycle")]
     [IsoXmlTag("PresntmntCycl")]
+    [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
     Exact1NumericText? PresentmentCycle { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IDisputeData2 : IIsoComponent
     [IsoId("_18M3s8ZiEeiCDcGzDHI_9Q")]
     [DisplayName("Dispute Condition")]
     [IsoXmlTag("DsptCond")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DisputeCondition { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IDisputeData2 : IIsoComponent
     [IsoId("_18M3ucZiEeiCDcGzDHI_9Q")]
     [DisplayName("Dispute Reference")]
     [IsoXmlTag("DsptRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeReference1> DisputeReference { get; }
 }

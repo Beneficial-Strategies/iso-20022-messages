@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes of a settlement service.
 /// </summary>
 [IsoId("_b2XNYEX7Eeegp_DADCe7HQ")]
+[IsoDisplayName(@"Settlement Service")]
 public interface ISettlementService1 : IIsoComponent
 {
     /// <summary>

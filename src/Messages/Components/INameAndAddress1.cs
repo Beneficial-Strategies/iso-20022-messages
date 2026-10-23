@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that locates and identifies a specific address, as defined by postal services.
 /// </summary>
 [IsoId("_VFxlA9p-Ed-ak6NoX_4Aeg_-1749124756")]
+[IsoDisplayName(@"Name And Address")]
 public interface INameAndAddress1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INameAndAddress1 : IIsoComponent
     [IsoId("_VFxlBNp-Ed-ak6NoX_4Aeg_-1749124755")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>

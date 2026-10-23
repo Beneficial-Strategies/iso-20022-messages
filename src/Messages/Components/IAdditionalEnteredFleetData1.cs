@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information entered for fleet transaction.
 /// </summary>
 [IsoId("_Cp6p8UYlEfCJpvfyM9roFQ")]
+[IsoDisplayName(@"Additional Entered Fleet Data1")]
 public interface IAdditionalEnteredFleetData1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IAdditionalEnteredFleetData1 : IIsoComponent
     [IsoId("_pVJaEkYkEfCJpvfyM9roFQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IAdditionalEnteredFleetData1 : IIsoComponent
     [IsoId("_pVJaE0YkEfCJpvfyM9roFQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> NationalData { get; }
 }

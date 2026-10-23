@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of formats to express the reason of a rejection of the notification advice.</summary>
 [IsoId("_9v0PoKUoEfCnE_wCEfCqTA")]
+[IsoDisplayName(@"Rejection Reason 6 Format 2 Choice")]
 public interface IRejectionReason6Format2Choice : IIsoChoice { }

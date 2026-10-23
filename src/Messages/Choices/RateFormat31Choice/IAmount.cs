@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat31Choice;
 
 /// <summary>Specifies the amount.</summary>
 [IsoId("_IJ18AKjuEfCG_LQaXOxwew")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount : IRateFormat31Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

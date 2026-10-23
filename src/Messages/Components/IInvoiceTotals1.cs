@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies totals related to the invoice.
 /// </summary>
 [IsoId("_Tho4zNp-Ed-ak6NoX_4Aeg_-773420460")]
+[IsoDisplayName(@"Invoice Totals")]
 public interface IInvoiceTotals1 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IInvoiceTotals1 : IIsoComponent
     [IsoId("_Thypw9p-Ed-ak6NoX_4Aeg_-773420121")]
     [DisplayName("Payment Due Date")]
     [IsoXmlTag("PmtDueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate PaymentDueDate { get; }
 }

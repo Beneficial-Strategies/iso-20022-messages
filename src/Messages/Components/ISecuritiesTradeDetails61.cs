@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities trade.
 /// </summary>
 [IsoId("_6MjroZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Securities Trade Details")]
 public interface ISecuritiesTradeDetails61 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesTradeDetails61 : IIsoComponent
     [IsoId("_6Mjrs5NLEeWGlc8L7oPDIg")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISecuritiesTradeDetails61 : IIsoComponent
     [IsoId("_6Mjrt5NLEeWGlc8L7oPDIg")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISecuritiesTradeDetails61 : IIsoComponent
     [IsoId("_6Mjru5NLEeWGlc8L7oPDIg")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ISecuritiesTradeDetails61 : IIsoComponent
     [IsoId("_6Mjrv5NLEeWGlc8L7oPDIg")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,7 @@ public interface ISecuritiesTradeDetails61 : IIsoComponent
     [IsoId("_6MjrwZNLEeWGlc8L7oPDIg")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax16Text> TradeIdentification { get; }
 
     /// <summary>
@@ -57,6 +67,8 @@ public interface ISecuritiesTradeDetails61 : IIsoComponent
     [IsoId("_6MjrxZNLEeWGlc8L7oPDIg")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? CommonIdentification { get; }
 
     /// <summary>
@@ -65,6 +77,8 @@ public interface ISecuritiesTradeDetails61 : IIsoComponent
     [IsoId("_6MjryZNLEeWGlc8L7oPDIg")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? PoolIdentification { get; }
 
     /// <summary>
@@ -73,6 +87,7 @@ public interface ISecuritiesTradeDetails61 : IIsoComponent
     [IsoId("_6MjrzZNLEeWGlc8L7oPDIg")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax16Text> CollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -145,6 +160,7 @@ public interface ISecuritiesTradeDetails61 : IIsoComponent
     [IsoId("_6Mjr8ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -169,6 +185,7 @@ public interface ISecuritiesTradeDetails61 : IIsoComponent
     [IsoId("_6Mjr_ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition6Choice> TradeTransactionCondition { get; }
 
     /// <summary>
@@ -249,5 +266,6 @@ public interface ISecuritiesTradeDetails61 : IIsoComponent
     [IsoId("_6MjsJZNLEeWGlc8L7oPDIg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

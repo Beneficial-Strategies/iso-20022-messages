@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Performance factors of the investment fund / fund class.
 /// </summary>
 [IsoId("_TTfIAtp-Ed-ak6NoX_4Aeg_1116778698")]
+[IsoDisplayName(@"Performance Factors")]
 public interface IPerformanceFactors1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPerformanceFactors1 : IIsoComponent
     [IsoId("_TTfIA9p-Ed-ak6NoX_4Aeg_-359866902")]
     [DisplayName("Corporate Action Factor")]
     [IsoXmlTag("CorpActnFctr")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? CorporateActionFactor { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPerformanceFactors1 : IIsoComponent
     [IsoId("_TTfIBNp-Ed-ak6NoX_4Aeg_-358021142")]
     [DisplayName("Cumulative Corporate Action Factor")]
     [IsoXmlTag("CmltvCorpActnFctr")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? CumulativeCorporateActionFactor { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IPerformanceFactors1 : IIsoComponent
     [IsoId("_TTfIBtp-Ed-ak6NoX_4Aeg_-357097187")]
     [DisplayName("Normal Performance")]
     [IsoXmlTag("NrmlPrfrmnc")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? NormalPerformance { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Short Payment Identification4.
 /// </summary>
 [IsoId("_2C1-ZTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Short Payment Identification4")]
 public interface IShortPaymentIdentification4 : IIsoComponent
 {
     /// <summary>

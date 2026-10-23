@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a range of securities accounts.
 /// </summary>
 [IsoId("_4H1_peGBEeWCAvUNsZ5u6g")]
+[IsoDisplayName(@"Securities Account Range2")]
 public interface ISecuritiesAccountRange2 : IIsoComponent
 {
     /// <summary>

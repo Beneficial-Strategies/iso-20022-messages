@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security or other asset.
 /// </summary>
 [IsoId("_npD8Z5NBEemQB_8XA98K0Q")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument85 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrument85 : IIsoComponent
     [IsoId("_n_OZmZNBEemQB_8XA98K0Q")]
     [DisplayName("Line Identification")]
     [IsoXmlTag("LineId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LineIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IFinancialInstrument85 : IIsoComponent
     [IsoId("_n_OZn5NBEemQB_8XA98K0Q")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit11> UnitsDetails { get; }
 
     /// <summary>
@@ -106,6 +110,7 @@ public interface IFinancialInstrument85 : IIsoComponent
     [IsoId("_n_OZr5NBEemQB_8XA98K0Q")]
     [DisplayName("Transferor")]
     [IsoXmlTag("Trfr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccount28> Transferor { get; }
 
     /// <summary>
@@ -114,6 +119,7 @@ public interface IFinancialInstrument85 : IIsoComponent
     [IsoId("__UugwaIxEem3ELMJcnCmxA")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary43> IntermediaryInformation { get; }
 
     /// <summary>
@@ -122,6 +128,7 @@ public interface IFinancialInstrument85 : IIsoComponent
     [IsoId("_n_OZsZNBEemQB_8XA98K0Q")]
     [DisplayName("Crystallisation Details")]
     [IsoXmlTag("CrstllstnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICrystallisation2> CrystallisationDetails { get; }
 
     /// <summary>
@@ -138,6 +145,7 @@ public interface IFinancialInstrument85 : IIsoComponent
     [IsoId("_n_OZtZNBEemQB_8XA98K0Q")]
     [DisplayName("Settlement Parties Details")]
     [IsoXmlTag("SttlmPtiesDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundSettlementParameters17> SettlementPartiesDetails { get; }
 
     /// <summary>
@@ -146,5 +154,6 @@ public interface IFinancialInstrument85 : IIsoComponent
     [IsoId("_n_OZt5NBEemQB_8XA98K0Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

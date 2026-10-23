@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the underlying rejection reason for the status of an object.
 /// </summary>
 [IsoId("_d7-FdTt5EeW638lNyHKv7A")]
+[IsoDisplayName(@"Rejection Reason")]
 public interface IRejectionReason27 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IRejectionReason27 : IIsoComponent
     [IsoId("_ecZ5Azt5EeW638lNyHKv7A")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Method and data intended to be verified as well as the related results.
 /// </summary>
 [IsoId("_cQ8dAcVVEeuPIIgba4mCug")]
+[IsoDisplayName(@"Verification")]
 public interface IVerification4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IVerification4 : IIsoComponent
     [IsoId("_cV-G88VVEeuPIIgba4mCug")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IVerification4 : IIsoComponent
     [IsoId("_cV-G9cVVEeuPIIgba4mCug")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubType { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IVerification4 : IIsoComponent
     [IsoId("_cV-G98VVEeuPIIgba4mCug")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalInformation { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface IVerification4 : IIsoComponent
     [IsoId("_cV-G-cVVEeuPIIgba4mCug")]
     [DisplayName("Verification Result")]
     [IsoXmlTag("VrfctnRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerificationResult2> VerificationResult { get; }
 }

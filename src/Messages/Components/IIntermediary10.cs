@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party that provides services to investors relating to financial products.
 /// </summary>
 [IsoId("_QOV8Bdp-Ed-ak6NoX_4Aeg_1509055223")]
+[IsoDisplayName(@"Intermediary")]
 public interface IIntermediary10 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface IIntermediary10 : IIsoComponent
     [IsoId("_QOV8Cdp-Ed-ak6NoX_4Aeg_-1795897420")]
     [DisplayName("Extended Role")]
     [IsoXmlTag("XtndedRole")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedRole { get; }
 
     /// <summary>

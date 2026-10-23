@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_VORZs9p-Ed-ak6NoX_4Aeg_-1697955805")]
+[IsoDisplayName(@"Transfer")]
 public interface ITransfer1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransfer1 : IIsoComponent
     [IsoId("_VORZtNp-Ed-ak6NoX_4Aeg_878647420")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ITransfer1 : IIsoComponent
     [IsoId("_VORZt9p-Ed-ak6NoX_4Aeg_433270005")]
     [DisplayName("Portfolio Transfer Out Rate")]
     [IsoXmlTag("PrtflTrfOutRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate PortfolioTransferOutRate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ITransfer1 : IIsoComponent
     [IsoId("_VORZuNp-Ed-ak6NoX_4Aeg_1997856008")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit1> UnitsDetails { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ITransfer1 : IIsoComponent
     [IsoId("_VORZudp-Ed-ak6NoX_4Aeg_-975762790")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator OwnAccountTransferIndicator { get; }
 
     /// <summary>

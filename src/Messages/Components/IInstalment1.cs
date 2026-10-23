@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information of a single instalment related to an invoice settlement.
 /// </summary>
 [IsoId("_Py7LUtp-Ed-ak6NoX_4Aeg_-550302761")]
+[IsoDisplayName(@"Instalment")]
 public interface IInstalment1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInstalment1 : IIsoComponent
     [IsoId("_Py7LU9p-Ed-ak6NoX_4Aeg_-760207226")]
     [DisplayName("Sequence Identification")]
     [IsoXmlTag("SeqId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text SequenceIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IInstalment1 : IIsoComponent
     [IsoId("_Py7LVNp-Ed-ak6NoX_4Aeg_-446211991")]
     [DisplayName("Payment Due Date")]
     [IsoXmlTag("PmtDueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate PaymentDueDate { get; }
 
     /// <summary>

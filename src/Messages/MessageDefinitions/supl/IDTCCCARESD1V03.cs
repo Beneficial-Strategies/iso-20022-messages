@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// </summary>
 [IsoId("_q_pK8Q4zEeuIpNw_GxsBOw")]
 [IsoMessage("supl.025.001.03", "DTCCCARESD1", "urn:iso:std:iso:20022:tech:xsd:supl.025.001.03")]
+[Description(@"The DTCCCARESD1 message extends ISO corporate action movement reversal advice message with DTCC corporate action elements not covered in the standard message.")]
+[IsoDisplayName(@"DTCCCARESD 1 V")]
 public interface IDTCCCARESD1V03 : IOuterRecord
 {
     /// <summary>

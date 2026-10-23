@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the comparison between the currently established baseline elements and the proposed ones.
 /// </summary>
 [IsoId("_RbOl4dp-Ed-ak6NoX_4Aeg_153355944")]
+[IsoDisplayName(@"Comparison Result")]
 public interface IComparisonResult2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IComparisonResult2 : IIsoComponent
     [IsoId("_RbOl4tp-Ed-ak6NoX_4Aeg_153356284")]
     [DisplayName("Element Sequence Number")]
     [IsoXmlTag("ElmtSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number ElementSequenceNumber { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IComparisonResult2 : IIsoComponent
     [IsoId("_RbOl49p-Ed-ak6NoX_4Aeg_153355976")]
     [DisplayName("Element Path")]
     [IsoXmlTag("ElmtPth")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text ElementPath { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IComparisonResult2 : IIsoComponent
     [IsoId("_RbOl5Np-Ed-ak6NoX_4Aeg_153356222")]
     [DisplayName("Element Name")]
     [IsoXmlTag("ElmtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ElementName { get; }
 
     /// <summary>

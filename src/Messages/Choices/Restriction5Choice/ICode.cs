@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Restriction5Choice;
 /// Restrictions expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_ElAWsTqIEeWVrPy0StzzSg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRestriction5Choice, IIsoChoiceVariant
 {
     /// <summary>

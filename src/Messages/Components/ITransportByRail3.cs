@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the transportation of goods by rail.
 /// </summary>
 [IsoId("_SuFU6dp-Ed-ak6NoX_4Aeg_-1718114304")]
+[IsoDisplayName(@"Transport By Rail")]
 public interface ITransportByRail3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransportByRail3 : IIsoComponent
     [IsoId("_SuFU6tp-Ed-ak6NoX_4Aeg_-1718113933")]
     [DisplayName("Place Of Receipt")]
     [IsoXmlTag("PlcOfRct")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> PlaceOfReceipt { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITransportByRail3 : IIsoComponent
     [IsoId("_SuFU69p-Ed-ak6NoX_4Aeg_-1718113995")]
     [DisplayName("Place Of Delivery")]
     [IsoXmlTag("PlcOfDlvry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> PlaceOfDelivery { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface ITransportByRail3 : IIsoComponent
     [IsoId("_SuFU7Np-Ed-ak6NoX_4Aeg_-1718114273")]
     [DisplayName("Rail Carrier Name")]
     [IsoXmlTag("RailCrrierNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RailCarrierName { get; }
 }

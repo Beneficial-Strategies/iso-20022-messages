@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionForMeetingResolut
 /// Specifies the vote recommendation for resolutions added during the meeting.
 /// </summary>
 [IsoId("_n3g1U16-EeSjaerr_EM7AQ")]
+[IsoDisplayName(@"Vote Indication")]
 public interface IVoteIndication : IVoteInstructionForMeetingResolution2Choice, IIsoChoiceVariant
 {
     /// <summary>

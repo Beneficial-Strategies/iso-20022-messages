@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provide information on the status reason of the record.
 /// </summary>
 [IsoId("_Nx3NEQtPEeWkxvNyFrBT8Q")]
+[IsoDisplayName(@"Validation Status Reason")]
 public interface IValidationStatusReason1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IValidationStatusReason1 : IIsoComponent
     [IsoId("_T2qoIQtPEeWkxvNyFrBT8Q")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericValidationRuleIdentification1> ValidationRule { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IValidationStatusReason1 : IIsoComponent
     [IsoId("_N71BaQtPEeWkxvNyFrBT8Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of system event.
 /// </summary>
 [IsoId("_d7AQEXhkEeidzqjNEfehPg")]
+[IsoDisplayName(@"System Event Type 4 Choice")]
 public interface ISystemEventType4Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction to capture in the batch.
 /// </summary>
 [IsoId("_SxR5qAEcEeCQm6a_G2yO_w_1194711550")]
+[IsoDisplayName(@"Card Payment Data Set Transaction")]
 public interface ICardPaymentDataSetTransaction1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardPaymentDataSetTransaction1 : IIsoComponent
     [IsoId("_SxR5qQEcEeCQm6a_G2yO_w_-1965275448")]
     [DisplayName("Transaction Sequence Counter")]
     [IsoXmlTag("TxSeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Max9NumericText)]
     Max9NumericText TransactionSequenceCounter { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICardPaymentDataSetTransaction1 : IIsoComponent
     [IsoId("_SxR5qgEcEeCQm6a_G2yO_w_-1696191127")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITraceability1> Traceability { get; }
 
     /// <summary>

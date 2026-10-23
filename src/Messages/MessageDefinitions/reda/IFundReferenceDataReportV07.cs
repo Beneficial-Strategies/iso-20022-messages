@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_7l6XgcQUEe2pvZQ_33Qz1Q")]
 [IsoMessage("reda.004.001.07", "FndRefDataRpt", "urn:iso:std:iso:20022:tech:xsd:reda.004.001.07")]
+[IsoDisplayName(@"Fund Reference Data Report V07")]
 public interface IFundReferenceDataReportV07 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IFundReferenceDataReportV07 : IOuterRecord
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference10> PreviousReference { get; }
 
     /// <summary>
@@ -46,5 +48,6 @@ public interface IFundReferenceDataReportV07 : IOuterRecord
     /// </summary>
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundReferenceDataReport5> Report { get; }
 }

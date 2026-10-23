@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlannedQuantity1Choice;
 /// Code for the planned quantity of financial instrument or lot of rights/warrants to be purchased.
 /// </summary>
 [IsoId("_FiTKMDF1EeGKkIZzgd38VA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPlannedQuantity1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the amount of a premium on a currency option together with its calculation method.
 /// </summary>
 [IsoId("_TMB1Itp-Ed-ak6NoX_4Aeg_-553386135")]
+[IsoDisplayName(@"Premium Quote 1 Choice")]
 public interface IPremiumQuote1Choice : IIsoChoice { }

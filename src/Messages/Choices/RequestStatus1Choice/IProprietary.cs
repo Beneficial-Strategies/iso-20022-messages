@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RequestStatus1Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IRequestStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

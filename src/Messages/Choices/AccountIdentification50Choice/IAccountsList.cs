@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification50Choice;
 /// </summary>
 [IsoId("_pdA8Kzi7Eeydid5dcNPKvg")]
 [IsoXmlTag("AcctsList")]
+[IsoDisplayName(@"Accounts List")]
 public interface IAccountsList : IAccountIdentification50Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IAccountsList : IAccountIdentification50Choice, IIsoChoiceVaria
     [IsoId("_pdBi8Ti7Eeydid5dcNPKvg")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINXMax35Text? SafekeepingAccount { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IAccountsList : IAccountIdentification50Choice, IIsoChoiceVaria
     [IsoId("_pdBi-Ti7Eeydid5dcNPKvg")]
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text? BlockChainAddressOrWallet { get; }
 
     /// <summary>

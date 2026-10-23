@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentIdentification1Choice;
 /// Identification of the document asigned by the account servicer.
 /// </summary>
 [IsoId("_ThCb1tp-Ed-ak6NoX_4Aeg_-1641444932")]
+[IsoDisplayName(@"Account Servicer Document Identification")]
 public interface IAccountServicerDocumentIdentification
     : IDocumentIdentification1Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface IAccountServicerDocumentIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("AcctSvcrDocId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

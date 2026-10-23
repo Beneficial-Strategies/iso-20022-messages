@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information which describes the organisation.
 /// </summary>
 [IsoId("_17ILgQ3zEeKGXqvMN6jpiw")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrganisation12 : IIsoComponent
     [IsoId("_2QSjMQ3zEeKGXqvMN6jpiw")]
     [DisplayName("Full Legal Name")]
     [IsoXmlTag("FullLglNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text FullLegalName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOrganisation12 : IIsoComponent
     [IsoId("_2QSjNQ3zEeKGXqvMN6jpiw")]
     [DisplayName("Trading Name")]
     [IsoXmlTag("TradgNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? TradingName { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IOrganisation12 : IIsoComponent
     [IsoId("_2QSjPQ3zEeKGXqvMN6jpiw")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface IOrganisation12 : IIsoComponent
     [IsoId("_2QSjUQ3zEeKGXqvMN6jpiw")]
     [DisplayName("Representative Officer")]
     [IsoXmlTag("RprtvOffcr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification40> RepresentativeOfficer { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface IOrganisation12 : IIsoComponent
     [IsoId("_2QSjWQ3zEeKGXqvMN6jpiw")]
     [DisplayName("Main Mandate Holder")]
     [IsoXmlTag("MainMndtHldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification40> MainMandateHolder { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface IOrganisation12 : IIsoComponent
     [IsoId("_2QSjXQ3zEeKGXqvMN6jpiw")]
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification40> Sender { get; }
 
     /// <summary>
@@ -121,5 +130,6 @@ public interface IOrganisation12 : IIsoComponent
     [IsoId("_2k0aAA35EeKGXqvMN6jpiw")]
     [DisplayName("Legal Representative")]
     [IsoXmlTag("LglRprtv")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification40> LegalRepresentative { get; }
 }

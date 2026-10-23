@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason21FormatChoice;
 /// Provides the interest rejection reason using an ISO 20022 code.
 /// </summary>
 [IsoId("_Qki1gtp-Ed-ak6NoX_4Aeg_-2000185214")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectionReason21FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

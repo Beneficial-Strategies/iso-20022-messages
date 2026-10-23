@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investment restrictions linked to the instrument.
 /// </summary>
 [IsoId("_ScM6utp-Ed-ak6NoX_4Aeg_841139560")]
+[IsoDisplayName(@"Investment Restrictions")]
 public interface IInvestmentRestrictions2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IInvestmentRestrictions2 : IIsoComponent
     [IsoId("_ScWEoNp-Ed-ak6NoX_4Aeg_842059623")]
     [DisplayName("Minimum Initial Subscription Units")]
     [IsoXmlTag("MinInitlSbcptUnits")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MinimumInitialSubscriptionUnits { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IInvestmentRestrictions2 : IIsoComponent
     [IsoId("_ScWEotp-Ed-ak6NoX_4Aeg_842059654")]
     [DisplayName("Minimum Subsequent Subscription Units")]
     [IsoXmlTag("MinSbsqntSbcptUnits")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MinimumSubsequentSubscriptionUnits { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IInvestmentRestrictions2 : IIsoComponent
     [IsoId("_ScWEpNp-Ed-ak6NoX_4Aeg_842059807")]
     [DisplayName("Maximum Redemption Units")]
     [IsoXmlTag("MaxRedUnits")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumRedemptionUnits { get; }
 
     /// <summary>
@@ -65,6 +69,8 @@ public interface IInvestmentRestrictions2 : IIsoComponent
     [IsoId("_ScWEpdp-Ed-ak6NoX_4Aeg_842059838")]
     [DisplayName("Other Redemption Restrictions")]
     [IsoXmlTag("OthrRedRstrctns")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? OtherRedemptionRestrictions { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface IInvestmentRestrictions2 : IIsoComponent
     [IsoId("_ScWEp9p-Ed-ak6NoX_4Aeg_842060116")]
     [DisplayName("Minimum Holding Units")]
     [IsoXmlTag("MinHldgUnits")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? MinimumHoldingUnits { get; }
 
     /// <summary>
@@ -89,6 +96,8 @@ public interface IInvestmentRestrictions2 : IIsoComponent
     [IsoId("_ScWEqNp-Ed-ak6NoX_4Aeg_842060146")]
     [DisplayName("Minimum Holding Period")]
     [IsoXmlTag("MinHldgPrd")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? MinimumHoldingPeriod { get; }
 
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Data to be reconciled.
 /// </summary>
 [IsoId("_Av6qZcK3EeuFNp8LZAnorg")]
+[IsoDisplayName(@"Reconciliation Matched Status 9 Choice")]
 public interface IReconciliationMatchedStatus9Choice : IIsoChoice { }

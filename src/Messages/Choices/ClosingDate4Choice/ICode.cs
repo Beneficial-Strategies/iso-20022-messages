@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosingDate4Choice;
 /// Closing date is defined using a code or data source scheme.
 /// </summary>
 [IsoId("_xTU6g8pdEemQ1o-hyeYV5w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IClosingDate4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

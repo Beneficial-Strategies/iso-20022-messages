@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the specification of the valuation of a collateral, based on the sector and the asset classification.
 /// </summary>
 [IsoId("_n1EQkaidEeWHO_l3hf2rlA")]
+[IsoDisplayName(@"Collateral Valuation")]
 public interface ICollateralValuation7 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICollateralValuation7 : IIsoComponent
     [IsoId("_oPGhM6idEeWHO_l3hf2rlA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier Type { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICollateralValuation7 : IIsoComponent
     [IsoId("_oPGhNaidEeWHO_l3hf2rlA")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoSimpleType(IsoSimpleType.SNA2008SectorIdentifier)]
     SNA2008SectorIdentifier Sector { get; }
 
     /// <summary>

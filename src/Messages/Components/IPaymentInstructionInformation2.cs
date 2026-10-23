@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics that apply to the credit side of the payment transactions included in the direct debit transaction initiation.
 /// </summary>
 [IsoId("_PzX3QNp-Ed-ak6NoX_4Aeg_-727808881")]
+[IsoDisplayName(@"Payment Instruction Information")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IPaymentInstructionInformation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IPaymentInstructionInformation2 : IIsoComponent
     [IsoId("_PzX3Qdp-Ed-ak6NoX_4Aeg_-727807890")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IPaymentInstructionInformation2 : IIsoComponent
     [IsoId("_PzX3RNp-Ed-ak6NoX_4Aeg_-727808447")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate RequestedCollectionDate { get; }
 
     /// <summary>
@@ -113,5 +118,6 @@ public interface IPaymentInstructionInformation2 : IIsoComponent
     [IsoId("_PzhBM9p-Ed-ak6NoX_4Aeg_-726886228")]
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDirectDebitTransactionInformation1> DirectDebitTransactionInformation { get; }
 }

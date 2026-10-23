@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References3Choice;
 /// Unambiguous identification of the report message to be cancelled.
 /// </summary>
 [IsoId("_USz3ANp-Ed-ak6NoX_4Aeg_-2006244843")]
+[IsoDisplayName(@"Securities Balance Custody Report Identification")]
 public interface ISecuritiesBalanceCustodyReportIdentification
     : IReferences3Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ISecuritiesBalanceCustodyReportIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("SctiesBalCtdyRptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

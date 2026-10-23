@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for an proforma status.
 /// </summary>
 [IsoId("_GeducUzDEeafiMTDrtSnyw")]
+[IsoDisplayName(@"Proforma Status Reason")]
 public interface IProformaStatusReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IProformaStatusReason1 : IIsoComponent
     [IsoId("_G4DTI0zDEeafiMTDrtSnyw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

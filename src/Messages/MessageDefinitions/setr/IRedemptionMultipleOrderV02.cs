@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("_rxRn99E7Ed-BzquC8wXy7w_-865600091")]
 [IsoMessage("setr.004.001.02", "setr.004.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.004.001.02")]
+[Description(@"Scope|The RedemptionMultipleOrder message is sent by an instructing party, eg, an investment manager or its authorised representative, to an executing party, eg, a transfer agent. There may be one or more intermediary parties between the instructing party and the executing party. The intermediary party is, for example, an intermediary or a concentrator.|This message is used to instruct the executing party to redeem to one or more financial instruments, for the same account.|Usage|The RedemptionMultipleOrder message is used for multiple orders. It may also be used for single orders, ie, a message containing one order for one financial instrument and related to one investment account. For a single redemption order, the RedemptionMultipleOrder message, not the RedemptionBulkOrder message, must be used.|If there are redemption orders for the same financial instrument but for different accounts, then the RedemptionBulkOrder must be used.")]
+[IsoDisplayName(@"Redemption Multiple Order V")]
 public interface IRedemptionMultipleOrderV02 : IOuterRecord
 {
     /// <summary>
@@ -41,6 +43,7 @@ public interface IRedemptionMultipleOrderV02 : IOuterRecord
     [IsoId("_rxRn-tE7Ed-BzquC8wXy7w_760033651")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -57,6 +60,9 @@ public interface IRedemptionMultipleOrderV02 : IOuterRecord
     [IsoId("_rxax4dE7Ed-BzquC8wXy7w_527770974")]
     [DisplayName("Intermediary Details")]
     [IsoXmlTag("IntrmyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary4> IntermediaryDetails { get; }
 
     /// <summary>
@@ -73,5 +79,6 @@ public interface IRedemptionMultipleOrderV02 : IOuterRecord
     [IsoId("_rxax49E7Ed-BzquC8wXy7w_1076965137")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

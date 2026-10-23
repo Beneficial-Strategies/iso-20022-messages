@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account to or from which a cash entry is made.
 /// </summary>
 [IsoId("_SOMT6Np-Ed-ak6NoX_4Aeg_-1967253219")]
+[IsoDisplayName(@"Cash Account")]
 public interface ICashAccount22 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICashAccount22 : IIsoComponent
     [IsoId("_SOWE4dp-Ed-ak6NoX_4Aeg_-2081092285")]
     [DisplayName("Servicer")]
     [IsoXmlTag("Svcr")]
+    [IsoSimpleType(IsoSimpleType.BICIdentifier)]
     BICIdentifier Servicer { get; }
 
     /// <summary>
@@ -49,5 +51,7 @@ public interface ICashAccount22 : IIsoComponent
     [IsoId("_SOWE5Np-Ed-ak6NoX_4Aeg_-268592078")]
     [DisplayName("Account Type Description")]
     [IsoXmlTag("AcctTpDesc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountTypeDescription { get; }
 }

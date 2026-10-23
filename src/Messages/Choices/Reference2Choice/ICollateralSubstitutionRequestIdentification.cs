@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference2Choice;
 /// Choice between the identification of the MarginCallRequest message, the MarginCallResponse message, the CollateralProposal message, the CollateralProposalResponse message, the CollateralSubstitutionRequest message, the CollateralSubstitutionResponse message, the CollateralSubstitutionConfirmation message, the InterestPaymentRequest message, the InterestPaymentResponse message, the InterestPaymentStatement message or the MarginCallDisputeNotification message.
 /// </summary>
 [IsoId("_TYW3lKerEeCq2KR6DaC1kQ_1953851275")]
+[IsoDisplayName(@"Collateral Substitution Request Identification")]
 public interface ICollateralSubstitutionRequestIdentification : IReference2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ICollateralSubstitutionRequestIdentification : IReference2Choic
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("CollSbstitnReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

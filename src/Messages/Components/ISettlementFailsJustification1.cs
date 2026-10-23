@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the justification for the derogation justification on the reporting of settlement fails instructions.
 /// </summary>
 [IsoId("_TKY2UMs0EemSav3hRKzWyg")]
+[IsoDisplayName(@"Settlement Fails Justification")]
 public interface ISettlementFailsJustification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementFailsJustification1 : IIsoComponent
     [IsoId("_TKY2Uss0EemSav3hRKzWyg")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveDecimalNumber)]
     Max20PositiveDecimalNumber Value { get; }
 
     /// <summary>

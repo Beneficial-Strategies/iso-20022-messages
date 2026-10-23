@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat2Choice;
 /// </summary>
 [IsoId("_SfeRItp-Ed-ak6NoX_4Aeg_-11928027")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ISafekeepingPlaceFormat2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IProprietary : ISafekeepingPlaceFormat2Choice, IIsoChoiceVarian
     [IsoId("_P-Zbh9p-Ed-ak6NoX_4Aeg_-1061935056")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 }

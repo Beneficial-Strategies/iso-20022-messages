@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Net position of a segregated holding, in a single security, within the overall position held in a securities account. A securities balance is calculated from the sum of securities&apos; receipts minus the sum of securities&apos; deliveries.
 /// </summary>
 [IsoId("_NJayYZj8EeWn2ur3BXxtdg")]
+[IsoDisplayName(@"Balance")]
 public interface IBalance13 : IIsoComponent
 {
     /// <summary>

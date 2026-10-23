@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card transaction for which the financial authorisation has been requested.
 /// </summary>
 [IsoId("_YXjg8YK5EeSqNu7AiKfyqQ")]
+[IsoDisplayName(@"Card Transaction")]
 public interface ICardTransaction6 : IIsoComponent
 {
     /// <summary>
@@ -35,6 +36,7 @@ public interface ICardTransaction6 : IIsoComponent
     [IsoId("_YnLRVYK5EeSqNu7AiKfyqQ")]
     [DisplayName("Acceptor Transaction Date Time")]
     [IsoXmlTag("AccptrTxDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime AcceptorTransactionDateTime { get; }
 
     /// <summary>
@@ -43,6 +45,8 @@ public interface ICardTransaction6 : IIsoComponent
     [IsoId("_YnLRV4K5EeSqNu7AiKfyqQ")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InitiatorTransactionIdentification { get; }
 
     /// <summary>
@@ -51,6 +55,8 @@ public interface ICardTransaction6 : IIsoComponent
     [IsoId("_YnLRWYK5EeSqNu7AiKfyqQ")]
     [DisplayName("Transaction Life Cycle Identification")]
     [IsoXmlTag("TxLifeCyclId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionLifeCycleIdentification { get; }
 
     /// <summary>
@@ -60,6 +66,7 @@ public interface ICardTransaction6 : IIsoComponent
     [IsoId("_YnLRW4K5EeSqNu7AiKfyqQ")]
     [DisplayName("Transaction Life Cycle Sequence Number")]
     [IsoXmlTag("TxLifeCyclSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TransactionLifeCycleSequenceNumber { get; }
 
     /// <summary>
@@ -68,6 +75,7 @@ public interface ICardTransaction6 : IIsoComponent
     [IsoId("_YnLRXYK5EeSqNu7AiKfyqQ")]
     [DisplayName("Transaction Life Cycle Sequence Counter")]
     [IsoXmlTag("TxLifeCyclSeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TransactionLifeCycleSequenceCounter { get; }
 
     /// <summary>
@@ -76,6 +84,8 @@ public interface ICardTransaction6 : IIsoComponent
     [IsoId("_C-aBgC7xEeWc7f-D6ByqMg")]
     [DisplayName("Card Issuer Reference Data")]
     [IsoXmlTag("CardIssrRefData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? CardIssuerReferenceData { get; }
 
     /// <summary>

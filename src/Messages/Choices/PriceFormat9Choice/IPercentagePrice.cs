@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat9Choice;
 /// </summary>
 [IsoId("_Q2IU0Np-Ed-ak6NoX_4Aeg_856668375")]
 [IsoXmlTag("PctgPric")]
+[IsoDisplayName(@"Percentage Price")]
 public interface IPercentagePrice : IPriceFormat9Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IPercentagePrice : IPriceFormat9Choice, IIsoChoiceVariant
     [IsoId("_QaaCEdp-Ed-ak6NoX_4Aeg_724274080")]
     [DisplayName("Price Value")]
     [IsoXmlTag("PricVal")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate PriceValue { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parties related to an investment fund.
 /// </summary>
 [IsoId("_FCdpMF_6EeiNMJ262H2pWg")]
+[IsoDisplayName(@"Fund Parties")]
 public interface IFundParties1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IFundParties1 : IIsoComponent
     [IsoId("_F-x3wWALEeiNMJ262H2pWg")]
     [DisplayName("Other Party")]
     [IsoXmlTag("OthrPty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtendedParty13> OtherParty { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies periods related to a corporate action option.
 /// </summary>
 [IsoId("_Nt3jYeENEd-qUMZtd_eZuQ")]
+[IsoDisplayName(@"Corporate Action Period")]
 public interface ICorporateActionPeriod7 : IIsoComponent
 {
     /// <summary>

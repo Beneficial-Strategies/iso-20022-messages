@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a exchange rate.
 /// </summary>
 [IsoId("_bmtcsE6bEeyEpI66tm807w")]
+[IsoDisplayName(@"Compare Exchange Rate")]
 public interface ICompareExchangeRate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICompareExchangeRate1 : IIsoComponent
     [IsoId("_hJhlAE6bEeyEpI66tm807w")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
+    [IsoSimpleType(IsoSimpleType.BaseOne18Rate)]
     BaseOne18Rate? Value1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICompareExchangeRate1 : IIsoComponent
     [IsoId("_jCxloE6bEeyEpI66tm807w")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
+    [IsoSimpleType(IsoSimpleType.BaseOne18Rate)]
     BaseOne18Rate? Value2 { get; }
 }

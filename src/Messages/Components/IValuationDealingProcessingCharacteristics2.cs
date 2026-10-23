@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Valuation dealing processing characteristics linked to the instrument, ie, not to the market.
 /// </summary>
 [IsoId("_UBOXydp-Ed-ak6NoX_4Aeg_689275880")]
+[IsoDisplayName(@"Valuation Dealing Processing Characteristics")]
 public interface IValuationDealingProcessingCharacteristics2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IValuationDealingProcessingCharacteristics2 : IIsoComponent
     [IsoId("_UBOXy9p-Ed-ak6NoX_4Aeg_689276342")]
     [DisplayName("Valuation Frequency Description")]
     [IsoXmlTag("ValtnFrqcyDesc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text ValuationFrequencyDescription { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IValuationDealingProcessingCharacteristics2 : IIsoComponent
     [IsoId("_UBYIwNp-Ed-ak6NoX_4Aeg_690196799")]
     [DisplayName("Decimalisation Units")]
     [IsoXmlTag("DcmlstnUnits")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number DecimalisationUnits { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IValuationDealingProcessingCharacteristics2 : IIsoComponent
     [IsoId("_UBYIwdp-Ed-ak6NoX_4Aeg_689276796")]
     [DisplayName("Decimalisation Price")]
     [IsoXmlTag("DcmlstnPric")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number DecimalisationPrice { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IValuationDealingProcessingCharacteristics2 : IIsoComponent
     [IsoId("_UBYIwtp-Ed-ak6NoX_4Aeg_689276681")]
     [DisplayName("Dual Fund Indicator")]
     [IsoXmlTag("DualFndInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator DualFundIndicator { get; }
 
     /// <summary>
@@ -65,5 +71,6 @@ public interface IValuationDealingProcessingCharacteristics2 : IIsoComponent
     [IsoId("_UBYIxNp-Ed-ak6NoX_4Aeg_689276743")]
     [DisplayName("Price Currency")]
     [IsoXmlTag("PricCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> PriceCurrency { get; }
 }

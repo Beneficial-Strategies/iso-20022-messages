@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus27Choice;
 /// </summary>
 [IsoId("_k04SAOCbEei2UYJ62ws-Fw")]
 [IsoXmlTag("PrtlSttlm")]
+[IsoDisplayName(@"Partial Settlement")]
 public interface IPartialSettlement : ISettlementStatus27Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IPartialSettlement : ISettlementStatus27Choice, IIsoChoiceVaria
     [IsoId("_RA3_Wzp5EeWVrPy0StzzSg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

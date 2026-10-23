@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details related to the duration of the mandate and the occurrence of the underlying transactions.
 /// </summary>
 [IsoId("_sKVqgWk2Eeanu6HLe77Rkg")]
+[IsoDisplayName(@"Mandate Occurrences")]
 public interface IMandateOccurrences4 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IMandateOccurrences4 : IIsoComponent
     [IsoId("_sVM2uWk2Eeanu6HLe77Rkg")]
     [DisplayName("First Collection Date")]
     [IsoXmlTag("FrstColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FirstCollectionDate { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface IMandateOccurrences4 : IIsoComponent
     [IsoId("_sVM2u2k2Eeanu6HLe77Rkg")]
     [DisplayName("Final Collection Date")]
     [IsoXmlTag("FnlColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FinalCollectionDate { get; }
 }

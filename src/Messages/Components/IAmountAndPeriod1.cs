@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Relates an amount to a period of time.
 /// </summary>
 [IsoId("_OTgzMzgw-AOSNFX-8224502")]
+[IsoDisplayName(@"Amount And Period")]
 public interface IAmountAndPeriod1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IAmountAndPeriod1 : IIsoComponent
     [IsoId("_OTgzMzgy-AOSNFX-8224502")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IAmountAndPeriod1 : IIsoComponent
     [IsoId("_OTgzMzgz-AOSNFX-8224502")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EndDate { get; }
 }

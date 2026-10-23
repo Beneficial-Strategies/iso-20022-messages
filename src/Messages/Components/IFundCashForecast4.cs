@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash movements from or to a fund as a result of investment funds transactions, eg, subscriptions or redemptions.
 /// </summary>
 [IsoId("_SjWrndp-Ed-ak6NoX_4Aeg_-222208527")]
+[IsoDisplayName(@"Fund Cash Forecast")]
 public interface IFundCashForecast4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFundCashForecast4 : IIsoComponent
     [IsoId("_Sjf1gNp-Ed-ak6NoX_4Aeg_-99942813")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface IFundCashForecast4 : IIsoComponent
     [IsoId("_Sjpmgdp-Ed-ak6NoX_4Aeg_-222208146")]
     [DisplayName("Total NAV Change Rate")]
     [IsoXmlTag("TtlNAVChngRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TotalNAVChangeRate { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface IFundCashForecast4 : IIsoComponent
     [IsoId("_Sjpmgtp-Ed-ak6NoX_4Aeg_-222208129")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface IFundCashForecast4 : IIsoComponent
     [IsoId("_Sjpmg9p-Ed-ak6NoX_4Aeg_-222207648")]
     [DisplayName("Net Cash Forecast Details")]
     [IsoXmlTag("NetCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetCashForecast2> NetCashForecastDetails { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface IFundCashForecast4 : IIsoComponent
     [IsoId("_SjpmhNp-Ed-ak6NoX_4Aeg_-222207786")]
     [DisplayName("Exceptional Net Cash Flow Indicator")]
     [IsoXmlTag("XcptnlNetCshFlowInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ExceptionalNetCashFlowIndicator { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface IFundCashForecast4 : IIsoComponent
     [IsoId("_Sjpmhdp-Ed-ak6NoX_4Aeg_-761081801")]
     [DisplayName("Breakdown By Country")]
     [IsoXmlTag("BrkdwnByCtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBreakdownByCountry1> BreakdownByCountry { get; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public interface IFundCashForecast4 : IIsoComponent
     [IsoId("_Sjpmhtp-Ed-ak6NoX_4Aeg_-755543099")]
     [DisplayName("Breakdown By Currency")]
     [IsoXmlTag("BrkdwnByCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBreakdownByCurrency1> BreakdownByCurrency { get; }
 
     /// <summary>
@@ -129,6 +138,7 @@ public interface IFundCashForecast4 : IIsoComponent
     [IsoId("_Sjpmh9p-Ed-ak6NoX_4Aeg_243049335")]
     [DisplayName("Breakdown By Party")]
     [IsoXmlTag("BrkdwnByPty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBreakdownByParty1> BreakdownByParty { get; }
 
     /// <summary>
@@ -137,5 +147,6 @@ public interface IFundCashForecast4 : IIsoComponent
     [IsoId("_SjpmiNp-Ed-ak6NoX_4Aeg_-745382905")]
     [DisplayName("Breakdown By User Defined Parameter")]
     [IsoXmlTag("BrkdwnByUsrDfndParam")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBreakdownByUserDefinedParameter1> BreakdownByUserDefinedParameter { get; }
 }

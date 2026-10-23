@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the security instrument by its name and typical characteristics.
 /// </summary>
 [IsoId("_S07jzNp-Ed-ak6NoX_4Aeg_1287302982")]
+[IsoDisplayName(@"Security Instrument Description")]
 public interface ISecurityInstrumentDescription2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecurityInstrumentDescription2 : IIsoComponent
     [IsoId("_S1FUwNp-Ed-ak6NoX_4Aeg_1287302984")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Description { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISecurityInstrumentDescription2 : IIsoComponent
     [IsoId("_S1FUwtp-Ed-ak6NoX_4Aeg_1288222996")]
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? PlaceOfListing { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ISecurityInstrumentDescription2 : IIsoComponent
     [IsoId("_S1FUw9p-Ed-ak6NoX_4Aeg_1288223013")]
     [DisplayName("Exercise Date")]
     [IsoXmlTag("ExrcDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExerciseDate { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ISecurityInstrumentDescription2 : IIsoComponent
     [IsoId("_S1FUxNp-Ed-ak6NoX_4Aeg_1288223031")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>
@@ -73,5 +79,6 @@ public interface ISecurityInstrumentDescription2 : IIsoComponent
     [IsoId("_S1FUx9p-Ed-ak6NoX_4Aeg_1288223091")]
     [DisplayName("Multiplier")]
     [IsoXmlTag("Mltplr")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? Multiplier { get; }
 }

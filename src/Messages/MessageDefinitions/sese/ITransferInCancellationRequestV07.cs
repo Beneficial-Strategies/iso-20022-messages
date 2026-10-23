@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_5T5PER8NEeWpZde3LQh6dg")]
 [IsoMessage("sese.006.001.07", "TrfInCxlReq", "urn:iso:std:iso:20022:tech:xsd:sese.006.001.07")]
+[Description(@"Scope|An instructing party, for example, a transfer agent, sends the TransferInCancellationRequest message to the executing party, for example, a transfer agent, to request the cancellation of a previously sent TransferInInstruction.|Usage|The TransferInCancellationRequest message is used to request cancellation of a previously sent TransferInInstruction.|There are two ways to specify the transfer cancellation request. Either:|- the transfer reference of the original transfer is quoted, or,|- all the details of the original transfer (this includes TransferReference) are quoted but this is not recommended.|The message identification of the TransferInInstruction message in which the transfer was conveyed may also be quoted in PreviousReference. It is also possible to request the cancellation of a TransferInInstruction message by quoting its message identification in PreviousReference.")]
+[IsoDisplayName(@"Transfer In Cancellation Request V")]
 public interface ITransferInCancellationRequestV07 : IOuterRecord
 {
     /// <summary>
@@ -35,6 +37,7 @@ public interface ITransferInCancellationRequestV07 : IOuterRecord
     [IsoId("_5T5PFR8NEeWpZde3LQh6dg")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferences20> References { get; }
 
     /// <summary>
@@ -51,6 +54,7 @@ public interface ITransferInCancellationRequestV07 : IOuterRecord
     [IsoId("_5T5PFx8NEeWpZde3LQh6dg")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICancellation10Choice> Cancellation { get; }
 
     /// <summary>

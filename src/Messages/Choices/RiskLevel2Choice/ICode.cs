@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RiskLevel2Choice;
 /// Risk level expressed as code.
 /// </summary>
 [IsoId("_BtuioSGREeWO8_xZKx-MFg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRiskLevel2Choice, IIsoChoiceVariant
 {
     /// <summary>

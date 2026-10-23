@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the clearing details.
 /// </summary>
 [IsoId("_OBWD8ao4EfCG2_q2WT-90w")]
+[IsoDisplayName(@"Clearing8")]
 public interface IClearing8 : IIsoComponent
 {
     /// <summary>

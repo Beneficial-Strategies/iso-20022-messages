@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of an underlying of a derivative or security that constitutes one lot of such derivative on an exchange.
 /// </summary>
 [IsoId("_SCZ9ILb6EeabfchHYoktpA")]
+[IsoDisplayName(@"Contract Size")]
 public interface IContractSize1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IContractSize1 : IIsoComponent
     [IsoId("_QTnOILb8EeabfchHYoktpA")]
     [DisplayName("Lot Size")]
     [IsoXmlTag("LotSz")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber LotSize { get; }
 
     /// <summary>

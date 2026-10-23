@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Rates1Choice;
 /// Details about the variable rate.
 /// </summary>
 [IsoId("_VdT5QHg2EeuXJdYjLmnO3w")]
+[IsoDisplayName(@"Floating")]
 public interface IFloating : IRates1Choice, IIsoChoiceVariant
 {
     /// <summary>

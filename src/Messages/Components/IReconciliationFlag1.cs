@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the process type used for the trade repository reconciliation.
 /// </summary>
 [IsoId("_N6obcNIDEeiG-o-KpBT4-g")]
+[IsoDisplayName(@"Reconciliation Flag")]
 public interface IReconciliationFlag1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IReconciliationFlag1 : IIsoComponent
     [IsoId("_LZGdYNIEEeiG-o-KpBT4-g")]
     [DisplayName("Both Counterparties Reporting")]
     [IsoXmlTag("BothCtrPtiesRptg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? BothCounterpartiesReporting { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IReconciliationFlag1 : IIsoComponent
     [IsoId("_783_8NIDEeiG-o-KpBT4-g")]
     [DisplayName("Paired Status")]
     [IsoXmlTag("PairdSts")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PairedStatus { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IReconciliationFlag1 : IIsoComponent
     [IsoId("_S6hgENIHEeiG-o-KpBT4-g")]
     [DisplayName("Loan Reconciliation Status")]
     [IsoXmlTag("LnRcncltnSts")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? LoanReconciliationStatus { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IReconciliationFlag1 : IIsoComponent
     [IsoId("_W-lLYNIHEeiG-o-KpBT4-g")]
     [DisplayName("Collateral Reconciliation Status")]
     [IsoXmlTag("CollRcncltnSts")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CollateralReconciliationStatus { get; }
 
     /// <summary>
@@ -57,5 +62,6 @@ public interface IReconciliationFlag1 : IIsoComponent
     [IsoId("_xL6XwNIDEeiG-o-KpBT4-g")]
     [DisplayName("Modification Status")]
     [IsoXmlTag("ModSts")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ModificationStatus { get; }
 }

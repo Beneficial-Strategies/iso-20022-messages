@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies corporate action event deadlines.
 /// </summary>
 [IsoId("_mNYgtJcFEee8S7xwGG7Veg")]
+[IsoDisplayName(@"Corporate Action Event Deadlines")]
 public interface ICorporateActionEventDeadlines1 : IIsoComponent
 {
     /// <summary>

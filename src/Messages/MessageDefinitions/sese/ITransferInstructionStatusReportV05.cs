@@ -30,6 +30,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_Pm-PkR8OEeWpZde3LQh6dg")]
 [IsoMessage("sese.011.001.05", "TrfInstrStsRpt", "urn:iso:std:iso:20022:tech:xsd:sese.011.001.05")]
+[Description(@"Scope|An executing party, for example, a transfer agent, sends the TransferInstructionStatusReport message to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received transfer instruction.|Usage|The TransferInstructionStatusReport message is used to report on the status of a transfer in or transfer out instruction. The reference of the transfer instruction for which the status is reported is identified in TransferReference.|The message identification of the transfer instruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.|One of the following statuses can be reported:|- an accepted status, or,|- an already executed status, or,|- a sent to next party status, or,|- a matched status, or,|- a settled status, or,|- a pending settlement status and the reason for the status, or,|- an unmatched status and the reason for the status, or,|- an in-repair status and the reason for the status, or,|- a rejected status and the reason for the status, or,|- a failed settlement status and the reason for the status, or,|- a cancelled status and the reason for the status, or,|- a cancelled status and the reason for the status, or,|- a cancellation pending status and the reason for the status.")]
+[IsoDisplayName(@"Transfer Instruction Status Report V")]
 public interface ITransferInstructionStatusReportV05 : IOuterRecord
 {
     /// <summary>
@@ -78,5 +80,6 @@ public interface ITransferInstructionStatusReportV05 : IOuterRecord
     [IsoId("_Pm-PoR8OEeWpZde3LQh6dg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

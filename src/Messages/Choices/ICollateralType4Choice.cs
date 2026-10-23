@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the collateral type.
 /// </summary>
 [IsoId("_DjSkgZEkEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Collateral Type 4 Choice")]
 public interface ICollateralType4Choice : IIsoChoice { }

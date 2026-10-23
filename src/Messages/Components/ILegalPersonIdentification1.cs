@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the identification of the organisation which is a legal person.
 /// </summary>
 [IsoId("_bF0vcT3YEe2uHKhHp3bXyA")]
+[IsoDisplayName(@"Legal Person Identification")]
 public interface ILegalPersonIdentification1 : IIsoComponent
 {
     /// <summary>

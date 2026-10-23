@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the notional quantity frequency.
 /// </summary>
 [IsoId("_X-QgoSJEEe2zWP9pqvmqdw")]
+[IsoDisplayName(@"Quantity Term")]
 public interface IQuantityTerm1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IQuantityTerm1 : IIsoComponent
     [IsoId("_n1kXkSJEEe2zWP9pqvmqdw")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
+    [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
     LongFraction19DecimalNumber? Quantity { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IQuantityTerm1 : IIsoComponent
     [IsoId("_X_OJ8SJEEe2zWP9pqvmqdw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? Value { get; }
 
     /// <summary>

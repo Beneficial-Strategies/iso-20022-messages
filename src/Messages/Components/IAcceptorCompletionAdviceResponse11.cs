@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acknowledgement by the acquirer, of the completion advice of the card payment at the acceptor.
 /// </summary>
 [IsoId("_TX-u8XJaEe299ZbWCkdR_w")]
+[IsoDisplayName(@"Acceptor Completion Advice Response")]
 public interface IAcceptorCompletionAdviceResponse11 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IAcceptorCompletionAdviceResponse11 : IIsoComponent
     [IsoId("_Tee_l3JaEe299ZbWCkdR_w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

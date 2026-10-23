@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of the transaction.
 /// </summary>
 [IsoId("_BYxPIXDgEe2MCaKO5AtGsA")]
+[IsoDisplayName(@"Card Payment Environment")]
 public interface ICardPaymentEnvironment79 : IIsoComponent
 {
     /// <summary>
@@ -66,6 +67,7 @@ public interface ICardPaymentEnvironment79 : IIsoComponent
     [IsoId("_BfzrS3DgEe2MCaKO5AtGsA")]
     [DisplayName("Stored Value Account")]
     [IsoXmlTag("StordValAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStoredValueAccount2> StoredValueAccount { get; }
 
     /// <summary>
@@ -74,6 +76,7 @@ public interface ICardPaymentEnvironment79 : IIsoComponent
     [IsoId("_BfzrTXDgEe2MCaKO5AtGsA")]
     [DisplayName("Loyalty Account")]
     [IsoXmlTag("LltyAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyAccount3> LoyaltyAccount { get; }
 
     /// <summary>

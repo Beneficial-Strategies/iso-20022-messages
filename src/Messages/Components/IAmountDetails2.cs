@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes each adjustment made to the original price.
 /// </summary>
 [IsoId("_9ycDoZJFEeuuktRxxQZoNQ")]
+[IsoDisplayName(@"Amount Details")]
 public interface IAmountDetails2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAmountDetails2 : IIsoComponent
     [IsoId("_94tDs5JFEeuuktRxxQZoNQ")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IAmountDetails2 : IIsoComponent
     [IsoId("_94tDuZJFEeuuktRxxQZoNQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax39> Tax { get; }
 }

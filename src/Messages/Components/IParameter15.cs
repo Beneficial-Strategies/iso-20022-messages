@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters of the RSASSA-PSS digital signature algorithm (RSA signature algorithm with appendix: Probabilistic Signature Scheme).
 /// </summary>
 [IsoId("_G4BX4S_JEeugIJ3Gvoevmg")]
+[IsoDisplayName(@"Parameter")]
 public interface IParameter15 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IParameter15 : IIsoComponent
     [IsoId("_HC81hS_JEeugIJ3Gvoevmg")]
     [DisplayName("Salt Length")]
     [IsoXmlTag("SaltLngth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SaltLength { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IParameter15 : IIsoComponent
     [IsoId("_HC81hy_JEeugIJ3Gvoevmg")]
     [DisplayName("Trailer Field")]
     [IsoXmlTag("TrlrFld")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TrailerField { get; }
 
     /// <summary>
@@ -49,5 +52,7 @@ public interface IParameter15 : IIsoComponent
     [IsoId("_WPWHMC_JEeugIJ3Gvoevmg")]
     [DisplayName("OID Curve Name")]
     [IsoXmlTag("OIDCrvNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? OIDCurveName { get; }
 }

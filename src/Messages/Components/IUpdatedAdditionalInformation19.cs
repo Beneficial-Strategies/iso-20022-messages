@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Updated Additional Information19.
 /// </summary>
 [IsoId("_5bhkoWH2Ee6R8rjBJai69w")]
+[IsoDisplayName(@"Updated Additional Information19")]
 public interface IUpdatedAdditionalInformation19 : IIsoComponent
 {
     /// <summary>

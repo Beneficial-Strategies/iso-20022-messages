@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters of a terminal management system protocol.
 /// </summary>
 [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"TMS Protocol Parameters8")]
 public interface ITMSProtocolParameters8 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ITMSProtocolParameters8 : IIsoComponent
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-msvc")]
     [DisplayName("Maintenance Service")]
     [IsoXmlTag("MntncSvc")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<DataSetCategory10Code> MaintenanceService { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ITMSProtocolParameters8 : IIsoComponent
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-apid")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ApplicationIdentification { get; }
 
     /// <summary>
@@ -105,6 +109,7 @@ public interface ITMSProtocolParameters8 : IIsoComponent
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-msgi")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageItemCondition2> MessageItem { get; }
 
     /// <summary>
@@ -113,5 +118,6 @@ public interface ITMSProtocolParameters8 : IIsoComponent
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-exts")]
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max1025Text> ExternallyTypeSupported { get; }
 }

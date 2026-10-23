@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.catp;
     "ATMWdrwlCmpltnAdvc",
     "urn:iso:std:iso:20022:tech:xsd:catp.003.001.03"
 )]
+[IsoDisplayName(@"ATM Withdrawal Completion Advice V03")]
 public interface IATMWithdrawalCompletionAdviceV03 : IOuterRecord
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Pending Cancellation Status13Choice.
 /// </summary>
 [IsoId("_C8HI8YYREe-9jM3-w7OB3g")]
+[IsoDisplayName(@"Pending Cancellation Status13Choice")]
 public interface IPendingCancellationStatus13Choice : IIsoChoice { }

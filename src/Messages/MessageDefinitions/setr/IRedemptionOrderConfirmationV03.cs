@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("_utoEWNE7Ed-BzquC8wXy7w_1346008013")]
 [IsoMessage("setr.006.001.03", "RedOrdrConfV03", "urn:iso:std:iso:20022:tech:xsd:setr.006.001.03")]
+[Description(@"Scope|An executing party, for example, a transfer agent, sends the RedemptionOrderConfirmation message to the instructing party, for example, an investment manager or its authorised representative to confirm the details of execution for a previously received RedemptionOrder message.|Usage|The RedemptionOrderConfirmation message is used to confirm the execution of one or more individual orders.|A RedemptionOrder message containing more than one individual order may be responded to by more than one RedemptionOrderConfirmation message, as the valuation cycle of the financial instruments in each individual order may be different.|Each individual order confirmation specified is identified in DealReference. The reference of the original individual order is specified in OrderReference. The message identification of the RedemptionOrder message in which the individual order was conveyed may also be quoted in RelatedReference.|When the executing party sends several confirmations, there is no specific indication in the message that it is an incomplete confirmation. Reconciliation should be based on the references.|A RedemptionOrder must in all cases be responded to by a RedemptionOrderConfirmation message and in no circumstances by a RedemptionBulkOrderConfirmation message.|If the executing party needs to confirm a RedemptionBulkOrder message, then a RedemptionBulkOrderConfirmation message must be used.")]
+[IsoDisplayName(@"Redemption Order Confirmation V")]
 public interface IRedemptionOrderConfirmationV03 : IOuterRecord
 {
     /// <summary>
@@ -44,6 +46,7 @@ public interface IRedemptionOrderConfirmationV03 : IOuterRecord
     [IsoId("_utxOQtE7Ed-BzquC8wXy7w_-411121699")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -68,6 +71,9 @@ public interface IRedemptionOrderConfirmationV03 : IOuterRecord
     [IsoId("_utxORdE7Ed-BzquC8wXy7w_645385224")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary9> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -84,5 +90,6 @@ public interface IRedemptionOrderConfirmationV03 : IOuterRecord
     [IsoId("_utxOR9E7Ed-BzquC8wXy7w_649080424")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

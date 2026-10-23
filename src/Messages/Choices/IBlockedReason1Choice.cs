@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the reason.
 /// </summary>
 [IsoId("_WFqMcxHdEeKVqeHljBM1MQ")]
+[IsoDisplayName(@"Blocked Reason 1 Choice")]
 public interface IBlockedReason1Choice : IIsoChoice { }

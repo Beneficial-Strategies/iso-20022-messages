@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication channel information.
 /// </summary>
 [IsoId("_9yCXl3ltEeG7BsjMvd1mEw_167324952")]
+[IsoDisplayName(@"Communication Channel")]
 public interface ICommunicationChannel1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ICommunicationChannel1 : IIsoComponent
     [IsoId("_9yMIkHltEeG7BsjMvd1mEw_493546087")]
     [DisplayName("Deliver To Name")]
     [IsoXmlTag("DlvrToNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? DeliverToName { get; }
 
     /// <summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_sVpAIfEkEeqRfth943bvEA")]
 [IsoMessage("seev.001.001.08", "MtgNtfctn", "urn:iso:std:iso:20022:tech:xsd:seev.001.001.08")]
+[Description(@"Scope|The MeetingNotification message is sent by a notifying party, for example, an issuer, its agent or an intermediary to another intermediary, a party holding the right to vote, a registered security holder or to a beneficial holder to announce a meeting.|Usage|The MeetingNotification message is used to announce a meeting, for example, it provides information on the participation details and requirements for the meeting, the vote parameters and the resolutions. The MeetingNotification message may also be used to announce an update.|This message definition is intended for use with the Business Application Header (BAH).")]
+[IsoDisplayName(@"Meeting Notification V")]
 public interface IMeetingNotificationV08 : IOuterRecord
 {
     /// <summary>
@@ -40,6 +42,7 @@ public interface IMeetingNotificationV08 : IOuterRecord
     [IsoId("_sVpANfEkEeqRfth943bvEA")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingEventReference1> EventsLinkage { get; }
 
     /// <summary>
@@ -56,6 +59,9 @@ public interface IMeetingNotificationV08 : IOuterRecord
     [IsoId("_sVpAOfEkEeqRfth943bvEA")]
     [DisplayName("Meeting Details")]
     [IsoXmlTag("MtgDtls")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeeting6> MeetingDetails { get; }
 
     /// <summary>
@@ -72,6 +78,9 @@ public interface IMeetingNotificationV08 : IOuterRecord
     [IsoId("_sVpAPfEkEeqRfth943bvEA")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIssuerAgent3> IssuerAgent { get; }
 
     /// <summary>
@@ -80,6 +89,9 @@ public interface IMeetingNotificationV08 : IOuterRecord
     [IsoId("_sVyKEfEkEeqRfth943bvEA")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition12> Security { get; }
 
     /// <summary>
@@ -88,6 +100,9 @@ public interface IMeetingNotificationV08 : IOuterRecord
     [IsoId("_sVyKE_EkEeqRfth943bvEA")]
     [DisplayName("Resolution")]
     [IsoXmlTag("Rsltn")]
+    [MinLength(0)]
+    [MaxLength(1000)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IResolution5> Resolution { get; }
 
     /// <summary>
@@ -120,5 +135,6 @@ public interface IMeetingNotificationV08 : IOuterRecord
     [IsoId("_sVyKG_EkEeqRfth943bvEA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

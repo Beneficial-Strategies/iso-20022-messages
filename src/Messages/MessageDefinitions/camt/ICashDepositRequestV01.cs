@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_NKdVwLe1Ee-Dk_aQVAan8Q")]
 [IsoMessage("camt.113.001.01", "CshDpstReq", "urn:iso:std:iso:20022:tech:xsd:camt.113.001.01")]
+[Description(@"The CashDepositRequest message is sent by a cash sender to a cash receiver to request that cash can be delivered for deposit into an account.")]
+[IsoDisplayName(@"Cash Deposit Request V01")]
 public interface ICashDepositRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -27,6 +29,8 @@ public interface ICashDepositRequestV01 : IOuterRecord
     [IsoId("_P6yykre5Ee-Dk_aQVAan8Q")]
     [DisplayName("Cash Deposit Request")]
     [IsoXmlTag("CshDpstReq")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashDepositRequest1> CashDepositRequest { get; }
 
     /// <summary>
@@ -35,5 +39,6 @@ public interface ICashDepositRequestV01 : IOuterRecord
     [IsoId("_YuRj4eR7Ee-NFYIkYc90gw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

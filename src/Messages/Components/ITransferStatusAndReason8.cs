@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the status of a transfer instruction and its reason.
 /// </summary>
 [IsoId("_UEdjodx9EeqKxsvOxFQHKA")]
+[IsoDisplayName(@"Transfer Status And Reason")]
 public interface ITransferStatusAndReason8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_UXplY9x9EeqKxsvOxFQHKA")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_UXplZdx9EeqKxsvOxFQHKA")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_UXzWY9x9EeqKxsvOxFQHKA")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_UXzWZdx9EeqKxsvOxFQHKA")]
     [DisplayName("Transfer Event Type")]
     [IsoXmlTag("TrfEvtTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransferStatusType3Choice> TransferEventType { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_vRGQMXdhEeuvip1zrZRWzw")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary48> IntermediaryInformation { get; }
 
     /// <summary>
@@ -90,6 +99,7 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_UXzWadx9EeqKxsvOxFQHKA")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TradeDate { get; }
 
     /// <summary>
@@ -98,6 +108,7 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_UXzWa9x9EeqKxsvOxFQHKA")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SettlementDate { get; }
 
     /// <summary>
@@ -106,6 +117,7 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_UXzWbdx9EeqKxsvOxFQHKA")]
     [DisplayName("Send Out Date")]
     [IsoXmlTag("SndOutDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SendOutDate { get; }
 
     /// <summary>
@@ -114,6 +126,7 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_0ksRsXgaEeuvip1zrZRWzw")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CashSettlementDate { get; }
 
     /// <summary>
@@ -122,6 +135,7 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_UXzWb9x9EeqKxsvOxFQHKA")]
     [DisplayName("Total Units Number")]
     [IsoXmlTag("TtlUnitsNb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? TotalUnitsNumber { get; }
 
     /// <summary>
@@ -138,6 +152,7 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_UXzWc9x9EeqKxsvOxFQHKA")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit11> UnitsDetails { get; }
 
     /// <summary>
@@ -162,6 +177,7 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_UXzWd9x9EeqKxsvOxFQHKA")]
     [DisplayName("Payment Details")]
     [IsoXmlTag("PmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstrument18> PaymentDetails { get; }
 
     /// <summary>
@@ -170,6 +186,7 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_UXzWedx9EeqKxsvOxFQHKA")]
     [DisplayName("Benefit Crystallisation Event")]
     [IsoXmlTag("BnftCrstllstnEvt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBenefitCrystallisationEvent2> BenefitCrystallisationEvent { get; }
 
     /// <summary>
@@ -178,6 +195,7 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_UXzWe9x9EeqKxsvOxFQHKA")]
     [DisplayName("Drawdown Tranche")]
     [IsoXmlTag("DrwdwnTrch")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDrawdown2> DrawdownTranche { get; }
 
     /// <summary>
@@ -194,6 +212,7 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_OfS3sXp6EeuldpLtvj4F0Q")]
     [DisplayName("Query Response")]
     [IsoXmlTag("QryRspn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> QueryResponse { get; }
 
     /// <summary>
@@ -226,5 +245,6 @@ public interface ITransferStatusAndReason8 : IIsoComponent
     [IsoId("_tGEMsXp6EeuldpLtvj4F0Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Liability and assets that arise for a clearing member with respect to a central counterparty.
 /// </summary>
 [IsoId("_BTNckKpwEeamNLogr5TkIQ")]
+[IsoDisplayName(@"Initial Margin Requirement")]
 public interface IInitialMarginRequirement1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInitialMarginRequirement1 : IIsoComponent
     [IsoId("_iLGYQKpzEeamNLogr5TkIQ")]
     [DisplayName("Initial Margin Exposure")]
     [IsoXmlTag("InitlMrgnXpsr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInitialMarginExposure1> InitialMarginExposure { get; }
 
     /// <summary>

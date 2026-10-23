@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an number and an option number in a code format.
 /// </summary>
 [IsoId("_Q1O84dp-Ed-ak6NoX_4Aeg_-1276805181")]
+[IsoDisplayName(@"Option Number 1 Choice")]
 public interface IOptionNumber1Choice : IIsoChoice { }

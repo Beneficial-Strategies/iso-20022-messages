@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAggregateBala
 /// </summary>
 [IsoId("_oI2KMaCCEeOEyO7fCl8lLA")]
 [IsoXmlTag("HldgBal")]
+[IsoDisplayName(@"Holding Balance")]
 public interface IHoldingBalance : IFinancialInstrumentAggregateBalance1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,5 +35,6 @@ public interface IHoldingBalance : IFinancialInstrumentAggregateBalance1Choice, 
     [IsoId("_aA5_K6CCEeOEyO7fCl8lLA")]
     [DisplayName("Balance Breakdown")]
     [IsoXmlTag("BalBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubBalanceBreakdown1> BalanceBreakdown { get; }
 }

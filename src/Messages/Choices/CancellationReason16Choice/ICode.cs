@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationReason16Choice;
 
 /// <summary>Reason for the cancellation request, in a coded form.</summary>
 [IsoId("_jG-UEO5NEeCisYr99QEiWA_-1774194697")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICancellationReason16Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

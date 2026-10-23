@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Ratio of the American or Global Depository Receipt(s) per ordinary share(s).
 /// </summary>
 [IsoId("_1hE44DL3EeKU9IrkkToqcw_-385014275")]
+[IsoDisplayName(@"Corporate Action Rate SD")]
 public interface ICorporateActionRateSD2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionRateSD2 : IIsoComponent
     [IsoId("_1hE44TL3EeKU9IrkkToqcw_-599097563")]
     [DisplayName("Receipt Base Quantity")]
     [IsoXmlTag("RctBaseQty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ReceiptBaseQuantity { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICorporateActionRateSD2 : IIsoComponent
     [IsoId("_1hE44jL3EeKU9IrkkToqcw_1099881985")]
     [DisplayName("Ordinary Share")]
     [IsoXmlTag("OrdnryShr")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? OrdinaryShare { get; }
 }

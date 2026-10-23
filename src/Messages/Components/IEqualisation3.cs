@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Equalisation3.
 /// </summary>
 [IsoId("_paOzkRvfEe6BvtAMnhq3zw")]
+[IsoDisplayName(@"Equalisation3")]
 public interface IEqualisation3 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface IEqualisation3 : IIsoComponent
     /// </summary>
     [DisplayName("Equalisation Methodology Type")]
     [IsoXmlTag("EqulstnMthdlgyTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEqualisationMethodologyType2> EqualisationMethodologyType { get; }
 
     /// <summary>

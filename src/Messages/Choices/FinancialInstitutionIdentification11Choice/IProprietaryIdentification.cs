@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 /// </summary>
 [IsoId("_RU--h5S7EemqYPWMBuVawg")]
 [IsoXmlTag("PrtryId")]
+[IsoDisplayName(@"Proprietary Identification")]
 public interface IProprietaryIdentification
     : IFinancialInstitutionIdentification11Choice,
         IIsoChoiceVariant
@@ -20,5 +21,7 @@ public interface IProprietaryIdentification
     [IsoId("_n2FZYSxxEeKgiYs1KJCQUg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

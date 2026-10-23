@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification of the message to be cancelled.
 /// </summary>
 [IsoId("_d0qV3ALyEeutW5-TpeYJhA")]
+[IsoDisplayName(@"Reference 3 Choice")]
 public interface IReference3Choice : IIsoChoice { }

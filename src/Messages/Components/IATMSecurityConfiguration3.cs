@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration of the encryption or digital envelope, if the security module is able to perform encryption.
 /// </summary>
 [IsoId("_nKkasYr7EeSvuOJS0mmL0g")]
+[IsoDisplayName(@"ATM Security Configuration")]
 public interface IATMSecurityConfiguration3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IATMSecurityConfiguration3 : IIsoComponent
     [IsoId("_3KR_sIr7EeSvuOJS0mmL0g")]
     [DisplayName("Asymmetric Encryption")]
     [IsoXmlTag("AsmmtrcNcrptn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AsymmetricEncryption { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IATMSecurityConfiguration3 : IIsoComponent
     [IsoId("_9exckIr7EeSvuOJS0mmL0g")]
     [DisplayName("Asymmetric Key Standard Identification")]
     [IsoXmlTag("AsmmtrcKeyStdId")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AsymmetricKeyStandardIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IATMSecurityConfiguration3 : IIsoComponent
     [IsoId("_CXeQ4Ir8EeSvuOJS0mmL0g")]
     [DisplayName("Asymmetric Encryption Algorithm")]
     [IsoXmlTag("AsmmtrcNcrptnAlgo")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Algorithm7Code> AsymmetricEncryptionAlgorithm { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IATMSecurityConfiguration3 : IIsoComponent
     [IsoId("_GbL98Ir8EeSvuOJS0mmL0g")]
     [DisplayName("Symmetric Transport Key")]
     [IsoXmlTag("SmmtrcTrnsprtKey")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? SymmetricTransportKey { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IATMSecurityConfiguration3 : IIsoComponent
     [IsoId("_LToTkIr8EeSvuOJS0mmL0g")]
     [DisplayName("Symmetric Transport Key Algorithm")]
     [IsoXmlTag("SmmtrcTrnsprtKeyAlgo")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Algorithm13Code> SymmetricTransportKeyAlgorithm { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IATMSecurityConfiguration3 : IIsoComponent
     [IsoId("_RIUPAIr8EeSvuOJS0mmL0g")]
     [DisplayName("Symmetric Encryption Algorithm")]
     [IsoXmlTag("SmmtrcNcrptnAlgo")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Algorithm15Code> SymmetricEncryptionAlgorithm { get; }
 
     /// <summary>
@@ -65,5 +72,6 @@ public interface IATMSecurityConfiguration3 : IIsoComponent
     [IsoId("_WZP9IIr8EeSvuOJS0mmL0g")]
     [DisplayName("Encryption Format")]
     [IsoXmlTag("NcrptnFrmt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<EncryptionFormat1Code> EncryptionFormat { get; }
 }

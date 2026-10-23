@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_suRVUS9dEeS94oXWDaBauA")]
 [IsoMessage("secl.010.001.03", "SttlmOblgtnRpt", "urn:iso:std:iso:20022:tech:xsd:secl.010.001.03")]
+[Description(@"Scope|The SettlementObligationReport message is sent by the central counterparty (CCP) to a clearing member to report on the settlement obligation that will be submitted for settlement.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|The SettlementObligationReport message may also be sent to a third party processing the settlement obligation(s) on behalf of more than one clearing member.|The Settlement Obligation Report message is provided per delivery account and per instrument. The report can be provided for one specific delivering party or one specific receiving party. It can also be generated per non clearing member.")]
+[IsoDisplayName(@"Settlement Obligation Report V")]
 public interface ISettlementObligationReportV03 : IOuterRecord
 {
     /// <summary>
@@ -68,6 +70,7 @@ public interface ISettlementObligationReportV03 : IOuterRecord
     [IsoId("_suRVXS9dEeS94oXWDaBauA")]
     [DisplayName("Report Details")]
     [IsoXmlTag("RptDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReport5> ReportDetails { get; }
 
     /// <summary>
@@ -84,5 +87,6 @@ public interface ISettlementObligationReportV03 : IOuterRecord
     [IsoId("_suRVYS9dEeS94oXWDaBauA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

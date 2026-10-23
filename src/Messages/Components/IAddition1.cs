@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Addition of a new element.
 /// </summary>
 [IsoId("_UtCU59p-Ed-ak6NoX_4Aeg_1642866501")]
+[IsoDisplayName(@"Addition")]
 public interface IAddition1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface IAddition1 : IIsoComponent
     [IsoId("_UtCU6Np-Ed-ak6NoX_4Aeg_-1834784201")]
     [DisplayName("Proposed Value")]
     [IsoXmlTag("PropsdVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text ProposedValue { get; }
 }

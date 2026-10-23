@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModelFormIdentification1Choice;
 /// Model form identification.
 /// </summary>
 [IsoId("_93HE0HltEeG7BsjMvd1mEw_-1112877289")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IModelFormIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>

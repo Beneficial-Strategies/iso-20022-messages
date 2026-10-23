@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionType1CodeChoice;
 /// Transaction type in a structured format.
 /// </summary>
 [IsoId("_U0V2wtp-Ed-ak6NoX_4Aeg_2144803463")]
+[IsoDisplayName(@"Structured")]
 public interface IStructured : ITransactionType1CodeChoice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reject of an exchange.
 /// </summary>
 [IsoId("_G5i8sWp1EeSMqvBfBY1c9A")]
+[IsoDisplayName(@"Acceptor Rejection")]
 public interface IAcceptorRejection3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAcceptorRejection3 : IIsoComponent
     [IsoId("_HGEVw2p1EeSMqvBfBY1c9A")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalInformation { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IAcceptorRejection3 : IIsoComponent
     [IsoId("_HGEVxWp1EeSMqvBfBY1c9A")]
     [DisplayName("Message In Error")]
     [IsoXmlTag("MsgInErr")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary? MessageInError { get; }
 }

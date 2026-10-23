@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationCancellationAllowed4
 /// Specifies whether a third party is allowed to modify or cancel the transaction.
 /// </summary>
 [IsoId("_5WrEsTtFEeWRTLSN0i0tng")]
+[IsoDisplayName(@"Indicator")]
 public interface IIndicator : IModificationCancellationAllowed4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIndicator : IModificationCancellationAllowed4Choice, IIsoChoic
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ParticipationMethod3Choice;
 /// Method of participation in the general meeting vote expressed as a code.
 /// </summary>
 [IsoId("_XuYKkRrlEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IParticipationMethod3Choice, IIsoChoiceVariant
 {
     /// <summary>

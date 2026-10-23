@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information on the transaction status to be updated in the tracker.
 /// </summary>
 [IsoId("_cQn51wSrEeusZ4O-nsxv_w")]
+[IsoDisplayName(@"Tracker Status")]
 public interface ITrackerStatus4 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ITrackerStatus4 : IIsoComponent
     [IsoId("_cRFz5QSrEeusZ4O-nsxv_w")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentStatusReason1> StatusReason { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ITrackerStatus4 : IIsoComponent
     [IsoId("_cRFz5wSrEeusZ4O-nsxv_w")]
     [DisplayName("Reject Return Reason")]
     [IsoXmlTag("RjctRtrRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentRejectReturnReason1> RejectReturnReason { get; }
 
     /// <summary>

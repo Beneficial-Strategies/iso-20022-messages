@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a securities account and its characteristics.
 /// </summary>
 [IsoId("_vTV8wZTIEemqYPWMBuVawg")]
+[IsoDisplayName(@"Investment Account")]
 public interface IInvestmentAccount76 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentAccount76 : IIsoComponent
     [IsoId("_voK9RZTIEemqYPWMBuVawg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IInvestmentAccount76 : IIsoComponent
     [IsoId("_voK9R5TIEemqYPWMBuVawg")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Designation { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IInvestmentAccount76 : IIsoComponent
     [IsoId("_voK9SZTIEemqYPWMBuVawg")]
     [DisplayName("Fund Type")]
     [IsoXmlTag("FndTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FundType { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IInvestmentAccount76 : IIsoComponent
     [IsoId("_voK9S5TIEemqYPWMBuVawg")]
     [DisplayName("Fund Family Name")]
     [IsoXmlTag("FndFmlyNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FundFamilyName { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IInvestmentAccount76 : IIsoComponent
     [IsoId("_voK9UZTIEemqYPWMBuVawg")]
     [DisplayName("Intermediary")]
     [IsoXmlTag("Intrmy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary47> Intermediary { get; }
 
     /// <summary>

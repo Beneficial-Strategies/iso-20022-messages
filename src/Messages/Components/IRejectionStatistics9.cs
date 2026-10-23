@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Rejection Statistics9.
 /// </summary>
 [IsoId("_l4cXEfreEe2mU4Wi2q3MzQ")]
+[IsoDisplayName(@"Rejection Statistics9")]
 public interface IRejectionStatistics9 : IIsoComponent
 {
     /// <summary>

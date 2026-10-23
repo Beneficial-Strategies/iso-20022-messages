@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters related to the security of software application and application protocol.
 /// </summary>
 [IsoId("_K5-REY4AEeWRwov1g9WL_A")]
+[IsoDisplayName(@"Security Parameters")]
 public interface ISecurityParameters6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ISecurityParameters6 : IIsoComponent
     [IsoId("_LE2EUY4AEeWRwov1g9WL_A")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Version { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISecurityParameters6 : IIsoComponent
     [IsoId("_LE2EU44AEeWRwov1g9WL_A")]
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? POIChallenge { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ISecurityParameters6 : IIsoComponent
     [IsoId("_LE2EVY4AEeWRwov1g9WL_A")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? TMChallenge { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface ISecurityParameters6 : IIsoComponent
     [IsoId("_LE2EV44AEeWRwov1g9WL_A")]
     [DisplayName("Symmetric Key")]
     [IsoXmlTag("SmmtrcKey")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICryptographicKey5> SymmetricKey { get; }
 }

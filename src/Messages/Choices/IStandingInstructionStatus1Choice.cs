@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between various statuses.
 /// </summary>
 [IsoId("_RiiHyNp-Ed-ak6NoX_4Aeg_-2004656056")]
+[IsoDisplayName(@"Standing Instruction Status 1 Choice")]
 public interface IStandingInstructionStatus1Choice : IIsoChoice { }

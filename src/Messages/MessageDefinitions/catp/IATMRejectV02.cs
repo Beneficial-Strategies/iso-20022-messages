@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_EnCvca42EeWpsoxRhdX-8A")]
 [IsoMessage("catp.005.001.02", "ATMRjct", "urn:iso:std:iso:20022:tech:xsd:catp.005.001.02")]
+[Description(@"The ATMReject message is sent by any entity to reject a received message.")]
+[IsoDisplayName(@"ATM Reject V")]
 public interface IATMRejectV02 : IOuterRecord
 {
     /// <summary>

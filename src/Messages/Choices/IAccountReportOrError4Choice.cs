@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between account information or an error report.
 /// </summary>
 [IsoId("_1NV5sTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Account Report Or Error 4 Choice")]
 public interface IAccountReportOrError4Choice : IIsoChoice { }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the rejection reason.
 /// </summary>
 [IsoId("_dXQZST0CEeWjqIDN7tjEjQ")]
+[IsoDisplayName(@"Rejection Reason 27 Choice")]
 public interface IRejectionReason27Choice : IIsoChoice { }

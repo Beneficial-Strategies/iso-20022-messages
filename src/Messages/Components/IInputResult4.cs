@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the result the input.
 /// </summary>
 [IsoId("_PenIAVFEEeyApZmLzm74zA")]
+[IsoDisplayName(@"Input Result")]
 public interface IInputResult4 : IIsoComponent
 {
     /// <summary>

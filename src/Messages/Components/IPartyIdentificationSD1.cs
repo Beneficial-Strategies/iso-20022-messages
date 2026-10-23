@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding the new agent component.
 /// </summary>
 [IsoId("_1URL8DL3EeKU9IrkkToqcw_45902877")]
+[IsoDisplayName(@"Party Identification SD")]
 public interface IPartyIdentificationSD1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyIdentificationSD1 : IIsoComponent
     [IsoId("_1URL8TL3EeKU9IrkkToqcw_1123856043")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPartyIdentificationSD1 : IIsoComponent
     [IsoId("_1URL8zL3EeKU9IrkkToqcw_1090964962")]
     [DisplayName("Agent Identification")]
     [IsoXmlTag("AgtId")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? AgentIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IPartyIdentificationSD1 : IIsoComponent
     [IsoId("_1URL9TL3EeKU9IrkkToqcw_-262167746")]
     [DisplayName("Agent Telephone Number")]
     [IsoXmlTag("AgtTelNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? AgentTelephoneNumber { get; }
 
     /// <summary>
@@ -57,6 +63,8 @@ public interface IPartyIdentificationSD1 : IIsoComponent
     [IsoId("_1URL9jL3EeKU9IrkkToqcw_1124868377")]
     [DisplayName("Agent Email Address")]
     [IsoXmlTag("AgtEmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? AgentEmailAddress { get; }
 
     /// <summary>

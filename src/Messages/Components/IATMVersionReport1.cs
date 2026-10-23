@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Version Report1.
 /// </summary>
 [IsoId("_dtfQ4J2jEe-4seDr3Li2Ew")]
+[IsoDisplayName(@"ATM Version Report1")]
 public interface IATMVersionReport1 : IIsoComponent
 {
     /// <summary>

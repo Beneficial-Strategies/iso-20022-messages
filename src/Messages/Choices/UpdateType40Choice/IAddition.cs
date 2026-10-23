@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType40Choice;
 
 /// <summary>Update expressed as an addition of settlement transaction details.</summary>
 [IsoId("_Y7zwxZaMEfC2_67yGLymgA")]
+[IsoDisplayName(@"Addition")]
 public interface IAddition : IUpdateType40Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

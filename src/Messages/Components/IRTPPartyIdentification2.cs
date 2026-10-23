@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// RTP Party Identification2.
 /// </summary>
 [IsoId("_whhq1TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"RTP Party Identification2")]
 public interface IRTPPartyIdentification2 : IIsoComponent
 {
     /// <summary>

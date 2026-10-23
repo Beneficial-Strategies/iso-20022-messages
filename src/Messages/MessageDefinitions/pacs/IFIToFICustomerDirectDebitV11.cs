@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
     "FIToFICstmrDrctDbt",
     "urn:iso:std:iso:20022:tech:xsd:pacs.003.001.11"
 )]
+[IsoDisplayName(@"FI To FI Customer Direct Debit V11")]
 public interface IFIToFICustomerDirectDebitV11 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface IFIToFICustomerDirectDebitV11 : IOuterRecord
     /// </summary>
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDirectDebitTransactionInformation31> DirectDebitTransactionInformation { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface IFIToFICustomerDirectDebitV11 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for the closure of the contract.
 /// </summary>
 [IsoId("_X56BEArAEeWD-cmAqruRjw")]
+[IsoDisplayName(@"Contract Closure Reason 1 Choice")]
 public interface IContractClosureReason1Choice : IIsoChoice { }

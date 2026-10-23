@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous identification of a non-financial institution.
 /// </summary>
 [IsoId("_QEgDhtp-Ed-ak6NoX_4Aeg_-47216937")]
+[IsoDisplayName(@"Non Financial Institution Identification")]
 public interface INonFinancialInstitutionIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INonFinancialInstitutionIdentification1 : IIsoComponent
     [IsoId("_QEgDh9p-Ed-ak6NoX_4Aeg_763605927")]
     [DisplayName("BEI")]
     [IsoXmlTag("BEI")]
+    [IsoSimpleType(IsoSimpleType.BEIIdentifier)]
     BEIIdentifier? BEI { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface INonFinancialInstitutionIdentification1 : IIsoComponent
     [IsoId("_QEgDiNp-Ed-ak6NoX_4Aeg_764528561")]
     [DisplayName("EANGLN")]
     [IsoXmlTag("EANGLN")]
+    [IsoSimpleType(IsoSimpleType.EANGLNIdentifier)]
     EANGLNIdentifier? EANGLN { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface INonFinancialInstitutionIdentification1 : IIsoComponent
     [IsoId("_QEgDidp-Ed-ak6NoX_4Aeg_764528699")]
     [DisplayName("CHIPS Universal Identification")]
     [IsoXmlTag("USCHU")]
+    [IsoSimpleType(IsoSimpleType.CHIPSUniversalIdentifier)]
     CHIPSUniversalIdentifier? CHIPSUniversalIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface INonFinancialInstitutionIdentification1 : IIsoComponent
     [IsoId("_QEgDitp-Ed-ak6NoX_4Aeg_794079445")]
     [DisplayName("DUNS")]
     [IsoXmlTag("DUNS")]
+    [IsoSimpleType(IsoSimpleType.DunsIdentifier)]
     DunsIdentifier? DUNS { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface INonFinancialInstitutionIdentification1 : IIsoComponent
     [IsoId("_QEgDi9p-Ed-ak6NoX_4Aeg_854111585")]
     [DisplayName("Bank Party Identification")]
     [IsoXmlTag("BkPtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BankPartyIdentification { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface INonFinancialInstitutionIdentification1 : IIsoComponent
     [IsoId("_QEgDjNp-Ed-ak6NoX_4Aeg_196804779")]
     [DisplayName("Tax Identification Number")]
     [IsoXmlTag("TaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxIdentificationNumber { get; }
 
     /// <summary>

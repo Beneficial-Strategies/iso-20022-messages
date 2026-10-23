@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Lodging provides summary information about lodging accommodations and related expenses for the cardholder.
 /// </summary>
 [IsoId("_SiW0AcWmEeuhguwJmlgagQ")]
+[IsoDisplayName(@"Lodging")]
 public interface ILodging3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ILodging3 : IIsoComponent
     [IsoId("_Sm2Sc8WmEeuhguwJmlgagQ")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILodgingLineItem2> LineItem { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to a financial institution required by business or regulation.
 /// </summary>
 [IsoId("_SH9dka8mEfCj8pUMKoRAjg")]
+[IsoDisplayName(@"Financial Institution10")]
 public interface IFinancialInstitution10 : IIsoComponent
 {
     /// <summary>

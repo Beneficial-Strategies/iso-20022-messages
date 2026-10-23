@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the processing status of an advice, a request or a movement.
 /// </summary>
 [IsoId("_RnTTBNp-Ed-ak6NoX_4Aeg_1585305057")]
+[IsoDisplayName(@"Processed Status 3 Format Choice")]
 public interface IProcessedStatus3FormatChoice : IIsoChoice { }

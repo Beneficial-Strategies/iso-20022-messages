@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Event And Balance25.
 /// </summary>
 [IsoId("_UotqZXSdEe6VWZz2tTgENw")]
+[IsoDisplayName(@"Corporate Action Event And Balance25")]
 public interface ICorporateActionEventAndBalance25 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface ICorporateActionEventAndBalance25 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

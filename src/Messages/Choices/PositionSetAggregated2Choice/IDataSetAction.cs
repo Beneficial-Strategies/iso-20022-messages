@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PositionSetAggregated2Choice;
 /// <summary>
 /// Data Set Action.
 /// </summary>
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : IPositionSetAggregated2Choice, IIsoChoiceVariant
 {
     /// <summary>

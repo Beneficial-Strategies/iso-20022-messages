@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification80Choice;
 /// <summary>
 /// Email.
 /// </summary>
+[IsoDisplayName(@"Email")]
 public interface IEmail : IAccountIdentification80Choice, IIsoChoiceVariant
 {
     /// <summary>

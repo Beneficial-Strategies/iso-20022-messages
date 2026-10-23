@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueProductIdentifier2Choice;
 /// Identification through a unique product identifier.
 /// </summary>
 [IsoId("__0j-AWETEe2P-L9DBerEgA")]
+[IsoDisplayName(@"Identification")]
 public interface IIdentification : IUniqueProductIdentifier2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IIdentification : IUniqueProductIdentifier2Choice, IIsoChoiceVa
     /// Specifies a character string with a maximum length of 52 characters.
     /// </summary>
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Value { get; }
 }

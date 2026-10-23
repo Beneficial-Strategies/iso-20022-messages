@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentOrigin1Choice;
 /// Specifies that the payment was included in a SWIFT XML message.
 /// </summary>
 [IsoId("_RIwV1tp-Ed-ak6NoX_4Aeg_1991862466")]
+[IsoDisplayName(@"XML Message Name")]
 public interface IXMLMessageName : IPaymentOrigin1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IXMLMessageName : IPaymentOrigin1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("XMLMsgNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

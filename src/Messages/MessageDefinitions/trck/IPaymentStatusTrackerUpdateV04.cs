@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.trck;
 /// </remarks>
 [IsoId("_9WJnQUN7Ee-QZYT2pcGFZw")]
 [IsoMessage("trck.001.001.04", "PmtStsTrckrUpd", "urn:iso:std:iso:20022:tech:xsd:trck.001.001.04")]
+[Description(@"The PaymentStatusTrackerUpdate message is sent by an agent to a tracking facility to monitor the progress of a business transaction, and to update the status of this business transaction for obtaining tracking and transparency purpose.||Usage:|Multiple business transaction statuses may be reported in a single message, and each status may include all relevant information of a single transaction or multiple transactions of the tracked payment(s) exchanged.")]
+[IsoDisplayName(@"Payment Status Tracker Update V04")]
 public interface IPaymentStatusTrackerUpdateV04 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +38,8 @@ public interface IPaymentStatusTrackerUpdateV04 : IOuterRecord
     [IsoId("_9WJnUUN7Ee-QZYT2pcGFZw")]
     [DisplayName("Tracker Status And Transaction")]
     [IsoXmlTag("TrckrStsAndTx")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITrackerStatusAndTransaction19> TrackerStatusAndTransaction { get; }
 
     /// <summary>
@@ -44,5 +48,6 @@ public interface IPaymentStatusTrackerUpdateV04 : IOuterRecord
     [IsoId("_9WJnU0N7Ee-QZYT2pcGFZw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

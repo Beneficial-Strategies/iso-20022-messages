@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionReversalReason10C
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICorporateActionReversalReason10Choice, IIsoChoiceVariant
 {
     /// <summary>

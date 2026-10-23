@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Non Eligible Proceeds Indicator6Choice.
 /// </summary>
 [IsoId("_U1VOQ3SdEe6VWZz2tTgENw")]
+[IsoDisplayName(@"Non Eligible Proceeds Indicator6Choice")]
 public interface INonEligibleProceedsIndicator6Choice : IIsoChoice { }

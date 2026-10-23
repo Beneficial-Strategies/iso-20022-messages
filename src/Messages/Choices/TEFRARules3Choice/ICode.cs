@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TEFRARules3Choice;
 /// TEFRA rules expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_irPNceLcEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITEFRARules3Choice, IIsoChoiceVariant
 {
     /// <summary>

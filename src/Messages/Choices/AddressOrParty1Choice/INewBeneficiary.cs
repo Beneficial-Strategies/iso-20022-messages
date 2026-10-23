@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AddressOrParty1Choice;
 /// </summary>
 [IsoId("_-Eq_sXltEeG7BsjMvd1mEw_-1059783639")]
 [IsoXmlTag("NewBnfcry")]
+[IsoDisplayName(@"New Beneficiary")]
 public interface INewBeneficiary : IAddressOrParty1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface INewBeneficiary : IAddressOrParty1Choice, IIsoChoiceVariant
     [IsoId("_Pa7iEtp-Ed-ak6NoX_4Aeg_1232531078")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>

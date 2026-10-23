@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional Fee3.
 /// </summary>
 [IsoId("_jAIIcG6VEe6DxcrvCrq6hQ")]
+[IsoDisplayName(@"Additional Fee3")]
 public interface IAdditionalFee3 : IIsoComponent
 {
     /// <summary>

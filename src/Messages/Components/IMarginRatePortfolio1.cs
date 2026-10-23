@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies long and short margin rates for a defined portfolio.
 /// </summary>
 [IsoId("_DzJ80ND0EfCCRJ-TKQa7sQ")]
+[IsoDisplayName(@"Margin Rate Portfolio1")]
 public interface IMarginRatePortfolio1 : IIsoComponent
 {
     /// <summary>

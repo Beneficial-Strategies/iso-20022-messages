@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferenceValue1Choice;
 /// Universally Unique IDentifier (UUID) version 4.
 /// </summary>
 [IsoId("_lTDZIMePEeysUoBKYz1Ytw")]
+[IsoDisplayName(@"UUID")]
 public interface IUUID : IReferenceValue1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IUUID : IReferenceValue1Choice, IIsoChoiceVariant
     /// Universally Unique IDentifier (UUID) version 4, as described in IETC RFC 4122 &quot;Universally Unique IDentifier (UUID) URN Namespace&quot;.
     /// </summary>
     [IsoXmlTag("UUID")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier Value { get; }
 }

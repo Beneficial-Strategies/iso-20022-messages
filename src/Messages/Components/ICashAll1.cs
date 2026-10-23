@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies whether all assets in the portfolio should be liquidated and transferred as cash.
 /// </summary>
 [IsoId("_qTJdkJP9EemyZbjY08A1Vw")]
+[IsoDisplayName(@"Cash All")]
 public interface ICashAll1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICashAll1 : IIsoComponent
     [IsoId("_R16NMJwBEem1d_TPEahrAw")]
     [DisplayName("Indicator")]
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Indicator { get; }
 
     /// <summary>

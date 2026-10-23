@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification12Choic
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICashAccountIdentification12Choice, IIsoChoiceVariant
 {
     /// <summary>

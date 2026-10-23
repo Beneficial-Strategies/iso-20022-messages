@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of price move.
 /// </summary>
 [IsoId("_itPG0Ks1Eeayv9XxdmMwKQ")]
+[IsoDisplayName(@"Stress Size 1 Choice")]
 public interface IStressSize1Choice : IIsoChoice { }

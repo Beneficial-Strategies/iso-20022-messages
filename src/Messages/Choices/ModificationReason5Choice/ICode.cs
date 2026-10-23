@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationReason5Choice;
 /// Specifies the reason why the related instruction is modified, or the related modification request is executed.
 /// </summary>
 [IsoId("_6QDrc5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IModificationReason5Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies whether the status is provided with a reason or not.
 /// </summary>
 [IsoId("_5xWf4f7YEeCtrO5qCU90cA")]
+[IsoDisplayName(@"Unmatched Status 5 Choice")]
 public interface IUnmatchedStatus5Choice : IIsoChoice { }

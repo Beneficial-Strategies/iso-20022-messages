@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a document.
 /// </summary>
 [IsoId("_96iMRHltEeG7BsjMvd1mEw_-1196515553")]
+[IsoDisplayName(@"Document")]
 public interface IDocument8 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDocument8 : IIsoComponent
     [IsoId("_96iMRnltEeG7BsjMvd1mEw_1367698828")]
     [DisplayName("Wording")]
     [IsoXmlTag("Wrdg")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text? Wording { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IDocument8 : IIsoComponent
     [IsoId("_96r9QHltEeG7BsjMvd1mEw_-701738172")]
     [DisplayName("Electronic Details")]
     [IsoXmlTag("ElctrncDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPresentation3> ElectronicDetails { get; }
 }

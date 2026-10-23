@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reported Fraud5.
 /// </summary>
 [IsoId("_uvIssZLFEe6TWIDarRgYow")]
+[IsoDisplayName(@"Reported Fraud5")]
 public interface IReportedFraud5 : IIsoComponent
 {
     /// <summary>

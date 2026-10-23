@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_CZMfEbDEEe-g3p7goNrabg")]
 [IsoMessage("reda.028.001.01", "CollDataStsAdvc", "urn:iso:std:iso:20022:tech:xsd:reda.028.001.01")]
+[IsoDisplayName(@"Collateral Data Status Advice V01")]
 public interface ICollateralDataStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -39,5 +40,6 @@ public interface ICollateralDataStatusAdviceV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

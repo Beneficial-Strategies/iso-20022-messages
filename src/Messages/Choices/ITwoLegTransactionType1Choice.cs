@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the choice of the two leg transaction type.
 /// </summary>
 [IsoId("_AYOINdokEeC60axPepSq7g_1757509328")]
+[IsoDisplayName(@"Two Leg Transaction Type 1 Choice")]
 public interface ITwoLegTransactionType1Choice : IIsoChoice { }

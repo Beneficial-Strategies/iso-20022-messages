@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "AcctgStmtOfHldgsCxlV02",
     "urn:iso:std:iso:20022:tech:xsd:semt.005.001.02"
 )]
+[Description(@"Scope|An account servicer, for example, a transfer agent, sends the AccountingStatementofHoldingsCancellation message to the account owner, for example, a fund manager or an account owner's designated agent, to notify the cancellation of a previously sent AccountingStatementOfHoldings message.|Usage|The AccountingStatementOfHoldingsCancellation message is used to cancel a previously sent AccountingStatementOfHoldings message. This message must contain the reference of the message to be cancelled.|This message may also contain all the details of the message to be cancelled, but this is not recommended.")]
+[IsoDisplayName(@"Accounting Statement Of Holdings Cancellation V")]
 public interface IAccountingStatementOfHoldingsCancellationV02 : IOuterRecord
 {
     /// <summary>

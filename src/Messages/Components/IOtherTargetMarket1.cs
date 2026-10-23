@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other target market parameter.
 /// </summary>
 [IsoId("_d1KFQD8VEeih8-WNbS6hbA")]
+[IsoDisplayName(@"Other Target Market")]
 public interface IOtherTargetMarket1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherTargetMarket1 : IIsoComponent
     [IsoId("_lV2PgD8VEeih8-WNbS6hbA")]
     [DisplayName("Target Market Type")]
     [IsoXmlTag("TrgtMktTp")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text TargetMarketType { get; }
 
     /// <summary>

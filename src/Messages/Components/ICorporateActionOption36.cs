@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action option.
 /// </summary>
 [IsoId("_nmltofmUEeCcAY_zfcalaA")]
+[IsoDisplayName(@"Corporate Action Option")]
 public interface ICorporateActionOption36 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionOption36 : IIsoComponent
     [IsoId("_nmvdOfmUEeCcAY_zfcalaA")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText OptionNumber { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICorporateActionOption36 : IIsoComponent
     [IsoId("_nmvdV_mUEeCcAY_zfcalaA")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOfferTypeFormat1Choice> OfferType { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICorporateActionOption36 : IIsoComponent
     [IsoId("_nmvdYfmUEeCcAY_zfcalaA")]
     [DisplayName("Option Features")]
     [IsoXmlTag("OptnFeatrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOptionFeaturesFormat9Choice> OptionFeatures { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ICorporateActionOption36 : IIsoComponent
     [IsoId("_nmvddfmUEeCcAY_zfcalaA")]
     [DisplayName("Certification Breakdown Type")]
     [IsoXmlTag("CertfctnBrkdwnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficiaryCertificationType5Choice> CertificationBreakdownType { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ICorporateActionOption36 : IIsoComponent
     [IsoId("_nmvdf_mUEeCcAY_zfcalaA")]
     [DisplayName("Non Domicile Country")]
     [IsoXmlTag("NonDmclCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> NonDomicileCountry { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface ICorporateActionOption36 : IIsoComponent
     [IsoId("_nmvdifmUEeCcAY_zfcalaA")]
     [DisplayName("Valid Domicile Country")]
     [IsoXmlTag("VldDmclCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> ValidDomicileCountry { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface ICorporateActionOption36 : IIsoComponent
     [IsoId("_nmvdp_mUEeCcAY_zfcalaA")]
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChargesAppliedIndicator { get; }
 
     /// <summary>
@@ -115,6 +123,7 @@ public interface ICorporateActionOption36 : IIsoComponent
     [IsoId("_nmvdsfmUEeCcAY_zfcalaA")]
     [DisplayName("Certification Breakdown Indicator")]
     [IsoXmlTag("CertfctnBrkdwnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CertificationBreakdownIndicator { get; }
 
     /// <summary>
@@ -123,6 +132,7 @@ public interface ICorporateActionOption36 : IIsoComponent
     [IsoId("_nmvdu_mUEeCcAY_zfcalaA")]
     [DisplayName("Withdrawal Allowed Indicator")]
     [IsoXmlTag("WdrwlAllwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? WithdrawalAllowedIndicator { get; }
 
     /// <summary>
@@ -131,6 +141,7 @@ public interface ICorporateActionOption36 : IIsoComponent
     [IsoId("_nmvdxfmUEeCcAY_zfcalaA")]
     [DisplayName("Change Allowed Indicator")]
     [IsoXmlTag("ChngAllwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChangeAllowedIndicator { get; }
 
     /// <summary>
@@ -187,6 +198,7 @@ public interface ICorporateActionOption36 : IIsoComponent
     [IsoId("_nmveC_mUEeCcAY_zfcalaA")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesOption25> SecuritiesMovementDetails { get; }
 
     /// <summary>
@@ -195,6 +207,7 @@ public interface ICorporateActionOption36 : IIsoComponent
     [IsoId("_nmveFfmUEeCcAY_zfcalaA")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOption17> CashMovementDetails { get; }
 
     /// <summary>

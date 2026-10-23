@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason why the verified identification information is incorrect.
 /// </summary>
 [IsoId("_Qo3U1Np-Ed-ak6NoX_4Aeg_-449981895")]
+[IsoDisplayName(@"Verification Reason 1 Choice")]
 public interface IVerificationReason1Choice : IIsoChoice { }

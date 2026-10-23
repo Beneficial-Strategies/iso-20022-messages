@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a fertilizer derivative of type urea and ammonium nitrate.
 /// </summary>
 [IsoId("_f4Fn8Fr2EeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Fertilizer Commodity Urea And Ammonium Nitrate")]
 public interface IFertilizerCommodityUreaAndAmmoniumNitrate1 : IIsoComponent
 {
     /// <summary>

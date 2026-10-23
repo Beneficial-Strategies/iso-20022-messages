@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.
 /// </summary>
 [IsoId("_5Pm5wRreEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Tax")]
 public interface ITax23 : IIsoComponent
 {
     /// <summary>

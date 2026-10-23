@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the amount and reason of the document adjustment.
 /// </summary>
 [IsoId("_UP-lctp-Ed-ak6NoX_4Aeg_1188294125")]
+[IsoDisplayName(@"Document Adjustment")]
 public interface IDocumentAdjustment1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IDocumentAdjustment1 : IIsoComponent
     [IsoId("_UP-lddp-Ed-ak6NoX_4Aeg_1641741581")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? Reason { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IDocumentAdjustment1 : IIsoComponent
     [IsoId("_UP-ldtp-Ed-ak6NoX_4Aeg_1656516606")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalInformation { get; }
 }

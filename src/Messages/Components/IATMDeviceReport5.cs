@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the report from an ATM device.
 /// </summary>
 [IsoId("_DNLgUbZ5EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"ATM Device Report5")]
 public interface IATMDeviceReport5 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IATMDeviceReport5 : IIsoComponent
     [IsoId("_DOPQRbZ5EfCUZfsQO4rYeA")]
     [DisplayName("Command Result")]
     [IsoXmlTag("CmdRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand15> CommandResult { get; }
 
     /// <summary>

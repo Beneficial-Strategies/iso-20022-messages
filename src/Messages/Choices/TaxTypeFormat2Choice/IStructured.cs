@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxTypeFormat2Choice;
 /// Specifies the type of tax in structured form.
 /// </summary>
 [IsoId("_Uy2pB9p-Ed-ak6NoX_4Aeg_-1825008729")]
+[IsoDisplayName(@"Structured")]
 public interface IStructured : ITaxTypeFormat2Choice, IIsoChoiceVariant
 {
     /// <summary>

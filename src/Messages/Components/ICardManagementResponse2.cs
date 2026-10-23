@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the card management response message.
 /// </summary>
 [IsoId("_mb2JwYN1EeuHqfO1LgkE9Q")]
+[IsoDisplayName(@"Card Management Response")]
 public interface ICardManagementResponse2 : IIsoComponent
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface ICardManagementResponse2 : IIsoComponent
     [IsoId("_mgL3OYN1EeuHqfO1LgkE9Q")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10KHexBinaryText)]
     Max10KHexBinaryText? ICCRelatedData { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface ICardManagementResponse2 : IIsoComponent
     [IsoId("_mgL3O4N1EeuHqfO1LgkE9Q")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -66,5 +69,6 @@ public interface ICardManagementResponse2 : IIsoComponent
     [IsoId("_mgL3PYN1EeuHqfO1LgkE9Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

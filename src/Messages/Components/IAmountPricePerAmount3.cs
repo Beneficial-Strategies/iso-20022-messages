@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a ratio: Amount price per amount.|Example:|ISIN US629377AS17. Repurchase USD1087.17 cash for every USD1000 stock (NRG Energy Inc 8% Senior Notes 15/12/13).
 /// </summary>
 [IsoId("_WjDbVtp-Ed-ak6NoX_4Aeg_-441488167")]
+[IsoDisplayName(@"Amount Price Per Amount")]
 public interface IAmountPricePerAmount3 : IIsoComponent
 {
     /// <summary>

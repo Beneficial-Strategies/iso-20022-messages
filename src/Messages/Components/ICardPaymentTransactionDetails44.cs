@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transaction in the completion advice.
 /// </summary>
 [IsoId("_3kZIcdncEeeN3v2fup_Shw")]
+[IsoDisplayName(@"Card Payment Transaction Details")]
 public interface ICardPaymentTransactionDetails44 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface ICardPaymentTransactionDetails44 : IIsoComponent
     [IsoId("_3tO7b9ncEeeN3v2fup_Shw")]
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidityDate { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface ICardPaymentTransactionDetails44 : IIsoComponent
     [IsoId("_3tO7cdncEeeN3v2fup_Shw")]
     [DisplayName("Unattended Level Category")]
     [IsoXmlTag("UattnddLvlCtgy")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? UnattendedLevelCategory { get; }
 
     /// <summary>
@@ -121,6 +124,8 @@ public interface ICardPaymentTransactionDetails44 : IIsoComponent
     [IsoId("_3tO7e9ncEeeN3v2fup_Shw")]
     [DisplayName("Product Code Set Identification")]
     [IsoXmlTag("PdctCdSetId")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? ProductCodeSetIdentification { get; }
 
     /// <summary>
@@ -129,6 +134,7 @@ public interface ICardPaymentTransactionDetails44 : IIsoComponent
     [IsoId("_3tO7fdncEeeN3v2fup_Shw")]
     [DisplayName("Sale Item")]
     [IsoXmlTag("SaleItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProduct3> SaleItem { get; }
 
     /// <summary>
@@ -137,6 +143,8 @@ public interface ICardPaymentTransactionDetails44 : IIsoComponent
     [IsoId("_3tO7f9ncEeeN3v2fup_Shw")]
     [DisplayName("Delivery Location")]
     [IsoXmlTag("DlvryLctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DeliveryLocation { get; }
 
     /// <summary>
@@ -153,5 +161,6 @@ public interface ICardPaymentTransactionDetails44 : IIsoComponent
     [IsoId("_3tO7g9ncEeeN3v2fup_Shw")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

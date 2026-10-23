@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_KOk_sdcDEeq_l4BJLVUF2Q")]
 [IsoMessage("acmt.027.001.04", "AcctSwtchInfReq", "urn:iso:std:iso:20022:tech:xsd:acmt.027.001.04")]
+[Description(@"The AccountSwitchInformationRequest message is sent by the new account servicer to the account servicer which previously held the account to initiate the account switch process. It provides information sufficient for the old account servicer to identify the old account and validate the account parties. The new account servicer is able to inform the old bank of the maximum funding the new account will provide to settle a negative closing balance and the proposed balance transfer window.")]
+[IsoDisplayName(@"Account Switch Information Request V04")]
 public interface IAccountSwitchInformationRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -51,6 +53,7 @@ public interface IAccountSwitchInformationRequestV04 : IOuterRecord
     [IsoId("_KOk_u9cDEeq_l4BJLVUF2Q")]
     [DisplayName("Balance Transfer")]
     [IsoXmlTag("BalTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceTransfer4> BalanceTransfer { get; }
 
     /// <summary>
@@ -59,5 +62,6 @@ public interface IAccountSwitchInformationRequestV04 : IOuterRecord
     [IsoId("_KOk_vdcDEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

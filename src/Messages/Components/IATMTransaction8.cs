@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Preferred withdrawal transaction chosen by the the customer.
 /// </summary>
 [IsoId("_keiqMYq3EeSIDtZ76p6McQ")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction8 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IATMTransaction8 : IIsoComponent
     [IsoId("_kq6SVYq3EeSIDtZ76p6McQ")]
     [DisplayName("Receipt Flag")]
     [IsoXmlTag("RctFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReceiptFlag { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IATMTransaction8 : IIsoComponent
     [IsoId("_D1jJUIq4EeSIDtZ76p6McQ")]
     [DisplayName("Balance Print Flag")]
     [IsoXmlTag("BalPrtFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? BalancePrintFlag { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IATMTransaction8 : IIsoComponent
     [IsoId("_kq6SUYq3EeSIDtZ76p6McQ")]
     [DisplayName("Mix Type")]
     [IsoXmlTag("MixTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MixType { get; }
 
     /// <summary>
@@ -57,5 +62,6 @@ public interface IATMTransaction8 : IIsoComponent
     [IsoId("_kq6SU4q3EeSIDtZ76p6McQ")]
     [DisplayName("Mix")]
     [IsoXmlTag("Mix")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMMediaMix2> Mix { get; }
 }

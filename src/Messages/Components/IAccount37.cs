@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account between an investor(s) and a fund manager or a fund.
 /// </summary>
 [IsoId("12ebde8c-20bc-4456-bbfb-a46afe86f4a8")]
+[IsoDisplayName(@"Account37")]
 public interface IAccount37 : IIsoComponent
 {
     /// <summary>

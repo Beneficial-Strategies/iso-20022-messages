@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the response for a collateral proposal.
 /// </summary>
 [IsoId("_ssRNNYpDEeaNTaanBSMWmg")]
+[IsoDisplayName(@"Collateral Proposal Response Type")]
 public interface ICollateralProposalResponseType3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICollateralProposalResponseType3 : IIsoComponent
     [IsoId("_s62bwYpDEeaNTaanBSMWmg")]
     [DisplayName("Collateral Proposal Identification")]
     [IsoXmlTag("CollPrpslId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CollateralProposalIdentification { get; }
 
     /// <summary>

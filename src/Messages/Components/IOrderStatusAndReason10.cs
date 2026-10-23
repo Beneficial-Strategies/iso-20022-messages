@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of a bulk or multiple or switch order that was previously received.
 /// </summary>
 [IsoId("_63pHozbsEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Order Status And Reason")]
 public interface IOrderStatusAndReason10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrderStatusAndReason10 : IIsoComponent
     [IsoId("_7RE7FTbsEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>

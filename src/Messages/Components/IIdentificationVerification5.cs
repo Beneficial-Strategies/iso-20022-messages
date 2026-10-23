@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification Verification5.
 /// </summary>
 [IsoId("_6u7S8TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Identification Verification5")]
 public interface IIdentificationVerification5 : IIsoComponent
 {
     /// <summary>

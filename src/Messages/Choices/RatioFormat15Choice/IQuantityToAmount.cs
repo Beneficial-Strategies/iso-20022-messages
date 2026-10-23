@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat15Choice;
 /// </summary>
 [IsoId("_CTIczfpYEeCRofvVIFrSrw")]
 [IsoXmlTag("QtyToAmt")]
+[IsoDisplayName(@"Quantity To Amount")]
 public interface IQuantityToAmount : IRatioFormat15Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IQuantityToAmount : IRatioFormat15Choice, IIsoChoiceVariant
     [IsoId("_UHySztp-Ed-ak6NoX_4Aeg_1510604921")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Quantity { get; }
 }

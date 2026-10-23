@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus31Choice;
 /// <summary>
 /// Global Cancellation Status.
 /// </summary>
+[IsoDisplayName(@"Global Cancellation Status")]
 public interface IGlobalCancellationStatus : ICancellationStatus31Choice, IIsoChoiceVariant
 {
     /// <summary>

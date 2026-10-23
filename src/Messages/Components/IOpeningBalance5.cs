@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Opening balance for the statement period (first opening balance) or of this page (intermediary opening balance).
 /// </summary>
 [IsoId("__ZNdESp7EeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Opening Balance")]
 public interface IOpeningBalance5 : IIsoComponent
 {
     /// <summary>

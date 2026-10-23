@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_0n_7mNE8Ed-BzquC8wXy7w_-619721878")]
 [IsoMessage("tsmt.038.001.03", "StsRptReq", "urn:iso:std:iso:20022:tech:xsd:tsmt.038.001.03")]
+[Description(@"Scope|The StatusReportRequest message is sent by a party involved in a transaction to the matching application.|This message is used to request a report on the status of transactions registered in the matching application.|Usage|The StatusReportRequest message can be sent by either party involved in a transaction to request a report on the status and sub-statuses of all transactions that the requester is involved in.|The application will respond to the request by sending a StatusReport message.")]
+[IsoDisplayName(@"Status Report Request V")]
 public interface IStatusReportRequestV03 : IOuterRecord
 {
     /// <summary>
@@ -33,5 +35,6 @@ public interface IStatusReportRequestV03 : IOuterRecord
     [IsoId("_0n_7mtE8Ed-BzquC8wXy7w_-619721446")]
     [DisplayName("Entities To Be Reported")]
     [IsoXmlTag("NttiesToBeRptd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> EntitiesToBeReported { get; }
 }

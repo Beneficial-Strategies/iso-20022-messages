@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_w4W-AVnMEeSPgY23yCMQSQ")]
 [IsoMessage("colr.010.001.03", "CollSbstitnReq", "urn:iso:std:iso:20022:tech:xsd:colr.010.001.03")]
+[Description(@"Scope|This CollateralSubstitutionRequest message is sent by either the collateral giver or its collateral manager to the collateral taker or its collateral manager. It is used to request a substitution of collateral by specifying the collateral to be returned and proposing the new type(s) of collateral to be delivered. Note: There are cases where the collateral taker can initiate the CollateralSubstitutionRequest message, for example in case of breach in the concentration limit.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|The CollateralSubstitutionRequest message can be sent by either the collateral giver or collateral taker in order to substitute collateral that is already held by the other party.")]
+[IsoDisplayName(@"Collateral Substitution Request V")]
 public interface ICollateralSubstitutionRequestV03 : IOuterRecord
 {
     /// <summary>
@@ -26,6 +28,8 @@ public interface ICollateralSubstitutionRequestV03 : IOuterRecord
     [IsoId("_w4W-A1nMEeSPgY23yCMQSQ")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -66,5 +70,6 @@ public interface ICollateralSubstitutionRequestV03 : IOuterRecord
     [IsoId("_w4W-E1nMEeSPgY23yCMQSQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

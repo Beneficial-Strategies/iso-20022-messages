@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Risk Assessment3.
 /// </summary>
 [IsoId("_Io6h4XG7Ee60F8I8TAMKmg")]
+[IsoDisplayName(@"Risk Assessment3")]
 public interface IRiskAssessment3 : IIsoComponent
 {
     /// <summary>
@@ -72,6 +73,7 @@ public interface IRiskAssessment3 : IIsoComponent
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> Reason { get; }
 
     /// <summary>
@@ -86,6 +88,7 @@ public interface IRiskAssessment3 : IIsoComponent
     /// </summary>
     [DisplayName("Condition")]
     [IsoXmlTag("Cond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> Condition { get; }
 
     /// <summary>
@@ -93,6 +96,7 @@ public interface IRiskAssessment3 : IIsoComponent
     /// </summary>
     [DisplayName("Recommendation")]
     [IsoXmlTag("Rcmmndtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRecommendationAction1> Recommendation { get; }
 
     /// <summary>
@@ -100,5 +104,6 @@ public interface IRiskAssessment3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalRiskData1> AdditionalData { get; }
 }

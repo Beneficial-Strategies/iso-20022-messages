@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateValueType6FormatChoice;
 /// Standard code to specify the value of a rate.
 /// </summary>
 [IsoId("_Rn5I6Np-Ed-ak6NoX_4Aeg_-1089918465")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRateValueType6FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CharacterSearch1Choice;
 /// Set of characters that cannot match to be considered valid.
 /// </summary>
 [IsoId("_GDljV5laEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Not Contain")]
 public interface INotContain : ICharacterSearch1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface INotContain : ICharacterSearch1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("NCT")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

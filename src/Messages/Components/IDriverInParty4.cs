@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Driver in a car rental party.
 /// </summary>
 [IsoId("_ZlwOsVN6EfC0lMwgjvMClw")]
+[IsoDisplayName(@"Driver In Party4")]
 public interface IDriverInParty4 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IDriverInParty4 : IIsoComponent
     [IsoId("_ZoVBm1N6EfC0lMwgjvMClw")]
     [DisplayName("Driver Credential")]
     [IsoXmlTag("DrvrCrdntl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITravelDocument3> DriverCredential { get; }
 
     /// <summary>

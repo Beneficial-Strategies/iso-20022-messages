@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeQueryExecutionFrequency1Cho
 /// Query is executed on a daily basis.
 /// </summary>
 [IsoId("_k1MacNGYEeaQk737TH1Fzw")]
+[IsoDisplayName(@"Daily")]
 public interface IDaily : ITradeQueryExecutionFrequency1Choice, IIsoChoiceVariant
 {
     /// <summary>

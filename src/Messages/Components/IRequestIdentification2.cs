@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the original withdrawal or deposit request.
 /// </summary>
 [IsoId("_iqWVsVQVEfG3m41zXZkDsg")]
+[IsoDisplayName(@"Request Identification2")]
 public interface IRequestIdentification2 : IIsoComponent
 {
     /// <summary>

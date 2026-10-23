@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedReason12Choice;
 /// Standard code to specify additional information about the processed instruction.
 /// </summary>
 [IsoId("_6HWbp5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAcceptedReason12Choice, IIsoChoiceVariant
 {
     /// <summary>

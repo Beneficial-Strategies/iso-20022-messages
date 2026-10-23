@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides system date for all of the changes occurred for an entity.
 /// </summary>
 [IsoId("_QQL0hZJKEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Security Statement")]
 public interface ISecurityStatement3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityStatement3 : IIsoComponent
     [IsoId("_QSGgEZJKEeuAlLVx8pyt3w")]
     [DisplayName("System Date")]
     [IsoXmlTag("SysDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate SystemDate { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ISecurityStatement3 : IIsoComponent
     [IsoId("_QSGgE5JKEeuAlLVx8pyt3w")]
     [DisplayName("Change")]
     [IsoXmlTag("Chng")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesReferenceDataChange3> Change { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionOrError6Choice;
 /// <summary>
 /// Transaction.
 /// </summary>
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction : ITransactionOrError6Choice, IIsoChoiceVariant
 {
     /// <summary>

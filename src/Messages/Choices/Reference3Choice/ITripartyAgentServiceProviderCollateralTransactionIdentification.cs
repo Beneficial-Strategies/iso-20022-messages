@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference3Choice;
 /// Unique reference identifying the triparty-agent/service-provider collateral management transaction from the triparty-agent&apos;s/service-provider&apos;s point of view.
 /// </summary>
 [IsoId("_ul6FcQLyEeutW5-TpeYJhA")]
+[IsoDisplayName(@"Triparty Agent Service Provider Collateral Transaction Identification")]
 public interface ITripartyAgentServiceProviderCollateralTransactionIdentification
     : IReference3Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ITripartyAgentServiceProviderCollateralTransactionIdentificatio
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

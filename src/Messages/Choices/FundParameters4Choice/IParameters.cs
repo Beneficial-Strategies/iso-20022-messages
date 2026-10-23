@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundParameters4Choice;
 /// </summary>
 [IsoId("_KQCmF2omEeipaMTLlhaKMQ")]
 [IsoXmlTag("Params")]
+[IsoDisplayName(@"Parameters")]
 public interface IParameters : IFundParameters4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IParameters : IFundParameters4Choice, IIsoChoiceVariant
     [IsoId("_Kf9RY2omEeipaMTLlhaKMQ")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument71> FinancialInstrumentDetails { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IParameters : IFundParameters4Choice, IIsoChoiceVariant
     [IsoId("_Kf9RZWomEeipaMTLlhaKMQ")]
     [DisplayName("Fund Management Company")]
     [IsoXmlTag("FndMgmtCpny")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification139> FundManagementCompany { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IParameters : IFundParameters4Choice, IIsoChoiceVariant
     [IsoId("_Kf9RZ2omEeipaMTLlhaKMQ")]
     [DisplayName("Date From")]
     [IsoXmlTag("DtFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateFrom { get; }
 
     /// <summary>
@@ -50,5 +54,6 @@ public interface IParameters : IFundParameters4Choice, IIsoChoiceVariant
     [IsoId("_Kf9Ra2omEeipaMTLlhaKMQ")]
     [DisplayName("Registered Distribution Country")]
     [IsoXmlTag("RegdDstrbtnCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> RegisteredDistributionCountry { get; }
 }

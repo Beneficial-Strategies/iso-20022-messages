@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides for reporting qualitative details of equity instruments as part of Transparency calculations.
 /// </summary>
 [IsoId("_pVzQ4Wk3EeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Transparency Data Report")]
 public interface ITransparencyDataReport11 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,8 @@ public interface ITransparencyDataReport11 : IIsoComponent
     [IsoId("_pfKBNWk3EeaLAKoEUNsD9g")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -27,6 +30,7 @@ public interface ITransparencyDataReport11 : IIsoComponent
     [IsoId("_pfKoQGk3EeaLAKoEUNsD9g")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier Identification { get; }
 
     /// <summary>
@@ -35,6 +39,8 @@ public interface ITransparencyDataReport11 : IIsoComponent
     [IsoId("_pfKoQmk3EeaLAKoEUNsD9g")]
     [DisplayName("Full Name")]
     [IsoXmlTag("FullNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FullName { get; }
 
     /// <summary>
@@ -43,6 +49,7 @@ public interface ITransparencyDataReport11 : IIsoComponent
     [IsoId("_pfKoRGk3EeaLAKoEUNsD9g")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? TradingVenue { get; }
 
     /// <summary>
@@ -51,6 +58,7 @@ public interface ITransparencyDataReport11 : IIsoComponent
     [IsoId("_pfKoRmk3EeaLAKoEUNsD9g")]
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ReportingDate { get; }
 
     /// <summary>
@@ -68,6 +76,7 @@ public interface ITransparencyDataReport11 : IIsoComponent
     [IsoId("_pfKoUGk3EeaLAKoEUNsD9g")]
     [DisplayName("Number Outstanding Instruments")]
     [IsoXmlTag("NbOutsdngInstrms")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumberFraction5)]
     DecimalNumberFraction5? NumberOutstandingInstruments { get; }
 
     /// <summary>
@@ -76,6 +85,7 @@ public interface ITransparencyDataReport11 : IIsoComponent
     [IsoId("_pfKoUmk3EeaLAKoEUNsD9g")]
     [DisplayName("Holdings Exceeding Total Voting Right Threshold")]
     [IsoXmlTag("HldgsExcdgTtlVtngRghtThrshld")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumberFraction5)]
     DecimalNumberFraction5? HoldingsExceedingTotalVotingRightThreshold { get; }
 
     /// <summary>

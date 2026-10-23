@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the competent authority which supervises the reporting counterparty.
 /// </summary>
 [IsoId("_jODlAIAuEeirUu_C8Wn_0Q")]
+[IsoDisplayName(@"Competent Authority")]
 public interface ICompetentAuthority1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICompetentAuthority1 : IIsoComponent
     [IsoId("_r8tXMIAuEeirUu_C8Wn_0Q")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Identification { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface ICompetentAuthority1 : IIsoComponent
     [IsoId("_tq-24IAuEeirUu_C8Wn_0Q")]
     [DisplayName("Onboarding Status")]
     [IsoXmlTag("OnbrdgSts")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator OnboardingStatus { get; }
 }

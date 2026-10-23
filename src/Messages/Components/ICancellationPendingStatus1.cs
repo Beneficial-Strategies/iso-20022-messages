@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for the cancellation pending status.
 /// </summary>
 [IsoId("_RSb2Qtp-Ed-ak6NoX_4Aeg_1032897405")]
+[IsoDisplayName(@"Cancellation Pending Status")]
 public interface ICancellationPendingStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICancellationPendingStatus1 : IIsoComponent
     [IsoId("_RSb2Q9p-Ed-ak6NoX_4Aeg_1032897423")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Reason { get; }
 
     /// <summary>

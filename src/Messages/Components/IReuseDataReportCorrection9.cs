@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates that the report is correcting the erroneous data fields of a previously submitted position.
 /// </summary>
 [IsoId("_qg6kof_pEemm3skPVSMJQg")]
+[IsoDisplayName(@"Reuse Data Report Correction")]
 public interface IReuseDataReportCorrection9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReuseDataReportCorrection9 : IIsoComponent
     [IsoId("_qlrv4f_pEemm3skPVSMJQg")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IReuseDataReportCorrection9 : IIsoComponent
     [IsoId("_qlrv6f_pEemm3skPVSMJQg")]
     [DisplayName("Event Day")]
     [IsoXmlTag("EvtDay")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDay { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IReuseDataReportCorrection9 : IIsoComponent
     [IsoId("_qlrv6__pEemm3skPVSMJQg")]
     [DisplayName("Reporting Date Time")]
     [IsoXmlTag("RptgDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ReportingDateTime { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IReuseDataReportCorrection9 : IIsoComponent
     [IsoId("_qlrv7f_pEemm3skPVSMJQg")]
     [DisplayName("Funding Source")]
     [IsoXmlTag("FndgSrc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundingSource1> FundingSource { get; }
 
     /// <summary>
@@ -81,5 +87,6 @@ public interface IReuseDataReportCorrection9 : IIsoComponent
     [IsoId("_qlrv8__pEemm3skPVSMJQg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdviceType1Choice;
 /// Advice type, in a coded form.
 /// </summary>
 [IsoId("_u3TXxNomEembTrt_WixjyQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAdviceType1Choice, IIsoChoiceVariant
 {
     /// <summary>

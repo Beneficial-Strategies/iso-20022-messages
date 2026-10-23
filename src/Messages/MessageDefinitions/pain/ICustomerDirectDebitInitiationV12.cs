@@ -24,6 +24,8 @@ namespace BeneficialStrategies.Iso20022.pain;
     "CstmrDrctDbtInitn",
     "urn:iso:std:iso:20022:tech:xsd:pain.008.001.12"
 )]
+[Description(@"Scope|The CustomerDirectDebitInitiation message is sent by the initiating party to the forwarding agent or creditor agent. It is used to request single or bulk collection(s) of funds from one or various debtor's account(s) for a creditor.|Usage|The CustomerDirectDebitInitiation message can contain one or more direct debit instructions.|The message can be used in a direct or a relay scenario:|- In a direct scenario, the message is sent directly to the creditor agent. The creditor agent is the account servicer of the creditor.|- In a relay scenario, the message is sent to a forwarding agent. The forwarding agent acts as a concentrating financial institution. It will forward the CustomerDirectDebitInitiation message to the creditor agent.|The message can also be used by an initiating party that has authority to send the message on behalf of the creditor. This caters for example for the scenario of a payments factory initiating all payments on behalf of a large corporate.|The CustomerDirectDebitInitiation message can be used in domestic and cross-border scenarios.|The CustomerDirectDebitInitiation may or may not contain mandate related information, i.e. extracts from a mandate, such as MandateIdentification or DateOfSignature. The CustomerDirectDebitInitiation message must not be considered as a mandate.|The CustomerDirectDebitInitiation message must not be used by the creditor agent to execute the direct debit instruction(s). The FIToFICustomerDirectDebit message must be used instead.")]
+[IsoDisplayName(@"Customer Direct Debit Initiation V12")]
 public interface ICustomerDirectDebitInitiationV12 : IOuterRecord
 {
     /// <summary>
@@ -38,6 +40,7 @@ public interface ICustomerDirectDebitInitiationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstruction50> PaymentInformation { get; }
 
     /// <summary>
@@ -45,5 +48,6 @@ public interface ICustomerDirectDebitInitiationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

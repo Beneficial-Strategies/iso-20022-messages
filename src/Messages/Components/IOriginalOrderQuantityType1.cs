@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Breakdown of the cash movements into a fund by order type, eg, order by quantity of units or amount of money.
 /// </summary>
 [IsoId("_Uvt1e9p-Ed-ak6NoX_4Aeg_-1430220527")]
+[IsoDisplayName(@"Original Order Quantity Type")]
 public interface IOriginalOrderQuantityType1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IOriginalOrderQuantityType1 : IIsoComponent
     [IsoId("_Uv3mcNp-Ed-ak6NoX_4Aeg_-997087875")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

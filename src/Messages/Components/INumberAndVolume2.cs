@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detail the number and the volume, defined by currency amount, for use in a transaction.
 /// </summary>
 [IsoId("_paGL8WlAEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Number And Volume")]
 public interface INumberAndVolume2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INumberAndVolume2 : IIsoComponent
     [IsoId("_pi_CMWlAEeaLAKoEUNsD9g")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumberFraction5)]
     DecimalNumberFraction5 Number { get; }
 
     /// <summary>

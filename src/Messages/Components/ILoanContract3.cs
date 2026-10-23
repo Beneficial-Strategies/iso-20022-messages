@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contract by which an amount of money in exchange for future repayment of the principal amount along with interest or other finance charges.
 /// </summary>
 [IsoId("_2n360bGIEeuSTr8k0UEM8A")]
+[IsoDisplayName(@"Loan Contract")]
 public interface ILoanContract3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ILoanContract3 : IIsoComponent
     [IsoId("_o_ORYLb6Eeu9Cp6InX88Vw")]
     [DisplayName("Loan Type Identification")]
     [IsoXmlTag("LnTpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LoanTypeIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ILoanContract3 : IIsoComponent
     [IsoId("_2o1kI7GIEeuSTr8k0UEM8A")]
     [DisplayName("Buyer")]
     [IsoXmlTag("Buyr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty5> Buyer { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ILoanContract3 : IIsoComponent
     [IsoId("_2o1kJbGIEeuSTr8k0UEM8A")]
     [DisplayName("Seller")]
     [IsoXmlTag("Sellr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty5> Seller { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ILoanContract3 : IIsoComponent
     [IsoId("_2o1kKbGIEeuSTr8k0UEM8A")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>
@@ -66,6 +72,7 @@ public interface ILoanContract3 : IIsoComponent
     [IsoId("_2o1kK7GIEeuSTr8k0UEM8A")]
     [DisplayName("Prolongation Flag")]
     [IsoXmlTag("PrlngtnFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ProlongationFlag { get; }
 
     /// <summary>
@@ -74,6 +81,7 @@ public interface ILoanContract3 : IIsoComponent
     [IsoId("_2o1kLbGIEeuSTr8k0UEM8A")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -98,6 +106,7 @@ public interface ILoanContract3 : IIsoComponent
     [IsoId("_2o1kM7GIEeuSTr8k0UEM8A")]
     [DisplayName("Duration Code")]
     [IsoXmlTag("DrtnCd")]
+    [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
     Exact1NumericText? DurationCode { get; }
 
     /// <summary>
@@ -114,6 +123,7 @@ public interface ILoanContract3 : IIsoComponent
     [IsoId("_2o1kN7GIEeuSTr8k0UEM8A")]
     [DisplayName("Tranche")]
     [IsoXmlTag("Trch")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoanContractTranche1> Tranche { get; }
 
     /// <summary>
@@ -122,6 +132,7 @@ public interface ILoanContract3 : IIsoComponent
     [IsoId("_2o1kObGIEeuSTr8k0UEM8A")]
     [DisplayName("Payment Schedule")]
     [IsoXmlTag("PmtSchdl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentSchedule1> PaymentSchedule { get; }
 
     /// <summary>
@@ -130,6 +141,7 @@ public interface ILoanContract3 : IIsoComponent
     [IsoId("_2o1kO7GIEeuSTr8k0UEM8A")]
     [DisplayName("Interest Schedule")]
     [IsoXmlTag("IntrstSchdl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestPaymentSchedule1> InterestSchedule { get; }
 
     /// <summary>
@@ -138,6 +150,7 @@ public interface ILoanContract3 : IIsoComponent
     [IsoId("_2o1kPbGIEeuSTr8k0UEM8A")]
     [DisplayName("Intra Company Loan")]
     [IsoXmlTag("IntraCpnyLn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator IntraCompanyLoan { get; }
 
     /// <summary>
@@ -154,6 +167,7 @@ public interface ILoanContract3 : IIsoComponent
     [IsoId("_2o1kQbGIEeuSTr8k0UEM8A")]
     [DisplayName("Syndicated Loan")]
     [IsoXmlTag("SndctdLn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISyndicatedLoan2> SyndicatedLoan { get; }
 
     /// <summary>
@@ -162,5 +176,6 @@ public interface ILoanContract3 : IIsoComponent
     [IsoId("_2o1kQ7GIEeuSTr8k0UEM8A")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation5> Attachment { get; }
 }

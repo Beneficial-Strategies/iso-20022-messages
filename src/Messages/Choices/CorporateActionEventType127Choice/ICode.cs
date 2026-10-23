@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType127Choic
 
 /// <summary>Event type expressed as a code.</summary>
 [IsoId("_z49Xo6NZEfC9id413JK-Ig")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionEventType127Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

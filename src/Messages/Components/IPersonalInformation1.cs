@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the identification of a person.
 /// </summary>
 [IsoId("_KaECoDnlEeW7UoCHqpiMaQ")]
+[IsoDisplayName(@"Personal Information")]
 public interface IPersonalInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPersonalInformation1 : IIsoComponent
     [IsoId("_ZTjmcDnlEeW7UoCHqpiMaQ")]
     [DisplayName("Name Of Father")]
     [IsoXmlTag("NmOfFthr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NameOfFather { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPersonalInformation1 : IIsoComponent
     [IsoId("_ZTjmcTnlEeW7UoCHqpiMaQ")]
     [DisplayName("Maiden Name Of Mother")]
     [IsoXmlTag("MdnNmOfMthr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MaidenNameOfMother { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IPersonalInformation1 : IIsoComponent
     [IsoId("_ZTjmcjnlEeW7UoCHqpiMaQ")]
     [DisplayName("Name Of Partner")]
     [IsoXmlTag("NmOfPrtnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NameOfPartner { get; }
 }

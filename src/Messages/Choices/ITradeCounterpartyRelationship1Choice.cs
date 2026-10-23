@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the relationship type between parties to the transaction.
 /// </summary>
 [IsoId("_n_k54Cb_Ee2BYL6XeAmCWw")]
+[IsoDisplayName(@"Trade Counterparty Relationship 1 Choice")]
 public interface ITradeCounterpartyRelationship1Choice : IIsoChoice { }

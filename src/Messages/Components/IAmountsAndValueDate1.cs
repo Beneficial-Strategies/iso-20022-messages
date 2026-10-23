@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the value date and the amounts traded in a foreign exchange transaction.
 /// </summary>
 [IsoId("_TITy0tp-Ed-ak6NoX_4Aeg_290674075")]
+[IsoDisplayName(@"Amounts And Value Date")]
 public interface IAmountsAndValueDate1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IAmountsAndValueDate1 : IIsoComponent
     [IsoId("_TIc8sdp-Ed-ak6NoX_4Aeg_290674077")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate SettlementDate { get; }
 }

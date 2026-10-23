@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference2Choice;
 /// Unique identifier of the interest payment statement.
 /// </summary>
 [IsoId("_TYgok6erEeCq2KR6DaC1kQ_2136597098")]
+[IsoDisplayName(@"Interest Payment Statement Identification")]
 public interface IInterestPaymentStatementIdentification : IReference2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IInterestPaymentStatementIdentification : IReference2Choice, II
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("IntrstPmtStmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

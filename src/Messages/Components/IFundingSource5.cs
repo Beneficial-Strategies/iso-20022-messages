@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Source of funding.
 /// </summary>
 [IsoId("_kuj4gT_ZEfCQAqQ9lolFUg")]
+[IsoDisplayName(@"Funding Source5")]
 public interface IFundingSource5 : IIsoComponent
 {
     /// <summary>

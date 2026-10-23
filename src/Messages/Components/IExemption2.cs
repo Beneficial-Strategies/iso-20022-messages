@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Exemption2.
 /// </summary>
 [IsoId("_PMDhAZqHEe6bZt44gtg6XQ")]
+[IsoDisplayName(@"Exemption2")]
 public interface IExemption2 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IExemption2 : IIsoComponent
     /// </summary>
     [DisplayName("Reason Not Honored")]
     [IsoXmlTag("RsnNotHnrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max4Text> ReasonNotHonored { get; }
 }

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the intra-position movement.
 /// </summary>
 [IsoId("_QXR1ndp-Ed-ak6NoX_4Aeg_680037953")]
+[IsoDisplayName(@"Intra Position Details")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-05-04.")]
 public interface IIntraPositionDetails3 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +35,6 @@ public interface IIntraPositionDetails3 : IIsoComponent
     [IsoId("_QXbmktp-Ed-ak6NoX_4Aeg_-1076895299")]
     [DisplayName("Intra Position Movement")]
     [IsoXmlTag("IntraPosMvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraPositionMovementDetails1> IntraPositionMovement { get; }
 }

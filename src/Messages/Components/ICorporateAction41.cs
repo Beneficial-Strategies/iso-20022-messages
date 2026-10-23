@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action event.
 /// </summary>
 [IsoId("_7ZeC0ZSfEeeh5JjedkaA_g")]
+[IsoDisplayName(@"Corporate Action")]
 public interface ICorporateAction41 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ICorporateAction41 : IIsoComponent
     [IsoId("_7rdx65SfEeeh5JjedkaA_g")]
     [DisplayName("Interest Accrued Number Of Days")]
     [IsoXmlTag("IntrstAcrdNbOfDays")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? InterestAccruedNumberOfDays { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface ICorporateAction41 : IIsoComponent
     [IsoId("_7rdx85SfEeeh5JjedkaA_g")]
     [DisplayName("Coupon Number")]
     [IsoXmlTag("CpnNb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIdentificationFormat3Choice> CouponNumber { get; }
 
     /// <summary>
@@ -75,6 +78,7 @@ public interface ICorporateAction41 : IIsoComponent
     [IsoId("_7rdx-5SfEeeh5JjedkaA_g")]
     [DisplayName("Certification Breakdown Indicator")]
     [IsoXmlTag("CertfctnBrkdwnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CertificationBreakdownIndicator { get; }
 
     /// <summary>
@@ -83,6 +87,7 @@ public interface ICorporateAction41 : IIsoComponent
     [IsoId("_7rdyA5SfEeeh5JjedkaA_g")]
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChargesAppliedIndicator { get; }
 
     /// <summary>
@@ -91,6 +96,7 @@ public interface ICorporateAction41 : IIsoComponent
     [IsoId("_7rdyC5SfEeeh5JjedkaA_g")]
     [DisplayName("Restriction Indicator")]
     [IsoXmlTag("RstrctnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RestrictionIndicator { get; }
 
     /// <summary>
@@ -99,6 +105,7 @@ public interface ICorporateAction41 : IIsoComponent
     [IsoId("_7rdyE5SfEeeh5JjedkaA_g")]
     [DisplayName("Accrued Interest Indicator")]
     [IsoXmlTag("AcrdIntrstInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AccruedInterestIndicator { get; }
 
     /// <summary>
@@ -107,6 +114,7 @@ public interface ICorporateAction41 : IIsoComponent
     [IsoId("_7rdyG5SfEeeh5JjedkaA_g")]
     [DisplayName("Letter Of Guaranteed Delivery Indicator")]
     [IsoXmlTag("LttrOfGrntedDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LetterOfGuaranteedDeliveryIndicator { get; }
 
     /// <summary>
@@ -139,6 +147,7 @@ public interface ICorporateAction41 : IIsoComponent
     [IsoId("_7rdyNZSfEeeh5JjedkaA_g")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOfferTypeFormat10Choice> OfferType { get; }
 
     /// <summary>
@@ -155,6 +164,7 @@ public interface ICorporateAction41 : IIsoComponent
     [IsoId("_7rdyRZSfEeeh5JjedkaA_g")]
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventStageFormat13Choice> EventStage { get; }
 
     /// <summary>
@@ -163,6 +173,7 @@ public interface ICorporateAction41 : IIsoComponent
     [IsoId("_7rdyTZSfEeeh5JjedkaA_g")]
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBusinessProcessFormat9Choice> AdditionalBusinessProcessIndicator { get; }
 
     /// <summary>
@@ -171,6 +182,7 @@ public interface ICorporateAction41 : IIsoComponent
     [IsoId("_7rdyVZSfEeeh5JjedkaA_g")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionChangeTypeFormat5Choice> ChangeType { get; }
 
     /// <summary>
@@ -251,6 +263,8 @@ public interface ICorporateAction41 : IIsoComponent
     [IsoId("_7rdykZSfEeeh5JjedkaA_g")]
     [DisplayName("New Place Of Incorporation")]
     [IsoXmlTag("NewPlcOfIncorprtn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NewPlaceOfIncorporation { get; }
 
     /// <summary>

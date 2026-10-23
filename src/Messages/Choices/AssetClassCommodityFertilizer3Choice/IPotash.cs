@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer3Ch
 /// </summary>
 [IsoId("_K_pO1bv7EeiLRYqS-r-R-A")]
 [IsoXmlTag("Ptsh")]
+[IsoDisplayName(@"Potash")]
 public interface IPotash : IAssetClassCommodityFertilizer3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestorProfileStatus1Choice;
 /// Investor profile status expressed as a code.
 /// </summary>
 [IsoId("_u1EvwCDOEeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInvestorProfileStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tangible items of value to a business.
 /// </summary>
 [IsoId("_P-BGdZJKEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Security Attributes")]
 public interface ISecurityAttributes11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityAttributes11 : IIsoComponent
     [IsoId("_QAKbgZJKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification39> FinancialInstrumentIdentification { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ISecurityAttributes11 : IIsoComponent
     [IsoId("_QAKbhZJKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Attributes")]
     [IsoXmlTag("FinInstrmAttrbts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommonFinancialInstrumentAttributes11> FinancialInstrumentAttributes { get; }
 }

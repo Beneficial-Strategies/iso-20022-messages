@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investment fund transactions for a specific financial instrument.
 /// </summary>
 [IsoId("_VGq85Np-Ed-ak6NoX_4Aeg_1018199129")]
+[IsoDisplayName(@"Investment Fund Transactions By Fund")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IInvestmentFundTransactionsByFund1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,8 @@ public interface IInvestmentFundTransactionsByFund1 : IIsoComponent
     [IsoId("_VGq85tp-Ed-ak6NoX_4Aeg_-117997413")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IInvestmentFundTransactionsByFund1 : IIsoComponent
     [IsoId("_VGq859p-Ed-ak6NoX_4Aeg_-117997361")]
     [DisplayName("Supplementary Identification")]
     [IsoXmlTag("SplmtryId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SupplementaryIdentification { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IInvestmentFundTransactionsByFund1 : IIsoComponent
     [IsoId("_VGq86dp-Ed-ak6NoX_4Aeg_-117996940")]
     [DisplayName("Class Type")]
     [IsoXmlTag("ClssTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClassType { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IInvestmentFundTransactionsByFund1 : IIsoComponent
     [IsoId("_VG0G0Np-Ed-ak6NoX_4Aeg_-3482322")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundTransaction2> TransactionDetails { get; }
 
     /// <summary>

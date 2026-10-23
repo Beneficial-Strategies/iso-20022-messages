@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Standing Order Search Criteria5.
 /// </summary>
 [IsoId("_0tAz1zEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Standing Order Search Criteria5")]
 public interface IStandingOrderSearchCriteria5 : IIsoComponent
 {
     /// <summary>

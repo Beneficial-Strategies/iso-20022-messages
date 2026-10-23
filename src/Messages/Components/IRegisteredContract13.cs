@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amendment data of document that a user must file with an authorised servicer for each contract that involves foreign currency transactions with non residents.
 /// </summary>
 [IsoId("_Nx-C4bGJEeuSTr8k0UEM8A")]
+[IsoDisplayName(@"Registered Contract")]
 public interface IRegisteredContract13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRegisteredContract13 : IIsoComponent
     [IsoId("_Ny7FIbGJEeuSTr8k0UEM8A")]
     [DisplayName("Contract Registration Amendment Identification")]
     [IsoXmlTag("CtrctRegnAmdmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ContractRegistrationAmendmentIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IRegisteredContract13 : IIsoComponent
     [IsoId("_Ny7FJ7GJEeuSTr8k0UEM8A")]
     [DisplayName("Registered Contract Amendment")]
     [IsoXmlTag("RegdCtrctAmdmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegisteredContract14> RegisteredContractAmendment { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IRegisteredContract13 : IIsoComponent
     [IsoId("_Ny7FL7GJEeuSTr8k0UEM8A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

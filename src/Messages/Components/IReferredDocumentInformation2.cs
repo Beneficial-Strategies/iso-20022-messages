@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Structured information related to the invoice to be financed.
 /// </summary>
 [IsoId("_ThfHx9p-Ed-ak6NoX_4Aeg_415673992")]
+[IsoDisplayName(@"Referred Document Information")]
 public interface IReferredDocumentInformation2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IReferredDocumentInformation2 : IIsoComponent
     [IsoId("_Tho4wNp-Ed-ak6NoX_4Aeg_785144500")]
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DocumentNumber { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IReferredDocumentInformation2 : IIsoComponent
     [IsoId("_Tho4wdp-Ed-ak6NoX_4Aeg_1357727086")]
     [DisplayName("Related Date")]
     [IsoXmlTag("RltdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RelatedDate { get; }
 
     /// <summary>

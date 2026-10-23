@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferUnmatchedStatus3Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_eLXpwyY4EeW_ZNn8gbfY7Q")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : ITransferUnmatchedStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EndPoint2Choice;
 
 /// <summary>Final payment of the standing order due.</summary>
 [IsoId("_a2rek7vGEfCYYbmqNrQFSg")]
+[IsoDisplayName(@"Last Payment Date")]
 public interface ILastPaymentDate : IEndPoint2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ActiveOrHistoricAmountRange2Choi
 /// </summary>
 [IsoId("_PPV2VZlcEeeE1Ya-LgRsuQ")]
 [IsoXmlTag("CcyAndAmtRg")]
+[IsoDisplayName(@"Currency And Amount Range")]
 public interface ICurrencyAndAmountRange : IActiveOrHistoricAmountRange2Choice, IIsoChoiceVariant
 {
     /// <summary>

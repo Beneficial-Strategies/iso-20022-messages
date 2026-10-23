@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_o01jMZDhEem7fvtoGpNpow")]
 [IsoMessage("sese.013.001.10", "PrtflTrfConf", "urn:iso:std:iso:20022:tech:xsd:sese.013.001.10")]
+[Description(@"Scope|The PortfolioTransferConfirmation message is sent by an executing party, for example, a (old) plan manager (transferor), to the instructing party for example, a (new) plan manager (transferee), to confirm the transfer of financial instruments from the client’s account at the old plan manager (transferor) to the clients account at the new plan manager (transferee). |Usage|The PortfolioTransferConfirmation message is used to confirm one or more portfolio transfers for one client.|The reference of each portfolio transfer confirmation is identified in TransferConfirmationIdentification. The reference of the original portfolio transfer as assigned by the instructing party is specified in TransferInstructionReference. The message identification of the PortfolioTransferInstruction message in which the portfolio transfers were conveyed may also be quoted in RelatedReference but this is not recommended.")]
+[IsoDisplayName(@"Portfolio Transfer Confirmation V")]
 public interface IPortfolioTransferConfirmationV10 : IOuterRecord
 {
     /// <summary>
@@ -80,6 +82,7 @@ public interface IPortfolioTransferConfirmationV10 : IOuterRecord
     [IsoId("_o01jR5DhEem7fvtoGpNpow")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson8> OtherIndividualInvestor { get; }
 
     /// <summary>
@@ -104,6 +107,7 @@ public interface IPortfolioTransferConfirmationV10 : IOuterRecord
     [IsoId("_o01jTZDhEem7fvtoGpNpow")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation36> OtherCorporateInvestor { get; }
 
     /// <summary>
@@ -136,6 +140,7 @@ public interface IPortfolioTransferConfirmationV10 : IOuterRecord
     [IsoId("_o01jV5DhEem7fvtoGpNpow")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPortfolioTransfer5> ProductTransfer { get; }
 
     /// <summary>
@@ -152,5 +157,6 @@ public interface IPortfolioTransferConfirmationV10 : IOuterRecord
     [IsoId("_o01jW5DhEem7fvtoGpNpow")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

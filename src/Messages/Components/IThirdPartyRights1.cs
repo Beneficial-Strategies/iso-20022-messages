@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about third party rights.
 /// </summary>
 [IsoId("_kAiCYCC-EeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Third Party Rights")]
 public interface IThirdPartyRights1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IThirdPartyRights1 : IIsoComponent
     [IsoId("_r57nkCC-EeWPMvNwVtiMsA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IThirdPartyRights1 : IIsoComponent
     [IsoId("_vRJbACC-EeWPMvNwVtiMsA")]
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DateTime { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IThirdPartyRights1 : IIsoComponent
     [IsoId("_B_aQ8SC_EeWPMvNwVtiMsA")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 
     /// <summary>
@@ -57,5 +62,7 @@ public interface IThirdPartyRights1 : IIsoComponent
     [IsoId("_JWAEACC_EeWPMvNwVtiMsA")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Description { get; }
 }

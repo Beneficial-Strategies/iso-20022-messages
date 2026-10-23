@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PositionSetAggregated1Choice;
 /// Where no reporting data are available, this field should be set so that a valid reference data file can be submitted to the competent authority as per submission requirements.
 /// </summary>
 [IsoId("_CHENxUwhEeqwfMIOLcNxbw")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : IPositionSetAggregated1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed statistics on derivatives submitted for reconciliation per counterparty pair.
 /// </summary>
 [IsoId("_cHKG8VovEe23K4GXSpBSeg")]
+[IsoDisplayName(@"Reconciliation Counterparty Pair Statistics")]
 public interface IReconciliationCounterpartyPairStatistics6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IReconciliationCounterpartyPairStatistics6 : IIsoComponent
     [IsoId("_cIzsw1ovEe23K4GXSpBSeg")]
     [DisplayName("Total Number Of Transactions")]
     [IsoXmlTag("TtlNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number TotalNumberOfTransactions { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IReconciliationCounterpartyPairStatistics6 : IIsoComponent
     [IsoId("_cIzsxVovEe23K4GXSpBSeg")]
     [DisplayName("Reconciliation Report")]
     [IsoXmlTag("RcncltnRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReconciliationReport14> ReconciliationReport { get; }
 }

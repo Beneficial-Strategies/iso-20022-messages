@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding underlying security details.
 /// </summary>
 [IsoId("_oTi1cQ-pEeuE0Pnt-OcNOA")]
+[IsoDisplayName(@"Financial Instrument Attributes SD")]
 public interface IFinancialInstrumentAttributesSD20 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrumentAttributesSD20 : IIsoComponent
     [IsoId("_orWRcQ-pEeuE0Pnt-OcNOA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IFinancialInstrumentAttributesSD20 : IIsoComponent
     [IsoId("_wbz9EQ-pEeuE0Pnt-OcNOA")]
     [DisplayName("Money Market Instrument Flag")]
     [IsoXmlTag("MnyMktInstrmFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? MoneyMarketInstrumentFlag { get; }
 }

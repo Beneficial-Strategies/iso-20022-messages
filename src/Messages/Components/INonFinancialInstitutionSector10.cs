@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information concerning non financial counterparties.
 /// </summary>
 [IsoId("_yfzO8Qz2Ee2YoLD-1vFj0g")]
+[IsoDisplayName(@"Non Financial Institution Sector")]
 public interface INonFinancialInstitutionSector10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INonFinancialInstitutionSector10 : IIsoComponent
     [IsoId("_ygiOwQz2Ee2YoLD-1vFj0g")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification175> Sector { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface INonFinancialInstitutionSector10 : IIsoComponent
     [IsoId("_ygiOxQz2Ee2YoLD-1vFj0g")]
     [DisplayName("Clearing Threshold")]
     [IsoXmlTag("ClrThrshld")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ClearingThreshold { get; }
 
     /// <summary>
@@ -35,6 +38,7 @@ public interface INonFinancialInstitutionSector10 : IIsoComponent
     [IsoId("_ygiOxwz2Ee2YoLD-1vFj0g")]
     [DisplayName("Directly Linked Activity")]
     [IsoXmlTag("DrctlyLkdActvty")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DirectlyLinkedActivity { get; }
 
     /// <summary>
@@ -44,5 +48,6 @@ public interface INonFinancialInstitutionSector10 : IIsoComponent
     [IsoId("_2Oz3UAz2Ee2YoLD-1vFj0g")]
     [DisplayName("Federal Institution")]
     [IsoXmlTag("FdrlInstn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? FederalInstitution { get; }
 }

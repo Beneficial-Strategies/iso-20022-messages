@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the calculation of the margin.
 /// </summary>
 [IsoId("_-eMvBKMOEeCojJW5vEuTEQ_631064077")]
+[IsoDisplayName(@"Margin")]
 public interface IMargin3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IMargin3 : IIsoComponent
     [IsoId("_-eMvBqMOEeCojJW5vEuTEQ_2054797146")]
     [DisplayName("Variation Margin")]
     [IsoXmlTag("VartnMrgn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVariationMargin3> VariationMargin { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IMargin3 : IIsoComponent
     [IsoId("_-eMvB6MOEeCojJW5vEuTEQ_-399143130")]
     [DisplayName("Other Margin")]
     [IsoXmlTag("OthrMrgn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMargin4> OtherMargin { get; }
 }

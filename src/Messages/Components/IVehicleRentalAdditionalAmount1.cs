@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contain additional amount information of the vehicle rental service.
 /// </summary>
 [IsoId("_SELowVN8EfC0lMwgjvMClw")]
+[IsoDisplayName(@"Vehicle Rental Additional Amount1")]
 public interface IVehicleRentalAdditionalAmount1 : IIsoComponent
 {
     /// <summary>

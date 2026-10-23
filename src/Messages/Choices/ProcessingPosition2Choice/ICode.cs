@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingPosition2Choice;
 /// Processing position expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_QtogENp-Ed-ak6NoX_4Aeg_-730269399")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProcessingPosition2Choice, IIsoChoiceVariant
 {
     /// <summary>

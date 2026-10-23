@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details for the penalty calculation.
 /// </summary>
 [IsoId("_eaMcYDkVEem897H7zB2RJg")]
+[IsoDisplayName(@"Penalty Calculation Record1")]
 public interface IPenaltyCalculationRecord1 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IPenaltyCalculationRecord1 : IIsoComponent
     [IsoId("_pqW6YWHYEemrM9-N4eJYkA")]
     [DisplayName("Foreign Exchange Data")]
     [IsoXmlTag("FXData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeRate3> ForeignExchangeData { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IPenaltyCalculationRecord1 : IIsoComponent
     [IsoId("_Jz6GIDkbEem897H7zB2RJg")]
     [DisplayName("Sub Amount Penalty Breakdown")]
     [IsoXmlTag("SubAmtPnltyBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPenaltyAmountBreakdown1> SubAmountPenaltyBreakdown { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountingStatus1Choice;
 /// Accounting status expressed as a code.
 /// </summary>
 [IsoId("_CuqKUCDEEeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAccountingStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

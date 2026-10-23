@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the reconciliation response.
 /// </summary>
 [IsoId("_NBXnUYt2EeSLQutgI1Ulfw")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction12 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IATMTransaction12 : IIsoComponent
     [IsoId("_NNcUc4t2EeSLQutgI1Ulfw")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ReconciliationIdentification { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IATMTransaction12 : IIsoComponent
     [IsoId("_NNcUfYt2EeSLQutgI1Ulfw")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand1> Command { get; }
 }

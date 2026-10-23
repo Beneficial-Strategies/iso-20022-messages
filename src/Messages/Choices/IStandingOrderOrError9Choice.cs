@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Standing Order Or Error9Choice.
 /// </summary>
 [IsoId("_zzZEMTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Standing Order Or Error9Choice")]
 public interface IStandingOrderOrError9Choice : IIsoChoice { }

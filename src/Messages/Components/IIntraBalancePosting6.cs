@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the data for the posting intra-balance movements.
 /// </summary>
 [IsoId("_ZXSw6zneEem7JZMuWtwtsg")]
+[IsoDisplayName(@"Intra Balance Posting")]
 public interface IIntraBalancePosting6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IIntraBalancePosting6 : IIsoComponent
     [IsoId("_ZhRzUzneEem7JZMuWtwtsg")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IIntraBalancePosting6 : IIsoComponent
     [IsoId("_ZhRzWzneEem7JZMuWtwtsg")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IIntraBalancePosting6 : IIsoComponent
     [IsoId("_ZhRzYzneEem7JZMuWtwtsg")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IIntraBalancePosting6 : IIsoComponent
     [IsoId("_ZhRzazneEem7JZMuWtwtsg")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IIntraBalancePosting6 : IIsoComponent
     [IsoId("_ZhRzbTneEem7JZMuWtwtsg")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PoolIdentification { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface IIntraBalancePosting6 : IIsoComponent
     [IsoId("_ZhRzdTneEem7JZMuWtwtsg")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -105,6 +118,7 @@ public interface IIntraBalancePosting6 : IIsoComponent
     [IsoId("_ZhRzkzneEem7JZMuWtwtsg")]
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StatusDate { get; }
 
     /// <summary>
@@ -121,6 +135,7 @@ public interface IIntraBalancePosting6 : IIsoComponent
     [IsoId("_ZhRznTneEem7JZMuWtwtsg")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages57> Linkages { get; }
 
     /// <summary>
@@ -145,6 +160,7 @@ public interface IIntraBalancePosting6 : IIsoComponent
     [IsoId("_ZhRzqTneEem7JZMuWtwtsg")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -153,6 +169,8 @@ public interface IIntraBalancePosting6 : IIsoComponent
     [IsoId("_ZhRzsTneEem7JZMuWtwtsg")]
     [DisplayName("Instruction Processing Additional Details")]
     [IsoXmlTag("InstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? InstructionProcessingAdditionalDetails { get; }
 
     /// <summary>
@@ -161,5 +179,6 @@ public interface IIntraBalancePosting6 : IIsoComponent
     [IsoId("_ZhRzuTneEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

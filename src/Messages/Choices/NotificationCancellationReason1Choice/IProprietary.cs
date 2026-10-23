@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationCancellationReason1C
 /// Reason for the cancellation request, in a proprietary form.
 /// </summary>
 [IsoId("_4g3B1Sv_Eey3nPxW-HgLUw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : INotificationCancellationReason1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : INotificationCancellationReason1Choice, IIsoChoi
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ImpliedCurrencyAmountRangeChoice
 /// </summary>
 [IsoId("_PVH1ANp-Ed-ak6NoX_4Aeg_-1220232112")]
 [IsoXmlTag("FrToAmt")]
+[IsoDisplayName(@"From To Amount")]
 public interface IFromToAmount : IImpliedCurrencyAmountRangeChoice, IIsoChoiceVariant
 {
     /// <summary>

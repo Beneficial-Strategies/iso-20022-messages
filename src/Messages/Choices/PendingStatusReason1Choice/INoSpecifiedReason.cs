@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatusReason1Choice;
 /// There is no reason available or to report for the pending account status.
 /// </summary>
 [IsoId("_xwsJwUzAEeafiMTDrtSnyw")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IPendingStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

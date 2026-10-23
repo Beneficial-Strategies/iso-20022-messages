@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 /// </summary>
 [IsoId("_TFnrINp-Ed-ak6NoX_4Aeg_426657982")]
 [IsoXmlTag("NmAndAdr")]
+[IsoDisplayName(@"Name And Address")]
 public interface INameAndAddress : IFinancialInstitutionIdentification5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface INameAndAddress : IFinancialInstitutionIdentification5Choice, I
     [IsoId("_PZleQtp-Ed-ak6NoX_4Aeg_1385273243")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Name { get; }
 
     /// <summary>

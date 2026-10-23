@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat6Choice;
 /// </summary>
 [IsoId("_lHIu-Tq5EeWQ1Y7f8kds2A")]
 [IsoXmlTag("FullPrdUnits")]
+[IsoDisplayName(@"Full Period Units")]
 public interface IFullPeriodUnits : IBalanceFormat6Choice, IIsoChoiceVariant
 {
     /// <summary>

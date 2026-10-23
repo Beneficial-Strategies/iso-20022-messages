@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExPostCostCalculationBasis1Choic
 /// Ex post cost calculation basis expressed as a code.
 /// </summary>
 [IsoId("_dnKIEJ9XEeqxTNfi5y7ywQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IExPostCostCalculationBasis1Choice, IIsoChoiceVariant
 {
     /// <summary>

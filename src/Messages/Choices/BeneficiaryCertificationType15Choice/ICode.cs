@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficiaryCertificationType15Ch
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IBeneficiaryCertificationType15Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus58Choice;
 /// <summary>
 /// No Specified Reason.
 /// </summary>
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IRejectedStatus58Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_K1n7vNE6Ed-BzquC8wXy7w_1755875491")]
 [IsoMessage("sese.003.001.01", "sese.003.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.003.001.01")]
+[Description(@"Scope|The TransferOutConfirmation message is sent by an executing party to the instructing party or the instructing party's designated agent.|This message is used to confirm the delivery of a financial instrument, free of payment, at a given date, to a specified party. This message can be used to confirm the transfer of a financial instrument to an own account or to a third party.|Usage|The TransferOutConfirmation message is used by an executing party to confirm to the instructing party that the withdrawal of a financial instrument from the owner's account and its delivery to another own account, or to a third party, has taken place.")]
+[IsoDisplayName(@"Transfer Out Confirmation")]
 public interface ITransferOutConfirmation : IOuterRecord
 {
     /// <summary>
@@ -80,5 +82,6 @@ public interface ITransferOutConfirmation : IOuterRecord
     [IsoId("_K1xFpNE6Ed-BzquC8wXy7w_1501522016")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

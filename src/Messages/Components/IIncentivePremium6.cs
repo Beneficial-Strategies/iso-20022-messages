@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Incentive Premium6.
 /// </summary>
 [IsoId("_qQvCxZK5Ee-l-O3vIHRmRw")]
+[IsoDisplayName(@"Incentive Premium6")]
 public interface IIncentivePremium6 : IIsoComponent
 {
     /// <summary>

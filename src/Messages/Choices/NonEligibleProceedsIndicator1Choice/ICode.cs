@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NonEligibleProceedsIndicator1Cho
 /// Standard code to specify information regarding the non eligibility of the outturn resources.
 /// </summary>
 [IsoId("_Q5QhQNp-Ed-ak6NoX_4Aeg_-1187456138")]
+[IsoDisplayName(@"Code")]
 public interface ICode : INonEligibleProceedsIndicator1Choice, IIsoChoiceVariant
 {
     /// <summary>

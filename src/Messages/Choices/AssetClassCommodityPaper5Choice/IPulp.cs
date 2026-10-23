@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper5Choice;
 /// <summary>
 /// Pulp.
 /// </summary>
+[IsoDisplayName(@"Pulp")]
 public interface IPulp : IAssetClassCommodityPaper5Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice;
 /// Number assigned by a passport authority to a passport.
 /// </summary>
 [IsoId("_QEW5ktp-Ed-ak6NoX_4Aeg_-1180196056")]
+[IsoDisplayName(@"Passport Number")]
 public interface IPassportNumber : IPersonIdentificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IPassportNumber : IPersonIdentificationType1Choice, IIsoChoiceV
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("PsptNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

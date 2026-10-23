@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the realisation of benefits taken from a pension.
 /// </summary>
 [IsoId("_N2Aj4LToEeiWMOV-LTfmAw")]
+[IsoDisplayName(@"Benefit Crystallisation Event")]
 public interface IBenefitCrystallisationEvent1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IBenefitCrystallisationEvent1 : IIsoComponent
     [IsoId("_UiBv87ToEeiWMOV-LTfmAw")]
     [DisplayName("Event Number")]
     [IsoXmlTag("EvtNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EventNumber { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IBenefitCrystallisationEvent1 : IIsoComponent
     [IsoId("_UiBv8LToEeiWMOV-LTfmAw")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EventDate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IBenefitCrystallisationEvent1 : IIsoComponent
     [IsoId("_UiBv8rToEeiWMOV-LTfmAw")]
     [DisplayName("Percentage Of Allowance")]
     [IsoXmlTag("PctgOfAllwnc")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfAllowance { get; }
 
     /// <summary>
@@ -57,5 +62,6 @@ public interface IBenefitCrystallisationEvent1 : IIsoComponent
     [IsoId("_UiBv9bToEeiWMOV-LTfmAw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

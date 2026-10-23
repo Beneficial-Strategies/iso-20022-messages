@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the shareholders meeting, specifying the participation requirements and the voting procedures. Alternatively, it may indicate where such information may be obtained.
 /// </summary>
 [IsoId("_TlqdLdp-Ed-ak6NoX_4Aeg_-507959976")]
+[IsoDisplayName(@"Meeting Notice")]
 public interface IMeetingNotice2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMeetingNotice2 : IIsoComponent
     [IsoId("_TlznENp-Ed-ak6NoX_4Aeg_-507959974")]
     [DisplayName("Meeting Identification")]
     [IsoXmlTag("MtgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MeetingIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IMeetingNotice2 : IIsoComponent
     [IsoId("_TlznEdp-Ed-ak6NoX_4Aeg_-507959959")]
     [DisplayName("Issuer Meeting Identification")]
     [IsoXmlTag("IssrMtgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? IssuerMeetingIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IMeetingNotice2 : IIsoComponent
     [IsoId("_TlznFNp-Ed-ak6NoX_4Aeg_-1590199402")]
     [DisplayName("Extended Classification")]
     [IsoXmlTag("XtndedClssfctn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedClassification { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IMeetingNotice2 : IIsoComponent
     [IsoId("_TlznFdp-Ed-ak6NoX_4Aeg_-507959916")]
     [DisplayName("Announcement Date")]
     [IsoXmlTag("AnncmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? AnnouncementDate { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IMeetingNotice2 : IIsoComponent
     [IsoId("_TlznFtp-Ed-ak6NoX_4Aeg_-507959899")]
     [DisplayName("Attendance Required")]
     [IsoXmlTag("AttndncReqrd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AttendanceRequired { get; }
 
     /// <summary>
@@ -73,6 +82,8 @@ public interface IMeetingNotice2 : IIsoComponent
     [IsoId("_TlznF9p-Ed-ak6NoX_4Aeg_-507959881")]
     [DisplayName("Attendance Confirmation Information")]
     [IsoXmlTag("AttndncConfInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AttendanceConfirmationInformation { get; }
 
     /// <summary>
@@ -105,6 +116,8 @@ public interface IMeetingNotice2 : IIsoComponent
     [IsoId("_Tl9YEtp-Ed-ak6NoX_4Aeg_-507959569")]
     [DisplayName("Additional Documentation URL Address")]
     [IsoXmlTag("AddtlDcmnttnURLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? AdditionalDocumentationURLAddress { get; }
 
     /// <summary>
@@ -129,6 +142,8 @@ public interface IMeetingNotice2 : IIsoComponent
     [IsoId("_Tl9YFdp-Ed-ak6NoX_4Aeg_-507959509")]
     [DisplayName("Resolution Proposal Threshold")]
     [IsoXmlTag("RsltnPrpslThrshld")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? ResolutionProposalThreshold { get; }
 
     /// <summary>
@@ -137,6 +152,7 @@ public interface IMeetingNotice2 : IIsoComponent
     [IsoId("_Tl9YFtp-Ed-ak6NoX_4Aeg_-507959492")]
     [DisplayName("Resolution Proposal Threshold Percentage")]
     [IsoXmlTag("RsltnPrpslThrshldPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ResolutionProposalThresholdPercentage { get; }
 
     /// <summary>
@@ -153,6 +169,7 @@ public interface IMeetingNotice2 : IIsoComponent
     [IsoId("_Tl9YGNp-Ed-ak6NoX_4Aeg_-507959201")]
     [DisplayName("Total Number Of Voting Rights")]
     [IsoXmlTag("TtlNbOfVtngRghts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberOfVotingRights { get; }
 
     /// <summary>
@@ -185,6 +202,9 @@ public interface IMeetingNotice2 : IIsoComponent
     [IsoId("_TmHJEtp-Ed-ak6NoX_4Aeg_-207913774")]
     [DisplayName("Contact Person Details")]
     [IsoXmlTag("CtctPrsnDtls")]
+    [MinLength(0)]
+    [MaxLength(12)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingContactPerson1> ContactPersonDetails { get; }
 
     /// <summary>

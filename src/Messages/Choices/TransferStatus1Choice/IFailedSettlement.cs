@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice;
 /// </summary>
 [IsoId("_o1CqrRwkEeOIveEnnb_1-A")]
 [IsoXmlTag("FaildSttlm")]
+[IsoDisplayName(@"Failed Settlement")]
 public interface IFailedSettlement : ITransferStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IFailedSettlement : ITransferStatus1Choice, IIsoChoiceVariant
     [IsoId("_RR_KWNp-Ed-ak6NoX_4Aeg_1532242482")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Reason { get; }
 
     /// <summary>

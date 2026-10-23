@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CcyCtrlReqOrLttr",
     "urn:iso:std:iso:20022:tech:xsd:auth.026.001.04"
 )]
+[IsoDisplayName(@"Currency Control Request Or Letter V04")]
 public interface ICurrencyControlRequestOrLetterV04 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface ICurrencyControlRequestOrLetterV04 : IOuterRecord
     /// </summary>
     [DisplayName("Request Or Letter")]
     [IsoXmlTag("ReqOrLttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupportingDocumentRequestOrLetter4> RequestOrLetter { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface ICurrencyControlRequestOrLetterV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

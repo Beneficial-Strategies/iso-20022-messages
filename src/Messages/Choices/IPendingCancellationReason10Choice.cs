@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a standard code or a proprietary code to specify the reason why a cancellation request sent for the related instruction is pending.</summary>
 [IsoId("_hIBt0aLNEfCHi7w3_0pcpw")]
+[IsoDisplayName(@"Pending Cancellation Reason 10 Choice")]
 public interface IPendingCancellationReason10Choice : IIsoChoice { }

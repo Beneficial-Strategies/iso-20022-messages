@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Item purchased with the transaction
 /// </summary>
 [IsoId("_EZKYYSCCEey8XKHwKquEQw")]
+[IsoDisplayName(@"Invoice Line Item")]
 public interface IInvoiceLineItem2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwASCCEey8XKHwKquEQw")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwAyCCEey8XKHwKquEQw")]
     [DisplayName("Order Date")]
     [IsoXmlTag("OrdrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OrderDate { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwBSCCEey8XKHwKquEQw")]
     [DisplayName("Contract Number")]
     [IsoXmlTag("CtrctNb")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ContractNumber { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwByCCEey8XKHwKquEQw")]
     [DisplayName("Shipping Date")]
     [IsoXmlTag("ShppgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ShippingDate { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwCSCCEey8XKHwKquEQw")]
     [DisplayName("Rebilling Indicator")]
     [IsoXmlTag("RbllgInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RebillingIndicator { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwCyCCEey8XKHwKquEQw")]
     [DisplayName("Medical Services Indicator")]
     [IsoXmlTag("MdclSvcsInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MedicalServicesIndicator { get; }
 
     /// <summary>
@@ -65,6 +73,8 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwDSCCEey8XKHwKquEQw")]
     [DisplayName("Ship To Industry Code")]
     [IsoXmlTag("ShipToIndstryCd")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? ShipToIndustryCode { get; }
 
     /// <summary>
@@ -73,6 +83,8 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwDyCCEey8XKHwKquEQw")]
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ProductCode { get; }
 
     /// <summary>
@@ -81,6 +93,8 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwESCCEey8XKHwKquEQw")]
     [DisplayName("Product Qualifier")]
     [IsoXmlTag("PdctQlfr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProductQualifier { get; }
 
     /// <summary>
@@ -89,6 +103,8 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwEyCCEey8XKHwKquEQw")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Description { get; }
 
     /// <summary>
@@ -98,6 +114,8 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwFSCCEey8XKHwKquEQw")]
     [DisplayName("Type Of Supply")]
     [IsoXmlTag("TpOfSpply")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? TypeOfSupply { get; }
 
     /// <summary>
@@ -114,6 +132,8 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwGSCCEey8XKHwKquEQw")]
     [DisplayName("Other Unit Of Measure")]
     [IsoXmlTag("OthrUnitOfMeasr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherUnitOfMeasure { get; }
 
     /// <summary>
@@ -130,6 +150,7 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwHSCCEey8XKHwKquEQw")]
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ProductQuantity { get; }
 
     /// <summary>
@@ -146,6 +167,7 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwISCCEey8XKHwKquEQw")]
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? InsuranceIndicator { get; }
 
     /// <summary>
@@ -162,6 +184,7 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwJSCCEey8XKHwKquEQw")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax39> Tax { get; }
 
     /// <summary>
@@ -170,6 +193,8 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwJyCCEey8XKHwKquEQw")]
     [DisplayName("Unique VAT Invoice Reference")]
     [IsoXmlTag("UnqVATInvcRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? UniqueVATInvoiceReference { get; }
 
     /// <summary>
@@ -196,6 +221,7 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwLSCCEey8XKHwKquEQw")]
     [DisplayName("Zero Cost To Customer Indicator")]
     [IsoXmlTag("ZeroCostToCstmrInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ZeroCostToCustomerIndicator { get; }
 
     /// <summary>
@@ -204,5 +230,7 @@ public interface IInvoiceLineItem2 : IIsoComponent
     [IsoId("_EeSwLyCCEey8XKHwKquEQw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

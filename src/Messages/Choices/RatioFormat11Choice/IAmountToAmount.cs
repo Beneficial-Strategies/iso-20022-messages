@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat11Choice;
 /// </summary>
 [IsoId("_anZPg-wOEd-sn-FiNtktcA")]
 [IsoXmlTag("AmtToAmt")]
+[IsoDisplayName(@"Amount To Amount")]
 public interface IAmountToAmount : IRatioFormat11Choice, IIsoChoiceVariant
 {
     /// <summary>

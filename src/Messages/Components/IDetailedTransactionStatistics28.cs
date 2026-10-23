@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about reported derivatives and reported derivatives with outliers.
 /// </summary>
 [IsoId("_x4xX8VyGEe24CqbZJK5XxA")]
+[IsoDisplayName(@"Detailed Transaction Statistics")]
 public interface IDetailedTransactionStatistics28 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDetailedTransactionStatistics28 : IIsoComponent
     [IsoId("_x5wPYVyGEe24CqbZJK5XxA")]
     [DisplayName("Number Of Derivatives Reported")]
     [IsoXmlTag("NbOfDerivsRptd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfDerivativesReported { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IDetailedTransactionStatistics28 : IIsoComponent
     [IsoId("_x5wPY1yGEe24CqbZJK5XxA")]
     [DisplayName("Number Of Derivatives Reported With Outliers")]
     [IsoXmlTag("NbOfDerivsRptdWthOtlrs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfDerivativesReportedWithOutliers { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IDetailedTransactionStatistics28 : IIsoComponent
     [IsoId("_x5wPZVyGEe24CqbZJK5XxA")]
     [DisplayName("Warnings")]
     [IsoXmlTag("Wrnngs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAbnormalValuesData4> Warnings { get; }
 }

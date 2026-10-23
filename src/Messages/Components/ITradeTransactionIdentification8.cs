@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on transaction and conducting counterparty.
 /// </summary>
 [IsoId("_Cn2qga7MEemZxoEFHjN-AQ")]
+[IsoDisplayName(@"Trade Transaction Identification")]
 public interface ITradeTransactionIdentification8 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface ITradeTransactionIdentification8 : IIsoComponent
     [IsoId("_URsPAa7MEemZxoEFHjN-AQ")]
     [DisplayName("Collateral Portfolio Identification")]
     [IsoXmlTag("CollPrtflId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text CollateralPortfolioIdentification { get; }
 }

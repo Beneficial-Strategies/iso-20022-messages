@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the clearing details.
 /// </summary>
 [IsoId("_VtTGpQasEe2phaVG0lYKTw")]
+[IsoDisplayName(@"Clearing")]
 public interface IClearing6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IClearing6 : IIsoComponent
     [IsoId("_V-b50QasEe2phaVG0lYKTw")]
     [DisplayName("Clearing Member")]
     [IsoXmlTag("ClrMmb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentificationAndAccount219> ClearingMember { get; }
 
     /// <summary>

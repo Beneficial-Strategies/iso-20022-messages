@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Replacement of an existing content by a different one.
 /// </summary>
 [IsoId("_UtfA1dp-Ed-ak6NoX_4Aeg_1630860927")]
+[IsoDisplayName(@"Replacement")]
 public interface IReplacement1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReplacement1 : IIsoComponent
     [IsoId("_UtfA1tp-Ed-ak6NoX_4Aeg_2072304256")]
     [DisplayName("Current Value")]
     [IsoXmlTag("CurVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text CurrentValue { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IReplacement1 : IIsoComponent
     [IsoId("_UtfA19p-Ed-ak6NoX_4Aeg_2072304711")]
     [DisplayName("Proposed Value")]
     [IsoXmlTag("PropsdVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text ProposedValue { get; }
 }

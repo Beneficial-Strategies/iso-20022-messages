@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the acceptor configuration.
 /// </summary>
 [IsoId("_Ksg2xX1DEeCF8NjrBemJWQ_1156169068")]
+[IsoDisplayName(@"Acceptor Configuration Content")]
 public interface IAcceptorConfigurationContent1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAcceptorConfigurationContent1 : IIsoComponent
     [IsoId("_Ksg2xn1DEeCF8NjrBemJWQ_2005180344")]
     [DisplayName("Acquirer Protocol Parameters")]
     [IsoXmlTag("AcqrrPrtcolParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcquirerProtocolParameters1> AcquirerProtocolParameters { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAcceptorConfigurationContent1 : IIsoComponent
     [IsoId("_Ksg2x31DEeCF8NjrBemJWQ_1029963495")]
     [DisplayName("Merchant Parameters")]
     [IsoXmlTag("MrchntParams")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10000Binary> MerchantParameters { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IAcceptorConfigurationContent1 : IIsoComponent
     [IsoId("_Ksg2yH1DEeCF8NjrBemJWQ_1720135233")]
     [DisplayName("Application Parameters")]
     [IsoXmlTag("ApplParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IApplicationParameters1> ApplicationParameters { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IAcceptorConfigurationContent1 : IIsoComponent
     [IsoId("_Ksg2yX1DEeCF8NjrBemJWQ_-131390732")]
     [DisplayName("Host Communication Parameters")]
     [IsoXmlTag("HstComParams")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHostCommunicationParameter1> HostCommunicationParameters { get; }
 }

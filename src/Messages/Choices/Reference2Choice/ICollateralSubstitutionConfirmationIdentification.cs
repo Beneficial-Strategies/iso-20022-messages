@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference2Choice;
 /// Unique identifier of the collateral substitution confirmation.
 /// </summary>
 [IsoId("_TYgokKerEeCq2KR6DaC1kQ_950968337")]
+[IsoDisplayName(@"Collateral Substitution Confirmation Identification")]
 public interface ICollateralSubstitutionConfirmationIdentification
     : IReference2Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ICollateralSubstitutionConfirmationIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("CollSbstitnConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

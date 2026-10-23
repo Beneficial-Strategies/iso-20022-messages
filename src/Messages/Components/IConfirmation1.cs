@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of confirmation in the CMU.
 /// </summary>
 [IsoId("_itJLUAJ-EeS2H9l84F_isg")]
+[IsoDisplayName(@"Confirmation")]
 public interface IConfirmation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IConfirmation1 : IIsoComponent
     [IsoId("_RzrzQKazEeSxuMLA5o46jQ")]
     [DisplayName("Confirmation Time")]
     [IsoXmlTag("ConfTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ConfirmationTime { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IConfirmation1 : IIsoComponent
     [IsoId("_OKoP4AKGEeS2H9l84F_isg")]
     [DisplayName("Trade Party Confirmation Time")]
     [IsoXmlTag("TradPtyConfTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TradePartyConfirmationTime { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IConfirmation1 : IIsoComponent
     [IsoId("_LLSw8AKGEeS2H9l84F_isg")]
     [DisplayName("Initiating Party Confirmation Time")]
     [IsoXmlTag("InitgPtyConfTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? InitiatingPartyConfirmationTime { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IConfirmation1 : IIsoComponent
     [IsoId("_MhL0UKayEeSxuMLA5o46jQ")]
     [DisplayName("Query Start Number")]
     [IsoXmlTag("QryStartNb")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText QueryStartNumber { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface IConfirmation1 : IIsoComponent
     [IsoId("_Wf7_4AKEEeS2H9l84F_isg")]
     [DisplayName("Total Number Of Reports")]
     [IsoXmlTag("TtlNbOfRpts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number TotalNumberOfReports { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface IConfirmation1 : IIsoComponent
     [IsoId("_YpefQAKEEeS2H9l84F_isg")]
     [DisplayName("Page Number")]
     [IsoXmlTag("PgNb")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText PageNumber { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface IConfirmation1 : IIsoComponent
     [IsoId("_YXsvUKayEeSxuMLA5o46jQ")]
     [DisplayName("Query Page Number")]
     [IsoXmlTag("QryPgNb")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText QueryPageNumber { get; }
 
     /// <summary>
@@ -97,6 +105,7 @@ public interface IConfirmation1 : IIsoComponent
     [IsoId("_CO9GQESsEeSTS-T7FO4CUQ")]
     [DisplayName("Message Number Of Current Page")]
     [IsoXmlTag("MsgNbOfCurPg")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number MessageNumberOfCurrentPage { get; }
 
     /// <summary>
@@ -105,6 +114,7 @@ public interface IConfirmation1 : IIsoComponent
     [IsoId("_-32pYAKFEeS2H9l84F_isg")]
     [DisplayName("List Order Number")]
     [IsoXmlTag("ListOrdrNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number ListOrderNumber { get; }
 
     /// <summary>
@@ -113,6 +123,7 @@ public interface IConfirmation1 : IIsoComponent
     [IsoId("_eV2zQAKEEeS2H9l84F_isg")]
     [DisplayName("Last Page Indicator")]
     [IsoXmlTag("LastPgInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator LastPageIndicator { get; }
 
     /// <summary>
@@ -121,5 +132,6 @@ public interface IConfirmation1 : IIsoComponent
     [IsoId("_B_YbAAKGEeS2H9l84F_isg")]
     [DisplayName("Last Report Requested")]
     [IsoXmlTag("LastRptReqd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator LastReportRequested { get; }
 }

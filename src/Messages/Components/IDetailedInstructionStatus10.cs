@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status applying to individual instructions of a MeetingInstruction.
 /// </summary>
 [IsoId("_qwFXEVtfEeSwKe7KuKvXhg")]
+[IsoDisplayName(@"Detailed Instruction Status")]
 public interface IDetailedInstructionStatus10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDetailedInstructionStatus10 : IIsoComponent
     [IsoId("_rN_bF1tfEeSwKe7KuKvXhg")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InstructionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IDetailedInstructionStatus10 : IIsoComponent
     [IsoId("_rN_bGVtfEeSwKe7KuKvXhg")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IDetailedInstructionStatus10 : IIsoComponent
     [IsoId("_rN_bHVtfEeSwKe7KuKvXhg")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubAccountIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,9 @@ public interface IDetailedInstructionStatus10 : IIsoComponent
     [IsoId("_rN_bH1tfEeSwKe7KuKvXhg")]
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification40Choice> RightsHolder { get; }
 
     /// <summary>
@@ -57,6 +67,7 @@ public interface IDetailedInstructionStatus10 : IIsoComponent
     [IsoId("_rN_bIVtfEeSwKe7KuKvXhg")]
     [DisplayName("Standing Instruction")]
     [IsoXmlTag("StgInstr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator StandingInstruction { get; }
 
     /// <summary>
@@ -65,5 +76,8 @@ public interface IDetailedInstructionStatus10 : IIsoComponent
     [IsoId("_rN_bI1tfEeSwKe7KuKvXhg")]
     [DisplayName("Vote Per Resolution")]
     [IsoXmlTag("VotePerRsltn")]
+    [MinLength(0)]
+    [MaxLength(1000)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVote6> VotePerResolution { get; }
 }

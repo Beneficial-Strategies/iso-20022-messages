@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the demand.
 /// </summary>
 [IsoId("_-AylQnltEeG7BsjMvd1mEw_1908468693")]
+[IsoDisplayName(@"Demand")]
 public interface IDemand1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDemand1 : IIsoComponent
     [IsoId("_-AylQ3ltEeG7BsjMvd1mEw_-2057301709")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IDemand1 : IIsoComponent
     [IsoId("_-A8WQHltEeG7BsjMvd1mEw_1331805812")]
     [DisplayName("Advising Party Reference Number")]
     [IsoXmlTag("AdvsgPtyRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdvisingPartyReferenceNumber { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface IDemand1 : IIsoComponent
     [IsoId("_8977YBVQEeKVqNjC36CBuQ")]
     [DisplayName("Second Advising Party Reference Number")]
     [IsoXmlTag("ScndAdvsgPtyRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecondAdvisingPartyReferenceNumber { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface IDemand1 : IIsoComponent
     [IsoId("_-A8WQXltEeG7BsjMvd1mEw_-346168184")]
     [DisplayName("Confirmer Reference Number")]
     [IsoXmlTag("CnfrmrRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ConfirmerReferenceNumber { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface IDemand1 : IIsoComponent
     [IsoId("_-A8WQ3ltEeG7BsjMvd1mEw_-1782957178")]
     [DisplayName("Settlement Account")]
     [IsoXmlTag("SttlmAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount27> SettlementAccount { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface IDemand1 : IIsoComponent
     [IsoId("_-BGHQHltEeG7BsjMvd1mEw_257214418")]
     [DisplayName("Requested Expiry Date")]
     [IsoXmlTag("ReqdXpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedExpiryDate { get; }
 
     /// <summary>
@@ -105,5 +116,9 @@ public interface IDemand1 : IIsoComponent
     [IsoId("_-BGHQ3ltEeG7BsjMvd1mEw_188236729")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies an amount and a rate status.
 /// </summary>
 [IsoId("_g2Fhg5nREeWLs7cvLxlyAg")]
+[IsoDisplayName(@"Amount And Rate Status")]
 public interface IAmountAndRateStatus2 : IIsoComponent
 {
     /// <summary>

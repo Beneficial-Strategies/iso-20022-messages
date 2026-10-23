@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Line item of a telecom services purchase.
 /// </summary>
 [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Telecom Services Line Item4")]
 public interface ITelecomServicesLineItem4 : IIsoComponent
 {
     /// <summary>
@@ -137,6 +138,7 @@ public interface ITelecomServicesLineItem4 : IIsoComponent
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-chrg")]
     [DisplayName("Charge")]
     [IsoXmlTag("Chrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITelecomLineItemAmount1> Charge { get; }
 
     /// <summary>
@@ -145,6 +147,7 @@ public interface ITelecomServicesLineItem4 : IIsoComponent
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-tax0")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> Tax { get; }
 
     /// <summary>
@@ -169,6 +172,7 @@ public interface ITelecomServicesLineItem4 : IIsoComponent
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-pvdt")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -177,5 +181,6 @@ public interface ITelecomServicesLineItem4 : IIsoComponent
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-ntdt")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason29Choice;
 /// Specifies the reason why the instruction/request has a rejection status using a code.
 /// </summary>
 [IsoId("_6HWbRZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectionReason29Choice, IIsoChoiceVariant
 {
     /// <summary>

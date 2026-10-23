@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the settlement condition modification request.
 /// </summary>
 [IsoId("_D9PU7ffXEeiNZp_PtLohLw")]
+[IsoDisplayName(@"Request Details")]
 public interface IRequestDetails21 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IRequestDetails21 : IIsoComponent
     [IsoId("_D9PU-ffXEeiNZp_PtLohLw")]
     [DisplayName("Restriction Reference")]
     [IsoXmlTag("RstrctnRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRestrictionIdentification2> RestrictionReference { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IRequestDetails21 : IIsoComponent
     [IsoId("_D9PU__fXEeiNZp_PtLohLw")]
     [DisplayName("Retain Indicator")]
     [IsoXmlTag("RtnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RetainIndicator { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IRequestDetails21 : IIsoComponent
     [IsoId("_D9PVC_fXEeiNZp_PtLohLw")]
     [DisplayName("Other Processing")]
     [IsoXmlTag("OthrPrcg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification47> OtherProcessing { get; }
 
     /// <summary>
@@ -113,5 +117,6 @@ public interface IRequestDetails21 : IIsoComponent
     [IsoId("_D9PVI_fXEeiNZp_PtLohLw")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages56> Linkages { get; }
 }

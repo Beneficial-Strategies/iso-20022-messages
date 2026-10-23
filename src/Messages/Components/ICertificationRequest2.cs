@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information of the certificate to create.
 /// </summary>
 [IsoId("_Bv1XkY4SEeW6h7rGyYlyTg")]
+[IsoDisplayName(@"Certification Request")]
 public interface ICertificationRequest2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICertificationRequest2 : IIsoComponent
     [IsoId("_B8DOoY4SEeW6h7rGyYlyTg")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface ICertificationRequest2 : IIsoComponent
     [IsoId("_ECnAkI4UEeW6h7rGyYlyTg")]
     [DisplayName("Attribute")]
     [IsoXmlTag("Attr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRelativeDistinguishedName2> Attribute { get; }
 }

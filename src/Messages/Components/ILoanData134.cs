@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the loan data details in case of a securities lending transaction.
 /// </summary>
 [IsoId("_F8Sz8cguEeuGrNSsxk3B0A")]
+[IsoDisplayName(@"Loan Data")]
 public interface ILoanData134 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ILoanData134 : IIsoComponent
     [IsoId("_F9r7FcguEeuGrNSsxk3B0A")]
     [DisplayName("Cleared")]
     [IsoXmlTag("Clrd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? Cleared { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface ILoanData134 : IIsoComponent
     [IsoId("_F9r7F8guEeuGrNSsxk3B0A")]
     [DisplayName("Portfolio Code")]
     [IsoXmlTag("PrtflCd")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? PortfolioCode { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ILoanData134 : IIsoComponent
     [IsoId("_F9r7HcguEeuGrNSsxk3B0A")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Eligible and not eligible balance of securities for a corporate action event.
 /// </summary>
 [IsoId("_MLOD9Tq5EeWQ1Y7f8kds2A")]
+[IsoDisplayName(@"Corporate Action Balance Details")]
 public interface ICorporateActionBalanceDetails30 : IIsoComponent
 {
     /// <summary>
@@ -137,6 +138,7 @@ public interface ICorporateActionBalanceDetails30 : IIsoComponent
     [IsoId("_MXuPQzq5EeWQ1Y7f8kds2A")]
     [DisplayName("Pending Delivery Balance")]
     [IsoXmlTag("PdgDlvryBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPendingBalance3> PendingDeliveryBalance { get; }
 
     /// <summary>
@@ -145,5 +147,6 @@ public interface ICorporateActionBalanceDetails30 : IIsoComponent
     [IsoId("_MXuPSzq5EeWQ1Y7f8kds2A")]
     [DisplayName("Pending Receipt Balance")]
     [IsoXmlTag("PdgRctBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPendingBalance3> PendingReceiptBalance { get; }
 }

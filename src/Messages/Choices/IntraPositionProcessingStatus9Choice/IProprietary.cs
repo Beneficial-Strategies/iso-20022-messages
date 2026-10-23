@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus9Ch
 /// </summary>
 [IsoId("_ZkDCMStUEeyhipY4f42fZQ")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IIntraPositionProcessingStatus9Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IProprietary : IIntraPositionProcessingStatus9Choice, IIsoChoic
     [IsoId("_y0OagTp4EeWVrPy0StzzSg")]
     [DisplayName("Proprietary Reason")]
     [IsoXmlTag("PrtryRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryReason4> ProprietaryReason { get; }
 }

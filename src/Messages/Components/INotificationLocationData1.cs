@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Notification Location Data1.
 /// </summary>
 [IsoId("_ZKYSYbkzEe68nbz8Nl_hLQ")]
+[IsoDisplayName(@"Notification Location Data1")]
 public interface INotificationLocationData1 : IIsoComponent
 {
     /// <summary>

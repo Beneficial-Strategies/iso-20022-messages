@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Position Set21.
 /// </summary>
 [IsoId("_jRH0yxTjEe61h9tfoUrWyw")]
+[IsoDisplayName(@"Position Set21")]
 public interface IPositionSet21 : IIsoComponent
 {
     /// <summary>

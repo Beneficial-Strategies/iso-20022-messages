@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount1Choice;
 /// </summary>
 [IsoId("_l8K8WpKgEeGy0b9YqEEfSQ")]
 [IsoXmlTag("DcrAmt")]
+[IsoDisplayName(@"Decrease Amount")]
 public interface IDecreaseAmount : IAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

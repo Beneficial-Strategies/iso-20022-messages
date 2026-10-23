@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contain information related promotion program applied to the transaction.
 /// </summary>
 [IsoId("_PaoEcXn7EfCmC4yYaU27Kg")]
+[IsoDisplayName(@"Promotion Data1")]
 public interface IPromotionData1 : IIsoComponent
 {
     /// <summary>

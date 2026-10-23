@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the request of maintenance delegations.
 /// </summary>
 [IsoId("_oIGS4S9EEeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Maintenance Delegation Response")]
 public interface IMaintenanceDelegationResponse5 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IMaintenanceDelegationResponse5 : IIsoComponent
     [IsoId("_oUmd1S9EEeu125Ip9zFcsQ")]
     [DisplayName("Delegation Response")]
     [IsoXmlTag("DlgtnRspn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMaintenanceDelegation12> DelegationResponse { get; }
 }

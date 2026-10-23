@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice;
 /// </summary>
 [IsoId("_L8Gl0LVQEeadLcJesEbkTQ")]
 [IsoXmlTag("SctiesFincgTx")]
+[IsoDisplayName(@"Securities Financing Transaction")]
 public interface ISecuritiesFinancingTransaction : IProduct1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,5 +35,6 @@ public interface ISecuritiesFinancingTransaction : IProduct1Choice, IIsoChoiceVa
     [IsoId("_aYvei7cREeabfchHYoktpA")]
     [DisplayName("Triparty Agent")]
     [IsoXmlTag("TrptyAgt")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? TripartyAgent { get; }
 }

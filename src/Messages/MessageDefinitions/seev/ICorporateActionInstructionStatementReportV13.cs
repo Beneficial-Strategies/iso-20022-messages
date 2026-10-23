@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnInstrStmtRpt",
     "urn:iso:std:iso:20022:tech:xsd:seev.042.001.13"
 )]
+[IsoDisplayName(@"Corporate Action Instruction Statement Report V13")]
 public interface ICorporateActionInstructionStatementReportV13 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +37,7 @@ public interface ICorporateActionInstructionStatementReportV13 : IOuterRecord
     /// </summary>
     [DisplayName("Account And Statement Details")]
     [IsoXmlTag("AcctAndStmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentification68> AccountAndStatementDetails { get; }
 
     /// <summary>
@@ -43,5 +45,6 @@ public interface ICorporateActionInstructionStatementReportV13 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

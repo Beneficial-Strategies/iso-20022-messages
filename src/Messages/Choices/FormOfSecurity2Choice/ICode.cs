@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FormOfSecurity2Choice;
 /// Form of the security expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_QvHt19p-Ed-ak6NoX_4Aeg_2137358938")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IFormOfSecurity2Choice, IIsoChoiceVariant
 {
     /// <summary>

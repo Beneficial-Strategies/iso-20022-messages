@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus22Choice;
 /// Status of the order cancellation request is cancelled.
 /// </summary>
 [IsoId("_0syLAkgsEeaD2L_hzZaE0w")]
+[IsoDisplayName(@"Status")]
 public interface IStatus : ICancellationStatus22Choice, IIsoChoiceVariant
 {
     /// <summary>

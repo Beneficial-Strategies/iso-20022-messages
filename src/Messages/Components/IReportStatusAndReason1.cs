@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the related report identification and its status. If the status is rejected, a reason for this status must be given.
 /// </summary>
 [IsoId("_RXWygNp-Ed-ak6NoX_4Aeg_-1224288491")]
+[IsoDisplayName(@"Report Status And Reason")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IReportStatusAndReason1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IReportStatusAndReason1 : IIsoComponent
     [IsoId("_RXWygdp-Ed-ak6NoX_4Aeg_-1224288239")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RelatedReference { get; }
 
     /// <summary>
@@ -33,5 +37,8 @@ public interface IReportStatusAndReason1 : IIsoComponent
     [IsoId("_RXWyg9p-Ed-ak6NoX_4Aeg_-1224287697")]
     [DisplayName("Rejected")]
     [IsoXmlTag("Rjctd")]
+    [MinLength(1)]
+    [MaxLength(100)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectedStatusReason9Choice> Rejected { get; }
 }

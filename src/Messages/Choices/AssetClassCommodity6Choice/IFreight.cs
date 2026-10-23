@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity6Choice;
 /// Freight commodities.
 /// </summary>
 [IsoId("_1bgUGRZXEe2QNcZTDeoKnQ")]
+[IsoDisplayName(@"Freight")]
 public interface IFreight : IAssetClassCommodity6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

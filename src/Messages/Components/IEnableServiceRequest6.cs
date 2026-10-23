@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Enable Service Request6.
 /// </summary>
 [IsoId("_B8BpYZFHEe6reqfAp4CunQ")]
+[IsoDisplayName(@"Enable Service Request6")]
 public interface IEnableServiceRequest6 : IIsoComponent
 {
     /// <summary>

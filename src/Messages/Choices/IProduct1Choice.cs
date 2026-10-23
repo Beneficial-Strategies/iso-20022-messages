@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the choice between the major categories of financial instruments.
 /// </summary>
 [IsoId("_AS4VYLVPEeadLcJesEbkTQ")]
+[IsoDisplayName(@"Product 1 Choice")]
 public interface IProduct1Choice : IIsoChoice { }

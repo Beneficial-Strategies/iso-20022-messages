@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// </summary>
 [IsoId("_yJhSq4v-Eei289CGNqs21g")]
 [IsoXmlTag("SysRstrctn")]
+[IsoDisplayName(@"System Restriction")]
 public interface ISystemRestriction : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ISystemRestriction : ISystemPartyModification2Choice, IIsoChoic
     [IsoId("_kpU3oe5NEeCisYr99QEiWA_534617393")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ValidFrom { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface ISystemRestriction : ISystemPartyModification2Choice, IIsoChoic
     [IsoId("_kpU3ou5NEeCisYr99QEiWA_1295382546")]
     [DisplayName("Valid To")]
     [IsoXmlTag("VldTo")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ValidTo { get; }
 
     /// <summary>
@@ -34,5 +37,7 @@ public interface ISystemRestriction : ISystemPartyModification2Choice, IIsoChoic
     [IsoId("_kpU3o-5NEeCisYr99QEiWA_1881329572")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 }

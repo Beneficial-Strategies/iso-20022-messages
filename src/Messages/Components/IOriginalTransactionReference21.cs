@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Key elements used to refer the original transaction.
 /// </summary>
 [IsoId("_AYcLaVkKEeSeLKjZh_lWZw")]
+[IsoDisplayName(@"Original Transaction Reference")]
 public interface IOriginalTransactionReference21 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IOriginalTransactionReference21 : IIsoComponent
     [IsoId("_Ayeb9VkKEeSeLKjZh_lWZw")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedExecutionDate { get; }
 
     /// <summary>

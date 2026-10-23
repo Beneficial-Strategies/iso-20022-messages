@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_0HGxcROHEfC1ZfCQz0xB3g")]
 [IsoMessage("cain.023.001.04", "CardMgmtInitn", "urn:iso:std:iso:20022:tech:xsd:cain.023.001.04")]
+[IsoDisplayName(@"Card Management Initiation V04")]
 public interface ICardManagementInitiationV04 : IOuterRecord
 {
     /// <summary>
@@ -123,6 +124,7 @@ public interface ICardManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardExchangeRate1> ExchangeRate { get; }
 
     /// <summary>
@@ -137,6 +139,7 @@ public interface ICardManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAmounts5> AdditionalAmount { get; }
 
     /// <summary>
@@ -172,6 +175,7 @@ public interface ICardManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent16> POIComponent { get; }
 
     /// <summary>
@@ -221,6 +225,7 @@ public interface ICardManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Cardholder")]
     [IsoXmlTag("Crdhldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholder23> Cardholder { get; }
 
     /// <summary>
@@ -228,6 +233,7 @@ public interface ICardManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerification8> Verification { get; }
 
     /// <summary>
@@ -235,6 +241,7 @@ public interface ICardManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Risk")]
     [IsoXmlTag("Rsk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRiskContext4> Risk { get; }
 
     /// <summary>
@@ -242,6 +249,7 @@ public interface ICardManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalService3> AdditionalService { get; }
 
     /// <summary>
@@ -263,6 +271,7 @@ public interface ICardManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -291,6 +300,7 @@ public interface ICardManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -298,6 +308,7 @@ public interface ICardManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -305,6 +316,7 @@ public interface ICardManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

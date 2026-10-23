@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the event that require an action from one of the parties to the trade transaction.
 /// </summary>
 [IsoId("_RaowBtp-Ed-ak6NoX_4Aeg_-888447978")]
+[IsoDisplayName(@"Pending Activity")]
 public interface IPendingActivity2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IPendingActivity2 : IIsoComponent
     [IsoId("_RaowCNp-Ed-ak6NoX_4Aeg_-888447900")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

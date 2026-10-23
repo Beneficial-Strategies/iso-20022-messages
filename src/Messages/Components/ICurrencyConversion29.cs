@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency Conversion29.
 /// </summary>
 [IsoId("_MKqkcZFDEe6reqfAp4CunQ")]
+[IsoDisplayName(@"Currency Conversion29")]
 public interface ICurrencyConversion29 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface ICurrencyConversion29 : IIsoComponent
     /// </summary>
     [DisplayName("Applicable Bin Range")]
     [IsoXmlTag("AplblBinRg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBinRange1> ApplicableBinRange { get; }
 
     /// <summary>
@@ -93,6 +95,7 @@ public interface ICurrencyConversion29 : IIsoComponent
     /// </summary>
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission19> CommissionDetails { get; }
 
     /// <summary>
@@ -100,6 +103,7 @@ public interface ICurrencyConversion29 : IIsoComponent
     /// </summary>
     [DisplayName("Mark Up Details")]
     [IsoXmlTag("MrkUpDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission18> MarkUpDetails { get; }
 
     /// <summary>
@@ -107,5 +111,6 @@ public interface ICurrencyConversion29 : IIsoComponent
     /// </summary>
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActionMessage11> DeclarationDetails { get; }
 }

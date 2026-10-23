@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus4Choice;
 /// Status of the switch order is accepted or already executed or sent to next party or received. There is no reason attached.
 /// </summary>
 [IsoId("_9wxHwUH8EeaV3ab_pHzFIQ")]
+[IsoDisplayName(@"Status")]
 public interface IStatus : IOrderStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>

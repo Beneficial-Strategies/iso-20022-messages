@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action option securities movement security details.
 /// </summary>
 [IsoId("_1g7u8TL3EeKU9IrkkToqcw_1034011765")]
+[IsoDisplayName(@"Financial Instrument Attributes SD")]
 public interface IFinancialInstrumentAttributesSD5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrumentAttributesSD5 : IIsoComponent
     [IsoId("_1g7u8jL3EeKU9IrkkToqcw_36939412")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>

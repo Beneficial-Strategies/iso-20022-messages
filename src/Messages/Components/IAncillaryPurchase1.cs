@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains additional charges related to or during transit (e.g., baggage fee, in-flight purchase). These are separate from the original ticket purchase.
 /// </summary>
 [IsoId("_6_5EA_QVEeihCvvpsmGI2w")]
+[IsoDisplayName(@"Ancillary Purchase")]
 public interface IAncillaryPurchase1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAncillaryPurchase1 : IIsoComponent
     [IsoId("_GkdTYPQWEeihCvvpsmGI2w")]
     [DisplayName("Ancillary Document Number")]
     [IsoXmlTag("AncllryDocNb")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text? AncillaryDocumentNumber { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAncillaryPurchase1 : IIsoComponent
     [IsoId("_wuJR8PQWEeihCvvpsmGI2w")]
     [DisplayName("Related Document Number")]
     [IsoXmlTag("RltdDocNb")]
+    [IsoSimpleType(IsoSimpleType.Max15Text)]
+    [StringLength(15, MinimumLength = 1)]
     Max15Text? RelatedDocumentNumber { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IAncillaryPurchase1 : IIsoComponent
     [IsoId("_H_iU0PQXEeihCvvpsmGI2w")]
     [DisplayName("Service Category Code")]
     [IsoXmlTag("SvcCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? ServiceCategoryCode { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IAncillaryPurchase1 : IIsoComponent
     [IsoId("_ZL7IUPQXEeihCvvpsmGI2w")]
     [DisplayName("Service Sub Category Code")]
     [IsoXmlTag("SvcSubCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? ServiceSubCategoryCode { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IAncillaryPurchase1 : IIsoComponent
     [IsoId("_g4oVUPQXEeihCvvpsmGI2w")]
     [DisplayName("Service Provider Service Type")]
     [IsoXmlTag("SvcPrvdrSvcTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ServiceProviderServiceType { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface IAncillaryPurchase1 : IIsoComponent
     [IsoId("_se2KgPQXEeihCvvpsmGI2w")]
     [DisplayName("Credit Reason Code")]
     [IsoXmlTag("CdtRsnCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CreditReasonCode { get; }
 
     /// <summary>
@@ -65,6 +78,8 @@ public interface IAncillaryPurchase1 : IIsoComponent
     [IsoId("_7SaFcfQXEeihCvvpsmGI2w")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SummaryCommodityIdentification { get; }
 
     /// <summary>
@@ -89,6 +104,7 @@ public interface IAncillaryPurchase1 : IIsoComponent
     [IsoId("_WnfAMPQYEeihCvvpsmGI2w")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax33> Tax { get; }
 
     /// <summary>
@@ -97,5 +113,7 @@ public interface IAncillaryPurchase1 : IIsoComponent
     [IsoId("_fspN4fQYEeihCvvpsmGI2w")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

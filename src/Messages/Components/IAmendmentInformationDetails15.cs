@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the list of direct debit mandate elements that have been modified when the amendment indicator has been set.
 /// </summary>
 [IsoId("_wL-4oTEyEe6g-ffJsqGiSA")]
+[Description(@"Provides further details on the list of direct debit mandate elements that have been modified when the amendment indicator has been set.")]
+[IsoDisplayName(@"Amendment Information Details15")]
 public interface IAmendmentInformationDetails15 : IIsoComponent
 {
     /// <summary>

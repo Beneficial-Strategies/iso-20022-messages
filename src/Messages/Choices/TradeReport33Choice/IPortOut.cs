@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport33Choice;
 /// <summary>
 /// Port Out.
 /// </summary>
+[IsoDisplayName(@"Port Out")]
 public interface IPortOut : ITradeReport33Choice, IIsoChoiceVariant
 {
     /// <summary>

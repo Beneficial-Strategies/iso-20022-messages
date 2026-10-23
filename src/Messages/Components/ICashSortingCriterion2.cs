@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Criterion by which the cash movements are broken down.
 /// </summary>
 [IsoId("_Uw6IRdp-Ed-ak6NoX_4Aeg_1035399646")]
+[IsoDisplayName(@"Cash Sorting Criterion")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ICashSortingCriterion2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICashSortingCriterion2 : IIsoComponent
     [IsoId("_Uw6IR9p-Ed-ak6NoX_4Aeg_1035399862")]
     [DisplayName("Forecast Breakdown Details")]
     [IsoXmlTag("FcstBrkdwnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForecastParameter2> ForecastBreakdownDetails { get; }
 }

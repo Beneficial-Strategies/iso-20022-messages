@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreementFramework1Choice;
 /// Code to specify the type of collateral agreement.
 /// </summary>
 [IsoId("_UkjHQNp-Ed-ak6NoX_4Aeg_-1888228410")]
+[IsoDisplayName(@"Agreement Framework")]
 public interface IAgreementFramework : IAgreementFramework1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus13Choice;
 /// <summary>
 /// Processing Status.
 /// </summary>
+[IsoDisplayName(@"Processing Status")]
 public interface IProcessingStatus : IInstructionStatus13Choice, IIsoChoiceVariant
 {
     /// <summary>

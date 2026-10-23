@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the final agent.
 /// </summary>
 [IsoId("_Prd4cdp-Ed-ak6NoX_4Aeg_-1258143330")]
+[IsoDisplayName(@"Instruction For Final Agent")]
 public interface IInstructionForFinalAgent : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,9 @@ public interface IInstructionForFinalAgent : IIsoComponent
     [IsoId("_Prd4ctp-Ed-ak6NoX_4Aeg_-357710298")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Instruction3Code> Code { get; }
 
     /// <summary>
@@ -25,5 +29,7 @@ public interface IInstructionForFinalAgent : IIsoComponent
     [IsoId("_Prd4c9p-Ed-ak6NoX_4Aeg_-100044573")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Proprietary { get; }
 }

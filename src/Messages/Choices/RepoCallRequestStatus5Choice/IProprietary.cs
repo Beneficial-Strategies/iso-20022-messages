@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepoCallRequestStatus5Choice;
 /// </summary>
 [IsoId("_fHQhS_7rEeCvPoRGOxRobQ")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IRepoCallRequestStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IProprietary : IRepoCallRequestStatus5Choice, IIsoChoiceVariant
     [IsoId("_UatOw9p-Ed-ak6NoX_4Aeg_-1512024757")]
     [DisplayName("Proprietary Reason")]
     [IsoXmlTag("PrtryRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryReason1> ProprietaryReason { get; }
 }

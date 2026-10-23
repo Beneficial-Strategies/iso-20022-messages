@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cryptographic key involved in the security command.
 /// </summary>
 [IsoId("_21LV8YtJEeSxlKlAGYErFg")]
+[IsoDisplayName(@"KEK Identifier")]
 public interface IKEKIdentifier4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IKEKIdentifier4 : IIsoComponent
     [IsoId("_3Bi-AYtJEeSxlKlAGYErFg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IKEKIdentifier4 : IIsoComponent
     [IsoId("_3Bi-A4tJEeSxlKlAGYErFg")]
     [DisplayName("Key Identification")]
     [IsoXmlTag("KeyId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? KeyIdentification { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IKEKIdentifier4 : IIsoComponent
     [IsoId("_3Bi-BYtJEeSxlKlAGYErFg")]
     [DisplayName("Key Version")]
     [IsoXmlTag("KeyVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? KeyVersion { get; }
 }

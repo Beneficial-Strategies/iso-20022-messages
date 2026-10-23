@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus58Cho
 /// <summary>
 /// Received By Issuer Or Offeror.
 /// </summary>
+[IsoDisplayName(@"Received By Issuer Or Offeror")]
 public interface IReceivedByIssuerOrOfferor
     : IInstructionProcessingStatus58Choice,
         IIsoChoiceVariant

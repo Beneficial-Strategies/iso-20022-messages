@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Delivery information
 /// </summary>
 [IsoId("_1qvqUcW3EeuhguwJmlgagQ")]
+[IsoDisplayName(@"Delivery Information")]
 public interface IDeliveryInformation4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDeliveryInformation4 : IIsoComponent
     [IsoId("_1vSzIcW3EeuhguwJmlgagQ")]
     [DisplayName("Delivery Note Number")]
     [IsoXmlTag("DlvryNoteNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DeliveryNoteNumber { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IDeliveryInformation4 : IIsoComponent
     [IsoId("_1vSzJ8W3EeuhguwJmlgagQ")]
     [DisplayName("Instructions")]
     [IsoXmlTag("Instrs")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Instructions { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IDeliveryInformation4 : IIsoComponent
     [IsoId("_1vSzKcW3EeuhguwJmlgagQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface IDeliveryInformation4 : IIsoComponent
     [IsoId("_1vSzK8W3EeuhguwJmlgagQ")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? Time { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information such as the registration details.
 /// </summary>
 [IsoId("_ULqGJ9p-Ed-ak6NoX_4Aeg_-1675533658")]
+[IsoDisplayName(@"Corporate Action Narrative")]
 public interface ICorporateActionNarrative7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionNarrative7 : IIsoComponent
     [IsoId("_ULqGKNp-Ed-ak6NoX_4Aeg_-1675533191")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> AdditionalText { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICorporateActionNarrative7 : IIsoComponent
     [IsoId("_ULz3INp-Ed-ak6NoX_4Aeg_-1675533166")]
     [DisplayName("Narrative Version")]
     [IsoXmlTag("NrrtvVrsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> NarrativeVersion { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICorporateActionNarrative7 : IIsoComponent
     [IsoId("_ULz3Idp-Ed-ak6NoX_4Aeg_-1675533131")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> RegistrationDetails { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICorporateActionNarrative7 : IIsoComponent
     [IsoId("_ULz3Itp-Ed-ak6NoX_4Aeg_-1675532763")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> PartyContactNarrative { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ICorporateActionNarrative7 : IIsoComponent
     [IsoId("_ULz3I9p-Ed-ak6NoX_4Aeg_-1675532693")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> Disclaimer { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface ICorporateActionNarrative7 : IIsoComponent
     [IsoId("_ULz3JNp-Ed-ak6NoX_4Aeg_-821241225")]
     [DisplayName("Basket Or Index Information")]
     [IsoXmlTag("BsktOrIndxInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> BasketOrIndexInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an agricultural derivative of type soft.
 /// </summary>
 [IsoId("_NRHWpA2jEeW72qLtWESimw")]
+[IsoDisplayName(@"Agricultural Commodity Soft")]
 public interface IAgriculturalCommoditySoft1 : IIsoComponent
 {
     /// <summary>

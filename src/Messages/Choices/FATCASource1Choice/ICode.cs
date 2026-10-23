@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FATCASource1Choice;
 /// Source of the Foreign Account Tax Compliance Act (FATCA) status expressed as a code.
 /// </summary>
 [IsoId("_pdKdkAjUEeS5F6qHcKOrew")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IFATCASource1Choice, IIsoChoiceVariant
 {
     /// <summary>

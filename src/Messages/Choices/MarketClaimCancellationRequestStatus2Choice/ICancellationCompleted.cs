@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
 /// <summary>
 /// Cancellation Completed.
 /// </summary>
+[IsoDisplayName(@"Cancellation Completed")]
 public interface ICancellationCompleted
     : IMarketClaimCancellationRequestStatus2Choice,
         IIsoChoiceVariant

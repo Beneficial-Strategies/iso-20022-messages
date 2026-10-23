@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_sYfqSWtdEeCY4-KZ9JEyUQ_1049190902")]
 [IsoMessage("camt.063.001.01", "PayInSchdlConf", "urn:iso:std:iso:20022:tech:xsd:camt.063.001.01")]
+[IsoDisplayName(@"Pay In Schedule Confirmation V01")]
 public interface IPayInScheduleConfirmationV01 : IOuterRecord
 {
     /// <summary>

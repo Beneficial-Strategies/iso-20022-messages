@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the securities settlement system used in a settlement process.
 /// </summary>
 [IsoId("_h-yqwR2yEeqF2P5v-Rtejg")]
+[IsoDisplayName(@"Securities Settlement System Identification")]
 public interface ISecuritiesSettlementSystemIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesSettlementSystemIdentification2 : IIsoComponent
     [IsoId("_iAmBkR2yEeqF2P5v-Rtejg")]
     [DisplayName("System Identification")]
     [IsoXmlTag("SysId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SystemIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISecuritiesSettlementSystemIdentification2 : IIsoComponent
     [IsoId("_iAmBkx2yEeqF2P5v-Rtejg")]
     [DisplayName("System Name")]
     [IsoXmlTag("SysNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SystemName { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ISecuritiesSettlementSystemIdentification2 : IIsoComponent
     [IsoId("_iAmBlx2yEeqF2P5v-Rtejg")]
     [DisplayName("CSD Legal Name")]
     [IsoXmlTag("CSDLglNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? CSDLegalName { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface ISecuritiesSettlementSystemIdentification2 : IIsoComponent
     [IsoId("_iAmBmR2yEeqF2P5v-Rtejg")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 
     /// <summary>
@@ -57,5 +65,6 @@ public interface ISecuritiesSettlementSystemIdentification2 : IIsoComponent
     [IsoId("_iAmBmx2yEeqF2P5v-Rtejg")]
     [DisplayName("Responsible Party")]
     [IsoXmlTag("RspnsblPty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContact9> ResponsibleParty { get; }
 }

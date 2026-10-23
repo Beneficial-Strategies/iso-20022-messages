@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of transaction for a file action.
 /// </summary>
 [IsoId("_rqZBIYgpEeu8-LhY4KPfWg")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction157 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ITransaction157 : IIsoComponent
     [IsoId("_aiTBd8sJEeuNe7RtB4qFHw")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface ITransaction157 : IIsoComponent
     [IsoId("_rvxQY4gpEeu8-LhY4KPfWg")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -59,6 +62,8 @@ public interface ITransaction157 : IIsoComponent
     [IsoId("_rvxQa4gpEeu8-LhY4KPfWg")]
     [DisplayName("Other File Action Type")]
     [IsoXmlTag("OthrFileActnTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherFileActionType { get; }
 
     /// <summary>
@@ -75,6 +80,7 @@ public interface ITransaction157 : IIsoComponent
     [IsoId("_rvxQb4gpEeu8-LhY4KPfWg")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee2> AdditionalFee { get; }
 
     /// <summary>
@@ -83,6 +89,7 @@ public interface ITransaction157 : IIsoComponent
     [IsoId("_rvxQcYgpEeu8-LhY4KPfWg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 
     /// <summary>
@@ -99,5 +106,6 @@ public interface ITransaction157 : IIsoComponent
     [IsoId("_V_dP0Zb9Eeuc6pwKtqbEVQ")]
     [DisplayName("Continuation Indicator")]
     [IsoXmlTag("ConttnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ContinuationIndicator { get; }
 }

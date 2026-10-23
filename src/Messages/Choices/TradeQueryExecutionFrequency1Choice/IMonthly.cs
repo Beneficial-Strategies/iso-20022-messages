@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeQueryExecutionFrequency1Cho
 /// Query is executed on a monthly basis. The day of the month of the query execution should be specified.
 /// </summary>
 [IsoId("_mmTLsNGYEeaQk737TH1Fzw")]
+[IsoDisplayName(@"Monthly")]
 public interface IMonthly : ITradeQueryExecutionFrequency1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IMonthly : ITradeQueryExecutionFrequency1Choice, IIsoChoiceVari
     /// Number (max 999) of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("Mnthly")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number Value { get; }
 }

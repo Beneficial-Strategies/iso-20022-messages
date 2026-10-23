@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReason1Choice;
 /// Reason why the payment status is suspended.
 /// </summary>
 [IsoId("_QWOztdEdEei798TPbKJMuw")]
+[IsoDisplayName(@"Suspended")]
 public interface ISuspended : IPaymentStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

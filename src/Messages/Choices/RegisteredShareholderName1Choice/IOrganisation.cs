@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RegisteredShareholderName1Choice
 /// </summary>
 [IsoId("_yANgEFxYEeWvPv3PXpS3fw")]
 [IsoXmlTag("Org")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation : IRegisteredShareholderName1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOrganisation : IRegisteredShareholderName1Choice, IIsoChoiceVa
     [IsoId("_GqORAVxZEeWvPv3PXpS3fw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IOrganisation : IRegisteredShareholderName1Choice, IIsoChoiceVa
     [IsoId("_GqORA1xZEeWvPv3PXpS3fw")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>
@@ -34,5 +39,8 @@ public interface IOrganisation : IRegisteredShareholderName1Choice, IIsoChoiceVa
     [IsoId("_GqORD1xZEeWvPv3PXpS3fw")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress21> PostalAddress { get; }
 }

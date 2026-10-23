@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_FsXYwS43EeK7-OZOLIksSw")]
 [IsoMessage("camt.061.001.02", "PayInCall", "urn:iso:std:iso:20022:tech:xsd:camt.061.001.02")]
+[Description(@"The PayInCall message is sent by a central settlement system to request additional funding from a settlement member impacted by a failure situation.")]
+[IsoDisplayName(@"Pay In Call V")]
 public interface IPayInCallV02 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +38,7 @@ public interface IPayInCallV02 : IOuterRecord
     [IsoId("_-6XNzzqdEeKqTf3MbquCbA")]
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SettlementSessionIdentifier { get; }
 
     /// <summary>
@@ -44,5 +47,6 @@ public interface IPayInCallV02 : IOuterRecord
     [IsoId("_CGzMPS53EeKwTrPDLMbLxA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

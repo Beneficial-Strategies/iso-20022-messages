@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of partners involved in exchange from the ATM to the issuer, with the relative timestamp of their exchanges.
 /// </summary>
 [IsoId("_iwOuUYnzEeS9F4Qrq_eaVA")]
+[IsoDisplayName(@"Traceability")]
 public interface ITraceability4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITraceability4 : IIsoComponent
     [IsoId("_rXzs8Cq5EeWRf8RNsvC5fQ")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SequenceNumber { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITraceability4 : IIsoComponent
     [IsoId("_i854Y4nzEeS9F4Qrq_eaVA")]
     [DisplayName("Trace Date Time In")]
     [IsoXmlTag("TracDtTmIn")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TraceDateTimeIn { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ITraceability4 : IIsoComponent
     [IsoId("_i854ZYnzEeS9F4Qrq_eaVA")]
     [DisplayName("Trace Date Time Out")]
     [IsoXmlTag("TracDtTmOut")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TraceDateTimeOut { get; }
 }

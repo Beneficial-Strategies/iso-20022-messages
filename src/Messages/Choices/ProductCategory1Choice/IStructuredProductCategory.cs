@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCategory1Choice;
 /// </summary>
 [IsoId("_RbrR19p-Ed-ak6NoX_4Aeg_1854520026")]
 [IsoXmlTag("StrdPdctCtgy")]
+[IsoDisplayName(@"Structured Product Category")]
 public interface IStructuredProductCategory : IProductCategory1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IStructuredProductCategory : IProductCategory1Choice, IIsoChoic
     [IsoId("_T5L2ENp-Ed-ak6NoX_4Aeg_-1658931027")]
     [DisplayName("Category")]
     [IsoXmlTag("Ctgy")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Category { get; }
 }

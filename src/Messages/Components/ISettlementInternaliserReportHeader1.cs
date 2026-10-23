@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies parameters of the report
 /// </summary>
 [IsoId("_rJ-pkO3kEeaWjpoyrnG6Rw")]
+[IsoDisplayName(@"Settlement Internaliser Report Header")]
 public interface ISettlementInternaliserReportHeader1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementInternaliserReportHeader1 : IIsoComponent
     [IsoId("_2Xg5AO3kEeaWjpoyrnG6Rw")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISettlementInternaliserReportHeader1 : IIsoComponent
     [IsoId("_4oFNcO3kEeaWjpoyrnG6Rw")]
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ReportingDate { get; }
 
     /// <summary>

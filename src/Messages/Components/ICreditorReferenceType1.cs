@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of the documents referred by the creditor.
 /// </summary>
 [IsoId("_T31ySNp-Ed-ak6NoX_4Aeg_96960704")]
+[IsoDisplayName(@"Creditor Reference Type")]
 public interface ICreditorReferenceType1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICreditorReferenceType1 : IIsoComponent
     [IsoId("_T31yStp-Ed-ak6NoX_4Aeg_96961652")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Proprietary { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface ICreditorReferenceType1 : IIsoComponent
     [IsoId("_T3_jQNp-Ed-ak6NoX_4Aeg_96961712")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

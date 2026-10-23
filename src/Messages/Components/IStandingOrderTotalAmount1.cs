@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the overall amount of &quot;not yet executed&quot; predefined liquidity transfer orders or &quot;defined&quot; by a system participant in its sphere of responsibility within the system.
 /// </summary>
 [IsoId("_73Rq5KMgEeCJ6YNENx4h-w_-307258227")]
+[IsoDisplayName(@"Standing Order Total Amount")]
 public interface IStandingOrderTotalAmount1 : IIsoComponent
 {
     /// <summary>

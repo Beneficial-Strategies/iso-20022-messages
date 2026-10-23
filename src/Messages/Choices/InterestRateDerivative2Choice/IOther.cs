@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateDerivative2Choice;
 /// Where contract type is different from swaps, swaptions, futures on swaps and forwards on a swap, this field is used.
 /// </summary>
 [IsoId("_xbbEc2lIEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IInterestRateDerivative2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the cash option.
 /// </summary>
 [IsoId("_QU8tP199Ee262vCSVgjImg")]
+[IsoDisplayName(@"Cash Option")]
 public interface ICashOption87 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ICashOption87 : IIsoComponent
     [IsoId("_QU8tZV99Ee262vCSVgjImg")]
     [DisplayName("Other Income Type")]
     [IsoXmlTag("OthrIncmTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification47> OtherIncomeType { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ICashOption87 : IIsoComponent
     [IsoId("_QU8tZ199Ee262vCSVgjImg")]
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification47> ExemptionType { get; }
 
     /// <summary>
@@ -105,6 +108,7 @@ public interface ICashOption87 : IIsoComponent
     [IsoId("_QU8ti199Ee262vCSVgjImg")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms27> ForeignExchangeDetails { get; }
 
     /// <summary>

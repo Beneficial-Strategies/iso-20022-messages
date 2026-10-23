@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further information required for the settlement the transaction.
 /// </summary>
 [IsoId("_QH7yANp-Ed-ak6NoX_4Aeg_-1468499267")]
+[IsoDisplayName(@"Settlement Information")]
 public interface ISettlementInformation3 : IIsoComponent
 {
     /// <summary>

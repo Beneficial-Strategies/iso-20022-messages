@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError4Choice
 /// </summary>
 [IsoId("_MqM5QdfiEeqoweZZxm4TPQ")]
 [IsoXmlTag("BizErr")]
+[IsoDisplayName(@"Business Error")]
 public interface IBusinessError : IExchangeRateReportOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IBusinessError : IExchangeRateReportOrError4Choice, IIsoChoiceV
     [IsoId("_RZI7MNp-Ed-ak6NoX_4Aeg_-917396614")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

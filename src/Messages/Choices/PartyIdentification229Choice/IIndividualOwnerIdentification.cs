@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification229Choice;
 /// </summary>
 [IsoId("_0DC2IO4CEeqc-LCjwLsUVg")]
 [IsoXmlTag("IndvOwnrId")]
+[IsoDisplayName(@"Individual Owner Identification")]
 public interface IIndividualOwnerIdentification : IPartyIdentification229Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,5 +35,7 @@ public interface IIndividualOwnerIdentification : IPartyIdentification229Choice,
     [IsoId("_BbMrhR5gEeWE3PufGMdJ3w")]
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AlternateIdentification { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashSettlementSystemPlace1Choice
 
 /// <summary>Place of safekeeping expressed with a Digital Ledger Identifier.</summary>
 [IsoId("_g5qmsZZhEfCShM_qO0U4ig")]
+[IsoDisplayName(@"Digital Ledger Identification")]
 public interface IDigitalLedgerIdentification : ICashSettlementSystemPlace1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

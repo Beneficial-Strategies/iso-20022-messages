@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed Instruction Status19.
 /// </summary>
 [IsoId("_PCvhwVxyEe6fgZt44_IqFA")]
+[IsoDisplayName(@"Detailed Instruction Status19")]
 public interface IDetailedInstructionStatus19 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface IDetailedInstructionStatus19 : IIsoComponent
     /// </summary>
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification246Choice> RightsHolder { get; }
 
     /// <summary>
@@ -79,5 +81,6 @@ public interface IDetailedInstructionStatus19 : IIsoComponent
     /// </summary>
     [DisplayName("Vote Per Resolution")]
     [IsoXmlTag("VotePerRsltn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVote19> VotePerResolution { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a true false indicator.
 /// </summary>
 [IsoId("_1oSvYa5iEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Compare True False Indicator")]
 public interface ICompareTrueFalseIndicator3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICompareTrueFalseIndicator3 : IIsoComponent
     [IsoId("_13oy8a5iEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? Value1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICompareTrueFalseIndicator3 : IIsoComponent
     [IsoId("_13oy865iEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? Value2 { get; }
 }

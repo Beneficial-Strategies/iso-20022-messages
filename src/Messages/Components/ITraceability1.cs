@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.
 /// </summary>
 [IsoId("_SxbqpQEcEeCQm6a_G2yO_w_-746422456")]
+[IsoDisplayName(@"Traceability")]
 public interface ITraceability1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITraceability1 : IIsoComponent
     [IsoId("_SxbqpwEcEeCQm6a_G2yO_w_1066870481")]
     [DisplayName("Trace Date Time In")]
     [IsoXmlTag("TracDtTmIn")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TraceDateTimeIn { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ITraceability1 : IIsoComponent
     [IsoId("_SxbqqAEcEeCQm6a_G2yO_w_2133792042")]
     [DisplayName("Trace Date Time Out")]
     [IsoXmlTag("TracDtTmOut")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TraceDateTimeOut { get; }
 }

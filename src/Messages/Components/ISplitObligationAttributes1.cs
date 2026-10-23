@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the split details.
 /// </summary>
 [IsoId("989c79b0-c096-45d8-b73c-e0001d518247")]
+[IsoDisplayName(@"Split Obligation Attributes1")]
 public interface ISplitObligationAttributes1 : IIsoComponent
 {
     /// <summary>

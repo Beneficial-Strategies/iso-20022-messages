@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.casp;
     "SaleToPOIDvcRspn",
     "urn:iso:std:iso:20022:tech:xsd:casp.017.001.01"
 )]
+[Description(@"This message is a Response for several kind of device services exchanged between the Sale System (Merchant I.S.) and the POI system (Card Acceptor system).")]
+[IsoDisplayName(@"Sale To POI Device Response V")]
 public interface ISaleToPOIDeviceResponseV01 : IOuterRecord
 {
     /// <summary>

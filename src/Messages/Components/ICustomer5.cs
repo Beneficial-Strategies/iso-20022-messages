@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the customer
 /// </summary>
 [IsoId("_Uany0vPmEeihCvvpsmGI2w")]
+[IsoDisplayName(@"Customer")]
 public interface ICustomer5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICustomer5 : IIsoComponent
     [IsoId("_UapA6fPmEeihCvvpsmGI2w")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICustomer5 : IIsoComponent
     [IsoId("_JALdkP5LEei6wbTV6LEt-g")]
     [DisplayName("Customer File Reference Number")]
     [IsoXmlTag("CstmrFileRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CustomerFileReferenceNumber { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ICustomer5 : IIsoComponent
     [IsoId("_UapA5vPmEeihCvvpsmGI2w")]
     [DisplayName("Age")]
     [IsoXmlTag("Age")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? Age { get; }
 
     /// <summary>

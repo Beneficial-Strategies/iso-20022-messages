@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyIdentification3Choic
 /// Legal entity identifier code used to recognise the counterparty of the reporting agent for the reported transaction.
 /// </summary>
 [IsoId("_ZxnU1cEcEea7jLfvGi1PDw")]
+[IsoDisplayName(@"LEI")]
 public interface ILEI : ICounterpartyIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ILEI : ICounterpartyIdentification3Choice, IIsoChoiceVariant
     /// Legal Entity Identifier is a code allocated to a party as described in ISO 17442 &quot;Financial Services - Legal Entity Identifier (LEI)&quot;.
     /// </summary>
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Value { get; }
 }

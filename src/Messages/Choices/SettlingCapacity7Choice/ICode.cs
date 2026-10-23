@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlingCapacity7Choice;
 /// Settlement capacity expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_czIEYTqEEeWVrPy0StzzSg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlingCapacity7Choice, IIsoChoiceVariant
 {
     /// <summary>

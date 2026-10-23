@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context20.
 /// </summary>
 [IsoId("_CcSmMXjPEe6YlIMyoxWMJA")]
+[IsoDisplayName(@"Context20")]
 public interface IContext20 : IIsoComponent
 {
     /// <summary>
@@ -135,6 +136,7 @@ public interface IContext20 : IIsoComponent
     /// </summary>
     [DisplayName("E Commerce Data")]
     [IsoXmlTag("EComrcData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IECommerceData1> ECommerceData { get; }
 
     /// <summary>
@@ -205,6 +207,7 @@ public interface IContext20 : IIsoComponent
     /// </summary>
     [DisplayName("Security Characteristics")]
     [IsoXmlTag("SctyChrtcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<SecurityCharacteristics1Code> SecurityCharacteristics { get; }
 
     /// <summary>

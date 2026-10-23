@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment terminal or ATM performing the transaction
 /// </summary>
 [IsoId("_e4IxaewNEeiMkKo2clXHdQ")]
+[IsoDisplayName(@"Terminal")]
 public interface ITerminal3 : IIsoComponent
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface ITerminal3 : IIsoComponent
     [IsoId("_e4Ixb-wNEeiMkKo2clXHdQ")]
     [DisplayName("Cardholder Verification Capability")]
     [IsoXmlTag("CrdhldrVrfctnCpblty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholderVerificationCapabilities1> CardholderVerificationCapability { get; }
 
     /// <summary>
@@ -52,6 +54,7 @@ public interface ITerminal3 : IIsoComponent
     [IsoId("_e4IxbOwNEeiMkKo2clXHdQ")]
     [DisplayName("Outdoor Indicator")]
     [IsoXmlTag("OutdrInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? OutdoorIndicator { get; }
 
     /// <summary>
@@ -63,6 +66,7 @@ public interface ITerminal3 : IIsoComponent
     [IsoId("_e4IxbewNEeiMkKo2clXHdQ")]
     [DisplayName("Off Premises Indicator")]
     [IsoXmlTag("OffPrmissInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? OffPremisesIndicator { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface ITerminal3 : IIsoComponent
     [IsoId("_e4IxcOwNEeiMkKo2clXHdQ")]
     [DisplayName("On Board Indicator")]
     [IsoXmlTag("OnBrdInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? OnBoardIndicator { get; }
 
     /// <summary>
@@ -81,5 +86,6 @@ public interface ITerminal3 : IIsoComponent
     [IsoId("_e4IxauwNEeiMkKo2clXHdQ")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent8> POIComponent { get; }
 }

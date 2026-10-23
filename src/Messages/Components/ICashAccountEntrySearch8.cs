@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash Account Entry Search8.
 /// </summary>
 [IsoId("_3RossTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Cash Account Entry Search8")]
 public interface ICashAccountEntrySearch8 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface ICashAccountEntrySearch8 : IIsoComponent
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentificationSearchCriteria2Choice> AccountIdentification { get; }
 
     /// <summary>
@@ -23,6 +25,7 @@ public interface ICashAccountEntrySearch8 : IIsoComponent
     /// </summary>
     [DisplayName("Entry Amount")]
     [IsoXmlTag("NtryAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActiveOrHistoricAmountRange2Choice> EntryAmount { get; }
 
     /// <summary>
@@ -30,6 +33,7 @@ public interface ICashAccountEntrySearch8 : IIsoComponent
     /// </summary>
     [DisplayName("Entry Amount Currency")]
     [IsoXmlTag("NtryAmtCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyCode> EntryAmountCurrency { get; }
 
     /// <summary>
@@ -44,6 +48,7 @@ public interface ICashAccountEntrySearch8 : IIsoComponent
     /// </summary>
     [DisplayName("Entry Status")]
     [IsoXmlTag("NtrySts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<EntryStatus1Code> EntryStatus { get; }
 
     /// <summary>
@@ -51,6 +56,7 @@ public interface ICashAccountEntrySearch8 : IIsoComponent
     /// </summary>
     [DisplayName("Entry Date")]
     [IsoXmlTag("NtryDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDateAndDateTimeSearch3Choice> EntryDate { get; }
 
     /// <summary>

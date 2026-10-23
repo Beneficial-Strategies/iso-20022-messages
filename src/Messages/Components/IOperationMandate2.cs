@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information specifying the Mandate.
 /// </summary>
 [IsoId("_a6CSAQ4aEeKGXqvMN6jpiw")]
+[IsoDisplayName(@"Operation Mandate")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IOperationMandate2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IOperationMandate2 : IIsoComponent
     [IsoId("_bPfkpQ4aEeKGXqvMN6jpiw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +29,7 @@ public interface IOperationMandate2 : IIsoComponent
     [IsoId("_hdVCcBg3EeKnW4lR85q-0A")]
     [DisplayName("Applicable Channel")]
     [IsoXmlTag("AplblChanl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IChannel2Choice> ApplicableChannel { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IOperationMandate2 : IIsoComponent
     [IsoId("_bPfkrA4aEeKGXqvMN6jpiw")]
     [DisplayName("Required Signature Number")]
     [IsoXmlTag("ReqrdSgntrNb")]
+    [IsoSimpleType(IsoSimpleType.Max15PlusSignedNumericText)]
     Max15PlusSignedNumericText RequiredSignatureNumber { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IOperationMandate2 : IIsoComponent
     [IsoId("_bPfksw4aEeKGXqvMN6jpiw")]
     [DisplayName("Signature Order Indicator")]
     [IsoXmlTag("SgntrOrdrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SignatureOrderIndicator { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IOperationMandate2 : IIsoComponent
     [IsoId("_bPfkug4aEeKGXqvMN6jpiw")]
     [DisplayName("Mandate Holder")]
     [IsoXmlTag("MndtHldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndAuthorisation1> MandateHolder { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IOperationMandate2 : IIsoComponent
     [IsoId("_bPfkwQ4aEeKGXqvMN6jpiw")]
     [DisplayName("Bank Operation")]
     [IsoXmlTag("BkOpr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBankTransactionCodeStructure4> BankOperation { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IOperationMandate2 : IIsoComponent
     [IsoId("_bPfkyA4aEeKGXqvMN6jpiw")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -73,5 +83,6 @@ public interface IOperationMandate2 : IIsoComponent
     [IsoId("_bPfkzw4aEeKGXqvMN6jpiw")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EndDate { get; }
 }

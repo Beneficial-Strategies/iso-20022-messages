@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Authorisation response from the acquirer.
 /// </summary>
 [IsoId("_aW1eMY0wEeW1W6lLicSC4w")]
+[IsoDisplayName(@"Card Payment Transaction")]
 public interface ICardPaymentTransaction54 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardPaymentTransaction54 : IIsoComponent
     [IsoId("_aiAzc40wEeW1W6lLicSC4w")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionVerificationResult4> TransactionVerificationResult { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICardPaymentTransaction54 : IIsoComponent
     [IsoId("_aiAzdY0wEeW1W6lLicSC4w")]
     [DisplayName("Allowed Product Code")]
     [IsoXmlTag("AllwdPdctCd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProduct4> AllowedProductCode { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICardPaymentTransaction54 : IIsoComponent
     [IsoId("_xftloJIPEeWww5VvitAAGw")]
     [DisplayName("Not Allowed Product Code")]
     [IsoXmlTag("NotAllwdPdctCd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProduct4> NotAllowedProductCode { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICardPaymentTransaction54 : IIsoComponent
     [IsoId("_QqQUAJVbEeWuuIjj4l7kpg")]
     [DisplayName("Additional Available Product")]
     [IsoXmlTag("AddtlAvlblPdct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProduct5> AdditionalAvailableProduct { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ICardPaymentTransaction54 : IIsoComponent
     [IsoId("_aiAze40wEeW1W6lLicSC4w")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction6> Action { get; }
 
     /// <summary>

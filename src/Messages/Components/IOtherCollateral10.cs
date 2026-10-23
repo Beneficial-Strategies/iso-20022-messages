@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the letter of credit or bank guarantee, or other collateral, posted as collateral.
 /// </summary>
 [IsoId("_eg72LSqUEeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Other Collateral")]
 public interface IOtherCollateral10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherCollateral10 : IIsoComponent
     [IsoId("_fSaWUSqUEeyR9JrVGfaMKw")]
     [DisplayName("Asset Number")]
     [IsoXmlTag("AsstNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AssetNumber { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOtherCollateral10 : IIsoComponent
     [IsoId("_fSaWUyqUEeyR9JrVGfaMKw")]
     [DisplayName("Letter Of Credit Identification")]
     [IsoXmlTag("LttrOfCdtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LetterOfCreditIdentification { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IOtherCollateral10 : IIsoComponent
     [IsoId("_fSaWYSqUEeyR9JrVGfaMKw")]
     [DisplayName("Limited Coverage Indicator")]
     [IsoXmlTag("LtdCvrgInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LimitedCoverageIndicator { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface IOtherCollateral10 : IIsoComponent
     [IsoId("_fSaWZyqUEeyR9JrVGfaMKw")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValueDate { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface IOtherCollateral10 : IIsoComponent
     [IsoId("_fSaWaSqUEeyR9JrVGfaMKw")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ExchangeRate { get; }
 
     /// <summary>
@@ -129,6 +137,7 @@ public interface IOtherCollateral10 : IIsoComponent
     [IsoId("_fSaWbSqUEeyR9JrVGfaMKw")]
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Haircut { get; }
 
     /// <summary>

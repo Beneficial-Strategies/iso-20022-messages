@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.head;
 /// </summary>
 [IsoId("_qJyPQtFHEd-BzquC8wXy7w_1346744518")]
 [IsoMessage("head.001.001.01", "AppHdr", "urn:iso:std:iso:20022:tech:xsd:head.001.001.01")]
+[Description(@"The Business Layer deals with Business Messages. The behaviour of the Business Messages is fully described by the Business Transaction and the structure of the Business Messages is fully described by the Message Definitions and related Message Rules, Rules and Market Practices. All of which are registered in the ISO 20022 Repository.|A single new Business Message (with its accompagnying business application header) is created - by the sending MessagingEndpoint - for each business event; that is each interaction in a Business Transaction. A Business Message adheres to the following principles:|"" A Business Message (and its business application header) must not contain information about the Message Transport System or the mechanics or mechanism of message sending, transportation, or receipt. |"" A Business Message must be comprehensible outside of the context of the Transport Message. That is the Business Message must not require knowledge of the Transport Message to be understood.|"" A Business Message may contain headers, footers, and envelopes that are meaningful for the business. When present, they are treated as any other message content, which means that they are considered part of the Message Definition of the Business Message and as such will be part of the ISO 20022 Repository.|"" A Business Message refers to Business Actors by their Name. Each instance of a Business Actor has one Name. The Business Actor must not be referred to in the Transport Layer.|Specific usage of this BusinessMessageHeader may be defined by the relevant SEG.")]
+[IsoDisplayName(@"Business Application Header V")]
 public interface IBusinessApplicationHeaderV01 : IOuterRecord
 {
     /// <summary>
@@ -52,6 +54,8 @@ public interface IBusinessApplicationHeaderV01 : IOuterRecord
     [IsoId("_qJyPRtFHEd-BzquC8wXy7w_1978492942")]
     [DisplayName("Business Message Identifier")]
     [IsoXmlTag("BizMsgIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text BusinessMessageIdentifier { get; }
 
     /// <summary>
@@ -62,6 +66,8 @@ public interface IBusinessApplicationHeaderV01 : IOuterRecord
     [IsoId("_qJyPR9FHEd-BzquC8wXy7w_-176162321")]
     [DisplayName("Message Definition Identifier")]
     [IsoXmlTag("MsgDefIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageDefinitionIdentifier { get; }
 
     /// <summary>
@@ -72,6 +78,8 @@ public interface IBusinessApplicationHeaderV01 : IOuterRecord
     [IsoId("_qJ8AQNFHEd-BzquC8wXy7w_-1566891032")]
     [DisplayName("Business Service")]
     [IsoXmlTag("BizSvc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BusinessService { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IBusinessApplicationHeaderV01 : IOuterRecord
     [IsoId("_qJ8AQdFHEd-BzquC8wXy7w_218642822")]
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
+    [IsoSimpleType(IsoSimpleType.ISONormalisedDateTime)]
     ISONormalisedDateTime CreationDate { get; }
 
     /// <summary>
@@ -101,6 +110,7 @@ public interface IBusinessApplicationHeaderV01 : IOuterRecord
     [IsoId("_qJ8AQ9FHEd-BzquC8wXy7w_-659356211")]
     [DisplayName("Possible Duplicate")]
     [IsoXmlTag("PssblDplct")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PossibleDuplicate { get; }
 
     /// <summary>

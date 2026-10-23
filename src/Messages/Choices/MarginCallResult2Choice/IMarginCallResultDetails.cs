@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginCallResult2Choice;
 /// </summary>
 [IsoId("_9boCQKMPEeCojJW5vEuTEQ_1384684121")]
 [IsoXmlTag("MrgnCallRsltDtls")]
+[IsoDisplayName(@"Margin Call Result Details")]
 public interface IMarginCallResultDetails : IMarginCallResult2Choice, IIsoChoiceVariant
 {
     /// <summary>

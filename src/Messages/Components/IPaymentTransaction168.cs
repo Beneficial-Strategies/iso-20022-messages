@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the reference and status on the original transactions, included in the original instruction, to which the return message applies.
 /// </summary>
 [IsoId("fccbf899-2453-42a4-ac0e-594ac02c735b")]
+[Description(@"Provides further details on the reference and status on the original transactions, included in the original instruction, to which the return message applies.")]
+[IsoDisplayName(@"Payment Transaction168")]
 public interface IPaymentTransaction168 : IIsoComponent
 {
     /// <summary>
@@ -177,6 +179,7 @@ public interface IPaymentTransaction168 : IIsoComponent
     [IsoId("152678df-a752-452b-984e-f3db1c93d499")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges16> ChargesInformation { get; }
 
     /// <summary>
@@ -217,6 +220,7 @@ public interface IPaymentTransaction168 : IIsoComponent
     [IsoId("39cbcde2-104b-497b-9cb1-50899d277d03")]
     [DisplayName("Return Reason Information")]
     [IsoXmlTag("RtrRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReturnReason7> ReturnReasonInformation { get; }
 
     /// <summary>
@@ -233,5 +237,6 @@ public interface IPaymentTransaction168 : IIsoComponent
     [IsoId("2e114227-40f7-49c5-b025-24b9ab3692b0")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

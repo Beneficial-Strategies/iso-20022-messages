@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Key Transport10.
 /// </summary>
 [IsoId("_TAt6YY-PEe6oobnCtR50kw")]
+[IsoDisplayName(@"Key Transport10")]
 public interface IKeyTransport10 : IIsoComponent
 {
     /// <summary>

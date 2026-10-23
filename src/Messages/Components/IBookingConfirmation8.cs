@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the booking details for the underlying transaction or entry.
 /// </summary>
 [IsoId("0e985a49-dfb5-4828-875e-f0232855688a")]
+[IsoDisplayName(@"Booking Confirmation8")]
 public interface IBookingConfirmation8 : IIsoComponent
 {
     /// <summary>

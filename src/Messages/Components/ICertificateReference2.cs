@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference of the transaction, that is the underlying payment instruction or statement entry.
 /// </summary>
 [IsoId("_6EHdcbMjEeueudaIbClZbQ")]
+[IsoDisplayName(@"Certificate Reference")]
 public interface ICertificateReference2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICertificateReference2 : IIsoComponent
     [IsoId("_6F_sw7MjEeueudaIbClZbQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 }

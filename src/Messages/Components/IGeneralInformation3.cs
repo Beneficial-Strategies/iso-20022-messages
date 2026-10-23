@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General Information, indicating the function of the message.
 /// </summary>
 [IsoId("_Su5UBAEcEeCQm6a_G2yO_w_-1968950823")]
+[IsoDisplayName(@"General Information")]
 public interface IGeneralInformation3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGeneralInformation3 : IIsoComponent
     [IsoId("_Su5UBQEcEeCQm6a_G2yO_w_-1613875024")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IGeneralInformation3 : IIsoComponent
     [IsoId("_Su5UBwEcEeCQm6a_G2yO_w_28051799")]
     [DisplayName("Request Reference")]
     [IsoXmlTag("ReqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RequestReference { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money for which goods or services are offered, sold, or bought.
 /// </summary>
 [IsoId("_OO8ZwZF_EeukDPgU2BMkjQ")]
+[IsoDisplayName(@"Unit Of Measure")]
 public interface IUnitOfMeasure2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IUnitOfMeasure2 : IIsoComponent
     [IsoId("_OU5Qw5F_EeukDPgU2BMkjQ")]
     [DisplayName("Other Unit Of Measure")]
     [IsoXmlTag("OthrUnitOfMeasr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherUnitOfMeasure { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IUnitOfMeasure2 : IIsoComponent
     [IsoId("_OU5QxZF_EeukDPgU2BMkjQ")]
     [DisplayName("Number Of Units")]
     [IsoXmlTag("NbOfUnits")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? NumberOfUnits { get; }
 }

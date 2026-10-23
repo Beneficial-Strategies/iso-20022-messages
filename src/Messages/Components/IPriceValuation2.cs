@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Calculation of the net asset value for an investment fund/fund class.
 /// </summary>
 [IsoId("_Vbrjn9p-Ed-ak6NoX_4Aeg_-213723155")]
+[IsoDisplayName(@"Price Valuation")]
 public interface IPriceValuation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPriceValuation2 : IIsoComponent
     [IsoId("_VbrjoNp-Ed-ak6NoX_4Aeg_-213722734")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IPriceValuation2 : IIsoComponent
     [IsoId("_Vb0tg9p-Ed-ak6NoX_4Aeg_-213723102")]
     [DisplayName("Total NAV")]
     [IsoXmlTag("TtlNAV")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyAndAmount> TotalNAV { get; }
 
     /// <summary>
@@ -89,6 +93,7 @@ public interface IPriceValuation2 : IIsoComponent
     [IsoId("_Vb0tiNp-Ed-ak6NoX_4Aeg_-213722751")]
     [DisplayName("Suspended Indicator")]
     [IsoXmlTag("SspdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SuspendedIndicator { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface IPriceValuation2 : IIsoComponent
     [IsoId("_Vb0tidp-Ed-ak6NoX_4Aeg_-213722690")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice6> PriceDetails { get; }
 
     /// <summary>
@@ -105,5 +111,6 @@ public interface IPriceValuation2 : IIsoComponent
     [IsoId("_Vb-egNp-Ed-ak6NoX_4Aeg_1507402268")]
     [DisplayName("Valuation Statistics")]
     [IsoXmlTag("ValtnSttstcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IValuationStatistics2> ValuationStatistics { get; }
 }

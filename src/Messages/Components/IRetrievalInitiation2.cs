@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the retrieval of a message.
 /// </summary>
 [IsoId("_o0ZJ4YHSEeuwq_rv81SdXw")]
+[IsoDisplayName(@"Retrieval Initiation")]
 public interface IRetrievalInitiation2 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IRetrievalInitiation2 : IIsoComponent
     [IsoId("_o5oPOYHSEeuwq_rv81SdXw")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -65,5 +67,6 @@ public interface IRetrievalInitiation2 : IIsoComponent
     [IsoId("_o5oPPYHSEeuwq_rv81SdXw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

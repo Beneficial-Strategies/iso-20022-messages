@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementSystemMethod5Choice;
 /// Settlement system expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_5TKlRZNLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlementSystemMethod5Choice, IIsoChoiceVariant
 {
     /// <summary>

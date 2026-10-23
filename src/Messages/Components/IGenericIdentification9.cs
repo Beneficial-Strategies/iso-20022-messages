@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the identification of an individual person.
 /// </summary>
 [IsoId("_P-2HcNp-Ed-ak6NoX_4Aeg_498545579")]
+[IsoDisplayName(@"Generic Identification")]
 public interface IGenericIdentification9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGenericIdentification9 : IIsoComponent
     [IsoId("_P_b9UNp-Ed-ak6NoX_4Aeg_498545614")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IGenericIdentification9 : IIsoComponent
     [IsoId("_P_b9Utp-Ed-ak6NoX_4Aeg_1879867766")]
     [DisplayName("Extended Identification Type")]
     [IsoXmlTag("XtndedIdTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedIdentificationType { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IGenericIdentification9 : IIsoComponent
     [IsoId("_P_b9U9p-Ed-ak6NoX_4Aeg_498545734")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IGenericIdentification9 : IIsoComponent
     [IsoId("_P_b9VNp-Ed-ak6NoX_4Aeg_285572379")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IssueDate { get; }
 
     /// <summary>
@@ -57,5 +65,6 @@ public interface IGenericIdentification9 : IIsoComponent
     [IsoId("_P_b9Vdp-Ed-ak6NoX_4Aeg_285573411")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpiryDate { get; }
 }

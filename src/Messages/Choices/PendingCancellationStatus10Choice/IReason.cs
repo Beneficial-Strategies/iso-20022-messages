@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus10Choic
 /// </summary>
 [IsoId("__KUE-7KiEemux5trsZcCpw")]
 [IsoXmlTag("Rsn")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IPendingCancellationStatus10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IReason : IPendingCancellationStatus10Choice, IIsoChoiceVariant
     [IsoId("_cHKOzbKjEemux5trsZcCpw")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalReasonInformation { get; }
 }

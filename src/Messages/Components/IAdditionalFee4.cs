@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fees not included in the transaction.
 /// </summary>
 [IsoId("_IllSoRRKEfC_aaedwHHlmw")]
+[IsoDisplayName(@"Additional Fee4")]
 public interface IAdditionalFee4 : IIsoComponent
 {
     /// <summary>

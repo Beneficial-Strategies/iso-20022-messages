@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative4Cho
 /// </summary>
 [IsoId("_xSzjUye0Eei12pGEsJIAeQ")]
 [IsoXmlTag("CdtDfltSwpIndx")]
+[IsoDisplayName(@"Credit Default Swap Index")]
 public interface ICreditDefaultSwapIndex : ICreditDefaultSwapsDerivative4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICreditDefaultSwapIndex : ICreditDefaultSwapsDerivative4Choice,
     [IsoId("_wRgo8ie1Eei12pGEsJIAeQ")]
     [DisplayName("Underlying Index Identification")]
     [IsoXmlTag("UndrlygIndxId")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? UnderlyingIndexIdentification { get; }
 
     /// <summary>
@@ -26,6 +28,8 @@ public interface ICreditDefaultSwapIndex : ICreditDefaultSwapsDerivative4Choice,
     [IsoId("_5bH40Ce1Eei12pGEsJIAeQ")]
     [DisplayName("Underlying Index Name")]
     [IsoXmlTag("UndrlygIndxNm")]
+    [IsoSimpleType(IsoSimpleType.Max25Text)]
+    [StringLength(25, MinimumLength = 1)]
     Max25Text? UnderlyingIndexName { get; }
 
     /// <summary>
@@ -34,6 +38,7 @@ public interface ICreditDefaultSwapIndex : ICreditDefaultSwapsDerivative4Choice,
     [IsoId("_qD_WwSe1Eei12pGEsJIAeQ")]
     [DisplayName("Series")]
     [IsoXmlTag("Srs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Series { get; }
 
     /// <summary>
@@ -42,6 +47,7 @@ public interface ICreditDefaultSwapIndex : ICreditDefaultSwapsDerivative4Choice,
     [IsoId("_qD_Wwye1Eei12pGEsJIAeQ")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -50,6 +56,10 @@ public interface ICreditDefaultSwapIndex : ICreditDefaultSwapsDerivative4Choice,
     [IsoId("_qD_WxSe1Eei12pGEsJIAeQ")]
     [DisplayName("Roll Month")]
     [IsoXmlTag("RollMnth")]
+    [IsoSimpleType(IsoSimpleType.RestrictedMonthExact2Number)]
+    [MinLength(0)]
+    [MaxLength(12)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ulong> RollMonth { get; }
 
     /// <summary>
@@ -58,6 +68,7 @@ public interface ICreditDefaultSwapIndex : ICreditDefaultSwapsDerivative4Choice,
     [IsoId("_qD_Wxye1Eei12pGEsJIAeQ")]
     [DisplayName("Next Roll Date")]
     [IsoXmlTag("NxtRollDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NextRollDate { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Split Trade Details5.
 /// </summary>
 [IsoId("_j_ONR0j3Ee-KhcStGV4xTg")]
+[IsoDisplayName(@"Split Trade Details5")]
 public interface ISplitTradeDetails5 : IIsoComponent
 {
     /// <summary>

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PreTradeOutputReport1Choice;
 
 /// <summary>Cancellation of a previously sent report, probably because of erroneous data.</summary>
 [IsoId("_e66WgGIVEfCeoPFCHQnhvA")]
+[IsoDisplayName(@"Cancellation")]
 public interface ICancellation : IPreTradeOutputReport1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

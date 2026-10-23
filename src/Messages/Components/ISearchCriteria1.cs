@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Eligibility parameters for a transaction to be part of transaction report.
 /// </summary>
 [IsoId("_5HATgN6PEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Search Criteria")]
 public interface ISearchCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface ISearchCriteria1 : IIsoComponent
     [IsoId("_APMeMN6QEeiwsev40qZGEQ")]
     [DisplayName("Search Or")]
     [IsoXmlTag("SchOr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISearchOr1> SearchOr { get; }
 }

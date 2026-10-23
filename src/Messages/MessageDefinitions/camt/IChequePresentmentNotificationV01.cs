@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "ChqPresntmntNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:camt.107.001.01"
 )]
+[Description(@"The ChequePresentmentNotification message is sent by a drawer bank, or a bank acting on behalf of the drawer bank to the bank on which a/several cheque(s) has been drawn (the drawee bank).|It is used to advise the drawee bank, or confirm to an enquiring bank, the details concerning the cheque(s) referred to in the message.")]
+[IsoDisplayName(@"Cheque Presentment Notification V")]
 public interface IChequePresentmentNotificationV01 : IOuterRecord
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface IChequePresentmentNotificationV01 : IOuterRecord
     [IsoId("_tGFUsbtlEeq_cfXrH83Rcw")]
     [DisplayName("Cheque")]
     [IsoXmlTag("Chq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICheque13> Cheque { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IChequePresentmentNotificationV01 : IOuterRecord
     [IsoId("_V-H6o7tlEeq_cfXrH83Rcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

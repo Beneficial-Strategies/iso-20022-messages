@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_0lbfYR8OEeWpZde3LQh6dg")]
 [IsoMessage("sese.013.001.07", "PrtflTrfConf", "urn:iso:std:iso:20022:tech:xsd:sese.013.001.07")]
+[Description(@"Scope|An executing party, for example, a (old) plan manager (Transferor), sends the PortfolioTransferConfirmation message to the instructing party, for example, a (new) plan manager (Transferee), to confirm the transfer of one or more ISA or portfolio products from the client's account at the old plan manager (Transferor) to the client's account at the new plan manager (Transferee) through a nominee account.|Usage|The PortfolioTransferConfirmation message is used to confirm the transfer of one or more ISA or portfolio products.|The reference of each product transfer confirmation is identified in TransferConfirmationIdentification. The reference of the original product transfer is specified in TransferInstructionReference. The message identification of the PortfolioTransferInstruction message in which the product transfers were conveyed may also be quoted in RelatedReference.")]
+[IsoDisplayName(@"Portfolio Transfer Confirmation V")]
 public interface IPortfolioTransferConfirmationV07 : IOuterRecord
 {
     /// <summary>
@@ -72,6 +74,7 @@ public interface IPortfolioTransferConfirmationV07 : IOuterRecord
     [IsoId("_0lbfex8OEeWpZde3LQh6dg")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson8> OtherIndividualInvestor { get; }
 
     /// <summary>
@@ -96,6 +99,7 @@ public interface IPortfolioTransferConfirmationV07 : IOuterRecord
     [IsoId("_0lbfgR8OEeWpZde3LQh6dg")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation21> OtherCorporateInvestor { get; }
 
     /// <summary>
@@ -128,6 +132,7 @@ public interface IPortfolioTransferConfirmationV07 : IOuterRecord
     [IsoId("_Km1hsSYNEeWJkOUkQWu90g")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary34> IntermediaryInformation { get; }
 
     /// <summary>
@@ -144,6 +149,7 @@ public interface IPortfolioTransferConfirmationV07 : IOuterRecord
     [IsoId("_0lbfix8OEeWpZde3LQh6dg")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IISATransfer26> ProductTransfer { get; }
 
     /// <summary>
@@ -160,5 +166,6 @@ public interface IPortfolioTransferConfirmationV07 : IOuterRecord
     [IsoId("_0lbfjx8OEeWpZde3LQh6dg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

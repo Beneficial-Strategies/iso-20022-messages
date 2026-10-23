@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus43Cho
 /// Cancellation instruction is pending.
 /// </summary>
 [IsoId("_pUH1zx9QEeuFz_FaCzCLgQ")]
+[IsoDisplayName(@"Pending Cancellation")]
 public interface IPendingCancellation : IInstructionProcessingStatus43Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

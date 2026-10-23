@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.catp;
     "ATMWdrwlCmpltnAdvc",
     "urn:iso:std:iso:20022:tech:xsd:catp.003.001.02"
 )]
+[Description(@"The ATMWithdrawalCompletionAdvice message is sent by an ATM to an acquirer or its agent to inform of the result of a withdrawal transaction at an ATM.|If the ATM is configured to only send negative completion, a generic completion message should be used instead of ATMCompletionAdvice.")]
+[IsoDisplayName(@"ATM Withdrawal Completion Advice V")]
 public interface IATMWithdrawalCompletionAdviceV02 : IOuterRecord
 {
     /// <summary>

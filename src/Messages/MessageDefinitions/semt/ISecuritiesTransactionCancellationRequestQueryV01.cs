@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesTxCxlReqQry",
     "urn:iso:std:iso:20022:tech:xsd:semt.032.001.01"
 )]
+[IsoDisplayName(@"Securities Transaction Cancellation Request Query V01")]
 public interface ISecuritiesTransactionCancellationRequestQueryV01 : IOuterRecord
 {
     /// <summary>
@@ -29,5 +30,6 @@ public interface ISecuritiesTransactionCancellationRequestQueryV01 : IOuterRecor
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

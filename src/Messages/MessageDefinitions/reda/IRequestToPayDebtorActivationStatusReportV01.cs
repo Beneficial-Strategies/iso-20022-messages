@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "ReqToPayDbtrActvtnStsRpt",
     "urn:iso:std:iso:20022:tech:xsd:reda.073.001.01"
 )]
+[Description(@"The RequestToPayDebtorActivationStatusReport message is sent from the recipient of the debtor activation request message (initiation, amendment or cancellation), such as the creditor RTP provider or the creditor, to the initiator of the debtor activation request message (debtor, debtor RTP provider or any of the forwarding agent) to provide the status of the request. |")]
+[IsoDisplayName(@"Request To Pay Debtor Activation Status Report V")]
 public interface IRequestToPayDebtorActivationStatusReportV01 : IOuterRecord
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface IRequestToPayDebtorActivationStatusReportV01 : IOuterRecord
     [IsoId("_rNNB3eHzEeqbls7Gk4-ckA")]
     [DisplayName("Original Activation And Status")]
     [IsoXmlTag("OrgnlActvtnAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActivationStatus2> OriginalActivationAndStatus { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IRequestToPayDebtorActivationStatusReportV01 : IOuterRecord
     [IsoId("_rNNB3-HzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

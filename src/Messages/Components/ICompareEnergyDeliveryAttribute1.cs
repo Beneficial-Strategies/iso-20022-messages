@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare related energy derivatives attributes.
 /// </summary>
 [IsoId("_YR3eIVo0Ee23K4GXSpBSeg")]
+[IsoDisplayName(@"Compare Energy Delivery Attribute")]
 public interface ICompareEnergyDeliveryAttribute1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICompareEnergyDeliveryAttribute1 : IIsoComponent
     [IsoId("_YTTokVo0Ee23K4GXSpBSeg")]
     [DisplayName("Energy Delivery Interval")]
     [IsoXmlTag("NrgyDlvryIntrvl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareTimePeriod2> EnergyDeliveryInterval { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICompareEnergyDeliveryAttribute1 : IIsoComponent
     [IsoId("_YTTol1o0Ee23K4GXSpBSeg")]
     [DisplayName("Energy Week Day")]
     [IsoXmlTag("NrgyWkDay")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareWeekDay1> EnergyWeekDay { get; }
 
     /// <summary>

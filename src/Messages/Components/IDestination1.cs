@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Destination of the message.
 /// </summary>
 [IsoId("_ZQh2YE95EeePXdaAO32Uew")]
+[IsoDisplayName(@"Destination")]
 public interface IDestination1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDestination1 : IIsoComponent
     [IsoId("_HtvVFE95EeePXdaAO32Uew")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IDestination1 : IIsoComponent
     [IsoId("_HtvVFU95EeePXdaAO32Uew")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Assigner { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface IDestination1 : IIsoComponent
     [IsoId("_HtvVF095EeePXdaAO32Uew")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 }

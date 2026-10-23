@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a Money Purchase Annual Allowance (MPAA).
 /// </summary>
 [IsoId("_YYAkcFK7EeiSDqv62fL07g")]
+[IsoDisplayName(@"Money Purchase Annual Allowance")]
 public interface IMoneyPurchaseAnnualAllowance1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMoneyPurchaseAnnualAllowance1 : IIsoComponent
     [IsoId("_havwQFK7EeiSDqv62fL07g")]
     [DisplayName("Triggered")]
     [IsoXmlTag("Trggrd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Triggered { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IMoneyPurchaseAnnualAllowance1 : IIsoComponent
     [IsoId("_kmRREFK7EeiSDqv62fL07g")]
     [DisplayName("Triggered Date")]
     [IsoXmlTag("TrggrdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TriggeredDate { get; }
 }

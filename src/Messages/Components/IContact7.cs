@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication device number or electronic address used for communication.
 /// </summary>
 [IsoId("_dwV7IVaAEeeFltjJxERUxw")]
+[IsoDisplayName(@"Contact")]
 public interface IContact7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContact7 : IIsoComponent
     [IsoId("_d8ZaIVaAEeeFltjJxERUxw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IContact7 : IIsoComponent
     [IsoId("_d8ZaI1aAEeeFltjJxERUxw")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IContact7 : IIsoComponent
     [IsoId("_d8ZaJVaAEeeFltjJxERUxw")]
     [DisplayName("Telephone Number")]
     [IsoXmlTag("TelNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? TelephoneNumber { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IContact7 : IIsoComponent
     [IsoId("_d8ZaJ1aAEeeFltjJxERUxw")]
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Email { get; }
 
     /// <summary>
@@ -49,5 +56,7 @@ public interface IContact7 : IIsoComponent
     [IsoId("_mrobIFaAEeeFltjJxERUxw")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? URLAddress { get; }
 }

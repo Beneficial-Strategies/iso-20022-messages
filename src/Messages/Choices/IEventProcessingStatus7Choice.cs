@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Event Processing Status7Choice.
 /// </summary>
 [IsoId("_qB__EZB0Ee-COKgew96POA")]
+[IsoDisplayName(@"Event Processing Status7Choice")]
 public interface IEventProcessingStatus7Choice : IIsoChoice { }

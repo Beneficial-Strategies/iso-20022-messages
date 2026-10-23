@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice;
 /// </summary>
 [IsoId("_FACTBkJ-EeGuetKibuqsKw")]
 [IsoXmlTag("PmtInstrm")]
+[IsoDisplayName(@"Payment Instrument")]
 public interface IPaymentInstrument : ISearchCriteria1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IPaymentInstrument : ISearchCriteria1Choice, IIsoChoiceVariant
     [IsoId("_Mvp5PE1KEeGAs6v-iSb2RQ")]
     [DisplayName("Card Number")]
     [IsoXmlTag("CardNb")]
+    [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
     Min8Max28NumericText CardNumber { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IPaymentInstrument : ISearchCriteria1Choice, IIsoChoiceVariant
     [IsoId("_PgYUYU1KEeGAs6v-iSb2RQ")]
     [DisplayName("Authority Request Type")]
     [IsoXmlTag("AuthrtyReqTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorityRequestType1> AuthorityRequestType { get; }
 
     /// <summary>
@@ -34,5 +37,7 @@ public interface IPaymentInstrument : ISearchCriteria1Choice, IIsoChoiceVariant
     [IsoId("_pJiNaV0wEeGwFY7pvwHH-g")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalInformation { get; }
 }

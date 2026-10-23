@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// List of the different methods that can be used to vote.
 /// </summary>
 [IsoId("_T5L2Gtp-Ed-ak6NoX_4Aeg_1911915200")]
+[IsoDisplayName(@"Vote Methods")]
 public interface IVoteMethods : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IVoteMethods : IIsoComponent
     [IsoId("_T5L2G9p-Ed-ak6NoX_4Aeg_1983026153")]
     [DisplayName("Vote Through Network")]
     [IsoXmlTag("VoteThrghNtwk")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier? VoteThroughNetwork { get; }
 
     /// <summary>
@@ -41,5 +43,7 @@ public interface IVoteMethods : IIsoComponent
     [IsoId("_T5VAAdp-Ed-ak6NoX_4Aeg_1298606357")]
     [DisplayName("Vote By Telephone")]
     [IsoXmlTag("VoteByTel")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? VoteByTelephone { get; }
 }

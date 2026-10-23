@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExecutingParty1Choice;
 /// Identification of an algorithm.
 /// </summary>
 [IsoId("_Fhu_41iJEea-d4CsgzjlAw")]
+[IsoDisplayName(@"Algorithm")]
 public interface IAlgorithm : IExecutingParty1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IAlgorithm : IExecutingParty1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 50 characters.
     /// </summary>
     [IsoXmlTag("Algo")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text Value { get; }
 }

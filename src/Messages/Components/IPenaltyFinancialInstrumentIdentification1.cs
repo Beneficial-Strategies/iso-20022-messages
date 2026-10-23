@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the financial instrument subject to penalties.
 /// </summary>
 [IsoId("_5-_1MDkVEem897H7zB2RJg")]
+[IsoDisplayName(@"Penalty Financial Instrument Identification1")]
 public interface IPenaltyFinancialInstrumentIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IPenaltyFinancialInstrumentIdentification1 : IIsoComponent
     [IsoId("_fHHFYDkYEem897H7zB2RJg")]
     [DisplayName("Foreign Exchange Data")]
     [IsoXmlTag("FXData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeRate3> ForeignExchangeData { get; }
 
     /// <summary>

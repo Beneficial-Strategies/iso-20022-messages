@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates a cancellation of a wrongly submitted entire report in case the contract never came into existence or was not subject to reporting requirements but was reported to a trade repository by mistake.
 /// </summary>
 [IsoId("_GYp4Mc2yEeudu8_R18uRnA")]
+[IsoDisplayName(@"Reuse Data Report Error")]
 public interface IReuseDataReportError5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReuseDataReportError5 : IIsoComponent
     [IsoId("_Gau70c2yEeudu8_R18uRnA")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IReuseDataReportError5 : IIsoComponent
     [IsoId("_Gau7082yEeudu8_R18uRnA")]
     [DisplayName("Reporting Date Time")]
     [IsoXmlTag("RptgDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ReportingDateTime { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IReuseDataReportError5 : IIsoComponent
     [IsoId("_Gau7182yEeudu8_R18uRnA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

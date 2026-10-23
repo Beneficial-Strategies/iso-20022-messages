@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).
 /// </summary>
 [IsoId("_JLYF8ZjwEeWn2ur3BXxtdg")]
+[IsoDisplayName(@"Safe Keeping Place")]
 public interface ISafeKeepingPlace2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ISafeKeepingPlace2 : IIsoComponent
     [IsoId("_JaaAdZjwEeWn2ur3BXxtdg")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 }

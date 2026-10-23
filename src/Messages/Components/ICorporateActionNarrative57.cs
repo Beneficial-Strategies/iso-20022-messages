@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Narrative57.
 /// </summary>
 [IsoId("_h4eEoWHjEe6yt_d72zQZeQ")]
+[IsoDisplayName(@"Corporate Action Narrative57")]
 public interface ICorporateActionNarrative57 : IIsoComponent
 {
     /// <summary>

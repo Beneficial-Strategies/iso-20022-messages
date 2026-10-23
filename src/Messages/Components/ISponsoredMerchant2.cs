@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Merchant using the payment services of the card acceptor. The sponsored merchant is not acting as the card acceptor; the latter remaining the only party liable for the transaction vis-à-vis the acquirer.
 /// </summary>
 [IsoId("_6l8gMMWPEeuhguwJmlgagQ")]
+[IsoDisplayName(@"Sponsored Merchant")]
 public interface ISponsoredMerchant2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ISponsoredMerchant2 : IIsoComponent
     [IsoId("_6qvgpcWPEeuhguwJmlgagQ")]
     [DisplayName("Common Name")]
     [IsoXmlTag("CmonNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? CommonName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ISponsoredMerchant2 : IIsoComponent
     [IsoId("_p1voQCB6Eey8XKHwKquEQw")]
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
+    [IsoSimpleType(IsoSimpleType.Max99Text)]
+    [StringLength(99, MinimumLength = 1)]
     Max99Text? LegalCorporateName { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface ISponsoredMerchant2 : IIsoComponent
     [IsoId("_CvEjdMWQEeuhguwJmlgagQ")]
     [DisplayName("Additional Address Information")]
     [IsoXmlTag("AddtlAdrInf")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? AdditionalAddressInformation { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface ISponsoredMerchant2 : IIsoComponent
     [IsoId("_LhmJAcWQEeuhguwJmlgagQ")]
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
+    [IsoSimpleType(IsoSimpleType.GeographicPointInDecimalDegrees)]
     GeographicPointInDecimalDegrees? GeographicLocation { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface ISponsoredMerchant2 : IIsoComponent
     [IsoId("_1yfEgMXMEeumGdYElfgmbw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 
     /// <summary>

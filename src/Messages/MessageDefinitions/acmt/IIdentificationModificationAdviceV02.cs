@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_sY77A1kyEeGeoaLUQk__nA_-164460400")]
 [IsoMessage("acmt.022.001.02", "IdModAdvc", "urn:iso:std:iso:20022:tech:xsd:acmt.022.001.02")]
+[Description(@"Scope|The IdentificationModificationAdvice message is sent by an assigner to an assignee. The message is used to advice on the correct party and/or account identification information.|Usage|The IdentificationModificationAdvice message is sent after the receipt of one or several transaction messages that included no longer valid party and/or account identification information.|The IdentificationModificationAdvice message is exchanged between financial institutions and between financial institutions and non financial institutions and can contain one or more modification advises.|There is no time limit on the time between the sending of an IdentificationModificationAdvice message and the receipt of the transaction messages that the IdentificationModificationAdvice refers to.|The IdentificationModificationAdvice includes the correct party and/or account identification information, the IdentificationModificationAdvice or the included information may be forwarded to the initiating party of the transaction messages.")]
+[IsoDisplayName(@"Identification Modification Advice V")]
 public interface IIdentificationModificationAdviceV02 : IOuterRecord
 {
     /// <summary>
@@ -42,6 +44,7 @@ public interface IIdentificationModificationAdviceV02 : IOuterRecord
     [IsoId("_sZFE8VkyEeGeoaLUQk__nA_2000152843")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIdentificationModification2> Modification { get; }
 
     /// <summary>
@@ -50,5 +53,6 @@ public interface IIdentificationModificationAdviceV02 : IOuterRecord
     [IsoId("_sZO18FkyEeGeoaLUQk__nA_606246720")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

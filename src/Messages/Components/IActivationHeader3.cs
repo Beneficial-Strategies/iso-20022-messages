@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Activation Header3.
 /// </summary>
 [IsoId("_3mBBQTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Activation Header3")]
 public interface IActivationHeader3 : IIsoComponent
 {
     /// <summary>

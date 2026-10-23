@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of transaction for a file action.
 /// </summary>
 [IsoId("_AIVomN0tEeil7LQldntseg")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction90 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITransaction90 : IIsoComponent
     [IsoId("_oDAeUf-9Eei7rYq35FFO4A")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee1> AdditionalFees { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ITransaction90 : IIsoComponent
     [IsoId("_K3MEARqnEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

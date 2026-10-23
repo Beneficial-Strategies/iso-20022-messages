@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed information about the outstanding derivatives for which no margin or outdated margin information has been reported.
 /// </summary>
 [IsoId("_rud9m1owEe23K4GXSpBSeg")]
+[IsoDisplayName(@"Missing Margin Transaction Data")]
 public interface IMissingMarginTransactionData2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IMissingMarginTransactionData2 : IIsoComponent
     [IsoId("_rvjis1owEe23K4GXSpBSeg")]
     [DisplayName("Collateral Time Stamp")]
     [IsoXmlTag("CollTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CollateralTimeStamp { get; }
 }

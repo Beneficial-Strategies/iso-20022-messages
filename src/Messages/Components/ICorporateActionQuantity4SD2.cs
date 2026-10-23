@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Extension to specify corporate action quantities.
 /// </summary>
 [IsoId("_o9JB5GCXEeK8P92abE6HIA")]
+[IsoDisplayName(@"Corporate Action Quantity 4 SD")]
 public interface ICorporateActionQuantity4SD2 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICorporateActionQuantity4SD2 : IIsoComponent
     [IsoId("_o9JB9WCXEeK8P92abE6HIA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>

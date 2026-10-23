@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_uldKWNE8Ed-BzquC8wXy7w_-3505275")]
 [IsoMessage("tsmt.048.001.01", "SpclNtfctn", "urn:iso:std:iso:20022:tech:xsd:tsmt.048.001.01")]
+[Description(@"Scope|The SpecialNotification message is sent by the matching application to parties to the transaction, following the receipt of a SpecialRequest message.|The SpecialRequest message is sent by a party to the transaction to the matching application if special circumstances are such that it cannot take part any longer to a specific transaction or that it cannot fulfill its role in the transaction.|Usage|The SpecialNotification message is sent to the parties to the transaction so that they can take appropriate action.")]
+[IsoDisplayName(@"Special Notification V")]
 public interface ISpecialNotificationV01 : IOuterRecord
 {
     /// <summary>
@@ -56,6 +58,9 @@ public interface ISpecialNotificationV01 : IOuterRecord
     [IsoId("_ulm7VNE8Ed-BzquC8wXy7w_8502400")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

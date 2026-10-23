@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to report on an account.
 /// </summary>
 [IsoId("_t-nrYXX4Eei3jO6riKEVXg")]
+[IsoDisplayName(@"Cash Account Return Criteria")]
 public interface ICashAccountReturnCriteria5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICashAccountReturnCriteria5 : IIsoComponent
     [IsoId("_uIKB43X4Eei3jO6riKEVXg")]
     [DisplayName("Name Indicator")]
     [IsoXmlTag("NmInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? NameIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICashAccountReturnCriteria5 : IIsoComponent
     [IsoId("_uIKB5XX4Eei3jO6riKEVXg")]
     [DisplayName("Currency Indicator")]
     [IsoXmlTag("CcyInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? CurrencyIndicator { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICashAccountReturnCriteria5 : IIsoComponent
     [IsoId("_uIKB53X4Eei3jO6riKEVXg")]
     [DisplayName("Type Indicator")]
     [IsoXmlTag("TpInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? TypeIndicator { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICashAccountReturnCriteria5 : IIsoComponent
     [IsoId("_uIKB6XX4Eei3jO6riKEVXg")]
     [DisplayName("Multilateral Limit Indicator")]
     [IsoXmlTag("MulLmtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? MultilateralLimitIndicator { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ICashAccountReturnCriteria5 : IIsoComponent
     [IsoId("_uIKB7XX4Eei3jO6riKEVXg")]
     [DisplayName("Bilateral Limit Indicator")]
     [IsoXmlTag("BilLmtInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? BilateralLimitIndicator { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface ICashAccountReturnCriteria5 : IIsoComponent
     [IsoId("_uIKB8XX4Eei3jO6riKEVXg")]
     [DisplayName("Standing Order Indicator")]
     [IsoXmlTag("StgOrdrInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? StandingOrderIndicator { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface ICashAccountReturnCriteria5 : IIsoComponent
     [IsoId("_uIKB83X4Eei3jO6riKEVXg")]
     [DisplayName("Account Owner Indicator")]
     [IsoXmlTag("AcctOwnrInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? AccountOwnerIndicator { get; }
 
     /// <summary>
@@ -89,5 +97,6 @@ public interface ICashAccountReturnCriteria5 : IIsoComponent
     [IsoId("_uIKB9XX4Eei3jO6riKEVXg")]
     [DisplayName("Account Servicer Indicator")]
     [IsoXmlTag("AcctSvcrInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? AccountServicerIndicator { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Authorisation initiation message record.
 /// </summary>
 [IsoId("_csijUFZVEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Authorisation Initiation")]
 public interface IAuthorisationInitiation : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IAuthorisationInitiation : IRecordMessage1Choice, IIsoChoiceVar
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("AuthstnInitn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference of an order and of an order cancellation.
 /// </summary>
 [IsoId("68b7fa2d-3b01-4ba3-b18e-a811799e8595")]
+[IsoDisplayName(@"Investment Fund Order12")]
 public interface IInvestmentFundOrder12 : IIsoComponent
 {
     /// <summary>

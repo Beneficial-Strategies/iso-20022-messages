@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters related to the net position.
 /// </summary>
 [IsoId("_Qk_hd9p-Ed-ak6NoX_4Aeg_937619716")]
+[IsoDisplayName(@"Report Parameters")]
 public interface IReportParameters1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportParameters1 : IIsoComponent
     [IsoId("_Qk_heNp-Ed-ak6NoX_4Aeg_-1693107427")]
     [DisplayName("Net Position Identification")]
     [IsoXmlTag("NetPosId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text NetPositionIdentification { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IReportParameters1 : IIsoComponent
     [IsoId("_QlIrY9p-Ed-ak6NoX_4Aeg_-378663272")]
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
+    [IsoSimpleType(IsoSimpleType.Exact5NumericText)]
     Exact5NumericText? ReportNumber { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface IReportParameters1 : IIsoComponent
     [IsoId("_QlIrZNp-Ed-ak6NoX_4Aeg_-704566571")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 }

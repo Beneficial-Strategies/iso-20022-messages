@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of an intention to pay based on purchase orders or commercial invoice.
 /// </summary>
 [IsoId("_9-CfYRVaEeOCqpkCrPgk4g")]
+[IsoDisplayName(@"Intent To Pay")]
 public interface IIntentToPay2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IIntentToPay2 : IIsoComponent
     [IsoId("_-X0RVxVaEeOCqpkCrPgk4g")]
     [DisplayName("Expected Payment Date")]
     [IsoXmlTag("XpctdPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ExpectedPaymentDate { get; }
 
     /// <summary>

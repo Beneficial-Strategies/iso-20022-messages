@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement5Choice;
 /// </summary>
 [IsoId("_sWEhcYpIEeaNTaanBSMWmg")]
 [IsoXmlTag("CollMvmntDrctn")]
+[IsoDisplayName(@"Collateral Movement Direction")]
 public interface ICollateralMovementDirection : ICollateralMovement5Choice, IIsoChoiceVariant
 {
     /// <summary>

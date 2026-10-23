@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOrUnderConfirmationChoice1;
 /// </summary>
 [IsoId("_97kuE3ltEeG7BsjMvd1mEw_-1053470050")]
 [IsoXmlTag("PlcOfPresntn")]
+[IsoDisplayName(@"Place Of Presentation")]
 public interface IPlaceOfPresentation : IPlaceOrUnderConfirmationChoice1, IIsoChoiceVariant
 {
     /// <summary>

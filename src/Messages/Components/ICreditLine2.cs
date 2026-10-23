@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide details of the credit line.
 /// </summary>
 [IsoId("_SZgzGNp-Ed-ak6NoX_4Aeg_-630126227")]
+[IsoDisplayName(@"Credit Line")]
 public interface ICreditLine2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICreditLine2 : IIsoComponent
     [IsoId("_SZgzGdp-Ed-ak6NoX_4Aeg_-630126197")]
     [DisplayName("Included")]
     [IsoXmlTag("Incl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator Included { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details of the trade transaction.
 /// </summary>
 [IsoId("_fVX4YWEfEe2P-L9DBerEgA")]
+[IsoDisplayName(@"Trade Transaction")]
 public interface ITradeTransaction49 : IIsoComponent
 {
     /// <summary>
@@ -52,6 +53,8 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQSWEfEe2P-L9DBerEgA")]
     [DisplayName("Report Tracking Number")]
     [IsoXmlTag("RptTrckgNb")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? ReportTrackingNumber { get; }
 
     /// <summary>
@@ -61,6 +64,7 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQS2EfEe2P-L9DBerEgA")]
     [DisplayName("Platform Identifier")]
     [IsoXmlTag("PltfmIdr")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? PlatformIdentifier { get; }
 
     /// <summary>
@@ -70,6 +74,7 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQTWEfEe2P-L9DBerEgA")]
     [DisplayName("Mirror Or Trigger Transaction")]
     [IsoXmlTag("MrrrOrTrggrTx")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MirrorOrTriggerTransaction { get; }
 
     /// <summary>
@@ -119,6 +124,7 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQWWEfEe2P-L9DBerEgA")]
     [DisplayName("Execution Time Stamp")]
     [IsoXmlTag("ExctnTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ExecutionTimeStamp { get; }
 
     /// <summary>
@@ -127,6 +133,7 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQW2EfEe2P-L9DBerEgA")]
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EffectiveDate { get; }
 
     /// <summary>
@@ -141,6 +148,7 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQXWEfEe2P-L9DBerEgA")]
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpirationDate { get; }
 
     /// <summary>
@@ -149,6 +157,7 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQX2EfEe2P-L9DBerEgA")]
     [DisplayName("Early Termination Date")]
     [IsoXmlTag("EarlyTermntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EarlyTerminationDate { get; }
 
     /// <summary>
@@ -158,6 +167,7 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQYWEfEe2P-L9DBerEgA")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISODate> SettlementDate { get; }
 
     /// <summary>
@@ -175,6 +185,7 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQZ2EfEe2P-L9DBerEgA")]
     [DisplayName("Compression")]
     [IsoXmlTag("Cmprssn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? Compression { get; }
 
     /// <summary>
@@ -183,6 +194,7 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQaWEfEe2P-L9DBerEgA")]
     [DisplayName("Post Trade Risk Reduction Flag")]
     [IsoXmlTag("PstTradRskRdctnFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PostTradeRiskReductionFlag { get; }
 
     /// <summary>
@@ -216,6 +228,7 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQcWEfEe2P-L9DBerEgA")]
     [DisplayName("Non Standardised Term")]
     [IsoXmlTag("NonStdsdTerm")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NonStandardisedTerm { get; }
 
     /// <summary>
@@ -233,6 +246,7 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQdWEfEe2P-L9DBerEgA")]
     [DisplayName("Block Trade Election")]
     [IsoXmlTag("BlckTradElctn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? BlockTradeElection { get; }
 
     /// <summary>
@@ -242,6 +256,7 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQd2EfEe2P-L9DBerEgA")]
     [DisplayName("Large Notional Off Facility Election")]
     [IsoXmlTag("LrgNtnlOffFcltyElctn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? LargeNotionalOffFacilityElection { get; }
 
     /// <summary>
@@ -298,6 +313,7 @@ public interface ITradeTransaction49 : IIsoComponent
     [IsoId("_fWRQhWEfEe2P-L9DBerEgA")]
     [DisplayName("Other Payment")]
     [IsoXmlTag("OthrPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherPayment5> OtherPayment { get; }
 
     /// <summary>

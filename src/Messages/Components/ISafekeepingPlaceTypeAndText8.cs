@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the place of safekeeping expressed as a code and a narrative description.
 /// </summary>
 [IsoId("_5V6N6znTEeWV5sr121Fc8A")]
+[IsoDisplayName(@"Safekeeping Place Type And Text")]
 public interface ISafekeepingPlaceTypeAndText8 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ISafekeepingPlaceTypeAndText8 : IIsoComponent
     [IsoId("_51maiznTEeWV5sr121Fc8A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 }

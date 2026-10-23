@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original Data Elements3.
 /// </summary>
 [IsoId("_GCyNcW3nEe6dwbOqHXrHWg")]
+[IsoDisplayName(@"Original Data Elements3")]
 public interface IOriginalDataElements3 : IIsoComponent
 {
     /// <summary>
@@ -72,6 +73,7 @@ public interface IOriginalDataElements3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>

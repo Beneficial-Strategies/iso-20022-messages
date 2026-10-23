@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentCondition1Choice;
 /// Shipment conditions expressed as a proprietary code.
 /// </summary>
 [IsoId("_gvqr4LGdEeuSTr8k0UEM8A")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IShipmentCondition1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IShipmentCondition1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

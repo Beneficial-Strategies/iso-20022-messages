@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References65Choice;
 /// Unambiguous identification of the intra balance movement transaction as known by the account owner.
 /// </summary>
 [IsoId("_1IqiV9BwEeihG9bKfarOOA")]
+[IsoDisplayName(@"Intra Balance Movement Identification")]
 public interface IIntraBalanceMovementIdentification : IReferences65Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IIntraBalanceMovementIdentification : IReferences65Choice, IIso
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("IntraBalMvmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

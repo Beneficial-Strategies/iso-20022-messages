@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party And Certificate7.
 /// </summary>
 [IsoId("_yoPfsTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Party And Certificate7")]
 public interface IPartyAndCertificate7 : IIsoComponent
 {
     /// <summary>

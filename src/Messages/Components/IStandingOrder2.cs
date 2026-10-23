@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the detailed attributes of a standing order.
 /// </summary>
 [IsoId("_7-RqxKMgEeCJ6YNENx4h-w_-305246324")]
+[IsoDisplayName(@"Standing Order")]
 public interface IStandingOrder2 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,8 @@ public interface IStandingOrder2 : IIsoComponent
     [IsoId("_7-bbwqMgEeCJ6YNENx4h-w_-1545122205")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reference { get; }
 
     /// <summary>
@@ -97,6 +100,8 @@ public interface IStandingOrder2 : IIsoComponent
     [IsoId("_7-bbx6MgEeCJ6YNENx4h-w_1953175849")]
     [DisplayName("Link Set Identification")]
     [IsoXmlTag("LkSetId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LinkSetIdentification { get; }
 
     /// <summary>
@@ -105,6 +110,8 @@ public interface IStandingOrder2 : IIsoComponent
     [IsoId("_7-lMwKMgEeCJ6YNENx4h-w_414157345")]
     [DisplayName("Link Set Order Identification")]
     [IsoXmlTag("LkSetOrdrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LinkSetOrderIdentification { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface IStandingOrder2 : IIsoComponent
     [IsoId("_7-lMwaMgEeCJ6YNENx4h-w_46283719")]
     [DisplayName("Link Set Order Sequence")]
     [IsoXmlTag("LkSetOrdrSeq")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LinkSetOrderSequence { get; }
 
     /// <summary>
@@ -153,5 +161,6 @@ public interface IStandingOrder2 : IIsoComponent
     [IsoId("_7-lMxqMgEeCJ6YNENx4h-w_1380829379")]
     [DisplayName("Zero Sweep Indicator")]
     [IsoXmlTag("ZeroSweepInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ZeroSweepIndicator { get; }
 }

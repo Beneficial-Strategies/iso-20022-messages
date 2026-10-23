@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// This component define the type of financial services to be used with this message of Reconciliation. There is only one service : ReconciliationRequest.
 /// </summary>
 [IsoId("_I7EpUS5LEeunNvJlR_vCbg")]
+[IsoDisplayName(@"Reconciliation Request")]
 public interface IReconciliationRequest4 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IReconciliationRequest4 : IIsoComponent
     [IsoId("_JK3_5y5LEeunNvJlR_vCbg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

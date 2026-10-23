@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instalment5.
 /// </summary>
 [IsoId("_taMPoJUNEe6YroSumzeMDQ")]
+[IsoDisplayName(@"Instalment5")]
 public interface IInstalment5 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IInstalment5 : IIsoComponent
     /// </summary>
     [DisplayName("Instalment Plan")]
     [IsoXmlTag("InstlmtPlan")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<InstalmentPlan1Code> InstalmentPlan { get; }
 
     /// <summary>
@@ -107,6 +109,7 @@ public interface IInstalment5 : IIsoComponent
     /// </summary>
     [DisplayName("Detailed Charges")]
     [IsoXmlTag("DtldChrgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalmentAmountDetails1> DetailedCharges { get; }
 
     /// <summary>
@@ -114,6 +117,7 @@ public interface IInstalment5 : IIsoComponent
     /// </summary>
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateDetails1> InterestRate { get; }
 
     /// <summary>
@@ -121,6 +125,7 @@ public interface IInstalment5 : IIsoComponent
     /// </summary>
     [DisplayName("Grace Period")]
     [IsoXmlTag("GracePrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGracePeriod1> GracePeriod { get; }
 
     /// <summary>
@@ -128,5 +133,6 @@ public interface IInstalment5 : IIsoComponent
     /// </summary>
     [DisplayName("Plan Notice")]
     [IsoXmlTag("PlanNtce")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActionMessage11> PlanNotice { get; }
 }

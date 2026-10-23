@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioCode5Choice;
 /// </summary>
 [IsoId("_wnwasTICEe2fXedS_ucFOA")]
 [IsoXmlTag("Prtfl")]
+[IsoDisplayName(@"Portfolio")]
 public interface IPortfolio : IPortfolioCode5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IPortfolio : IPortfolioCode5Choice, IIsoChoiceVariant
     [IsoId("_B1XWMTIDEe2fXedS_ucFOA")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Code { get; }
 
     /// <summary>
@@ -27,5 +30,6 @@ public interface IPortfolio : IPortfolioCode5Choice, IIsoChoiceVariant
     [IsoId("_B1X9QTIDEe2fXedS_ucFOA")]
     [DisplayName("Portfolio Transaction Exemption")]
     [IsoXmlTag("PrtflTxXmptn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PortfolioTransactionExemption { get; }
 }

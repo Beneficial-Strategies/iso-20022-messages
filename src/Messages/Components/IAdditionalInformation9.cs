@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional specific modification criteria.
 /// </summary>
 [IsoId("_YoyEkSzREeOsiuMH68so7Q")]
+[IsoDisplayName(@"Additional Information")]
 public interface IAdditionalInformation9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAdditionalInformation9 : IIsoComponent
     [IsoId("_ZBCMiyzREeOsiuMH68so7Q")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountOwnerTransactionIdentification { get; }
 
     /// <summary>

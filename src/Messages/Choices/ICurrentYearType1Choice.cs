@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the selections of individual saving accounts issued during the current fiscal year.
 /// </summary>
 [IsoId("_3f6cYEXfEeGY6MkiuzuPOA_1308013300")]
+[IsoDisplayName(@"Current Year Type 1 Choice")]
 public interface ICurrentYearType1Choice : IIsoChoice { }

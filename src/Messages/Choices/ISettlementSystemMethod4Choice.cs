@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the settlement system/method.
 /// </summary>
 [IsoId("_R9Xe8TqIEeWVrPy0StzzSg")]
+[IsoDisplayName(@"Settlement System Method 4 Choice")]
 public interface ISettlementSystemMethod4Choice : IIsoChoice { }

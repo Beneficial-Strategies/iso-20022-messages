@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security.
 /// </summary>
 [IsoId("_AI9BAZy2Eem54rMzia0iag")]
+[IsoDisplayName(@"Financial Instrument Identification")]
 public interface IFinancialInstrumentIdentification4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IFinancialInstrumentIdentification4 : IIsoComponent
     [IsoId("_Acb9tZy2Eem54rMzia0iag")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IFinancialInstrumentIdentification4 : IIsoComponent
     [IsoId("_Acb9t5y2Eem54rMzia0iag")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>

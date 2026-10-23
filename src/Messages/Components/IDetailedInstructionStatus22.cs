@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a meeting instruction vote.
 /// </summary>
 [IsoId("_Kxz5EajIEfCzuLlmLrhIvA")]
+[IsoDisplayName(@"Detailed Instruction Status22")]
 public interface IDetailedInstructionStatus22 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IDetailedInstructionStatus22 : IIsoComponent
     [IsoId("_K5kt_ajIEfCzuLlmLrhIvA")]
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification246Choice> RightsHolder { get; }
 
     /// <summary>
@@ -89,5 +91,6 @@ public interface IDetailedInstructionStatus22 : IIsoComponent
     [IsoId("_K5kuB6jIEfCzuLlmLrhIvA")]
     [DisplayName("Vote Per Resolution")]
     [IsoXmlTag("VotePerRsltn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVote22> VotePerResolution { get; }
 }

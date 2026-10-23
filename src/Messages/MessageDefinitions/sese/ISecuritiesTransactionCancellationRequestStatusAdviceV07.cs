@@ -28,6 +28,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesTxCxlReqStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:sese.027.001.07"
 )]
+[Description(@"Scope|An account servicer sends an SecuritiesTransactionCancellationRequestStatusAdvice to an account owner to advise the status of a securities transaction cancellation request previously sent by the account owner.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Transaction Cancellation Request Status Advice V")]
 public interface ISecuritiesTransactionCancellationRequestStatusAdviceV07 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +38,8 @@ public interface ISecuritiesTransactionCancellationRequestStatusAdviceV07 : IOut
     [IsoId("_78fdkSgVEeym1_Zp1BTvEw")]
     [DisplayName("Cancellation Request Reference")]
     [IsoXmlTag("CxlReqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CancellationRequestReference { get; }
 
     /// <summary>
@@ -68,5 +72,6 @@ public interface ISecuritiesTransactionCancellationRequestStatusAdviceV07 : IOut
     [IsoId("_78fdmSgVEeym1_Zp1BTvEw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

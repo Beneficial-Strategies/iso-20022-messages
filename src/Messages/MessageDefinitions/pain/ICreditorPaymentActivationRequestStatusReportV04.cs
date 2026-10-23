@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.pain;
     "CdtrPmtActvtnReqStsRpt",
     "urn:iso:std:iso:20022:tech:xsd:pain.014.001.04"
 )]
+[Description(@"The CreditorPaymentActivationRequestStatusReport message is sent by a party to the next party in the creditor payment activation request chain. It is used to inform the latter about the positive or negative status of a creditor payment activation request (either single or file).")]
+[IsoDisplayName(@"Creditor Payment Activation Request Status Report V")]
 public interface ICreditorPaymentActivationRequestStatusReportV04 : IOuterRecord
 {
     /// <summary>
@@ -40,6 +42,7 @@ public interface ICreditorPaymentActivationRequestStatusReportV04 : IOuterRecord
     [IsoId("__PZbEU_GEeSNduMozFyRUg")]
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalPaymentInstruction14> OriginalPaymentInformationAndStatus { get; }
 
     /// <summary>
@@ -48,5 +51,6 @@ public interface ICreditorPaymentActivationRequestStatusReportV04 : IOuterRecord
     [IsoId("__PZbE0_GEeSNduMozFyRUg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

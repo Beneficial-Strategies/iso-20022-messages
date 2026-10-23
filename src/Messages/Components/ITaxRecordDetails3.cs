@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the individual tax amount(s) per period of the tax record.
 /// </summary>
 [IsoId("_oAWcqd4lEeqt1ZcLzWyWFw")]
+[IsoDisplayName(@"Tax Record Details")]
 public interface ITaxRecordDetails3 : IIsoComponent
 {
     /// <summary>

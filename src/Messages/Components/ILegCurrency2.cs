@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the currency(ies) for each leg of the transaction.
 /// </summary>
 [IsoId("_q25Pk3hCEeu3kecHd7QKUQ")]
+[IsoDisplayName(@"Leg Currency")]
 public interface ILegCurrency2 : IIsoComponent
 {
     /// <summary>

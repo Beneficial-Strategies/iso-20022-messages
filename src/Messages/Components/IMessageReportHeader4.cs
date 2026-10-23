@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details of many status advice reports where many received reports are reported at once.
 /// </summary>
 [IsoId("_CLY7kdGdEeaQk737TH1Fzw")]
+[IsoDisplayName(@"Message Report Header")]
 public interface IMessageReportHeader4 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,8 @@ public interface IMessageReportHeader4 : IIsoComponent
     [IsoId("_iChZYOvBEealxoQGKU9EVQ")]
     [DisplayName("Message Report Identifier")]
     [IsoXmlTag("MsgRptIdr")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? MessageReportIdentifier { get; }
 
     /// <summary>
@@ -35,6 +38,7 @@ public interface IMessageReportHeader4 : IIsoComponent
     [IsoId("_CUoXJdGdEeaQk737TH1Fzw")]
     [DisplayName("Record Status")]
     [IsoXmlTag("RcrdSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReportRecord3> RecordStatus { get; }
 
     /// <summary>
@@ -43,5 +47,6 @@ public interface IMessageReportHeader4 : IIsoComponent
     [IsoId("_CUoXJ9GdEeaQk737TH1Fzw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

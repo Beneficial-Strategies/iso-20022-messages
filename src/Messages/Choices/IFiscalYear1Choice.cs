@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of start date and end date for the fiscal year.
 /// </summary>
 [IsoId("_534EEFxREeW8MLuBzR10cg")]
+[IsoDisplayName(@"Fiscal Year 1 Choice")]
 public interface IFiscalYear1Choice : IIsoChoice { }

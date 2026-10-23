@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the financial instrument removal request.
 /// </summary>
 [IsoId("_3bfJsStFEeySlt9bF77XfA")]
+[IsoDisplayName(@"Request Details")]
 public interface IRequestDetails28 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IRequestDetails28 : IIsoComponent
     [IsoId("_3zn85StFEeySlt9bF77XfA")]
     [DisplayName("Financial Instrument And Attributes")]
     [IsoXmlTag("FinInstrmAndAttrbts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemovalProcessing2Choice> FinancialInstrumentAndAttributes { get; }
 
     /// <summary>

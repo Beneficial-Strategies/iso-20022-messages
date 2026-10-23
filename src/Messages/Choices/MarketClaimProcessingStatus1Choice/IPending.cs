@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus1Choi
 /// Provides status information related to a pending instruction.
 /// </summary>
 [IsoId("_YGaIg9x4EeqESbVR5AloZQ")]
+[IsoDisplayName(@"Pending")]
 public interface IPending : IMarketClaimProcessingStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

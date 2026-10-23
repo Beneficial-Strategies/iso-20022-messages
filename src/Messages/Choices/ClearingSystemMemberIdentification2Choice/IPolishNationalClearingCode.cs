@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Polish National Clearing Code - identifies Polish financial institutions on the Polish national clearing system.
 /// </summary>
 [IsoId("_TDPFhNp-Ed-ak6NoX_4Aeg_-1877438256")]
+[IsoDisplayName(@"Polish National Clearing Code")]
 public interface IPolishNationalClearingCode
     : IClearingSystemMemberIdentification2Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IPolishNationalClearingCode
     /// Polish National Clearing Code Identifier. Identifies Polish financial institutions on the Polish national clearing system.
     /// </summary>
     [IsoXmlTag("PLKNR")]
+    [IsoSimpleType(IsoSimpleType.PolishNationalClearingCodeIdentifier)]
     PolishNationalClearingCodeIdentifier Value { get; }
 }

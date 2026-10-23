@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account Report36.
 /// </summary>
 [IsoId("_5ZlQoTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Account Report36")]
 public interface IAccountReport36 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IAccountReport36 : IIsoComponent
     /// </summary>
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOperationMandate7> Mandate { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface IAccountReport36 : IIsoComponent
     /// </summary>
     [DisplayName("Group")]
     [IsoXmlTag("Grp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGroup6> Group { get; }
 
     /// <summary>

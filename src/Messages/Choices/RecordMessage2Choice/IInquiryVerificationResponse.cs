@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the inquiry verification response message.</summary>
 [IsoId("_kNBju27-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Inquiry Verification Response")]
 public interface IInquiryVerificationResponse : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

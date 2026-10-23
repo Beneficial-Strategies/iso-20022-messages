@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingIdentification3Choice;
 /// </summary>
 [IsoId("_2EZuEZ3DEeuwmdq0KtnICg")]
 [IsoXmlTag("Swp")]
+[IsoDisplayName(@"Swap")]
 public interface ISwap : IUnderlyingIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>

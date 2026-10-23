@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice between a fixed rate and a floating rate.
 /// </summary>
 [IsoId("_g9tac6x2Eem81-uIvTF5rQ")]
+[IsoDisplayName(@"Interest Rate")]
 public interface IInterestRate3 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics related to the transfer of transactions.
 /// </summary>
 [IsoId("_d7nnwAJXEeS2H9l84F_isg")]
+[IsoDisplayName(@"Header")]
 public interface IHeader23 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IHeader23 : IIsoComponent
     [IsoId("_eMpGUwJXEeS2H9l84F_isg")]
     [DisplayName("Format Version")]
     [IsoXmlTag("FrmtVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max6Text)]
+    [StringLength(6, MinimumLength = 1)]
     Max6Text FormatVersion { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IHeader23 : IIsoComponent
     [IsoId("_eMpGVQJXEeS2H9l84F_isg")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText ExchangeIdentification { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IHeader23 : IIsoComponent
     [IsoId("_waUXsAJXEeS2H9l84F_isg")]
     [DisplayName("Message Sequence Number")]
     [IsoXmlTag("MsgSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number MessageSequenceNumber { get; }
 
     /// <summary>
@@ -57,5 +62,6 @@ public interface IHeader23 : IIsoComponent
     [IsoId("_eMpGVwJXEeS2H9l84F_isg")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity51Cho
 
 /// <summary>Percentage of the total redemption amount to be redeemed.</summary>
 [IsoId("5d3b5841-cd11-4d16-992a-19846b56026c")]
+[IsoDisplayName(@"Percentage Of Total Redemption Amount")]
 public interface IPercentageOfTotalRedemptionAmount
     : IFinancialInstrumentQuantity51Choice,
         IIsoChoiceVariant

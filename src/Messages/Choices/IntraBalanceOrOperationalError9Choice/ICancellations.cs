@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError9C
 /// </summary>
 [IsoId("_p-rkcTnfEem7JZMuWtwtsg")]
 [IsoXmlTag("Cxls")]
+[IsoDisplayName(@"Cancellations")]
 public interface ICancellations : IIntraBalanceOrOperationalError9Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -50,5 +51,6 @@ public interface ICancellations : IIntraBalanceOrOperationalError9Choice, IIsoCh
     [IsoId("_qIqm7TnfEem7JZMuWtwtsg")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalanceCancellation6> Cancellation { get; }
 }

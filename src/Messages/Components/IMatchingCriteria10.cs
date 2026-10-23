@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on loan and collateral matching criteria.
 /// </summary>
 [IsoId("_Ays4p8K3EeuFNp8LZAnorg")]
+[IsoDisplayName(@"Matching Criteria")]
 public interface IMatchingCriteria10 : IIsoComponent
 {
     /// <summary>

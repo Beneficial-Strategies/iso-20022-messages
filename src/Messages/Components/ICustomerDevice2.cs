@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the customer device.
 /// </summary>
 [IsoId("_c9QGQEamEeeIjf8aP9KbJA")]
+[IsoDisplayName(@"Customer Device")]
 public interface ICustomerDevice2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICustomerDevice2 : IIsoComponent
     [IsoId("_WqOMgEanEeeIjf8aP9KbJA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Identification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface ICustomerDevice2 : IIsoComponent
     [IsoId("_eNRHMEanEeeIjf8aP9KbJA")]
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Provider { get; }
 }

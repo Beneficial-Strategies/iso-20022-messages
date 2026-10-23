@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the arrangement of the transport of goods and services and the parties involved in this process.
 /// </summary>
 [IsoId("_S-10hgEcEeCQm6a_G2yO_w_-323080810")]
+[IsoDisplayName(@"Consignment")]
 public interface IConsignment2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IConsignment2 : IIsoComponent
     [IsoId("_S-_lgAEcEeCQm6a_G2yO_w_-1584428859")]
     [DisplayName("Transport Means")]
     [IsoXmlTag("TrnsprtMeans")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransportMeans3> TransportMeans { get; }
 }

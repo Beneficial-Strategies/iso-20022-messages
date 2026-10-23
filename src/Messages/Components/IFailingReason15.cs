@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason why the instruction or request has a failing settlement status.
 /// </summary>
 [IsoId("_0o3p8eSkEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Failing Reason15")]
 public interface IFailingReason15 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Margin Portfolio4.
 /// </summary>
 [IsoId("_Unl0AbEtEe63r8FIfzOHCQ")]
+[IsoDisplayName(@"Margin Portfolio4")]
 public interface IMarginPortfolio4 : IIsoComponent
 {
     /// <summary>

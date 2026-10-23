@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card Payment Data Set Transaction50.
 /// </summary>
 [IsoId("_rZa7EaE1Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"Card Payment Data Set Transaction50")]
 public interface ICardPaymentDataSetTransaction50 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ICardPaymentDataSetTransaction50 : IIsoComponent
     /// </summary>
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITraceability8> Traceability { get; }
 
     /// <summary>

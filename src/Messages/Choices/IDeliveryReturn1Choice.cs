@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the delivery return information.
 /// </summary>
 [IsoId("_QuOV89p-Ed-ak6NoX_4Aeg_1305476197")]
+[IsoDisplayName(@"Delivery Return 1 Choice")]
 public interface IDeliveryReturn1Choice : IIsoChoice { }

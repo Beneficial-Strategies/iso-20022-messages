@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerOfferorTaxabilityIndicator
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IIssuerOfferorTaxabilityIndicator2Choice, IIsoChoiceVariant
 {
     /// <summary>

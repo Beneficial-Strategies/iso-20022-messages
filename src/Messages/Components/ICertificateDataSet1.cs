@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Formal document used to record a fact and used as proof of the fact, in the context of a commercial trade transaction.
 /// </summary>
 [IsoId("_TnTb4tp-Ed-ak6NoX_4Aeg_-729563695")]
+[IsoDisplayName(@"Certificate Data Set")]
 public interface ICertificateDataSet1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICertificateDataSet1 : IIsoComponent
     [IsoId("_TnTb5dp-Ed-ak6NoX_4Aeg_1492322947")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItemAndPOIdentification1> LineItem { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ICertificateDataSet1 : IIsoComponent
     [IsoId("_TnTb59p-Ed-ak6NoX_4Aeg_-889596132")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate IssueDate { get; }
 
     /// <summary>
@@ -81,6 +84,7 @@ public interface ICertificateDataSet1 : IIsoComponent
     [IsoId("_Tncl0dp-Ed-ak6NoX_4Aeg_1960984582")]
     [DisplayName("Authorised Inspector Indicator")]
     [IsoXmlTag("AuthrsdInspctrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AuthorisedInspectorIndicator { get; }
 
     /// <summary>
@@ -89,6 +93,8 @@ public interface ICertificateDataSet1 : IIsoComponent
     [IsoId("_Tncl0tp-Ed-ak6NoX_4Aeg_-729563395")]
     [DisplayName("Certificate Identification")]
     [IsoXmlTag("CertId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CertificateIdentification { get; }
 
     /// <summary>
@@ -105,6 +111,8 @@ public interface ICertificateDataSet1 : IIsoComponent
     [IsoId("_Tncl1Np-Ed-ak6NoX_4Aeg_-729563335")]
     [DisplayName("Goods Description")]
     [IsoXmlTag("GoodsDesc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? GoodsDescription { get; }
 
     /// <summary>
@@ -137,5 +145,6 @@ public interface ICertificateDataSet1 : IIsoComponent
     [IsoId("_Tncl2Np-Ed-ak6NoX_4Aeg_-729563179")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> AdditionalInformation { get; }
 }

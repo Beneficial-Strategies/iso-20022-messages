@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus34Choice;
 
 /// <summary>Status of individual instruction cancellation requests received within the instruction cancellation message.</summary>
 [IsoId("_c87iY68uEfCx2aBifPEdRg")]
+[IsoDisplayName(@"Detailed Cancellation Status")]
 public interface IDetailedCancellationStatus : ICancellationStatus34Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

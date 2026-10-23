@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account Sub Level25.
 /// </summary>
 [IsoId("_w_HKh1x7Ee6fgZt44_IqFA")]
+[IsoDisplayName(@"Account Sub Level25")]
 public interface IAccountSubLevel25 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IAccountSubLevel25 : IIsoComponent
     /// </summary>
     [DisplayName("Shareholding Balance")]
     [IsoXmlTag("ShrhldgBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IShareholdingBalance1> ShareholdingBalance { get; }
 }

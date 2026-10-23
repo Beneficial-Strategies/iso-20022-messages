@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification Type46Choice.
 /// </summary>
 [IsoId("_g_0AYaDcEe-CRv8HNM1RKw")]
+[IsoDisplayName(@"Identification Type46Choice")]
 public interface IIdentificationType46Choice : IIsoChoice { }

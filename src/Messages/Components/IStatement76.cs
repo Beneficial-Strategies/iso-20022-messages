@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the statement.
 /// </summary>
 [IsoId("_Z0x55ffVEeiNZp_PtLohLw")]
+[IsoDisplayName(@"Statement")]
 public interface IStatement76 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IStatement76 : IIsoComponent
     [IsoId("_Z0x58ffVEeiNZp_PtLohLw")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? QueryReference { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IStatement76 : IIsoComponent
     [IsoId("_Z0x5-ffVEeiNZp_PtLohLw")]
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? StatementIdentification { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface IStatement76 : IIsoComponent
     [IsoId("_Z0x6G_fVEeiNZp_PtLohLw")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface IStatement76 : IIsoComponent
     [IsoId("_Z0x6I_fVEeiNZp_PtLohLw")]
     [DisplayName("Audited Indicator")]
     [IsoXmlTag("AudtdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AuditedIndicator { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface IStatement76 : IIsoComponent
     [IsoId("_Z0x6K_fVEeiNZp_PtLohLw")]
     [DisplayName("Sub Account Indicator")]
     [IsoXmlTag("SubAcctInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SubAccountIndicator { get; }
 
     /// <summary>
@@ -97,6 +105,7 @@ public interface IStatement76 : IIsoComponent
     [IsoId("_Z0x6M_fVEeiNZp_PtLohLw")]
     [DisplayName("Tax Lot Indicator")]
     [IsoXmlTag("TaxLotInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TaxLotIndicator { get; }
 
     /// <summary>
@@ -105,5 +114,6 @@ public interface IStatement76 : IIsoComponent
     [IsoId("_Z0x6O_fVEeiNZp_PtLohLw")]
     [DisplayName("Security Interest Or Set Off")]
     [IsoXmlTag("SctyIntrstOrSetOff")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SecurityInterestOrSetOff { get; }
 }

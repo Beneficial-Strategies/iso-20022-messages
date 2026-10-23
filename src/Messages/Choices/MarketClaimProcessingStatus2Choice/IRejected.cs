@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus2Choi
 
 /// <summary>Instruction processing has been rejected.</summary>
 [IsoId("_G1D_MbMaEfCEXew4g5B5oA")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IMarketClaimProcessingStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

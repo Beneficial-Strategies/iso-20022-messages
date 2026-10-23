@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reporting per financial instrument.
 /// </summary>
 [IsoId("_PlRZQfvmEeCBQp5TnX1XKQ")]
+[IsoDisplayName(@"Financial Instrument Details")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-05-04.")]
 public interface IFinancialInstrumentDetails9 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +59,6 @@ public interface IFinancialInstrumentDetails9 : IIsoComponent
     [IsoId("_PlRZefvmEeCBQp5TnX1XKQ")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransaction18> Transaction { get; }
 }

@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_M87dQRj3EeKxeog5DTmtgg")]
 [IsoMessage("reda.002.001.04", "PricRptCxl", "urn:iso:std:iso:20022:tech:xsd:reda.002.001.04")]
+[Description(@"SCOPE|A report provider, for example, a transfer agent, fund accountant or market data provider, sends the PriceReportCancellation message to the report recipient, for example, a fund management company, transfer agent, market data provider, regulator or any other interested party to cancel previously sent prices.||USAGE|The PriceReportCancellation message is used to either: |- cancel an entire PriceReport that was previously sent (by quoting the business reference of the original price report in the PriceReportIdentification element), or,|- cancel one or more individual prices from a previously sent price report (by using the PriceDetailsToBeCancelled sequence).|Technically, it is possible to cancel all the prices individually by using the PriceDetailsToBeCancelled sequence, but this is not recommended.|The cancellation should not contain the cancellation of prices for more than one NAV date. ||")]
+[IsoDisplayName(@"Price Report Cancellation V")]
 public interface IPriceReportCancellationV04 : IOuterRecord
 {
     /// <summary>
@@ -57,6 +59,8 @@ public interface IPriceReportCancellationV04 : IOuterRecord
     [IsoId("_NPnKdRmAEeKxsrht2duUcg")]
     [DisplayName("Price Report Identification")]
     [IsoXmlTag("PricRptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PriceReportIdentification { get; }
 
     /// <summary>
@@ -65,6 +69,8 @@ public interface IPriceReportCancellationV04 : IOuterRecord
     [IsoId("_epzJZRmAEeKxsrht2duUcg")]
     [DisplayName("Cancellation Identification")]
     [IsoXmlTag("CxlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CancellationIdentification { get; }
 
     /// <summary>
@@ -73,6 +79,8 @@ public interface IPriceReportCancellationV04 : IOuterRecord
     [IsoId("_06rKcBmAEeKxsrht2duUcg")]
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? CancellationReason { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface IPriceReportCancellationV04 : IOuterRecord
     [IsoId("_Cj3HgBmCEeKxsrht2duUcg")]
     [DisplayName("Complete Price Cancellation")]
     [IsoXmlTag("CmpltPricCxl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CompletePriceCancellation { get; }
 
     /// <summary>
@@ -97,6 +106,7 @@ public interface IPriceReportCancellationV04 : IOuterRecord
     [IsoId("_M87dUxj3EeKxeog5DTmtgg")]
     [DisplayName("Cancelled Price Valuation Details")]
     [IsoXmlTag("CancPricValtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceReport3> CancelledPriceValuationDetails { get; }
 
     /// <summary>
@@ -105,5 +115,6 @@ public interface IPriceReportCancellationV04 : IOuterRecord
     [IsoId("_2sI2JRmCEeKxsrht2duUcg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the report.
 /// </summary>
 [IsoId("_jf2uIe5NEeCisYr99QEiWA_-2045963141")]
+[IsoDisplayName(@"Movement Report")]
 public interface IMovementReport1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMovementReport1 : IIsoComponent
     [IsoId("_jf2uIu5NEeCisYr99QEiWA_1138092736")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IMovementReport1 : IIsoComponent
     [IsoId("_jf2uI-5NEeCisYr99QEiWA_2135165089")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReportIdentification { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface IMovementReport1 : IIsoComponent
     [IsoId("_jgAfIO5NEeCisYr99QEiWA_-856051970")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralType22Choice;
 /// <summary>
 /// General Collateral.
 /// </summary>
+[IsoDisplayName(@"General Collateral")]
 public interface IGeneralCollateral : ICollateralType22Choice, IIsoChoiceVariant
 {
     /// <summary>

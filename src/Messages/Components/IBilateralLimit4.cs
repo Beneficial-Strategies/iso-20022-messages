@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Bilateral Limit4.
 /// </summary>
 [IsoId("_36KFVzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Bilateral Limit4")]
 public interface IBilateralLimit4 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IBilateralLimit4 : IIsoComponent
     /// </summary>
     [DisplayName("Bilateral Balance")]
     [IsoXmlTag("BilBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance11> BilateralBalance { get; }
 }

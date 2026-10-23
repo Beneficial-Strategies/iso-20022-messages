@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError4Choice;
 /// <summary>
 /// Business Error.
 /// </summary>
+[IsoDisplayName(@"Business Error")]
 public interface IBusinessError : IPartyAuditTrailOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_6rd65VUFEeetiruPyDPo0Q")]
 [IsoMessage("caad.005.001.02", "RcncltnInitn", "urn:iso:std:iso:20022:tech:xsd:caad.005.001.02")]
+[Description(@"The ReconciliationInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer).||Reconciliation is the exchange between two interchanging parties (Acquirer, Issuer or Agent) of totals and/or counts of messages within a specific session.")]
+[IsoDisplayName(@"Reconciliation Initiation V")]
 public interface IReconciliationInitiationV02 : IOuterRecord
 {
     /// <summary>

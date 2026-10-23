@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the original notification item and to provide the status.
 /// </summary>
 [IsoId("_b73e0dcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Original Item And Status")]
 public interface IOriginalItemAndStatus7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalItemAndStatus7 : IIsoComponent
     [IsoId("_b9qOkdcZEeqRFcf2R4bPBw")]
     [DisplayName("Original Item Identification")]
     [IsoXmlTag("OrgnlItmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalItemIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalItemAndStatus7 : IIsoComponent
     [IsoId("_b9qOk9cZEeqRFcf2R4bPBw")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IOriginalItemAndStatus7 : IIsoComponent
     [IsoId("_b9qOldcZEeqRFcf2R4bPBw")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? OriginalUETR { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IOriginalItemAndStatus7 : IIsoComponent
     [IsoId("_b9qOmdcZEeqRFcf2R4bPBw")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedValueDate { get; }
 
     /// <summary>
@@ -65,6 +72,8 @@ public interface IOriginalItemAndStatus7 : IIsoComponent
     [IsoId("_b9qOndcZEeqRFcf2R4bPBw")]
     [DisplayName("Additional Status Information")]
     [IsoXmlTag("AddtlStsInf")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? AdditionalStatusInformation { get; }
 
     /// <summary>

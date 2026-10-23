@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details for the adjustment of the mandate.
 /// </summary>
 [IsoId("_PJFAQGVQEeacpJ-gG9kyUQ")]
+[IsoDisplayName(@"Mandate Adjustment")]
 public interface IMandateAdjustment1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMandateAdjustment1 : IIsoComponent
     [IsoId("_RgDh4GVUEeacpJ-gG9kyUQ")]
     [DisplayName("Date Adjustment Rule Indicator")]
     [IsoXmlTag("DtAdjstmntRuleInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator DateAdjustmentRuleIndicator { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IMandateAdjustment1 : IIsoComponent
     [IsoId("_OG1PAGoEEearR-CA7eRZXQ")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 }

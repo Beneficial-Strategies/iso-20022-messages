@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_J4YkRygrEeyB747fKu7_rw")]
 [IsoMessage("colr.006.001.05", "CollMgmtCxlSts", "urn:iso:std:iso:20022:tech:xsd:colr.006.001.05")]
+[Description(@"Scope|The CollateralManagementCancellationStatus message is sent by:|- the collateral taker or its collateral manager to the collateral giver or its collateral manager, or|- the collateral giver or its collateral manager to the collateral taker or its collateral manager.|This message is used to provide the status of accepted or rejected for the CollateralManagementCancellationRequest message previously received.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|The CollateralManagementCancellationStatus message can be sent to provide a status for a previously received CollateralManagementCancellationRequest message.")]
+[IsoDisplayName(@"Collateral Management Cancellation Status V")]
 public interface ICollateralManagementCancellationStatusV05 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +31,8 @@ public interface ICollateralManagementCancellationStatusV05 : IOuterRecord
     [IsoId("_J4YkTSgrEeyB747fKu7_rw")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -61,5 +65,6 @@ public interface ICollateralManagementCancellationStatusV05 : IOuterRecord
     [IsoId("_J4YkVSgrEeyB747fKu7_rw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

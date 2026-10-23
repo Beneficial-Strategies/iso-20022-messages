@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax applicable to a securities transaction.
 /// </summary>
 [IsoId("84a3ce1c-48b6-4540-8c36-5b77709f3523")]
+[IsoDisplayName(@"Tax43")]
 public interface ITax43 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITax43 : IIsoComponent
     [IsoId("84a3ce1c-amnt-0001-0002-5b77709f3523")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyAnd13DecimalAmount> Amount { get; }
 
     /// <summary>

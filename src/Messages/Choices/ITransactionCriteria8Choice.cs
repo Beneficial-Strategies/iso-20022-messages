@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Transaction Criteria8Choice.
 /// </summary>
 [IsoId("_3IuBQTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Transaction Criteria8Choice")]
 public interface ITransactionCriteria8Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the summation of the call amounts for the variation margin and optionaly the segregated independent amount.
 /// </summary>
 [IsoId("_UlvaFtp-Ed-ak6NoX_4Aeg_-1833234715")]
+[IsoDisplayName(@"Margin Call Result")]
 public interface IMarginCallResult2 : IIsoComponent
 {
     /// <summary>

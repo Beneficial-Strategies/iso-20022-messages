@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Card35.
 /// </summary>
 [IsoId("__UZVMY-YEe6oobnCtR50kw")]
+[IsoDisplayName(@"Payment Card35")]
 public interface IPaymentCard35 : IIsoComponent
 {
     /// <summary>
@@ -107,6 +108,7 @@ public interface IPaymentCard35 : IIsoComponent
     /// </summary>
     [DisplayName("Allowed Product")]
     [IsoXmlTag("AllwdPdct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max70Text> AllowedProduct { get; }
 
     /// <summary>

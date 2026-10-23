@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the loan data details in case of a margin lending transaction.
 /// </summary>
 [IsoId("_eT8boaotEemdLtwzt4CWxg")]
+[IsoDisplayName(@"Loan Data")]
 public interface ILoanData75 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILoanData75 : IIsoComponent
     [IsoId("_eX0PAaotEemdLtwzt4CWxg")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? UniqueTradeIdentifier { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ILoanData75 : IIsoComponent
     [IsoId("_eX0PA6otEemdLtwzt4CWxg")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EventDate { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ILoanData75 : IIsoComponent
     [IsoId("_eX0PBaotEemdLtwzt4CWxg")]
     [DisplayName("Execution Date Time")]
     [IsoXmlTag("ExctnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ExecutionDateTime { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ILoanData75 : IIsoComponent
     [IsoId("__QUkkN4LEemiJt2087YZcw")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? TradingVenue { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface ILoanData75 : IIsoComponent
     [IsoId("_eX0PD6otEemdLtwzt4CWxg")]
     [DisplayName("Margin Loan Attribute")]
     [IsoXmlTag("MrgnLnAttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRate3> MarginLoanAttribute { get; }
 
     /// <summary>
@@ -81,5 +88,6 @@ public interface ILoanData75 : IIsoComponent
     [IsoId("_0Me_MbODEemDE9K-I5TT8Q")]
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TerminationDate { get; }
 }

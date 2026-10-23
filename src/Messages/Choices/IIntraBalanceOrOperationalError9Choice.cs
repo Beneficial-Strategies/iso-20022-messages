@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the report data or an operational error.
 /// </summary>
 [IsoId("_p0siMTnfEem7JZMuWtwtsg")]
+[IsoDisplayName(@"Intra Balance Or Operational Error 9 Choice")]
 public interface IIntraBalanceOrOperationalError9Choice : IIsoChoice { }

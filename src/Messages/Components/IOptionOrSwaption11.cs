@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Option Or Swaption11.
 /// </summary>
 [IsoId("_BpQX8I-SEe6Ojt1b3tfu9Q")]
+[IsoDisplayName(@"Option Or Swaption11")]
 public interface IOptionOrSwaption11 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface IOptionOrSwaption11 : IIsoComponent
     /// </summary>
     [DisplayName("Exercise Style")]
     [IsoXmlTag("ExrcStyle")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<OptionStyle6Code> ExerciseStyle { get; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public interface IOptionOrSwaption11 : IIsoComponent
     /// </summary>
     [DisplayName("Strike Price Schedule")]
     [IsoXmlTag("StrkPricSchdl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISchedule4> StrikePriceSchedule { get; }
 
     /// <summary>

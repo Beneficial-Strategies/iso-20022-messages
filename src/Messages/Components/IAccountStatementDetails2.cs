@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statement information of an account.
 /// </summary>
 [IsoId("_lBqwQTaqEeyjpIf0r_Ojqw")]
+[IsoDisplayName(@"Account Statement Details")]
 public interface IAccountStatementDetails2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAccountStatementDetails2 : IIsoComponent
     [IsoId("_lF5wATaqEeyjpIf0r_Ojqw")]
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate TransactionDate { get; }
 
     /// <summary>
@@ -27,6 +29,7 @@ public interface IAccountStatementDetails2 : IIsoComponent
     [IsoId("_lF5wAzaqEeyjpIf0r_Ojqw")]
     [DisplayName("Pending Indicator")]
     [IsoXmlTag("PdgInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PendingIndicator { get; }
 
     /// <summary>
@@ -35,6 +38,7 @@ public interface IAccountStatementDetails2 : IIsoComponent
     [IsoId("_lF5wBTaqEeyjpIf0r_Ojqw")]
     [DisplayName("Transaction Posting Date")]
     [IsoXmlTag("TxPstngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TransactionPostingDate { get; }
 
     /// <summary>
@@ -67,6 +71,8 @@ public interface IAccountStatementDetails2 : IIsoComponent
     [IsoId("_lF6XFzaqEeyjpIf0r_Ojqw")]
     [DisplayName("Acceptor Name And Location")]
     [IsoXmlTag("AccptrNmAndLctn")]
+    [IsoSimpleType(IsoSimpleType.Max99Text)]
+    [StringLength(99, MinimumLength = 1)]
     Max99Text? AcceptorNameAndLocation { get; }
 
     /// <summary>
@@ -75,6 +81,8 @@ public interface IAccountStatementDetails2 : IIsoComponent
     [IsoId("_lF6XGTaqEeyjpIf0r_Ojqw")]
     [DisplayName("Short Transaction Description")]
     [IsoXmlTag("ShrtTxDesc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ShortTransactionDescription { get; }
 
     /// <summary>
@@ -83,5 +91,7 @@ public interface IAccountStatementDetails2 : IIsoComponent
     [IsoId("_lF6XGzaqEeyjpIf0r_Ojqw")]
     [DisplayName("Long Transaction Description")]
     [IsoXmlTag("LngTxDesc")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? LongTransactionDescription { get; }
 }

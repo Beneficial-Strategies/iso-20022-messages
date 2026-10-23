@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_M2OIONE_Ed-BzquC8wXy7w_1304956917")]
 [IsoMessage("camt.061.001.01", "PayInCall", "urn:iso:std:iso:20022:tech:xsd:camt.061.001.01")]
+[IsoDisplayName(@"Pay In Call V01")]
 public interface IPayInCallV01 : IOuterRecord
 {
     /// <summary>

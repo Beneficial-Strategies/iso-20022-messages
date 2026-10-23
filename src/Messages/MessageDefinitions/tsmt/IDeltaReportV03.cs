@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_nsFeyNE8Ed-BzquC8wXy7w_1762924909")]
 [IsoMessage("tsmt.015.001.03", "DltaRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.015.001.03")]
+[Description(@"Scope|The DeltaReport message is sent by the matching application to the parties involved in the request of a baseline amendment.|The message is used to list the differences between the established and the newly proposed baseline.|Usage|The DeltaReport message can be sent by the matching application to|- the parties involved in the amendment of a baseline that has been established in the push-through mode. In the outlined scenario the message is sent to the requester of the amendment to acknowledge the receipt of the request and to list the differences between the established and the newly proposed baseline and to the counterparty to list the differences between the established and the newly proposed baseline and to request the acceptance or rejection of the amendment request,|or|- the party that has requested the amendment of a baseline established in the lodge mode. In the outlined scenario the message is used to confirm the changes to the baseline and to list the differences between the amended baseline and the baseline established earlier.")]
+[IsoDisplayName(@"Delta Report V")]
 public interface IDeltaReportV03 : IOuterRecord
 {
     /// <summary>
@@ -67,6 +69,9 @@ public interface IDeltaReportV03 : IOuterRecord
     [IsoId("_nsPPxdE8Ed-BzquC8wXy7w_1762925311")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>
@@ -115,6 +120,7 @@ public interface IDeltaReportV03 : IOuterRecord
     [IsoId("_nsYZs9E8Ed-BzquC8wXy7w_1762925773")]
     [DisplayName("Updated Element")]
     [IsoXmlTag("UpdtdElmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IComparisonResult2> UpdatedElement { get; }
 
     /// <summary>

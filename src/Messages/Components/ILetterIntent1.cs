@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies information about the letter of intent.
 /// </summary>
 [IsoId("_QXVWcxKHEeKj15WxqwlXPw")]
+[IsoDisplayName(@"Letter Intent")]
 public interface ILetterIntent1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILetterIntent1 : IIsoComponent
     [IsoId("_iqLbsBKHEeKj15WxqwlXPw")]
     [DisplayName("Letter Intent Reference")]
     [IsoXmlTag("LttrInttRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text LetterIntentReference { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ILetterIntent1 : IIsoComponent
     [IsoId("_3Jsz4BKHEeKj15WxqwlXPw")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ILetterIntent1 : IIsoComponent
     [IsoId("_-X9KUBKHEeKj15WxqwlXPw")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EndDate { get; }
 }

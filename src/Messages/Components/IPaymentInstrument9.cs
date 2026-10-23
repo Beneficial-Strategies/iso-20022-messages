@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instrument that has or represents monetary value and is used to process a payment instruction.
 /// </summary>
 [IsoId("_SBq61dp-Ed-ak6NoX_4Aeg_473679007")]
+[IsoDisplayName(@"Payment Instrument")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IPaymentInstrument9 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,9 @@ public interface IPaymentInstrument9 : IIsoComponent
     [IsoId("_SBq619p-Ed-ak6NoX_4Aeg_473679501")]
     [DisplayName("Cash Account Details")]
     [IsoXmlTag("CshAcctDtls")]
+    [MinLength(1)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount4> CashAccountDetails { get; }
 
     /// <summary>

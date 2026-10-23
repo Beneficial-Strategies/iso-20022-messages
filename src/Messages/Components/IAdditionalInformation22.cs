@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information relevant to the destination.
 /// </summary>
 [IsoId("_y9nX8VDfEee94_dUz-hvgw")]
+[IsoDisplayName(@"Additional Information")]
 public interface IAdditionalInformation22 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IAdditionalInformation22 : IIsoComponent
     [IsoId("_zI7QE1DfEee94_dUz-hvgw")]
     [DisplayName("Target")]
     [IsoXmlTag("Trgt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<UserInterface8Code> Target { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface IAdditionalInformation22 : IIsoComponent
     [IsoId("_XYwPQRs4EeqrvK3udMUsNQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -49,5 +53,7 @@ public interface IAdditionalInformation22 : IIsoComponent
     [IsoId("_zI7QF1DfEee94_dUz-hvgw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max20KText)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20KText Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed Report Statistics7.
 /// </summary>
 [IsoId("_CNlAofrfEe2mU4Wi2q3MzQ")]
+[IsoDisplayName(@"Detailed Report Statistics7")]
 public interface IDetailedReportStatistics7 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IDetailedReportStatistics7 : IIsoComponent
     /// </summary>
     [DisplayName("Number Of Reports Rejected Per Error")]
     [IsoXmlTag("NbOfRptsRjctdPerErr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfTransactionsPerValidationRule6> NumberOfReportsRejectedPerError { get; }
 }

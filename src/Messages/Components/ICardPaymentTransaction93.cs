@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction information in the authorisation response.
 /// </summary>
 [IsoId("_L0yYUQuLEeqYM5yH99IYQw")]
+[IsoDisplayName(@"Card Payment Transaction")]
 public interface ICardPaymentTransaction93 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICardPaymentTransaction93 : IIsoComponent
     [IsoId("_L_wSMQuLEeqYM5yH99IYQw")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICardPaymentTransaction93 : IIsoComponent
     [IsoId("_L_wSNQuLEeqYM5yH99IYQw")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InitiatorTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ICardPaymentTransaction93 : IIsoComponent
     [IsoId("_L_wSNwuLEeqYM5yH99IYQw")]
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? RecipientTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ICardPaymentTransaction93 : IIsoComponent
     [IsoId("_L_wSOQuLEeqYM5yH99IYQw")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface ICardPaymentTransaction93 : IIsoComponent
     [IsoId("_L_wSOwuLEeqYM5yH99IYQw")]
     [DisplayName("Interchange Data")]
     [IsoXmlTag("IntrchngData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InterchangeData { get; }
 
     /// <summary>
@@ -73,5 +84,7 @@ public interface ICardPaymentTransaction93 : IIsoComponent
     [IsoId("_L_wSPwuLEeqYM5yH99IYQw")]
     [DisplayName("Merchant Reference Data")]
     [IsoXmlTag("MrchntRefData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? MerchantReferenceData { get; }
 }

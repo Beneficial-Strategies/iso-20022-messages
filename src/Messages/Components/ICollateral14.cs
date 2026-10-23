@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the security pledge as collateral.
 /// </summary>
 [IsoId("_hc-tS6idEeWHO_l3hf2rlA")]
+[IsoDisplayName(@"Collateral")]
 public interface ICollateral14 : IIsoComponent
 {
     /// <summary>
@@ -28,6 +29,7 @@ public interface ICollateral14 : IIsoComponent
     [IsoId("_h6SUM6idEeWHO_l3hf2rlA")]
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Haircut { get; }
 
     /// <summary>

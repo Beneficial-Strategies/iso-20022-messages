@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReceivedReason1Choice;
 /// Reason for the received status.
 /// </summary>
 [IsoId("_9wz1b1jqEeOnqqBHs8Gasw")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IReceivedReason1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

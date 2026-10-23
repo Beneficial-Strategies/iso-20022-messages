@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError3Choice;
 /// <summary>
 /// Operational Error.
 /// </summary>
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : IPartyAuditTrailOrError3Choice, IIsoChoiceVariant
 {
     /// <summary>

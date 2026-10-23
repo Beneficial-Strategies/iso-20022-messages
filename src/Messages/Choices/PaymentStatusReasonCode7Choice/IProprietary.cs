@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReasonCode7Choice;
 /// Defines a free text proprietary reason.
 /// </summary>
 [IsoId("_Ny9DzZlPEee-Zps0fZQaFQ")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPaymentStatusReasonCode7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IPaymentStatusReasonCode7Choice, IIsoChoiceVaria
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

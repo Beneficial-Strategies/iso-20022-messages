@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference of an order and of an order cancellation.
 /// </summary>
 [IsoId("_TSlwINp-Ed-ak6NoX_4Aeg_-803507887")]
+[IsoDisplayName(@"Investment Fund Order")]
 public interface IInvestmentFundOrder2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentFundOrder2 : IIsoComponent
     [IsoId("_TSlwIdp-Ed-ak6NoX_4Aeg_-863722752")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IInvestmentFundOrder2 : IIsoComponent
     [IsoId("_TSlwItp-Ed-ak6NoX_4Aeg_-803507483")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IInvestmentFundOrder2 : IIsoComponent
     [IsoId("_TSlwI9p-Ed-ak6NoX_4Aeg_-803507423")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IInvestmentFundOrder2 : IIsoComponent
     [IsoId("_TSlwJNp-Ed-ak6NoX_4Aeg_-803507363")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IInvestmentFundOrder2 : IIsoComponent
     [IsoId("_TSlwJdp-Ed-ak6NoX_4Aeg_-574475178")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DealReference { get; }
 
     /// <summary>

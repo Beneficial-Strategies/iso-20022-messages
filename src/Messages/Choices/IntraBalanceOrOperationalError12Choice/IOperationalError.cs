@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError12
 /// <summary>
 /// Operational Error.
 /// </summary>
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : IIntraBalanceOrOperationalError12Choice, IIsoChoiceVariant
 {
     /// <summary>

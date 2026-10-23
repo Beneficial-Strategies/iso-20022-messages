@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acknowledgement of the exception advice.
 /// </summary>
 [IsoId("_KMtHsa5HEeWCgYcWSNgX5g")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction28 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IATMTransaction28 : IIsoComponent
     [IsoId("_KZEvza5HEeWCgYcWSNgX5g")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 }

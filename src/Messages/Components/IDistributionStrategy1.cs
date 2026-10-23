@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Distribution strategy criteria.
 /// </summary>
 [IsoId("_XogS0DcfEeidBoT_PugKiA")]
+[IsoDisplayName(@"Distribution Strategy")]
 public interface IDistributionStrategy1 : IIsoComponent
 {
     /// <summary>

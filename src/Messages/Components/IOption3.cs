@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// List of elements which provide the parameters of an option trade.
 /// </summary>
 [IsoId("_TLSOQNp-Ed-ak6NoX_4Aeg_-1226899977")]
+[IsoDisplayName(@"Option")]
 public interface IOption3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IOption3 : IIsoComponent
     [IsoId("_TLSORNp-Ed-ak6NoX_4Aeg_-1226899694")]
     [DisplayName("Earliest Exercise Date")]
     [IsoXmlTag("EarlstExrcDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EarliestExerciseDate { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IOption3 : IIsoComponent
     [IsoId("_TLSORdp-Ed-ak6NoX_4Aeg_-1226899676")]
     [DisplayName("Expiry Date And Time")]
     [IsoXmlTag("XpryDtAndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ExpiryDateAndTime { get; }
 
     /// <summary>
@@ -57,6 +60,8 @@ public interface IOption3 : IIsoComponent
     [IsoId("_TLSORtp-Ed-ak6NoX_4Aeg_-1226899651")]
     [DisplayName("Expiry Location")]
     [IsoXmlTag("XpryLctn")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText ExpiryLocation { get; }
 
     /// <summary>
@@ -73,6 +78,8 @@ public interface IOption3 : IIsoComponent
     [IsoId("_TLSOSNp-Ed-ak6NoX_4Aeg_-1226899616")]
     [DisplayName("Additional Option Information")]
     [IsoXmlTag("AddtlOptnInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalOptionInformation { get; }
 
     /// <summary>

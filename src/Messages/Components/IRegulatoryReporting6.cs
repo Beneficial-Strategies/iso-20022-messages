@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Includes data elements that can be used for reporting to trade repositories, it is not to be used on regular trade confirmations. Although some fields, for example, unique transaction identifier and prior unique transaction identifier, might be used on regular trade confirmations.
 /// </summary>
 [IsoId("_vafxwZR6Eeak6e8_Fc5fQg")]
+[IsoDisplayName(@"Regulatory Reporting")]
 public interface IRegulatoryReporting6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHAZR6Eeak6e8_Fc5fQg")]
     [DisplayName("Trading Side Transaction Reporting")]
     [IsoXmlTag("TradgSdTxRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradingSideTransactionReporting1> TradingSideTransactionReporting { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHA5R6Eeak6e8_Fc5fQg")]
     [DisplayName("Counterparty Side Transaction Reporting")]
     [IsoXmlTag("CtrPtySdTxRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICounterpartySideTransactionReporting1> CounterpartySideTransactionReporting { get; }
 
     /// <summary>
@@ -66,6 +69,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHDZR6Eeak6e8_Fc5fQg")]
     [DisplayName("Clearing Threshold Indicator")]
     [IsoXmlTag("ClrThrshldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ClearingThresholdIndicator { get; }
 
     /// <summary>
@@ -74,6 +78,8 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHD5R6Eeak6e8_Fc5fQg")]
     [DisplayName("Cleared Product Identification")]
     [IsoXmlTag("ClrdPdctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClearedProductIdentification { get; }
 
     /// <summary>
@@ -106,6 +112,8 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHF5R6Eeak6e8_Fc5fQg")]
     [DisplayName("Execution Venue")]
     [IsoXmlTag("ExctnVn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ExecutionVenue { get; }
 
     /// <summary>
@@ -122,6 +130,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHG5R6Eeak6e8_Fc5fQg")]
     [DisplayName("Non Standard Flag")]
     [IsoXmlTag("NonStdFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NonStandardFlag { get; }
 
     /// <summary>
@@ -130,6 +139,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHHZR6Eeak6e8_Fc5fQg")]
     [DisplayName("Link Swap Identification")]
     [IsoXmlTag("LkSwpId")]
+    [IsoSimpleType(IsoSimpleType.Exact42Text)]
     Exact42Text? LinkSwapIdentification { get; }
 
     /// <summary>
@@ -138,6 +148,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHH5R6Eeak6e8_Fc5fQg")]
     [DisplayName("Financial Nature Of The Counterparty Indicator")]
     [IsoXmlTag("FinNtrOfTheCtrPtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FinancialNatureOfTheCounterpartyIndicator { get; }
 
     /// <summary>
@@ -146,6 +157,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHIZR6Eeak6e8_Fc5fQg")]
     [DisplayName("Collateral Portfolio Indicator")]
     [IsoXmlTag("CollPrtflInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CollateralPortfolioIndicator { get; }
 
     /// <summary>
@@ -154,6 +166,8 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHI5R6Eeak6e8_Fc5fQg")]
     [DisplayName("Collateral Portfolio Code")]
     [IsoXmlTag("CollPrtflCd")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? CollateralPortfolioCode { get; }
 
     /// <summary>
@@ -162,6 +176,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHJZR6Eeak6e8_Fc5fQg")]
     [DisplayName("Portfolio Compression Indicator")]
     [IsoXmlTag("PrtflCmprssnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PortfolioCompressionIndicator { get; }
 
     /// <summary>
@@ -178,6 +193,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHKZR6Eeak6e8_Fc5fQg")]
     [DisplayName("Trade With Non EEA Counterparty Indicator")]
     [IsoXmlTag("TradWthNonEEACtrPtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TradeWithNonEEACounterpartyIndicator { get; }
 
     /// <summary>
@@ -186,6 +202,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHK5R6Eeak6e8_Fc5fQg")]
     [DisplayName("Intragroup Trade Indicator")]
     [IsoXmlTag("NtrgrpTradInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? IntragroupTradeIndicator { get; }
 
     /// <summary>
@@ -194,6 +211,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHLZR6Eeak6e8_Fc5fQg")]
     [DisplayName("Commercial Or Treasury Financing Indicator")]
     [IsoXmlTag("ComrclOrTrsrFincgInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CommercialOrTreasuryFinancingIndicator { get; }
 
     /// <summary>
@@ -210,6 +228,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_kyLvAJUZEea7vKctaoIyEQ")]
     [DisplayName("Confirmation Date And Timestamp")]
     [IsoXmlTag("ConfDtAndTmstmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ConfirmationDateAndTimestamp { get; }
 
     /// <summary>
@@ -218,6 +237,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_s3QYsJUZEea7vKctaoIyEQ")]
     [DisplayName("Clearing Timestamp")]
     [IsoXmlTag("ClrTmstmp")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? ClearingTimestamp { get; }
 
     /// <summary>
@@ -226,5 +246,7 @@ public interface IRegulatoryReporting6 : IIsoComponent
     [IsoId("_vlrHL5R6Eeak6e8_Fc5fQg")]
     [DisplayName("Additional Reporting Information")]
     [IsoXmlTag("AddtlRptgInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReportingInformation { get; }
 }

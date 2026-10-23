@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial instrument stressed under a stress test scenario.
 /// </summary>
 [IsoId("_DU0dAas2Eeayv9XxdmMwKQ")]
+[IsoDisplayName(@"Stressed Product")]
 public interface IStressedProduct1 : IIsoComponent
 {
     /// <summary>

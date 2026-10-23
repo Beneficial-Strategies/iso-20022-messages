@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information such as the taxation conditions.
 /// </summary>
 [IsoId("_x_UOzx9REeuFz_FaCzCLgQ")]
+[IsoDisplayName(@"Corporate Action Narrative")]
 public interface ICorporateActionNarrative48 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionNarrative48 : IIsoComponent
     [IsoId("_x_UO0x9REeuFz_FaCzCLgQ")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation14> AdditionalText { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICorporateActionNarrative48 : IIsoComponent
     [IsoId("_x_UO2x9REeuFz_FaCzCLgQ")]
     [DisplayName("Narrative Version")]
     [IsoXmlTag("NrrtvVrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation14> NarrativeVersion { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICorporateActionNarrative48 : IIsoComponent
     [IsoId("_x_UO4x9REeuFz_FaCzCLgQ")]
     [DisplayName("Information Conditions")]
     [IsoXmlTag("InfConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation15> InformationConditions { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICorporateActionNarrative48 : IIsoComponent
     [IsoId("_x_UO6x9REeuFz_FaCzCLgQ")]
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation15> InformationToComplyWith { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ICorporateActionNarrative48 : IIsoComponent
     [IsoId("_x_UO8x9REeuFz_FaCzCLgQ")]
     [DisplayName("Security Restriction")]
     [IsoXmlTag("SctyRstrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation15> SecurityRestriction { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ICorporateActionNarrative48 : IIsoComponent
     [IsoId("_x_UO-x9REeuFz_FaCzCLgQ")]
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation15> TaxationConditions { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ICorporateActionNarrative48 : IIsoComponent
     [IsoId("_x_UPAx9REeuFz_FaCzCLgQ")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation15> Disclaimer { get; }
 
     /// <summary>
@@ -73,5 +81,6 @@ public interface ICorporateActionNarrative48 : IIsoComponent
     [IsoId("_x_UPCx9REeuFz_FaCzCLgQ")]
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdatedAdditionalInformation15> CertificationBreakdown { get; }
 }

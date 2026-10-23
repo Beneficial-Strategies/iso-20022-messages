@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument11Choice;
 /// </summary>
 [IsoId("_SBhw5dp-Ed-ak6NoX_4Aeg_113603084")]
 [IsoXmlTag("ChqDtls")]
+[IsoDisplayName(@"Cheque Details")]
 public interface IChequeDetails : IPaymentInstrument11Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IChequeDetails : IPaymentInstrument11Choice, IIsoChoiceVariant
     [IsoId("_QbdK_Np-Ed-ak6NoX_4Aeg_-241775366")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Number { get; }
 
     /// <summary>

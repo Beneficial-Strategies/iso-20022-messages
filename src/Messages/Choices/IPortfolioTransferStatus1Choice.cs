@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the allegement status.
 /// </summary>
 [IsoId("_A91Owa3EEeeBVbuVcoH9Nw")]
+[IsoDisplayName(@"Portfolio Transfer Status 1 Choice")]
 public interface IPortfolioTransferStatus1Choice : IIsoChoice { }

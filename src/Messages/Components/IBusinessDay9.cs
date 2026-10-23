@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment system operational information, such as opening, closure, session period or events, given per currency.
 /// </summary>
 [IsoId("_OYVo5XXyEei3jO6riKEVXg")]
+[IsoDisplayName(@"Business Day")]
 public interface IBusinessDay9 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IBusinessDay9 : IIsoComponent
     [IsoId("_OinmRXXyEei3jO6riKEVXg")]
     [DisplayName("System Information Per Currency")]
     [IsoXmlTag("SysInfPerCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemAvailabilityAndEvents3> SystemInformationPerCurrency { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus55Cho
 /// <summary>
 /// Rejected.
 /// </summary>
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IInstructionProcessingStatus55Choice, IIsoChoiceVariant
 {
     /// <summary>

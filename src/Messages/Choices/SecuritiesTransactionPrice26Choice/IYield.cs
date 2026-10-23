@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice26Choi
 
 /// <summary>Price expressed as a yield.</summary>
 [IsoId("_HT_WFa2kEfCfRtNoJv1jFQ")]
+[IsoDisplayName(@"Yield")]
 public interface IYield : ISecuritiesTransactionPrice26Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

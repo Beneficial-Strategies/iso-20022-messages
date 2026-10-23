@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other Payment6.
 /// </summary>
 [IsoId("_kq-10SysEe6J0v6OMXVc7g")]
+[IsoDisplayName(@"Other Payment6")]
 public interface IOtherPayment6 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.
 /// </summary>
 [IsoId("_U5HCC9p-Ed-ak6NoX_4Aeg_-556148948")]
+[IsoDisplayName(@"Tax")]
 public interface ITax3 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ITax3 : IIsoComponent
     [IsoId("_U5QL89p-Ed-ak6NoX_4Aeg_1207062761")]
     [DisplayName("Exemption Indicator")]
     [IsoXmlTag("XmptnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ExemptionIndicator { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data elements of a system abort message.
 /// </summary>
 [IsoId("_DR-kYbYDEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"System Abort9")]
 public interface ISystemAbort9 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface ISystemAbort9 : IIsoComponent
     [IsoId("_DR-kYbYDEfCUZfsQO4rYeA-sup")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

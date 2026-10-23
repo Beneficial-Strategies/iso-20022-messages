@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityStatus3Choice;
 /// Security status expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_GHDbQeLcEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISecurityStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

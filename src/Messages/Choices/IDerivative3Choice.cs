@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice element to define a derivative instrument.
 /// </summary>
 [IsoId("_w9mvYSe0Eei12pGEsJIAeQ")]
+[IsoDisplayName(@"Derivative 3 Choice")]
 public interface IDerivative3Choice : IIsoChoice { }

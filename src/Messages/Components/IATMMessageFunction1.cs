@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the type of process related to an ATM message.
 /// </summary>
 [IsoId("_PEDmAInwEeS9F4Qrq_eaVA")]
+[IsoDisplayName(@"ATM Message Function")]
 public interface IATMMessageFunction1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IATMMessageFunction1 : IIsoComponent
     [IsoId("_KHqdIInzEeS9F4Qrq_eaVA")]
     [DisplayName("ATM Service Code")]
     [IsoXmlTag("ATMSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ATMServiceCode { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IATMMessageFunction1 : IIsoComponent
     [IsoId("_M5XvwInzEeS9F4Qrq_eaVA")]
     [DisplayName("Host Service Code")]
     [IsoXmlTag("HstSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? HostServiceCode { get; }
 }

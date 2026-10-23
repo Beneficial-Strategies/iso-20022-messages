@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the account and the role of the party.
 /// </summary>
 [IsoId("_ApDrEC_9EeOKib24wnHaFg")]
+[IsoDisplayName(@"Account And Parties")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IAccountAndParties2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface IAccountAndParties2 : IIsoComponent
     [IsoId("_clKesC__EeOKib24wnHaFg")]
     [DisplayName("Role")]
     [IsoXmlTag("Role")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountRole1> Role { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IAccountAndParties2 : IIsoComponent
     [IsoId("_dQJnUC_9EeOKib24wnHaFg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max256Text> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the status of the cancellation request.
 /// </summary>
 [IsoId("_TPwek9p-Ed-ak6NoX_4Aeg_1694475325")]
+[IsoDisplayName(@"Cancellation Status Reason Information")]
 public interface ICancellationStatusReasonInformation1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ICancellationStatusReasonInformation1 : IIsoComponent
     [IsoId("_TPweltp-Ed-ak6NoX_4Aeg_1694475355")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

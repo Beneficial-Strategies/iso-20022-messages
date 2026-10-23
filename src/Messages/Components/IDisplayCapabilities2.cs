@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// The capabilities of the display components performing the transaction.
 /// </summary>
 [IsoId("_OdbxQS9KEeOlZIh7PImd0A")]
+[IsoDisplayName(@"Display Capabilities")]
 public interface IDisplayCapabilities2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IDisplayCapabilities2 : IIsoComponent
     [IsoId("_Ot8Scy9KEeOlZIh7PImd0A")]
     [DisplayName("Number Of Lines")]
     [IsoXmlTag("NbOfLines")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfLines { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IDisplayCapabilities2 : IIsoComponent
     [IsoId("_Ot8SdS9KEeOlZIh7PImd0A")]
     [DisplayName("Line Width")]
     [IsoXmlTag("LineWidth")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number LineWidth { get; }
 }

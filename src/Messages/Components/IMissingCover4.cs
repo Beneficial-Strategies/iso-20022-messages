@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional cover details for the claim non receipt.
 /// </summary>
 [IsoId("_H5fNMW4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Missing Cover")]
 public interface IMissingCover4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMissingCover4 : IIsoComponent
     [IsoId("_ICuow24-EeiU9cctagi5ow")]
     [DisplayName("Missing Cover Indicator")]
     [IsoXmlTag("MssngCoverInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator MissingCoverIndicator { get; }
 
     /// <summary>

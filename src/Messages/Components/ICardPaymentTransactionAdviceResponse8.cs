@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card payment completion advice response from the acquirer.
 /// </summary>
 [IsoId("_e1mpAS1xEeuZtpnZJ4v-5Q")]
+[IsoDisplayName(@"Card Payment Transaction Advice Response")]
 public interface ICardPaymentTransactionAdviceResponse8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICardPaymentTransactionAdviceResponse8 : IIsoComponent
     [IsoId("_fBhlIS1xEeuZtpnZJ4v-5Q")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICardPaymentTransactionAdviceResponse8 : IIsoComponent
     [IsoId("_fBhlJS1xEeuZtpnZJ4v-5Q")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InitiatorTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ICardPaymentTransactionAdviceResponse8 : IIsoComponent
     [IsoId("_fBhlJy1xEeuZtpnZJ4v-5Q")]
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? RecipientTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ICardPaymentTransactionAdviceResponse8 : IIsoComponent
     [IsoId("_fBhlKS1xEeuZtpnZJ4v-5Q")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>

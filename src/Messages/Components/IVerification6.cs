@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Verification6.
 /// </summary>
 [IsoId("_xdOlwXG3Ee60F8I8TAMKmg")]
+[IsoDisplayName(@"Verification6")]
 public interface IVerification6 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IVerification6 : IIsoComponent
     /// </summary>
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerificationValue1> Data { get; }
 
     /// <summary>
@@ -79,5 +81,6 @@ public interface IVerification6 : IIsoComponent
     /// </summary>
     [DisplayName("Result Details")]
     [IsoXmlTag("RsltDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> ResultDetails { get; }
 }

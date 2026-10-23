@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party involved in the settlement chain.
 /// </summary>
 [IsoId("_PbYOA9p-Ed-ak6NoX_4Aeg_-49395914")]
+[IsoDisplayName(@"Party Identification And Account")]
 public interface IPartyIdentificationAndAccount5 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IPartyIdentificationAndAccount5 : IIsoComponent
     [IsoId("_PbYOBtp-Ed-ak6NoX_4Aeg_-49394594")]
     [DisplayName("Processing Reference")]
     [IsoXmlTag("PrcgRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessingReference { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditorEnrolmentAmendmentReason
 /// Reason, as published in an external reason code list.
 /// </summary>
 [IsoId("_yRMkL_DBEemsS_0xy2XRug")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICreditorEnrolmentAmendmentReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

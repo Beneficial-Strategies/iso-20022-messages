@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action details.
 /// </summary>
 [IsoId("_S9dVw2JhEeOfOt7Y7nAPUA")]
+[IsoDisplayName(@"Corporate Action SD")]
 public interface ICorporateActionSD10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionSD10 : IIsoComponent
     [IsoId("_S9dVxGJhEeOfOt7Y7nAPUA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICorporateActionSD10 : IIsoComponent
     [IsoId("_S9dVxWJhEeOfOt7Y7nAPUA")]
     [DisplayName("Lottery Sequence Number")]
     [IsoXmlTag("LtrySeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? LotterySequenceNumber { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface ICorporateActionSD10 : IIsoComponent
     [IsoId("_sTkCZGJhEeOfOt7Y7nAPUA")]
     [DisplayName("Lottery Date")]
     [IsoXmlTag("LtryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LotteryDate { get; }
 }

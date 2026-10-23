@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioCode1Choice;
 /// Unique code determined by the reporting counterparty to identify the portfolio if collateral is reported on a portfolio basis.
 /// </summary>
 [IsoId("_KN8581fVEeqqKf65rDYWYw")]
+[IsoDisplayName(@"Portfolio")]
 public interface IPortfolio : IPortfolioCode1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IPortfolio : IPortfolioCode1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 52 characters.
     /// </summary>
     [IsoXmlTag("Prtfl")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Value { get; }
 }

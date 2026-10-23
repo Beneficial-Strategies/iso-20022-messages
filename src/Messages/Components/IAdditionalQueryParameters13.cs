@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional specific query criteria.
 /// </summary>
 [IsoId("_7Vxv0StXEeyhipY4f42fZQ")]
+[IsoDisplayName(@"Additional Query Parameters")]
 public interface IAdditionalQueryParameters13 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IAdditionalQueryParameters13 : IIsoComponent
     [IsoId("_70ByFStXEeyhipY4f42fZQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReason19Choice> Reason { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IAdditionalQueryParameters13 : IIsoComponent
     [IsoId("_70ByGStXEeyhipY4f42fZQ")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification19> FinancialInstrumentIdentification { get; }
 }

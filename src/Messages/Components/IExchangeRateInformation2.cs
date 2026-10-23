@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further detailed information on the exchange rate that has been used in or is related to the transaction.
 /// </summary>
 [IsoId("_ZGiv0INlEeuHqfO1LgkE9Q")]
+[IsoDisplayName(@"Exchange Rate Information")]
 public interface IExchangeRateInformation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IExchangeRateInformation2 : IIsoComponent
     [IsoId("_FxfKMINmEeuHqfO1LgkE9Q")]
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Provider { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IExchangeRateInformation2 : IIsoComponent
     [IsoId("_NnqcQINmEeuHqfO1LgkE9Q")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Identification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IExchangeRateInformation2 : IIsoComponent
     [IsoId("_T8oaQINmEeuHqfO1LgkE9Q")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IExchangeRateInformation2 : IIsoComponent
     [IsoId("_Zsv-wINmEeuHqfO1LgkE9Q")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? Time { get; }
 
     /// <summary>

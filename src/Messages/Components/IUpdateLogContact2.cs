@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Update Log Contact2.
 /// </summary>
 [IsoId("_Yy18KTE_Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Update Log Contact2")]
 public interface IUpdateLogContact2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax41.
 /// </summary>
 [IsoId("_ATvMQXNTEe6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Tax41")]
 public interface ITax41 : IIsoComponent
 {
     /// <summary>

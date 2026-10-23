@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemittanceInformation3Choice;
 /// Information, in free text form, to enable the matching, ie reconciliation, (reconciliation) of a payment with the items that the payment is intended to settle, such as commercial invoices in an accounts receivable system.
 /// </summary>
 [IsoId("_Rb1C19p-Ed-ak6NoX_4Aeg_975277681")]
+[IsoDisplayName(@"Unstructured")]
 public interface IUnstructured : IRemittanceInformation3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IUnstructured : IRemittanceInformation3Choice, IIsoChoiceVarian
     /// Specifies a character string with a maximum length of 140 characters.
     /// </summary>
     [IsoXmlTag("Ustrd")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Value { get; }
 }

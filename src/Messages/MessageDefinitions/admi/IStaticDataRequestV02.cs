@@ -13,6 +13,8 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// </summary>
 [IsoId("_XX0eARnXEeKKXqHkeUjBbw")]
 [IsoMessage("admi.009.001.02", "StatcDataReq", "urn:iso:std:iso:20022:tech:xsd:admi.009.001.02")]
+[Description(@"The StaticDataRequest message is sent by a participant of a central system to the central system to request a static data report.|")]
+[IsoDisplayName(@"Static Data Request V")]
 public interface IStaticDataRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -21,6 +23,8 @@ public interface IStaticDataRequestV02 : IOuterRecord
     [IsoId("_xkBhxTp8EeKXK8qRvydwAw")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -29,6 +33,7 @@ public interface IStaticDataRequestV02 : IOuterRecord
     [IsoId("_u9jYIR3bEeKXIbeXfdPzuw")]
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SettlementSessionIdentifier { get; }
 
     /// <summary>
@@ -45,5 +50,6 @@ public interface IStaticDataRequestV02 : IOuterRecord
     [IsoId("_EPiaUC53EeKwTrPDLMbLxA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

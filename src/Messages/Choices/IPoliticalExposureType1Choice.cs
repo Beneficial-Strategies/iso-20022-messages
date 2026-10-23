@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the type of political exposure.
 /// </summary>
 [IsoId("_c6LHoRRvEeOKWo1NF21OVw")]
+[IsoDisplayName(@"Political Exposure Type 1 Choice")]
 public interface IPoliticalExposureType1Choice : IIsoChoice { }

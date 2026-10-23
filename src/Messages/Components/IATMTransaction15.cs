@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Deposit transaction for which the service is requested.
 /// </summary>
 [IsoId("_DGFika4AEeWL1uap3dNhCQ")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction15 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IATMTransaction15 : IIsoComponent
     [IsoId("_DRHG1a4AEeWL1uap3dNhCQ")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IATMTransaction15 : IIsoComponent
     [IsoId("_DRHG3a4AEeWL1uap3dNhCQ")]
     [DisplayName("Detailed Requested Amount")]
     [IsoXmlTag("DtldReqdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount16> DetailedRequestedAmount { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IATMTransaction15 : IIsoComponent
     [IsoId("_f3v6oK4BEeWL1uap3dNhCQ")]
     [DisplayName("Deposited Media")]
     [IsoXmlTag("DpstdMdia")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMDepositedMedia1> DepositedMedia { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface IATMTransaction15 : IIsoComponent
     [IsoId("_DRHG5a4AEeWL1uap3dNhCQ")]
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RequestedReceipt { get; }
 
     /// <summary>
@@ -81,5 +87,6 @@ public interface IATMTransaction15 : IIsoComponent
     [IsoId("_DRHG564AEeWL1uap3dNhCQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

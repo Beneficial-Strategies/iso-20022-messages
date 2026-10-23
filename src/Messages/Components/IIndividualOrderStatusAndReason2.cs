@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of the individual orders of a bulk or multiple order that was previously received.
 /// </summary>
 [IsoId("_TR_TNtp-Ed-ak6NoX_4Aeg_-1985802937")]
+[IsoDisplayName(@"Individual Order Status And Reason")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IIndividualOrderStatusAndReason2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IIndividualOrderStatusAndReason2 : IIsoComponent
     [IsoId("_TR_TN9p-Ed-ak6NoX_4Aeg_-561399129")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +29,8 @@ public interface IIndividualOrderStatusAndReason2 : IIsoComponent
     [IsoId("_TR_TONp-Ed-ak6NoX_4Aeg_-1985802876")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -33,6 +39,8 @@ public interface IIndividualOrderStatusAndReason2 : IIsoComponent
     [IsoId("_TR_TOdp-Ed-ak6NoX_4Aeg_-561398852")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -41,6 +49,8 @@ public interface IIndividualOrderStatusAndReason2 : IIsoComponent
     [IsoId("_TR_TOtp-Ed-ak6NoX_4Aeg_2140630642")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DealReference { get; }
 
     /// <summary>
@@ -49,6 +59,8 @@ public interface IIndividualOrderStatusAndReason2 : IIsoComponent
     [IsoId("_TR_TO9p-Ed-ak6NoX_4Aeg_1512317038")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -81,6 +93,9 @@ public interface IIndividualOrderStatusAndReason2 : IIsoComponent
     [IsoId("_TSJEM9p-Ed-ak6NoX_4Aeg_-1985802048")]
     [DisplayName("Rejected")]
     [IsoXmlTag("Rjctd")]
+    [MinLength(1)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectedStatus6> Rejected { get; }
 
     /// <summary>

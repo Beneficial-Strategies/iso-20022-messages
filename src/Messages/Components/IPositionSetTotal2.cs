@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Position Set Total2.
 /// </summary>
 [IsoId("_7LI85RTuEe61h9tfoUrWyw")]
+[IsoDisplayName(@"Position Set Total2")]
 public interface IPositionSetTotal2 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IPositionSetTotal2 : IIsoComponent
     /// </summary>
     [DisplayName("Other Payment Amount")]
     [IsoXmlTag("OthrPmtAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyAnd19DecimalAmount> OtherPaymentAmount { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a benchmark curve name.
 /// </summary>
 [IsoId("_Ge11wa5jEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Compare Benchmark Curve Name")]
 public interface ICompareBenchmarkCurveName3 : IIsoComponent
 {
     /// <summary>

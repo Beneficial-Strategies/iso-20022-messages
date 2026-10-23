@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes3Ch
 /// Identification of a financial instrument admitted to trading.
 /// </summary>
 [IsoId("_KUIpcYG-EeaalK9UbuVGFw")]
+[IsoDisplayName(@"Identification")]
 public interface IIdentification : IFinancialInstrumentAttributes3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIdentification : IFinancialInstrumentAttributes3Choice, IIsoCh
     /// The International Securities Identification Number is a code allocated to financial instruments as well as referential instruments, as described in the ISO 6166 standard, associated with the minimum descriptive data.  The ISIN consists of a prefix using the alpha-2 country codes or reserved codes specified in ISO 3166 or other prefixes as may be determined by the Registration Authority for the ISO 6166 standard, a nine characters (alphanumeric) basic code and a check digit.
     /// </summary>
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier Value { get; }
 }

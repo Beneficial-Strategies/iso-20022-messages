@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Passenger ticket summary information for the cardholder.
 /// </summary>
 [IsoId("_UNtzYZGBEeukDPgU2BMkjQ")]
+[IsoDisplayName(@"Passenger Transport Summary")]
 public interface IPassengerTransportSummary2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPassengerTransportSummary2 : IIsoComponent
     [IsoId("_UUE6EZGBEeukDPgU2BMkjQ")]
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DocumentNumber { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPassengerTransportSummary2 : IIsoComponent
     [IsoId("_UUE6FZGBEeukDPgU2BMkjQ")]
     [DisplayName("Travel Authorisation Code")]
     [IsoXmlTag("TrvlAuthstnCd")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? TravelAuthorisationCode { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPassengerTransportSummary2 : IIsoComponent
     [IsoId("_UUE6F5GBEeukDPgU2BMkjQ")]
     [DisplayName("Ticket Issuer")]
     [IsoXmlTag("TcktIssr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TicketIssuer { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IPassengerTransportSummary2 : IIsoComponent
     [IsoId("_UUE6GZGBEeukDPgU2BMkjQ")]
     [DisplayName("Open Ticket Indicator")]
     [IsoXmlTag("OpnTcktInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? OpenTicketIndicator { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IPassengerTransportSummary2 : IIsoComponent
     [IsoId("_UUE6G5GBEeukDPgU2BMkjQ")]
     [DisplayName("Customer Reference")]
     [IsoXmlTag("CstmrRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomerReference1> CustomerReference { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IPassengerTransportSummary2 : IIsoComponent
     [IsoId("_UUE6HZGBEeukDPgU2BMkjQ")]
     [DisplayName("Passenger")]
     [IsoXmlTag("Pssngr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomer8> Passenger { get; }
 
     /// <summary>
@@ -81,6 +91,7 @@ public interface IPassengerTransportSummary2 : IIsoComponent
     [IsoId("_UUE6IZGBEeukDPgU2BMkjQ")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? Duration { get; }
 
     /// <summary>
@@ -89,6 +100,7 @@ public interface IPassengerTransportSummary2 : IIsoComponent
     [IsoId("_UUE6I5GBEeukDPgU2BMkjQ")]
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? InsuranceIndicator { get; }
 
     /// <summary>
@@ -97,6 +109,7 @@ public interface IPassengerTransportSummary2 : IIsoComponent
     [IsoId("_UUE6JZGBEeukDPgU2BMkjQ")]
     [DisplayName("Total Amount")]
     [IsoXmlTag("TtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountDetails2> TotalAmount { get; }
 
     /// <summary>
@@ -105,6 +118,8 @@ public interface IPassengerTransportSummary2 : IIsoComponent
     [IsoId("_UUE6J5GBEeukDPgU2BMkjQ")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SummaryCommodityIdentification { get; }
 
     /// <summary>
@@ -121,5 +136,7 @@ public interface IPassengerTransportSummary2 : IIsoComponent
     [IsoId("_UUE6K5GBEeukDPgU2BMkjQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of tax as a code or free text.
 /// </summary>
 [IsoId("_Xf3zQBrfEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Tax Type 2 Choice")]
 public interface ITaxType2Choice : IIsoChoice { }

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money for which goods or services are offered, sold, or bought.
 /// </summary>
 [IsoId("_QelXdtp-Ed-ak6NoX_4Aeg_116968013")]
+[IsoDisplayName(@"Unit Price")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IUnitPrice15 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,8 @@ public interface IUnitPrice15 : IIsoComponent
     [IsoId("_QelXeNp-Ed-ak6NoX_4Aeg_-1035184327")]
     [DisplayName("Extended Type")]
     [IsoXmlTag("XtndedTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedType { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IUnitPrice15 : IIsoComponent
     [IsoId("_QeuhYdp-Ed-ak6NoX_4Aeg_116968420")]
     [DisplayName("Value In Investment Currency")]
     [IsoXmlTag("ValInInvstmtCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceValue1> ValueInInvestmentCurrency { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IUnitPrice15 : IIsoComponent
     [IsoId("_QeuhYtp-Ed-ak6NoX_4Aeg_116968480")]
     [DisplayName("Value In Alternative Currency")]
     [IsoXmlTag("ValInAltrntvCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceValue1> ValueInAlternativeCurrency { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IUnitPrice15 : IIsoComponent
     [IsoId("_QeuhY9p-Ed-ak6NoX_4Aeg_116968557")]
     [DisplayName("For Execution Indicator")]
     [IsoXmlTag("ForExctnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ForExecutionIndicator { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IUnitPrice15 : IIsoComponent
     [IsoId("_QeuhZNp-Ed-ak6NoX_4Aeg_116968883")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IUnitPrice15 : IIsoComponent
     [IsoId("_QeuhZdp-Ed-ak6NoX_4Aeg_116968944")]
     [DisplayName("Calculation Basis")]
     [IsoXmlTag("ClctnBsis")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? CalculationBasis { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface IUnitPrice15 : IIsoComponent
     [IsoId("_QeuhZtp-Ed-ak6NoX_4Aeg_240626510")]
     [DisplayName("Estimated Price Indicator")]
     [IsoXmlTag("EstmtdPricInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator EstimatedPriceIndicator { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface IUnitPrice15 : IIsoComponent
     [IsoId("_QeuhZ9p-Ed-ak6NoX_4Aeg_116969021")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -113,6 +124,8 @@ public interface IUnitPrice15 : IIsoComponent
     [IsoId("_Qe4SYNp-Ed-ak6NoX_4Aeg_911625097")]
     [DisplayName("Extended Taxable Income Per Share Calculated")]
     [IsoXmlTag("XtndedTaxblIncmPerShrClctd")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedTaxableIncomePerShareCalculated { get; }
 
     /// <summary>
@@ -137,6 +150,8 @@ public interface IUnitPrice15 : IIsoComponent
     [IsoId("_Qe4SY9p-Ed-ak6NoX_4Aeg_1319885059")]
     [DisplayName("Extended EU Dividend Status")]
     [IsoXmlTag("XtndedEUDvddSts")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedEUDividendStatus { get; }
 
     /// <summary>
@@ -145,6 +160,7 @@ public interface IUnitPrice15 : IIsoComponent
     [IsoId("_Qe4SZNp-Ed-ak6NoX_4Aeg_116969935")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge15> ChargeDetails { get; }
 
     /// <summary>
@@ -153,6 +169,7 @@ public interface IUnitPrice15 : IIsoComponent
     [IsoId("_Qe4SZdp-Ed-ak6NoX_4Aeg_1606728234")]
     [DisplayName("Tax Liability Details")]
     [IsoXmlTag("TaxLbltyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax17> TaxLiabilityDetails { get; }
 
     /// <summary>
@@ -161,5 +178,6 @@ public interface IUnitPrice15 : IIsoComponent
     [IsoId("_Qe4SZtp-Ed-ak6NoX_4Aeg_1615962093")]
     [DisplayName("Tax Refund Details")]
     [IsoXmlTag("TaxRfndDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax17> TaxRefundDetails { get; }
 }

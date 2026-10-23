@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus32Choice;
 /// <summary>
 /// Rejected.
 /// </summary>
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : ICancellationStatus32Choice, IIsoChoiceVariant
 {
     /// <summary>

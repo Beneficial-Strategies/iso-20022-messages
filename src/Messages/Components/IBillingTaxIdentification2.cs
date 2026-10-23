@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the tax identification related to a service to be billed.
 /// </summary>
 [IsoId("_uEG5seDzEeim_fWj9imBTA")]
+[IsoDisplayName(@"Billing Tax Identification")]
 public interface IBillingTaxIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBillingTaxIdentification2 : IIsoComponent
     [IsoId("_uPxXIeDzEeim_fWj9imBTA")]
     [DisplayName("VAT Registration Number")]
     [IsoXmlTag("VATRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? VATRegistrationNumber { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IBillingTaxIdentification2 : IIsoComponent
     [IsoId("_uPxXI-DzEeim_fWj9imBTA")]
     [DisplayName("Tax Registration Number")]
     [IsoXmlTag("TaxRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxRegistrationNumber { get; }
 
     /// <summary>

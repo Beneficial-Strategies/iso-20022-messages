@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerOfferorTaxabilityIndicator
 /// Standard code to specify information regarding the issuer / offeror taxability status.
 /// </summary>
 [IsoId("_dw_XMIlzEeavwKddCbm3hg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IIssuerOfferorTaxabilityIndicator1Choice, IIsoChoiceVariant
 {
     /// <summary>

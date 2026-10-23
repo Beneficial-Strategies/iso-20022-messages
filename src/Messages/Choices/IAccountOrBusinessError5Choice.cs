@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between account details or a business error when the requested data cannot be retrieved.
 /// </summary>
 [IsoId("_fDmr0dcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Account Or Business Error 5 Choice")]
 public interface IAccountOrBusinessError5Choice : IIsoChoice { }

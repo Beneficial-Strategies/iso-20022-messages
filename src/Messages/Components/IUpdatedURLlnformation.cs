@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information with update description and date.
 /// </summary>
 [IsoId("_Q237pdp-Ed-ak6NoX_4Aeg_-1219687967")]
+[IsoDisplayName(@"Updated UR Llnformation")]
 public interface IUpdatedURLlnformation : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IUpdatedURLlnformation : IIsoComponent
     [IsoId("_Q237ptp-Ed-ak6NoX_4Aeg_-1219687595")]
     [DisplayName("Update Description")]
     [IsoXmlTag("UpdDesc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? UpdateDescription { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IUpdatedURLlnformation : IIsoComponent
     [IsoId("_Q237p9p-Ed-ak6NoX_4Aeg_-1219687500")]
     [DisplayName("Update Date")]
     [IsoXmlTag("UpdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? UpdateDate { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IUpdatedURLlnformation : IIsoComponent
     [IsoId("_Q237qNp-Ed-ak6NoX_4Aeg_-1219687423")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text URLAddress { get; }
 }

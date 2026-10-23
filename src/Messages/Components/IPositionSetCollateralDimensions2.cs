@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variables related to derivatives that are used to group derivatives together into positions for collateral position sets and currency collateral position sets reports.
 /// </summary>
 [IsoId("_83N69eNfEeiTop2HXWk15w")]
+[IsoDisplayName(@"Position Set Collateral Dimensions")]
 public interface IPositionSetCollateralDimensions2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IPositionSetCollateralDimensions2 : IIsoComponent
     [IsoId("_9BppVeNfEeiTop2HXWk15w")]
     [DisplayName("Portfolio")]
     [IsoXmlTag("Prtfl")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? Portfolio { get; }
 
     /// <summary>

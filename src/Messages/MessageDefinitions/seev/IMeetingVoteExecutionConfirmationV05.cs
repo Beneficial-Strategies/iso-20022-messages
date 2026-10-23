@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "MtgVoteExctnConf",
     "urn:iso:std:iso:20022:tech:xsd:seev.007.001.05"
 )]
+[Description(@"Scope|An issuer, its agent or an intermediary sends the MeetingVoteExecutionConfirmation message to confirm to the Sender of the MeetingInstruction message, the execution of their voting instruction.|Usage|This message is sent after the shareholders meeting has taken place. The Sender of this message confirms the execution of the vote at the meeting and confirms that the vote has been processed as instructed via the MeetingInstruction message.|This messages is sent if the Sender of the MeetingInstruction message has requested such a confirmation or if market practice or regulation stipulates the need for a full audit trail.|This message definition is intended for use with the Business Application Header.")]
+[IsoDisplayName(@"Meeting Vote Execution Confirmation V")]
 public interface IMeetingVoteExecutionConfirmationV05 : IOuterRecord
 {
     /// <summary>
@@ -53,6 +55,7 @@ public interface IMeetingVoteExecutionConfirmationV05 : IOuterRecord
     [IsoId("_xDJ_QVtcEeSwKe7KuKvXhg")]
     [DisplayName("Vote Instructions")]
     [IsoXmlTag("VoteInstrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedInstructionStatus10> VoteInstructions { get; }
 
     /// <summary>
@@ -61,5 +64,6 @@ public interface IMeetingVoteExecutionConfirmationV05 : IOuterRecord
     [IsoId("_ZQ-s0VtoEeSwKe7KuKvXhg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

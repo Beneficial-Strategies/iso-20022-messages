@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the reason of the cancellation request.
 /// </summary>
 [IsoId("_t3j1I1kyEeGeoaLUQk__nA_1924238897")]
+[IsoDisplayName(@"Payment Cancellation Reason")]
 public interface IPaymentCancellationReason2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IPaymentCancellationReason2 : IIsoComponent
     [IsoId("_t3s_EVkyEeGeoaLUQk__nA_712732373")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

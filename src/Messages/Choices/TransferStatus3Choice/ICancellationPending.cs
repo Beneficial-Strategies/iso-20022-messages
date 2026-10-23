@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus3Choice;
 /// Status of the transfer is cancellation pending.
 /// </summary>
 [IsoId("_aeWNYVNUEeijdq8ilaxyOA")]
+[IsoDisplayName(@"Cancellation Pending")]
 public interface ICancellationPending : ITransferStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

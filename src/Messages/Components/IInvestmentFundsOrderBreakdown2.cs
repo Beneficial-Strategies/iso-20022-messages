@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// An investor&apos;s instruction to either subscribe or redeem an amount of money or its equivalent, for example, other assets, into or out of an investment fund.
 /// </summary>
 [IsoId("_Y0VCoThjEeamLZQeccJa7w")]
+[IsoDisplayName(@"Investment Funds Order Breakdown")]
 public interface IInvestmentFundsOrderBreakdown2 : IIsoComponent
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord1Choice;
 /// <summary>
 /// Confirmation.
 /// </summary>
+[IsoDisplayName(@"Confirmation")]
 public interface IConfirmation : IInvestigationDataRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

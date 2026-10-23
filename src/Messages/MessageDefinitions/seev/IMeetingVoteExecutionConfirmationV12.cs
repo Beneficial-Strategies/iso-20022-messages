@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "MtgVoteExctnConf",
     "urn:iso:std:iso:20022:tech:xsd:seev.007.001.12"
 )]
+[IsoDisplayName(@"Meeting Vote Execution Confirmation V12")]
 public interface IMeetingVoteExecutionConfirmationV12 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,8 @@ public interface IMeetingVoteExecutionConfirmationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Vote Execution Confirmation Identification")]
     [IsoXmlTag("VoteExctnConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? VoteExecutionConfirmationIdentification { get; }
 
     /// <summary>
@@ -36,6 +39,8 @@ public interface IMeetingVoteExecutionConfirmationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Meeting Instruction Identification")]
     [IsoXmlTag("MtgInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MeetingInstructionIdentification { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IMeetingVoteExecutionConfirmationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Vote Instructions")]
     [IsoXmlTag("VoteInstrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedInstructionStatus22> VoteInstructions { get; }
 
     /// <summary>
@@ -64,6 +70,8 @@ public interface IMeetingVoteExecutionConfirmationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Vote Instructions Confirmation URL Address")]
     [IsoXmlTag("VoteInstrsConfURLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? VoteInstructionsConfirmationURLAddress { get; }
 
     /// <summary>
@@ -71,5 +79,6 @@ public interface IMeetingVoteExecutionConfirmationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative3Choice;
 /// Details specific for a credit derivative.
 /// </summary>
 [IsoId("_xH-zaye0Eei12pGEsJIAeQ")]
+[IsoDisplayName(@"Credit")]
 public interface ICredit : IDerivative3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

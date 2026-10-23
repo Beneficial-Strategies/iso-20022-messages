@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
 /// </summary>
 [IsoId("_RP7foZGrEem-9Y6mq5ZH3Q")]
+[IsoDisplayName(@"Investment Account")]
 public interface IInvestmentAccount72 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInvestmentAccount72 : IIsoComponent
     [IsoId("_Rj3vV5GrEem-9Y6mq5ZH3Q")]
     [DisplayName("Owner Identification")]
     [IsoXmlTag("OwnrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification139> OwnerIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IInvestmentAccount72 : IIsoComponent
     [IsoId("_Rj3vWZGrEem-9Y6mq5ZH3Q")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IInvestmentAccount72 : IIsoComponent
     [IsoId("_Rj3vW5GrEem-9Y6mq5ZH3Q")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountName { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface IInvestmentAccount72 : IIsoComponent
     [IsoId("_Rj3vXZGrEem-9Y6mq5ZH3Q")]
     [DisplayName("Account Designation")]
     [IsoXmlTag("AcctDsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountDesignation { get; }
 
     /// <summary>
@@ -49,6 +57,7 @@ public interface IInvestmentAccount72 : IIsoComponent
     [IsoId("_Rj3vX5GrEem-9Y6mq5ZH3Q")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary43> IntermediaryInformation { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IInvestmentAccount72 : IIsoComponent
     [IsoId("_Rj3vY5GrEem-9Y6mq5ZH3Q")]
     [DisplayName("Dematerialised Indicator")]
     [IsoXmlTag("DmtrlsdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DematerialisedIndicator { get; }
 
     /// <summary>

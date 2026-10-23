@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData2Choice;
 /// <summary>
 /// Other.
 /// </summary>
+[IsoDisplayName(@"Other")]
 public interface IOther : IUnderlyingData2Choice, IIsoChoiceVariant
 {
     /// <summary>

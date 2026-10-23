@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctSwtchTermntnSwtch",
     "urn:iso:std:iso:20022:tech:xsd:acmt.036.001.01"
 )]
+[Description(@"The AccountSwitchTerminationSwitch message is sent by the new account servicer to the account switch servicer to signal that the account switch must be stopped. The AccountSwitchTerminationSwitch message is only used in exception after the new account servicer has received an AccountSwitchInformationResponse message.")]
+[IsoDisplayName(@"Account Switch Termination Switch V")]
 public interface IAccountSwitchTerminationSwitchV01 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface IAccountSwitchTerminationSwitchV01 : IOuterRecord
     [IsoId("_2dsZMA8EEeeJ4ZumUkzG4Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding linkage details.
 /// </summary>
 [IsoId("_pm0bkb5XEeexmbB7KsjCwA")]
+[IsoDisplayName(@"Corporate Action Cancellation SD")]
 public interface ICorporateActionCancellationSD3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionCancellationSD3 : IIsoComponent
     [IsoId("_p4rAkL5XEeexmbB7KsjCwA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICorporateActionCancellationSD3 : IIsoComponent
     [IsoId("_p4rAkr5XEeexmbB7KsjCwA")]
     [DisplayName("Linked Corporate Action Identification")]
     [IsoXmlTag("LkdCorpActnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text LinkedCorporateActionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ICorporateActionCancellationSD3 : IIsoComponent
     [IsoId("_p4rAqL5XEeexmbB7KsjCwA")]
     [DisplayName("Link Added Date")]
     [IsoXmlTag("LkAddedDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate LinkAddedDate { get; }
 
     /// <summary>
@@ -49,5 +55,6 @@ public interface ICorporateActionCancellationSD3 : IIsoComponent
     [IsoId("_p4rAsL5XEeexmbB7KsjCwA")]
     [DisplayName("Link Modified Date")]
     [IsoXmlTag("LkModfdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? LinkModifiedDate { get; }
 }

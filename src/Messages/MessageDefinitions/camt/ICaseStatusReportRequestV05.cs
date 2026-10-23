@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3CdDzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.038.001.05", "CaseStsRptReq", "urn:iso:std:iso:20022:tech:xsd:camt.038.001.05")]
+[IsoDisplayName(@"Case Status Report Request V05")]
 public interface ICaseStatusReportRequestV05 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +33,6 @@ public interface ICaseStatusReportRequestV05 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

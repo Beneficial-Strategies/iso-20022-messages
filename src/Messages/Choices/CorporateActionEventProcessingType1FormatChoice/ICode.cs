@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventProcessingTy
 /// Standard code to specify the type of event processing.
 /// </summary>
 [IsoId("_RmHAMtp-Ed-ak6NoX_4Aeg_-1265853518")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionEventProcessingType1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

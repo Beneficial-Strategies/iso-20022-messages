@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details for the trading under waiver of the instrument.
 /// </summary>
 [IsoId("__YT0wJuKEeaPcol5ibnfBQ")]
+[IsoDisplayName(@"Trading Under Waivers Percentage")]
 public interface ITradingUnderWaiversPercentage1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradingUnderWaiversPercentage1 : IIsoComponent
     [IsoId("_V9BX0JuLEeaPcol5ibnfBQ")]
     [DisplayName("Trading Under Waiver Percentage")]
     [IsoXmlTag("TradgUdrWvrPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate TradingUnderWaiverPercentage { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITradingUnderWaiversPercentage1 : IIsoComponent
     [IsoId("_ri_asJuLEeaPcol5ibnfBQ")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier TradingVenue { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface ITradingUnderWaiversPercentage1 : IIsoComponent
     [IsoId("_wreiAJuMEeaPcol5ibnfBQ")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Disclaimer { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the cash option.
 /// </summary>
 [IsoId("_00j16QVTEeqjd8n6wD9JVw")]
+[IsoDisplayName(@"Cash Option")]
 public interface ICashOption75 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ICashOption75 : IIsoComponent
     [IsoId("_00j2EQVTEeqjd8n6wD9JVw")]
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification47> ExemptionType { get; }
 
     /// <summary>

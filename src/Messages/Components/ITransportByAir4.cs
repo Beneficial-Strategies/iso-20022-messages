@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the transportation of goods by air.
 /// </summary>
 [IsoId("_yXPisdQwEeK0PPbKncCqzA")]
+[IsoDisplayName(@"Transport By Air")]
 public interface ITransportByAir4 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ITransportByAir4 : IIsoComponent
     [IsoId("_-uNGENQ1EeK0PPbKncCqzA")]
     [DisplayName("Flight Number")]
     [IsoXmlTag("FlghtNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FlightNumber { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ITransportByAir4 : IIsoComponent
     [IsoId("_y08LVdQwEeK0PPbKncCqzA")]
     [DisplayName("Air Carrier Name")]
     [IsoXmlTag("AirCrrierNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AirCarrierName { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface ITransportByAir4 : IIsoComponent
     [IsoId("_JJ8sMNQ2EeK0PPbKncCqzA")]
     [DisplayName("Carrier Agent Name")]
     [IsoXmlTag("CrrierAgtNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CarrierAgentName { get; }
 
     /// <summary>

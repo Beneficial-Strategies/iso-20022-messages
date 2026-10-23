@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reconciliation response from the acquirer.
 /// </summary>
 [IsoId("_cch-sRzwEeK5OKMB21JFBg")]
+[IsoDisplayName(@"Acceptor Reconciliation Response")]
 public interface IAcceptorReconciliationResponse2 : IIsoComponent
 {
     /// <summary>

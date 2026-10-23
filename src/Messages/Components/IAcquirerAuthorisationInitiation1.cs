@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the authorisation initiation.
 /// </summary>
 [IsoId("_JQs4AHrhEeSlsoBd7x4P6A")]
+[IsoDisplayName(@"Acquirer Authorisation Initiation")]
 public interface IAcquirerAuthorisationInitiation1 : IIsoComponent
 {
     /// <summary>

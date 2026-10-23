@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status1Choice;
 /// Provides the status of allocation of collateral to cover the instruction.
 /// </summary>
 [IsoId("_UU5htdp-Ed-ak6NoX_4Aeg_-2085416312")]
+[IsoDisplayName(@"Allocation Status")]
 public interface IAllocationStatus : IStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the processing status of an individual movement.
 /// </summary>
 [IsoId("_RlNoUtp-Ed-ak6NoX_4Aeg_-1325784757")]
+[IsoDisplayName(@"Movement Processing Status")]
 public interface IMovementProcessingStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IMovementProcessingStatus1 : IIsoComponent
     [IsoId("_RlNoVNp-Ed-ak6NoX_4Aeg_-1310083490")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

@@ -27,6 +27,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesSttlmTxAllgmtNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:sese.028.001.10"
 )]
+[Description(@"Scope|An account servicer sends a SecuritiesSettlementTransactionAllegementNotification to an account owner to advise the account owner that a counterparty has alleged an instruction against the account owner's account at the account servicer and that the account servicer could not find the corresponding instruction of the account owner.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Settlement Transaction Allegement Notification V")]
 public interface ISecuritiesSettlementTransactionAllegementNotificationV10 : IOuterRecord
 {
     /// <summary>
@@ -35,6 +37,8 @@ public interface ISecuritiesSettlementTransactionAllegementNotificationV10 : IOu
     [IsoId("_Kr5RSygWEeym1_Zp1BTvEw")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -51,6 +55,8 @@ public interface ISecuritiesSettlementTransactionAllegementNotificationV10 : IOu
     [IsoId("_Kr5RTygWEeym1_Zp1BTvEw")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -59,6 +65,8 @@ public interface ISecuritiesSettlementTransactionAllegementNotificationV10 : IOu
     [IsoId("_ES2rgSgWEeym1_Zp1BTvEw")]
     [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
     [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -163,5 +171,6 @@ public interface ISecuritiesSettlementTransactionAllegementNotificationV10 : IOu
     [IsoId("_Kr5RaSgWEeym1_Zp1BTvEw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

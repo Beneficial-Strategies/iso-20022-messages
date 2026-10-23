@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Order Priority1.
 /// </summary>
 [IsoId("_Mav_UBAUEe6N57R8Wekj-w")]
+[IsoDisplayName(@"Order Priority1")]
 public interface IOrderPriority1 : IIsoComponent
 {
     /// <summary>

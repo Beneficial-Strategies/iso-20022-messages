@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Quantity of securities assigned as collateral position.
 /// </summary>
 [IsoId("_Y5UdUStEEeySlt9bF77XfA")]
+[IsoDisplayName(@"Securities Balance")]
 public interface ISecuritiesBalance3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ISecuritiesBalance3 : IIsoComponent
     [IsoId("_ZQ3aqStEEeySlt9bF77XfA")]
     [DisplayName("Collateral Indicator")]
     [IsoXmlTag("CollInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CollateralIndicator { get; }
 
     /// <summary>
@@ -89,6 +91,7 @@ public interface ISecuritiesBalance3 : IIsoComponent
     [IsoId("_ZQ3atStEEeySlt9bF77XfA")]
     [DisplayName("Rating Details")]
     [IsoXmlTag("RatgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRating2> RatingDetails { get; }
 
     /// <summary>
@@ -113,5 +116,6 @@ public interface ISecuritiesBalance3 : IIsoComponent
     [IsoId("_ZQ3auytEEeySlt9bF77XfA")]
     [DisplayName("Transaction Lot Number")]
     [IsoXmlTag("TxLotNb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification178> TransactionLotNumber { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the modification of an account.
 /// </summary>
 [IsoId("_viqSgWB1EeaHEJD5P6-ccw")]
+[IsoDisplayName(@"Investment Account Modification")]
 public interface IInvestmentAccountModification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentAccountModification3 : IIsoComponent
     [IsoId("_v8P3MWB1EeaHEJD5P6-ccw")]
     [DisplayName("Modification Reason")]
     [IsoXmlTag("ModRsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? ModificationReason { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IInvestmentAccountModification3 : IIsoComponent
     [IsoId("_v8P3M2B1EeaHEJD5P6-ccw")]
     [DisplayName("Account Application Identification")]
     [IsoXmlTag("AcctApplId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountApplicationIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IInvestmentAccountModification3 : IIsoComponent
     [IsoId("_v8P3NWB1EeaHEJD5P6-ccw")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface IInvestmentAccountModification3 : IIsoComponent
     [IsoId("_v8P3OWB1EeaHEJD5P6-ccw")]
     [DisplayName("Existing Account Identification")]
     [IsoXmlTag("ExstgAcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccount23> ExistingAccountIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Merchant performing the transaction.
 /// </summary>
 [IsoId("_87jR4R24EeKyZ4l838zwaQ")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation8 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IOrganisation8 : IIsoComponent
     [IsoId("_9HKE9R24EeKyZ4l838zwaQ")]
     [DisplayName("Common Name")]
     [IsoXmlTag("CmonNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CommonName { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IOrganisation8 : IIsoComponent
     [IsoId("_9HKE_R24EeKyZ4l838zwaQ")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Address { get; }
 
     /// <summary>
@@ -57,5 +62,7 @@ public interface IOrganisation8 : IIsoComponent
     [IsoId("_9HKFBR24EeKyZ4l838zwaQ")]
     [DisplayName("Scheme Data")]
     [IsoXmlTag("SchmeData")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SchemeData { get; }
 }

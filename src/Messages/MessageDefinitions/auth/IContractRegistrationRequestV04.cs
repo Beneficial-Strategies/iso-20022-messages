@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_R3GHcTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("auth.018.001.04", "CtrctRegnReq", "urn:iso:std:iso:20022:tech:xsd:auth.018.001.04")]
+[IsoDisplayName(@"Contract Registration Request V04")]
 public interface IContractRegistrationRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IContractRegistrationRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Contract Registration")]
     [IsoXmlTag("CtrctRegn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContractRegistration7> ContractRegistration { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IContractRegistrationRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_JJKuEeUUEem3X-64-NKdqg")]
 [IsoMessage("auth.061.001.01", "CCPInvstmtsRpt", "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01")]
+[Description(@"The CCPInvestmentsReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about how the central counterparty invests the cash balances deposited with it as collateral by its clearing members.")]
+[IsoDisplayName(@"CCP Investments Report V")]
 public interface ICCPInvestmentsReportV01 : IOuterRecord
 {
     /// <summary>
@@ -20,6 +22,7 @@ public interface ICCPInvestmentsReportV01 : IOuterRecord
     [IsoId("_JJKuGeUUEem3X-64-NKdqg")]
     [DisplayName("Investment")]
     [IsoXmlTag("Invstmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestment1Choice> Investment { get; }
 
     /// <summary>
@@ -28,5 +31,6 @@ public interface ICCPInvestmentsReportV01 : IOuterRecord
     [IsoId("_JJKuG-UUEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of change to name.
 /// </summary>
 [IsoId("_x7FN8A4pEeK3IMoVvcTkkg")]
+[IsoDisplayName(@"Name Modification")]
 public interface INameModification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface INameModification1 : IIsoComponent
     [IsoId("_9shbsA4pEeK3IMoVvcTkkg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Name { get; }
 }

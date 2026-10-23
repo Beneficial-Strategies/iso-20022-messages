@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// File action initiation message record.
 /// </summary>
 [IsoId("_arBFkFZXEeen1vB4iz5SyA")]
+[IsoDisplayName(@"File Action Initiation")]
 public interface IFileActionInitiation : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IFileActionInitiation : IRecordMessage1Choice, IIsoChoiceVarian
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("FileActnInitn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

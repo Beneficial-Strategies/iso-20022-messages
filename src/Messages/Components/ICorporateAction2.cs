@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the CA event.
 /// </summary>
 [IsoId("_TdKoc9p-Ed-ak6NoX_4Aeg_281523718")]
+[IsoDisplayName(@"Corporate Action")]
 public interface ICorporateAction2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateAction2 : IIsoComponent
     [IsoId("_TdKodNp-Ed-ak6NoX_4Aeg_-642508316")]
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventStage1FormatChoice> EventStage { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICorporateAction2 : IIsoComponent
     [IsoId("_TdKodtp-Ed-ak6NoX_4Aeg_205464242")]
     [DisplayName("Default Option Number")]
     [IsoXmlTag("DfltOptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? DefaultOptionNumber { get; }
 
     /// <summary>
@@ -121,6 +124,7 @@ public interface ICorporateAction2 : IIsoComponent
     [IsoId("_TdUZd9p-Ed-ak6NoX_4Aeg_-1796992526")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionChangeType1FormatChoice> ChangeType { get; }
 
     /// <summary>
@@ -129,6 +133,7 @@ public interface ICorporateAction2 : IIsoComponent
     [IsoId("_TdUZeNp-Ed-ak6NoX_4Aeg_-1408191238")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOfferType1FormatChoice> OfferType { get; }
 
     /// <summary>
@@ -137,6 +142,7 @@ public interface ICorporateAction2 : IIsoComponent
     [IsoId("_TdUZedp-Ed-ak6NoX_4Aeg_-1393415357")]
     [DisplayName("Restriction Indicator")]
     [IsoXmlTag("RstrctnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RestrictionIndicator { get; }
 
     /// <summary>
@@ -145,6 +151,7 @@ public interface ICorporateAction2 : IIsoComponent
     [IsoId("_TddjYNp-Ed-ak6NoX_4Aeg_-1367556347")]
     [DisplayName("Partial Election Indicator")]
     [IsoXmlTag("PrtlElctnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PartialElectionIndicator { get; }
 
     /// <summary>
@@ -193,6 +200,7 @@ public interface ICorporateAction2 : IIsoComponent
     [IsoId("_TddjZtp-Ed-ak6NoX_4Aeg_-1756777381")]
     [DisplayName("Coupon Number")]
     [IsoXmlTag("CpnNb")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max3NumericText> CouponNumber { get; }
 
     /// <summary>
@@ -201,6 +209,7 @@ public interface ICorporateAction2 : IIsoComponent
     [IsoId("_TddjZ9p-Ed-ak6NoX_4Aeg_1584193884")]
     [DisplayName("Interest Accrued Number Of Days")]
     [IsoXmlTag("IntrstAcrdNbOfDays")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? InterestAccruedNumberOfDays { get; }
 
     /// <summary>
@@ -225,6 +234,7 @@ public interface ICorporateAction2 : IIsoComponent
     [IsoId("_TdnUYNp-Ed-ak6NoX_4Aeg_-915572886")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionPrice2> PriceDetails { get; }
 
     /// <summary>
@@ -257,6 +267,7 @@ public interface ICorporateAction2 : IIsoComponent
     [IsoId("_TdnUZNp-Ed-ak6NoX_4Aeg_991134143")]
     [DisplayName("Certification Required Indicator")]
     [IsoXmlTag("CertfctnReqrdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CertificationRequiredIndicator { get; }
 
     /// <summary>
@@ -289,6 +300,8 @@ public interface ICorporateAction2 : IIsoComponent
     [IsoId("_TdnUaNp-Ed-ak6NoX_4Aeg_715065943")]
     [DisplayName("New Place Of Incorporation")]
     [IsoXmlTag("NewPlcOfIncorprtn")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? NewPlaceOfIncorporation { get; }
 
     /// <summary>
@@ -313,6 +326,7 @@ public interface ICorporateAction2 : IIsoComponent
     [IsoId("_TdxFYdp-Ed-ak6NoX_4Aeg_1075177055")]
     [DisplayName("Redemption Charges Applied Indicator")]
     [IsoXmlTag("RedChrgsApldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RedemptionChargesAppliedIndicator { get; }
 
     /// <summary>

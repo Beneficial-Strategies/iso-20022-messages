@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerJurisdiction1Choice;
 /// Other than those explicitly mentioned/listed.
 /// </summary>
 [IsoId("_NxaDAIfYEeu9_PKSQNOmdg")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IIssuerJurisdiction1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOther : IIssuerJurisdiction1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Othr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

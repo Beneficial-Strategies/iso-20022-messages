@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateTimePeriodChoice;
 /// </summary>
 [IsoId("_T57c8dp-Ed-ak6NoX_4Aeg_1215657175")]
 [IsoXmlTag("DtTmRg")]
+[IsoDisplayName(@"Date Time Range")]
 public interface IDateTimeRange : IDateTimePeriodChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IDateTimeRange : IDateTimePeriodChoice, IIsoChoiceVariant
     [IsoId("_T5xr9dp-Ed-ak6NoX_4Aeg_330596092")]
     [DisplayName("From Date Time")]
     [IsoXmlTag("FrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime FromDateTime { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface IDateTimeRange : IDateTimePeriodChoice, IIsoChoiceVariant
     [IsoId("_T5xr9tp-Ed-ak6NoX_4Aeg_330596093")]
     [DisplayName("To Date Time")]
     [IsoXmlTag("ToDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ToDateTime { get; }
 }

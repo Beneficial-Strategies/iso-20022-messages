@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_7wsWs9b-Eeq_l4BJLVUF2Q")]
 [IsoMessage("camt.053.001.09", "BkToCstmrStmt", "urn:iso:std:iso:20022:tech:xsd:camt.053.001.09")]
+[Description(@"Scope|The BankToCustomerStatement message is sent by the account servicer to an account owner or to a party authorised by the account owner to receive the message. It is used to inform the account owner, or authorised party, of the entries booked to the account, and to provide the owner with balance information on the account at a given point in time.|Usage|The BankToCustomerStatement message can contain reports for more than one account. It provides information for cash management and/or reconciliation.|It contains information on booked entries only.|It can include underlying details of transactions that have been included in the entry.|The message is exchanged as defined between the account servicer and the account owner. It provides information on items that have been booked to the account and also balance information. Depending on services and schedule agreed between banks and their customers, statements may be generated and exchanged accordingly, for example for intraday or prior day periods.|It is possible that the receiver of the message is not the account owner, but a party entitled through arrangement with the account owner to receive the account information (also known as recipient).")]
+[IsoDisplayName(@"Bank To Customer Statement V")]
 public interface IBankToCustomerStatementV09 : IOuterRecord
 {
     /// <summary>
@@ -35,6 +37,7 @@ public interface IBankToCustomerStatementV09 : IOuterRecord
     [IsoId("_7wsWwdb-Eeq_l4BJLVUF2Q")]
     [DisplayName("Statement")]
     [IsoXmlTag("Stmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountStatement10> Statement { get; }
 
     /// <summary>
@@ -43,5 +46,6 @@ public interface IBankToCustomerStatementV09 : IOuterRecord
     [IsoId("_7wsWw9b-Eeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

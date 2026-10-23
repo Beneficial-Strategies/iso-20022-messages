@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Net position of a segregated holding, in a single security, within the overall position held in a securities account at a specified place of safekeeping.
 /// </summary>
 [IsoId("_R-_aRdp-Ed-ak6NoX_4Aeg_1472551753")]
+[IsoDisplayName(@"Aggregate Balance Per Safekeeping Place")]
 public interface IAggregateBalancePerSafekeepingPlace3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IAggregateBalancePerSafekeepingPlace3 : IIsoComponent
     [IsoId("_R-_aSdp-Ed-ak6NoX_4Aeg_1472551848")]
     [DisplayName("Days Accrued")]
     [IsoXmlTag("DaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? DaysAccrued { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IAggregateBalancePerSafekeepingPlace3 : IIsoComponent
     [IsoId("_R-_aStp-Ed-ak6NoX_4Aeg_1472551873")]
     [DisplayName("Holding Value")]
     [IsoXmlTag("HldgVal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyAndAmount> HoldingValue { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface IAggregateBalancePerSafekeepingPlace3 : IIsoComponent
     [IsoId("_R_JLQtp-Ed-ak6NoX_4Aeg_1824415266")]
     [DisplayName("Accrued Interest Amount Sign")]
     [IsoXmlTag("AcrdIntrstAmtSgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? AccruedInterestAmountSign { get; }
 
     /// <summary>
@@ -97,6 +101,7 @@ public interface IAggregateBalancePerSafekeepingPlace3 : IIsoComponent
     [IsoId("_R_JLRdp-Ed-ak6NoX_4Aeg_1472552243")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceInformation2> PriceDetails { get; }
 
     /// <summary>
@@ -113,6 +118,7 @@ public interface IAggregateBalancePerSafekeepingPlace3 : IIsoComponent
     [IsoId("_R_JLR9p-Ed-ak6NoX_4Aeg_1472552294")]
     [DisplayName("Balance Breakdown Details")]
     [IsoXmlTag("BalBrkdwnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubBalanceInformation2> BalanceBreakdownDetails { get; }
 
     /// <summary>
@@ -121,5 +127,6 @@ public interface IAggregateBalancePerSafekeepingPlace3 : IIsoComponent
     [IsoId("_R_JLSNp-Ed-ak6NoX_4Aeg_1472552337")]
     [DisplayName("Additional Balance Breakdown Details")]
     [IsoXmlTag("AddtlBalBrkdwnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBalanceInformation2> AdditionalBalanceBreakdownDetails { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides an amount choice between currency or digital token.
 /// </summary>
 [IsoId("_mG0UsANhEe2-vqzwMUAewg")]
+[IsoDisplayName(@"Currency Or Digital Token Amount 1 Choice")]
 public interface ICurrencyOrDigitalTokenAmount1Choice : IIsoChoice { }

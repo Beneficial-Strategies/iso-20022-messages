@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChequeCancellationReason1Choice;
 /// Reason, as published in an external code set.
 /// </summary>
 [IsoId("_kwwc_btvEeq_cfXrH83Rcw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChequeCancellationReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

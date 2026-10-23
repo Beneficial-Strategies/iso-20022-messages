@@ -10,12 +10,14 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification242Choice;
 /// </summary>
 [IsoId("_BXmqtQN1Ee2-vqzwMUAewg")]
 [IsoXmlTag("AnyBIC")]
+[IsoDisplayName(@"Any BIC")]
 public interface IAnyBIC : IPartyIdentification242Choice, IIsoChoiceVariant
 {
     /// <summary>
     /// Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
     /// </summary>
     [IsoXmlTag("AnyBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier Value { get; }
 
     /// <summary>
@@ -24,5 +26,10 @@ public interface IAnyBIC : IPartyIdentification242Choice, IIsoChoiceVariant
     [IsoId("_BdWGVQN1Ee2-vqzwMUAewg")]
     [DisplayName("Alternative Identifier")]
     [IsoXmlTag("AltrntvIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [StringLength(35, MinimumLength = 1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AlternativeIdentifier { get; }
 }

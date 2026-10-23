@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a drawdown event type.
 /// </summary>
 [IsoId("_DvIiEFNiEeijdq8ilaxyOA")]
+[IsoDisplayName(@"Drawdown Event Type 1 Choice")]
 public interface IDrawdownEventType1Choice : IIsoChoice { }

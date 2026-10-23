@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentType2Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IDocumentType2Choice, IIsoChoiceVariant
 {
     /// <summary>

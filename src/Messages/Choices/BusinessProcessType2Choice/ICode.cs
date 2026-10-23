@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessProcessType2Choice;
 /// Business process type is identified using a code.
 /// </summary>
 [IsoId("_0w-KU5BgEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBusinessProcessType2Choice, IIsoChoiceVariant
 {
     /// <summary>

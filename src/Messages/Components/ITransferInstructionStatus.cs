@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction status and the reason for the status.
 /// </summary>
 [IsoId("_U0yittp-Ed-ak6NoX_4Aeg_-1585322239")]
+[IsoDisplayName(@"Transfer Instruction Status")]
 public interface ITransferInstructionStatus : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITransferInstructionStatus : IIsoComponent
     [IsoId("_U0yiuNp-Ed-ak6NoX_4Aeg_-549474831")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

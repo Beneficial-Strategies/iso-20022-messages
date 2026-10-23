@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Additional Request Data1Choice.
 /// </summary>
 [IsoId("_QnNBUHSHEe2bKJC9xIuWQw")]
+[IsoDisplayName(@"Additional Request Data1Choice")]
 public interface IAdditionalRequestData1Choice : IIsoChoice { }

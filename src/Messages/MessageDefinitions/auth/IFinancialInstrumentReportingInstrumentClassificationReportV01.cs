@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgInstrmClssfctnRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.050.001.01"
 )]
+[Description(@"The FinancialInstrumentReportingInstrumentClassificationReport message is sent by ESMA to all national competent authorities and provides all valid combinations for classification of financial instruments (CFI) as per ISO 10962.")]
+[IsoDisplayName(@"Financial Instrument Reporting Instrument Classification Report V")]
 public interface IFinancialInstrumentReportingInstrumentClassificationReportV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface IFinancialInstrumentReportingInstrumentClassificationReportV01 
     [IsoId("_4LK8V0RNEee7JdgA9zPESA")]
     [DisplayName("Instrument Classification")]
     [IsoXmlTag("InstrmClssfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesInstrumentClassification2> InstrumentClassification { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface IFinancialInstrumentReportingInstrumentClassificationReportV01 
     [IsoId("_4LK8WURNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

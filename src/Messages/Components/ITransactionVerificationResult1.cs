@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of the verifications performed by the issuer to deliver or decline the authorisation.
 /// </summary>
 [IsoId("_SxbqoAEcEeCQm6a_G2yO_w_1847653135")]
+[IsoDisplayName(@"Transaction Verification Result")]
 public interface ITransactionVerificationResult1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionVerificationResult1 : IIsoComponent
     [IsoId("_SxbqoQEcEeCQm6a_G2yO_w_1653552840")]
     [DisplayName("Electronic Commerce Authentication Result")]
     [IsoXmlTag("ElctrncComrcAuthntcnRslt")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? ElectronicCommerceAuthenticationResult { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ITransactionVerificationResult1 : IIsoComponent
     [IsoId("_SxbqpAEcEeCQm6a_G2yO_w_2039129918")]
     [DisplayName("Declined Product Code")]
     [IsoXmlTag("DclndPdctCd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> DeclinedProductCode { get; }
 }

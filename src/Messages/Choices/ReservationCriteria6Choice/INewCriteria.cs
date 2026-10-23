@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria6Choice;
 /// <summary>
 /// New Criteria.
 /// </summary>
+[IsoDisplayName(@"New Criteria")]
 public interface INewCriteria : IReservationCriteria6Choice, IIsoChoiceVariant
 {
     /// <summary>

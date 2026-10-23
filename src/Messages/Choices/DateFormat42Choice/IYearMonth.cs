@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat42Choice;
 /// Year and month.
 /// </summary>
 [IsoId("_xXmZwpBrEeaGiLsfv6g8MA")]
+[IsoDisplayName(@"Year Month")]
 public interface IYearMonth : IDateFormat42Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IYearMonth : IDateFormat42Choice, IIsoChoiceVariant
     /// Month within a particular calendar year represented by YYYY-MM (ISO 8601).
     /// </summary>
     [IsoXmlTag("YrMnth")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth Value { get; }
 }

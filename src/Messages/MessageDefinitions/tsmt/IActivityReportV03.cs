@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_i8_5eNE8Ed-BzquC8wXy7w_1638780045")]
 [IsoMessage("tsmt.002.001.03", "ActvtyRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.002.001.03")]
+[Description(@"Scope|The ActivityReport message is sent by the matching application to the requester of an activity report.|This message is used to report on all transactions for which an activity has taken place within a given time span.|Usage|The ActivityReport message can be sent|- at a pre-determined time every 24 hours. The message reports on all transactions that the requester is involved in and for which an activity has taken place within the last 24 hours.|- on demand in response to an ActivityReportRequest message. The message reports on all transactions that the requester is involved in and for which an activity has taken place within a time span specified by the requester in the ActivityReportRequest message.")]
+[IsoDisplayName(@"Activity Report V")]
 public interface IActivityReportV03 : IOuterRecord
 {
     /// <summary>
@@ -42,5 +44,6 @@ public interface IActivityReportV03 : IOuterRecord
     [IsoId("_i9JDYNE8Ed-BzquC8wXy7w_1638780107")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActivityReportItems2> Report { get; }
 }

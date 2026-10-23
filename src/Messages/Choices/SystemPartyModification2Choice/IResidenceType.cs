@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// Specifies the type of residence where the party has its permanent home or principal establishment.
 /// </summary>
 [IsoId("__edeAov_Eei289CGNqs21g")]
+[IsoDisplayName(@"Residence Type")]
 public interface IResidenceType : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>

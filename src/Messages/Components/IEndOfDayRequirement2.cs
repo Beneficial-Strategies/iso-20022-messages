@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Obligations of a clearing member with respect to a central counterparty that are calculated based on end of day positions.
 /// </summary>
 [IsoId("_RUSFwKprEeamNLogr5TkIQ")]
+[IsoDisplayName(@"End Of Day Requirement")]
 public interface IEndOfDayRequirement2 : IIsoComponent
 {
     /// <summary>

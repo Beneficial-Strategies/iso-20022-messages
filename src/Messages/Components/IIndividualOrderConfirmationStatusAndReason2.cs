@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of the individual orders confirmation that was previously received.
 /// </summary>
 [IsoId("_ArbrJTbtEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Individual Order Confirmation Status And Reason")]
 public interface IIndividualOrderConfirmationStatusAndReason2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IIndividualOrderConfirmationStatusAndReason2 : IIsoComponent
     [IsoId("_BFLAozbtEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IIndividualOrderConfirmationStatusAndReason2 : IIsoComponent
     [IsoId("_BFLApTbtEead9bDRE_1DAQ")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IIndividualOrderConfirmationStatusAndReason2 : IIsoComponent
     [IsoId("_BFLApzbtEead9bDRE_1DAQ")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IIndividualOrderConfirmationStatusAndReason2 : IIsoComponent
     [IsoId("_BFLAqTbtEead9bDRE_1DAQ")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DealReference { get; }
 
     /// <summary>

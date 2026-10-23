@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the start and end time for the time to maturity.
 /// </summary>
 [IsoId("_vvHl4MVbEeiYpLQka876sg")]
+[IsoDisplayName(@"Time To Maturity Period")]
 public interface ITimeToMaturityPeriod1 : IIsoComponent
 {
     /// <summary>

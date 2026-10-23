@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Terminal8.
 /// </summary>
 [IsoId("_y4BnEXjOEe6YlIMyoxWMJA")]
+[IsoDisplayName(@"Terminal8")]
 public interface ITerminal8 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface ITerminal8 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalIdentification { get; }
 }

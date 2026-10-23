@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Request message to transmit.
 /// </summary>
 [IsoId("_Hi8mMQ0sEeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Device Transmit Message Request")]
 public interface IDeviceTransmitMessageRequest2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IDeviceTransmitMessageRequest2 : IIsoComponent
     [IsoId("_H1Mz0w0sEeqUVL7sB4m7NA")]
     [DisplayName("Maximum Transmission Time")]
     [IsoXmlTag("MaxTrnsmssnTm")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number MaximumTransmissionTime { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IDeviceTransmitMessageRequest2 : IIsoComponent
     [IsoId("_H1Mz1Q0sEeqUVL7sB4m7NA")]
     [DisplayName("Maximum Waiting Time")]
     [IsoXmlTag("MaxWtgTm")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumWaitingTime { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IDeviceTransmitMessageRequest2 : IIsoComponent
     [IsoId("_H1Mz1w0sEeqUVL7sB4m7NA")]
     [DisplayName("Message To Send")]
     [IsoXmlTag("MsgToSnd")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary MessageToSend { get; }
 }

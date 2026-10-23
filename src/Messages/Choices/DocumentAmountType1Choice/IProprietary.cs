@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentAmountType1Choice;
 /// <summary>
 /// Specifies the amount type, in a free-text form.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IDocumentAmountType1Choice, IIsoChoiceVariant
 {
     /// <summary>

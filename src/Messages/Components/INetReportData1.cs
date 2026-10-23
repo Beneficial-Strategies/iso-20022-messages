@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the meta data associated with a net report.
 /// </summary>
 [IsoId("_e329QJUnEeaYkf5FCqYMeA")]
+[IsoDisplayName(@"Net Report Data")]
 public interface INetReportData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INetReportData1 : IIsoComponent
     [IsoId("_HVrP4JUoEeaYkf5FCqYMeA")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface INetReportData1 : IIsoComponent
     [IsoId("_SsPfgZUoEeaYkf5FCqYMeA")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface INetReportData1 : IIsoComponent
     [IsoId("_iq-XoJUpEeaYkf5FCqYMeA")]
     [DisplayName("Netting Cut Off Time")]
     [IsoXmlTag("NetgCutOffTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime NettingCutOffTime { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface INetReportData1 : IIsoComponent
     [IsoId("_n2O7kJUpEeaYkf5FCqYMeA")]
     [DisplayName("Report Date")]
     [IsoXmlTag("RptDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ReportDate { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface INetReportData1 : IIsoComponent
     [IsoId("_viuGIJUpEeaYkf5FCqYMeA")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValueDate { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface INetReportData1 : IIsoComponent
     [IsoId("_eUqpQJUqEeaYkf5FCqYMeA")]
     [DisplayName("Report Type")]
     [IsoXmlTag("RptTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReportType { get; }
 
     /// <summary>
@@ -73,6 +82,8 @@ public interface INetReportData1 : IIsoComponent
     [IsoId("_4IAEcJUqEeaYkf5FCqYMeA")]
     [DisplayName("Net Service Type")]
     [IsoXmlTag("NetSvcTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NetServiceType { get; }
 
     /// <summary>

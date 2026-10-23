@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format to expressed a ratio.
 /// </summary>
 [IsoId("_Q1h31dp-Ed-ak6NoX_4Aeg_544072927")]
+[IsoDisplayName(@"Ratio Format 4 Choice")]
 public interface IRatioFormat4Choice : IIsoChoice { }

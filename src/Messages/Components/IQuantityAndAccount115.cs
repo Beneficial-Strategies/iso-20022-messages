@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Quantity And Account115.
 /// </summary>
 [IsoId("_wJJ27YoiEe-efPejSUAtLw")]
+[IsoDisplayName(@"Quantity And Account115")]
 public interface IQuantityAndAccount115 : IIsoComponent
 {
     /// <summary>
@@ -86,6 +87,7 @@ public interface IQuantityAndAccount115 : IIsoComponent
     /// </summary>
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQuantityBreakdown63> QuantityBreakdown { get; }
 
     /// <summary>

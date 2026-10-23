@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_oHDjhdE8Ed-BzquC8wXy7w_-1687018808")]
 [IsoMessage("tsmt.016.001.03", "ErrRpt", "urn:iso:std:iso:20022:tech:xsd:tsmt.016.001.03")]
+[Description(@"Scope|The ErrorReport message is sent by the matching application to the party from which it received a message.|This message is used to inform about the inability of the matching application to process a received message.|Usage|The ErrorReport message can be sent to a party from which the matching application received a message to inform about its inability to process the received message because|- the syntax of the message is incorrect,or|- the message content is inconsistent,or|- according to the workflow implemented in the matching application, it did not expect the received message.")]
+[IsoDisplayName(@"Error Report V")]
 public interface IErrorReportV03 : IOuterRecord
 {
     /// <summary>
@@ -83,6 +85,7 @@ public interface IErrorReportV03 : IOuterRecord
     [IsoId("_oHNUgdE8Ed-BzquC8wXy7w_-1686098797")]
     [DisplayName("Error Description")]
     [IsoXmlTag("ErrDesc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IValidationResult3> ErrorDescription { get; }
 
     /// <summary>

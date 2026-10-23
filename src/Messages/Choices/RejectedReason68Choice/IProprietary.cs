@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason68Choice;
 
 /// <summary>Specifies the proprietary value.</summary>
 [IsoId("_pS4SaaKsEfCHi7w3_0pcpw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IRejectedReason68Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

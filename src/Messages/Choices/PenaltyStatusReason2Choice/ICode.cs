@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PenaltyStatusReason2Choice;
 
 /// <summary>Penalty status reason, in a coded form.</summary>
 [IsoId("_vUsvER-DEeuwwezkzufkMw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPenaltyStatusReason2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

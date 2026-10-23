@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_ow6JocsZEeizUq4cFQ71-Q")]
 [IsoMessage("caad.007.001.02", "Err", "urn:iso:std:iso:20022:tech:xsd:caad.007.001.02")]
+[Description(@"The Error message is sent by any party to any party (acquirer, agent or issuer) to indicate a message error. ")]
+[IsoDisplayName(@"Error V")]
 public interface IErrorV02 : IOuterRecord
 {
     /// <summary>

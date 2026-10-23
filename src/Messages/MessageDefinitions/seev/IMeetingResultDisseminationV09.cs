@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_d7xBO1xxEe6fgZt44_IqFA")]
 [IsoMessage("seev.008.001.09", "MtgRsltDssmntn", "urn:iso:std:iso:20022:tech:xsd:seev.008.001.09")]
+[IsoDisplayName(@"Meeting Result Dissemination V09")]
 public interface IMeetingResultDisseminationV09 : IOuterRecord
 {
     /// <summary>
@@ -53,6 +54,9 @@ public interface IMeetingResultDisseminationV09 : IOuterRecord
     /// </summary>
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition19> Security { get; }
 
     /// <summary>
@@ -60,6 +64,9 @@ public interface IMeetingResultDisseminationV09 : IOuterRecord
     /// </summary>
     [DisplayName("Vote Result")]
     [IsoXmlTag("VoteRslt")]
+    [MinLength(1)]
+    [MaxLength(1000)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVote20> VoteResult { get; }
 
     /// <summary>
@@ -81,5 +88,6 @@ public interface IMeetingResultDisseminationV09 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

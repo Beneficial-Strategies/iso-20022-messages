@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Expected trade date and expected settlement date of the order execution.
 /// </summary>
 [IsoId("_R6914Np-Ed-ak6NoX_4Aeg_1060526305")]
+[IsoDisplayName(@"Expected Execution Details")]
 public interface IExpectedExecutionDetails2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IExpectedExecutionDetails2 : IIsoComponent
     [IsoId("_R6914tp-Ed-ak6NoX_4Aeg_1060526347")]
     [DisplayName("Expected Cash Settlement Date")]
     [IsoXmlTag("XpctdCshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedCashSettlementDate { get; }
 }

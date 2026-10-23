@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrAll2Choice;
 /// </summary>
 [IsoId("_Hv82sW4-EeiU9cctagi5ow")]
 [IsoXmlTag("StgOrdr")]
+[IsoDisplayName(@"Standing Order")]
 public interface IStandingOrder : IStandingOrderOrAll2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IStandingOrder : IStandingOrderOrAll2Choice, IIsoChoiceVariant
     [IsoId("_Cj8r424-EeiU9cctagi5ow")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>

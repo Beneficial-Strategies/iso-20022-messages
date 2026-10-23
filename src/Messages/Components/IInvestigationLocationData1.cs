@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investigation Location Data1.
 /// </summary>
 [IsoId("_CXmpVFRtEe23M4WgERMsYw")]
+[IsoDisplayName(@"Investigation Location Data1")]
 public interface IInvestigationLocationData1 : IIsoComponent
 {
     /// <summary>

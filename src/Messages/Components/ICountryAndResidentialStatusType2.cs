@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Country and residential status.
 /// </summary>
 [IsoId("_0D9OcSDZEeWCLu74WLgP4w")]
+[IsoDisplayName(@"Country And Residential Status Type")]
 public interface ICountryAndResidentialStatusType2 : IIsoComponent
 {
     /// <summary>

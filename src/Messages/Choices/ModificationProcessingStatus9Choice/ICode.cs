@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus9Cho
 /// Provides the status of a modification request.
 /// </summary>
 [IsoId("_xFphgeF8EeWCAvUNsZ5u6g")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IModificationProcessingStatus9Choice, IIsoChoiceVariant
 {
     /// <summary>

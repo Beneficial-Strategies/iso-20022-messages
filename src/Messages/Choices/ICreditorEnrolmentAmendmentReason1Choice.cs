@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the amendment of a creditor enrolment.
 /// </summary>
 [IsoId("_yRMkLfDBEemsS_0xy2XRug")]
+[IsoDisplayName(@"Creditor Enrolment Amendment Reason 1 Choice")]
 public interface ICreditorEnrolmentAmendmentReason1Choice : IIsoChoice { }

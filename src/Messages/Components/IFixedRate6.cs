@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fixed rate related information.
 /// </summary>
 [IsoId("_mNXX0fOFEeaS7fYULSI4_Q")]
+[IsoDisplayName(@"Fixed Rate")]
 public interface IFixedRate6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFixedRate6 : IIsoComponent
     [IsoId("_mY0Z4_OFEeaS7fYULSI4_Q")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IFixedRate6 : IIsoComponent
     [IsoId("_mY0Z5fOFEeaS7fYULSI4_Q")]
     [DisplayName("Day Count")]
     [IsoXmlTag("DayCnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DayCount { get; }
 
     /// <summary>

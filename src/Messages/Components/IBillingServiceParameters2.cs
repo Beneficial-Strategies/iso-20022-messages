@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the detailed parameters a service to be billed.
 /// </summary>
 [IsoId("_6PgXxJqlEeGSON8vddiWzQ_126693803")]
+[IsoDisplayName(@"Billing Service Parameters")]
 public interface IBillingServiceParameters2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IBillingServiceParameters2 : IIsoComponent
     [IsoId("_6PgXxpqlEeGSON8vddiWzQ_-424116921")]
     [DisplayName("Volume")]
     [IsoXmlTag("Vol")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? Volume { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
 /// </summary>
 [IsoId("_TFehMNp-Ed-ak6NoX_4Aeg_696000199")]
+[IsoDisplayName(@"Financial Institution Identification")]
 public interface IFinancialInstitutionIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancialInstitutionIdentification3 : IIsoComponent
     [IsoId("_TFehMdp-Ed-ak6NoX_4Aeg_696920663")]
     [DisplayName("BIC")]
     [IsoXmlTag("BIC")]
+    [IsoSimpleType(IsoSimpleType.BICIdentifier)]
     BICIdentifier? BIC { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IFinancialInstitutionIdentification3 : IIsoComponent
     [IsoId("_TFehM9p-Ed-ak6NoX_4Aeg_696922156")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>

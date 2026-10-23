@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on transaction and conducting counterparty.
 /// </summary>
 [IsoId("_xzGNwVyGEe24CqbZJK5XxA")]
+[IsoDisplayName(@"Trade Transaction Identification")]
 public interface ITradeTransactionIdentification24 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeTransactionIdentification24 : IIsoComponent
     [IsoId("_x0MZ8VyGEe24CqbZJK5XxA")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITradeTransactionIdentification24 : IIsoComponent
     [IsoId("_x0MZ9VyGEe24CqbZJK5XxA")]
     [DisplayName("Reporting Time Stamp")]
     [IsoXmlTag("RptgTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ReportingTimeStamp { get; }
 
     /// <summary>

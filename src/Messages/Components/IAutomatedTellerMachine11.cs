@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Automated Teller Machine11.
 /// </summary>
 [IsoId("_ULVjoZ-wEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Automated Teller Machine11")]
 public interface IAutomatedTellerMachine11 : IIsoComponent
 {
     /// <summary>
@@ -72,5 +73,6 @@ public interface IAutomatedTellerMachine11 : IIsoComponent
     /// </summary>
     [DisplayName("Available Device")]
     [IsoXmlTag("AvlblDvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATMDevice2Code> AvailableDevice { get; }
 }

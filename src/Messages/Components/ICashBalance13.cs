@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance details for a cash account.
 /// </summary>
 [IsoId("_nkznoXYOEei3jO6riKEVXg")]
+[IsoDisplayName(@"Cash Balance")]
 public interface ICashBalance13 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ICashBalance13 : IIsoComponent
     [IsoId("_nwIG3XYOEei3jO6riKEVXg")]
     [DisplayName("Number Of Payments")]
     [IsoXmlTag("NbOfPmts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfPayments { get; }
 
     /// <summary>

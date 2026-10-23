@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Human entity, as distinguished from a corporate entity (which is sometimes referred to as an &apos;artificial person&apos;).
 /// </summary>
 [IsoId("_G0Tt4YoUEeahcZ3Nzs1Qag")]
+[IsoDisplayName(@"Individual Person")]
 public interface IIndividualPerson34 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNKtYoUEeahcZ3Nzs1Qag")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? GivenName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNKt4oUEeahcZ3Nzs1Qag")]
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MiddleName { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNKuYoUEeahcZ3Nzs1Qag")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNKu4oUEeahcZ3Nzs1Qag")]
     [DisplayName("Name Suffix")]
     [IsoXmlTag("NmSfx")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NameSuffix { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNKv4oUEeahcZ3Nzs1Qag")]
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BirthDate { get; }
 
     /// <summary>
@@ -81,6 +91,8 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNKxYoUEeahcZ3Nzs1Qag")]
     [DisplayName("Province Of Birth")]
     [IsoXmlTag("PrvcOfBirth")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProvinceOfBirth { get; }
 
     /// <summary>
@@ -89,6 +101,8 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNKx4oUEeahcZ3Nzs1Qag")]
     [DisplayName("City Of Birth")]
     [IsoXmlTag("CityOfBirth")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CityOfBirth { get; }
 
     /// <summary>
@@ -97,6 +111,8 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNKyYoUEeahcZ3Nzs1Qag")]
     [DisplayName("Profession")]
     [IsoXmlTag("Prfssn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Profession { get; }
 
     /// <summary>
@@ -105,6 +121,9 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNKy4oUEeahcZ3Nzs1Qag")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
+    [MinLength(1)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress21> PostalAddress { get; }
 
     /// <summary>
@@ -113,6 +132,9 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNKzYoUEeahcZ3Nzs1Qag")]
     [DisplayName("Citizenship")]
     [IsoXmlTag("Ctznsh")]
+    [MinLength(0)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICitizenshipInformation2> Citizenship { get; }
 
     /// <summary>
@@ -121,6 +143,8 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNKz4oUEeahcZ3Nzs1Qag")]
     [DisplayName("Employing Company")]
     [IsoXmlTag("EmplngCpny")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? EmployingCompany { get; }
 
     /// <summary>
@@ -129,6 +153,8 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNK0YoUEeahcZ3Nzs1Qag")]
     [DisplayName("Business Function")]
     [IsoXmlTag("BizFctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BusinessFunction { get; }
 
     /// <summary>
@@ -145,6 +171,7 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNK1YoUEeahcZ3Nzs1Qag")]
     [DisplayName("Death Date")]
     [IsoXmlTag("DthDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DeathDate { get; }
 
     /// <summary>
@@ -161,6 +188,8 @@ public interface IIndividualPerson34 : IIsoComponent
     [IsoId("_HZNK2YoUEeahcZ3Nzs1Qag")]
     [DisplayName("Education Level")]
     [IsoXmlTag("EdctnLvl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EducationLevel { get; }
 
     /// <summary>

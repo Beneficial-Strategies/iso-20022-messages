@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Post-trade related data.
 /// </summary>
 [IsoId("_Mwc6wGIhEfCeoPFCHQnhvA")]
+[IsoDisplayName(@"Post Trade Data1")]
 public interface IPostTradeData1 : IIsoComponent
 {
     /// <summary>
@@ -120,6 +121,7 @@ public interface IPostTradeData1 : IIsoComponent
     [IsoId("_8sjVIGInEfCeoPFCHQnhvA")]
     [DisplayName("Post Trade Data")]
     [IsoXmlTag("PstTradData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostTradeData1Choice> PostTradeData { get; }
 
     /// <summary>

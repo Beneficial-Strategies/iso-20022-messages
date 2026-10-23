@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed information about the safekeeping account, its holdings and the sublevel accounts.
 /// </summary>
 [IsoId("_MM9hZfNyEeqRfth943bvEA")]
+[IsoDisplayName(@"Safekeeping Account")]
 public interface ISafekeepingAccount11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISafekeepingAccount11 : IIsoComponent
     [IsoId("_Mhe_4fNyEeqRfth943bvEA")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SafekeepingAccount { get; }
 
     /// <summary>

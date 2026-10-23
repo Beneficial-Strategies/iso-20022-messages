@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// </summary>
 [IsoId("_R3SUyzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("admi.005.001.02", "RptQryReq", "urn:iso:std:iso:20022:tech:xsd:admi.005.001.02")]
+[IsoDisplayName(@"Report Query Request V02")]
 public interface IReportQueryRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IReportQueryRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Report Query Criteria")]
     [IsoXmlTag("RptQryCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportQueryCriteria3> ReportQueryCriteria { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IReportQueryRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

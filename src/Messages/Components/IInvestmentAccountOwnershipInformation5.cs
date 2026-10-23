@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the ownership of an investment account.
 /// </summary>
 [IsoId("_TTyC-dp-Ed-ak6NoX_4Aeg_-400113795")]
+[IsoDisplayName(@"Investment Account Ownership Information")]
 public interface IInvestmentAccountOwnershipInformation5 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface IInvestmentAccountOwnershipInformation5 : IIsoComponent
     [IsoId("_TTyC_dp-Ed-ak6NoX_4Aeg_-400113208")]
     [DisplayName("Extended Money Laundering Check")]
     [IsoXmlTag("XtndedMnyLndrgChck")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedMoneyLaunderingCheck { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IInvestmentAccountOwnershipInformation5 : IIsoComponent
     [IsoId("_TTyC_tp-Ed-ak6NoX_4Aeg_-1033915899")]
     [DisplayName("Investor Profile Validation")]
     [IsoXmlTag("InvstrPrflVldtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyProfileInformation1> InvestorProfileValidation { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IInvestmentAccountOwnershipInformation5 : IIsoComponent
     [IsoId("_TT7M4Np-Ed-ak6NoX_4Aeg_-400112769")]
     [DisplayName("Ownership Beneficiary Rate")]
     [IsoXmlTag("OwnrshBnfcryRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OwnershipBeneficiaryRate { get; }
 
     /// <summary>
@@ -65,6 +70,8 @@ public interface IInvestmentAccountOwnershipInformation5 : IIsoComponent
     [IsoId("_TT7M4dp-Ed-ak6NoX_4Aeg_-400112242")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientIdentification { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IInvestmentAccountOwnershipInformation5 : IIsoComponent
     [IsoId("_TT7M4tp-Ed-ak6NoX_4Aeg_-400111857")]
     [DisplayName("Fiscal Exemption")]
     [IsoXmlTag("FsclXmptn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FiscalExemption { get; }
 
     /// <summary>
@@ -81,5 +89,6 @@ public interface IInvestmentAccountOwnershipInformation5 : IIsoComponent
     [IsoId("_TT7M49p-Ed-ak6NoX_4Aeg_-400111737")]
     [DisplayName("Signatory Right Indicator")]
     [IsoXmlTag("SgntryRghtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SignatoryRightIndicator { get; }
 }

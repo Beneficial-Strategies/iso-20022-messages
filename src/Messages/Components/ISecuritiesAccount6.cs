@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the securities account.
 /// </summary>
 [IsoId("_QUTaGdp-Ed-ak6NoX_4Aeg_477135220")]
+[IsoDisplayName(@"Securities Account")]
 public interface ISecuritiesAccount6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ISecuritiesAccount6 : IIsoComponent
     [IsoId("_QUckAdp-Ed-ak6NoX_4Aeg_1621375386")]
     [DisplayName("Securities Account Identification")]
     [IsoXmlTag("SctiesAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SecuritiesAccountIdentification { get; }
 
     /// <summary>
@@ -49,5 +52,7 @@ public interface ISecuritiesAccount6 : IIsoComponent
     [IsoId("_QUckBNp-Ed-ak6NoX_4Aeg_-1394411677")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? RegistrationDetails { get; }
 }

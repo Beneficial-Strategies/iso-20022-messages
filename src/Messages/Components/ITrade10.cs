@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade10.
 /// </summary>
 [IsoId("_jXw8Ae3vEe6nAu63uIo75Q")]
+[IsoDisplayName(@"Trade10")]
 public interface ITrade10 : IIsoComponent
 {
     /// <summary>
@@ -114,5 +115,6 @@ public interface ITrade10 : IIsoComponent
     /// </summary>
     [DisplayName("Associated Trade Reference")]
     [IsoXmlTag("AssoctdTradRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max70Text> AssociatedTradeReference { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Non-protected sensitive data associated with the card or payment token performing the transaction.
 /// </summary>
 [IsoId("_RcdeYIEHEeu6D49Gi-ZPwQ")]
+[IsoDisplayName(@"Card Data")]
 public interface ICardData6 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_RicxoYEHEeu6D49Gi-ZPwQ")]
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
+    [IsoSimpleType(IsoSimpleType.Max19NumericText)]
     Max19NumericText? PAN { get; }
 
     /// <summary>
@@ -29,6 +31,7 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_RidYsYEHEeu6D49Gi-ZPwQ")]
     [DisplayName("Protected PAN Indicator")]
     [IsoXmlTag("PrtctdPANInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ProtectedPANIndicator { get; }
 
     /// <summary>
@@ -38,6 +41,7 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_RidYs4EHEeu6D49Gi-ZPwQ")]
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
     Min2Max3NumericText? CardSequenceNumber { get; }
 
     /// <summary>
@@ -47,6 +51,7 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_RidYtYEHEeu6D49Gi-ZPwQ")]
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? EffectiveDate { get; }
 
     /// <summary>
@@ -56,6 +61,7 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_RidYt4EHEeu6D49Gi-ZPwQ")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? ExpiryDate { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_RidYuYEHEeu6D49Gi-ZPwQ")]
     [DisplayName("Service Code")]
     [IsoXmlTag("SvcCd")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? ServiceCode { get; }
 
     /// <summary>
@@ -74,6 +81,8 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_RidYu4EHEeu6D49Gi-ZPwQ")]
     [DisplayName("Track")]
     [IsoXmlTag("Trck1")]
+    [IsoSimpleType(IsoSimpleType.Max76Text)]
+    [StringLength(76, MinimumLength = 1)]
     Max76Text? Track1 { get; }
 
     /// <summary>
@@ -92,6 +101,8 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_RidYv4EHEeu6D49Gi-ZPwQ")]
     [DisplayName("Track")]
     [IsoXmlTag("Trck3")]
+    [IsoSimpleType(IsoSimpleType.Max104Text)]
+    [StringLength(104, MinimumLength = 1)]
     Max104Text? Track3 { get; }
 
     /// <summary>
@@ -103,6 +114,8 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_RidYwYEHEeu6D49Gi-ZPwQ")]
     [DisplayName("Payment Account Reference")]
     [IsoXmlTag("PmtAcctRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentAccountReference { get; }
 
     /// <summary>
@@ -111,6 +124,7 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_CYCp4TEEEeyjbpgZW6G1Fg")]
     [DisplayName("PAN Account Range")]
     [IsoXmlTag("PANAcctRg")]
+    [IsoSimpleType(IsoSimpleType.Max19NumericText)]
     Max19NumericText? PANAccountRange { get; }
 
     /// <summary>
@@ -128,6 +142,8 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_RidYxYEHEeu6D49Gi-ZPwQ")]
     [DisplayName("Card Product Type")]
     [IsoXmlTag("CardPdctTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardProductType { get; }
 
     /// <summary>
@@ -136,6 +152,8 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_RidYx4EHEeu6D49Gi-ZPwQ")]
     [DisplayName("Card Product Sub Type")]
     [IsoXmlTag("CardPdctSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardProductSubType { get; }
 
     /// <summary>
@@ -144,6 +162,8 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_RidYyYEHEeu6D49Gi-ZPwQ")]
     [DisplayName("Card Portfolio Identifier")]
     [IsoXmlTag("CardPrtflIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardPortfolioIdentifier { get; }
 
     /// <summary>
@@ -152,5 +172,6 @@ public interface ICardData6 : IIsoComponent
     [IsoId("_RidYy4EHEeu6D49Gi-ZPwQ")]
     [DisplayName("Additional Card Data")]
     [IsoXmlTag("AddtlCardData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalCardData { get; }
 }

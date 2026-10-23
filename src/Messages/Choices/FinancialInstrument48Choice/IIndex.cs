@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument48Choice;
 /// </summary>
 [IsoId("_HYrJVX5aEea2k7EBUopqxw")]
 [IsoXmlTag("Indx")]
+[IsoDisplayName(@"Index")]
 public interface IIndex : IFinancialInstrument48Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IIndex : IFinancialInstrument48Choice, IIsoChoiceVariant
     [IsoId("_HhTg4X5aEea2k7EBUopqxw")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? ISIN { get; }
 
     /// <summary>

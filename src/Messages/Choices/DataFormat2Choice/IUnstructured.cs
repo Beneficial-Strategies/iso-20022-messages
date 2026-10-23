@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DataFormat2Choice;
 /// Specification of data for which there isn&apos;t a structured form.
 /// </summary>
 [IsoId("_Q6vvB9p-Ed-ak6NoX_4Aeg_-2132356031")]
+[IsoDisplayName(@"Unstructured")]
 public interface IUnstructured : IDataFormat2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IUnstructured : IDataFormat2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 140 characters.
     /// </summary>
     [IsoXmlTag("Ustrd")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Value { get; }
 }

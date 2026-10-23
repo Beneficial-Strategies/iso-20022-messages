@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Distance between a start and a return car rental period.
 /// </summary>
 [IsoId("_M0xaMF_pEee-csPAW1txwQ")]
+[IsoDisplayName(@"Distance")]
 public interface IDistance1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IDistance1 : IIsoComponent
     [IsoId("_B81x4F_qEee-csPAW1txwQ")]
     [DisplayName("Odometer Start")]
     [IsoXmlTag("OdmtrStart")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? OdometerStart { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IDistance1 : IIsoComponent
     [IsoId("_KHAW8F_qEee-csPAW1txwQ")]
     [DisplayName("Odometer Return")]
     [IsoXmlTag("OdmtrRtr")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? OdometerReturn { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IDistance1 : IIsoComponent
     [IsoId("_PvfCYF_qEee-csPAW1txwQ")]
     [DisplayName("Total Distance")]
     [IsoXmlTag("TtlDstnc")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? TotalDistance { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IDistance1 : IIsoComponent
     [IsoId("_XtVCsF_qEee-csPAW1txwQ")]
     [DisplayName("Free Distance")]
     [IsoXmlTag("FreeDstnc")]
+    [IsoSimpleType(IsoSimpleType.Max10NumericText)]
     Max10NumericText? FreeDistance { get; }
 
     /// <summary>

@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of format for underlying payment or statement data.</summary>
 [IsoId("24af6bff-ee4a-4c33-908e-c0da6fcb6a57")]
+[IsoDisplayName(@"Underlying Data 13 Choice")]
 public interface IUnderlyingData13Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor parameters dedicated to a payment application of the point of interaction.
 /// </summary>
 [IsoId("_fidxgdX4Eeia9rtBTv_9KA")]
+[IsoDisplayName(@"Application Parameters")]
 public interface IApplicationParameters8 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IApplicationParameters8 : IIsoComponent
     [IsoId("_fsB9M9X4Eeia9rtBTv_9KA")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ApplicationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IApplicationParameters8 : IIsoComponent
     [IsoId("_fsB9NdX4Eeia9rtBTv_9KA")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Version { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IApplicationParameters8 : IIsoComponent
     [IsoId("_FGrPMdX4Eeia9rtBTv_9KA")]
     [DisplayName("Parameter Format Identifier")]
     [IsoXmlTag("ParamFrmtIdr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? ParameterFormatIdentifier { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IApplicationParameters8 : IIsoComponent
     [IsoId("_fsB9N9X4Eeia9rtBTv_9KA")]
     [DisplayName("Parameters")]
     [IsoXmlTag("Params")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max100KBinary> Parameters { get; }
 
     /// <summary>

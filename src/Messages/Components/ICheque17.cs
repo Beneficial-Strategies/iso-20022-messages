@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cheque17.
 /// </summary>
 [IsoId("_09KvsTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Cheque17")]
 public interface ICheque17 : IIsoComponent
 {
     /// <summary>
@@ -100,5 +101,6 @@ public interface ICheque17 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Cheque Agent")]
     [IsoXmlTag("InstrForChqAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForChequeAgent1> InstructionForChequeAgent { get; }
 }

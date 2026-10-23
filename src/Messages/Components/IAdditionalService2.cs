@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional functions or services that have been or are to be performed in conjunction with the transaction.
 /// </summary>
 [IsoId("_KvaacZ1JEeublrfU-wN95w")]
+[IsoDisplayName(@"Additional Service")]
 public interface IAdditionalService2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAdditionalService2 : IIsoComponent
     [IsoId("_K05XYZ1JEeublrfU-wN95w")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IAdditionalService2 : IIsoComponent
     [IsoId("_mYWP4J1KEeublrfU-wN95w")]
     [DisplayName("Other Result")]
     [IsoXmlTag("OthrRslt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherResult { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IAdditionalService2 : IIsoComponent
     [IsoId("_DODP4J1LEeublrfU-wN95w")]
     [DisplayName("Service Detail")]
     [IsoXmlTag("SvcDtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> ServiceDetail { get; }
 }

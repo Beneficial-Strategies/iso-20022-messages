@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Status applying globally to the instruction received.
 /// </summary>
 [IsoId("_8v5Era-nEemJ1NnLPsTFaw")]
+[IsoDisplayName(@"Instruction Status 8 Choice")]
 public interface IInstructionStatus8Choice : IIsoChoice { }

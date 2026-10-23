@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport34Choice;
 /// <summary>
 /// Correction.
 /// </summary>
+[IsoDisplayName(@"Correction")]
 public interface ICorrection : ITradeReport34Choice, IIsoChoiceVariant
 {
     /// <summary>

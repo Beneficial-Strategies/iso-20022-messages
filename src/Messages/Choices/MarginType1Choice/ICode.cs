@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginType1Choice;
 /// Provides the margin type using a code.
 /// </summary>
 [IsoId("_-axnkaMOEeCojJW5vEuTEQ_8773811")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMarginType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateSetupReason1Choice;
 /// Reason for the mandate setup, as published in an external reason code list.
 /// </summary>
 [IsoId("_iQq8NT2OEeS6DKIV6SF6gw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMandateSetupReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

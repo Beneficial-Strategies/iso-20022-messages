@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity36Cho
 /// Quantity expressed as a number, for example, a number of shares.
 /// </summary>
 [IsoId("_peY04Ti7Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Unit")]
 public interface IUnit : IFinancialInstrumentQuantity36Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IUnit : IFinancialInstrumentQuantity36Choice, IIsoChoiceVariant
     /// Number of objects represented as a decimal number, for example, 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
     RestrictedFINDecimalNumber Value { get; }
 }

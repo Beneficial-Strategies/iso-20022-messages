@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Price Rate Or Amount8Choice.
 /// </summary>
 [IsoId("_qbKxCZK5Ee-l-O3vIHRmRw")]
+[IsoDisplayName(@"Price Rate Or Amount8Choice")]
 public interface IPriceRateOrAmount8Choice : IIsoChoice { }

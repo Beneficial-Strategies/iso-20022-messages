@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosurePendingStatusReason1Choic
 /// </summary>
 [IsoId("_UwXSs2CLEeabZtzjEVWYCQ")]
 [IsoXmlTag("Rsn")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IClosurePendingStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IReason : IClosurePendingStatusReason1Choice, IIsoChoiceVariant
     [IsoId("_1EL_Y2CLEeabZtzjEVWYCQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

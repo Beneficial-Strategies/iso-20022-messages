@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amounts of the deposit transaction.
 /// </summary>
 [IsoId("_7175Qa4AEeWL1uap3dNhCQ")]
+[IsoDisplayName(@"Detailed Amount")]
 public interface IDetailedAmount16 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDetailedAmount16 : IIsoComponent
     [IsoId("_FgDOIK4BEeWL1uap3dNhCQ")]
     [DisplayName("Account Sequence Number")]
     [IsoXmlTag("AcctSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? AccountSequenceNumber { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IDetailedAmount16 : IIsoComponent
     [IsoId("_8BHOha4AEeWL1uap3dNhCQ")]
     [DisplayName("Fees")]
     [IsoXmlTag("Fees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount13> Fees { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface IDetailedAmount16 : IIsoComponent
     [IsoId("_8BHOh64AEeWL1uap3dNhCQ")]
     [DisplayName("Donation")]
     [IsoXmlTag("Dontn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount13> Donation { get; }
 }

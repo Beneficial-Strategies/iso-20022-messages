@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource5Choice;
 /// Entity that issues the proprietary identification.
 /// </summary>
 [IsoId("_n7S8I19NEeS7xuKaq75oiQ")]
+[IsoDisplayName(@"Proprietary Identification Source")]
 public interface IProprietaryIdentificationSource : IIdentificationSource5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietaryIdentificationSource : IIdentificationSource5Choice
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("PrtryIdSrc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

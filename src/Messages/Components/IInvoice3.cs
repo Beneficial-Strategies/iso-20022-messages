@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Invoice3.
 /// </summary>
 [IsoId("_5qsCYXNXEe6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Invoice3")]
 public interface IInvoice3 : IIsoComponent
 {
     /// <summary>
@@ -135,6 +136,7 @@ public interface IInvoice3 : IIsoComponent
     /// </summary>
     [DisplayName("Tax Total")]
     [IsoXmlTag("TaxTtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax41> TaxTotal { get; }
 
     /// <summary>
@@ -149,6 +151,7 @@ public interface IInvoice3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 
     /// <summary>
@@ -156,5 +159,6 @@ public interface IInvoice3 : IIsoComponent
     /// </summary>
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvoiceLineItem3> LineItem { get; }
 }

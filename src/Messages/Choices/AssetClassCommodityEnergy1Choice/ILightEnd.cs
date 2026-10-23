@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy1Choice
 /// </summary>
 [IsoId("_GHehsFrXEeWN79Bl6BUd3g")]
 [IsoXmlTag("LghtEnd")]
+[IsoDisplayName(@"Light End")]
 public interface ILightEnd : IAssetClassCommodityEnergy1Choice, IIsoChoiceVariant
 {
     /// <summary>

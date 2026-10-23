@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification2Choice;
 /// Identification of a securities account.
 /// </summary>
 [IsoId("_Rjkpmdp-Ed-ak6NoX_4Aeg_136863972")]
+[IsoDisplayName(@"Securities Account Identification")]
 public interface ISecuritiesAccountIdentification : IAccountIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ISecuritiesAccountIdentification : IAccountIdentification2Choic
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("SctiesAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

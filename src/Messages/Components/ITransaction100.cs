@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Key exchange activity transaction.
 /// </summary>
 [IsoId("_ZtxdcVWXEeeiG_nL4vgKnQ")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction100 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITransaction100 : IIsoComponent
     [IsoId("_Z5FVk1WXEeeiG_nL4vgKnQ")]
     [DisplayName("Other Key Exchange Function")]
     [IsoXmlTag("OthrKeyXchgFctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherKeyExchangeFunction { get; }
 
     /// <summary>
@@ -35,6 +38,7 @@ public interface ITransaction100 : IIsoComponent
     [IsoId("_Z5FVmVWXEeeiG_nL4vgKnQ")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Exact4NumericText> MessageReason { get; }
 
     /// <summary>
@@ -43,6 +47,8 @@ public interface ITransaction100 : IIsoComponent
     [IsoId("_Z5FVm1WXEeeiG_nL4vgKnQ")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AlternateMessageReason { get; }
 
     /// <summary>
@@ -67,6 +73,8 @@ public interface ITransaction100 : IIsoComponent
     [IsoId("_4oO2Uf8cEeic54G0fOJNMg")]
     [DisplayName("Other Key Exchange Type")]
     [IsoXmlTag("OthrKeyXchgTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherKeyExchangeType { get; }
 
     /// <summary>
@@ -84,6 +92,7 @@ public interface ITransaction100 : IIsoComponent
     [IsoId("_55egQvF9EeiGNursv3uE_g")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee1> AdditionalFees { get; }
 
     /// <summary>
@@ -92,5 +101,6 @@ public interface ITransaction100 : IIsoComponent
     [IsoId("_dWsFMRqnEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number1Choice;
 /// Number of maximum 3 numeric text.
 /// </summary>
 [IsoId("_RdKflNp-Ed-ak6NoX_4Aeg_-2117497176")]
+[IsoDisplayName(@"Number Identification")]
 public interface INumberIdentification : INumber1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INumberIdentification : INumber1Choice, IIsoChoiceVariant
     /// Specifies a numeric string with a maximum length of 3 digits.
     /// </summary>
     [IsoXmlTag("NbId")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText Value { get; }
 }

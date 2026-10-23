@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingVenueIdentification1Choic
 /// </summary>
 [IsoId("_IkBp4Dd7EeWebbGLlGzH3g")]
 [IsoXmlTag("Othr")]
+[IsoDisplayName(@"Other")]
 public interface IOther : ITradingVenueIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOther : ITradingVenueIdentification1Choice, IIsoChoiceVariant
     [IsoId("_4sMdk10hEeWErPfQ7BYx8A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text Identification { get; }
 
     /// <summary>

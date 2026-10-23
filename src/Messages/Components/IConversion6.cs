@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a financial instrument.
 /// </summary>
 [IsoId("57ef7968-f5e2-4699-a4a6-764e699ef427")]
+[IsoDisplayName(@"Conversion6")]
 public interface IConversion6 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IConversion6 : IIsoComponent
     [IsoId("1c68536d-7e60-4e56-99bb-e461bbc89644")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reconciliation Counterparty Pair Statistics7.
 /// </summary>
 [IsoId("_BUWnQZBIEe6Ojt1b3tfu9Q")]
+[IsoDisplayName(@"Reconciliation Counterparty Pair Statistics7")]
 public interface IReconciliationCounterpartyPairStatistics7 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IReconciliationCounterpartyPairStatistics7 : IIsoComponent
     /// </summary>
     [DisplayName("Reconciliation Report")]
     [IsoXmlTag("RcncltnRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReconciliationReport15> ReconciliationReport { get; }
 }

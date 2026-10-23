@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the amount and type of the referred document.
 /// </summary>
 [IsoId("_vRiGoDKzEe6dJsbzsnAdDg")]
+[Description(@"Provides details on the amount and type of the referred document.")]
+[IsoDisplayName(@"Document Amount1")]
 public interface IDocumentAmount1 : IIsoComponent
 {
     /// <summary>

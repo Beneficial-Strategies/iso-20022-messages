@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes of energy related derivatives.
 /// </summary>
 [IsoId("_d_O8oQzwEe2YoLD-1vFj0g")]
+[IsoDisplayName(@"Energy Specific Attribute")]
 public interface IEnergySpecificAttribute9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IEnergySpecificAttribute9 : IIsoComponent
     [IsoId("_eAuKYQzwEe2YoLD-1vFj0g")]
     [DisplayName("Delivery Point Or Zone")]
     [IsoXmlTag("DlvryPtOrZone")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDeliveryInterconnectionPoint1Choice> DeliveryPointOrZone { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IEnergySpecificAttribute9 : IIsoComponent
     [IsoId("_eAuKZwzwEe2YoLD-1vFj0g")]
     [DisplayName("Delivery Attribute")]
     [IsoXmlTag("DlvryAttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEnergyDeliveryAttribute10> DeliveryAttribute { get; }
 }

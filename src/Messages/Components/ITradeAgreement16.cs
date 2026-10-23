@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contractual details related to the agreement between parties.
 /// </summary>
 [IsoId("_Issv0eWnEeevU7McUP3D1w")]
+[IsoDisplayName(@"Trade Agreement")]
 public interface ITradeAgreement16 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ITradeAgreement16 : IIsoComponent
     [IsoId("_I1Xjq-WnEeevU7McUP3D1w")]
     [DisplayName("Additional Reference Document")]
     [IsoXmlTag("AddtlRefDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation2> AdditionalReferenceDocument { get; }
 
     /// <summary>

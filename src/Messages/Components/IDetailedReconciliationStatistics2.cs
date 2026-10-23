@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed statistics on reconciliation.
 /// </summary>
 [IsoId("_6PTLRVfcEeqZr5K1Woax-g")]
+[IsoDisplayName(@"Detailed Reconciliation Statistics")]
 public interface IDetailedReconciliationStatistics2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDetailedReconciliationStatistics2 : IIsoComponent
     [IsoId("_6lXh4VfcEeqZr5K1Woax-g")]
     [DisplayName("Total Accepted")]
     [IsoXmlTag("TtlAccptd")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber TotalAccepted { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IDetailedReconciliationStatistics2 : IIsoComponent
     [IsoId("_6lXh41fcEeqZr5K1Woax-g")]
     [DisplayName("Total Not Submitted To Reconciliation")]
     [IsoXmlTag("TtlNotSubmittdToRcncltn")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber TotalNotSubmittedToReconciliation { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IDetailedReconciliationStatistics2 : IIsoComponent
     [IsoId("_6lXh5VfcEeqZr5K1Woax-g")]
     [DisplayName("Total Single Sided EEA Unpaired")]
     [IsoXmlTag("TtlSnglSddEEAUnprd")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber TotalSingleSidedEEAUnpaired { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IDetailedReconciliationStatistics2 : IIsoComponent
     [IsoId("_6lXh51fcEeqZr5K1Woax-g")]
     [DisplayName("Total Single Sided EEA Paired")]
     [IsoXmlTag("TtlSnglSddEEAPaird")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber TotalSingleSidedEEAPaired { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IDetailedReconciliationStatistics2 : IIsoComponent
     [IsoId("_6lXh6VfcEeqZr5K1Woax-g")]
     [DisplayName("Total Single Sided EEA Matched")]
     [IsoXmlTag("TtlSnglSddEEAMtchd")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber TotalSingleSidedEEAMatched { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IDetailedReconciliationStatistics2 : IIsoComponent
     [IsoId("_6lXh61fcEeqZr5K1Woax-g")]
     [DisplayName("Total Dual Sided Non Matched")]
     [IsoXmlTag("TtlDualSddNonMtchd")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber TotalDualSidedNonMatched { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IDetailedReconciliationStatistics2 : IIsoComponent
     [IsoId("_6lXh7VfcEeqZr5K1Woax-g")]
     [DisplayName("Total Dual Sided Matched")]
     [IsoXmlTag("TtlDualSddMtchd")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber TotalDualSidedMatched { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IDetailedReconciliationStatistics2 : IIsoComponent
     [IsoId("_6lXh71fcEeqZr5K1Woax-g")]
     [DisplayName("Total Single Sided Non EEA")]
     [IsoXmlTag("TtlSnglSddNonEEA")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber TotalSingleSidedNonEEA { get; }
 
     /// <summary>
@@ -81,5 +90,6 @@ public interface IDetailedReconciliationStatistics2 : IIsoComponent
     [IsoId("_6lXh8VfcEeqZr5K1Woax-g")]
     [DisplayName("Top Reasons For Paired Non Matched")]
     [IsoXmlTag("TopRsnsForPairdNonMtchd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TopReasonsForPairedNonMatched { get; }
 }

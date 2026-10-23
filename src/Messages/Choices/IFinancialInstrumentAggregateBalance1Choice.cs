@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of holding indicator and aggregated position of holdings.
 /// </summary>
 [IsoId("_PW7ItqCCEeOEyO7fCl8lLA")]
+[IsoDisplayName(@"Financial Instrument Aggregate Balance 1 Choice")]
 public interface IFinancialInstrumentAggregateBalance1Choice : IIsoChoice { }

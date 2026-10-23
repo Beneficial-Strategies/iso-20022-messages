@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason for the settlement fails as defined in the relevant regulation.
 /// </summary>
 [IsoId("_nWYekSGkEeqlG_HhjTmcZg")]
+[IsoDisplayName(@"Settlement Failure Reason")]
 public interface ISettlementFailureReason3 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface ISettlementFailureReason3 : IIsoComponent
     [IsoId("_nXq4ASGkEeqlG_HhjTmcZg")]
     [DisplayName("Average Duration")]
     [IsoXmlTag("AvrgDrtn")]
+    [IsoSimpleType(IsoSimpleType.Max2Fraction1NonNegativeNumber)]
     Max2Fraction1NonNegativeNumber? AverageDuration { get; }
 
     /// <summary>
@@ -27,5 +29,6 @@ public interface ISettlementFailureReason3 : IIsoComponent
     [IsoId("_nXq4AyGkEeqlG_HhjTmcZg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementFailureReason2> Description { get; }
 }

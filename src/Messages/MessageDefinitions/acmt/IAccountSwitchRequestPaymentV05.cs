@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_R3AntzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("acmt.034.001.05", "AcctSwtchReqPmt", "urn:iso:std:iso:20022:tech:xsd:acmt.034.001.05")]
+[Description(@"The AccountSwitchRequestPayment message is sent by the old account servicer to the new account servicer after the completion of the account switch to request the transfer of funds for a payment that the previous account servicer has had to make from the old account (for example: the settlement of a card transaction that was authorised offline).")]
+[IsoDisplayName(@"Account Switch Request Payment V05")]
 public interface IAccountSwitchRequestPaymentV05 : IOuterRecord
 {
     /// <summary>
@@ -51,5 +53,6 @@ public interface IAccountSwitchRequestPaymentV05 : IOuterRecord
     [IsoId("_R3AnwzEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

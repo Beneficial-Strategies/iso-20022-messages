@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the repair reason.
 /// </summary>
 [IsoId("_ZffRYemrEemUgrefIx730g")]
+[IsoDisplayName(@"Corporate Action Event Type 88 Choice")]
 public interface ICorporateActionEventType88Choice : IIsoChoice { }

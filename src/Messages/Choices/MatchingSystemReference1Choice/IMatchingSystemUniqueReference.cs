@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingSystemReference1Choice;
 /// Reference to the unique system identification assigned to the trade by the central matching system.
 /// </summary>
 [IsoId("_0rPdA4ufEeKYr_965Eh8aQ")]
+[IsoDisplayName(@"Matching System Unique Reference")]
 public interface IMatchingSystemUniqueReference : IMatchingSystemReference1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IMatchingSystemUniqueReference : IMatchingSystemReference1Choic
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("MtchgSysUnqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

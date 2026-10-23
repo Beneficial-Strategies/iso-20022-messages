@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a bonus paid out or a withdrawal.
 /// </summary>
 [IsoId("_K37R0F23EeiFXdiLi_Nf4A")]
+[IsoDisplayName(@"Bonus Withdrawal")]
 public interface IBonusWithdrawal1 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IBonusWithdrawal1 : IIsoComponent
     [IsoId("_Q-AfR123EeiFXdiLi_Nf4A")]
     [DisplayName("Outstanding")]
     [IsoXmlTag("Outsdng")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Outstanding { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IBonusWithdrawal1 : IIsoComponent
     [IsoId("_u-KIsZDGEeiQvr1XXv37hw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

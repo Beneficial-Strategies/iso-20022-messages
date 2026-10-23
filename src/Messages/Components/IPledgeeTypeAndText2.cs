@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the entity to which the financial instruments are pledged expressed as a code and a narrative description.
 /// </summary>
 [IsoId("_Sg8bNW_nEeSNvKTulh2IuA")]
+[IsoDisplayName(@"Pledgee Type And Text")]
 public interface IPledgeeTypeAndText2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPledgeeTypeAndText2 : IIsoComponent
     [IsoId("_Sg8bN2_nEeSNvKTulh2IuA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax30Text)]
+    [StringLength(30, MinimumLength = 1)]
     RestrictedFINMax30Text? Identification { get; }
 
     /// <summary>

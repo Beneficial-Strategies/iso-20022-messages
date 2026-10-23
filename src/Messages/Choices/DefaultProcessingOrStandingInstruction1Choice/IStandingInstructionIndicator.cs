@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DefaultProcessingOrStandingInstr
 /// Indicates whether an account owner has placed a standing order to select this corporate action option.
 /// </summary>
 [IsoId("_Q0VlBNp-Ed-ak6NoX_4Aeg_-857961387")]
+[IsoDisplayName(@"Standing Instruction Indicator")]
 public interface IStandingInstructionIndicator
     : IDefaultProcessingOrStandingInstruction1Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IStandingInstructionIndicator
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("StgInstrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cryptographic algorithm and parameters for encryptions with a symmetric cryptographic key.
 /// </summary>
 [IsoId("_YSxbcaQtEeeWXKXf3KjtmQ")]
+[IsoDisplayName(@"Algorithm Identification")]
 public interface IAlgorithmIdentification25 : IIsoComponent
 {
     /// <summary>

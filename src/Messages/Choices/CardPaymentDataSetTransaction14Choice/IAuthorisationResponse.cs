@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction14C
 
 /// <summary>Card payment transaction including an authorisation response.</summary>
 [IsoId("_tKIfZ7YJEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Authorisation Response")]
 public interface IAuthorisationResponse : ICardPaymentDataSetTransaction14Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

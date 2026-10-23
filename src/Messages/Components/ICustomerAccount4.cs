@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account owned by a customer.
 /// </summary>
 [IsoId("_1qi_0Q1ZEeKGXqvMN6jpiw")]
+[IsoDisplayName(@"Customer Account")]
 public interface ICustomerAccount4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICustomerAccount4 : IIsoComponent
     [IsoId("_2ATNZQ1ZEeKGXqvMN6jpiw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ICustomerAccount4 : IIsoComponent
     [IsoId("_2ATNfQ1ZEeKGXqvMN6jpiw")]
     [DisplayName("Monthly Transaction Number")]
     [IsoXmlTag("MnthlyTxNb")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? MonthlyTransactionNumber { get; }
 
     /// <summary>
@@ -89,6 +93,8 @@ public interface ICustomerAccount4 : IIsoComponent
     [IsoId("_2ATNhQ1ZEeKGXqvMN6jpiw")]
     [DisplayName("Account Purpose")]
     [IsoXmlTag("AcctPurp")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AccountPurpose { get; }
 
     /// <summary>
@@ -113,6 +119,7 @@ public interface ICustomerAccount4 : IIsoComponent
     [IsoId("_2ATNkQ1ZEeKGXqvMN6jpiw")]
     [DisplayName("Statement Frequency And Format")]
     [IsoXmlTag("StmtFrqcyAndFrmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatementFrequencyAndForm1> StatementFrequencyAndFormat { get; }
 
     /// <summary>
@@ -121,6 +128,7 @@ public interface ICustomerAccount4 : IIsoComponent
     [IsoId("_2ATNlQ1ZEeKGXqvMN6jpiw")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClosingDate { get; }
 
     /// <summary>
@@ -129,5 +137,6 @@ public interface ICustomerAccount4 : IIsoComponent
     [IsoId("_2ATNmQ1ZEeKGXqvMN6jpiw")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRestriction1> Restriction { get; }
 }

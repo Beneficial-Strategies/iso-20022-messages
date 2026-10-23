@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_uMgQ9y-1Ee-7Nrf72hv69A")]
 [IsoMessage("reda.045.001.01", "SctyCSDLkCreReq", "urn:iso:std:iso:20022:tech:xsd:reda.045.001.01")]
+[IsoDisplayName(@"Security CSD Link Creation Request V01")]
 public interface ISecurityCSDLinkCreationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISecurityCSDLinkCreationRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Security CSD Link")]
     [IsoXmlTag("SctyCSDLk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityCSDLink12> SecurityCSDLink { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface ISecurityCSDLinkCreationRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

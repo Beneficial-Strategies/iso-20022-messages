@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the statement.
 /// </summary>
 [IsoId("_XdISgStMEeyOa655cLd-DQ")]
+[IsoDisplayName(@"Statement")]
 public interface IStatement85 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStatement85 : IIsoComponent
     [IsoId("_X2UOkStMEeyOa655cLd-DQ")]
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text StatementIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IStatement85 : IIsoComponent
     [IsoId("_X2UOkytMEeyOa655cLd-DQ")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data associated with the transaction during the authorisation.
 /// </summary>
 [IsoId("_NGF1sZ_9EfC4Q_xhaK1hdQ")]
+[IsoDisplayName(@"Card Payment Transaction146")]
 public interface ICardPaymentTransaction146 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICardPaymentTransaction146 : IIsoComponent
     [IsoId("_NHHwgZ_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardPaymentServiceType9Code> AdditionalService { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface ICardPaymentTransaction146 : IIsoComponent
     [IsoId("_NHHwn5_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CardProgrammeProposed { get; }
 
     /// <summary>
@@ -177,6 +180,7 @@ public interface ICardPaymentTransaction146 : IIsoComponent
     [IsoId("_NHHw7Z_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AdditionalTransactionData { get; }
 
     /// <summary>
@@ -185,5 +189,6 @@ public interface ICardPaymentTransaction146 : IIsoComponent
     [IsoId("_rSbRcJ_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Message From Merchant")]
     [IsoXmlTag("MsgFrMrchnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction18> MessageFromMerchant { get; }
 }

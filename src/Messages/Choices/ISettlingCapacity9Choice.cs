@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the settlement capacity information.
 /// </summary>
 [IsoId("_hOSOwZEZEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Settling Capacity 9 Choice")]
 public interface ISettlingCapacity9Choice : IIsoChoice { }

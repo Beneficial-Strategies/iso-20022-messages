@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a securities account and its characteristics.
 /// </summary>
 [IsoId("_QqdlYZS8EemqYPWMBuVawg")]
+[IsoDisplayName(@"Investment Account")]
 public interface IInvestmentAccount75 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IInvestmentAccount75 : IIsoComponent
     [IsoId("_Q-GTHZS8EemqYPWMBuVawg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IInvestmentAccount75 : IIsoComponent
     [IsoId("_Q-GTH5S8EemqYPWMBuVawg")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Designation { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface IInvestmentAccount75 : IIsoComponent
     [IsoId("_Q-GTL5S8EemqYPWMBuVawg")]
     [DisplayName("Reinvestment Details")]
     [IsoXmlTag("RinvstmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReinvestment4> ReinvestmentDetails { get; }
 
     /// <summary>
@@ -113,6 +119,7 @@ public interface IInvestmentAccount75 : IIsoComponent
     [IsoId("_Q-GTM5S8EemqYPWMBuVawg")]
     [DisplayName("Tax Reporting")]
     [IsoXmlTag("TaxRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxReporting3> TaxReporting { get; }
 
     /// <summary>
@@ -129,6 +136,8 @@ public interface IInvestmentAccount75 : IIsoComponent
     [IsoId("_Q-GTN5S8EemqYPWMBuVawg")]
     [DisplayName("Accumulation Right Reference")]
     [IsoXmlTag("AcmltnRghtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccumulationRightReference { get; }
 
     /// <summary>
@@ -137,6 +146,7 @@ public interface IInvestmentAccount75 : IIsoComponent
     [IsoId("_Q-GTOZS8EemqYPWMBuVawg")]
     [DisplayName("Required Signatories Number")]
     [IsoXmlTag("ReqrdSgntriesNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? RequiredSignatoriesNumber { get; }
 
     /// <summary>
@@ -145,6 +155,8 @@ public interface IInvestmentAccount75 : IIsoComponent
     [IsoId("_Q-GTO5S8EemqYPWMBuVawg")]
     [DisplayName("Fund Family Name")]
     [IsoXmlTag("FndFmlyNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FundFamilyName { get; }
 
     /// <summary>
@@ -153,6 +165,7 @@ public interface IInvestmentAccount75 : IIsoComponent
     [IsoId("_Q-GTPZS8EemqYPWMBuVawg")]
     [DisplayName("Modified Financial Instrument Details")]
     [IsoXmlTag("ModfdFinInstrmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope42> ModifiedFinancialInstrumentDetails { get; }
 
     /// <summary>
@@ -281,6 +294,7 @@ public interface IInvestmentAccount75 : IIsoComponent
     [IsoId("_Q-GTXZS8EemqYPWMBuVawg")]
     [DisplayName("Negative Indicator")]
     [IsoXmlTag("NegInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NegativeIndicator { get; }
 
     /// <summary>
@@ -305,6 +319,7 @@ public interface IInvestmentAccount75 : IIsoComponent
     [IsoId("_Q-GTY5S8EemqYPWMBuVawg")]
     [DisplayName("Modified Investor Profile")]
     [IsoXmlTag("ModfdInvstrPrfl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope46> ModifiedInvestorProfile { get; }
 
     /// <summary>

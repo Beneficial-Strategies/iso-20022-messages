@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus3Choice;
 /// </summary>
 [IsoId("_vIDnY0H7EeaV3ab_pHzFIQ")]
 [IsoXmlTag("Canc")]
+[IsoDisplayName(@"Cancelled")]
 public interface ICancelled : IOrderStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface ICancelled : IOrderStatus3Choice, IIsoChoiceVariant
     [IsoId("_YZDVI0HVEeasdbKMiqizqA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

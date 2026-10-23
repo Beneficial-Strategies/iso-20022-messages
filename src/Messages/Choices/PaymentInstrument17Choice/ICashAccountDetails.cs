@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument17Choice;
 /// </summary>
 [IsoId("_t7vvERdHEeK5g-3oYI0_9Q")]
 [IsoXmlTag("CshAcctDtls")]
+[IsoDisplayName(@"Cash Account Details")]
 public interface ICashAccountDetails : IPaymentInstrument17Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -58,5 +59,6 @@ public interface ICashAccountDetails : IPaymentInstrument17Choice, IIsoChoiceVar
     [IsoId("_xpDeUBczEeK5g-3oYI0_9Q")]
     [DisplayName("Account Owner Other Identification")]
     [IsoXmlTag("AcctOwnrOthrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification46> AccountOwnerOtherIdentification { get; }
 }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "FinInstrmRptgNonWorkgDayRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.039.001.01"
 )]
+[Description(@"The FinancialInstrumentReportingNonWorkingDayReport message is sent by the reporting entity to the competent authority to report on non-working days.")]
+[IsoDisplayName(@"Financial Instrument Reporting Non Working Day Report V")]
 public interface IFinancialInstrumentReportingNonWorkingDayReportV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IFinancialInstrumentReportingNonWorkingDayReportV01 : IOuterRec
     [IsoId("_4LUGJURNEee7JdgA9zPESA")]
     [DisplayName("Non Working Day")]
     [IsoXmlTag("NonWorkgDay")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesNonTradingDayReport1> NonWorkingDay { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IFinancialInstrumentReportingNonWorkingDayReportV01 : IOuterRec
     [IsoId("_4LUGJ0RNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

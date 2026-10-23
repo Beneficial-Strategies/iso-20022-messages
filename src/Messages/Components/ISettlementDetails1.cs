@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
 /// </summary>
 [IsoId("_UhkEstp-Ed-ak6NoX_4Aeg_1749898448")]
+[IsoDisplayName(@"Settlement Details")]
 public interface ISettlementDetails1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementDetails1 : IIsoComponent
     [IsoId("_UhkEs9p-Ed-ak6NoX_4Aeg_-2081864948")]
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? HoldIndicator { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ISettlementDetails1 : IIsoComponent
     [IsoId("_UhkEttp-Ed-ak6NoX_4Aeg_-404749658")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementTransactionCondition1Choice> SettlementTransactionCondition { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ISettlementDetails1 : IIsoComponent
     [IsoId("_UhkEt9p-Ed-ak6NoX_4Aeg_-2062667938")]
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PartialSettlementIndicator { get; }
 
     /// <summary>
@@ -217,6 +221,7 @@ public interface ISettlementDetails1 : IIsoComponent
     [IsoId("_Uh2_qdp-Ed-ak6NoX_4Aeg_246787371")]
     [DisplayName("Return Leg")]
     [IsoXmlTag("RtrLeg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ReturnLeg { get; }
 
     /// <summary>
@@ -233,5 +238,6 @@ public interface ISettlementDetails1 : IIsoComponent
     [IsoId("_UiAwodp-Ed-ak6NoX_4Aeg_314676877")]
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EligibleForCollateral { get; }
 }

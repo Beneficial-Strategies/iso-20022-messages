@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the repair reason.
 /// </summary>
 [IsoId("_A5mW8NokEeC60axPepSq7g_-1465147117")]
+[IsoDisplayName(@"Repair Reason 9 Choice")]
 public interface IRepairReason9Choice : IIsoChoice { }

@@ -24,6 +24,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_J4YkLygrEeyB747fKu7_rw")]
 [IsoMessage("colr.004.001.05", "MrgnCallRspn", "urn:iso:std:iso:20022:tech:xsd:colr.004.001.05")]
+[Description(@"Scope|The MarginCallResponse message is sent by the collateral giver or its collateral manager to the collateral taker or its collateral manager or vice versa. This is a response to the MarginCallRequest message. The margin call can be accepted, fully disputed or partially disputed.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|When sent by the collateral giver the MarginCallResponse message is used to:|- fully accept the MarginCallRequest|- or partially accept the MarginCallRequest.||When sent by the collateral taker the MarginCallResponse message is used to:|- fully accept the recall of collateral|- or partially accept the recall of collateral.")]
+[IsoDisplayName(@"Margin Call Response V")]
 public interface IMarginCallResponseV05 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,8 @@ public interface IMarginCallResponseV05 : IOuterRecord
     [IsoId("_J4YkNSgrEeyB747fKu7_rw")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -96,5 +100,6 @@ public interface IMarginCallResponseV05 : IOuterRecord
     [IsoId("_J4YkRSgrEeyB747fKu7_rw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

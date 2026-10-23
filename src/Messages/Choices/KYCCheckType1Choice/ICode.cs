@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KYCCheckType1Choice;
 /// Type of Know Your Customer (KYC) check type expressed as a code.
 /// </summary>
 [IsoId("_CsmgIBRyEeOKWo1NF21OVw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IKYCCheckType1Choice, IIsoChoiceVariant
 {
     /// <summary>

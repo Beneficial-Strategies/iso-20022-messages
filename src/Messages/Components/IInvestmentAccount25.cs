@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
 /// </summary>
 [IsoId("_Rw1pgdp-Ed-ak6NoX_4Aeg_-1767174220")]
+[IsoDisplayName(@"Investment Account")]
 public interface IInvestmentAccount25 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IInvestmentAccount25 : IIsoComponent
     [IsoId("_Rw1pg9p-Ed-ak6NoX_4Aeg_-1767174185")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IInvestmentAccount25 : IIsoComponent
     [IsoId("_Rw1phNp-Ed-ak6NoX_4Aeg_-1767174167")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Designation { get; }
 
     /// <summary>
@@ -41,6 +46,9 @@ public interface IInvestmentAccount25 : IIsoComponent
     [IsoId("_Rw1phdp-Ed-ak6NoX_4Aeg_-996150055")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary11> IntermediaryInformation { get; }
 
     /// <summary>

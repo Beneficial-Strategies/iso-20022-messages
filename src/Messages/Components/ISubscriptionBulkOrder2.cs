@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Order to invest the investor&apos;s principal in an investment fund.
 /// </summary>
 [IsoId("_VTep0tp-Ed-ak6NoX_4Aeg_-1702777082")]
+[IsoDisplayName(@"Subscription Bulk Order")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISubscriptionBulkOrder2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISubscriptionBulkOrder2 : IIsoComponent
     [IsoId("_VTep1Np-Ed-ak6NoX_4Aeg_1567228890")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISubscriptionBulkOrder2 : IIsoComponent
     [IsoId("_VTep1dp-Ed-ak6NoX_4Aeg_-1371983771")]
     [DisplayName("Expiry Date Time")]
     [IsoXmlTag("XpryDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ExpiryDateTime { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ISubscriptionBulkOrder2 : IIsoComponent
     [IsoId("_VTep2Np-Ed-ak6NoX_4Aeg_-1702776726")]
     [DisplayName("Individual Order Details")]
     [IsoXmlTag("IndvOrdrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubscriptionOrder3> IndividualOrderDetails { get; }
 
     /// <summary>

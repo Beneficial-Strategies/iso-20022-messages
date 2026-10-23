@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification38Choice;
 /// <summary>
 /// RIC.
 /// </summary>
+[IsoDisplayName(@"RIC")]
 public interface IRIC : ISecurityIdentification38Choice, IIsoChoiceVariant
 {
     /// <summary>

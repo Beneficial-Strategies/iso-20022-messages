@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Natural Person Identification5.
 /// </summary>
 [IsoId("_XYzn8eIZEe-eFYnrXcX-mQ")]
+[IsoDisplayName(@"Natural Person Identification5")]
 public interface INaturalPersonIdentification5 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface INaturalPersonIdentification5 : IIsoComponent
     /// </summary>
     [DisplayName("Person Name")]
     [IsoXmlTag("PrsnNm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max500Text> PersonName { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface INaturalPersonIdentification5 : IIsoComponent
     /// </summary>
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndustrySector3Choice> Sector { get; }
 
     /// <summary>

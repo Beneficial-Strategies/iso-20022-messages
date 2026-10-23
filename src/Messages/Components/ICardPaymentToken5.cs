@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment token information.
 /// </summary>
 [IsoId("_FpZMMQx_Eeqdx6buGpCCQw")]
+[IsoDisplayName(@"Card Payment Token")]
 public interface ICardPaymentToken5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardPaymentToken5 : IIsoComponent
     [IsoId("_F0awcQx_Eeqdx6buGpCCQw")]
     [DisplayName("Token")]
     [IsoXmlTag("Tkn")]
+    [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
     Min8Max28NumericText? Token { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICardPaymentToken5 : IIsoComponent
     [IsoId("_F0awcwx_Eeqdx6buGpCCQw")]
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
     Min2Max3NumericText? CardSequenceNumber { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICardPaymentToken5 : IIsoComponent
     [IsoId("_F0awdQx_Eeqdx6buGpCCQw")]
     [DisplayName("Token Expiry Date")]
     [IsoXmlTag("TknXpryDt")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? TokenExpiryDate { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ICardPaymentToken5 : IIsoComponent
     [IsoId("_F0awdwx_Eeqdx6buGpCCQw")]
     [DisplayName("Token Characteristic")]
     [IsoXmlTag("TknChrtc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TokenCharacteristic { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ICardPaymentToken5 : IIsoComponent
     [IsoId("_F0awewx_Eeqdx6buGpCCQw")]
     [DisplayName("Token Assurance Level")]
     [IsoXmlTag("TknAssrncLvl")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TokenAssuranceLevel { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ICardPaymentToken5 : IIsoComponent
     [IsoId("_F0awfQx_Eeqdx6buGpCCQw")]
     [DisplayName("Token Assurance Data")]
     [IsoXmlTag("TknAssrncData")]
+    [IsoSimpleType(IsoSimpleType.Max500Binary)]
     Max500Binary? TokenAssuranceData { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface ICardPaymentToken5 : IIsoComponent
     [IsoId("_Jy0i4AyDEeqdx6buGpCCQw")]
     [DisplayName("Token Assurance Method")]
     [IsoXmlTag("TknAssrncMtd")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? TokenAssuranceMethod { get; }
 
     /// <summary>
@@ -81,5 +90,6 @@ public interface ICardPaymentToken5 : IIsoComponent
     [IsoId("_jsFm8AyDEeqdx6buGpCCQw")]
     [DisplayName("Token Initiated Indicator")]
     [IsoXmlTag("TknInittdInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TokenInitiatedIndicator { get; }
 }

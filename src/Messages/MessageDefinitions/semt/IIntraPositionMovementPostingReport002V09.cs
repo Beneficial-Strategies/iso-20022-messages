@@ -25,6 +25,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "IntraPosMvmntPstngRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.016.002.09"
 )]
+[Description(@"Scope|The IntraPositionMovementPostingReport is sent by an account servicer to an account owner to provide the details of increases and decreases in securities with a given status within a holding, that is, intra-position transfers, which occurred during a specified period, for all or selected securities in a specified safekeeping account which the account servicer holds for the account owner. |||The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of its participant|- an agent (sub-custodian) acting on behalf of its global custodian customer, or |- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|:|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information |using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Intra Position Movement Posting Report 002 V")]
 public interface IIntraPositionMovementPostingReport002V09 : IOuterRecord
 {
     /// <summary>
@@ -73,5 +75,6 @@ public interface IIntraPositionMovementPostingReport002V09 : IOuterRecord
     [IsoId("_ccnLODi8Eeydid5dcNPKvg")]
     [DisplayName("Financial Instrument")]
     [IsoXmlTag("FinInstrm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentDetails44> FinancialInstrument { get; }
 }

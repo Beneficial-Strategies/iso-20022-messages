@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOfMeasure7Choice;
 /// Unit of measure expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_rnXegWp8EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IUnitOfMeasure7Choice, IIsoChoiceVariant
 {
     /// <summary>

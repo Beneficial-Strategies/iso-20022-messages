@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organisation Identification49.
 /// </summary>
 [IsoId("_Yxi7seJJEe-5wchdE0oJYw")]
+[IsoDisplayName(@"Organisation Identification49")]
 public interface IOrganisationIdentification49 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IOrganisationIdentification49 : IIsoComponent
     /// </summary>
     [DisplayName("Organisation Name")]
     [IsoXmlTag("OrgNm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyName5> OrganisationName { get; }
 
     /// <summary>
@@ -30,6 +32,7 @@ public interface IOrganisationIdentification49 : IIsoComponent
     /// </summary>
     [DisplayName("Alternate Organisation Identification")]
     [IsoXmlTag("AltrnOrgId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericOrganisationIdentification3> AlternateOrganisationIdentification { get; }
 
     /// <summary>
@@ -51,6 +54,7 @@ public interface IOrganisationIdentification49 : IIsoComponent
     /// </summary>
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndustrySector3Choice> Sector { get; }
 
     /// <summary>
@@ -58,6 +62,7 @@ public interface IOrganisationIdentification49 : IIsoComponent
     /// </summary>
     [DisplayName("Person Name")]
     [IsoXmlTag("PrsnNm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max500Text> PersonName { get; }
 
     /// <summary>

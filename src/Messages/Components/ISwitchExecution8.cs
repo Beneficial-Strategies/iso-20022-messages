@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a switch order.
 /// </summary>
 [IsoId("b567fa88-7149-489e-9058-cbedd3f4632d")]
+[IsoDisplayName(@"Switch Execution8")]
 public interface ISwitchExecution8 : IIsoComponent
 {
     /// <summary>
@@ -97,6 +98,7 @@ public interface ISwitchExecution8 : IIsoComponent
     [IsoId("b567fa88-rltd-0001-0011-cbedd3f4632d")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary49> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -161,6 +163,8 @@ public interface ISwitchExecution8 : IIsoComponent
     [IsoId("b567fa88-rdmp-0001-0019-cbedd3f4632d")]
     [DisplayName("Redemption Leg Details")]
     [IsoXmlTag("RedLegDtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchRedemptionLegExecution5> RedemptionLegDetails { get; }
 
     /// <summary>
@@ -169,6 +173,8 @@ public interface ISwitchExecution8 : IIsoComponent
     [IsoId("b567fa88-sbsc-0001-0020-cbedd3f4632d")]
     [DisplayName("Subscription Leg Details")]
     [IsoXmlTag("SbcptLegDtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchSubscriptionLegExecution5> SubscriptionLegDetails { get; }
 
     /// <summary>
@@ -185,6 +191,7 @@ public interface ISwitchExecution8 : IIsoComponent
     [IsoId("b567fa88-fxdt-0001-0022-cbedd3f4632d")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms37> ForeignExchangeDetails { get; }
 
     /// <summary>

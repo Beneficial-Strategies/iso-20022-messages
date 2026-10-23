@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the parties and accounts involved in the receiving side of the transaction.
 /// </summary>
 [IsoId("13f34c81-a583-4d11-b4e2-d62551fc1ceb")]
+[IsoDisplayName(@"Receiving Parties And Account24")]
 public interface IReceivingPartiesAndAccount24 : IIsoComponent
 {
     /// <summary>

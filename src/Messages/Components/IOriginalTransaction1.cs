@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to an original transaction
 /// </summary>
 [IsoId("_mdH0wOFLEeeL6cBQHtS6kw")]
+[IsoDisplayName(@"Original Transaction")]
 public interface IOriginalTransaction1 : IIsoComponent
 {
     /// <summary>

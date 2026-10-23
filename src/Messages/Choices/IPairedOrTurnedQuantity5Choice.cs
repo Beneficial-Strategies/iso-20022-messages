@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a turnaround and pair-off quantity for instructing a one to many and many to many (partial) pair-off or turnaround.
 /// </summary>
 [IsoId("_YE22YSqHEeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Paired Or Turned Quantity 5 Choice")]
 public interface IPairedOrTurnedQuantity5Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Direct Debit Transaction Information32.
 /// </summary>
 [IsoId("_8-eiozEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Direct Debit Transaction Information32")]
 public interface IDirectDebitTransactionInformation32 : IIsoComponent
 {
     /// <summary>
@@ -107,6 +108,7 @@ public interface IDirectDebitTransactionInformation32 : IIsoComponent
     /// </summary>
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting3> RegulatoryReporting { get; }
 
     /// <summary>
@@ -121,6 +123,7 @@ public interface IDirectDebitTransactionInformation32 : IIsoComponent
     /// </summary>
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation8> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -135,5 +138,6 @@ public interface IDirectDebitTransactionInformation32 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

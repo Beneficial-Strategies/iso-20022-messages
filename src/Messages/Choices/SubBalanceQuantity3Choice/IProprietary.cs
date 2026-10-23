@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity3Choice;
 /// </summary>
 [IsoId("_QYLNftp-Ed-ak6NoX_4Aeg_-1874662777")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ISubBalanceQuantity3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IProprietary : ISubBalanceQuantity3Choice, IIsoChoiceVariant
     [IsoId("_P-Pqh9p-Ed-ak6NoX_4Aeg_-338184473")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText Identification { get; }
 
     /// <summary>
@@ -26,6 +28,8 @@ public interface IProprietary : ISubBalanceQuantity3Choice, IIsoChoiceVariant
     [IsoId("_P-PqiNp-Ed-ak6NoX_4Aeg_-1221417760")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Issuer { get; }
 
     /// <summary>
@@ -34,6 +38,8 @@ public interface IProprietary : ISubBalanceQuantity3Choice, IIsoChoiceVariant
     [IsoId("_P-ZbgNp-Ed-ak6NoX_4Aeg_-1043299088")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SchemeName { get; }
 
     /// <summary>
@@ -42,5 +48,6 @@ public interface IProprietary : ISubBalanceQuantity3Choice, IIsoChoiceVariant
     [IsoId("_P-Zbgdp-Ed-ak6NoX_4Aeg_2076477183")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Balance { get; }
 }

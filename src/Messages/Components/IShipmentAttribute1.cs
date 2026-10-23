@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further details on the shipment conditions.
 /// </summary>
 [IsoId("_wGRaAdM_EeSDLevdaFPXHw")]
+[IsoDisplayName(@"Shipment Attribute")]
 public interface IShipmentAttribute1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IShipmentAttribute1 : IIsoComponent
     [IsoId("_-CyYMNM_EeSDLevdaFPXHw")]
     [DisplayName("Expected Date")]
     [IsoXmlTag("XpctdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedDate { get; }
 
     /// <summary>

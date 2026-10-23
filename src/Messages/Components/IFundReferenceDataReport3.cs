@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fund reference data.
 /// </summary>
 [IsoId("_oxsv4Z9BEeqxTNfi5y7ywQ")]
+[IsoDisplayName(@"Fund Reference Data Report")]
 public interface IFundReferenceDataReport3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFundReferenceDataReport3 : IIsoComponent
     [IsoId("_peCRdZ9BEeqxTNfi5y7ywQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IFundReferenceDataReport3 : IIsoComponent
     [IsoId("_peCReZ9BEeqxTNfi5y7ywQ")]
     [DisplayName("General Reference Date")]
     [IsoXmlTag("GnlRefDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate GeneralReferenceDate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IFundReferenceDataReport3 : IIsoComponent
     [IsoId("_g11soKDuEequlaOyi6MUhw")]
     [DisplayName("Target Market Indicator")]
     [IsoXmlTag("TrgtMktInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TargetMarketIndicator { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IFundReferenceDataReport3 : IIsoComponent
     [IsoId("_q9Tr4KDuEequlaOyi6MUhw")]
     [DisplayName("Ex Ante Indicator")]
     [IsoXmlTag("ExAnteInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ExAnteIndicator { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IFundReferenceDataReport3 : IIsoComponent
     [IsoId("_383SkKDuEequlaOyi6MUhw")]
     [DisplayName("Ex Post Indicator")]
     [IsoXmlTag("ExPstInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ExPostIndicator { get; }
 
     /// <summary>
@@ -153,6 +160,7 @@ public interface IFundReferenceDataReport3 : IIsoComponent
     [IsoId("_peCRj59BEeqxTNfi5y7ywQ")]
     [DisplayName("Plan Characteristics")]
     [IsoXmlTag("PlanChrtcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentPlanCharacteristics1> PlanCharacteristics { get; }
 
     /// <summary>
@@ -161,6 +169,7 @@ public interface IFundReferenceDataReport3 : IIsoComponent
     [IsoId("_peCRkZ9BEeqxTNfi5y7ywQ")]
     [DisplayName("Payment Instrument")]
     [IsoXmlTag("PmtInstrm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstrument16> PaymentInstrument { get; }
 
     /// <summary>
@@ -169,6 +178,7 @@ public interface IFundReferenceDataReport3 : IIsoComponent
     [IsoId("_peCRk59BEeqxTNfi5y7ywQ")]
     [DisplayName("Cash Settlement Details")]
     [IsoXmlTag("CshSttlmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount202> CashSettlementDetails { get; }
 
     /// <summary>
@@ -177,6 +187,7 @@ public interface IFundReferenceDataReport3 : IIsoComponent
     [IsoId("_peCRlZ9BEeqxTNfi5y7ywQ")]
     [DisplayName("Local Market Annex")]
     [IsoXmlTag("LclMktAnx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalMarketAnnex4> LocalMarketAnnex { get; }
 
     /// <summary>
@@ -201,6 +212,9 @@ public interface IFundReferenceDataReport3 : IIsoComponent
     [IsoId("_peCRm59BEeqxTNfi5y7ywQ")]
     [DisplayName("Costs And Charges")]
     [IsoXmlTag("CostsAndChrgs")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICostsAndCharges2> CostsAndCharges { get; }
 
     /// <summary>
@@ -209,5 +223,6 @@ public interface IFundReferenceDataReport3 : IIsoComponent
     [IsoId("_peCRnZ9BEeqxTNfi5y7ywQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

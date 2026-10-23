@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the intra-position movement.
 /// </summary>
 [IsoId("_SX4SAxQ0EeKOSJdKMJK1cg")]
+[IsoDisplayName(@"Intra Position Movement Details")]
 public interface IIntraPositionMovementDetails9 : IIsoComponent
 {
     /// <summary>
@@ -97,6 +98,8 @@ public interface IIntraPositionMovementDetails9 : IIsoComponent
     [IsoId("_StyQsRQ0EeKOSJdKMJK1cg")]
     [DisplayName("Instruction Processing Additional Details")]
     [IsoXmlTag("InstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? InstructionProcessingAdditionalDetails { get; }
 
     /// <summary>
@@ -105,5 +108,6 @@ public interface IIntraPositionMovementDetails9 : IIsoComponent
     [IsoId("_StyQtRQ0EeKOSJdKMJK1cg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

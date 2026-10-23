@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statistics for a financial instrument generated as part of transparency calculations.
 /// </summary>
 [IsoId("_L1E_AXvwEeanCNPcMT7sSg")]
+[IsoDisplayName(@"Statistics Transparency")]
 public interface IStatisticsTransparency3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IStatisticsTransparency3 : IIsoComponent
     [IsoId("_L-xGhXvwEeanCNPcMT7sSg")]
     [DisplayName("Large In Scale")]
     [IsoXmlTag("LrgInScale")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? LargeInScale { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IStatisticsTransparency3 : IIsoComponent
     [IsoId("_L-xGh3vwEeanCNPcMT7sSg")]
     [DisplayName("Standard Market Size")]
     [IsoXmlTag("StdMktSz")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? StandardMarketSize { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IStatisticsTransparency3 : IIsoComponent
     [IsoId("_L-xGiXvwEeanCNPcMT7sSg")]
     [DisplayName("Average Daily Number Of Transactions")]
     [IsoXmlTag("AvrgDalyNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? AverageDailyNumberOfTransactions { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IStatisticsTransparency3 : IIsoComponent
     [IsoId("_L-xGi3vwEeanCNPcMT7sSg")]
     [DisplayName("Total Number Of Transactions Executed")]
     [IsoXmlTag("TtlNbOfTxsExctd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? TotalNumberOfTransactionsExecuted { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IStatisticsTransparency3 : IIsoComponent
     [IsoId("_L-xGjXvwEeanCNPcMT7sSg")]
     [DisplayName("Total Volume Of Transactions Executed")]
     [IsoXmlTag("TtlVolOfTxsExctd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? TotalVolumeOfTransactionsExecuted { get; }
 
     /// <summary>
@@ -73,5 +79,6 @@ public interface IStatisticsTransparency3 : IIsoComponent
     [IsoId("_L-xGj3vwEeanCNPcMT7sSg")]
     [DisplayName("Total Number Of Trading Days")]
     [IsoXmlTag("TtlNbOfTradgDays")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberOfTradingDays { get; }
 }

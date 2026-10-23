@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous identification of the original message references.
 /// </summary>
 [IsoId("_82mgkUHaEeWOe6CsyhCBsg")]
+[IsoDisplayName(@"Original Message")]
 public interface IOriginalMessage2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IOriginalMessage2 : IIsoComponent
     [IsoId("_9C7FUUHaEeWOe6CsyhCBsg")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IOriginalMessage2 : IIsoComponent
     [IsoId("_9C7FU0HaEeWOe6CsyhCBsg")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageNameIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IOriginalMessage2 : IIsoComponent
     [IsoId("_9C7FVUHaEeWOe6CsyhCBsg")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IOriginalMessage2 : IIsoComponent
     [IsoId("_8USHUlh7EeWsIujc3q4tQw")]
     [DisplayName("Original Package Identification")]
     [IsoXmlTag("OrgnlPackgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalPackageIdentification { get; }
 
     /// <summary>
@@ -57,5 +65,7 @@ public interface IOriginalMessage2 : IIsoComponent
     [IsoId("_8USHU1h7EeWsIujc3q4tQw")]
     [DisplayName("Original Record Identification")]
     [IsoXmlTag("OrgnlRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalRecordIdentification { get; }
 }

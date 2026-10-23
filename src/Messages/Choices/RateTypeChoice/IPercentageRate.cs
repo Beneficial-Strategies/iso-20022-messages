@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateTypeChoice;
 /// Percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument.
 /// </summary>
 [IsoId("_RIwV0tp-Ed-ak6NoX_4Aeg_-1267403774")]
+[IsoDisplayName(@"Percentage Rate")]
 public interface IPercentageRate : IRateTypeChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPercentageRate : IRateTypeChoice, IIsoChoiceVariant
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("PctgRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     BeneficialStrategies.Iso20022.SimpleTypes.PercentageRate Value { get; }
 }

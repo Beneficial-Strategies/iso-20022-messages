@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Compares information related to both sides of a collateral.
 /// </summary>
 [IsoId("_A0ExqcK3EeuFNp8LZAnorg")]
+[IsoDisplayName(@"Collateral Matching Criteria")]
 public interface ICollateralMatchingCriteria6 : IIsoComponent
 {
     /// <summary>

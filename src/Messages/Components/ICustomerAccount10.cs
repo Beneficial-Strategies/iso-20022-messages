@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account owned by a customer.
 /// </summary>
 [IsoId("_INRP8TFKEe651u5xu3f5iw")]
+[IsoDisplayName(@"Customer Account10")]
 public interface ICustomerAccount10 : IIsoComponent
 {
     /// <summary>
@@ -169,6 +170,7 @@ public interface ICustomerAccount10 : IIsoComponent
     [IsoId("_IQXAVzFKEe651u5xu3f5iw")]
     [DisplayName("Statement Frequency And Format")]
     [IsoXmlTag("StmtFrqcyAndFrmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatementFrequencyAndForm1> StatementFrequencyAndFormat { get; }
 
     /// <summary>
@@ -177,6 +179,7 @@ public interface ICustomerAccount10 : IIsoComponent
     [IsoId("_IQXAWTFKEe651u5xu3f5iw")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRestriction1> Restriction { get; }
 
     /// <summary>
@@ -209,6 +212,7 @@ public interface ICustomerAccount10 : IIsoComponent
     [IsoId("_IQXAYTFKEe651u5xu3f5iw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification1> Proprietary { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details related to a direct debit mandate signed between the creditor and the debtor.
 /// </summary>
 [IsoId("_ATlBXW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Mandate Related Information")]
 public interface IMandateRelatedInformation14 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMandateRelatedInformation14 : IIsoComponent
     [IsoId("_Acqrx249EeiU9cctagi5ow")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IMandateRelatedInformation14 : IIsoComponent
     [IsoId("_AcqryW49EeiU9cctagi5ow")]
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfSignature { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IMandateRelatedInformation14 : IIsoComponent
     [IsoId("_Acqry249EeiU9cctagi5ow")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AmendmentIndicator { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IMandateRelatedInformation14 : IIsoComponent
     [IsoId("_Acqrz249EeiU9cctagi5ow")]
     [DisplayName("Electronic Signature")]
     [IsoXmlTag("ElctrncSgntr")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? ElectronicSignature { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IMandateRelatedInformation14 : IIsoComponent
     [IsoId("_Acqr0W49EeiU9cctagi5ow")]
     [DisplayName("First Collection Date")]
     [IsoXmlTag("FrstColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FirstCollectionDate { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IMandateRelatedInformation14 : IIsoComponent
     [IsoId("_Acqr0249EeiU9cctagi5ow")]
     [DisplayName("Final Collection Date")]
     [IsoXmlTag("FnlColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FinalCollectionDate { get; }
 
     /// <summary>
@@ -89,5 +98,6 @@ public interface IMandateRelatedInformation14 : IIsoComponent
     [IsoId("_Acqr2W49EeiU9cctagi5ow")]
     [DisplayName("Tracking Days")]
     [IsoXmlTag("TrckgDays")]
+    [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
     Exact2NumericText? TrackingDays { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData60Choice;
 /// <summary>
 /// Data Set Action.
 /// </summary>
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : ITradeData60Choice, IIsoChoiceVariant
 {
     /// <summary>

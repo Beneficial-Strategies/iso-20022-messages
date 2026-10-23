@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the audit trail static data or a business error.
 /// </summary>
 [IsoId("_bRP60Wc-EemvNLufWGIVOQ")]
+[IsoDisplayName(@"Audit Trail Or Business Error 6 Choice")]
 public interface IAuditTrailOrBusinessError6Choice : IIsoChoice { }

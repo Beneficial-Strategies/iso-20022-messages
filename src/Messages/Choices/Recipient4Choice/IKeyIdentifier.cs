@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient4Choice;
 /// </summary>
 [IsoId("_N1aSpWi0EeS87LmvcA55sg")]
 [IsoXmlTag("KeyIdr")]
+[IsoDisplayName(@"Key Identifier")]
 public interface IKeyIdentifier : IRecipient4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IKeyIdentifier : IRecipient4Choice, IIsoChoiceVariant
     [IsoId("_RzjGsWi1EeS87LmvcA55sg")]
     [DisplayName("Key Identification")]
     [IsoXmlTag("KeyId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text KeyIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IKeyIdentifier : IRecipient4Choice, IIsoChoiceVariant
     [IsoId("_RzjGs2i1EeS87LmvcA55sg")]
     [DisplayName("Key Version")]
     [IsoXmlTag("KeyVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text KeyVersion { get; }
 
     /// <summary>
@@ -34,6 +39,7 @@ public interface IKeyIdentifier : IRecipient4Choice, IIsoChoiceVariant
     [IsoId("_riRHoGi1EeS87LmvcA55sg")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SequenceNumber { get; }
 
     /// <summary>
@@ -42,5 +48,6 @@ public interface IKeyIdentifier : IRecipient4Choice, IIsoChoiceVariant
     [IsoId("_RzjGtWi1EeS87LmvcA55sg")]
     [DisplayName("Derivation Identification")]
     [IsoXmlTag("DerivtnId")]
+    [IsoSimpleType(IsoSimpleType.Min5Max16Binary)]
     Min5Max16Binary? DerivationIdentification { get; }
 }

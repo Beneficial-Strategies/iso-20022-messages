@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of each individual invoice tax report transaction.
 /// </summary>
 [IsoId("_8pkzYU53Eeaine-lsNAGsA")]
+[IsoDisplayName(@"Invoice Tax Report Transaction Status")]
 public interface IInvoiceTaxReportTransactionStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvoiceTaxReportTransactionStatus1 : IIsoComponent
     [IsoId("_8xqYYU53Eeaine-lsNAGsA")]
     [DisplayName("Tax Report Identification")]
     [IsoXmlTag("TaxRptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TaxReportIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IInvoiceTaxReportTransactionStatus1 : IIsoComponent
     [IsoId("_8xqYaU53Eeaine-lsNAGsA")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericValidationRuleIdentification1> ValidationRule { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IInvoiceTaxReportTransactionStatus1 : IIsoComponent
     [IsoId("_8xqYa053Eeaine-lsNAGsA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

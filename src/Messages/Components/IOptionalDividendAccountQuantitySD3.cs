@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding optional dividend election details.
 /// </summary>
 [IsoId("_zQRzsb5YEeexmbB7KsjCwA")]
+[IsoDisplayName(@"Optional Dividend Account Quantity SD")]
 public interface IOptionalDividendAccountQuantitySD3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOptionalDividendAccountQuantitySD3 : IIsoComponent
     [IsoId("_zgpK8b5YEeexmbB7KsjCwA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IOptionalDividendAccountQuantitySD3 : IIsoComponent
     [IsoId("_zgpK-75YEeexmbB7KsjCwA")]
     [DisplayName("Number Of Accounts")]
     [IsoXmlTag("NbOfAccts")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfAccounts { get; }
 }

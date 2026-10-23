@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.pain;
     "CdtrPmtActvtnReqStsRpt",
     "urn:iso:std:iso:20022:tech:xsd:pain.014.001.11"
 )]
+[IsoDisplayName(@"Creditor Payment Activation Request Status Report V11")]
 public interface ICreditorPaymentActivationRequestStatusReportV11 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +37,7 @@ public interface ICreditorPaymentActivationRequestStatusReportV11 : IOuterRecord
     /// </summary>
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalPaymentInstruction47> OriginalPaymentInformationAndStatus { get; }
 
     /// <summary>
@@ -43,5 +45,6 @@ public interface ICreditorPaymentActivationRequestStatusReportV11 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

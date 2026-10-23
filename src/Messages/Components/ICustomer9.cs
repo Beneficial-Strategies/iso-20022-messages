@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Customer9.
 /// </summary>
 [IsoId("_xGQgIXQ8Ee6Y1uOeeiF_Eg")]
+[IsoDisplayName(@"Customer9")]
 public interface ICustomer9 : IIsoComponent
 {
     /// <summary>

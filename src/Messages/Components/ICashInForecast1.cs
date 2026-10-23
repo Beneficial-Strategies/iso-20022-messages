@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash movements into a fund as a result of investment funds transactions, eg, subscriptions or switch-in.
 /// </summary>
 [IsoId("_VCC7kdp-Ed-ak6NoX_4Aeg_542558277")]
+[IsoDisplayName(@"Cash In Forecast")]
 public interface ICashInForecast1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICashInForecast1 : IIsoComponent
     [IsoId("_VCC7ktp-Ed-ak6NoX_4Aeg_542558544")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate SettlementDate { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICashInForecast1 : IIsoComponent
     [IsoId("_VCC7ldp-Ed-ak6NoX_4Aeg_542558698")]
     [DisplayName("Exceptional Cash Flow Indicator")]
     [IsoXmlTag("XcptnlCshFlowInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ExceptionalCashFlowIndicator { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface ICashInForecast1 : IIsoComponent
     [IsoId("_VCC7ltp-Ed-ak6NoX_4Aeg_-455150453")]
     [DisplayName("Cash In Breakdown Details")]
     [IsoXmlTag("CshInBrkdwnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundCashInBreakdown1> CashInBreakdownDetails { get; }
 }

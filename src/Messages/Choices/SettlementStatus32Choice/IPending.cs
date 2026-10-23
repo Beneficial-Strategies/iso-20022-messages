@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus32Choice;
 /// <summary>
 /// Pending.
 /// </summary>
+[IsoDisplayName(@"Pending")]
 public interface IPending : ISettlementStatus32Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the original payment transaction, to which the investigation message refers.
 /// </summary>
 [IsoId("_ehakwdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Underlying Payment Transaction")]
 public interface IUnderlyingPaymentTransaction6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IUnderlyingPaymentTransaction6 : IIsoComponent
     [IsoId("_ejzxddcZEeqRFcf2R4bPBw")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IUnderlyingPaymentTransaction6 : IIsoComponent
     [IsoId("_ejzxd9cZEeqRFcf2R4bPBw")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IUnderlyingPaymentTransaction6 : IIsoComponent
     [IsoId("_ejzxedcZEeqRFcf2R4bPBw")]
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IUnderlyingPaymentTransaction6 : IIsoComponent
     [IsoId("_ejzxe9cZEeqRFcf2R4bPBw")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? OriginalUETR { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IUnderlyingPaymentTransaction6 : IIsoComponent
     [IsoId("_ejzxf9cZEeqRFcf2R4bPBw")]
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate OriginalInterbankSettlementDate { get; }
 
     /// <summary>

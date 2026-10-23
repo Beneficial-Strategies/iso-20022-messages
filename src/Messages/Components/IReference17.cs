@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to a linked transaction.
 /// </summary>
 [IsoId("_QnOWE9p-Ed-ak6NoX_4Aeg_-1322304897")]
+[IsoDisplayName(@"Reference")]
 public interface IReference17 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReference17 : IIsoComponent
     [IsoId("_QnOWFNp-Ed-ak6NoX_4Aeg_-1310311408")]
     [DisplayName("Collateral Substitution Request Identification")]
     [IsoXmlTag("CollSbstitnReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CollateralSubstitutionRequestIdentification { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IReference17 : IIsoComponent
     [IsoId("_QnOWFdp-Ed-ak6NoX_4Aeg_2000246740")]
     [DisplayName("Collateral Substitution Response Identification")]
     [IsoXmlTag("CollSbstitnRspnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CollateralSubstitutionResponseIdentification { get; }
 }

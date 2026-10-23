@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Traded venue related fields.
 /// </summary>
 [IsoId("_OjY1gBtGEeWhp-Wous5jzA")]
+[IsoDisplayName(@"Trading Venue Attributes")]
 public interface ITradingVenueAttributes1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradingVenueAttributes1 : IIsoComponent
     [IsoId("_-W6iMc2BEeS6sY79p-9Zxw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier Identification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITradingVenueAttributes1 : IIsoComponent
     [IsoId("_i79mwAjzEeWQVudpMI8Aug")]
     [DisplayName("Issuer Request")]
     [IsoXmlTag("IssrReq")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator IssuerRequest { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITradingVenueAttributes1 : IIsoComponent
     [IsoId("_suGEIRtHEeWhp-Wous5jzA")]
     [DisplayName("Admission Approval Date By Issuer")]
     [IsoXmlTag("AdmssnApprvlDtByIssr")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AdmissionApprovalDateByIssuer { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ITradingVenueAttributes1 : IIsoComponent
     [IsoId("_v43-ExtHEeWhp-Wous5jzA")]
     [DisplayName("Request For Admission Date")]
     [IsoXmlTag("ReqForAdmssnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? RequestForAdmissionDate { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ITradingVenueAttributes1 : IIsoComponent
     [IsoId("_v43-FBtHEeWhp-Wous5jzA")]
     [DisplayName("First Trade Date")]
     [IsoXmlTag("FrstTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? FirstTradeDate { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface ITradingVenueAttributes1 : IIsoComponent
     [IsoId("_v43-FRtHEeWhp-Wous5jzA")]
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TerminationDate { get; }
 }

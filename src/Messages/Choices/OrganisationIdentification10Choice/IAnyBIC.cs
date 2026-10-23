@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification10Choi
 /// Business identifier code used to identify the organisation.
 /// </summary>
 [IsoId("_phMdQXisEeqKjIYaFgh_2g")]
+[IsoDisplayName(@"Any BIC")]
 public interface IAnyBIC : IOrganisationIdentification10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IAnyBIC : IOrganisationIdentification10Choice, IIsoChoiceVarian
     /// Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362: 2014 - &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
     /// </summary>
     [IsoXmlTag("AnyBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier Value { get; }
 }

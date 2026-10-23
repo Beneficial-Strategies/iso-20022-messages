@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the original transactions, to which the status report message refers.
 /// </summary>
 [IsoId("11374abc-92e8-4404-9e28-3abe0e95451e")]
+[IsoDisplayName(@"Payment Transaction178")]
 public interface IPaymentTransaction178 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IPaymentTransaction178 : IIsoComponent
     [IsoId("7e3d81bd-53c1-44cc-96fc-9a06770d3ade")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation14> StatusReasonInformation { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface IPaymentTransaction178 : IIsoComponent
     [IsoId("d4f9c89a-1287-4e9b-ab53-e29165f85536")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges16> ChargesInformation { get; }
 
     /// <summary>
@@ -113,5 +116,6 @@ public interface IPaymentTransaction178 : IIsoComponent
     [IsoId("4198462d-1f2b-445e-a7c0-405d1211efcd")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

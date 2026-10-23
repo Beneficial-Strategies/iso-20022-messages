@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to identify a person or an organisation.
 /// </summary>
 [IsoId("_PXDustp-Ed-ak6NoX_4Aeg_1995698451")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification41 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyIdentification41 : IIsoComponent
     [IsoId("_PXDus9p-Ed-ak6NoX_4Aeg_1881859385")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>

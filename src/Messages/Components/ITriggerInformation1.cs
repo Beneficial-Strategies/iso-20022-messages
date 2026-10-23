@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Element containing all information needed to identify who triggered the request.
 /// </summary>
 [IsoId("_52zPwNwoEeeKpa-yxjuKzQ")]
+[IsoDisplayName(@"Trigger Information")]
 public interface ITriggerInformation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITriggerInformation1 : IIsoComponent
     [IsoId("_P5d1sNwpEeeKpa-yxjuKzQ")]
     [DisplayName("Source Identification")]
     [IsoXmlTag("SrcId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SourceIdentification { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface ITriggerInformation1 : IIsoComponent
     [IsoId("_d7oI4NwpEeeKpa-yxjuKzQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalInformation { get; }
 }

@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_x_BHItE8Ed-BzquC8wXy7w_-321664507")]
 [IsoMessage("tsmt.032.001.03", "StsXtnsnNtfctn", "urn:iso:std:iso:20022:tech:xsd:tsmt.032.001.03")]
+[Description(@"Scope|The StatusExtensionNotification message is sent by the matching application to the parties involved in a request to extend the status of a transaction.|This message is used to inform about the acceptance of a request to extend the status of a transaction.|Usage|The StatusExtensionNotification message can be sent by the matching application|- to the submitter of a request to extend the status of a transaction to pass on information about the acceptance of the request that it has obtained through the receipt of an StatusExtensionAcceptance message.|- to the accepter of a request to extend the status of a transaction to inform about the actual status of the transaction in response to a StatusExtensionAcceptance message.|In order to pass on information about the rejection of a request to extend the status of a transaction the matching application sends a StatusExtensionRejectionNotification message.")]
+[IsoDisplayName(@"Status Extension Notification V")]
 public interface IStatusExtensionNotificationV03 : IOuterRecord
 {
     /// <summary>
@@ -51,6 +53,9 @@ public interface IStatusExtensionNotificationV03 : IOuterRecord
     [IsoId("_x_BHJtE8Ed-BzquC8wXy7w_-321664004")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

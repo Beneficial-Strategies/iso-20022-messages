@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the sale involved in a card transaction.
 /// </summary>
 [IsoId("_GejwcShKEeyhZIgCcGlTyA")]
+[IsoDisplayName(@"Sale Context")]
 public interface ISaleContext8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISaleContext8 : IIsoComponent
     [IsoId("_GknVIShKEeyhZIgCcGlTyA")]
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISaleContext8 : IIsoComponent
     [IsoId("_GknVIyhKEeyhZIgCcGlTyA")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISaleContext8 : IIsoComponent
     [IsoId("_GknVJShKEeyhZIgCcGlTyA")]
     [DisplayName("Sale Reference Number")]
     [IsoXmlTag("SaleRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReferenceNumber { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface ISaleContext8 : IIsoComponent
     [IsoId("_GknVKyhKEeyhZIgCcGlTyA")]
     [DisplayName("Good And Services Other Sub Type")]
     [IsoXmlTag("GoodAndSvcsOthrSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? GoodAndServicesOtherSubType { get; }
 
     /// <summary>
@@ -73,6 +82,8 @@ public interface ISaleContext8 : IIsoComponent
     [IsoId("_3TryoD5LEeyHI64WSlzTlg")]
     [DisplayName("Other Good And Service Delivery Channel")]
     [IsoXmlTag("OthrGoodAndSvcDlvryChanl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherGoodAndServiceDeliveryChannel { get; }
 
     /// <summary>
@@ -89,6 +100,8 @@ public interface ISaleContext8 : IIsoComponent
     [IsoId("_H9uuED5MEeyHI64WSlzTlg")]
     [DisplayName("Other Good And Service Delivery Schedule")]
     [IsoXmlTag("OthrGoodAndSvcDlvrySchdl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherGoodAndServiceDeliverySchedule { get; }
 
     /// <summary>
@@ -99,6 +112,7 @@ public interface ISaleContext8 : IIsoComponent
     [IsoId("_GknVLShKEeyhZIgCcGlTyA")]
     [DisplayName("Split Payment Indicator")]
     [IsoXmlTag("SpltPmtInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? SplitPaymentIndicator { get; }
 
     /// <summary>
@@ -109,6 +123,7 @@ public interface ISaleContext8 : IIsoComponent
     [IsoId("_GknVLyhKEeyhZIgCcGlTyA")]
     [DisplayName("Receipt Request Indicator")]
     [IsoXmlTag("RctReqInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReceiptRequestIndicator { get; }
 
     /// <summary>
@@ -117,6 +132,7 @@ public interface ISaleContext8 : IIsoComponent
     [IsoId("_GknVMShKEeyhZIgCcGlTyA")]
     [DisplayName("Receipt Type")]
     [IsoXmlTag("RctTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ReceiptType1Code> ReceiptType { get; }
 
     /// <summary>
@@ -125,6 +141,8 @@ public interface ISaleContext8 : IIsoComponent
     [IsoId("_GknVMyhKEeyhZIgCcGlTyA")]
     [DisplayName("Receipt Destination")]
     [IsoXmlTag("RctDstn")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ReceiptDestination { get; }
 
     /// <summary>
@@ -133,5 +151,6 @@ public interface ISaleContext8 : IIsoComponent
     [IsoId("_SeXxYShKEeyhZIgCcGlTyA")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

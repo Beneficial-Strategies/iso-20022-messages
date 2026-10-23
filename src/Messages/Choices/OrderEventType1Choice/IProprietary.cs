@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderEventType1Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IOrderEventType1Choice, IIsoChoiceVariant
 {
     /// <summary>

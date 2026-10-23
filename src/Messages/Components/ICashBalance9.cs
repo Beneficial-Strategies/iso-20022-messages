@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance details for a cash account.
 /// </summary>
 [IsoId("_ylymkZlcEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Cash Balance")]
 public interface ICashBalance9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICashBalance9 : IIsoComponent
     [IsoId("_yttMZ5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceType8Choice> Type { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICashBalance9 : IIsoComponent
     [IsoId("_yttMa5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Counterparty Identification")]
     [IsoXmlTag("CtrPtyId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBranchAndFinancialInstitutionIdentification5> CounterpartyIdentification { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ICashBalance9 : IIsoComponent
     [IsoId("_yttMbZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDateAndDateTimeSearch3Choice> ValueDate { get; }
 }

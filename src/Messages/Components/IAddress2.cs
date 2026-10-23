@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Structured postal address.
 /// </summary>
 [IsoId("_WZgu8cWqEeuhguwJmlgagQ")]
+[IsoDisplayName(@"Address")]
 public interface IAddress2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAddress2 : IIsoComponent
     [IsoId("_Wd6t0cWqEeuhguwJmlgagQ")]
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine1")]
+    [IsoSimpleType(IsoSimpleType.Max99Text)]
+    [StringLength(99, MinimumLength = 1)]
     Max99Text? AddressLine1 { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAddress2 : IIsoComponent
     [IsoId("_Wd6t08WqEeuhguwJmlgagQ")]
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine2")]
+    [IsoSimpleType(IsoSimpleType.Max99Text)]
+    [StringLength(99, MinimumLength = 1)]
     Max99Text? AddressLine2 { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IAddress2 : IIsoComponent
     [IsoId("_Wd6t1cWqEeuhguwJmlgagQ")]
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max99Text)]
+    [StringLength(99, MinimumLength = 1)]
     Max99Text? StreetName { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IAddress2 : IIsoComponent
     [IsoId("_Wd6t18WqEeuhguwJmlgagQ")]
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? BuildingNumber { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IAddress2 : IIsoComponent
     [IsoId("_Wd6t2cWqEeuhguwJmlgagQ")]
     [DisplayName("Postal Code")]
     [IsoXmlTag("PstlCd")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? PostalCode { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface IAddress2 : IIsoComponent
     [IsoId("_Wd6t28WqEeuhguwJmlgagQ")]
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? TownName { get; }
 
     /// <summary>
@@ -83,6 +96,8 @@ public interface IAddress2 : IIsoComponent
     [IsoId("_VB4SwRvPEey2RdTw-AkXzg")]
     [DisplayName("Country Sub Division Major Name")]
     [IsoXmlTag("CtrySubDvsnMjrNm")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? CountrySubDivisionMajorName { get; }
 
     /// <summary>
@@ -91,6 +106,8 @@ public interface IAddress2 : IIsoComponent
     [IsoId("_b2xG8RvPEey2RdTw-AkXzg")]
     [DisplayName("Country Sub Division Minor Name")]
     [IsoXmlTag("CtrySubDvsnMnrNm")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? CountrySubDivisionMinorName { get; }
 
     /// <summary>

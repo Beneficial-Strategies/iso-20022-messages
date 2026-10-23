@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument61Choice;
 /// </summary>
 [IsoId("_mW7mE5NBEemQB_8XA98K0Q")]
 [IsoXmlTag("CshAsst")]
+[IsoDisplayName(@"Cash Asset")]
 public interface ICashAsset : IFinancialInstrument61Choice, IIsoChoiceVariant
 {
     /// <summary>

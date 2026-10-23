@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a subscription order.
 /// </summary>
 [IsoId("d77f5252-15d2-450d-bbe7-bb05f028c6ac")]
+[IsoDisplayName(@"Subscription Bulk Execution05")]
 public interface ISubscriptionBulkExecution05 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,8 @@ public interface ISubscriptionBulkExecution05 : IIsoComponent
     [IsoId("30f6d7ec-367c-4e48-b813-d3e5c7cca191")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubscriptionExecution15> IndividualExecutionDetails { get; }
 
     /// <summary>

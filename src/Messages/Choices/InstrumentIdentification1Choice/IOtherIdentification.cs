@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentIdentification1Choice;
 /// </summary>
 [IsoId("_AmCO0QbTEeqrW7Meu5r3kQ")]
 [IsoXmlTag("OthrId")]
+[IsoDisplayName(@"Other Identification")]
 public interface IOtherIdentification : IInstrumentIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOtherIdentification : IInstrumentIdentification1Choice, IIsoCh
     [IsoId("_n3WSFQbTEeqrW7Meu5r3kQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IOtherIdentification : IInstrumentIdentification1Choice, IIsoCh
     [IsoId("_n3WSFwbTEeqrW7Meu5r3kQ")]
     [DisplayName("Source")]
     [IsoXmlTag("Src")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Source { get; }
 }

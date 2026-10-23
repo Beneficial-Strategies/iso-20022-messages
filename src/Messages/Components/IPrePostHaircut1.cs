@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of collateral calculated pre-haircut and/or post-haircut.
 /// </summary>
 [IsoId("_SUuMwFfVEeqqKf65rDYWYw")]
+[IsoDisplayName(@"Pre Post Haircut")]
 public interface IPrePostHaircut1 : IIsoComponent
 {
     /// <summary>

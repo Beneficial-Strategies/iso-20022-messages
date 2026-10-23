@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus105Choice;
 
 /// <summary>Specifies the cancelled status.</summary>
 [IsoId("_u9DESaodEfCG2_q2WT-90w")]
+[IsoDisplayName(@"Cancelled")]
 public interface ICancelled : IProcessingStatus105Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

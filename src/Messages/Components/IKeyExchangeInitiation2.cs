@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to a key exchange activity.
 /// </summary>
 [IsoId("_Y2XogYv6EeumSPwlS1PkxQ")]
+[IsoDisplayName(@"Key Exchange Initiation")]
 public interface IKeyExchangeInitiation2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IKeyExchangeInitiation2 : IIsoComponent
     [IsoId("_Y7gAJYv6EeumSPwlS1PkxQ")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IKeyExchangeInitiation2 : IIsoComponent
     [IsoId("_Y7gAJ4v6EeumSPwlS1PkxQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

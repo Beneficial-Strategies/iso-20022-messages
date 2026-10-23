@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the accounting status.
 /// </summary>
 [IsoId("_9Oz2cCDDEeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Accounting Status 1 Choice")]
 public interface IAccountingStatus1Choice : IIsoChoice { }

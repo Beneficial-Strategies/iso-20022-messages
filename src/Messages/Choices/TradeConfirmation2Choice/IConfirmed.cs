@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeConfirmation2Choice;
 /// </summary>
 [IsoId("_qo0sYQFXEeaDfK-zDSyB6A")]
 [IsoXmlTag("Confd")]
+[IsoDisplayName(@"Confirmed")]
 public interface IConfirmed : ITradeConfirmation2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IConfirmed : ITradeConfirmation2Choice, IIsoChoiceVariant
     [IsoId("_41eYUwFXEeaDfK-zDSyB6A")]
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TimeStamp { get; }
 }

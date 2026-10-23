@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Clearing Control Totals3.
 /// </summary>
 [IsoId("_Na42UY1KEe6S0_1AaJzQCA")]
+[IsoDisplayName(@"Clearing Control Totals3")]
 public interface IClearingControlTotals3 : IIsoComponent
 {
     /// <summary>

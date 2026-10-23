@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Numeric variables calculated on the number of transactions or on market exposures.
 /// </summary>
 [IsoId("_HPOrga5QEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Volume Metrics")]
 public interface IVolumeMetrics6 : IIsoComponent
 {
     /// <summary>

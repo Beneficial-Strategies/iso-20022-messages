@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData1Choice;
 /// </summary>
 [IsoId("_2_Hf4clxEem0vqvvoqYsqQ")]
 [IsoXmlTag("CdtTrfMndt")]
+[IsoDisplayName(@"Credit Transfer Mandate")]
 public interface ICreditTransferMandate : IMandateRelatedData1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICreditTransferMandate : IMandateRelatedData1Choice, IIsoChoice
     [IsoId("_EgIuh8lqEem0vqvvoqYsqQ")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface ICreditTransferMandate : IMandateRelatedData1Choice, IIsoChoice
     [IsoId("_EgIuiclqEem0vqvvoqYsqQ")]
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfSignature { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface ICreditTransferMandate : IMandateRelatedData1Choice, IIsoChoice
     [IsoId("_MBcj0MlqEem0vqvvoqYsqQ")]
     [DisplayName("Date Of Verification")]
     [IsoXmlTag("DtOfVrfctn")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DateOfVerification { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface ICreditTransferMandate : IMandateRelatedData1Choice, IIsoChoice
     [IsoId("_EgIuj8lqEem0vqvvoqYsqQ")]
     [DisplayName("Electronic Signature")]
     [IsoXmlTag("ElctrncSgntr")]
+    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
     Max10KBinary? ElectronicSignature { get; }
 
     /// <summary>
@@ -58,6 +64,7 @@ public interface ICreditTransferMandate : IMandateRelatedData1Choice, IIsoChoice
     [IsoId("_EgIukclqEem0vqvvoqYsqQ")]
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FirstPaymentDate { get; }
 
     /// <summary>
@@ -66,6 +73,7 @@ public interface ICreditTransferMandate : IMandateRelatedData1Choice, IIsoChoice
     [IsoId("_EgIuk8lqEem0vqvvoqYsqQ")]
     [DisplayName("Final Payment Date")]
     [IsoXmlTag("FnlPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FinalPaymentDate { get; }
 
     /// <summary>

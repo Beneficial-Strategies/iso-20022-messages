@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of the captured set of transactions.
 /// </summary>
 [IsoId("_1y1K4Qx4Eeqdx6buGpCCQw")]
+[IsoDisplayName(@"Card Payment Data Set")]
 public interface ICardPaymentDataSet24 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICardPaymentDataSet24 : IIsoComponent
     [IsoId("_1-gPZQx4Eeqdx6buGpCCQw")]
     [DisplayName("Remove Data Set")]
     [IsoXmlTag("RmvDataSet")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator RemoveDataSet { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ICardPaymentDataSet24 : IIsoComponent
     [IsoId("_1-gPaQx4Eeqdx6buGpCCQw")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotals7> TransactionTotals { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ICardPaymentDataSet24 : IIsoComponent
     [IsoId("_9MPL8Qx5Eeqdx6buGpCCQw")]
     [DisplayName("Rejected Transaction")]
     [IsoXmlTag("RjctdTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet25> RejectedTransaction { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ICardPaymentDataSet24 : IIsoComponent
     [IsoId("_1-gPawx4Eeqdx6buGpCCQw")]
     [DisplayName("Suspended Transaction")]
     [IsoXmlTag("SspdTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet25> SuspendedTransaction { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ICardPaymentDataSet24 : IIsoComponent
     [IsoId("_90xLkQx5Eeqdx6buGpCCQw")]
     [DisplayName("Resumed Approval")]
     [IsoXmlTag("RsmdApprvl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet25> ResumedApproval { get; }
 
     /// <summary>
@@ -81,5 +87,6 @@ public interface ICardPaymentDataSet24 : IIsoComponent
     [IsoId("_-P-g4Qx5Eeqdx6buGpCCQw")]
     [DisplayName("Resumed Rejection")]
     [IsoXmlTag("RsmdRjctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet25> ResumedRejection { get; }
 }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.tsrv;
     "UdrtkgAmdmntRspnNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:tsrv.009.001.01"
 )]
+[Description(@"The UndertakingAmendmentResponseNotification message is sent by the advising party to the party that issued the undertaking, either directly or via one or more other parties, to notify the recipient of the acceptance or rejection by the beneficiary of the amendment. On receipt of this message or the UndertakingAmendmentResponse message, the issuer may also send the UndertakingAmendmentResponseNotification to the applicant.")]
+[IsoDisplayName(@"Undertaking Amendment Response Notification V")]
 public interface IUndertakingAmendmentResponseNotificationV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,8 @@ public interface IUndertakingAmendmentResponseNotificationV01 : IOuterRecord
     [IsoId("_Xldnk387EeGx884K2iQOLg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [StringLength(2000, MinimumLength = 1)]
     Max2000Text? AdditionalInformation { get; }
 
     /// <summary>

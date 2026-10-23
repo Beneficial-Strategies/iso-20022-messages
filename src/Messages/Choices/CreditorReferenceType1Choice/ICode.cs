@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditorReferenceType1Choice;
 /// Type of creditor reference, in a coded form.
 /// </summary>
 [IsoId("_T4ItMNp-Ed-ak6NoX_4Aeg_651436918")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICreditorReferenceType1Choice, IIsoChoiceVariant
 {
     /// <summary>

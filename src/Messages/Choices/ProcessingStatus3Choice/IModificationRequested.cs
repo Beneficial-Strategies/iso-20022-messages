@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus3Choice;
 /// </summary>
 [IsoId("_UV8Dh9p-Ed-ak6NoX_4Aeg_-234441513")]
 [IsoXmlTag("ModReqd")]
+[IsoDisplayName(@"Modification Requested")]
 public interface IModificationRequested : IProcessingStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

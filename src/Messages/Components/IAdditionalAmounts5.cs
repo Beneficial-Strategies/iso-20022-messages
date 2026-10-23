@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limits and amounts not part of the transaction amount. Not included in reconciliation totals.
 /// </summary>
 [IsoId("_LnpvoSH3EfCkq6-p7S3J1Q")]
+[IsoDisplayName(@"Additional Amounts5")]
 public interface IAdditionalAmounts5 : IIsoComponent
 {
     /// <summary>

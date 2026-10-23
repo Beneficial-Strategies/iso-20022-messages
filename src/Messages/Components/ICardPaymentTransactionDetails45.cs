@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transaction in the authorisation request in a batch.
 /// </summary>
 [IsoId("_C87UgdwuEeeKpa-yxjuKzQ")]
+[IsoDisplayName(@"Card Payment Transaction Details")]
 public interface ICardPaymentTransactionDetails45 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ICardPaymentTransactionDetails45 : IIsoComponent
     [IsoId("_DF31KdwuEeeKpa-yxjuKzQ")]
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidityDate { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ICardPaymentTransactionDetails45 : IIsoComponent
     [IsoId("_DF31K9wuEeeKpa-yxjuKzQ")]
     [DisplayName("On Line Reason")]
     [IsoXmlTag("OnLineRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<OnLineReason1Code> OnLineReason { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ICardPaymentTransactionDetails45 : IIsoComponent
     [IsoId("_DF31LdwuEeeKpa-yxjuKzQ")]
     [DisplayName("Unattended Level Category")]
     [IsoXmlTag("UattnddLvlCtgy")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? UnattendedLevelCategory { get; }
 
     /// <summary>
@@ -105,6 +109,8 @@ public interface ICardPaymentTransactionDetails45 : IIsoComponent
     [IsoId("_DF31N9wuEeeKpa-yxjuKzQ")]
     [DisplayName("Product Code Set Identification")]
     [IsoXmlTag("PdctCdSetId")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? ProductCodeSetIdentification { get; }
 
     /// <summary>
@@ -113,6 +119,7 @@ public interface ICardPaymentTransactionDetails45 : IIsoComponent
     [IsoId("_DF31OdwuEeeKpa-yxjuKzQ")]
     [DisplayName("Sale Item")]
     [IsoXmlTag("SaleItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProduct3> SaleItem { get; }
 
     /// <summary>
@@ -121,6 +128,8 @@ public interface ICardPaymentTransactionDetails45 : IIsoComponent
     [IsoId("_DF31O9wuEeeKpa-yxjuKzQ")]
     [DisplayName("Delivery Location")]
     [IsoXmlTag("DlvryLctn")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? DeliveryLocation { get; }
 
     /// <summary>
@@ -137,5 +146,6 @@ public interface ICardPaymentTransactionDetails45 : IIsoComponent
     [IsoId("_DF31P9wuEeeKpa-yxjuKzQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

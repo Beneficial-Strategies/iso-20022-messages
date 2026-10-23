@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Type of document and the type of communication method to be used to notify a party.
 /// </summary>
 [IsoId("_y2mIcZTFEemqYPWMBuVawg")]
+[IsoDisplayName(@"Document To Send")]
 public interface IDocumentToSend4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDocumentToSend4 : IIsoComponent
     [IsoId("_zKhxEZTFEemqYPWMBuVawg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Type { get; }
 
     /// <summary>

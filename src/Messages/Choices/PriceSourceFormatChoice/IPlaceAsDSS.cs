@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice;
 /// </summary>
 [IsoId("_RCDQ5tp-Ed-ak6NoX_4Aeg_1174932111")]
 [IsoXmlTag("PlcAsDSS")]
+[IsoDisplayName(@"Place As DSS")]
 public interface IPlaceAsDSS : IPriceSourceFormatChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IPlaceAsDSS : IPriceSourceFormatChoice, IIsoChoiceVariant
     [IsoId("_P_b9Wtp-Ed-ak6NoX_4Aeg_691069232")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text Issuer { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IPlaceAsDSS : IPriceSourceFormatChoice, IIsoChoiceVariant
     [IsoId("_P_b9W9p-Ed-ak6NoX_4Aeg_691068172")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText Information { get; }
 
     /// <summary>
@@ -34,5 +38,7 @@ public interface IPlaceAsDSS : IPriceSourceFormatChoice, IIsoChoiceVariant
     [IsoId("_P_luUNp-Ed-ak6NoX_4Aeg_691069664")]
     [DisplayName("Narrative")]
     [IsoXmlTag("Nrrtv")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Narrative { get; }
 }

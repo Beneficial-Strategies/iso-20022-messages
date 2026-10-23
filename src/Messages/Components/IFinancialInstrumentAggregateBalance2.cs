@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Aggregated position held in a securities account for a specified financial instrument.
 /// </summary>
 [IsoId("_aA5_JqCCEeOEyO7fCl8lLA")]
+[IsoDisplayName(@"Financial Instrument Aggregate Balance")]
 public interface IFinancialInstrumentAggregateBalance2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IFinancialInstrumentAggregateBalance2 : IIsoComponent
     [IsoId("_aA5_K6CCEeOEyO7fCl8lLA")]
     [DisplayName("Balance Breakdown")]
     [IsoXmlTag("BalBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubBalanceBreakdown1> BalanceBreakdown { get; }
 }

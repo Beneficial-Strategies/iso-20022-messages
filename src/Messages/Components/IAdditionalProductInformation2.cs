@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information required for distribution in the French market.
 /// </summary>
 [IsoId("_J8Y8UM3AEeuAE-cYsQdwHQ")]
+[IsoDisplayName(@"Additional Product Information")]
 public interface IAdditionalProductInformation2 : IIsoComponent
 {
     /// <summary>

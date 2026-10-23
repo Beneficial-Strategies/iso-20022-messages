@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Allows to specify other collateral type by providing a description and the quantity.
 /// </summary>
 [IsoId("_l4wJ4V9_EeSMgPeFpRHeJw")]
+[IsoDisplayName(@"Other Type Of Collateral")]
 public interface IOtherTypeOfCollateral2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherTypeOfCollateral2 : IIsoComponent
     [IsoId("_mUkjMV9_EeSMgPeFpRHeJw")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Description { get; }
 
     /// <summary>

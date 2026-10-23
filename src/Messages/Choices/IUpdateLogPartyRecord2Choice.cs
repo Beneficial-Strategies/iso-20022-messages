@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Update Log Party Record2Choice.
 /// </summary>
 [IsoId("_YwDt2TE_Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Update Log Party Record2Choice")]
 public interface IUpdateLogPartyRecord2Choice : IIsoChoice { }

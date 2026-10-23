@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus7Choice;
 
 /// <summary>Status of the switch order is partially settled.</summary>
 [IsoId("791a8cc9-5874-4a3f-ad53-3d93d67ed206")]
+[IsoDisplayName(@"Partially Settled")]
 public interface IPartiallySettled : IOrderStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

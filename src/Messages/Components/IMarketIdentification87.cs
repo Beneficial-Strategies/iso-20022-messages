@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the market and purpose for the settlement.
 /// </summary>
 [IsoId("_ZkmIMNTPEeKvJeoOII0e7w")]
+[IsoDisplayName(@"Market Identification")]
 public interface IMarketIdentification87 : IIsoComponent
 {
     /// <summary>

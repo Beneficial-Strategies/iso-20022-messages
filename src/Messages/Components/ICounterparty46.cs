@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to counterparty identification.
 /// </summary>
 [IsoId("_P6R6gQz4Ee2YoLD-1vFj0g")]
+[IsoDisplayName(@"Counterparty")]
 public interface ICounterparty46 : IIsoComponent
 {
     /// <summary>
@@ -34,5 +35,6 @@ public interface ICounterparty46 : IIsoComponent
     [IsoId("_P7Cvhwz4Ee2YoLD-1vFj0g")]
     [DisplayName("Reporting Obligation")]
     [IsoXmlTag("RptgOblgtn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReportingObligation { get; }
 }

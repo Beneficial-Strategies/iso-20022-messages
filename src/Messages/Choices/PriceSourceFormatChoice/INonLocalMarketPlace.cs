@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice;
 /// </summary>
 [IsoId("_RCDQ5dp-Ed-ak6NoX_4Aeg_1149070716")]
 [IsoXmlTag("NonLclMktPlc")]
+[IsoDisplayName(@"Non Local Market Place")]
 public interface INonLocalMarketPlace : IPriceSourceFormatChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -24,5 +25,7 @@ public interface INonLocalMarketPlace : IPriceSourceFormatChoice, IIsoChoiceVari
     [IsoId("_QelXcdp-Ed-ak6NoX_4Aeg_404714109")]
     [DisplayName("Narrative")]
     [IsoXmlTag("Nrrtv")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Narrative { get; }
 }

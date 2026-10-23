@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of search criteria for querying securities account reference data.
 /// </summary>
 [IsoId("_U5MuUTp1Eemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Securities Account Search Criteria")]
 public interface ISecuritiesAccountSearchCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesAccountSearchCriteria2 : IIsoComponent
     [IsoId("_VDocsTp1Eemk2e6qGBk8IQ")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ISecuritiesAccountSearchCriteria2 : IIsoComponent
     [IsoId("_VDocvzp1Eemk2e6qGBk8IQ")]
     [DisplayName("End Investor Flag")]
     [IsoXmlTag("EndInvstrFlg")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? EndInvestorFlag { get; }
 
     /// <summary>
@@ -81,5 +85,6 @@ public interface ISecuritiesAccountSearchCriteria2 : IIsoComponent
     [IsoId("_VDocwTp1Eemk2e6qGBk8IQ")]
     [DisplayName("Pricing Scheme")]
     [IsoXmlTag("PricgSchme")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? PricingScheme { get; }
 }

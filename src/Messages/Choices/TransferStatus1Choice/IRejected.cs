@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice;
 /// Status of the transfer is rejected.
 /// </summary>
 [IsoId("_o1CqrBwkEeOIveEnnb_1-A")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : ITransferStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

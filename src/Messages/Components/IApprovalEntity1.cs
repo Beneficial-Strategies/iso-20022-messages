@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Entity that has delivered or declined the card payment authorisation (the party may be unidentified).
 /// </summary>
 [IsoId("_3HL7gEVREeea-M6VZkEPUw")]
+[IsoDisplayName(@"Approval Entity")]
 public interface IApprovalEntity1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IApprovalEntity1 : IIsoComponent
     [IsoId("_R_7fkEVSEeea-M6VZkEPUw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IApprovalEntity1 : IIsoComponent
     [IsoId("_ZiLTwZRKEemrTL7utsGcSA")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -52,6 +57,7 @@ public interface IApprovalEntity1 : IIsoComponent
     [IsoId("_sb3L0EVSEeea-M6VZkEPUw")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
     Min2Max3AlphaText? Country { get; }
 
     /// <summary>
@@ -60,5 +66,7 @@ public interface IApprovalEntity1 : IIsoComponent
     [IsoId("_2mWp4EVSEeea-M6VZkEPUw")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 }

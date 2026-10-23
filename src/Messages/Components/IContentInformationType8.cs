@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General cryptographic message syntax (CMS) containing authenticated data.
 /// </summary>
 [IsoId("_KpedcTF5EeO118ZQJgaQSQ")]
+[IsoDisplayName(@"Content Information Type")]
 public interface IContentInformationType8 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IContentInformationType8 : IIsoComponent
     [IsoId("_K5_lszF5EeO118ZQJgaQSQ")]
     [DisplayName("Authenticated Data")]
     [IsoXmlTag("AuthntcdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthenticatedData3> AuthenticatedData { get; }
 }

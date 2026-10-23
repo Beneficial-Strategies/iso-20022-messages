@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the status reason of the debtor activation request.
 /// </summary>
 [IsoId("_P4LStOIKEeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Debtor Activation Status Reason")]
 public interface IDebtorActivationStatusReason2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IDebtorActivationStatusReason2 : IIsoComponent
     [IsoId("_P4LStuIKEeqbls7Gk4-ckA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

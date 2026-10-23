@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatist
 /// </summary>
 [IsoId("_x1GY41yGEe24CqbZJK5XxA")]
 [IsoXmlTag("Rpt")]
+[IsoDisplayName(@"Report")]
 public interface IReport : IDetailedMissingValuationsStatistics4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IReport : IDetailedMissingValuationsStatistics4Choice, IIsoChoi
     [IsoId("_x2DbIFyGEe24CqbZJK5XxA")]
     [DisplayName("Number Of Outstanding Derivatives")]
     [IsoXmlTag("NbOfOutsdngDerivs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfOutstandingDerivatives { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IReport : IDetailedMissingValuationsStatistics4Choice, IIsoChoi
     [IsoId("_x2DbIlyGEe24CqbZJK5XxA")]
     [DisplayName("Number Of Outstanding Derivatives With No Valuation")]
     [IsoXmlTag("NbOfOutsdngDerivsWthNoValtn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfOutstandingDerivativesWithNoValuation { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IReport : IDetailedMissingValuationsStatistics4Choice, IIsoChoi
     [IsoId("_x2DbJFyGEe24CqbZJK5XxA")]
     [DisplayName("Number Of Outstanding Derivatives With Outdated Valuation")]
     [IsoXmlTag("NbOfOutsdngDerivsWthOutdtdValtn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberOfOutstandingDerivativesWithOutdatedValuation { get; }
 
     /// <summary>
@@ -42,5 +46,6 @@ public interface IReport : IDetailedMissingValuationsStatistics4Choice, IIsoChoi
     [IsoId("_x2DbJlyGEe24CqbZJK5XxA")]
     [DisplayName("Warnings")]
     [IsoXmlTag("Wrnngs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMissingValuationsData2> Warnings { get; }
 }

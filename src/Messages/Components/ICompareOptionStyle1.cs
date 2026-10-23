@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a option style.
 /// </summary>
 [IsoId("_s87WEE6lEeyEpI66tm807w")]
+[IsoDisplayName(@"Compare Option Style")]
 public interface ICompareOptionStyle1 : IIsoComponent
 {
     /// <summary>

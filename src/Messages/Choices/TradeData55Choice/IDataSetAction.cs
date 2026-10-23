@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData55Choice;
 /// Where no reporting data are available, this field should be set so that a valid reference data file can be submitted to the competent authority as per submission requirements.
 /// </summary>
 [IsoId("_oyOywVosEe23K4GXSpBSeg")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : ITradeData55Choice, IIsoChoiceVariant
 {
     /// <summary>

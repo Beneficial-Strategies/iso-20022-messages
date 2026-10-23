@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Cryptographic Key1Choice.
 /// </summary>
 [IsoId("__lk0wD6wEe-QZYT2pcGFZw")]
+[IsoDisplayName(@"Cryptographic Key1Choice")]
 public interface ICryptographicKey1Choice : IIsoChoice { }

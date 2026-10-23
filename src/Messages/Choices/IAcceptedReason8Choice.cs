@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the reason of an accepted status.
 /// </summary>
 [IsoId("_UUFf8VjpEeOnqqBHs8Gasw")]
+[IsoDisplayName(@"Accepted Reason 8 Choice")]
 public interface IAcceptedReason8Choice : IIsoChoice { }

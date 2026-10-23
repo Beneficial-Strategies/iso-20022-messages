@@ -26,6 +26,8 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("_MXEzfdFSEd-BzquC8wXy7w_970546686")]
 [IsoMessage("semt.003.001.01", "semt.003.001.01", "urn:iso:std:iso:20022:tech:xsd:semt.003.001.01")]
+[Description(@"Scope|The AccountingStatementOfHoldings message is sent by an account servicer to the account owner or the account owner's designated agent. The account servicer may be a local agent acting on behalf of its global custodian customer, a custodian acting on behalf of an investment management institution or a broker/dealer, a fund administrator or fund intermediary, trustee or registrar, etc.|This message provides, at a specified moment in time, valuations of the portfolio together with details of each financial instrument holding.|The information in the message can be audited or un-audited.|Usage|The AccountingStatementOfHoldings message can be sent:|- At a frequency agreed bi-laterally between the Sender and the Receiver|- As a response to a request for statement sent by the account owner. The request for statement message will be developed at a later stage.|This message can only be used to list the holdings of a single (master) account. However, it is possible to break down these holdings into one or several sub-accounts. Therefore, the message can be used to either specify holdings at|- the main account level, or|- the sub-account level.|This message can be used to report where the securities are safe-kept, physically or notionally. If a security is held in more than one safekeeping place, this can also be indicated.|The AccountingStatementOfHoldings message must not be used to reconcile the books of the account owner and the account servicer. The CustodyStatementOfHoldings message is used for reconciliation purposes.|The AccountingStatementOfHoldings message must not be used for trading purposes.|Since a SWIFT message as sent is restricted to the maximum input message length, several messages may be needed to accommodate all the information.")]
+[IsoDisplayName(@"Accounting Statement Of Holdings")]
 public interface IAccountingStatementOfHoldings : IOuterRecord
 {
     /// <summary>
@@ -34,6 +36,7 @@ public interface IAccountingStatementOfHoldings : IOuterRecord
     [IsoId("_MXEzftFSEd-BzquC8wXy7w_1496951408")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference2> PreviousReference { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface IAccountingStatementOfHoldings : IOuterRecord
     [IsoId("_MXOkcNFSEd-BzquC8wXy7w_1583764706")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference2> RelatedReference { get; }
 
     /// <summary>
@@ -74,6 +78,7 @@ public interface IAccountingStatementOfHoldings : IOuterRecord
     [IsoId("_MXOkdNFSEd-BzquC8wXy7w_-1564192387")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateBalanceInformation2> BalanceForAccount { get; }
 
     /// <summary>
@@ -82,6 +87,7 @@ public interface IAccountingStatementOfHoldings : IOuterRecord
     [IsoId("_MXOkddFSEd-BzquC8wXy7w_-1553108612")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubAccountIdentification2> SubAccountDetails { get; }
 
     /// <summary>
@@ -98,5 +104,6 @@ public interface IAccountingStatementOfHoldings : IOuterRecord
     [IsoId("_MXOkd9FSEd-BzquC8wXy7w_-34086064")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

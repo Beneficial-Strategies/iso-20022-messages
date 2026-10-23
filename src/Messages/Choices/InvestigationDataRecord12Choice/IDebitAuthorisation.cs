@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord12Choice;
 
 /// <summary>Indicates if the debit authorisation is granted or not.</summary>
 [IsoId("60e760ac-2333-4a1d-8ff2-a9c214d310e0")]
+[IsoDisplayName(@"Debit Authorisation")]
 public interface IDebitAuthorisation : IInvestigationDataRecord12Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

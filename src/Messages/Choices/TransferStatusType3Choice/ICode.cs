@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatusType3Choice;
 /// Type of event expressed as a code.
 /// </summary>
 [IsoId("_SoQd0dydEeqzDbuoooxhdw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITransferStatusType3Choice, IIsoChoiceVariant
 {
     /// <summary>

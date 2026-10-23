@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction, initiated by the creditor, to debit a debtor&apos;s account in favour of the creditor. A direct debit can be pre-authorised or not. In most countries, authorisation is in the form of a mandate between the debtor and creditor.
 /// </summary>
 [IsoId("_VMep9tp-Ed-ak6NoX_4Aeg_-615142722")]
+[IsoDisplayName(@"Direct Debit Mandate")]
 public interface IDirectDebitMandate2 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,8 @@ public interface IDirectDebitMandate2 : IIsoComponent
     [IsoId("_VMep_Np-Ed-ak6NoX_4Aeg_-615142354")]
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegistrationIdentification { get; }
 
     /// <summary>
@@ -65,5 +68,7 @@ public interface IDirectDebitMandate2 : IIsoComponent
     [IsoId("_VMoa8Np-Ed-ak6NoX_4Aeg_-615142337")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 }

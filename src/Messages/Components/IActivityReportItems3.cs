@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the events that occurred for one transaction.
 /// </summary>
 [IsoId("_i1YO8efGEeKNfc-Rw_dPYg")]
+[IsoDisplayName(@"Activity Report Items")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IActivityReportItems3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IActivityReportItems3 : IIsoComponent
     [IsoId("_jT0ecefGEeKNfc-Rw_dPYg")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +29,9 @@ public interface IActivityReportItems3 : IIsoComponent
     [IsoId("_jT0ec-fGEeKNfc-Rw_dPYg")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>
@@ -33,6 +40,7 @@ public interface IActivityReportItems3 : IIsoComponent
     [IsoId("_jT0edefGEeKNfc-Rw_dPYg")]
     [DisplayName("Reported Entity")]
     [IsoXmlTag("RptdNtty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> ReportedEntity { get; }
 
     /// <summary>
@@ -41,6 +49,7 @@ public interface IActivityReportItems3 : IIsoComponent
     [IsoId("_jT1FgefGEeKNfc-Rw_dPYg")]
     [DisplayName("Reported Item")]
     [IsoXmlTag("RptdItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActivityDetails1> ReportedItem { get; }
 
     /// <summary>
@@ -49,5 +58,6 @@ public interface IActivityReportItems3 : IIsoComponent
     [IsoId("_jT1Fg-fGEeKNfc-Rw_dPYg")]
     [DisplayName("Pending Request For Action")]
     [IsoXmlTag("PdgReqForActn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPendingActivity2> PendingRequestForAction { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper1Choice;
 /// </summary>
 [IsoId("_itCYoFryEeWN79Bl6BUd3g")]
 [IsoXmlTag("RcvrdPpr")]
+[IsoDisplayName(@"Recovered Paper")]
 public interface IRecoveredPaper : IAssetClassCommodityPaper1Choice, IIsoChoiceVariant
 {
     /// <summary>

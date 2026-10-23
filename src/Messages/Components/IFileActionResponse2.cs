@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the file action.
 /// </summary>
 [IsoId("_gZVqQYKwEeu4svNQ5N-l6w")]
+[IsoDisplayName(@"File Action Response")]
 public interface IFileActionResponse2 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IFileActionResponse2 : IIsoComponent
     [IsoId("_geda2YKwEeu4svNQ5N-l6w")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface IFileActionResponse2 : IIsoComponent
     [IsoId("_geda24KwEeu4svNQ5N-l6w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FloatingRateIdentification8Choic
 /// List of floating rate curves.
 /// </summary>
 [IsoId("_IsYmITNoEe2UWZuK9pqFtg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IFloatingRateIdentification8Choice, IIsoChoiceVariant
 {
     /// <summary>

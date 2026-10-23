@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the status of a trade.
 /// </summary>
 [IsoId("_SvV_8gEcEeCQm6a_G2yO_w_2088147903")]
+[IsoDisplayName(@"Trade Data")]
 public interface ITradeData3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeData3 : IIsoComponent
     [IsoId("_SvV_8wEcEeCQm6a_G2yO_w_1091075550")]
     [DisplayName("Matching System Unique Reference")]
     [IsoXmlTag("MtchgSysUnqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MatchingSystemUniqueReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITradeData3 : IIsoComponent
     [IsoId("_SvV_9AEcEeCQm6a_G2yO_w_-206207174")]
     [DisplayName("Matching System Matching Reference")]
     [IsoXmlTag("MtchgSysMtchgRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MatchingSystemMatchingReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITradeData3 : IIsoComponent
     [IsoId("_SvV_9QEcEeCQm6a_G2yO_w_977236484")]
     [DisplayName("Status Originator")]
     [IsoXmlTag("StsOrgtr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StatusOriginator { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ITradeData3 : IIsoComponent
     [IsoId("_SvV_9wEcEeCQm6a_G2yO_w_-1016908222")]
     [DisplayName("Current Status Sub Type")]
     [IsoXmlTag("CurStsSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CurrentStatusSubType { get; }
 
     /// <summary>
@@ -57,6 +66,7 @@ public interface ITradeData3 : IIsoComponent
     [IsoId("_SvV_-AEcEeCQm6a_G2yO_w_-2013980575")]
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CurrentStatusDateTime { get; }
 
     /// <summary>
@@ -73,6 +83,7 @@ public interface ITradeData3 : IIsoComponent
     [IsoId("_SvV_-gEcEeCQm6a_G2yO_w_-633353166")]
     [DisplayName("Alleged Trade")]
     [IsoXmlTag("AllgdTrad")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AllegedTrade { get; }
 
     /// <summary>
@@ -81,5 +92,7 @@ public interface ITradeData3 : IIsoComponent
     [IsoId("_SvV_-wEcEeCQm6a_G2yO_w_-1846645819")]
     [DisplayName("Previous Status Sub Type")]
     [IsoXmlTag("PrvsStsSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? PreviousStatusSubType { get; }
 }

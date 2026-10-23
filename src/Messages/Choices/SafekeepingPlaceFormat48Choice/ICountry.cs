@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat48Choice;
 /// <summary>
 /// Country.
 /// </summary>
+[IsoDisplayName(@"Country")]
 public interface ICountry : ISafekeepingPlaceFormat48Choice, IIsoChoiceVariant
 {
     /// <summary>

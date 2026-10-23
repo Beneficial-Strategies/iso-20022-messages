@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
 /// </summary>
 [IsoId("_3V6ZQ53DEeuwmdq0KtnICg")]
 [IsoXmlTag("Indx")]
+[IsoDisplayName(@"Index")]
 public interface IIndex : IFinancialInstrumentIdentification9Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IIndex : IFinancialInstrumentIdentification9Choice, IIsoChoiceV
     [IsoId("_GHFukZ3EEeuwmdq0KtnICg")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISIN2021Identifier)]
     ISIN2021Identifier? ISIN { get; }
 
     /// <summary>

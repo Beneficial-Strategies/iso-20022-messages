@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics shared by all individual transactions included in the message.
 /// </summary>
 [IsoId("_w_FwIVnLEeOQYsoJizpkVw")]
+[IsoDisplayName(@"Group Header")]
 public interface IGroupHeader69 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGroupHeader69 : IIsoComponent
     [IsoId("_xLvFAVnLEeOQYsoJizpkVw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IGroupHeader69 : IIsoComponent
     [IsoId("_xLvFBVnLEeOQYsoJizpkVw")]
     [DisplayName("Issued Date")]
     [IsoXmlTag("IssdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate IssuedDate { get; }
 
     /// <summary>
@@ -49,6 +53,8 @@ public interface IGroupHeader69 : IIsoComponent
     [IsoId("_e6lMYFnMEeOQYsoJizpkVw")]
     [DisplayName("Original Identification")]
     [IsoXmlTag("OrgnlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalIdentification { get; }
 
     /// <summary>

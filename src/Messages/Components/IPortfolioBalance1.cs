@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance breakdown information.
 /// </summary>
 [IsoId("_m9_jwPNBEeCuA5Tr22BnwA_-274650344")]
+[IsoDisplayName(@"Portfolio Balance")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2019-03-02.")]
 public interface IPortfolioBalance1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IPortfolioBalance1 : IIsoComponent
     [IsoId("_m9_jwfNBEeCuA5Tr22BnwA_1134139495")]
     [DisplayName("Summary Balance")]
     [IsoXmlTag("SummryBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceDetails5> SummaryBalance { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IPortfolioBalance1 : IIsoComponent
     [IsoId("_m9_jwvNBEeCuA5Tr22BnwA_432347507")]
     [DisplayName("Detailed Balance")]
     [IsoXmlTag("DtldBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceDetails6> DetailedBalance { get; }
 }

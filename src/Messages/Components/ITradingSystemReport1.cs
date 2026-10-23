@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// New trading system related data report.
 /// </summary>
 [IsoId("_dVjE0GFdEfC-1NkZ9TkdKA")]
+[IsoDisplayName(@"Trading System Report1")]
 public interface ITradingSystemReport1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITradingSystemReport1 : IIsoComponent
     [IsoId("_jguNoGFdEfC-1NkZ9TkdKA")]
     [DisplayName("Trading System")]
     [IsoXmlTag("TradgSys")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradingSystemData1> TradingSystem { get; }
 }

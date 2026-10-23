@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status is accepted under certain conditions.
 /// </summary>
 [IsoId("_RM7EKdp-Ed-ak6NoX_4Aeg_-367108012")]
+[IsoDisplayName(@"Conditionally Accepted Status")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IConditionallyAcceptedStatus2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +27,8 @@ public interface IConditionallyAcceptedStatus2 : IIsoComponent
     [IsoId("_RM7EK9p-Ed-ak6NoX_4Aeg_1592724754")]
     [DisplayName("Reason Details")]
     [IsoXmlTag("RsnDtls")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IConditionallyAcceptedStatusReason2> ReasonDetails { get; }
 }

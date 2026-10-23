@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade Recurrent Query7.
 /// </summary>
 [IsoId("_-zhqwZjCEe6BApM7bIoABA")]
+[IsoDisplayName(@"Trade Recurrent Query7")]
 public interface ITradeRecurrentQuery7 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ITradeRecurrentQuery7 : IIsoComponent
     /// </summary>
     [DisplayName("Frequency")]
     [IsoXmlTag("Frqcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeQueryExecutionFrequency3> Frequency { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Product purchased to be paid.
 /// </summary>
 [IsoId("_t5V90lkyEeGeoaLUQk__nA_1997796326")]
+[IsoDisplayName(@"Product")]
 public interface IProduct2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IProduct2 : IIsoComponent
     [IsoId("_t5V901kyEeGeoaLUQk__nA_1872858483")]
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text ProductCode { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IProduct2 : IIsoComponent
     [IsoId("_t5fu0FkyEeGeoaLUQk__nA_-1611123080")]
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ProductQuantity { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface IProduct2 : IIsoComponent
     [IsoId("_t5fu01kyEeGeoaLUQk__nA_-391380294")]
     [DisplayName("Tax Type")]
     [IsoXmlTag("TaxTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxType { get; }
 
     /// <summary>
@@ -65,5 +71,7 @@ public interface IProduct2 : IIsoComponent
     [IsoId("_t5o4wFkyEeGeoaLUQk__nA_442293533")]
     [DisplayName("Additional Product Information")]
     [IsoXmlTag("AddtlPdctInf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalProductInformation { get; }
 }

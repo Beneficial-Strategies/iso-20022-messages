@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentRole1Choice;
 /// Payment party role, in a coded form.
 /// </summary>
 [IsoId("_b_Ox1XhiEeidzqjNEfehPg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPaymentRole1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to an identification, for example, party identification or account identification.
 /// </summary>
 [IsoId("_WeJGK9p-Ed-ak6NoX_4Aeg_-458352417")]
+[IsoDisplayName(@"Generic Identification")]
 public interface IGenericIdentification18 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGenericIdentification18 : IIsoComponent
     [IsoId("_WeJGLNp-Ed-ak6NoX_4Aeg_1842470173")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
+    [StringLength(30, MinimumLength = 1)]
     RestrictedFINXMax30Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IGenericIdentification18 : IIsoComponent
     [IsoId("_WeSQENp-Ed-ak6NoX_4Aeg_-151674533")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText? SchemeName { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IGenericIdentification18 : IIsoComponent
     [IsoId("_WeSQEdp-Ed-ak6NoX_4Aeg_-2145819239")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText? Issuer { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics shared by all individual items included in the currency control message.
 /// </summary>
 [IsoId("_MC9ncdLJEeSdq5yU2aaSNw")]
+[IsoDisplayName(@"Currency Control Header")]
 public interface ICurrencyControlHeader1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICurrencyControlHeader1 : IIsoComponent
     [IsoId("_MSJS8dLJEeSdq5yU2aaSNw")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICurrencyControlHeader1 : IIsoComponent
     [IsoId("_MSJS89LJEeSdq5yU2aaSNw")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ICurrencyControlHeader1 : IIsoComponent
     [IsoId("_MSJS99LJEeSdq5yU2aaSNw")]
     [DisplayName("Number Of Items")]
     [IsoXmlTag("NbOfItms")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfItems { get; }
 
     /// <summary>

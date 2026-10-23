@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further additional details on the underlying payment instruction that cannot be transferred in a regular statement message.
 /// </summary>
 [IsoId("_ko_scTq3EeWZFYSPlduMhw")]
+[IsoDisplayName(@"Payment Complementary Information")]
 public interface IPaymentComplementaryInformation5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentComplementaryInformation5 : IIsoComponent
     [IsoId("_kzAj9Tq3EeWZFYSPlduMhw")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPaymentComplementaryInformation5 : IIsoComponent
     [IsoId("_kzAj9zq3EeWZFYSPlduMhw")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPaymentComplementaryInformation5 : IIsoComponent
     [IsoId("_kzAj-Tq3EeWZFYSPlduMhw")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IPaymentComplementaryInformation5 : IIsoComponent
     [IsoId("_kzAj_Tq3EeWZFYSPlduMhw")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedExecutionDate { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IPaymentComplementaryInformation5 : IIsoComponent
     [IsoId("_kzAj_zq3EeWZFYSPlduMhw")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IPaymentComplementaryInformation5 : IIsoComponent
     [IsoId("_kzAkATq3EeWZFYSPlduMhw")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -241,6 +251,8 @@ public interface IPaymentComplementaryInformation5 : IIsoComponent
     [IsoId("_kzAkLTq3EeWZFYSPlduMhw")]
     [DisplayName("Instruction For Debtor Agent")]
     [IsoXmlTag("InstrForDbtrAgt")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InstructionForDebtorAgent { get; }
 
     /// <summary>
@@ -265,6 +277,7 @@ public interface IPaymentComplementaryInformation5 : IIsoComponent
     [IsoId("_kzAkMzq3EeWZFYSPlduMhw")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>
@@ -273,6 +286,7 @@ public interface IPaymentComplementaryInformation5 : IIsoComponent
     [IsoId("_kzAkNTq3EeWZFYSPlduMhw")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent1> InstructionForCreditorAgent { get; }
 
     /// <summary>

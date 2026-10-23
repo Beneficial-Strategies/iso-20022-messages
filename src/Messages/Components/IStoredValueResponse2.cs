@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Response data to a Stored Value request.
 /// </summary>
 [IsoId("_FW05gYYMEemxIqbaFEE8-w")]
+[IsoDisplayName(@"Stored Value Response")]
 public interface IStoredValueResponse2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IStoredValueResponse2 : IIsoComponent
     [IsoId("_FhPZw4YMEemxIqbaFEE8-w")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStoredValueData2> Result { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IStoredValueResponse2 : IIsoComponent
     [IsoId("_FhPZxYYMEemxIqbaFEE8-w")]
     [DisplayName("Receipt")]
     [IsoXmlTag("Rct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReceipt1> Receipt { get; }
 }

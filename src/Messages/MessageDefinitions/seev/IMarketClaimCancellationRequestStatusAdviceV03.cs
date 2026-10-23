@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "MktClmCxlReqStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.053.001.03"
 )]
+[IsoDisplayName(@"Market Claim Cancellation Request Status Advice V03")]
 public interface IMarketClaimCancellationRequestStatusAdviceV03 : IOuterRecord
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IMarketClaimCancellationRequestStatusAdviceV03 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

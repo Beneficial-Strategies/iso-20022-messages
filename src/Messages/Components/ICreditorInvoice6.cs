@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Creditor Invoice6.
 /// </summary>
 [IsoId("_1GcAcTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Creditor Invoice6")]
 public interface ICreditorInvoice6 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface ICreditorInvoice6 : IIsoComponent
     /// </summary>
     [DisplayName("Contract Format Type")]
     [IsoXmlTag("CtrctFrmtTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentFormat2Choice> ContractFormatType { get; }
 
     /// <summary>
@@ -37,6 +39,7 @@ public interface ICreditorInvoice6 : IIsoComponent
     /// </summary>
     [DisplayName("Contract Reference Type")]
     [IsoXmlTag("CtrctRefTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentType1Choice> ContractReferenceType { get; }
 
     /// <summary>

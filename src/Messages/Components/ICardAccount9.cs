@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Customer account information.
 /// </summary>
 [IsoId("_SuUbsa4AEeWL1uap3dNhCQ")]
+[IsoDisplayName(@"Card Account")]
 public interface ICardAccount9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardAccount9 : IIsoComponent
     [IsoId("_ePFJIK4AEeWL1uap3dNhCQ")]
     [DisplayName("Account Sequence Number")]
     [IsoXmlTag("AcctSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? AccountSequenceNumber { get; }
 
     /// <summary>
@@ -42,6 +44,8 @@ public interface ICardAccount9 : IIsoComponent
     [IsoId("_S6i51a4AEeWL1uap3dNhCQ")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AccountName { get; }
 
     /// <summary>
@@ -74,6 +78,8 @@ public interface ICardAccount9 : IIsoComponent
     [IsoId("_rUA_EK4AEeWL1uap3dNhCQ")]
     [DisplayName("Credit Reference")]
     [IsoXmlTag("CdtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CreditReference { get; }
 
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionAmendmentStatus1Choice;
 /// </summary>
 [IsoId("_RiiHx9p-Ed-ak6NoX_4Aeg_-1936329849")]
 [IsoXmlTag("RjctdSts")]
+[IsoDisplayName(@"Rejected Status")]
 public interface IRejectedStatus : IElectionAmendmentStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IRejectedStatus : IElectionAmendmentStatus1Choice, IIsoChoiceVa
     [IsoId("_RkUQdNp-Ed-ak6NoX_4Aeg_-1873733608")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason8FormatChoice> Reason { get; }
 
     /// <summary>
@@ -26,5 +28,7 @@ public interface IRejectedStatus : IElectionAmendmentStatus1Choice, IIsoChoiceVa
     [IsoId("_RkUQddp-Ed-ak6NoX_4Aeg_-1873733607")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limits and amounts not part of the transaction amount.
 /// </summary>
 [IsoId("_tSAeoUTEEeiTBYbU3rWV0A")]
+[IsoDisplayName(@"Additional Amounts")]
 public interface IAdditionalAmounts2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAdditionalAmounts2 : IIsoComponent
     [IsoId("_td6Mo0TEEeiTBYbU3rWV0A")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IAdditionalAmounts2 : IIsoComponent
     [IsoId("_td6Mp0TEEeiTBYbU3rWV0A")]
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Label { get; }
 }

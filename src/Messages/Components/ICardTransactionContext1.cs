@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context in which the card transaction is performed.
 /// </summary>
 [IsoId("_LAygUHsHEeSR68OJvMfxJQ")]
+[IsoDisplayName(@"Card Transaction Context")]
 public interface ICardTransactionContext1 : IIsoComponent
 {
     /// <summary>

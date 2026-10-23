@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice;
 /// </summary>
 [IsoId("_FX0FVUDHEeGUr-Tp_ntVFg")]
 [IsoXmlTag("CstmrId")]
+[IsoDisplayName(@"Customer Identification")]
 public interface ICustomerIdentification : ISearchCriteria1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface ICustomerIdentification : ISearchCriteria1Choice, IIsoChoiceVar
     [IsoId("_jP3PoUyuEeGcV5yVhSZuNw")]
     [DisplayName("Authority Request")]
     [IsoXmlTag("AuthrtyReq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorityInvestigation2> AuthorityRequest { get; }
 }

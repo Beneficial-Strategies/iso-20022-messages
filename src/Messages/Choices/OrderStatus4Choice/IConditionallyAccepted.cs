@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus4Choice;
 /// Status of the switch order is conditionally accepted.
 /// </summary>
 [IsoId("_9wxHxUH8EeaV3ab_pHzFIQ")]
+[IsoDisplayName(@"Conditionally Accepted")]
 public interface IConditionallyAccepted : IOrderStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

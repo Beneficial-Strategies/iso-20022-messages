@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the details of the transaction.
 /// </summary>
 [IsoId("_w8vId7PuEeelzbgsFa3sqQ")]
+[IsoDisplayName(@"Transaction Details")]
 public interface ITransactionDetails106 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITransactionDetails106 : IIsoComponent
     [IsoId("_xMgpl7PuEeelzbgsFa3sqQ")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ITransactionDetails106 : IIsoComponent
     [IsoId("_xMgpm7PuEeelzbgsFa3sqQ")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ITransactionDetails106 : IIsoComponent
     [IsoId("_xMgpn7PuEeelzbgsFa3sqQ")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ITransactionDetails106 : IIsoComponent
     [IsoId("_xMgpobPuEeelzbgsFa3sqQ")]
     [DisplayName("Other Transaction Identification")]
     [IsoXmlTag("OthrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherTransactionIdentification { get; }
 
     /// <summary>

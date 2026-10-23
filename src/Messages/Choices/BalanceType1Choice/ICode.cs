@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceType1Choice;
 /// Specifies the code for the type of a balance, eg, opening booked balance.
 /// </summary>
 [IsoId("_RcH9xtp-Ed-ak6NoX_4Aeg_-106550504")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBalanceType1Choice, IIsoChoiceVariant
 {
     /// <summary>

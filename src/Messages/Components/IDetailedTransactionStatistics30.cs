@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed Transaction Statistics30.
 /// </summary>
 [IsoId("_l8bfMfreEe2mU4Wi2q3MzQ")]
+[IsoDisplayName(@"Detailed Transaction Statistics30")]
 public interface IDetailedTransactionStatistics30 : IIsoComponent
 {
     /// <summary>
@@ -44,5 +45,6 @@ public interface IDetailedTransactionStatistics30 : IIsoComponent
     /// </summary>
     [DisplayName("Transactions Rejections Reason")]
     [IsoXmlTag("TxsRjctnsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason71> TransactionsRejectionsReason { get; }
 }

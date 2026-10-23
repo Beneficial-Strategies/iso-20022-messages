@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the request of a diagnostic from an ATM.
 /// </summary>
 [IsoId("_ZlSuMa46EeWRfYPBaeOY8w")]
+[IsoDisplayName(@"ATM Diagnostic Request")]
 public interface IATMDiagnosticRequest2 : IIsoComponent
 {
     /// <summary>

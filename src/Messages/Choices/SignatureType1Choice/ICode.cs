@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SignatureType1Choice;
 /// Signature type expressed as a code.
 /// </summary>
 [IsoId("_rszToDoHEeabspMEjqY5TQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISignatureType1Choice, IIsoChoiceVariant
 {
     /// <summary>

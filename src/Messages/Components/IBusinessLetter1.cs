@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// (3) - the LegalContext element.
 /// </summary>
 [IsoId("_OTgzMTkz-AOSNFX-8224490")]
+[IsoDisplayName(@"Business Letter")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IBusinessLetter1 : IIsoComponent
 {
     /// <summary>
@@ -22,6 +24,8 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjAz-AOSNFX-8224491")]
     [DisplayName("Application Context")]
     [IsoXmlTag("ApplCntxt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ApplicationContext { get; }
 
     /// <summary>
@@ -38,6 +42,7 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjA2-AOSNFX-8224491")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Date { get; }
 
     /// <summary>
@@ -46,6 +51,7 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjA3-AOSNFX-8224491")]
     [DisplayName("Related Letter")]
     [IsoXmlTag("RltdLttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> RelatedLetter { get; }
 
     /// <summary>
@@ -54,6 +60,7 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjA4-AOSNFX-822449")]
     [DisplayName("Related Message")]
     [IsoXmlTag("RltdMsg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> RelatedMessage { get; }
 
     /// <summary>
@@ -62,6 +69,7 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjA5-AOSNFX-8224491")]
     [DisplayName("Content Identifier")]
     [IsoXmlTag("CnttIdr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ContentIdentifier { get; }
 
     /// <summary>
@@ -86,6 +94,7 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjE0-AOSNFX-8224491")]
     [DisplayName("Primary Recipient")]
     [IsoXmlTag("PmryRcpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedPartyIdentification1> PrimaryRecipient { get; }
 
     /// <summary>
@@ -94,6 +103,7 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjE1-AOSNFX-8224492")]
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedPartyIdentification1> Sender { get; }
 
     /// <summary>
@@ -102,6 +112,7 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjE2-AOSNFX-8224492")]
     [DisplayName("Authorisation User")]
     [IsoXmlTag("AuthstnUsr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedPartyIdentification1> AuthorisationUser { get; }
 
     /// <summary>
@@ -110,6 +121,7 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjE3-AOSNFX-8224492")]
     [DisplayName("Response Recipient")]
     [IsoXmlTag("RspnRcpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedPartyIdentification1> ResponseRecipient { get; }
 
     /// <summary>
@@ -118,6 +130,7 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjE4-AOSNFX-8224492")]
     [DisplayName("Copy Recipient")]
     [IsoXmlTag("CpyRcpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedPartyIdentification1> CopyRecipient { get; }
 
     /// <summary>
@@ -126,6 +139,7 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjE5-AOSNFX-8224492")]
     [DisplayName("Other Party")]
     [IsoXmlTag("OthrPty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedPartyIdentification1> OtherParty { get; }
 
     /// <summary>
@@ -134,6 +148,7 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjIw-AOSNFX-8224493")]
     [DisplayName("Associated Document")]
     [IsoXmlTag("AssoctdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> AssociatedDocument { get; }
 
     /// <summary>
@@ -142,6 +157,7 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjIx-AOSNFX-8224493")]
     [DisplayName("Governing Contract")]
     [IsoXmlTag("GovngCtrct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> GoverningContract { get; }
 
     /// <summary>
@@ -150,6 +166,7 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjIz-AOSNFX-8224493")]
     [DisplayName("Legal Context")]
     [IsoXmlTag("LglCntxt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGovernanceRules2> LegalContext { get; }
 
     /// <summary>
@@ -158,6 +175,8 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjI0-AOSNFX-8224493")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [StringLength(2000, MinimumLength = 1)]
     Max2000Text? AdditionalInformation { get; }
 
     /// <summary>
@@ -166,6 +185,8 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjI1-AOSNFX-8224493")]
     [DisplayName("Notice")]
     [IsoXmlTag("Ntce")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Notice { get; }
 
     /// <summary>
@@ -182,5 +203,6 @@ public interface IBusinessLetter1 : IIsoComponent
     [IsoId("_OTgzMjI4-AOSNFX-8224493")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedPartyAndXMLSignature1> DigitalSignature { get; }
 }

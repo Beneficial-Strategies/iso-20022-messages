@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party Identification287.
 /// </summary>
 [IsoId("_5kDx4W9lEe6DxcrvCrq6hQ")]
+[IsoDisplayName(@"Party Identification287")]
 public interface IPartyIdentification287 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IPartyIdentification287 : IIsoComponent
     /// </summary>
     [DisplayName("Credentials")]
     [IsoXmlTag("Crdntls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICredentials3> Credentials { get; }
 
     /// <summary>
@@ -86,6 +88,7 @@ public interface IPartyIdentification287 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 
     /// <summary>

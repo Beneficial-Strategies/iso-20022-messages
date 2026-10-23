@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters of the report.
 /// </summary>
 [IsoId("_MSIRAAynEeukOZYTbzKKxw")]
+[IsoDisplayName(@"Report Parameters")]
 public interface IReportParameters6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportParameters6 : IIsoComponent
     [IsoId("_MSIRBAynEeukOZYTbzKKxw")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ReportIdentification { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IReportParameters6 : IIsoComponent
     [IsoId("_MSIRAgynEeukOZYTbzKKxw")]
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CalculationDate { get; }
 }

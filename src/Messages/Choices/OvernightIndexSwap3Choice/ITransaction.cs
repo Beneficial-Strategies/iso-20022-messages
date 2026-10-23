@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OvernightIndexSwap3Choice;
 /// </summary>
 [IsoId("_zLz706icEeWHO_l3hf2rlA")]
 [IsoXmlTag("Tx")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction : IOvernightIndexSwap3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -28,6 +29,7 @@ public interface ITransaction : IOvernightIndexSwap3Choice, IIsoChoiceVariant
     [IsoId("_1UopgaicEeWHO_l3hf2rlA")]
     [DisplayName("Branch Identification")]
     [IsoXmlTag("BrnchId")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? BranchIdentification { get; }
 
     /// <summary>
@@ -36,6 +38,8 @@ public interface ITransaction : IOvernightIndexSwap3Choice, IIsoChoiceVariant
     [IsoId("_znSW46icEeWHO_l3hf2rlA")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? UniqueTransactionIdentifier { get; }
 
     /// <summary>
@@ -44,6 +48,8 @@ public interface ITransaction : IOvernightIndexSwap3Choice, IIsoChoiceVariant
     [IsoId("_znSW5aicEeWHO_l3hf2rlA")]
     [DisplayName("Proprietary Transaction Identification")]
     [IsoXmlTag("PrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text ProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -52,6 +58,8 @@ public interface ITransaction : IOvernightIndexSwap3Choice, IIsoChoiceVariant
     [IsoId("_znSW56icEeWHO_l3hf2rlA")]
     [DisplayName("Counterparty Proprietary Transaction Identification")]
     [IsoXmlTag("CtrPtyPrtryTxId")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? CounterpartyProprietaryTransactionIdentification { get; }
 
     /// <summary>
@@ -79,6 +87,7 @@ public interface ITransaction : IOvernightIndexSwap3Choice, IIsoChoiceVariant
     [IsoId("_znSW7aicEeWHO_l3hf2rlA")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate StartDate { get; }
 
     /// <summary>
@@ -87,6 +96,7 @@ public interface ITransaction : IOvernightIndexSwap3Choice, IIsoChoiceVariant
     [IsoId("_znSW76icEeWHO_l3hf2rlA")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -119,5 +129,6 @@ public interface ITransaction : IOvernightIndexSwap3Choice, IIsoChoiceVariant
     [IsoId("_znSW96icEeWHO_l3hf2rlA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

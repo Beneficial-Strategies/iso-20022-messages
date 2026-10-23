@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// System Event Notification8.
 /// </summary>
 [IsoId("_5pvR8aEoEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"System Event Notification8")]
 public interface ISystemEventNotification8 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface ISystemEventNotification8 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

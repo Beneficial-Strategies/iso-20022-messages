@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Information about contract status.
 /// </summary>
 [IsoId("_Ah8Gl5PuEey0rJ3Gl6WZVA")]
+[IsoDisplayName(@"Clearing Exception Or Exemption 3 Choice")]
 public interface IClearingExceptionOrExemption3Choice : IIsoChoice { }

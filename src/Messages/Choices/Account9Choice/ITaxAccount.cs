@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Account9Choice;
 /// Account to be used for taxes if different from the account for payment.
 /// </summary>
 [IsoId("_XY_k0dp-Ed-ak6NoX_4Aeg_-1676267174")]
+[IsoDisplayName(@"Tax Account")]
 public interface ITaxAccount : IAccount9Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

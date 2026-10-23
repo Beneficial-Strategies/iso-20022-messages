@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReturnReason5Choice;
 /// Reason for the return, in a proprietary form.
 /// </summary>
 [IsoId("_TP6Pk9p-Ed-ak6NoX_4Aeg_-1676325975")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IReturnReason5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IReturnReason5Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

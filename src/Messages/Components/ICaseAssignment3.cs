@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Represents the assignment of a case to a party.
 /// </summary>
 [IsoId("_sbKvolkyEeGeoaLUQk__nA_1583838951")]
+[IsoDisplayName(@"Case Assignment")]
 public interface ICaseAssignment3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICaseAssignment3 : IIsoComponent
     [IsoId("_sbUgoFkyEeGeoaLUQk__nA_-799871475")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ICaseAssignment3 : IIsoComponent
     [IsoId("_sbnbkFkyEeGeoaLUQk__nA_1928127455")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party Identification288.
 /// </summary>
 [IsoId("_VFIs4W6YEe6DxcrvCrq6hQ")]
+[IsoDisplayName(@"Party Identification288")]
 public interface IPartyIdentification288 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface IPartyIdentification288 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalIdentification { get; }
 
     /// <summary>
@@ -121,6 +123,7 @@ public interface IPartyIdentification288 : IIsoComponent
     /// </summary>
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData11> LocalData { get; }
 
     /// <summary>
@@ -128,6 +131,7 @@ public interface IPartyIdentification288 : IIsoComponent
     /// </summary>
     [DisplayName("Sponsored Merchant")]
     [IsoXmlTag("SpnsrdMrchnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISponsoredMerchant3> SponsoredMerchant { get; }
 
     /// <summary>
@@ -212,5 +216,6 @@ public interface IPartyIdentification288 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the implementation specification to which the ISO 20022 message conforms.
 /// </summary>
 [IsoId("_6Pu8gMieEei73Ywzx0CAAg")]
+[IsoDisplayName(@"Implementation Specification")]
 public interface IImplementationSpecification1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IImplementationSpecification1 : IIsoComponent
     [IsoId("_Dr2RoMifEei73Ywzx0CAAg")]
     [DisplayName("Registry")]
     [IsoXmlTag("Regy")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Registry { get; }
 
     /// <summary>
@@ -27,5 +30,7 @@ public interface IImplementationSpecification1 : IIsoComponent
     [IsoId("_GKeQMMifEei73Ywzx0CAAg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text Identification { get; }
 }

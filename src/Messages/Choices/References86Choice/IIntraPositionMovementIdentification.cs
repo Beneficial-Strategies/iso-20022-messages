@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References86Choice;
 
 /// <summary>Specifies the intra position movement identification.</summary>
 [IsoId("0577edb6-a64d-496d-b1fe-82f9a12a9d98")]
+[IsoDisplayName(@"Intra Position Movement Identification")]
 public interface IIntraPositionMovementIdentification : IReferences86Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further information related to the processing of the cheque instruction that may need to be acted upon by the receiving agent.
 /// </summary>
 [IsoId("_93bgEbtnEeq_cfXrH83Rcw")]
+[IsoDisplayName(@"Instruction For Cheque Agent")]
 public interface IInstructionForChequeAgent1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IInstructionForChequeAgent1 : IIsoComponent
     [IsoId("_94B9A7tnEeq_cfXrH83Rcw")]
     [DisplayName("Instruction Information")]
     [IsoXmlTag("InstrInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InstructionInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information regarding the selected buyer protection instructions options.
 /// </summary>
 [IsoId("_qRwkwN_FEe-Ned3-G07x_A")]
+[IsoDisplayName(@"Corporate Action Option Statement1")]
 public interface ICorporateActionOptionStatement1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface ICorporateActionOptionStatement1 : IIsoComponent
     [IsoId("_J7RJIN_GEe-Ned3-G07x_A")]
     [DisplayName("Buyer Protection Instruction Details")]
     [IsoXmlTag("BuyrPrtcnInstrDtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBuyerProtectionInstructionDetails1> BuyerProtectionInstructionDetails { get; }
 }

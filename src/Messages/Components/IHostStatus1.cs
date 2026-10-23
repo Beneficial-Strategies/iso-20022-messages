@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// State of a Host.
 /// </summary>
 [IsoId("_N2O4cN6MEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Host Status")]
 public interface IHostStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IHostStatus1 : IIsoComponent
     [IsoId("_Teh9sN6MEeiwsev40qZGEQ")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AcquirerIdentification { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IHostStatus1 : IIsoComponent
     [IsoId("_WWtEsN6MEeiwsev40qZGEQ")]
     [DisplayName("Reachable")]
     [IsoXmlTag("Rchbl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? Reachable { get; }
 }

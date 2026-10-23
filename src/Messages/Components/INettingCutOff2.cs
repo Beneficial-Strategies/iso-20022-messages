@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details for one to many netting cut off update requests to be actioned by a central system.
 /// </summary>
 [IsoId("_B-239QN1Ee2-vqzwMUAewg")]
+[IsoDisplayName(@"Netting Cut Off")]
 public interface INettingCutOff2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface INettingCutOff2 : IIsoComponent
     [IsoId("_CEZfQwN1Ee2-vqzwMUAewg")]
     [DisplayName("New Cut Off")]
     [IsoXmlTag("NewCutOff")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICutOff1> NewCutOff { get; }
 }

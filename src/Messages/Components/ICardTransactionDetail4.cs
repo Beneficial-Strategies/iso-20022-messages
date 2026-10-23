@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the card transaction.
 /// </summary>
 [IsoId("_nUP88YNtEeSXtJ8rlirVJw")]
+[IsoDisplayName(@"Card Transaction Detail")]
 public interface ICardTransactionDetail4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardTransactionDetail4 : IIsoComponent
     [IsoId("_D5rsUINuEeSXtJ8rlirVJw")]
     [DisplayName("Transaction Fees")]
     [IsoXmlTag("TxFees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount11> TransactionFees { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICardTransactionDetail4 : IIsoComponent
     [IsoId("_nhgV04NtEeSXtJ8rlirVJw")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount10> AdditionalAmounts { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICardTransactionDetail4 : IIsoComponent
     [IsoId("_nhgV1YNtEeSXtJ8rlirVJw")]
     [DisplayName("Account And Balance")]
     [IsoXmlTag("AcctAndBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardAccount2> AccountAndBalance { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICardTransactionDetail4 : IIsoComponent
     [IsoId("_nhgV14NtEeSXtJ8rlirVJw")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionVerificationResult4> TransactionVerificationResult { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface ICardTransactionDetail4 : IIsoComponent
     [IsoId("_nhgV2YNtEeSXtJ8rlirVJw")]
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidityDate { get; }
 
     /// <summary>
@@ -67,5 +73,6 @@ public interface ICardTransactionDetail4 : IIsoComponent
     [IsoId("_nhgV24NtEeSXtJ8rlirVJw")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

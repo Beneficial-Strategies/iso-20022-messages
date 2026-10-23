@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceType5Choice;
 /// </summary>
 [IsoId("_SKL8D83yEee5nJBZsW8MFQ")]
 [IsoXmlTag("Indctv")]
+[IsoDisplayName(@"Indicative")]
 public interface IIndicative : IPriceType5Choice, IIsoChoiceVariant
 {
     /// <summary>

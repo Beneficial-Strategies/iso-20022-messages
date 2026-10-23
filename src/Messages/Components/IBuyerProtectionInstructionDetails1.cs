@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information received for a given buyer protection instruction.
 /// </summary>
 [IsoId("_wvC70N_GEe-Ned3-G07x_A")]
+[IsoDisplayName(@"Buyer Protection Instruction Details1")]
 public interface IBuyerProtectionInstructionDetails1 : IIsoComponent
 {
     /// <summary>

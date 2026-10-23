@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a subscription leg of a switch order.
 /// </summary>
 [IsoId("ec413d6f-6bc2-4f14-a0da-b9bb7bb30358")]
+[IsoDisplayName(@"Switch Subscription Leg Execution5")]
 public interface ISwitchSubscriptionLegExecution5 : IIsoComponent
 {
     /// <summary>
@@ -89,6 +90,7 @@ public interface ISwitchSubscriptionLegExecution5 : IIsoComponent
     [IsoId("ec413d6f-infp-0001-0010-b9bb7bb30358")]
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnitPrice22> InformativePriceDetails { get; }
 
     /// <summary>

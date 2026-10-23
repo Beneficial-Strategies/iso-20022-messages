@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_TSqlENEwEd-BzquC8wXy7w_-20074079")]
 [IsoMessage("seev.039.001.01", "CorpActnCxlAdvc", "urn:iso:std:iso:20022:tech:xsd:seev.039.001.01")]
+[Description(@"Scope|An account servicer sends the CorporateActionCancellationAdvice message to an account owner or its designated agent to cancel a previously announced corporate action event in case of error from the account servicer or in case of withdrawal by the issuer.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).|ISO 15022 - 20022 COEXISTENCE|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
+[IsoDisplayName(@"Corporate Action Cancellation Advice V")]
 public interface ICorporateActionCancellationAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -74,6 +76,7 @@ public interface ICorporateActionCancellationAdviceV01 : IOuterRecord
     [IsoId("_TS0WBdEwEd-BzquC8wXy7w_-1577810223")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -82,6 +85,7 @@ public interface ICorporateActionCancellationAdviceV01 : IOuterRecord
     [IsoId("_TS0WBtEwEd-BzquC8wXy7w_-1527937239")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> PayingAgent { get; }
 
     /// <summary>
@@ -90,6 +94,7 @@ public interface ICorporateActionCancellationAdviceV01 : IOuterRecord
     [IsoId("_TS0WB9EwEd-BzquC8wXy7w_-1469758174")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -106,6 +111,7 @@ public interface ICorporateActionCancellationAdviceV01 : IOuterRecord
     [IsoId("_TS-HAdEwEd-BzquC8wXy7w_827404384")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> ResellingAgent { get; }
 
     /// <summary>
@@ -130,6 +136,7 @@ public interface ICorporateActionCancellationAdviceV01 : IOuterRecord
     [IsoId("_TS-HBNEwEd-BzquC8wXy7w_838487177")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification10Choice> SolicitationAgent { get; }
 
     /// <summary>
@@ -146,5 +153,6 @@ public interface ICorporateActionCancellationAdviceV01 : IOuterRecord
     [IsoId("_TS-HBtEwEd-BzquC8wXy7w_-1922281510")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension2> Extension { get; }
 }

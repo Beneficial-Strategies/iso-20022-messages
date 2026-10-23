@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Cash Account Identification14Choice.
 /// </summary>
 [IsoId("_m45sd5t3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Cash Account Identification14Choice")]
 public interface ICashAccountIdentification14Choice : IIsoChoice { }

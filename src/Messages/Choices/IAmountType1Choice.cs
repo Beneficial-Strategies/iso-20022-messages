@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Amount of money to be transferred between the debtor and creditor, expressed in debtor&apos;s account currency or converted in another currency.
 /// </summary>
 [IsoId("_PrUuhtp-Ed-ak6NoX_4Aeg_-1333132724")]
+[IsoDisplayName(@"Amount Type 1 Choice")]
 public interface IAmountType1Choice : IIsoChoice { }

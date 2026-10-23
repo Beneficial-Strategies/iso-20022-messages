@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General information about the collateral agreement.
 /// </summary>
 [IsoId("_G5UkMSW1EeyT3chuyX0PgA")]
+[IsoDisplayName(@"Obligation")]
 public interface IObligation8 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details about the system availability and the related system events that might impact the availability.
 /// </summary>
 [IsoId("_dk-8wXhkEeidzqjNEfehPg")]
+[IsoDisplayName(@"System Availability And Events")]
 public interface ISystemAvailabilityAndEvents3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ISystemAvailabilityAndEvents3 : IIsoComponent
     [IsoId("_dw2Oh3hkEeidzqjNEfehPg")]
     [DisplayName("Event")]
     [IsoXmlTag("Evt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemEvent3> Event { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface ISystemAvailabilityAndEvents3 : IIsoComponent
     [IsoId("_dw2OiXhkEeidzqjNEfehPg")]
     [DisplayName("Closure Information")]
     [IsoXmlTag("ClsrInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemClosure2> ClosureInformation { get; }
 }

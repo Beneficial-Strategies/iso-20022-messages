@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a subscription order.
 /// </summary>
 [IsoId("_Vji3MTk7EeapUO0vUIo9Xw")]
+[IsoDisplayName(@"Subscription Bulk Execution")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface ISubscriptionBulkExecution4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface ISubscriptionBulkExecution4 : IIsoComponent
     [IsoId("_Pqdz0VAMEeal4_lvhAnyGQ")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AmendmentIndicator { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISubscriptionBulkExecution4 : IIsoComponent
     [IsoId("_V8F6HTk7EeapUO0vUIo9Xw")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ISubscriptionBulkExecution4 : IIsoComponent
     [IsoId("_V8F6ITk7EeapUO0vUIo9Xw")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ISubscriptionBulkExecution4 : IIsoComponent
     [IsoId("_Pj_ikTw7Eea0R-RTP9Wg-Q")]
     [DisplayName("Received Date Time")]
     [IsoXmlTag("RcvdDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ReceivedDateTime { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface ISubscriptionBulkExecution4 : IIsoComponent
     [IsoId("_V8F6Izk7EeapUO0vUIo9Xw")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedFutureTradeDate { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface ISubscriptionBulkExecution4 : IIsoComponent
     [IsoId("_V8F6Kzk7EeapUO0vUIo9Xw")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubscriptionExecution12> IndividualExecutionDetails { get; }
 
     /// <summary>

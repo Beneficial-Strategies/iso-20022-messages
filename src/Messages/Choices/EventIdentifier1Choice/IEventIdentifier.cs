@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventIdentifier1Choice;
 /// Specifies event identifier.
 /// </summary>
 [IsoId("_sZ6xcPbfEeyInphUKJZxtQ")]
+[IsoDisplayName(@"Event Identifier")]
 public interface IEventIdentifier : IEventIdentifier1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IEventIdentifier : IEventIdentifier1Choice, IIsoChoiceVariant
     /// Unique Transaction Identifier (UTI). Unique number allocated to a financial transaction as agreed among the parties and/or within the regulatory system under which it is formed. The UTI is described in the latest edition of the international standard ISO 23897:2020.
     /// </summary>
     [IsoXmlTag("EvtIdr")]
+    [IsoSimpleType(IsoSimpleType.UTIIdentifier)]
     UTIIdentifier Value { get; }
 }

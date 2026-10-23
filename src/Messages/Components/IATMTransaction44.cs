@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Transaction44.
 /// </summary>
 [IsoId("_f_z-UaEQEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Transaction44")]
 public interface IATMTransaction44 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface IATMTransaction44 : IIsoComponent
     /// </summary>
     [DisplayName("Total Authorised Amount")]
     [IsoXmlTag("TtlAuthrsdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountAndCurrency1> TotalAuthorisedAmount { get; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public interface IATMTransaction44 : IIsoComponent
     /// </summary>
     [DisplayName("Total Requested Amount")]
     [IsoXmlTag("TtlReqdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ImpliedCurrencyAndAmount> TotalRequestedAmount { get; }
 
     /// <summary>
@@ -51,6 +54,7 @@ public interface IATMTransaction44 : IIsoComponent
     /// </summary>
     [DisplayName("Sub Deposit")]
     [IsoXmlTag("SubDpst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMDepositComponent1> SubDeposit { get; }
 
     /// <summary>
@@ -58,6 +62,7 @@ public interface IATMTransaction44 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount13> AdditionalCharge { get; }
 
     /// <summary>
@@ -79,6 +84,7 @@ public interface IATMTransaction44 : IIsoComponent
     /// </summary>
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 
     /// <summary>
@@ -86,6 +92,7 @@ public interface IATMTransaction44 : IIsoComponent
     /// </summary>
     [DisplayName("Account Information")]
     [IsoXmlTag("AcctInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardAccount18> AccountInformation { get; }
 
     /// <summary>
@@ -93,5 +100,6 @@ public interface IATMTransaction44 : IIsoComponent
     /// </summary>
     [DisplayName("Deposited Media")]
     [IsoXmlTag("DpstdMdia")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMDepositedMedia4> DepositedMedia { get; }
 }

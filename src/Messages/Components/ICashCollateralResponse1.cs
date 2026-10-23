@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides more details on the response such as the response type, the collateral identification, and optionally further details in case of rejection.
 /// </summary>
 [IsoId("_o6s0UWTXEeSSTJlMfOKFsA")]
+[IsoDisplayName(@"Cash Collateral Response")]
 public interface ICashCollateralResponse1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICashCollateralResponse1 : IIsoComponent
     [IsoId("_OLvGQGT2EeSnseycwS8fpA")]
     [DisplayName("Collateral Identification")]
     [IsoXmlTag("CollId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CollateralIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICashCollateralResponse1 : IIsoComponent
     [IsoId("_r9x4oW88EeSYoqRdI5bS5Q")]
     [DisplayName("Asset Number")]
     [IsoXmlTag("AsstNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AssetNumber { get; }
 
     /// <summary>
@@ -57,5 +62,7 @@ public interface ICashCollateralResponse1 : IIsoComponent
     [IsoId("_a3_oYGT0EeSnseycwS8fpA")]
     [DisplayName("Rejection Information")]
     [IsoXmlTag("RjctnInf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RejectionInformation { get; }
 }

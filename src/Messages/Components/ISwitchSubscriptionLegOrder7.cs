@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Subscription leg of a switch order.
 /// </summary>
 [IsoId("696a1285-d3fc-427d-be05-073e778482f8")]
+[IsoDisplayName(@"Switch Subscription Leg Order7")]
 public interface ISwitchSubscriptionLegOrder7 : IIsoComponent
 {
     /// <summary>

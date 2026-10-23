@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "MtgEntitlmntNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:seev.003.001.02"
 )]
+[Description(@"Scope|An account servicer sends the MeetingEntitlementNotification to an issuer, its agent, an intermediary or an account owner to advise the entitlement in relation to a shareholders meeting.|Usage|This message is sent to advise the quantity of securities held by an account owner. The balance is specified for the securities for which the meeting is taking place.|This entitlement message is sent by the account servicer or the registrar to an intermediary, the issuer's agent or the issuer. It is also sent between the account servicer and the account owner or the party holding the right to vote.|The message is also used to amend a previously sent MeetingEntitlementNotification. To notify an update, the RelatedReference must be included in the message.")]
+[IsoDisplayName(@"Meeting Entitlement Notification V")]
 public interface IMeetingEntitlementNotificationV02 : IOuterRecord
 {
     /// <summary>
@@ -61,6 +63,9 @@ public interface IMeetingEntitlementNotificationV02 : IOuterRecord
     [IsoId("_TmL99NEwEd-BzquC8wXy7w_-554853942")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition5> Security { get; }
 
     /// <summary>

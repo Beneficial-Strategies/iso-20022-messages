@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountIdentification1
 
 /// <summary>Account identified by a safekeeping account number.</summary>
 [IsoId("_s5w_SN-5Ee-Ned3-G07x_A")]
+[IsoDisplayName(@"Safekeeping Account")]
 public interface ISafekeepingAccount : ISecuritiesAccountIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of beneficiary certification required.
 /// </summary>
 [IsoId("_QzTDNdp-Ed-ak6NoX_4Aeg_-1272152318")]
+[IsoDisplayName(@"Beneficiary Certification Type 2 Choice")]
 public interface IBeneficiaryCertificationType2Choice : IIsoChoice { }

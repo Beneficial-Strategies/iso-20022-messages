@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// It is used to provide confirmation details of one or more reservations set by the member (or on behalf of the member) and managed by the transaction administrator.
 /// </summary>
 [IsoId("_DMyNh24-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Reservation Or Error 8 Choice")]
 public interface IReservationOrError8Choice : IIsoChoice { }

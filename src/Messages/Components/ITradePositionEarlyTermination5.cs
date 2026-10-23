@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details of an early termination report on a trade position.
 /// </summary>
 [IsoId("_SUW0IQ1JEeqV4s5SpzR1dQ")]
+[IsoDisplayName(@"Trade Position Early Termination")]
 public interface ITradePositionEarlyTermination5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,9 @@ public interface ITradePositionEarlyTermination5 : IIsoComponent
     [IsoId("_SVL6kQ1JEeqV4s5SpzR1dQ")]
     [DisplayName("Counterparty Specific Data")]
     [IsoXmlTag("CtrPtySpcfcData")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICounterpartySpecificData22> CounterpartySpecificData { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface ITradePositionEarlyTermination5 : IIsoComponent
     [IsoId("_SVL6lw1JEeqV4s5SpzR1dQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

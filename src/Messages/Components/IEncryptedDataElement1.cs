@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Structure to encrypt data elements.
 /// </summary>
 [IsoId("_5yR_YMVvEeem1auQ2bBhWw")]
+[IsoDisplayName(@"Encrypted Data Element")]
 public interface IEncryptedDataElement1 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IEncryptedDataElement1 : IIsoComponent
     [IsoId("_KZY7kMVwEeem1auQ2bBhWw")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherIdentification { get; }
 
     /// <summary>
@@ -50,5 +53,7 @@ public interface IEncryptedDataElement1 : IIsoComponent
     [IsoId("_KH4C8E4YEeqJcrFc0K-9yg")]
     [DisplayName("Other Clear Text Data Format")]
     [IsoXmlTag("OthrClearTxtDataFrmt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherClearTextDataFormat { get; }
 }

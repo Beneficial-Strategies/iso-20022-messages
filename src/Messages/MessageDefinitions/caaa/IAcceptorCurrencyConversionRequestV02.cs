@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrCcyConvsReq",
     "urn:iso:std:iso:20022:tech:xsd:caaa.016.001.02"
 )]
+[Description(@"The AcceptorCurrencyConversionRequest message is sent by the card acceptor to the currency conversion service provider to request if the cardholder is able to pay in the currency of its card.|")]
+[IsoDisplayName(@"Acceptor Currency Conversion Request V")]
 public interface IAcceptorCurrencyConversionRequestV02 : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Service29.
 /// </summary>
 [IsoId("_Vf8eQee-Ee-AuZFZ3aE3Cg")]
+[IsoDisplayName(@"ATM Service29")]
 public interface IATMService29 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IATMService29 : IIsoComponent
     /// </summary>
     [DisplayName("Service Variant")]
     [IsoXmlTag("SvcVarnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMService18> ServiceVariant { get; }
 
     /// <summary>
@@ -30,5 +32,6 @@ public interface IATMService29 : IIsoComponent
     /// </summary>
     [DisplayName("Limits")]
     [IsoXmlTag("Lmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMTransactionAmounts6> Limits { get; }
 }

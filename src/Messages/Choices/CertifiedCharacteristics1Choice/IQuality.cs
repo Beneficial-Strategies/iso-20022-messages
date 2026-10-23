@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics1Choice;
 /// Quality of the goods, as proven by the certificate.
 /// </summary>
 [IsoId("_TnJq6tp-Ed-ak6NoX_4Aeg_584342238")]
+[IsoDisplayName(@"Quality")]
 public interface IQuality : ICertifiedCharacteristics1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IQuality : ICertifiedCharacteristics1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 70characters.
     /// </summary>
     [IsoXmlTag("Qlty")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Value { get; }
 }

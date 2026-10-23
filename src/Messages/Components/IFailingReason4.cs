@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// The status of an instruction, advice or request.
 /// </summary>
 [IsoId("_NP0JARqLEeG38P9Gj2JZJw")]
+[IsoDisplayName(@"Failing Reason")]
 public interface IFailingReason4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IFailingReason4 : IIsoComponent
     [IsoId("_NP0JDRqLEeG38P9Gj2JZJw")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

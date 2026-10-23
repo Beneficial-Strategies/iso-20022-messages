@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment context in which the transaction is performed.
 /// </summary>
 [IsoId("_bTG-UWjqEeSDR-pyia6Xtg")]
+[IsoDisplayName(@"Payment Context")]
 public interface IPaymentContext8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPaymentContext8 : IIsoComponent
     [IsoId("_bgKi4WjqEeSDR-pyia6Xtg")]
     [DisplayName("Card Present")]
     [IsoXmlTag("CardPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardPresent { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPaymentContext8 : IIsoComponent
     [IsoId("_bgKi42jqEeSDR-pyia6Xtg")]
     [DisplayName("Cardholder Present")]
     [IsoXmlTag("CrdhldrPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardholderPresent { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IPaymentContext8 : IIsoComponent
     [IsoId("_bgKi62jqEeSDR-pyia6Xtg")]
     [DisplayName("Attendant Message Capable")]
     [IsoXmlTag("AttndntMsgCpbl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AttendantMessageCapable { get; }
 
     /// <summary>
@@ -90,5 +94,6 @@ public interface IPaymentContext8 : IIsoComponent
     [IsoId("_bgKi82jqEeSDR-pyia6Xtg")]
     [DisplayName("Supported Option")]
     [IsoXmlTag("SpprtdOptn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<SupportedPaymentOption1Code> SupportedOption { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fix of the penultimate accrual date of the transaction to the final (repurchase) date. Crystallizing the penultimate fixing into a fixed rate for the final business day. This will allow for parties to send timely settlement instructions for the repurchase leg of the transaction. Default value is 1 day.
 /// </summary>
 [IsoId("_SBqscOhlEeqspItL-MF5VQ")]
+[IsoDisplayName(@"Crystallisation Day")]
 public interface ICrystallisationDay1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICrystallisationDay1 : IIsoComponent
     [IsoId("_bB3hoehlEeqspItL-MF5VQ")]
     [DisplayName("Day")]
     [IsoXmlTag("Day")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Day { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICrystallisationDay1 : IIsoComponent
     [IsoId("_gxCq8ehlEeqspItL-MF5VQ")]
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? Period { get; }
 }

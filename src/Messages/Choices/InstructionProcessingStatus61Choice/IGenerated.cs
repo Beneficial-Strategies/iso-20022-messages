@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus61Cho
 
 /// <summary>Instruction has been generated.</summary>
 [IsoId("35559f13-aca3-4e14-a005-c4137068db20")]
+[IsoDisplayName(@"Generated")]
 public interface IGenerated : IInstructionProcessingStatus61Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

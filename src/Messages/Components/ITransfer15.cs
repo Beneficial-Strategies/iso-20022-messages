@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_CYOXwfr3EeCJc7cZxzE2fg")]
+[IsoDisplayName(@"Transfer")]
 public interface ITransfer15 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransfer15 : IIsoComponent
     [IsoId("_gudFcPruEeCJc7cZxzE2fg2")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransfer15 : IIsoComponent
     [IsoId("_ylwr8PrzEeCJc7cZxzE2fg2")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -65,6 +70,9 @@ public interface ITransfer15 : IIsoComponent
     [IsoId("_m5Q04AojEeGN18jOnwLFzg")]
     [DisplayName("Holdings Plan Type")]
     [IsoXmlTag("HldgsPlanTp")]
+    [MinLength(0)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<HoldingsPlanType1Code> HoldingsPlanType { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface ITransfer15 : IIsoComponent
     [IsoId("_CYOX2_r3EeCJc7cZxzE2fg")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OwnAccountTransferIndicator { get; }
 
     /// <summary>
@@ -97,5 +106,7 @@ public interface ITransfer15 : IIsoComponent
     [IsoId("_CYOX3_r3EeCJc7cZxzE2fg")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 }

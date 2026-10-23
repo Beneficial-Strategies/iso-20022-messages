@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus7Cho
 /// Modification is pending processing.
 /// </summary>
 [IsoId("_17xaSTp4EeWVrPy0StzzSg")]
+[IsoDisplayName(@"Pending Processing")]
 public interface IPendingProcessing : IModificationProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

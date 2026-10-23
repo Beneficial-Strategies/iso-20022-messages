@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies an organisation through client identification, a name and a domicile.
 /// </summary>
 [IsoId("_IEaQke9IEemVGdgB8P8uQQ")]
+[IsoDisplayName(@"Organisation Identification")]
 public interface IOrganisationIdentification36 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IOrganisationIdentification36 : IIsoComponent
     [IsoId("_IUQDY-9IEemVGdgB8P8uQQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? Name { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IOrganisationIdentification36 : IIsoComponent
     [IsoId("_IUQDZe9IEemVGdgB8P8uQQ")]
     [DisplayName("Domicile")]
     [IsoXmlTag("Dmcl")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? Domicile { get; }
 }

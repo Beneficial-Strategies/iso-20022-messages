@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateType2Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IDateType2Choice, IIsoChoiceVariant
 {
     /// <summary>

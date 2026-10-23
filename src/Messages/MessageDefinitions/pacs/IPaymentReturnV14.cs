@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// </summary>
 [IsoId("_dI-nYTrDEe-thIfLZ94a1w")]
 [IsoMessage("pacs.004.001.14", "PmtRtr", "urn:iso:std:iso:20022:tech:xsd:pacs.004.001.14")]
+[IsoDisplayName(@"Payment Return V14")]
 public interface IPaymentReturnV14 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +33,7 @@ public interface IPaymentReturnV14 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction163> TransactionInformation { get; }
 
     /// <summary>
@@ -39,5 +41,6 @@ public interface IPaymentReturnV14 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

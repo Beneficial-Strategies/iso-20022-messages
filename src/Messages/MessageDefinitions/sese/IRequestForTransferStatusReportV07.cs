@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_fnYVIZDhEem7fvtoGpNpow")]
 [IsoMessage("sese.009.001.07", "ReqForTrfStsRpt", "urn:iso:std:iso:20022:tech:xsd:sese.009.001.07")]
+[Description(@"Scope|The RequestForTransferStatusReport is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent to request the status of a previously instructed transfer.|Usage|The RequestForTransferStatusReport is used to request either:|- the status of one or several transfer instructions or,|- the status of one or several transfer cancellation instructions.")]
+[IsoDisplayName(@"Request For Transfer Status Report V")]
 public interface IRequestForTransferStatusReportV07 : IOuterRecord
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface IRequestForTransferStatusReportV07 : IOuterRecord
     [IsoId("_fnYVJZDhEem7fvtoGpNpow")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageAndBusinessReference12> RequestDetails { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IRequestForTransferStatusReportV07 : IOuterRecord
     [IsoId("_fnYVKZDhEem7fvtoGpNpow")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

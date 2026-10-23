@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus55Cho
 /// <summary>
 /// Returned.
 /// </summary>
+[IsoDisplayName(@"Returned")]
 public interface IReturned : IInstructionProcessingStatus55Choice, IIsoChoiceVariant
 {
     /// <summary>

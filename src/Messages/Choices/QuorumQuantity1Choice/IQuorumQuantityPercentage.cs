@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuorumQuantity1Choice;
 /// Minimum quantity of securities, expressed as a percentage, required to hold a meeting.
 /// </summary>
 [IsoId("_RDiep9p-Ed-ak6NoX_4Aeg_-2055367797")]
+[IsoDisplayName(@"Quorum Quantity Percentage")]
 public interface IQuorumQuantityPercentage : IQuorumQuantity1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IQuorumQuantityPercentage : IQuorumQuantity1Choice, IIsoChoiceV
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("QrmQtyPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

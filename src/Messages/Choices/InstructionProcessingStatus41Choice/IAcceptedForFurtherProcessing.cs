@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus41Cho
 /// </summary>
 [IsoId("_4Yit_e6KEeqc-LCjwLsUVg")]
 [IsoXmlTag("AccptdForFrthrPrcg")]
+[IsoDisplayName(@"Accepted For Further Processing")]
 public interface IAcceptedForFurtherProcessing
     : IInstructionProcessingStatus41Choice,
         IIsoChoiceVariant

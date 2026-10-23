@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_W1npgNsFEeqmdMJWobugpw")]
 [IsoMessage("seev.052.001.01", "MktClmStsAdvc", "urn:iso:std:iso:20022:tech:xsd:seev.052.001.01")]
+[Description(@"Scope and Usage|The MarketClaimStatusAdvice message is sent by an account servicer to an account holder to provide the status of a market claim transaction.|This message definition is intended for use with the Business Application Header (BAH).")]
+[IsoDisplayName(@"Market Claim Status Advice V")]
 public interface IMarketClaimStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -70,5 +72,6 @@ public interface IMarketClaimStatusAdviceV01 : IOuterRecord
     [IsoId("_ODyf0SgaEeuYwc3diVMizA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

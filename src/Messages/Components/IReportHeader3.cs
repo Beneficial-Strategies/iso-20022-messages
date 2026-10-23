@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides header details on the report.
 /// </summary>
 [IsoId("_6Q_lh5qlEeGSON8vddiWzQ_-723206236")]
+[IsoDisplayName(@"Report Header")]
 public interface IReportHeader3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportHeader3 : IIsoComponent
     [IsoId("_6RJWgJqlEeGSON8vddiWzQ_-75011154")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ReportIdentification { get; }
 
     /// <summary>

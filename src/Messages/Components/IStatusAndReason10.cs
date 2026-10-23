@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details related to the status of the order.
 /// </summary>
 [IsoId("_AYEXMtokEeC60axPepSq7g_-1155773451")]
+[IsoDisplayName(@"Status And Reason")]
 public interface IStatusAndReason10 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IStatusAndReason10 : IIsoComponent
     [IsoId("_AYEXNdokEeC60axPepSq7g_1323167811")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

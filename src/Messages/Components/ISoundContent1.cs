@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Sound to play.
 /// </summary>
 [IsoId("_2WDDcN6-Eeiwsev40qZGEQ")]
+[IsoDisplayName(@"Sound Content")]
 public interface ISoundContent1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ISoundContent1 : IIsoComponent
     [IsoId("_aSHpMN6_Eeiwsev40qZGEQ")]
     [DisplayName("Sound Reference")]
     [IsoXmlTag("SoundRef")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? SoundReference { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface ISoundContent1 : IIsoComponent
     [IsoId("_dWbHsN6_Eeiwsev40qZGEQ")]
     [DisplayName("Text")]
     [IsoXmlTag("Txt")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? Text { get; }
 }

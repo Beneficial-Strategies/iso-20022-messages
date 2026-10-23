@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ImpliedCurrencyAmountRange1Choic
 /// </summary>
 [IsoId("_O_mxM5lcEeeE1Ya-LgRsuQ")]
 [IsoXmlTag("ToAmt")]
+[IsoDisplayName(@"To Amount")]
 public interface IToAmount : IImpliedCurrencyAmountRange1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IToAmount : IImpliedCurrencyAmountRange1Choice, IIsoChoiceVaria
     [IsoId("_T4SeMNp-Ed-ak6NoX_4Aeg_-1036855240")]
     [DisplayName("Included")]
     [IsoXmlTag("Incl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Included { get; }
 }

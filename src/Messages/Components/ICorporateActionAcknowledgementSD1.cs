@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acknowledgement information relative to corporate action reorganisation instructions.
 /// </summary>
 [IsoId("_uuvg0MVsEeeprYdSN88o0Q")]
+[IsoDisplayName(@"Corporate Action Acknowledgement SD")]
 public interface ICorporateActionAcknowledgementSD1 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface ICorporateActionAcknowledgementSD1 : IIsoComponent
     [IsoId("_ab-VwMVtEeeprYdSN88o0Q")]
     [DisplayName("Terms Acknowledgement Indicator")]
     [IsoXmlTag("TermsAckInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TermsAcknowledgementIndicator { get; }
 
     /// <summary>
@@ -29,6 +31,7 @@ public interface ICorporateActionAcknowledgementSD1 : IIsoComponent
     [IsoId("_G6TQcMVuEeeprYdSN88o0Q")]
     [DisplayName("Condition 1 Indicator")]
     [IsoXmlTag("Cond1Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Condition1Indicator { get; }
 
     /// <summary>
@@ -39,6 +42,7 @@ public interface ICorporateActionAcknowledgementSD1 : IIsoComponent
     [IsoId("_PH6yIcVuEeeprYdSN88o0Q")]
     [DisplayName("Condition 2 Indicator")]
     [IsoXmlTag("Cond2Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Condition2Indicator { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICorporateActionAcknowledgementSD1 : IIsoComponent
     [IsoId("_SIuQscVuEeeprYdSN88o0Q")]
     [DisplayName("Condition 3 Indicator")]
     [IsoXmlTag("Cond3Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Condition3Indicator { get; }
 
     /// <summary>
@@ -59,6 +64,7 @@ public interface ICorporateActionAcknowledgementSD1 : IIsoComponent
     [IsoId("_UbasEcVuEeeprYdSN88o0Q")]
     [DisplayName("Condition 4 Indicator")]
     [IsoXmlTag("Cond4Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Condition4Indicator { get; }
 
     /// <summary>
@@ -69,6 +75,7 @@ public interface ICorporateActionAcknowledgementSD1 : IIsoComponent
     [IsoId("_WQNDccVuEeeprYdSN88o0Q")]
     [DisplayName("Condition 5 Indicator")]
     [IsoXmlTag("Cond5Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Condition5Indicator { get; }
 
     /// <summary>
@@ -79,6 +86,7 @@ public interface ICorporateActionAcknowledgementSD1 : IIsoComponent
     [IsoId("_XQeNocVuEeeprYdSN88o0Q")]
     [DisplayName("Condition 6 Indicator")]
     [IsoXmlTag("Cond6Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Condition6Indicator { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface ICorporateActionAcknowledgementSD1 : IIsoComponent
     [IsoId("_5Jm10MVvEeeprYdSN88o0Q")]
     [DisplayName("Adjudication Of Incompetency Acknowledgement Indicator")]
     [IsoXmlTag("AdjdctnOfIncmptncyAckInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AdjudicationOfIncompetencyAcknowledgementIndicator { get; }
 
     /// <summary>
@@ -99,6 +108,7 @@ public interface ICorporateActionAcknowledgementSD1 : IIsoComponent
     [IsoId("_jiDgUMX4EeexPc-mfUU5zQ")]
     [DisplayName("Legal Documentation Thirty Months Retention Acknowledgement Indicator")]
     [IsoXmlTag("LglDcmnttnThrtyMnthsRtntnAckInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LegalDocumentationThirtyMonthsRetentionAcknowledgementIndicator { get; }
 
     /// <summary>
@@ -109,6 +119,7 @@ public interface ICorporateActionAcknowledgementSD1 : IIsoComponent
     [IsoId("_TBjtAMX5EeexPc-mfUU5zQ")]
     [DisplayName("Instruction Deletion Acknowledgement Indicator")]
     [IsoXmlTag("InstrDeltnAckInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? InstructionDeletionAcknowledgementIndicator { get; }
 
     /// <summary>
@@ -119,5 +130,6 @@ public interface ICorporateActionAcknowledgementSD1 : IIsoComponent
     [IsoId("_uFPVwMX5EeexPc-mfUU5zQ")]
     [DisplayName("Potential Loss Acknowledgement Indicator")]
     [IsoXmlTag("PotntlLossAckInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PotentialLossAcknowledgementIndicator { get; }
 }

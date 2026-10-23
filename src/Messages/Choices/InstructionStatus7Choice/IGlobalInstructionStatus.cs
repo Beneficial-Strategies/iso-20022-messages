@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus7Choice;
 /// Status applicable globally to the meeting instruction message.
 /// </summary>
 [IsoId("_8bzrA6-nEemJ1NnLPsTFaw")]
+[IsoDisplayName(@"Global Instruction Status")]
 public interface IGlobalInstructionStatus : IInstructionStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

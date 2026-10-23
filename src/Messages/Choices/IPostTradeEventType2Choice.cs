@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Post Trade Event Type2Choice.
 /// </summary>
 [IsoId("_6NBoAUj-Ee-KhcStGV4xTg")]
+[IsoDisplayName(@"Post Trade Event Type2Choice")]
 public interface IPostTradeEventType2Choice : IIsoChoice { }

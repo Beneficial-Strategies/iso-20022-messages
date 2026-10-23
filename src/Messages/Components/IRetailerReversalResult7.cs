@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Retailer Reversal Result7.
 /// </summary>
 [IsoId("_3el4gZ9FEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Retailer Reversal Result7")]
 public interface IRetailerReversalResult7 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IRetailerReversalResult7 : IIsoComponent
     /// </summary>
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICustomerOrder1> CustomerOrder { get; }
 }

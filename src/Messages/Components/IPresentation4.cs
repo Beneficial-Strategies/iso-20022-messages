@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information for the presentation of documents.
 /// </summary>
 [IsoId("_vsXgeX1qEeGlwNeVP9egyg")]
+[IsoDisplayName(@"Presentation")]
 public interface IPresentation4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPresentation4 : IIsoComponent
     [IsoId("_vsXgh31qEeGlwNeVP9egyg")]
     [DisplayName("Document")]
     [IsoXmlTag("Doc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument11> Document { get; }
 
     /// <summary>
@@ -33,5 +35,9 @@ public interface IPresentation4 : IIsoComponent
     [IsoId("_vsXgf31qEeGlwNeVP9egyg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

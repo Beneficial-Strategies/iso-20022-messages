@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Point of interaction (POI) performing the transaction.
 /// </summary>
 [IsoId("_g0gcMS8SEeu125Ip9zFcsQ")]
+[IsoDisplayName(@"Point Of Interaction")]
 public interface IPointOfInteraction11 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPointOfInteraction11 : IIsoComponent
     [IsoId("_g_yfIy8SEeu125Ip9zFcsQ")]
     [DisplayName("System Name")]
     [IsoXmlTag("SysNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SystemName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPointOfInteraction11 : IIsoComponent
     [IsoId("_g_yfJS8SEeu125Ip9zFcsQ")]
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? GroupIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IPointOfInteraction11 : IIsoComponent
     [IsoId("_g_yfKS8SEeu125Ip9zFcsQ")]
     [DisplayName("Time Zone")]
     [IsoXmlTag("TmZone")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? TimeZone { get; }
 
     /// <summary>
@@ -65,5 +72,6 @@ public interface IPointOfInteraction11 : IIsoComponent
     [IsoId("_g_yfLS8SEeu125Ip9zFcsQ")]
     [DisplayName("Component")]
     [IsoXmlTag("Cmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent11> Component { get; }
 }

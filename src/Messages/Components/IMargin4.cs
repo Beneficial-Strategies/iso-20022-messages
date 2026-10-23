@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the type of margin amounts.
 /// </summary>
 [IsoId("_-aesraMOEeCojJW5vEuTEQ_-272677709")]
+[IsoDisplayName(@"Margin")]
 public interface IMargin4 : IIsoComponent
 {
     /// <summary>

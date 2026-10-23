@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides remittance information about a payment for garnishment-related purposes.
 /// </summary>
 [IsoId("__Cz88248EeiU9cctagi5ow")]
+[IsoDisplayName(@"Garnishment")]
 public interface IGarnishment3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface IGarnishment3 : IIsoComponent
     [IsoId("__NrwJ248EeiU9cctagi5ow")]
     [DisplayName("Reference Number")]
     [IsoXmlTag("RefNb")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? ReferenceNumber { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IGarnishment3 : IIsoComponent
     [IsoId("__NrwKW48EeiU9cctagi5ow")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Date { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IGarnishment3 : IIsoComponent
     [IsoId("__NrwLW48EeiU9cctagi5ow")]
     [DisplayName("Family Medical Insurance Indicator")]
     [IsoXmlTag("FmlyMdclInsrncInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? FamilyMedicalInsuranceIndicator { get; }
 
     /// <summary>
@@ -73,5 +78,6 @@ public interface IGarnishment3 : IIsoComponent
     [IsoId("__NrwL248EeiU9cctagi5ow")]
     [DisplayName("Employee Termination Indicator")]
     [IsoXmlTag("MplyeeTermntnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? EmployeeTerminationIndicator { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeHorizon1Choice;
 /// Minimum recommended holding (RHP) period.
 /// </summary>
 [IsoId("_3lufkDcuEeidBoT_PugKiA")]
+[IsoDisplayName(@"Number Of Years")]
 public interface INumberOfYears : ITimeHorizon1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INumberOfYears : ITimeHorizon1Choice, IIsoChoiceVariant
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("NbOfYrs")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 }

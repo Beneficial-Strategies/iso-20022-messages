@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the CA option.
 /// </summary>
 [IsoId("_UFsoGdp-Ed-ak6NoX_4Aeg_-1064577856")]
+[IsoDisplayName(@"Corporate Action Option")]
 public interface ICorporateActionOption1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionOption1 : IIsoComponent
     [IsoId("_UFsoGtp-Ed-ak6NoX_4Aeg_-963912936")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText OptionNumber { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICorporateActionOption1 : IIsoComponent
     [IsoId("_UF2ZENp-Ed-ak6NoX_4Aeg_-548329043")]
     [DisplayName("Certification Indicator")]
     [IsoXmlTag("CertfctnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CertificationIndicator { get; }
 
     /// <summary>
@@ -65,6 +68,8 @@ public interface ICorporateActionOption1 : IIsoComponent
     [IsoId("_UF2ZE9p-Ed-ak6NoX_4Aeg_-65255820")]
     [DisplayName("Agent Securities Account Identification")]
     [IsoXmlTag("AgtSctiesAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AgentSecuritiesAccountIdentification { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface ICorporateActionOption1 : IIsoComponent
     [IsoId("_UF2ZFdp-Ed-ak6NoX_4Aeg_-616320822")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOfferType1FormatChoice> OfferType { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface ICorporateActionOption1 : IIsoComponent
     [IsoId("_UF2ZF9p-Ed-ak6NoX_4Aeg_1839983467")]
     [DisplayName("Withdrawal Allowed Indicator")]
     [IsoXmlTag("WdrwlAllwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator WithdrawalAllowedIndicator { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface ICorporateActionOption1 : IIsoComponent
     [IsoId("_UF2ZGNp-Ed-ak6NoX_4Aeg_-2128058199")]
     [DisplayName("Change Allowed Indicator")]
     [IsoXmlTag("ChngAllwdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ChangeAllowedIndicator { get; }
 
     /// <summary>
@@ -145,6 +153,7 @@ public interface ICorporateActionOption1 : IIsoComponent
     [IsoId("_UF_jA9p-Ed-ak6NoX_4Aeg_3077583")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityOption1> SecuritiesMovementDetails { get; }
 
     /// <summary>
@@ -153,6 +162,7 @@ public interface ICorporateActionOption1 : IIsoComponent
     [IsoId("_UF_jBNp-Ed-ak6NoX_4Aeg_-127876028")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOption1> CashMovementDetails { get; }
 
     /// <summary>
@@ -161,6 +171,7 @@ public interface ICorporateActionOption1 : IIsoComponent
     [IsoId("_UF_jBdp-Ed-ak6NoX_4Aeg_1521015328")]
     [DisplayName("Corporate Action Other Agent Details")]
     [IsoXmlTag("CorpActnOthrAgtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionAgent1> CorporateActionOtherAgentDetails { get; }
 
     /// <summary>
@@ -177,6 +188,7 @@ public interface ICorporateActionOption1 : IIsoComponent
     [IsoId("_UF_jB9p-Ed-ak6NoX_4Aeg_2102524745")]
     [DisplayName("Redemption Charges Applied Indicator")]
     [IsoXmlTag("RedChrgsApldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RedemptionChargesAppliedIndicator { get; }
 
     /// <summary>
@@ -185,6 +197,7 @@ public interface ICorporateActionOption1 : IIsoComponent
     [IsoId("_UF_jCNp-Ed-ak6NoX_4Aeg_330286965")]
     [DisplayName("Option Features")]
     [IsoXmlTag("OptnFeatrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOptionFeatures1FormatChoice> OptionFeatures { get; }
 
     /// <summary>

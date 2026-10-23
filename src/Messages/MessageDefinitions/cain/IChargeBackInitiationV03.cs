@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_4AQDkYSfEe6odei_lsRKtw")]
 [IsoMessage("cain.027.001.03", "ChrgBckInitn", "urn:iso:std:iso:20022:tech:xsd:cain.027.001.03")]
+[IsoDisplayName(@"Charge Back Initiation V03")]
 public interface IChargeBackInitiationV03 : IOuterRecord
 {
     /// <summary>
@@ -179,6 +180,7 @@ public interface IChargeBackInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -193,6 +195,7 @@ public interface IChargeBackInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Dispute Data")]
     [IsoXmlTag("DsptData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeData4> DisputeData { get; }
 
     /// <summary>
@@ -200,6 +203,7 @@ public interface IChargeBackInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Documentation")]
     [IsoXmlTag("Dcmnttn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeDocumentation1> Documentation { get; }
 
     /// <summary>
@@ -221,6 +225,7 @@ public interface IChargeBackInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 
     /// <summary>
@@ -228,6 +233,7 @@ public interface IChargeBackInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -235,6 +241,7 @@ public interface IChargeBackInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>

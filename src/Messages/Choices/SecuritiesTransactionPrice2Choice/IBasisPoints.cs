@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice2Choic
 /// Price expressed as basis points.
 /// </summary>
 [IsoId("_0ng5oIbCEeWW6qdkesUKSQ")]
+[IsoDisplayName(@"Basis Points")]
 public interface IBasisPoints : ISecuritiesTransactionPrice2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBasisPoints : ISecuritiesTransactionPrice2Choice, IIsoChoiceVa
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("BsisPts")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 }

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
     "FXTradInstrAmdmnt",
     "urn:iso:std:iso:20022:tech:xsd:fxtr.015.001.06"
 )]
+[IsoDisplayName(@"Foreign Exchange Trade Instruction Amendment V06")]
 public interface IForeignExchangeTradeInstructionAmendmentV06 : IOuterRecord
 {
     /// <summary>
@@ -99,5 +100,6 @@ public interface IForeignExchangeTradeInstructionAmendmentV06 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

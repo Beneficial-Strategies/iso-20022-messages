@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginResult1Choice;
 /// </summary>
 [IsoId("_Qk1wd9p-Ed-ak6NoX_4Aeg_-1636463476")]
 [IsoXmlTag("DfcitAmt")]
+[IsoDisplayName(@"Deficit Amount")]
 public interface IDeficitAmount : IMarginResult1Choice, IIsoChoiceVariant
 {
     /// <summary>

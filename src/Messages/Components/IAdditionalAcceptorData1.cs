@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains additional acceptor data
 /// </summary>
 [IsoId("_ZG0IJfJREeiJn9rM2Znz2w")]
+[IsoDisplayName(@"Additional Acceptor Data")]
 public interface IAdditionalAcceptorData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAdditionalAcceptorData1 : IIsoComponent
     [IsoId("_ZG0vMfJREeiJn9rM2Znz2w")]
     [DisplayName("Additional Transaction Reference Number")]
     [IsoXmlTag("AddtlTxRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalTransactionReferenceNumber { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAdditionalAcceptorData1 : IIsoComponent
     [IsoId("__OitIfJREeiJn9rM2Znz2w")]
     [DisplayName("Tax Registration Identification")]
     [IsoXmlTag("TaxRegnId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? TaxRegistrationIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IAdditionalAcceptorData1 : IIsoComponent
     [IsoId("_ZG0vMvJREeiJn9rM2Znz2w")]
     [DisplayName("Corporate Tax Identification")]
     [IsoXmlTag("CorpTaxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CorporateTaxIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IAdditionalAcceptorData1 : IIsoComponent
     [IsoId("_ZG0vMPJREeiJn9rM2Znz2w")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalIdentification1> AdditionalIdentification { get; }
 
     /// <summary>
@@ -65,5 +73,7 @@ public interface IAdditionalAcceptorData1 : IIsoComponent
     [IsoId("_aVCxoPJYEeiJn9rM2Znz2w")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

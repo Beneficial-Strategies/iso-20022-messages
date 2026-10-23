@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information on the delegation of a maintenance action or maintenance function.
 /// </summary>
 [IsoId("_JpuL0Q00EeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Maintenance Delegation")]
 public interface IMaintenanceDelegation9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMaintenanceDelegation9 : IIsoComponent
     [IsoId("_J1SioQ00EeqUVL7sB4m7NA")]
     [DisplayName("Maintenance Service")]
     [IsoXmlTag("MntncSvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<DataSetCategory11Code> MaintenanceService { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IMaintenanceDelegation9 : IIsoComponent
     [IsoId("_J1SipQ00EeqUVL7sB4m7NA")]
     [DisplayName("Response Reason")]
     [IsoXmlTag("RspnRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ResponseReason { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IMaintenanceDelegation9 : IIsoComponent
     [IsoId("_J1SiqQ00EeqUVL7sB4m7NA")]
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> POISubset { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface IMaintenanceDelegation9 : IIsoComponent
     [IsoId("_J1Siqw00EeqUVL7sB4m7NA")]
     [DisplayName("Delegation Scope Identification")]
     [IsoXmlTag("DlgtnScpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DelegationScopeIdentification { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IMaintenanceDelegation9 : IIsoComponent
     [IsoId("_J1SirQ00EeqUVL7sB4m7NA")]
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
+    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
     Max3000Binary? DelegationScopeDefinition { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IMaintenanceDelegation9 : IIsoComponent
     [IsoId("_J1Sirw00EeqUVL7sB4m7NA")]
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary? DelegationProof { get; }
 
     /// <summary>
@@ -89,5 +98,6 @@ public interface IMaintenanceDelegation9 : IIsoComponent
     [IsoId("_J1Sisw00EeqUVL7sB4m7NA")]
     [DisplayName("POI Identification Association")]
     [IsoXmlTag("POIIdAssoctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMaintenanceIdentificationAssociation1> POIIdentificationAssociation { get; }
 }

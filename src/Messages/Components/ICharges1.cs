@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of charge and the amont.
 /// </summary>
 [IsoId("_Ruv-1dp-Ed-ak6NoX_4Aeg_-799598981")]
+[IsoDisplayName(@"Charges")]
 public interface ICharges1 : IIsoComponent
 {
     /// <summary>

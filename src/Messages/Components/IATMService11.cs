@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Deposit service provided by the ATM inside the session.
 /// </summary>
 [IsoId("_fRt8wa3-EeWL1uap3dNhCQ")]
+[IsoDisplayName(@"ATM Service")]
 public interface IATMService11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMService11 : IIsoComponent
     [IsoId("_fdDDAa3-EeWL1uap3dNhCQ")]
     [DisplayName("Service Reference")]
     [IsoXmlTag("SvcRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ServiceReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMService11 : IIsoComponent
     [IsoId("_fdDDA63-EeWL1uap3dNhCQ")]
     [DisplayName("ATM Service Code")]
     [IsoXmlTag("ATMSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ATMServiceCode { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IATMService11 : IIsoComponent
     [IsoId("_fdDDB63-EeWL1uap3dNhCQ")]
     [DisplayName("Service Variant Identification")]
     [IsoXmlTag("SvcVarntId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> ServiceVariantIdentification { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IATMService11 : IIsoComponent
     [IsoId("_lZk2YK3_EeWL1uap3dNhCQ")]
     [DisplayName("Cash Back")]
     [IsoXmlTag("CshBck")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CashBack { get; }
 
     /// <summary>
@@ -57,5 +64,6 @@ public interface IATMService11 : IIsoComponent
     [IsoId("_pnrOgK3_EeWL1uap3dNhCQ")]
     [DisplayName("Multi Account")]
     [IsoXmlTag("MultiAcct")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MultiAccount { get; }
 }

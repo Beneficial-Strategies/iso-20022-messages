@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide details of the account report.
 /// </summary>
 [IsoId("_RpFbtNp-Ed-ak6NoX_4Aeg_-1975945805")]
+[IsoDisplayName(@"Account Report")]
 public interface IAccountReport11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountReport11 : IIsoComponent
     [IsoId("_RpFbtdp-Ed-ak6NoX_4Aeg_-1975945557")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IAccountReport11 : IIsoComponent
     [IsoId("_RpFbttp-Ed-ak6NoX_4Aeg_-1975945503")]
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ElectronicSequenceNumber { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IAccountReport11 : IIsoComponent
     [IsoId("_RpFbt9p-Ed-ak6NoX_4Aeg_-1975945442")]
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LegalSequenceNumber { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IAccountReport11 : IIsoComponent
     [IsoId("_RpFbuNp-Ed-ak6NoX_4Aeg_-1975945534")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface IAccountReport11 : IIsoComponent
     [IsoId("_RpPMtNp-Ed-ak6NoX_4Aeg_-1975944978")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountInterest2> Interest { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface IAccountReport11 : IIsoComponent
     [IsoId("_RpPMtdp-Ed-ak6NoX_4Aeg_-1975944608")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance3> Balance { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface IAccountReport11 : IIsoComponent
     [IsoId("_RpPMt9p-Ed-ak6NoX_4Aeg_-1975945070")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportEntry2> Entry { get; }
 
     /// <summary>
@@ -121,5 +130,7 @@ public interface IAccountReport11 : IIsoComponent
     [IsoId("_RpPMuNp-Ed-ak6NoX_4Aeg_-1975945102")]
     [DisplayName("Additional Report Information")]
     [IsoXmlTag("AddtlRptInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalReportInformation { get; }
 }

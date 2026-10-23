@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for a distribution policy.
 /// </summary>
 [IsoId("_HolxYeLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Distribution Policy 2 Choice")]
 public interface IDistributionPolicy2Choice : IIsoChoice { }

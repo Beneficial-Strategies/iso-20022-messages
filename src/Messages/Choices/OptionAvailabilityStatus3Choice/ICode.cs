@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionAvailabilityStatus3Choice;
 /// Standard code to specify the status of the option availability.
 /// </summary>
 [IsoId("_tBuQcUEHEeWVgfuHGaKtRQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOptionAvailabilityStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cryptographic Key.
 /// </summary>
 [IsoId("_t5utsXvOEeSCJdwgzb6SFw")]
+[IsoDisplayName(@"Cryptographic Key")]
 public interface ICryptographicKey6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICryptographicKey6 : IIsoComponent
     [IsoId("__juqQHvOEeSCJdwgzb6SFw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICryptographicKey6 : IIsoComponent
     [IsoId("_uGPfsXvOEeSCJdwgzb6SFw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Identification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ICryptographicKey6 : IIsoComponent
     [IsoId("_uGPftXvOEeSCJdwgzb6SFw")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Version { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface ICryptographicKey6 : IIsoComponent
     [IsoId("_uGPfuXvOEeSCJdwgzb6SFw")]
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<KeyUsage1Code> Function { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface ICryptographicKey6 : IIsoComponent
     [IsoId("_uGPfu3vOEeSCJdwgzb6SFw")]
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ActivationDate { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface ICryptographicKey6 : IIsoComponent
     [IsoId("_uGPfvXvOEeSCJdwgzb6SFw")]
     [DisplayName("Deactivation Date")]
     [IsoXmlTag("DeactvtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DeactivationDate { get; }
 
     /// <summary>
@@ -81,6 +91,7 @@ public interface ICryptographicKey6 : IIsoComponent
     [IsoId("_VzAv4HvPEeSCJdwgzb6SFw")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max5000Binary> Certificate { get; }
 
     /// <summary>
@@ -89,5 +100,6 @@ public interface ICryptographicKey6 : IIsoComponent
     [IsoId("_Ykxs4HvPEeSCJdwgzb6SFw")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary? ICCRelatedData { get; }
 }

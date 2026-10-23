@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the tax exemption reason.
 /// </summary>
 [IsoId("_VSvC-9p-Ed-ak6NoX_4Aeg_1927276750")]
+[IsoDisplayName(@"Tax Exemption Reason")]
 public interface ITaxExemptionReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITaxExemptionReason1 : IIsoComponent
     [IsoId("_VSvC_dp-Ed-ak6NoX_4Aeg_1975301750")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

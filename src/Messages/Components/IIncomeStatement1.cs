@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statement of the financial performance of a legal entity.
 /// </summary>
 [IsoId("_l_mSELIdEeaYqc4G3TTwhA")]
+[IsoDisplayName(@"Income Statement")]
 public interface IIncomeStatement1 : IIsoComponent
 {
     /// <summary>

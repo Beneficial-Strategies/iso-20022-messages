@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balances of units and cash derived from investment fund orders.
 /// </summary>
 [IsoId("_zGdM0QdEEeSyIPzOZ6VzBQ")]
+[IsoDisplayName(@"Fund Balance")]
 public interface IFundBalance1 : IIsoComponent
 {
     /// <summary>

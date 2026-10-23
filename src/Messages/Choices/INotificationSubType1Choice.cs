@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Notification Sub Type1Choice.
 /// </summary>
 [IsoId("_oUxLMLkuEe68nbz8Nl_hLQ")]
+[IsoDisplayName(@"Notification Sub Type1Choice")]
 public interface INotificationSubType1Choice : IIsoChoice { }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Track2Data1Choice;
 /// When an odd number of hexadecimal text characters is present, a zero must be appended to the end of the string to pad to an even number of hexadecimal text characters.
 /// </summary>
 [IsoId("_jYXPMd8aEeeNTcLLmuYy-w")]
+[IsoDisplayName(@"Hexadecimal Binary Value")]
 public interface IHexadecimalBinaryValue : ITrack2Data1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -19,5 +20,6 @@ public interface IHexadecimalBinaryValue : ITrack2Data1Choice, IIsoChoiceVariant
     /// Used only for hex binary data only, supports only characters A-F and 0-9.
     /// </summary>
     [IsoXmlTag("HexBinryVal")]
+    [IsoSimpleType(IsoSimpleType.Max19HexBinaryText)]
     Max19HexBinaryText Value { get; }
 }

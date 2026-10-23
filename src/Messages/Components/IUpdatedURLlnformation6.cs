@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Updated UR Llnformation6.
 /// </summary>
 [IsoId("_YXrbIWH0Ee6yt_d72zQZeQ")]
+[IsoDisplayName(@"Updated UR Llnformation6")]
 public interface IUpdatedURLlnformation6 : IIsoComponent
 {
     /// <summary>

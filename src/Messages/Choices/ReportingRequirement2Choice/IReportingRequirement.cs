@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingRequirement2Choice;
 /// </summary>
 [IsoId("_IVUQMV55Ee2a_-MvhEjKmA")]
 [IsoXmlTag("RptgRqrmnt")]
+[IsoDisplayName(@"Reporting Requirement")]
 public interface IReportingRequirement : IReportingRequirement2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -50,6 +51,7 @@ public interface IReportingRequirement : IReportingRequirement2Choice, IIsoChoic
     [IsoId("_IWQraV55Ee2a_-MvhEjKmA")]
     [DisplayName("Revived")]
     [IsoXmlTag("Rvvd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Revived { get; }
 
     /// <summary>
@@ -58,5 +60,6 @@ public interface IReportingRequirement : IReportingRequirement2Choice, IIsoChoic
     [IsoId("_IWQra155Ee2a_-MvhEjKmA")]
     [DisplayName("Further Modification")]
     [IsoXmlTag("FrthrMod")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator FurtherModification { get; }
 }

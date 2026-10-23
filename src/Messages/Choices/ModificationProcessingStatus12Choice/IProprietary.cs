@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus12Ch
 
 /// <summary>Proprietary status.</summary>
 [IsoId("_rZruZ6ohEfCG2_q2WT-90w")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IModificationProcessingStatus12Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

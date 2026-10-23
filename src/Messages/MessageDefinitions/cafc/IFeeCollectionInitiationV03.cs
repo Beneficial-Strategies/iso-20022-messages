@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cafc;
 /// </summary>
 [IsoId("_7J27cJBpEe6TWIDarRgYow")]
 [IsoMessage("cafc.001.001.03", "FeeColltnInitn", "urn:iso:std:iso:20022:tech:xsd:cafc.001.001.03")]
+[IsoDisplayName(@"Fee Collection Initiation V03")]
 public interface IFeeCollectionInitiationV03 : IOuterRecord
 {
     /// <summary>
@@ -123,6 +124,7 @@ public interface IFeeCollectionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAmounts4> AdditionalAmount { get; }
 
     /// <summary>
@@ -151,6 +153,7 @@ public interface IFeeCollectionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialProgrammeQualification2> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -172,6 +175,7 @@ public interface IFeeCollectionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee3> AdditionalFee { get; }
 
     /// <summary>
@@ -193,6 +197,7 @@ public interface IFeeCollectionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData2> ProtectedData { get; }
 
     /// <summary>
@@ -200,6 +205,7 @@ public interface IFeeCollectionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>
@@ -214,5 +220,6 @@ public interface IFeeCollectionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndustrySector3Choice;
 /// <summary>
 /// NACE Taxonomy Sector.
 /// </summary>
+[IsoDisplayName(@"NACE Taxonomy Sector")]
 public interface INACETaxonomySector : IIndustrySector3Choice, IIsoChoiceVariant
 {
     /// <summary>

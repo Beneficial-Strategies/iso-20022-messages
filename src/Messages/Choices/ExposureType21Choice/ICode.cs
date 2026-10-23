@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExposureType21Choice;
 /// Specifies the underlying business area/type of trade causing the exposure expressed as a code.
 /// </summary>
 [IsoId("_2WM6sSW1EeyT3chuyX0PgA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IExposureType21Choice, IIsoChoiceVariant
 {
     /// <summary>

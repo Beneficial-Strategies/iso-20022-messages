@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party.
 /// </summary>
 [IsoId("_nNGsIcWjEeuhguwJmlgagQ")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification259 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyIdentification259 : IIsoComponent
     [IsoId("_nRrDEcWjEeuhguwJmlgagQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IPartyIdentification259 : IIsoComponent
     [IsoId("_nRrDGcWjEeuhguwJmlgagQ")]
     [DisplayName("Tax Registration Identification")]
     [IsoXmlTag("TaxRegnId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? TaxRegistrationIdentification { get; }
 
     /// <summary>
@@ -57,5 +62,7 @@ public interface IPartyIdentification259 : IIsoComponent
     [IsoId("_nRrDG8WjEeuhguwJmlgagQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? AdditionalInformation { get; }
 }

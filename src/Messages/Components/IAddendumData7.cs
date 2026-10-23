@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Addendum Data7.
 /// </summary>
 [IsoId("_RnF4QXjWEe6YlIMyoxWMJA")]
+[IsoDisplayName(@"Addendum Data7")]
 public interface IAddendumData7 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IAddendumData7 : IIsoComponent
     /// </summary>
     [DisplayName("Fleet Line Item")]
     [IsoXmlTag("FleetLineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFleetLineItem6> FleetLineItem { get; }
 
     /// <summary>
@@ -23,5 +25,6 @@ public interface IAddendumData7 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData2> AdditionalData { get; }
 }

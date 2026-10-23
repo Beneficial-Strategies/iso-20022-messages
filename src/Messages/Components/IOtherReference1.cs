@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other option to express a reference.
 /// </summary>
 [IsoId("_6VGSwMeTEeysUoBKYz1Ytw")]
+[IsoDisplayName(@"Other Reference")]
 public interface IOtherReference1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IOtherReference1 : IIsoComponent
     [IsoId("_LuoKYMeUEeysUoBKYz1Ytw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Value { get; }
 }

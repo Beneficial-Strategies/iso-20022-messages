@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// </summary>
 [IsoId("__4wdQZ_yEfC4Q_xhaK1hdQ")]
 [IsoMessage("catm.005.001.12", "MntncDlgtnReq", "urn:iso:std:iso:20022:tech:xsd:catm.005.001.12")]
+[IsoDisplayName(@"Maintenance Delegation Request V12")]
 public interface IMaintenanceDelegationRequestV12 : IOuterRecord
 {
     /// <summary>

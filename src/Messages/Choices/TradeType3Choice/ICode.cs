@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeType3Choice;
 /// Trade type information expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_AXK_VdokEeC60axPepSq7g_1214802521")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITradeType3Choice, IIsoChoiceVariant
 {
     /// <summary>

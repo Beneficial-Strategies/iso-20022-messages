@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification and status corporate action notification cancellation request sent by the agent.
 /// </summary>
 [IsoId("4a6116d2-b2ee-409f-85db-51032b983fe9")]
+[IsoDisplayName(@"Agent Notification Cancellation Identification And Status2")]
 public interface IAgentNotificationCancellationIdentificationAndStatus2 : IIsoComponent
 {
     /// <summary>

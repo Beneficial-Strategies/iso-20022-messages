@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionAmendmentStatus1Choice;
 /// </summary>
 [IsoId("_RiiHxtp-Ed-ak6NoX_4Aeg_-1968652783")]
 [IsoXmlTag("PrcdSts")]
+[IsoDisplayName(@"Processed Status")]
 public interface IProcessedStatus : IElectionAmendmentStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IProcessedStatus : IElectionAmendmentStatus1Choice, IIsoChoiceV
     [IsoId("_RkUQctp-Ed-ak6NoX_4Aeg_-1503403592")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

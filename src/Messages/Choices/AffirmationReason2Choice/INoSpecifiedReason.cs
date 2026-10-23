@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationReason2Choice;
 /// Indicates that there is no reason available or to report.
 /// </summary>
 [IsoId("_YFYT9Qd3Ee2fOITqoTnSLQ")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IAffirmationReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

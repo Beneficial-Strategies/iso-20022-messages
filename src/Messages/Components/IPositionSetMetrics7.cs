@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variables used to quantify the different calculations for position sets.
 /// </summary>
 [IsoId("_dpo_4a5MEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Position Set Metrics")]
 public interface IPositionSetMetrics7 : IIsoComponent
 {
     /// <summary>

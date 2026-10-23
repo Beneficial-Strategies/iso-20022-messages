@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// An investor&apos;s instruction to either subscribe or redeem an amount of money or its equivalent, eg, other assets, into or out of an investment fund.
 /// </summary>
 [IsoId("_TSS1NNp-Ed-ak6NoX_4Aeg_2044308495")]
+[IsoDisplayName(@"Investment Funds Order Breakdown")]
 public interface IInvestmentFundsOrderBreakdown1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IInvestmentFundsOrderBreakdown1 : IIsoComponent
     [IsoId("_TSS1Ntp-Ed-ak6NoX_4Aeg_-1531234336")]
     [DisplayName("Extended Order Breakdown Type")]
     [IsoXmlTag("XtndedOrdrBrkdwnTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedOrderBreakdownType { get; }
 
     /// <summary>

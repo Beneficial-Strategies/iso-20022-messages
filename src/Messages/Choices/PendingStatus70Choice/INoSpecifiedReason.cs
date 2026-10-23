@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus70Choice;
 /// <summary>
 /// No Specified Reason.
 /// </summary>
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IPendingStatus70Choice, IIsoChoiceVariant
 {
     /// <summary>

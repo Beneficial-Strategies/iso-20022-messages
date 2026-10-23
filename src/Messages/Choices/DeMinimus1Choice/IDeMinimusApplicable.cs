@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeMinimus1Choice;
 /// </summary>
 [IsoId("_CgNiAggqEeSUG-8hqXsVMQ")]
 [IsoXmlTag("DeMnmsAplbl")]
+[IsoDisplayName(@"De Minimus Applicable")]
 public interface IDeMinimusApplicable : IDeMinimus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IDeMinimusApplicable : IDeMinimus1Choice, IIsoChoiceVariant
     [IsoId("_RSSsUdp-Ed-ak6NoX_4Aeg_-1045122513")]
     [DisplayName("New Issue Permission")]
     [IsoXmlTag("NewIssePrmssn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator NewIssuePermission { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface IDeMinimusApplicable : IDeMinimus1Choice, IIsoChoiceVariant
     [IsoId("_RSSsUtp-Ed-ak6NoX_4Aeg_-1042351920")]
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Percentage { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason4Choice;
 /// Rejected reason expressed as a code.
 /// </summary>
 [IsoId("_5Snq0R6qEeODgY9qxg6TFA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectedReason4Choice, IIsoChoiceVariant
 {
     /// <summary>

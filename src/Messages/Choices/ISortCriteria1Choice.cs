@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between pre-defined and user-defined sorting criteria.
 /// </summary>
 [IsoId("_U1-1hNp-Ed-ak6NoX_4Aeg_1941564546")]
+[IsoDisplayName(@"Sort Criteria 1 Choice")]
 public interface ISortCriteria1Choice : IIsoChoice { }

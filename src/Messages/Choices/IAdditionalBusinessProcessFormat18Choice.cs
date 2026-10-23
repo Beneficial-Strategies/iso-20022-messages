@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of the additional business process, that is, a tax refund.
 /// </summary>
 [IsoId("_A3Fp2xewEeyroI8qKgB7Mg")]
+[IsoDisplayName(@"Additional Business Process Format 18 Choice")]
 public interface IAdditionalBusinessProcessFormat18Choice : IIsoChoice { }

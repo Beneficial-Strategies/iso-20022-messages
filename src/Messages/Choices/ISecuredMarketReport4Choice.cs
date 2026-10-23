@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a reason for no activity and the secured market segment transaction details.
 /// </summary>
 [IsoId("_GQHsIcEREea7jLfvGi1PDw")]
+[IsoDisplayName(@"Secured Market Report 4 Choice")]
 public interface ISecuredMarketReport4Choice : IIsoChoice { }

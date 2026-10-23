@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Agreement details for the over the counter market.
 /// </summary>
 [IsoId("_6T7_AYbEEeWguotXa4lFgg")]
+[IsoDisplayName(@"Agreement")]
 public interface IAgreement4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAgreement4 : IIsoComponent
     [IsoId("_6qZXMYbEEeWguotXa4lFgg")]
     [DisplayName("Agreement Details")]
     [IsoXmlTag("AgrmtDtls")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text AgreementDetails { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAgreement4 : IIsoComponent
     [IsoId("_6qZXM4bEEeWguotXa4lFgg")]
     [DisplayName("Agreement Identification")]
     [IsoXmlTag("AgrmtId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AgreementIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IAgreement4 : IIsoComponent
     [IsoId("_6qZXNYbEEeWguotXa4lFgg")]
     [DisplayName("Agreement Date")]
     [IsoXmlTag("AgrmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate AgreementDate { get; }
 
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the type of transaction Channel.
 /// </summary>
 [IsoId("_JtX4MRRGEeOKWo1NF21OVw")]
+[IsoDisplayName(@"Transaction Channel Type 1 Choice")]
 public interface ITransactionChannelType1Choice : IIsoChoice { }

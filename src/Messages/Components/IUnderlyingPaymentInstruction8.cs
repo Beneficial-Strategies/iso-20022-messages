@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the original payment initiation, to which the investigation message refers.
 /// </summary>
 [IsoId("_3y0OsXfIEe2A6pitLvwC_g")]
+[IsoDisplayName(@"Underlying Payment Instruction")]
 public interface IUnderlyingPaymentInstruction8 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IUnderlyingPaymentInstruction8 : IIsoComponent
     [IsoId("_37wvV3fIEe2A6pitLvwC_g")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalPaymentInformationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IUnderlyingPaymentInstruction8 : IIsoComponent
     [IsoId("_37wvWXfIEe2A6pitLvwC_g")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IUnderlyingPaymentInstruction8 : IIsoComponent
     [IsoId("_37wvW3fIEe2A6pitLvwC_g")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IUnderlyingPaymentInstruction8 : IIsoComponent
     [IsoId("_37wvXXfIEe2A6pitLvwC_g")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? OriginalUETR { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IUnderlyingPaymentInstruction8 : IIsoComponent
     [IsoId("_37wvY3fIEe2A6pitLvwC_g")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 
     /// <summary>

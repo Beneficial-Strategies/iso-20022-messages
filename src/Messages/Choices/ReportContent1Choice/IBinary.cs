@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportContent1Choice;
 /// BASE-64 encoded report content.
 /// </summary>
 [IsoId("_YoZIMMlWEeuJ35KoBRZFOg")]
+[IsoDisplayName(@"Binary")]
 public interface IBinary : IReportContent1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBinary : IReportContent1Choice, IIsoChoiceVariant
     /// Binary data of 20 megabytes (20 Mb) maximum.
     /// </summary>
     [IsoXmlTag("Binry")]
+    [IsoSimpleType(IsoSimpleType.Max20MbBinary)]
     Max20MbBinary Value { get; }
 }

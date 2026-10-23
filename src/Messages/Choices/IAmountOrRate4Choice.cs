@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an amount or a rate.
 /// </summary>
 [IsoId("_xN0ggANwEe2-vqzwMUAewg")]
+[IsoDisplayName(@"Amount Or Rate 4 Choice")]
 public interface IAmountOrRate4Choice : IIsoChoice { }

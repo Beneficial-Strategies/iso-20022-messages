@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason14Choice;
 /// Specifies the reason why the instruction is in repair.
 /// </summary>
 [IsoId("_ux5oN1hpEeS8HfHHd4stCA")]
+[IsoDisplayName(@"Repair Reason")]
 public interface IRepairReason : IReason14Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

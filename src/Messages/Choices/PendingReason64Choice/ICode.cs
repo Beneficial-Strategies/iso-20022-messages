@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason64Choice;
 /// Standard code to specify the reason why the instruction/event has a pending status.
 /// </summary>
 [IsoId("_piJUQTi7Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPendingReason64Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessedStatus1Format1Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IProcessedStatus1Format1Choice, IIsoChoiceVariant
 {
     /// <summary>

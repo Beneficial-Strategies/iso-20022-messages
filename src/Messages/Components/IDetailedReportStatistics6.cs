@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed statistics on reports.
 /// </summary>
 [IsoId("_zQlJ8U2UEe2bQ-Ksk8mwQg")]
+[IsoDisplayName(@"Detailed Report Statistics")]
 public interface IDetailedReportStatistics6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDetailedReportStatistics6 : IIsoComponent
     [IsoId("_zRV-8U2UEe2bQ-Ksk8mwQg")]
     [DisplayName("Total Number Of Reports")]
     [IsoXmlTag("TtlNbOfRpts")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfReports { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IDetailedReportStatistics6 : IIsoComponent
     [IsoId("_zRV-802UEe2bQ-Ksk8mwQg")]
     [DisplayName("Total Number Of Reports Accepted")]
     [IsoXmlTag("TtlNbOfRptsAccptd")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfReportsAccepted { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IDetailedReportStatistics6 : IIsoComponent
     [IsoId("_zRV-9U2UEe2bQ-Ksk8mwQg")]
     [DisplayName("Total Number Of Reports Rejected")]
     [IsoXmlTag("TtlNbOfRptsRjctd")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfReportsRejected { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IDetailedReportStatistics6 : IIsoComponent
     [IsoId("_zRV-902UEe2bQ-Ksk8mwQg")]
     [DisplayName("Number Of Reports Rejected Per Error")]
     [IsoXmlTag("NbOfRptsRjctdPerErr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfTransactionsPerValidationRule6> NumberOfReportsRejectedPerError { get; }
 }

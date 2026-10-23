@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Channel2Choice;
 /// Specifies a channel by means of a text.
 /// </summary>
 [IsoId("_D4edcBg3EeKnW4lR85q-0A")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IChannel2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IChannel2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

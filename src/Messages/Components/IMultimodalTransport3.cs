@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to multimodal transportation of goods.
 /// </summary>
 [IsoId("_StCMANp-Ed-ak6NoX_4Aeg_1369687043")]
+[IsoDisplayName(@"Multimodal Transport")]
 public interface IMultimodalTransport3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMultimodalTransport3 : IIsoComponent
     [IsoId("_StCMAdp-Ed-ak6NoX_4Aeg_1369687683")]
     [DisplayName("Taking In Charge")]
     [IsoXmlTag("TakngInChrg")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TakingInCharge { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IMultimodalTransport3 : IIsoComponent
     [IsoId("_StL9ANp-Ed-ak6NoX_4Aeg_1369687605")]
     [DisplayName("Place Of Final Destination")]
     [IsoXmlTag("PlcOfFnlDstn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PlaceOfFinalDestination { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity9Choice;
 /// Quantity of securities in the sub-balance.
 /// </summary>
 [IsoId("_ciAo3zi8Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Quantity")]
 public interface IQuantity : ISubBalanceQuantity9Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the cancellation requests.
 /// </summary>
 [IsoId("_qIqm7znfEem7JZMuWtwtsg")]
+[IsoDisplayName(@"Intra Balance Cancellation")]
 public interface IIntraBalanceCancellation6 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,8 @@ public interface IIntraBalanceCancellation6 : IIsoComponent
     [IsoId("_qSppXTnfEem7JZMuWtwtsg")]
     [DisplayName("Request Reference")]
     [IsoXmlTag("ReqRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RequestReference { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IIntraBalanceCancellation6 : IIsoComponent
     [IsoId("_qSppXznfEem7JZMuWtwtsg")]
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StatusDate { get; }
 
     /// <summary>

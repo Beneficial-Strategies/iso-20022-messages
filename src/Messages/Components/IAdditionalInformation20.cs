@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information relevant to the destination.
 /// </summary>
 [IsoId("_n7eS8EXYEeegp_DADCe7HQ")]
+[IsoDisplayName(@"Additional Information")]
 public interface IAdditionalInformation20 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAdditionalInformation20 : IIsoComponent
     [IsoId("_2IAAoFKdEeeFcfYfFkVztg")]
     [DisplayName("Other Recipient")]
     [IsoXmlTag("OthrRcpt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherRecipient { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IAdditionalInformation20 : IIsoComponent
     [IsoId("_CbEXMEXZEeegp_DADCe7HQ")]
     [DisplayName("Target")]
     [IsoXmlTag("Trgt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<UserInterface6Code> Target { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface IAdditionalInformation20 : IIsoComponent
     [IsoId("_8Jnk0FKdEeeFcfYfFkVztg")]
     [DisplayName("Other Target")]
     [IsoXmlTag("OthrTrgt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherTarget { get; }
 
     /// <summary>
@@ -57,6 +63,8 @@ public interface IAdditionalInformation20 : IIsoComponent
     [IsoId("_CEF_MFKeEeeFcfYfFkVztg")]
     [DisplayName("Other Format")]
     [IsoXmlTag("OthrFrmt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherFormat { get; }
 
     /// <summary>
@@ -65,6 +73,8 @@ public interface IAdditionalInformation20 : IIsoComponent
     [IsoId("_RGBF4Bs4EeqrvK3udMUsNQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -73,5 +83,7 @@ public interface IAdditionalInformation20 : IIsoComponent
     [IsoId("_vuWMoewlEeiMkKo2clXHdQ")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max20KText)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20KText Value { get; }
 }

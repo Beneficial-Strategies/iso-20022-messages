@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_sRylWGtdEeCY4-KZ9JEyUQ_-1959332273")]
 [IsoMessage("acmt.023.001.01", "IdVrfctnReq", "urn:iso:std:iso:20022:tech:xsd:acmt.023.001.01")]
+[Description(@"Scope|The IdentificationVerificationRequest message is sent by an assigner to an assignee. It is used to request the verification of party and/or account identification information.|Usage|The IdentificationVerificationRequest message is sent before the sending of one or several transactions messages.|The IdentificationVerificationRequest message can contain one or more verification requests.")]
+[IsoDisplayName(@"Identification Verification Request V")]
 public interface IIdentificationVerificationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +34,6 @@ public interface IIdentificationVerificationRequestV01 : IOuterRecord
     [IsoId("_sRylWmtdEeCY4-KZ9JEyUQ_731202779")]
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIdentificationVerification1> Verification { get; }
 }

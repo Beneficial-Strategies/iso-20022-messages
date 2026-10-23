@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Securities Trade Details141.
 /// </summary>
 [IsoId("_ib3J0YYQEe-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Securities Trade Details141")]
 public interface ISecuritiesTradeDetails141 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface ISecuritiesTradeDetails141 : IIsoComponent
     /// </summary>
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> CollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -163,6 +165,7 @@ public interface ISecuritiesTradeDetails141 : IIsoComponent
     /// </summary>
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition5Choice> TradeTransactionCondition { get; }
 
     /// <summary>
@@ -233,5 +236,6 @@ public interface ISecuritiesTradeDetails141 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

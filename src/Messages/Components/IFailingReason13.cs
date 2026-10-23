@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Failing Reason13.
 /// </summary>
 [IsoId("_8xVDEYcTEe-FecylWsA1vA")]
+[IsoDisplayName(@"Failing Reason13")]
 public interface IFailingReason13 : IIsoComponent
 {
     /// <summary>

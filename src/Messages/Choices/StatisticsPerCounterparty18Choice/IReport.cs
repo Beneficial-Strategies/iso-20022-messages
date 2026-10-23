@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty18Choic
 /// <summary>
 /// Report.
 /// </summary>
+[IsoDisplayName(@"Report")]
 public interface IReport : IStatisticsPerCounterparty18Choice, IIsoChoiceVariant
 {
     /// <summary>

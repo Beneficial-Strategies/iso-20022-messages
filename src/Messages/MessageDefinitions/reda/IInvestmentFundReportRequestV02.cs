@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "InvstmtFndRptReq",
     "urn:iso:std:iso:20022:tech:xsd:reda.005.001.02"
 )]
+[Description(@"Scope|A report user, for example, a professional investor, investment fund distributor, market data provider, regulator or other interested party sends the InvestmentFundReportRequest message to the report provider, for example, a fund promoter, fund management company, transfer agent, or market data provider to request a report.|The InvestmentFundReportRequest message can be used to request one or many fund processing passport reports.|Usage|If the InvestmentFundReportRequest message is used to request a fund processing passport then the request can specify the financial instrument for which the report is requested. Other appropriate parameters can also be included. It is also possible to indicate that the request is an open request, that is, there is no specific criteria for the report requested. For example, a request for a fund processing passport report that is specified as ""no criteria"" means that the request is a request for all fund processing passports.")]
+[IsoDisplayName(@"Investment Fund Report Request V")]
 public interface IInvestmentFundReportRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -52,5 +54,6 @@ public interface IInvestmentFundReportRequestV02 : IOuterRecord
     [IsoId("_Zsax3NEvEd-BzquC8wXy7w_436796647")]
     [DisplayName("Fund Processing Passport Report")]
     [IsoXmlTag("FPPRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundParameters3Choice> FundProcessingPassportReport { get; }
 }

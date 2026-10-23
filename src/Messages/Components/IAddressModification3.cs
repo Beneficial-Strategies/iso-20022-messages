@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Address Modification3.
 /// </summary>
 [IsoId("_y83E2zEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Address Modification3")]
 public interface IAddressModification3 : IIsoComponent
 {
     /// <summary>

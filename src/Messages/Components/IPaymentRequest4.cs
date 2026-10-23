@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data required to request a Payment.
 /// </summary>
 [IsoId("_UmnwQU36Eey_VecAUE-C9Q")]
+[IsoDisplayName(@"Payment Request")]
 public interface IPaymentRequest4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPaymentRequest4 : IIsoComponent
     [IsoId("_UtDIY036Eey_VecAUE-C9Q")]
     [DisplayName("Loyalty Data")]
     [IsoXmlTag("LltyData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyRequestData3> LoyaltyData { get; }
 }

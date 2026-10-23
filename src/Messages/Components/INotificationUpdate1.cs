@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a previous notification.
 /// </summary>
 [IsoId("_cLJsVK7REemG7MmivSuE5g")]
+[IsoDisplayName(@"Notification Update")]
 public interface INotificationUpdate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INotificationUpdate1 : IIsoComponent
     [IsoId("_cLJsV67REemG7MmivSuE5g")]
     [DisplayName("Previous Notification Identification")]
     [IsoXmlTag("PrvsNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PreviousNotificationIdentification { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface INotificationUpdate1 : IIsoComponent
     [IsoId("_cLJsVq7REemG7MmivSuE5g")]
     [DisplayName("Reconfirm Instructions")]
     [IsoXmlTag("RcnfrmInstrs")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ReconfirmInstructions { get; }
 }

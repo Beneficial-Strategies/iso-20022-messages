@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of settlement of a transaction.
 /// </summary>
 [IsoId("_wAVV4QzTEeuTPv2wqaotHg")]
+[IsoDisplayName(@"Settlement Details")]
 public interface ISettlementDetails187 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementDetails187 : IIsoComponent
     [IsoId("_wPNfZwzTEeuTPv2wqaotHg")]
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? HoldIndicator { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ISettlementDetails187 : IIsoComponent
     [IsoId("_wPNfdwzTEeuTPv2wqaotHg")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementTransactionCondition35Choice> SettlementTransactionCondition { get; }
 
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient9Choice;
 /// </summary>
 [IsoId("_M0YGAS8jEeu125Ip9zFcsQ")]
 [IsoXmlTag("IssrAndSrlNb")]
+[IsoDisplayName(@"Issuer And Serial Number")]
 public interface IIssuerAndSerialNumber : IRecipient9Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IIssuerAndSerialNumber : IRecipient9Choice, IIsoChoiceVariant
     [IsoId("_-8B2Iy8iEeu125Ip9zFcsQ")]
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
+    [IsoSimpleType(IsoSimpleType.Max500Binary)]
     Max500Binary SerialNumber { get; }
 }

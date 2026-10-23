@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provide further details on the requested modifications of the underlying payment instruction.
 /// </summary>
 [IsoId("_o5bqca6bEeeDKoD1W8to1w")]
+[IsoDisplayName(@"Requested Modification")]
 public interface IRequestedModification7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRequestedModification7 : IIsoComponent
     [IsoId("_pDGj0a6bEeeDKoD1W8to1w")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IRequestedModification7 : IIsoComponent
     [IsoId("_pDGj066bEeeDKoD1W8to1w")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IRequestedModification7 : IIsoComponent
     [IsoId("_pDGj1a6bEeeDKoD1W8to1w")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IRequestedModification7 : IIsoComponent
     [IsoId("_pDGj266bEeeDKoD1W8to1w")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IRequestedModification7 : IIsoComponent
     [IsoId("_pDGj3a6bEeeDKoD1W8to1w")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -177,6 +186,8 @@ public interface IRequestedModification7 : IIsoComponent
     [IsoId("_pDGj-a6bEeeDKoD1W8to1w")]
     [DisplayName("Instruction For Debtor Agent")]
     [IsoXmlTag("InstrForDbtrAgt")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InstructionForDebtorAgent { get; }
 
     /// <summary>
@@ -185,6 +196,7 @@ public interface IRequestedModification7 : IIsoComponent
     [IsoId("_pDGj-66bEeeDKoD1W8to1w")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>
@@ -193,6 +205,7 @@ public interface IRequestedModification7 : IIsoComponent
     [IsoId("_pDGj_a6bEeeDKoD1W8to1w")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent1> InstructionForCreditorAgent { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the pricing expressed as a rate type or a rate name complemented with lookback and crystallization days.
 /// </summary>
 [IsoId("_KwT9gRIlEeyLzJfz3xPQNA")]
+[IsoDisplayName(@"Rate Type And Lookback")]
 public interface IRateTypeAndLookback2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IRateTypeAndLookback2 : IIsoComponent
     [IsoId("_LIAr0xIlEeyLzJfz3xPQNA")]
     [DisplayName("Look Back Days")]
     [IsoXmlTag("LookBckDays")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? LookBackDays { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding notification general information details.
 /// </summary>
 [IsoId("_1cnPoTL3EeKU9IrkkToqcw_-1946623556")]
+[IsoDisplayName(@"Corporate Action Notification SD")]
 public interface ICorporateActionNotificationSD3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionNotificationSD3 : IIsoComponent
     [IsoId("_1cnPojL3EeKU9IrkkToqcw_-185294215")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICorporateActionNotificationSD3 : IIsoComponent
     [IsoId("_1cnPozL3EeKU9IrkkToqcw_1725505269")]
     [DisplayName("Create Date And Time")]
     [IsoXmlTag("CretDtAndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreateDateAndTime { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface ICorporateActionNotificationSD3 : IIsoComponent
     [IsoId("_1cnPpDL3EeKU9IrkkToqcw_-897285003")]
     [DisplayName("Update Date And Time")]
     [IsoXmlTag("UpdDtAndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? UpdateDateAndTime { get; }
 }

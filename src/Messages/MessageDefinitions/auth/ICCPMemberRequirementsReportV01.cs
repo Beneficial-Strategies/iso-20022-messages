@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPMmbRqrmntsRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.055.001.01"
 )]
+[Description(@"The CCPMemberRequirementsReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the collateral requirements that a central counterparty obligates a clearing member post at the central counterparty.")]
+[IsoDisplayName(@"CCP Member Requirements Report V")]
 public interface ICCPMemberRequirementsReportV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface ICCPMemberRequirementsReportV01 : IOuterRecord
     [IsoId("_daMXSeUUEem3X-64-NKdqg")]
     [DisplayName("Intra Day Requirement Amount")]
     [IsoXmlTag("IntraDayRqrmntAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraDayRequirement1> IntraDayRequirementAmount { get; }
 
     /// <summary>
@@ -32,6 +35,7 @@ public interface ICCPMemberRequirementsReportV01 : IOuterRecord
     [IsoId("_daMXS-UUEem3X-64-NKdqg")]
     [DisplayName("Intra Day Margin Call")]
     [IsoXmlTag("IntraDayMrgnCall")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraDayMarginCall1> IntraDayMarginCall { get; }
 
     /// <summary>
@@ -40,6 +44,7 @@ public interface ICCPMemberRequirementsReportV01 : IOuterRecord
     [IsoId("_daMXTeUUEem3X-64-NKdqg")]
     [DisplayName("End Of Day Requirement")]
     [IsoXmlTag("EndOfDayRqrmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEndOfDayRequirement2> EndOfDayRequirement { get; }
 
     /// <summary>
@@ -48,6 +53,7 @@ public interface ICCPMemberRequirementsReportV01 : IOuterRecord
     [IsoId("_daMXT-UUEem3X-64-NKdqg")]
     [DisplayName("Default Fund Requirement")]
     [IsoXmlTag("DfltFndRqrmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDefaultFundRequirement1> DefaultFundRequirement { get; }
 
     /// <summary>
@@ -56,5 +62,6 @@ public interface ICCPMemberRequirementsReportV01 : IOuterRecord
     [IsoId("_daMXUeUUEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Globalised card transaction entry details.
 /// </summary>
 [IsoId("_t5ypwVkyEeGeoaLUQk__nA_-1874814988")]
+[IsoDisplayName(@"Card Aggregated")]
 public interface ICardAggregated1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ICardAggregated1 : IIsoComponent
     [IsoId("_t5ypxFkyEeGeoaLUQk__nA_-684903817")]
     [DisplayName("Sale Reconciliation Identification")]
     [IsoXmlTag("SaleRcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SaleReconciliationIdentification { get; }
 
     /// <summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.tsrv;
     "UdrtkgNonXtnsnReq",
     "urn:iso:std:iso:20022:tech:xsd:tsrv.010.001.01"
 )]
+[Description(@"The UndertakingNonExtensionRequest message is sent by the party that requested issuance of the undertaking (applicant or obligor) to the party that issued the undertaking. It is used to request no further automatic extensions to the expiry of the referenced undertaking.")]
+[IsoDisplayName(@"Undertaking Non Extension Request V")]
 public interface IUndertakingNonExtensionRequestV01 : IOuterRecord
 {
     /// <summary>

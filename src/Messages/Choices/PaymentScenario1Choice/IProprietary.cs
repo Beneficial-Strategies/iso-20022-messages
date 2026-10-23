@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentScenario1Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPaymentScenario1Choice, IIsoChoiceVariant
 {
     /// <summary>

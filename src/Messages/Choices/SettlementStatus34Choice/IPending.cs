@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus34Choice;
 
 /// <summary>Settlement status expressed as a pending status.</summary>
 [IsoId("_XtOZ8-SkEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Pending")]
 public interface IPending : ISettlementStatus34Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

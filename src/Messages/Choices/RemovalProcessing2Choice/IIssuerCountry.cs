@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemovalProcessing2Choice;
 /// Country of the issuer  (this can the either the country of residence or the nationality).
 /// </summary>
 [IsoId("__ioARRIoEeyZaPkaPAzTvQ")]
+[IsoDisplayName(@"Issuer Country")]
 public interface IIssuerCountry : IRemovalProcessing2Choice, IIsoChoiceVariant
 {
     /// <summary>

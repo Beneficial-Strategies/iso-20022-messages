@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus104Choice;
 
 /// <summary>Specifies the cancellation requested status.</summary>
 [IsoId("5664f4df-9e82-459d-8d88-c23ef123e8af")]
+[IsoDisplayName(@"Cancellation Requested")]
 public interface ICancellationRequested : IProcessingStatus104Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

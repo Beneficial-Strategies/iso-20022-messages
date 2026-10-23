@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeBasisType1Choice;
 /// Charge basis expressed as a code.
 /// </summary>
 [IsoId("_2hsPgWZ5EeSQMqOS_ceSQA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChargeBasisType1Choice, IIsoChoiceVariant
 {
     /// <summary>

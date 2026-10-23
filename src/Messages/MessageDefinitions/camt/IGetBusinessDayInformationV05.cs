@@ -25,6 +25,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_jwlbbxbvEeiyVv5j1vf1VQ")]
 [IsoMessage("camt.018.001.05", "GetBizDayInf", "urn:iso:std:iso:20022:tech:xsd:camt.018.001.05")]
+[Description(@"Scope|The GetBusinessDayInformation message is sent by a member to the transaction administrator.|It is used to request information on different types of administrative data linked to the system.|Usage|The transaction administrator is in charge of providing the members with business information. The term business day information covers all information related to the management of the system, not related to the transactions created in the system. The type of business day information available can vary depending on the system.|At any time during the operating hours of the system, the member can query the transaction administrator to get information about the static data of the system.|The member can request information based on the following elements:|- identification of the system|- currency within the system concerned|- status of the system|- period of availability of a given currency linked to the system concerned (in case the system handles more than one currency)|- closure information (dates when the system will be inactive and reasons for this inactivity)|- event indicator (types of event and precise timing of their occurrence within the system concerned)|This message will be replied to by a ReturnBusinessDayInformation message. Additional information on the generic design of the Get/Return messages can be found in the section How to Use the Cash Management Messages.")]
+[IsoDisplayName(@"Get Business Day Information V")]
 public interface IGetBusinessDayInformationV05 : IOuterRecord
 {
     /// <summary>
@@ -49,5 +51,6 @@ public interface IGetBusinessDayInformationV05 : IOuterRecord
     [IsoId("_jwlbdRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

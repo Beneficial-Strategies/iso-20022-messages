@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details of the account notification.
 /// </summary>
 [IsoId("_lNlFcQ5rEe2xs7BqO31w6w")]
+[IsoDisplayName(@"Account Notification")]
 public interface IAccountNotification21 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountNotification21 : IIsoComponent
     [IsoId("_lXyKUQ5rEe2xs7BqO31w6w")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IAccountNotification21 : IIsoComponent
     [IsoId("_lXyKVQ5rEe2xs7BqO31w6w")]
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ElectronicSequenceNumber { get; }
 
     /// <summary>
@@ -50,6 +54,7 @@ public interface IAccountNotification21 : IIsoComponent
     [IsoId("_lXyKWQ5rEe2xs7BqO31w6w")]
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LegalSequenceNumber { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface IAccountNotification21 : IIsoComponent
     [IsoId("_lXyKWw5rEe2xs7BqO31w6w")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CreationDateTime { get; }
 
     /// <summary>
@@ -106,6 +112,7 @@ public interface IAccountNotification21 : IIsoComponent
     [IsoId("_lXyKZw5rEe2xs7BqO31w6w")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountInterest4> Interest { get; }
 
     /// <summary>
@@ -126,6 +133,7 @@ public interface IAccountNotification21 : IIsoComponent
     [IsoId("_lXyKaw5rEe2xs7BqO31w6w")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportEntry13> Entry { get; }
 
     /// <summary>
@@ -134,5 +142,7 @@ public interface IAccountNotification21 : IIsoComponent
     [IsoId("_lXyKbQ5rEe2xs7BqO31w6w")]
     [DisplayName("Additional Notification Information")]
     [IsoXmlTag("AddtlNtfctnInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalNotificationInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Fee Component1.
 /// </summary>
 [IsoId("_8wDXwJ2oEe-4seDr3Li2Ew")]
+[IsoDisplayName(@"ATM Fee Component1")]
 public interface IATMFeeComponent1 : IIsoComponent
 {
     /// <summary>

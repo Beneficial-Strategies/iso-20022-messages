@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// </summary>
 [IsoId("_56FNoRnWEeKKXqHkeUjBbw")]
 [IsoMessage("fxtr.016.001.02", "FXTradInstrCxl", "urn:iso:std:iso:20022:tech:xsd:fxtr.016.001.02")]
+[Description(@"Scope||The ForeignExchangeTradeInstructionCancellation message is sent by a participant to a central settlement system to notify the cancellation of the foreign exchange trade previously confirmed by the sender.||Usage||The ForeignExchangeTradeInstructionCancellation message is sent from a participant to a central settlement system to advise of the cancellation of a previously sent notification. The ""Related Reference"" must be used to link it to the previous notification.")]
+[IsoDisplayName(@"Foreign Exchange Trade Instruction Cancellation V")]
 public interface IForeignExchangeTradeInstructionCancellationV02 : IOuterRecord
 {
     /// <summary>
@@ -95,5 +97,6 @@ public interface IForeignExchangeTradeInstructionCancellationV02 : IOuterRecord
     [IsoId("_ahqUmSnBEeKqmMA7_Y42sg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

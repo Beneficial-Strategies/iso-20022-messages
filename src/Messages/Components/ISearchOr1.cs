@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// List of criteria following the OR logic.
 /// </summary>
 [IsoId("_BBbMYN6QEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Search Or")]
 public interface ISearchOr1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface ISearchOr1 : IIsoComponent
     [IsoId("_InLc0N6QEeiwsev40qZGEQ")]
     [DisplayName("Search And")]
     [IsoXmlTag("SchAnd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISearchAnd1> SearchAnd { get; }
 }

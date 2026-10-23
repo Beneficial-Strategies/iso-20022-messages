@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment instrument between a debtor and a creditor, which flows through one or more financial institutions or systems.
 /// </summary>
 [IsoId("_Qcynu9p-Ed-ak6NoX_4Aeg_86583344")]
+[IsoDisplayName(@"Credit Transfer")]
 public interface ICreditTransfer6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICreditTransfer6 : IIsoComponent
     [IsoId("_QcynvNp-Ed-ak6NoX_4Aeg_86583379")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reference { get; }
 
     /// <summary>

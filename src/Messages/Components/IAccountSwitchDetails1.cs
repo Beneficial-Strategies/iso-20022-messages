@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the account switch, including its status and any response codes.
 /// </summary>
 [IsoId("_8m2xcQ2ZEeSNWNtJlXOAhg")]
+[IsoDisplayName(@"Account Switch Details")]
 public interface IAccountSwitchDetails1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountSwitchDetails1 : IIsoComponent
     [IsoId("_vm6TwA2aEeSNWNtJlXOAhg")]
     [DisplayName("Unique Reference Number")]
     [IsoXmlTag("UnqRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text UniqueReferenceNumber { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IAccountSwitchDetails1 : IIsoComponent
     [IsoId("_cbscEA2aEeSNWNtJlXOAhg")]
     [DisplayName("Routing Unique Reference Number")]
     [IsoXmlTag("RtgUnqRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RoutingUniqueReferenceNumber { get; }
 
     /// <summary>
@@ -34,6 +39,7 @@ public interface IAccountSwitchDetails1 : IIsoComponent
     [IsoId("_f7vbYA2aEeSNWNtJlXOAhg")]
     [DisplayName("Switch Received Date Time")]
     [IsoXmlTag("SwtchRcvdDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? SwitchReceivedDateTime { get; }
 
     /// <summary>
@@ -42,6 +48,7 @@ public interface IAccountSwitchDetails1 : IIsoComponent
     [IsoId("_o9RtUA2aEeSNWNtJlXOAhg")]
     [DisplayName("Switch Date")]
     [IsoXmlTag("SwtchDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SwitchDate { get; }
 
     /// <summary>
@@ -75,5 +82,6 @@ public interface IAccountSwitchDetails1 : IIsoComponent
     [IsoId("_wTtyIBE7EeafpqhYGpTDnw")]
     [DisplayName("Response")]
     [IsoXmlTag("Rspn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IResponseDetails1> Response { get; }
 }

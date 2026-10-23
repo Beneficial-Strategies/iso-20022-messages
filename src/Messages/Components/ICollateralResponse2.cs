@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information on the collateral proposal(s), that is either in cash, securities or other types.
 /// </summary>
 [IsoId("_s62bx4pDEeaNTaanBSMWmg")]
+[IsoDisplayName(@"Collateral Response")]
 public interface ICollateralResponse2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICollateralResponse2 : IIsoComponent
     [IsoId("_tKLRM4pDEeaNTaanBSMWmg")]
     [DisplayName("Securities Collateral Response")]
     [IsoXmlTag("SctiesCollRspn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesCollateralResponse1> SecuritiesCollateralResponse { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICollateralResponse2 : IIsoComponent
     [IsoId("_tKLRNYpDEeaNTaanBSMWmg")]
     [DisplayName("Cash Collateral Response")]
     [IsoXmlTag("CshCollRspn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashCollateralResponse2> CashCollateralResponse { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ICollateralResponse2 : IIsoComponent
     [IsoId("_tKLRN4pDEeaNTaanBSMWmg")]
     [DisplayName("Other Collateral Response")]
     [IsoXmlTag("OthrCollRspn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherCollateralResponse2> OtherCollateralResponse { get; }
 }

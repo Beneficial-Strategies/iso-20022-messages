@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial loan (instalment) or a recurring transaction.
 /// </summary>
 [IsoId("_I0Ew0XDlEe2MCaKO5AtGsA")]
+[IsoDisplayName(@"Recurring Transaction")]
 public interface IRecurringTransaction5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRecurringTransaction5 : IIsoComponent
     [IsoId("_I60SAXDlEe2MCaKO5AtGsA")]
     [DisplayName("Instalment Plan")]
     [IsoXmlTag("InstlmtPlan")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<InstalmentPlan1Code> InstalmentPlan { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IRecurringTransaction5 : IIsoComponent
     [IsoId("_I60SA3DlEe2MCaKO5AtGsA")]
     [DisplayName("Plan Identification")]
     [IsoXmlTag("PlanId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PlanIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IRecurringTransaction5 : IIsoComponent
     [IsoId("_I60SB3DlEe2MCaKO5AtGsA")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? SequenceNumber { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IRecurringTransaction5 : IIsoComponent
     [IsoId("_I60SC3DlEe2MCaKO5AtGsA")]
     [DisplayName("Instalment Period")]
     [IsoXmlTag("InstlmtPrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? InstalmentPeriod { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IRecurringTransaction5 : IIsoComponent
     [IsoId("_I60SDXDlEe2MCaKO5AtGsA")]
     [DisplayName("Total Number Of Payments")]
     [IsoXmlTag("TtlNbOfPmts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberOfPayments { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IRecurringTransaction5 : IIsoComponent
     [IsoId("_I60SD3DlEe2MCaKO5AtGsA")]
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FirstPaymentDate { get; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public interface IRecurringTransaction5 : IIsoComponent
     [IsoId("_I60SG3DlEe2MCaKO5AtGsA")]
     [DisplayName("Detailed Charges")]
     [IsoXmlTag("DtldChrgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalmentAmountDetails1> DetailedCharges { get; }
 
     /// <summary>
@@ -129,6 +138,7 @@ public interface IRecurringTransaction5 : IIsoComponent
     [IsoId("_I60SHXDlEe2MCaKO5AtGsA")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateDetails1> InterestRate { get; }
 
     /// <summary>
@@ -137,6 +147,7 @@ public interface IRecurringTransaction5 : IIsoComponent
     [IsoId("_I60SH3DlEe2MCaKO5AtGsA")]
     [DisplayName("Grace Period")]
     [IsoXmlTag("GracePrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGracePeriod1> GracePeriod { get; }
 
     /// <summary>
@@ -145,5 +156,6 @@ public interface IRecurringTransaction5 : IIsoComponent
     [IsoId("_5ug1AHDmEe2MCaKO5AtGsA")]
     [DisplayName("Plan Notice")]
     [IsoXmlTag("PlanNtce")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActionMessage10> PlanNotice { get; }
 }

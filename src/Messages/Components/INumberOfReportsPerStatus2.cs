@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Number of reports per status.
 /// </summary>
 [IsoId("_XANm0SmsEeerta_tWXAsWQ")]
+[IsoDisplayName(@"Number Of Reports Per Status")]
 public interface INumberOfReportsPerStatus2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INumberOfReportsPerStatus2 : IIsoComponent
     [IsoId("_XNl7gSmsEeerta_tWXAsWQ")]
     [DisplayName("Detailed Number Of Reports")]
     [IsoXmlTag("DtldNbOfRpts")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText DetailedNumberOfReports { get; }
 
     /// <summary>

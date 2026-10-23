@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that locates and identifies a specific address, as defined by postal services.
 /// </summary>
 [IsoId("_6S7fNpqlEeGSON8vddiWzQ_1010099278")]
+[IsoDisplayName(@"Postal Address")]
 public interface IPostalAddress11 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPostalAddress11 : IIsoComponent
     [IsoId("_6S7fOJqlEeGSON8vddiWzQ_-1547428104")]
     [DisplayName("Department")]
     [IsoXmlTag("Dept")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Department { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPostalAddress11 : IIsoComponent
     [IsoId("_6S7fOZqlEeGSON8vddiWzQ_-340438004")]
     [DisplayName("Sub Department")]
     [IsoXmlTag("SubDept")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SubDepartment { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPostalAddress11 : IIsoComponent
     [IsoId("_6S7fOpqlEeGSON8vddiWzQ_737582334")]
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? StreetName { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IPostalAddress11 : IIsoComponent
     [IsoId("_6S7fO5qlEeGSON8vddiWzQ_1323529360")]
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? BuildingNumber { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface IPostalAddress11 : IIsoComponent
     [IsoId("_6S7fPJqlEeGSON8vddiWzQ_-1497603038")]
     [DisplayName("Post Code")]
     [IsoXmlTag("PstCd")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? PostCode { get; }
 
     /// <summary>
@@ -65,6 +76,8 @@ public interface IPostalAddress11 : IIsoComponent
     [IsoId("_6TFQMJqlEeGSON8vddiWzQ_-469579455")]
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TownName { get; }
 
     /// <summary>
@@ -73,6 +86,8 @@ public interface IPostalAddress11 : IIsoComponent
     [IsoId("_6TFQMZqlEeGSON8vddiWzQ_1046520893")]
     [DisplayName("Country Sub Division")]
     [IsoXmlTag("CtrySubDvsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CountrySubDivision { get; }
 
     /// <summary>
@@ -89,6 +104,10 @@ public interface IPostalAddress11 : IIsoComponent
     [IsoId("_6TFQM5qlEeGSON8vddiWzQ_1667628057")]
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [MinLength(0)]
+    [MaxLength(7)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AddressLine { get; }
 
     /// <summary>
@@ -97,6 +116,8 @@ public interface IPostalAddress11 : IIsoComponent
     [IsoId("_6TFQNJqlEeGSON8vddiWzQ_1584364960")]
     [DisplayName("Floor")]
     [IsoXmlTag("Flr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Floor { get; }
 
     /// <summary>
@@ -105,6 +126,8 @@ public interface IPostalAddress11 : IIsoComponent
     [IsoId("_6TFQNZqlEeGSON8vddiWzQ_1373380598")]
     [DisplayName("Post Box")]
     [IsoXmlTag("PstBx")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? PostBox { get; }
 
     /// <summary>
@@ -113,6 +136,8 @@ public interface IPostalAddress11 : IIsoComponent
     [IsoId("_6TFQNpqlEeGSON8vddiWzQ_177232554")]
     [DisplayName("Building Name")]
     [IsoXmlTag("BldgNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? BuildingName { get; }
 
     /// <summary>
@@ -121,5 +146,7 @@ public interface IPostalAddress11 : IIsoComponent
     [IsoId("_6TFQN5qlEeGSON8vddiWzQ_75681346")]
     [DisplayName("Room")]
     [IsoXmlTag("Room")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Room { get; }
 }

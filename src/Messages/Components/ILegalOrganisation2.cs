@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Legally constituted organization specified for this party.
 /// </summary>
 [IsoId("_9DOo8dOdEeS75MhTUaTyUQ")]
+[IsoDisplayName(@"Legal Organisation")]
 public interface ILegalOrganisation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILegalOrganisation2 : IIsoComponent
     [IsoId("_9M5iUdOdEeS75MhTUaTyUQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ILegalOrganisation2 : IIsoComponent
     [IsoId("_9M5iU9OdEeS75MhTUaTyUQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface ILegalOrganisation2 : IIsoComponent
     [IsoId("_92q4EdOdEeS75MhTUaTyUQ")]
     [DisplayName("Establishment Date")]
     [IsoXmlTag("EstblishmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EstablishmentDate { get; }
 
     /// <summary>
@@ -41,5 +47,6 @@ public interface ILegalOrganisation2 : IIsoComponent
     [IsoId("_C59Lw9OeEeS75MhTUaTyUQ")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 }

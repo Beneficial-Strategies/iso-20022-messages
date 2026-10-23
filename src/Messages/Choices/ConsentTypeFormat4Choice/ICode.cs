@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsentTypeFormat4Choice;
 /// Standard code to specify the consent type required.
 /// </summary>
 [IsoId("_d-eJIUEGEeWVgfuHGaKtRQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IConsentTypeFormat4Choice, IIsoChoiceVariant
 {
     /// <summary>

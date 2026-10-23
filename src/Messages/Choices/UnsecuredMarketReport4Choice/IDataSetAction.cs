@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnsecuredMarketReport4Choice;
 /// Provides the reason why no transactions are being reported for a money market reporting period.
 /// </summary>
 [IsoId("_HHn74cEREea7jLfvGi1PDw")]
+[IsoDisplayName(@"Data Set Action")]
 public interface IDataSetAction : IUnsecuredMarketReport4Choice, IIsoChoiceVariant
 {
     /// <summary>

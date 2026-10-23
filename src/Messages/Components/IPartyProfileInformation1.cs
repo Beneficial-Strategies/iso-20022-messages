@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information to support the Know Your Customer processes.
 /// </summary>
 [IsoId("_TUhp1dp-Ed-ak6NoX_4Aeg_-300374569")]
+[IsoDisplayName(@"Party Profile Information")]
 public interface IPartyProfileInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPartyProfileInformation1 : IIsoComponent
     [IsoId("_TUhp1tp-Ed-ak6NoX_4Aeg_903696093")]
     [DisplayName("Certification Indicator")]
     [IsoXmlTag("CertfctnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CertificationIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IPartyProfileInformation1 : IIsoComponent
     [IsoId("_TUhp19p-Ed-ak6NoX_4Aeg_497583653")]
     [DisplayName("Validating Party")]
     [IsoXmlTag("VldtngPty")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? ValidatingParty { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IPartyProfileInformation1 : IIsoComponent
     [IsoId("_TUhp2Np-Ed-ak6NoX_4Aeg_-461332733")]
     [DisplayName("Checking Party")]
     [IsoXmlTag("ChckngPty")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? CheckingParty { get; }
 
     /// <summary>
@@ -41,6 +47,8 @@ public interface IPartyProfileInformation1 : IIsoComponent
     [IsoId("_TUhp2dp-Ed-ak6NoX_4Aeg_368913503")]
     [DisplayName("Responsible Party")]
     [IsoXmlTag("RspnsblPty")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? ResponsibleParty { get; }
 
     /// <summary>
@@ -57,6 +65,8 @@ public interface IPartyProfileInformation1 : IIsoComponent
     [IsoId("_TUra0Np-Ed-ak6NoX_4Aeg_536135706")]
     [DisplayName("Extended Certificate Type")]
     [IsoXmlTag("XtndedCertTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedCertificateType { get; }
 
     /// <summary>
@@ -65,6 +75,7 @@ public interface IPartyProfileInformation1 : IIsoComponent
     [IsoId("_TUra0dp-Ed-ak6NoX_4Aeg_-459485436")]
     [DisplayName("Checking Date")]
     [IsoXmlTag("ChckngDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CheckingDate { get; }
 
     /// <summary>
@@ -81,6 +92,7 @@ public interface IPartyProfileInformation1 : IIsoComponent
     [IsoId("_TUra09p-Ed-ak6NoX_4Aeg_-456714285")]
     [DisplayName("Next Revision Date")]
     [IsoXmlTag("NxtRvsnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NextRevisionDate { get; }
 
     /// <summary>
@@ -89,6 +101,8 @@ public interface IPartyProfileInformation1 : IIsoComponent
     [IsoId("_TUra1Np-Ed-ak6NoX_4Aeg_-444706221")]
     [DisplayName("Salary Range")]
     [IsoXmlTag("SlryRg")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SalaryRange { get; }
 
     /// <summary>
@@ -97,5 +111,7 @@ public interface IPartyProfileInformation1 : IIsoComponent
     [IsoId("_TUra1dp-Ed-ak6NoX_4Aeg_-206438748")]
     [DisplayName("Source Of Wealth")]
     [IsoXmlTag("SrcOfWlth")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SourceOfWealth { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrQuantityToReceive1Choice
 /// Quantity of securities that has been assigned the status indicated.
 /// </summary>
 [IsoId("_UGvw8Np-Ed-ak6NoX_4Aeg_1067930264")]
+[IsoDisplayName(@"Status Quantity")]
 public interface IStatusQuantity : IStatusOrQuantityToReceive1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

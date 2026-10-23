@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for calculation type.
 /// </summary>
 [IsoId("_MpzBp-LaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Calculation Type 3 Choice")]
 public interface ICalculationType3Choice : IIsoChoice { }

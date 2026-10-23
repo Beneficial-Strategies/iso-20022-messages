@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details on the reference and status of the original transactions, included in the original instruction, to which the cancellation request message applies.
 /// </summary>
 [IsoId("_sHR-aYlrEeePr-EGJjGYzQ")]
+[IsoDisplayName(@"Original Payment Instruction")]
 public interface IOriginalPaymentInstruction26 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalPaymentInstruction26 : IIsoComponent
     [IsoId("_sUtWaYlrEeePr-EGJjGYzQ")]
     [DisplayName("Original Payment Information Cancellation Identification")]
     [IsoXmlTag("OrgnlPmtInfCxlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalPaymentInformationCancellationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IOriginalPaymentInstruction26 : IIsoComponent
     [IsoId("_sUtWbYlrEeePr-EGJjGYzQ")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalPaymentInformationIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IOriginalPaymentInstruction26 : IIsoComponent
     [IsoId("_sUtWcYlrEeePr-EGJjGYzQ")]
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? OriginalNumberOfTransactions { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IOriginalPaymentInstruction26 : IIsoComponent
     [IsoId("_sUtWc4lrEeePr-EGJjGYzQ")]
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? OriginalControlSum { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IOriginalPaymentInstruction26 : IIsoComponent
     [IsoId("_sUtWd4lrEeePr-EGJjGYzQ")]
     [DisplayName("Cancellation Status Reason Information")]
     [IsoXmlTag("CxlStsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICancellationStatusReason3> CancellationStatusReasonInformation { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IOriginalPaymentInstruction26 : IIsoComponent
     [IsoId("_sUtWeYlrEeePr-EGJjGYzQ")]
     [DisplayName("Number Of Transactions Per Cancellation Status")]
     [IsoXmlTag("NbOfTxsPerCxlSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfCancellationsPerStatus1> NumberOfTransactionsPerCancellationStatus { get; }
 
     /// <summary>
@@ -89,5 +98,6 @@ public interface IOriginalPaymentInstruction26 : IIsoComponent
     [IsoId("_sUtWe4lrEeePr-EGJjGYzQ")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction84> TransactionInformationAndStatus { get; }
 }

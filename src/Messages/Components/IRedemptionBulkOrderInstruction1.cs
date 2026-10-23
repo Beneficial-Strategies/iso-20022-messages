@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a redemption bulk order.
 /// </summary>
 [IsoId("_U2kratp-Ed-ak6NoX_4Aeg_1088875951")]
+[IsoDisplayName(@"Redemption Bulk Order Instruction")]
 public interface IRedemptionBulkOrderInstruction1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,9 @@ public interface IRedemptionBulkOrderInstruction1 : IIsoComponent
     [IsoId("_U2ucYdp-Ed-ak6NoX_4Aeg_956464123")]
     [DisplayName("Intermediary Details")]
     [IsoXmlTag("IntrmyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary4> IntermediaryDetails { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IRedemptionBulkOrderInstruction1 : IIsoComponent
     [IsoId("_U2ucY9p-Ed-ak6NoX_4Aeg_-256538472")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

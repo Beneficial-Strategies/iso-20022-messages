@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "PEPOrISAOrPrtflTrfInstrV02",
     "urn:iso:std:iso:20022:tech:xsd:sese.012.001.02"
 )]
+[Description(@"Scope|An instructing party, eg, a (new) plan manager, sends the PEPOrISAOrPortfolioTransferInstruction message to the executing party, eg, a (old) plan manager, on behalf of the initiating party, eg, an investor (client), to instruct the transfer of financial instruments from the clients account at the old plan manager to the clients account at the new plan manager through a nominee account.|Usage|The PEPOrISAOrPortfolioTransferInstruction message is used to instruct the withdrawal of one or more PEP or ISA or portfolio products from one account and deliver them to another account.|The PEPOrISAOrPortfolioTransferInstruction message is used to instruct one or more transfers for one client. Each transfer is for delivery to the same account. The account may be owned by one or more individual investors or one or more corporate investors. Each transfer is identified in TransferIdentification.|If the instructing party does not have enough information to instruct the transfer, then it must first send a RequestForPEPOrISAOrPortfolioInformation message to the executing party in order to receive a PEPOrISAOrPortfolioInformation message.")]
+[IsoDisplayName(@"PEP Or ISA Or Portfolio Transfer Instruction V")]
 public interface IPEPOrISAOrPortfolioTransferInstructionV02 : IOuterRecord
 {
     /// <summary>
@@ -77,6 +79,7 @@ public interface IPEPOrISAOrPortfolioTransferInstructionV02 : IOuterRecord
     [IsoId("_lB-JQNE5Ed-BzquC8wXy7w_792350029")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson8> OtherIndividualInvestor { get; }
 
     /// <summary>
@@ -101,6 +104,7 @@ public interface IPEPOrISAOrPortfolioTransferInstructionV02 : IOuterRecord
     [IsoId("_lB-JQ9E5Ed-BzquC8wXy7w_1050932778")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation4> OtherCorporateInvestor { get; }
 
     /// <summary>
@@ -141,6 +145,7 @@ public interface IPEPOrISAOrPortfolioTransferInstructionV02 : IOuterRecord
     [IsoId("_lB-JSNE5Ed-BzquC8wXy7w_1014401994")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPEPISATransfer3> ProductTransfer { get; }
 
     /// <summary>
@@ -149,5 +154,6 @@ public interface IPEPOrISAOrPortfolioTransferInstructionV02 : IOuterRecord
     [IsoId("_lCH6QNE5Ed-BzquC8wXy7w_-407900085")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

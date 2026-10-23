@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report Parameters7.
 /// </summary>
 [IsoId("_82z_cZIVEe-HRNGM304Vlw")]
+[IsoDisplayName(@"Report Parameters7")]
 public interface IReportParameters7 : IIsoComponent
 {
     /// <summary>

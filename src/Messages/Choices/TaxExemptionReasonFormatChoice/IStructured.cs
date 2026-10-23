@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxExemptionReasonFormatChoice;
 /// Structured format.
 /// </summary>
 [IsoId("_UzJj9Np-Ed-ak6NoX_4Aeg_-1748201268")]
+[IsoDisplayName(@"Structured")]
 public interface IStructured : ITaxExemptionReasonFormatChoice, IIsoChoiceVariant
 {
     /// <summary>

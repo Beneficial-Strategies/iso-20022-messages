@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification80Choice;
 /// <summary>
 /// Domestic Account.
 /// </summary>
+[IsoDisplayName(@"Domestic Account")]
 public interface IDomesticAccount : IAccountIdentification80Choice, IIsoChoiceVariant
 {
     /// <summary>

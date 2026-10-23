@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to report on collateral.
 /// </summary>
 [IsoId("__7yZ5zpsEemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Collateral Value Return Criteria")]
 public interface ICollateralValueReturnCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICollateralValueReturnCriteria1 : IIsoComponent
     [IsoId("_AF6mUTptEemk2e6qGBk8IQ")]
     [DisplayName("Cash Account Owner Indicator")]
     [IsoXmlTag("CshAcctOwnrInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? CashAccountOwnerIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICollateralValueReturnCriteria1 : IIsoComponent
     [IsoId("_AF6mUzptEemk2e6qGBk8IQ")]
     [DisplayName("Cash Account Servicer Indicator")]
     [IsoXmlTag("CshAcctSvcrInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? CashAccountServicerIndicator { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICollateralValueReturnCriteria1 : IIsoComponent
     [IsoId("_LCkhFTptEemk2e6qGBk8IQ")]
     [DisplayName("Securities Account Owner Indicator")]
     [IsoXmlTag("SctiesAcctOwnrInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? SecuritiesAccountOwnerIndicator { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICollateralValueReturnCriteria1 : IIsoComponent
     [IsoId("_LCkhFjptEemk2e6qGBk8IQ")]
     [DisplayName("Securities Account Servicer Indicator")]
     [IsoXmlTag("SctiesAcctSvcrInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? SecuritiesAccountServicerIndicator { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ICollateralValueReturnCriteria1 : IIsoComponent
     [IsoId("_LCkhFzptEemk2e6qGBk8IQ")]
     [DisplayName("Total Collateral Valuation Indicator")]
     [IsoXmlTag("TtlCollValtnInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? TotalCollateralValuationIndicator { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ICollateralValueReturnCriteria1 : IIsoComponent
     [IsoId("_LCkhGDptEemk2e6qGBk8IQ")]
     [DisplayName("Securities Account Indicator")]
     [IsoXmlTag("SctiesAcctInd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? SecuritiesAccountIndicator { get; }
 
     /// <summary>
@@ -65,5 +72,6 @@ public interface ICollateralValueReturnCriteria1 : IIsoComponent
     [IsoId("_LCkhGTptEemk2e6qGBk8IQ")]
     [DisplayName("Securities")]
     [IsoXmlTag("Scties")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator? Securities { get; }
 }

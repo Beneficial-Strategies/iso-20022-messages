@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities settlement transaction.
 /// </summary>
 [IsoId("bc4e3872-28fe-433d-91e3-4213f3947bec")]
+[IsoDisplayName(@"Transaction Details177")]
 public interface ITransactionDetails177 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransactionDetails177 : IIsoComponent
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b01")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TradeIdentification { get; }
 
     /// <summary>

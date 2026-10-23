@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Detailed Transaction Statistics7Choice.
 /// </summary>
 [IsoId("_l6YQx_reEe2mU4Wi2q3MzQ")]
+[IsoDisplayName(@"Detailed Transaction Statistics7Choice")]
 public interface IDetailedTransactionStatistics7Choice : IIsoChoice { }

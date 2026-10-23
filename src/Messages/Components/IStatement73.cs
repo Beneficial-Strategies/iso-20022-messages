@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of the statement.
 /// </summary>
 [IsoId("_WB0y4dCAEeiO-eodGv5iKQ")]
+[IsoDisplayName(@"Statement")]
 public interface IStatement73 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IStatement73 : IIsoComponent
     [IsoId("_WVKlq9CAEeiO-eodGv5iKQ")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryReference { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IStatement73 : IIsoComponent
     [IsoId("_WVKls9CAEeiO-eodGv5iKQ")]
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StatementIdentification { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface IStatement73 : IIsoComponent
     [IsoId("_WVUWu9CAEeiO-eodGv5iKQ")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface IStatement73 : IIsoComponent
     [IsoId("_WVUWw9CAEeiO-eodGv5iKQ")]
     [DisplayName("Sub Account Indicator")]
     [IsoXmlTag("SubAcctInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator SubAccountIndicator { get; }
 
     /// <summary>
@@ -89,5 +96,6 @@ public interface IStatement73 : IIsoComponent
     [IsoId("_U940MNCBEeiO-eodGv5iKQ")]
     [DisplayName("Security Interest Or Set Off")]
     [IsoXmlTag("SctyIntrstOrSetOff")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SecurityInterestOrSetOff { get; }
 }

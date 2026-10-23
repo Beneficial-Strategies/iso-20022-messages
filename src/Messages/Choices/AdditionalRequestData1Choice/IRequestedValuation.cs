@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRequestData1Choice;
 /// <summary>
 /// Requested Valuation.
 /// </summary>
+[IsoDisplayName(@"Requested Valuation")]
 public interface IRequestedValuation : IAdditionalRequestData1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument19Choice;
 /// </summary>
 [IsoId("_-mXAkyC1EeWJd9HF2tO7BA")]
 [IsoXmlTag("ChqDtls")]
+[IsoDisplayName(@"Cheque Details")]
 public interface IChequeDetails : IPaymentInstrument19Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party Identification276.
 /// </summary>
 [IsoId("_xHwJLVx7Ee6fgZt44_IqFA")]
+[IsoDisplayName(@"Party Identification276")]
 public interface IPartyIdentification276 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IPartyIdentification276 : IIsoComponent
     /// </summary>
     [DisplayName("Legal Person")]
     [IsoXmlTag("LglPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification275> LegalPerson { get; }
 
     /// <summary>
@@ -23,5 +25,6 @@ public interface IPartyIdentification276 : IIsoComponent
     /// </summary>
     [DisplayName("Natural Person")]
     [IsoXmlTag("NtrlPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification217> NaturalPerson { get; }
 }

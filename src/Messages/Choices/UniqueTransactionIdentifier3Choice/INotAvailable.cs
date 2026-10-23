@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueTransactionIdentifier3Choi
 /// Indicates unique transaction identifier is not available.
 /// </summary>
 [IsoId("__pAKxU7qEe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Not Available")]
 public interface INotAvailable : IUniqueTransactionIdentifier3Choice, IIsoChoiceVariant
 {
     /// <summary>

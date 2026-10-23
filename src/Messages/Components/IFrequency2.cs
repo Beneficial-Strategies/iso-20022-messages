@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details to specify the frequency, pattern and other items to allow for the communication of a series of payments to be made to the same recipient over a period of time.
 /// </summary>
 [IsoId("_auNAsbpVEfCPZvweyV2nEg")]
+[IsoDisplayName(@"Frequency2")]
 public interface IFrequency2 : IIsoComponent
 {
     /// <summary>

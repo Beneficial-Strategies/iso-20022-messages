@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unprotected sensitive detailed information about the cardholder.
 /// </summary>
 [IsoId("_91eHMEarEeeIjf8aP9KbJA")]
+[IsoDisplayName(@"Cardholder")]
 public interface ICardholder15 : IIsoComponent
 {
     /// <summary>
@@ -28,6 +29,7 @@ public interface ICardholder15 : IIsoComponent
     [IsoId("_Wy6cMEasEeeIjf8aP9KbJA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICredentials1> Identification { get; }
 
     /// <summary>
@@ -55,5 +57,6 @@ public interface ICardholder15 : IIsoComponent
     [IsoId("_ZM4VARqYEeqH1IQNpbVpEw")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfBirth { get; }
 }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PenaltyListType1Choice;
 
 /// <summary>Specifies the penalty list reported, in a coded format.</summary>
 [IsoId("_-p6qk9fNEeiJ1vId85LeLw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPenaltyListType1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference information concerning the original payment initiation, to which the investigation message refers.
 /// </summary>
 [IsoId("_8EU0B66FEeexrtTFgmVD3Q")]
+[IsoDisplayName(@"Underlying Payment Instruction")]
 public interface IUnderlyingPaymentInstruction4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IUnderlyingPaymentInstruction4 : IIsoComponent
     [IsoId("_8NjBd66FEeexrtTFgmVD3Q")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalPaymentInformationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IUnderlyingPaymentInstruction4 : IIsoComponent
     [IsoId("_8NjBea6FEeexrtTFgmVD3Q")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IUnderlyingPaymentInstruction4 : IIsoComponent
     [IsoId("_8NjBe66FEeexrtTFgmVD3Q")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IUnderlyingPaymentInstruction4 : IIsoComponent
     [IsoId("_8NjBga6FEeexrtTFgmVD3Q")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 
     /// <summary>

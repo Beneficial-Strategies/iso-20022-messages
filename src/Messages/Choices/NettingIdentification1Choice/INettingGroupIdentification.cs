@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NettingIdentification1Choice;
 /// Describes the netting group.
 /// </summary>
 [IsoId("_WcyfUJUwEeaYkf5FCqYMeA")]
+[IsoDisplayName(@"Netting Group Identification")]
 public interface INettingGroupIdentification : INettingIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface INettingGroupIdentification : INettingIdentification1Choice, II
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("NetgGrpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

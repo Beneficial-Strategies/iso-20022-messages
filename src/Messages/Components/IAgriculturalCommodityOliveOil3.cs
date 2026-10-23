@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an agricultural derivative of type olive oil.
 /// </summary>
 [IsoId("_9YO60U8SEe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Agricultural Commodity Olive Oil")]
 public interface IAgriculturalCommodityOliveOil3 : IIsoComponent
 {
     /// <summary>

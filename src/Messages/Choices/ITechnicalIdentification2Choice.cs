@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Selection between a generic technical address or a BIC identifier when setting up or modifying the technical address for a party.
 /// </summary>
 [IsoId("_X5McYb11Eeiut6mmSKzDFQ")]
+[IsoDisplayName(@"Technical Identification 2 Choice")]
 public interface ITechnicalIdentification2Choice : IIsoChoice { }

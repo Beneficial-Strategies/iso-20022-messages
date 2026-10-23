@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount4Choic
 /// </summary>
 [IsoId("_ICF6E7XQEeiTob_PrFFUxA")]
 [IsoXmlTag("InstdAmt")]
+[IsoDisplayName(@"Instructed Amount")]
 public interface IInstructedAmount : ISecuritiesQuantityOrAmount4Choice, IIsoChoiceVariant
 {
     /// <summary>

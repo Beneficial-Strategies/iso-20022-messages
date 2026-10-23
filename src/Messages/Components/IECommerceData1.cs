@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains electronic commerce data.
 /// </summary>
 [IsoId("_NJD5E2zZEemD24gVaMSpeA")]
+[IsoDisplayName(@"E Commerce Data")]
 public interface IECommerceData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IECommerceData1 : IIsoComponent
     [IsoId("_NJD5FWzZEemD24gVaMSpeA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IECommerceData1 : IIsoComponent
     [IsoId("_NJD5FGzZEemD24gVaMSpeA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text Value { get; }
 }

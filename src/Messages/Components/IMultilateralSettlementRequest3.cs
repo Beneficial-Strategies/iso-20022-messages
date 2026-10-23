@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details specific to the individual settlement instruction(s) included in the message.
 /// </summary>
 [IsoId("_z-2GQTEyEe6g-ffJsqGiSA")]
+[Description(@"Provides details specific to the individual settlement instruction(s) included in the message.")]
+[IsoDisplayName(@"Multilateral Settlement Request3")]
 public interface IMultilateralSettlementRequest3 : IIsoComponent
 {
     /// <summary>
@@ -73,5 +75,6 @@ public interface IMultilateralSettlementRequest3 : IIsoComponent
     /// </remarks>
     [DisplayName("Movement Record")]
     [IsoXmlTag("MvmntRcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMovementRecord2> MovementRecord { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria3Choice;
 /// Recalls the criteria (search and return criteria) defined in a preceding query.
 /// </summary>
 [IsoId("_EBPJQ24-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Query Name")]
 public interface IQueryName : IReservationCriteria3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IQueryName : IReservationCriteria3Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("QryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

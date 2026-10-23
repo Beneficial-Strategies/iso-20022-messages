@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Proprietary status and reason of an instruction or an instruction cancellation.
 /// </summary>
 [IsoId("_AljAYVhHEeOMYfRGLS0NbA")]
+[IsoDisplayName(@"Proprietary Status And Reason")]
 public interface IProprietaryStatusAndReason5 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IProprietaryStatusAndReason5 : IIsoComponent
     [IsoId("_80za9Vj8EeOgwYxfAV02bg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the underlying statement entry to which the investigation message refers.
 /// </summary>
 [IsoId("40cec56e-b22f-436f-9774-349b1a70a720")]
+[IsoDisplayName(@"Underlying Statement Entry11")]
 public interface IUnderlyingStatementEntry11 : IIsoComponent
 {
     /// <summary>

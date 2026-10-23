@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies all information around an event notification.
 /// </summary>
 [IsoId("_I8-wAbZeEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Event Notification Data8")]
 public interface IEventNotificationData8 : IIsoComponent
 {
     /// <summary>

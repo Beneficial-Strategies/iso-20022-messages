@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the report item rejection reason in a coded or proprietary form.
 /// </summary>
 [IsoId("_havMI73REeO2FLWuu_JIqg")]
+[IsoDisplayName(@"Report Item Rejection Reason 1 Choice")]
 public interface IReportItemRejectionReason1Choice : IIsoChoice { }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a location and codified form.
 /// </summary>
 [IsoId("_97kuEnltEeG7BsjMvd1mEw_-1026438563")]
+[IsoDisplayName(@"Place Or Under Confirmation Choice")]
 public interface IPlaceOrUnderConfirmationChoice1 : IIsoChoice { }

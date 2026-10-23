@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus63Cho
 
 /// <summary>Modification has been requested.</summary>
 [IsoId("_9ENHzQNrEfG_3cM8uyJ20w")]
+[IsoDisplayName(@"Modification Requested")]
 public interface IModificationRequested : IInstructionProcessingStatus63Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

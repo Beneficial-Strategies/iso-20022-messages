@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References18Choice;
 /// </summary>
 [IsoId("_9EijIz9mEeCuVfEpWlZb5g")]
 [IsoXmlTag("SctiesSttlmTxConfId")]
+[IsoDisplayName(@"Securities Settlement Transaction Confirmation Identification")]
 public interface ISecuritiesSettlementTransactionConfirmationIdentification
     : IReferences18Choice,
         IIsoChoiceVariant
@@ -20,6 +21,8 @@ public interface ISecuritiesSettlementTransactionConfirmationIdentification
     [IsoId("_H4smFU-2EeCKyoyCaiI0rw")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>

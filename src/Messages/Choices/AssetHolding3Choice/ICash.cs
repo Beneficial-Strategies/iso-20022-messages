@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding3Choice;
 /// <summary>
 /// Cash.
 /// </summary>
+[IsoDisplayName(@"Cash")]
 public interface ICash : IAssetHolding3Choice, IIsoChoiceVariant
 {
     /// <summary>

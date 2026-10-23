@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the return or reversal expected by the party that initiated the initial payment instruction after a cancellation or modification request.
 /// </summary>
 [IsoId("_QJIE2tp-Ed-ak6NoX_4Aeg_-774810951")]
+[IsoDisplayName(@"Resolution Information")]
 public interface IResolutionInformation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IResolutionInformation1 : IIsoComponent
     [IsoId("_QJROwNp-Ed-ak6NoX_4Aeg_-774810920")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>

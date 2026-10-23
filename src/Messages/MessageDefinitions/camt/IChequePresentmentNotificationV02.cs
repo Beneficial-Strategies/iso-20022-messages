@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
     "ChqPresntmntNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:camt.107.001.02"
 )]
+[IsoDisplayName(@"Cheque Presentment Notification V02")]
 public interface IChequePresentmentNotificationV02 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface IChequePresentmentNotificationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Cheque")]
     [IsoXmlTag("Chq")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICheque17> Cheque { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface IChequePresentmentNotificationV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

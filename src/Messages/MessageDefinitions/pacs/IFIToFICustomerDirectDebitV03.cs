@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.pacs;
     "FIToFICstmrDrctDbt",
     "urn:iso:std:iso:20022:tech:xsd:pacs.003.001.03"
 )]
+[Description(@"Scope|The FinancialInstitutionToFinancialInstitutionCustomerDirectDebit message is sent by the creditor agent to the debtor agent, directly or through other agents and/or a payment clearing and settlement system.|It is used to collect funds from a debtor account for a creditor.|Usage|The FItoFICustomerDirectDebit message can contain one or more customer direct debit instructions.|The FIToFICustomerDirectDebit message does not allow for grouping: the PaymentInformation block must be present once per occurrence of a DirectDebitTransactionInformation block.|The FItoFICustomerDirectDebit message may or may not contain mandate related information, i.e. extracts from a mandate, such as the MandateIdentification or DateOfSignature. The FIToFICustomerDirectDebit message must not be considered as a mandate.|The FItoFICustomerDirectDebit message can be used in domestic and cross-border scenarios.")]
+[IsoDisplayName(@"FI To FI Customer Direct Debit V")]
 public interface IFIToFICustomerDirectDebitV03 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +41,7 @@ public interface IFIToFICustomerDirectDebitV03 : IOuterRecord
     [IsoId("_sFjsAlkyEeGeoaLUQk__nA_-2098450125")]
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDirectDebitTransactionInformation12> DirectDebitTransactionInformation { get; }
 
     /// <summary>
@@ -47,5 +50,6 @@ public interface IFIToFICustomerDirectDebitV03 : IOuterRecord
     [IsoId("_sFjsA1kyEeGeoaLUQk__nA_833637444")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

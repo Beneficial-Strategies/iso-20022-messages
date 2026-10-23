@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification expressed as a proprietary type and narrative description.
 /// </summary>
 [IsoId("_P-Zbhdp-Ed-ak6NoX_4Aeg_-64862703")]
+[IsoDisplayName(@"Generic Identification")]
 public interface IGenericIdentification21 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IGenericIdentification21 : IIsoComponent
     [IsoId("_P-Zbh9p-Ed-ak6NoX_4Aeg_-1061935056")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status25Choice;
 /// Status code.
 /// </summary>
 [IsoId("_E09yoUQTEealVdmlTDXWkw")]
+[IsoDisplayName(@"Status")]
 public interface IStatus : IStatus25Choice, IIsoChoiceVariant
 {
     /// <summary>

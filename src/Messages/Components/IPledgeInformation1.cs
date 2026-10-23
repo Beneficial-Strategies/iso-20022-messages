@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the pledge and pledger.
 /// </summary>
 [IsoId("_xiaQoPQ9EeqAradXpAelDQ")]
+[IsoDisplayName(@"Pledge Information")]
 public interface IPledgeInformation1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IPledgeInformation1 : IIsoComponent
     [IsoId("_Q7cJAPQ-EeqAradXpAelDQ")]
     [DisplayName("Return Securities Indicator")]
     [IsoXmlTag("RtrSctiesInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ReturnSecuritiesIndicator { get; }
 }

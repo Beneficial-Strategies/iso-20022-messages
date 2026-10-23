@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery10Choice;
 /// </summary>
 [IsoId("_esoLYd1dEeqxpKDfBZC1vg")]
 [IsoXmlTag("AdHocQry")]
+[IsoDisplayName(@"Ad Hoc Query")]
 public interface IAdHocQuery : ITradeReportQuery10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface IAdHocQuery : ITradeReportQuery10Choice, IIsoChoiceVariant
     [IsoId("_MepeI5QUEeiok48Eh9lW9Q")]
     [DisplayName("Trade Life Cycle History")]
     [IsoXmlTag("TradLifeCyclHstry")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator TradeLifeCycleHistory { get; }
 
     /// <summary>
@@ -27,6 +29,7 @@ public interface IAdHocQuery : ITradeReportQuery10Choice, IIsoChoiceVariant
     [IsoId("_MepeJZQUEeiok48Eh9lW9Q")]
     [DisplayName("Outstanding Trade Indicator")]
     [IsoXmlTag("OutsdngTradInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator OutstandingTradeIndicator { get; }
 
     /// <summary>

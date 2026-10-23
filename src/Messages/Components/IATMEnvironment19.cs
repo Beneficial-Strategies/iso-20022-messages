@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Environment19.
 /// </summary>
 [IsoId("_yAEqgaErEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Environment19")]
 public interface IATMEnvironment19 : IIsoComponent
 {
     /// <summary>

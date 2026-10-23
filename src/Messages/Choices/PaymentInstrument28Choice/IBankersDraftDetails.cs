@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument28Choice;
 
 /// <summary>Banker's draft details.</summary>
 [IsoId("7d656f61-5871-4c04-a95d-555814ff960e")]
+[IsoDisplayName(@"Bankers Draft Details")]
 public interface IBankersDraftDetails : IPaymentInstrument28Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

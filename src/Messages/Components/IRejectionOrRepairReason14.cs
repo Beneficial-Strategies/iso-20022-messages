@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for the rejection or repair status.
 /// </summary>
 [IsoId("_ifpDl_4wEeClUvPNHKL9Zw")]
+[IsoDisplayName(@"Rejection Or Repair Reason")]
 public interface IRejectionOrRepairReason14 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRejectionOrRepairReason14 : IIsoComponent
     [IsoId("_ify0Qf4wEeClUvPNHKL9Zw")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionAndRepairReason14Choice> Code { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface IRejectionOrRepairReason14 : IIsoComponent
     [IsoId("_ify0S_4wEeClUvPNHKL9Zw")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

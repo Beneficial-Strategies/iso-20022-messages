@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details of the account report.
 /// </summary>
 [IsoId("_trMNE1kyEeGeoaLUQk__nA_1823876123")]
+[IsoDisplayName(@"Account Report")]
 public interface IAccountReport12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountReport12 : IIsoComponent
     [IsoId("_trVXAFkyEeGeoaLUQk__nA_826803770")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface IAccountReport12 : IIsoComponent
     [IsoId("_trVXAlkyEeGeoaLUQk__nA_1075005211")]
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ElectronicSequenceNumber { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface IAccountReport12 : IIsoComponent
     [IsoId("_trVXA1kyEeGeoaLUQk__nA_-805300429")]
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? LegalSequenceNumber { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface IAccountReport12 : IIsoComponent
     [IsoId("_trVXBFkyEeGeoaLUQk__nA_-299919801")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -98,6 +104,7 @@ public interface IAccountReport12 : IIsoComponent
     [IsoId("_tro5AFkyEeGeoaLUQk__nA_885199114")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountInterest3> Interest { get; }
 
     /// <summary>
@@ -106,6 +113,7 @@ public interface IAccountReport12 : IIsoComponent
     [IsoId("_tro5AVkyEeGeoaLUQk__nA_-1303053405")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance3> Balance { get; }
 
     /// <summary>
@@ -122,6 +130,7 @@ public interface IAccountReport12 : IIsoComponent
     [IsoId("_tro5A1kyEeGeoaLUQk__nA_1853804737")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportEntry3> Entry { get; }
 
     /// <summary>
@@ -130,5 +139,7 @@ public interface IAccountReport12 : IIsoComponent
     [IsoId("_tro5BFkyEeGeoaLUQk__nA_1912159654")]
     [DisplayName("Additional Report Information")]
     [IsoXmlTag("AddtlRptInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalReportInformation { get; }
 }

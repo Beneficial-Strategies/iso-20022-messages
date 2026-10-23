@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies an item in the agenda of the meeting. Some resolutions are submitted to the vote of the security holders, some are presented for information only.
 /// </summary>
 [IsoId("_zsXb8VtnEeSwKe7KuKvXhg")]
+[IsoDisplayName(@"Resolution")]
 public interface IResolution3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IResolution3 : IIsoComponent
     [IsoId("_0JrqE1tnEeSwKe7KuKvXhg")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IResolution3 : IIsoComponent
     [IsoId("_0JrqFVtnEeSwKe7KuKvXhg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? Description { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IResolution3 : IIsoComponent
     [IsoId("_0JrqF1tnEeSwKe7KuKvXhg")]
     [DisplayName("Title")]
     [IsoXmlTag("Titl")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Title { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IResolution3 : IIsoComponent
     [IsoId("_0JrqG1tnEeSwKe7KuKvXhg")]
     [DisplayName("For Information Only")]
     [IsoXmlTag("ForInfOnly")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ForInformationOnly { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IResolution3 : IIsoComponent
     [IsoId("_0JrqH1tnEeSwKe7KuKvXhg")]
     [DisplayName("Submitted By Security Holder")]
     [IsoXmlTag("SubmittdBySctyHldr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SubmittedBySecurityHolder { get; }
 
     /// <summary>
@@ -73,6 +82,9 @@ public interface IResolution3 : IIsoComponent
     [IsoId("_0JrqIVtnEeSwKe7KuKvXhg")]
     [DisplayName("Vote Instruction Type")]
     [IsoXmlTag("VoteInstrTp")]
+    [MinLength(0)]
+    [MaxLength(8)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<VoteInstruction2Code> VoteInstructionType { get; }
 
     /// <summary>

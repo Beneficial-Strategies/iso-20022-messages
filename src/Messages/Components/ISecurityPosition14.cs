@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security and its balance.
 /// </summary>
 [IsoId("_gXJjwxuUEeyhRdHRjakS2w")]
+[IsoDisplayName(@"Security Position")]
 public interface ISecurityPosition14 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,8 @@ public interface ISecurityPosition14 : IIsoComponent
     [IsoId("_gsm2VRuUEeyhRdHRjakS2w")]
     [DisplayName("Position")]
     [IsoXmlTag("Pos")]
+    [MinLength(0)]
+    [MaxLength(1000)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEligiblePosition11> Position { get; }
 }

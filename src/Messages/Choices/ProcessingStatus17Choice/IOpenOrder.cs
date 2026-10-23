@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice;
 /// </summary>
 [IsoId("_A4_6BdokEeC60axPepSq7g_-2075229028")]
 [IsoXmlTag("OpnOrdr")]
+[IsoDisplayName(@"Open Order")]
 public interface IOpenOrder : IProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IOpenOrder : IProcessingStatus17Choice, IIsoChoiceVariant
     [IsoId("_UatOxtp-Ed-ak6NoX_4Aeg_-1133156666")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

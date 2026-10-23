@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amendment details and reason related to the registered contract.
 /// </summary>
 [IsoId("__zlVIdL3EeSDLevdaFPXHw")]
+[IsoDisplayName(@"Registered Contract Amendment")]
 public interface IRegisteredContractAmendment1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRegisteredContractAmendment1 : IIsoComponent
     [IsoId("_OtXz4NL4EeSDLevdaFPXHw")]
     [DisplayName("Amendment Date")]
     [IsoXmlTag("AmdmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate AmendmentDate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IRegisteredContractAmendment1 : IIsoComponent
     [IsoId("_y1JvktOWEeSQ_-lmj1tzfw")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IRegisteredContractAmendment1 : IIsoComponent
     [IsoId("_4nTUYtOWEeSQ_-lmj1tzfw")]
     [DisplayName("Amendment Reason")]
     [IsoXmlTag("AmdmntRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AmendmentReason { get; }
 
     /// <summary>
@@ -49,5 +54,7 @@ public interface IRegisteredContractAmendment1 : IIsoComponent
     [IsoId("_CikDoNOXEeSQ_-lmj1tzfw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? AdditionalInformation { get; }
 }

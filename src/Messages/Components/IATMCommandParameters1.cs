@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters to be used to update the configuration or the status security device.
 /// </summary>
 [IsoId("_CxFZMItIEeSxlKlAGYErFg")]
+[IsoDisplayName(@"ATM Command Parameters")]
 public interface IATMCommandParameters1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMCommandParameters1 : IIsoComponent
     [IsoId("_ObyFwItIEeSxlKlAGYErFg")]
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SerialNumber { get; }
 
     /// <summary>

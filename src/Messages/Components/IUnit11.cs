@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about units to transfer.
 /// </summary>
 [IsoId("_b2mNAW1bEeiqaPNRWUnGNA")]
+[IsoDisplayName(@"Unit")]
 public interface IUnit11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IUnit11 : IIsoComponent
     [IsoId("_cHHVQ21bEeiqaPNRWUnGNA")]
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber UnitsNumber { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IUnit11 : IIsoComponent
     [IsoId("_cHHVRW1bEeiqaPNRWUnGNA")]
     [DisplayName("Order Date")]
     [IsoXmlTag("OrdrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? OrderDate { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IUnit11 : IIsoComponent
     [IsoId("_cHHVR21bEeiqaPNRWUnGNA")]
     [DisplayName("Acquisition Date")]
     [IsoXmlTag("AcqstnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? AcquisitionDate { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IUnit11 : IIsoComponent
     [IsoId("_cHHVSW1bEeiqaPNRWUnGNA")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CertificateNumber { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface IUnit11 : IIsoComponent
     [IsoId("_cHHVTW1bEeiqaPNRWUnGNA")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reference { get; }
 
     /// <summary>
@@ -81,5 +88,6 @@ public interface IUnit11 : IIsoComponent
     [IsoId("_cHHVU21bEeiqaPNRWUnGNA")]
     [DisplayName("Other Amount")]
     [IsoXmlTag("OthrAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherAmount1> OtherAmount { get; }
 }

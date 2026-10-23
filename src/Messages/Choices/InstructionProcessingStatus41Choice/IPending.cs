@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus41Cho
 /// </summary>
 [IsoId("_4YiuDe6KEeqc-LCjwLsUVg")]
 [IsoXmlTag("Pdg")]
+[IsoDisplayName(@"Pending")]
 public interface IPending : IInstructionProcessingStatus41Choice, IIsoChoiceVariant
 {
     /// <summary>

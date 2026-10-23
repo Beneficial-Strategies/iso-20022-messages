@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between details of one or more limits set by the member (or on behalf of the member) and managed by the transaction administrator or an operational error when the requested data cannot be retrieved.
 /// </summary>
 [IsoId("_CtV4dW4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Limit Report Or Error 4 Choice")]
 public interface ILimitReportOrError4Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Electronic money product that provides the cardholder with a portable and specialised computer device, which typically contains a microprocessor.
 /// </summary>
 [IsoId("_t6iQoFkyEeGeoaLUQk__nA_2134907969")]
+[IsoDisplayName(@"Payment Card")]
 public interface IPaymentCard4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPaymentCard4 : IIsoComponent
     [IsoId("_t6iQolkyEeGeoaLUQk__nA_1737660243")]
     [DisplayName("Card Country Code")]
     [IsoXmlTag("CardCtryCd")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? CardCountryCode { get; }
 
     /// <summary>
@@ -41,5 +43,7 @@ public interface IPaymentCard4 : IIsoComponent
     [IsoId("_t6iQpFkyEeGeoaLUQk__nA_-642875600")]
     [DisplayName("Additional Card Data")]
     [IsoXmlTag("AddtlCardData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalCardData { get; }
 }

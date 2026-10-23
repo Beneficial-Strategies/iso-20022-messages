@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the closing of the securities financing transaction.
 /// </summary>
 [IsoId("_5Tn2yc3yEee5nJBZsW8MFQ")]
+[IsoDisplayName(@"Securities Financing Transaction Details")]
 public interface ISecuritiesFinancingTransactionDetails39 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesFinancingTransactionDetails39 : IIsoComponent
     [IsoId("_5Tn2y83yEee5nJBZsW8MFQ")]
     [DisplayName("Securities Financing Trade Identification")]
     [IsoXmlTag("SctiesFincgTradId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? SecuritiesFinancingTradeIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISecuritiesFinancingTransactionDetails39 : IIsoComponent
     [IsoId("_5Tn2083yEee5nJBZsW8MFQ")]
     [DisplayName("Closing Leg Identification")]
     [IsoXmlTag("ClsgLegId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ClosingLegIdentification { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface ISecuritiesFinancingTransactionDetails39 : IIsoComponent
     [IsoId("_5Tn3D83yEee5nJBZsW8MFQ")]
     [DisplayName("Maturity Date Modification")]
     [IsoXmlTag("MtrtyDtMod")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? MaturityDateModification { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface ISecuritiesFinancingTransactionDetails39 : IIsoComponent
     [IsoId("_5Tn3F83yEee5nJBZsW8MFQ")]
     [DisplayName("Interest Payment")]
     [IsoXmlTag("IntrstPmt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? InterestPayment { get; }
 
     /// <summary>
@@ -169,6 +176,7 @@ public interface ISecuritiesFinancingTransactionDetails39 : IIsoComponent
     [IsoId("_5Tn3Uc3yEee5nJBZsW8MFQ")]
     [DisplayName("Transaction Call Delay")]
     [IsoXmlTag("TxCallDely")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? TransactionCallDelay { get; }
 
     /// <summary>
@@ -177,6 +185,7 @@ public interface ISecuritiesFinancingTransactionDetails39 : IIsoComponent
     [IsoId("_5Tn3Wc3yEee5nJBZsW8MFQ")]
     [DisplayName("Total Number Of Collateral Instructions")]
     [IsoXmlTag("TtlNbOfCollInstrs")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? TotalNumberOfCollateralInstructions { get; }
 
     /// <summary>
@@ -233,5 +242,7 @@ public interface ISecuritiesFinancingTransactionDetails39 : IIsoComponent
     [IsoId("_5Tn3kc3yEee5nJBZsW8MFQ")]
     [DisplayName("Second Leg Narrative")]
     [IsoXmlTag("ScndLegNrrtv")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text? SecondLegNarrative { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vote expressed for one resolution.
 /// </summary>
 [IsoId("_M7uL4ajIEfCzuLlmLrhIvA")]
+[IsoDisplayName(@"Vote22")]
 public interface IVote22 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IVote22 : IIsoComponent
     [IsoId("_NDMF06jIEfCzuLlmLrhIvA")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IItemDescription2> Description { get; }
 
     /// <summary>
@@ -137,6 +139,7 @@ public interface IVote22 : IIsoComponent
     [IsoId("_NDMF76jIEfCzuLlmLrhIvA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryVote2> Proprietary { get; }
 
     /// <summary>

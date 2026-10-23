@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash settlement parties and accounts.
 /// </summary>
 [IsoId("_opbHoa0gEem-sffGyZ-CNg")]
+[IsoDisplayName(@"Cash Settlement")]
 public interface ICashSettlement4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICashSettlement4 : IIsoComponent
     [IsoId("_o-jDEa0gEem-sffGyZ-CNg")]
     [DisplayName("Cash Account Details")]
     [IsoXmlTag("CshAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount204> CashAccountDetails { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ICashSettlement4 : IIsoComponent
     [IsoId("_o-jDE60gEem-sffGyZ-CNg")]
     [DisplayName("Other Cash Settlement Details")]
     [IsoXmlTag("OthrCshSttlmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentInstrument17> OtherCashSettlementDetails { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication details related to the registered currency control contract.
 /// </summary>
 [IsoId("_oDuGMdL6EeSDLevdaFPXHw")]
+[IsoDisplayName(@"Registered Contract Communication")]
 public interface IRegisteredContractCommunication1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IRegisteredContractCommunication1 : IIsoComponent
     [IsoId("_8MZrsNL6EeSDLevdaFPXHw")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Date { get; }
 }

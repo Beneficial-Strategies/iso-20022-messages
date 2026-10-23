@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit for a percentage rate range.
 /// </summary>
 [IsoId("_8Gekh6MgEeCJ6YNENx4h-w_1560024598")]
+[IsoDisplayName(@"Percentage Range Boundary")]
 public interface IPercentageRangeBoundary1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPercentageRangeBoundary1 : IIsoComponent
     [IsoId("_8GekiKMgEeCJ6YNENx4h-w_1727044493")]
     [DisplayName("Boundary Rate")]
     [IsoXmlTag("BdryRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate BoundaryRate { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IPercentageRangeBoundary1 : IIsoComponent
     [IsoId("_8GekiaMgEeCJ6YNENx4h-w_-1807157650")]
     [DisplayName("Included")]
     [IsoXmlTag("Incl")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Included { get; }
 }

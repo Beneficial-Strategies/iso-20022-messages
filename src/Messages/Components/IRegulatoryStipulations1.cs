@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies regulatory stipulations that financial institutions must be compliant with in the country, region, and/or area they conduct business.
 /// </summary>
 [IsoId("_AmX48NokEeC60axPepSq7g_4921707")]
+[IsoDisplayName(@"Regulatory Stipulations")]
 public interface IRegulatoryStipulations1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IRegulatoryStipulations1 : IIsoComponent
     [IsoId("_Amhp8dokEeC60axPepSq7g_1275857359")]
     [DisplayName("Stipulations")]
     [IsoXmlTag("Stiptns")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Stipulations { get; }
 }

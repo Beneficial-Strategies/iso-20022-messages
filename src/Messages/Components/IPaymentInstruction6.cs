@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics that apply to the debit side of the payment transactions included in the credit transfer initiation.
 /// </summary>
 [IsoId("_so30dlkyEeGeoaLUQk__nA_1534787075")]
+[IsoDisplayName(@"Payment Instruction")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IPaymentInstruction6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IPaymentInstruction6 : IIsoComponent
     [IsoId("_spBlcFkyEeGeoaLUQk__nA_-1554984035")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IPaymentInstruction6 : IIsoComponent
     [IsoId("_spBlclkyEeGeoaLUQk__nA_101009836")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
+    [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
     BatchBookingIndicator? BatchBooking { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IPaymentInstruction6 : IIsoComponent
     [IsoId("_spBlc1kyEeGeoaLUQk__nA_-23928007")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? NumberOfTransactions { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IPaymentInstruction6 : IIsoComponent
     [IsoId("_spLWcFkyEeGeoaLUQk__nA_898235303")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface IPaymentInstruction6 : IIsoComponent
     [IsoId("_spLWclkyEeGeoaLUQk__nA_-1601601609")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate RequestedExecutionDate { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface IPaymentInstruction6 : IIsoComponent
     [IsoId("_spLWc1kyEeGeoaLUQk__nA_53894449")]
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PoolingAdjustmentDate { get; }
 
     /// <summary>
@@ -114,6 +123,8 @@ public interface IPaymentInstruction6 : IIsoComponent
     [IsoId("_speRYVkyEeGeoaLUQk__nA_-2047990082")]
     [DisplayName("Instruction For Debtor Agent")]
     [IsoXmlTag("InstrForDbtrAgt")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InstructionForDebtorAgent { get; }
 
     /// <summary>
@@ -154,5 +165,6 @@ public interface IPaymentInstruction6 : IIsoComponent
     [IsoId("_spoCYVkyEeGeoaLUQk__nA_1890849661")]
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICreditTransferTransaction1> CreditTransferTransactionInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Time span defined by a start date and time, and an end date and time.
 /// </summary>
 [IsoId("_T5oiANp-Ed-ak6NoX_4Aeg_1497161223")]
+[IsoDisplayName(@"Period")]
 public interface IPeriod2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPeriod2 : IIsoComponent
     [IsoId("_T5oiAdp-Ed-ak6NoX_4Aeg_1497161242")]
     [DisplayName("From Date")]
     [IsoXmlTag("FrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate FromDate { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IPeriod2 : IIsoComponent
     [IsoId("_T5oiAtp-Ed-ak6NoX_4Aeg_1497161560")]
     [DisplayName("To Date")]
     [IsoXmlTag("ToDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ToDate { get; }
 }

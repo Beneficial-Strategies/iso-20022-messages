@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the collateral that will be substituted.
 /// </summary>
 [IsoId("_WKR_ESqSEeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Collateral Substitution")]
 public interface ICollateralSubstitution8 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ICollateralSubstitution8 : IIsoComponent
     [IsoId("_Wh-taSqSEeyR9JrVGfaMKw")]
     [DisplayName("Standard Settlement Instructions")]
     [IsoXmlTag("StdSttlmInstrs")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? StandardSettlementInstructions { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICollateralSubstitution8 : IIsoComponent
     [IsoId("_Wh-tayqSEeyR9JrVGfaMKw")]
     [DisplayName("Securities Collateral")]
     [IsoXmlTag("SctiesColl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesCollateral12> SecuritiesCollateral { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ICollateralSubstitution8 : IIsoComponent
     [IsoId("_Wh-tbSqSEeyR9JrVGfaMKw")]
     [DisplayName("Cash Collateral")]
     [IsoXmlTag("CshColl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashCollateral3> CashCollateral { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ICollateralSubstitution8 : IIsoComponent
     [IsoId("_Wh-tbyqSEeyR9JrVGfaMKw")]
     [DisplayName("Other Collateral")]
     [IsoXmlTag("OthrColl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherCollateral9> OtherCollateral { get; }
 
     /// <summary>

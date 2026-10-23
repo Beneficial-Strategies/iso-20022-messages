@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details related to a direct debit mandate signed between the creditor and the debtor.
 /// </summary>
 [IsoId("_m-35kR72EeSxevWRRWxNAg")]
+[IsoDisplayName(@"Mandate Related Information")]
 public interface IMandateRelatedInformation10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMandateRelatedInformation10 : IIsoComponent
     [IsoId("_nP8bdx72EeSxevWRRWxNAg")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IMandateRelatedInformation10 : IIsoComponent
     [IsoId("_nP8beR72EeSxevWRRWxNAg")]
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfSignature { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IMandateRelatedInformation10 : IIsoComponent
     [IsoId("_nP8bex72EeSxevWRRWxNAg")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AmendmentIndicator { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IMandateRelatedInformation10 : IIsoComponent
     [IsoId("_nP8bfx72EeSxevWRRWxNAg")]
     [DisplayName("Electronic Signature")]
     [IsoXmlTag("ElctrncSgntr")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? ElectronicSignature { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IMandateRelatedInformation10 : IIsoComponent
     [IsoId("_nP8bgR72EeSxevWRRWxNAg")]
     [DisplayName("First Collection Date")]
     [IsoXmlTag("FrstColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FirstCollectionDate { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IMandateRelatedInformation10 : IIsoComponent
     [IsoId("_nP8bgx72EeSxevWRRWxNAg")]
     [DisplayName("Final Collection Date")]
     [IsoXmlTag("FnlColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FinalCollectionDate { get; }
 
     /// <summary>

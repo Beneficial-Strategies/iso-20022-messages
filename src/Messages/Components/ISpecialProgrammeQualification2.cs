@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Special Programme Qualification2.
 /// </summary>
 [IsoId("_SeEdsZm-Ee6Qpd-x8YgzaA")]
+[IsoDisplayName(@"Special Programme Qualification2")]
 public interface ISpecialProgrammeQualification2 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface ISpecialProgrammeQualification2 : IIsoComponent
     /// </summary>
     [DisplayName("Detail")]
     [IsoXmlTag("Dtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialProgrammeDetails2> Detail { get; }
 }

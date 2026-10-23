@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ApplicableRules1Choice;
 /// Applicable rules expressed as a code.
 /// </summary>
 [IsoId("_zP4owFNeEeijdq8ilaxyOA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IApplicableRules1Choice, IIsoChoiceVariant
 {
     /// <summary>

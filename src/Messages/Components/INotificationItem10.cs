@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further means of referencing a payment transaction.
 /// </summary>
 [IsoId("a20cda2a-a121-48de-a0bf-f1f92b322248")]
+[IsoDisplayName(@"Notification Item10")]
 public interface INotificationItem10 : IIsoComponent
 {
     /// <summary>
@@ -137,5 +138,6 @@ public interface INotificationItem10 : IIsoComponent
     [IsoId("55b983a5-72de-4d9b-9ac6-b9705d75c566")]
     [DisplayName("Underlying Allocation")]
     [IsoXmlTag("UndrlygAllcn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionAllocation2> UnderlyingAllocation { get; }
 }

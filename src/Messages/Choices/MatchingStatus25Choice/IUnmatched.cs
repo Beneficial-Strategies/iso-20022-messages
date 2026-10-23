@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus25Choice;
 /// Status is unmatched.
 /// </summary>
 [IsoId("_04af2Tp4EeWVrPy0StzzSg")]
+[IsoDisplayName(@"Unmatched")]
 public interface IUnmatched : IMatchingStatus25Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

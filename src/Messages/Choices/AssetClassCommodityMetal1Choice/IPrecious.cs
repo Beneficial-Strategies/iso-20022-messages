@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityMetal1Choice;
 /// </summary>
 [IsoId("_D1rdVQ2rEeW72qLtWESimw")]
 [IsoXmlTag("Prcs")]
+[IsoDisplayName(@"Precious")]
 public interface IPrecious : IAssetClassCommodityMetal1Choice, IIsoChoiceVariant
 {
     /// <summary>

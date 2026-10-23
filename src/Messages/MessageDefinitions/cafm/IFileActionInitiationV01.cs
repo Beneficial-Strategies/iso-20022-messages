@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.cafm;
 /// </summary>
 [IsoId("_OtjNBFZiEeen1vB4iz5SyA")]
 [IsoMessage("cafm.001.001.01", "FileActnInitn", "urn:iso:std:iso:20022:tech:xsd:cafm.001.001.01")]
+[Description(@"The FileActionInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer).||This message is used to inquire, add, change, delete or replace a file or a record.")]
+[IsoDisplayName(@"File Action Initiation V")]
 public interface IFileActionInitiationV01 : IOuterRecord
 {
     /// <summary>

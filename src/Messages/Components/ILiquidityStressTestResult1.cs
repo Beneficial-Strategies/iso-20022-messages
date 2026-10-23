@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Results of a scenario used to test whether a legal entity or other financial construct has sufficient liquid resources to meet its obligations as they arise.
 /// </summary>
 [IsoId("_PwgG8LJPEeaYqc4G3TTwhA")]
+[IsoDisplayName(@"Liquidity Stress Test Result")]
 public interface ILiquidityStressTestResult1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILiquidityStressTestResult1 : IIsoComponent
     [IsoId("_W2YkgLJPEeaYqc4G3TTwhA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Identification { get; }
 
     /// <summary>
@@ -33,5 +36,8 @@ public interface ILiquidityStressTestResult1 : IIsoComponent
     [IsoId("_E8PuQLbxEeaqL_M7XFD7PQ")]
     [DisplayName("Liquidity Required And Available")]
     [IsoXmlTag("LqdtyReqrdAndAvlbl")]
+    [MinLength(6)]
+    [MaxLength(6)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILiquidityRequiredAndAvailable1> LiquidityRequiredAndAvailable { get; }
 }

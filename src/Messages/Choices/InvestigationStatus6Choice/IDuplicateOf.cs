@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus6Choice;
 /// <summary>
 /// Duplicate Of.
 /// </summary>
+[IsoDisplayName(@"Duplicate Of")]
 public interface IDuplicateOf : IInvestigationStatus6Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money to be moved between the debtor and creditor, expressed in the currency of the debtor&apos;s account, and the currency in which the amount is to be moved.
 /// </summary>
 [IsoId("_P57LM9p-Ed-ak6NoX_4Aeg_853564482")]
+[IsoDisplayName(@"Equivalent Amount")]
 public interface IEquivalentAmount2 : IIsoComponent
 {
     /// <summary>

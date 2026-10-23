@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the elements that identify a proxy appointed to represent a party authorised to vote at a shareholders meeting.
 /// </summary>
 [IsoId("_T4cPNNp-Ed-ak6NoX_4Aeg_-1419937890")]
+[IsoDisplayName(@"Proxy")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IProxy3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,9 @@ public interface IProxy3 : IIsoComponent
     [IsoId("_T4cPNdp-Ed-ak6NoX_4Aeg_-1419937859")]
     [DisplayName("Proxy Type")]
     [IsoXmlTag("PrxyTp")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ProxyType2Code> ProxyType { get; }
 
     /// <summary>

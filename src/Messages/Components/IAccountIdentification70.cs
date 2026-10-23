@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account Identification70.
 /// </summary>
 [IsoId("_4tdbF4-9Ee-COKgew96POA")]
+[IsoDisplayName(@"Account Identification70")]
 public interface IAccountIdentification70 : IIsoComponent
 {
     /// <summary>

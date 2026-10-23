@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus7Choice;
 /// <summary>
 /// Proprietary Status.
 /// </summary>
+[IsoDisplayName(@"Proprietary Status")]
 public interface IProprietaryStatus : IEventProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>

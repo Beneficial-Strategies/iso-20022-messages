@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial instrument that gives the holder the right to purchase shares or bonds at a given price within a specified time.
 /// </summary>
 [IsoId("_rfndQWf2Eembv_9KtOEw8g")]
+[IsoDisplayName(@"Warrant")]
 public interface IWarrant4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IWarrant4 : IIsoComponent
     [IsoId("_rsuFIWf2Eembv_9KtOEw8g")]
     [DisplayName("Multiplier")]
     [IsoXmlTag("Mltplr")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? Multiplier { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IWarrant4 : IIsoComponent
     [IsoId("_rsuFJ2f2Eembv_9KtOEw8g")]
     [DisplayName("Warrant Agent")]
     [IsoXmlTag("WarrtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation38> WarrantAgent { get; }
 }

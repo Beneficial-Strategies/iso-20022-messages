@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationType43Choice;
 /// Type of identification is defined using a code.
 /// </summary>
 [IsoId("_gsSfpYMEEeWhGPRU7TIQwQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IIdentificationType43Choice, IIsoChoiceVariant
 {
     /// <summary>

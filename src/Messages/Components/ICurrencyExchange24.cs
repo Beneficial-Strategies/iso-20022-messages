@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide details of the currency exchange.
 /// </summary>
 [IsoId("_mOGuUQ5rEe2xs7BqO31w6w")]
+[IsoDisplayName(@"Currency Exchange")]
 public interface ICurrencyExchange24 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICurrencyExchange24 : IIsoComponent
     [IsoId("_mY_IqQ5rEe2xs7BqO31w6w")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate ExchangeRate { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface ICurrencyExchange24 : IIsoComponent
     [IsoId("_mY_IsQ5rEe2xs7BqO31w6w")]
     [DisplayName("Contract Identification")]
     [IsoXmlTag("CtrctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ContractIdentification { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ICurrencyExchange24 : IIsoComponent
     [IsoId("_mY_Isw5rEe2xs7BqO31w6w")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? QuotationDate { get; }
 
     /// <summary>
@@ -65,5 +70,6 @@ public interface ICurrencyExchange24 : IIsoComponent
     [IsoId("_g2od4A5sEe2xs7BqO31w6w")]
     [DisplayName("Exchange Rate Base")]
     [IsoXmlTag("XchgRateBase")]
+    [IsoSimpleType(IsoSimpleType.PositiveNumber)]
     PositiveNumber? ExchangeRateBase { get; }
 }

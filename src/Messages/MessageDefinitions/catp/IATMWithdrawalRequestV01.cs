@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_Gi-LMInvEeS9F4Qrq_eaVA")]
 [IsoMessage("catp.001.001.01", "ATMWdrwlReq", "urn:iso:std:iso:20022:tech:xsd:catp.001.001.01")]
+[Description(@"The ATMWithdrawalRequest message is sent by an ATM to an acquirer or its agent to request the approval of a withdrawal transaction at an ATM.")]
+[IsoDisplayName(@"ATM Withdrawal Request V")]
 public interface IATMWithdrawalRequestV01 : IOuterRecord
 {
     /// <summary>

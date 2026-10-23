@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.catm;
 /// </summary>
 [IsoId("_u9CRUQ00EeqUVL7sB4m7NA")]
 [IsoMessage("catm.005.001.06", "MntncDlgtnReq", "urn:iso:std:iso:20022:tech:xsd:catm.005.001.06")]
+[Description(@"The MaintenanceDelegationRequest message is sent by a terminal manager to the master terminal manager to request delegation of maintenance functions or maintenance operation on the terminal estate managed by the master terminal manager.")]
+[IsoDisplayName(@"Maintenance Delegation Request V")]
 public interface IMaintenanceDelegationRequestV06 : IOuterRecord
 {
     /// <summary>

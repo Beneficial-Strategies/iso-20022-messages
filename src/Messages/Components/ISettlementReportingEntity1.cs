@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Entity in charge of the settlement reporting service.
 /// </summary>
 [IsoId("_kLz1YEX7Eeegp_DADCe7HQ")]
+[IsoDisplayName(@"Settlement Reporting Entity")]
 public interface ISettlementReportingEntity1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISettlementReportingEntity1 : IIsoComponent
     [IsoId("_8QsxwEX7Eeegp_DADCe7HQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ISettlementReportingEntity1 : IIsoComponent
     [IsoId("_BKJM8EX8Eeegp_DADCe7HQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 }

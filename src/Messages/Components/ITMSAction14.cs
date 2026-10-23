@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Action to perform on a terminal management system.
 /// </summary>
 [IsoId("_AOesQbYFEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"TMS Action14")]
 public interface ITMSAction14 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ITMSAction14 : IIsoComponent
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-key")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICryptographicKey19> Key { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface ITMSAction14 : IIsoComponent
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-cmpt")]
     [DisplayName("Component Type")]
     [IsoXmlTag("CmpntTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<DataSetCategory20Code> ComponentType { get; }
 
     /// <summary>
@@ -121,6 +124,7 @@ public interface ITMSAction14 : IIsoComponent
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-adpr")]
     [DisplayName("Additional Process")]
     [IsoXmlTag("AddtlPrc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; }
 
     /// <summary>
@@ -153,6 +157,7 @@ public interface ITMSAction14 : IIsoComponent
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-kecr")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10KBinary> KeyEnciphermentCertificate { get; }
 
     /// <summary>
@@ -161,6 +166,7 @@ public interface ITMSAction14 : IIsoComponent
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-erac")]
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorAction5> ErrorAction { get; }
 
     /// <summary>
@@ -169,6 +175,7 @@ public interface ITMSAction14 : IIsoComponent
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-adif")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max3000Binary> AdditionalInformation { get; }
 
     /// <summary>
@@ -177,6 +184,7 @@ public interface ITMSAction14 : IIsoComponent
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-msgi")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageItemCondition2> MessageItem { get; }
 
     /// <summary>

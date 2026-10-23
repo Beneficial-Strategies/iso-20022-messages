@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "ShrhldrsIdDsclsrRspn",
     "urn:iso:std:iso:20022:tech:xsd:seev.047.001.03"
 )]
+[IsoDisplayName(@"Shareholders Identification Disclosure Response V03")]
 public interface IShareholdersIdentificationDisclosureResponseV03 : IOuterRecord
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IShareholdersIdentificationDisclosureResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

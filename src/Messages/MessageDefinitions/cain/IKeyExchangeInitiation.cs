@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_tdBdMHvGEeSCJdwgzb6SFw")]
 [IsoMessage("cain.011.001.01", "KeyXchgInitn", "urn:iso:std:iso:20022:tech:xsd:cain.011.001.01")]
+[Description(@"The KeyExchangeInitiation message is sent by any party to an acquirer, an issuer or an agent, to initiate a cryptographic key exchange.")]
+[IsoDisplayName(@"Key Exchange Initiation")]
 public interface IKeyExchangeInitiation : IOuterRecord
 {
     /// <summary>

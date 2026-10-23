@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOfMeasure6Choice;
 /// Quantity of a product on a line specified by a number. For example, 100 (kgs), 50 (pieces).
 /// </summary>
 [IsoId("_QWXDkfFSEee_LsXdoqzkWg")]
+[IsoDisplayName(@"Unit Of Measure Code")]
 public interface IUnitOfMeasureCode : IUnitOfMeasure6Choice, IIsoChoiceVariant
 {
     /// <summary>

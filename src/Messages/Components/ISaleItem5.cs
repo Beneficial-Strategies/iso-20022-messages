@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Item purchased with the transaction.
 /// </summary>
 [IsoId("_JazOkVXhEfC0lMwgjvMClw")]
+[IsoDisplayName(@"Sale Item5")]
 public interface ISaleItem5 : IIsoComponent
 {
     /// <summary>
@@ -113,6 +114,7 @@ public interface ISaleItem5 : IIsoComponent
     [IsoId("_JdVlSFXhEfC0lMwgjvMClw")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment14> Adjustment { get; }
 
     /// <summary>
@@ -145,6 +147,7 @@ public interface ISaleItem5 : IIsoComponent
     [IsoId("_JdVlUFXhEfC0lMwgjvMClw")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> Tax { get; }
 
     /// <summary>

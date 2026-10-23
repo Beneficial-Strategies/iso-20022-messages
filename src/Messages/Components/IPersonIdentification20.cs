@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Person Identification20.
 /// </summary>
 [IsoId("_5xkUATFMEe6e4MbXgPVc4A")]
+[IsoDisplayName(@"Person Identification20")]
 public interface IPersonIdentification20 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IPersonIdentification20 : IIsoComponent
     /// </summary>
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericPersonIdentification2> Other { get; }
 }

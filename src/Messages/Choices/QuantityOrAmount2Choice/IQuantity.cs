@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrAmount2Choice;
 /// Quantity is expressed in units, face amount or amortised amount.
 /// </summary>
 [IsoId("_wXH_kQeCEe2fOITqoTnSLQ")]
+[IsoDisplayName(@"Quantity")]
 public interface IQuantity : IQuantityOrAmount2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

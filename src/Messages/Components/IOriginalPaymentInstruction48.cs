@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original Payment Instruction48.
 /// </summary>
 [IsoId("_9UEYETEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Original Payment Instruction48")]
 public interface IOriginalPaymentInstruction48 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface IOriginalPaymentInstruction48 : IIsoComponent
     /// </summary>
     [DisplayName("Cancellation Status Reason Information")]
     [IsoXmlTag("CxlStsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICancellationStatusReason5> CancellationStatusReasonInformation { get; }
 
     /// <summary>
@@ -72,6 +74,7 @@ public interface IOriginalPaymentInstruction48 : IIsoComponent
     /// </summary>
     [DisplayName("Number Of Transactions Per Cancellation Status")]
     [IsoXmlTag("NbOfTxsPerCxlSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfCancellationsPerStatus1> NumberOfTransactionsPerCancellationStatus { get; }
 
     /// <summary>
@@ -79,5 +82,6 @@ public interface IOriginalPaymentInstruction48 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction153> TransactionInformationAndStatus { get; }
 }

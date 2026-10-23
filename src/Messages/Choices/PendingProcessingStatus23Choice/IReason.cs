@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessingStatus23Choice;
 
 /// <summary>Specifies the reason of the pending processing status.</summary>
 [IsoId("_rb4t4aohEfCG2_q2WT-90w")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IPendingProcessingStatus23Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

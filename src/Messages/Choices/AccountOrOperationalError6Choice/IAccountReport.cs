@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrOperationalError6Choice
 /// <summary>
 /// Account Report.
 /// </summary>
+[IsoDisplayName(@"Account Report")]
 public interface IAccountReport : IAccountOrOperationalError6Choice, IIsoChoiceVariant
 {
     /// <summary>

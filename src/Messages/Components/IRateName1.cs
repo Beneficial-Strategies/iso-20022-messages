@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Rate name specifies the reference rate or basis rate on which a variable rate is based (ex: EONIA, EURIBOR, LIBOR, FEFUND, EURREPO).
 /// </summary>
 [IsoId("_Q-niZdp-Ed-ak6NoX_4Aeg_-1174778269")]
+[IsoDisplayName(@"Rate Name")]
 public interface IRateName1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRateName1 : IIsoComponent
     [IsoId("_Q-niZtp-Ed-ak6NoX_4Aeg_-1174778268")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text? Issuer { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IRateName1 : IIsoComponent
     [IsoId("_Q-niZ9p-Ed-ak6NoX_4Aeg_-1174778267")]
     [DisplayName("Rate Name")]
     [IsoXmlTag("RateNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RateName { get; }
 }

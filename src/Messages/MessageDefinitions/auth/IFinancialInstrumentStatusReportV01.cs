@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_ahM2QGFPEfC91ZUW7iS7ww")]
 [IsoMessage("auth.120.001.01", "FinInstrmStsRpt", "urn:iso:std:iso:20022:tech:xsd:auth.120.001.01")]
+[Description(@"The InstrumentStatusReport message is sent by the Trading Venue to the Consolidated Tape Provider, which disseminates the data to their users on a consolidated basis. The InstrumentStatusReport message contains the latest trading status of financial instruments on a per-venue basis, including information such as whether an instrument is active, suspended, halted, or removed, along with its current trading phase.")]
+[IsoDisplayName(@"Financial Instrument Status Report V01")]
 public interface IFinancialInstrumentStatusReportV01 : IOuterRecord
 {
     /// <summary>
@@ -27,6 +29,8 @@ public interface IFinancialInstrumentStatusReportV01 : IOuterRecord
     [IsoId("_C3pgIGFREfC91ZUW7iS7ww")]
     [DisplayName("Instrument Report")]
     [IsoXmlTag("InstrmRpt")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstrumentReport1Choice> InstrumentReport { get; }
 
     /// <summary>
@@ -35,5 +39,6 @@ public interface IFinancialInstrumentStatusReportV01 : IOuterRecord
     [IsoId("_axV5IGFREfC91ZUW7iS7ww")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

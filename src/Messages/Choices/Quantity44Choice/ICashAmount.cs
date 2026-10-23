@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity44Choice;
 /// </summary>
 [IsoId("_ZMtfME3WEeidB49bWZiS0g")]
 [IsoXmlTag("CshAmt")]
+[IsoDisplayName(@"Cash Amount")]
 public interface ICashAmount : IQuantity44Choice, IIsoChoiceVariant
 {
     /// <summary>

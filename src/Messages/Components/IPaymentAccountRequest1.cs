@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the account pointed by the payment card.
 /// </summary>
 [IsoId("_TIjQcNuIEeiB5uLfkg9ZJA")]
+[IsoDisplayName(@"Payment Account Request")]
 public interface IPaymentAccountRequest1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IPaymentAccountRequest1 : IIsoComponent
     [IsoId("_n-WaoNuIEeiB5uLfkg9ZJA")]
     [DisplayName("Account Reference")]
     [IsoXmlTag("AcctRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountReference { get; }
 }

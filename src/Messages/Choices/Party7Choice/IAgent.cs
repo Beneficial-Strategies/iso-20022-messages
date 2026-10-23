@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party7Choice;
 /// </summary>
 [IsoId("_PbFTENp-Ed-ak6NoX_4Aeg_2127848193")]
 [IsoXmlTag("Agt")]
+[IsoDisplayName(@"Agent")]
 public interface IAgent : IParty7Choice, IIsoChoiceVariant
 {
     /// <summary>

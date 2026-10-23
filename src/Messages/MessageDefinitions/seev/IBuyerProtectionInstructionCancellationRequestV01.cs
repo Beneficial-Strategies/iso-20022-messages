@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "BuyrPrtcnInstrCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:seev.062.001.01"
 )]
+[IsoDisplayName(@"Buyer Protection Instruction Cancellation Request V01")]
 public interface IBuyerProtectionInstructionCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IBuyerProtectionInstructionCancellationRequestV01 : IOuterRecor
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

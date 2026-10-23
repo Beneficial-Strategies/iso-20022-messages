@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkReport1Choice;
 /// </summary>
 [IsoId("_v7YEYdOtEeilDKNlC_3bSg")]
 [IsoXmlTag("Cret")]
+[IsoDisplayName(@"Create")]
 public interface ICreate : IBenchmarkReport1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICreate : IBenchmarkReport1Choice, IIsoChoiceVariant
     [IsoId("_-mkGfdOtEeilDKNlC_3bSg")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -74,5 +77,6 @@ public interface ICreate : IBenchmarkReport1Choice, IIsoChoiceVariant
     [IsoId("_-mkGftOtEeilDKNlC_3bSg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

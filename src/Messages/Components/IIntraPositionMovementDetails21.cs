@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Intra Position Movement Details21.
 /// </summary>
 [IsoId("_nJwZOYybEe-PVZsedaAGaA")]
+[IsoDisplayName(@"Intra Position Movement Details21")]
 public interface IIntraPositionMovementDetails21 : IIsoComponent
 {
     /// <summary>
@@ -100,5 +101,6 @@ public interface IIntraPositionMovementDetails21 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

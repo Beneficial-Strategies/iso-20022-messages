@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instructed Corporate Action Option20.
 /// </summary>
 [IsoId("_Uox703SdEe6VWZz2tTgENw")]
+[IsoDisplayName(@"Instructed Corporate Action Option20")]
 public interface IInstructedCorporateActionOption20 : IIsoComponent
 {
     /// <summary>
@@ -86,5 +87,6 @@ public interface IInstructedCorporateActionOption20 : IIsoComponent
     /// </summary>
     [DisplayName("Option Instruction Details")]
     [IsoXmlTag("OptnInstrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOptionInstructionDetails10> OptionInstructionDetails { get; }
 }

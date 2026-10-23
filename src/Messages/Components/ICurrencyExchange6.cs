@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the details of the currency exchange.
 /// </summary>
 [IsoId("_6SCHWZqlEeGSON8vddiWzQ_1288197096")]
+[IsoDisplayName(@"Currency Exchange")]
 public interface ICurrencyExchange6 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICurrencyExchange6 : IIsoComponent
     [IsoId("_6SCHXJqlEeGSON8vddiWzQ_491309707")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate ExchangeRate { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface ICurrencyExchange6 : IIsoComponent
     [IsoId("_6SL4UJqlEeGSON8vddiWzQ_1542442779")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max40Text)]
+    [StringLength(40, MinimumLength = 1)]
     Max40Text? Description { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface ICurrencyExchange6 : IIsoComponent
     [IsoId("_6SL4UpqlEeGSON8vddiWzQ_-301426210")]
     [DisplayName("Comments")]
     [IsoXmlTag("Cmnts")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Comments { get; }
 
     /// <summary>
@@ -65,5 +71,6 @@ public interface ICurrencyExchange6 : IIsoComponent
     [IsoId("_6SL4U5qlEeGSON8vddiWzQ_-813958820")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? QuotationDate { get; }
 }

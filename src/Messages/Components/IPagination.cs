@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Number used to sequence pages when it is not possible for data to be conveyed in a single message and the data has to be split across several pages (messages).
 /// </summary>
 [IsoId("_Q65gBdp-Ed-ak6NoX_4Aeg_-21330104")]
+[IsoDisplayName(@"Pagination")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IPagination : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IPagination : IIsoComponent
     [IsoId("_Q65gBtp-Ed-ak6NoX_4Aeg_653765264")]
     [DisplayName("Page Number")]
     [IsoXmlTag("PgNb")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText PageNumber { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IPagination : IIsoComponent
     [IsoId("_Q65gB9p-Ed-ak6NoX_4Aeg_811686458")]
     [DisplayName("Last Page Indicator")]
     [IsoXmlTag("LastPgInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator LastPageIndicator { get; }
 }

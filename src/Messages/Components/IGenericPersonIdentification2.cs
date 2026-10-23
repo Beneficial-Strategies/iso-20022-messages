@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Generic Person Identification2.
 /// </summary>
 [IsoId("__Aaz9TFLEe651u5xu3f5iw")]
+[IsoDisplayName(@"Generic Person Identification2")]
 public interface IGenericPersonIdentification2 : IIsoComponent
 {
     /// <summary>

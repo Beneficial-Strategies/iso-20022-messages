@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification38Choice;
 
 /// <summary>Unique identification of the cash account, as assigned by the account servicer.</summary>
 [IsoId("_mmlMg-F6EeWCAvUNsZ5u6g")]
+[IsoDisplayName(@"Cash Account Identification")]
 public interface ICashAccountIdentification : IAccountIdentification38Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

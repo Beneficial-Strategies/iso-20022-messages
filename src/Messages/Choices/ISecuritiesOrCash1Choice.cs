@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of securities or cash parties.
 /// </summary>
 [IsoId("_xeOrADcgEeOA3chqL9a4Rw")]
+[IsoDisplayName(@"Securities Or Cash 1 Choice")]
 public interface ISecuritiesOrCash1Choice : IIsoChoice { }

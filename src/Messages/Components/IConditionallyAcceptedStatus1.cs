@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status that is accepted under certain conditions.
 /// </summary>
 [IsoId("_UyQMGtp-Ed-ak6NoX_4Aeg_94624297")]
+[IsoDisplayName(@"Conditionally Accepted Status")]
 public interface IConditionallyAcceptedStatus1 : IIsoComponent
 {
     /// <summary>

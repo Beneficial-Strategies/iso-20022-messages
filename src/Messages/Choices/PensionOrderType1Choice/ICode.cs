@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PensionOrderType1Choice;
 /// Type of order attached to the pension policy, plan or scheme expressed as a code.
 /// </summary>
 [IsoId("_BlYN0LTqEeiENt6AoDfPXg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPensionOrderType1Choice, IIsoChoiceVariant
 {
     /// <summary>

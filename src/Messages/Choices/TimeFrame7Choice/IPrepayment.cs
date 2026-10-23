@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame7Choice;
 /// Indicates whether pre-payment is necessary.
 /// </summary>
 [IsoId("_5-myszgDEei6RvewLQWEqw")]
+[IsoDisplayName(@"Prepayment")]
 public interface IPrepayment : ITimeFrame7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPrepayment : ITimeFrame7Choice, IIsoChoiceVariant
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Prepmt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

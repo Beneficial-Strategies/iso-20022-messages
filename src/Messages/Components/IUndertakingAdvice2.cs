@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the advice for the issuance of an undertaking.
 /// </summary>
 [IsoId("_-AfqUnltEeG7BsjMvd1mEw_27275144")]
+[IsoDisplayName(@"Undertaking Advice")]
 public interface IUndertakingAdvice2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IUndertakingAdvice2 : IIsoComponent
     [IsoId("_-AfqU3ltEeG7BsjMvd1mEw_682292746")]
     [DisplayName("Applicant Reference Number")]
     [IsoXmlTag("ApplcntRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ApplicantReferenceNumber { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IUndertakingAdvice2 : IIsoComponent
     [IsoId("_-ApbUXltEeG7BsjMvd1mEw_637726234")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument9> EnclosedFile { get; }
 
     /// <summary>
@@ -57,5 +61,9 @@ public interface IUndertakingAdvice2 : IIsoComponent
     [IsoId("_-ApbUnltEeG7BsjMvd1mEw_776941520")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

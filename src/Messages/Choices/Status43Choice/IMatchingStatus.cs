@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status43Choice;
 
 /// <summary>Status expressed as a matching status.</summary>
 [IsoId("41fb6c32-f077-44f8-bfcc-f14f3124314c")]
+[IsoDisplayName(@"Matching Status")]
 public interface IMatchingStatus : IStatus43Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

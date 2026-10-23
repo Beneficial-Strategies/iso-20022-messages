@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate27Choice;
 /// </summary>
 [IsoId("_Z-T6U8g6Eeu4ecZgAYuz5w")]
 [IsoXmlTag("Fltg")]
+[IsoDisplayName(@"Floating")]
 public interface IFloating : IInterestRate27Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface IFloating : IInterestRate27Choice, IIsoChoiceVariant
     [IsoId("_Z_09Tcg6Eeu4ecZgAYuz5w")]
     [DisplayName("Rate Adjustment")]
     [IsoXmlTag("RateAdjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAdjustment1> RateAdjustment { get; }
 
     /// <summary>

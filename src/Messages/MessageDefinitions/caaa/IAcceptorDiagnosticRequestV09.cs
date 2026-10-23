@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_8OPcQS5IEeunNvJlR_vCbg")]
 [IsoMessage("caaa.013.001.09", "AccptrDgnstcReq", "urn:iso:std:iso:20022:tech:xsd:caaa.013.001.09")]
+[Description(@"The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check the end-to-end communication, to test the availability of this acquirer, or to validate the security environment.")]
+[IsoDisplayName(@"Acceptor Diagnostic Request V")]
 public interface IAcceptorDiagnosticRequestV09 : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification10Choi
 /// Identification is done through the use of legal entity identifier code.
 /// </summary>
 [IsoId("_IEZpge9IEemVGdgB8P8uQQ")]
+[IsoDisplayName(@"LEI")]
 public interface ILEI : IOrganisationIdentification10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ILEI : IOrganisationIdentification10Choice, IIsoChoiceVariant
     /// Legal Entity Identifier is a code allocated to a party as described in ISO 17442 &quot;Financial Services - Legal Entity Identifier (LEI)&quot;.
     /// </summary>
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Value { get; }
 }

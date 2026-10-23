@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Definition of retry process if activation of an action fails.
 /// </summary>
 [IsoId("_K9D0N31DEeCF8NjrBemJWQ_-2058168701")]
+[IsoDisplayName(@"Process Retry")]
 public interface IProcessRetry1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IProcessRetry1 : IIsoComponent
     [IsoId("_K9M-IH1DEeCF8NjrBemJWQ_444551643")]
     [DisplayName("Delay")]
     [IsoXmlTag("Dely")]
+    [IsoSimpleType(IsoSimpleType.Max9NumericText)]
     Max9NumericText Delay { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IProcessRetry1 : IIsoComponent
     [IsoId("_K9M-IX1DEeCF8NjrBemJWQ_-1003849246")]
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumNumber { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IProcessRetry1 : IIsoComponent
     [IsoId("_K9M-In1DEeCF8NjrBemJWQ_-109160754")]
     [DisplayName("Last Re Try Time")]
     [IsoXmlTag("LastReTryTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? LastReTryTime { get; }
 }

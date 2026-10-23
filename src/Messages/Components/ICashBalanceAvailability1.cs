@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to indicate when the booked amount of money will become available, ie can be accessed and start generating interest.
 /// </summary>
 [IsoId("_TU0k0Np-Ed-ak6NoX_4Aeg_865553727")]
+[IsoDisplayName(@"Cash Balance Availability")]
 public interface ICashBalanceAvailability1 : IIsoComponent
 {
     /// <summary>

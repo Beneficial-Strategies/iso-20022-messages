@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a fertilizer derivative of type diammonium phosphate.
 /// </summary>
 [IsoId("_VVXQEFr2EeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Fertilizer Commodity Diammonium Phosphate")]
 public interface IFertilizerCommodityDiammoniumPhosphate1 : IIsoComponent
 {
     /// <summary>

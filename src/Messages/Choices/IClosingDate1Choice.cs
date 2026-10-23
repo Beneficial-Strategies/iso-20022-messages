@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a date or a code.
 /// </summary>
 [IsoId("_j2-tkNopEeCWg-hsBVGrDA_1110999750")]
+[IsoDisplayName(@"Closing Date 1 Choice")]
 public interface IClosingDate1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedReason14Choice;
 /// Specifies the reason why the request was denied.
 /// </summary>
 [IsoId("_2WdbQTqxEeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDeniedReason14Choice, IIsoChoiceVariant
 {
     /// <summary>

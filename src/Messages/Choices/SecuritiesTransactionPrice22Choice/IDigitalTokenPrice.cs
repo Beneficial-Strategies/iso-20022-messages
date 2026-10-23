@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice22Choi
 /// </summary>
 [IsoId("_fc2HMKOrEe2UDKy7o9_HIg")]
 [IsoXmlTag("DgtlTknPric")]
+[IsoDisplayName(@"Digital Token Price")]
 public interface IDigitalTokenPrice : ISecuritiesTransactionPrice22Choice, IIsoChoiceVariant
 {
     /// <summary>

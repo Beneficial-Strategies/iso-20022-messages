@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_Femd0SRUEfCa6bxMAKEOKg")]
 [IsoMessage("cain.017.001.04", "NqryVrfctnRspn", "urn:iso:std:iso:20022:tech:xsd:cain.017.001.04")]
+[IsoDisplayName(@"Inquiry Verification Response V04")]
 public interface IInquiryVerificationResponseV04 : IOuterRecord
 {
     /// <summary>
@@ -95,6 +96,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Card Programme")]
     [IsoXmlTag("CardPrgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode6> CardProgramme { get; }
 
     /// <summary>
@@ -116,6 +118,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAmounts5> AdditionalAmount { get; }
 
     /// <summary>
@@ -200,6 +203,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Cardholder")]
     [IsoXmlTag("Crdhldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholder23> Cardholder { get; }
 
     /// <summary>
@@ -207,6 +211,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerification9> Verification { get; }
 
     /// <summary>
@@ -214,6 +219,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Risk")]
     [IsoXmlTag("Rsk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRiskContext4> Risk { get; }
 
     /// <summary>
@@ -221,6 +227,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -235,6 +242,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalService3> AdditionalService { get; }
 
     /// <summary>
@@ -242,6 +250,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Account Balance")]
     [IsoXmlTag("AcctBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountBalance4> AccountBalance { get; }
 
     /// <summary>
@@ -249,6 +258,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Account Statement Data")]
     [IsoXmlTag("AcctStmtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountStatementData3> AccountStatementData { get; }
 
     /// <summary>
@@ -270,6 +280,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -284,6 +295,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Benefits")]
     [IsoXmlTag("Bnfts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBenefitSupportingData1> Benefits { get; }
 
     /// <summary>
@@ -312,6 +324,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -319,6 +332,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -326,6 +340,7 @@ public interface IInquiryVerificationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

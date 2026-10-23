@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentification5Choice;
 /// <summary>
 /// Description.
 /// </summary>
+[IsoDisplayName(@"Description")]
 public interface IDescription : IMarketIdentification5Choice, IIsoChoiceVariant
 {
     /// <summary>

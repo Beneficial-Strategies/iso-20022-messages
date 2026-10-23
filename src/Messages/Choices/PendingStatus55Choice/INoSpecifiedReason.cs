@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus55Choice;
 /// Reason not specified.
 /// </summary>
 [IsoId("_Tfp1K7KdEemux5trsZcCpw")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IPendingStatus55Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Algorithm Identification36.
 /// </summary>
 [IsoId("_JCWzUJWvEe6FeYYOKs6hxw")]
+[IsoDisplayName(@"Algorithm Identification36")]
 public interface IAlgorithmIdentification36 : IIsoComponent
 {
     /// <summary>

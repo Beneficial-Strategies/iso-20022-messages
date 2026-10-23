@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError4Choice;
 /// <summary>
 /// Audit Trail.
 /// </summary>
+[IsoDisplayName(@"Audit Trail")]
 public interface IAuditTrail : IPartyAuditTrailOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>

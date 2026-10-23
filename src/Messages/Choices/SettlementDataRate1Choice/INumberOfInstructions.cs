@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDataRate1Choice;
 /// Specifies the rate of settlement fails, based either on the number of settlement instructions or on the value of settlement instructions, is lower than the ceiling rate as specified in the local regulation.
 /// </summary>
 [IsoId("_yFQMBMs0EemSav3hRKzWyg")]
+[IsoDisplayName(@"Number Of Instructions")]
 public interface INumberOfInstructions : ISettlementDataRate1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INumberOfInstructions : ISettlementDataRate1Choice, IIsoChoiceV
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("NbOfInstrs")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

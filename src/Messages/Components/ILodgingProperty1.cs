@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Company in charge of a lodging establishment
 /// </summary>
 [IsoId("_VHhwSvcAEeiW-auGnDPZIw")]
+[IsoDisplayName(@"Lodging Property")]
 public interface ILodgingProperty1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ILodgingProperty1 : IIsoComponent
     [IsoId("_VHhwT_cAEeiW-auGnDPZIw")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ILodgingProperty1 : IIsoComponent
     [IsoId("_VHhwS_cAEeiW-auGnDPZIw")]
     [DisplayName("Prestigious Property")]
     [IsoXmlTag("PrstgsPrprty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PrestigiousProperty { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ILodgingProperty1 : IIsoComponent
     [IsoId("_VHhwTfcAEeiW-auGnDPZIw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -82,6 +89,7 @@ public interface ILodgingProperty1 : IIsoComponent
     [IsoId("_VHhwUfcAEeiW-auGnDPZIw")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
     Min2Max3AlphaText? Country { get; }
 
     /// <summary>
@@ -92,5 +100,6 @@ public interface ILodgingProperty1 : IIsoComponent
     [IsoId("_w998kPcJEeiW-auGnDPZIw")]
     [DisplayName("Fire Safety Act Indicator")]
     [IsoXmlTag("FireSftyActInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? FireSafetyActIndicator { get; }
 }

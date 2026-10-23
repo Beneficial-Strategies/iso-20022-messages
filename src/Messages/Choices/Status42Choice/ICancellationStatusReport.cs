@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status42Choice;
 
 /// <summary>Status expressed as cancellation status report.</summary>
 [IsoId("c0f329a9-a243-4b9d-b8f8-0b9924bf16b9")]
+[IsoDisplayName(@"Cancellation Status Report")]
 public interface ICancellationStatusReport : IStatus42Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

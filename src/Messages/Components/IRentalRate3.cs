@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vehicle rental rate.
 /// </summary>
 [IsoId("_8UHSIXnwEfCmC4yYaU27Kg")]
+[IsoDisplayName(@"Rental Rate3")]
 public interface IRentalRate3 : IIsoComponent
 {
     /// <summary>

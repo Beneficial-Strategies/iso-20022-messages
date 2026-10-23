@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash movements from or to a fund as a result of investment funds transactions, eg, subscriptions or redemptions.
 /// </summary>
 [IsoId("_VCfni9p-Ed-ak6NoX_4Aeg_811516950")]
+[IsoDisplayName(@"Estimated Fund Cash Forecast")]
 public interface IEstimatedFundCashForecast1 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface IEstimatedFundCashForecast1 : IIsoComponent
     [IsoId("_VCpYh9p-Ed-ak6NoX_4Aeg_811517502")]
     [DisplayName("Estimated Total NAV Change Rate")]
     [IsoXmlTag("EstmtdTtlNAVChngRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? EstimatedTotalNAVChangeRate { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface IEstimatedFundCashForecast1 : IIsoComponent
     [IsoId("_VCpYiNp-Ed-ak6NoX_4Aeg_811517572")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; }
 
     /// <summary>
@@ -89,6 +92,7 @@ public interface IEstimatedFundCashForecast1 : IIsoComponent
     [IsoId("_VCyicNp-Ed-ak6NoX_4Aeg_811517537")]
     [DisplayName("Exceptional Net Cash Flow Indicator")]
     [IsoXmlTag("XcptnlNetCshFlowInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ExceptionalNetCashFlowIndicator { get; }
 
     /// <summary>
@@ -97,6 +101,7 @@ public interface IEstimatedFundCashForecast1 : IIsoComponent
     [IsoId("_VCyicdp-Ed-ak6NoX_4Aeg_811518002")]
     [DisplayName("Estimated Cash In Forecast Details")]
     [IsoXmlTag("EstmtdCshInFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashInForecast2> EstimatedCashInForecastDetails { get; }
 
     /// <summary>
@@ -105,6 +110,7 @@ public interface IEstimatedFundCashForecast1 : IIsoComponent
     [IsoId("_VCyictp-Ed-ak6NoX_4Aeg_811517967")]
     [DisplayName("Estimated Cash Out Forecast Details")]
     [IsoXmlTag("EstmtdCshOutFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOutForecast2> EstimatedCashOutForecastDetails { get; }
 
     /// <summary>
@@ -113,5 +119,6 @@ public interface IEstimatedFundCashForecast1 : IIsoComponent
     [IsoId("_VCyic9p-Ed-ak6NoX_4Aeg_811517907")]
     [DisplayName("Estimated Net Cash Forecast Details")]
     [IsoXmlTag("EstmtdNetCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetCashForecast1> EstimatedNetCashForecastDetails { get; }
 }

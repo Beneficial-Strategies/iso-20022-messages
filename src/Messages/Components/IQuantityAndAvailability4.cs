@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Net position of a segregated holding of a single security within the overall position held in the securities account, for example, sub-balance per status.
 /// </summary>
 [IsoId("_ciApGzi8Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Quantity And Availability")]
 public interface IQuantityAndAvailability4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IQuantityAndAvailability4 : IIsoComponent
     [IsoId("_ciApHzi8Eeydid5dcNPKvg")]
     [DisplayName("Availability Indicator")]
     [IsoXmlTag("AvlbtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AvailabilityIndicator { get; }
 }

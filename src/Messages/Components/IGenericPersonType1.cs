@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a generic type of identification requested for a person.
 /// </summary>
 [IsoId("_lvDzgnFwEemaN4ndAVY1ZQ")]
+[IsoDisplayName(@"Generic Person Type")]
 public interface IGenericPersonType1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IGenericPersonType1 : IIsoComponent
     [IsoId("_lvDzhHFwEemaN4ndAVY1ZQ")]
     [DisplayName("Requested")]
     [IsoXmlTag("Reqd")]
+    [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
     RequestedIndicator Requested { get; }
 
     /// <summary>

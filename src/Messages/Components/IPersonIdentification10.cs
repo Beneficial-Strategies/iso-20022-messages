@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous way to identify a person.
 /// </summary>
 [IsoId("_9nU3QfPYEeS_qLctCs2aRQ")]
+[IsoDisplayName(@"Person Identification")]
 public interface IPersonIdentification10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPersonIdentification10 : IIsoComponent
     [IsoId("_AifA0vPZEeS_qLctCs2aRQ")]
     [DisplayName("First Name")]
     [IsoXmlTag("FrstNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text FirstName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPersonIdentification10 : IIsoComponent
     [IsoId("_AifA0_PZEeS_qLctCs2aRQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IPersonIdentification10 : IIsoComponent
     [IsoId("_BzRTQfPZEeS_qLctCs2aRQ")]
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate BirthDate { get; }
 
     /// <summary>

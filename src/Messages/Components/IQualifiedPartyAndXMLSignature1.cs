@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines a signing party and a digital signature made by this party.
 /// </summary>
 [IsoId("_OTgzMjI3-AOSNFX-8224493")]
+[IsoDisplayName(@"Qualified Party And XML Signature")]
 public interface IQualifiedPartyAndXMLSignature1 : IIsoComponent
 {
     /// <summary>

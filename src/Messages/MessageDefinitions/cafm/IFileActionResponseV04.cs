@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cafm;
 /// </summary>
 [IsoId("_G0myYROIEfC1ZfCQz0xB3g")]
 [IsoMessage("cafm.002.001.04", "FileActnRspn", "urn:iso:std:iso:20022:tech:xsd:cafm.002.001.04")]
+[IsoDisplayName(@"File Action Response V04")]
 public interface IFileActionResponseV04 : IOuterRecord
 {
     /// <summary>
@@ -165,6 +166,7 @@ public interface IFileActionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent16> POIComponent { get; }
 
     /// <summary>
@@ -228,6 +230,7 @@ public interface IFileActionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -249,6 +252,7 @@ public interface IFileActionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -256,6 +260,7 @@ public interface IFileActionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -263,6 +268,7 @@ public interface IFileActionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

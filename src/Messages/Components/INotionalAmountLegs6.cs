@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Notional Amount Legs6.
 /// </summary>
 [IsoId("_NNn4oRT0Ee61h9tfoUrWyw")]
+[IsoDisplayName(@"Notional Amount Legs6")]
 public interface INotionalAmountLegs6 : IIsoComponent
 {
     /// <summary>

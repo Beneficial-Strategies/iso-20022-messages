@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Device Poweroff Card Reader Request6.
 /// </summary>
 [IsoId("_70w9AZCSEe6zroekBXoFoQ")]
+[IsoDisplayName(@"Device Poweroff Card Reader Request6")]
 public interface IDevicePoweroffCardReaderRequest6 : IIsoComponent
 {
     /// <summary>

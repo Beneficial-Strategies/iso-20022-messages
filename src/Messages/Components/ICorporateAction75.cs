@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action event.
 /// </summary>
 [IsoId("_QUy8V199Ee262vCSVgjImg")]
+[IsoDisplayName(@"Corporate Action")]
 public interface ICorporateAction75 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICorporateAction75 : IIsoComponent
     [IsoId("_QUy8XV99Ee262vCSVgjImg")]
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBusinessProcessFormat20Choice> AdditionalBusinessProcessIndicator { get; }
 
     /// <summary>

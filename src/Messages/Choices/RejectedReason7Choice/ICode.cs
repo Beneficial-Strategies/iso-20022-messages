@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason7Choice;
 /// Reason for the rejected status expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_sv4bSFj7EeOgwYxfAV02bg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRejectedReason7Choice, IIsoChoiceVariant
 {
     /// <summary>

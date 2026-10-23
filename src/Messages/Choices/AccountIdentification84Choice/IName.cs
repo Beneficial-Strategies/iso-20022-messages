@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification84Choice;
 
 /// <summary>Additional disclosure account name.</summary>
 [IsoId("_lWvqQKnOEfC5VNwixU6YfQ")]
+[IsoDisplayName(@"Name")]
 public interface IName : IAccountIdentification84Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

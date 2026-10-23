@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the transaction for network management.
 /// </summary>
 [IsoId("_CQ8poUS4EeiTBYbU3rWV0A")]
+[IsoDisplayName(@"Transaction Identification")]
 public interface ITransactionIdentification11 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ITransactionIdentification11 : IIsoComponent
     [IsoId("_CeogUUS4EeiTBYbU3rWV0A")]
     [DisplayName("Local Date Time")]
     [IsoXmlTag("LclDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? LocalDateTime { get; }
 
     /// <summary>
@@ -26,6 +28,8 @@ public interface ITransactionIdentification11 : IIsoComponent
     [IsoId("_CeogU0S4EeiTBYbU3rWV0A")]
     [DisplayName("Time Zone")]
     [IsoXmlTag("TmZone")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? TimeZone { get; }
 
     /// <summary>
@@ -34,6 +38,8 @@ public interface ITransactionIdentification11 : IIsoComponent
     [IsoId("_CeogVUS4EeiTBYbU3rWV0A")]
     [DisplayName("Transaction Reference")]
     [IsoXmlTag("TxRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionReference { get; }
 
     /// <summary>
@@ -43,6 +49,7 @@ public interface ITransactionIdentification11 : IIsoComponent
     [IsoId("_CeogV0S4EeiTBYbU3rWV0A")]
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TransmissionDateTime { get; }
 
     /// <summary>
@@ -52,6 +59,7 @@ public interface ITransactionIdentification11 : IIsoComponent
     [IsoId("_CeogWUS4EeiTBYbU3rWV0A")]
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
+    [IsoSimpleType(IsoSimpleType.Max12NumericText)]
     Max12NumericText SystemTraceAuditNumber { get; }
 
     /// <summary>
@@ -61,6 +69,7 @@ public interface ITransactionIdentification11 : IIsoComponent
     [IsoId("_CeogW0S4EeiTBYbU3rWV0A")]
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact12Text)]
     Exact12Text RetrievalReferenceNumber { get; }
 
     /// <summary>
@@ -69,6 +78,7 @@ public interface ITransactionIdentification11 : IIsoComponent
     [IsoId("_CeogXUS4EeiTBYbU3rWV0A")]
     [DisplayName("Life Cycle Support Indicator")]
     [IsoXmlTag("LifeCyclSpprtInd")]
+    [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
     Exact2NumericText? LifeCycleSupportIndicator { get; }
 
     /// <summary>
@@ -86,6 +96,8 @@ public interface ITransactionIdentification11 : IIsoComponent
     [IsoId("_CeogYUS4EeiTBYbU3rWV0A")]
     [DisplayName("Life Cycle Trace Identification Missing")]
     [IsoXmlTag("LifeCyclTracIdMssng")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? LifeCycleTraceIdentificationMissing { get; }
 
     /// <summary>
@@ -95,6 +107,8 @@ public interface ITransactionIdentification11 : IIsoComponent
     [IsoId("_CeogY0S4EeiTBYbU3rWV0A")]
     [DisplayName("Acquirer Reference Data")]
     [IsoXmlTag("AcqrrRefData")]
+    [IsoSimpleType(IsoSimpleType.Max99Text)]
+    [StringLength(99, MinimumLength = 1)]
     Max99Text? AcquirerReferenceData { get; }
 
     /// <summary>
@@ -104,6 +118,7 @@ public interface ITransactionIdentification11 : IIsoComponent
     [IsoId("_CeogZUS4EeiTBYbU3rWV0A")]
     [DisplayName("Acquirer Reference Number")]
     [IsoXmlTag("AcqrrRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max23NumericText)]
     Max23NumericText? AcquirerReferenceNumber { get; }
 
     /// <summary>
@@ -113,5 +128,7 @@ public interface ITransactionIdentification11 : IIsoComponent
     [IsoId("_CeogZ0S4EeiTBYbU3rWV0A")]
     [DisplayName("Card Issuer Reference Data")]
     [IsoXmlTag("CardIssrRefData")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? CardIssuerReferenceData { get; }
 }

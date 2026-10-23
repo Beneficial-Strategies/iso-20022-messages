@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared23Choice;
 /// Indicates that the contract is intended to be cleared.
 /// </summary>
 [IsoId("_zX2RYwtuEe2eQ-C-GTDpFA")]
+[IsoDisplayName(@"Intend To Clear")]
 public interface IIntendToClear : ICleared23Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

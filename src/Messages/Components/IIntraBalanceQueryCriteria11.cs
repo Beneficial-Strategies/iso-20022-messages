@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Intra Balance Query Criteria11.
 /// </summary>
 [IsoId("_7D3oNTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Intra Balance Query Criteria11")]
 public interface IIntraBalanceQueryCriteria11 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IIntraBalanceQueryCriteria11 : IIsoComponent
     /// </summary>
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferences36Choice> References { get; }
 
     /// <summary>
@@ -30,6 +32,7 @@ public interface IIntraBalanceQueryCriteria11 : IIsoComponent
     /// </summary>
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentificationSearchCriteria2Choice> CashAccount { get; }
 
     /// <summary>
@@ -37,6 +40,7 @@ public interface IIntraBalanceQueryCriteria11 : IIsoComponent
     /// </summary>
     [DisplayName("Cash Account Owner")]
     [IsoXmlTag("CshAcctOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> CashAccountOwner { get; }
 
     /// <summary>
@@ -51,6 +55,7 @@ public interface IIntraBalanceQueryCriteria11 : IIsoComponent
     /// </summary>
     [DisplayName("Balance Type")]
     [IsoXmlTag("BalTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalanceType3> BalanceType { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface IIntraBalanceQueryCriteria11 : IIsoComponent
     /// </summary>
     [DisplayName("Cash Sub Balance Identification")]
     [IsoXmlTag("CshSubBalId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification37> CashSubBalanceIdentification { get; }
 
     /// <summary>
@@ -79,6 +85,7 @@ public interface IIntraBalanceQueryCriteria11 : IIsoComponent
     /// </summary>
     [DisplayName("Settlement Currency")]
     [IsoXmlTag("SttlmCcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveOrHistoricCurrencyCode> SettlementCurrency { get; }
 
     /// <summary>
@@ -100,6 +107,7 @@ public interface IIntraBalanceQueryCriteria11 : IIsoComponent
     /// </summary>
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriorityNumeric4Choice> Priority { get; }
 
     /// <summary>
@@ -107,6 +115,7 @@ public interface IIntraBalanceQueryCriteria11 : IIsoComponent
     /// </summary>
     [DisplayName("Message Originator")]
     [IsoXmlTag("MsgOrgtr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> MessageOriginator { get; }
 
     /// <summary>

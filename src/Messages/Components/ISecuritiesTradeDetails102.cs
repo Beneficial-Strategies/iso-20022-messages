@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities trade.
 /// </summary>
 [IsoId("_HFMaEffWEeiNZp_PtLohLw")]
+[IsoDisplayName(@"Securities Trade Details")]
 public interface ISecuritiesTradeDetails102 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ISecuritiesTradeDetails102 : IIsoComponent
     [IsoId("_HFMaMffWEeiNZp_PtLohLw")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface ISecuritiesTradeDetails102 : IIsoComponent
     [IsoId("_HFMaNffWEeiNZp_PtLohLw")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReporting11Choice> Reporting { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ISecuritiesTradeDetails102 : IIsoComponent
     [IsoId("_HFMaOffWEeiNZp_PtLohLw")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition6Choice> TradeTransactionCondition { get; }
 
     /// <summary>
@@ -121,6 +125,8 @@ public interface ISecuritiesTradeDetails102 : IIsoComponent
     [IsoId("_HFMaUffWEeiNZp_PtLohLw")]
     [DisplayName("Settlement Instruction Processing Additional Details")]
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text? SettlementInstructionProcessingAdditionalDetails { get; }
 
     /// <summary>
@@ -129,5 +135,7 @@ public interface ISecuritiesTradeDetails102 : IIsoComponent
     [IsoId("_HFMaVffWEeiNZp_PtLohLw")]
     [DisplayName("FX Additional Details")]
     [IsoXmlTag("FxAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text? FXAdditionalDetails { get; }
 }

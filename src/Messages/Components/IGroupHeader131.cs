@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics shared by all individual transactions included in the message.
 /// </summary>
 [IsoId("_sVST0W9YEe-Mlpx0N5T4gg")]
+[Description(@"Set of characteristics shared by all individual transactions included in the message.")]
+[IsoDisplayName(@"Group Header131")]
 public interface IGroupHeader131 : IIsoComponent
 {
     /// <summary>

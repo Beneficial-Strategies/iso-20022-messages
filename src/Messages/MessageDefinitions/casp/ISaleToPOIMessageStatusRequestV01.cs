@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.casp;
     "SaleToPOIMsgStsReq",
     "urn:iso:std:iso:20022:tech:xsd:casp.014.001.01"
 )]
+[Description(@"A Message Status Request is sent by the Sale system when the sale system wants to know the status of previous message that has not be answered.")]
+[IsoDisplayName(@"Sale To POI Message Status Request V")]
 public interface ISaleToPOIMessageStatusRequestV01 : IOuterRecord
 {
     /// <summary>

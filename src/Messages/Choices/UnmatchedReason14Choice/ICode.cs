@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnmatchedReason14Choice;
 /// Specifies the reason why the instruction has an unmatched status.
 /// </summary>
 [IsoId("_OEuZkSwZEeOEV5XHD-BKpw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IUnmatchedReason14Choice, IIsoChoiceVariant
 {
     /// <summary>

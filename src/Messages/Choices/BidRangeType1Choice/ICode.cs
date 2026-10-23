@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BidRangeType1Choice;
 /// Bid range type expressed as a code value.
 /// </summary>
 [IsoId("_ZWOBQO3NEeqc-LCjwLsUVg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBidRangeType1Choice, IIsoChoiceVariant
 {
     /// <summary>

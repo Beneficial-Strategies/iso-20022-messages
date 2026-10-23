@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organised structure that is set up for a particular purpose, eg, a business, government body, department, charity, or financial institution.
 /// </summary>
 [IsoId("_QNmVKdp-Ed-ak6NoX_4Aeg_-1024878477")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrganisation3 : IIsoComponent
     [IsoId("_QNvfENp-Ed-ak6NoX_4Aeg_-1024878451")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IOrganisation3 : IIsoComponent
     [IsoId("_QNvfEtp-Ed-ak6NoX_4Aeg_-1024878123")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Purpose { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IOrganisation3 : IIsoComponent
     [IsoId("_QNvfFdp-Ed-ak6NoX_4Aeg_-1024877702")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 
     /// <summary>
@@ -65,6 +71,8 @@ public interface IOrganisation3 : IIsoComponent
     [IsoId("_QNvfFtp-Ed-ak6NoX_4Aeg_-1805973863")]
     [DisplayName("Tax Identification Number")]
     [IsoXmlTag("TaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxIdentificationNumber { get; }
 
     /// <summary>
@@ -73,6 +81,8 @@ public interface IOrganisation3 : IIsoComponent
     [IsoId("_QNvfF9p-Ed-ak6NoX_4Aeg_-1805973435")]
     [DisplayName("National Registration Number")]
     [IsoXmlTag("NtlRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NationalRegistrationNumber { get; }
 
     /// <summary>
@@ -81,6 +91,9 @@ public interface IOrganisation3 : IIsoComponent
     [IsoId("_QNvfGNp-Ed-ak6NoX_4Aeg_-1024877512")]
     [DisplayName("Modified Postal Address")]
     [IsoXmlTag("ModfdPstlAdr")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope1> ModifiedPostalAddress { get; }
 
     /// <summary>

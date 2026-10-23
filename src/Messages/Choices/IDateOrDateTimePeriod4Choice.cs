@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a date or a date and time format for a period.
 /// </summary>
 [IsoId("c6ef8432-0935-45be-8b0d-6aca785aaa24")]
+[IsoDisplayName(@"Date Or Date Time Period 4 Choice")]
 public interface IDateOrDateTimePeriod4Choice : IIsoChoice { }

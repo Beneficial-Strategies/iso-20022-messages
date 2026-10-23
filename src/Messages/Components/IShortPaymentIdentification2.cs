@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies a payment instruction by a simple set of characteristics which provides an unambiguous identification of the instruction.
 /// </summary>
 [IsoId("_AqNjIW4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Short Payment Identification")]
 public interface IShortPaymentIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IShortPaymentIdentification2 : IIsoComponent
     [IsoId("_A08MYW4-EeiU9cctagi5ow")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IShortPaymentIdentification2 : IIsoComponent
     [IsoId("_A08MY24-EeiU9cctagi5ow")]
     [DisplayName("Inter Bank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate InterBankSettlementDate { get; }
 
     /// <summary>

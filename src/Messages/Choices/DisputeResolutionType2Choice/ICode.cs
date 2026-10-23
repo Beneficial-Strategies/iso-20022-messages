@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisputeResolutionType2Choice;
 /// Code to specify the type of dispute that is to be resolved regarding the disputed collateral amount.
 /// </summary>
 [IsoId("_UnrTytp-Ed-ak6NoX_4Aeg_61652399")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDisputeResolutionType2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of garnishment.
 /// </summary>
 [IsoId("_k8MIkYnnEeOORMXOfBk1Bw")]
+[IsoDisplayName(@"Garnishment Type 1 Choice")]
 public interface IGarnishmentType1Choice : IIsoChoice { }

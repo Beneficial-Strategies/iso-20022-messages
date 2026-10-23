@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a security or other asset.
 /// </summary>
 [IsoId("_V3-UwelwEeuJptoA6B9tfA")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument101 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrument101 : IIsoComponent
     [IsoId("_WOewQ-lwEeuJptoA6B9tfA")]
     [DisplayName("Line Identification")]
     [IsoXmlTag("LineId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LineIdentification { get; }
 
     /// <summary>
@@ -74,6 +77,7 @@ public interface IFinancialInstrument101 : IIsoComponent
     [IsoId("_cTjREOlwEeuJptoA6B9tfA")]
     [DisplayName("Assets Held In Own Name")]
     [IsoXmlTag("AsstsHeldInOwnNm")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AssetsHeldInOwnName { get; }
 
     /// <summary>
@@ -82,6 +86,7 @@ public interface IFinancialInstrument101 : IIsoComponent
     [IsoId("_f0jSoOlwEeuJptoA6B9tfA")]
     [DisplayName("Transfer Results In Change Of Beneficial Owner")]
     [IsoXmlTag("TrfRsltsInChngOfBnfclOwnr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TransferResultsInChangeOfBeneficialOwner { get; }
 
     /// <summary>
@@ -90,5 +95,6 @@ public interface IFinancialInstrument101 : IIsoComponent
     [IsoId("_WOewUelwEeuJptoA6B9tfA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

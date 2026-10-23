@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an energy derivative of type renewable energy.
 /// </summary>
 [IsoId("_k4gckU8SEe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Energy Commodity Renewable Energy")]
 public interface IEnergyCommodityRenewableEnergy2 : IIsoComponent
 {
     /// <summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_Ts5C69EwEd-BzquC8wXy7w_762088787")]
 [IsoMessage("seev.008.001.02", "MtgRsltDssmntn", "urn:iso:std:iso:20022:tech:xsd:seev.008.001.02")]
+[Description(@"Scope|An issuer, its agent or an intermediary sends the MeetingResultDissemination message to another intermediary, to a party holding the right to vote, to a registered security holder or to a beneficial holder to provide information on the voting results of a shareholders meeting.|Usage|The MeetingResultDissemination message is used to provide the vote results per resolution. It may also provide information on the level of participation.|This message is also used to notify an update or amendment to a previously sent MeetingResultDissemination message.")]
+[IsoDisplayName(@"Meeting Result Dissemination V")]
 public interface IMeetingResultDisseminationV02 : IOuterRecord
 {
     /// <summary>
@@ -56,6 +58,9 @@ public interface IMeetingResultDisseminationV02 : IOuterRecord
     [IsoId("_TtCz4tEwEd-BzquC8wXy7w_762088866")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityPosition5> Security { get; }
 
     /// <summary>
@@ -64,6 +69,9 @@ public interface IMeetingResultDisseminationV02 : IOuterRecord
     [IsoId("_TtCz49EwEd-BzquC8wXy7w_762088823")]
     [DisplayName("Vote Result")]
     [IsoXmlTag("VoteRslt")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVote5> VoteResult { get; }
 
     /// <summary>

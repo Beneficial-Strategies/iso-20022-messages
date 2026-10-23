@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the conditions under which the order/trade is to be settled.
 /// </summary>
 [IsoId("_Flq00duJEd-RF5yaMAVhAw")]
+[IsoDisplayName(@"Transaction Type And Additional Parameters")]
 public interface ITransactionTypeAndAdditionalParameters7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionTypeAndAdditionalParameters7 : IIsoComponent
     [IsoId("_Flq009uJEd-RF5yaMAVhAw")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransactionTypeAndAdditionalParameters7 : IIsoComponent
     [IsoId("_Flq01duJEd-RF5yaMAVhAw")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface ITransactionTypeAndAdditionalParameters7 : IIsoComponent
     [IsoId("_Flq03duJEd-RF5yaMAVhAw")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonIdentification { get; }
 
     /// <summary>
@@ -65,5 +72,7 @@ public interface ITransactionTypeAndAdditionalParameters7 : IIsoComponent
     [IsoId("_Flq039uJEd-RF5yaMAVhAw")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PoolIdentification { get; }
 }

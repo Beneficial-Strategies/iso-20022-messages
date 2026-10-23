@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the payment instruction.
 /// </summary>
 [IsoId("_yVSsYZlcEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Payment Instruction")]
 public interface IPaymentInstruction27 : IIsoComponent
 {
     /// <summary>

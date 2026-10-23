@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateReason1Choice;
 /// Reason, as published in an external reason code list.
 /// </summary>
 [IsoId("_TOt8xtp-Ed-ak6NoX_4Aeg_193514894")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMandateReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Movements of securities.
 /// </summary>
 [IsoId("_qJOe4StEEeySlt9bF77XfA")]
+[IsoDisplayName(@"Securities Movement")]
 public interface ISecuritiesMovement8 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ISecuritiesMovement8 : IIsoComponent
     [IsoId("_qhOIKStEEeySlt9bF77XfA")]
     [DisplayName("Collateral Movement")]
     [IsoXmlTag("CollMvmnt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CollateralMovement { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ISecuritiesMovement8 : IIsoComponent
     [IsoId("_qhOIKytEEeySlt9bF77XfA")]
     [DisplayName("Securities Movements Approved")]
     [IsoXmlTag("SctiesMvmntsApprvd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SecuritiesMovementsApproved { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ISecuritiesMovement8 : IIsoComponent
     [IsoId("_qhOILStEEeySlt9bF77XfA")]
     [DisplayName("Position Type")]
     [IsoXmlTag("PosTp")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PositionType { get; }
 
     /// <summary>
@@ -89,6 +93,8 @@ public interface ISecuritiesMovement8 : IIsoComponent
     [IsoId("_qhOIMStEEeySlt9bF77XfA")]
     [DisplayName("Client Securities Movement Identification")]
     [IsoXmlTag("ClntSctiesMvmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientSecuritiesMovementIdentification { get; }
 
     /// <summary>
@@ -97,6 +103,8 @@ public interface ISecuritiesMovement8 : IIsoComponent
     [IsoId("_qhOIMytEEeySlt9bF77XfA")]
     [DisplayName("Triparty Agent Service Provider Securities Movement Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrSctiesMvmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripartyAgentServiceProviderSecuritiesMovementIdentification { get; }
 
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Party associated with the account.
 /// </summary>
 [IsoId("_sv2SwRRiEeOKWo1NF21OVw")]
+[IsoDisplayName(@"Account Parties 4 Choice")]
 public interface IAccountParties4Choice : IIsoChoice { }

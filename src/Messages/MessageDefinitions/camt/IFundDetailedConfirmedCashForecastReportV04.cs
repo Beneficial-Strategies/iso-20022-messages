@@ -27,6 +27,8 @@ namespace BeneficialStrategies.Iso20022.camt;
     "FndDtldConfdCshFcstRpt",
     "urn:iso:std:iso:20022:tech:xsd:camt.043.001.04"
 )]
+[Description(@"Scope|A report provider, such as a transfer agent, sends the FundDetailedConfirmedCashForecastReport message to the report user, such as an investment manager or pricing agent, to report the confirmed cash incomings and outgoings, sorted by country, institution name or other criteria defined by the user of one or more share classes of an investment fund on one or more trade dates.|The cash movements may result from, for example, redemption, subscription, switch transactions or reinvestment of dividends.|Usage|The FundDetailedConfirmedCashForecastReport is used to provide definitive cash movements, that is, it is sent after the cut-off time and/or the price valuation of the fund. |If the price is not yet definitive, then the FundDetailedEstimatedCashForecastReport message must be used.|The message structure allows for the following uses:|-	to provide cash in and cash out amounts for a fund/sub fund and one or more share classes (a FundOrSubFundDetails sequence and one or FundCashForecastDetails sequences are used),|-	to provide cash in and cash out amounts for one or more share classes (one or more FundCashForecastDetails sequences are used).|If the report is to provide cash in and cash out for a fund/sub fund only and not for one or more share classes, then the FundConfirmedCashForecastReport message must be used.|The FundDetailedConfirmedCashForecastReport message is used to report cash movements in or out of a fund, organised by party, such as fund management company, country, currency or by some other criteria defined by the report provider. If the report is used to given the cash-in and cash-out for a party, then additional criteria, such as currency and country, can be specified.|In addition, the underlying transaction type for the cash-in or cash-out movement can be specified, as well as information about the cash movement's underlying orders, such as commission and charges.")]
+[IsoDisplayName(@"Fund Detailed Confirmed Cash Forecast Report V")]
 public interface IFundDetailedConfirmedCashForecastReportV04 : IOuterRecord
 {
     /// <summary>
@@ -51,6 +53,7 @@ public interface IFundDetailedConfirmedCashForecastReportV04 : IOuterRecord
     [IsoId("_LgMJWQasEeSrXeb3pHPmbg")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -59,6 +62,7 @@ public interface IFundDetailedConfirmedCashForecastReportV04 : IOuterRecord
     [IsoId("_LgMJWwasEeSrXeb3pHPmbg")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> RelatedReference { get; }
 
     /// <summary>
@@ -83,6 +87,7 @@ public interface IFundDetailedConfirmedCashForecastReportV04 : IOuterRecord
     [IsoId("_LgMJXwasEeSrXeb3pHPmbg")]
     [DisplayName("Fund Cash Forecast Details")]
     [IsoXmlTag("FndCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFundCashForecast6> FundCashForecastDetails { get; }
 
     /// <summary>
@@ -99,5 +104,6 @@ public interface IFundDetailedConfirmedCashForecastReportV04 : IOuterRecord
     [IsoId("_LgMJYwasEeSrXeb3pHPmbg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

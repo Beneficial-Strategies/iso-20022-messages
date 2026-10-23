@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Option or swaption related attributes.
 /// </summary>
 [IsoId("_g9Y4w5PeEey0rJ3Gl6WZVA")]
+[IsoDisplayName(@"Option Or Swaption")]
 public interface IOptionOrSwaption10 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IOptionOrSwaption10 : IIsoComponent
     [IsoId("_g-V6x5PeEey0rJ3Gl6WZVA")]
     [DisplayName("Exercise Style")]
     [IsoXmlTag("ExrcStyle")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<OptionStyle6Code> ExerciseStyle { get; }
 
     /// <summary>
@@ -59,6 +61,7 @@ public interface IOptionOrSwaption10 : IIsoComponent
     [IsoId("_g-V6z5PeEey0rJ3Gl6WZVA")]
     [DisplayName("Strike Price Schedule")]
     [IsoXmlTag("StrkPricSchdl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISchedule4> StrikePriceSchedule { get; }
 
     /// <summary>
@@ -91,6 +94,7 @@ public interface IOptionOrSwaption10 : IIsoComponent
     [IsoId("_g-V615PeEey0rJ3Gl6WZVA")]
     [DisplayName("Premium Payment Date")]
     [IsoXmlTag("PrmPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PremiumPaymentDate { get; }
 
     /// <summary>
@@ -99,5 +103,6 @@ public interface IOptionOrSwaption10 : IIsoComponent
     [IsoId("_g-V62ZPeEey0rJ3Gl6WZVA")]
     [DisplayName("Maturity Date Of Underlying")]
     [IsoXmlTag("MtrtyDtOfUndrlyg")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDateOfUnderlying { get; }
 }

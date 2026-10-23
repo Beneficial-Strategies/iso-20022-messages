@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the amendment of a creditor enrolment.
 /// </summary>
 [IsoId("_bjMUbvGAEemQ7oqCO5NTQw")]
+[IsoDisplayName(@"Debtor Activation Amendment Reason 1 Choice")]
 public interface IDebtorActivationAmendmentReason1Choice : IIsoChoice { }

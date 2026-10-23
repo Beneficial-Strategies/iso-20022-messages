@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of the captured set of transactions.
 /// </summary>
 [IsoId("_4LejsY3VEeWjkqXgn_0Imw")]
+[IsoDisplayName(@"Card Payment Data Set")]
 public interface ICardPaymentDataSet14 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICardPaymentDataSet14 : IIsoComponent
     [IsoId("_4XaG5Y3VEeWjkqXgn_0Imw")]
     [DisplayName("Remove Data Set")]
     [IsoXmlTag("RmvDataSet")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator RemoveDataSet { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ICardPaymentDataSet14 : IIsoComponent
     [IsoId("_4XaG6Y3VEeWjkqXgn_0Imw")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotals7> TransactionTotals { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface ICardPaymentDataSet14 : IIsoComponent
     [IsoId("_4XaG643VEeWjkqXgn_0Imw")]
     [DisplayName("Rejected Transaction")]
     [IsoXmlTag("RjctdTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet15> RejectedTransaction { get; }
 }

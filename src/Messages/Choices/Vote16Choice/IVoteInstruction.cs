@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote16Choice;
 /// </summary>
 [IsoId("_XbSmlfNoEeqRfth943bvEA")]
 [IsoXmlTag("VoteInstr")]
+[IsoDisplayName(@"Vote Instruction")]
 public interface IVoteInstruction : IVote16Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IVoteInstruction : IVote16Choice, IIsoChoiceVariant
     [IsoId("_8v8_o_NXEeqRfth943bvEA")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IVoteInstruction : IVote16Choice, IIsoChoiceVariant
     [IsoId("_hYJhAfNXEeqRfth943bvEA")]
     [DisplayName("Listing Group Resolution Label")]
     [IsoXmlTag("ListgGrpRsltnLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ListingGroupResolutionLabel { get; }
 
     /// <summary>
@@ -130,5 +135,8 @@ public interface IVoteInstruction : IVote16Choice, IIsoChoiceVariant
     [IsoId("_8v8_vfNXEeqRfth943bvEA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [MinLength(0)]
+    [MaxLength(4)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryVote1> Proprietary { get; }
 }

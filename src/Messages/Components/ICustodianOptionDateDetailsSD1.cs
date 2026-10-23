@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate action option information for the custodian record.
 /// </summary>
 [IsoId("_1TqvATL3EeKU9IrkkToqcw_1383220652")]
+[IsoDisplayName(@"Custodian Option Date Details SD")]
 public interface ICustodianOptionDateDetailsSD1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICustodianOptionDateDetailsSD1 : IIsoComponent
     [IsoId("_1TqvAjL3EeKU9IrkkToqcw_-1902659123")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICustodianOptionDateDetailsSD1 : IIsoComponent
     [IsoId("_1TqvAzL3EeKU9IrkkToqcw_-26617381")]
     [DisplayName("Agent Deadline Date")]
     [IsoXmlTag("AgtDdlnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? AgentDeadlineDate { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface ICustodianOptionDateDetailsSD1 : IIsoComponent
     [IsoId("_1TqvBDL3EeKU9IrkkToqcw_-744742048")]
     [DisplayName("Agent Deadline Time")]
     [IsoXmlTag("AgtDdlnTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? AgentDeadlineTime { get; }
 }

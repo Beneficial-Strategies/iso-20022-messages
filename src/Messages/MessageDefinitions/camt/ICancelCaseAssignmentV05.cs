@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3Cc7zEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("camt.032.001.05", "CclCaseAssgnmt", "urn:iso:std:iso:20022:tech:xsd:camt.032.001.05")]
+[IsoDisplayName(@"Cancel Case Assignment V05")]
 public interface ICancelCaseAssignmentV05 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +33,6 @@ public interface ICancelCaseAssignmentV05 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

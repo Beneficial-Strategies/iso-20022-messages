@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card performing the withdrawal transaction.
 /// </summary>
 [IsoId("_rCe_gYqPEeSRT5rEzcAHEw")]
+[IsoDisplayName(@"Payment Card")]
 public interface IPaymentCard17 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,8 @@ public interface IPaymentCard17 : IIsoComponent
     [IsoId("_rOjFmYqPEeSRT5rEzcAHEw")]
     [DisplayName("Card Country Code")]
     [IsoXmlTag("CardCtryCd")]
+    [IsoSimpleType(IsoSimpleType.Max3Text)]
+    [StringLength(3, MinimumLength = 1)]
     Max3Text? CardCountryCode { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IPaymentCard17 : IIsoComponent
     [IsoId("_rOjFm4qPEeSRT5rEzcAHEw")]
     [DisplayName("Card Currency Code")]
     [IsoXmlTag("CardCcyCd")]
+    [IsoSimpleType(IsoSimpleType.Exact3AlphaNumericText)]
     Exact3AlphaNumericText? CardCurrencyCode { get; }
 
     /// <summary>

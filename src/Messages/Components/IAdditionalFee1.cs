@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fees not included in the transaction.
 /// </summary>
 [IsoId("_mFHMkESLEeeb1MmUPTrSMw")]
+[IsoDisplayName(@"Additional Fee")]
 public interface IAdditionalFee1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAdditionalFee1 : IIsoComponent
     [IsoId("_1pF31USLEeeb1MmUPTrSMw")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IAdditionalFee1 : IIsoComponent
     [IsoId("_7lgj8WqBEemXfKijhrqa-Q")]
     [DisplayName("Fee Program")]
     [IsoXmlTag("FeePrgm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FeeProgram { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IAdditionalFee1 : IIsoComponent
     [IsoId("_8a_acWqBEemXfKijhrqa-Q")]
     [DisplayName("Fee Descriptor")]
     [IsoXmlTag("FeeDscrptr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FeeDescriptor { get; }
 
     /// <summary>
@@ -57,5 +64,7 @@ public interface IAdditionalFee1 : IIsoComponent
     [IsoId("_wsUqAZmJEee_M7tURHTZTQ")]
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Label { get; }
 }

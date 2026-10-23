@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reports on limits.
 /// </summary>
 [IsoId("_C3LJ5W4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Limits")]
 public interface ILimits7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILimits7 : IIsoComponent
     [IsoId("_DAtgY24-EeiU9cctagi5ow")]
     [DisplayName("Current Limit")]
     [IsoXmlTag("CurLmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILimitReport7> CurrentLimit { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ILimits7 : IIsoComponent
     [IsoId("_DAtgZW4-EeiU9cctagi5ow")]
     [DisplayName("Default Limit")]
     [IsoXmlTag("DfltLmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILimitReport7> DefaultLimit { get; }
 }

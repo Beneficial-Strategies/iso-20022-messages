@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Position Set Aggregated4.
 /// </summary>
 [IsoId("_jQT8dRTjEe61h9tfoUrWyw")]
+[IsoDisplayName(@"Position Set Aggregated4")]
 public interface IPositionSetAggregated4 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IPositionSetAggregated4 : IIsoComponent
     /// </summary>
     [DisplayName("Position Set")]
     [IsoXmlTag("PosSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet21> PositionSet { get; }
 
     /// <summary>
@@ -30,6 +32,7 @@ public interface IPositionSetAggregated4 : IIsoComponent
     /// </summary>
     [DisplayName("Currency Position Set")]
     [IsoXmlTag("CcyPosSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet21> CurrencyPositionSet { get; }
 
     /// <summary>
@@ -37,6 +40,7 @@ public interface IPositionSetAggregated4 : IIsoComponent
     /// </summary>
     [DisplayName("Collateral Position Set")]
     [IsoXmlTag("CollPosSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet22> CollateralPositionSet { get; }
 
     /// <summary>
@@ -44,5 +48,6 @@ public interface IPositionSetAggregated4 : IIsoComponent
     /// </summary>
     [DisplayName("Currency Collateral Position Set")]
     [IsoXmlTag("CcyCollPosSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet22> CurrencyCollateralPositionSet { get; }
 }

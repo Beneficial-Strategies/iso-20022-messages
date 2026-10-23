@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies what to do during shutdown.
 /// </summary>
 [IsoId("_ZF4QwbZfEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Device Poweroff Card Reader Request7")]
 public interface IDevicePoweroffCardReaderRequest7 : IIsoComponent
 {
     /// <summary>

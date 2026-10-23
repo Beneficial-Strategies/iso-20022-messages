@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RequestType4Choice;
 /// Request type is a control command on a set of transactions.
 /// </summary>
 [IsoId("_i375oZIhEeect698_YsnIA")]
+[IsoDisplayName(@"Payment Control")]
 public interface IPaymentControl : IRequestType4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the identification of an individual person.
 /// </summary>
 [IsoId("_S3OSYUHLEeWeNKJ6kJGSFw")]
+[IsoDisplayName(@"Alternate Identification")]
 public interface IAlternateIdentification4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAlternateIdentification4 : IIsoComponent
     [IsoId("_S_Cxo0HLEeWeNKJ6kJGSFw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IAlternateIdentification4 : IIsoComponent
     [IsoId("_S_Cxp0HLEeWeNKJ6kJGSFw")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IAlternateIdentification4 : IIsoComponent
     [IsoId("_S_CxqUHLEeWeNKJ6kJGSFw")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IssueDate { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IAlternateIdentification4 : IIsoComponent
     [IsoId("_S_Cxq0HLEeWeNKJ6kJGSFw")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpiryDate { get; }
 
     /// <summary>

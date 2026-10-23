@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acknowledgement by the acquirer, of the completion advice of the card payment at the acceptor.
 /// </summary>
 [IsoId("_A3hccQvXEeKzJ69IWwzB9Q")]
+[IsoDisplayName(@"Acceptor Completion Advice Response")]
 public interface IAcceptorCompletionAdviceResponse2 : IIsoComponent
 {
     /// <summary>

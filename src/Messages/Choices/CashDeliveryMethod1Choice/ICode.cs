@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashDeliveryMethod1Choice;
 
 /// <summary>Cash delivery method as published in an external delivery method code set.</summary>
 [IsoId("_7w1L8OOwEe-NFYIkYc90gw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICashDeliveryMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details for the tax calculation.
 /// </summary>
 [IsoId("_6R49apqlEeGSON8vddiWzQ_163014572")]
+[IsoDisplayName(@"Tax Calculation")]
 public interface ITaxCalculation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITaxCalculation1 : IIsoComponent
     [IsoId("_6R49bJqlEeGSON8vddiWzQ_1186516095")]
     [DisplayName("Taxable Service Charge Conversion")]
     [IsoXmlTag("TaxblSvcChrgConvs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingServicesAmount3> TaxableServiceChargeConversion { get; }
 
     /// <summary>
@@ -41,6 +43,9 @@ public interface ITaxCalculation1 : IIsoComponent
     [IsoId("_6SCHUZqlEeGSON8vddiWzQ_603580500")]
     [DisplayName("Tax Identification")]
     [IsoXmlTag("TaxId")]
+    [MinLength(1)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingServicesTax3> TaxIdentification { get; }
 
     /// <summary>

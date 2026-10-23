@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides narrative information about an event and the language in which it is specified.
 /// </summary>
 [IsoId("_JmgaIfM-EeqRfth943bvEA")]
+[IsoDisplayName(@"Language Specified Narrative")]
 public interface ILanguageSpecifiedNarrative1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ILanguageSpecifiedNarrative1 : IIsoComponent
     [IsoId("_IV5RYfM_EeqRfth943bvEA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max8000Text)]
+    [StringLength(8000, MinimumLength = 1)]
     Max8000Text AdditionalInformation { get; }
 }

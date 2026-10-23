@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Location of a presentation.
 /// </summary>
 [IsoId("_97RzI3ltEeG7BsjMvd1mEw_-1003914803")]
+[IsoDisplayName(@"Place Of Presentation")]
 public interface IPlaceOfPresentation1 : IIsoComponent
 {
     /// <summary>

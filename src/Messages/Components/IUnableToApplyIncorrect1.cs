@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of incorrect information.
 /// </summary>
 [IsoId("_f2qNhUgoEeaGKYpLDboHPQ")]
+[IsoDisplayName(@"Unable To Apply Incorrect")]
 public interface IUnableToApplyIncorrect1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IUnableToApplyIncorrect1 : IIsoComponent
     [IsoId("_q8AC5EgrEeaGKYpLDboHPQ")]
     [DisplayName("Additional Incorrect Information")]
     [IsoXmlTag("AddtlIncrrctInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalIncorrectInformation { get; }
 }

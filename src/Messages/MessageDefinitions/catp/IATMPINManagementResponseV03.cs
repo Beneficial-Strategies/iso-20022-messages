@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_jYewMaFFEe-MRKYsaX6JDg")]
 [IsoMessage("catp.011.001.03", "ATMPINMgmtRspn", "urn:iso:std:iso:20022:tech:xsd:catp.011.001.03")]
+[IsoDisplayName(@"ATMPIN Management Response V03")]
 public interface IATMPINManagementResponseV03 : IOuterRecord
 {
     /// <summary>

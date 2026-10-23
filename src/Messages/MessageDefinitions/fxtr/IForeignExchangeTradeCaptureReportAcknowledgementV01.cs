@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.fxtr;
     "FXTradCaptrRptAck",
     "urn:iso:std:iso:20022:tech:xsd:fxtr.033.001.01"
 )]
+[Description(@"Scope|The ForeignExchangeTradeCaptureReportAcknowledgement message is sent by trading members to the trading system for notifying the trade capture report is received.||Usage|The acknowledgement is sent by the trading member to the trading system after they received the trade capture report. |Note that one capture acknowledgement responds to one capture report.")]
+[IsoDisplayName(@"Foreign Exchange Trade Capture Report Acknowledgement V")]
 public interface IForeignExchangeTradeCaptureReportAcknowledgementV01 : IOuterRecord
 {
     /// <summary>
@@ -37,6 +39,8 @@ public interface IForeignExchangeTradeCaptureReportAcknowledgementV01 : IOuterRe
     [IsoId("_EnLdcHO1EeSG-OV0nXMl5w")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TradeIdentification { get; }
 
     /// <summary>
@@ -61,5 +65,6 @@ public interface IForeignExchangeTradeCaptureReportAcknowledgementV01 : IOuterRe
     [IsoId("_ankbAKHiEeS69KkQis5bYg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

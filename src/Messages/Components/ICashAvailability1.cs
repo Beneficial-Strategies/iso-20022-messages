@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates when the amount of money will become available, that is can be accessed and start generating interest.
 /// </summary>
 [IsoId("_VYy83zqwEeWZFYSPlduMhw")]
+[IsoDisplayName(@"Cash Availability")]
 public interface ICashAvailability1 : IIsoComponent
 {
     /// <summary>

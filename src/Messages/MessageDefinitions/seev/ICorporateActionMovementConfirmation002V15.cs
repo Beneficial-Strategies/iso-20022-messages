@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnMvmntConf",
     "urn:iso:std:iso:20022:tech:xsd:seev.036.002.15"
 )]
+[IsoDisplayName(@"Corporate Action Movement Confirmation002V15")]
 public interface ICorporateActionMovementConfirmation002V15 : IOuterRecord
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ICorporateActionMovementConfirmation002V15 : IOuterRecord
     /// </summary>
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification38> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -64,6 +66,7 @@ public interface ICorporateActionMovementConfirmation002V15 : IOuterRecord
     /// </summary>
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventReference4> EventsLinkage { get; }
 
     /// <summary>
@@ -113,6 +116,7 @@ public interface ICorporateActionMovementConfirmation002V15 : IOuterRecord
     /// </summary>
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -120,6 +124,7 @@ public interface ICorporateActionMovementConfirmation002V15 : IOuterRecord
     /// </summary>
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> PayingAgent { get; }
 
     /// <summary>
@@ -127,6 +132,7 @@ public interface ICorporateActionMovementConfirmation002V15 : IOuterRecord
     /// </summary>
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification137Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -134,5 +140,6 @@ public interface ICorporateActionMovementConfirmation002V15 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

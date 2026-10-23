@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrAuthstnRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.002.001.15"
 )]
+[IsoDisplayName(@"Acceptor Authorisation Response V15")]
 public interface IAcceptorAuthorisationResponseV15 : IOuterRecord
 {
     /// <summary>

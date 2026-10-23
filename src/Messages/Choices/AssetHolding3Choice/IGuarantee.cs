@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding3Choice;
 /// <summary>
 /// Guarantee.
 /// </summary>
+[IsoDisplayName(@"Guarantee")]
 public interface IGuarantee : IAssetHolding3Choice, IIsoChoiceVariant
 {
     /// <summary>

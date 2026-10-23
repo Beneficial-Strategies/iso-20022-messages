@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Party Or Business Error4Choice.
 /// </summary>
 [IsoId("_YS_-ZTE_Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Party Or Business Error4Choice")]
 public interface IPartyOrBusinessError4Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acquirer involved in the card payment.
 /// </summary>
 [IsoId("_TRdIwWitEeS87LmvcA55sg")]
+[IsoDisplayName(@"Acquirer")]
 public interface IAcquirer4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IAcquirer4 : IIsoComponent
     [IsoId("_Tf3_Q2itEeS87LmvcA55sg")]
     [DisplayName("Parameters Version")]
     [IsoXmlTag("ParamsVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text ParametersVersion { get; }
 }

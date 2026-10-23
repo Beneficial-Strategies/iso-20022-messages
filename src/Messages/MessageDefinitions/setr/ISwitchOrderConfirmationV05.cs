@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("eaea3956-4abe-4582-a09a-bfb5602bfedf")]
 [IsoMessage("setr.015.001.05", "SwtchOrdrConf", "urn:iso:std:iso:20022:tech:xsd:setr.015.001.05")]
+[Description(@"Scope|The SwitchOrderConfirmation message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to confirm the details of the execution of a previously received SwitchOrder instruction.|Usage|The SwitchOrderConfirmation message is used to confirm that all the legs of the previously instructed switch order have been executed. The reference of the switch order confirmation is identified in DealReference.|The reference of the original switch order is specified in OrderReference. The message identification of the SwitchOrder message in which the switch order was conveyed may also be quoted in RelatedReference but this is not recommended.|When the message is used to convey a confirmation amendment/s, the AmendmentIndicator must be present with the value ‘true’ or ‘1’. When this is the case, the message must only contain a confirmation amendment/s and not contain both a confirmation amendment/s and a ‘new’ confirmation/s.")]
+[IsoDisplayName(@"Switch Order Confirmation V05")]
 public interface ISwitchOrderConfirmationV05 : IOuterRecord
 {
     /// <summary>
@@ -38,6 +40,7 @@ public interface ISwitchOrderConfirmationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference10> PreviousReference { get; }
 
     /// <summary>
@@ -52,6 +55,7 @@ public interface ISwitchOrderConfirmationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Switch Execution Details")]
     [IsoXmlTag("SwtchExctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchExecution8> SwitchExecutionDetails { get; }
 
     /// <summary>
@@ -66,5 +70,6 @@ public interface ISwitchOrderConfirmationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame6Choice;
 /// Time frame expressed as a code.
 /// </summary>
 [IsoId("_-0Bz8DcbEeidBoT_PugKiA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITimeFrame6Choice, IIsoChoiceVariant
 {
     /// <summary>

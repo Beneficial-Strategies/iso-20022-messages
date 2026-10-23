@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Name and value of a parameter being returned.
 /// </summary>
 [IsoId("_SuwKEwEcEeCQm6a_G2yO_w_-358984797")]
+[IsoDisplayName(@"Report Parameter")]
 public interface IReportParameter1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportParameter1 : IIsoComponent
     [IsoId("_SuwKFAEcEeCQm6a_G2yO_w_1702915618")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Name { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IReportParameter1 : IIsoComponent
     [IsoId("_SuwKFQEcEeCQm6a_G2yO_w_1720011327")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Value { get; }
 }

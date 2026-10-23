@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade Transaction50.
 /// </summary>
 [IsoId("_8t-JsY-REe6Ojt1b3tfu9Q")]
+[IsoDisplayName(@"Trade Transaction50")]
 public interface ITradeTransaction50 : IIsoComponent
 {
     /// <summary>
@@ -135,6 +136,7 @@ public interface ITradeTransaction50 : IIsoComponent
     /// </summary>
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISODate> SettlementDate { get; }
 
     /// <summary>
@@ -254,6 +256,7 @@ public interface ITradeTransaction50 : IIsoComponent
     /// </summary>
     [DisplayName("Other Payment")]
     [IsoXmlTag("OthrPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherPayment5> OtherPayment { get; }
 
     /// <summary>

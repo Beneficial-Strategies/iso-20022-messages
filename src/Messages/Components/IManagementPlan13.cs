@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Management Plan13.
 /// </summary>
 [IsoId("_S2DgsaE6Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"Management Plan13")]
 public interface IManagementPlan13 : IIsoComponent
 {
     /// <summary>

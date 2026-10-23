@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery13Choice;
 /// </summary>
 [IsoId("_1id0wxfMEeyPHpqpKwtFdw")]
 [IsoXmlTag("RcrntQry")]
+[IsoDisplayName(@"Recurrent Query")]
 public interface IRecurrentQuery : ITradeReportQuery13Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IRecurrentQuery : ITradeReportQuery13Choice, IIsoChoiceVariant
     [IsoId("_et5Wsd1dEeqxpKDfBZC1vg")]
     [DisplayName("Query Type")]
     [IsoXmlTag("QryTp")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text QueryType { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface IRecurrentQuery : ITradeReportQuery13Choice, IIsoChoiceVariant
     [IsoId("_et5Wtd1dEeqxpKDfBZC1vg")]
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValidUntil { get; }
 }

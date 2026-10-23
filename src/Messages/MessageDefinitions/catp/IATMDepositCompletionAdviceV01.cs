@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.catp;
     "ATMDpstCmpltnAdvc",
     "urn:iso:std:iso:20022:tech:xsd:catp.014.001.01"
 )]
+[Description(@"The ATMDepositCompletionAdvice message is sent by an ATM to an acquirer or its agent to inform of the result of a deposit transaction at an ATM.|If the ATM is configured to only send negative completion, a generic completion message should be used instead of ATMCompletionAdvice.|This message can be used each time a bundle is put in the ATM safe and/or at the end of a multi bundle deposit.")]
+[IsoDisplayName(@"ATM Deposit Completion Advice V")]
 public interface IATMDepositCompletionAdviceV01 : IOuterRecord
 {
     /// <summary>

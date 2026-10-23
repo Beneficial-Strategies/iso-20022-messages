@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Resolution Data5.
 /// </summary>
 [IsoId("_xIfkMTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Resolution Data5")]
 public interface IResolutionData5 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,6 @@ public interface IResolutionData5 : IIsoComponent
     /// </summary>
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges14> ChargesInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Possible valuation factors.
 /// </summary>
 [IsoId("_Lh2DkDYoEeuD7rm9md9zvg")]
+[IsoDisplayName(@"Valuation Factor Breakdown")]
 public interface IValuationFactorBreakdown1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IValuationFactorBreakdown1 : IIsoComponent
     [IsoId("_wQR6YTYoEeuD7rm9md9zvg")]
     [DisplayName("Valuation Factor")]
     [IsoXmlTag("ValtnFctr")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ValuationFactor { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IValuationFactorBreakdown1 : IIsoComponent
     [IsoId("_w_l3cTYoEeuD7rm9md9zvg")]
     [DisplayName("Inflation Factor")]
     [IsoXmlTag("InfltnFctr")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? InflationFactor { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IValuationFactorBreakdown1 : IIsoComponent
     [IsoId("_xxRzETYoEeuD7rm9md9zvg")]
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? Haircut { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IValuationFactorBreakdown1 : IIsoComponent
     [IsoId("_yzoA4TYoEeuD7rm9md9zvg")]
     [DisplayName("Pool Factor")]
     [IsoXmlTag("PoolFctr")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? PoolFactor { get; }
 }

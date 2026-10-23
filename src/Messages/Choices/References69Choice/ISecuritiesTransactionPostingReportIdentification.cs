@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References69Choice;
 /// Unambiguous identification of the report message to be cancelled.
 /// </summary>
 [IsoId("_z_ogQwzXEeuUZuaHWzkTew")]
+[IsoDisplayName(@"Securities Transaction Posting Report Identification")]
 public interface ISecuritiesTransactionPostingReportIdentification
     : IReferences69Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ISecuritiesTransactionPostingReportIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("SctiesTxPstngRptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

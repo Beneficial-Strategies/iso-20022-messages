@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Account8Choice;
 /// Account in which cash is maintained.
 /// </summary>
 [IsoId("_Q4z1Utp-Ed-ak6NoX_4Aeg_-1708533047")]
+[IsoDisplayName(@"Cash Account")]
 public interface ICashAccount : IAccount8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between action to request on a security.
 /// </summary>
 [IsoId("_QMJpmZJKEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Update Type 35 Choice")]
 public interface IUpdateType35Choice : IIsoChoice { }

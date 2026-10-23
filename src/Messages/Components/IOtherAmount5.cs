@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other Amount5.
 /// </summary>
 [IsoId("_CN_OIY1MEe6S0_1AaJzQCA")]
+[IsoDisplayName(@"Other Amount5")]
 public interface IOtherAmount5 : IIsoComponent
 {
     /// <summary>

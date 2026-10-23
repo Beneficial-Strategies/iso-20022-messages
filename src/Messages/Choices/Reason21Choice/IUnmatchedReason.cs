@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason21Choice;
 
 /// <summary>Specifies the unmatched reason.</summary>
 [IsoId("ea90df78-128e-42a2-8934-72ced0729b58")]
+[IsoDisplayName(@"Unmatched Reason")]
 public interface IUnmatchedReason : IReason21Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "MtgVoteExctnConf",
     "urn:iso:std:iso:20022:tech:xsd:seev.007.001.02"
 )]
+[Description(@"Scope|An issuer, its agent or an intermediary sends the MeetingVoteExecutionConfirmation message to confirm to the Sender of the MeetingInstruction message, the execution of their voting instruction.|Usage|This message is sent after the shareholders meeting has taken place. The Sender of this message confirms the execution of the vote at the meeting and confirms that the vote has been processed as instructed via the MeetingInstruction message.|This messages is sent if the Sender of the MeetingInstruction message has requested such a confirmation or if market practice or regulation stipulates the need for a full audit trail.")]
+[IsoDisplayName(@"Meeting Vote Execution Confirmation V")]
 public interface IMeetingVoteExecutionConfirmationV02 : IOuterRecord
 {
     /// <summary>
@@ -68,5 +70,6 @@ public interface IMeetingVoteExecutionConfirmationV02 : IOuterRecord
     [IsoId("_Tt8LxNEwEd-BzquC8wXy7w_603156788")]
     [DisplayName("Vote Instruction")]
     [IsoXmlTag("VoteInstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedInstructionStatus2> VoteInstruction { get; }
 }

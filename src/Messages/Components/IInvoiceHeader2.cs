@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Collection of data for that is exchanged between two or more parties in written, printed or electronic form.
 /// </summary>
 [IsoId("_1EABwcNREeWGDrnsYu2p6g")]
+[IsoDisplayName(@"Invoice Header")]
 public interface IInvoiceHeader2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvoiceHeader2 : IIsoComponent
     [IsoId("_1QzHocNREeWGDrnsYu2p6g")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IInvoiceHeader2 : IIsoComponent
     [IsoId("_1QzHpcNREeWGDrnsYu2p6g")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> Name { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IInvoiceHeader2 : IIsoComponent
     [IsoId("_1QzHp8NREeWGDrnsYu2p6g")]
     [DisplayName("Issue Date Time")]
     [IsoXmlTag("IsseDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime IssueDateTime { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IInvoiceHeader2 : IIsoComponent
     [IsoId("_1QzHrcNREeWGDrnsYu2p6g")]
     [DisplayName("Copy Indicator")]
     [IsoXmlTag("CpyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CopyIndicator { get; }
 
     /// <summary>
@@ -81,5 +87,6 @@ public interface IInvoiceHeader2 : IIsoComponent
     [IsoId("_1QzHscNREeWGDrnsYu2p6g")]
     [DisplayName("Included Note")]
     [IsoXmlTag("InclNote")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation6> IncludedNote { get; }
 }

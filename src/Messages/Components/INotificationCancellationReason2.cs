@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Notification Cancellation Reason2.
 /// </summary>
 [IsoId("_y_FSYTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Notification Cancellation Reason2")]
 public interface INotificationCancellationReason2 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface INotificationCancellationReason2 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

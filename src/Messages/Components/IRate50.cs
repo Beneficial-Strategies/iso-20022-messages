@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the rates related to securities movement.
 /// </summary>
 [IsoId("_cWghQa3eEfCN-rGCydxGUA")]
+[IsoDisplayName(@"Rate50")]
 public interface IRate50 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IRate50 : IIsoComponent
     [IsoId("_cdAx463eEfCN-rGCydxGUA")]
     [DisplayName("Gross Distribution Rate")]
     [IsoXmlTag("GrssDstrbtnRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGrossDividendRateFormat38Choice> GrossDistributionRate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IRate50 : IIsoComponent
     [IsoId("_cdAx5a3eEfCN-rGCydxGUA")]
     [DisplayName("Gross Interest Rate Used For Payment")]
     [IsoXmlTag("GrssIntrstRateUsdForPmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateUsedForPaymentFormat11Choice> GrossInterestRateUsedForPayment { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IRate50 : IIsoComponent
     [IsoId("_cdAx563eEfCN-rGCydxGUA")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat56Choice> WithholdingTaxRate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IRate50 : IIsoComponent
     [IsoId("_cdAx6a3eEfCN-rGCydxGUA")]
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat56Choice> SecondLevelTax { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface IRate50 : IIsoComponent
     [IsoId("_cdAx863eEfCN-rGCydxGUA")]
     [DisplayName("Net Distribution Rate")]
     [IsoXmlTag("NetDstrbtnRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetDividendRateFormat39Choice> NetDistributionRate { get; }
 
     /// <summary>
@@ -153,5 +159,6 @@ public interface IRate50 : IIsoComponent
     [IsoId("_cdAyA63eEfCN-rGCydxGUA")]
     [DisplayName("Deemed Rate")]
     [IsoXmlTag("DmdRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat61Choice> DeemedRate { get; }
 }

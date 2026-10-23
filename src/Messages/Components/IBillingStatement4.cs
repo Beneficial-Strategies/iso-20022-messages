@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the statement reporting the bank services billing.
 /// </summary>
 [IsoId("_cLa9zdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Billing Statement")]
 public interface IBillingStatement4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBillingStatement4 : IIsoComponent
     [IsoId("_cPV0cdcZEeqRFcf2R4bPBw")]
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text StatementIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IBillingStatement4 : IIsoComponent
     [IsoId("_cPV0ddcZEeqRFcf2R4bPBw")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IBillingStatement4 : IIsoComponent
     [IsoId("_cPV0e9cZEeqRFcf2R4bPBw")]
     [DisplayName("Rate Data")]
     [IsoXmlTag("RateData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingRate1> RateData { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IBillingStatement4 : IIsoComponent
     [IsoId("_cPV0fdcZEeqRFcf2R4bPBw")]
     [DisplayName("Currency Exchange")]
     [IsoXmlTag("CcyXchg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICurrencyExchange6> CurrencyExchange { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface IBillingStatement4 : IIsoComponent
     [IsoId("_cPV0f9cZEeqRFcf2R4bPBw")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingBalance1> Balance { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface IBillingStatement4 : IIsoComponent
     [IsoId("_cPV0gdcZEeqRFcf2R4bPBw")]
     [DisplayName("Compensation")]
     [IsoXmlTag("Compstn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingCompensation1> Compensation { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface IBillingStatement4 : IIsoComponent
     [IsoId("_cPV0g9cZEeqRFcf2R4bPBw")]
     [DisplayName("Service")]
     [IsoXmlTag("Svc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingService2> Service { get; }
 
     /// <summary>
@@ -97,6 +106,7 @@ public interface IBillingStatement4 : IIsoComponent
     [IsoId("_cPV0hdcZEeqRFcf2R4bPBw")]
     [DisplayName("Tax Region")]
     [IsoXmlTag("TaxRgn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingTaxRegion2> TaxRegion { get; }
 
     /// <summary>
@@ -105,6 +115,7 @@ public interface IBillingStatement4 : IIsoComponent
     [IsoId("_cPV0h9cZEeqRFcf2R4bPBw")]
     [DisplayName("Balance Adjustment")]
     [IsoXmlTag("BalAdjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceAdjustment1> BalanceAdjustment { get; }
 
     /// <summary>
@@ -113,5 +124,6 @@ public interface IBillingStatement4 : IIsoComponent
     [IsoId("_cPV0idcZEeqRFcf2R4bPBw")]
     [DisplayName("Service Adjustment")]
     [IsoXmlTag("SvcAdjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingServiceAdjustment1> ServiceAdjustment { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sensible data associated with the payment card performing the transaction.
 /// </summary>
 [IsoId("_b98VAXu3EeS2Z_kGi7H1VQ")]
+[IsoDisplayName(@"Plain Card Data")]
 public interface IPlainCardData12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPlainCardData12 : IIsoComponent
     [IsoId("_cKdHAXu3EeS2Z_kGi7H1VQ")]
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
+    [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
     Min8Max28NumericText PAN { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPlainCardData12 : IIsoComponent
     [IsoId("_cKdHA3u3EeS2Z_kGi7H1VQ")]
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
     Min2Max3NumericText? CardSequenceNumber { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IPlainCardData12 : IIsoComponent
     [IsoId("_cKdHB3u3EeS2Z_kGi7H1VQ")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? ExpiryDate { get; }
 }

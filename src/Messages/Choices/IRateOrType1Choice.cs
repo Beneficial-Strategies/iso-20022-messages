@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a percentage rate or a rate index or a rate name.
 /// </summary>
 [IsoId("_XAtno8IiEeuexrfMa3dl_Q")]
+[IsoDisplayName(@"Rate Or Type 1 Choice")]
 public interface IRateOrType1Choice : IIsoChoice { }

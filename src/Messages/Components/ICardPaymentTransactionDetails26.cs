@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the payment transaction.
 /// </summary>
 [IsoId("_pE2bIWpDEeS4VPLpYyQgxQ")]
+[IsoDisplayName(@"Card Payment Transaction Details")]
 public interface ICardPaymentTransactionDetails26 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface ICardPaymentTransactionDetails26 : IIsoComponent
     [IsoId("_pRODOWpDEeS4VPLpYyQgxQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

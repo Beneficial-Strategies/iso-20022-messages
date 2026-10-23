@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate21Choice;
 /// </summary>
 [IsoId("_GPqvsw1IEeqV4s5SpzR1dQ")]
 [IsoXmlTag("Fltg")]
+[IsoDisplayName(@"Floating")]
 public interface IFloating : IInterestRate21Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface IFloating : IInterestRate21Choice, IIsoChoiceVariant
     [IsoId("_GQZvhw1IEeqV4s5SpzR1dQ")]
     [DisplayName("Spread")]
     [IsoXmlTag("Sprd")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Spread { get; }
 
     /// <summary>

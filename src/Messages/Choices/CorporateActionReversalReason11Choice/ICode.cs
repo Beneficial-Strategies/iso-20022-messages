@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionReversalReason11C
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionReversalReason11Choice, IIsoChoiceVariant
 {
     /// <summary>

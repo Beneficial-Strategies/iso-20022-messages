@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investment that is not characterised by any other financial instrument provided.
 /// </summary>
 [IsoId("_OWQacLLnEeavNMum-T1eEA")]
+[IsoDisplayName(@"Other Investment")]
 public interface IOtherInvestment1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherInvestment1 : IIsoComponent
     [IsoId("_YaCMgLLnEeavNMum-T1eEA")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Description { get; }
 
     /// <summary>

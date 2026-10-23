@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the type and amount of the cash reinvestment in a given currency.
 /// </summary>
 [IsoId("_08jc8JLiEeelrYORFsXWZg")]
+[IsoDisplayName(@"Reinvested Cash Type And Amount")]
 public interface IReinvestedCashTypeAndAmount1 : IIsoComponent
 {
     /// <summary>

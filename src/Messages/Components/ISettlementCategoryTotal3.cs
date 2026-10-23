@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement Category Total3.
 /// </summary>
 [IsoId("_stLFMZjJEe6OBt2eQPMPsQ")]
+[IsoDisplayName(@"Settlement Category Total3")]
 public interface ISettlementCategoryTotal3 : IIsoComponent
 {
     /// <summary>

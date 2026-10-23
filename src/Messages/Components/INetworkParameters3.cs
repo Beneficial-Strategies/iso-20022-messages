@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters to communicate with a host.
 /// </summary>
 [IsoId("_-UB7YWpTEeSR-ZWLvO-1dg")]
+[IsoDisplayName(@"Network Parameters")]
 public interface INetworkParameters3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INetworkParameters3 : IIsoComponent
     [IsoId("_hbhpkGpUEeSR-ZWLvO-1dg")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetworkParameters4> Address { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface INetworkParameters3 : IIsoComponent
     [IsoId("_-gseaWpTEeSR-ZWLvO-1dg")]
     [DisplayName("User Name")]
     [IsoXmlTag("UsrNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? UserName { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface INetworkParameters3 : IIsoComponent
     [IsoId("_-gsea2pTEeSR-ZWLvO-1dg")]
     [DisplayName("Access Code")]
     [IsoXmlTag("AccsCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary? AccessCode { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface INetworkParameters3 : IIsoComponent
     [IsoId("_H9hTQGpWEeSR-ZWLvO-1dg")]
     [DisplayName("Server Certificate")]
     [IsoXmlTag("SvrCert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max3000Binary> ServerCertificate { get; }
 
     /// <summary>
@@ -49,5 +55,6 @@ public interface INetworkParameters3 : IIsoComponent
     [IsoId("_PZZO8GpWEeSR-ZWLvO-1dg")]
     [DisplayName("Server Certificate Identifier")]
     [IsoXmlTag("SvrCertIdr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max140Binary> ServerCertificateIdentifier { get; }
 }

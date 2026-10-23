@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of values assigned to a special programme.
 /// </summary>
 [IsoId("_nfCugEU8Eeea-M6VZkEPUw")]
+[IsoDisplayName(@"Special Programme Details")]
 public interface ISpecialProgrammeDetails1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISpecialProgrammeDetails1 : IIsoComponent
     [IsoId("_99USYEU8Eeea-M6VZkEPUw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ISpecialProgrammeDetails1 : IIsoComponent
     [IsoId("_HO0S8EU9Eeea-M6VZkEPUw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Value { get; }
 }

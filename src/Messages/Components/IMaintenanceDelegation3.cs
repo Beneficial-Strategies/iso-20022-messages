@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information on the delegation of a maintenance action or maintenance function.
 /// </summary>
 [IsoId("_APfkAY4DEeWrZqsymMFdfg")]
+[IsoDisplayName(@"Maintenance Delegation")]
 public interface IMaintenanceDelegation3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IMaintenanceDelegation3 : IIsoComponent
     [IsoId("_AahvUY4DEeWrZqsymMFdfg")]
     [DisplayName("Maintenance Service")]
     [IsoXmlTag("MntncSvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<DataSetCategory11Code> MaintenanceService { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IMaintenanceDelegation3 : IIsoComponent
     [IsoId("_AahvU44DEeWrZqsymMFdfg")]
     [DisplayName("Partial Delegation")]
     [IsoXmlTag("PrtlDlgtn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PartialDelegation { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IMaintenanceDelegation3 : IIsoComponent
     [IsoId("_AahvVY4DEeWrZqsymMFdfg")]
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> POISubset { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface IMaintenanceDelegation3 : IIsoComponent
     [IsoId("_AahvWY4DEeWrZqsymMFdfg")]
     [DisplayName("Delegation Scope Identification")]
     [IsoXmlTag("DlgtnScpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DelegationScopeIdentification { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IMaintenanceDelegation3 : IIsoComponent
     [IsoId("_AahvW44DEeWrZqsymMFdfg")]
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
+    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
     Max3000Binary? DelegationScopeDefinition { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IMaintenanceDelegation3 : IIsoComponent
     [IsoId("_AahvXY4DEeWrZqsymMFdfg")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max10KBinary> Certificate { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IMaintenanceDelegation3 : IIsoComponent
     [IsoId("_AahvX44DEeWrZqsymMFdfg")]
     [DisplayName("POI Identification Association")]
     [IsoXmlTag("POIIdAssoctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMaintenanceIdentificationAssociation1> POIIdentificationAssociation { get; }
 
     /// <summary>
@@ -89,6 +98,7 @@ public interface IMaintenanceDelegation3 : IIsoComponent
     [IsoId("_AahvYY4DEeWrZqsymMFdfg")]
     [DisplayName("Symmetric Key")]
     [IsoXmlTag("SmmtrcKey")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IKEKIdentifier5> SymmetricKey { get; }
 
     /// <summary>

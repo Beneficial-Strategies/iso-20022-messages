@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Reversal Reason9.
 /// </summary>
 [IsoId("_l6NNiZt3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Corporate Action Reversal Reason9")]
 public interface ICorporateActionReversalReason9 : IIsoComponent
 {
     /// <summary>

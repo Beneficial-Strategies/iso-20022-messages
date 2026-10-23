@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingMethod1Choice;
 /// </summary>
 [IsoId("_6P9Ds5qlEeGSON8vddiWzQ_1047988105")]
 [IsoXmlTag("MtdB")]
+[IsoDisplayName(@"Method B")]
 public interface IMethodB : IBillingMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -35,5 +36,8 @@ public interface IMethodB : IBillingMethod1Choice, IIsoChoiceVariant
     [IsoId("_6P9DuJqlEeGSON8vddiWzQ_1610375494")]
     [DisplayName("Tax Identification")]
     [IsoXmlTag("TaxId")]
+    [MinLength(1)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBillingServicesTax1> TaxIdentification { get; }
 }

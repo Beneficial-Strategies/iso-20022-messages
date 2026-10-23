@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Programme or brand of the card for the transaction.
 /// </summary>
 [IsoId("_0zZyYEX-Eeegp_DADCe7HQ")]
+[IsoDisplayName(@"Card Programme Mode")]
 public interface ICardProgrammeMode1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICardProgrammeMode1 : IIsoComponent
     [IsoId("_ErjW0EX_Eeegp_DADCe7HQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ICardProgrammeMode1 : IIsoComponent
     [IsoId("_LOkX4EX_Eeegp_DADCe7HQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

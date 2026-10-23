@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the amount in the reporting currency and optionally in the original currency.
 /// </summary>
 [IsoId("_9s6WsePHEea7_eMQH225xA")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount3 : IIsoComponent
 {
     /// <summary>

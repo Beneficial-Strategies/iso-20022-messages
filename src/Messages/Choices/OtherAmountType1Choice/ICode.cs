@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OtherAmountType1Choice;
 /// Type of amount expressed as a code.
 /// </summary>
 [IsoId("_fJLzgI2NEeeNN9vGwZc5aA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOtherAmountType1Choice, IIsoChoiceVariant
 {
     /// <summary>

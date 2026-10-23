@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessOrError8Choice;
 /// </summary>
 [IsoId("_Q2Ivw3hdEeidzqjNEfehPg")]
 [IsoXmlTag("GnlBiz")]
+[IsoDisplayName(@"General Business")]
 public interface IGeneralBusiness : IGeneralBusinessOrError8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IGeneralBusiness : IGeneralBusinessOrError8Choice, IIsoChoiceVa
     [IsoId("_MpLIg5lgEeeE1Ya-LgRsuQ")]
     [DisplayName("Subject")]
     [IsoXmlTag("Sbjt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Subject { get; }
 
     /// <summary>
@@ -34,5 +37,7 @@ public interface IGeneralBusiness : IGeneralBusinessOrError8Choice, IIsoChoiceVa
     [IsoId("_MpLIhZlgEeeE1Ya-LgRsuQ")]
     [DisplayName("Subject Details")]
     [IsoXmlTag("SbjtDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? SubjectDetails { get; }
 }

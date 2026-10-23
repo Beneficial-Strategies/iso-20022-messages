@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderRestriction1Choice;
 /// <summary>
 /// Order Restriction Code.
 /// </summary>
+[IsoDisplayName(@"Order Restriction Code")]
 public interface IOrderRestrictionCode : IOrderRestriction1Choice, IIsoChoiceVariant
 {
     /// <summary>

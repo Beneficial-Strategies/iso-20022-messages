@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action option.
 /// </summary>
 [IsoId("3e681117-9896-419e-b001-b51adf469948")]
+[IsoDisplayName(@"Corporate Action Option250")]
 public interface ICorporateActionOption250 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICorporateActionOption250 : IIsoComponent
     [IsoId("4ce599f8-32f1-4f5d-9fd3-b8e4a4dec59f")]
     [DisplayName("Option Features")]
     [IsoXmlTag("OptnFeatrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOptionFeaturesFormat32Choice> OptionFeatures { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ICorporateActionOption250 : IIsoComponent
     [IsoId("c43a4b20-3c4b-4028-9539-0c24c86508fb")]
     [DisplayName("Supplementary Option Features")]
     [IsoXmlTag("SplmtryOptnFeatrs")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ExtendedOptionFeature2Code> SupplementaryOptionFeatures { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ICorporateActionOption250 : IIsoComponent
     [IsoId("16eb231b-a305-4ef3-839c-b5de0f73fb8f")]
     [DisplayName("Certification Breakdown Type")]
     [IsoXmlTag("CertfctnBrkdwnTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficiaryCertificationType13Choice> CertificationBreakdownType { get; }
 
     /// <summary>
@@ -185,6 +189,7 @@ public interface ICorporateActionOption250 : IIsoComponent
     [IsoId("63bef6f6-967e-4128-b73a-36f60a6539c1")]
     [DisplayName("Tax Category")]
     [IsoXmlTag("TaxCtgy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCategory1> TaxCategory { get; }
 
     /// <summary>
@@ -225,6 +230,7 @@ public interface ICorporateActionOption250 : IIsoComponent
     [IsoId("4e0384bb-275b-41c6-8acc-447a73cdff62")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesOption120> SecuritiesMovementDetails { get; }
 
     /// <summary>
@@ -233,6 +239,7 @@ public interface ICorporateActionOption250 : IIsoComponent
     [IsoId("79c96d41-094c-46ae-9e62-f65bd9dd8795")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOption115> CashMovementDetails { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a list of financing items exchanged between two parties, for example invoice, credit, financing request.
 /// </summary>
 [IsoId("_OTgzMTk3-AOSNFX-8224490")]
+[IsoDisplayName(@"Financing Item List")]
 public interface IFinancingItemList1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancingItemList1 : IIsoComponent
     [IsoId("_OTgzMzI0-AOSNFX-8224499")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identifier { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IFinancingItemList1 : IIsoComponent
     [IsoId("_OTgzMzI1-AOSNFX-8224499")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate IssueDate { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IFinancingItemList1 : IIsoComponent
     [IsoId("_OTgzMzI2-AOSNFX-8224500")]
     [DisplayName("Related Document")]
     [IsoXmlTag("RltdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> RelatedDocument { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IFinancingItemList1 : IIsoComponent
     [IsoId("_OTgzMzI3-AOSNFX-8224500")]
     [DisplayName("Amount Cut Off Date")]
     [IsoXmlTag("AmtCutOffDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? AmountCutOffDate { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IFinancingItemList1 : IIsoComponent
     [IsoId("_OTgzMzMx-AOSNFX-8224500")]
     [DisplayName("Notification Information")]
     [IsoXmlTag("NtfctnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancingNotificationParties1> NotificationInformation { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IFinancingItemList1 : IIsoComponent
     [IsoId("_OTgzMzMz-AOSNFX-8224500")]
     [DisplayName("Financial Item")]
     [IsoXmlTag("FinItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialItem1> FinancialItem { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IFinancingItemList1 : IIsoComponent
     [IsoId("_OTgzMzM0-AOSNFX-8224500")]
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText ItemCount { get; }
 
     /// <summary>
@@ -89,6 +98,7 @@ public interface IFinancingItemList1 : IIsoComponent
     [IsoId("_OTgzMzM1-AOSNFX-8224500")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -121,6 +131,7 @@ public interface IFinancingItemList1 : IIsoComponent
     [IsoId("_OTgzMzQw-AOSNFX-8224500")]
     [DisplayName("Financing Instalment")]
     [IsoXmlTag("FincgInstlmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalment2> FinancingInstalment { get; }
 
     /// <summary>
@@ -129,6 +140,8 @@ public interface IFinancingItemList1 : IIsoComponent
     [IsoId("_OTgzMzQx-AOSNFX-8224500")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [StringLength(2000, MinimumLength = 1)]
     Max2000Text? AdditionalInformation { get; }
 
     /// <summary>

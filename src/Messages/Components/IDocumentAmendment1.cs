@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates whether the supporting document is amending an original document or not, and the reference of the original supporting document, when applicable.
 /// </summary>
 [IsoId("_3IeEUNLlEeSDLevdaFPXHw")]
+[IsoDisplayName(@"Document Amendment")]
 public interface IDocumentAmendment1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDocumentAmendment1 : IIsoComponent
     [IsoId("_7aD1UNLlEeSDLevdaFPXHw")]
     [DisplayName("Correction Identification")]
     [IsoXmlTag("CrrctnId")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number CorrectionIdentification { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface IDocumentAmendment1 : IIsoComponent
     [IsoId("__vOewNLlEeSDLevdaFPXHw")]
     [DisplayName("Original Document Identification")]
     [IsoXmlTag("OrgnlDocId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalDocumentIdentification { get; }
 }

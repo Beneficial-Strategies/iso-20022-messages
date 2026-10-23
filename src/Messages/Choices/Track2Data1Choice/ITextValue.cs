@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Track2Data1Choice;
 /// Value of track 2 data expressed in text form.
 /// </summary>
 [IsoId("_cnIL8ZaOEemfCcEf5rVTyg")]
+[IsoDisplayName(@"Text Value")]
 public interface ITextValue : ITrack2Data1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ITextValue : ITrack2Data1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 37 characters.
     /// </summary>
     [IsoXmlTag("TxtVal")]
+    [IsoSimpleType(IsoSimpleType.Max37Text)]
+    [StringLength(37, MinimumLength = 1)]
     Max37Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Deletion of the current element.
 /// </summary>
 [IsoId("_UtVP1tp-Ed-ak6NoX_4Aeg_1632709893")]
+[IsoDisplayName(@"Deletion")]
 public interface IDeletion1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface IDeletion1 : IIsoComponent
     [IsoId("_UtVP19p-Ed-ak6NoX_4Aeg_2107399666")]
     [DisplayName("Deleted Value")]
     [IsoXmlTag("DeltdVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text DeletedValue { get; }
 }

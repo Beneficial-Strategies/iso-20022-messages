@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrCxlAdvcRspn",
     "urn:iso:std:iso:20022:tech:xsd:caaa.008.001.01"
 )]
+[Description(@"Scope|The AcceptorCancellationAdviceResponse message is sent by the acquirer to acknowledge the proper reception of the AcceptorCancellationAdvice. The message can be sent directly to the card acceptor or through an agent.|Usage|The AcceptorCancellationAdviceResponse message should be accepted by the card acceptor unless the message received was invalid.")]
+[IsoDisplayName(@"Acceptor Cancellation Advice Response V")]
 public interface IAcceptorCancellationAdviceResponseV01 : IOuterRecord
 {
     /// <summary>

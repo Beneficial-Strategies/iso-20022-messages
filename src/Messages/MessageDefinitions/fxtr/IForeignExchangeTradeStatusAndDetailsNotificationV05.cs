@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.fxtr;
     "FXTradStsAndDtlsNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05"
 )]
+[Description(@"Scope||The ForeignExchangeTradeStatusAndDetails message is sent by a central system to the participant to provide notification of the status and details of a foreign exchange trade.||Usage||The notification is sent by a central settlement system to the two trading parties after it has received foreign exchange trade instructions from both.")]
+[IsoDisplayName(@"Foreign Exchange Trade Status And Details Notification V")]
 public interface IForeignExchangeTradeStatusAndDetailsNotificationV05 : IOuterRecord
 {
     /// <summary>
@@ -107,6 +109,7 @@ public interface IForeignExchangeTradeStatusAndDetailsNotificationV05 : IOuterRe
     [IsoId("_mJe8WwM-Ee2nqoJcXIhTdw")]
     [DisplayName("Split Trade Information")]
     [IsoXmlTag("SpltTradInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISplitTradeDetails4> SplitTradeInformation { get; }
 
     /// <summary>
@@ -123,5 +126,6 @@ public interface IForeignExchangeTradeStatusAndDetailsNotificationV05 : IOuterRe
     [IsoId("_mJe8XwM-Ee2nqoJcXIhTdw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

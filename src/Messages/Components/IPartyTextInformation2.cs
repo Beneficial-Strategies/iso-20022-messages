@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
 /// </summary>
 [IsoId("_PYi8ftp-Ed-ak6NoX_4Aeg_1769478257")]
+[IsoDisplayName(@"Party Text Information")]
 public interface IPartyTextInformation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyTextInformation2 : IIsoComponent
     [IsoId("_PYstcNp-Ed-ak6NoX_4Aeg_1655639191")]
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? DeclarationDetails { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IPartyTextInformation2 : IIsoComponent
     [IsoId("_PYstcdp-Ed-ak6NoX_4Aeg_658566838")]
     [DisplayName("Party Contact Details")]
     [IsoXmlTag("PtyCtctDtls")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? PartyContactDetails { get; }
 }

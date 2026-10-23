@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 /// Identification of the financial institution expressed as a BIC.
 /// </summary>
 [IsoId("_Rou1E2AZEeiH9-hkDDXUHA")]
+[IsoDisplayName(@"BICFI")]
 public interface IBICFI : IFinancialInstitutionIdentification10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBICFI : IFinancialInstitutionIdentification10Choice, IIsoChoic
     /// Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362: 2014 - &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
     /// </summary>
     [IsoXmlTag("BICFI")]
+    [IsoSimpleType(IsoSimpleType.BICFIDec2014Identifier)]
     BICFIDec2014Identifier Value { get; }
 }

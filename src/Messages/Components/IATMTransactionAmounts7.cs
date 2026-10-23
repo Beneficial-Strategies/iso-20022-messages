@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional amount that may be displayed to the customer, for instance the daily limit or the daily balance for the service.
 /// </summary>
 [IsoId("_3ACQ0a19EeWMg5rOByfExw")]
+[IsoDisplayName(@"ATM Transaction Amounts")]
 public interface IATMTransactionAmounts7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMTransactionAmounts7 : IIsoComponent
     [IsoId("_3L9M8a19EeWMg5rOByfExw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IATMTransactionAmounts7 : IIsoComponent
     [IsoId("_3L9M8619EeWMg5rOByfExw")]
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Label { get; }
 }

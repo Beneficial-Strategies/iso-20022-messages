@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide summary information on entries.
 /// </summary>
 [IsoId("_yGoqcYaGEee8r9VKRbnJSg")]
+[IsoDisplayName(@"Total Transactions")]
 public interface ITotalTransactions6 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface ITotalTransactions6 : IIsoComponent
     [IsoId("_yVb7d4aGEee8r9VKRbnJSg")]
     [DisplayName("Total Entries Per Bank Transaction Code")]
     [IsoXmlTag("TtlNtriesPerBkTxCd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITotalsPerBankTransactionCode5> TotalEntriesPerBankTransactionCode { get; }
 }

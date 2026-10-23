@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money for which goods or services are offered, sold, or bought.
 /// </summary>
 [IsoId("_U4XbKNp-Ed-ak6NoX_4Aeg_-49589526")]
+[IsoDisplayName(@"Unit Price")]
 public interface IUnitPrice3 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IUnitPrice3 : IIsoComponent
     [IsoId("_U4glEtp-Ed-ak6NoX_4Aeg_107730858")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfDaysAccrued { get; }
 
     /// <summary>

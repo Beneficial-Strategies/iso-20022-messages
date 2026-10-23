@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// TMS Action12.
 /// </summary>
 [IsoId("_65AqwZLUEe6-zvj9Dw-ctg")]
+[IsoDisplayName(@"TMS Action12")]
 public interface ITMSAction12 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface ITMSAction12 : IIsoComponent
     /// </summary>
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IKEKIdentifier5> Key { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface ITMSAction12 : IIsoComponent
     /// </summary>
     [DisplayName("Component Type")]
     [IsoXmlTag("CmpntTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<DataSetCategory18Code> ComponentType { get; }
 
     /// <summary>
@@ -107,6 +110,7 @@ public interface ITMSAction12 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Process")]
     [IsoXmlTag("AddtlPrc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; }
 
     /// <summary>
@@ -135,6 +139,7 @@ public interface ITMSAction12 : IIsoComponent
     /// </summary>
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max10KBinary> KeyEnciphermentCertificate { get; }
 
     /// <summary>
@@ -142,6 +147,7 @@ public interface ITMSAction12 : IIsoComponent
     /// </summary>
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IErrorAction5> ErrorAction { get; }
 
     /// <summary>
@@ -149,6 +155,7 @@ public interface ITMSAction12 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max3000Binary> AdditionalInformation { get; }
 
     /// <summary>
@@ -156,6 +163,7 @@ public interface ITMSAction12 : IIsoComponent
     /// </summary>
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMessageItemCondition2> MessageItem { get; }
 
     /// <summary>

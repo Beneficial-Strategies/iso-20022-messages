@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeDate4Choice;
 /// Date and time at which the securities are to be traded expressed as a ISO20022 code.
 /// </summary>
 [IsoId("_AXK_U9okEeC60axPepSq7g_-838039776")]
+[IsoDisplayName(@"Value")]
 public interface IValue : ITradeDate4Choice, IIsoChoiceVariant
 {
     /// <summary>The choice this variant holds. (Not called Value: the variant is.)</summary>

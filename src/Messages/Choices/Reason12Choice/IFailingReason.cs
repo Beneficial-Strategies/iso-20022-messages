@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason12Choice;
 /// Specifies the reason why the instruction has a failing settlement status.
 /// </summary>
 [IsoId("_C2YFwSRhEeO8sskhVI3IDA")]
+[IsoDisplayName(@"Failing Reason")]
 public interface IFailingReason : IReason12Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

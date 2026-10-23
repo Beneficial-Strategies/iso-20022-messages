@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Remittance Information23.
 /// </summary>
 [IsoId("_9FAoQTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Remittance Information23")]
 public interface IRemittanceInformation23 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IRemittanceInformation23 : IIsoComponent
     /// </summary>
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max140Text> Unstructured { get; }
 
     /// <summary>
@@ -30,6 +32,7 @@ public interface IRemittanceInformation23 : IIsoComponent
     /// </summary>
     [DisplayName("Structured")]
     [IsoXmlTag("Strd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStructuredRemittanceInformation18> Structured { get; }
 
     /// <summary>

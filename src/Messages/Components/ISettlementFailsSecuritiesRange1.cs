@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the highest volume and value of settlement fails with a ranking by financial instrument.
 /// </summary>
 [IsoId("_BnlYg40bEemUAO64Q252gQ")]
+[IsoDisplayName(@"Settlement Fails Securities Range")]
 public interface ISettlementFailsSecuritiesRange1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementFailsSecuritiesRange1 : IIsoComponent
     [IsoId("_BnlYhY0bEemUAO64Q252gQ")]
     [DisplayName("Highest In Volume")]
     [IsoXmlTag("HghstInVol")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementFailsSecurities1> HighestInVolume { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ISettlementFailsSecuritiesRange1 : IIsoComponent
     [IsoId("_BnlYhI0bEemUAO64Q252gQ")]
     [DisplayName("Highest In Value")]
     [IsoXmlTag("HghstInVal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementFailsSecurities1> HighestInValue { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateQuarter1Choice;
 /// Proprietary description of the timeframe.
 /// </summary>
 [IsoId("_ft10AaFTEei_VZq-6SQkuQ")]
+[IsoDisplayName(@"Period")]
 public interface IPeriod : IDateQuarter1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IPeriod : IDateQuarter1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

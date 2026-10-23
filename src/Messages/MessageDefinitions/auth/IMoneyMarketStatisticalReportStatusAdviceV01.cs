@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "MnyMktSttstclRptStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:auth.028.001.01"
 )]
+[Description(@"The MoneyMarketStatisticalReportStatusAdvice message is sent by the relevant competent authority to the reporting agents to provide the status on the reported transactions.")]
+[IsoDisplayName(@"Money Market Statistical Report Status Advice V")]
 public interface IMoneyMarketStatisticalReportStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IMoneyMarketStatisticalReportStatusAdviceV01 : IOuterRecord
     [IsoId("_1P-hFaieEeWHO_l3hf2rlA")]
     [DisplayName("Transaction Status")]
     [IsoXmlTag("TxSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMoneyMarketTransactionStatus2> TransactionStatus { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IMoneyMarketStatisticalReportStatusAdviceV01 : IOuterRecord
     [IsoId("_1P-hF6ieEeWHO_l3hf2rlA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

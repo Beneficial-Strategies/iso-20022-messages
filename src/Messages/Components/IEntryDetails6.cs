@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the underlying transaction(s) and/or batched entries.
 /// </summary>
 [IsoId("_byl1Ox77EeSxevWRRWxNAg")]
+[IsoDisplayName(@"Entry Details")]
 public interface IEntryDetails6 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IEntryDetails6 : IIsoComponent
     [IsoId("_cDkQVR77EeSxevWRRWxNAg")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEntryTransaction7> TransactionDetails { get; }
 }

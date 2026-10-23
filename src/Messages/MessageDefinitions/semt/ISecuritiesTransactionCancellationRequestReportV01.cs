@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesTxCxlReqRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.033.001.01"
 )]
+[IsoDisplayName(@"Securities Transaction Cancellation Request Report V01")]
 public interface ISecuritiesTransactionCancellationRequestReportV01 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +37,7 @@ public interface ISecuritiesTransactionCancellationRequestReportV01 : IOuterReco
     /// </summary>
     [DisplayName("Cancellations")]
     [IsoXmlTag("Cxls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesCancellation2> Cancellations { get; }
 
     /// <summary>
@@ -43,5 +45,6 @@ public interface ISecuritiesTransactionCancellationRequestReportV01 : IOuterReco
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

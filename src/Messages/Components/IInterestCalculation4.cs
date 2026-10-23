@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the interest calculation.
 /// </summary>
 [IsoId("_iNo2MYPLEeWLIolfk4fFwQ")]
+[IsoDisplayName(@"Interest Calculation")]
 public interface IInterestCalculation4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInterestCalculation4 : IIsoComponent
     [IsoId("_ioRjwYPLEeWLIolfk4fFwQ")]
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate CalculationDate { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IInterestCalculation4 : IIsoComponent
     [IsoId("_ioats4PLEeWLIolfk4fFwQ")]
     [DisplayName("Number Of Days")]
     [IsoXmlTag("NbOfDays")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfDays { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IInterestCalculation4 : IIsoComponent
     [IsoId("_ioattYPLEeWLIolfk4fFwQ")]
     [DisplayName("Effective Rate")]
     [IsoXmlTag("FctvRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate EffectiveRate { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface IInterestCalculation4 : IIsoComponent
     [IsoId("_ioatt4PLEeWLIolfk4fFwQ")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? InterestRate { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IInterestCalculation4 : IIsoComponent
     [IsoId("_ioatuYPLEeWLIolfk4fFwQ")]
     [DisplayName("Spread")]
     [IsoXmlTag("Sprd")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Spread { get; }
 
     /// <summary>

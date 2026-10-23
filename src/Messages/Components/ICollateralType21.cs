@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information for the first side of the transaction on the type of collateral.
 /// </summary>
 [IsoId("_C8NGHcg5Eeu4ecZgAYuz5w")]
+[IsoDisplayName(@"Collateral Type")]
 public interface ICollateralType21 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICollateralType21 : IIsoComponent
     [IsoId("_C9k_E8g5Eeu4ecZgAYuz5w")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurity52> Security { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICollateralType21 : IIsoComponent
     [IsoId("_C9k_Fcg5Eeu4ecZgAYuz5w")]
     [DisplayName("Cash")]
     [IsoXmlTag("Csh")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountHaircutMargin1> Cash { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ICollateralType21 : IIsoComponent
     [IsoId("_C9k_F8g5Eeu4ecZgAYuz5w")]
     [DisplayName("Commodity")]
     [IsoXmlTag("Cmmdty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommodity43> Commodity { get; }
 }

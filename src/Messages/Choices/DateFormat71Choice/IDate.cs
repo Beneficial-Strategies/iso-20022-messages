@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat71Choice;
 /// <summary>
 /// Date.
 /// </summary>
+[IsoDisplayName(@"Date")]
 public interface IDate : IDateFormat71Choice, IIsoChoiceVariant
 {
     /// <summary>

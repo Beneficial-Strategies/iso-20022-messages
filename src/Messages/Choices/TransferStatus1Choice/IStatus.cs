@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice;
 /// </summary>
 [IsoId("_o1CqqBwkEeOIveEnnb_1-A")]
 [IsoXmlTag("Sts")]
+[IsoDisplayName(@"Status")]
 public interface IStatus : ITransferStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -24,5 +25,7 @@ public interface IStatus : ITransferStatus1Choice, IIsoChoiceVariant
     [IsoId("_ar5QVSGjEeONGJioFgcMDw")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Reason { get; }
 }

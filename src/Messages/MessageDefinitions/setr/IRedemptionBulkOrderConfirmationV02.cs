@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("_pGD-5dE7Ed-BzquC8wXy7w_314405258")]
 [IsoMessage("setr.003.001.02", "setr.003.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.003.001.02")]
+[Description(@"Scope|The RedemptionBulkOrderConfirmation message is sent by an executing party, eg, a transfer agent, to an instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.|This message is used to confirm the details of the execution of a RedemptionBulkOrder message.|Usage|The RedemptionBulkOrderConfirmation message is sent, after the price has been determined, to confirm the execution of all individual orders.|There is usually one bulk confirmation message for one bulk order message.|A RedemptionBulkOrder must in all cases be responded to by a RedemptionBulkOrderConfirmation and in no circumstances by a RedemptionMultipleOrderConfirmation.|If the executing party needs to confirm a RedemptionMultipleOrder message, then the RedemptionMultipleOrderConfirmation message must be used.")]
+[IsoDisplayName(@"Redemption Bulk Order Confirmation V")]
 public interface IRedemptionBulkOrderConfirmationV02 : IOuterRecord
 {
     /// <summary>
@@ -43,6 +45,7 @@ public interface IRedemptionBulkOrderConfirmationV02 : IOuterRecord
     [IsoId("_pGD-6NE7Ed-BzquC8wXy7w_1774443914")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -67,6 +70,9 @@ public interface IRedemptionBulkOrderConfirmationV02 : IOuterRecord
     [IsoId("_pGNI0dE7Ed-BzquC8wXy7w_-833250151")]
     [DisplayName("Intermediary Details")]
     [IsoXmlTag("IntrmyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary4> IntermediaryDetails { get; }
 
     /// <summary>
@@ -83,5 +89,6 @@ public interface IRedemptionBulkOrderConfirmationV02 : IOuterRecord
     [IsoId("_pGNI09E7Ed-BzquC8wXy7w_-338730008")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains protected data and the attributes used to protect the data.
 /// </summary>
 [IsoId("_SmzOEEYdEeegp_DADCe7HQ")]
+[IsoDisplayName(@"Protected Data")]
 public interface IProtectedData1 : IIsoComponent
 {
     /// <summary>

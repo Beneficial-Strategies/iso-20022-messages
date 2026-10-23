@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the collateral substitution response.
 /// </summary>
 [IsoId("_QnhRA9p-Ed-ak6NoX_4Aeg_908779595")]
+[IsoDisplayName(@"Substitution Response")]
 public interface ISubstitutionResponse1 : IIsoComponent
 {
     /// <summary>

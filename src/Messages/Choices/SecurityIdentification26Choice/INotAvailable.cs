@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification26Choice;
 /// Default value, when not identification is available.
 /// </summary>
 [IsoId("_OQJ8k47DEeaxxtxaoOwzAg")]
+[IsoDisplayName(@"Not Available")]
 public interface INotAvailable : ISecurityIdentification26Choice, IIsoChoiceVariant
 {
     /// <summary>

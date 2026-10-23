@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the remittance advice.
 /// </summary>
 [IsoId("_RcTcsW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Remittance Location")]
 public interface IRemittanceLocation5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRemittanceLocation5 : IIsoComponent
     [IsoId("_RmlaEW49EeiU9cctagi5ow")]
     [DisplayName("Remittance Identification")]
     [IsoXmlTag("RmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RemittanceIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IRemittanceLocation5 : IIsoComponent
     [IsoId("_RmlaE249EeiU9cctagi5ow")]
     [DisplayName("Remittance Location Details")]
     [IsoXmlTag("RmtLctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocationData1> RemittanceLocationDetails { get; }
 
     /// <summary>

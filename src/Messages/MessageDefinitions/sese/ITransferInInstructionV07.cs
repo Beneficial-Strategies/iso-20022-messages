@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_1ejVMR8NEeWpZde3LQh6dg")]
 [IsoMessage("sese.005.001.07", "TrfInInstr", "urn:iso:std:iso:20022:tech:xsd:sese.005.001.07")]
+[Description(@"Scope|An instructing party, for example, an investment manager or its authorised representative, sends the TransferInInstruction message to the executing party, for example, a transfer agent, to instruct the receipt of a financial instrument, free of payment, on a given date from a specified party.|This message may also be used to instruct the receipt of a financial instrument, free of payment, from another of the instructing parties own accounts or from a third party.|This message may also be used as an advice and request, that is, the message is used to inform the receiver to expect an unsolicited transfer in confirmation and to request account information for the transfer.|Usage|The TransferInInstruction message is used to instruct the receipt of a financial instrument from another account, either owned by the instructing party or by a third party.")]
+[IsoDisplayName(@"Transfer In Instruction V")]
 public interface ITransferInInstructionV07 : IOuterRecord
 {
     /// <summary>
@@ -65,6 +67,8 @@ public interface ITransferInInstructionV07 : IOuterRecord
     [IsoId("_1ejVPR8NEeWpZde3LQh6dg")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface ITransferInInstructionV07 : IOuterRecord
     [IsoId("_1ejVPx8NEeWpZde3LQh6dg")]
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransfer32> TransferDetails { get; }
 
     /// <summary>
@@ -113,5 +118,6 @@ public interface ITransferInInstructionV07 : IOuterRecord
     [IsoId("_1ejVSR8NEeWpZde3LQh6dg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

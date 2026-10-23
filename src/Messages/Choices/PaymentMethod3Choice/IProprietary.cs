@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentMethod3Choice;
 
 /// <summary>Method of payment for the remittance of the CSD or the NCB to the invoicing party, in a proprietary free text format.</summary>
 [IsoId("_63Gwk9EvEfCli6pH8hj5ag")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPaymentMethod3Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

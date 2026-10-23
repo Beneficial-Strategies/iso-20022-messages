@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "AgtCAStgInstrCxlReq",
     "urn:iso:std:iso:20022:tech:xsd:seev.026.001.01"
 )]
+[Description(@"Scope|This message is sent by a CSD to the issuer agent to request the cancellation of a previously sent Agent Corporate Action Standing Instruction.|Usage|This message is used to request the cancellation of a standing instruction.|This message must contain the identification of the standing instruction to be cancelled. It may also contain details of the standing instruction to be cancelled, but this is not recommended.")]
+[IsoDisplayName(@"Agent CA Standing Instruction Cancellation Request V")]
 public interface IAgentCAStandingInstructionCancellationRequestV01 : IOuterRecord
 {
     /// <summary>

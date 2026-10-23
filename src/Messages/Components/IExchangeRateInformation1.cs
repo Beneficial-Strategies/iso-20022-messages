@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further detailed information on the exchange rate that has been used in the payment transaction.
 /// </summary>
 [IsoId("_QLp0Ytp-Ed-ak6NoX_4Aeg_-1204184302")]
+[IsoDisplayName(@"Exchange Rate Information")]
 public interface IExchangeRateInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IExchangeRateInformation1 : IIsoComponent
     [IsoId("_QLp0Y9p-Ed-ak6NoX_4Aeg_-940984267")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ExchangeRate { get; }
 
     /// <summary>
@@ -33,5 +35,7 @@ public interface IExchangeRateInformation1 : IIsoComponent
     [IsoId("_QLp0Zdp-Ed-ak6NoX_4Aeg_-941904256")]
     [DisplayName("Contract Identification")]
     [IsoXmlTag("CtrctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ContractIdentification { get; }
 }

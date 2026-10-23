@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice;
 
 /// <summary>Reuters Instrument Code (RIC) identifier.</summary>
 [IsoId("4c0823c1-e6c9-4976-bee6-76d903c80b9a")]
+[IsoDisplayName(@"RIC")]
 public interface IRIC : ISecurityIdentification46Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// General Collateral4.
 /// </summary>
 [IsoId("_yqzGUZh8EeyJwbhKOp9Ehg")]
+[IsoDisplayName(@"General Collateral4")]
 public interface IGeneralCollateral4 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IGeneralCollateral4 : IIsoComponent
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument104> FinancialInstrumentIdentification { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of advice to report back for the transaction.
 /// </summary>
 [IsoId("_5ZNFsNolEembTrt_WixjyQ")]
+[IsoDisplayName(@"Advice Type")]
 public interface IAdviceType1 : IIsoComponent
 {
     /// <summary>

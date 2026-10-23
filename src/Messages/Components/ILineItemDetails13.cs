@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Goods or services that are part of a commercial trade agreement.
 /// </summary>
 [IsoId("_krToMTcjEeSaC-PiOaz_KQ")]
+[IsoDisplayName(@"Line Item Details")]
 public interface ILineItemDetails13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILineItemDetails13 : IIsoComponent
     [IsoId("_lCOTYTcjEeSaC-PiOaz_KQ")]
     [DisplayName("Line Item Identification")]
     [IsoXmlTag("LineItmId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text LineItemIdentification { get; }
 
     /// <summary>
@@ -57,6 +60,8 @@ public interface ILineItemDetails13 : IIsoComponent
     [IsoId("_lCOTazcjEeSaC-PiOaz_KQ")]
     [DisplayName("Product Name")]
     [IsoXmlTag("PdctNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ProductName { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ILineItemDetails13 : IIsoComponent
     [IsoId("_lCOTbTcjEeSaC-PiOaz_KQ")]
     [DisplayName("Product Identifier")]
     [IsoXmlTag("PdctIdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductIdentifier2Choice> ProductIdentifier { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface ILineItemDetails13 : IIsoComponent
     [IsoId("_lCOTbzcjEeSaC-PiOaz_KQ")]
     [DisplayName("Product Characteristics")]
     [IsoXmlTag("PdctChrtcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductCharacteristics1Choice> ProductCharacteristics { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface ILineItemDetails13 : IIsoComponent
     [IsoId("_lCOTcTcjEeSaC-PiOaz_KQ")]
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductCategory1Choice> ProductCategory { get; }
 
     /// <summary>
@@ -89,6 +97,7 @@ public interface ILineItemDetails13 : IIsoComponent
     [IsoId("_lCOTczcjEeSaC-PiOaz_KQ")]
     [DisplayName("Product Origin")]
     [IsoXmlTag("PdctOrgn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> ProductOrigin { get; }
 
     /// <summary>
@@ -113,6 +122,7 @@ public interface ILineItemDetails13 : IIsoComponent
     [IsoId("_lCOTeTcjEeSaC-PiOaz_KQ")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment7> Adjustment { get; }
 
     /// <summary>
@@ -129,6 +139,7 @@ public interface ILineItemDetails13 : IIsoComponent
     [IsoId("_lCOTfTcjEeSaC-PiOaz_KQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax23> Tax { get; }
 
     /// <summary>

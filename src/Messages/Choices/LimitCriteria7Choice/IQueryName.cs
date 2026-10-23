@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitCriteria7Choice;
 /// <summary>
 /// Query Name.
 /// </summary>
+[IsoDisplayName(@"Query Name")]
 public interface IQueryName : ILimitCriteria7Choice, IIsoChoiceVariant
 {
     /// <summary>

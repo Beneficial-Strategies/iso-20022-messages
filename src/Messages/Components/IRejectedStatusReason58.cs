@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Rejected Status Reason58.
 /// </summary>
 [IsoId("_Uo2Nz3SdEe6VWZz2tTgENw")]
+[IsoDisplayName(@"Rejected Status Reason58")]
 public interface IRejectedStatusReason58 : IIsoComponent
 {
     /// <summary>

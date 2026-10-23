@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a code and proprietary format for a tax type.</summary>
 [IsoId("c747fb5c-f271-40b3-a402-46937374c425")]
+[IsoDisplayName(@"Tax Type 4 Choice")]
 public interface ITaxType4Choice : IIsoChoice { }

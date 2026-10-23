@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledStatus13Choice;
 /// Reason for the cancelled status.
 /// </summary>
 [IsoId("_P3gGFyY5EeW_ZNn8gbfY7Q")]
+[IsoDisplayName(@"Extended Reason")]
 public interface IExtendedReason : ICancelledStatus13Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IExtendedReason : ICancelledStatus13Choice, IIsoChoiceVariant
     /// Code and / or description for values that are not yet part of the related code list.
     /// </summary>
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code Value { get; }
 }

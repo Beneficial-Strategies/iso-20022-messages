@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice;
 
 /// <summary>International Securities Identification Number (ISIN).</summary>
 [IsoId("256a59be-1564-4e1b-b0ed-604c6acbb3df")]
+[IsoDisplayName(@"ISIN")]
 public interface IISIN : ISecurityIdentification46Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

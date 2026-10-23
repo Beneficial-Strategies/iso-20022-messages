@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Related Notification Data1.
 /// </summary>
 [IsoId("_uZw2sLkyEe68nbz8Nl_hLQ")]
+[IsoDisplayName(@"Related Notification Data1")]
 public interface IRelatedNotificationData1 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IRelatedNotificationData1 : IIsoComponent
     /// </summary>
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INotificationLocationData1> Location { get; }
 }

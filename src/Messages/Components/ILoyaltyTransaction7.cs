@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Loyalty Transaction7.
 /// </summary>
 [IsoId("_aaRacZ9VEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Loyalty Transaction7")]
 public interface ILoyaltyTransaction7 : IIsoComponent
 {
     /// <summary>
@@ -51,5 +52,6 @@ public interface ILoyaltyTransaction7 : IIsoComponent
     /// </summary>
     [DisplayName("Sale Item")]
     [IsoXmlTag("SaleItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProduct6> SaleItem { get; }
 }

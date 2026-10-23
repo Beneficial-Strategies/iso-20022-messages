@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide further means of referencing a payment transaction.
 /// </summary>
 [IsoId("_P6E8ONp-Ed-ak6NoX_4Aeg_2126712429")]
+[IsoDisplayName(@"Payment Identification")]
 public interface IPaymentIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentIdentification3 : IIsoComponent
     [IsoId("_P6OGINp-Ed-ak6NoX_4Aeg_2126712459")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPaymentIdentification3 : IIsoComponent
     [IsoId("_P6OGIdp-Ed-ak6NoX_4Aeg_2126712490")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text EndToEndIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPaymentIdentification3 : IIsoComponent
     [IsoId("_P6OGItp-Ed-ak6NoX_4Aeg_2126712551")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -41,5 +48,7 @@ public interface IPaymentIdentification3 : IIsoComponent
     [IsoId("_P6OGI9p-Ed-ak6NoX_4Aeg_-2094373157")]
     [DisplayName("Clearing System Reference")]
     [IsoXmlTag("ClrSysRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClearingSystemReference { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit Journal Report4.
 /// </summary>
 [IsoId("_tmqQAZEhEe-Goq1fIU72qA")]
+[IsoDisplayName(@"Limit Journal Report4")]
 public interface ILimitJournalReport4 : IIsoComponent
 {
     /// <summary>

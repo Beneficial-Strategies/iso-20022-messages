@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_fBFHUQ1TEeKGXqvMN6jpiw")]
 [IsoMessage("acmt.014.001.02", "AcctRpt", "urn:iso:std:iso:20022:tech:xsd:acmt.014.001.02")]
+[Description(@"The AccountReport message is sent from a financial institution to an organisation for reporting purposes. It can be sent unsolicited as part of opening, maintenance, or closing process, or it can be sent as response to an AccountReportRequest message.")]
+[IsoDisplayName(@"Account Report V")]
 public interface IAccountReportV02 : IOuterRecord
 {
     /// <summary>
@@ -52,6 +54,7 @@ public interface IAccountReportV02 : IOuterRecord
     [IsoId("_fBO4XQ1TEeKGXqvMN6jpiw")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountReport15> Report { get; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public interface IAccountReportV02 : IOuterRecord
     [IsoId("_fBO4YQ1TEeKGXqvMN6jpiw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature2> DigitalSignature { get; }
 
     /// <summary>
@@ -68,5 +72,6 @@ public interface IAccountReportV02 : IOuterRecord
     [IsoId("_d5SQMA4AEeKGXqvMN6jpiw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

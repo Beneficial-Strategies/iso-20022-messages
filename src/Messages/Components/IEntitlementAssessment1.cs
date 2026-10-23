@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the parameters, such as dates, used to calculate the entitlement to vote at a general meeting.
 /// </summary>
 [IsoId("_TmHJH9p-Ed-ak6NoX_4Aeg_-30513816")]
+[IsoDisplayName(@"Entitlement Assessment")]
 public interface IEntitlementAssessment1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IEntitlementAssessment1 : IIsoComponent
     [IsoId("_TmQTA9p-Ed-ak6NoX_4Aeg_-30513781")]
     [DisplayName("Securities Blocking Period End Date")]
     [IsoXmlTag("SctiesBlckgPrdEndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? SecuritiesBlockingPeriodEndDate { get; }
 
     /// <summary>
@@ -105,6 +107,8 @@ public interface IEntitlementAssessment1 : IIsoComponent
     [IsoId("_TmaEAdp-Ed-ak6NoX_4Aeg_-30513409")]
     [DisplayName("Entitlement Description")]
     [IsoXmlTag("EntitlmntDesc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? EntitlementDescription { get; }
 
     /// <summary>
@@ -113,5 +117,6 @@ public interface IEntitlementAssessment1 : IIsoComponent
     [IsoId("_TmaEAtp-Ed-ak6NoX_4Aeg_-30513427")]
     [DisplayName("Entitlement Ratio")]
     [IsoXmlTag("EntitlmntRatio")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? EntitlementRatio { get; }
 }

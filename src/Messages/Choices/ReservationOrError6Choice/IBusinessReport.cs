@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError6Choice;
 /// </summary>
 [IsoId("_TjY2sZliEeeE1Ya-LgRsuQ")]
 [IsoXmlTag("BizRpt")]
+[IsoDisplayName(@"Business Report")]
 public interface IBusinessReport : IReservationOrError6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IBusinessReport : IReservationOrError6Choice, IIsoChoiceVariant
     [IsoId("_Tr4EU5liEeeE1Ya-LgRsuQ")]
     [DisplayName("Current Reservation")]
     [IsoXmlTag("CurRsvatn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReservationReport5> CurrentReservation { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface IBusinessReport : IReservationOrError6Choice, IIsoChoiceVariant
     [IsoId("_Tr4EVZliEeeE1Ya-LgRsuQ")]
     [DisplayName("Default Reservation")]
     [IsoXmlTag("DfltRsvatn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReservationReport5> DefaultReservation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PremiumQuote1Choice;
 /// Premium calculation is based on points of the call amount.
 /// </summary>
 [IsoId("_TMLmItp-Ed-ak6NoX_4Aeg_-1552900268")]
+[IsoDisplayName(@"Points Of Call Amount")]
 public interface IPointsOfCallAmount : IPremiumQuote1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPointsOfCallAmount : IPremiumQuote1Choice, IIsoChoiceVariant
     /// Rate expressed as a decimal, for example, 0.7 is 7/10 and 70%.
     /// </summary>
     [IsoXmlTag("PtsOfCallAmt")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate Value { get; }
 }

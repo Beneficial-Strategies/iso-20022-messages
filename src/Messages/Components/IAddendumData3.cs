@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Component contains data structures applicable to certain merchant verticals that require industry-specific data within transaction messages.
 /// </summary>
 [IsoId("_-wbMoYv0EeumSPwlS1PkxQ")]
+[IsoDisplayName(@"Addendum Data")]
 public interface IAddendumData3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAddendumData3 : IIsoComponent
     [IsoId("_-2QH04v0EeumSPwlS1PkxQ")]
     [DisplayName("Other Purchase Identifier Type")]
     [IsoXmlTag("OthrPurchsIdrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherPurchaseIdentifierType { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IAddendumData3 : IIsoComponent
     [IsoId("_-2QH1Yv0EeumSPwlS1PkxQ")]
     [DisplayName("Purchase Identifier")]
     [IsoXmlTag("PurchsIdr")]
+    [IsoSimpleType(IsoSimpleType.Max99Text)]
+    [StringLength(99, MinimumLength = 1)]
     Max99Text? PurchaseIdentifier { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface IAddendumData3 : IIsoComponent
     [IsoId("_-2QH4Yv0EeumSPwlS1PkxQ")]
     [DisplayName("Travel Agency")]
     [IsoXmlTag("TrvlAgcy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITravelAgency3> TravelAgency { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface IAddendumData3 : IIsoComponent
     [IsoId("_-2QH5Yv0EeumSPwlS1PkxQ")]
     [DisplayName("Vehicle Rental")]
     [IsoXmlTag("VhclRntl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVehicleRentalService2> VehicleRental { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface IAddendumData3 : IIsoComponent
     [IsoId("_-2QH54v0EeumSPwlS1PkxQ")]
     [DisplayName("Lodging")]
     [IsoXmlTag("Ldgg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILodging3> Lodging { get; }
 
     /// <summary>
@@ -129,6 +137,7 @@ public interface IAddendumData3 : IIsoComponent
     [IsoId("_-2QH7Yv0EeumSPwlS1PkxQ")]
     [DisplayName("Temporary Services")]
     [IsoXmlTag("TempSvcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITemporaryServices2> TemporaryServices { get; }
 
     /// <summary>
@@ -145,5 +154,6 @@ public interface IAddendumData3 : IIsoComponent
     [IsoId("_-2QH8Yv0EeumSPwlS1PkxQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

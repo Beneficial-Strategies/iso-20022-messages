@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Withdrawal or deposit of an amount of money defined in cash notes.
 /// </summary>
 [IsoId("_zy9x4OR-Ee-NFYIkYc90gw")]
+[IsoDisplayName(@"Cash Note1")]
 public interface ICashNote1 : IIsoComponent
 {
     /// <summary>

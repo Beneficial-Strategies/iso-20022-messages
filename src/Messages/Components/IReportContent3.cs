@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the content of a report.
 /// </summary>
 [IsoId("_7I0XcUVdEfCQAqQ9lolFUg")]
+[IsoDisplayName(@"Report Content3")]
 public interface IReportContent3 : IIsoComponent
 {
     /// <summary>

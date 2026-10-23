@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventStageFormat1
 /// Standard code to specify the stage of the corporate action event.
 /// </summary>
 [IsoId("_ARbRc0EGEeWVgfuHGaKtRQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionEventStageFormat13Choice, IIsoChoiceVariant
 {
     /// <summary>

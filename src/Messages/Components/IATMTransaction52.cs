@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Transaction52.
 /// </summary>
 [IsoId("_kDRiAaE3Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Transaction52")]
 public interface IATMTransaction52 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface IATMTransaction52 : IIsoComponent
     /// </summary>
     [DisplayName("ATM Totals")]
     [IsoXmlTag("ATMTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMTotals4> ATMTotals { get; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public interface IATMTransaction52 : IIsoComponent
     /// </summary>
     [DisplayName("Cassette")]
     [IsoXmlTag("Csstt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCassette3> Cassette { get; }
 
     /// <summary>
@@ -58,5 +61,6 @@ public interface IATMTransaction52 : IIsoComponent
     /// </summary>
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of change to the party.
 /// </summary>
 [IsoId("_9gwpd24-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Party Modification")]
 public interface IPartyModification2 : IIsoComponent
 {
     /// <summary>

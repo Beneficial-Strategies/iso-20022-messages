@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Priority is expressed as a code or a text.
 /// </summary>
 [IsoId("_SEJYAX_REeiik6YN_dzlEA")]
+[IsoDisplayName(@"Priority 1 Choice")]
 public interface IPriority1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference8Choice;
 /// Unique reference agreed upon by the two trade counterparties to identify the trade.
 /// </summary>
 [IsoId("_AcPsldokEeC60axPepSq7g_1315485442")]
+[IsoDisplayName(@"Common Identification")]
 public interface ICommonIdentification : IIdentificationReference8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ICommonIdentification : IIdentificationReference8Choice, IIsoCh
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

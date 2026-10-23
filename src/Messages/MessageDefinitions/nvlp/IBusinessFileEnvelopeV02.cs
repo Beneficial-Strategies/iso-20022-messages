@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.nvlp;
 /// </summary>
 [IsoId("_Sjb8LcPAEfCvjKJD91zEUA")]
 [IsoMessage("nvlp.002.001.02", "BizFileEnvlp", "urn:iso:std:iso:20022:tech:xsd:nvlp.002.001.02")]
+[IsoDisplayName(@"Business File Envelope V02")]
 public interface IBusinessFileEnvelopeV02 : IOuterRecord
 {
     /// <summary>
@@ -46,6 +47,7 @@ public interface IBusinessFileEnvelopeV02 : IOuterRecord
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferenceData1> Reference { get; }
 
     /// <summary>
@@ -53,6 +55,7 @@ public interface IBusinessFileEnvelopeV02 : IOuterRecord
     /// </summary>
     [DisplayName("Payload")]
     [IsoXmlTag("Pyld")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBusinessPayload1> Payload { get; }
 
     /// <summary>
@@ -60,5 +63,6 @@ public interface IBusinessFileEnvelopeV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

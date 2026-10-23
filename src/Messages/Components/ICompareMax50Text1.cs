@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a text field of 50 characters.
 /// </summary>
 [IsoId("_K3ilUExZEeywvc16MwOPfw")]
+[IsoDisplayName(@"Compare Max 50 Text")]
 public interface ICompareMax50Text1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICompareMax50Text1 : IIsoComponent
     [IsoId("_S4_6UExZEeywvc16MwOPfw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? Value1 { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ICompareMax50Text1 : IIsoComponent
     [IsoId("_VHhAUExZEeywvc16MwOPfw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? Value2 { get; }
 }

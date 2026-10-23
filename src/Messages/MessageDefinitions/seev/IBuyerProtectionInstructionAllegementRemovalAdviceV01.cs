@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "BuyrPrtcnInstrAllgmtRmvlAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.065.001.01"
 )]
+[IsoDisplayName(@"Buyer Protection Instruction Allegement Removal Advice V01")]
 public interface IBuyerProtectionInstructionAllegementRemovalAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -22,6 +23,8 @@ public interface IBuyerProtectionInstructionAllegementRemovalAdviceV01 : IOuterR
     /// </summary>
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -64,5 +67,6 @@ public interface IBuyerProtectionInstructionAllegementRemovalAdviceV01 : IOuterR
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

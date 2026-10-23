@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the securities account reference data or a business error.
 /// </summary>
 [IsoId("_yC-g5Tp1Eemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Securities Account Or Business Error 3 Choice")]
 public interface ISecuritiesAccountOrBusinessError3Choice : IIsoChoice { }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionBarrierLevel1Choice;
 /// <summary>
 /// Multiple.
 /// </summary>
+[IsoDisplayName(@"Multiple")]
 public interface IMultiple : IOptionBarrierLevel1Choice, IIsoChoiceVariant
 {
     /// <summary>

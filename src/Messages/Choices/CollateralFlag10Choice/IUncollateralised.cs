@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralFlag10Choice;
 /// Indication that security is not collateralised.
 /// </summary>
 [IsoId("_gI37UwAAEeqefbt-QjTNnA")]
+[IsoDisplayName(@"Uncollateralised")]
 public interface IUncollateralised : ICollateralFlag10Choice, IIsoChoiceVariant
 {
     /// <summary>

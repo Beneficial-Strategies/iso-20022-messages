@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data exclusively related to a card issuer financial loan of the payment transaction, or instalment.
 /// </summary>
 [IsoId("_ycNGMbZnEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Instalment7")]
 public interface IInstalment7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInstalment7 : IIsoComponent
     [IsoId("_ydRdMbZnEfCUZfsQO4rYeA")]
     [DisplayName("Instalment Plan")]
     [IsoXmlTag("InstlmtPlan")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<InstalmentPlan1Code> InstalmentPlan { get; }
 
     /// <summary>
@@ -121,6 +123,7 @@ public interface IInstalment7 : IIsoComponent
     [IsoId("_ydRdS7ZnEfCUZfsQO4rYeA")]
     [DisplayName("Detailed Charges")]
     [IsoXmlTag("DtldChrgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalmentAmountDetails1> DetailedCharges { get; }
 
     /// <summary>
@@ -129,6 +132,7 @@ public interface IInstalment7 : IIsoComponent
     [IsoId("_ydRdTbZnEfCUZfsQO4rYeA")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateDetails1> InterestRate { get; }
 
     /// <summary>
@@ -137,6 +141,7 @@ public interface IInstalment7 : IIsoComponent
     [IsoId("_ydRdT7ZnEfCUZfsQO4rYeA")]
     [DisplayName("Grace Period")]
     [IsoXmlTag("GracePrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGracePeriod1> GracePeriod { get; }
 
     /// <summary>
@@ -145,5 +150,6 @@ public interface IInstalment7 : IIsoComponent
     [IsoId("_ydRdUbZnEfCUZfsQO4rYeA")]
     [DisplayName("Plan Notice")]
     [IsoXmlTag("PlanNtce")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActionMessage12> PlanNotice { get; }
 }

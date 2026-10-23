@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related specifically to counterparty.
 /// </summary>
 [IsoId("_4f64UbHYEemRPNDOvJwndA")]
+[IsoDisplayName(@"Counterparty Data")]
 public interface ICounterpartyData76 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICounterpartyData76 : IIsoComponent
     [IsoId("_4j8csbHYEemRPNDOvJwndA")]
     [DisplayName("Reporting Date Time")]
     [IsoXmlTag("RptgDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ReportingDateTime { get; }
 
     /// <summary>
@@ -33,5 +35,8 @@ public interface ICounterpartyData76 : IIsoComponent
     [IsoId("_4j8ctbHYEemRPNDOvJwndA")]
     [DisplayName("Counterparty Data")]
     [IsoXmlTag("CtrPtyData")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICounterpartyData77> CounterpartyData { get; }
 }

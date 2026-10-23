@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Total amount of charges.
 /// </summary>
 [IsoId("_WI09c9p-Ed-ak6NoX_4Aeg_628420775")]
+[IsoDisplayName(@"Total Charges")]
 public interface ITotalCharges5 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,8 @@ public interface ITotalCharges5 : IIsoComponent
     [IsoId("_WI09dNp-Ed-ak6NoX_4Aeg_628420899")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [MinLength(1)]
+    [MaxLength(4)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge23> ChargeDetails { get; }
 }

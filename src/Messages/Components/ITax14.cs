@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax related to an investment fund order.
 /// </summary>
 [IsoId("_SmoCANp-Ed-ak6NoX_4Aeg_-1632227217")]
+[IsoDisplayName(@"Tax")]
 public interface ITax14 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITax14 : IIsoComponent
     [IsoId("_SmoCAtp-Ed-ak6NoX_4Aeg_-1264604318")]
     [DisplayName("Extended Type")]
     [IsoXmlTag("XtndedTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedType { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ITax14 : IIsoComponent
     [IsoId("_SmoCBNp-Ed-ak6NoX_4Aeg_-1632227165")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ITax14 : IIsoComponent
     [IsoId("_SmoCB9p-Ed-ak6NoX_4Aeg_-1632227122")]
     [DisplayName("Exemption Indicator")]
     [IsoXmlTag("XmptnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ExemptionIndicator { get; }
 
     /// <summary>
@@ -81,6 +86,8 @@ public interface ITax14 : IIsoComponent
     [IsoId("_SmoCCdp-Ed-ak6NoX_4Aeg_-576582519")]
     [DisplayName("Extended Exemption Reason")]
     [IsoXmlTag("XtndedXmptnRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedExemptionReason { get; }
 
     /// <summary>

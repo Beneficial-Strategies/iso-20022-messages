@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFreight3Choic
 /// </summary>
 [IsoId("_VcEcUbv5EeiLRYqS-r-R-A")]
 [IsoXmlTag("Dry")]
+[IsoDisplayName(@"Dry")]
 public interface IDry : IAssetClassCommodityFreight3Choice, IIsoChoiceVariant
 {
     /// <summary>

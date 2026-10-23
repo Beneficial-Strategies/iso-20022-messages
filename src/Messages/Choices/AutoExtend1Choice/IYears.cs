@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AutoExtend1Choice;
 /// Number of years.
 /// </summary>
 [IsoId("_95fqcnltEeG7BsjMvd1mEw_960984968")]
+[IsoDisplayName(@"Years")]
 public interface IYears : IAutoExtend1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IYears : IAutoExtend1Choice, IIsoChoiceVariant
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("Yrs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

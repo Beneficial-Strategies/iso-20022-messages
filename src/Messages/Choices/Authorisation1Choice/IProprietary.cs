@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Authorisation1Choice;
 /// Specifies the authorisation, in a free text form.
 /// </summary>
 [IsoId("_RD_KkNp-Ed-ak6NoX_4Aeg_-955120080")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IAuthorisation1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IAuthorisation1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 128 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max128Text)]
+    [StringLength(128, MinimumLength = 1)]
     Max128Text Value { get; }
 }

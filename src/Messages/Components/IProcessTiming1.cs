@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters defining the timing conditions to process an action.
 /// </summary>
 [IsoId("_K9M-I31DEeCF8NjrBemJWQ_817576617")]
+[IsoDisplayName(@"Process Timing")]
 public interface IProcessTiming1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IProcessTiming1 : IIsoComponent
     [IsoId("_K9M-JH1DEeCF8NjrBemJWQ_1403344682")]
     [DisplayName("Waiting Time")]
     [IsoXmlTag("WtgTm")]
+    [IsoSimpleType(IsoSimpleType.Max9NumericText)]
     Max9NumericText? WaitingTime { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IProcessTiming1 : IIsoComponent
     [IsoId("_K9M-JX1DEeCF8NjrBemJWQ_-894476748")]
     [DisplayName("Start Time")]
     [IsoXmlTag("StartTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StartTime { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IProcessTiming1 : IIsoComponent
     [IsoId("_K9M-Jn1DEeCF8NjrBemJWQ_-229688670")]
     [DisplayName("End Time")]
     [IsoXmlTag("EndTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? EndTime { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IProcessTiming1 : IIsoComponent
     [IsoId("_K9WvIH1DEeCF8NjrBemJWQ_1138907236")]
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
+    [IsoSimpleType(IsoSimpleType.Max9NumericText)]
     Max9NumericText? Period { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IProcessTiming1 : IIsoComponent
     [IsoId("_K9WvIX1DEeCF8NjrBemJWQ_181960059")]
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumNumber { get; }
 
     /// <summary>

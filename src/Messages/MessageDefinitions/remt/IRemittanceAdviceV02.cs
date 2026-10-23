@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.remt;
 /// </summary>
 [IsoId("_pmmdrTqxEeWZFYSPlduMhw")]
 [IsoMessage("remt.001.001.02", "RmtAdvc", "urn:iso:std:iso:20022:tech:xsd:remt.001.001.02")]
+[Description(@"The RemittanceAdvice message allows the originator to provide remittance details that can be associated with a payment.")]
+[IsoDisplayName(@"Remittance Advice V")]
 public interface IRemittanceAdviceV02 : IOuterRecord
 {
     /// <summary>
@@ -28,6 +30,7 @@ public interface IRemittanceAdviceV02 : IOuterRecord
     [IsoId("_pmmdszqxEeWZFYSPlduMhw")]
     [DisplayName("Remittance Information")]
     [IsoXmlTag("RmtInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceInformation12> RemittanceInformation { get; }
 
     /// <summary>
@@ -36,5 +39,6 @@ public interface IRemittanceAdviceV02 : IOuterRecord
     [IsoId("_pmmdtTqxEeWZFYSPlduMhw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

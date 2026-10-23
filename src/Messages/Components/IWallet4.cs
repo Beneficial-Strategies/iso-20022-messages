@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Container for tenders used by the customer to perform the payment transaction.
 /// </summary>
 [IsoId("_OPJEURQXEfC1ZfCQz0xB3g")]
+[IsoDisplayName(@"Wallet4")]
 public interface IWallet4 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IWallet4 : IIsoComponent
     [IsoId("_SO-dqkhyEfCMZJtj4J7UGQ")]
     [DisplayName("Provider Local Data")]
     [IsoXmlTag("PrvdrLclData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILocalData20> ProviderLocalData { get; }
 
     /// <summary>
@@ -201,6 +203,7 @@ public interface IWallet4 : IIsoComponent
     [IsoId("_VFnC4kVZEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -209,5 +212,6 @@ public interface IWallet4 : IIsoComponent
     [IsoId("_VFnC40VZEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

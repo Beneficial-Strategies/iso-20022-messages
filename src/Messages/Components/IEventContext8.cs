@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the context when the event occurred.
 /// </summary>
 [IsoId("_chPX0bZ0EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Event Context8")]
 public interface IEventContext8 : IIsoComponent
 {
     /// <summary>

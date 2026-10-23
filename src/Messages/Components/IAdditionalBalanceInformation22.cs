@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sub-balances providing additional information on a specific position but that is not to be accounted for in the building of the aggregate balance, for example, registered.
 /// </summary>
 [IsoId("_lMvTxSp8EeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Additional Balance Information")]
 public interface IAdditionalBalanceInformation22 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface IAdditionalBalanceInformation22 : IIsoComponent
     [IsoId("_lkba9Sp8EeyR9JrVGfaMKw")]
     [DisplayName("Sub Balance Additional Details")]
     [IsoXmlTag("SubBalAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SubBalanceAdditionalDetails { get; }
 }

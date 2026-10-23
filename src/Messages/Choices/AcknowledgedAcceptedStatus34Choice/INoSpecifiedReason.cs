@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgedAcceptedStatus34Choi
 
 /// <summary>Indicates that there is no reason available or to report.</summary>
 [IsoId("_XJtf5Y5bEfC_4ZEXsY0Xyg")]
+[IsoDisplayName(@"No Specified Reason")]
 public interface INoSpecifiedReason : IAcknowledgedAcceptedStatus34Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

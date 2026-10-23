@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the collateral held, in transit or that still needs to be agreed by both parties.
 /// </summary>
 [IsoId("_Uoa6pdp-Ed-ak6NoX_4Aeg_1642095269")]
+[IsoDisplayName(@"Margin Collateral")]
 public interface IMarginCollateral1 : IIsoComponent
 {
     /// <summary>

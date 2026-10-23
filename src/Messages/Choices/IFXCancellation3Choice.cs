@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the forex cancellation information.
 /// </summary>
 [IsoId("_IHRikT0EEeWjqIDN7tjEjQ")]
+[IsoDisplayName(@"FX Cancellation 3 Choice")]
 public interface IFXCancellation3Choice : IIsoChoice { }

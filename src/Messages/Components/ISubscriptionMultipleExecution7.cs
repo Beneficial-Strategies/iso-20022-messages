@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of a subscription order.
 /// </summary>
 [IsoId("ea4813b0-c4d4-476f-866a-f03d07723258")]
+[IsoDisplayName(@"Subscription Multiple Execution7")]
 public interface ISubscriptionMultipleExecution7 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface ISubscriptionMultipleExecution7 : IIsoComponent
     [IsoId("6f1ef1af-35ab-4b31-b456-947ce486996c")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson32> BeneficiaryDetails { get; }
 
     /// <summary>
@@ -89,6 +91,8 @@ public interface ISubscriptionMultipleExecution7 : IIsoComponent
     [IsoId("de795a98-5878-46f1-bce9-e06a8076e6cb")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubscriptionExecution16> IndividualExecutionDetails { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further means of referencing a payment transaction.
 /// </summary>
 [IsoId("_xnoxwXrgEeidVZmeoasaWQ")]
+[IsoDisplayName(@"Payment Identification")]
 public interface IPaymentIdentification6 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IPaymentIdentification6 : IIsoComponent
     [IsoId("_x6fcUXrgEeidVZmeoasaWQ")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -27,6 +30,8 @@ public interface IPaymentIdentification6 : IIsoComponent
     [IsoId("_x6gDYXrgEeidVZmeoasaWQ")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text EndToEndIdentification { get; }
 
     /// <summary>
@@ -35,5 +40,6 @@ public interface IPaymentIdentification6 : IIsoComponent
     [IsoId("_hU3t4XrgEeidVZmeoasaWQ")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? UETR { get; }
 }

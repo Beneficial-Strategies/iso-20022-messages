@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat60Choice;
 /// Specifies the type of date.
 /// </summary>
 [IsoId("_aBRhXDUIEe2tRf29bleifQ")]
+[IsoDisplayName(@"Date Code")]
 public interface IDateCode : IDateFormat60Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

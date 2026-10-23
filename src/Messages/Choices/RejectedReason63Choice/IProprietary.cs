@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason63Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IRejectedReason63Choice, IIsoChoiceVariant
 {
     /// <summary>

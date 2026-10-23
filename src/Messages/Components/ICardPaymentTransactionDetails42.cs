@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transaction in the authorisation response.
 /// </summary>
 [IsoId("_acK-MfnGEeaYndR2y_Ep9g")]
+[IsoDisplayName(@"Card Payment Transaction Details")]
 public interface ICardPaymentTransactionDetails42 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ICardPaymentTransactionDetails42 : IIsoComponent
     [IsoId("_asYkefnGEeaYndR2y_Ep9g")]
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidityDate { get; }
 
     /// <summary>
@@ -65,5 +67,6 @@ public interface ICardPaymentTransactionDetails42 : IIsoComponent
     [IsoId("_asYkffnGEeaYndR2y_Ep9g")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

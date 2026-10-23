@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains ticket details.
 /// </summary>
 [IsoId("_em5RL_P0EeihCvvpsmGI2w")]
+[IsoDisplayName(@"Ticket")]
 public interface ITicket1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITicket1 : IIsoComponent
     [IsoId("_em5ROPP0EeihCvvpsmGI2w")]
     [DisplayName("Ticket Number")]
     [IsoXmlTag("TcktNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TicketNumber { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ITicket1 : IIsoComponent
     [IsoId("_em5RPPP0EeihCvvpsmGI2w")]
     [DisplayName("Ticket Issue Date")]
     [IsoXmlTag("TcktIsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TicketIssueDate { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface ITicket1 : IIsoComponent
     [IsoId("_em5RN_P0EeihCvvpsmGI2w")]
     [DisplayName("Ticket Issue Location")]
     [IsoXmlTag("TcktIsseLctn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TicketIssueLocation { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface ITicket1 : IIsoComponent
     [IsoId("_em5RMvP0EeihCvvpsmGI2w")]
     [DisplayName("Conjunction Ticket Number")]
     [IsoXmlTag("CnjnctnTcktNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ConjunctionTicketNumber { get; }
 
     /// <summary>
@@ -59,6 +67,7 @@ public interface ITicket1 : IIsoComponent
     [IsoId("_YZgmkP4gEeix6ug6HlF6IQ")]
     [DisplayName("Restricted Ticket Indicator")]
     [IsoXmlTag("RstrctdTcktInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RestrictedTicketIndicator { get; }
 
     /// <summary>
@@ -69,6 +78,7 @@ public interface ITicket1 : IIsoComponent
     [IsoId("_9Q92gP4gEeix6ug6HlF6IQ")]
     [DisplayName("Open Ticket Indicator")]
     [IsoXmlTag("OpnTcktInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? OpenTicketIndicator { get; }
 
     /// <summary>
@@ -77,6 +87,8 @@ public interface ITicket1 : IIsoComponent
     [IsoId("_cuxWoP4gEeix6ug6HlF6IQ")]
     [DisplayName("Restrictions")]
     [IsoXmlTag("Rstrctns")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Restrictions { get; }
 
     /// <summary>
@@ -87,6 +99,7 @@ public interface ITicket1 : IIsoComponent
     [IsoId("_z7DQAP4gEeix6ug6HlF6IQ")]
     [DisplayName("Exchanged Ticket Indicator")]
     [IsoXmlTag("XchgdTcktInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ExchangedTicketIndicator { get; }
 
     /// <summary>
@@ -95,6 +108,8 @@ public interface ITicket1 : IIsoComponent
     [IsoId("_qVfrAP4gEeix6ug6HlF6IQ")]
     [DisplayName("Exchanged Ticket Number")]
     [IsoXmlTag("XchgdTcktNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ExchangedTicketNumber { get; }
 
     /// <summary>
@@ -103,6 +118,8 @@ public interface ITicket1 : IIsoComponent
     [IsoId("_em5RPfP0EeihCvvpsmGI2w")]
     [DisplayName("Record Locator Number")]
     [IsoXmlTag("RcrdLctrNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RecordLocatorNumber { get; }
 
     /// <summary>

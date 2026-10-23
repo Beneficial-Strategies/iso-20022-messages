@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentCodeOrOther1Choice;
 /// Specifies payment terms not present in a code list.
 /// </summary>
 [IsoId("_yg8O4NP8EeK0PPbKncCqzA")]
+[IsoDisplayName(@"Other Payment Terms")]
 public interface IOtherPaymentTerms : IPaymentCodeOrOther1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOtherPaymentTerms : IPaymentCodeOrOther1Choice, IIsoChoiceVari
     /// Specifies a character string with a maximum length of 140 characters.
     /// </summary>
     [IsoXmlTag("OthrPmtTerms")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Value { get; }
 }

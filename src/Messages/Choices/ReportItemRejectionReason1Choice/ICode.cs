@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportItemRejectionReason1Choice
 /// Status reason expressed as a code.
 /// </summary>
 [IsoId("_hlx-c73REeO2FLWuu_JIqg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IReportItemRejectionReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

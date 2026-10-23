@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Low level communication of the hardware or software component toward another component or an external entity.
 /// </summary>
 [IsoId("_FsXroQ0XEeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Communication Characteristics")]
 public interface ICommunicationCharacteristics5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICommunicationCharacteristics5 : IIsoComponent
     [IsoId("_F3D4sw0XEeqUVL7sB4m7NA")]
     [DisplayName("Remote Party")]
     [IsoXmlTag("RmotPty")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<PartyType7Code> RemoteParty { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICommunicationCharacteristics5 : IIsoComponent
     [IsoId("_F3D4tQ0XEeqUVL7sB4m7NA")]
     [DisplayName("Active")]
     [IsoXmlTag("Actv")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator Active { get; }
 
     /// <summary>

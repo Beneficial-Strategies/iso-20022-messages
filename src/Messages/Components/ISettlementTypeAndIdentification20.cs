@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Overall process covering the trade and settlement transactions of financial instruments.
 /// </summary>
 [IsoId("_celg8UGZEeWqy4niLuXETA")]
+[IsoDisplayName(@"Settlement Type And Identification")]
 public interface ISettlementTypeAndIdentification20 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ISettlementTypeAndIdentification20 : IIsoComponent
     [IsoId("_csbIq0GZEeWqy4niLuXETA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>

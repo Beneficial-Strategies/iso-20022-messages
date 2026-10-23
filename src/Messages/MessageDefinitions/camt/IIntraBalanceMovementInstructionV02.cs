@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
     "IntraBalMvmntInstr",
     "urn:iso:std:iso:20022:tech:xsd:camt.066.001.02"
 )]
+[IsoDisplayName(@"Intra Balance Movement Instruction V02")]
 public interface IIntraBalanceMovementInstructionV02 : IOuterRecord
 {
     /// <summary>
@@ -43,6 +44,7 @@ public interface IIntraBalanceMovementInstructionV02 : IOuterRecord
     /// </summary>
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages57> Linkages { get; }
 
     /// <summary>
@@ -78,5 +80,6 @@ public interface IIntraBalanceMovementInstructionV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

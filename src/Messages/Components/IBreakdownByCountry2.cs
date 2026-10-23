@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the cash-in and cash-out flows by country.
 /// </summary>
 [IsoId("_K78-cQatEeS3lpTattq7hg")]
+[IsoDisplayName(@"Breakdown By Country")]
 public interface IBreakdownByCountry2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IBreakdownByCountry2 : IIsoComponent
     [IsoId("_LVijEwatEeS3lpTattq7hg")]
     [DisplayName("Cash In Forecast")]
     [IsoXmlTag("CshInFcst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashInForecast5> CashInForecast { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IBreakdownByCountry2 : IIsoComponent
     [IsoId("_LVijFQatEeS3lpTattq7hg")]
     [DisplayName("Cash Out Forecast")]
     [IsoXmlTag("CshOutFcst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOutForecast5> CashOutForecast { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IBreakdownByCountry2 : IIsoComponent
     [IsoId("_LVijFwatEeS3lpTattq7hg")]
     [DisplayName("Net Cash Forecast")]
     [IsoXmlTag("NetCshFcst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetCashForecast4> NetCashForecast { get; }
 }

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details relative to the submission of the certificate data set.
 /// </summary>
 [IsoId("_TnwH19p-Ed-ak6NoX_4Aeg_1225128644")]
+[IsoDisplayName(@"Required Submission")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IRequiredSubmission5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IRequiredSubmission5 : IIsoComponent
     [IsoId("_TnwH2Np-Ed-ak6NoX_4Aeg_1225129107")]
     [DisplayName("Submitter")]
     [IsoXmlTag("Submitr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> Submitter { get; }
 
     /// <summary>

@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Specifies the data elements related to the response to an investigation request.</summary>
 [IsoId("16be93ac-0f22-4db6-ae8f-75981b183529")]
+[IsoDisplayName(@"Investigation Data Record 12 Choice")]
 public interface IInvestigationDataRecord12Choice : IIsoChoice { }

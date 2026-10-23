@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType4Choice;
 /// </summary>
 [IsoId("_9KbWEQhKEe2fOITqoTnSLQ")]
 [IsoXmlTag("FutrOrOptnDtls")]
+[IsoDisplayName(@"Future Or Option Details")]
 public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoCho
     [IsoId("_TdVCYweFEe2fOITqoTnSLQ")]
     [DisplayName("Last Delivery Date")]
     [IsoXmlTag("LastDlvryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? LastDeliveryDate { get; }
 
     /// <summary>
@@ -42,6 +44,7 @@ public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoCho
     [IsoId("_TdVCZweFEe2fOITqoTnSLQ")]
     [DisplayName("Future Date")]
     [IsoXmlTag("FutrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? FutureDate { get; }
 
     /// <summary>
@@ -58,6 +61,7 @@ public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoCho
     [IsoId("_TdVCaweFEe2fOITqoTnSLQ")]
     [DisplayName("Announcement Date")]
     [IsoXmlTag("AnncmntDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AnnouncementDate { get; }
 
     /// <summary>
@@ -74,6 +78,7 @@ public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoCho
     [IsoId("_TdVCbweFEe2fOITqoTnSLQ")]
     [DisplayName("Strippable Indicator")]
     [IsoXmlTag("StrpblInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? StrippableIndicator { get; }
 
     /// <summary>
@@ -82,6 +87,7 @@ public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoCho
     [IsoId("_TdVCcQeFEe2fOITqoTnSLQ")]
     [DisplayName("Position Limit")]
     [IsoXmlTag("PosLmt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? PositionLimit { get; }
 
     /// <summary>
@@ -90,6 +96,7 @@ public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoCho
     [IsoId("_TdVCcweFEe2fOITqoTnSLQ")]
     [DisplayName("Near Term Position Limit")]
     [IsoXmlTag("NearTermPosLmt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NearTermPositionLimit { get; }
 
     /// <summary>
@@ -98,6 +105,7 @@ public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoCho
     [IsoId("_TdVCdQeFEe2fOITqoTnSLQ")]
     [DisplayName("Minimum Trading Pricing Increment")]
     [IsoXmlTag("MinTradgPricgIncrmt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MinimumTradingPricingIncrement { get; }
 
     /// <summary>
@@ -106,6 +114,8 @@ public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoCho
     [IsoId("_TdVCdweFEe2fOITqoTnSLQ")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Purpose { get; }
 
     /// <summary>
@@ -114,6 +124,7 @@ public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoCho
     [IsoId("_TdVCeQeFEe2fOITqoTnSLQ")]
     [DisplayName("Contract Settlement Month")]
     [IsoXmlTag("CtrctSttlmMnth")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? ContractSettlementMonth { get; }
 
     /// <summary>
@@ -130,6 +141,7 @@ public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoCho
     [IsoId("_TdVCfQeFEe2fOITqoTnSLQ")]
     [DisplayName("Ratio")]
     [IsoXmlTag("Ratio")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnderlyingRatio2> Ratio { get; }
 
     /// <summary>
@@ -138,6 +150,7 @@ public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoCho
     [IsoId("_TdVCfweFEe2fOITqoTnSLQ")]
     [DisplayName("Rating")]
     [IsoXmlTag("Ratg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRating1> Rating { get; }
 
     /// <summary>
@@ -162,6 +175,7 @@ public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoCho
     [IsoId("_TdVChQeFEe2fOITqoTnSLQ")]
     [DisplayName("Last Transaction")]
     [IsoXmlTag("LastTx")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LastTransaction { get; }
 
     /// <summary>
@@ -170,5 +184,6 @@ public interface IFutureOrOptionDetails : ITwoLegTransactionType4Choice, IIsoCho
     [IsoId("_TdVChweFEe2fOITqoTnSLQ")]
     [DisplayName("Spread Transaction")]
     [IsoXmlTag("SprdTx")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SpreadTransaction { get; }
 }

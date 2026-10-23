@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Rate is expressed as a percentage or a text.
 /// </summary>
 [IsoId("_RIwV0dp-Ed-ak6NoX_4Aeg_-1267403783")]
+[IsoDisplayName(@"Rate Type Choice")]
 public interface IRateTypeChoice : IIsoChoice { }

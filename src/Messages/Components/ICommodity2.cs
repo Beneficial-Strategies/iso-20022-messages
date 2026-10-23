@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial instrument representing ownership of an amount of a commodity.
 /// </summary>
 [IsoId("_l0hO0BYHEeejf-cbr8l5qw")]
+[IsoDisplayName(@"Commodity")]
 public interface ICommodity2 : IIsoComponent
 {
     /// <summary>

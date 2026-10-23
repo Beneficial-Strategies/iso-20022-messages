@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// </summary>
 [IsoId("_x6QSMwB6EeqouY-yI_q3qQ")]
 [IsoMessage("supl.011.001.08", "DTCCCACOSD1", "urn:iso:std:iso:20022:tech:xsd:supl.011.001.08")]
+[Description(@"The DTCCCACOSD1 message extends ISO corporate action movement confirmation message with DTCC corporate action elements not covered in the standard message.")]
+[IsoDisplayName(@"DTCCCACOSD 1 V")]
 public interface IDTCCCACOSD1V08 : IOuterRecord
 {
     /// <summary>
@@ -44,6 +46,7 @@ public interface IDTCCCACOSD1V08 : IOuterRecord
     [IsoId("_x6QSQQB6EeqouY-yI_q3qQ")]
     [DisplayName("Account Balance")]
     [IsoXmlTag("AcctBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountBalanceSD14> AccountBalance { get; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public interface IDTCCCACOSD1V08 : IOuterRecord
     [IsoId("_x6QSRQB6EeqouY-yI_q3qQ")]
     [DisplayName("Corporate Action Confirmation Securities Movement Details")]
     [IsoXmlTag("CorpActnConfSctiesMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionConfirmationSecuritiesMovementDetailsSD6> CorporateActionConfirmationSecuritiesMovementDetails { get; }
 
     /// <summary>
@@ -68,6 +72,7 @@ public interface IDTCCCACOSD1V08 : IOuterRecord
     [IsoId("_x6QSTQB6EeqouY-yI_q3qQ")]
     [DisplayName("Corporate Action Confirmation Cash Movement Details")]
     [IsoXmlTag("CorpActnConfCshMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionConfirmationCashMovementDetailsSD5> CorporateActionConfirmationCashMovementDetails { get; }
 
     /// <summary>
@@ -76,5 +81,6 @@ public interface IDTCCCACOSD1V08 : IOuterRecord
     [IsoId("_x6QSVQB6EeqouY-yI_q3qQ")]
     [DisplayName("Option Transaction Details")]
     [IsoXmlTag("OptnTxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOptionTransactionSD6> OptionTransactionDetails { get; }
 }

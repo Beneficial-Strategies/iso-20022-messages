@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the the status of a legally recognized subject or national of a particular country.
 /// </summary>
 [IsoId("_hRQnYQ2bEeSNWNtJlXOAhg")]
+[IsoDisplayName(@"Citizenship Information")]
 public interface ICitizenshipInformation1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICitizenshipInformation1 : IIsoComponent
     [IsoId("_pxKL4A2bEeSNWNtJlXOAhg")]
     [DisplayName("Minor Indicator")]
     [IsoXmlTag("MnrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? MinorIndicator { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICitizenshipInformation1 : IIsoComponent
     [IsoId("_ssmpUA2bEeSNWNtJlXOAhg")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ICitizenshipInformation1 : IIsoComponent
     [IsoId("_vsqhAA2bEeSNWNtJlXOAhg")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EndDate { get; }
 }

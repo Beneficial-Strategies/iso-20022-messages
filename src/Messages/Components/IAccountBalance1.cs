@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance of the account involved in the card transaction.
 /// </summary>
 [IsoId("_B51cYUNTEeiut6dbx3wnBg")]
+[IsoDisplayName(@"Account Balance")]
 public interface IAccountBalance1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IAccountBalance1 : IIsoComponent
     [IsoId("_CFvKYUNTEeiut6dbx3wnBg")]
     [DisplayName("Account Type")]
     [IsoXmlTag("AcctTp")]
+    [IsoSimpleType(IsoSimpleType.Exact2AlphaNumericText)]
     Exact2AlphaNumericText AccountType { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface IAccountBalance1 : IIsoComponent
     [IsoId("_CFvKY0NTEeiut6dbx3wnBg")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalance15> Balance { get; }
 }

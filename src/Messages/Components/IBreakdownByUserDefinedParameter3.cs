@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the cash-in and cash-out flows by a user defined parameter/s.
 /// </summary>
 [IsoId("_KigjuQatEeS3lpTattq7hg")]
+[IsoDisplayName(@"Breakdown By User Defined Parameter")]
 public interface IBreakdownByUserDefinedParameter3 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IBreakdownByUserDefinedParameter3 : IIsoComponent
     [IsoId("_K78-awatEeS3lpTattq7hg")]
     [DisplayName("Cash In Forecast")]
     [IsoXmlTag("CshInFcst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashInForecast5> CashInForecast { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IBreakdownByUserDefinedParameter3 : IIsoComponent
     [IsoId("_K78-bQatEeS3lpTattq7hg")]
     [DisplayName("Cash Out Forecast")]
     [IsoXmlTag("CshOutFcst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashOutForecast5> CashOutForecast { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface IBreakdownByUserDefinedParameter3 : IIsoComponent
     [IsoId("_K78-bwatEeS3lpTattq7hg")]
     [DisplayName("Net Cash Forecast")]
     [IsoXmlTag("NetCshFcst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetCashForecast4> NetCashForecast { get; }
 }

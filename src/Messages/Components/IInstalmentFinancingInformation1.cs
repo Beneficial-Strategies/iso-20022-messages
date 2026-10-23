@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about result of a single instalment (financed or not) within an invoice.
 /// </summary>
 [IsoId("_PyxaU9p-Ed-ak6NoX_4Aeg_1394536846")]
+[IsoDisplayName(@"Instalment Financing Information")]
 public interface IInstalmentFinancingInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInstalmentFinancingInformation1 : IIsoComponent
     [IsoId("_PyxaVNp-Ed-ak6NoX_4Aeg_254515146")]
     [DisplayName("Instalment Sequence Identification")]
     [IsoXmlTag("InstlmtSeqId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text InstalmentSequenceIdentification { get; }
 
     /// <summary>

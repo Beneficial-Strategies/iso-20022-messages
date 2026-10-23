@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OwnerIdentification2Choice;
 /// Identification of the individual person.
 /// </summary>
 [IsoId("_FJYQgSGZEeWKAaDJcYGKLw")]
+[IsoDisplayName(@"Individual Owner Identification")]
 public interface IIndividualOwnerIdentification : IOwnerIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
 /// </summary>
 [IsoId("_Sw3zQSqSEeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Settlement Details")]
 public interface ISettlementDetails205 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementDetails205 : IIsoComponent
     [IsoId("_TJKXcSqSEeyR9JrVGfaMKw")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime TradeDate { get; }
 
     /// <summary>

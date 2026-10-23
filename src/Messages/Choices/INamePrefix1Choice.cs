@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the name prefix.
 /// </summary>
 [IsoId("_rzAroCiEEeKVDZ5HKjI6bg")]
+[IsoDisplayName(@"Name Prefix 1 Choice")]
 public interface INamePrefix1Choice : IIsoChoice { }

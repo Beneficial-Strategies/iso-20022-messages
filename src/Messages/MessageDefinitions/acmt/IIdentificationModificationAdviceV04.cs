@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_R3M08zEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("acmt.022.001.04", "IdModAdvc", "urn:iso:std:iso:20022:tech:xsd:acmt.022.001.04")]
+[IsoDisplayName(@"Identification Modification Advice V04")]
 public interface IIdentificationModificationAdviceV04 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +33,7 @@ public interface IIdentificationModificationAdviceV04 : IOuterRecord
     /// </summary>
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIdentificationModification5> Modification { get; }
 
     /// <summary>
@@ -39,5 +41,6 @@ public interface IIdentificationModificationAdviceV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

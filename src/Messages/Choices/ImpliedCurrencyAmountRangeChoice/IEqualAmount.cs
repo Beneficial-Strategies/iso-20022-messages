@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ImpliedCurrencyAmountRangeChoice
 /// Exact value an amount must match to be considered valid.
 /// </summary>
 [IsoId("_PVH1Adp-Ed-ak6NoX_4Aeg_-1174057054")]
+[IsoDisplayName(@"Equal Amount")]
 public interface IEqualAmount : IImpliedCurrencyAmountRangeChoice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

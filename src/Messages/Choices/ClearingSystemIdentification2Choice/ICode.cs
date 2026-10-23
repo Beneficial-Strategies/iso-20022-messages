@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification2Cho
 /// Identification of a clearing system, in a coded form as published in an external list.
 /// </summary>
 [IsoId("_TMoSEdp-Ed-ak6NoX_4Aeg_-1410917191")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IClearingSystemIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

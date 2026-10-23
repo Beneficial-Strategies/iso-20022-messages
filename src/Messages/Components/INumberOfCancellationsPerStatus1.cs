@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide detailed information on the number of transactions that are reported with a specific cancellation status.
 /// </summary>
 [IsoId("_Rquaddp-Ed-ak6NoX_4Aeg_847606645")]
+[IsoDisplayName(@"Number Of Cancellations Per Status")]
 public interface INumberOfCancellationsPerStatus1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INumberOfCancellationsPerStatus1 : IIsoComponent
     [IsoId("_Rquadtp-Ed-ak6NoX_4Aeg_847606677")]
     [DisplayName("Detailed Number Of Transactions")]
     [IsoXmlTag("DtldNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText DetailedNumberOfTransactions { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface INumberOfCancellationsPerStatus1 : IIsoComponent
     [IsoId("_RquaeNp-Ed-ak6NoX_4Aeg_847606954")]
     [DisplayName("Detailed Control Sum")]
     [IsoXmlTag("DtldCtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? DetailedControlSum { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tracker Data8.
 /// </summary>
 [IsoId("_tLDxcVeWEe6G45fhJISx6Q")]
+[IsoDisplayName(@"Tracker Data8")]
 public interface ITrackerData8 : IIsoComponent
 {
     /// <summary>

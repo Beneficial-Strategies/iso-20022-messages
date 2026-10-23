@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Non-enforcement of the right to all or part of a commission by the party entitled to the commission.
 /// </summary>
 [IsoId("_QbTZ-dp-Ed-ak6NoX_4Aeg_-841172268")]
+[IsoDisplayName(@"Commission Waiver")]
 public interface ICommissionWaiver3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICommissionWaiver3 : IIsoComponent
     [IsoId("_QbTZ-9p-Ed-ak6NoX_4Aeg_-1880085102")]
     [DisplayName("Extended Instruction Basis")]
     [IsoXmlTag("XtndedInstrBsis")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedInstructionBasis { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ICommissionWaiver3 : IIsoComponent
     [IsoId("_QbTZ_Np-Ed-ak6NoX_4Aeg_-841172243")]
     [DisplayName("Waived Rate")]
     [IsoXmlTag("WvdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate WaivedRate { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of a payment instrument for the cash-in flow or cash-out flow.
 /// </summary>
 [IsoId("_SBhw6Np-Ed-ak6NoX_4Aeg_885994005")]
+[IsoDisplayName(@"Cash In Or Out 6 Choice")]
 public interface ICashInOrOut6Choice : IIsoChoice { }

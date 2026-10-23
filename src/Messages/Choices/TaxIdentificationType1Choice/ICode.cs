@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxIdentificationType1Choice;
 /// Type of tax identification number or identifier expressed as a code.
 /// </summary>
 [IsoId("_4itmAAhIEeSUPbC7DbLJpQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITaxIdentificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

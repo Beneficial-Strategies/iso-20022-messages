@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party that provides services relating to financial products to investors, eg, advice on products and placement of orders for the investment fund.
 /// </summary>
 [IsoId("_QOyn9Np-Ed-ak6NoX_4Aeg_113093308")]
+[IsoDisplayName(@"Intermediary")]
 public interface IIntermediary12 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IIntermediary12 : IIsoComponent
     [IsoId("_QOyn99p-Ed-ak6NoX_4Aeg_114015503")]
     [DisplayName("Waived Trailer Commission Indicator")]
     [IsoXmlTag("WvdTrlrComssnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? WaivedTrailerCommissionIndicator { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface IIntermediary12 : IIsoComponent
     [IsoId("_QOyn-dp-Ed-ak6NoX_4Aeg_114015840")]
     [DisplayName("Extended Role")]
     [IsoXmlTag("XtndedRole")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedRole { get; }
 
     /// <summary>

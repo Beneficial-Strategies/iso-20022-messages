@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the beneficiary of a drawdown.
 /// </summary>
 [IsoId("060f5b7c-5f73-49cd-8328-183e7820b929")]
+[IsoDisplayName(@"Beneficiary Drawdown2")]
 public interface IBeneficiaryDrawdown2 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IBeneficiaryDrawdown2 : IIsoComponent
     [IsoId("3732d376-9487-49e9-9c3b-8f5bf75833fa")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

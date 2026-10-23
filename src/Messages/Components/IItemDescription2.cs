@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Item Description2.
 /// </summary>
 [IsoId("_PUBfI1xyEe6fgZt44_IqFA")]
+[IsoDisplayName(@"Item Description2")]
 public interface IItemDescription2 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IItemDescription2 : IIsoComponent
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max8000Text> Description { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information needed to contact a physical person.
 /// </summary>
 [IsoId("_QB-T89p-Ed-ak6NoX_4Aeg_-1034387476")]
+[IsoDisplayName(@"Contact Identification")]
 public interface IContactIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IContactIdentification2 : IIsoComponent
     [IsoId("_QB-T9dp-Ed-ak6NoX_4Aeg_-1034386605")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? GivenName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IContactIdentification2 : IIsoComponent
     [IsoId("_QB-T9tp-Ed-ak6NoX_4Aeg_-1034387034")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Name { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IContactIdentification2 : IIsoComponent
     [IsoId("_QB-T99p-Ed-ak6NoX_4Aeg_-1034386493")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IContactIdentification2 : IIsoComponent
     [IsoId("_QB-T-Np-Ed-ak6NoX_4Aeg_700909475")]
     [DisplayName("Mobile Number")]
     [IsoXmlTag("MobNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? MobileNumber { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IContactIdentification2 : IIsoComponent
     [IsoId("_QCHd4Np-Ed-ak6NoX_4Aeg_-1034386528")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -65,5 +73,7 @@ public interface IContactIdentification2 : IIsoComponent
     [IsoId("_QCHd4dp-Ed-ak6NoX_4Aeg_-1034386570")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 }

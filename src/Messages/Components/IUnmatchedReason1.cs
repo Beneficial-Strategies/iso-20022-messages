@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// The status of an instruction, advice or request.
 /// </summary>
 [IsoId("_UaHY4tp-Ed-ak6NoX_4Aeg_1743650924")]
+[IsoDisplayName(@"Unmatched Reason")]
 public interface IUnmatchedReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IUnmatchedReason1 : IIsoComponent
     [IsoId("_UaHY5Np-Ed-ak6NoX_4Aeg_-1379840589")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

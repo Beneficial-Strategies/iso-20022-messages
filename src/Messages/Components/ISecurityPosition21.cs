@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security Position21.
 /// </summary>
 [IsoId("_40TqC4-9Ee-COKgew96POA")]
+[IsoDisplayName(@"Security Position21")]
 public interface ISecurityPosition21 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface ISecurityPosition21 : IIsoComponent
     /// </summary>
     [DisplayName("Position")]
     [IsoXmlTag("Pos")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEligiblePosition19> Position { get; }
 }

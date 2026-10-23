@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference to the transaction identifier issued by the counterparty. Building block may also be used to reference a previous transaction, or tie a set of messages together.
 /// </summary>
 [IsoId("_Sh39oSP0EeWQjryFgN2ITg")]
+[IsoDisplayName(@"References")]
 public interface IReferences20 : IIsoComponent
 {
     /// <summary>

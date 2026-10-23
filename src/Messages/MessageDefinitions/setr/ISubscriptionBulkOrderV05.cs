@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("f27d3b7f-b6b1-4a86-8bdd-c19bbd55dab6")]
 [IsoMessage("setr.007.001.05", "SbcptBlkOrdr", "urn:iso:std:iso:20022:tech:xsd:setr.007.001.05")]
+[Description(@"Scope|The SubscriptionBulkOrder message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to instruct a subscription to a financial instrument for two or more accounts.|Usage|The SubscriptionBulkOrder message is used to bulk several individual orders into one bulk order. The individual orders come from different instructing parties, that is, account owners, but are for the same financial instrument. This message will typically be used by a party collecting orders and bulking these individual orders into one bulk order before sending it to another party.|For a single subscription order, the SubscriptionOrder message, not the SubscriptionBulkOrder message, must be used.")]
+[IsoDisplayName(@"Subscription Bulk Order V05")]
 public interface ISubscriptionBulkOrderV05 : IOuterRecord
 {
     /// <summary>
@@ -37,6 +39,7 @@ public interface ISubscriptionBulkOrderV05 : IOuterRecord
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference10> PreviousReference { get; }
 
     /// <summary>
@@ -58,5 +61,6 @@ public interface ISubscriptionBulkOrderV05 : IOuterRecord
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

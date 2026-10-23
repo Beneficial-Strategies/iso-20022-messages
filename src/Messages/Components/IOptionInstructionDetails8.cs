@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instructions information received for a given option.
 /// </summary>
 [IsoId("_pf87HTi7Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Option Instruction Details")]
 public interface IOptionInstructionDetails8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOptionInstructionDetails8 : IIsoComponent
     [IsoId("_pf87Hzi7Eeydid5dcNPKvg")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax15Text)]
+    [StringLength(15, MinimumLength = 1)]
     RestrictedFINMax15Text InstructionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IOptionInstructionDetails8 : IIsoComponent
     [IsoId("_pf87ITi7Eeydid5dcNPKvg")]
     [DisplayName("Instruction Sequence Number")]
     [IsoXmlTag("InstrSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? InstructionSequenceNumber { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IOptionInstructionDetails8 : IIsoComponent
     [IsoId("_pf87Jzi7Eeydid5dcNPKvg")]
     [DisplayName("Instruction Date")]
     [IsoXmlTag("InstrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate InstructionDate { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IOptionInstructionDetails8 : IIsoComponent
     [IsoId("_pf87KTi7Eeydid5dcNPKvg")]
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ProtectDate { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IOptionInstructionDetails8 : IIsoComponent
     [IsoId("_pf87Kzi7Eeydid5dcNPKvg")]
     [DisplayName("Cover Protect Date")]
     [IsoXmlTag("CoverPrtctDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CoverProtectDate { get; }
 
     /// <summary>
@@ -89,6 +96,8 @@ public interface IOptionInstructionDetails8 : IIsoComponent
     [IsoId("_pf87MTi7Eeydid5dcNPKvg")]
     [DisplayName("Customer Reference")]
     [IsoXmlTag("CstmrRef")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINMax50Text)]
+    [StringLength(50, MinimumLength = 1)]
     RestrictedFINMax50Text? CustomerReference { get; }
 
     /// <summary>
@@ -97,6 +106,8 @@ public interface IOptionInstructionDetails8 : IIsoComponent
     [IsoId("_pf87Mzi7Eeydid5dcNPKvg")]
     [DisplayName("Instruction Narrative")]
     [IsoXmlTag("InstrNrrtv")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text? InstructionNarrative { get; }
 
     /// <summary>

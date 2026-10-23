@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to search for business information.
 /// </summary>
 [IsoId("_51l8cZlZEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"General Business Information Search Criteria")]
 public interface IGeneralBusinessInformationSearchCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IGeneralBusinessInformationSearchCriteria1 : IIsoComponent
     [IsoId("_59y2MZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> Reference { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IGeneralBusinessInformationSearchCriteria1 : IIsoComponent
     [IsoId("_59y2M5lZEeeE1Ya-LgRsuQ")]
     [DisplayName("Subject")]
     [IsoXmlTag("Sbjt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharacterSearch1Choice> Subject { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IGeneralBusinessInformationSearchCriteria1 : IIsoComponent
     [IsoId("_59y2NZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("Qualifier")]
     [IsoXmlTag("Qlfr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInformationQualifierType1> Qualifier { get; }
 }

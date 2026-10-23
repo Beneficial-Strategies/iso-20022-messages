@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money associated with a service.
 /// </summary>
 [IsoId("_T8nZAW1bEeiqaPNRWUnGNA")]
+[IsoDisplayName(@"Fee")]
 public interface IFee5 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IFee5 : IIsoComponent
     [IsoId("_UNkmKW1bEeiqaPNRWUnGNA")]
     [DisplayName("Standard Rate")]
     [IsoXmlTag("StdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? StandardRate { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface IFee5 : IIsoComponent
     [IsoId("_UNkmL21bEeiqaPNRWUnGNA")]
     [DisplayName("Applied Rate")]
     [IsoXmlTag("ApldRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? AppliedRate { get; }
 
     /// <summary>
@@ -73,6 +76,8 @@ public interface IFee5 : IIsoComponent
     [IsoId("_UNkmMW1bEeiqaPNRWUnGNA")]
     [DisplayName("Non Standard SLA Reference")]
     [IsoXmlTag("NonStdSLARef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NonStandardSLAReference { get; }
 
     /// <summary>
@@ -89,5 +94,6 @@ public interface IFee5 : IIsoComponent
     [IsoId("_UNkmNW1bEeiqaPNRWUnGNA")]
     [DisplayName("Informative Indicator")]
     [IsoXmlTag("InftvInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator InformativeIndicator { get; }
 }

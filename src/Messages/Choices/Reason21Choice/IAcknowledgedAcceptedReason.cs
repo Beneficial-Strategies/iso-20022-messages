@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason21Choice;
 
 /// <summary>Specifies the acknowledged accepted reason.</summary>
 [IsoId("d1db825f-7005-43fa-8f2d-e17becbfe391")]
+[IsoDisplayName(@"Acknowledged Accepted Reason")]
 public interface IAcknowledgedAcceptedReason : IReason21Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References86Choice;
 
 /// <summary>Specifies the other transaction identification.</summary>
 [IsoId("5147c52c-cde1-4d2c-a81d-fb58f63537b2")]
+[IsoDisplayName(@"Other Transaction Identification")]
 public interface IOtherTransactionIdentification : IReferences86Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

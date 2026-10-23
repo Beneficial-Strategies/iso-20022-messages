@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the charge basis.
 /// </summary>
 [IsoId("_VMLvAtp-Ed-ak6NoX_4Aeg_-1276327629")]
+[IsoDisplayName(@"Calculation Basis")]
 public interface ICalculationBasis1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICalculationBasis1 : IIsoComponent
     [IsoId("_VMLvBNp-Ed-ak6NoX_4Aeg_-1188591227")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

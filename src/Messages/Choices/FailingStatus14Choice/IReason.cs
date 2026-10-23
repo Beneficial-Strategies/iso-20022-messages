@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingStatus14Choice;
 /// </summary>
 [IsoId("_f99yDTi8Eeydid5dcNPKvg")]
 [IsoXmlTag("Rsn")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IFailingStatus14Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IReason : IFailingStatus14Choice, IIsoChoiceVariant
     [IsoId("_f99yIzi8Eeydid5dcNPKvg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
+    [StringLength(210, MinimumLength = 1)]
     RestrictedFINXMax210Text? AdditionalReasonInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargesType1Choice;
 /// Type of service for which a charge is asked or paid.
 /// </summary>
 [IsoId("_yW81UBrdEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Type")]
 public interface IType : IChargesType1Choice, IIsoChoiceVariant
 {
     /// <summary>

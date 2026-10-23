@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details on the status of the payment conditions.
 /// </summary>
 [IsoId("_IGiOt3VlEeiEU7thYTAN1w")]
+[IsoDisplayName(@"Payment Condition Status")]
 public interface IPaymentConditionStatus1 : IIsoComponent
 {
     /// <summary>
@@ -27,6 +28,7 @@ public interface IPaymentConditionStatus1 : IIsoComponent
     [IsoId("_IGiOvXVlEeiEU7thYTAN1w")]
     [DisplayName("Guaranteed Payment")]
     [IsoXmlTag("GrntedPmt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator GuaranteedPayment { get; }
 
     /// <summary>
@@ -35,5 +37,6 @@ public interface IPaymentConditionStatus1 : IIsoComponent
     [IsoId("_IGiOuHVlEeiEU7thYTAN1w")]
     [DisplayName("Early Payment")]
     [IsoXmlTag("EarlyPmt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator EarlyPayment { get; }
 }

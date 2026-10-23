@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a decimal number.
 /// </summary>
 [IsoId("_z-06AdR6EemZdYGWu384Zw")]
+[IsoDisplayName(@"Compare Decimal Number")]
 public interface ICompareDecimalNumber2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICompareDecimalNumber2 : IIsoComponent
     [IsoId("_0C0CIdR6EemZdYGWu384Zw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? Value1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICompareDecimalNumber2 : IIsoComponent
     [IsoId("_0C0CI9R6EemZdYGWu384Zw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? Value2 { get; }
 }

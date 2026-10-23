@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the card transaction.
 /// </summary>
 [IsoId("_L_gNQXu1EeS2Z_kGi7H1VQ")]
+[IsoDisplayName(@"Card Transaction Detail")]
 public interface ICardTransactionDetail5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardTransactionDetail5 : IIsoComponent
     [IsoId("_uuK-kINyEeSXtJ8rlirVJw")]
     [DisplayName("Transaction Fees")]
     [IsoXmlTag("TxFees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount11> TransactionFees { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICardTransactionDetail5 : IIsoComponent
     [IsoId("_ML31U3u1EeS2Z_kGi7H1VQ")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount10> AdditionalAmounts { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface ICardTransactionDetail5 : IIsoComponent
     [IsoId("_ML31VXu1EeS2Z_kGi7H1VQ")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<MessageReason1Code> MessageReason { get; }
 
     /// <summary>
@@ -51,5 +55,6 @@ public interface ICardTransactionDetail5 : IIsoComponent
     [IsoId("_ML31Y3u1EeS2Z_kGi7H1VQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

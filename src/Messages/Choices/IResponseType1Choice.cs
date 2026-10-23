@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a response type code and a proprietary code.
 /// </summary>
 [IsoId("_QnOWFtp-Ed-ak6NoX_4Aeg_-827637915")]
+[IsoDisplayName(@"Response Type 1 Choice")]
 public interface IResponseType1Choice : IIsoChoice { }

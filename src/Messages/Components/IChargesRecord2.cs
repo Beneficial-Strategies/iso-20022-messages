@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further individual record details on the charges related to the payment transaction.
 /// </summary>
 [IsoId("_c1FRUSHBEeK_0OuuIoS2mw")]
+[IsoDisplayName(@"Charges Record")]
 public interface IChargesRecord2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IChargesRecord2 : IIsoComponent
     [IsoId("_gXIbwyHBEeK_0OuuIoS2mw")]
     [DisplayName("Charge Included Indicator")]
     [IsoXmlTag("ChrgInclInd")]
+    [IsoSimpleType(IsoSimpleType.ChargeIncludedIndicator)]
     ChargeIncludedIndicator? ChargeIncludedIndicator { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IChargesRecord2 : IIsoComponent
     [IsoId("_dK_P7SHBEeK_0OuuIoS2mw")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>

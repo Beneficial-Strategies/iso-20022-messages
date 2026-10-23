@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.
 /// </summary>
 [IsoId("_V_Dp4fr2EeCJc7cZxzE2fg")]
+[IsoDisplayName(@"Transfer")]
 public interface ITransfer13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransfer13 : IIsoComponent
     [IsoId("_EH8ecfr2EeCJc7cZxzE2fg")]
     [DisplayName("Transfer Confirmation Reference")]
     [IsoXmlTag("TrfConfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferConfirmationReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransfer13 : IIsoComponent
     [IsoId("__UhLw_r1EeCJc7cZxzE2fg")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransfer13 : IIsoComponent
     [IsoId("__UhLyvr1EeCJc7cZxzE2fg")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ITransfer13 : IIsoComponent
     [IsoId("_bAn0afu8EeC3VvXpH76gow")]
     [DisplayName("Transfer Order Date Form")]
     [IsoXmlTag("TrfOrdrDtForm")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TransferOrderDateForm { get; }
 
     /// <summary>
@@ -81,6 +89,9 @@ public interface ITransfer13 : IIsoComponent
     [IsoId("_D_btifu4EeC3VvXpH76gow")]
     [DisplayName("Holdings Plan Type")]
     [IsoXmlTag("HldgsPlanTp")]
+    [MinLength(0)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<HoldingsPlanType1Code> HoldingsPlanType { get; }
 
     /// <summary>
@@ -105,6 +116,7 @@ public interface ITransfer13 : IIsoComponent
     [IsoId("_V_DqC_r2EeCJc7cZxzE2fg")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit3> UnitsDetails { get; }
 
     /// <summary>
@@ -113,6 +125,7 @@ public interface ITransfer13 : IIsoComponent
     [IsoId("_V_DqD_r2EeCJc7cZxzE2fg")]
     [DisplayName("Portfolio Transfer Out Rate")]
     [IsoXmlTag("PrtflTrfOutRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PortfolioTransferOutRate { get; }
 
     /// <summary>
@@ -145,6 +158,7 @@ public interface ITransfer13 : IIsoComponent
     [IsoId("_V_DqF_r2EeCJc7cZxzE2fg")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OwnAccountTransferIndicator { get; }
 
     /// <summary>
@@ -153,5 +167,7 @@ public interface ITransfer13 : IIsoComponent
     [IsoId("_V_DqH_r2EeCJc7cZxzE2fg")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 }

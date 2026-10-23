@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementBasisCodeAndDSSCodeChoi
 /// </summary>
 [IsoId("_Q7Cp8tp-Ed-ak6NoX_4Aeg_-1630736025")]
 [IsoXmlTag("StmtBsisAsDSS")]
+[IsoDisplayName(@"Statement Basis As DSS")]
 public interface IStatementBasisAsDSS : IStatementBasisCodeAndDSSCodeChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IStatementBasisAsDSS : IStatementBasisCodeAndDSSCodeChoice, IIs
     [IsoId("_P_luVtp-Ed-ak6NoX_4Aeg_858746211")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text Issuer { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IStatementBasisAsDSS : IStatementBasisCodeAndDSSCodeChoice, IIs
     [IsoId("_P_luV9p-Ed-ak6NoX_4Aeg_858746099")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Information { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Common details for all payment instruction.
 /// </summary>
 [IsoId("_mKHMIZlgEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Payment Common")]
 public interface IPaymentCommon3 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IPaymentCommon3 : IIsoComponent
     [IsoId("_mSsgY5lgEeeE1Ya-LgRsuQ")]
     [DisplayName("Common Status")]
     [IsoXmlTag("CmonSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentStatus3> CommonStatus { get; }
 
     /// <summary>

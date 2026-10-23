@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration parameters of data exchanges.
 /// </summary>
 [IsoId("_Ksg2wH1DEeCF8NjrBemJWQ_-332730472")]
+[IsoDisplayName(@"Exchange Configuration")]
 public interface IExchangeConfiguration1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IExchangeConfiguration1 : IIsoComponent
     [IsoId("_Ksg2wX1DEeCF8NjrBemJWQ_-515846242")]
     [DisplayName("Exchange Policy")]
     [IsoXmlTag("XchgPlcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ExchangePolicy1Code> ExchangePolicy { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IExchangeConfiguration1 : IIsoComponent
     [IsoId("_Ksg2wn1DEeCF8NjrBemJWQ_-1174534805")]
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? MaximumNumber { get; }
 
     /// <summary>

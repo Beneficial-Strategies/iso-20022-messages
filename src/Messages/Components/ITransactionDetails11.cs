@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the details of the transaction.
 /// </summary>
 [IsoId("_UcNDk9p-Ed-ak6NoX_4Aeg_1219473022")]
+[IsoDisplayName(@"Transaction Details")]
 public interface ITransactionDetails11 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITransactionDetails11 : IIsoComponent
     [IsoId("_UcNDldp-Ed-ak6NoX_4Aeg_-2032300761")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ITransactionDetails11 : IIsoComponent
     [IsoId("_UcNDltp-Ed-ak6NoX_4Aeg_-522540246")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction information in the batch capture.
 /// </summary>
 [IsoId("_TFsqegEcEeCQm6a_G2yO_w_-106788857")]
+[IsoDisplayName(@"Card Payment Transaction")]
 public interface ICardPaymentTransaction4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardPaymentTransaction4 : IIsoComponent
     [IsoId("_TFsqfAEcEeCQm6a_G2yO_w_-183203476")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CardPaymentServiceType2Code> AdditionalService { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface ICardPaymentTransaction4 : IIsoComponent
     [IsoId("_TFsqfgEcEeCQm6a_G2yO_w_336199635")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Min3Max4Text)]
+    [StringLength(4, MinimumLength = 3)]
     Min3Max4Text? MerchantCategoryCode { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ICardPaymentTransaction4 : IIsoComponent
     [IsoId("_TF2bcQEcEeCQm6a_G2yO_w_-1413770249")]
     [DisplayName("Transaction Success")]
     [IsoXmlTag("TxSucss")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator TransactionSuccess { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ICardPaymentTransaction4 : IIsoComponent
     [IsoId("_TF2bcgEcEeCQm6a_G2yO_w_579282451")]
     [DisplayName("Reversal")]
     [IsoXmlTag("Rvsl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? Reversal { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface ICardPaymentTransaction4 : IIsoComponent
     [IsoId("_TF2bcwEcEeCQm6a_G2yO_w_-2020589262")]
     [DisplayName("Merchant Override")]
     [IsoXmlTag("MrchntOvrrd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MerchantOverride { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface ICardPaymentTransaction4 : IIsoComponent
     [IsoId("_TF2bdAEcEeCQm6a_G2yO_w_1944434253")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<FailureReason1Code> FailureReason { get; }
 
     /// <summary>
@@ -97,6 +105,8 @@ public interface ICardPaymentTransaction4 : IIsoComponent
     [IsoId("_TF2bdQEcEeCQm6a_G2yO_w_-2052847941")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InitiatorTransactionIdentification { get; }
 
     /// <summary>
@@ -105,6 +115,8 @@ public interface ICardPaymentTransaction4 : IIsoComponent
     [IsoId("_TF2bdgEcEeCQm6a_G2yO_w_1919917234")]
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RecipientTransactionIdentification { get; }
 
     /// <summary>
@@ -113,6 +125,8 @@ public interface ICardPaymentTransaction4 : IIsoComponent
     [IsoId("_TF2bdwEcEeCQm6a_G2yO_w_-1932061570")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -121,6 +135,8 @@ public interface ICardPaymentTransaction4 : IIsoComponent
     [IsoId("_TF2beAEcEeCQm6a_G2yO_w_-1638072282")]
     [DisplayName("Interchange Data")]
     [IsoXmlTag("IntrchngData")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InterchangeData { get; }
 
     /// <summary>
@@ -153,5 +169,7 @@ public interface ICardPaymentTransaction4 : IIsoComponent
     [IsoId("_TF2bfAEcEeCQm6a_G2yO_w_-635588334")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalTransactionData { get; }
 }

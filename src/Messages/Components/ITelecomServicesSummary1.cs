@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Telecom services summary component carries summary level telephony billing data.
 /// </summary>
 [IsoId("_3YH6X_e-Eei89sMSHxl1ew")]
+[IsoDisplayName(@"Telecom Services Summary")]
 public interface ITelecomServicesSummary1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITelecomServicesSummary1 : IIsoComponent
     [IsoId("_3YIhYve-Eei89sMSHxl1ew")]
     [DisplayName("Billing Statement Period Start")]
     [IsoXmlTag("BllgStmtPrdStart")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BillingStatementPeriodStart { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITelecomServicesSummary1 : IIsoComponent
     [IsoId("_tFwnwffAEei89sMSHxl1ew")]
     [DisplayName("Billing Statement Period End")]
     [IsoXmlTag("BllgStmtPrdEnd")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? BillingStatementPeriodEnd { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ITelecomServicesSummary1 : IIsoComponent
     [IsoId("_3YK9p_e-Eei89sMSHxl1ew")]
     [DisplayName("Billing Event")]
     [IsoXmlTag("BllgEvt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmount10> BillingEvent { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ITelecomServicesSummary1 : IIsoComponent
     [IsoId("_sjf9UffCEei89sMSHxl1ew")]
     [DisplayName("Total Tax")]
     [IsoXmlTag("TtlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax33> TotalTax { get; }
 
     /// <summary>
@@ -57,5 +62,7 @@ public interface ITelecomServicesSummary1 : IIsoComponent
     [IsoId("_3YK9oPe-Eei89sMSHxl1ew")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalData { get; }
 }

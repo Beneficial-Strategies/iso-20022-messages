@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Statement information of an account.
 /// </summary>
 [IsoId("_O9ETgYq8EeSHjtO_wHA7PQ")]
+[IsoDisplayName(@"ATM Account Statement")]
 public interface IATMAccountStatement2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IATMAccountStatement2 : IIsoComponent
     [IsoId("_eeqZIIq8EeSHjtO_wHA7PQ")]
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TransactionDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IATMAccountStatement2 : IIsoComponent
     [IsoId("_iEU4QIq8EeSHjtO_wHA7PQ")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValueDate { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IATMAccountStatement2 : IIsoComponent
     [IsoId("_p2DvMIq8EeSHjtO_wHA7PQ")]
     [DisplayName("Short Text")]
     [IsoXmlTag("ShrtTxt")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ShortText { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IATMAccountStatement2 : IIsoComponent
     [IsoId("_tS5pgIq8EeSHjtO_wHA7PQ")]
     [DisplayName("Credit Transaction")]
     [IsoXmlTag("CdtTx")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CreditTransaction { get; }
 
     /// <summary>
@@ -65,5 +71,7 @@ public interface IATMAccountStatement2 : IIsoComponent
     [IsoId("_99CrkIq8EeSHjtO_wHA7PQ")]
     [DisplayName("Long Text")]
     [IsoXmlTag("LngTxt")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? LongText { get; }
 }

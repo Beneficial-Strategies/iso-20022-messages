@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters1Choice;
 /// Required status of the ATM, parameters of the status update command.
 /// </summary>
 [IsoId("_w2lB4IqLEeSRT5rEzcAHEw")]
+[IsoDisplayName(@"ATM Required Global Status")]
 public interface IATMRequiredGlobalStatus : IATMCommandParameters1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
 /// </summary>
 [IsoId("_cj-HA5KQEeWHWpTQn1FFVg")]
 [IsoXmlTag("Amt")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount : IInterestRateUsedForPaymentFormat9Choice, IIsoChoiceVariant
 {
     /// <summary>

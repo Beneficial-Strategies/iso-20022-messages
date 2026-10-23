@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice;
 /// </summary>
 [IsoId("_QGJCQ9p-Ed-ak6NoX_4Aeg_-888106466")]
 [IsoXmlTag("DuePyblAmt")]
+[IsoDisplayName(@"Due Payable Amount")]
 public interface IDuePayableAmount : IReferredDocumentAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

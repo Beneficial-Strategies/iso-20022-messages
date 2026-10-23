@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Mandate Suspension Reason3.
 /// </summary>
 [IsoId("_4TGJuzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Mandate Suspension Reason3")]
 public interface IMandateSuspensionReason3 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IMandateSuspensionReason3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

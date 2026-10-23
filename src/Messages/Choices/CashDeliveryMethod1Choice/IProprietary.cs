@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashDeliveryMethod1Choice;
 
 /// <summary>Cash delivery method, in a proprietary form.</summary>
 [IsoId("_ETdUUOOxEe-NFYIkYc90gw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICashDeliveryMethod1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

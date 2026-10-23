@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.
 /// </summary>
 [IsoId("_ucCWPfr2EeCJc7cZxzE2fg")]
+[IsoDisplayName(@"Transfer")]
 public interface ITransfer14 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,9 @@ public interface ITransfer14 : IIsoComponent
     [IsoId("_LMMPJfu4EeC3VvXpH76gow")]
     [DisplayName("Holdings Plan Type")]
     [IsoXmlTag("HldgsPlanTp")]
+    [MinLength(0)]
+    [MaxLength(3)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<HoldingsPlanType1Code> HoldingsPlanType { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ITransfer14 : IIsoComponent
     [IsoId("_ucCWZ_r2EeCJc7cZxzE2fg")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnit3> UnitsDetails { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ITransfer14 : IIsoComponent
     [IsoId("_ucCWa_r2EeCJc7cZxzE2fg")]
     [DisplayName("Portfolio Transfer Out Rate")]
     [IsoXmlTag("PrtflTrfOutRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PortfolioTransferOutRate { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface ITransfer14 : IIsoComponent
     [IsoId("_ucCWc_r2EeCJc7cZxzE2fg")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OwnAccountTransferIndicator { get; }
 
     /// <summary>
@@ -97,5 +104,7 @@ public interface ITransfer14 : IIsoComponent
     [IsoId("_ucCWe_r2EeCJc7cZxzE2fg")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 }

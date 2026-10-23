@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference8Choice;
 /// Unambiguous identification of the confirmation transaction as known by the market infrastructure.
 /// </summary>
 [IsoId("_AcF7lNokEeC60axPepSq7g_-1472748055")]
+[IsoDisplayName(@"Market Infrastructure Transaction Identification")]
 public interface IMarketInfrastructureTransactionIdentification
     : IIdentificationReference8Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface IMarketInfrastructureTransactionIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

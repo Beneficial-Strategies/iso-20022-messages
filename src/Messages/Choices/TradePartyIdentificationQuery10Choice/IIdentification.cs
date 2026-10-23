@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePartyIdentificationQuery10C
 /// <summary>
 /// Identification.
 /// </summary>
+[IsoDisplayName(@"Identification")]
 public interface IIdentification : ITradePartyIdentificationQuery10Choice, IIsoChoiceVariant
 {
     /// <summary>

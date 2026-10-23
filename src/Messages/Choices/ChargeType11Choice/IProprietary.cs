@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType11Choice;
 
 /// <summary>Charge type expressed as an extended code.</summary>
 [IsoId("36d434f4-4cf5-47c6-9d48-85d48f2ed439")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IChargeType11Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

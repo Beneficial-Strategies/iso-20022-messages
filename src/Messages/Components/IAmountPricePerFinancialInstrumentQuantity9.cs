@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a ratio: amount price and price fixing date per financial instrument quantity.
 /// </summary>
 [IsoId("_zuw0oTpyEemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Amount Price Per Financial Instrument Quantity")]
 public interface IAmountPricePerFinancialInstrumentQuantity9 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IAmountPricePerFinancialInstrumentQuantity9 : IIsoComponent
     [IsoId("_z5pPCTpyEemk2e6qGBk8IQ")]
     [DisplayName("Price Fixing Date")]
     [IsoXmlTag("PricFxgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate PriceFixingDate { get; }
 }

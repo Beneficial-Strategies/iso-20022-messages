@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrBusinessError6Choice;
 /// <summary>
 /// Account.
 /// </summary>
+[IsoDisplayName(@"Account")]
 public interface IAccount : IAccountOrBusinessError6Choice, IIsoChoiceVariant
 {
     /// <summary>

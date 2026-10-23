@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralProposalResponse4Choic
 /// </summary>
 [IsoId("_wFtHkytIEeyOa655cLd-DQ")]
 [IsoXmlTag("SgrtdIndpdntAmt")]
+[IsoDisplayName(@"Segregated Independent Amount")]
 public interface ISegregatedIndependentAmount
     : ICollateralProposalResponse4Choice,
         IIsoChoiceVariant
@@ -20,6 +21,8 @@ public interface ISegregatedIndependentAmount
     [IsoId("_wfCNkStIEeyOa655cLd-DQ")]
     [DisplayName("Collateral Proposal Identification")]
     [IsoXmlTag("CollPrpslId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CollateralProposalIdentification { get; }
 
     /// <summary>

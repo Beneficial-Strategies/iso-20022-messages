@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the original group, to which the message refers.
 /// </summary>
 [IsoId("_sniXsFkyEeGeoaLUQk__nA_1278270511")]
+[IsoDisplayName(@"Original Group Header")]
 public interface IOriginalGroupHeader1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalGroupHeader1 : IIsoComponent
     [IsoId("_sniXsVkyEeGeoaLUQk__nA_1164431445")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalGroupHeader1 : IIsoComponent
     [IsoId("_snrhoFkyEeGeoaLUQk__nA_281198158")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageNameIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IOriginalGroupHeader1 : IIsoComponent
     [IsoId("_snrhoVkyEeGeoaLUQk__nA_167359092")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IOriginalGroupHeader1 : IIsoComponent
     [IsoId("_snrholkyEeGeoaLUQk__nA_-829713261")]
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? OriginalNumberOfTransactions { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IOriginalGroupHeader1 : IIsoComponent
     [IsoId("_sn1SoFkyEeGeoaLUQk__nA_-1826785614")]
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? OriginalControlSum { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IOriginalGroupHeader1 : IIsoComponent
     [IsoId("_sn_DoVkyEeGeoaLUQk__nA_-2054947877")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation9> StatusReasonInformation { get; }
 
     /// <summary>
@@ -73,5 +82,6 @@ public interface IOriginalGroupHeader1 : IIsoComponent
     [IsoId("_soINkFkyEeGeoaLUQk__nA_1242947066")]
     [DisplayName("Number Of Transactions Per Status")]
     [IsoXmlTag("NbOfTxsPerSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfTransactionsPerStatus3> NumberOfTransactionsPerStatus { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication information.
 /// </summary>
 [IsoId("_T0l-cXrqEeSz_of_1TY14A")]
+[IsoDisplayName(@"Communication Address")]
 public interface ICommunicationAddress5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICommunicationAddress5 : IIsoComponent
     [IsoId("_UBtNYXrqEeSz_of_1TY14A")]
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Email { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICommunicationAddress5 : IIsoComponent
     [IsoId("_UBtNa3rqEeSz_of_1TY14A")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? URLAddress { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ICommunicationAddress5 : IIsoComponent
     [IsoId("_UBtNY3rqEeSz_of_1TY14A")]
     [DisplayName("Phone")]
     [IsoXmlTag("Phne")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? Phone { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface ICommunicationAddress5 : IIsoComponent
     [IsoId("_trLakHrtEeSz_of_1TY14A")]
     [DisplayName("Customer Service")]
     [IsoXmlTag("CstmrSvc")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? CustomerService { get; }
 
     /// <summary>
@@ -57,5 +64,7 @@ public interface ICommunicationAddress5 : IIsoComponent
     [IsoId("_0cE8EHrsEeSz_of_1TY14A")]
     [DisplayName("Additional Contact Information")]
     [IsoXmlTag("AddtlCtctInf")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? AdditionalContactInformation { get; }
 }

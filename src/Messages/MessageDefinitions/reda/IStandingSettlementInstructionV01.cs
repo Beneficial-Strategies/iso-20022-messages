@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_UWnqsNQPEeKSSosHwGnjNw")]
 [IsoMessage("reda.056.001.01", "StgSttlmInstr", "urn:iso:std:iso:20022:tech:xsd:reda.056.001.01")]
+[Description(@"Scope|An instructing party sends the StandingSettlementInstruction (SSI) message to the receiver to create or update a standing cash or securities settlement instruction. The message can also be used to notify a counterparty of an SSI.||Usage|The instructing party (initiator) is:|• An account servicer, for example, a global custodian or prime broker|• A counterparty in a transaction, for example:|- an investment manager (executing broker),|- a global custodian (executing broker, prime broker)|• A vendor’s application communicating on behalf of an account servicer or counterparty|The receiver is:|• An account owner, for example, an investment manager, hedge fund administrator or a party to which SSI operations have been outsourced|• A counterparty, for example:|- an investment manager (executing broker)|- a global custodian (executing broker, prime broker)|• A vendor’s application communicating on behalf of the account owner or counterparty.")]
+[IsoDisplayName(@"Standing Settlement Instruction V01")]
 public interface IStandingSettlementInstructionV01 : IOuterRecord
 {
     /// <summary>
@@ -35,6 +37,8 @@ public interface IStandingSettlementInstructionV01 : IOuterRecord
     [IsoId("_8cPQANQgEeKvJeoOII0e7w")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentification26> AccountIdentification { get; }
 
     /// <summary>
@@ -67,5 +71,6 @@ public interface IStandingSettlementInstructionV01 : IOuterRecord
     [IsoId("_0dGa4dT_EeKnWItMEK8CZg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

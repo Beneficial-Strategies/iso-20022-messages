@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for call type.
 /// </summary>
 [IsoId("_fBEo0eLcEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Call Type 3 Choice")]
 public interface ICallType3Choice : IIsoChoice { }

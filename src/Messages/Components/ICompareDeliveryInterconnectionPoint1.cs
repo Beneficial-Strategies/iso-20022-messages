@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a delivery interconnection point.
 /// </summary>
 [IsoId("_g-BqME6cEeyEpI66tm807w")]
+[IsoDisplayName(@"Compare Delivery Interconnection Point")]
 public interface ICompareDeliveryInterconnectionPoint1 : IIsoComponent
 {
     /// <summary>

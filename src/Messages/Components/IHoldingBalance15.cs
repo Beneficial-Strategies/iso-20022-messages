@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Holding Balance15.
 /// </summary>
 [IsoId("_4mmlN4-9Ee-COKgew96POA")]
+[IsoDisplayName(@"Holding Balance15")]
 public interface IHoldingBalance15 : IIsoComponent
 {
     /// <summary>

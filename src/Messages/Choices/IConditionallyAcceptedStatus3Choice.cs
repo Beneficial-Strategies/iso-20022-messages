@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for a conditionally accepted status.
 /// </summary>
 [IsoId("_scSIAUHXEeamVPoS58KxXA")]
+[IsoDisplayName(@"Conditionally Accepted Status 3 Choice")]
 public interface IConditionallyAcceptedStatus3Choice : IIsoChoice { }

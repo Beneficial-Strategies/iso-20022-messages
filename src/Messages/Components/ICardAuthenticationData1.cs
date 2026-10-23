@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains authentication related data. such as 3DS authentication data.
 /// </summary>
 [IsoId("_EujNMGZ8EfCX7uJiAWHfoQ")]
+[IsoDisplayName(@"Card Authentication Data1")]
 public interface ICardAuthenticationData1 : IIsoComponent
 {
     /// <summary>
@@ -185,6 +186,7 @@ public interface ICardAuthenticationData1 : IIsoComponent
     [IsoId("_FCFpUG2EEfC68Y4jZPNEug")]
     [DisplayName("Device Identification")]
     [IsoXmlTag("DvcId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max64Text> DeviceIdentification { get; }
 
     /// <summary>
@@ -193,6 +195,7 @@ public interface ICardAuthenticationData1 : IIsoComponent
     [IsoId("_6OtpgG2HEfC68Y4jZPNEug")]
     [DisplayName("Device Type")]
     [IsoXmlTag("DvcTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Exact2NumericText> DeviceType { get; }
 
     /// <summary>
@@ -265,6 +268,7 @@ public interface ICardAuthenticationData1 : IIsoComponent
     [IsoId("_7aY3sm8iEfC68Y4jZPNEug")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -273,5 +277,6 @@ public interface ICardAuthenticationData1 : IIsoComponent
     [IsoId("_7aY3s28iEfC68Y4jZPNEug")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<LaxProcessing> NationalData { get; }
 }

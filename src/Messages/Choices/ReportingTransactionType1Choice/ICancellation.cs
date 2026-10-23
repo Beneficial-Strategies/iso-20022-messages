@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType1Choice;
 /// </summary>
 [IsoId("_J-kCE4G-EeaalK9UbuVGFw")]
 [IsoXmlTag("Cxl")]
+[IsoDisplayName(@"Cancellation")]
 public interface ICancellation : IReportingTransactionType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICancellation : IReportingTransactionType1Choice, IIsoChoiceVar
     [IsoId("_CVjMkyrlEeWiy6-TnRWhpA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text TransactionIdentification { get; }
 
     /// <summary>
@@ -28,6 +31,7 @@ public interface ICancellation : IReportingTransactionType1Choice, IIsoChoiceVar
     [IsoId("_CVjMmSrlEeWiy6-TnRWhpA")]
     [DisplayName("Executing Party")]
     [IsoXmlTag("ExctgPty")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier ExecutingParty { get; }
 
     /// <summary>
@@ -36,6 +40,7 @@ public interface ICancellation : IReportingTransactionType1Choice, IIsoChoiceVar
     [IsoId("_QrvSQFymEeWe9sWf-OA_kA")]
     [DisplayName("Submitting Party")]
     [IsoXmlTag("SubmitgPty")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier SubmittingParty { get; }
 
     /// <summary>
@@ -52,5 +57,6 @@ public interface ICancellation : IReportingTransactionType1Choice, IIsoChoiceVar
     [IsoId("_WLYxoMpeEeW3lKrJLTgxRg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

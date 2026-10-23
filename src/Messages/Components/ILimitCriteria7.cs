@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit Criteria7.
 /// </summary>
 [IsoId("_zV-IYTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Limit Criteria7")]
 public interface ILimitCriteria7 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ILimitCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILimitSearchCriteria7> SearchCriteria { get; }
 
     /// <summary>

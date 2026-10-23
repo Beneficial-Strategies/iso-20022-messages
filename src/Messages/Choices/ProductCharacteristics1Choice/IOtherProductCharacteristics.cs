@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCharacteristics1Choice;
 /// </summary>
 [IsoId("_RbrR1dp-Ed-ak6NoX_4Aeg_816698034")]
 [IsoXmlTag("OthrPdctChrtcs")]
+[IsoDisplayName(@"Other Product Characteristics")]
 public interface IOtherProductCharacteristics : IProductCharacteristics1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOtherProductCharacteristics : IProductCharacteristics1Choice, 
     [IsoId("_P-sWddp-Ed-ak6NoX_4Aeg_-1304682662")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IOtherProductCharacteristics : IProductCharacteristics1Choice, 
     [IsoId("_P-sWdtp-Ed-ak6NoX_4Aeg_-1601134417")]
     [DisplayName("Identification Type")]
     [IsoXmlTag("IdTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IdentificationType { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the time frame.
 /// </summary>
 [IsoId("_UgWqwcztEeq1WLK5fVzKiQ")]
+[IsoDisplayName(@"Time Frame 9 Choice")]
 public interface ITimeFrame9Choice : IIsoChoice { }

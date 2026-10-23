@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number21Choice;
 /// Number of maximum 4 numeric text.
 /// </summary>
 [IsoId("_AeehNNokEeC60axPepSq7g_249465515")]
+[IsoDisplayName(@"Number Identification")]
 public interface INumberIdentification : INumber21Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INumberIdentification : INumber21Choice, IIsoChoiceVariant
     /// Specifies a numeric string with a maximum length of 4 digits.
     /// </summary>
     [IsoXmlTag("NbId")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText Value { get; }
 }

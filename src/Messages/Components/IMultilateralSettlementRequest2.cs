@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details specific to the individual settlement instruction(s) included in the message.
 /// </summary>
 [IsoId("_I5-6EQcZEeyTDbUIoCmuCw")]
+[IsoDisplayName(@"Multilateral Settlement Request")]
 public interface IMultilateralSettlementRequest2 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IMultilateralSettlementRequest2 : IIsoComponent
     [IsoId("_I-zvsQcZEeyTDbUIoCmuCw")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InstructionIdentification { get; }
 
     /// <summary>
@@ -53,6 +56,8 @@ public interface IMultilateralSettlementRequest2 : IIsoComponent
     [IsoId("_I-zvuwcZEeyTDbUIoCmuCw")]
     [DisplayName("Settlement Cycle")]
     [IsoXmlTag("SttlmCycl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SettlementCycle { get; }
 
     /// <summary>
@@ -61,6 +66,7 @@ public interface IMultilateralSettlementRequest2 : IIsoComponent
     [IsoId("_I-zvvQcZEeyTDbUIoCmuCw")]
     [DisplayName("Number Of Movement Records")]
     [IsoXmlTag("NbOfMvmntRcrds")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfMovementRecords { get; }
 
     /// <summary>
@@ -70,5 +76,6 @@ public interface IMultilateralSettlementRequest2 : IIsoComponent
     [IsoId("_I-zvvwcZEeyTDbUIoCmuCw")]
     [DisplayName("Movement Record")]
     [IsoXmlTag("MvmntRcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMovementRecord1> MovementRecord { get; }
 }

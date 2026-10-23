@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details of the account statement.
 /// </summary>
 [IsoId("f2d5db70-d297-4049-9ae1-97fe2c32f5ef")]
+[IsoDisplayName(@"Account Statement15")]
 public interface IAccountStatement15 : IIsoComponent
 {
     /// <summary>
@@ -105,6 +106,7 @@ public interface IAccountStatement15 : IIsoComponent
     [IsoId("9e152592-106c-40ed-8af8-601a81c41008")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountInterest4> Interest { get; }
 
     /// <summary>
@@ -113,6 +115,8 @@ public interface IAccountStatement15 : IIsoComponent
     [IsoId("62002a5c-b6a0-496c-ae85-d8dfff8cbaaf")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance8> Balance { get; }
 
     /// <summary>
@@ -129,6 +133,7 @@ public interface IAccountStatement15 : IIsoComponent
     [IsoId("c1bfd244-584b-46fd-bcfb-45d012593359")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportEntry16> Entry { get; }
 
     /// <summary>

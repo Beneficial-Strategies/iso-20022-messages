@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus56Cho
 /// <summary>
 /// Accepted.
 /// </summary>
+[IsoDisplayName(@"Accepted")]
 public interface IAccepted : IInstructionProcessingStatus56Choice, IIsoChoiceVariant
 {
     /// <summary>

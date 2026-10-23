@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestType1Choice;
 /// Specifies the type of interest in uncoded form.
 /// </summary>
 [IsoId("_SRnbWNp-Ed-ak6NoX_4Aeg_-822918058")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IInterestType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IInterestType1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

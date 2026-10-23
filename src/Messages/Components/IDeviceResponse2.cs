@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// This component define the type of Device service to be used with this message.
 /// </summary>
 [IsoId("_by2wwYYDEemxIqbaFEE8-w")]
+[IsoDisplayName(@"Device Response")]
 public interface IDeviceResponse2 : IIsoComponent
 {
     /// <summary>
@@ -105,5 +106,6 @@ public interface IDeviceResponse2 : IIsoComponent
     [IsoId("_b9IuN4YDEemxIqbaFEE8-w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

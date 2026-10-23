@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SupportLetterType1Choice;
 /// Type of supporting letter expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_Hk37ILbyEeu9Cp6InX88Vw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISupportLetterType1Choice, IIsoChoiceVariant
 {
     /// <summary>

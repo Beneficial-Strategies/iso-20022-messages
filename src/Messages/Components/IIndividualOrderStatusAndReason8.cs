@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status report of an individual order of a bulk or multiple or switch order cancellation instruction that was previously received.
 /// </summary>
 [IsoId("_JrWMRzbtEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Individual Order Status And Reason")]
 public interface IIndividualOrderStatusAndReason8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IIndividualOrderStatusAndReason8 : IIsoComponent
     [IsoId("_KFFh8zbtEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IIndividualOrderStatusAndReason8 : IIsoComponent
     [IsoId("_KFFh9TbtEead9bDRE_1DAQ")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IIndividualOrderStatusAndReason8 : IIsoComponent
     [IsoId("_KFFh9zbtEead9bDRE_1DAQ")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IIndividualOrderStatusAndReason8 : IIsoComponent
     [IsoId("_KFFh-TbtEead9bDRE_1DAQ")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>

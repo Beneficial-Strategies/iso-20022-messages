@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Reconciliation initiation message record.
 /// </summary>
 [IsoId("_wPMnkRs8EeqrvK3udMUsNQ")]
+[IsoDisplayName(@"Reconciliation Initiation")]
 public interface IReconciliationInitiation : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IReconciliationInitiation : IRecordMessage1Choice, IIsoChoiceVa
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("RcncltnInitn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

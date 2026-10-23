@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the movement instructions.
 /// </summary>
 [IsoId("_RirRtdp-Ed-ak6NoX_4Aeg_-1983038422")]
+[IsoDisplayName(@"Movement Instruction")]
 public interface IMovementInstruction1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IMovementInstruction1 : IIsoComponent
     [IsoId("_RirRt9p-Ed-ak6NoX_4Aeg_-1853745607")]
     [DisplayName("Underlying Securities Movement Details")]
     [IsoXmlTag("UndrlygSctiesMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnderlyingSecurityMovement1> UnderlyingSecuritiesMovementDetails { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IMovementInstruction1 : IIsoComponent
     [IsoId("_RirRuNp-Ed-ak6NoX_4Aeg_-1965607200")]
     [DisplayName("Underlying Cash Movement Details")]
     [IsoXmlTag("UndrlygCshMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashMovement2> UnderlyingCashMovementDetails { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IMovementInstruction1 : IIsoComponent
     [IsoId("_Ri1CsNp-Ed-ak6NoX_4Aeg_-1820497873")]
     [DisplayName("Proceeds Movement Details")]
     [IsoXmlTag("PrcdsMvmntDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProceedsMovement1> ProceedsMovementDetails { get; }
 }

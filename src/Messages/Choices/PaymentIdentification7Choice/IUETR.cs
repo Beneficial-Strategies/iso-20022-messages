@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification7Choice;
 /// Universally unique identifier to provide an end-to-end reference of a payment transaction.
 /// </summary>
 [IsoId("_LMT0IQKzEe2X55dNQNVKfg")]
+[IsoDisplayName(@"UETR")]
 public interface IUETR : IPaymentIdentification7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IUETR : IPaymentIdentification7Choice, IIsoChoiceVariant
     /// Universally Unique IDentifier (UUID) version 4, as described in IETC RFC 4122 &quot;Universally Unique IDentifier (UUID) URN Namespace&quot;.
     /// </summary>
     [IsoXmlTag("UETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier Value { get; }
 }

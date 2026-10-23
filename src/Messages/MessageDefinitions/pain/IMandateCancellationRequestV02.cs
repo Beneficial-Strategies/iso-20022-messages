@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// </summary>
 [IsoId("_r0RuwFkyEeGeoaLUQk__nA_893031254")]
 [IsoMessage("pain.011.001.02", "MndtCxlReq", "urn:iso:std:iso:20022:tech:xsd:pain.011.001.02")]
+[Description(@"Scope|The MandateCancellationRequest message is sent by the initiator of the request to his agent. The initiator can either be the debtor or the creditor.|The MandateCancellationRequest message is forwarded by the agent of the initiator to the agent of the counterparty.|A MandateCancellationRequest message is used to request the cancellation of an existing mandate. If accepted, this MandateCancellationRequest message together with the MandateAcceptanceReport message confirming the acceptance will be considered a valid cancellation of an existing mandate, agreed upon by all parties.|Usage|The MandateCancellationRequest message can contain only one request to cancel one specific mandate.|The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.|The message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.|The MandateCancellationRequest message can be used in domestic and cross-border scenarios.")]
+[IsoDisplayName(@"Mandate Cancellation Request V")]
 public interface IMandateCancellationRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -44,5 +46,6 @@ public interface IMandateCancellationRequestV02 : IOuterRecord
     [IsoId("_r0kpsFkyEeGeoaLUQk__nA_-961186885")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

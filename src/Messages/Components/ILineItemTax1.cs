@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.
 /// </summary>
 [IsoId("_S0j3MQEcEeCQm6a_G2yO_w_1452898168")]
+[IsoDisplayName(@"Line Item Tax")]
 public interface ILineItemTax1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILineItemTax1 : IIsoComponent
     [IsoId("_S0toIAEcEeCQm6a_G2yO_w_525289040")]
     [DisplayName("Calculated Amount")]
     [IsoXmlTag("ClctdAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> CalculatedAmount { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ILineItemTax1 : IIsoComponent
     [IsoId("_S0toIgEcEeCQm6a_G2yO_w_1128406293")]
     [DisplayName("Tax Point Date")]
     [IsoXmlTag("TaxPtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TaxPointDate { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ILineItemTax1 : IIsoComponent
     [IsoId("_S0toIwEcEeCQm6a_G2yO_w_-316336554")]
     [DisplayName("Calculated Rate")]
     [IsoXmlTag("ClctdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? CalculatedRate { get; }
 
     /// <summary>
@@ -49,6 +53,8 @@ public interface ILineItemTax1 : IIsoComponent
     [IsoId("_S0toJAEcEeCQm6a_G2yO_w_-344611001")]
     [DisplayName("Category Code")]
     [IsoXmlTag("CtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? CategoryCode { get; }
 
     /// <summary>
@@ -57,5 +63,6 @@ public interface ILineItemTax1 : IIsoComponent
     [IsoId("_S0toJQEcEeCQm6a_G2yO_w_-1190517937")]
     [DisplayName("Category Name")]
     [IsoXmlTag("CtgyNm")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CategoryName { get; }
 }

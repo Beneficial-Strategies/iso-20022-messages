@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment obligation contracted between two financial institutions related to the financing of a commercial transaction.
 /// </summary>
 [IsoId("_TmaED9p-Ed-ak6NoX_4Aeg_596881925")]
+[IsoDisplayName(@"Payment Obligation")]
 public interface IPaymentObligation1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IPaymentObligation1 : IIsoComponent
     [IsoId("_Tmj1A9p-Ed-ak6NoX_4Aeg_68097507")]
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Percentage { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IPaymentObligation1 : IIsoComponent
     [IsoId("_Tmj1Bdp-Ed-ak6NoX_4Aeg_-870552237")]
     [DisplayName("Charges Percentage")]
     [IsoXmlTag("ChrgsPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ChargesPercentage { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface IPaymentObligation1 : IIsoComponent
     [IsoId("_Tmj1Btp-Ed-ak6NoX_4Aeg_1478843016")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ExpiryDate { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface IPaymentObligation1 : IIsoComponent
     [IsoId("_Tms-8Np-Ed-ak6NoX_4Aeg_1971081576")]
     [DisplayName("Payment Terms")]
     [IsoXmlTag("PmtTerms")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTerms2> PaymentTerms { get; }
 
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reference to a message.
 /// </summary>
 [IsoId("_7Q8FcQgJEeSFYfyUKDXKaw")]
+[IsoDisplayName(@"Linked Message 1 Choice")]
 public interface ILinkedMessage1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data on transaction requiring reconciliation or pairing.
 /// </summary>
 [IsoId("_cIzsx1ovEe23K4GXSpBSeg")]
+[IsoDisplayName(@"Reconciliation Report")]
 public interface IReconciliationReport14 : IIsoComponent
 {
     /// <summary>

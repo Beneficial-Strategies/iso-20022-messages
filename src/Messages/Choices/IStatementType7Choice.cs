@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of format for the statement type.</summary>
 [IsoId("_wEGvUQJ3EfGAP_FOfstLIw")]
+[IsoDisplayName(@"Statement Type 7 Choice")]
 public interface IStatementType7Choice : IIsoChoice { }

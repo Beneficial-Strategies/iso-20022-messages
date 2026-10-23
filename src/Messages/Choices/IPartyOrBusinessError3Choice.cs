@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Report between the party reference data or a business error.
 /// </summary>
 [IsoId("_0CyYAYwXEei289CGNqs21g")]
+[IsoDisplayName(@"Party Or Business Error 3 Choice")]
 public interface IPartyOrBusinessError3Choice : IIsoChoice { }

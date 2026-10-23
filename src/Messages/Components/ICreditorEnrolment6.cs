@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Creditor Enrolment6.
 /// </summary>
 [IsoId("_zhDXAzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Creditor Enrolment6")]
 public interface ICreditorEnrolment6 : IIsoComponent
 {
     /// <summary>

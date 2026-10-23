@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contents information to identify a previous exchange.
 /// </summary>
 [IsoId("_d_IAYU6tEeyGi9JAv6wq7Q")]
+[IsoDisplayName(@"Message Status Request")]
 public interface IMessageStatusRequest5 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IMessageStatusRequest5 : IIsoComponent
     [IsoId("_eFo4F06tEeyGi9JAv6wq7Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

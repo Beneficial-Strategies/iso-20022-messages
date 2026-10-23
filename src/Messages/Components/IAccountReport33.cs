@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account Report33.
 /// </summary>
 [IsoId("_9HJ9UTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Account Report33")]
 public interface IAccountReport33 : IIsoComponent
 {
     /// <summary>
@@ -93,6 +94,7 @@ public interface IAccountReport33 : IIsoComponent
     /// </summary>
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountInterest4> Interest { get; }
 
     /// <summary>
@@ -100,6 +102,7 @@ public interface IAccountReport33 : IIsoComponent
     /// </summary>
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance8> Balance { get; }
 
     /// <summary>
@@ -114,6 +117,7 @@ public interface IAccountReport33 : IIsoComponent
     /// </summary>
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportEntry14> Entry { get; }
 
     /// <summary>

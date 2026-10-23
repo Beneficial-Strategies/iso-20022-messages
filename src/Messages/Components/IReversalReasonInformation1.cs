@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further information on the reversal reason of the transaction.
 /// </summary>
 [IsoId("_TPKBodp-Ed-ak6NoX_4Aeg_157540470")]
+[IsoDisplayName(@"Reversal Reason Information")]
 public interface IReversalReasonInformation1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IReversalReasonInformation1 : IIsoComponent
     [IsoId("_TPKBpNp-Ed-ak6NoX_4Aeg_157540512")]
     [DisplayName("Additional Reversal Reason Information")]
     [IsoXmlTag("AddtlRvslRsnInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalReversalReasonInformation { get; }
 }

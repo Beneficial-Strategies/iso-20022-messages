@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria which are used to search for a standing order and to report on standing orders. A name may be given to the new query.
 /// </summary>
 [IsoId("_GMtiVW4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Standing Order Criteria")]
 public interface IStandingOrderCriteria3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStandingOrderCriteria3 : IIsoComponent
     [IsoId("_GWGH024-EeiU9cctagi5ow")]
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NewQueryName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IStandingOrderCriteria3 : IIsoComponent
     [IsoId("_GWGH1W4-EeiU9cctagi5ow")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStandingOrderSearchCriteria3> SearchCriteria { get; }
 
     /// <summary>

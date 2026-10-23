@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies information about the penalty report.
 /// </summary>
 [IsoId("_8l9EMdfMEeiJ1vId85LeLw")]
+[IsoDisplayName(@"Penalty Report1")]
 public interface IPenaltyReport1 : IIsoComponent
 {
     /// <summary>

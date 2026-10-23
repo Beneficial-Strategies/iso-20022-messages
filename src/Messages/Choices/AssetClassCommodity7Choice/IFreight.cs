@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice;
 /// <summary>
 /// Freight.
 /// </summary>
+[IsoDisplayName(@"Freight")]
 public interface IFreight : IAssetClassCommodity7Choice, IIsoChoiceVariant
 {
     /// <summary>

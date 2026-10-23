@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionStyle6Choice;
 /// Option style expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_AbpPoNokEeC60axPepSq7g_1913109761")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOptionStyle6Choice, IIsoChoiceVariant
 {
     /// <summary>

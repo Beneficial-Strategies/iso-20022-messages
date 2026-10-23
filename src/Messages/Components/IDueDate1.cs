@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the date by when the financial institutiion needs to provide a response.
 /// </summary>
 [IsoId("_AeNGMEcWEeGlWcsEChp7QA")]
+[IsoDisplayName(@"Due Date")]
 public interface IDueDate1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDueDate1 : IIsoComponent
     [IsoId("_C31QHEcWEeGlWcsEChp7QA")]
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DueDate { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface IDueDate1 : IIsoComponent
     [IsoId("_pW-2nEcWEeGlWcsEChp7QA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalInformation { get; }
 }

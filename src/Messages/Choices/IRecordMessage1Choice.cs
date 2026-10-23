@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Message to be sent in a batch transfer as a record.
 /// </summary>
 [IsoId("_F2jDAFZVEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Record Message 1 Choice")]
 public interface IRecordMessage1Choice : IIsoChoice { }

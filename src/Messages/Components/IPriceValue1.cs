@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Value given to a price.
 /// </summary>
 [IsoId("_QaaCEtp-Ed-ak6NoX_4Aeg_-423063067")]
+[IsoDisplayName(@"Price Value")]
 public interface IPriceValue1 : IIsoComponent
 {
     /// <summary>

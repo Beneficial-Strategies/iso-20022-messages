@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria based on which information is included.
 /// </summary>
 [IsoId("_WmNI4agzEfCXwLUUylXgrQ")]
+[IsoDisplayName(@"Settlement Instruction Query Criteria4")]
 public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp7LQagzEfCXwLUUylXgrQ")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferences83Choice> References { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp7LSagzEfCXwLUUylXgrQ")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementInstructionQueryStatus3> Status { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp7LS6gzEfCXwLUUylXgrQ")]
     [DisplayName("Securities Movement Type")]
     [IsoXmlTag("SctiesMvmntTp")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ReceiveDelivery1Code> SecuritiesMovementType { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp7LWagzEfCXwLUUylXgrQ")]
     [DisplayName("Payment")]
     [IsoXmlTag("Pmt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<DeliveryReceiptType2Code> Payment { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp7yU6gzEfCXwLUUylXgrQ")]
     [DisplayName("Securities Transaction Type")]
     [IsoXmlTag("SctiesTxTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesTransactionType48Choice> SecuritiesTransactionType { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp7yW6gzEfCXwLUUylXgrQ")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification19> FinancialInstrumentIdentification { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp7yY6gzEfCXwLUUylXgrQ")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriorityNumeric4Choice> Priority { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp7ya6gzEfCXwLUUylXgrQ")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesAccount19> SafekeepingAccount { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp7ybagzEfCXwLUUylXgrQ")]
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentificationSearchCriteria2Choice> CashAccount { get; }
 
     /// <summary>
@@ -145,6 +155,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp8ZaagzEfCXwLUUylXgrQ")]
     [DisplayName("Settlement Currency")]
     [IsoXmlTag("SttlmCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveOrHistoricCurrencyCode> SettlementCurrency { get; }
 
     /// <summary>
@@ -153,6 +164,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp8Za6gzEfCXwLUUylXgrQ")]
     [DisplayName("Safekeeping Account Owner")]
     [IsoXmlTag("SfkpgAcctOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification148> SafekeepingAccountOwner { get; }
 
     /// <summary>
@@ -161,6 +173,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp8ZbagzEfCXwLUUylXgrQ")]
     [DisplayName("Message Originator")]
     [IsoXmlTag("MsgOrgtr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> MessageOriginator { get; }
 
     /// <summary>
@@ -169,6 +182,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp8Zb6gzEfCXwLUUylXgrQ")]
     [DisplayName("Counterpart Settlement Parties")]
     [IsoXmlTag("CntrptSttlmPties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementParties78> CounterpartSettlementParties { get; }
 
     /// <summary>
@@ -177,6 +191,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp8ZcagzEfCXwLUUylXgrQ")]
     [DisplayName("Delivering Settlement Parties")]
     [IsoXmlTag("DlvrgSttlmPties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementParties78> DeliveringSettlementParties { get; }
 
     /// <summary>
@@ -185,6 +200,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp8ZeagzEfCXwLUUylXgrQ")]
     [DisplayName("Receiving Settlement Parties")]
     [IsoXmlTag("RcvgSttlmPties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementParties78> ReceivingSettlementParties { get; }
 
     /// <summary>
@@ -193,6 +209,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp8ZgagzEfCXwLUUylXgrQ")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<TradeTransactionCondition1Code> TradeTransactionCondition { get; }
 
     /// <summary>
@@ -201,6 +218,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp8Zg6gzEfCXwLUUylXgrQ")]
     [DisplayName("Securities Transaction Condition")]
     [IsoXmlTag("SctiesTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementTransactionCondition34Choice> SecuritiesTransactionCondition { get; }
 
     /// <summary>
@@ -225,6 +243,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp8ZiagzEfCXwLUUylXgrQ")]
     [DisplayName("Country Of Issue")]
     [IsoXmlTag("CtryOfIsse")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> CountryOfIssue { get; }
 
     /// <summary>
@@ -233,6 +252,7 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp8ZkagzEfCXwLUUylXgrQ")]
     [DisplayName("Issuer CSD")]
     [IsoXmlTag("IssrCSD")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification136> IssuerCSD { get; }
 
     /// <summary>
@@ -241,5 +261,6 @@ public interface ISettlementInstructionQueryCriteria4 : IIsoComponent
     [IsoId("_Wp8Zk6gzEfCXwLUUylXgrQ")]
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegistration10Choice> HoldIndicator { get; }
 }

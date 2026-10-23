@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money debited or credited on the books of an account servicer.
 /// </summary>
 [IsoId("_SUmd49p-Ed-ak6NoX_4Aeg_-1279955340")]
+[IsoDisplayName(@"Amount And Direction")]
 public interface IAmountAndDirection9 : IIsoComponent
 {
     /// <summary>

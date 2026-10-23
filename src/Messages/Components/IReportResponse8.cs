@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report Response8.
 /// </summary>
 [IsoId("_Zdt7waE7Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"Report Response8")]
 public interface IReportResponse8 : IIsoComponent
 {
     /// <summary>
@@ -58,5 +59,6 @@ public interface IReportResponse8 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

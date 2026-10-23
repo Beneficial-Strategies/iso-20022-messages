@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the type of garnishment.
 /// </summary>
 [IsoId("_LLLooYnnEeOORMXOfBk1Bw")]
+[IsoDisplayName(@"Garnishment Type")]
 public interface IGarnishmentType1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IGarnishmentType1 : IIsoComponent
     [IsoId("_LWYzFYnnEeOORMXOfBk1Bw")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

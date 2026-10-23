@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the intra-position movement.
 /// </summary>
 [IsoId("_LTFb8wVVEeqjd8n6wD9JVw")]
+[IsoDisplayName(@"Intra Position Movement Details")]
 public interface IIntraPositionMovementDetails18 : IIsoComponent
 {
     /// <summary>
@@ -81,6 +82,7 @@ public interface IIntraPositionMovementDetails18 : IIsoComponent
     [IsoId("_LTFcBwVVEeqjd8n6wD9JVw")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AcknowledgedStatusTimeStamp { get; }
 
     /// <summary>
@@ -105,6 +107,8 @@ public interface IIntraPositionMovementDetails18 : IIsoComponent
     [IsoId("_LTFcDQVVEeqjd8n6wD9JVw")]
     [DisplayName("Instruction Processing Additional Details")]
     [IsoXmlTag("InstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text? InstructionProcessingAdditionalDetails { get; }
 
     /// <summary>
@@ -113,5 +117,6 @@ public interface IIntraPositionMovementDetails18 : IIsoComponent
     [IsoId("_LTFcDwVVEeqjd8n6wD9JVw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

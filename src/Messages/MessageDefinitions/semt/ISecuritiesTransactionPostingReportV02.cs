@@ -28,6 +28,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesTxPstngRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.017.001.02"
 )]
+[Description(@"Scope|An account servicer sends a SecuritiesTransactionPostingReport to an account owner to provide the details of increases and decreases of holdings which occurred during a specified period, for all or selected securities in the specified safekeeping account or sub-safekeeping account which the account servicer holds for the account owner.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.|Usage|This message may be used as a trade date based or a settlement date based statement.|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).|using the relevant elements in the Business Application Header.|ISO 15022 - 20022 Coexistence|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
+[IsoDisplayName(@"Securities Transaction Posting Report V")]
 public interface ISecuritiesTransactionPostingReportV02 : IOuterRecord
 {
     /// <summary>
@@ -68,6 +70,7 @@ public interface ISecuritiesTransactionPostingReportV02 : IOuterRecord
     [IsoId("_oO6-HdtYEd-RF5yaMAVhAw")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentDetails5> FinancialInstrumentDetails { get; }
 
     /// <summary>
@@ -76,5 +79,6 @@ public interface ISecuritiesTransactionPostingReportV02 : IOuterRecord
     [IsoId("_oO6-H9tYEd-RF5yaMAVhAw")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubAccountIdentification15> SubAccountDetails { get; }
 }

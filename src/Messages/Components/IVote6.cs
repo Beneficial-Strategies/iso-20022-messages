@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Decision of the voting party for one resolution. Several types of decisions can be indicated to allow for split vote specification.
 /// </summary>
 [IsoId("_8pNRsV61EeSjaerr_EM7AQ")]
+[IsoDisplayName(@"Vote")]
 public interface IVote6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVote6 : IIsoComponent
     [IsoId("_9Gg4w161EeSjaerr_EM7AQ")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IVote6 : IIsoComponent
     [IsoId("_9Gg4xV61EeSjaerr_EM7AQ")]
     [DisplayName("For")]
     [IsoXmlTag("For")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? For { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IVote6 : IIsoComponent
     [IsoId("_9Gg4x161EeSjaerr_EM7AQ")]
     [DisplayName("Against")]
     [IsoXmlTag("Agnst")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Against { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IVote6 : IIsoComponent
     [IsoId("_9Gg4yV61EeSjaerr_EM7AQ")]
     [DisplayName("Abstain")]
     [IsoXmlTag("Abstn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Abstain { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IVote6 : IIsoComponent
     [IsoId("_9Gg4y161EeSjaerr_EM7AQ")]
     [DisplayName("Withhold")]
     [IsoXmlTag("Wthhld")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Withhold { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IVote6 : IIsoComponent
     [IsoId("_9Gg4zV61EeSjaerr_EM7AQ")]
     [DisplayName("With Management")]
     [IsoXmlTag("WthMgmt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? WithManagement { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IVote6 : IIsoComponent
     [IsoId("_9Gg4z161EeSjaerr_EM7AQ")]
     [DisplayName("Against Management")]
     [IsoXmlTag("AgnstMgmt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? AgainstManagement { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface IVote6 : IIsoComponent
     [IsoId("_9Gg40V61EeSjaerr_EM7AQ")]
     [DisplayName("Discretionary")]
     [IsoXmlTag("Dscrtnry")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Discretionary { get; }
 
     /// <summary>
@@ -81,6 +91,7 @@ public interface IVote6 : IIsoComponent
     [IsoId("_SdMMU16_EeSjaerr_EM7AQ")]
     [DisplayName("One Year")]
     [IsoXmlTag("OneYr")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? OneYear { get; }
 
     /// <summary>
@@ -89,6 +100,7 @@ public interface IVote6 : IIsoComponent
     [IsoId("_SdMMVF6_EeSjaerr_EM7AQ")]
     [DisplayName("Two Years")]
     [IsoXmlTag("TwoYrs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TwoYears { get; }
 
     /// <summary>
@@ -97,6 +109,7 @@ public interface IVote6 : IIsoComponent
     [IsoId("_SdMMVV6_EeSjaerr_EM7AQ")]
     [DisplayName("Three Years")]
     [IsoXmlTag("ThreeYrs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ThreeYears { get; }
 
     /// <summary>
@@ -105,6 +118,7 @@ public interface IVote6 : IIsoComponent
     [IsoId("_9Gg40161EeSjaerr_EM7AQ")]
     [DisplayName("No Action")]
     [IsoXmlTag("NoActn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NoAction { get; }
 
     /// <summary>
@@ -113,5 +127,6 @@ public interface IVote6 : IIsoComponent
     [IsoId("_GlQEEF62EeSjaerr_EM7AQ")]
     [DisplayName("Withdrawn")]
     [IsoXmlTag("Wdrwn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? Withdrawn { get; }
 }

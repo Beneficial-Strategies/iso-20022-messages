@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification12Choice;
 /// Unique and unambiguous way to identify an organisation.
 /// </summary>
 [IsoId("_QQ3rl9p-Ed-ak6NoX_4Aeg_1616890530")]
+[IsoDisplayName(@"BIC Or BEI")]
 public interface IBICOrBEI : IPartyIdentification12Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBICOrBEI : IPartyIdentification12Choice, IIsoChoiceVariant
     /// Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
     /// </summary>
     [IsoXmlTag("BICOrBEI")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier Value { get; }
 }

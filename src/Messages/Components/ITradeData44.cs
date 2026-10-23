@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trade Data44.
 /// </summary>
 [IsoId("_GCpiQUjrEe-KhcStGV4xTg")]
+[IsoDisplayName(@"Trade Data44")]
 public interface ITradeData44 : IIsoComponent
 {
     /// <summary>

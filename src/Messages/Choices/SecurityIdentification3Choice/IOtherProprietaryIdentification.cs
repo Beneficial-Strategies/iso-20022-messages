@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice;
 /// </summary>
 [IsoId("_Qd1wldp-Ed-ak6NoX_4Aeg_1064399293")]
 [IsoXmlTag("OthrPrtryId")]
+[IsoDisplayName(@"Other Proprietary Identification")]
 public interface IOtherProprietaryIdentification : ISecurityIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOtherProprietaryIdentification : ISecurityIdentification3Choic
     [IsoId("_Sk_qYNp-Ed-ak6NoX_4Aeg_-815168262")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -34,5 +37,7 @@ public interface IOtherProprietaryIdentification : ISecurityIdentification3Choic
     [IsoId("_Sk_qYtp-Ed-ak6NoX_4Aeg_-815168263")]
     [DisplayName("Proprietary Identification Source")]
     [IsoXmlTag("PrtryIdSrc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ProprietaryIdentificationSource { get; }
 }

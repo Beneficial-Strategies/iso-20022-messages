@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BidRangeType2Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IBidRangeType2Choice, IIsoChoiceVariant
 {
     /// <summary>

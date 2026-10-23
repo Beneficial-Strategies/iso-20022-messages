@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("8cfdad38-bf8e-433a-bf6f-b499eae23ebb")]
 [IsoMessage("setr.005.001.05", "RedOrdrCxlReq", "urn:iso:std:iso:20022:tech:xsd:setr.005.001.05")]
+[Description(@"Scope|The RedemptionOrderCancellationRequest message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to request the cancellation of a previously sent RedemptionOrder.|Usage|The RedemptionOrderCancellationRequest message is used to message is used to request the cancellation of one or more individual orders.|There is no amendment, but a cancellation and re-instruct policy.|To request the cancellation of one or more individual orders, the order reference of each individual order listed in the original RedemptionOrder message in the order reference element. The message identification of the RedemptionOrder message which contains the individual orders to be cancelled may also be quoted in PreviousReference but this is not recommended.|The deadline and acceptance of a cancellation request is subject to a service level agreement (SLA). This cancellation message is a cancellation request. There is no automatic acceptance of the cancellation.|The rejection or acceptance of a RedemptionOrderCancellationRequest is made using an OrderCancellationStatusReport message.")]
+[IsoDisplayName(@"Redemption Order Cancellation Request V05")]
 public interface IRedemptionOrderCancellationRequestV05 : IOuterRecord
 {
     /// <summary>
@@ -47,6 +49,8 @@ public interface IRedemptionOrderCancellationRequestV05 : IOuterRecord
     /// </summary>
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -54,6 +58,7 @@ public interface IRedemptionOrderCancellationRequestV05 : IOuterRecord
     /// </summary>
     [DisplayName("Order References")]
     [IsoXmlTag("OrdrRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundOrder13> OrderReferences { get; }
 
     /// <summary>

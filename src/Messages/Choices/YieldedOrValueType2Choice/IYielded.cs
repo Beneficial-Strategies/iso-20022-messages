@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.YieldedOrValueType2Choice;
 /// Indicates whether the price is expressed as a yield.
 /// </summary>
 [IsoId("_VBLs0QycEeuG8M5giQ2e0w")]
+[IsoDisplayName(@"Yielded")]
 public interface IYielded : IYieldedOrValueType2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IYielded : IYieldedOrValueType2Choice, IIsoChoiceVariant
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Yldd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

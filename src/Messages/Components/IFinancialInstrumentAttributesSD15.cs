@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding underlying security details.
 /// </summary>
 [IsoId("_3beX4b5PEeexmbB7KsjCwA")]
+[IsoDisplayName(@"Financial Instrument Attributes SD")]
 public interface IFinancialInstrumentAttributesSD15 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrumentAttributesSD15 : IIsoComponent
     [IsoId("_3r_gIb5PEeexmbB7KsjCwA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IFinancialInstrumentAttributesSD15 : IIsoComponent
     [IsoId("_3r_gO75PEeexmbB7KsjCwA")]
     [DisplayName("Security Eligibility Indicator")]
     [IsoXmlTag("SctyElgbltyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SecurityEligibilityIndicator { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface IFinancialInstrumentAttributesSD15 : IIsoComponent
     [IsoId("_3r_gQ75PEeexmbB7KsjCwA")]
     [DisplayName("Ticker Symbol")]
     [IsoXmlTag("TckrSymb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TickerSymbol { get; }
 
     /// <summary>
@@ -81,6 +87,8 @@ public interface IFinancialInstrumentAttributesSD15 : IIsoComponent
     [IsoId("_3r_gW75PEeexmbB7KsjCwA")]
     [DisplayName("DIVANN Security Description")]
     [IsoXmlTag("DIVANNSctyDesc")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? DIVANNSecurityDescription { get; }
 
     /// <summary>
@@ -89,5 +97,6 @@ public interface IFinancialInstrumentAttributesSD15 : IIsoComponent
     [IsoId("_3r_gXb5PEeexmbB7KsjCwA")]
     [DisplayName("Foreign Issue Flag")]
     [IsoXmlTag("FrgnIsseFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ForeignIssueFlag { get; }
 }

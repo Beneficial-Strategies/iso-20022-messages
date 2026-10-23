@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the valuation of a collateral, identified through an ISIN.
 /// </summary>
 [IsoId("_iZO6CaidEeWHO_l3hf2rlA")]
+[IsoDisplayName(@"Collateral Valuation")]
 public interface ICollateralValuation6 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICollateralValuation6 : IIsoComponent
     [IsoId("_i2_NA6idEeWHO_l3hf2rlA")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier ISIN { get; }
 }

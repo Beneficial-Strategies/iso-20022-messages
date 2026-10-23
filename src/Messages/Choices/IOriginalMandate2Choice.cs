@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the mandate that is being accepted.
 /// </summary>
 [IsoId("_to8xYVkyEeGeoaLUQk__nA_-1304460970")]
+[IsoDisplayName(@"Original Mandate 2 Choice")]
 public interface IOriginalMandate2Choice : IIsoChoice { }

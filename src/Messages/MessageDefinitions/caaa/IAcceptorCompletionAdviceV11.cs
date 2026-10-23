@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
     "AccptrCmpltnAdvc",
     "urn:iso:std:iso:20022:tech:xsd:caaa.003.001.11"
 )]
+[Description(@"The AcceptorCompletionAdvice message is sent by an acceptor (or its agent) to notify the acquirer (or its agent) of the outcome of the payment at the acceptor, and to transfer the financial data of the transaction to the acquirer (capture).|A AcceptorCompletionAdvice message is also sent to reverse an approved authorisation and any associated financial transfer (capture), if the card payment transaction could not be completed successfully.")]
+[IsoDisplayName(@"Acceptor Completion Advice V")]
 public interface IAcceptorCompletionAdviceV11 : IOuterRecord
 {
     /// <summary>

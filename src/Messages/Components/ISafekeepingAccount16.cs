@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification and information about a securities account and balance.
 /// </summary>
 [IsoId("_yKdFpTT5Ee2j2eQlcOSMKg")]
+[IsoDisplayName(@"Safekeeping Account")]
 public interface ISafekeepingAccount16 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISafekeepingAccount16 : IIsoComponent
     [IsoId("_ygDiNzT5Ee2j2eQlcOSMKg")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISafekeepingAccount16 : IIsoComponent
     [IsoId("_GNAN8TT6Ee2j2eQlcOSMKg")]
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? BlockChainAddressOrWallet { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ISafekeepingAccount16 : IIsoComponent
     [IsoId("_ygDiOzT5Ee2j2eQlcOSMKg")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SubAccountIdentification { get; }
 
     /// <summary>
@@ -49,6 +56,9 @@ public interface ISafekeepingAccount16 : IIsoComponent
     [IsoId("_ygDiPTT5Ee2j2eQlcOSMKg")]
     [DisplayName("Instructed Balance")]
     [IsoXmlTag("InstdBal")]
+    [MinLength(1)]
+    [MaxLength(15)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IHoldingBalance12> InstructedBalance { get; }
 
     /// <summary>
@@ -57,5 +67,8 @@ public interface ISafekeepingAccount16 : IIsoComponent
     [IsoId("_ygDiPzT5Ee2j2eQlcOSMKg")]
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
+    [MinLength(0)]
+    [MaxLength(250)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification246Choice> RightsHolder { get; }
 }

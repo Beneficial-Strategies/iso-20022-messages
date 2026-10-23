@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References36Choice;
 /// Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).
 /// </summary>
 [IsoId("_jx45WO5NEeCisYr99QEiWA_-753671308")]
+[IsoDisplayName(@"Account Owner Transaction Identification")]
 public interface IAccountOwnerTransactionIdentification : IReferences36Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IAccountOwnerTransactionIdentification : IReferences36Choice, I
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

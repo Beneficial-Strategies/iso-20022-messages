@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the settlement frequency.
 /// </summary>
 [IsoId("_jg3o4CDUEeWCLu74WLgP4w")]
+[IsoDisplayName(@"Settlement Frequency 1 Choice")]
 public interface ISettlementFrequency1Choice : IIsoChoice { }

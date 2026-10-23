@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides a set of identifications to reference to a securities settlement transaction.
 /// </summary>
 [IsoId("_vngwR90-Eeqr9MBu3-7tWg")]
+[IsoDisplayName(@"References")]
 public interface IReferences26 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReferences26 : IIsoComponent
     [IsoId("_vngwSt0-Eeqr9MBu3-7tWg")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountServicerTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IReferences26 : IIsoComponent
     [IsoId("_vngwSN0-Eeqr9MBu3-7tWg")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketInfrastructureTransactionIdentification { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IReferences26 : IIsoComponent
     [IsoId("_vngwSd0-Eeqr9MBu3-7tWg")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessorTransactionIdentification { get; }
 }

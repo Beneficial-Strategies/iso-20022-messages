@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the collateral value position/balance.
 /// </summary>
 [IsoId("_EP0opTpyEemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Collateral Value Position")]
 public interface ICollateralValuePosition3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICollateralValuePosition3 : IIsoComponent
     [IsoId("_EbS40TpyEemk2e6qGBk8IQ")]
     [DisplayName("Data Access Time")]
     [IsoXmlTag("DataAccsTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime DataAccessTime { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface ICollateralValuePosition3 : IIsoComponent
     [IsoId("_EbS41zpyEemk2e6qGBk8IQ")]
     [DisplayName("Securities")]
     [IsoXmlTag("Scties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityCharacteristics3> Securities { get; }
 }

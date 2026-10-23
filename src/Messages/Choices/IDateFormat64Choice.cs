@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the date.
 /// </summary>
 [IsoId("_TtBUi199Ee262vCSVgjImg")]
+[IsoDisplayName(@"Date Format 64 Choice")]
 public interface IDateFormat64Choice : IIsoChoice { }

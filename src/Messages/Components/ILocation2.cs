@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Location information.
 /// </summary>
 [IsoId("_ZTussRUwEeOCqpkCrPgk4g")]
+[IsoDisplayName(@"Location")]
 public interface ILocation2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,7 @@ public interface ILocation2 : IIsoComponent
     [IsoId("_ZrbbBRUwEeOCqpkCrPgk4g")]
     [DisplayName("Text")]
     [IsoXmlTag("Txt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Text { get; }
 }

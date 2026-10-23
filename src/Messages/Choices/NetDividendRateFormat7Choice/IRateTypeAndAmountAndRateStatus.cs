@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateFormat7Choice;
 /// </summary>
 [IsoId("_0k8OAQFgEeGUnupuEvvOAg")]
 [IsoXmlTag("RateTpAndAmtAndRateSts")]
+[IsoDisplayName(@"Rate Type And Amount And Rate Status")]
 public interface IRateTypeAndAmountAndRateStatus : INetDividendRateFormat7Choice, IIsoChoiceVariant
 {
     /// <summary>

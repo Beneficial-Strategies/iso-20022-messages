@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionCondition47
 
 /// <summary>Settlement transaction condition expressed as an ISO 20022 code.</summary>
 [IsoId("_m1cVBfHcEfChCaiL9q1LKg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlementTransactionCondition47Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

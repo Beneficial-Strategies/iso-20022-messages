@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information used to calculate the tax.
 /// </summary>
 [IsoId("_VSSXCdp-Ed-ak6NoX_4Aeg_-2096389555")]
+[IsoDisplayName(@"Tax Calculation Information")]
 public interface ITaxCalculationInformation3 : IIsoComponent
 {
     /// <summary>

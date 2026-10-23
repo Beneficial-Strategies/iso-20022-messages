@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the transaction published by a contributor.
 /// </summary>
 [IsoId("_Nf1zgGIlEfCeoPFCHQnhvA")]
+[IsoDisplayName(@"Contributor Publication Data1")]
 public interface IContributorPublicationData1 : IIsoComponent
 {
     /// <summary>

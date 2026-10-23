@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionReportOrError5Choice;
 /// </summary>
 [IsoId("_df3BIdcZEeqRFcf2R4bPBw")]
 [IsoXmlTag("BizRpt")]
+[IsoDisplayName(@"Business Report")]
 public interface IBusinessReport : ITransactionReportOrError5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,5 +35,6 @@ public interface IBusinessReport : ITransactionReportOrError5Choice, IIsoChoiceV
     [IsoId("_dhhOC9cZEeqRFcf2R4bPBw")]
     [DisplayName("Transaction Report")]
     [IsoXmlTag("TxRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionReport6> TransactionReport { get; }
 }

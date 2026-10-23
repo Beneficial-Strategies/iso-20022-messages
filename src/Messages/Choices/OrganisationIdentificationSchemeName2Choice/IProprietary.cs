@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentificationScheme
 /// Name of the identification scheme, in a free text form.
 /// </summary>
 [IsoId("_WgN0SRBBEeGyZLI6olyk-Q")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IOrganisationIdentificationSchemeName2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IOrganisationIdentificationSchemeName2Choice, II
     /// Specifies a character string with a maximum length of 35 characters limited to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + .
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
+    [StringLength(35, MinimumLength = 1)]
     RestrictedFINXMax35Text Value { get; }
 }

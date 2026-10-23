@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Document26.
 /// </summary>
 [IsoId("_PG2_EeJJEe-5wchdE0oJYw")]
+[IsoDisplayName(@"Document26")]
 public interface IDocument26 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IDocument26 : IIsoComponent
     /// </summary>
     [DisplayName("Language")]
     [IsoXmlTag("Lang")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISO2ALanguageCode> Language { get; }
 
     /// <summary>

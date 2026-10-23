@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_G1IuQZEHEem7fvtoGpNpow")]
+[IsoDisplayName(@"Receive Information")]
 public interface IReceiveInformation21 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IReceiveInformation21 : IIsoComponent
     [IsoId("_HJOH7ZEHEem7fvtoGpNpow")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary43> IntermediaryInformation { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IReceiveInformation21 : IIsoComponent
     [IsoId("_LGSAY7HiEem4X-SfagDa8w")]
     [DisplayName("Dematerialised Indicator")]
     [IsoXmlTag("DmtrlsdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DematerialisedIndicator { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface IReceiveInformation21 : IIsoComponent
     [IsoId("_G25c4ZM4EemKz5EOjv82iQ")]
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedTradeDate { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface IReceiveInformation21 : IIsoComponent
     [IsoId("_HJOH75EHEem7fvtoGpNpow")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>
@@ -113,6 +118,7 @@ public interface IReceiveInformation21 : IIsoComponent
     [IsoId("_HJOH95EHEem7fvtoGpNpow")]
     [DisplayName("Fees")]
     [IsoXmlTag("Fees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFees2> Fees { get; }
 
     /// <summary>
@@ -121,6 +127,7 @@ public interface IReceiveInformation21 : IIsoComponent
     [IsoId("_HJOH-ZEHEem7fvtoGpNpow")]
     [DisplayName("Individual Tax")]
     [IsoXmlTag("IndvTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax38> IndividualTax { get; }
 
     /// <summary>
@@ -138,6 +145,7 @@ public interface IReceiveInformation21 : IIsoComponent
     [IsoId("_HJOH-5EHEem7fvtoGpNpow")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms37> ForeignExchangeDetails { get; }
 
     /// <summary>

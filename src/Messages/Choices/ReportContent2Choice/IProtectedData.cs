@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportContent2Choice;
 /// <summary>
 /// Protected Data.
 /// </summary>
+[IsoDisplayName(@"Protected Data")]
 public interface IProtectedData : IReportContent2Choice, IIsoChoiceVariant
 {
     /// <summary>

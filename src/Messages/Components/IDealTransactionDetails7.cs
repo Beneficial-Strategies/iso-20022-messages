@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the triparty collateral transaction deal.
 /// </summary>
 [IsoId("_b2hQgRIlEeyLzJfz3xPQNA")]
+[IsoDisplayName(@"Deal Transaction Details")]
 public interface IDealTransactionDetails7 : IIsoComponent
 {
     /// <summary>

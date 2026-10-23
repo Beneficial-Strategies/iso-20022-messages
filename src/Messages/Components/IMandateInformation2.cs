@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that serves as a basis to debit an account.
 /// </summary>
 [IsoId("_T28aaNp-Ed-ak6NoX_4Aeg_-1312343153")]
+[IsoDisplayName(@"Mandate Information")]
 public interface IMandateInformation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMandateInformation2 : IIsoComponent
     [IsoId("_T28aadp-Ed-ak6NoX_4Aeg_-1312343061")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IMandateInformation2 : IIsoComponent
     [IsoId("_T3GLYNp-Ed-ak6NoX_4Aeg_-1312343122")]
     [DisplayName("Mandate Request Identification")]
     [IsoXmlTag("MndtReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MandateRequestIdentification { get; }
 
     /// <summary>

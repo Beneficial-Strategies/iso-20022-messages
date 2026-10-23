@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Choice between formats for the quantity of security.
 /// </summary>
 [IsoId("_m1LjEWqWEemz04WrKJaMEA")]
+[IsoDisplayName(@"Financial Instrument Quantity Search2")]
 public interface IFinancialInstrumentQuantitySearch2 : IIsoComponent
 {
     /// <summary>

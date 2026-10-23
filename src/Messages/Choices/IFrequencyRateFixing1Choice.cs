@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the frequency fixing for the rate.
 /// </summary>
 [IsoId("_OPAdMI9PEeqMo4JxiuZGSw")]
+[IsoDisplayName(@"Frequency Rate Fixing 1 Choice")]
 public interface IFrequencyRateFixing1Choice : IIsoChoice { }

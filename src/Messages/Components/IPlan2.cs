@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Attributes of the instalment plan.
 /// </summary>
 [IsoId("_0uO7YZJJEeuuktRxxQZoNQ")]
+[IsoDisplayName(@"Plan")]
 public interface IPlan2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPlan2 : IIsoComponent
     [IsoId("_00pscZJJEeuuktRxxQZoNQ")]
     [DisplayName("Plan Identification")]
     [IsoXmlTag("PlanId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? PlanIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPlan2 : IIsoComponent
     [IsoId("_00qTg5JJEeuuktRxxQZoNQ")]
     [DisplayName("Other Plan Owner")]
     [IsoXmlTag("OthrPlanOwnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherPlanOwner { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPlan2 : IIsoComponent
     [IsoId("_00qThZJJEeuuktRxxQZoNQ")]
     [DisplayName("Instalment Payment Type")]
     [IsoXmlTag("InstlmtPmtTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstalmentPaymentType { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IPlan2 : IIsoComponent
     [IsoId("_qVTp4CuCEeyg-aG5nXcnfg")]
     [DisplayName("Deferred Instalment Indicator")]
     [IsoXmlTag("DfrrdInstlmtInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DeferredInstalmentIndicator { get; }
 
     /// <summary>
@@ -65,6 +73,7 @@ public interface IPlan2 : IIsoComponent
     [IsoId("_00qTiZJJEeuuktRxxQZoNQ")]
     [DisplayName("Number Of Periods")]
     [IsoXmlTag("NbOfPrds")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfPeriods { get; }
 
     /// <summary>
@@ -73,6 +82,7 @@ public interface IPlan2 : IIsoComponent
     [IsoId("_00qTi5JJEeuuktRxxQZoNQ")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInterestRateDetails2> InterestRate { get; }
 
     /// <summary>
@@ -81,6 +91,7 @@ public interface IPlan2 : IIsoComponent
     [IsoId("_00qTjZJJEeuuktRxxQZoNQ")]
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FirstPaymentDate { get; }
 
     /// <summary>
@@ -105,6 +116,7 @@ public interface IPlan2 : IIsoComponent
     [IsoId("_00qTk5JJEeuuktRxxQZoNQ")]
     [DisplayName("Total Number Of Payments")]
     [IsoXmlTag("TtlNbOfPmts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberOfPayments { get; }
 
     /// <summary>
@@ -129,6 +141,7 @@ public interface IPlan2 : IIsoComponent
     [IsoId("_00qTmZJJEeuuktRxxQZoNQ")]
     [DisplayName("Amount Details")]
     [IsoXmlTag("AmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalmentAmountDetails2> AmountDetails { get; }
 
     /// <summary>
@@ -145,5 +158,6 @@ public interface IPlan2 : IIsoComponent
     [IsoId("_5Q7OAJJKEeuuktRxxQZoNQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExecutingParty2Choice;
 /// <summary>
 /// Person.
 /// </summary>
+[IsoDisplayName(@"Person")]
 public interface IPerson : IExecutingParty2Choice, IIsoChoiceVariant
 {
     /// <summary>

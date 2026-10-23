@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InformationDistribution1Choice;
 /// Information distribution expressed as a code.
 /// </summary>
 [IsoId("_HJm3ACCVEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInformationDistribution1Choice, IIsoChoiceVariant
 {
     /// <summary>

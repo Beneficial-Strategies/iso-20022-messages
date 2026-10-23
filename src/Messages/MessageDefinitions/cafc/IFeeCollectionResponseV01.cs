@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.cafc;
 /// </summary>
 [IsoId("_WzFGdFciEeeFltjJxERUxw")]
 [IsoMessage("cafc.002.001.01", "FeeColltnRspn", "urn:iso:std:iso:20022:tech:xsd:cafc.002.001.01")]
+[Description(@"The FeeCollectionResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a FeeCollectionInitiation message.")]
+[IsoDisplayName(@"Fee Collection Response V")]
 public interface IFeeCollectionResponseV01 : IOuterRecord
 {
     /// <summary>

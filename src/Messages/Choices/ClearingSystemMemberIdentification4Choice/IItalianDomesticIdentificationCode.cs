@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Italian Domestic Identification Code - identifies Italian financial institutions on the Italian national clearing system. The code is assigned by the Associazione Bancaria Italiana (ABI).
 /// </summary>
 [IsoId("_VwSCc7NIEeejueAciesPMA")]
+[IsoDisplayName(@"Italian Domestic Identification Code")]
 public interface IItalianDomesticIdentificationCode
     : IClearingSystemMemberIdentification4Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IItalianDomesticIdentificationCode
     /// Italian Domestic Identification Code. Identifies Italian financial institutions on the Italian national clearing system. The code is assigned by the Associazione Bancaria Italiana (ABI).
     /// </summary>
     [IsoXmlTag("ITNCC")]
+    [IsoSimpleType(IsoSimpleType.ItalianDomesticIdentifier)]
     ItalianDomesticIdentifier Value { get; }
 }

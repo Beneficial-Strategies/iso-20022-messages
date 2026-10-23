@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingVenueType1Choice;
 /// Whether the Securities Financing Transaction was concluded off-venue.
 /// </summary>
 [IsoId("_5_yR8Hy7Eeu1BeE84IrnAQ")]
+[IsoDisplayName(@"Off Venue")]
 public interface IOffVenue : ITradingVenueType1Choice, IIsoChoiceVariant
 {
     /// <summary>

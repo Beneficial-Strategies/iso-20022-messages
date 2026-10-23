@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the multimodal or the individual transport of goods.
 /// </summary>
 [IsoId("_S5xucAEcEeCQm6a_G2yO_w_-1153183053")]
+[IsoDisplayName(@"Transport Means")]
 public interface ITransportMeans3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransportMeans3 : IIsoComponent
     [IsoId("_S5xucQEcEeCQm6a_G2yO_w_-629200229")]
     [DisplayName("Mode Code")]
     [IsoXmlTag("MdCd")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text? ModeCode { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransportMeans3 : IIsoComponent
     [IsoId("_S5xucgEcEeCQm6a_G2yO_w_1530122887")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface ITransportMeans3 : IIsoComponent
     [IsoId("_S5xucwEcEeCQm6a_G2yO_w_1574560835")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 }

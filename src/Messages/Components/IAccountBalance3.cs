@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account Balance3.
 /// </summary>
 [IsoId("_rnyE4XjUEe6YlIMyoxWMJA")]
+[IsoDisplayName(@"Account Balance3")]
 public interface IAccountBalance3 : IIsoComponent
 {
     /// <summary>
@@ -23,5 +24,6 @@ public interface IAccountBalance3 : IIsoComponent
     /// </summary>
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalance29> Balance { get; }
 }

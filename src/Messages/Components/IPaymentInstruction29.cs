@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics that apply to the credit side of the payment transactions included in the direct debit initiation.
 /// </summary>
 [IsoId("_KKol4W49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Payment Instruction")]
 public interface IPaymentInstruction29 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentInstruction29 : IIsoComponent
     [IsoId("_KVEUUW49EeiU9cctagi5ow")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPaymentInstruction29 : IIsoComponent
     [IsoId("_KVEUVW49EeiU9cctagi5ow")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
+    [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
     BatchBookingIndicator? BatchBooking { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IPaymentInstruction29 : IIsoComponent
     [IsoId("_KVEUV249EeiU9cctagi5ow")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? NumberOfTransactions { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IPaymentInstruction29 : IIsoComponent
     [IsoId("_KVEUWW49EeiU9cctagi5ow")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IPaymentInstruction29 : IIsoComponent
     [IsoId("_KVEUXW49EeiU9cctagi5ow")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate RequestedCollectionDate { get; }
 
     /// <summary>
@@ -145,5 +152,6 @@ public interface IPaymentInstruction29 : IIsoComponent
     [IsoId("_KVEUcW49EeiU9cctagi5ow")]
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDirectDebitTransactionInformation23> DirectDebitTransactionInformation { get; }
 }

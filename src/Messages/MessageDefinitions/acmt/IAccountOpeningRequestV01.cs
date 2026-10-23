@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_uso6-NE9Ed-BzquC8wXy7w_1165338755")]
 [IsoMessage("acmt.007.001.01", "AcctOpngReq", "urn:iso:std:iso:20022:tech:xsd:acmt.007.001.01")]
+[Description(@"Scope|The AccountOpeningRequest message is sent from an organisation to a financial institution as part of the account opening process. It is the initial request to open an account.|Usage|This message should only be used for initiating the account opening process.|It could be sent together with other related documents.")]
+[IsoDisplayName(@"Account Opening Request V")]
 public interface IAccountOpeningRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -64,6 +66,7 @@ public interface IAccountOpeningRequestV01 : IOuterRecord
     [IsoId("_usyr9NE9Ed-BzquC8wXy7w_-684862622")]
     [DisplayName("Organisation")]
     [IsoXmlTag("Org")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation7> Organisation { get; }
 
     /// <summary>
@@ -72,6 +75,7 @@ public interface IAccountOpeningRequestV01 : IOuterRecord
     [IsoId("_usyr9dE9Ed-BzquC8wXy7w_1854082685")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOperationMandate1> Mandate { get; }
 
     /// <summary>
@@ -88,5 +92,6 @@ public interface IAccountOpeningRequestV01 : IOuterRecord
     [IsoId("_usyr99E9Ed-BzquC8wXy7w_1390915325")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature1> DigitalSignature { get; }
 }

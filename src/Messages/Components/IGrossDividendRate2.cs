@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash dividend amount per equity before deductions or allowances have been made.
 /// </summary>
 [IsoId("_UPh5g9p-Ed-ak6NoX_4Aeg_1227561580")]
+[IsoDisplayName(@"Gross Dividend Rate")]
 public interface IGrossDividendRate2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency control contract registration details.
 /// </summary>
 [IsoId("_tWwUwbGIEeuSTr8k0UEM8A")]
+[IsoDisplayName(@"Contract Registration")]
 public interface IContractRegistration5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContractRegistration5 : IIsoComponent
     [IsoId("_tYjEgbGIEeuSTr8k0UEM8A")]
     [DisplayName("Contract Registration Identification")]
     [IsoXmlTag("CtrctRegnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ContractRegistrationIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IContractRegistration5 : IIsoComponent
     [IsoId("_tYjEh7GIEeuSTr8k0UEM8A")]
     [DisplayName("Contract Registration Opening")]
     [IsoXmlTag("CtrctRegnOpng")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContractRegistration6> ContractRegistrationOpening { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IContractRegistration5 : IIsoComponent
     [IsoId("_tYjEj7GIEeuSTr8k0UEM8A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

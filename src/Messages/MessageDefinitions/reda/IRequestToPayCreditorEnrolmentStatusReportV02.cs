@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.reda;
     "ReqToPayCdtrEnrlmntStsRpt",
     "urn:iso:std:iso:20022:tech:xsd:reda.069.001.02"
 )]
+[IsoDisplayName(@"Request To Pay Creditor Enrolment Status Report V02")]
 public interface IRequestToPayCreditorEnrolmentStatusReportV02 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface IRequestToPayCreditorEnrolmentStatusReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Original Enrolment And Status")]
     [IsoXmlTag("OrgnlEnrlmntAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEnrolmentStatus3> OriginalEnrolmentAndStatus { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface IRequestToPayCreditorEnrolmentStatusReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

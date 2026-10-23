@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat18Choice;
 /// Date not specified, for example, the date is unknown.
 /// </summary>
 [IsoId("_QhuyJeENEd-qUMZtd_eZuQ")]
+[IsoDisplayName(@"Not Specified Date")]
 public interface INotSpecifiedDate : IDateFormat18Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the party.
 /// </summary>
 [IsoId("_QgqFw2wfEeWLq_lbZ2Mhyw")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification100 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPartyIdentification100 : IIsoComponent
     [IsoId("_QgqFxWwfEeWLq_lbZ2Mhyw")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 }

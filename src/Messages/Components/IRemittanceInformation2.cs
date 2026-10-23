@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle.
 /// </summary>
 [IsoId("_QFsWVdp-Ed-ak6NoX_4Aeg_-1040515995")]
+[IsoDisplayName(@"Remittance Information")]
 public interface IRemittanceInformation2 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IRemittanceInformation2 : IIsoComponent
     [IsoId("_QFsWVtp-Ed-ak6NoX_4Aeg_-1039592586")]
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max140Text> Unstructured { get; }
 }

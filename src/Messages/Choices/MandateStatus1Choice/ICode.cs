@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateStatus1Choice;
 /// Status of the mandate, in a coded form as published in an external list.
 /// </summary>
 [IsoId("_ChH7ZJnAEeao_Z127E9uYg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMandateStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

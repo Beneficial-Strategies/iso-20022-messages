@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Description of the financial instrument.
 /// </summary>
 [IsoId("_nK2rmSqjEeObprHJy8Zrxg")]
+[IsoDisplayName(@"Financial Instrument Attributes")]
 public interface IFinancialInstrumentAttributes50 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IFinancialInstrumentAttributes50 : IIsoComponent
     [IsoId("_njGzjyqjEeObprHJy8Zrxg")]
     [DisplayName("Next Coupon Date")]
     [IsoXmlTag("NxtCpnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NextCouponDate { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface IFinancialInstrumentAttributes50 : IIsoComponent
     [IsoId("_njGzlyqjEeObprHJy8Zrxg")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpiryDate { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface IFinancialInstrumentAttributes50 : IIsoComponent
     [IsoId("_njGznyqjEeObprHJy8Zrxg")]
     [DisplayName("Floating Rate Fixing Date")]
     [IsoXmlTag("FltgRateFxgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FloatingRateFixingDate { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface IFinancialInstrumentAttributes50 : IIsoComponent
     [IsoId("_njGzpyqjEeObprHJy8Zrxg")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface IFinancialInstrumentAttributes50 : IIsoComponent
     [IsoId("_njGzryqjEeObprHJy8Zrxg")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IssueDate { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface IFinancialInstrumentAttributes50 : IIsoComponent
     [IsoId("_njGztyqjEeObprHJy8Zrxg")]
     [DisplayName("Next Callable Date")]
     [IsoXmlTag("NxtCllblDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? NextCallableDate { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface IFinancialInstrumentAttributes50 : IIsoComponent
     [IsoId("_njGzvyqjEeObprHJy8Zrxg")]
     [DisplayName("Putable Date")]
     [IsoXmlTag("PutblDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? PutableDate { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface IFinancialInstrumentAttributes50 : IIsoComponent
     [IsoId("_njGzxyqjEeObprHJy8Zrxg")]
     [DisplayName("Dated Date")]
     [IsoXmlTag("DtdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DatedDate { get; }
 
     /// <summary>
@@ -121,6 +130,7 @@ public interface IFinancialInstrumentAttributes50 : IIsoComponent
     [IsoId("_njGzzyqjEeObprHJy8Zrxg")]
     [DisplayName("Conversion Date")]
     [IsoXmlTag("ConvsDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ConversionDate { get; }
 
     /// <summary>
@@ -129,6 +139,7 @@ public interface IFinancialInstrumentAttributes50 : IIsoComponent
     [IsoId("_njGz1yqjEeObprHJy8Zrxg")]
     [DisplayName("Previous Factor")]
     [IsoXmlTag("PrvsFctr")]
+    [IsoSimpleType(IsoSimpleType.BaseOne14Rate)]
     BaseOne14Rate? PreviousFactor { get; }
 
     /// <summary>
@@ -137,6 +148,7 @@ public interface IFinancialInstrumentAttributes50 : IIsoComponent
     [IsoId("_njGz3yqjEeObprHJy8Zrxg")]
     [DisplayName("Next Factor")]
     [IsoXmlTag("NxtFctr")]
+    [IsoSimpleType(IsoSimpleType.BaseOne14Rate)]
     BaseOne14Rate? NextFactor { get; }
 
     /// <summary>
@@ -145,6 +157,7 @@ public interface IFinancialInstrumentAttributes50 : IIsoComponent
     [IsoId("_njGz5yqjEeObprHJy8Zrxg")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? InterestRate { get; }
 
     /// <summary>
@@ -153,6 +166,7 @@ public interface IFinancialInstrumentAttributes50 : IIsoComponent
     [IsoId("_njGz7yqjEeObprHJy8Zrxg")]
     [DisplayName("Next Interest Rate")]
     [IsoXmlTag("NxtIntrstRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? NextInterestRate { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics shared by all individual transactions included in the message.
 /// </summary>
 [IsoId("_PtaZMNp-Ed-ak6NoX_4Aeg_-472629694")]
+[IsoDisplayName(@"Group Header")]
 public interface IGroupHeader9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGroupHeader9 : IIsoComponent
     [IsoId("_PtaZMdp-Ed-ak6NoX_4Aeg_-1557438436")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IGroupHeader9 : IIsoComponent
     [IsoId("_PtaZMtp-Ed-ak6NoX_4Aeg_-1557438366")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,10 @@ public interface IGroupHeader9 : IIsoComponent
     [IsoId("_PtaZM9p-Ed-ak6NoX_4Aeg_-1557438341")]
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
+    [IsoSimpleType(IsoSimpleType.Max128Text)]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Authorisation { get; }
 
     /// <summary>
@@ -41,6 +49,7 @@ public interface IGroupHeader9 : IIsoComponent
     [IsoId("_PtaZNNp-Ed-ak6NoX_4Aeg_-1557438016")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
+    [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
     BatchBookingIndicator? BatchBooking { get; }
 
     /// <summary>
@@ -49,6 +58,7 @@ public interface IGroupHeader9 : IIsoComponent
     [IsoId("_PtaZNdp-Ed-ak6NoX_4Aeg_-1557437981")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfTransactions { get; }
 
     /// <summary>
@@ -57,6 +67,7 @@ public interface IGroupHeader9 : IIsoComponent
     [IsoId("_PtaZNtp-Ed-ak6NoX_4Aeg_-1557437903")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -65,6 +76,7 @@ public interface IGroupHeader9 : IIsoComponent
     [IsoId("_PtaZN9p-Ed-ak6NoX_4Aeg_-1055967010")]
     [DisplayName("Group Reversal")]
     [IsoXmlTag("GrpRvsl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? GroupReversal { get; }
 
     /// <summary>
@@ -81,6 +93,7 @@ public interface IGroupHeader9 : IIsoComponent
     [IsoId("_PtaZOdp-Ed-ak6NoX_4Aeg_-1557437783")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>

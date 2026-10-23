@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceValueType6FormatChoice;
 /// Standard code to specify the value of a price.
 /// </summary>
 [IsoId("_RnJiAdp-Ed-ak6NoX_4Aeg_124226664")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPriceValueType6FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

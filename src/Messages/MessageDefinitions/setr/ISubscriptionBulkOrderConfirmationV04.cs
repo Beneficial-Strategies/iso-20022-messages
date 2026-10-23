@@ -24,6 +24,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "SbcptBlkOrdrConf",
     "urn:iso:std:iso:20022:tech:xsd:setr.009.001.04"
 )]
+[Description(@"Scope|The SubscriptionBulkOrderConfirmation message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to confirm the details of the execution of a SubscriptionBulkOrder instruction.|Usage|The SubscriptionBulkOrderConfirmation message is used to confirm the execution of all individual orders.|There is usually one bulk confirmation message for one bulk order message.|Each individual order confirmation specified is identified in DealReference. The reference of the original individual order is specified in OrderReference. The message identification of the SubscriptionBulkOrder message in which the individual order was conveyed may also be quoted in RelatedReference.|A SubscriptionBulkOrder must in all cases be responded to by a SubscriptionBulkOrderConfirmation and in no circumstances by a SubscriptionOrderConfirmation.|If the executing party needs to confirm a SubscriptionOrder instruction, then the SubscriptionOrderConfirmation must be used.|When the message is used to convey a confirmation amendment/s, the AmendmentIndicator must be present with the value ‘true’ or ‘1’. When this is the case, the message must only contain a confirmation amendment/s and not contain both a confirmation amendment/s and a ‘new’ confirmation/s.")]
+[IsoDisplayName(@"Subscription Bulk Order Confirmation V")]
 public interface ISubscriptionBulkOrderConfirmationV04 : IOuterRecord
 {
     /// <summary>
@@ -48,6 +50,7 @@ public interface ISubscriptionBulkOrderConfirmationV04 : IOuterRecord
     [IsoId("_Aab6kzbLEead9bDRE_1DAQ")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference8> PreviousReference { get; }
 
     /// <summary>
@@ -80,5 +83,6 @@ public interface ISubscriptionBulkOrderConfirmationV04 : IOuterRecord
     [IsoId("_Aab6nTbLEead9bDRE_1DAQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

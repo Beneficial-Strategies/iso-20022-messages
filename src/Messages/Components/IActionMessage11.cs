@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Action Message11.
 /// </summary>
 [IsoId("_G9nNoZB7Ee6FLLjWp95ntQ")]
+[IsoDisplayName(@"Action Message11")]
 public interface IActionMessage11 : IIsoComponent
 {
     /// <summary>

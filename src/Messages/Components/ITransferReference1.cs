@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference of a transfer and of a transfer cancellation.
 /// </summary>
 [IsoId("_SwKYjdp-Ed-ak6NoX_4Aeg_-838136093")]
+[IsoDisplayName(@"Transfer Reference")]
 public interface ITransferReference1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransferReference1 : IIsoComponent
     [IsoId("_SwUJgNp-Ed-ak6NoX_4Aeg_-1571572721")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransferReference1 : IIsoComponent
     [IsoId("_SwUJgdp-Ed-ak6NoX_4Aeg_-838136033")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransferReference1 : IIsoComponent
     [IsoId("_SwUJgtp-Ed-ak6NoX_4Aeg_-838136016")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -41,5 +48,7 @@ public interface ITransferReference1 : IIsoComponent
     [IsoId("_SwUJg9p-Ed-ak6NoX_4Aeg_-838135973")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice to define the price of the securities transaction.
 /// </summary>
 [IsoId("_QhQ_wf9iEea3W_f2lS_aiw")]
+[IsoDisplayName(@"Securities Transaction Price 10 Choice")]
 public interface ISecuritiesTransactionPrice10Choice : IIsoChoice { }

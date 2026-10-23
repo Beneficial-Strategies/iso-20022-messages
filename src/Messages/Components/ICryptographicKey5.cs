@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cryptographic Key.
 /// </summary>
 [IsoId("_oxe5kWpLEeSR-ZWLvO-1dg")]
+[IsoDisplayName(@"Cryptographic Key")]
 public interface ICryptographicKey5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICryptographicKey5 : IIsoComponent
     [IsoId("_o92hoWpLEeSR-ZWLvO-1dg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Identification { get; }
 
     /// <summary>
@@ -27,6 +30,7 @@ public interface ICryptographicKey5 : IIsoComponent
     [IsoId("_o92ho2pLEeSR-ZWLvO-1dg")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary? AdditionalIdentification { get; }
 
     /// <summary>
@@ -35,6 +39,8 @@ public interface ICryptographicKey5 : IIsoComponent
     [IsoId("_o92hpWpLEeSR-ZWLvO-1dg")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text Version { get; }
 
     /// <summary>
@@ -51,6 +57,7 @@ public interface ICryptographicKey5 : IIsoComponent
     [IsoId("_o92hqWpLEeSR-ZWLvO-1dg")]
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<KeyUsage1Code> Function { get; }
 
     /// <summary>
@@ -59,6 +66,7 @@ public interface ICryptographicKey5 : IIsoComponent
     [IsoId("_o92hq2pLEeSR-ZWLvO-1dg")]
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ActivationDate { get; }
 
     /// <summary>
@@ -67,6 +75,7 @@ public interface ICryptographicKey5 : IIsoComponent
     [IsoId("_o92hrWpLEeSR-ZWLvO-1dg")]
     [DisplayName("Deactivation Date")]
     [IsoXmlTag("DeactvtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DeactivationDate { get; }
 
     /// <summary>

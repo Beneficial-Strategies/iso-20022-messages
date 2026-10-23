@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification4Choic
 /// <summary>
 /// Over The Counter.
 /// </summary>
+[IsoDisplayName(@"Over The Counter")]
 public interface IOverTheCounter : IPlaceOfTradeIdentification4Choice, IIsoChoiceVariant
 {
     /// <summary>

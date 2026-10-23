@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_R3RGkTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("reda.014.001.02", "PtyCreReq", "urn:iso:std:iso:20022:tech:xsd:reda.014.001.02")]
+[IsoDisplayName(@"Party Creation Request V02")]
 public interface IPartyCreationRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +33,6 @@ public interface IPartyCreationRequestV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

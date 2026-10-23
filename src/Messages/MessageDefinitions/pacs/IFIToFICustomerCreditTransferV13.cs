@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
     "FIToFICstmrCdtTrf",
     "urn:iso:std:iso:20022:tech:xsd:pacs.008.001.13"
 )]
+[IsoDisplayName(@"FI To FI Customer Credit Transfer V13")]
 public interface IFIToFICustomerCreditTransferV13 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface IFIToFICustomerCreditTransferV13 : IOuterRecord
     /// </summary>
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICreditTransferTransaction70> CreditTransferTransactionInformation { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface IFIToFICustomerCreditTransferV13 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

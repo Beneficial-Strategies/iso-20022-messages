@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateFrequency2Choice;
 /// Frequency expressed in a proprietary notation.
 /// </summary>
 [IsoId("_mNON4_OFEeaS7fYULSI4_Q")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IInterestRateFrequency2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IInterestRateFrequency2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 52 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Value { get; }
 }

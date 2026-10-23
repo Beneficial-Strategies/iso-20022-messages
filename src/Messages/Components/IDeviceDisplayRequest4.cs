@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Display Request message.
 /// </summary>
 [IsoId("_IimjsVE6EeyApZmLzm74zA")]
+[IsoDisplayName(@"Device Display Request")]
 public interface IDeviceDisplayRequest4 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IDeviceDisplayRequest4 : IIsoComponent
     [IsoId("_IpU2wVE6EeyApZmLzm74zA")]
     [DisplayName("Display Output")]
     [IsoXmlTag("DispOutpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActionMessage9> DisplayOutput { get; }
 }

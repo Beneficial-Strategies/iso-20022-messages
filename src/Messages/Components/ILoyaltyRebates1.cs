@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Rebate form to an award.
 /// </summary>
 [IsoId("_M2VZgNxOEeioifFt1dhnJA")]
+[IsoDisplayName(@"Loyalty Rebates")]
 public interface ILoyaltyRebates1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ILoyaltyRebates1 : IIsoComponent
     [IsoId("_ZewSkNxOEeioifFt1dhnJA")]
     [DisplayName("Rebate Label")]
     [IsoXmlTag("RbtLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RebateLabel { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ILoyaltyRebates1 : IIsoComponent
     [IsoId("_dE2PgNxOEeioifFt1dhnJA")]
     [DisplayName("Sale Item Rebate")]
     [IsoXmlTag("SaleItmRbt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISaleItemRebate1> SaleItemRebate { get; }
 }

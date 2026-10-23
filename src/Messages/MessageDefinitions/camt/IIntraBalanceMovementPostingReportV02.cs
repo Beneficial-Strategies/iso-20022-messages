@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
     "IntraBalMvmntPstngRpt",
     "urn:iso:std:iso:20022:tech:xsd:camt.084.001.02"
 )]
+[IsoDisplayName(@"Intra Balance Movement Posting Report V02")]
 public interface IIntraBalanceMovementPostingReportV02 : IOuterRecord
 {
     /// <summary>
@@ -64,5 +65,6 @@ public interface IIntraBalanceMovementPostingReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Sub Balance")]
     [IsoXmlTag("SubBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraBalancePosting5> SubBalance { get; }
 }

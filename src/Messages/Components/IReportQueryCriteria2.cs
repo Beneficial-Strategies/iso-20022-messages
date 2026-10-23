@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria which are used to search for generated report.
 /// </summary>
 [IsoId("_3NLDgZb6Eee4htziCyV8eA")]
+[IsoDisplayName(@"Report Query Criteria")]
 public interface IReportQueryCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportQueryCriteria2 : IIsoComponent
     [IsoId("_3b6DEZb6Eee4htziCyV8eA")]
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NewQueryName { get; }
 
     /// <summary>

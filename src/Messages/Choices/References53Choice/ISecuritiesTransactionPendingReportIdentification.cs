@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References53Choice;
 /// Unambiguous identification of the report message to be cancelled.
 /// </summary>
 [IsoId("_6EvMP5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Securities Transaction Pending Report Identification")]
 public interface ISecuritiesTransactionPendingReportIdentification
     : IReferences53Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ISecuritiesTransactionPendingReportIdentification
     /// Specifies a character string with a maximum length of 16 characters. It has a pattern that disables the use of characters that is not part of the character set X, that is, that is not a-z A-Z / - ? : ( ) . , ‘ + , and disable the use of slash &quot;/&quot; at the beginning and end of line and double slash &quot;//&quot; within the line.
     /// </summary>
     [IsoXmlTag("SctiesTxPdgRptId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text Value { get; }
 }

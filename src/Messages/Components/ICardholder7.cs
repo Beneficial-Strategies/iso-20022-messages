@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the cardholder.
 /// </summary>
 [IsoId("_3Ts24WjMEeSHBr6v3XO0Mg")]
+[IsoDisplayName(@"Cardholder")]
 public interface ICardholder7 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICardholder7 : IIsoComponent
     [IsoId("_3hbJ02jMEeSHBr6v3XO0Mg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max45Text)]
+    [StringLength(45, MinimumLength = 1)]
     Max45Text? Name { get; }
 
     /// <summary>
@@ -58,6 +61,7 @@ public interface ICardholder7 : IIsoComponent
     [IsoId("_3hbJ22jMEeSHBr6v3XO0Mg")]
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholderAuthentication6> Authentication { get; }
 
     /// <summary>
@@ -66,6 +70,7 @@ public interface ICardholder7 : IIsoComponent
     [IsoId("_63ojwGjkEeSDR-pyia6Xtg")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionVerificationResult3> TransactionVerificationResult { get; }
 
     /// <summary>
@@ -74,5 +79,7 @@ public interface ICardholder7 : IIsoComponent
     [IsoId("_3hbJ32jMEeSHBr6v3XO0Mg")]
     [DisplayName("Personal Data")]
     [IsoXmlTag("PrsnlData")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? PersonalData { get; }
 }

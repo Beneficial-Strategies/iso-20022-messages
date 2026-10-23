@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other freight commodity derivative.
 /// </summary>
 [IsoId("_m-fxQbv5EeiLRYqS-r-R-A")]
+[IsoDisplayName(@"Freight Commodity Other")]
 public interface IFreightCommodityOther1 : IIsoComponent
 {
     /// <summary>

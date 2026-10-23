@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClaimNonReceipt3Choice;
 /// <summary>
 /// Rejected.
 /// </summary>
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IClaimNonReceipt3Choice, IIsoChoiceVariant
 {
     /// <summary>

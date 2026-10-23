@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics shared by all individual charges records included in the message.
 /// </summary>
 [IsoId("_mjXnuSkYEeuBrrgCSpsocg")]
+[IsoDisplayName(@"Group Header")]
 public interface IGroupHeader102 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGroupHeader102 : IIsoComponent
     [IsoId("_mjXnvCkYEeuBrrgCSpsocg")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IGroupHeader102 : IIsoComponent
     [IsoId("_mjXnwCkYEeuBrrgCSpsocg")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IGroupHeader102 : IIsoComponent
     [IsoId("_mjXnvSkYEeuBrrgCSpsocg")]
     [DisplayName("Number Of Charges Records")]
     [IsoXmlTag("NbOfChrgsRcrds")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfChargesRecords { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IGroupHeader102 : IIsoComponent
     [IsoId("_mjXnuykYEeuBrrgCSpsocg")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>

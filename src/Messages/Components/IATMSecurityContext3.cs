@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the ATM for the key download.
 /// </summary>
 [IsoId("_9Bek8V2VEeekzJIz1JxYSQ")]
+[IsoDisplayName(@"ATM Security Context")]
 public interface IATMSecurityContext3 : IIsoComponent
 {
     /// <summary>

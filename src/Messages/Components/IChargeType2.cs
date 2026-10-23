@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the charge type.
 /// </summary>
 [IsoId("_VPT7gdp-Ed-ak6NoX_4Aeg_-884329785")]
+[IsoDisplayName(@"Charge Type")]
 public interface IChargeType2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IChargeType2 : IIsoComponent
     [IsoId("_VPT7g9p-Ed-ak6NoX_4Aeg_-563866050")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

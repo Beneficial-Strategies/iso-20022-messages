@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// This component define the environment, the context and the services to be used with this message.
 /// </summary>
 [IsoId("_g59rYS5LEeunNvJlR_vCbg")]
+[IsoDisplayName(@"Report Response")]
 public interface IReportResponse4 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,6 @@ public interface IReportResponse4 : IIsoComponent
     [IsoId("_hIRNLS5LEeunNvJlR_vCbg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

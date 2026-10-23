@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report Query Search Criteria3.
 /// </summary>
 [IsoId("_6fCc1TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Report Query Search Criteria3")]
 public interface IReportQuerySearchCriteria3 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IReportQuerySearchCriteria3 : IIsoComponent
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentificationSearchCriteria2Choice> AccountIdentification { get; }
 
     /// <summary>
@@ -23,6 +25,7 @@ public interface IReportQuerySearchCriteria3 : IIsoComponent
     /// </summary>
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalance14> Balance { get; }
 
     /// <summary>

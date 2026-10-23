@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification253Choice;
 /// <summary>
 /// BIC.
 /// </summary>
+[IsoDisplayName(@"BIC")]
 public interface IBIC : IPartyIdentification253Choice, IIsoChoiceVariant
 {
     /// <summary>

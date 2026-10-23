@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity29Cho
 /// Percentage of the total switch amount (buy-driven) to be invested in a particular investment fund or investment fund class.
 /// </summary>
 [IsoId("_52gvZU_3Eea1ZIrmU5dI3w")]
+[IsoDisplayName(@"Percentage Of Total Subscription Amount")]
 public interface IPercentageOfTotalSubscriptionAmount
     : IFinancialInstrumentQuantity29Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IPercentageOfTotalSubscriptionAmount
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("PctgOfTtlSbcptAmt")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

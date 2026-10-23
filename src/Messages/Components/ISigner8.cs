@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Signer8.
 /// </summary>
 [IsoId("_YearcY-KEe6oobnCtR50kw")]
+[IsoDisplayName(@"Signer8")]
 public interface ISigner8 : IIsoComponent
 {
     /// <summary>
@@ -37,6 +38,7 @@ public interface ISigner8 : IIsoComponent
     /// </summary>
     [DisplayName("Signed Attributes")]
     [IsoXmlTag("SgndAttrbts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericInformation1> SignedAttributes { get; }
 
     /// <summary>

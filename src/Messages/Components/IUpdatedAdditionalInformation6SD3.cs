@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Extension for additional information.
 /// </summary>
 [IsoId("_FWA4v2CUEeK8P92abE6HIA")]
+[IsoDisplayName(@"Updated Additional Information 6 SD")]
 public interface IUpdatedAdditionalInformation6SD3 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IUpdatedAdditionalInformation6SD3 : IIsoComponent
     [IsoId("_FWA4y2CUEeK8P92abE6HIA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -27,6 +30,8 @@ public interface IUpdatedAdditionalInformation6SD3 : IIsoComponent
     [IsoId("_lYWXUGCVEeK8P92abE6HIA")]
     [DisplayName("Securities Credit Account Identification")]
     [IsoXmlTag("SctiesCdtAcctId")]
+    [IsoSimpleType(IsoSimpleType.Max50Text)]
+    [StringLength(50, MinimumLength = 1)]
     Max50Text? SecuritiesCreditAccountIdentification { get; }
 
     /// <summary>
@@ -35,6 +40,7 @@ public interface IUpdatedAdditionalInformation6SD3 : IIsoComponent
     [IsoId("_48yLQGxREeK_SqccejsxHw")]
     [DisplayName("Offeror Share")]
     [IsoXmlTag("OfferrShr")]
+    [IsoSimpleType(IsoSimpleType.ISINIdentifier)]
     ISINIdentifier? OfferorShare { get; }
 
     /// <summary>
@@ -44,6 +50,8 @@ public interface IUpdatedAdditionalInformation6SD3 : IIsoComponent
     [IsoId("_48yLQ2xREeK_SqccejsxHw")]
     [DisplayName("Offeror Share Local Code")]
     [IsoXmlTag("OfferrShrLclCd")]
+    [IsoSimpleType(IsoSimpleType.Max5AlphaNumericText)]
+    [StringLength(5, MinimumLength = 1)]
     Max5AlphaNumericText? OfferorShareLocalCode { get; }
 
     /// <summary>
@@ -52,5 +60,7 @@ public interface IUpdatedAdditionalInformation6SD3 : IIsoComponent
     [IsoId("_48yLRmxREeK_SqccejsxHw")]
     [DisplayName("Local Language Name")]
     [IsoXmlTag("LclLangNm")]
+    [IsoSimpleType(IsoSimpleType.Max240Text)]
+    [StringLength(240, MinimumLength = 1)]
     Max240Text? LocalLanguageName { get; }
 }

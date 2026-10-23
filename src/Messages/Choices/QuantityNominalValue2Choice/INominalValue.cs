@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityNominalValue2Choice;
 /// </summary>
 [IsoId("_b3cSo8pbEem6kd3Y9uIDqg")]
 [IsoXmlTag("NmnlVal")]
+[IsoDisplayName(@"Nominal Value")]
 public interface INominalValue : IQuantityNominalValue2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -27,5 +28,6 @@ public interface INominalValue : IQuantityNominalValue2Choice, IIsoChoiceVariant
     [IsoId("_sxKFs0DXEeWOL-OsSq2h6w")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? Sign { get; }
 }

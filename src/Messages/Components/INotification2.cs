@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the type of notification required.
 /// </summary>
 [IsoId("_j2Sv8DnmEeW7UoCHqpiMaQ")]
+[IsoDisplayName(@"Notification")]
 public interface INotification2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INotification2 : IIsoComponent
     [IsoId("_vifRUDnmEeW7UoCHqpiMaQ")]
     [DisplayName("Notification Type")]
     [IsoXmlTag("NtfctnTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text NotificationType { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface INotification2 : IIsoComponent
     [IsoId("_xG6RcDnmEeW7UoCHqpiMaQ")]
     [DisplayName("Required")]
     [IsoXmlTag("Reqrd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Required { get; }
 
     /// <summary>

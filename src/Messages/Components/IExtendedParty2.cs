@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other type of party.
 /// </summary>
 [IsoId("_RSI7Utp-Ed-ak6NoX_4Aeg_-1118068620")]
+[IsoDisplayName(@"Extended Party")]
 public interface IExtendedParty2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IExtendedParty2 : IIsoComponent
     [IsoId("_RSI7U9p-Ed-ak6NoX_4Aeg_-1118068343")]
     [DisplayName("Extended Party Role")]
     [IsoXmlTag("XtndedPtyRole")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedPartyRole { get; }
 
     /// <summary>

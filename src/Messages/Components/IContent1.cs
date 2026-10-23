@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of or reference to the content of a message.
 /// </summary>
 [IsoId("_jrZ20EXWEeegp_DADCe7HQ")]
+[IsoDisplayName(@"Content")]
 public interface IContent1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContent1 : IIsoComponent
     [IsoId("_7RCrYEXWEeegp_DADCe7HQ")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max20KText)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20KText Value { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IContent1 : IIsoComponent
     [IsoId("_Y50HEEXXEeegp_DADCe7HQ")]
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? Signature { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IContent1 : IIsoComponent
     [IsoId("_lPoNMEXXEeegp_DADCe7HQ")]
     [DisplayName("Certificate Identification")]
     [IsoXmlTag("CertId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CertificateIdentification { get; }
 }

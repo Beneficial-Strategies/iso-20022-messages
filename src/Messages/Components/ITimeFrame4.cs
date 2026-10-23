@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Time frame elements that define a period as number of days before or after a activity.
 /// </summary>
 [IsoId("_6vFC0TgCEei6RvewLQWEqw")]
+[IsoDisplayName(@"Time Frame")]
 public interface ITimeFrame4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITimeFrame4 : IIsoComponent
     [IsoId("_6-2kNTgCEei6RvewLQWEqw")]
     [DisplayName("Other Time Frame Description")]
     [IsoXmlTag("OthrTmFrameDesc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? OtherTimeFrameDescription { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ITimeFrame4 : IIsoComponent
     [IsoId("_6-2kNzgCEei6RvewLQWEqw")]
     [DisplayName("Trade Minus")]
     [IsoXmlTag("TMns")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TradeMinus { get; }
 
     /// <summary>

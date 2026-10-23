@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionFeaturesFormat6Choice;
 /// Standard code to specify the features that may apply to a corporate action option.
 /// </summary>
 [IsoId("_qWHuk93eEd-KAqAOGQOnnw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOptionFeaturesFormat6Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the non guaranteed trade details.
 /// </summary>
 [IsoId("_C9INcWpUEeSgo9vJrfSF_Q")]
+[IsoDisplayName(@"Non Guaranteed Trade")]
 public interface INonGuaranteedTrade3 : IIsoComponent
 {
     /// <summary>

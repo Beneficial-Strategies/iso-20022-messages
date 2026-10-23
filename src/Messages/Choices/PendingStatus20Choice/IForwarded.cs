@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus20Choice;
 /// </summary>
 [IsoId("_0k3gwwlIEeGATtfOBToyew_-935306155")]
 [IsoXmlTag("Fwdd")]
+[IsoDisplayName(@"Forwarded")]
 public interface IForwarded : IPendingStatus20Choice, IIsoChoiceVariant
 {
     /// <summary>

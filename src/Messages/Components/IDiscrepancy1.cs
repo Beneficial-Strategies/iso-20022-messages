@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a discrepancy of a demand.
 /// </summary>
 [IsoId("_-BiMJnltEeG7BsjMvd1mEw_711014268")]
+[IsoDisplayName(@"Discrepancy")]
 public interface IDiscrepancy1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDiscrepancy1 : IIsoComponent
     [IsoId("_-BiMJ3ltEeG7BsjMvd1mEw_170785768")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IDiscrepancy1 : IIsoComponent
     [IsoId("_-BiMKXltEeG7BsjMvd1mEw_-2015726895")]
     [DisplayName("Narrative")]
     [IsoXmlTag("Nrrtv")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text Narrative { get; }
 }

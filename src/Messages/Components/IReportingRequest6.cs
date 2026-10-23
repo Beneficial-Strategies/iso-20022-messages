@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the reporting request.
 /// </summary>
 [IsoId("_eoT28dcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Reporting Request")]
 public interface IReportingRequest6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReportingRequest6 : IIsoComponent
     [IsoId("_eqfBMdcZEeqRFcf2R4bPBw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IReportingRequest6 : IIsoComponent
     [IsoId("_eqfBM9cZEeqRFcf2R4bPBw")]
     [DisplayName("Requested Message Name Identification")]
     [IsoXmlTag("ReqdMsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RequestedMessageNameIdentification { get; }
 
     /// <summary>
@@ -81,5 +86,6 @@ public interface IReportingRequest6 : IIsoComponent
     [IsoId("_eqfoS9cZEeqRFcf2R4bPBw")]
     [DisplayName("Requested Balance Type")]
     [IsoXmlTag("ReqdBalTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceType13> RequestedBalanceType { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Liquidity set aside by the account owner for specific purposes.
 /// </summary>
 [IsoId("_eK6JQdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Reservation Identification")]
 public interface IReservationIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReservationIdentification3 : IIsoComponent
     [IsoId("_eMNw0dcZEeqRFcf2R4bPBw")]
     [DisplayName("Reservation Identification")]
     [IsoXmlTag("RsvatnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReservationIdentification { get; }
 
     /// <summary>

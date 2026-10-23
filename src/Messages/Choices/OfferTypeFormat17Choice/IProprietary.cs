@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OfferTypeFormat17Choice;
 
 /// <summary>Proprietary identification of the conditions that apply to the offer.</summary>
 [IsoId("29abb297-522a-49f1-89d8-2d751f284906")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IOfferTypeFormat17Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

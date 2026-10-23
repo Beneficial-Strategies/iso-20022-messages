@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details of the number of transactions and the control sum of the message.
 /// </summary>
 [IsoId("_RqlQiNp-Ed-ak6NoX_4Aeg_518525040")]
+[IsoDisplayName(@"Control Data")]
 public interface IControlData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IControlData1 : IIsoComponent
     [IsoId("_RqlQidp-Ed-ak6NoX_4Aeg_518525132")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfTransactions { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IControlData1 : IIsoComponent
     [IsoId("_RquacNp-Ed-ak6NoX_4Aeg_518525163")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 }

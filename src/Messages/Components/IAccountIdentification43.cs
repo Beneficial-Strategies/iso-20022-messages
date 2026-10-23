@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account information and detailed account holdings information report for corporate action events.
 /// </summary>
 [IsoId("_SQJWEZcFEee8S7xwGG7Veg")]
+[IsoDisplayName(@"Account Identification")]
 public interface IAccountIdentification43 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountIdentification43 : IIsoComponent
     [IsoId("_SfUahZcFEee8S7xwGG7Veg")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SafekeepingAccount { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IAccountIdentification43 : IIsoComponent
     [IsoId("_SfUanZcFEee8S7xwGG7Veg")]
     [DisplayName("Corporate Action Event And Balance")]
     [IsoXmlTag("CorpActnEvtAndBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventAndBalance13> CorporateActionEventAndBalance { get; }
 }

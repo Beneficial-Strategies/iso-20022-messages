@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Range of quantities.
 /// </summary>
 [IsoId("_mmgB2UD5EeW1yage4PQ__A")]
+[IsoDisplayName(@"From To Quantity Range")]
 public interface IFromToQuantityRange2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFromToQuantityRange2 : IIsoComponent
     [IsoId("_mxuaYUD5EeW1yage4PQ__A")]
     [DisplayName("From Quantity")]
     [IsoXmlTag("FrQty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber FromQuantity { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IFromToQuantityRange2 : IIsoComponent
     [IsoId("_mxuaY0D5EeW1yage4PQ__A")]
     [DisplayName("To Quantity")]
     [IsoXmlTag("ToQty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber ToQuantity { get; }
 }

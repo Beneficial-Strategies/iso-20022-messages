@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of breakdown of a quantity.
 /// </summary>
 [IsoId("_XvMXmf_oEeCiHMrKuf9tBw")]
+[IsoDisplayName(@"Quantity Breakdown")]
 public interface IQuantityBreakdown13 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between risk management limit details or a business error when the requested data cannot be retrieved.
 /// </summary>
 [IsoId("_RYTBoXhdEeidzqjNEfehPg")]
+[IsoDisplayName(@"Limit Or Error 4 Choice")]
 public interface ILimitOrError4Choice : IIsoChoice { }

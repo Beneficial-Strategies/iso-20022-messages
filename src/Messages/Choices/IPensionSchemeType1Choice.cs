@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a type of pension scheme.
 /// </summary>
 [IsoId("_G5FcYE4OEeiQHa-q1Uephw")]
+[IsoDisplayName(@"Pension Scheme Type 1 Choice")]
 public interface IPensionSchemeType1Choice : IIsoChoice { }

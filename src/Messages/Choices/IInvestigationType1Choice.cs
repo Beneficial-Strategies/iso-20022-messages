@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Investigation Type1Choice.
 /// </summary>
 [IsoId("_CXmCoFRtEe23M4WgERMsYw")]
+[IsoDisplayName(@"Investigation Type1Choice")]
 public interface IInvestigationType1Choice : IIsoChoice { }

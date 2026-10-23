@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Software1.
 /// </summary>
 [IsoId("_VYvPQG6hEe6DxcrvCrq6hQ")]
+[IsoDisplayName(@"Software1")]
 public interface ISoftware1 : IIsoComponent
 {
     /// <summary>

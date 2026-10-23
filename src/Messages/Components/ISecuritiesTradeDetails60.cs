@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities trade.
 /// </summary>
 [IsoId("_6IYWa5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Securities Trade Details")]
 public interface ISecuritiesTradeDetails60 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecuritiesTradeDetails60 : IIsoComponent
     [IsoId("_6IYWc5NLEeWGlc8L7oPDIg")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax16Text> TradeIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecuritiesTradeDetails60 : IIsoComponent
     [IsoId("_6IYWd5NLEeWGlc8L7oPDIg")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax16Text> CollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ISecuritiesTradeDetails60 : IIsoComponent
     [IsoId("_6IYWe5NLEeWGlc8L7oPDIg")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<RestrictedFINXMax16Text> AccountOwnerTransactionIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface ISecuritiesTradeDetails60 : IIsoComponent
     [IsoId("_6IYWf5NLEeWGlc8L7oPDIg")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ProcessorTransactionIdentification { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface ISecuritiesTradeDetails60 : IIsoComponent
     [IsoId("_6IYWlZNLEeWGlc8L7oPDIg")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface ISecuritiesTradeDetails60 : IIsoComponent
     [IsoId("_6IYWmZNLEeWGlc8L7oPDIg")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionCondition6Choice> TradeTransactionCondition { get; }
 
     /// <summary>

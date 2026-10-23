@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat10Choice;
 /// Value of the price not specified.
 /// </summary>
 [IsoId("_Q4z1WNp-Ed-ak6NoX_4Aeg_-1792370793")]
+[IsoDisplayName(@"Not Specified Price")]
 public interface INotSpecifiedPrice : IPriceFormat10Choice, IIsoChoiceVariant
 {
     /// <summary>

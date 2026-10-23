@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Non Financial Response Component5.
 /// </summary>
 [IsoId("_sT6jgaEsEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Non Financial Response Component5")]
 public interface INonFinancialResponseComponent5 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface INonFinancialResponseComponent5 : IIsoComponent
     /// </summary>
     [DisplayName("Response Content")]
     [IsoXmlTag("RspnCntt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INonFinancialResponseContentComponent5> ResponseContent { get; }
 
     /// <summary>
@@ -37,5 +39,6 @@ public interface INonFinancialResponseComponent5 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

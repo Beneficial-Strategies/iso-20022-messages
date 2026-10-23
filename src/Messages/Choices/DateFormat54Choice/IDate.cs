@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat54Choice;
 /// Date expressed as a calendar date.
 /// </summary>
 [IsoId("_k9m0sc3xEee5nJBZsW8MFQ")]
+[IsoDisplayName(@"Date")]
 public interface IDate : IDateFormat54Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies reasons for the cancelled status.
 /// </summary>
 [IsoId("_cgnRrZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Cancelled Status Reason")]
 public interface ICancelledStatusReason14 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICancelledStatusReason14 : IIsoComponent
     [IsoId("_cgnRuZKQEeWHWpTQn1FFVg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
+    [StringLength(210, MinimumLength = 1)]
     RestrictedFINXMax210Text? AdditionalReasonInformation { get; }
 }

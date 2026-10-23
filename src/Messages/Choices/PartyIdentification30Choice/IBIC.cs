@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification30Choice;
 /// Unique and unambiguous identifier for an organisation that is allocated by an institution.
 /// </summary>
 [IsoId("_QQIEt9p-Ed-ak6NoX_4Aeg_-186892124")]
+[IsoDisplayName(@"BIC")]
 public interface IBIC : IPartyIdentification30Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IBIC : IPartyIdentification30Choice, IIsoChoiceVariant
     /// Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
     /// </summary>
     [IsoXmlTag("BIC")]
+    [IsoSimpleType(IsoSimpleType.BICIdentifier)]
     BICIdentifier Value { get; }
 }

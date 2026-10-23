@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique identification, as assigned by the original requestor, to unambiguously identify the business instruction message.
 /// </summary>
 [IsoId("_Au3KEK0qEeijn5WVKzFWUw")]
+[IsoDisplayName(@"Original Business Instruction")]
 public interface IOriginalBusinessInstruction1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalBusinessInstruction1 : IIsoComponent
     [IsoId("_Au3KFK0qEeijn5WVKzFWUw")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalBusinessInstruction1 : IIsoComponent
     [IsoId("_Au3KE60qEeijn5WVKzFWUw")]
     [DisplayName("Message Name Identification")]
     [IsoXmlTag("MsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageNameIdentification { get; }
 
     /// <summary>
@@ -33,5 +38,6 @@ public interface IOriginalBusinessInstruction1 : IIsoComponent
     [IsoId("_Au3KEa0qEeijn5WVKzFWUw")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CreationDateTime { get; }
 }

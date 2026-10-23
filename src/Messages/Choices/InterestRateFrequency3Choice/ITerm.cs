@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateFrequency3Choice;
 /// </summary>
 [IsoId("_7KQYoVfREeqqKf65rDYWYw")]
 [IsoXmlTag("Term")]
+[IsoDisplayName(@"Term")]
 public interface ITerm : IInterestRateFrequency3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface ITerm : IInterestRateFrequency3Choice, IIsoChoiceVariant
     [IsoId("_7j19VVfREeqqKf65rDYWYw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trigger parameters.
 /// </summary>
 [IsoId("_99Ns1nltEeG7BsjMvd1mEw_340413416")]
+[IsoDisplayName(@"Trigger")]
 public interface ITrigger1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ITrigger1 : IIsoComponent
     [IsoId("_99Ns2HltEeG7BsjMvd1mEw_-1230694624")]
     [DisplayName("Documentary Event")]
     [IsoXmlTag("DcmntryEvt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument10> DocumentaryEvent { get; }
 }

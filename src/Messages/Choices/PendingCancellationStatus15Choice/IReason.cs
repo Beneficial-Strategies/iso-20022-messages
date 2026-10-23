@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus15Choic
 /// <summary>
 /// Reason.
 /// </summary>
+[IsoDisplayName(@"Reason")]
 public interface IReason : IPendingCancellationStatus15Choice, IIsoChoiceVariant
 {
     /// <summary>

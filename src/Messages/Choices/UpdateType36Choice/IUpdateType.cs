@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType36Choice;
 /// Request to add, modify or delete data&apos;s of a security.
 /// </summary>
 [IsoId("_QIOLUZJKEeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Update Type")]
 public interface IUpdateType : IUpdateType36Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

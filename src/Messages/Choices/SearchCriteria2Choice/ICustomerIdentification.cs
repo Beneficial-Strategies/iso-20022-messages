@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria2Choice;
 /// <summary>
 /// Customer Identification.
 /// </summary>
+[IsoDisplayName(@"Customer Identification")]
 public interface ICustomerIdentification : ISearchCriteria2Choice, IIsoChoiceVariant
 {
     /// <summary>

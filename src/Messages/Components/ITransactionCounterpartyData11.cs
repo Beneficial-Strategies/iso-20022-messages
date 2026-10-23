@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details related to the parties involved in the securities lending transaction.
 /// </summary>
 [IsoId("_Z3Woocg4Eeu4ecZgAYuz5w")]
+[IsoDisplayName(@"Transaction Counterparty Data")]
 public interface ITransactionCounterpartyData11 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentFormat2Choice;
 /// Document format, in a coded form.
 /// </summary>
 [IsoId("_ElusseatEeqCKaUycnDWEg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDocumentFormat2Choice, IIsoChoiceVariant
 {
     /// <summary>

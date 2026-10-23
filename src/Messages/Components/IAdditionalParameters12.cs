@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies additional parameters to the message or transaction.
 /// </summary>
 [IsoId("__hoh0ENHEeGHJ_bHJRPaIQ_1862779948")]
+[IsoDisplayName(@"Additional Parameters")]
 public interface IAdditionalParameters12 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IAdditionalParameters12 : IIsoComponent
     [IsoId("__hoh00NHEeGHJ_bHJRPaIQ_-245203824")]
     [DisplayName("Previous Partial Confirmation Identification")]
     [IsoXmlTag("PrvsPrtlConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PreviousPartialConfirmationIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IAdditionalParameters12 : IIsoComponent
     [IsoId("__h8D0ENHEeGHJ_bHJRPaIQ_-1242276177")]
     [DisplayName("Triparty Agent Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripartyAgentCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -49,5 +54,7 @@ public interface IAdditionalParameters12 : IIsoComponent
     [IsoId("__h8D0UNHEeGHJ_bHJRPaIQ_2055618766")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientTripartyCollateralTransactionIdentification { get; }
 }

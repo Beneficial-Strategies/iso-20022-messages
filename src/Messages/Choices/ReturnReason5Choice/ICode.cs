@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReturnReason5Choice;
 /// Reason for the return, as published in an external reason code list.
 /// </summary>
 [IsoId("_TP6Pktp-Ed-ak6NoX_4Aeg_-1676326035")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IReturnReason5Choice, IIsoChoiceVariant
 {
     /// <summary>

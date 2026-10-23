@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contractual details related to the agreement between parties.
 /// </summary>
 [IsoId("_AxQTQNokEeC60axPepSq7g_-153529059")]
+[IsoDisplayName(@"Agreement")]
 public interface IAgreement3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAgreement3 : IIsoComponent
     [IsoId("_AxQTQdokEeC60axPepSq7g_-267368125")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Description { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IAgreement3 : IIsoComponent
     [IsoId("_AxQTQtokEeC60axPepSq7g_2033454465")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? Date { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IAgreement3 : IIsoComponent
     [IsoId("_AxaEQtokEeC60axPepSq7g_-957762594")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? StartDate { get; }
 
     /// <summary>
@@ -65,5 +70,6 @@ public interface IAgreement3 : IIsoComponent
     [IsoId("_AxaERNokEeC60axPepSq7g_1343059996")]
     [DisplayName("Margin Ratio")]
     [IsoXmlTag("MrgnRatio")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? MarginRatio { get; }
 }

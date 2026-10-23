@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Aggregate Balance Per Safekeeping Place43.
 /// </summary>
 [IsoId("_XAfkjYS2Ee-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Aggregate Balance Per Safekeeping Place43")]
 public interface IAggregateBalancePerSafekeepingPlace43 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface IAggregateBalancePerSafekeepingPlace43 : IIsoComponent
     /// </summary>
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceInformation29> PriceDetails { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface IAggregateBalancePerSafekeepingPlace43 : IIsoComponent
     /// </summary>
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IForeignExchangeTerms34> ForeignExchangeDetails { get; }
 
     /// <summary>
@@ -93,6 +96,7 @@ public interface IAggregateBalancePerSafekeepingPlace43 : IIsoComponent
     /// </summary>
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQuantityBreakdown57> QuantityBreakdown { get; }
 
     /// <summary>
@@ -107,6 +111,7 @@ public interface IAggregateBalancePerSafekeepingPlace43 : IIsoComponent
     /// </summary>
     [DisplayName("Balance Breakdown")]
     [IsoXmlTag("BalBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubBalanceInformation20> BalanceBreakdown { get; }
 
     /// <summary>
@@ -114,6 +119,7 @@ public interface IAggregateBalancePerSafekeepingPlace43 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Balance Breakdown")]
     [IsoXmlTag("AddtlBalBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBalanceInformation20> AdditionalBalanceBreakdown { get; }
 
     /// <summary>

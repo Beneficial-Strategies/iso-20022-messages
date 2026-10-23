@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Used to report between the cash account reference data or an operational error.
 /// </summary>
 [IsoId("_9qh9YeVaEfC90e_m8fMznQ")]
+[IsoDisplayName(@"Cash Account Audit Trail Or Operational Error 4 Choice")]
 public interface ICashAccountAuditTrailOrOperationalError4Choice : IIsoChoice { }

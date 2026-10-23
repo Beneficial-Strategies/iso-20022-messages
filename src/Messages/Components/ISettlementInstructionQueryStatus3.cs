@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the settlement instruction status query criteria including the status period.
 /// </summary>
 [IsoId("_X5k3wWdnEemMLeaDfmIfIA")]
+[IsoDisplayName(@"Settlement Instruction Query Status3")]
 public interface ISettlementInstructionQueryStatus3 : IIsoComponent
 {
     /// <summary>

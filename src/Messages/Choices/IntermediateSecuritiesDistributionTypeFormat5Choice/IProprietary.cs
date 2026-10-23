@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntermediateSecuritiesDistributi
 /// </summary>
 [IsoId("_waQgReAYEd-D2OAFXdoRmA")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary
     : IIntermediateSecuritiesDistributionTypeFormat5Choice,
         IIsoChoiceVariant
@@ -20,6 +21,7 @@ public interface IProprietary
     [IsoId("_P-ilddp-Ed-ak6NoX_4Aeg_-1136501922")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText Identification { get; }
 
     /// <summary>
@@ -28,6 +30,8 @@ public interface IProprietary
     [IsoId("_P-ildtp-Ed-ak6NoX_4Aeg_-2133574275")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Issuer { get; }
 
     /// <summary>
@@ -36,5 +40,7 @@ public interface IProprietary
     [IsoId("_P-ild9p-Ed-ak6NoX_4Aeg_1456278406")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SchemeName { get; }
 }

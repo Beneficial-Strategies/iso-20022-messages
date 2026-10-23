@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account to or from which a securities entry is made.
 /// </summary>
 [IsoId("_VbFGp9p-Ed-ak6NoX_4Aeg_1318763778")]
+[IsoDisplayName(@"Sub Account Identification")]
 public interface ISubAccountIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISubAccountIdentification1 : IIsoComponent
     [IsoId("_VbO3oNp-Ed-ak6NoX_4Aeg_1744529409")]
     [DisplayName("Fungible Indicator")]
     [IsoXmlTag("FngbInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator FungibleIndicator { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ISubAccountIdentification1 : IIsoComponent
     [IsoId("_VbO3odp-Ed-ak6NoX_4Aeg_-2139469577")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ISubAccountIdentification1 : IIsoComponent
     [IsoId("_VbO3otp-Ed-ak6NoX_4Aeg_-1134985221")]
     [DisplayName("Balance For Sub Account")]
     [IsoXmlTag("BalForSubAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateBalanceInformation1> BalanceForSubAccount { get; }
 }

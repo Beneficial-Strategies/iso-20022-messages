@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessedStatus6FormatChoice;
 /// Standard code to specify the processing status of a deactivation instruction.
 /// </summary>
 [IsoId("_RnmN9tp-Ed-ak6NoX_4Aeg_-1064962646")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProcessedStatus6FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Minimum Executable1.
 /// </summary>
 [IsoId("_WeU5IGvpEe2Re-GccwOX8g")]
+[IsoDisplayName(@"Minimum Executable1")]
 public interface IMinimumExecutable1 : IIsoComponent
 {
     /// <summary>

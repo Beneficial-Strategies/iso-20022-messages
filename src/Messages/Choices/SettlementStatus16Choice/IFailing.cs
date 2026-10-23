@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus16Choice;
 /// Instruction is failing. Settlement at the instructed settlement date is no longer possible.
 /// </summary>
 [IsoId("_z2Uwuzp4EeWVrPy0StzzSg")]
+[IsoDisplayName(@"Failing")]
 public interface IFailing : ISettlementStatus16Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

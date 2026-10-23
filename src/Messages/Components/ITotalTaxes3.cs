@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information regarding the total amount of taxes.
 /// </summary>
 [IsoId("_SlbvM9p-Ed-ak6NoX_4Aeg_-655710552")]
+[IsoDisplayName(@"Total Taxes")]
 public interface ITotalTaxes3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ITotalTaxes3 : IIsoComponent
     [IsoId("_SlbvN9p-Ed-ak6NoX_4Aeg_1440938995")]
     [DisplayName("Extended EU Capital Gain")]
     [IsoXmlTag("XtndedEUCptlGn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedEUCapitalGain { get; }
 
     /// <summary>
@@ -57,6 +60,8 @@ public interface ITotalTaxes3 : IIsoComponent
     [IsoId("_SlbvOdp-Ed-ak6NoX_4Aeg_-1861991218")]
     [DisplayName("Extended EU Dividend Status")]
     [IsoXmlTag("XtndedEUDvddSts")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedEUDividendStatus { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface ITotalTaxes3 : IIsoComponent
     [IsoId("_SllgMNp-Ed-ak6NoX_4Aeg_1230792355")]
     [DisplayName("Percentage Of Debt Claim")]
     [IsoXmlTag("PctgOfDebtClm")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfDebtClaim { get; }
 
     /// <summary>
@@ -73,5 +79,6 @@ public interface ITotalTaxes3 : IIsoComponent
     [IsoId("_SllgMdp-Ed-ak6NoX_4Aeg_-655709586")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax14> TaxDetails { get; }
 }

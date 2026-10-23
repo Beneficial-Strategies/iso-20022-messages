@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuorumQuantity1Choice;
 /// Minimum quantity of securities required to hold a meeting.
 /// </summary>
 [IsoId("_RDieptp-Ed-ak6NoX_4Aeg_-2055367828")]
+[IsoDisplayName(@"Quorum Quantity")]
 public interface IQuorumQuantity : IQuorumQuantity1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IQuorumQuantity : IQuorumQuantity1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("QrmQty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

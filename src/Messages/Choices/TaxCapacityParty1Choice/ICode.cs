@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxCapacityParty1Choice;
 /// Party tax capacity expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_Qv3Utdp-Ed-ak6NoX_4Aeg_991753619")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITaxCapacityParty1Choice, IIsoChoiceVariant
 {
     /// <summary>

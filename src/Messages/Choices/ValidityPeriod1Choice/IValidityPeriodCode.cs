@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ValidityPeriod1Choice;
 /// <summary>
 /// Validity Period Code.
 /// </summary>
+[IsoDisplayName(@"Validity Period Code")]
 public interface IValidityPeriodCode : IValidityPeriod1Choice, IIsoChoiceVariant
 {
     /// <summary>

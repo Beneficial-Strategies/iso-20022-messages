@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Print Request message.
 /// </summary>
 [IsoId("_ySkXAN6qEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Device Print Request")]
 public interface IDevicePrintRequest1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IDevicePrintRequest1 : IIsoComponent
     [IsoId("_V2SuMN6rEeiwsev40qZGEQ")]
     [DisplayName("Integrated Print Flag")]
     [IsoXmlTag("IntgrtdPrtFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? IntegratedPrintFlag { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IDevicePrintRequest1 : IIsoComponent
     [IsoId("_ZR8VsN6rEeiwsev40qZGEQ")]
     [DisplayName("Required Signature Flag")]
     [IsoXmlTag("ReqrdSgntrFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RequiredSignatureFlag { get; }
 
     /// <summary>

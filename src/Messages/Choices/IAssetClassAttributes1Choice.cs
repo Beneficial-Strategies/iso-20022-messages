@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Asset class specific details of a derivative.
 /// </summary>
 [IsoId("_id4oJO94EeW7gabYEJmWIA")]
+[IsoDisplayName(@"Asset Class Attributes 1 Choice")]
 public interface IAssetClassAttributes1Choice : IIsoChoice { }

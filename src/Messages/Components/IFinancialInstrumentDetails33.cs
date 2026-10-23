@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reporting per financial instrument.
 /// </summary>
 [IsoId("_sanQ0_fZEeiNZp_PtLohLw")]
+[IsoDisplayName(@"Financial Instrument Details")]
 public interface IFinancialInstrumentDetails33 : IIsoComponent
 {
     /// <summary>
@@ -65,5 +66,6 @@ public interface IFinancialInstrumentDetails33 : IIsoComponent
     [IsoId("_sanQ6_fZEeiNZp_PtLohLw")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransaction72> Transaction { get; }
 }

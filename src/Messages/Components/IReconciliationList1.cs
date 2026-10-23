@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a list of reconciliation information concerning financial items.
 /// </summary>
 [IsoId("_OTgzMTk5-AOSNFX-8224490")]
+[IsoDisplayName(@"Reconciliation List")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IReconciliationList1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IReconciliationList1 : IIsoComponent
     [IsoId("_OTgzNDE5-AOSNFX-8224504")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Date { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IReconciliationList1 : IIsoComponent
     [IsoId("_OTgzNDIw-AOSNFX-8224504")]
     [DisplayName("Related Document")]
     [IsoXmlTag("RltdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> RelatedDocument { get; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public interface IReconciliationList1 : IIsoComponent
     [IsoId("_OTgzNDI2-AOSNFX-8224504")]
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate PaymentDate { get; }
 
     /// <summary>
@@ -97,6 +102,7 @@ public interface IReconciliationList1 : IIsoComponent
     [IsoId("_OTgzNDI5-AOSNFX-8224504")]
     [DisplayName("Item")]
     [IsoXmlTag("Itm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialItem1> Item { get; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public interface IReconciliationList1 : IIsoComponent
     [IsoId("_OTgzNDMw-AOSNFX-8224504")]
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText ItemCount { get; }
 
     /// <summary>
@@ -113,6 +120,7 @@ public interface IReconciliationList1 : IIsoComponent
     [IsoId("_OTgzNDMx-AOSNFX-8224504")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public interface IReconciliationList1 : IIsoComponent
     [IsoId("_OTgzNDMy-AOSNFX-8224504")]
     [DisplayName("Associated Document")]
     [IsoXmlTag("AssoctdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQualifiedDocumentInformation1> AssociatedDocument { get; }
 
     /// <summary>
@@ -129,6 +138,8 @@ public interface IReconciliationList1 : IIsoComponent
     [IsoId("_OTgzNDMz-AOSNFX-8224505")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [StringLength(2000, MinimumLength = 1)]
     Max2000Text? AdditionalInformation { get; }
 
     /// <summary>

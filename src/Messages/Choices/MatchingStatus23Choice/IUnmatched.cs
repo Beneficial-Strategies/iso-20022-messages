@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus23Choice;
 /// Trade is unmatched or mismatched.
 /// </summary>
 [IsoId("_1Bk5h2XREeOWzsrIp2keDA")]
+[IsoDisplayName(@"Unmatched")]
 public interface IUnmatched : IMatchingStatus23Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

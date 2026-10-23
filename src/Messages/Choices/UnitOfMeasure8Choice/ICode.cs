@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOfMeasure8Choice;
 /// Unit of measure, as defined in an external code set.
 /// </summary>
 [IsoId("_2_CFgDNlEe2UWZuK9pqFtg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IUnitOfMeasure8Choice, IIsoChoiceVariant
 {
     /// <summary>

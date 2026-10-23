@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies an amount of money as a debit or credit amount.
 /// </summary>
 [IsoId("_jO3r0e5NEeCisYr99QEiWA_1570893165")]
+[IsoDisplayName(@"Credit Debit Amount")]
 public interface ICreditDebitAmount1 : IIsoComponent
 {
     /// <summary>

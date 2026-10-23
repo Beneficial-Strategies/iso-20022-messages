@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustificationChoice
 /// </summary>
 [IsoId("_VFn0ENp-Ed-ak6NoX_4Aeg_478745608")]
 [IsoXmlTag("MssngOrIncrrctInf")]
+[IsoDisplayName(@"Missing Or Incorrect Information")]
 public interface IMissingOrIncorrectInformation
     : IUnableToApplyJustificationChoice,
         IIsoChoiceVariant
@@ -20,6 +21,9 @@ public interface IMissingOrIncorrectInformation
     [IsoId("_VFn0DNp-Ed-ak6NoX_4Aeg_-2094358719")]
     [DisplayName("Missing Information")]
     [IsoXmlTag("MssngInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<UnableToApplyMissingInfo1Code> MissingInformation { get; }
 
     /// <summary>
@@ -28,5 +32,8 @@ public interface IMissingOrIncorrectInformation
     [IsoId("_VFn0Ddp-Ed-ak6NoX_4Aeg_1320808370")]
     [DisplayName("Incorrect Information")]
     [IsoXmlTag("IncrrctInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<UnableToApplyIncorrectInfo1Code> IncorrectInformation { get; }
 }

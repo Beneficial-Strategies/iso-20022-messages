@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Formal document used to record a fact and used as proof of the fact, in the context of a commercial trade transaction.
 /// </summary>
 [IsoId("_d3zy0QgKEeSeS5xdjFfOTw")]
+[IsoDisplayName(@"Other Certificate Data Set")]
 public interface IOtherCertificateDataSet2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IOtherCertificateDataSet2 : IIsoComponent
     [IsoId("_ePAx4wgKEeSeS5xdjFfOTw")]
     [DisplayName("Certificate Identification")]
     [IsoXmlTag("CertId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CertificateIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IOtherCertificateDataSet2 : IIsoComponent
     [IsoId("_ePAx5QgKEeSeS5xdjFfOTw")]
     [DisplayName("Certificate Type")]
     [IsoXmlTag("CertTp")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText CertificateType { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IOtherCertificateDataSet2 : IIsoComponent
     [IsoId("_ePAx5wgKEeSeS5xdjFfOTw")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate IssueDate { get; }
 
     /// <summary>
@@ -57,5 +62,6 @@ public interface IOtherCertificateDataSet2 : IIsoComponent
     [IsoId("_ePAx6wgKEeSeS5xdjFfOTw")]
     [DisplayName("Certificate Information")]
     [IsoXmlTag("CertInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> CertificateInformation { get; }
 }

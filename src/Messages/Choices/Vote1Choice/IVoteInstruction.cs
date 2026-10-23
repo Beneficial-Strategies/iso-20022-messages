@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote1Choice;
 /// </summary>
 [IsoId("_Rb-MyNp-Ed-ak6NoX_4Aeg_4445867")]
 [IsoXmlTag("VoteInstr")]
+[IsoDisplayName(@"Vote Instruction")]
 public interface IVoteInstruction : IVote1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IVoteInstruction : IVote1Choice, IIsoChoiceVariant
     [IsoId("_TK1iVNp-Ed-ak6NoX_4Aeg_62627585")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IVoteInstruction : IVote1Choice, IIsoChoiceVariant
     [IsoId("_TK1iVdp-Ed-ak6NoX_4Aeg_62627600")]
     [DisplayName("For")]
     [IsoXmlTag("For")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? For { get; }
 
     /// <summary>
@@ -34,6 +38,7 @@ public interface IVoteInstruction : IVote1Choice, IIsoChoiceVariant
     [IsoId("_TK1iVtp-Ed-ak6NoX_4Aeg_62627618")]
     [DisplayName("Against")]
     [IsoXmlTag("Agnst")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Against { get; }
 
     /// <summary>
@@ -42,6 +47,7 @@ public interface IVoteInstruction : IVote1Choice, IIsoChoiceVariant
     [IsoId("_TK_TUNp-Ed-ak6NoX_4Aeg_62627643")]
     [DisplayName("Abstain")]
     [IsoXmlTag("Abstn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Abstain { get; }
 
     /// <summary>
@@ -50,6 +56,7 @@ public interface IVoteInstruction : IVote1Choice, IIsoChoiceVariant
     [IsoId("_TK_TUdp-Ed-ak6NoX_4Aeg_62627660")]
     [DisplayName("Withhold")]
     [IsoXmlTag("Wthhld")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Withhold { get; }
 
     /// <summary>
@@ -58,6 +65,7 @@ public interface IVoteInstruction : IVote1Choice, IIsoChoiceVariant
     [IsoId("_TK_TUtp-Ed-ak6NoX_4Aeg_62627678")]
     [DisplayName("With Management")]
     [IsoXmlTag("WthMgmt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? WithManagement { get; }
 
     /// <summary>
@@ -66,6 +74,7 @@ public interface IVoteInstruction : IVote1Choice, IIsoChoiceVariant
     [IsoId("_TK_TU9p-Ed-ak6NoX_4Aeg_62627937")]
     [DisplayName("Against Management")]
     [IsoXmlTag("AgnstMgmt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? AgainstManagement { get; }
 
     /// <summary>
@@ -74,6 +83,7 @@ public interface IVoteInstruction : IVote1Choice, IIsoChoiceVariant
     [IsoId("_TK_TVNp-Ed-ak6NoX_4Aeg_62627955")]
     [DisplayName("Discretionary")]
     [IsoXmlTag("Dscrtnry")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Discretionary { get; }
 
     /// <summary>
@@ -82,5 +92,6 @@ public interface IVoteInstruction : IVote1Choice, IIsoChoiceVariant
     [IsoId("_TK_TVdp-Ed-ak6NoX_4Aeg_128196007")]
     [DisplayName("No Action")]
     [IsoXmlTag("NoActn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NoAction { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding underlying security details.
 /// </summary>
 [IsoId("_1esTQDL3EeKU9IrkkToqcw_-24344462")]
+[IsoDisplayName(@"Financial Instrument Attributes SD")]
 public interface IFinancialInstrumentAttributesSD7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrumentAttributesSD7 : IIsoComponent
     [IsoId("_1esTQTL3EeKU9IrkkToqcw_1068806572")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IFinancialInstrumentAttributesSD7 : IIsoComponent
     [IsoId("_1esTQjL3EeKU9IrkkToqcw_-811499068")]
     [DisplayName("Issuer Description")]
     [IsoXmlTag("IssrDesc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? IssuerDescription { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IFinancialInstrumentAttributesSD7 : IIsoComponent
     [IsoId("_1esTRDL3EeKU9IrkkToqcw_-88358462")]
     [DisplayName("Primary Exchange Flag")]
     [IsoXmlTag("PmryXchgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PrimaryExchangeFlag { get; }
 
     /// <summary>
@@ -49,5 +55,6 @@ public interface IFinancialInstrumentAttributesSD7 : IIsoComponent
     [IsoId("_1esTRTL3EeKU9IrkkToqcw_-809173124")]
     [DisplayName("SEC Registered Flag")]
     [IsoXmlTag("SECRegdFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SECRegisteredFlag { get; }
 }

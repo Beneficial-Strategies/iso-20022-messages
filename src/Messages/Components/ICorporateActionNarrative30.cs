@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information such as the registration details.
 /// </summary>
 [IsoId("_rbxzgWLLEeWR9ZSfjmHwUA")]
+[IsoDisplayName(@"Corporate Action Narrative")]
 public interface ICorporateActionNarrative30 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICorporateActionNarrative30 : IIsoComponent
     [IsoId("_rvHmUWLLEeWR9ZSfjmHwUA")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> RegistrationDetails { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICorporateActionNarrative30 : IIsoComponent
     [IsoId("_rvHmWWLLEeWR9ZSfjmHwUA")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> PartyContactNarrative { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ICorporateActionNarrative30 : IIsoComponent
     [IsoId("_rvHmcWLLEeWR9ZSfjmHwUA")]
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max350Text> CertificationBreakdown { get; }
 }

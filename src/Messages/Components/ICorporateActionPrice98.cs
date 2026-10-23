@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Corporate Action Price98.
 /// </summary>
 [IsoId("_nLl9qZt3Ee-wQIOX0djF2w")]
+[IsoDisplayName(@"Corporate Action Price98")]
 public interface ICorporateActionPrice98 : IIsoComponent
 {
     /// <summary>

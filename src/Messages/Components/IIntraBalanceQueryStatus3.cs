@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the intra-balance movement status query criteria including the status period.
 /// </summary>
 [IsoId("_Vp21kTp9EemwKdP955WBJQ")]
+[IsoDisplayName(@"Intra Balance Query Status")]
 public interface IIntraBalanceQueryStatus3 : IIsoComponent
 {
     /// <summary>

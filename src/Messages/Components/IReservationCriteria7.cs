@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reservation Criteria7.
 /// </summary>
 [IsoId("_zu8pFTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Reservation Criteria7")]
 public interface IReservationCriteria7 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IReservationCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReservationSearchCriteria6> SearchCriteria { get; }
 
     /// <summary>

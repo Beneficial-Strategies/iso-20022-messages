@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Usage: It is not to be used on regular trade confirmations. Although some fields, for example, unique transaction identifier and prior unique transaction identifier, might be used on regular trade confirmations.
 /// </summary>
 [IsoId("_VB4PMQNwEe2-vqzwMUAewg")]
+[IsoDisplayName(@"Regulatory Reporting")]
 public interface IRegulatoryReporting7 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDEQNwEe2-vqzwMUAewg")]
     [DisplayName("Trading Side Transaction Reporting")]
     [IsoXmlTag("TradgSdTxRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradingSideTransactionReporting2> TradingSideTransactionReporting { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDEwNwEe2-vqzwMUAewg")]
     [DisplayName("Counterparty Side Transaction Reporting")]
     [IsoXmlTag("CtrPtySdTxRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICounterpartySideTransactionReporting2> CounterpartySideTransactionReporting { get; }
 
     /// <summary>
@@ -67,6 +70,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDHQNwEe2-vqzwMUAewg")]
     [DisplayName("Clearing Threshold Indicator")]
     [IsoXmlTag("ClrThrshldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ClearingThresholdIndicator { get; }
 
     /// <summary>
@@ -75,6 +79,8 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDHwNwEe2-vqzwMUAewg")]
     [DisplayName("Cleared Product Identification")]
     [IsoXmlTag("ClrdPdctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClearedProductIdentification { get; }
 
     /// <summary>
@@ -107,6 +113,8 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDJwNwEe2-vqzwMUAewg")]
     [DisplayName("Execution Venue")]
     [IsoXmlTag("ExctnVn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ExecutionVenue { get; }
 
     /// <summary>
@@ -123,6 +131,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDKwNwEe2-vqzwMUAewg")]
     [DisplayName("Non Standard Flag")]
     [IsoXmlTag("NonStdFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NonStandardFlag { get; }
 
     /// <summary>
@@ -131,6 +140,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDLQNwEe2-vqzwMUAewg")]
     [DisplayName("Link Swap Identification")]
     [IsoXmlTag("LkSwpId")]
+    [IsoSimpleType(IsoSimpleType.Exact42Text)]
     Exact42Text? LinkSwapIdentification { get; }
 
     /// <summary>
@@ -139,6 +149,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDLwNwEe2-vqzwMUAewg")]
     [DisplayName("Financial Nature Of The Counterparty Indicator")]
     [IsoXmlTag("FinNtrOfTheCtrPtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FinancialNatureOfTheCounterpartyIndicator { get; }
 
     /// <summary>
@@ -147,6 +158,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDMQNwEe2-vqzwMUAewg")]
     [DisplayName("Collateral Portfolio Indicator")]
     [IsoXmlTag("CollPrtflInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CollateralPortfolioIndicator { get; }
 
     /// <summary>
@@ -155,6 +167,8 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDMwNwEe2-vqzwMUAewg")]
     [DisplayName("Collateral Portfolio Code")]
     [IsoXmlTag("CollPrtflCd")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? CollateralPortfolioCode { get; }
 
     /// <summary>
@@ -163,6 +177,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDNQNwEe2-vqzwMUAewg")]
     [DisplayName("Portfolio Compression Indicator")]
     [IsoXmlTag("PrtflCmprssnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PortfolioCompressionIndicator { get; }
 
     /// <summary>
@@ -179,6 +194,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDOQNwEe2-vqzwMUAewg")]
     [DisplayName("Trade With Non EEA Counterparty Indicator")]
     [IsoXmlTag("TradWthNonEEACtrPtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TradeWithNonEEACounterpartyIndicator { get; }
 
     /// <summary>
@@ -187,6 +203,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDOwNwEe2-vqzwMUAewg")]
     [DisplayName("Intragroup Trade Indicator")]
     [IsoXmlTag("NtrgrpTradInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? IntragroupTradeIndicator { get; }
 
     /// <summary>
@@ -195,6 +212,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDPQNwEe2-vqzwMUAewg")]
     [DisplayName("Commercial Or Treasury Financing Indicator")]
     [IsoXmlTag("ComrclOrTrsrFincgInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CommercialOrTreasuryFinancingIndicator { get; }
 
     /// <summary>
@@ -211,6 +229,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDQQNwEe2-vqzwMUAewg")]
     [DisplayName("Confirmation Date And Timestamp")]
     [IsoXmlTag("ConfDtAndTmstmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ConfirmationDateAndTimestamp { get; }
 
     /// <summary>
@@ -219,6 +238,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDQwNwEe2-vqzwMUAewg")]
     [DisplayName("Clearing Timestamp")]
     [IsoXmlTag("ClrTmstmp")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? ClearingTimestamp { get; }
 
     /// <summary>
@@ -227,6 +247,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_vk2-oANwEe2-vqzwMUAewg")]
     [DisplayName("Commissions And Fees")]
     [IsoXmlTag("ComssnsAndFees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFXCommissionOrFee1> CommissionsAndFees { get; }
 
     /// <summary>
@@ -235,5 +256,7 @@ public interface IRegulatoryReporting7 : IIsoComponent
     [IsoId("_VHDDRQNwEe2-vqzwMUAewg")]
     [DisplayName("Additional Reporting Information")]
     [IsoXmlTag("AddtlRptgInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReportingInformation { get; }
 }

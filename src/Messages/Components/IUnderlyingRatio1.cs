@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Related financial instrument into which the security can be converted.
 /// </summary>
 [IsoId("_A39YNdokEeC60axPepSq7g_1995898844")]
+[IsoDisplayName(@"Underlying Ratio")]
 public interface IUnderlyingRatio1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IUnderlyingRatio1 : IIsoComponent
     [IsoId("_A39YONokEeC60axPepSq7g_-177745809")]
     [DisplayName("Related Financial Instrument Identification")]
     [IsoXmlTag("RltdFinInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification14> RelatedFinancialInstrumentIdentification { get; }
 }

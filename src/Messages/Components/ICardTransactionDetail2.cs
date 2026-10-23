@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the card transaction.
 /// </summary>
 [IsoId("_vWoV4XuUEeSVeNXcmBQ4hQ")]
+[IsoDisplayName(@"Card Transaction Detail")]
 public interface ICardTransactionDetail2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardTransactionDetail2 : IIsoComponent
     [IsoId("_vi_983uUEeSVeNXcmBQ4hQ")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount10> AdditionalAmounts { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICardTransactionDetail2 : IIsoComponent
     [IsoId("_AMoNMHuWEeSVeNXcmBQ4hQ")]
     [DisplayName("Account And Balance")]
     [IsoXmlTag("AcctAndBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardAccount2> AccountAndBalance { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICardTransactionDetail2 : IIsoComponent
     [IsoId("_lNdbkHuWEeSVeNXcmBQ4hQ")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionVerificationResult4> TransactionVerificationResult { get; }
 
     /// <summary>
@@ -50,6 +54,7 @@ public interface ICardTransactionDetail2 : IIsoComponent
     [IsoId("_vi_993uUEeSVeNXcmBQ4hQ")]
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidityDate { get; }
 
     /// <summary>
@@ -59,5 +64,6 @@ public interface ICardTransactionDetail2 : IIsoComponent
     [IsoId("_vi_-A3uUEeSVeNXcmBQ4hQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

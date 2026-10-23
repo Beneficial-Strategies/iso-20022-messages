@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transfer from one investment fund/fund class to another investment fund or investment fund class by the investor. A switch is composed of one or several subscription legs, and one or several redemption legs.
 /// </summary>
 [IsoId("_SM2QJdp-Ed-ak6NoX_4Aeg_1757620202")]
+[IsoDisplayName(@"Switch Order")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISwitchOrder3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ISwitchOrder3 : IIsoComponent
     [IsoId("_SM2QJtp-Ed-ak6NoX_4Aeg_1113169580")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +29,7 @@ public interface ISwitchOrder3 : IIsoComponent
     [IsoId("_SM2QJ9p-Ed-ak6NoX_4Aeg_1757620539")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISwitchOrder3 : IIsoComponent
     [IsoId("_SNABENp-Ed-ak6NoX_4Aeg_1757620557")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface ISwitchOrder3 : IIsoComponent
     [IsoId("_SNABEdp-Ed-ak6NoX_4Aeg_-854095150")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface ISwitchOrder3 : IIsoComponent
     [IsoId("_SNABEtp-Ed-ak6NoX_4Aeg_542784803")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>
@@ -81,6 +92,7 @@ public interface ISwitchOrder3 : IIsoComponent
     [IsoId("_SNABFtp-Ed-ak6NoX_4Aeg_1625538577")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedFutureTradeDate { get; }
 
     /// <summary>
@@ -97,6 +109,7 @@ public interface ISwitchOrder3 : IIsoComponent
     [IsoId("_SNABGNp-Ed-ak6NoX_4Aeg_-1374779115")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CashSettlementDate { get; }
 
     /// <summary>
@@ -137,6 +150,9 @@ public interface ISwitchOrder3 : IIsoComponent
     [IsoId("_SNJyE9p-Ed-ak6NoX_4Aeg_-925023819")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary8> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -153,6 +169,8 @@ public interface ISwitchOrder3 : IIsoComponent
     [IsoId("_SNJyFdp-Ed-ak6NoX_4Aeg_736165579")]
     [DisplayName("Extended Cancellation Right")]
     [IsoXmlTag("XtndedCxlRght")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code? ExtendedCancellationRight { get; }
 
     /// <summary>
@@ -161,6 +179,7 @@ public interface ISwitchOrder3 : IIsoComponent
     [IsoId("_SNJyFtp-Ed-ak6NoX_4Aeg_1765930670")]
     [DisplayName("Redemption Leg Details")]
     [IsoXmlTag("RedLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchRedemptionLegOrder3> RedemptionLegDetails { get; }
 
     /// <summary>
@@ -169,6 +188,7 @@ public interface ISwitchOrder3 : IIsoComponent
     [IsoId("_SNJyF9p-Ed-ak6NoX_4Aeg_1765930309")]
     [DisplayName("Subscription Leg Details")]
     [IsoXmlTag("SbcptLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchSubscriptionLegOrder3> SubscriptionLegDetails { get; }
 
     /// <summary>

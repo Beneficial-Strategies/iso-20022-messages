@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an agricultural derivative of type livestock.
 /// </summary>
 [IsoId("_IlbMAU8TEe2PGo0mhYCh1g")]
+[IsoDisplayName(@"Agricultural Commodity Live Stock")]
 public interface IAgriculturalCommodityLiveStock2 : IIsoComponent
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SolicitationFeeRateFormat15Choic
 /// <summary>
 /// Amount To Quantity.
 /// </summary>
+[IsoDisplayName(@"Amount To Quantity")]
 public interface IAmountToQuantity : ISolicitationFeeRateFormat15Choice, IIsoChoiceVariant
 {
     /// <summary>

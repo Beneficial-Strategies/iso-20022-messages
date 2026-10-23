@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Can be used when replying to a query; can also be used when canceling or amending.
 /// </summary>
 [IsoId("_QnrCBdp-Ed-ak6NoX_4Aeg_2082653882")]
+[IsoDisplayName(@"Business Application Header")]
 public interface IBusinessApplicationHeader1 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,8 @@ public interface IBusinessApplicationHeader1 : IIsoComponent
     [IsoId("_QnrCCdp-Ed-ak6NoX_4Aeg_325023192")]
     [DisplayName("Business Message Identifier")]
     [IsoXmlTag("BizMsgIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text BusinessMessageIdentifier { get; }
 
     /// <summary>
@@ -54,6 +57,8 @@ public interface IBusinessApplicationHeader1 : IIsoComponent
     [IsoId("_QnrCCtp-Ed-ak6NoX_4Aeg_-2098267532")]
     [DisplayName("Message Definition Identifier")]
     [IsoXmlTag("MsgDefIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageDefinitionIdentifier { get; }
 
     /// <summary>
@@ -64,6 +69,8 @@ public interface IBusinessApplicationHeader1 : IIsoComponent
     [IsoId("_QnrCC9p-Ed-ak6NoX_4Aeg_-1512320506")]
     [DisplayName("Business Service")]
     [IsoXmlTag("BizSvc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BusinessService { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IBusinessApplicationHeader1 : IIsoComponent
     [IsoId("_Qn0zANp-Ed-ak6NoX_4Aeg_1403963847")]
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
+    [IsoSimpleType(IsoSimpleType.ISONormalisedDateTime)]
     ISONormalisedDateTime CreationDate { get; }
 
     /// <summary>
@@ -93,6 +101,7 @@ public interface IBusinessApplicationHeader1 : IIsoComponent
     [IsoId("_Qn0zAtp-Ed-ak6NoX_4Aeg_1615242288")]
     [DisplayName("Possible Duplicate")]
     [IsoXmlTag("PssblDplct")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PossibleDuplicate { get; }
 
     /// <summary>

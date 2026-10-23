@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the management plan.
 /// </summary>
 [IsoId("_c6IB0TWAEeODSIIQsYYKhw")]
+[IsoDisplayName(@"Management Plan Content")]
 public interface IManagementPlanContent3 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IManagementPlanContent3 : IIsoComponent
     [IsoId("_dKVoETWAEeODSIIQsYYKhw")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITMSAction3> Action { get; }
 }

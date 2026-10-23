@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of meeting cancellation reason.
 /// </summary>
 [IsoId("_RCWL0dp-Ed-ak6NoX_4Aeg_1417276542")]
+[IsoDisplayName(@"Meeting Cancellation Reason 1 Choice")]
 public interface IMeetingCancellationReason1Choice : IIsoChoice { }

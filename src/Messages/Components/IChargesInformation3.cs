@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information on the charges related to the payment transaction.
 /// </summary>
 [IsoId("_RudD6tp-Ed-ak6NoX_4Aeg_-1792074809")]
+[IsoDisplayName(@"Charges Information")]
 public interface IChargesInformation3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IChargesInformation3 : IIsoComponent
     [IsoId("_RumN09p-Ed-ak6NoX_4Aeg_-808524507")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>

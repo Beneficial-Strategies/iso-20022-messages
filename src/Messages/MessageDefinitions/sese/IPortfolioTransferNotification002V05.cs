@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_qImco83yEee5nJBZsW8MFQ")]
 [IsoMessage("sese.037.002.05", "PrtflTrfNtfctn", "urn:iso:std:iso:20022:tech:xsd:sese.037.002.05")]
+[Description(@"Scope|An account servicer sends a PortfolioTransferNotification to another account servicer to exchange transfer settlement details information during a retail or institutional client portfolio transfer.|The account servicers will typically be local agents or global custodians acting on behalf of an investment management institution, a broker/dealer or a retail client.||Usage|By exchange of transfer settlement details, it is understood the providing, by the delivering account servicer to the receiving account servicer, of the settlement details (such as trade date, settlement date, delivering settlement chain, quantities) of the individual transfers that will take place during a full or partial portfolio transfer. This delivering account servicer message may also include, for validation, the receiving settlement chain as provided by the client. In case the receiving settlement chain is not available to the delivering account servicer, the receiving account servicer may in return provide to the delivering account servicer the receiving settlement chain using the same message.||The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Portfolio Transfer Notification 002 V")]
 public interface IPortfolioTransferNotification002V05 : IOuterRecord
 {
     /// <summary>
@@ -63,5 +65,6 @@ public interface IPortfolioTransferNotification002V05 : IOuterRecord
     [IsoId("_qImcr83yEee5nJBZsW8MFQ")]
     [DisplayName("Transfer Notification Details")]
     [IsoXmlTag("TrfNtfctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesTradeDetails81> TransferNotificationDetails { get; }
 }

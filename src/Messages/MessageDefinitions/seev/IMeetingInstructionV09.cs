@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_nIzHsTQ7Ee22Z83HpR5E8w")]
 [IsoMessage("seev.004.001.09", "MtgInstr", "urn:iso:std:iso:20022:tech:xsd:seev.004.001.09")]
+[Description(@"Scope|The MeetingInstruction message is sent by a party holding the right to vote to an intermediary, the issuer or its agent to request the receiving party to act upon one or several instructions.|Usage|The MeetingInstruction message is used to vote, to require attendance to a meeting, to request registration of securities and assign a proxy. One instruction or multiple instructions can be carried within the same message.|Once the message is sent, it cannot be modified. It must be cancelled by a MeetingInstructionCancellationRequest. Only after receipt of a confirmed cancelled status via the|MeetingInstructionStatus message, a new MeetingInstruction message can be sent.|This message definition is intended for use with the Business Application Header (BAH).")]
+[IsoDisplayName(@"Meeting Instruction V")]
 public interface IMeetingInstructionV09 : IOuterRecord
 {
     /// <summary>
@@ -34,6 +36,8 @@ public interface IMeetingInstructionV09 : IOuterRecord
     [IsoId("_7o9OIDT-Ee2tRf29bleifQ")]
     [DisplayName("Meeting Instruction Identification")]
     [IsoXmlTag("MtgInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MeetingInstructionIdentification { get; }
 
     /// <summary>
@@ -58,6 +62,7 @@ public interface IMeetingInstructionV09 : IOuterRecord
     [IsoId("_J-5jgDUAEe2tRf29bleifQ")]
     [DisplayName("Instruction Cancellation Request Identification")]
     [IsoXmlTag("InstrCxlReqId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingInstructionCancellation1> InstructionCancellationRequestIdentification { get; }
 
     /// <summary>
@@ -66,6 +71,7 @@ public interface IMeetingInstructionV09 : IOuterRecord
     [IsoId("_bAVEMDUAEe2tRf29bleifQ")]
     [DisplayName("Cancelled Instruction Identification")]
     [IsoXmlTag("CancInstrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingInstructionIdentification1> CancelledInstructionIdentification { get; }
 
     /// <summary>
@@ -74,6 +80,7 @@ public interface IMeetingInstructionV09 : IOuterRecord
     [IsoId("_nIzHuzQ7Ee22Z83HpR5E8w")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification32> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -82,6 +89,7 @@ public interface IMeetingInstructionV09 : IOuterRecord
     [IsoId("_nIzHvTQ7Ee22Z83HpR5E8w")]
     [DisplayName("Instruction")]
     [IsoXmlTag("Instr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstruction7> Instruction { get; }
 
     /// <summary>
@@ -90,5 +98,6 @@ public interface IMeetingInstructionV09 : IOuterRecord
     [IsoId("_nIzHvzQ7Ee22Z83HpR5E8w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

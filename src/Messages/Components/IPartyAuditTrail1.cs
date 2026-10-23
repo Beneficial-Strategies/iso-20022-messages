@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes information needed to identify a change in the party related static data, the time when it was performed and the user requesting the change and approving it.
 /// </summary>
 [IsoId("_HK6rsWjHEeiCUdTMLdZoIg")]
+[IsoDisplayName(@"Party Audit Trail")]
 public interface IPartyAuditTrail1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPartyAuditTrail1 : IIsoComponent
     [IsoId("_GLdVoWjOEeiRg5NzP0jkQg")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUpdateLogPartyRecord1Choice> Record { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPartyAuditTrail1 : IIsoComponent
     [IsoId("_HZNmZ2jHEeiCUdTMLdZoIg")]
     [DisplayName("Operation Time Stamp")]
     [IsoXmlTag("OprTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime OperationTimeStamp { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPartyAuditTrail1 : IIsoComponent
     [IsoId("_HZNmaWjHEeiCUdTMLdZoIg")]
     [DisplayName("Instructing User")]
     [IsoXmlTag("InstgUsr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text InstructingUser { get; }
 
     /// <summary>
@@ -41,5 +46,7 @@ public interface IPartyAuditTrail1 : IIsoComponent
     [IsoId("_HZNma2jHEeiCUdTMLdZoIg")]
     [DisplayName("Approving User")]
     [IsoXmlTag("ApprvgUsr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? ApprovingUser { get; }
 }

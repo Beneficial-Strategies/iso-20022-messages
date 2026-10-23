@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestComputationMethod3Choice
 /// Code is used to determine the interest computation method.
 /// </summary>
 [IsoId("_x33EkZEjEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInterestComputationMethod3Choice, IIsoChoiceVariant
 {
     /// <summary>

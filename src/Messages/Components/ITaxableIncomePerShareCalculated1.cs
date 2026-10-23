@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the taxable income per share.
 /// </summary>
 [IsoId("_VSl5B9p-Ed-ak6NoX_4Aeg_-362445404")]
+[IsoDisplayName(@"Taxable Income Per Share Calculated")]
 public interface ITaxableIncomePerShareCalculated1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITaxableIncomePerShareCalculated1 : IIsoComponent
     [IsoId("_VSl5Cdp-Ed-ak6NoX_4Aeg_-308882890")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

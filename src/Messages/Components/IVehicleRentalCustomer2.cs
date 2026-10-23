@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Customer renting a vehicle.
 /// </summary>
 [IsoId("_hRHmIcW0EeuhguwJmlgagQ")]
+[IsoDisplayName(@"Vehicle Rental Customer")]
 public interface IVehicleRentalCustomer2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVehicleRentalCustomer2 : IIsoComponent
     [IsoId("_hVxcocW0EeuhguwJmlgagQ")]
     [DisplayName("Renter Name")]
     [IsoXmlTag("RntrNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text RenterName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IVehicleRentalCustomer2 : IIsoComponent
     [IsoId("_hVxco8W0EeuhguwJmlgagQ")]
     [DisplayName("Corporate Name")]
     [IsoXmlTag("CorpNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CorporateName { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IVehicleRentalCustomer2 : IIsoComponent
     [IsoId("_hVxcpcW0EeuhguwJmlgagQ")]
     [DisplayName("Corporate Identifier")]
     [IsoXmlTag("CorpIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CorporateIdentifier { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IVehicleRentalCustomer2 : IIsoComponent
     [IsoId("_hVxcqcW0EeuhguwJmlgagQ")]
     [DisplayName("Primary Driver")]
     [IsoXmlTag("PmryDrvr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDriverInParty2> PrimaryDriver { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IVehicleRentalCustomer2 : IIsoComponent
     [IsoId("_hVxcq8W0EeuhguwJmlgagQ")]
     [DisplayName("Additional Driver")]
     [IsoXmlTag("AddtlDrvr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDriverInParty2> AdditionalDriver { get; }
 
     /// <summary>

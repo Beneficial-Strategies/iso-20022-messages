@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the payment instruction.
 /// </summary>
 [IsoId("_NZNuIZlPEee-Zps0fZQaFQ")]
+[IsoDisplayName(@"Payment Instruction")]
 public interface IPaymentInstruction26 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentInstruction26 : IIsoComponent
     [IsoId("_NhZZs5lPEee-Zps0fZQaFQ")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPaymentInstruction26 : IIsoComponent
     [IsoId("_NhZZt5lPEee-Zps0fZQaFQ")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentStatus3> Status { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface IPaymentInstruction26 : IIsoComponent
     [IsoId("_NhZZvZlPEee-Zps0fZQaFQ")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? Purpose { get; }
 
     /// <summary>
@@ -89,6 +95,8 @@ public interface IPaymentInstruction26 : IIsoComponent
     [IsoId("_NhZZxZlPEee-Zps0fZQaFQ")]
     [DisplayName("Instruction Copy")]
     [IsoXmlTag("InstrCpy")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text? InstructionCopy { get; }
 
     /// <summary>
@@ -105,6 +113,7 @@ public interface IPaymentInstruction26 : IIsoComponent
     [IsoId("_NhZZyZlPEee-Zps0fZQaFQ")]
     [DisplayName("Generated Order")]
     [IsoXmlTag("GnrtdOrdr")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? GeneratedOrder { get; }
 
     /// <summary>
@@ -115,6 +124,8 @@ public interface IPaymentInstruction26 : IIsoComponent
     [IsoId("_NhZZy5lPEee-Zps0fZQaFQ")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -123,6 +134,7 @@ public interface IPaymentInstruction26 : IIsoComponent
     [IsoId("_NhZZzZlPEee-Zps0fZQaFQ")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -134,6 +146,8 @@ public interface IPaymentInstruction26 : IIsoComponent
     [IsoId("_NhZZz5lPEee-Zps0fZQaFQ")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>

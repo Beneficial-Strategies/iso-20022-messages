@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice;
 /// <summary>
 /// Residence Type.
 /// </summary>
+[IsoDisplayName(@"Residence Type")]
 public interface IResidenceType : ISystemPartyModification3Choice, IIsoChoiceVariant
 {
     /// <summary>

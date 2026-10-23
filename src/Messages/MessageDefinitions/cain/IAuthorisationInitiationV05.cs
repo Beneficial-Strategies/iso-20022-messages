@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_l2kEAROHEfC1ZfCQz0xB3g")]
 [IsoMessage("cain.001.001.05", "AuthstnInitn", "urn:iso:std:iso:20022:tech:xsd:cain.001.001.05")]
+[IsoDisplayName(@"Authorisation Initiation V05")]
 public interface IAuthorisationInitiationV05 : IOuterRecord
 {
     /// <summary>
@@ -116,6 +117,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardExchangeRate1> ExchangeRate { get; }
 
     /// <summary>
@@ -130,6 +132,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAmounts5> AdditionalAmount { get; }
 
     /// <summary>
@@ -137,6 +140,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> Tax { get; }
 
     /// <summary>
@@ -158,6 +162,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Transactor")]
     [IsoXmlTag("Txtr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactorData1> Transactor { get; }
 
     /// <summary>
@@ -172,6 +177,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent16> POIComponent { get; }
 
     /// <summary>
@@ -235,6 +241,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Cardholder")]
     [IsoXmlTag("Crdhldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholder23> Cardholder { get; }
 
     /// <summary>
@@ -249,6 +256,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVerification8> Verification { get; }
 
     /// <summary>
@@ -256,6 +264,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Risk")]
     [IsoXmlTag("Rsk")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRiskContext4> Risk { get; }
 
     /// <summary>
@@ -263,6 +272,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -284,6 +294,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Account Balance")]
     [IsoXmlTag("AcctBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountBalance4> AccountBalance { get; }
 
     /// <summary>
@@ -291,6 +302,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalService3> AdditionalService { get; }
 
     /// <summary>
@@ -305,6 +317,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Deposit Details")]
     [IsoXmlTag("DpstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDepositDetails4> DepositDetails { get; }
 
     /// <summary>
@@ -326,6 +339,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -347,6 +361,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Benefits")]
     [IsoXmlTag("Bnfts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBenefitSupportingData1> Benefits { get; }
 
     /// <summary>
@@ -354,6 +369,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Promotion")]
     [IsoXmlTag("Prmtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPromotionData1> Promotion { get; }
 
     /// <summary>
@@ -375,6 +391,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -382,6 +399,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -389,6 +407,7 @@ public interface IAuthorisationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

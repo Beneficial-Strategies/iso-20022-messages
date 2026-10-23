@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the attributes of the financial instrument.
 /// </summary>
 [IsoId("_6fVwkZicEe2f7NHvXATP5g")]
+[IsoDisplayName(@"Financial Instrument Attributes 5 Choice")]
 public interface IFinancialInstrumentAttributes5Choice : IIsoChoice { }

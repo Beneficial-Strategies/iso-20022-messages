@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_OACD8ZDhEem7fvtoGpNpow")]
 [IsoMessage("sese.003.001.09", "TrfOutConf", "urn:iso:std:iso:20022:tech:xsd:sese.003.001.09")]
+[Description(@"The TransferOutConfirmation message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to confirm the delivery of a financial instrument, free of payment, on a given date, to a specified party.|This message may also be used to confirm the delivery of a financial instrument, free of payment, to another of the instructing parties own accounts or to a third party.|Usage|The TransferOutConfirmation message is used to confirm the withdrawal of a financial instrument from the owner's account and its delivery to another own account, or to a third party, has taken place.|The reference of the transfer confirmation is identified in TransferConfirmationReference. The reference of the original transfer instruction is specified in TransferReference. The message identification of the TransferOutInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference but this is not recommended.")]
+[IsoDisplayName(@"Transfer Out Confirmation V")]
 public interface ITransferOutConfirmationV09 : IOuterRecord
 {
     /// <summary>
@@ -56,6 +58,8 @@ public interface ITransferOutConfirmationV09 : IOuterRecord
     [IsoId("_OACD_5DhEem7fvtoGpNpow")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -64,6 +68,7 @@ public interface ITransferOutConfirmationV09 : IOuterRecord
     [IsoId("_OACrAZDhEem7fvtoGpNpow")]
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransfer37> TransferDetails { get; }
 
     /// <summary>
@@ -104,5 +109,6 @@ public interface ITransferOutConfirmationV09 : IOuterRecord
     [IsoId("_OACrC5DhEem7fvtoGpNpow")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

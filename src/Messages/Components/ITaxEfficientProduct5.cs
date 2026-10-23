@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of a tax efficient product.
 /// </summary>
 [IsoId("_aNbAIZNNEemQB_8XA98K0Q")]
+[IsoDisplayName(@"Tax Efficient Product")]
 public interface ITaxEfficientProduct5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ITaxEfficientProduct5 : IIsoComponent
     [IsoId("_mgyu4ZNQEemQB_8XA98K0Q")]
     [DisplayName("Current Year")]
     [IsoXmlTag("CurYr")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CurrentYear { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITaxEfficientProduct5 : IIsoComponent
     [IsoId("_alOcJZNNEemQB_8XA98K0Q")]
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CashComponentIndicator { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ITaxEfficientProduct5 : IIsoComponent
     [IsoId("_alOcKZNNEemQB_8XA98K0Q")]
     [DisplayName("Date Of First Subscription")]
     [IsoXmlTag("DtOfFrstSbcpt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfFirstSubscription { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface ITaxEfficientProduct5 : IIsoComponent
     [IsoId("_alOcLZNNEemQB_8XA98K0Q")]
     [DisplayName("Bonus Or Withdrawal")]
     [IsoXmlTag("BnsOrWdrwl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBonusWithdrawal2> BonusOrWithdrawal { get; }
 
     /// <summary>
@@ -89,6 +94,8 @@ public interface ITaxEfficientProduct5 : IIsoComponent
     [IsoId("__u1BEJzGEembF9M4GR6EAA")]
     [DisplayName("Transferor Alternate Identification")]
     [IsoXmlTag("TrfrAltrnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransferorAlternateIdentification { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface ITaxEfficientProduct5 : IIsoComponent
     [IsoId("_kEJ0UJzHEembF9M4GR6EAA")]
     [DisplayName("Other Amount")]
     [IsoXmlTag("OthrAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherAmount3> OtherAmount { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface ITaxEfficientProduct5 : IIsoComponent
     [IsoId("_CtM9UDOOEeqjy7_SkdcoGg")]
     [DisplayName("Date First Qualifying Addition")]
     [IsoXmlTag("DtFrstQlfygAddtn")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateFirstQualifyingAddition { get; }
 
     /// <summary>
@@ -129,6 +138,7 @@ public interface ITaxEfficientProduct5 : IIsoComponent
     [IsoId("_alOcMZNNEemQB_8XA98K0Q")]
     [DisplayName("Investments To Follow Value")]
     [IsoXmlTag("InvstmtsToFllwVal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDateAndAmount2> InvestmentsToFollowValue { get; }
 
     /// <summary>
@@ -137,6 +147,7 @@ public interface ITaxEfficientProduct5 : IIsoComponent
     [IsoId("_alOcM5NNEemQB_8XA98K0Q")]
     [DisplayName("Innovative Finance")]
     [IsoXmlTag("InnvtvFinc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInnovativeFinance1> InnovativeFinance { get; }
 
     /// <summary>
@@ -185,5 +196,6 @@ public interface ITaxEfficientProduct5 : IIsoComponent
     [IsoId("_alOcP5NNEemQB_8XA98K0Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

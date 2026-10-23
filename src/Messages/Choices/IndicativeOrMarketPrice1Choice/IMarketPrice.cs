@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndicativeOrMarketPrice1Choice;
 /// Last reported/known price of a financial instrument in a market.
 /// </summary>
 [IsoId("_UKwuRNp-Ed-ak6NoX_4Aeg_-1205110541")]
+[IsoDisplayName(@"Market Price")]
 public interface IMarketPrice : IIndicativeOrMarketPrice1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

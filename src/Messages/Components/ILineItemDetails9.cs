@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Goods or services that are part of a commercial trade agreement.
 /// </summary>
 [IsoId("_SqWrcNp-Ed-ak6NoX_4Aeg_1674748039")]
+[IsoDisplayName(@"Line Item Details")]
 public interface ILineItemDetails9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILineItemDetails9 : IIsoComponent
     [IsoId("_SqWrcdp-Ed-ak6NoX_4Aeg_1674748070")]
     [DisplayName("Line Item Identification")]
     [IsoXmlTag("LineItmId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text LineItemIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ILineItemDetails9 : IIsoComponent
     [IsoId("_SqWrdNp-Ed-ak6NoX_4Aeg_1674748161")]
     [DisplayName("Product Name")]
     [IsoXmlTag("PdctNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ProductName { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ILineItemDetails9 : IIsoComponent
     [IsoId("_SqWrddp-Ed-ak6NoX_4Aeg_1674749110")]
     [DisplayName("Product Identifier")]
     [IsoXmlTag("PdctIdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductIdentifier2Choice> ProductIdentifier { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ILineItemDetails9 : IIsoComponent
     [IsoId("_SqWrdtp-Ed-ak6NoX_4Aeg_1674749080")]
     [DisplayName("Product Characteristics")]
     [IsoXmlTag("PdctChrtcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductCharacteristics1Choice> ProductCharacteristics { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ILineItemDetails9 : IIsoComponent
     [IsoId("_SqWrd9p-Ed-ak6NoX_4Aeg_1674749018")]
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProductCategory1Choice> ProductCategory { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface ILineItemDetails9 : IIsoComponent
     [IsoId("_SqgccNp-Ed-ak6NoX_4Aeg_1674748709")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment4> Adjustment { get; }
 
     /// <summary>
@@ -97,6 +106,7 @@ public interface ILineItemDetails9 : IIsoComponent
     [IsoId("_Sqgcctp-Ed-ak6NoX_4Aeg_1674748678")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax12> Tax { get; }
 
     /// <summary>

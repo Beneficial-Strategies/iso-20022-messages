@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the original transactions, to which the status report message refers.
 /// </summary>
 [IsoId("bf9235eb-bfaf-490c-99bb-dbbbce3ca4c3")]
+[IsoDisplayName(@"Original Payment Instruction52")]
 public interface IOriginalPaymentInstruction52 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IOriginalPaymentInstruction52 : IIsoComponent
     [IsoId("e4269925-9c4a-4b40-906e-e85a5888e48e")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation14> StatusReasonInformation { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IOriginalPaymentInstruction52 : IIsoComponent
     [IsoId("a886c0c0-917b-4fdb-bc2b-21fec67c8dfd")]
     [DisplayName("Number Of Transactions Per Status")]
     [IsoXmlTag("NbOfTxsPerSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfTransactionsPerStatus5> NumberOfTransactionsPerStatus { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface IOriginalPaymentInstruction52 : IIsoComponent
     [IsoId("aa84a587-5da0-452d-a615-3e1f30709901")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction169> TransactionInformationAndStatus { get; }
 }

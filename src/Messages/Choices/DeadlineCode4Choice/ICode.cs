@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeadlineCode4Choice;
 /// Standard code to specify the reference date of a corporate action.
 /// </summary>
 [IsoId("_cfsslZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDeadlineCode4Choice, IIsoChoiceVariant
 {
     /// <summary>

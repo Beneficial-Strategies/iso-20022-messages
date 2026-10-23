@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the header for a trade transaction query message.
 /// </summary>
 [IsoId("_7oH-8cWBEeijrI2SDYOAOw")]
+[IsoDisplayName(@"Trade Query Header")]
 public interface ITradeQueryHeader4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITradeQueryHeader4 : IIsoComponent
     [IsoId("_70_WQcWBEeijrI2SDYOAOw")]
     [DisplayName("Query Execution Date")]
     [IsoXmlTag("QryExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? QueryExecutionDate { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ITradeQueryHeader4 : IIsoComponent
     [IsoId("_71JHQ8WBEeijrI2SDYOAOw")]
     [DisplayName("Number Records")]
     [IsoXmlTag("NbRcrds")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number NumberRecords { get; }
 }

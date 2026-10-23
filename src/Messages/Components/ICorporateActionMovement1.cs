@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the movement instruction.
 /// </summary>
 [IsoId("_UIh5p9p-Ed-ak6NoX_4Aeg_378115287")]
+[IsoDisplayName(@"Corporate Action Movement")]
 public interface ICorporateActionMovement1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICorporateActionMovement1 : IIsoComponent
     [IsoId("_UIh5qdp-Ed-ak6NoX_4Aeg_1947921085")]
     [DisplayName("High Priority Indicator")]
     [IsoXmlTag("HghPrtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator HighPriorityIndicator { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICorporateActionMovement1 : IIsoComponent
     [IsoId("_UIh5qtp-Ed-ak6NoX_4Aeg_1390292817")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? OptionNumber { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface ICorporateActionMovement1 : IIsoComponent
     [IsoId("_UIh5rNp-Ed-ak6NoX_4Aeg_1481723517")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate RequestedExecutionDate { get; }
 
     /// <summary>
@@ -65,6 +69,8 @@ public interface ICorporateActionMovement1 : IIsoComponent
     [IsoId("_UIrqodp-Ed-ak6NoX_4Aeg_1208775765")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>

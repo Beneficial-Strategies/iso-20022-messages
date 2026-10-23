@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Encrypted data with an encryption key identified with a name.
 /// </summary>
 [IsoId("_t4lk8QivEeKn9O5oyej_zw")]
+[IsoDisplayName(@"Named Key Encrypted Data")]
 public interface INamedKeyEncryptedData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INamedKeyEncryptedData2 : IIsoComponent
     [IsoId("_uEpD8QivEeKn9O5oyej_zw")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? Version { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface INamedKeyEncryptedData2 : IIsoComponent
     [IsoId("_uEpD9QivEeKn9O5oyej_zw")]
     [DisplayName("Key Name")]
     [IsoXmlTag("KeyNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? KeyName { get; }
 
     /// <summary>

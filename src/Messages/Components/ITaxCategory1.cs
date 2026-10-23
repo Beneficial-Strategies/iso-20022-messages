@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the identification of the tax category.
 /// </summary>
 [IsoId("_3WHcEOaPEei5aPS232E3Mw")]
+[IsoDisplayName(@"Tax Category")]
 public interface ITaxCategory1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITaxCategory1 : IIsoComponent
     [IsoId("_OKB4wOaQEei5aPS232E3Mw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? Identification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ITaxCategory1 : IIsoComponent
     [IsoId("_cqX8wOaQEei5aPS232E3Mw")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Description { get; }
 
     /// <summary>

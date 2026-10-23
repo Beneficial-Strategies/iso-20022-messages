@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the service to be billed.
 /// </summary>
 [IsoId("_bBKr1Tq2EeWZFYSPlduMhw")]
+[IsoDisplayName(@"Billing Service Identification")]
 public interface IBillingServiceIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBillingServiceIdentification3 : IIsoComponent
     [IsoId("_bICI0Tq2EeWZFYSPlduMhw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IBillingServiceIdentification3 : IIsoComponent
     [IsoId("_bICI1Tq2EeWZFYSPlduMhw")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Description { get; }
 
     /// <summary>
@@ -57,5 +62,7 @@ public interface IBillingServiceIdentification3 : IIsoComponent
     [IsoId("_bICI2Tq2EeWZFYSPlduMhw")]
     [DisplayName("Service Type")]
     [IsoXmlTag("SvcTp")]
+    [IsoSimpleType(IsoSimpleType.Max12Text)]
+    [StringLength(12, MinimumLength = 1)]
     Max12Text? ServiceType { get; }
 }

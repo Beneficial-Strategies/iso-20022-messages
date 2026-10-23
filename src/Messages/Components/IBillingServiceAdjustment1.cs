@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the billing adjustments for a specific service.
 /// </summary>
 [IsoId("_6Oww7pqlEeGSON8vddiWzQ_453454713")]
+[IsoDisplayName(@"Billing Service Adjustment")]
 public interface IBillingServiceAdjustment1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IBillingServiceAdjustment1 : IIsoComponent
     [IsoId("_6O560JqlEeGSON8vddiWzQ_-1074957921")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Description { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IBillingServiceAdjustment1 : IIsoComponent
     [IsoId("_6O5605qlEeGSON8vddiWzQ_-241284094")]
     [DisplayName("Error Date")]
     [IsoXmlTag("ErrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ErrorDate { get; }
 
     /// <summary>
@@ -57,6 +61,8 @@ public interface IBillingServiceAdjustment1 : IIsoComponent
     [IsoId("_6O561JqlEeGSON8vddiWzQ_-823688632")]
     [DisplayName("Adjustment Identification")]
     [IsoXmlTag("AdjstmntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdjustmentIdentification { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface IBillingServiceAdjustment1 : IIsoComponent
     [IsoId("_6PDr0JqlEeGSON8vddiWzQ_2125329040")]
     [DisplayName("Volume Change")]
     [IsoXmlTag("VolChng")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? VolumeChange { get; }
 
     /// <summary>
@@ -105,6 +112,7 @@ public interface IBillingServiceAdjustment1 : IIsoComponent
     [IsoId("_6PDr0ZqlEeGSON8vddiWzQ_-1006641385")]
     [DisplayName("Original Volume")]
     [IsoXmlTag("OrgnlVol")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? OriginalVolume { get; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public interface IBillingServiceAdjustment1 : IIsoComponent
     [IsoId("_6PDr0pqlEeGSON8vddiWzQ_-630849814")]
     [DisplayName("New Volume")]
     [IsoXmlTag("NewVol")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? NewVolume { get; }
 
     /// <summary>

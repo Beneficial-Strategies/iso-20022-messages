@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Mobile Data6.
 /// </summary>
 [IsoId("_2kGeAZB5Ee6FLLjWp95ntQ")]
+[IsoDisplayName(@"Mobile Data6")]
 public interface IMobileData6 : IIsoComponent
 {
     /// <summary>

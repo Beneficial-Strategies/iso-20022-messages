@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further information on the reason for the unable to apply investigation.
 /// </summary>
 [IsoId("_7MMxcdjKEeq5MfBBxQig1Q")]
+[IsoDisplayName(@"Missing Or Incorrect Data")]
 public interface IMissingOrIncorrectData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IMissingOrIncorrectData1 : IIsoComponent
     [IsoId("_7O3D4djKEeq5MfBBxQig1Q")]
     [DisplayName("Anti Money Laundering Request")]
     [IsoXmlTag("AMLReq")]
+    [IsoSimpleType(IsoSimpleType.AMLIndicator)]
     AMLIndicator? AntiMoneyLaunderingRequest { get; }
 
     /// <summary>
@@ -25,6 +27,9 @@ public interface IMissingOrIncorrectData1 : IIsoComponent
     [IsoId("_7O3D49jKEeq5MfBBxQig1Q")]
     [DisplayName("Missing Information")]
     [IsoXmlTag("MssngInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnableToApplyMissing2> MissingInformation { get; }
 
     /// <summary>
@@ -33,5 +38,8 @@ public interface IMissingOrIncorrectData1 : IIsoComponent
     [IsoId("_7O3D5djKEeq5MfBBxQig1Q")]
     [DisplayName("Incorrect Information")]
     [IsoXmlTag("IncrrctInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnableToApplyIncorrect2> IncorrectInformation { get; }
 }

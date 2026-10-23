@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// </summary>
 [IsoId("_VgTq09E8Ed-BzquC8wXy7w_1259743081")]
 [IsoMessage("trea.008.001.02", "trea.008.001.02", "urn:iso:std:iso:20022:tech:xsd:trea.008.001.02")]
+[Description(@"Scope|The StatusNotification message is sent by a central system to a participant to notify the current status of a trade in the system.|Usage|This message will be sent at specific times agreed upon by the central settlement system and a participant in a central settlement system.|||This message is obsolete please use ForeignExchangeAndDerivativeTradeStatusNotificationV03 - fxtr.008.001.03")]
+[IsoDisplayName(@"Status Notification V")]
 public interface IStatusNotificationV02 : IOuterRecord
 {
     /// <summary>

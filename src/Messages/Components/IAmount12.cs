@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains amount details for a specific type of charge.
 /// </summary>
 [IsoId("_trtR1vfeEei89sMSHxl1ew")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount12 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAmount12 : IIsoComponent
     [IsoId("_trtR2PfeEei89sMSHxl1ew")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IAmount12 : IIsoComponent
     [IsoId("_trtR2ffeEei89sMSHxl1ew")]
     [DisplayName("Hours")]
     [IsoXmlTag("Hrs")]
+    [IsoSimpleType(IsoSimpleType.Max6NumericText)]
     Max6NumericText? Hours { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType47Choice;
 /// Standard code to specify the type of tax rate.
 /// </summary>
 [IsoId("_cj-uOZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRateType47Choice, IIsoChoiceVariant
 {
     /// <summary>

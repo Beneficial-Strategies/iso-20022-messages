@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.tsrv;
     "UdrtkgTermntnNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:tsrv.012.001.01"
 )]
+[Description(@"The UndertakingTerminationNotification message is sent to the applicant by the party that issued the undertaking to give notification of the termination or cancelation of the referenced undertaking.")]
+[IsoDisplayName(@"Undertaking Termination Notification V")]
 public interface IUndertakingTerminationNotificationV01 : IOuterRecord
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioCode5Choice;
 /// Collateralisation was performed on a transaction level basis or if the collateral portfolio code is not known at the time of reporting.
 /// </summary>
 [IsoId("_wnwaszICEe2fXedS_ucFOA")]
+[IsoDisplayName(@"No Portfolio")]
 public interface INoPortfolio : IPortfolioCode5Choice, IIsoChoiceVariant
 {
     /// <summary>

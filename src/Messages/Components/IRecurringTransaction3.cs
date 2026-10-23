@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial loan (instalment) or a recurring transaction.
 /// </summary>
 [IsoId("_hH4hcK4wEeWpsoxRhdX-8A")]
+[IsoDisplayName(@"Recurring Transaction")]
 public interface IRecurringTransaction3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRecurringTransaction3 : IIsoComponent
     [IsoId("_hUsOba4wEeWpsoxRhdX-8A")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate StartDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IRecurringTransaction3 : IIsoComponent
     [IsoId("_hUsOa64wEeWpsoxRhdX-8A")]
     [DisplayName("Number Of Occurrences")]
     [IsoXmlTag("NbOfOcrncs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NumberOfOccurrences { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IRecurringTransaction3 : IIsoComponent
     [IsoId("_CTLosK4xEeWpsoxRhdX-8A")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate EndDate { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface IRecurringTransaction3 : IIsoComponent
     [IsoId("_hUsOaa4wEeWpsoxRhdX-8A")]
     [DisplayName("Interval Day")]
     [IsoXmlTag("IntrvlDay")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? IntervalDay { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Underlying Transaction8Choice.
 /// </summary>
 [IsoId("_7j6B4TEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Underlying Transaction8Choice")]
 public interface IUnderlyingTransaction8Choice : IIsoChoice { }

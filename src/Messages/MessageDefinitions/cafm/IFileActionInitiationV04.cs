@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cafm;
 /// </summary>
 [IsoId("_EWSV0ROIEfC1ZfCQz0xB3g")]
 [IsoMessage("cafm.001.001.04", "FileActnInitn", "urn:iso:std:iso:20022:tech:xsd:cafm.001.001.04")]
+[IsoDisplayName(@"File Action Initiation V04")]
 public interface IFileActionInitiationV04 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IFileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -32,6 +34,7 @@ public interface IFileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -207,6 +210,7 @@ public interface IFileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent16> POIComponent { get; }
 
     /// <summary>
@@ -270,6 +274,7 @@ public interface IFileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -291,6 +296,7 @@ public interface IFileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -298,6 +304,7 @@ public interface IFileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -305,6 +312,7 @@ public interface IFileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

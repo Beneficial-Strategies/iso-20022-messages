@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other amount in clearing record data.
 /// </summary>
 [IsoId("_L8b4wZM5EeuleeHpFMMhmQ")]
+[IsoDisplayName(@"Other Amount")]
 public interface IOtherAmount4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IOtherAmount4 : IIsoComponent
     [IsoId("_MBFvQZM5EeuleeHpFMMhmQ")]
     [DisplayName("Clearing Count")]
     [IsoXmlTag("ClrCnt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number ClearingCount { get; }
 
     /// <summary>

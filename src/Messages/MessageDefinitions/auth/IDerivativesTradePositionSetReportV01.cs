@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "DerivsTradPosSetRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.090.001.01"
 )]
+[Description(@"The DerivativesTradePositionSetReport message is sent by the trade repositories to the supervisory authority system, to report aggregated exposures between a pair of counterparties that comprise positions sets, collateral position sets, currency positions sets and currency collateral position sets.")]
+[IsoDisplayName(@"Derivatives Trade Position Set Report V")]
 public interface IDerivativesTradePositionSetReportV01 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +34,6 @@ public interface IDerivativesTradePositionSetReportV01 : IOuterRecord
     [IsoId("_CCludQ1MEeqV4s5SpzR1dQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

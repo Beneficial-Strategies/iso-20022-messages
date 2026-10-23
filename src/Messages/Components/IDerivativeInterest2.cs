@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a multi-leg interest derivative.
 /// </summary>
 [IsoId("_pMapccnYEeWpf-ImB_F2gQ")]
+[IsoDisplayName(@"Derivative Interest")]
 public interface IDerivativeInterest2 : IIsoComponent
 {
     /// <summary>

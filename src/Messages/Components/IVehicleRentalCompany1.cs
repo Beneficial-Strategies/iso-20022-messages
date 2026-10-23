@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Company in charge of a vehicle rental service.
 /// </summary>
 [IsoId("_-kUfUFymEeeve7Je9cXtkQ")]
+[IsoDisplayName(@"Vehicle Rental Company")]
 public interface IVehicleRentalCompany1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVehicleRentalCompany1 : IIsoComponent
     [IsoId("_W9__8FynEeeve7Je9cXtkQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -50,6 +53,7 @@ public interface IVehicleRentalCompany1 : IIsoComponent
     [IsoId("_bSv9MFyoEeeve7Je9cXtkQ")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
     Min2Max3AlphaText? Country { get; }
 
     /// <summary>
@@ -66,5 +70,7 @@ public interface IVehicleRentalCompany1 : IIsoComponent
     [IsoId("_wFMt4FynEeeve7Je9cXtkQ")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherType { get; }
 }

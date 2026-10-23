@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification6Choice;
 /// Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain.|Usage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period.|Usage: this is the former PaymentInstructionReference element.
 /// </summary>
 [IsoId("_AghbkW4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Transaction Identification")]
 public interface ITransactionIdentification : IPaymentIdentification6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ITransactionIdentification : IPaymentIdentification6Choice, IIs
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

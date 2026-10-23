@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Quantity of a security.
 /// </summary>
 [IsoId("_SoH21Np-Ed-ak6NoX_4Aeg_-1748202213")]
+[IsoDisplayName(@"Financial Instrument Quantity")]
 public interface IFinancialInstrumentQuantity1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IFinancialInstrumentQuantity1 : IIsoComponent
     [IsoId("_SoH21dp-Ed-ak6NoX_4Aeg_-1748202212")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Unit { get; }
 }

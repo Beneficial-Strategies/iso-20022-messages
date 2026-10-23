@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies whether the information on the frequency units are matching or not.
 /// </summary>
 [IsoId("_2k8xoE0jEeyQkYR0RbXyEg")]
+[IsoDisplayName(@"Compare Frequency Unit")]
 public interface ICompareFrequencyUnit1 : IIsoComponent
 {
     /// <summary>

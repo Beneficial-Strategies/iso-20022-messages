@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variables used to quantify the different calculations for position sets and currency position sets reports.
 /// </summary>
 [IsoId("_9h9p58WLEeiRga8tPu1L4Q")]
+[IsoDisplayName(@"Position Set Collateral Total")]
 public interface IPositionSetCollateralTotal1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPositionSetCollateralTotal1 : IIsoComponent
     [IsoId("_9h9p6sWLEeiRga8tPu1L4Q")]
     [DisplayName("Number Of Reports")]
     [IsoXmlTag("NbOfRpts")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber? NumberOfReports { get; }
 
     /// <summary>

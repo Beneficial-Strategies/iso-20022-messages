@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money placed at a deposit taking institution.
 /// </summary>
 [IsoId("_-hi44LJUEeaYqc4G3TTwhA")]
+[IsoDisplayName(@"Deposit")]
 public interface IDeposit1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDeposit1 : IIsoComponent
     [IsoId("_H_pLALJVEeaYqc4G3TTwhA")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IDeposit1 : IIsoComponent
     [IsoId("_N0LVcLJVEeaYqc4G3TTwhA")]
     [DisplayName("Counterparty Identification")]
     [IsoXmlTag("CtrPtyId")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier CounterpartyIdentification { get; }
 }

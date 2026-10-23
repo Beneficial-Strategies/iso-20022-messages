@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics1Choice;
 /// Indicates if the goods have passed the phytosanitary check.
 /// </summary>
 [IsoId("_TnTb4dp-Ed-ak6NoX_4Aeg_-2016555095")]
+[IsoDisplayName(@"Phytosanitary Indication")]
 public interface IPhytosanitaryIndication : ICertifiedCharacteristics1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPhytosanitaryIndication : ICertifiedCharacteristics1Choice, II
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("PhytosntryIndctn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

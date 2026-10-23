@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Structured information supplied to enable the matching, ie, reconciliation, of a payment with the items that the payment is intended to settle, eg, commercial invoices in an accounts receivable system.
 /// </summary>
 [IsoId("_QFjMZtp-Ed-ak6NoX_4Aeg_-1409254181")]
+[IsoDisplayName(@"Structured Remittance Information")]
 public interface IStructuredRemittanceInformation2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IStructuredRemittanceInformation2 : IIsoComponent
     [IsoId("_QFjMaNp-Ed-ak6NoX_4Aeg_-1151592780")]
     [DisplayName("Referred Document Related Date")]
     [IsoXmlTag("RfrdDocRltdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ReferredDocumentRelatedDate { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IStructuredRemittanceInformation2 : IIsoComponent
     [IsoId("_QFsWUNp-Ed-ak6NoX_4Aeg_-479270891")]
     [DisplayName("Referred Document Amount")]
     [IsoXmlTag("RfrdDocAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferredDocumentAmount1Choice> ReferredDocumentAmount { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IStructuredRemittanceInformation2 : IIsoComponent
     [IsoId("_QFsWUdp-Ed-ak6NoX_4Aeg_-1151593080")]
     [DisplayName("Document Reference Number")]
     [IsoXmlTag("DocRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DocumentReferenceNumber { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IStructuredRemittanceInformation2 : IIsoComponent
     [IsoId("_QFsWUtp-Ed-ak6NoX_4Aeg_-521744082")]
     [DisplayName("Creditor Reference")]
     [IsoXmlTag("CdtrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CreditorReference { get; }
 
     /// <summary>

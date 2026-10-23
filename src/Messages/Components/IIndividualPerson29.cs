@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Human entity, as distinguished from a corporate entity (which is sometimes referred to as an &apos;artificial person&apos;).
 /// </summary>
 [IsoId("_p3DcEVxiEeWvPv3PXpS3fw")]
+[IsoDisplayName(@"Individual Person")]
 public interface IIndividualPerson29 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IIndividualPerson29 : IIsoComponent
     [IsoId("_qTeSVVxiEeWvPv3PXpS3fw")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? GivenName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IIndividualPerson29 : IIsoComponent
     [IsoId("_qTeSV1xiEeWvPv3PXpS3fw")]
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MiddleName { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IIndividualPerson29 : IIsoComponent
     [IsoId("_qTeSWVxiEeWvPv3PXpS3fw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -49,5 +56,8 @@ public interface IIndividualPerson29 : IIsoComponent
     [IsoId("_qTeSa1xiEeWvPv3PXpS3fw")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress21> PostalAddress { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the foreign exchange commissions and fees amounts.
 /// </summary>
 [IsoId("_Tv5YAANyEe2-vqzwMUAewg")]
+[IsoDisplayName(@"FX Commission Or Fee")]
 public interface IFXCommissionOrFee1 : IIsoComponent
 {
     /// <summary>
@@ -34,5 +35,6 @@ public interface IFXCommissionOrFee1 : IIsoComponent
     [IsoId("_pC8e4ANyEe2-vqzwMUAewg")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? Sign { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice11Choi
 /// </summary>
 [IsoId("_MXso4c1VEem4K5qLxnWwMA")]
 [IsoXmlTag("MntryVal")]
+[IsoDisplayName(@"Monetary Value")]
 public interface IMonetaryValue : ISecuritiesTransactionPrice11Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -27,5 +28,6 @@ public interface IMonetaryValue : ISecuritiesTransactionPrice11Choice, IIsoChoic
     [IsoId("_sxKFs0DXEeWOL-OsSq2h6w")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? Sign { get; }
 }

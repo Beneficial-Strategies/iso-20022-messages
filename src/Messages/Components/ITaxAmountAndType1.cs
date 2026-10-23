@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the amount with a specific type.
 /// </summary>
 [IsoId("_ts1L0VkyEeGeoaLUQk__nA_404730048")]
+[IsoDisplayName(@"Tax Amount And Type")]
 public interface ITaxAmountAndType1 : IIsoComponent
 {
     /// <summary>

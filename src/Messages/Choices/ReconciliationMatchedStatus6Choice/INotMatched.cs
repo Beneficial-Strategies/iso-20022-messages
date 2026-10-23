@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReconciliationMatchedStatus6Choi
 /// </summary>
 [IsoId("_C44f8__oEemm3skPVSMJQg")]
 [IsoXmlTag("NotMtchd")]
+[IsoDisplayName(@"Not Matched")]
 public interface INotMatched : IReconciliationMatchedStatus6Choice, IIsoChoiceVariant
 {
     /// <summary>

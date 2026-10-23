@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cryptographic Key to exchange.
 /// </summary>
 [IsoId("_555bkTZ3EeOP_KvUKe29ng")]
+[IsoDisplayName(@"Cryptographic Key")]
 public interface ICryptographicKey4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICryptographicKey4 : IIsoComponent
     [IsoId("_6NE2QTZ3EeOP_KvUKe29ng")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Identification { get; }
 
     /// <summary>
@@ -27,6 +30,7 @@ public interface ICryptographicKey4 : IIsoComponent
     [IsoId("_6NE2QzZ3EeOP_KvUKe29ng")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary? AdditionalIdentification { get; }
 
     /// <summary>
@@ -35,6 +39,7 @@ public interface ICryptographicKey4 : IIsoComponent
     [IsoId("_6NE2RTZ3EeOP_KvUKe29ng")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Exact10Text)]
     Exact10Text Version { get; }
 
     /// <summary>
@@ -51,6 +56,7 @@ public interface ICryptographicKey4 : IIsoComponent
     [IsoId("_6NE2STZ3EeOP_KvUKe29ng")]
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<KeyUsage1Code> Function { get; }
 
     /// <summary>
@@ -59,6 +65,7 @@ public interface ICryptographicKey4 : IIsoComponent
     [IsoId("_6NE2SzZ3EeOP_KvUKe29ng")]
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ActivationDate { get; }
 
     /// <summary>
@@ -67,6 +74,7 @@ public interface ICryptographicKey4 : IIsoComponent
     [IsoId("_6NE2TTZ3EeOP_KvUKe29ng")]
     [DisplayName("Deactivation Date")]
     [IsoXmlTag("DeactvtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DeactivationDate { get; }
 
     /// <summary>

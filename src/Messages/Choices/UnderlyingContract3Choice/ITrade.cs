@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract3Choice;
 /// </summary>
 [IsoId("_0ORmM7GIEeuSTr8k0UEM8A")]
 [IsoXmlTag("Trad")]
+[IsoDisplayName(@"Trade")]
 public interface ITrade : IUnderlyingContract3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface ITrade : IUnderlyingContract3Choice, IIsoChoiceVariant
     [IsoId("_ZRtPoLb6Eeu9Cp6InX88Vw")]
     [DisplayName("Trade Type Identification")]
     [IsoXmlTag("TradTpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TradeTypeIdentification { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface ITrade : IUnderlyingContract3Choice, IIsoChoiceVariant
     [IsoId("_6SzUdbGIEeuSTr8k0UEM8A")]
     [DisplayName("Buyer")]
     [IsoXmlTag("Buyr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty5> Buyer { get; }
 
     /// <summary>
@@ -50,6 +54,7 @@ public interface ITrade : IUnderlyingContract3Choice, IIsoChoiceVariant
     [IsoId("_6SzUd7GIEeuSTr8k0UEM8A")]
     [DisplayName("Seller")]
     [IsoXmlTag("Sellr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty5> Seller { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface ITrade : IUnderlyingContract3Choice, IIsoChoiceVariant
     [IsoId("_6SzUebGIEeuSTr8k0UEM8A")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>
@@ -67,6 +73,7 @@ public interface ITrade : IUnderlyingContract3Choice, IIsoChoiceVariant
     [IsoId("_6SzUe7GIEeuSTr8k0UEM8A")]
     [DisplayName("Prolongation Flag")]
     [IsoXmlTag("PrlngtnFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ProlongationFlag { get; }
 
     /// <summary>
@@ -75,6 +82,7 @@ public interface ITrade : IUnderlyingContract3Choice, IIsoChoiceVariant
     [IsoId("_6SzUfbGIEeuSTr8k0UEM8A")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -115,5 +123,6 @@ public interface ITrade : IUnderlyingContract3Choice, IIsoChoiceVariant
     [IsoId("_6SzUh7GIEeuSTr8k0UEM8A")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation5> Attachment { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingInstructionCancellationS
 /// </summary>
 [IsoId("_RirRtNp-Ed-ak6NoX_4Aeg_1204907770")]
 [IsoXmlTag("RjctdSts")]
+[IsoDisplayName(@"Rejected Status")]
 public interface IRejectedStatus : IStandingInstructionCancellationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IRejectedStatus : IStandingInstructionCancellationStatus1Choice
     [IsoId("_Rk6tZdp-Ed-ak6NoX_4Aeg_1289872620")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason10FormatChoice> Reason { get; }
 
     /// <summary>
@@ -26,5 +28,7 @@ public interface IRejectedStatus : IStandingInstructionCancellationStatus1Choice
     [IsoId("_Rk6tZtp-Ed-ak6NoX_4Aeg_1289872650")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

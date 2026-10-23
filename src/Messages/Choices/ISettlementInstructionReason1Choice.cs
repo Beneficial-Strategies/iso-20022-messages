@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the settlement instruction reason.
 /// </summary>
 [IsoId("_YtrTQCCsEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Settlement Instruction Reason 1 Choice")]
 public interface ISettlementInstructionReason1Choice : IIsoChoice { }

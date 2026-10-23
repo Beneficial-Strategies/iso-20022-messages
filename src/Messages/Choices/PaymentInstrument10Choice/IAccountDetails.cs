@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument10Choice;
 /// </summary>
 [IsoId("_VKY_S9p-Ed-ak6NoX_4Aeg_511551951")]
 [IsoXmlTag("AcctDtls")]
+[IsoDisplayName(@"Account Details")]
 public interface IAccountDetails : IPaymentInstrument10Choice, IIsoChoiceVariant
 {
     /// <summary>

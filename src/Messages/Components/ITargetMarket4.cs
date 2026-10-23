@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Target Market4.
 /// </summary>
 [IsoId("_q6sQAcQXEe2pvZQ_33Qz1Q")]
+[IsoDisplayName(@"Target Market4")]
 public interface ITargetMarket4 : IIsoComponent
 {
     /// <summary>
@@ -58,5 +59,6 @@ public interface ITargetMarket4 : IIsoComponent
     /// </summary>
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherTargetMarket1> Other { get; }
 }

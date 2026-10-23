@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Adjustment Compensation1.
 /// </summary>
 [IsoId("_-0qJAG8xEe2aW4iy-zispA")]
+[IsoDisplayName(@"Adjustment Compensation1")]
 public interface IAdjustmentCompensation1 : IIsoComponent
 {
     /// <summary>

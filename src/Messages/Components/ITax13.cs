@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.
 /// </summary>
 [IsoId("_RvpWsNp-Ed-ak6NoX_4Aeg_-681693938")]
+[IsoDisplayName(@"Tax")]
 public interface ITax13 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITax13 : IIsoComponent
     [IsoId("_RvpWstp-Ed-ak6NoX_4Aeg_-681693903")]
     [DisplayName("Other Tax Type")]
     [IsoXmlTag("OthrTaxTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OtherTaxType { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ITax13 : IIsoComponent
     [IsoId("_RvpWtNp-Ed-ak6NoX_4Aeg_-681693626")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Rate { get; }
 }

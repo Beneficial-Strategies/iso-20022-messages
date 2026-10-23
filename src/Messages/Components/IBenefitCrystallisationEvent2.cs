@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the realisation of benefits taken from a pension.
 /// </summary>
 [IsoId("_bWw_QZN4EembCsVG-3f_AA")]
+[IsoDisplayName(@"Benefit Crystallisation Event")]
 public interface IBenefitCrystallisationEvent2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBenefitCrystallisationEvent2 : IIsoComponent
     [IsoId("_brJT05N4EembCsVG-3f_AA")]
     [DisplayName("Event Type Number")]
     [IsoXmlTag("EvtTpNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EventTypeNumber { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IBenefitCrystallisationEvent2 : IIsoComponent
     [IsoId("_brJT0ZN4EembCsVG-3f_AA")]
     [DisplayName("Event Type Name")]
     [IsoXmlTag("EvtTpNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EventTypeName { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IBenefitCrystallisationEvent2 : IIsoComponent
     [IsoId("_brJT1ZN4EembCsVG-3f_AA")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EventDate { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IBenefitCrystallisationEvent2 : IIsoComponent
     [IsoId("_brJT2ZN4EembCsVG-3f_AA")]
     [DisplayName("Percentage Of Allowance")]
     [IsoXmlTag("PctgOfAllwnc")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfAllowance { get; }
 
     /// <summary>
@@ -57,6 +64,7 @@ public interface IBenefitCrystallisationEvent2 : IIsoComponent
     [IsoId("_O21eYJN5EembCsVG-3f_AA")]
     [DisplayName("Lifetime Allowance Protection")]
     [IsoXmlTag("LftmAllwncPrtcn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LifetimeAllowanceProtection { get; }
 
     /// <summary>
@@ -65,5 +73,6 @@ public interface IBenefitCrystallisationEvent2 : IIsoComponent
     [IsoId("_brJT25N4EembCsVG-3f_AA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

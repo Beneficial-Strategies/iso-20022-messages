@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics shared by all individual transactions included in the message.
 /// </summary>
 [IsoId("_PvMh4tp-Ed-ak6NoX_4Aeg_-279444335")]
+[IsoDisplayName(@"Group Header")]
 public interface IGroupHeader1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGroupHeader1 : IIsoComponent
     [IsoId("_PvMh49p-Ed-ak6NoX_4Aeg_907204266")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IGroupHeader1 : IIsoComponent
     [IsoId("_PvMh5Np-Ed-ak6NoX_4Aeg_907205059")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,10 @@ public interface IGroupHeader1 : IIsoComponent
     [IsoId("_PvMh5dp-Ed-ak6NoX_4Aeg_907205214")]
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
+    [IsoSimpleType(IsoSimpleType.Max128Text)]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Authorisation { get; }
 
     /// <summary>
@@ -41,6 +49,7 @@ public interface IGroupHeader1 : IIsoComponent
     [IsoId("_PvMh5tp-Ed-ak6NoX_4Aeg_908125661")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
+    [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
     BatchBookingIndicator? BatchBooking { get; }
 
     /// <summary>
@@ -49,6 +58,7 @@ public interface IGroupHeader1 : IIsoComponent
     [IsoId("_PvMh59p-Ed-ak6NoX_4Aeg_908127633")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfTransactions { get; }
 
     /// <summary>
@@ -57,6 +67,7 @@ public interface IGroupHeader1 : IIsoComponent
     [IsoId("_PvMh6Np-Ed-ak6NoX_4Aeg_908128667")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>

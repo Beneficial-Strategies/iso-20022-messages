@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment instrument for a type of order.
 /// </summary>
 [IsoId("_q3QsMF8rEeicg40_9gK9vQ")]
+[IsoDisplayName(@"Payment Instrument")]
 public interface IPaymentInstrument16 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IPaymentInstrument16 : IIsoComponent
     [IsoId("_xXAigWAKEeiNMJ262H2pWg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

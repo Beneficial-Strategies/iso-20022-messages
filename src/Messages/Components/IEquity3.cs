@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Financial instrument which represents a title of ownership in a company, ie, the shareholder is entitled to a part of the company&apos;s profit - usually by payment of a dividend - and to voting rights, if any. Each company issues generally different classes of shares, eg, ordinary or common shares, which have no guaranteed amount of dividend but carry voting rights, or preferred shares, which receive dividends before ordinary shares but have no voting right.
 /// </summary>
 [IsoId("_4YmZIeLZEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Equity")]
 public interface IEquity3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IEquity3 : IIsoComponent
     [IsoId("_4jwgQ-LZEeWFtOV72FbX9w")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? MaturityDate { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface IEquity3 : IIsoComponent
     [IsoId("_4jwgSeLZEeWFtOV72FbX9w")]
     [DisplayName("Voting Rights Per Share")]
     [IsoXmlTag("VtngRghtsPerShr")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? VotingRightsPerShare { get; }
 }

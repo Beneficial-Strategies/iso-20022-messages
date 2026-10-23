@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosedStatusReason2Choice;
 /// Reason for the closed account status expressed as a code.
 /// </summary>
 [IsoId("_lSNvgUzDEeafiMTDrtSnyw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IClosedStatusReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

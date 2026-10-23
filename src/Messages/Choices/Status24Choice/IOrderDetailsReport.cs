@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status24Choice;
 /// </summary>
 [IsoId("_bpQwY0HPEeazV4RAqPV71g")]
 [IsoXmlTag("OrdrDtlsRpt")]
+[IsoDisplayName(@"Order Details Report")]
 public interface IOrderDetailsReport : IStatus24Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOrderDetailsReport : IStatus24Choice, IIsoChoiceVariant
     [IsoId("_7RE7FTbsEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>

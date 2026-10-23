@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitStructure3Choice;
 /// <summary>
 /// Current Limit Identification.
 /// </summary>
+[IsoDisplayName(@"Current Limit Identification")]
 public interface ICurrentLimitIdentification : ILimitStructure3Choice, IIsoChoiceVariant
 {
     /// <summary>

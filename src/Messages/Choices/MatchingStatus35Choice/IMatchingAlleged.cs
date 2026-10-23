@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus35Choice;
 /// Trade is matched alleged.
 /// </summary>
 [IsoId("_2sTZ9Qd3Ee2fOITqoTnSLQ")]
+[IsoDisplayName(@"Matching Alleged")]
 public interface IMatchingAlleged : IMatchingStatus35Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity28Cho
 /// </summary>
 [IsoId("_ZipfAzhUEeaRwdGFv45qTQ")]
 [IsoXmlTag("GrssAmt")]
+[IsoDisplayName(@"Gross Amount")]
 public interface IGrossAmount : IFinancialInstrumentQuantity28Choice, IIsoChoiceVariant
 {
     /// <summary>

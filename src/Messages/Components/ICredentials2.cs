@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains credential information.
 /// </summary>
 [IsoId("_3tXfsad2EeuEcqP2FGAFaA")]
+[IsoDisplayName(@"Credentials")]
 public interface ICredentials2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICredentials2 : IIsoComponent
     [IsoId("_3zA0sad2EeuEcqP2FGAFaA")]
     [DisplayName("Other Identification Code")]
     [IsoXmlTag("OthrIdCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherIdentificationCode { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICredentials2 : IIsoComponent
     [IsoId("_3zA0s6d2EeuEcqP2FGAFaA")]
     [DisplayName("Identification Value")]
     [IsoXmlTag("IdVal")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text IdentificationValue { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ICredentials2 : IIsoComponent
     [IsoId("_HbqHgCX9Eeym0KcvJF9aDQ")]
     [DisplayName("Identification Expiry Date")]
     [IsoXmlTag("IdXpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? IdentificationExpiryDate { get; }
 
     /// <summary>

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod7Choice;
 
 /// <summary>Settlement via a credit transfer transaction.</summary>
 [IsoId("_GcCY0XeKEfCdoODv2ypKfw")]
+[IsoDisplayName(@"Credit")]
 public interface ICredit : ISettlementMethod7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

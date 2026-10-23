@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the vote methods to be used.
 /// </summary>
 [IsoId("_gf0lJzT7Ee2tRf29bleifQ")]
+[IsoDisplayName(@"Vote Methods")]
 public interface IVoteMethods5 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,9 @@ public interface IVoteMethods5 : IIsoComponent
     [IsoId("_g1R3pzT7Ee2tRf29bleifQ")]
     [DisplayName("Electronic Vote")]
     [IsoXmlTag("ElctrncVote")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommunicationAddress12> ElectronicVote { get; }
 
     /// <summary>
@@ -41,5 +45,9 @@ public interface IVoteMethods5 : IIsoComponent
     [IsoId("_g1R3qTT7Ee2tRf29bleifQ")]
     [DisplayName("Vote By Telephone")]
     [IsoXmlTag("VoteByTel")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> VoteByTelephone { get; }
 }

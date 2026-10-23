@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExposureType25Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IExposureType25Choice, IIsoChoiceVariant
 {
     /// <summary>

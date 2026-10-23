@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification10Choic
 /// <summary>
 /// Block Chain Cash Wallet.
 /// </summary>
+[IsoDisplayName(@"Block Chain Cash Wallet")]
 public interface IBlockChainCashWallet : ICashAccountIdentification10Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details to identify an account.
 /// </summary>
 [IsoId("_TnJx8Xh1EeidzqjNEfehPg")]
+[IsoDisplayName(@"Cash Account")]
 public interface ICashAccount38 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,8 @@ public interface ICashAccount38 : IIsoComponent
     [IsoId("_T4SlSXh1EeidzqjNEfehPg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>

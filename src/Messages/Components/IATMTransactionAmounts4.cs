@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Withdrawal limits for the account.
 /// </summary>
 [IsoId("_umPyoYq6EeSHjtO_wHA7PQ")]
+[IsoDisplayName(@"ATM Transaction Amounts")]
 public interface IATMTransactionAmounts4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IATMTransactionAmounts4 : IIsoComponent
     [IsoId("__XeUIIq6EeSHjtO_wHA7PQ")]
     [DisplayName("Display Flag")]
     [IsoXmlTag("DispFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DisplayFlag { get; }
 
     /// <summary>

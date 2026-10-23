@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Variables related to derivatives that are used to group derivatives together into positions for position sets.
 /// </summary>
 [IsoId("_woVqNcKzEeuFNp8LZAnorg")]
+[IsoDisplayName(@"Position Set Dimensions")]
 public interface IPositionSetDimensions12 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IPositionSetDimensions12 : IIsoComponent
     [IsoId("_wpybt8KzEeuFNp8LZAnorg")]
     [DisplayName("Outliers Included")]
     [IsoXmlTag("OtlrsIncl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? OutliersIncluded { get; }
 }

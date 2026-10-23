@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Holding of a financial asset as collateral.
 /// </summary>
 [IsoId("_4DvF8K_5EeaE9YROwd69hA")]
+[IsoDisplayName(@"Asset Holding")]
 public interface IAssetHolding1 : IIsoComponent
 {
     /// <summary>

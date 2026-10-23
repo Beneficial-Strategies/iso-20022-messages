@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the process of a currency exchange or conversion.
 /// </summary>
 [IsoId("_SpYh4AEcEeCQm6a_G2yO_w_1950817465")]
+[IsoDisplayName(@"Currency Reference")]
 public interface ICurrencyReference2 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ICurrencyReference2 : IIsoComponent
     [IsoId("_SpYh4wEcEeCQm6a_G2yO_w_953745112")]
     [DisplayName("Exchange Rate Information")]
     [IsoXmlTag("XchgRateInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExchangeRateInformation1> ExchangeRateInformation { get; }
 }

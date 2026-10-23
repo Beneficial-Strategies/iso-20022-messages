@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies security rate details.
 /// </summary>
 [IsoId("_vOJz0TQNEe2o-K1dwNg8Gg")]
+[IsoDisplayName(@"Corporate Action Rate")]
 public interface ICorporateActionRate112 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICorporateActionRate112 : IIsoComponent
     [IsoId("_vmvTCzQNEe2o-K1dwNg8Gg")]
     [DisplayName("Transformation Rate")]
     [IsoXmlTag("TrfrmatnRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TransformationRate { get; }
 
     /// <summary>
@@ -89,6 +91,7 @@ public interface ICorporateActionRate112 : IIsoComponent
     [IsoId("_sAgzIjQNEe2o-K1dwNg8Gg")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat41Choice> WithholdingTaxRate { get; }
 
     /// <summary>
@@ -97,5 +100,6 @@ public interface ICorporateActionRate112 : IIsoComponent
     [IsoId("_sAgzIzQNEe2o-K1dwNg8Gg")]
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRateAndAmountFormat41Choice> SecondLevelTax { get; }
 }

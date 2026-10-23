@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.fxtr;
     "FXTradCaptrRptReq",
     "urn:iso:std:iso:20022:tech:xsd:fxtr.032.001.01"
 )]
+[Description(@"Scope|The ForeignExchangeTradeCaptureReportRequest message is sent by a trading member to the trading system for inquiry of trade capture report. |Usage|The request is sent by the trading member to the trading system to inquire trade capture report. |Note a capture request could be rejected.")]
+[IsoDisplayName(@"Foreign Exchange Trade Capture Report Request V")]
 public interface IForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -52,6 +54,7 @@ public interface IForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [IsoId("_e_2ZkIHHEeSY3ulMDfpmvA")]
     [DisplayName("Query Start Number")]
     [IsoXmlTag("QryStartNb")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText QueryStartNumber { get; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public interface IForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [IsoId("_iSHbkIHHEeSY3ulMDfpmvA")]
     [DisplayName("Query By Period")]
     [IsoXmlTag("QryByPrd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator QueryByPeriod { get; }
 
     /// <summary>
@@ -76,6 +80,8 @@ public interface IForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [IsoId("_r0UKkIHHEeSY3ulMDfpmvA")]
     [DisplayName("Query Trade Identification")]
     [IsoXmlTag("QryTradId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryTradeIdentification { get; }
 
     /// <summary>
@@ -84,6 +90,8 @@ public interface IForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [IsoId("_BOrPMKa7EeSxuMLA5o46jQ")]
     [DisplayName("Query End Identification")]
     [IsoXmlTag("QryEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryEndIdentification { get; }
 
     /// <summary>
@@ -92,6 +100,7 @@ public interface IForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [IsoId("_a2e2MKHhEeS69KkQis5bYg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 
     /// <summary>
@@ -100,6 +109,7 @@ public interface IForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [IsoId("_eP9iMKa9EeSxuMLA5o46jQ")]
     [DisplayName("Query Page Size")]
     [IsoXmlTag("QryPgSz")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? QueryPageSize { get; }
 
     /// <summary>
@@ -108,5 +118,7 @@ public interface IForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [IsoId("_Ex-IEKbBEeSxuMLA5o46jQ")]
     [DisplayName("Query Parameter Value")]
     [IsoXmlTag("QryParamVal")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryParameterValue { get; }
 }

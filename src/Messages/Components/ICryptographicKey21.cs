@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cryptographic key.
 /// </summary>
 [IsoId("_xufmcbZ5EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Cryptographic Key21")]
 public interface ICryptographicKey21 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface ICryptographicKey21 : IIsoComponent
     [IsoId("_xvj9f7Z5EfCUZfsQO4rYeA")]
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<KeyUsage1Code> Function { get; }
 
     /// <summary>

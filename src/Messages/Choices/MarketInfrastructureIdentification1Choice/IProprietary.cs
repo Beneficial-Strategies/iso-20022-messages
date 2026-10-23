@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketInfrastructureIdentificati
 /// Clearing system identification in a proprietary form.|.
 /// </summary>
 [IsoId("_8BZ3QKMgEeCJ6YNENx4h-w_-1719940070")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IMarketInfrastructureIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IMarketInfrastructureIdentification1Choice, IIso
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Type of position sets calculated to represent the exposures between a pair of counterparties.
 /// </summary>
 [IsoId("_0wETAQ1MEeqV4s5SpzR1dQ")]
+[IsoDisplayName(@"Position Set Aggregated")]
 public interface IPositionSetAggregated3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPositionSetAggregated3 : IIsoComponent
     [IsoId("_0w29MQ1MEeqV4s5SpzR1dQ")]
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ReferenceDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPositionSetAggregated3 : IIsoComponent
     [IsoId("_0w29Mw1MEeqV4s5SpzR1dQ")]
     [DisplayName("Position Set")]
     [IsoXmlTag("PosSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet5> PositionSet { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPositionSetAggregated3 : IIsoComponent
     [IsoId("_0w29NQ1MEeqV4s5SpzR1dQ")]
     [DisplayName("Currency Position Set")]
     [IsoXmlTag("CcyPosSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet5> CurrencyPositionSet { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IPositionSetAggregated3 : IIsoComponent
     [IsoId("_0w29Nw1MEeqV4s5SpzR1dQ")]
     [DisplayName("Collateral Position Set")]
     [IsoXmlTag("CollPosSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet4> CollateralPositionSet { get; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public interface IPositionSetAggregated3 : IIsoComponent
     [IsoId("_0w29OQ1MEeqV4s5SpzR1dQ")]
     [DisplayName("Currency Collateral Position Set")]
     [IsoXmlTag("CcyCollPosSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPositionSet4> CurrencyCollateralPositionSet { get; }
 }

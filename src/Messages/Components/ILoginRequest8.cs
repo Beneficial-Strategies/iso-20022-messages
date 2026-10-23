@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the login request message.
 /// </summary>
 [IsoId("_5706cbZcEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Login Request8")]
 public interface ILoginRequest8 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ILoginRequest8 : IIsoComponent
     [IsoId("_58wHi7ZcEfCUZfsQO4rYeA")]
     [DisplayName("Sale Software")]
     [IsoXmlTag("SaleSftwr")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent18> SaleSoftware { get; }
 
     /// <summary>

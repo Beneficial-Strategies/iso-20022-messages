@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IncentivePremiumType1Choice;
 /// Number of securities giving right to a premium.
 /// </summary>
 [IsoId("_RDieotp-Ed-ak6NoX_4Aeg_1361394658")]
+[IsoDisplayName(@"Per Security")]
 public interface IPerSecurity : IIncentivePremiumType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPerSecurity : IIncentivePremiumType1Choice, IIsoChoiceVariant
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("PerScty")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

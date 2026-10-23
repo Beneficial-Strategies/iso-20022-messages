@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform7Choice;
 /// <summary>
 /// Payment Request.
 /// </summary>
+[IsoDisplayName(@"Payment Request")]
 public interface IPaymentRequest : ITransactionToPerform7Choice, IIsoChoiceVariant
 {
     /// <summary>

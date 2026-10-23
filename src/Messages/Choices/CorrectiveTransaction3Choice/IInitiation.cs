@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction3Choice;
 /// </summary>
 [IsoId("_9GWT4a6UEeexrtTFgmVD3Q")]
 [IsoXmlTag("Initn")]
+[IsoDisplayName(@"Initiation")]
 public interface IInitiation : ICorrectiveTransaction3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IInitiation : ICorrectiveTransaction3Choice, IIsoChoiceVariant
     [IsoId("_9OYOh66UEeexrtTFgmVD3Q")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IInitiation : ICorrectiveTransaction3Choice, IIsoChoiceVariant
     [IsoId("_9OYOia6UEeexrtTFgmVD3Q")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -42,6 +47,8 @@ public interface IInitiation : ICorrectiveTransaction3Choice, IIsoChoiceVariant
     [IsoId("_9OYOi66UEeexrtTFgmVD3Q")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>
@@ -67,5 +74,6 @@ public interface IInitiation : ICorrectiveTransaction3Choice, IIsoChoiceVariant
     [IsoId("_9OYOka6UEeexrtTFgmVD3Q")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 }

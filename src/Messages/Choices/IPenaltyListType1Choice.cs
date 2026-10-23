@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of format for the penalty list type.</summary>
 [IsoId("_-dWOMdfNEeiJ1vId85LeLw")]
+[IsoDisplayName(@"Penalty List Type 1 Choice")]
 public interface IPenaltyListType1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique identification, as assigned by the original instructing party, to unambiguously identify the message.
 /// </summary>
 [IsoId("_PgJZVdp-Ed-ak6NoX_4Aeg_1129957204")]
+[IsoDisplayName(@"Original Message Information")]
 public interface IOriginalMessageInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalMessageInformation1 : IIsoComponent
     [IsoId("_PgJZVtp-Ed-ak6NoX_4Aeg_1215844112")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalMessageInformation1 : IIsoComponent
     [IsoId("_PgJZV9p-Ed-ak6NoX_4Aeg_1215844113")]
     [DisplayName("Message Name Identification")]
     [IsoXmlTag("MsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageNameIdentification { get; }
 
     /// <summary>
@@ -33,5 +38,6 @@ public interface IOriginalMessageInformation1 : IIsoComponent
     [IsoId("_PgTKQNp-Ed-ak6NoX_4Aeg_1215844134")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CreationDateTime { get; }
 }

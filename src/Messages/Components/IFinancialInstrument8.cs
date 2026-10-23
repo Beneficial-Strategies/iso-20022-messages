@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.
 /// </summary>
 [IsoId("_Scywm9p-Ed-ak6NoX_4Aeg_-221038844")]
+[IsoDisplayName(@"Financial Instrument")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IFinancialInstrument8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,9 @@ public interface IFinancialInstrument8 : IIsoComponent
     [IsoId("_Sc8hkNp-Ed-ak6NoX_4Aeg_-221038808")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [MinLength(1)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification3Choice> Identification { get; }
 
     /// <summary>
@@ -25,6 +30,8 @@ public interface IFinancialInstrument8 : IIsoComponent
     [IsoId("_Sc8hkdp-Ed-ak6NoX_4Aeg_-221038748")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -33,6 +40,8 @@ public interface IFinancialInstrument8 : IIsoComponent
     [IsoId("_Sc8hktp-Ed-ak6NoX_4Aeg_-221038671")]
     [DisplayName("Supplementary Identification")]
     [IsoXmlTag("SplmtryId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SupplementaryIdentification { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IFinancialInstrument8 : IIsoComponent
     [IsoId("_SdFrgNp-Ed-ak6NoX_4Aeg_-221038316")]
     [DisplayName("Class Type")]
     [IsoXmlTag("ClssTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClassType { get; }
 
     /// <summary>
@@ -73,5 +84,6 @@ public interface IFinancialInstrument8 : IIsoComponent
     [IsoId("_SdFrg9p-Ed-ak6NoX_4Aeg_-221037878")]
     [DisplayName("Dual Fund Indicator")]
     [IsoXmlTag("DualFndInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator DualFundIndicator { get; }
 }

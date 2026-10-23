@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus4
 /// </summary>
 [IsoId("_tNku8SXZEeOFIcNWlDEvdQ")]
 [IsoXmlTag("Cd")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionProcessingStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>

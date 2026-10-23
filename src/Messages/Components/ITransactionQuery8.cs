@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Query8.
 /// </summary>
 [IsoId("_3GZtETEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Transaction Query8")]
 public interface ITransactionQuery8 : IIsoComponent
 {
     /// <summary>

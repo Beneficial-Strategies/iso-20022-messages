@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentIdentification6Choice;
 /// Identification through a unique product identifier.
 /// </summary>
 [IsoId("_xzhRNSyGEe2xAdY9t5fB3g")]
+[IsoDisplayName(@"Unique Product Identifier")]
 public interface IUniqueProductIdentifier : IInstrumentIdentification6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

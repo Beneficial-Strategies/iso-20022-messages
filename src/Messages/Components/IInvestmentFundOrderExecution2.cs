@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference of an order, client or deal reference.
 /// </summary>
 [IsoId("_R60r8tp-Ed-ak6NoX_4Aeg_1702688877")]
+[IsoDisplayName(@"Investment Fund Order Execution")]
 public interface IInvestmentFundOrderExecution2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentFundOrderExecution2 : IIsoComponent
     [IsoId("_R60r89p-Ed-ak6NoX_4Aeg_-571676421")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OrderReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IInvestmentFundOrderExecution2 : IIsoComponent
     [IsoId("_R60r9Np-Ed-ak6NoX_4Aeg_-571676388")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -33,5 +38,7 @@ public interface IInvestmentFundOrderExecution2 : IIsoComponent
     [IsoId("_R60r9dp-Ed-ak6NoX_4Aeg_-571676033")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DealReference { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionNumber1Choice;
 /// Number identifying the available corporate action options.
 /// </summary>
 [IsoId("_Q1O84tp-Ed-ak6NoX_4Aeg_2144641695")]
+[IsoDisplayName(@"Number")]
 public interface INumber : IOptionNumber1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INumber : IOptionNumber1Choice, IIsoChoiceVariant
     /// Specifies a numeric string with an exact length of 3 digits.
     /// </summary>
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText Value { get; }
 }

@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 /// </summary>
 [IsoId("_1eFPCNE8Ed-BzquC8wXy7w_1723275077")]
 [IsoMessage("tsmt.040.001.03", "TmOutNtfctn", "urn:iso:std:iso:20022:tech:xsd:tsmt.040.001.03")]
+[Description(@"Scope|The TimeOutNotification message is sent by the matching application to a party involved in a transaction.|This message is used to inform that a transaction will be closed within a given span of time if no action is taken.|Usage|The TimeOutNotification message can be sent by the matching application to inform the parties that a transaction will be closed within a given span of time if no action is taken by either party because|- no activity for the transaction has taken place within a specified span of time,or|- a significant date is reached, for example latest shipment date.")]
+[IsoDisplayName(@"Time Out Notification V")]
 public interface ITimeOutNotificationV03 : IOuterRecord
 {
     /// <summary>
@@ -58,6 +60,9 @@ public interface ITimeOutNotificationV03 : IOuterRecord
     [IsoId("_1ePABNE8Ed-BzquC8wXy7w_1723275231")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

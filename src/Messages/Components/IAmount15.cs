@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount, currency, exchange rate and quotation date.
 /// </summary>
 [IsoId("_WfYR0ZFyEeukDPgU2BMkjQ")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount15 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IAmount15 : IIsoComponent
     [IsoId("_Wmb8FZFyEeukDPgU2BMkjQ")]
     [DisplayName("Effective Exchange Rate")]
     [IsoXmlTag("FctvXchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOne25Rate)]
     BaseOne25Rate? EffectiveExchangeRate { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IAmount15 : IIsoComponent
     [IsoId("_Wmb8F5FyEeukDPgU2BMkjQ")]
     [DisplayName("Conversion Date")]
     [IsoXmlTag("ConvsDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ConversionDate { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IAmount15 : IIsoComponent
     [IsoId("_v4dZ8JFyEeukDPgU2BMkjQ")]
     [DisplayName("Conversion Time")]
     [IsoXmlTag("ConvsTm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? ConversionTime { get; }
 }

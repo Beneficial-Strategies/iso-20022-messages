@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the cash account elements of a parent cash account.
 /// </summary>
 [IsoId("_cTJ9i9cZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Parent Cash Account")]
 public interface IParentCashAccount4 : IIsoComponent
 {
     /// <summary>

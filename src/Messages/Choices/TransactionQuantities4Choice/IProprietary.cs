@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities4Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ITransactionQuantities4Choice, IIsoChoiceVariant
 {
     /// <summary>

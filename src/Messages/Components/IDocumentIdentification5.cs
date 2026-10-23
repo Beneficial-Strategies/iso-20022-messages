@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies a document by a unique identification and its issuer.
 /// </summary>
 [IsoId("_RJWLsdp-Ed-ak6NoX_4Aeg_-86119846")]
+[IsoDisplayName(@"Document Identification")]
 public interface IDocumentIdentification5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDocumentIdentification5 : IIsoComponent
     [IsoId("_RJWLstp-Ed-ak6NoX_4Aeg_109665302")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

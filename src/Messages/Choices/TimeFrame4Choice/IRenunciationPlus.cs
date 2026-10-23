@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame4Choice;
 /// An agreed number of days after the renunciation of title documents are received used to define standard timeframes in Redemption e.g R+3 Redemption settlement cycle.
 /// </summary>
 [IsoId("_UAew69p-Ed-ak6NoX_4Aeg_500203194")]
+[IsoDisplayName(@"Renunciation Plus")]
 public interface IRenunciationPlus : ITimeFrame4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IRenunciationPlus : ITimeFrame4Choice, IIsoChoiceVariant
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("RPlus")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

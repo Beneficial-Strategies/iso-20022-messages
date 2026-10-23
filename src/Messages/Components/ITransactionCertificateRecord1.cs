@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Certificate record in which all currency control transactions are registered.
 /// </summary>
 [IsoId("_LUhDsNLiEeSdq5yU2aaSNw")]
+[IsoDisplayName(@"Transaction Certificate Record")]
 public interface ITransactionCertificateRecord1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionCertificateRecord1 : IIsoComponent
     [IsoId("_RPZRQNLjEeSdq5yU2aaSNw")]
     [DisplayName("Certificate Record Identification")]
     [IsoXmlTag("CertRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CertificateRecordIdentification { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ITransactionCertificateRecord1 : IIsoComponent
     [IsoId("_HyBtYTm5EeWDb47rJ6ki4Q")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation3> Attachment { get; }
 }

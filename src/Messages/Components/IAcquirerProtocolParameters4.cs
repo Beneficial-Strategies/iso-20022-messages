@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Acceptor parameters dedicated to the acquirer protocol.
 /// </summary>
 [IsoId("_tiYEcR3kEeKWfegf-2AeBQ")]
+[IsoDisplayName(@"Acquirer Protocol Parameters")]
 public interface IAcquirerProtocolParameters4 : IIsoComponent
 {
     /// <summary>

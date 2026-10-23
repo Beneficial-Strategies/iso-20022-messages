@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_jwlbnxbvEeiyVv5j1vf1VQ")]
 [IsoMessage("camt.069.001.03", "GetStgOrdr", "urn:iso:std:iso:20022:tech:xsd:camt.069.001.03")]
+[Description(@"Scope|The GetStandingOrder message is sent by a member to the transaction administrator.|It is used to request information on the details of one or more standing orders, based on specific request criteria, especially to query the amount of the overall liquidity available. It will allow to query both reserved liquidity and liquidity available for normal operations.|Usage|The member can request information based on the following elements: |- individual standing orders (predefined or standing liquidity transfer orders)|- amount|- account to be credited|- account to be debited|- account owner (for on behalf scenario)|- frequency of payment|- daytime or overnight processing|- dates when the standing order begins and ceases to be effective|This message will be answered by a ReturnStandingOrder message.")]
+[IsoDisplayName(@"Get Standing Order V")]
 public interface IGetStandingOrderV03 : IOuterRecord
 {
     /// <summary>
@@ -36,5 +38,6 @@ public interface IGetStandingOrderV03 : IOuterRecord
     [IsoId("_jwlbpRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

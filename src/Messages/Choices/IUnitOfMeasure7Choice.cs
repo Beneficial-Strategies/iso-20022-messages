@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for unit of measure.
 /// </summary>
 [IsoId("_rZT0YWp8EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Unit Of Measure 7 Choice")]
 public interface IUnitOfMeasure7Choice : IIsoChoice { }

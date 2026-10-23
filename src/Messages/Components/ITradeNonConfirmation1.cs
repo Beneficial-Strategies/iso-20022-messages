@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies contract that is not confirmed.
 /// </summary>
 [IsoId("_8sHJ5A27EeWmAKKPnqYEVQ")]
+[IsoDisplayName(@"Trade Non Confirmation")]
 public interface ITradeNonConfirmation1 : IIsoComponent
 {
     /// <summary>

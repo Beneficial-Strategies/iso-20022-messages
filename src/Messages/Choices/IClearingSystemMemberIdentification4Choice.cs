@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of identifiers for a clearing system member, as assigned by the clearing system. In some clearing systems, the accounts of the clearing system members are also assigned an identifier.
 /// </summary>
 [IsoId("_Vgzb8bNIEeejueAciesPMA")]
+[IsoDisplayName(@"Clearing System Member Identification 4 Choice")]
 public interface IClearingSystemMemberIdentification4Choice : IIsoChoice { }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "InfReqStsChngNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:auth.003.001.01"
 )]
+[Description(@"This message is sent by the authorities (police, customs, tax authorities, enforcement authorities) to a financial institution to inform the financial institution that the confidentiality status of the investigation has changed.")]
+[IsoDisplayName(@"Information Request Status Change Notification V")]
 public interface IInformationRequestStatusChangeNotificationV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,8 @@ public interface IInformationRequestStatusChangeNotificationV01 : IOuterRecord
     [IsoId("_tqPSWz2QEeGG64_ngBNdUg")]
     [DisplayName("Original Business Query")]
     [IsoXmlTag("OrgnlBizQry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalBusinessQuery { get; }
 
     /// <summary>
@@ -32,6 +36,7 @@ public interface IInformationRequestStatusChangeNotificationV01 : IOuterRecord
     [IsoId("_0ikcBT2QEeGG64_ngBNdUg")]
     [DisplayName("Confidentiality Status")]
     [IsoXmlTag("CnfdtltySts")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ConfidentialityStatus { get; }
 
     /// <summary>
@@ -40,5 +45,6 @@ public interface IInformationRequestStatusChangeNotificationV01 : IOuterRecord
     [IsoId("_2tmJOz2QEeGG64_ngBNdUg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

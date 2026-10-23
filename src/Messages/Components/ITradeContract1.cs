@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Agreement between the parties, stipulating the terms and conditions of the delivery of goods or services.
 /// </summary>
 [IsoId("_1lQO0NLJEeSdq5yU2aaSNw")]
+[IsoDisplayName(@"Trade Contract")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface ITradeContract1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +35,7 @@ public interface ITradeContract1 : IIsoComponent
     [IsoId("_RZltc9NDEeSDLevdaFPXHw")]
     [DisplayName("Buyer")]
     [IsoXmlTag("Buyr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty2> Buyer { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ITradeContract1 : IIsoComponent
     [IsoId("_RZltdNNDEeSDLevdaFPXHw")]
     [DisplayName("Seller")]
     [IsoXmlTag("Sellr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty2> Seller { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ITradeContract1 : IIsoComponent
     [IsoId("_r21y4NNEEeSDLevdaFPXHw")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ITradeContract1 : IIsoComponent
     [IsoId("_wrZHANNEEeSDLevdaFPXHw")]
     [DisplayName("Prolongation Flag")]
     [IsoXmlTag("PrlngtnFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator ProlongationFlag { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface ITradeContract1 : IIsoComponent
     [IsoId("_y6NvANNEEeSDLevdaFPXHw")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate StartDate { get; }
 
     /// <summary>
@@ -105,5 +112,6 @@ public interface ITradeContract1 : IIsoComponent
     [IsoId("_HyjhwdNDEeSDLevdaFPXHw")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation3> Attachment { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data Set Request5.
 /// </summary>
 [IsoId("_gtJRcZB8Ee6FLLjWp95ntQ")]
+[IsoDisplayName(@"Data Set Request5")]
 public interface IDataSetRequest5 : IIsoComponent
 {
     /// <summary>

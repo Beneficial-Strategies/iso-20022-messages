@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderType1Choice;
 /// Liquidity transfer standing order type, in a coded form.
 /// </summary>
 [IsoId("_73bb4aMgEeCJ6YNENx4h-w_-1852211918")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IStandingOrderType1Choice, IIsoChoiceVariant
 {
     /// <summary>

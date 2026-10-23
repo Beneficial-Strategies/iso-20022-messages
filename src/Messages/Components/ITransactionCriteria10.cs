@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria which are used to search for a transaction and to report on the transaction. A name may be given to the new query.
 /// </summary>
 [IsoId("_-S2D1QKxEe2rHs6fbn9-0A")]
+[IsoDisplayName(@"Transaction Criteria")]
 public interface ITransactionCriteria10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionCriteria10 : IIsoComponent
     [IsoId("_-9kb0wKxEe2rHs6fbn9-0A")]
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NewQueryName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ITransactionCriteria10 : IIsoComponent
     [IsoId("_-9kb1QKxEe2rHs6fbn9-0A")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionSearchCriteria10> SearchCriteria { get; }
 
     /// <summary>

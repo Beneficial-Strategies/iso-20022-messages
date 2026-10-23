@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transfer of a security on a securities account servicer after the receipt of a securities settlement instruction, or the transfer of cash on an account servicer after the receipt of a payment instruction. The transfer consists of a debit/credit operation in the books of the account servicer.
 /// </summary>
 [IsoId("_SwnEd9p-Ed-ak6NoX_4Aeg_-1173422245")]
+[IsoDisplayName(@"Transfer Reference")]
 public interface ITransferReference4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransferReference4 : IIsoComponent
     [IsoId("_SwnEeNp-Ed-ak6NoX_4Aeg_207079813")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferReference { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ITransferReference4 : IIsoComponent
     [IsoId("_SwnEedp-Ed-ak6NoX_4Aeg_229404157")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 }

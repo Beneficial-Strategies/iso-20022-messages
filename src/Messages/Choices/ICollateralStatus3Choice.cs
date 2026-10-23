@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the collateral status of an instruction.
 /// </summary>
 [IsoId("_K3a_kOCdEei2UYJ62ws-Fw")]
+[IsoDisplayName(@"Collateral Status 3 Choice")]
 public interface ICollateralStatus3Choice : IIsoChoice { }

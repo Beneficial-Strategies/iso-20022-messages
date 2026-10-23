@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberIdentification3Choice;
 /// </summary>
 [IsoId("_iR9BhXSbEeiH1ZOt2UD8vQ")]
 [IsoXmlTag("ClrSysMmbId")]
+[IsoDisplayName(@"Clearing System Member Identification")]
 public interface IClearingSystemMemberIdentification
     : IMemberIdentification3Choice,
         IIsoChoiceVariant
@@ -28,5 +29,7 @@ public interface IClearingSystemMemberIdentification
     [IsoId("_TMehHtp-Ed-ak6NoX_4Aeg_151445420")]
     [DisplayName("Member Identification")]
     [IsoXmlTag("MmbId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MemberIdentification { get; }
 }

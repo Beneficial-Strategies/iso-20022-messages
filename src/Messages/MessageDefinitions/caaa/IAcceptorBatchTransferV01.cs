@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_edEQpaMVEeCJ6YNENx4h-w_1105979751")]
 [IsoMessage("caaa.011.001.01", "AccptrBtchTrf", "urn:iso:std:iso:20022:tech:xsd:caaa.011.001.01")]
+[Description(@"Scope|The AcceptorBatchTransfer message is sent by the card acceptor to the acquirer to capture a collection of previously completed card payment transactions.|Usage|The AcceptorBatchTransfer message embeds the information required for transferring to the acquirer the data needed to perform the financial settlement of these transactions (capture).")]
+[IsoDisplayName(@"Acceptor Batch Transfer V")]
 public interface IAcceptorBatchTransferV01 : IOuterRecord
 {
     /// <summary>
@@ -31,6 +33,7 @@ public interface IAcceptorBatchTransferV01 : IOuterRecord
     [IsoId("_edEQp6MVEeCJ6YNENx4h-w_1311812770")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet1> DataSet { get; }
 
     /// <summary>

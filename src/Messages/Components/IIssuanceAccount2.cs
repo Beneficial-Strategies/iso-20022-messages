@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the account to or from which a securities entry is made and the usage type.
 /// </summary>
 [IsoId("_mzWcD-FgEeWIA4E9cYSxxQ")]
+[IsoDisplayName(@"Issuance Account")]
 public interface IIssuanceAccount2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IIssuanceAccount2 : IIsoComponent
     [IsoId("_m8H9g-FgEeWIA4E9cYSxxQ")]
     [DisplayName("Primary Account Indicator")]
     [IsoXmlTag("PmryAcctInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PrimaryAccountIndicator { get; }
 }

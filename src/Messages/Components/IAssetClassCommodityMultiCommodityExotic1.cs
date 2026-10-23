@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity attributes of a derivative where the type is multi commodity exotic.
 /// </summary>
 [IsoId("_iNuUgFr0EeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Asset Class Commodity Multi Commodity Exotic")]
 public interface IAssetClassCommodityMultiCommodityExotic1 : IIsoComponent
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification4Choic
 /// <summary>
 /// Party.
 /// </summary>
+[IsoDisplayName(@"Party")]
 public interface IParty : IPlaceOfTradeIdentification4Choice, IIsoChoiceVariant
 {
     /// <summary>

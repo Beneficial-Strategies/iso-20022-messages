@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between message record types for card payment messages.</summary>
 [IsoId("_kKcwsW7-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Record Message 2 Choice")]
 public interface IRecordMessage2Choice : IIsoChoice { }

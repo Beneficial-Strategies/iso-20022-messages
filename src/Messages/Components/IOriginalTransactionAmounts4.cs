@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amounts of the card transaction.
 /// </summary>
 [IsoId("_asDGcSH4EfCkq6-p7S3J1Q")]
+[IsoDisplayName(@"Original Transaction Amounts4")]
 public interface IOriginalTransactionAmounts4 : IIsoComponent
 {
     /// <summary>

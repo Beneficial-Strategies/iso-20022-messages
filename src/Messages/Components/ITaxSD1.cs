@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides extra tax details.
 /// </summary>
 [IsoId("_1bBq5m99EeKuY41pq1-dog")]
+[IsoDisplayName(@"Tax SD")]
 public interface ITaxSD1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ITaxSD1 : IIsoComponent
     [IsoId("_1bBrGG99EeKuY41pq1-dog")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface ITaxSD1 : IIsoComponent
     [IsoId("_1bBrCW99EeKuY41pq1-dog")]
     [DisplayName("Foreign Tax Credit Rate")]
     [IsoXmlTag("FrgnTaxCdtRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ForeignTaxCreditRate { get; }
 
     /// <summary>
@@ -50,6 +54,7 @@ public interface ITaxSD1 : IIsoComponent
     [IsoId("_1bBrE299EeKuY41pq1-dog")]
     [DisplayName("Foreign Source Rate")]
     [IsoXmlTag("FrgnSrcRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ForeignSourceRate { get; }
 
     /// <summary>
@@ -74,6 +79,7 @@ public interface ITaxSD1 : IIsoComponent
     [IsoId("_1bBrBG99EeKuY41pq1-dog")]
     [DisplayName("Tax Advantage Rate")]
     [IsoXmlTag("TaxAdvntgRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TaxAdvantageRate { get; }
 
     /// <summary>
@@ -82,6 +88,7 @@ public interface ITaxSD1 : IIsoComponent
     [IsoId("_1bBrDm99EeKuY41pq1-dog")]
     [DisplayName("Sundry Or Other Rate")]
     [IsoXmlTag("SndryOrOthrRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? SundryOrOtherRate { get; }
 
     /// <summary>
@@ -90,6 +97,7 @@ public interface ITaxSD1 : IIsoComponent
     [IsoId("_1bBq8G99EeKuY41pq1-dog")]
     [DisplayName("Tax Deferred Rate")]
     [IsoXmlTag("TaxDfrrdRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TaxDeferredRate { get; }
 
     /// <summary>
@@ -98,5 +106,6 @@ public interface ITaxSD1 : IIsoComponent
     [IsoId("_1bBq_299EeKuY41pq1-dog")]
     [DisplayName("Tax Free Rate")]
     [IsoXmlTag("TaxFreeRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? TaxFreeRate { get; }
 }

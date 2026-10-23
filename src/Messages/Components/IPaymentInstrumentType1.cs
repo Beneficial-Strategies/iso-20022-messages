@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies a payment instrument type as the search criteria for the financial institution to do the investigation.
 /// </summary>
 [IsoId("_KRjfA01KEeGAs6v-iSb2RQ")]
+[IsoDisplayName(@"Payment Instrument Type")]
 public interface IPaymentInstrumentType1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPaymentInstrumentType1 : IIsoComponent
     [IsoId("_Mvp5PE1KEeGAs6v-iSb2RQ")]
     [DisplayName("Card Number")]
     [IsoXmlTag("CardNb")]
+    [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
     Min8Max28NumericText CardNumber { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPaymentInstrumentType1 : IIsoComponent
     [IsoId("_PgYUYU1KEeGAs6v-iSb2RQ")]
     [DisplayName("Authority Request Type")]
     [IsoXmlTag("AuthrtyReqTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorityRequestType1> AuthorityRequestType { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IPaymentInstrumentType1 : IIsoComponent
     [IsoId("_pJiNaV0wEeGwFY7pvwHH-g")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information which describes the organisation.
 /// </summary>
 [IsoId("_QM2HONp-Ed-ak6NoX_4Aeg_-1220331346")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrganisation7 : IIsoComponent
     [IsoId("_QM2HOdp-Ed-ak6NoX_4Aeg_-1334170412")]
     [DisplayName("Full Legal Name")]
     [IsoXmlTag("FullLglNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text FullLegalName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOrganisation7 : IIsoComponent
     [IsoId("_QM2HOtp-Ed-ak6NoX_4Aeg_1963724531")]
     [DisplayName("Trading Name")]
     [IsoXmlTag("TradgNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? TradingName { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IOrganisation7 : IIsoComponent
     [IsoId("_QM_4Mdp-Ed-ak6NoX_4Aeg_-30420175")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate RegistrationDate { get; }
 
     /// <summary>
@@ -81,6 +87,7 @@ public interface IOrganisation7 : IIsoComponent
     [IsoId("_QM_4Ntp-Ed-ak6NoX_4Aeg_2035364210")]
     [DisplayName("Representative Officer")]
     [IsoXmlTag("RprtvOffcr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification40> RepresentativeOfficer { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface IOrganisation7 : IIsoComponent
     [IsoId("_QM_4ONp-Ed-ak6NoX_4Aeg_41219504")]
     [DisplayName("Main Mandate Holder")]
     [IsoXmlTag("MainMndtHldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification40> MainMandateHolder { get; }
 
     /// <summary>
@@ -105,5 +113,6 @@ public interface IOrganisation7 : IIsoComponent
     [IsoId("_QM_4Odp-Ed-ak6NoX_4Aeg_-878814148")]
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification40> Sender { get; }
 }

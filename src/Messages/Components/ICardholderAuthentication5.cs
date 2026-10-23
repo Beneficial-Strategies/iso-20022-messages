@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the authentication of the cardholder.
 /// </summary>
 [IsoId("_kpi3wS_yEeO4w-IWHJMI9g")]
+[IsoDisplayName(@"Cardholder Authentication")]
 public interface ICardholderAuthentication5 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ICardholderAuthentication5 : IIsoComponent
     [IsoId("_k_3GBS_yEeO4w-IWHJMI9g")]
     [DisplayName("Authentication Value")]
     [IsoXmlTag("AuthntcnVal")]
+    [IsoSimpleType(IsoSimpleType.Max40Text)]
+    [StringLength(40, MinimumLength = 1)]
     Max40Text? AuthenticationValue { get; }
 
     /// <summary>
@@ -49,5 +52,7 @@ public interface ICardholderAuthentication5 : IIsoComponent
     [IsoId("_k_3GCS_yEeO4w-IWHJMI9g")]
     [DisplayName("Authentication Collection Indicator")]
     [IsoXmlTag("AuthntcnColltnInd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AuthenticationCollectionIndicator { get; }
 }

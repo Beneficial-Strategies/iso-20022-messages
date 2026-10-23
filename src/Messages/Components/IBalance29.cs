@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance29.
 /// </summary>
 [IsoId("_CFN7QXjVEe6YlIMyoxWMJA")]
+[IsoDisplayName(@"Balance29")]
 public interface IBalance29 : IIsoComponent
 {
     /// <summary>

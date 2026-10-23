@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount and trigger information.
 /// </summary>
 [IsoId("_-GTXZnltEeG7BsjMvd1mEw_-1985688302")]
+[IsoDisplayName(@"Amount And Trigger")]
 public interface IAmountAndTrigger1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAmountAndTrigger1 : IIsoComponent
     [IsoId("_-GTXZ3ltEeG7BsjMvd1mEw_-1458509078")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IAmountAndTrigger1 : IIsoComponent
     [IsoId("_-GdIYHltEeG7BsjMvd1mEw_-206552408")]
     [DisplayName("Trigger")]
     [IsoXmlTag("Trggr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITrigger1> Trigger { get; }
 }

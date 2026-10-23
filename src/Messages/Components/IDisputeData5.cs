@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to be present in a dispute.
 /// </summary>
 [IsoId("_pkC1gRT_EfC_aaedwHHlmw")]
+[IsoDisplayName(@"Dispute Data5")]
 public interface IDisputeData5 : IIsoComponent
 {
     /// <summary>
@@ -89,6 +90,7 @@ public interface IDisputeData5 : IIsoComponent
     [IsoId("_pq7grRT_EfC_aaedwHHlmw")]
     [DisplayName("Reject Reason")]
     [IsoXmlTag("RjctRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> RejectReason { get; }
 
     /// <summary>
@@ -113,6 +115,7 @@ public interface IDisputeData5 : IIsoComponent
     [IsoId("_lxWUwmvXEfCyxsm1jzUNug")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -121,5 +124,6 @@ public interface IDisputeData5 : IIsoComponent
     [IsoId("_lxWUw2vXEfCyxsm1jzUNug")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

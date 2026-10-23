@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
 /// <summary>
 /// Pending Cancellation.
 /// </summary>
+[IsoDisplayName(@"Pending Cancellation")]
 public interface IPendingCancellation
     : IMarketClaimCancellationRequestStatus2Choice,
         IIsoChoiceVariant

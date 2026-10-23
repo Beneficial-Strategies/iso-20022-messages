@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument26Choice;
 /// <summary>
 /// Credit Transfer Details.
 /// </summary>
+[IsoDisplayName(@"Credit Transfer Details")]
 public interface ICreditTransferDetails : IPaymentInstrument26Choice, IIsoChoiceVariant
 {
     /// <summary>

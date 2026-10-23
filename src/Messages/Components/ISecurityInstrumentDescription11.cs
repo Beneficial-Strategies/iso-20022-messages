@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the security instrument by its name and typical characteristics.
 /// </summary>
 [IsoId("_1x58kcnTEeWpf-ImB_F2gQ")]
+[IsoDisplayName(@"Security Instrument Description")]
 public interface ISecurityInstrumentDescription11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurityInstrumentDescription11 : IIsoComponent
     [IsoId("_2J6z8cnTEeWpf-ImB_F2gQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? Identification { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface ISecurityInstrumentDescription11 : IIsoComponent
     [IsoId("_2J6z88nTEeWpf-ImB_F2gQ")]
     [DisplayName("Full Name")]
     [IsoXmlTag("FullNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text FullName { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ISecurityInstrumentDescription11 : IIsoComponent
     [IsoId("_2J6z98nTEeWpf-ImB_F2gQ")]
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier ClassificationType { get; }
 
     /// <summary>

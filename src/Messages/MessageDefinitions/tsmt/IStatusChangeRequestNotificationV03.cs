@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "StsChngReqNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.028.001.03"
 )]
+[Description(@"Scope|The StatusChangeRequestNotification message is sent by the matching application to the party requested to accept or reject the request of a change in the status of a transaction.|This message is used to notify the request of a change in the status of a transaction.|Usage|The StatusChangeRequestNotification message can be sent by the matching application to pass on the information about the request of a change in the status of a transaction that it has obtained through the receipt of a StatusChangeRequest message.")]
+[IsoDisplayName(@"Status Change Request Notification V")]
 public interface IStatusChangeRequestNotificationV03 : IOuterRecord
 {
     /// <summary>
@@ -60,6 +62,9 @@ public interface IStatusChangeRequestNotificationV03 : IOuterRecord
     [IsoId("_wSiXNNE8Ed-BzquC8wXy7w_439569386")]
     [DisplayName("User Transaction Reference")]
     [IsoXmlTag("UsrTxRef")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification5> UserTransactionReference { get; }
 
     /// <summary>

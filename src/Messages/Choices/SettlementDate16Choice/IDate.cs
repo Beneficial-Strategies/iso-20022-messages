@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDate16Choice;
 /// Numeric representation of the day of the month and year.
 /// </summary>
 [IsoId("_GxX0s5BhEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Date")]
 public interface IDate : ISettlementDate16Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

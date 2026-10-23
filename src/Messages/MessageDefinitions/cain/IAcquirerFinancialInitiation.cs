@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_Mdr84HubEeSBS-QFUaKA-g")]
 [IsoMessage("cain.003.001.01", "AcqrrFinInitn", "urn:iso:std:iso:20022:tech:xsd:cain.003.001.01")]
+[Description(@"The AcquirerFinancialInitiation message is sent by an acquirer or an agent to an issuer or an agent, to request, advice or notify the approval and the clearing of a card transaction.")]
+[IsoDisplayName(@"Acquirer Financial Initiation")]
 public interface IAcquirerFinancialInitiation : IOuterRecord
 {
     /// <summary>

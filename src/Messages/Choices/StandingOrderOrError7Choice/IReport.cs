@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError7Choice;
 /// </summary>
 [IsoId("_eamLEdcZEeqRFcf2R4bPBw")]
 [IsoXmlTag("Rpt")]
+[IsoDisplayName(@"Report")]
 public interface IReport : IStandingOrderOrError7Choice, IIsoChoiceVariant
 {
     /// <summary>

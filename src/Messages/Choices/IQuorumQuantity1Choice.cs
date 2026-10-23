@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of quorum quantity.
 /// </summary>
 [IsoId("_RDiepdp-Ed-ak6NoX_4Aeg_1841562834")]
+[IsoDisplayName(@"Quorum Quantity 1 Choice")]
 public interface IQuorumQuantity1Choice : IIsoChoice { }

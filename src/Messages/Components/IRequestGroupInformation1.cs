@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics that unambiguously identify the global invoice financing request.
 /// </summary>
 [IsoId("_TiYfoNp-Ed-ak6NoX_4Aeg_1465496511")]
+[IsoDisplayName(@"Request Group Information")]
 public interface IRequestGroupInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRequestGroupInformation1 : IIsoComponent
     [IsoId("_TiYfodp-Ed-ak6NoX_4Aeg_1465496537")]
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text GroupIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IRequestGroupInformation1 : IIsoComponent
     [IsoId("_TiYfotp-Ed-ak6NoX_4Aeg_1465496553")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,10 @@ public interface IRequestGroupInformation1 : IIsoComponent
     [IsoId("_TiYfo9p-Ed-ak6NoX_4Aeg_515663679")]
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
+    [IsoSimpleType(IsoSimpleType.Max128Text)]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Authorisation { get; }
 
     /// <summary>
@@ -41,6 +49,7 @@ public interface IRequestGroupInformation1 : IIsoComponent
     [IsoId("_TiYfpNp-Ed-ak6NoX_4Aeg_1465496571")]
     [DisplayName("Number Of Invoice Requests")]
     [IsoXmlTag("NbOfInvcReqs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? NumberOfInvoiceRequests { get; }
 
     /// <summary>
@@ -65,6 +74,8 @@ public interface IRequestGroupInformation1 : IIsoComponent
     [IsoId("_TiYfp9p-Ed-ak6NoX_4Aeg_1465496648")]
     [DisplayName("Financing Agreement")]
     [IsoXmlTag("FincgAgrmt")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? FinancingAgreement { get; }
 
     /// <summary>
@@ -97,6 +108,7 @@ public interface IRequestGroupInformation1 : IIsoComponent
     [IsoId("_TiiQodp-Ed-ak6NoX_4Aeg_1465496695")]
     [DisplayName("Agreement Clauses")]
     [IsoXmlTag("AgrmtClauses")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAgreementClauses1> AgreementClauses { get; }
 
     /// <summary>
@@ -105,5 +117,6 @@ public interface IRequestGroupInformation1 : IIsoComponent
     [IsoId("_TiiQotp-Ed-ak6NoX_4Aeg_-1564243574")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation1> AdditionalInformation { get; }
 }

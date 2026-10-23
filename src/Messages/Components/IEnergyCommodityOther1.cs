@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other energy commodity derivative.
 /// </summary>
 [IsoId("_COd1cbvtEeiLRYqS-r-R-A")]
+[IsoDisplayName(@"Energy Commodity Other")]
 public interface IEnergyCommodityOther1 : IIsoComponent
 {
     /// <summary>

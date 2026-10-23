@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card Account18.
 /// </summary>
 [IsoId("_C3Y9IZ-QEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Card Account18")]
 public interface ICardAccount18 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ICardAccount18 : IIsoComponent
     /// </summary>
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAmountAndDirection111> Balance { get; }
 
     /// <summary>
@@ -86,5 +88,6 @@ public interface ICardAccount18 : IIsoComponent
     /// </summary>
     [DisplayName("Allowed Service")]
     [IsoXmlTag("AllwdSvc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMService29> AllowedService { get; }
 }

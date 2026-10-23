@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the reason for rejecting a RequestToCancelPayment.
 /// </summary>
 [IsoId("_T9gVYtp-Ed-ak6NoX_4Aeg_1111011316")]
+[IsoDisplayName(@"Rejected Cancellation Justification")]
 public interface IRejectedCancellationJustification : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IRejectedCancellationJustification : IIsoComponent
     [IsoId("_T9gVZNp-Ed-ak6NoX_4Aeg_1563536447")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Reason { get; }
 }

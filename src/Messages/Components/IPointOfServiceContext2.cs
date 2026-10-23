@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the transaction at the point of service.
 /// </summary>
 [IsoId("_wiXuIUP-EeiFlYmBVFSxUw")]
+[IsoDisplayName(@"Point Of Service Context")]
 public interface IPointOfServiceContext2 : IIsoComponent
 {
     /// <summary>
@@ -20,6 +21,7 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XQUP-EeiFlYmBVFSxUw")]
     [DisplayName("Card Present")]
     [IsoXmlTag("CardPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardPresent { get; }
 
     /// <summary>
@@ -31,6 +33,7 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XQ0P-EeiFlYmBVFSxUw")]
     [DisplayName("Cardholder Present")]
     [IsoXmlTag("CrdhldrPres")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardholderPresent { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XRUP-EeiFlYmBVFSxUw")]
     [DisplayName("Cardholder Activated")]
     [IsoXmlTag("CrdhldrActvtd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CardholderActivated { get; }
 
     /// <summary>
@@ -52,6 +56,7 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XR0P-EeiFlYmBVFSxUw")]
     [DisplayName("Transponder Initiated")]
     [IsoXmlTag("TrnspndrInittd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TransponderInitiated { get; }
 
     /// <summary>
@@ -63,6 +68,7 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XSUP-EeiFlYmBVFSxUw")]
     [DisplayName("Attended Indicator")]
     [IsoXmlTag("AttnddInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AttendedIndicator { get; }
 
     /// <summary>
@@ -71,6 +77,7 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XS0P-EeiFlYmBVFSxUw")]
     [DisplayName("Unattended Level Category")]
     [IsoXmlTag("UattnddLvlCtgy")]
+    [IsoSimpleType(IsoSimpleType.Max35NumericText)]
     Max35NumericText? UnattendedLevelCategory { get; }
 
     /// <summary>
@@ -83,6 +90,7 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XTUP-EeiFlYmBVFSxUw")]
     [DisplayName("E Commerce Indicator")]
     [IsoXmlTag("EComrcInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ECommerceIndicator { get; }
 
     /// <summary>
@@ -91,6 +99,7 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_dWb_QWzcEemD24gVaMSpeA")]
     [DisplayName("E Commerce Data")]
     [IsoXmlTag("EComrcData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IECommerceData1> ECommerceData { get; }
 
     /// <summary>
@@ -105,6 +114,7 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XT0P-EeiFlYmBVFSxUw")]
     [DisplayName("MOTO Indicator")]
     [IsoXmlTag("MOTOInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? MOTOIndicator { get; }
 
     /// <summary>
@@ -115,6 +125,7 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XUUP-EeiFlYmBVFSxUw")]
     [DisplayName("Partial Approval Supported")]
     [IsoXmlTag("PrtlApprvlSpprtd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PartialApprovalSupported { get; }
 
     /// <summary>
@@ -125,6 +136,7 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XU0P-EeiFlYmBVFSxUw")]
     [DisplayName("Delayed Authorisation Indicator")]
     [IsoXmlTag("DelydAuthstnInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DelayedAuthorisationIndicator { get; }
 
     /// <summary>
@@ -134,6 +146,7 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XVUP-EeiFlYmBVFSxUw")]
     [DisplayName("Security Characteristics")]
     [IsoXmlTag("SctyChrtcs")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<SecurityCharacteristics1Code> SecurityCharacteristics { get; }
 
     /// <summary>
@@ -142,6 +155,8 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XV0P-EeiFlYmBVFSxUw")]
     [DisplayName("Other Security Characteristics")]
     [IsoXmlTag("OthrSctyChrtcs")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherSecurityCharacteristics { get; }
 
     /// <summary>
@@ -159,6 +174,8 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XW0P-EeiFlYmBVFSxUw")]
     [DisplayName("Other Card Data Entry Mode")]
     [IsoXmlTag("OthrCardDataNtryMd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherCardDataEntryMode { get; }
 
     /// <summary>
@@ -167,6 +184,8 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XXUP-EeiFlYmBVFSxUw")]
     [DisplayName("Storage Location")]
     [IsoXmlTag("StorgLctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? StorageLocation { get; }
 
     /// <summary>
@@ -175,5 +194,6 @@ public interface IPointOfServiceContext2 : IIsoComponent
     [IsoId("_wt1XX0P-EeiFlYmBVFSxUw")]
     [DisplayName("Special Conditions")]
     [IsoXmlTag("SpclConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialConditions1> SpecialConditions { get; }
 }

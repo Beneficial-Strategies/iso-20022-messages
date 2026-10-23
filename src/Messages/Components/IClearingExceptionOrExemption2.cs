@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further details on clearing exceptions or exemptions.
 /// </summary>
 [IsoId("_AjSxdZPuEey0rJ3Gl6WZVA")]
+[IsoDisplayName(@"Clearing Exception Or Exemption")]
 public interface IClearingExceptionOrExemption2 : IIsoComponent
 {
     /// <summary>

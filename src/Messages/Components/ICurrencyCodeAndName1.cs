@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a currency by its code or its name.
 /// </summary>
 [IsoId("_cIJQQMOVEeWiEtRBUJSIaA")]
+[IsoDisplayName(@"Currency Code And Name")]
 public interface ICurrencyCodeAndName1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICurrencyCodeAndName1 : IIsoComponent
     [IsoId("_rJgWoMOVEeWiEtRBUJSIaA")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Name { get; }
 }

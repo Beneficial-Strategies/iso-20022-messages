@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the information that is searched through the definition of specific criteria.
 /// </summary>
 [IsoId("_VSF1oagzEfCXwLUUylXgrQ")]
+[IsoDisplayName(@"Settlement Instruction Query Definition4")]
 public interface ISettlementInstructionQueryDefinition4 : IIsoComponent
 {
     /// <summary>

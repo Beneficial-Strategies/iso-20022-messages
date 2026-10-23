@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmount8Choice;
 /// <summary>
 /// Amount.
 /// </summary>
+[IsoDisplayName(@"Amount")]
 public interface IAmount : IPriceRateOrAmount8Choice, IIsoChoiceVariant
 {
     /// <summary>

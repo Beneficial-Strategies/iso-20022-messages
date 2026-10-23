@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctClsgAmdmntReq",
     "urn:iso:std:iso:20022:tech:xsd:acmt.020.001.04"
 )]
+[IsoDisplayName(@"Account Closing Amendment Request V04")]
 public interface IAccountClosingAmendmentRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -78,6 +79,7 @@ public interface IAccountClosingAmendmentRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature4> DigitalSignature { get; }
 
     /// <summary>
@@ -85,5 +87,6 @@ public interface IAccountClosingAmendmentRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

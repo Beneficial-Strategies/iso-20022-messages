@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status information.
 /// </summary>
 [IsoId("_8vNzgUQSEealVdmlTDXWkw")]
+[IsoDisplayName(@"Account Management Status And Reason")]
 public interface IAccountManagementStatusAndReason5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IAccountManagementStatusAndReason5 : IIsoComponent
     [IsoId("_cPlMMGBdEeaR1OOiVxm3Gg")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAcceptedStatusReason1Choice> StatusReason { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IAccountManagementStatusAndReason5 : IIsoComponent
     [IsoId("_9H6nY0QSEealVdmlTDXWkw")]
     [DisplayName("Account Application Identification")]
     [IsoXmlTag("AcctApplId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountApplicationIdentification { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IAccountManagementStatusAndReason5 : IIsoComponent
     [IsoId("_9H6nZUQSEealVdmlTDXWkw")]
     [DisplayName("Existing Account Identification")]
     [IsoXmlTag("ExstgAcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccount23> ExistingAccountIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface IAccountManagementStatusAndReason5 : IIsoComponent
     [IsoId("_CTz6oEy9EeafiMTDrtSnyw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AccountIdentification { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IAccountManagementStatusAndReason5 : IIsoComponent
     [IsoId("_tfSXcWBzEeaHEJD5P6-ccw")]
     [DisplayName("FATCA Reporting Date")]
     [IsoXmlTag("FATCARptgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FATCAReportingDate { get; }
 
     /// <summary>
@@ -81,5 +89,6 @@ public interface IAccountManagementStatusAndReason5 : IIsoComponent
     [IsoId("_VrHMUXXXEeaH0fB6yD0LBA")]
     [DisplayName("CRS Reporting Date")]
     [IsoXmlTag("CRSRptgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CRSReportingDate { get; }
 }

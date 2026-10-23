@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Elements indicating the direction of the derivative transaction.
 /// </summary>
 [IsoId("_9zN68C0WEe2ZUuvBHegNNg")]
+[IsoDisplayName(@"Direction")]
 public interface IDirection2 : IIsoComponent
 {
     /// <summary>

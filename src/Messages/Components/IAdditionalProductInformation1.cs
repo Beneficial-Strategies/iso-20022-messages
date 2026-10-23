@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information required for distribution in the German market.
 /// </summary>
 [IsoId("_Z1vAIM2rEeuAE-cYsQdwHQ")]
+[IsoDisplayName(@"Additional Product Information")]
 public interface IAdditionalProductInformation1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IAdditionalProductInformation1 : IIsoComponent
     [IsoId("_D4f3UM2sEeuAE-cYsQdwHQ")]
     [DisplayName("ESG Label Or Standard")]
     [IsoXmlTag("ESGLablOrStd")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ESGLabelOrStandard1Code> ESGLabelOrStandard { get; }
 }

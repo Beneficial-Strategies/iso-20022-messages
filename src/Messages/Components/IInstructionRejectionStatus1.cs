@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status advising on the rejection of the instruction or cancellation request.
 /// </summary>
 [IsoId("_RWwVldp-Ed-ak6NoX_4Aeg_-151657311")]
+[IsoDisplayName(@"Instruction Rejection Status")]
 public interface IInstructionRejectionStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IInstructionRejectionStatus1 : IIsoComponent
     [IsoId("_RWwVl9p-Ed-ak6NoX_4Aeg_-1485291083")]
     [DisplayName("Extended Reason")]
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedReason { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IInstructionRejectionStatus1 : IIsoComponent
     [IsoId("_RWwVmNp-Ed-ak6NoX_4Aeg_-151657294")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

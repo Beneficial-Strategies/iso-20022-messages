@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgentDocumentIdentificationAndSt
 /// <summary>
 /// Agent CA Notification Cancellation Request Identification And Status.
 /// </summary>
+[IsoDisplayName(@"Agent CA Notification Cancellation Request Identification And Status")]
 public interface IAgentCANotificationCancellationRequestIdentificationAndStatus
     : IAgentDocumentIdentificationAndStatus1Choice,
         IIsoChoiceVariant

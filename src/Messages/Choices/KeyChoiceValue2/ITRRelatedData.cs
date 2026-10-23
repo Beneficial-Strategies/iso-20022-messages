@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KeyChoiceValue2;
 /// </summary>
 [IsoId("_FjgS07TqEeeQy4o2AayYHg")]
 [IsoXmlTag("TRRltdData")]
+[IsoDisplayName(@"TR Related Data")]
 public interface ITRRelatedData : IKeyChoiceValue2, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface ITRRelatedData : IKeyChoiceValue2, IIsoChoiceVariant
     [IsoId("_PZ0GE7TpEeeQy4o2AayYHg")]
     [DisplayName("TR Block")]
     [IsoXmlTag("TRBlck")]
+    [IsoSimpleType(IsoSimpleType.Max100KBinary)]
     Max100KBinary? TRBlock { get; }
 }

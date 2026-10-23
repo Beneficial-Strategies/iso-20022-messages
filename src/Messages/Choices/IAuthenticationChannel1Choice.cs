@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for an authentication channel.
 /// </summary>
 [IsoId("_U4Y945dgEea1K6JAcAwoVg")]
+[IsoDisplayName(@"Authentication Channel 1 Choice")]
 public interface IAuthenticationChannel1Choice : IIsoChoice { }

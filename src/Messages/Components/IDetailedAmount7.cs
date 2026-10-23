@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed amounts associated with the total amount of transaction.
 /// </summary>
 [IsoId("_ddRJ8WkEEeS7zPBpvm732w")]
+[IsoDisplayName(@"Detailed Amount")]
 public interface IDetailedAmount7 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IDetailedAmount7 : IIsoComponent
     [IsoId("_dqMLpWkEEeS7zPBpvm732w")]
     [DisplayName("Fees")]
     [IsoXmlTag("Fees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount4> Fees { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IDetailedAmount7 : IIsoComponent
     [IsoId("_dqMLp2kEEeS7zPBpvm732w")]
     [DisplayName("Rebate")]
     [IsoXmlTag("Rbt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount4> Rebate { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IDetailedAmount7 : IIsoComponent
     [IsoId("_dqMLqWkEEeS7zPBpvm732w")]
     [DisplayName("Value Added Tax")]
     [IsoXmlTag("ValAddedTax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount4> ValueAddedTax { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface IDetailedAmount7 : IIsoComponent
     [IsoId("_m6QBwGkEEeS7zPBpvm732w")]
     [DisplayName("Surcharge")]
     [IsoXmlTag("Srchrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount4> Surcharge { get; }
 }

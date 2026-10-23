@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a Transaction Identifier.
 /// </summary>
 [IsoId("_Bil10TAvEe2Ne600gC45nw")]
+[IsoDisplayName(@"Compare Unique Transaction Identifier")]
 public interface ICompareUniqueTransactionIdentifier2 : IIsoComponent
 {
     /// <summary>

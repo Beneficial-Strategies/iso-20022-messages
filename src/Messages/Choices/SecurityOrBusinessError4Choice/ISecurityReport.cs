@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityOrBusinessError4Choice;
 /// </summary>
 [IsoId("_P7y44ZJKEeuAlLVx8pyt3w")]
 [IsoXmlTag("SctyRpt")]
+[IsoDisplayName(@"Security Report")]
 public interface ISecurityReport : ISecurityOrBusinessError4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ISecurityReport : ISecurityOrBusinessError4Choice, IIsoChoiceVa
     [IsoId("_QAKbgZJKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification39> FinancialInstrumentIdentification { get; }
 
     /// <summary>
@@ -34,5 +36,6 @@ public interface ISecurityReport : ISecurityOrBusinessError4Choice, IIsoChoiceVa
     [IsoId("_QAKbhZJKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Attributes")]
     [IsoXmlTag("FinInstrmAttrbts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommonFinancialInstrumentAttributes11> FinancialInstrumentAttributes { get; }
 }

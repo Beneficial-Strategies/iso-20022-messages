@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentificationOrCashPurpos
 /// Underlying reason for the payment SSI instruction, expressed as a code.
 /// </summary>
 [IsoId("_3LyNoUiNEeOdL6nMHefDgg")]
+[IsoDisplayName(@"Cash SSI Purpose")]
 public interface ICashSSIPurpose : IMarketIdentificationOrCashPurpose1Choice, IIsoChoiceVariant
 {
     /// <summary>

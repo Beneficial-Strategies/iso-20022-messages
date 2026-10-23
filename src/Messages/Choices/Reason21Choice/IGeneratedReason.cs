@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason21Choice;
 
 /// <summary>Specifies the generated reason.</summary>
 [IsoId("c3c22dfd-080a-468a-a422-d3b33044250b")]
+[IsoDisplayName(@"Generated Reason")]
 public interface IGeneratedReason : IReason21Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

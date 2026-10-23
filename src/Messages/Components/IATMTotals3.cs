@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Totals of the ATM.
 /// </summary>
 [IsoId("_A8HNEYtzEeSLQutgI1Ulfw")]
+[IsoDisplayName(@"ATM Totals")]
 public interface IATMTotals3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMTotals3 : IIsoComponent
     [IsoId("_cyRboItzEeSLQutgI1Ulfw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMTotals3 : IIsoComponent
     [IsoId("_h4nDUItzEeSLQutgI1Ulfw")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface IATMTotals3 : IIsoComponent
     [IsoId("_BIxwGYtzEeSLQutgI1Ulfw")]
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Count { get; }
 
     /// <summary>

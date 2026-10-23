@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Intermediary49.
 /// </summary>
 [IsoId("_2LatsxwMEe6O0NdiBuX__w")]
+[IsoDisplayName(@"Intermediary49")]
 public interface IIntermediary49 : IIsoComponent
 {
     /// <summary>

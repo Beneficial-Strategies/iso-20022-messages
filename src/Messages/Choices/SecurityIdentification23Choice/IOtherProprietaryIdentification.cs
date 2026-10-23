@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice;
 /// </summary>
 [IsoId("_CSq4TyGQEeW7gKYhAMEFCw")]
 [IsoXmlTag("OthrPrtryId")]
+[IsoDisplayName(@"Other Proprietary Identification")]
 public interface IOtherProprietaryIdentification
     : ISecurityIdentification23Choice,
         IIsoChoiceVariant
@@ -20,6 +21,8 @@ public interface IOtherProprietaryIdentification
     [IsoId("_A7IS8yGPEeW7gKYhAMEFCw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

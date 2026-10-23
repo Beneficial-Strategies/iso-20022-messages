@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.fxtr;
     "FXTradConfStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:fxtr.037.001.01"
 )]
+[Description(@"Scope|The ForeignExchageTradeConfirmationStatusAdvice message is sent from a Central matching utility (CMU) to a market participant to advise the matching status of the trade. ||Usage|The confirmation status advice is sent by the CMU to the market participants after they received the confirmation request.")]
+[IsoDisplayName(@"Foreign Exchange Trade Confirmation Status Advice V")]
 public interface IForeignExchangeTradeConfirmationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -84,5 +86,6 @@ public interface IForeignExchangeTradeConfirmationStatusAdviceV01 : IOuterRecord
     [IsoId("_Ab9F4KHmEeS69KkQis5bYg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

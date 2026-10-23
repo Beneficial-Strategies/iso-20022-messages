@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a party&apos;s account.
 /// </summary>
 [IsoId("_GmcvUUzPEeafiMTDrtSnyw")]
+[IsoDisplayName(@"Account Parties")]
 public interface IAccountParties16 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IAccountParties16 : IIsoComponent
     [IsoId("_HAMFCUzPEeafiMTDrtSnyw")]
     [DisplayName("Secondary Owner")]
     [IsoXmlTag("ScndryOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation15> SecondaryOwner { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IAccountParties16 : IIsoComponent
     [IsoId("_HAMFC0zPEeafiMTDrtSnyw")]
     [DisplayName("Beneficiary")]
     [IsoXmlTag("Bnfcry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation15> Beneficiary { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IAccountParties16 : IIsoComponent
     [IsoId("_HAMFDUzPEeafiMTDrtSnyw")]
     [DisplayName("Power Of Attorney")]
     [IsoXmlTag("PwrOfAttny")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation15> PowerOfAttorney { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IAccountParties16 : IIsoComponent
     [IsoId("_HAMFD0zPEeafiMTDrtSnyw")]
     [DisplayName("Legal Guardian")]
     [IsoXmlTag("LglGuardn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation15> LegalGuardian { get; }
 
     /// <summary>
@@ -73,6 +78,9 @@ public interface IAccountParties16 : IIsoComponent
     [IsoId("_HAMFE0zPEeafiMTDrtSnyw")]
     [DisplayName("Successor On Death")]
     [IsoXmlTag("SucssrOnDth")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation15> SuccessorOnDeath { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IAccountParties16 : IIsoComponent
     [IsoId("_HAMFFUzPEeafiMTDrtSnyw")]
     [DisplayName("Administrator")]
     [IsoXmlTag("Admstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation15> Administrator { get; }
 
     /// <summary>
@@ -89,6 +98,7 @@ public interface IAccountParties16 : IIsoComponent
     [IsoId("_HAMFF0zPEeafiMTDrtSnyw")]
     [DisplayName("Other Party")]
     [IsoXmlTag("OthrPty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtendedParty12> OtherParty { get; }
 
     /// <summary>
@@ -97,6 +107,9 @@ public interface IAccountParties16 : IIsoComponent
     [IsoId("_HAMFGUzPEeafiMTDrtSnyw")]
     [DisplayName("Granter")]
     [IsoXmlTag("Grntr")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation15> Granter { get; }
 
     /// <summary>
@@ -105,6 +118,9 @@ public interface IAccountParties16 : IIsoComponent
     [IsoId("_HAMFG0zPEeafiMTDrtSnyw")]
     [DisplayName("Settlor")]
     [IsoXmlTag("Sttlr")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation15> Settlor { get; }
 
     /// <summary>
@@ -113,6 +129,7 @@ public interface IAccountParties16 : IIsoComponent
     [IsoId("_OyS58EzQEea8fovz_9xSTQ")]
     [DisplayName("Senior Managing Official")]
     [IsoXmlTag("SnrMggOffcl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation15> SeniorManagingOfficial { get; }
 
     /// <summary>
@@ -121,6 +138,7 @@ public interface IAccountParties16 : IIsoComponent
     [IsoId("_OyThAEzQEea8fovz_9xSTQ")]
     [DisplayName("Protector")]
     [IsoXmlTag("Prtctr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentAccountOwnershipInformation15> Protector { get; }
 
     /// <summary>

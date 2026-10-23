@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique identification, as assigned by a clearing system, to unambiguously identify a member of the clearing system.
 /// </summary>
 [IsoId("_TMehHNp-Ed-ak6NoX_4Aeg_151445359")]
+[IsoDisplayName(@"Clearing System Member Identification")]
 public interface IClearingSystemMemberIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IClearingSystemMemberIdentification2 : IIsoComponent
     [IsoId("_TMehHtp-Ed-ak6NoX_4Aeg_151445420")]
     [DisplayName("Member Identification")]
     [IsoXmlTag("MmbId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MemberIdentification { get; }
 }

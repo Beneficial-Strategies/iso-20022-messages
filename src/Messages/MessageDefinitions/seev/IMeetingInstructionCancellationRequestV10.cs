@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_UbvI2X_5Ee-h086v0qPiyQ")]
 [IsoMessage("seev.005.001.10", "MtgInstrCxlReq", "urn:iso:std:iso:20022:tech:xsd:seev.005.001.10")]
+[IsoDisplayName(@"Meeting Instruction Cancellation Request V10")]
 public interface IMeetingInstructionCancellationRequestV10 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +40,7 @@ public interface IMeetingInstructionCancellationRequestV10 : IOuterRecord
     /// </summary>
     [DisplayName("To Be Cancelled Instruction")]
     [IsoXmlTag("ToBeCancInstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICancelInstruction5> ToBeCancelledInstruction { get; }
 
     /// <summary>
@@ -46,5 +48,6 @@ public interface IMeetingInstructionCancellationRequestV10 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

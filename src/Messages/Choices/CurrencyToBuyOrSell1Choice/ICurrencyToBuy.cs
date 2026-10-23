@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyToBuyOrSell1Choice;
 /// Account servicer is instructed to buy the indicated currency after the receipt of cash proceeds.
 /// </summary>
 [IsoId("_QsvIMtp-Ed-ak6NoX_4Aeg_-894055874")]
+[IsoDisplayName(@"Currency To Buy")]
 public interface ICurrencyToBuy : ICurrencyToBuyOrSell1Choice, IIsoChoiceVariant
 {
     /// <summary>

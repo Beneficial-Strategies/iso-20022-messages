@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Trade market identification using a externally defined code or proprietary identification.
 /// </summary>
 [IsoId("_OTgzMzEx-AOSNFX-8224498")]
+[IsoDisplayName(@"Trade Market 1 Choice")]
 public interface ITradeMarket1Choice : IIsoChoice { }

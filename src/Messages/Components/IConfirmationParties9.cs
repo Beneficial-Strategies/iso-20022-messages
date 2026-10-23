@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parties used for acting parties that apply either to the whole message or to individual sides.
 /// </summary>
 [IsoId("_YMcpnwasEe2phaVG0lYKTw")]
+[IsoDisplayName(@"Confirmation Parties")]
 public interface IConfirmationParties9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IConfirmationParties9 : IIsoComponent
     [IsoId("_YfhWgQasEe2phaVG0lYKTw")]
     [DisplayName("Investor")]
     [IsoXmlTag("Invstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentificationAndAccount220> Investor { get; }
 
     /// <summary>

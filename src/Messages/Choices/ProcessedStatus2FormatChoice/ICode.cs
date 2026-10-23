@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessedStatus2FormatChoice;
 /// Standard code to specify the processing status of a cancellation request.
 /// </summary>
 [IsoId("_RnJiB9p-Ed-ak6NoX_4Aeg_-2111312844")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProcessedStatus2FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

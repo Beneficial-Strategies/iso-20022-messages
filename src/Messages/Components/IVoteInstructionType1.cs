@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vote options for a resolution.
 /// </summary>
 [IsoId("_ScucEK4JEemG7MmivSuE5g")]
+[IsoDisplayName(@"Vote Instruction Type")]
 public interface IVoteInstructionType1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IVoteInstructionType1 : IIsoComponent
     [IsoId("_uWdjEK4JEemG7MmivSuE5g")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

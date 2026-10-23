@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClientSide6Choice;
 /// Market side or a client side information expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_-_M6sa3KEeey8N0JWnVPUw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMarketClientSide6Choice, IIsoChoiceVariant
 {
     /// <summary>

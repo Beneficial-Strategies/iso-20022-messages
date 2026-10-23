@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument27Choice;
 /// <summary>
 /// Cash Account Details.
 /// </summary>
+[IsoDisplayName(@"Cash Account Details")]
 public interface ICashAccountDetails : IPaymentInstrument27Choice, IIsoChoiceVariant
 {
     /// <summary>

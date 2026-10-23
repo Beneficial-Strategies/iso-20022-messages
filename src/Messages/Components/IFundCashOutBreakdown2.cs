@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Breakdown of cash movements out of a fund as a result of investment funds transactions, eg, redemptions or switch-out.
 /// </summary>
 [IsoId("_SjDJlNp-Ed-ak6NoX_4Aeg_-2020690769")]
+[IsoDisplayName(@"Fund Cash Out Breakdown")]
 public interface IFundCashOutBreakdown2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IFundCashOutBreakdown2 : IIsoComponent
     [IsoId("_SjDJl9p-Ed-ak6NoX_4Aeg_-2019769305")]
     [DisplayName("New Amount Indicator")]
     [IsoXmlTag("NewAmtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NewAmountIndicator { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface IFundCashOutBreakdown2 : IIsoComponent
     [IsoId("_SjM6kNp-Ed-ak6NoX_4Aeg_881142898")]
     [DisplayName("Extended Investment Fund Transaction Out Type")]
     [IsoXmlTag("XtndedInvstmtFndTxOutTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedInvestmentFundTransactionOutType { get; }
 
     /// <summary>
@@ -65,6 +69,8 @@ public interface IFundCashOutBreakdown2 : IIsoComponent
     [IsoId("_SjM6ktp-Ed-ak6NoX_4Aeg_881143235")]
     [DisplayName("Extended Original Order Quantity Type")]
     [IsoXmlTag("XtndedOrgnlOrdrQtyTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedOriginalOrderQuantityType { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface IFundCashOutBreakdown2 : IIsoComponent
     [IsoId("_SjM6k9p-Ed-ak6NoX_4Aeg_2117714463")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge16> ChargeDetails { get; }
 
     /// <summary>
@@ -81,5 +88,6 @@ public interface IFundCashOutBreakdown2 : IIsoComponent
     [IsoId("_SjM6lNp-Ed-ak6NoX_4Aeg_-2019767882")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission9> CommissionDetails { get; }
 }

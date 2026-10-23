@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentScenario1Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IPaymentScenario1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// </summary>
 [IsoId("_b8PHcTrDEe-thIfLZ94a1w")]
 [IsoMessage("pacs.009.001.12", "FICdtTrf", "urn:iso:std:iso:20022:tech:xsd:pacs.009.001.12")]
+[IsoDisplayName(@"Financial Institution Credit Transfer V12")]
 public interface IFinancialInstitutionCreditTransferV12 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IFinancialInstitutionCreditTransferV12 : IOuterRecord
     /// </summary>
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICreditTransferTransaction67> CreditTransferTransactionInformation { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IFinancialInstitutionCreditTransferV12 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

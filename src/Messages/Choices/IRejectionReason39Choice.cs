@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides additional reason information that cannot be provided in a structured field.
 /// </summary>
 [IsoId("_GQC2VRIwEeydmIVkS03esw")]
+[IsoDisplayName(@"Rejection Reason 39 Choice")]
 public interface IRejectionReason39Choice : IIsoChoice { }

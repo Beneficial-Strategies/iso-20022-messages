@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Quantity of assets.
 /// </summary>
 [IsoId("_wsgl8QVUEeq4ZaI1b_-GPA")]
+[IsoDisplayName(@"Quantity")]
 public interface IQuantity47 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IQuantity47 : IIsoComponent
     [IsoId("_xCEmQQVUEeq4ZaI1b_-GPA")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? Unit { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IQuantity47 : IIsoComponent
     [IsoId("_xCEmQwVUEeq4ZaI1b_-GPA")]
     [DisplayName("Percentage Rate")]
     [IsoXmlTag("PctgRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageRate { get; }
 
     /// <summary>
@@ -57,5 +60,7 @@ public interface IQuantity47 : IIsoComponent
     [IsoId("_xCEmSwVUEeq4ZaI1b_-GPA")]
     [DisplayName("Other Asset")]
     [IsoXmlTag("OthrAsst")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherAsset { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Body of the Abort Request message.
 /// </summary>
 [IsoId("_cnvHcN6YEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Abort Data")]
 public interface IAbortData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAbortData1 : IIsoComponent
     [IsoId("_ldMFMN6YEeiwsev40qZGEQ")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ExchangeIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IAbortData1 : IIsoComponent
     [IsoId("_nyMNsN6YEeiwsev40qZGEQ")]
     [DisplayName("Abort Reason")]
     [IsoXmlTag("AbrtRsn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text AbortReason { get; }
 
     /// <summary>

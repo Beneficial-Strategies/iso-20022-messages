@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the processing status of a deactivation instruction.
 /// </summary>
 [IsoId("_RnmN9dp-Ed-ak6NoX_4Aeg_-344158716")]
+[IsoDisplayName(@"Processed Status 6 Format Choice")]
 public interface IProcessedStatus6FormatChoice : IIsoChoice { }

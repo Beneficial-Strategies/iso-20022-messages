@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
 /// </summary>
 [IsoId("_oj4IqzQXEe2o-K1dwNg8Gg")]
 [IsoXmlTag("Accptd")]
+[IsoDisplayName(@"Accepted")]
 public interface IAccepted : IInstructionCancellationRequestStatus15Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OutputData1Choice;
 
 /// <summary>Data related to the continuous order books for the pre-trade output report.</summary>
 [IsoId("_YDzX8GIZEfCeoPFCHQnhvA")]
+[IsoDisplayName(@"Continuous Order Book")]
 public interface IContinuousOrderBook : IOutputData1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice;
 /// Number assigned by a social security agency.
 /// </summary>
 [IsoId("_QEW5lNp-Ed-ak6NoX_4Aeg_-1180196178")]
+[IsoDisplayName(@"Social Security Number")]
 public interface ISocialSecurityNumber : IPersonIdentificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface ISocialSecurityNumber : IPersonIdentificationType1Choice, IIsoC
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("SclSctyNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

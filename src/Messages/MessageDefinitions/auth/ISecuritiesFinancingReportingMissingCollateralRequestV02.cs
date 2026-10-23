@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "SctiesFincgRptgMssngCollReq",
     "urn:iso:std:iso:20022:tech:xsd:auth.083.001.02"
 )]
+[Description(@"The SecuritiesFinancingReportingMissingCollateralRequest is made available by the trade repository (TR) to the  report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, with a request to submit collateral information for a given trade. ")]
+[IsoDisplayName(@"Securities Financing Reporting Missing Collateral Request V")]
 public interface ISecuritiesFinancingReportingMissingCollateralRequestV02 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface ISecuritiesFinancingReportingMissingCollateralRequestV02 : IOut
     [IsoId("_EGxyI8KvEeuzU9S_IANlog")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeTransactionIdentification18> TransactionIdentification { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface ISecuritiesFinancingReportingMissingCollateralRequestV02 : IOut
     [IsoId("_EGxyJcKvEeuzU9S_IANlog")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.secl;
     "DfltFndCntrbtnRpt",
     "urn:iso:std:iso:20022:tech:xsd:secl.006.001.02"
 )]
+[Description(@"Scope|The DefaultFundContributionReport message is sent by the central counterparty (CCP) to a Clearing member to report on the calculation of the default fund contribution and the potential net excess or deficit.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|CCPs require participants to post assets in a clearing fund that can be used in the event of a default by a participant, to compensate non-defaulting participants for losses they suffer due to this default. The CCP evaluates each participant risk level based on their positions (monthly or daily) and calculate the excess of deficit of the default fund contribution. The DefaultFundContributionReport is usually sent on a monthly basis.")]
+[IsoDisplayName(@"Default Fund Contribution Report V")]
 public interface IDefaultFundContributionReportV02 : IOuterRecord
 {
     /// <summary>
@@ -46,6 +48,7 @@ public interface IDefaultFundContributionReportV02 : IOuterRecord
     [IsoId("_-hodgKMOEeCojJW5vEuTEQ_-78589152")]
     [DisplayName("Report Details")]
     [IsoXmlTag("RptDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDefaultFundReport1> ReportDetails { get; }
 
     /// <summary>
@@ -54,5 +57,6 @@ public interface IDefaultFundContributionReportV02 : IOuterRecord
     [IsoId("_-hodgaMOEeCojJW5vEuTEQ_-1828123252")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "MnyMktScrdMktSttstclRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.012.001.01"
 )]
+[Description(@"The MoneyMarketSecuredMarketStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report all relevant secured money market transactions.")]
+[IsoDisplayName(@"Money Market Secured Market Statistical Report V")]
 public interface IMoneyMarketSecuredMarketStatisticalReportV01 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface IMoneyMarketSecuredMarketStatisticalReportV01 : IOuterRecord
     [IsoId("_OgdYx6idEeWHO_l3hf2rlA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

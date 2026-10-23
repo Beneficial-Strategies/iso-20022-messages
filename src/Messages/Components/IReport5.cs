@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the settlement obligation report.
 /// </summary>
 [IsoId("_7jLUES9dEeS94oXWDaBauA")]
+[IsoDisplayName(@"Report")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IReport5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IReport5 : IIsoComponent
     [IsoId("_71U0AS9dEeS94oXWDaBauA")]
     [DisplayName("Non Clearing Member")]
     [IsoXmlTag("NonClrMmb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentificationAndAccount31> NonClearingMember { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface IReport5 : IIsoComponent
     [IsoId("_71U0Ay9dEeS94oXWDaBauA")]
     [DisplayName("Settlement Obligation Details")]
     [IsoXmlTag("SttlmOblgtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISettlementObligation8> SettlementObligationDetails { get; }
 }

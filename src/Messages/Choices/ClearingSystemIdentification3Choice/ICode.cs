@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification3Cho
 /// Infrastructure through which the payment instruction is processed, as published in an external clearing system identification code list.
 /// </summary>
 [IsoId("_TMVXJtp-Ed-ak6NoX_4Aeg_948374929")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IClearingSystemIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>

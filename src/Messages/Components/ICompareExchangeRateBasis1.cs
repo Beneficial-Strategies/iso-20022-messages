@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a exchange rate basis.
 /// </summary>
 [IsoId("_yOHHYE6bEeyEpI66tm807w")]
+[IsoDisplayName(@"Compare Exchange Rate Basis")]
 public interface ICompareExchangeRateBasis1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party Audit Trail Report4.
 /// </summary>
 [IsoId("_Yn4CMTE_Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Party Audit Trail Report4")]
 public interface IPartyAuditTrailReport4 : IIsoComponent
 {
     /// <summary>

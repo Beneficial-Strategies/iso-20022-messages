@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Switch order confirmation details.
 /// </summary>
 [IsoId("_RNqrBtp-Ed-ak6NoX_4Aeg_1790539148")]
+[IsoDisplayName(@"Switch Order Confirmation")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ISwitchOrderConfirmation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface ISwitchOrderConfirmation1 : IIsoComponent
     [IsoId("_RNqrB9p-Ed-ak6NoX_4Aeg_152297658")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator AmendmentIndicator { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ISwitchOrderConfirmation1 : IIsoComponent
     [IsoId("_RNqrCNp-Ed-ak6NoX_4Aeg_1791463151")]
     [DisplayName("Switch Execution Details")]
     [IsoXmlTag("SwtchExctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISwitchExecution4> SwitchExecutionDetails { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface ISwitchOrderConfirmation1 : IIsoComponent
     [IsoId("_RNqrCdp-Ed-ak6NoX_4Aeg_1791462670")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

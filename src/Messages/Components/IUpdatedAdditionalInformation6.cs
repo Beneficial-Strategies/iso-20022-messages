@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information with update description and date.
 /// </summary>
 [IsoId("_XWm_Ntp-Ed-ak6NoX_4Aeg_-831316652")]
+[IsoDisplayName(@"Updated Additional Information")]
 public interface IUpdatedAdditionalInformation6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IUpdatedAdditionalInformation6 : IIsoComponent
     [IsoId("_XWm_N9p-Ed-ak6NoX_4Aeg_1583345004")]
     [DisplayName("Update Description")]
     [IsoXmlTag("UpdDesc")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text? UpdateDescription { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IUpdatedAdditionalInformation6 : IIsoComponent
     [IsoId("_XWm_ONp-Ed-ak6NoX_4Aeg_472433585")]
     [DisplayName("Update Date")]
     [IsoXmlTag("UpdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? UpdateDate { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IUpdatedAdditionalInformation6 : IIsoComponent
     [IsoId("_XWm_Odp-Ed-ak6NoX_4Aeg_-1407872055")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
+    [StringLength(350, MinimumLength = 1)]
     RestrictedFINXMax350Text AdditionalInformation { get; }
 }

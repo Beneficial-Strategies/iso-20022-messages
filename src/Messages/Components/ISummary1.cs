@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information related to the collateral position, that is, the identification of the exposed party, the total exposure amount and the total collateral amount held by the taker. It also contains the valuation dates and the requested settlement date of collateral if there is a shortage of collateral.
 /// </summary>
 [IsoId("_vV7IVqMOEeCojJW5vEuTEQ_-501666863")]
+[IsoDisplayName(@"Summary")]
 public interface ISummary1 : IIsoComponent
 {
     /// <summary>
@@ -65,6 +66,7 @@ public interface ISummary1 : IIsoComponent
     [IsoId("_vWODQKMOEeCojJW5vEuTEQ_2025903920")]
     [DisplayName("Valuation Date Time")]
     [IsoXmlTag("ValtnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ValuationDateTime { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface ISummary1 : IIsoComponent
     [IsoId("_vWODQaMOEeCojJW5vEuTEQ_1010852622")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedSettlementDate { get; }
 
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EncryptedData2Choice;
 /// <summary>
 /// Hexadecimal Binary.
 /// </summary>
+[IsoDisplayName(@"Hexadecimal Binary")]
 public interface IHexadecimalBinary : IEncryptedData2Choice, IIsoChoiceVariant
 {
     /// <summary>

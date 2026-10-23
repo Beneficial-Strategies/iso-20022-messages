@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Further qualifies the information provided in terms of its importance and its format.
 /// </summary>
 [IsoId("_59y2N5lZEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Information Qualifier Type")]
 public interface IInformationQualifierType1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInformationQualifierType1 : IIsoComponent
     [IsoId("_6FzisZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("Is Formatted")]
     [IsoXmlTag("IsFrmtd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? IsFormatted { get; }
 
     /// <summary>

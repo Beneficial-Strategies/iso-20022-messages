@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
     "LmtUtlstnJrnlRpt",
     "urn:iso:std:iso:20022:tech:xsd:camt.065.001.01"
 )]
+[IsoDisplayName(@"Limit Utilisation Journal Report V01")]
 public interface ILimitUtilisationJournalReportV01 : IOuterRecord
 {
     /// <summary>
@@ -43,5 +44,6 @@ public interface ILimitUtilisationJournalReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

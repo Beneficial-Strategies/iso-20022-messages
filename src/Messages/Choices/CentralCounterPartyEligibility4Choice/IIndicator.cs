@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CentralCounterPartyEligibility4C
 /// Specifies whether the settlement transaction is CCP (Central Counterparty) eligible.
 /// </summary>
 [IsoId("_Adf5UTqJEeWVrPy0StzzSg")]
+[IsoDisplayName(@"Indicator")]
 public interface IIndicator : ICentralCounterPartyEligibility4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIndicator : ICentralCounterPartyEligibility4Choice, IIsoChoice
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

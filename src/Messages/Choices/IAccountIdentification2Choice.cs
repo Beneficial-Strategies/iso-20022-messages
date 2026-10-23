@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the identification of a cash or securities account.
 /// </summary>
 [IsoId("_Rjkpl9p-Ed-ak6NoX_4Aeg_63905637")]
+[IsoDisplayName(@"Account Identification 2 Choice")]
 public interface IAccountIdentification2Choice : IIsoChoice { }

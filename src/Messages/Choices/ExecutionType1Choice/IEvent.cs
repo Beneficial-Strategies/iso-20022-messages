@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExecutionType1Choice;
 /// Execution type is executed based on an event driven trigger.
 /// </summary>
 [IsoId("_750BgaMgEeCJ6YNENx4h-w_989331050")]
+[IsoDisplayName(@"Event")]
 public interface IEvent : IExecutionType1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

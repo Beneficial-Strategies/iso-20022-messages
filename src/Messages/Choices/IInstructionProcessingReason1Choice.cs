@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the instruction processing status.
 /// </summary>
 [IsoId("_Azyp49okEeC60axPepSq7g_-773750122")]
+[IsoDisplayName(@"Instruction Processing Reason 1 Choice")]
 public interface IInstructionProcessingReason1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters for contracts which obligate the buyer to receive and the seller to deliver in the future the assets specified at an agreed price.
 /// </summary>
 [IsoId("_12okUWp7EemmaZLSPtWX5A")]
+[IsoDisplayName(@"Future")]
 public interface IFuture4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFuture4 : IIsoComponent
     [IsoId("_2CcLsWp7EemmaZLSPtWX5A")]
     [DisplayName("Contract Size")]
     [IsoXmlTag("CtrctSz")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ContractSize { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IFuture4 : IIsoComponent
     [IsoId("_2CcLtWp7EemmaZLSPtWX5A")]
     [DisplayName("Future Date")]
     [IsoXmlTag("FutrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? FutureDate { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface IFuture4 : IIsoComponent
     [IsoId("_2CcLyWp7EemmaZLSPtWX5A")]
     [DisplayName("Additional Underlying Attributes")]
     [IsoXmlTag("AddtlUndrlygAttrbts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnderlyingAttributes4> AdditionalUnderlyingAttributes { get; }
 }

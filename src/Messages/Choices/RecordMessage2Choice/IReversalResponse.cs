@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the reversal response message.</summary>
 [IsoId("_kNBj027-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Reversal Response")]
 public interface IReversalResponse : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

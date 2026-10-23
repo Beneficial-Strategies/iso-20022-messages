@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Party to which the TaxReport is delivered. This message block contains party details for a specific tax authority.
 /// </summary>
 [IsoId("_-WIBwEkGEeaOe8w0NJ11wQ")]
+[IsoDisplayName(@"Tax Organisation Identification")]
 public interface ITaxOrganisationIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITaxOrganisationIdentification1 : IIsoComponent
     [IsoId("_MhcQ8EkHEeaOe8w0NJ11wQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>

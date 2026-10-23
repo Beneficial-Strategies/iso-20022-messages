@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StampDutyType1FormatChoice;
 /// Standard code to specify the stamp duty information.
 /// </summary>
 [IsoId("_Ro8Rx9p-Ed-ak6NoX_4Aeg_-874099083")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IStampDutyType1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

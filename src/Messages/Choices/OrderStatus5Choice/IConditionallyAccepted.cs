@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus5Choice;
 /// Status of the individual order is conditionally accepted.
 /// </summary>
 [IsoId("_P8YAmUHREeasdbKMiqizqA")]
+[IsoDisplayName(@"Conditionally Accepted")]
 public interface IConditionallyAccepted : IOrderStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

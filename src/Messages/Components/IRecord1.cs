@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Message in file message identified as a batch record.
 /// </summary>
 [IsoId("_k1mCsFBCEeedyPuM0kK2EQ")]
+[IsoDisplayName(@"Record")]
 public interface IRecord1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRecord1 : IIsoComponent
     [IsoId("_6M0e8FBCEeedyPuM0kK2EQ")]
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number SequenceCounter { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IRecord1 : IIsoComponent
     [IsoId("_PDd9sFBDEeedyPuM0kK2EQ")]
     [DisplayName("Record Checksum Input Value")]
     [IsoXmlTag("RcrdChcksmInptVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? RecordChecksumInputValue { get; }
 
     /// <summary>

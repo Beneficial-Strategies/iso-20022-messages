@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ActivityIndicator1Choice;
 /// <summary>
 /// ISIC Identifier.
 /// </summary>
+[IsoDisplayName(@"ISIC Identifier")]
 public interface IISICIdentifier : IActivityIndicator1Choice, IIsoChoiceVariant
 {
     /// <summary>

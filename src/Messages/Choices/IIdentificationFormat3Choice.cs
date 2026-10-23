@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between either a short, long or a proprietary identification format.
 /// </summary>
 [IsoId("_qZTHkUEFEeWVgfuHGaKtRQ")]
+[IsoDisplayName(@"Identification Format 3 Choice")]
 public interface IIdentificationFormat3Choice : IIsoChoice { }

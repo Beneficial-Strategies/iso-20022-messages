@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the identification data that is requested to be verified.
 /// </summary>
 [IsoId("_fevvsdcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Identification Verification")]
 public interface IIdentificationVerification4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IIdentificationVerification4 : IIsoComponent
     [IsoId("_fgQyo9cZEeqRFcf2R4bPBw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

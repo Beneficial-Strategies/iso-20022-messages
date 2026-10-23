@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional Fee Reconciliation3.
 /// </summary>
 [IsoId("__aw7wY1PEe6S0_1AaJzQCA")]
+[IsoDisplayName(@"Additional Fee Reconciliation3")]
 public interface IAdditionalFeeReconciliation3 : IIsoComponent
 {
     /// <summary>

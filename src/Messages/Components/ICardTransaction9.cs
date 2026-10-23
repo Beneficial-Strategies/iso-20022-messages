@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card transaction for which the authorisation has been requested.
 /// </summary>
 [IsoId("_1xK7IXu6EeSLmfFG0DG7zQ")]
+[IsoDisplayName(@"Card Transaction")]
 public interface ICardTransaction9 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICardTransaction9 : IIsoComponent
     [IsoId("_eaxVEHu9EeSLmfFG0DG7zQ")]
     [DisplayName("Inter Bank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterBankSettlementDate { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface ICardTransaction9 : IIsoComponent
     [IsoId("_kJP60Hu9EeSLmfFG0DG7zQ")]
     [DisplayName("Initiator Transaction Date Time")]
     [IsoXmlTag("InitrTxDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime InitiatorTransactionDateTime { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface ICardTransaction9 : IIsoComponent
     [IsoId("_191eJ3u6EeSLmfFG0DG7zQ")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InitiatorTransactionIdentification { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface ICardTransaction9 : IIsoComponent
     [IsoId("_191eKXu6EeSLmfFG0DG7zQ")]
     [DisplayName("Transaction Life Cycle Identification")]
     [IsoXmlTag("TxLifeCyclId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionLifeCycleIdentification { get; }
 
     /// <summary>

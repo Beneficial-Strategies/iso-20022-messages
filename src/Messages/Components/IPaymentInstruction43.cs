@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment Instruction43.
 /// </summary>
 [IsoId("_78YMQTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Payment Instruction43")]
 public interface IPaymentInstruction43 : IIsoComponent
 {
     /// <summary>
@@ -135,5 +136,6 @@ public interface IPaymentInstruction43 : IIsoComponent
     /// </summary>
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICreditTransferTransaction59> CreditTransferTransactionInformation { get; }
 }

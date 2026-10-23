@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instrument specific technical data to support identification.
 /// </summary>
 [IsoId("_OwQysSX7EeigZbhgJcrASA")]
+[IsoDisplayName(@"Record Technical Data")]
 public interface IRecordTechnicalData4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRecordTechnicalData4 : IIsoComponent
     [IsoId("_O7vp8yX7EeigZbhgJcrASA")]
     [DisplayName("Inconsistency Indicator")]
     [IsoXmlTag("IncnsstncyInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? InconsistencyIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IRecordTechnicalData4 : IIsoComponent
     [IsoId("_O7vp9SX7EeigZbhgJcrASA")]
     [DisplayName("Last Update")]
     [IsoXmlTag("LastUpd")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? LastUpdate { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IRecordTechnicalData4 : IIsoComponent
     [IsoId("_O7vp9yX7EeigZbhgJcrASA")]
     [DisplayName("Submission Date Time")]
     [IsoXmlTag("SubmissnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? SubmissionDateTime { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface IRecordTechnicalData4 : IIsoComponent
     [IsoId("_O7vp_SX7EeigZbhgJcrASA")]
     [DisplayName("Never Published")]
     [IsoXmlTag("NvrPblshd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NeverPublished { get; }
 
     /// <summary>
@@ -65,5 +70,6 @@ public interface IRecordTechnicalData4 : IIsoComponent
     [IsoId("_qDbo8CX7EeigZbhgJcrASA")]
     [DisplayName("Relevant Trading Venue")]
     [IsoXmlTag("RlvntTradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? RelevantTradingVenue { get; }
 }

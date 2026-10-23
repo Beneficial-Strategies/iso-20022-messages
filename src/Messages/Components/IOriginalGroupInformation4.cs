@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous identifier of the group of transactions as assigned by the original instructing party.
 /// </summary>
 [IsoId("_PhVsEtp-Ed-ak6NoX_4Aeg_453123857")]
+[IsoDisplayName(@"Original Group Information")]
 public interface IOriginalGroupInformation4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalGroupInformation4 : IIsoComponent
     [IsoId("_PhVsE9p-Ed-ak6NoX_4Aeg_453123876")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalGroupInformation4 : IIsoComponent
     [IsoId("_PhVsFNp-Ed-ak6NoX_4Aeg_453123952")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageNameIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IOriginalGroupInformation4 : IIsoComponent
     [IsoId("_PhVsFdp-Ed-ak6NoX_4Aeg_-1547891782")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -41,5 +47,6 @@ public interface IOriginalGroupInformation4 : IIsoComponent
     [IsoId("_PhVsFtp-Ed-ak6NoX_4Aeg_-1239359353")]
     [DisplayName("Cancellation Reason Information")]
     [IsoXmlTag("CxlRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICancellationReasonInformation1> CancellationReasonInformation { get; }
 }

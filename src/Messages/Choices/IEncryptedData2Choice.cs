@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Encrypted Data2Choice.
 /// </summary>
 [IsoId("_FN8A0XdCEe6YlIMyoxWMJA")]
+[IsoDisplayName(@"Encrypted Data2Choice")]
 public interface IEncryptedData2Choice : IIsoChoice { }

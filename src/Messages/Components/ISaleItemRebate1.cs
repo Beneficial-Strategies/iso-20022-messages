@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// The discount amount that is attached to an item as a rebate.
 /// </summary>
 [IsoId("_ifYlkNxOEeioifFt1dhnJA")]
+[IsoDisplayName(@"Sale Item Rebate")]
 public interface ISaleItemRebate1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ISaleItemRebate1 : IIsoComponent
     [IsoId("_uhRqINxOEeioifFt1dhnJA")]
     [DisplayName("Rebate Label")]
     [IsoXmlTag("RbtLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RebateLabel { get; }
 }

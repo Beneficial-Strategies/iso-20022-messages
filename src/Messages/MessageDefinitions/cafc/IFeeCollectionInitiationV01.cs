@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.cafc;
 /// </summary>
 [IsoId("_q5bNFFaHEeeFltjJxERUxw")]
 [IsoMessage("cafc.001.001.01", "FeeColltnInitn", "urn:iso:std:iso:20022:tech:xsd:cafc.001.001.01")]
+[Description(@"The FeeCollectionInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer) to claim or pay a miscellaneous service between financial institutions. Fee collection messages have financial impacts and affect reconciliation totals without affecting a cardholder account.||")]
+[IsoDisplayName(@"Fee Collection Initiation V")]
 public interface IFeeCollectionInitiationV01 : IOuterRecord
 {
     /// <summary>

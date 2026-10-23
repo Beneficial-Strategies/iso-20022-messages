@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the references of the underlying trade leg(s) and/or the reference to the related NetPosition report message.
 /// </summary>
 [IsoId("_Ql4SRdp-Ed-ak6NoX_4Aeg_1999754651")]
+[IsoDisplayName(@"Reference")]
 public interface IReference19 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IReference19 : IIsoComponent
     [IsoId("_Ql4SRtp-Ed-ak6NoX_4Aeg_1904546885")]
     [DisplayName("Trade Leg Notification Identification")]
     [IsoXmlTag("TradLegNtfctnId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TradeLegNotificationIdentification { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface IReference19 : IIsoComponent
     [IsoId("_Ql4SR9p-Ed-ak6NoX_4Aeg_-321657762")]
     [DisplayName("Net Position Identification")]
     [IsoXmlTag("NetPosId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NetPositionIdentification { get; }
 }

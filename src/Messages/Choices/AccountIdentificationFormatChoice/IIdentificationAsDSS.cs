@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationFormatChoic
 /// </summary>
 [IsoId("_RB5f4dp-Ed-ak6NoX_4Aeg_1770326434")]
 [IsoXmlTag("IdAsDSS")]
+[IsoDisplayName(@"Identification As DSS")]
 public interface IIdentificationAsDSS : IAccountIdentificationFormatChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IIdentificationAsDSS : IAccountIdentificationFormatChoice, IIso
     [IsoId("_PoVr9Np-Ed-ak6NoX_4Aeg_2100019973")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max8Text)]
+    [StringLength(8, MinimumLength = 1)]
     Max8Text Issuer { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface IIdentificationAsDSS : IAccountIdentificationFormatChoice, IIso
     [IsoId("_PoVr9dp-Ed-ak6NoX_4Aeg_2100019938")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText Information { get; }
 }

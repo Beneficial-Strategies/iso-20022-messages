@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity44Cho
 /// Quantity of digital tokens expressed as a number, for example, a number of blockchain tokens.
 /// </summary>
 [IsoId("_ptJrYTi7Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Digital Token Unit")]
 public interface IDigitalTokenUnit : IFinancialInstrumentQuantity44Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IDigitalTokenUnit : IFinancialInstrumentQuantity44Choice, IIsoC
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6 with a maximum of 30 digits and 29 fraction digits.
     /// </summary>
     [IsoXmlTag("DgtlTknUnit")]
+    [IsoSimpleType(IsoSimpleType.Max30DecimalNumber)]
     Max30DecimalNumber Value { get; }
 }

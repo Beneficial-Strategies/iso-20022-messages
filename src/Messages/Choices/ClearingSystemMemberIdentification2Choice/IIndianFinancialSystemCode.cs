@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Indian Financial System Code - identifies Indian financial institutions on the Indian local clearing system.
 /// </summary>
 [IsoId("_TDPFgtp-Ed-ak6NoX_4Aeg_2074902177")]
+[IsoDisplayName(@"Indian Financial System Code")]
 public interface IIndianFinancialSystemCode
     : IClearingSystemMemberIdentification2Choice,
         IIsoChoiceVariant
@@ -18,5 +19,6 @@ public interface IIndianFinancialSystemCode
     /// Indian Financial System Code Identifier. Identifies Indian financial institutions on the Indian national clearing system.
     /// </summary>
     [IsoXmlTag("INIFSC")]
+    [IsoSimpleType(IsoSimpleType.IndianFinancialSystemCodeIdentifier)]
     IndianFinancialSystemCodeIdentifier Value { get; }
 }

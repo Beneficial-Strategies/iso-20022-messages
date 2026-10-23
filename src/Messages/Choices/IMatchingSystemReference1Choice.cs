@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a matching system unique identification or the related reference.
 /// </summary>
 [IsoId("_i-a184ufEeKYr_965Eh8aQ")]
+[IsoDisplayName(@"Matching System Reference 1 Choice")]
 public interface IMatchingSystemReference1Choice : IIsoChoice { }

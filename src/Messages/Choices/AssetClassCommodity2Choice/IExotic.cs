@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity2Choice;
 /// Indicates the exotic type of commodities.
 /// </summary>
 [IsoId("_BzEmPSYyEeWHeosc_5RQEw")]
+[IsoDisplayName(@"Exotic")]
 public interface IExotic : IAssetClassCommodity2Choice, IIsoChoiceVariant
 {
     /// <summary>

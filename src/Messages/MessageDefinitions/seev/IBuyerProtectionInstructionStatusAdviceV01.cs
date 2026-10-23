@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.seev;
     "BuyrPrtcnInstrStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.061.001.01"
 )]
+[IsoDisplayName(@"Buyer Protection Instruction Status Advice V01")]
 public interface IBuyerProtectionInstructionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +37,7 @@ public interface IBuyerProtectionInstructionStatusAdviceV01 : IOuterRecord
     /// </summary>
     [DisplayName("Instruction Processing Status")]
     [IsoXmlTag("InstrPrcgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionProcessingStatus59Choice> InstructionProcessingStatus { get; }
 
     /// <summary>
@@ -64,5 +66,6 @@ public interface IBuyerProtectionInstructionStatusAdviceV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

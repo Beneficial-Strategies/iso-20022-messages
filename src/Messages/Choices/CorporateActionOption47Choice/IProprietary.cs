@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionOption47Choice;
 
 /// <summary>Proprietary identification of the type of corporate action options.</summary>
 [IsoId("_Rh4CBQ7VEfC-6PbsYHIdig")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICorporateActionOption47Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

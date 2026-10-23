@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice;
 /// Verification initiation message record.
 /// </summary>
 [IsoId("_aHMxYFZYEeen1vB4iz5SyA")]
+[IsoDisplayName(@"Verification Initiation")]
 public interface IVerificationInitiation : IRecordMessage1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IVerificationInitiation : IRecordMessage1Choice, IIsoChoiceVari
     /// Binary data of 2MB maximum.
     /// </summary>
     [IsoXmlTag("VrfctnInitn")]
+    [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
     Max2MBBinary Value { get; }
 }

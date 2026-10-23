@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the matching processing change requested expressed as code
 /// </summary>
 [IsoId("_f6-tYPkREeicy5Zn42b9bg")]
+[IsoDisplayName(@"Removal 1 Choice")]
 public interface IRemoval1Choice : IIsoChoice { }

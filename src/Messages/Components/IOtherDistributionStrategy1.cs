@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Other distribution strategy.
 /// </summary>
 [IsoId("_q5CaAD8PEeih8-WNbS6hbA")]
+[IsoDisplayName(@"Other Distribution Strategy")]
 public interface IOtherDistributionStrategy1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherDistributionStrategy1 : IIsoComponent
     [IsoId("_TfymMj8QEeih8-WNbS6hbA")]
     [DisplayName("Distribution Strategy Type")]
     [IsoXmlTag("DstrbtnStrtgyTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DistributionStrategyType { get; }
 
     /// <summary>

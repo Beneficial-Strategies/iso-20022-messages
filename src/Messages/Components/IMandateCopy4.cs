@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Mandate Copy4.
 /// </summary>
 [IsoId("_5GXZsTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Mandate Copy4")]
 public interface IMandateCopy4 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IMandateCopy4 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

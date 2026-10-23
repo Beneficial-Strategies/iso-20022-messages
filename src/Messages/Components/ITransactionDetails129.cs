@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the transaction.
 /// </summary>
 [IsoId("_ei7WO-mrEemUgrefIx730g")]
+[IsoDisplayName(@"Transaction Details")]
 public interface ITransactionDetails129 : IIsoComponent
 {
     /// <summary>
@@ -89,6 +90,7 @@ public interface ITransactionDetails129 : IIsoComponent
     [IsoId("_fOXf3emrEemUgrefIx730g")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -145,6 +147,7 @@ public interface ITransactionDetails129 : IIsoComponent
     [IsoId("_fOXf-emrEemUgrefIx730g")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AcknowledgedStatusTimeStamp { get; }
 
     /// <summary>
@@ -153,6 +156,7 @@ public interface ITransactionDetails129 : IIsoComponent
     [IsoId("_fOXf--mrEemUgrefIx730g")]
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? MatchedStatusTimeStamp { get; }
 
     /// <summary>
@@ -177,6 +181,7 @@ public interface ITransactionDetails129 : IIsoComponent
     [IsoId("_fOXgBemrEemUgrefIx730g")]
     [DisplayName("Reversal Indicator")]
     [IsoXmlTag("RvslInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ReversalIndicator { get; }
 
     /// <summary>
@@ -185,5 +190,7 @@ public interface ITransactionDetails129 : IIsoComponent
     [IsoId("_fOXgCemrEemUgrefIx730g")]
     [DisplayName("Transaction Additional Details")]
     [IsoXmlTag("TxAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? TransactionAdditionalDetails { get; }
 }

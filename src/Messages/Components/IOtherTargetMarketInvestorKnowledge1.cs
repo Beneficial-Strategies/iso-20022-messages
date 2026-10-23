@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Investor knowledge and experience target market.
 /// </summary>
 [IsoId("_pd4osDcOEeiIxKQErQxblg")]
+[IsoDisplayName(@"Other Target Market Investor Knowledge")]
 public interface IOtherTargetMarketInvestorKnowledge1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOtherTargetMarketInvestorKnowledge1 : IIsoComponent
     [IsoId("_07LyczcOEeiIxKQErQxblg")]
     [DisplayName("Investor Knowledge Type")]
     [IsoXmlTag("InvstrKnwldgTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InvestorKnowledgeType { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of good and services included in the sale.
 /// </summary>
 [IsoId("_G95uUVXhEfC0lMwgjvMClw")]
+[IsoDisplayName(@"Sale4")]
 public interface ISale4 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ISale4 : IIsoComponent
     [IsoId("_HAUwNVXhEfC0lMwgjvMClw")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment13> Adjustment { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface ISale4 : IIsoComponent
     [IsoId("_HAUwN1XhEfC0lMwgjvMClw")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISaleItem5> LineItem { get; }
 }

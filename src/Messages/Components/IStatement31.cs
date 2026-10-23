@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides statement details such as the account owner identification (ie, the clearing member identification) and optionaly the non clearing member identification, the clearing account or the list of trade legs.
 /// </summary>
 [IsoId("_QllXWNp-Ed-ak6NoX_4Aeg_530575505")]
+[IsoDisplayName(@"Statement")]
 public interface IStatement31 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IStatement31 : IIsoComponent
     [IsoId("_QlvIUNp-Ed-ak6NoX_4Aeg_-743464227")]
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text StatementIdentification { get; }
 
     /// <summary>
@@ -49,6 +52,7 @@ public interface IStatement31 : IIsoComponent
     [IsoId("_QlvIVNp-Ed-ak6NoX_4Aeg_2070796472")]
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
+    [IsoSimpleType(IsoSimpleType.Exact5NumericText)]
     Exact5NumericText? ReportNumber { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface IStatement31 : IIsoComponent
     [IsoId("_QlvIVdp-Ed-ak6NoX_4Aeg_929830275")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ActivityIndicator { get; }
 }

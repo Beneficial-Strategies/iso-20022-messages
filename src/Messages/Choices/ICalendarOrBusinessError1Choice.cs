@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the audit trail or a business error when the requested data cannot be retrieved.
 /// </summary>
 [IsoId("_dVcQ2Im7Eeipw6hHPgB4Sw")]
+[IsoDisplayName(@"Calendar Or Business Error 1 Choice")]
 public interface ICalendarOrBusinessError1Choice : IIsoChoice { }

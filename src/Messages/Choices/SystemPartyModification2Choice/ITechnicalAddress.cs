@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// Unique technical address to unambiguously identify a party for receiving messages from the executing system.
 /// </summary>
 [IsoId("_yJhSp4v-Eei289CGNqs21g")]
+[IsoDisplayName(@"Technical Address")]
 public interface ITechnicalAddress : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

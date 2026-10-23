@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice;
 /// </summary>
 [IsoId("_A42wFNokEeC60axPepSq7g_1860431455")]
 [IsoXmlTag("AlrdyMtchdAndAffrmd")]
+[IsoDisplayName(@"Already Matched And Affirmed")]
 public interface IAlreadyMatchedAndAffirmed : IProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IAlreadyMatchedAndAffirmed : IProcessingStatus17Choice, IIsoCho
     [IsoId("_UatOxtp-Ed-ak6NoX_4Aeg_-1133156666")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

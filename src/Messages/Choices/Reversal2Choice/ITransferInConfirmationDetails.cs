@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal2Choice;
 /// </summary>
 [IsoId("_QDM4fBg4EeK-_89we2b-bA")]
 [IsoXmlTag("TrfInConfDtls")]
+[IsoDisplayName(@"Transfer In Confirmation Details")]
 public interface ITransferInConfirmationDetails : IReversal2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ITransferInConfirmationDetails : IReversal2Choice, IIsoChoiceVa
     [IsoId("_RFpSFRgmEeK-_89we2b-bA")]
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransfer25> TransferDetails { get; }
 
     /// <summary>
@@ -42,5 +44,6 @@ public interface ITransferInConfirmationDetails : IReversal2Choice, IIsoChoiceVa
     [IsoId("_RFpSIRgmEeK-_89we2b-bA")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

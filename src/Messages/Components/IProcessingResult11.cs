@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Outcome of the processing of the transaction.
 /// </summary>
 [IsoId("_5IBIoahOEeuOaMA1YOy5YQ")]
+[IsoDisplayName(@"Processing Result")]
 public interface IProcessingResult11 : IIsoComponent
 {
     /// <summary>
@@ -35,6 +36,7 @@ public interface IProcessingResult11 : IIsoComponent
     [IsoId("_5NhTtahOEeuOaMA1YOy5YQ")]
     [DisplayName("Action Required")]
     [IsoXmlTag("ActnReqrd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ActionRequired { get; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public interface IProcessingResult11 : IIsoComponent
     [IsoId("_5NhTt6hOEeuOaMA1YOy5YQ")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction13> Action { get; }
 
     /// <summary>
@@ -51,6 +54,7 @@ public interface IProcessingResult11 : IIsoComponent
     [IsoId("_5NhTuahOEeuOaMA1YOy5YQ")]
     [DisplayName("Additional Action")]
     [IsoXmlTag("AddtlActn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAction1> AdditionalAction { get; }
 
     /// <summary>
@@ -60,5 +64,6 @@ public interface IProcessingResult11 : IIsoComponent
     [IsoId("_5NhTu6hOEeuOaMA1YOy5YQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation29> AdditionalInformation { get; }
 }

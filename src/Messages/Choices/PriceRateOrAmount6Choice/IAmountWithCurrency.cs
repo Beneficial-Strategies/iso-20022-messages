@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmount6Choice;
 
 /// <summary>Specifies the price as an amount with currency.</summary>
 [IsoId("_xuxKU2hTEeq6Jv5Orh6cCw")]
+[IsoDisplayName(@"Amount With Currency")]
 public interface IAmountWithCurrency : IPriceRateOrAmount6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

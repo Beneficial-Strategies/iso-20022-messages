@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a pricing component, such as a service, promotion, allowance or charge, for this trade settlement.
 /// </summary>
 [IsoId("_S0Q8SgEcEeCQm6a_G2yO_w_1558181804")]
+[IsoDisplayName(@"Settlement Allowance Charge")]
 public interface ISettlementAllowanceCharge1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementAllowanceCharge1 : IIsoComponent
     [IsoId("_S0Q8SwEcEeCQm6a_G2yO_w_23404513")]
     [DisplayName("Allowance Charge Indicator")]
     [IsoXmlTag("AllwncChrgInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AllowanceChargeIndicator { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISettlementAllowanceCharge1 : IIsoComponent
     [IsoId("_S0Q8TAEcEeCQm6a_G2yO_w_-2142675469")]
     [DisplayName("Actual Amount")]
     [IsoXmlTag("ActlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<CurrencyAndAmount> ActualAmount { get; }
 
     /// <summary>

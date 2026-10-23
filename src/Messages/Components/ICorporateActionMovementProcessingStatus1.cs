@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provide processing status information of a movement.
 /// </summary>
 [IsoId("_Rkw8ZNp-Ed-ak6NoX_4Aeg_-1849557856")]
+[IsoDisplayName(@"Corporate Action Movement Processing Status")]
 public interface ICorporateActionMovementProcessingStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ICorporateActionMovementProcessingStatus1 : IIsoComponent
     [IsoId("_Rkw8Ztp-Ed-ak6NoX_4Aeg_-1819081353")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

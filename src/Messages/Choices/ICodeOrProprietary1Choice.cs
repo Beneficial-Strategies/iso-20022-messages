@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format between an ISO 20022 code and a proprietary code.
 /// </summary>
 [IsoId("_Qotj1tp-Ed-ak6NoX_4Aeg_-1810617673")]
+[IsoDisplayName(@"Code Or Proprietary 1 Choice")]
 public interface ICodeOrProprietary1Choice : IIsoChoice { }

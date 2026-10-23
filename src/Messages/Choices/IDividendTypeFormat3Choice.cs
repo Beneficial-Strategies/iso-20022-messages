@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of dividend.
 /// </summary>
 [IsoId("_KsR2Md3iEd-KAqAOGQOnnw")]
+[IsoDisplayName(@"Dividend Type Format 3 Choice")]
 public interface IDividendTypeFormat3Choice : IIsoChoice { }

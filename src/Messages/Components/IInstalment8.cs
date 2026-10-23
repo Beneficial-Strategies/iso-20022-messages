@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data exclusively related to a card issuer financial loan of the payment transaction, or instalment.
 /// </summary>
 [IsoId("_Nfxw0T2AEfCQAqQ9lolFUg")]
+[IsoDisplayName(@"Instalment8")]
 public interface IInstalment8 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IInstalment8 : IIsoComponent
     [IsoId("_Nh-JMz2AEfCQAqQ9lolFUg")]
     [DisplayName("Plan")]
     [IsoXmlTag("Plan")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstalmentPlan1> Plan { get; }
 }

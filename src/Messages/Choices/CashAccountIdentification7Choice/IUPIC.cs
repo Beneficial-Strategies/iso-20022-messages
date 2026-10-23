@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification7Choice
 /// Universal Payment Identification Code (UPIC) - identifier used by the New York Clearing House to mask confidential data, such as bank accounts and bank routing numbers. UPIC numbers remain with business customers, regardless of banking relationship changes.
 /// </summary>
 [IsoId("_o7ELN-WbEeevU7McUP3D1w")]
+[IsoDisplayName(@"UPIC")]
 public interface IUPIC : ICashAccountIdentification7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IUPIC : ICashAccountIdentification7Choice, IIsoChoiceVariant
     /// Universal Payment Identification Code (UPIC). Identifier used by the New York Clearing House to mask confidential data, such as bank accounts and bank routing numbers. UPIC numbers remain with business customers, regardless of banking relationship changes.
     /// </summary>
     [IsoXmlTag("UPIC")]
+    [IsoSimpleType(IsoSimpleType.UPICIdentifier)]
     UPICIdentifier Value { get; }
 }

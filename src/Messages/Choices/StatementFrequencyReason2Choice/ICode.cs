@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementFrequencyReason2Choice;
 /// Statement frequency expressed as a code.
 /// </summary>
 [IsoId("_sGXPISDAEeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IStatementFrequencyReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reference to the linked transaction.
 /// </summary>
 [IsoId("_21pbMFSLEemTt7251YwCKw")]
+[IsoDisplayName(@"References 70 Choice")]
 public interface IReferences70Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies an payment schedule, that is an amount that must be paid no sooner than the expected payment date and no later than the due date.
 /// </summary>
 [IsoId("_QeqY8bJVEeuX8-p7DPhoRw")]
+[IsoDisplayName(@"Payment Schedule")]
 public interface IPaymentSchedule1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentSchedule1 : IIsoComponent
     [IsoId("_QgascbJVEeuX8-p7DPhoRw")]
     [DisplayName("Payment Schedule Identification")]
     [IsoXmlTag("PmtSchdlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentScheduleIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IPaymentSchedule1 : IIsoComponent
     [IsoId("_QgasdbJVEeuX8-p7DPhoRw")]
     [DisplayName("Expected Date")]
     [IsoXmlTag("XpctdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedDate { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IPaymentSchedule1 : IIsoComponent
     [IsoId("_Qgasd7JVEeuX8-p7DPhoRw")]
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DueDate { get; }
 
     /// <summary>
@@ -49,5 +54,7 @@ public interface IPaymentSchedule1 : IIsoComponent
     [IsoId("_R9n00LJWEeuX8-p7DPhoRw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max1025Text)]
+    [StringLength(1025, MinimumLength = 1)]
     Max1025Text? AdditionalInformation { get; }
 }

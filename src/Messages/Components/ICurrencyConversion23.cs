@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be accepted by the cardholder.
 /// </summary>
 [IsoId("_n3pl4VE4EeyApZmLzm74zA")]
+[IsoDisplayName(@"Currency Conversion")]
 public interface ICurrencyConversion23 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICurrencyConversion23 : IIsoComponent
     [IsoId("_n9-QUVE4EeyApZmLzm74zA")]
     [DisplayName("Currency Conversion Identification")]
     [IsoXmlTag("CcyConvsId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CurrencyConversionIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICurrencyConversion23 : IIsoComponent
     [IsoId("_n9-QV1E4EeyApZmLzm74zA")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate ExchangeRate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ICurrencyConversion23 : IIsoComponent
     [IsoId("_n9-QWVE4EeyApZmLzm74zA")]
     [DisplayName("Inverted Exchange Rate")]
     [IsoXmlTag("NvrtdXchgRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? InvertedExchangeRate { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface ICurrencyConversion23 : IIsoComponent
     [IsoId("_n9-QW1E4EeyApZmLzm74zA")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? QuotationDate { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface ICurrencyConversion23 : IIsoComponent
     [IsoId("_n9-QXVE4EeyApZmLzm74zA")]
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ValidUntil { get; }
 
     /// <summary>
@@ -89,6 +96,7 @@ public interface ICurrencyConversion23 : IIsoComponent
     [IsoId("_n9-QY1E4EeyApZmLzm74zA")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission19> CommissionDetails { get; }
 
     /// <summary>
@@ -97,6 +105,7 @@ public interface ICurrencyConversion23 : IIsoComponent
     [IsoId("_n9-QZVE4EeyApZmLzm74zA")]
     [DisplayName("Mark Up Details")]
     [IsoXmlTag("MrkUpDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission18> MarkUpDetails { get; }
 
     /// <summary>
@@ -105,5 +114,6 @@ public interface ICurrencyConversion23 : IIsoComponent
     [IsoId("_n9-QZ1E4EeyApZmLzm74zA")]
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IActionMessage9> DeclarationDetails { get; }
 }

@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.cain;
 /// </summary>
 [IsoId("_b47ZkYwFEeugeuahCxXQ-Q")]
 [IsoMessage("cain.019.001.02", "VrfctnRspn", "urn:iso:std:iso:20022:tech:xsd:cain.019.001.02")]
+[Description(@"The VerificationResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a VerificationInitiation message.")]
+[IsoDisplayName(@"Verification Response V")]
 public interface IVerificationResponseV02 : IOuterRecord
 {
     /// <summary>

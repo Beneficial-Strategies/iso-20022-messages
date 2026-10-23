@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationFormat1Choice;
 /// Format expressed as a short identification.
 /// </summary>
 [IsoId("_Q4EOcdp-Ed-ak6NoX_4Aeg_287687502")]
+[IsoDisplayName(@"Short Identification")]
 public interface IShortIdentification : IIdentificationFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IShortIdentification : IIdentificationFormat1Choice, IIsoChoice
     /// Specifies an upper case alphanumeric string with a length of three characters.
     /// </summary>
     [IsoXmlTag("ShrtId")]
+    [IsoSimpleType(IsoSimpleType.Exact3UpperCaseAlphaNumericText)]
     Exact3UpperCaseAlphaNumericText Value { get; }
 }

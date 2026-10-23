@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status is in repair.
 /// </summary>
 [IsoId("_Uuhiptp-Ed-ak6NoX_4Aeg_-794783023")]
+[IsoDisplayName(@"In Repair Status")]
 public interface IInRepairStatus1 : IIsoComponent
 {
     /// <summary>

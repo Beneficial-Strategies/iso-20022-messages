@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency control document entry supporting the contract registration.
 /// </summary>
 [IsoId("_l1j-wbGJEeuSTr8k0UEM8A")]
+[IsoDisplayName(@"Supporting Document Entry")]
 public interface ISupportingDocumentEntry2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISupportingDocumentEntry2 : IIsoComponent
     [IsoId("_l2d9sbGJEeuSTr8k0UEM8A")]
     [DisplayName("Entry Identification")]
     [IsoXmlTag("NtryId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text EntryIdentification { get; }
 
     /// <summary>
@@ -34,6 +37,7 @@ public interface ISupportingDocumentEntry2 : IIsoComponent
     [IsoId("_l2d9tbGJEeuSTr8k0UEM8A")]
     [DisplayName("Document Type")]
     [IsoXmlTag("DocTp")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericUnderscoreText)]
     Exact4AlphaNumericUnderscoreText DocumentType { get; }
 
     /// <summary>
@@ -90,6 +94,8 @@ public interface ISupportingDocumentEntry2 : IIsoComponent
     [IsoId("_xqX3ULP_Eeud-ZmjZVm7MA")]
     [DisplayName("Maturity Data")]
     [IsoXmlTag("MtrtyData")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MaturityData { get; }
 
     /// <summary>
@@ -98,6 +104,8 @@ public interface ISupportingDocumentEntry2 : IIsoComponent
     [IsoId("_l2d9wbGJEeuSTr8k0UEM8A")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? AdditionalInformation { get; }
 
     /// <summary>
@@ -106,5 +114,6 @@ public interface ISupportingDocumentEntry2 : IIsoComponent
     [IsoId("_l2d9w7GJEeuSTr8k0UEM8A")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation5> Attachment { get; }
 }

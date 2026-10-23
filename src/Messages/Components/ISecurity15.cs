@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data specific to securities being subject to the transaction.
 /// </summary>
 [IsoId("_MXso6c1VEem4K5qLxnWwMA")]
+[IsoDisplayName(@"Security")]
 public interface ISecurity15 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISecurity15 : IIsoComponent
     [IsoId("_MeGL0c1VEem4K5qLxnWwMA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? Identification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISecurity15 : IIsoComponent
     [IsoId("_MeGL081VEem4K5qLxnWwMA")]
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier? ClassificationType { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ISecurity15 : IIsoComponent
     [IsoId("_MeGL3c1VEem4K5qLxnWwMA")]
     [DisplayName("Maturity")]
     [IsoXmlTag("Mtrty")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? Maturity { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface ISecurity15 : IIsoComponent
     [IsoId("_MeGL4c1VEem4K5qLxnWwMA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesLendingType3Choice> Type { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface ISecurity15 : IIsoComponent
     [IsoId("_MeGL481VEem4K5qLxnWwMA")]
     [DisplayName("Exclusive Arrangement")]
     [IsoXmlTag("ExclsvArrgmnt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ExclusiveArrangement { get; }
 
     /// <summary>
@@ -97,5 +103,6 @@ public interface ISecurity15 : IIsoComponent
     [IsoId("_MeGL581VEem4K5qLxnWwMA")]
     [DisplayName("Available For Collateral Reuse")]
     [IsoXmlTag("AvlblForCollReuse")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AvailableForCollateralReuse { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency36Choice;
 /// </summary>
 [IsoId("_6IxUQWk2Eeanu6HLe77Rkg")]
 [IsoXmlTag("PtInTm")]
+[IsoDisplayName(@"Point In Time")]
 public interface IPointInTime : IFrequency36Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -24,5 +25,6 @@ public interface IPointInTime : IFrequency36Choice, IIsoChoiceVariant
     /// Further information on the exact point in time the event should take place.
     /// </summary>
     [IsoXmlTag("PtInTm")]
+    [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
     Exact2NumericText Value { get; }
 }

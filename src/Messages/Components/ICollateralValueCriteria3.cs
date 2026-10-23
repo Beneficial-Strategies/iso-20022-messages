@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria which are used to search for an account and to report on the account. A name may be given to the new query.
 /// </summary>
 [IsoId("__xWrgTpsEemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Collateral Value Criteria")]
 public interface ICollateralValueCriteria3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICollateralValueCriteria3 : IIsoComponent
     [IsoId("__7yZ4TpsEemk2e6qGBk8IQ")]
     [DisplayName("Query Name")]
     [IsoXmlTag("QryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryName { get; }
 
     /// <summary>

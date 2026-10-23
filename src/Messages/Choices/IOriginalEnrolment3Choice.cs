@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Original Enrolment3Choice.
 /// </summary>
 [IsoId("_xDw1NTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Original Enrolment3Choice")]
 public interface IOriginalEnrolment3Choice : IIsoChoice { }

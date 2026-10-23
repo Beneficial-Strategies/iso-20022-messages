@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for which a transaction report is rejected.
 /// </summary>
 [IsoId("_RXWyh9p-Ed-ak6NoX_4Aeg_-1456677531")]
+[IsoDisplayName(@"Rejected Status Reason 9 Choice")]
 public interface IRejectedStatusReason9Choice : IIsoChoice { }

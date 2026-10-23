@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateSuspensionReason1Choice;
 /// Reason, as published in an external reason code list.
 /// </summary>
 [IsoId("_gW_7xYPDEeahmOIR_zFG6A")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMandateSuspensionReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

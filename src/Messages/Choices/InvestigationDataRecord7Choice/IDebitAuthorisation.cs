@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord7Choice;
 /// <summary>
 /// Debit Authorisation.
 /// </summary>
+[IsoDisplayName(@"Debit Authorisation")]
 public interface IDebitAuthorisation : IInvestigationDataRecord7Choice, IIsoChoiceVariant
 {
     /// <summary>

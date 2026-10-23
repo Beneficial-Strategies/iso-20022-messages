@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity2Choice;
 /// Code list for freight type of commodities.
 /// </summary>
 [IsoId("_BzEmOSYyEeWHeosc_5RQEw")]
+[IsoDisplayName(@"Freight")]
 public interface IFreight : IAssetClassCommodity2Choice, IIsoChoiceVariant
 {
     /// <summary>

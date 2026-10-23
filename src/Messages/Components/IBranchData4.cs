@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information that locates and identifies a specific branch of a financial institution.
 /// </summary>
 [IsoId("_kbtKce6REemVDc1WJaqofw")]
+[IsoDisplayName(@"Branch Data")]
 public interface IBranchData4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBranchData4 : IIsoComponent
     [IsoId("_kvMuMe6REemVDc1WJaqofw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IBranchData4 : IIsoComponent
     [IsoId("_kvMuM-6REemVDc1WJaqofw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>

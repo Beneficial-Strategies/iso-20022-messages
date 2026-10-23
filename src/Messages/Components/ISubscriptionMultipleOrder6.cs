@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Order to invest the investor&apos;s principal in an investment fund.
 /// </summary>
 [IsoId("_CPQ1PTbtEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Subscription Multiple Order")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface ISubscriptionMultipleOrder6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ISubscriptionMultipleOrder6 : IIsoComponent
     [IsoId("_Cnz4HTbtEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ISubscriptionMultipleOrder6 : IIsoComponent
     [IsoId("_Cnz4ITbtEead9bDRE_1DAQ")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OrderDateTime { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ISubscriptionMultipleOrder6 : IIsoComponent
     [IsoId("_Cnz4JTbtEead9bDRE_1DAQ")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedFutureTradeDate { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface ISubscriptionMultipleOrder6 : IIsoComponent
     [IsoId("_Cnz4LTbtEead9bDRE_1DAQ")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson31> BeneficiaryDetails { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface ISubscriptionMultipleOrder6 : IIsoComponent
     [IsoId("_Cnz4LzbtEead9bDRE_1DAQ")]
     [DisplayName("Individual Order Details")]
     [IsoXmlTag("IndvOrdrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubscriptionOrder14> IndividualOrderDetails { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Claim Non Receipt3.
 /// </summary>
 [IsoId("_2xf0FTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Claim Non Receipt3")]
 public interface IClaimNonReceipt3 : IIsoComponent
 {
     /// <summary>

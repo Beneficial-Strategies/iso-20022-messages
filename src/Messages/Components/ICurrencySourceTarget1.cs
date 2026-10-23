@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information needed to process a currency exchange or conversion.
 /// </summary>
 [IsoId("_77TPRKMgEeCJ6YNENx4h-w_-284480309")]
+[IsoDisplayName(@"Currency Source Target")]
 public interface ICurrencySourceTarget1 : IIsoComponent
 {
     /// <summary>

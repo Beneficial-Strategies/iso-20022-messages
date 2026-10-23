@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_m9MVgO3jEeaWjpoyrnG6Rw")]
 [IsoMessage("auth.072.001.01", "SttlmIntlrRpt", "urn:iso:std:iso:20022:tech:xsd:auth.072.001.01")]
+[Description(@"The SettlementInternaliserReport message is sent by the settlement internalisers to the relevant competent authority to report aggregated information on all securities transactions that they settle outside securities settlement systems, on a quarterly basis. The report contains aggregated information on the value and volume of all internalised settlement instructions (settled and failed) that have been performed during the period covered by the report, for financial instruments, types of transactions, types of clients and cash transfers.||Usage: |This report may be used by settlement internalisers to provide aggregated information (volume and value) on internalised settlement instructions (settled and failed) to their competent authorities.")]
+[IsoDisplayName(@"Settlement Internaliser Report V")]
 public interface ISettlementInternaliserReportV01 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +41,7 @@ public interface ISettlementInternaliserReportV01 : IOuterRecord
     [IsoId("_pgDeYO3kEeaWjpoyrnG6Rw")]
     [DisplayName("Issuer CSD")]
     [IsoXmlTag("IssrCSD")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIssuerCSDReport1> IssuerCSD { get; }
 
     /// <summary>
@@ -47,5 +50,6 @@ public interface ISettlementInternaliserReportV01 : IOuterRecord
     [IsoId("_D1rv0X9xEeiuTa5SlOUnYg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

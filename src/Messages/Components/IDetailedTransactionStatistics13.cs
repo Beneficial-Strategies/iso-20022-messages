@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about number of transactions accepted and rejected and the reasons of the rejections.
 /// </summary>
 [IsoId("_hUsuxcK4EeuFNp8LZAnorg")]
+[IsoDisplayName(@"Detailed Transaction Statistics")]
 public interface IDetailedTransactionStatistics13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDetailedTransactionStatistics13 : IIsoComponent
     [IsoId("_hV-hIcK4EeuFNp8LZAnorg")]
     [DisplayName("Total Number Of Transactions")]
     [IsoXmlTag("TtlNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfTransactions { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IDetailedTransactionStatistics13 : IIsoComponent
     [IsoId("_hV-hI8K4EeuFNp8LZAnorg")]
     [DisplayName("Total Number Of Transactions Accepted")]
     [IsoXmlTag("TtlNbOfTxsAccptd")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfTransactionsAccepted { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IDetailedTransactionStatistics13 : IIsoComponent
     [IsoId("_hV-hJcK4EeuFNp8LZAnorg")]
     [DisplayName("Total Number Of Transactions Rejected")]
     [IsoXmlTag("TtlNbOfTxsRjctd")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfTransactionsRejected { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IDetailedTransactionStatistics13 : IIsoComponent
     [IsoId("_hV-hJ8K4EeuFNp8LZAnorg")]
     [DisplayName("Transactions Rejections Reason")]
     [IsoXmlTag("TxsRjctnsRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason53> TransactionsRejectionsReason { get; }
 }

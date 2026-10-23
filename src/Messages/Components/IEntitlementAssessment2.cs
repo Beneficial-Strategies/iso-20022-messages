@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the parameters, such as dates, used to calculate the entitlement to vote at a general meeting.
 /// </summary>
 [IsoId("_TkeKUtp-Ed-ak6NoX_4Aeg_-271063564")]
+[IsoDisplayName(@"Entitlement Assessment")]
 public interface IEntitlementAssessment2 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IEntitlementAssessment2 : IIsoComponent
     [IsoId("_TkeKVtp-Ed-ak6NoX_4Aeg_-271063194")]
     [DisplayName("Securities Blocking Period End Date")]
     [IsoXmlTag("SctiesBlckgPrdEndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? SecuritiesBlockingPeriodEndDate { get; }
 
     /// <summary>

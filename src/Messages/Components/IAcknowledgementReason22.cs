@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies additional information about the processed instruction.
 /// </summary>
 [IsoId("_XJuG8Y5bEfC_4ZEXsY0Xyg")]
+[IsoDisplayName(@"Acknowledgement Reason22")]
 public interface IAcknowledgementReason22 : IIsoComponent
 {
     /// <summary>

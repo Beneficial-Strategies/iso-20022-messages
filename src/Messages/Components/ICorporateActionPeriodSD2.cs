@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action details periods details.
 /// </summary>
 [IsoId("_1hYa5jL3EeKU9IrkkToqcw_-1057782766")]
+[IsoDisplayName(@"Corporate Action Period SD")]
 public interface ICorporateActionPeriodSD2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionPeriodSD2 : IIsoComponent
     [IsoId("_1hhk0DL3EeKU9IrkkToqcw_503444309")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>

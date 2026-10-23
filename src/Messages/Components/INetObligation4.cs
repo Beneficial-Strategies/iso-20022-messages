@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the amount, direction and parties involved in a payment obligation between two participants of a netting service.
 /// </summary>
 [IsoId("d6ff5721-5e8e-447f-8f29-ec05a1a04ae2")]
+[IsoDisplayName(@"Net Obligation4")]
 public interface INetObligation4 : IIsoComponent
 {
     /// <summary>
@@ -121,5 +122,6 @@ public interface INetObligation4 : IIsoComponent
     [IsoId("2847f29f-7399-4ae4-9f49-10bb9fb84e66")]
     [DisplayName("Split Obligation Data")]
     [IsoXmlTag("SpltOblgtnData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISplitObligationAttributes1> SplitObligationData { get; }
 }

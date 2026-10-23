@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Technical note: The sequence of relative identifiers is used to avoid a recursive definition in the catalogue.
 /// </summary>
 [IsoId("_OTgzMjUx-AOSNFX-8224494")]
+[IsoDisplayName(@"Single Qualified Party Identification")]
 public interface ISingleQualifiedPartyIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -28,5 +29,9 @@ public interface ISingleQualifiedPartyIdentification1 : IIsoComponent
     [IsoId("_OTgzMjUz-AOSNFX-8224494")]
     [DisplayName("Relative Identifier")]
     [IsoXmlTag("RltvIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> RelativeIdentifier { get; }
 }

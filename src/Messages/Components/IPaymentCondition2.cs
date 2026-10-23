@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the conditions for the execution of the payment.
 /// </summary>
 [IsoId("_4N9WwTFNEe6e4MbXgPVc4A")]
+[Description(@"Specifies the conditions for the execution of the payment.")]
+[IsoDisplayName(@"Payment Condition2")]
 public interface IPaymentCondition2 : IIsoComponent
 {
     /// <summary>

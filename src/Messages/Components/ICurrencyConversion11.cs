@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider.
 /// </summary>
 [IsoId("_F3KO0a_UEeaepNKtQMrGAQ")]
+[IsoDisplayName(@"Currency Conversion")]
 public interface ICurrencyConversion11 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICurrencyConversion11 : IIsoComponent
     [IsoId("_GDXe0a_UEeaepNKtQMrGAQ")]
     [DisplayName("Result Reason")]
     [IsoXmlTag("RsltRsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ResultReason { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ICurrencyConversion11 : IIsoComponent
     [IsoId("_GDXe06_UEeaepNKtQMrGAQ")]
     [DisplayName("Conversion Details")]
     [IsoXmlTag("ConvsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICurrencyConversion12> ConversionDetails { get; }
 }

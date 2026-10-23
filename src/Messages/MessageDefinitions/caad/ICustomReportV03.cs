@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_8juYcROHEfC1ZfCQz0xB3g")]
 [IsoMessage("caad.010.001.03", "CstmRpt", "urn:iso:std:iso:20022:tech:xsd:caad.010.001.03")]
+[IsoDisplayName(@"Custom Report V03")]
 public interface ICustomReportV03 : IOuterRecord
 {
     /// <summary>
@@ -53,6 +54,7 @@ public interface ICustomReportV03 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode6> Programme { get; }
 
     /// <summary>
@@ -95,6 +97,7 @@ public interface ICustomReportV03 : IOuterRecord
     /// </summary>
     [DisplayName("Report Content")]
     [IsoXmlTag("RptCntt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportContent3> ReportContent { get; }
 
     /// <summary>
@@ -102,6 +105,7 @@ public interface ICustomReportV03 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -109,6 +113,7 @@ public interface ICustomReportV03 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

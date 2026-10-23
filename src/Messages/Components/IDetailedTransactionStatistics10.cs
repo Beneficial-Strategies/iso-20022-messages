@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about number of transactions accepted and rejected and the reasons of the rejections.
 /// </summary>
 [IsoId("_j31tca4cEemB_csI4yyKLA")]
+[IsoDisplayName(@"Detailed Transaction Statistics")]
 public interface IDetailedTransactionStatistics10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDetailedTransactionStatistics10 : IIsoComponent
     [IsoId("_j8wpsa4cEemB_csI4yyKLA")]
     [DisplayName("Total Number Of Transactions")]
     [IsoXmlTag("TtlNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfTransactions { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IDetailedTransactionStatistics10 : IIsoComponent
     [IsoId("_j8wps64cEemB_csI4yyKLA")]
     [DisplayName("Total Number Of Transactions Accepted")]
     [IsoXmlTag("TtlNbOfTxsAccptd")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfTransactionsAccepted { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IDetailedTransactionStatistics10 : IIsoComponent
     [IsoId("_j8wpta4cEemB_csI4yyKLA")]
     [DisplayName("Total Number Of Transactions Rejected")]
     [IsoXmlTag("TtlNbOfTxsRjctd")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText TotalNumberOfTransactionsRejected { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IDetailedTransactionStatistics10 : IIsoComponent
     [IsoId("_j8wpt64cEemB_csI4yyKLA")]
     [DisplayName("Number Of Transactions Rejected")]
     [IsoXmlTag("NbOfTxsRjctd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionReason47> NumberOfTransactionsRejected { get; }
 }

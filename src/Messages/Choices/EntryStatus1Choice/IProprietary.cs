@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EntryStatus1Choice;
 /// Entry status, in a proprietary form.
 /// </summary>
 [IsoId("_KbxmUIaoEeeUws0ZryHQ2w")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IEntryStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IEntryStatus1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

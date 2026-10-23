@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters to synchronise a real time clock.
 /// </summary>
 [IsoId("_QciVYdqbEeearpaEPXv9UA")]
+[IsoDisplayName(@"Clock Synchronisation")]
 public interface IClockSynchronisation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IClockSynchronisation2 : IIsoComponent
     [IsoId("_QlfdEdqbEeearpaEPXv9UA")]
     [DisplayName("POI Time Zone")]
     [IsoXmlTag("POITmZone")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text POITimeZone { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IClockSynchronisation2 : IIsoComponent
     [IsoId("_QlfdE9qbEeearpaEPXv9UA")]
     [DisplayName("Synchronisation Server")]
     [IsoXmlTag("SynctnSvr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetworkParameters5> SynchronisationServer { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IClockSynchronisation2 : IIsoComponent
     [IsoId("_gIAvwNqbEeearpaEPXv9UA")]
     [DisplayName("Delay")]
     [IsoXmlTag("Dely")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime? Delay { get; }
 }

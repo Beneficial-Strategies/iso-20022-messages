@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides reasons of rejecting transactions.
 /// </summary>
 [IsoId("_j8wpua4cEemB_csI4yyKLA")]
+[IsoDisplayName(@"Rejection Reason")]
 public interface IRejectionReason47 : IIsoComponent
 {
     /// <summary>

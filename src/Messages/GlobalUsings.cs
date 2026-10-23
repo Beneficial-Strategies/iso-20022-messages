@@ -1,6 +1,7 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 global using System.ComponentModel;
+global using System.ComponentModel.DataAnnotations;
 global using BeneficialStrategies.Iso20022.Amounts;
 global using BeneficialStrategies.Iso20022.Choices;
 global using BeneficialStrategies.Iso20022.Codesets;

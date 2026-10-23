@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice;
 /// <summary>
 /// Market Specific Attribute.
 /// </summary>
+[IsoDisplayName(@"Market Specific Attribute")]
 public interface IMarketSpecificAttribute : IUpdateLogPartyRecord2Choice, IIsoChoiceVariant
 {
     /// <summary>

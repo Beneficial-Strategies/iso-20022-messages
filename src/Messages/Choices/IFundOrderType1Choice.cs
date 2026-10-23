@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the fund order type.
 /// </summary>
 [IsoId("_RC8V8RHcEeKVqeHljBM1MQ")]
+[IsoDisplayName(@"Fund Order Type 1 Choice")]
 public interface IFundOrderType1Choice : IIsoChoice { }

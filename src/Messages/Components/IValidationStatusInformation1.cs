@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the status of a specific message.
 /// </summary>
 [IsoId("_RXzec9p-Ed-ak6NoX_4Aeg_714459273")]
+[IsoDisplayName(@"Validation Status Information")]
 public interface IValidationStatusInformation1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IValidationStatusInformation1 : IIsoComponent
     [IsoId("_RXzedtp-Ed-ak6NoX_4Aeg_1617662894")]
     [DisplayName("Additional Status Reason Information")]
     [IsoXmlTag("AddtlStsRsnInf")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max105Text> AdditionalStatusReasonInformation { get; }
 }

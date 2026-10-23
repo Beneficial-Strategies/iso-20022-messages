@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the customer device.
 /// </summary>
 [IsoId("_sOvAsTJ4EfCLfeKcVPKw8g")]
+[IsoDisplayName(@"Customer Device6")]
 public interface ICustomerDevice6 : IIsoComponent
 {
     /// <summary>
@@ -105,6 +106,7 @@ public interface ICustomerDevice6 : IIsoComponent
     [IsoId("_sR_wKTJ4EfCLfeKcVPKw8g")]
     [DisplayName("Device Identification")]
     [IsoXmlTag("DvcId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDeviceIdentification2> DeviceIdentification { get; }
 
     /// <summary>
@@ -177,6 +179,7 @@ public interface ICustomerDevice6 : IIsoComponent
     [IsoId("_Gyrv0kVZEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -185,5 +188,6 @@ public interface ICustomerDevice6 : IIsoComponent
     [IsoId("_Gyrv00VZEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a country code.
 /// </summary>
 [IsoId("_QtxKsdR7EemZdYGWu384Zw")]
+[IsoDisplayName(@"Compare Country Code")]
 public interface ICompareCountryCode2 : IIsoComponent
 {
     /// <summary>

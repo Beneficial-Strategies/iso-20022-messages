@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionOrError4Choice;
 /// </summary>
 [IsoId("_XFBYs249EeiU9cctagi5ow")]
 [IsoXmlTag("Tx")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction : ITransactionOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>

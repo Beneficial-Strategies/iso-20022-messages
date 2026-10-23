@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExposureType12Choice;
 /// </summary>
 [IsoId("_ijHiNV27EeS_LPIA7qJ58w")]
 [IsoXmlTag("Prtry")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IExposureType12Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IProprietary : IExposureType12Choice, IIsoChoiceVariant
     [IsoId("_haF85GliEeGaMcKyqKNRfQ_1885458332")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText Identification { get; }
 
     /// <summary>
@@ -26,6 +28,8 @@ public interface IProprietary : IExposureType12Choice, IIsoChoiceVariant
     [IsoId("_haF85WliEeGaMcKyqKNRfQ_888385979")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Issuer { get; }
 
     /// <summary>
@@ -34,5 +38,7 @@ public interface IProprietary : IExposureType12Choice, IIsoChoiceVariant
     [IsoId("_haF85mliEeGaMcKyqKNRfQ_-286805046")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SchemeName { get; }
 }

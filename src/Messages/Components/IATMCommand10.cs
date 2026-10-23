@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Maintenance command the ATM must perform.
 /// </summary>
 [IsoId("_j2e5wV_SEeeD0NpJQPACzA")]
+[IsoDisplayName(@"ATM Command")]
 public interface IATMCommand10 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IATMCommand10 : IIsoComponent
     [IsoId("_j_HRVV_SEeeD0NpJQPACzA")]
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DateTime { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IATMCommand10 : IIsoComponent
     [IsoId("_j_HRW1_SEeeD0NpJQPACzA")]
     [DisplayName("Trace Reason")]
     [IsoXmlTag("TracRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATMCommandReason1Code> TraceReason { get; }
 
     /// <summary>
@@ -65,6 +68,8 @@ public interface IATMCommand10 : IIsoComponent
     [IsoId("_j_HRXV_SEeeD0NpJQPACzA")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AdditionalReasonInformation { get; }
 
     /// <summary>

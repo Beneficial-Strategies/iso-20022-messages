@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Contact person details in a bank.
 /// </summary>
 [IsoId("_eCkSADAZEeOKib24wnHaFg")]
+[IsoDisplayName(@"Bank Contact Person 1 Choice")]
 public interface IBankContactPerson1Choice : IIsoChoice { }

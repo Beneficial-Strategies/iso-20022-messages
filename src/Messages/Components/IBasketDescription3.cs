@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes the constituents of the basket.
 /// </summary>
 [IsoId("_LHTy1YG-EeaalK9UbuVGFw")]
+[IsoDisplayName(@"Basket Description")]
 public interface IBasketDescription3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IBasketDescription3 : IIsoComponent
     [IsoId("_LS6l4YG-EeaalK9UbuVGFw")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISINOct2015Identifier> ISIN { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IBasketDescription3 : IIsoComponent
     [IsoId("_LS6l44G-EeaalK9UbuVGFw")]
     [DisplayName("Index")]
     [IsoXmlTag("Indx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument58> Index { get; }
 }

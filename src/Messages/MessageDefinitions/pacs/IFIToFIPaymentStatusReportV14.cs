@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// </summary>
 [IsoId("_R3LABzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("pacs.002.001.14", "FIToFIPmtStsRpt", "urn:iso:std:iso:20022:tech:xsd:pacs.002.001.14")]
+[IsoDisplayName(@"FI To FI Payment Status Report V14")]
 public interface IFIToFIPaymentStatusReportV14 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IFIToFIPaymentStatusReportV14 : IOuterRecord
     /// </summary>
     [DisplayName("Original Group Information And Status")]
     [IsoXmlTag("OrgnlGrpInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalGroupHeader22> OriginalGroupInformationAndStatus { get; }
 
     /// <summary>
@@ -32,6 +34,7 @@ public interface IFIToFIPaymentStatusReportV14 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction161> TransactionInformationAndStatus { get; }
 
     /// <summary>
@@ -39,5 +42,6 @@ public interface IFIToFIPaymentStatusReportV14 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

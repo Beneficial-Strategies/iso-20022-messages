@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information to identify funds order(s).
 /// </summary>
 [IsoId("b315373d-7975-479b-a9fd-5abb96bde549")]
+[IsoDisplayName(@"Message And Business Reference15")]
 public interface IMessageAndBusinessReference15 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface IMessageAndBusinessReference15 : IIsoComponent
     [IsoId("25c43a49-89ae-4e7e-93ba-5226971f52fe")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundOrder12> OrderReference { get; }
 }

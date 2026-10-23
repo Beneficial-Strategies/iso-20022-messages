@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to specify the type margin.
 /// </summary>
 [IsoId("_-axnkKMOEeCojJW5vEuTEQ_533219719")]
+[IsoDisplayName(@"Margin Type 1 Choice")]
 public interface IMarginType1Choice : IIsoChoice { }

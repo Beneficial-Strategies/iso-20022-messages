@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndividualPersonIdentification2C
 /// </summary>
 [IsoId("_6KMwsSGZEeWKAaDJcYGKLw")]
 [IsoXmlTag("IdNb")]
+[IsoDisplayName(@"Identification Number")]
 public interface IIdentificationNumber : IIndividualPersonIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IIdentificationNumber : IIndividualPersonIdentification2Choice,
     [IsoId("_ULIwYyFVEeWgV9SQSyaAog")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

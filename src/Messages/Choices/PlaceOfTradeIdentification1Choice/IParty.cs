@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification1Choic
 /// Party&apos;s location at which the transaction is executed.
 /// </summary>
 [IsoId("_TCfeotp-Ed-ak6NoX_4Aeg_-508773714")]
+[IsoDisplayName(@"Party")]
 public interface IParty : IPlaceOfTradeIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IParty : IPlaceOfTradeIdentification1Choice, IIsoChoiceVariant
     /// Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
     /// </summary>
     [IsoXmlTag("Pty")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier Value { get; }
 }

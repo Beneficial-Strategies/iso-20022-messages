@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFreight3Choic
 /// </summary>
 [IsoId("_VcEcU7v5EeiLRYqS-r-R-A")]
 [IsoXmlTag("Wet")]
+[IsoDisplayName(@"Wet")]
 public interface IWet : IAssetClassCommodityFreight3Choice, IIsoChoiceVariant
 {
     /// <summary>

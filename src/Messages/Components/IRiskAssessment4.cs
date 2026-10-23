@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates to the card issuer the level of risk associated with the transaction.
 /// </summary>
 [IsoId("_rVNPERNoEfC1ZfCQz0xB3g")]
+[IsoDisplayName(@"Risk Assessment4")]
 public interface IRiskAssessment4 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface IRiskAssessment4 : IIsoComponent
     [IsoId("_rcwBkRNoEfC1ZfCQz0xB3g")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> Reason { get; }
 
     /// <summary>
@@ -81,6 +83,7 @@ public interface IRiskAssessment4 : IIsoComponent
     [IsoId("_rcwBlxNoEfC1ZfCQz0xB3g")]
     [DisplayName("Recommendation")]
     [IsoXmlTag("Rcmmndtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRecommendationAction2> Recommendation { get; }
 
     /// <summary>
@@ -89,6 +92,7 @@ public interface IRiskAssessment4 : IIsoComponent
     [IsoId("_ZwQNEkVZEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -97,5 +101,6 @@ public interface IRiskAssessment4 : IIsoComponent
     [IsoId("_ZwQNE0VZEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeLegNotificationIdentificati
 /// <summary>
 /// Unique Transaction Identifier.
 /// </summary>
+[IsoDisplayName(@"Unique Transaction Identifier")]
 public interface IUniqueTransactionIdentifier
     : ITradeLegNotificationIdentification1Choice,
         IIsoChoiceVariant

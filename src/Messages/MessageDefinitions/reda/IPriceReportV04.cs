@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_IOkQsRj3EeKxeog5DTmtgg")]
 [IsoMessage("reda.001.001.04", "PricRpt", "urn:iso:std:iso:20022:tech:xsd:reda.001.001.04")]
+[Description(@"SCOPE||A report provider, for example, a transfer agent, fund accountant or market data provider, sends the PriceReport message to the report recipient, for example, a fund management company, transfer agent, market data provider, regulator or any other interested party to provide the net asset value and price information for financial instruments on specific trade dates and, optionally, to quote price variation information.||USAGE||The PriceReport message is sent by the report provider to the report recipient to: |- report prices for one or several different financial instruments for one or several different trade dates,|- report statistical information about the valuation of a financial instrument,|- inform another party that the quotation of a financial instrument is suspended,|- report prices that are used for other purposes than the execution of investment funds orders.|.")]
+[IsoDisplayName(@"Price Report V")]
 public interface IPriceReportV04 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +38,7 @@ public interface IPriceReportV04 : IOuterRecord
     [IsoId("_IOkQvxj3EeKxeog5DTmtgg")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -60,6 +63,8 @@ public interface IPriceReportV04 : IOuterRecord
     [IsoId("__CwxkBl8EeKxsrht2duUcg")]
     [DisplayName("Price Report Identification")]
     [IsoXmlTag("PricRptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PriceReportIdentification { get; }
 
     /// <summary>
@@ -76,6 +81,8 @@ public interface IPriceReportV04 : IOuterRecord
     [IsoId("_CDo2sBl_EeKxsrht2duUcg")]
     [DisplayName("Cancellation Identification")]
     [IsoXmlTag("CxlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationIdentification { get; }
 
     /// <summary>
@@ -84,6 +91,7 @@ public interface IPriceReportV04 : IOuterRecord
     [IsoId("_IOkQyxj3EeKxeog5DTmtgg")]
     [DisplayName("Price Valuation Details")]
     [IsoXmlTag("PricValtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceValuation4> PriceValuationDetails { get; }
 
     /// <summary>
@@ -92,5 +100,6 @@ public interface IPriceReportV04 : IOuterRecord
     [IsoId("_IOkQzxj3EeKxeog5DTmtgg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

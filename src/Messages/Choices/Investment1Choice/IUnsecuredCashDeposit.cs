@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice;
 /// </summary>
 [IsoId("_8csFMLJUEeaYqc4G3TTwhA")]
 [IsoXmlTag("UscrdCshDpst")]
+[IsoDisplayName(@"Unsecured Cash Deposit")]
 public interface IUnsecuredCashDeposit : IInvestment1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IUnsecuredCashDeposit : IInvestment1Choice, IIsoChoiceVariant
     [IsoId("_H_pLALJVEeaYqc4G3TTwhA")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -34,5 +36,6 @@ public interface IUnsecuredCashDeposit : IInvestment1Choice, IIsoChoiceVariant
     [IsoId("_N0LVcLJVEeaYqc4G3TTwhA")]
     [DisplayName("Counterparty Identification")]
     [IsoXmlTag("CtrPtyId")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier CounterpartyIdentification { get; }
 }

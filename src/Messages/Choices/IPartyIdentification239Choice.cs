@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Unique and unambiguous way to identify an organisation using a choice between a BIC or the name and addres or the country code.
 /// </summary>
 [IsoId("_dT1SEStKEeyOa655cLd-DQ")]
+[IsoDisplayName(@"Party Identification 239 Choice")]
 public interface IPartyIdentification239Choice : IIsoChoice { }

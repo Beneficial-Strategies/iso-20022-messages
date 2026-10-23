@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EUCapitalGainType4Choice;
 
 /// <summary>ISO 20022 code to specify whether capital gain is in the scope of the European directive on taxation of savings income.</summary>
 [IsoId("fac71824-b8c9-44c6-8689-ff3ed21ab36e")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IEUCapitalGainType4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to qualify for incentive or other related programmes.
 /// </summary>
 [IsoId("_NqO3MEU9Eeea-M6VZkEPUw")]
+[IsoDisplayName(@"Special Programme Qualification")]
 public interface ISpecialProgrammeQualification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISpecialProgrammeQualification1 : IIsoComponent
     [IsoId("_hm4y4EU9Eeea-M6VZkEPUw")]
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Programme { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface ISpecialProgrammeQualification1 : IIsoComponent
     [IsoId("_oRYU8EU9Eeea-M6VZkEPUw")]
     [DisplayName("Detail")]
     [IsoXmlTag("Dtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialProgrammeDetails1> Detail { get; }
 }

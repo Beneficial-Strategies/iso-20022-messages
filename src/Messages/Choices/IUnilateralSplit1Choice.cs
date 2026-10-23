@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the matching processing change requested.
 /// </summary>
 [IsoId("_QtogGdp-Ed-ak6NoX_4Aeg_510702003")]
+[IsoDisplayName(@"Unilateral Split 1 Choice")]
 public interface IUnilateralSplit1Choice : IIsoChoice { }

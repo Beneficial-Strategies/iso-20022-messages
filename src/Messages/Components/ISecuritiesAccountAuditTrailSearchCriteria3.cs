@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes search criteria for securities account audit trail query.
 /// </summary>
 [IsoId("_0Ba1cTpzEemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Securities Account Audit Trail Search Criteria")]
 public interface ISecuritiesAccountAuditTrailSearchCriteria3 : IIsoComponent
 {
     /// <summary>

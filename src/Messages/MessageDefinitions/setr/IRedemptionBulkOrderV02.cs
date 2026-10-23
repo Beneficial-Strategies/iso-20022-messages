@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("_p-h38NE7Ed-BzquC8wXy7w_-1554802764")]
 [IsoMessage("setr.001.001.02", "setr.001.001.02", "urn:iso:std:iso:20022:tech:xsd:setr.001.001.02")]
+[Description(@"Scope|The RedemptionBulkOrder message is sent by an instructing party, eg, an investment manager or its authorised representative, to an executing party, eg, a transfer agent. There may be one or more intermediary parties between the instructing party and the executing party. The intermediary party is, for example, an intermediary or a concentrator.|This message is used to instruct the executing party to redeem a financial instrument for two or more accounts.|Usage|The RedemptionBulkOrder message is used to bulk several individual orders into one bulk order. The individual orders come from different instructing parties, ie, account owners, but are the same financial instrument. The RedemptionBulkOrder can result in one single bulk cash settlement or several individual cash settlements.|This message will be typically used by a party collecting orders and bulking these individual orders into one bulk order before sending it to another party.|For a single redemption order, the RedemptionMultipleOrder message, not the RedemptionBulkOrder message, must be used.|If there are redemption orders for different financial instruments but for the same account, then the RedemptionMultipleOrder must be used.")]
+[IsoDisplayName(@"Redemption Bulk Order V")]
 public interface IRedemptionBulkOrderV02 : IOuterRecord
 {
     /// <summary>
@@ -43,6 +45,7 @@ public interface IRedemptionBulkOrderV02 : IOuterRecord
     [IsoId("_p-h389E7Ed-BzquC8wXy7w_-1381034585")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -59,6 +62,9 @@ public interface IRedemptionBulkOrderV02 : IOuterRecord
     [IsoId("_p-h39dE7Ed-BzquC8wXy7w_-1159389506")]
     [DisplayName("Intermediary Details")]
     [IsoXmlTag("IntrmyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary4> IntermediaryDetails { get; }
 
     /// <summary>
@@ -75,5 +81,6 @@ public interface IRedemptionBulkOrderV02 : IOuterRecord
     [IsoId("_p-ro8dE7Ed-BzquC8wXy7w_-684127238")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

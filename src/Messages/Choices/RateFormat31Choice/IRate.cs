@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat31Choice;
 
 /// <summary>Specifies the rate.</summary>
 [IsoId("__Ha5QajtEfCG_LQaXOxwew")]
+[IsoDisplayName(@"Rate")]
 public interface IRate : IRateFormat31Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

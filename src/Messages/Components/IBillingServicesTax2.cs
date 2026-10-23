@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides for regional taxes on the service.
 /// </summary>
 [IsoId("_6RcRcJqlEeGSON8vddiWzQ_-480249725")]
+[IsoDisplayName(@"Billing Services Tax")]
 public interface IBillingServicesTax2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IBillingServicesTax2 : IIsoComponent
     [IsoId("_6RcRcZqlEeGSON8vddiWzQ_-1477322078")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Number { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IBillingServicesTax2 : IIsoComponent
     [IsoId("_6RcRcpqlEeGSON8vddiWzQ_1706733799")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max40Text)]
+    [StringLength(40, MinimumLength = 1)]
     Max40Text? Description { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IBillingServicesTax2 : IIsoComponent
     [IsoId("_6RcRc5qlEeGSON8vddiWzQ_-173571841")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Rate { get; }
 
     /// <summary>

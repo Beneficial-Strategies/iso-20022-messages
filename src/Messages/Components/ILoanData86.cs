@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the transaction.
 /// </summary>
 [IsoId("_mUNDEK0oEemlgIolf65eZg")]
+[IsoDisplayName(@"Loan Data")]
 public interface ILoanData86 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ILoanData86 : IIsoComponent
     [IsoId("_uz06w60oEemlgIolf65eZg")]
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text UniqueTradeIdentifier { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ILoanData86 : IIsoComponent
     [IsoId("_uz06xK0oEemlgIolf65eZg")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EventDate { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface ILoanData86 : IIsoComponent
     [IsoId("_uz06xa0oEemlgIolf65eZg")]
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TerminationDate { get; }
 }

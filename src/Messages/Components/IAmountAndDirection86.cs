@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cash posting where the currency is implied by the context.
 /// </summary>
 [IsoId("_dilJ8FG0EeeqtLmveSCYmA")]
+[IsoDisplayName(@"Amount And Direction")]
 public interface IAmountAndDirection86 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IAmountAndDirection86 : IIsoComponent
     [IsoId("_IXnNwFHEEeeqtLmveSCYmA")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator Sign { get; }
 }

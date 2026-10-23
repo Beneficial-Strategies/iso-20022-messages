@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Hardware security module information, so called EPP for Encrypted PIN Pad.
 /// </summary>
 [IsoId("_jisRQYtMEeSxlKlAGYErFg")]
+[IsoDisplayName(@"ATM Equipment")]
 public interface IATMEquipment3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMEquipment3 : IIsoComponent
     [IsoId("_jvD5UYtMEeSxlKlAGYErFg")]
     [DisplayName("Manufacturer")]
     [IsoXmlTag("Manfctr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Manufacturer { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMEquipment3 : IIsoComponent
     [IsoId("_jvD5U4tMEeSxlKlAGYErFg")]
     [DisplayName("Model")]
     [IsoXmlTag("Mdl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Model { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IATMEquipment3 : IIsoComponent
     [IsoId("_jvD5VYtMEeSxlKlAGYErFg")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Version { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IATMEquipment3 : IIsoComponent
     [IsoId("_jvD5V4tMEeSxlKlAGYErFg")]
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SerialNumber { get; }
 
     /// <summary>
@@ -57,6 +66,8 @@ public interface IATMEquipment3 : IIsoComponent
     [IsoId("_jvD5WYtMEeSxlKlAGYErFg")]
     [DisplayName("Firmware Provider")]
     [IsoXmlTag("FrmwrPrvdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FirmwareProvider { get; }
 
     /// <summary>
@@ -65,6 +76,8 @@ public interface IATMEquipment3 : IIsoComponent
     [IsoId("_jvD5XYtMEeSxlKlAGYErFg")]
     [DisplayName("Firmware Identification")]
     [IsoXmlTag("FrmwrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FirmwareIdentification { get; }
 
     /// <summary>
@@ -73,5 +86,7 @@ public interface IATMEquipment3 : IIsoComponent
     [IsoId("_jvD5X4tMEeSxlKlAGYErFg")]
     [DisplayName("Firmware Version")]
     [IsoXmlTag("FrmwrVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FirmwareVersion { get; }
 }

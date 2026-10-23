@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_ixVXwztbEeGg8InIPRjKog")]
 [IsoMessage("auth.001.001.01", "InfReqOpng", "urn:iso:std:iso:20022:tech:xsd:auth.001.001.01")]
+[Description(@"This message is sent by the authorities (police, customs, tax authorities, enforcement authorities) to a financial institution to request account and other banking and financial information. Requested information can relate to accounts, their signatories and beneficiaries and co-owners as well as movements plus positions on these accounts.||Requests are underpinned by specific legal texts.")]
+[IsoDisplayName(@"Information Request Opening V")]
 public interface IInformationRequestOpeningV01 : IOuterRecord
 {
     /// <summary>
@@ -22,6 +24,8 @@ public interface IInformationRequestOpeningV01 : IOuterRecord
     [IsoId("_MvVY3zteEeGg8InIPRjKog")]
     [DisplayName("Investigation Identification")]
     [IsoXmlTag("InvstgtnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InvestigationIdentification { get; }
 
     /// <summary>
@@ -38,6 +42,7 @@ public interface IInformationRequestOpeningV01 : IOuterRecord
     [IsoId("_UdsRrz2NEeGG64_ngBNdUg")]
     [DisplayName("Confidentiality Status")]
     [IsoXmlTag("CnfdtltySts")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ConfidentialityStatus { get; }
 
     /// <summary>
@@ -70,5 +75,6 @@ public interface IInformationRequestOpeningV01 : IOuterRecord
     [IsoId("_O_AtrzwoEeGUCuI3g5RrVg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

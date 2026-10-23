@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of consent status.
 /// </summary>
 [IsoId("_n--vUTzpEeWeNtT0s2RbkQ")]
+[IsoDisplayName(@"Consent Status 4 Choice")]
 public interface IConsentStatus4Choice : IIsoChoice { }

@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.colr;
     "TrptyCollStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:colr.023.001.01"
 )]
+[Description(@"Scope:|This message is sent by a triparty agent after the receipt of a collateral instruction from its client.||In this message, the Sender is the triparty agent and the Receiver is either the collateral taker or the collateral giver or their account servicer.||Usage:|This message provides valuation results as well as the status of the  proposed collateral movements (cash and securities).")]
+[IsoDisplayName(@"Triparty Collateral Status Advice V")]
 public interface ITripartyCollateralStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -102,6 +104,7 @@ public interface ITripartyCollateralStatusAdviceV01 : IOuterRecord
     [IsoId("_2uaNBSs7EeySlt9bF77XfA")]
     [DisplayName("Securities Movement")]
     [IsoXmlTag("SctiesMvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesMovement8> SecuritiesMovement { get; }
 
     /// <summary>
@@ -110,6 +113,7 @@ public interface ITripartyCollateralStatusAdviceV01 : IOuterRecord
     [IsoId("_2uaNBys7EeySlt9bF77XfA")]
     [DisplayName("Cash Movement")]
     [IsoXmlTag("CshMvmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashMovement7> CashMovement { get; }
 
     /// <summary>
@@ -118,5 +122,6 @@ public interface ITripartyCollateralStatusAdviceV01 : IOuterRecord
     [IsoId("_2uaNCSs7EeySlt9bF77XfA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

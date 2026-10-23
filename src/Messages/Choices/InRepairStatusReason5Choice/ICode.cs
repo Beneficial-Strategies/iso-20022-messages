@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InRepairStatusReason5Choice;
 /// In repair reason expressed as a code.
 /// </summary>
 [IsoId("_P8QicUHqEea8I67lh6qdSQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IInRepairStatusReason5Choice, IIsoChoiceVariant
 {
     /// <summary>

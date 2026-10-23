@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cheque18.
 /// </summary>
 [IsoId("_26nT0TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Cheque18")]
 public interface ICheque18 : IIsoComponent
 {
     /// <summary>

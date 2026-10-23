@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a price report.
 /// </summary>
 [IsoId("_brky0RmCEeKxsrht2duUcg")]
+[IsoDisplayName(@"Price Report")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-08-07.")]
 public interface IPriceReport3 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +19,6 @@ public interface IPriceReport3 : IIsoComponent
     [IsoId("_cAvKhRmCEeKxsrht2duUcg")]
     [DisplayName("Price Valuation Details")]
     [IsoXmlTag("PricValtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceValuation4> PriceValuationDetails { get; }
 }

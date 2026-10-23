@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.
 /// </summary>
 [IsoId("_VN93tdp-Ed-ak6NoX_4Aeg_-1112110934")]
+[IsoDisplayName(@"Receive Information")]
 public interface IReceiveInformation2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IReceiveInformation2 : IIsoComponent
     [IsoId("_VN93ttp-Ed-ak6NoX_4Aeg_-682749671")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge4> ChargeDetails { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IReceiveInformation2 : IIsoComponent
     [IsoId("_VN93t9p-Ed-ak6NoX_4Aeg_1276116650")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax3> TaxDetails { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface IReceiveInformation2 : IIsoComponent
     [IsoId("_VN93udp-Ed-ak6NoX_4Aeg_1074705091")]
     [DisplayName("Physical Transfer Indicator")]
     [IsoXmlTag("PhysTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalTransferIndicator { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Certification request PKCS#10 (Public Key Certificate Standard 10) for creation or renewal of an X.509 certificate.
 /// </summary>
 [IsoId("_ruEwkI4REeW6h7rGyYlyTg")]
+[IsoDisplayName(@"Certification Request")]
 public interface ICertificationRequest1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICertificationRequest1 : IIsoComponent
     [IsoId("_6_1qcI4REeW6h7rGyYlyTg")]
     [DisplayName("Key Identification")]
     [IsoXmlTag("KeyId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? KeyIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface ICertificationRequest1 : IIsoComponent
     [IsoId("_dWxMcI4UEeW6h7rGyYlyTg")]
     [DisplayName("Key Version")]
     [IsoXmlTag("KeyVrsn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? KeyVersion { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingPosition2FormatChoice;
 /// Standard code to specify the processing position.
 /// </summary>
 [IsoId("_Rnv-8dp-Ed-ak6NoX_4Aeg_-520028961")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProcessingPosition2FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

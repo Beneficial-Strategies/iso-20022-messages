@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the level of participation to a shareholders meeting.
 /// </summary>
 [IsoId("_MWKHMV7AEeSjaerr_EM7AQ")]
+[IsoDisplayName(@"Participation")]
 public interface IParticipation4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IParticipation4 : IIsoComponent
     [IsoId("_MyuHY17AEeSjaerr_EM7AQ")]
     [DisplayName("Total Number Of Voting Rights")]
     [IsoXmlTag("TtlNbOfVtngRghts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberOfVotingRights { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IParticipation4 : IIsoComponent
     [IsoId("_MyuHZV7AEeSjaerr_EM7AQ")]
     [DisplayName("Percentage Of Voting Rights")]
     [IsoXmlTag("PctgOfVtngRghts")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? PercentageOfVotingRights { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IParticipation4 : IIsoComponent
     [IsoId("_MyuHaV7AEeSjaerr_EM7AQ")]
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CalculationDate { get; }
 }

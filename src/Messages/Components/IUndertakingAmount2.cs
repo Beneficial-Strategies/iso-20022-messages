@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about an amount.
 /// </summary>
 [IsoId("_95C-gXltEeG7BsjMvd1mEw_-215420241")]
+[IsoDisplayName(@"Undertaking Amount")]
 public interface IUndertakingAmount2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,9 @@ public interface IUndertakingAmount2 : IIsoComponent
     [IsoId("_95C-g3ltEeG7BsjMvd1mEw_-1235765635")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 }

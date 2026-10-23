@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a POI (Point of Interaction) component.
 /// </summary>
 [IsoId("_q_KfcSYBEeym0KcvJF9aDQ")]
+[IsoDisplayName(@"Point Of Interaction Component Identification")]
 public interface IPointOfInteractionComponentIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPointOfInteractionComponentIdentification3 : IIsoComponent
     [IsoId("_rEN-kSYBEeym0KcvJF9aDQ")]
     [DisplayName("Item Number")]
     [IsoXmlTag("ItmNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ItemNumber { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPointOfInteractionComponentIdentification3 : IIsoComponent
     [IsoId("_rEN-kyYBEeym0KcvJF9aDQ")]
     [DisplayName("Provider Identification")]
     [IsoXmlTag("PrvdrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProviderIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPointOfInteractionComponentIdentification3 : IIsoComponent
     [IsoId("_rEN-lSYBEeym0KcvJF9aDQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Identification { get; }
 
     /// <summary>
@@ -41,5 +48,7 @@ public interface IPointOfInteractionComponentIdentification3 : IIsoComponent
     [IsoId("_rEN-lyYBEeym0KcvJF9aDQ")]
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SerialNumber { get; }
 }

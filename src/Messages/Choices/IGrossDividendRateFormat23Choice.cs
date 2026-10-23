@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format to express a gross dividend.
 /// </summary>
 [IsoId("_cj85p5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Gross Dividend Rate Format 23 Choice")]
 public interface IGrossDividendRateFormat23Choice : IIsoChoice { }

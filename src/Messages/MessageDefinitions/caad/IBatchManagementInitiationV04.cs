@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_qYCEEROHEfC1ZfCQz0xB3g")]
 [IsoMessage("caad.001.001.04", "BtchMgmtInitn", "urn:iso:std:iso:20022:tech:xsd:caad.001.001.04")]
+[IsoDisplayName(@"Batch Management Initiation V04")]
 public interface IBatchManagementInitiationV04 : IOuterRecord
 {
     /// <summary>
@@ -95,6 +96,7 @@ public interface IBatchManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Collection Identification List")]
     [IsoXmlTag("ColltnIdList")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max70Text> CollectionIdentificationList { get; }
 
     /// <summary>
@@ -102,6 +104,7 @@ public interface IBatchManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Batch Identification List")]
     [IsoXmlTag("BtchIdList")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max70Text> BatchIdentificationList { get; }
 
     /// <summary>
@@ -186,6 +189,7 @@ public interface IBatchManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProgrammeMode6> Programme { get; }
 
     /// <summary>
@@ -263,6 +267,7 @@ public interface IBatchManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -270,6 +275,7 @@ public interface IBatchManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -277,6 +283,7 @@ public interface IBatchManagementInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

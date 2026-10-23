@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice;
 /// <summary>
 /// Party.
 /// </summary>
+[IsoDisplayName(@"Party")]
 public interface IParty : ITransactionAmendment1Choice, IIsoChoiceVariant
 {
     /// <summary>

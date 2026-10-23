@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Message used to report to a corporate on the actual set up up of the account, related services and mandates.
 /// </summary>
 [IsoId("_Qoao59p-Ed-ak6NoX_4Aeg_1996281064")]
+[IsoDisplayName(@"Account Report")]
 public interface IAccountReport1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IAccountReport1 : IIsoComponent
     [IsoId("_QokZ49p-Ed-ak6NoX_4Aeg_1192047529")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOperationMandate1> Mandate { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Aggregated values and volumes of settlements instructions for a specific type of financial instruments, type of transaction, type of clients, and cash transfers.
 /// </summary>
 [IsoId("_rv5NIY0SEemUAO64Q252gQ")]
+[IsoDisplayName(@"Settlement Data Volume")]
 public interface ISettlementDataVolume2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISettlementDataVolume2 : IIsoComponent
     [IsoId("_r1TRkY0SEemUAO64Q252gQ")]
     [DisplayName("Volume")]
     [IsoXmlTag("Vol")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
     Max20PositiveNumber Volume { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ISettlementDataVolume2 : IIsoComponent
     [IsoId("_r1TRk40SEemUAO64Q252gQ")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.Max20PositiveDecimalNumber)]
     Max20PositiveDecimalNumber Value { get; }
 }

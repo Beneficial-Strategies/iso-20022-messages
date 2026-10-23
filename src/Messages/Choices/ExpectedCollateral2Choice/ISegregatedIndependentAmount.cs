@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExpectedCollateral2Choice;
 /// </summary>
 [IsoId("_-sdWM4LZEeWrrO9HojbPQA")]
 [IsoXmlTag("SgrtdIndpdntAmt")]
+[IsoDisplayName(@"Segregated Independent Amount")]
 public interface ISegregatedIndependentAmount : IExpectedCollateral2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ISegregatedIndependentAmount : IExpectedCollateral2Choice, IIso
     [IsoId("__cEOMYLZEeWrrO9HojbPQA")]
     [DisplayName("Delivery")]
     [IsoXmlTag("Dlvry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralMovement9> Delivery { get; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public interface ISegregatedIndependentAmount : IExpectedCollateral2Choice, IIso
     [IsoId("__cEOM4LZEeWrrO9HojbPQA")]
     [DisplayName("Return")]
     [IsoXmlTag("Rtr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralMovement9> Return { get; }
 }

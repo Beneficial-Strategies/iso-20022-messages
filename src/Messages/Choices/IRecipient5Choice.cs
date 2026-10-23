@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification of a cryptographic asymmetric key.
 /// </summary>
 [IsoId("_0DRU0Wi0EeS87LmvcA55sg")]
+[IsoDisplayName(@"Recipient 5 Choice")]
 public interface IRecipient5Choice : IIsoChoice { }

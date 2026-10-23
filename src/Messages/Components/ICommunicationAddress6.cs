@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication device number or electronic address used for communication.
 /// </summary>
 [IsoId("_IHGxISCBEeWhHbfCMWc1cw")]
+[IsoDisplayName(@"Communication Address")]
 public interface ICommunicationAddress6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICommunicationAddress6 : IIsoComponent
     [IsoId("_Iid3cSCBEeWhHbfCMWc1cw")]
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Email { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICommunicationAddress6 : IIsoComponent
     [IsoId("_Iid3cyCBEeWhHbfCMWc1cw")]
     [DisplayName("Phone")]
     [IsoXmlTag("Phne")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? Phone { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICommunicationAddress6 : IIsoComponent
     [IsoId("_Iid3dSCBEeWhHbfCMWc1cw")]
     [DisplayName("Mobile")]
     [IsoXmlTag("Mob")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? Mobile { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ICommunicationAddress6 : IIsoComponent
     [IsoId("_Iid3dyCBEeWhHbfCMWc1cw")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -57,6 +63,8 @@ public interface ICommunicationAddress6 : IIsoComponent
     [IsoId("_Iid3eSCBEeWhHbfCMWc1cw")]
     [DisplayName("Telex Address")]
     [IsoXmlTag("TlxAdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TelexAddress { get; }
 
     /// <summary>
@@ -65,5 +73,7 @@ public interface ICommunicationAddress6 : IIsoComponent
     [IsoId("_Iid3eyCBEeWhHbfCMWc1cw")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? URLAddress { get; }
 }

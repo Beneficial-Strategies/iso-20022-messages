@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Represents the assignment of a case to a party. Assignment is a step in the overall process of managing a case.
 /// </summary>
 [IsoId("_T9Dpetp-Ed-ak6NoX_4Aeg_588710247")]
+[IsoDisplayName(@"Case Assignment")]
 public interface ICaseAssignment : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICaseAssignment : IIsoComponent
     [IsoId("_T9Dpe9p-Ed-ak6NoX_4Aeg_588710282")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICaseAssignment : IIsoComponent
     [IsoId("_T9NacNp-Ed-ak6NoX_4Aeg_588710299")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier Assigner { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ICaseAssignment : IIsoComponent
     [IsoId("_T9Nacdp-Ed-ak6NoX_4Aeg_588710607")]
     [DisplayName("Assignee")]
     [IsoXmlTag("Assgne")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier Assignee { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface ICaseAssignment : IIsoComponent
     [IsoId("_T9Nactp-Ed-ak6NoX_4Aeg_588710650")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 }

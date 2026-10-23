@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Stored Value Data7.
 /// </summary>
 [IsoId("_zpgJYZLPEe6-zvj9Dw-ctg")]
+[IsoDisplayName(@"Stored Value Data7")]
 public interface IStoredValueData7 : IIsoComponent
 {
     /// <summary>

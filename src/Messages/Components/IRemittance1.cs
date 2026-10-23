@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Remittance1.
 /// </summary>
 [IsoId("_k720LJMsEey8cNcx3imo5Q")]
+[IsoDisplayName(@"Remittance1")]
 public interface IRemittance1 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IRemittance1 : IIsoComponent
     /// </summary>
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max140Text> Unstructured { get; }
 
     /// <summary>
@@ -23,6 +25,7 @@ public interface IRemittance1 : IIsoComponent
     /// </summary>
     [DisplayName("Structured")]
     [IsoXmlTag("Strd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStructuredRemittanceInformation16> Structured { get; }
 
     /// <summary>
@@ -30,5 +33,6 @@ public interface IRemittance1 : IIsoComponent
     /// </summary>
     [DisplayName("Related")]
     [IsoXmlTag("Rltd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation7> Related { get; }
 }

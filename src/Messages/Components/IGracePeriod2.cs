@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Grace period applicable to an instalment plan.
 /// </summary>
 [IsoId("_CPcywZJMEeuuktRxxQZoNQ")]
+[IsoDisplayName(@"Grace Period")]
 public interface IGracePeriod2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IGracePeriod2 : IIsoComponent
     [IsoId("_CWyJ0ZJMEeuuktRxxQZoNQ")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? Time { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IGracePeriod2 : IIsoComponent
     [IsoId("_CWyJ1ZJMEeuuktRxxQZoNQ")]
     [DisplayName("Other Unit Type")]
     [IsoXmlTag("OthrUnitTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherUnitType { get; }
 
     /// <summary>
@@ -41,5 +45,6 @@ public interface IGracePeriod2 : IIsoComponent
     [IsoId("_oMntkJJMEeuuktRxxQZoNQ")]
     [DisplayName("Customer Selected Grace Period")]
     [IsoXmlTag("CstmrSelctdGracePrd")]
+    [IsoSimpleType(IsoSimpleType.boolean)]
     XsdBoolean? CustomerSelectedGracePeriod { get; }
 }

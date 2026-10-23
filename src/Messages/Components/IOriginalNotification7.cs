@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the original notification and to provide the status.
 /// </summary>
 [IsoId("_ZG1Zlx77EeSxevWRRWxNAg")]
+[IsoDisplayName(@"Original Notification")]
 public interface IOriginalNotification7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalNotification7 : IIsoComponent
     [IsoId("_ZYMPMx77EeSxevWRRWxNAg")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IOriginalNotification7 : IIsoComponent
     [IsoId("_ZYMPNR77EeSxevWRRWxNAg")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IOriginalNotification7 : IIsoComponent
     [IsoId("_ZYMPNx77EeSxevWRRWxNAg")]
     [DisplayName("Original Notification Identification")]
     [IsoXmlTag("OrgnlNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalNotificationIdentification { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IOriginalNotification7 : IIsoComponent
     [IsoId("_ZYMPOx77EeSxevWRRWxNAg")]
     [DisplayName("Additional Status Information")]
     [IsoXmlTag("AddtlStsInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalStatusInformation { get; }
 
     /// <summary>
@@ -57,5 +65,6 @@ public interface IOriginalNotification7 : IIsoComponent
     [IsoId("_ZYMPPR77EeSxevWRRWxNAg")]
     [DisplayName("Original Notification Reference")]
     [IsoXmlTag("OrgnlNtfctnRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalNotificationReference5> OriginalNotificationReference { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed information on the original transaction, to which the status report message refers.
 /// </summary>
 [IsoId("_yhnwJ8loEem0vqvvoqYsqQ")]
+[IsoDisplayName(@"Original Payment Instruction")]
 public interface IOriginalPaymentInstruction37 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalPaymentInstruction37 : IIsoComponent
     [IsoId("_ysDeWcloEem0vqvvoqYsqQ")]
     [DisplayName("Reversal Payment Information Identification")]
     [IsoXmlTag("RvslPmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReversalPaymentInformationIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalPaymentInstruction37 : IIsoComponent
     [IsoId("_ysDeW8loEem0vqvvoqYsqQ")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalPaymentInformationIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IOriginalPaymentInstruction37 : IIsoComponent
     [IsoId("_ysDeXcloEem0vqvvoqYsqQ")]
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? OriginalNumberOfTransactions { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IOriginalPaymentInstruction37 : IIsoComponent
     [IsoId("_ysDeX8loEem0vqvvoqYsqQ")]
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? OriginalControlSum { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IOriginalPaymentInstruction37 : IIsoComponent
     [IsoId("_ysDeYcloEem0vqvvoqYsqQ")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
+    [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
     BatchBookingIndicator? BatchBooking { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IOriginalPaymentInstruction37 : IIsoComponent
     [IsoId("_ysDeY8loEem0vqvvoqYsqQ")]
     [DisplayName("Payment Information Reversal")]
     [IsoXmlTag("PmtInfRvsl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PaymentInformationReversal { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IOriginalPaymentInstruction37 : IIsoComponent
     [IsoId("_ysDeZcloEem0vqvvoqYsqQ")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReversalReason9> ReversalReasonInformation { get; }
 
     /// <summary>
@@ -73,5 +83,6 @@ public interface IOriginalPaymentInstruction37 : IIsoComponent
     [IsoId("_ysDeZ8loEem0vqvvoqYsqQ")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction125> TransactionInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusCodeSearch2Choice;
 /// State of a payment instruction at a specified time.
 /// </summary>
 [IsoId("_RGEOM9p-Ed-ak6NoX_4Aeg_396814260")]
+[IsoDisplayName(@"Pending And Final Status")]
 public interface IPendingAndFinalStatus : IPaymentStatusCodeSearch2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status is partially settled.
 /// </summary>
 [IsoId("_RLuxWdp-Ed-ak6NoX_4Aeg_736788368")]
+[IsoDisplayName(@"Partially Settled Status")]
 public interface IPartiallySettledStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPartiallySettledStatus1 : IIsoComponent
     [IsoId("_RL4iUdp-Ed-ak6NoX_4Aeg_608153866")]
     [DisplayName("Extended Reason")]
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedReason { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IPartiallySettledStatus1 : IIsoComponent
     [IsoId("_RL4iU9p-Ed-ak6NoX_4Aeg_1342405646")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

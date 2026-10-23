@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Date Format67Choice.
 /// </summary>
 [IsoId("_XMoEkaAXEe-6zfgb2Rwrlw")]
+[IsoDisplayName(@"Date Format67Choice")]
 public interface IDateFormat67Choice : IIsoChoice { }

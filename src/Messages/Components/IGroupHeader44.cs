@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide further details on the message.
 /// </summary>
 [IsoId("_P9gDotp-Ed-ak6NoX_4Aeg_1780446347")]
+[IsoDisplayName(@"Group Header")]
 public interface IGroupHeader44 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGroupHeader44 : IIsoComponent
     [IsoId("_P9gDo9p-Ed-ak6NoX_4Aeg_1780446408")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IGroupHeader44 : IIsoComponent
     [IsoId("_P9gDpNp-Ed-ak6NoX_4Aeg_1780446500")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>

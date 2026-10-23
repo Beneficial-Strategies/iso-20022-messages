@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References79Choice;
 /// Unambiguous account servicer identification of the intra-position movement confirmation to be cancelled.
 /// </summary>
 [IsoId("_Wkm3h0fGEey6Is2iMqV8fg")]
+[IsoDisplayName(@"Intra Position Movement Confirmation Identification")]
 public interface IIntraPositionMovementConfirmationIdentification
     : IReferences79Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface IIntraPositionMovementConfirmationIdentification
     /// Specifies a character string with a maximum length of 16 characters. It has a pattern that disables the use of characters that is not part of the character set X, that is, that is not a-z A-Z / - ? : ( ) . , ‘ + , and disable the use of slash &quot;/&quot; at the beginning and end of line and double slash &quot;//&quot; within the line.
     /// </summary>
     [IsoXmlTag("IntraPosMvmntConfId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text Value { get; }
 }

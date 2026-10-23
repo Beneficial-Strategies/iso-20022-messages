@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment token information.
 /// </summary>
 [IsoId("_LTwEMWkiEeSTIuB9A-QJ6g")]
+[IsoDisplayName(@"Card Payment Token")]
 public interface ICardPaymentToken2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardPaymentToken2 : IIsoComponent
     [IsoId("_8o4ssGtaEeSKOvNNYJQdoQ")]
     [DisplayName("Token Characteristic")]
     [IsoXmlTag("TknChrtc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TokenCharacteristic { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICardPaymentToken2 : IIsoComponent
     [IsoId("_SZewwGkiEeSTIuB9A-QJ6g")]
     [DisplayName("Token Assurance Level")]
     [IsoXmlTag("TknAssrncLvl")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TokenAssuranceLevel { get; }
 }

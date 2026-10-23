@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to search for system business day information.
 /// </summary>
 [IsoId("_yNYGiZlcEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Business Day Search Criteria")]
 public interface IBusinessDaySearchCriteria2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IBusinessDaySearchCriteria2 : IIsoComponent
     [IsoId("_yVMlw5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("System Date")]
     [IsoXmlTag("SysDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SystemDate { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IBusinessDaySearchCriteria2 : IIsoComponent
     [IsoId("_yVMlxZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("System Identification")]
     [IsoXmlTag("SysId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemIdentification2Choice> SystemIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IBusinessDaySearchCriteria2 : IIsoComponent
     [IsoId("_yVMlx5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("System Currency")]
     [IsoXmlTag("SysCcy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveCurrencyCode> SystemCurrency { get; }
 
     /// <summary>

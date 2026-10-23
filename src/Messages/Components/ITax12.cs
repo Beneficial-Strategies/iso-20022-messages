@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.
 /// </summary>
 [IsoId("_Rvygptp-Ed-ak6NoX_4Aeg_1549201834")]
+[IsoDisplayName(@"Tax")]
 public interface ITax12 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITax12 : IIsoComponent
     [IsoId("_RvygqNp-Ed-ak6NoX_4Aeg_1549201853")]
     [DisplayName("Other Tax Type")]
     [IsoXmlTag("OthrTaxTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OtherTaxType { get; }
 
     /// <summary>

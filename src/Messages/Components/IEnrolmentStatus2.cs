@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the status of a creditor enrolment.
 /// </summary>
 [IsoId("_UalrzeH7Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Enrolment Status")]
 public interface IEnrolmentStatus2 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface IEnrolmentStatus2 : IIsoComponent
     [IsoId("_Ub7vneH7Eeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

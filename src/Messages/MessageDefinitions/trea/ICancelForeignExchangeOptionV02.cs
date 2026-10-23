@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.trea;
 /// </summary>
 [IsoId("_KP1cKNE8Ed-BzquC8wXy7w_-352671200")]
 [IsoMessage("trea.011.001.02", "CclFXOptnV02", "urn:iso:std:iso:20022:tech:xsd:trea.011.001.02")]
+[Description(@"Scope|The CancelForeignExchangeOption message is sent by a participant to a central system or to a counterparty to notify the cancellation of a foreign currency option contract.|Usage|The message will contain a Related Reference to link it to the previously sent notification. It may contain a reason for cancellation.|This message is only suitable for Simple (i.e. not Barrier) Vanilla (i.e. not Binary, Digital, Notouch) Foreign Exchange Options.")]
+[IsoDisplayName(@"Cancel Foreign Exchange Option V")]
 public interface ICancelForeignExchangeOptionV02 : IOuterRecord
 {
     /// <summary>

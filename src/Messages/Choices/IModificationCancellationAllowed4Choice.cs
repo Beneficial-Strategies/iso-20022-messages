@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the modification cancellation information.
 /// </summary>
 [IsoId("_421HATtFEeWRTLSN0i0tng")]
+[IsoDisplayName(@"Modification Cancellation Allowed 4 Choice")]
 public interface IModificationCancellationAllowed4Choice : IIsoChoice { }

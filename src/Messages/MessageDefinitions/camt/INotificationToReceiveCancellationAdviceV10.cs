@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.camt;
     "NtfctnToRcvCxlAdvc",
     "urn:iso:std:iso:20022:tech:xsd:camt.058.001.10"
 )]
+[IsoDisplayName(@"Notification To Receive Cancellation Advice V10")]
 public interface INotificationToReceiveCancellationAdviceV10 : IOuterRecord
 {
     /// <summary>
@@ -43,5 +44,6 @@ public interface INotificationToReceiveCancellationAdviceV10 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

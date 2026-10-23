@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Business Application Header8.
 /// </summary>
 [IsoId("_2aMHUTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Business Application Header8")]
 public interface IBusinessApplicationHeader8 : IIsoComponent
 {
     /// <summary>

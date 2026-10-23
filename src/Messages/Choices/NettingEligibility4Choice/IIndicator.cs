@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NettingEligibility4Choice;
 /// Specifies whether the settlement transaction is eligible for netting.
 /// </summary>
 [IsoId("_1CkuITqIEeWVrPy0StzzSg")]
+[IsoDisplayName(@"Indicator")]
 public interface IIndicator : INettingEligibility4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIndicator : INettingEligibility4Choice, IIsoChoiceVariant
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Value of the public component of a RSA key.
 /// </summary>
 [IsoId("_uH2O4Y4SEeW6h7rGyYlyTg")]
+[IsoDisplayName(@"Public RSA Key")]
 public interface IPublicRSAKey2 : IIsoComponent
 {
     /// <summary>

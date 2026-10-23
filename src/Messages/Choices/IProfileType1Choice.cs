@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the profile type.
 /// </summary>
 [IsoId("_tXgbACDNEeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Profile Type 1 Choice")]
 public interface IProfileType1Choice : IIsoChoice { }

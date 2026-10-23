@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Plan that allows investors to schedule periodical investments or divestments, according to pre-defined criteria.
 /// </summary>
 [IsoId("_QMQRUtp-Ed-ak6NoX_4Aeg_320174351")]
+[IsoDisplayName(@"Investment Plan")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IInvestmentPlan5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,8 @@ public interface IInvestmentPlan5 : IIsoComponent
     [IsoId("_QMQRVNp-Ed-ak6NoX_4Aeg_321094383")]
     [DisplayName("Extended Frequency")]
     [IsoXmlTag("XtndedFrqcy")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedFrequency { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IInvestmentPlan5 : IIsoComponent
     [IsoId("_QMQRVdp-Ed-ak6NoX_4Aeg_321094418")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate StartDate { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IInvestmentPlan5 : IIsoComponent
     [IsoId("_QMQRVtp-Ed-ak6NoX_4Aeg_321094460")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EndDate { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface IInvestmentPlan5 : IIsoComponent
     [IsoId("_QMQRWNp-Ed-ak6NoX_4Aeg_321094876")]
     [DisplayName("Gross Amount Indicator")]
     [IsoXmlTag("GrssAmtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? GrossAmountIndicator { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IInvestmentPlan5 : IIsoComponent
     [IsoId("_QMaCUNp-Ed-ak6NoX_4Aeg_321094946")]
     [DisplayName("Initial Number Of Instalment")]
     [IsoXmlTag("InitlNbOfInstlmt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? InitialNumberOfInstalment { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IInvestmentPlan5 : IIsoComponent
     [IsoId("_QMaCUdp-Ed-ak6NoX_4Aeg_321095031")]
     [DisplayName("Total Number Of Instalment")]
     [IsoXmlTag("TtlNbOfInstlmt")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberOfInstalment { get; }
 
     /// <summary>
@@ -97,6 +106,9 @@ public interface IInvestmentPlan5 : IIsoComponent
     [IsoId("_QMaCU9p-Ed-ak6NoX_4Aeg_321095341")]
     [DisplayName("Security Details")]
     [IsoXmlTag("SctyDtls")]
+    [MinLength(1)]
+    [MaxLength(50)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRepartition1> SecurityDetails { get; }
 
     /// <summary>
@@ -105,5 +117,8 @@ public interface IInvestmentPlan5 : IIsoComponent
     [IsoId("_QMaCVNp-Ed-ak6NoX_4Aeg_321095452")]
     [DisplayName("Modified Cash Settlement")]
     [IsoXmlTag("ModfdCshSttlm")]
+    [MinLength(0)]
+    [MaxLength(8)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundCashSettlementInformation4> ModifiedCashSettlement { get; }
 }

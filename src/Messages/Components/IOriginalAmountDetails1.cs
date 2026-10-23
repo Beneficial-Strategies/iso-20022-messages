@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// The OriginalAmountDetails contains all amount information in the acceptor currency code necessary to manage currency conversion in the cardholder currency code.
 /// </summary>
 [IsoId("_H_Dk4K_TEeaepNKtQMrGAQ")]
+[IsoDisplayName(@"Original Amount Details")]
 public interface IOriginalAmountDetails1 : IIsoComponent
 {
     /// <summary>

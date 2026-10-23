@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatusChoice;
 /// If yes, it means the cancellation of the assignment is confirmed.|If no, it means the cancellation of the assignment is rejected and the investigation process will continue.
 /// </summary>
 [IsoId("_UuYYt9p-Ed-ak6NoX_4Aeg_760151836")]
+[IsoDisplayName(@"Assignment Cancellation Confirmation")]
 public interface IAssignmentCancellationConfirmation : IInvestigationStatusChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IAssignmentCancellationConfirmation : IInvestigationStatusChoic
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("AssgnmtCxlConf")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Login Request7.
 /// </summary>
 [IsoId("_ovFdsZ9yEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Login Request7")]
 public interface ILoginRequest7 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ILoginRequest7 : IIsoComponent
     /// </summary>
     [DisplayName("Sale Software")]
     [IsoXmlTag("SaleSftwr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent17> SaleSoftware { get; }
 
     /// <summary>

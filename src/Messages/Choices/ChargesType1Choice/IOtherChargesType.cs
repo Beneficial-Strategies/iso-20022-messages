@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargesType1Choice;
 /// Specifies the type of charge by means of a free text.
 /// </summary>
 [IsoId("_9WlysBrdEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Other Charges Type")]
 public interface IOtherChargesType : IChargesType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOtherChargesType : IChargesType1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("OthrChrgsTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

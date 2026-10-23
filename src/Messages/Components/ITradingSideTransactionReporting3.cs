@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Trading Side Transaction Reporting3.
 /// </summary>
 [IsoId("_FuYiqUjrEe-KhcStGV4xTg")]
+[IsoDisplayName(@"Trading Side Transaction Reporting3")]
 public interface ITradingSideTransactionReporting3 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface ITradingSideTransactionReporting3 : IIsoComponent
     /// </summary>
     [DisplayName("Trading Side Unique Transaction Identifier")]
     [IsoXmlTag("TradgSdUnqTxIdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUniqueTransactionIdentifier3> TradingSideUniqueTransactionIdentifier { get; }
 }

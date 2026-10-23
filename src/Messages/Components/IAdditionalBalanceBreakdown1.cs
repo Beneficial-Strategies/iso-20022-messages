@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Subbalances providing additional information on a specific position but that is not to be accounted for in the building of the aggregate balance, for example, registered.
 /// </summary>
 [IsoId("_kEi5Iag6EfCXwLUUylXgrQ")]
+[IsoDisplayName(@"Additional Balance Breakdown1")]
 public interface IAdditionalBalanceBreakdown1 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IAdditionalBalanceBreakdown1 : IIsoComponent
     [IsoId("_kHopjag6EfCXwLUUylXgrQ")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IQuantityBreakdown54> QuantityBreakdown { get; }
 }

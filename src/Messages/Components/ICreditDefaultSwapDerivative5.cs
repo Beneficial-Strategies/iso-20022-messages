@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Credit default swap derivative specific for reporting derivatives on a credit default swap index.
 /// </summary>
 [IsoId("_xS0KYSe0Eei12pGEsJIAeQ")]
+[IsoDisplayName(@"Credit Default Swap Derivative")]
 public interface ICreditDefaultSwapDerivative5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICreditDefaultSwapDerivative5 : IIsoComponent
     [IsoId("__ZOEYie0Eei12pGEsJIAeQ")]
     [DisplayName("Underlying Credit Default Swap Identification")]
     [IsoXmlTag("UndrlygCdtDfltSwpId")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier? UnderlyingCreditDefaultSwapIdentification { get; }
 
     /// <summary>

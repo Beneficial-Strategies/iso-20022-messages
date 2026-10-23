@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities transaction report.
 /// </summary>
 [IsoId("_XM1TF526Eeuwmdq0KtnICg")]
+[IsoDisplayName(@"Securities Transaction Report")]
 public interface ISecuritiesTransactionReport6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesTransactionReport6 : IIsoComponent
     [IsoId("_XjVHgZ26Eeuwmdq0KtnICg")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text TransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ISecuritiesTransactionReport6 : IIsoComponent
     [IsoId("_XjVHg526Eeuwmdq0KtnICg")]
     [DisplayName("Executing Party")]
     [IsoXmlTag("ExctgPty")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier ExecutingParty { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ISecuritiesTransactionReport6 : IIsoComponent
     [IsoId("_XjVHhZ26Eeuwmdq0KtnICg")]
     [DisplayName("Investment Party Indicator")]
     [IsoXmlTag("InvstmtPtyInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator InvestmentPartyIndicator { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ISecuritiesTransactionReport6 : IIsoComponent
     [IsoId("_XjVHjZ26Eeuwmdq0KtnICg")]
     [DisplayName("Submitting Party")]
     [IsoXmlTag("SubmitgPty")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier SubmittingParty { get; }
 
     /// <summary>
@@ -122,5 +128,6 @@ public interface ISecuritiesTransactionReport6 : IIsoComponent
     [IsoId("_XjVHo526Eeuwmdq0KtnICg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

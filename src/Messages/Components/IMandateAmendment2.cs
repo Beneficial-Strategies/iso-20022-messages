@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the mandate to be amended and gives details of the new mandate.
 /// </summary>
 [IsoId("_tlOvAVkyEeGeoaLUQk__nA_-1635096845")]
+[IsoDisplayName(@"Mandate Amendment")]
 public interface IMandateAmendment2 : IIsoComponent
 {
     /// <summary>

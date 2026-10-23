@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus6Choice;
 /// Reason provided for the status.
 /// </summary>
 [IsoId("_mdrUkTzpEeWeNtT0s2RbkQ")]
+[IsoDisplayName(@"Consented")]
 public interface IConsented : IResponseStatus6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ISAPortfolio4Choice;
 /// </summary>
 [IsoId("_1AA5AbNBEeewUI7-Tnew9A")]
 [IsoXmlTag("ISA")]
+[IsoDisplayName(@"ISA")]
 public interface IISA : IISAPortfolio4Choice, IIsoChoiceVariant
 {
     /// <summary>

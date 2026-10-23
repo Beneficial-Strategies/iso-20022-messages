@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EntryStatus1Choice;
 /// Entry status, in a coded form.
 /// </summary>
 [IsoId("_H_H9sIaoEeeUws0ZryHQ2w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IEntryStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

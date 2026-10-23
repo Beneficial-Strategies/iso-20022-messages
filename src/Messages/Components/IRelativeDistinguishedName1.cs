@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Relative distinguished name defined by X.500 and X.509.
 /// </summary>
 [IsoId("_Sw--ugEcEeCQm6a_G2yO_w_-2086938163")]
+[IsoDisplayName(@"Relative Distinguished Name")]
 public interface IRelativeDistinguishedName1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IRelativeDistinguishedName1 : IIsoComponent
     [IsoId("_Sw--vAEcEeCQm6a_G2yO_w_-1820514760")]
     [DisplayName("Attribute Value")]
     [IsoXmlTag("AttrVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text AttributeValue { get; }
 }

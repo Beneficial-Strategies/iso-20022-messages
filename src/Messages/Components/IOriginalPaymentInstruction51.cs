@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original Payment Instruction51.
 /// </summary>
 [IsoId("_-JN3QTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Original Payment Instruction51")]
 public interface IOriginalPaymentInstruction51 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface IOriginalPaymentInstruction51 : IIsoComponent
     /// </summary>
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusReasonInformation14> StatusReasonInformation { get; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public interface IOriginalPaymentInstruction51 : IIsoComponent
     /// </summary>
     [DisplayName("Number Of Transactions Per Status")]
     [IsoXmlTag("NbOfTxsPerSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INumberOfTransactionsPerStatus5> NumberOfTransactionsPerStatus { get; }
 
     /// <summary>
@@ -58,5 +61,6 @@ public interface IOriginalPaymentInstruction51 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction160> TransactionInformationAndStatus { get; }
 }

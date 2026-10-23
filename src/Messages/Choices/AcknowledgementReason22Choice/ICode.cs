@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementReason22Choice;
 /// Specifies additional information about the processed instruction.
 /// </summary>
 [IsoId("_6QE5i5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAcknowledgementReason22Choice, IIsoChoiceVariant
 {
     /// <summary>

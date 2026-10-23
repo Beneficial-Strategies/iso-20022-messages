@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IncentivePremiumType2Choice;
 /// </summary>
 [IsoId("_vMYu8_NBEeqRfth943bvEA")]
 [IsoXmlTag("PerVote")]
+[IsoDisplayName(@"Per Vote")]
 public interface IPerVote : IIncentivePremiumType2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,6 @@ public interface IPerVote : IIncentivePremiumType2Choice, IIsoChoiceVariant
     [IsoId("_n-JmoPNBEeqRfth943bvEA")]
     [DisplayName("Vote Quantity")]
     [IsoXmlTag("VoteQty")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number VoteQuantity { get; }
 }

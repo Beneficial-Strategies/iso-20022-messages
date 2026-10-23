@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Account10Choice;
 /// <summary>
 /// Tax Account.
 /// </summary>
+[IsoDisplayName(@"Tax Account")]
 public interface ITaxAccount : IAccount10Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("55e2ca53-a1ac-4cc7-864b-523be1261957")]
 [IsoMessage("setr.004.001.05", "RedOrdr", "urn:iso:std:iso:20022:tech:xsd:setr.004.001.05")]
+[Description(@"Scope|The RedemptionOrder message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to instruct the redemption of one or more financial instruments for one investment fund account.|Usage|The RedemptionOrder message is used to instruct single redemption orders, that is, a message containing one order for one financial instrument and related to one investment account. The RedemptionOrder message may also be used for multiple orders, that is, a message containing several orders related to the same investment account for different financial instruments.|For a single redemption order, the RedemptionOrder message, not the RedemptionBulkOrder message, must be used.|If there are redemption orders for the same financial instrument but for different accounts that are to be communicated in a single message, then the RedemptionBulkOrder message must be used.")]
+[IsoDisplayName(@"Redemption Order V05")]
 public interface IRedemptionOrderV05 : IOuterRecord
 {
     /// <summary>
@@ -38,6 +40,7 @@ public interface IRedemptionOrderV05 : IOuterRecord
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference10> PreviousReference { get; }
 
     /// <summary>
@@ -59,5 +62,6 @@ public interface IRedemptionOrderV05 : IOuterRecord
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

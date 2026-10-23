@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a metal derivative of type non-precious.
 /// </summary>
 [IsoId("_NogpVA2rEeW72qLtWESimw")]
+[IsoDisplayName(@"Metal Commodity Non Precious")]
 public interface IMetalCommodityNonPrecious1 : IIsoComponent
 {
     /// <summary>

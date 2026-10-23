@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_24xMkOR7Ee-NFYIkYc90gw")]
 [IsoMessage("camt.114.001.01", "CshWdrwlReq", "urn:iso:std:iso:20022:tech:xsd:camt.114.001.01")]
+[Description(@"The CashWithdrawalRequest message is sent by a cash receiver to a a cash sender to request that cash is withdrawn from an account.")]
+[IsoDisplayName(@"Cash Withdrawal Request V01")]
 public interface ICashWithdrawalRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -27,6 +29,8 @@ public interface ICashWithdrawalRequestV01 : IOuterRecord
     [IsoId("_U5yJI-R8Ee-NFYIkYc90gw")]
     [DisplayName("Cash Withdrawal Request")]
     [IsoXmlTag("CshWdrwlReq")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashWithdrawalRequest1> CashWithdrawalRequest { get; }
 
     /// <summary>
@@ -35,5 +39,6 @@ public interface ICashWithdrawalRequestV01 : IOuterRecord
     [IsoId("_U5yJJOR8Ee-NFYIkYc90gw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

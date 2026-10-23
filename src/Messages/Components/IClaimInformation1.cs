@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information provided to claim funds
 /// </summary>
 [IsoId("_jh2RQBcTEeit0dtP9bTmEg")]
+[IsoDisplayName(@"Claim Information")]
 public interface IClaimInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IClaimInformation1 : IIsoComponent
     [IsoId("_yZs2UBcTEeit0dtP9bTmEg")]
     [DisplayName("Claim Credentials")]
     [IsoXmlTag("ClmCrdntls")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? ClaimCredentials { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IClaimInformation1 : IIsoComponent
     [IsoId("_65wy4BcTEeit0dtP9bTmEg")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Assigner { get; }
 }

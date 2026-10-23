@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example, dividend option or valuation currency.
 /// </summary>
 [IsoId("_-tqH8dANEeuSBa1PsnseFg")]
+[IsoDisplayName(@"Security Identification")]
 public interface ISecurityIdentification41 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ISecurityIdentification41 : IIsoComponent
     [IsoId("__DHak9ANEeuSBa1PsnseFg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ISecurityIdentification41 : IIsoComponent
     [IsoId("__DHaldANEeuSBa1PsnseFg")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ShortName { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ISecurityIdentification41 : IIsoComponent
     [IsoId("__DHal9ANEeuSBa1PsnseFg")]
     [DisplayName("Class Type")]
     [IsoXmlTag("ClssTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClassType { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface ISecurityIdentification41 : IIsoComponent
     [IsoId("__DHamdANEeuSBa1PsnseFg")]
     [DisplayName("Umbrella Name")]
     [IsoXmlTag("UmbrllNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? UmbrellaName { get; }
 
     /// <summary>
@@ -57,6 +66,7 @@ public interface ISecurityIdentification41 : IIsoComponent
     [IsoId("__DHam9ANEeuSBa1PsnseFg")]
     [DisplayName("New Umbrella")]
     [IsoXmlTag("NewUmbrll")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NewUmbrella { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface ISecurityIdentification41 : IIsoComponent
     [IsoId("__DHaqdANEeuSBa1PsnseFg")]
     [DisplayName("Registered Distribution Country")]
     [IsoXmlTag("RegdDstrbtnCtry")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<CountryCode> RegisteredDistributionCountry { get; }
 
     /// <summary>
@@ -121,6 +132,8 @@ public interface ISecurityIdentification41 : IIsoComponent
     [IsoId("__DHasdANEeuSBa1PsnseFg")]
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? ProductCategory { get; }
 
     /// <summary>
@@ -130,6 +143,8 @@ public interface ISecurityIdentification41 : IIsoComponent
     [IsoId("__DHas9ANEeuSBa1PsnseFg")]
     [DisplayName("Product Category Germany")]
     [IsoXmlTag("PdctCtgyDE")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? ProductCategoryGermany { get; }
 
     /// <summary>
@@ -155,6 +170,7 @@ public interface ISecurityIdentification41 : IIsoComponent
     [IsoId("__DHaudANEeuSBa1PsnseFg")]
     [DisplayName("Leveraged Or Contigent Liability")]
     [IsoXmlTag("LvrgdOrCntgntLblty")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LeveragedOrContigentLiability { get; }
 
     /// <summary>
@@ -163,6 +179,7 @@ public interface ISecurityIdentification41 : IIsoComponent
     [IsoId("__DHau9ANEeuSBa1PsnseFg")]
     [DisplayName("No Retrocession Indicator")]
     [IsoXmlTag("NoRtrcssnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NoRetrocessionIndicator { get; }
 
     /// <summary>
@@ -179,5 +196,6 @@ public interface ISecurityIdentification41 : IIsoComponent
     [IsoId("__DHav9ANEeuSBa1PsnseFg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

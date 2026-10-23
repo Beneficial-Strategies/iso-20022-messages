@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification116Choice;
 /// Nation with its own government, occupying a particular territory.
 /// </summary>
 [IsoId("_GnHIo5EpEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Country")]
 public interface ICountry : IPartyIdentification116Choice, IIsoChoiceVariant
 {
     /// <summary>

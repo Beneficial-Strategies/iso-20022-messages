@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_ZtUJstEvEd-BzquC8wXy7w_-1004257172")]
 [IsoMessage("reda.001.001.02", "reda.001.001.02", "urn:iso:std:iso:20022:tech:xsd:reda.001.001.02")]
+[Description(@"Scope|The PriceReport message is sent by a report provider, eg, a fund accountant, transfer agent, market data provider, or any other interested party, to a report user, eg, a fund management company, a transfer agent, market data provider, regulator or any other interested party.|This message is used to provide net asset value and price information for financial instruments on given trade dates and, optionally, to quote price variation information.|Usage|The PriceReport message can be used to:|- report prices for one or several different financial instruments for one or several different trade dates,|- report statistical information about the valuation of a financial instrument,|- inform another party that the quotation of a financial instrument is suspended,|- report prices that are used for other purposes than the execution of investment funds orders.")]
+[IsoDisplayName(@"Price Report V")]
 public interface IPriceReportV02 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +38,7 @@ public interface IPriceReportV02 : IOuterRecord
     [IsoId("_ZtUJtNEvEd-BzquC8wXy7w_1511536226")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>
@@ -52,6 +55,7 @@ public interface IPriceReportV02 : IOuterRecord
     [IsoId("_ZtUJttEvEd-BzquC8wXy7w_-158313846")]
     [DisplayName("Price Valuation Details")]
     [IsoXmlTag("PricValtnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPriceValuation2> PriceValuationDetails { get; }
 
     /// <summary>
@@ -60,5 +64,6 @@ public interface IPriceReportV02 : IOuterRecord
     [IsoId("_ZtUJt9EvEd-BzquC8wXy7w_1630736372")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

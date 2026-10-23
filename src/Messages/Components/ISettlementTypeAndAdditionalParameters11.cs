@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides transaction type and identification information.
 /// </summary>
 [IsoId("_nthO8TtAEeWRTLSN0i0tng")]
+[IsoDisplayName(@"Settlement Type And Additional Parameters")]
 public interface ISettlementTypeAndAdditionalParameters11 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ISettlementTypeAndAdditionalParameters11 : IIsoComponent
     [IsoId("_oOspfztAEeWRTLSN0i0tng")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommonIdentification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ISettlementTypeAndAdditionalParameters11 : IIsoComponent
     [IsoId("_oOsphztAEeWRTLSN0i0tng")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CorporateActionEventIdentification { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ISettlementTypeAndAdditionalParameters11 : IIsoComponent
     [IsoId("_oOspjztAEeWRTLSN0i0tng")]
     [DisplayName("Reconciliation Indicator")]
     [IsoXmlTag("RcncltnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ReconciliationIndicator { get; }
 
     /// <summary>
@@ -57,6 +63,8 @@ public interface ISettlementTypeAndAdditionalParameters11 : IIsoComponent
     [IsoId("_oOsplztAEeWRTLSN0i0tng")]
     [DisplayName("Client Collateral Instruction Identification")]
     [IsoXmlTag("ClntCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientCollateralInstructionIdentification { get; }
 
     /// <summary>
@@ -65,6 +73,8 @@ public interface ISettlementTypeAndAdditionalParameters11 : IIsoComponent
     [IsoId("_oOspmTtAEeWRTLSN0i0tng")]
     [DisplayName("Client Collateral Transaction Identification")]
     [IsoXmlTag("ClntCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -73,6 +83,8 @@ public interface ISettlementTypeAndAdditionalParameters11 : IIsoComponent
     [IsoId("_oOspmztAEeWRTLSN0i0tng")]
     [DisplayName("Triparty Agent Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtCollTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripartyAgentCollateralTransactionIdentification { get; }
 
     /// <summary>
@@ -81,5 +93,7 @@ public interface ISettlementTypeAndAdditionalParameters11 : IIsoComponent
     [IsoId("_oOspnTtAEeWRTLSN0i0tng")]
     [DisplayName("Triparty Collateral Instruction Identification")]
     [IsoXmlTag("TrptyCollInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TripartyCollateralInstructionIdentification { get; }
 }

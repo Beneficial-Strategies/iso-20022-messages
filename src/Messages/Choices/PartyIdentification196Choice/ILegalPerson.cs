@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification196Choice;
 /// </summary>
 [IsoId("_8gnOcDtnEemIf7eyjCwinw")]
 [IsoXmlTag("LglPrsn")]
+[IsoDisplayName(@"Legal Person")]
 public interface ILegalPerson : IPartyIdentification196Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface ILegalPerson : IPartyIdentification196Choice, IIsoChoiceVariant
     [IsoId("_GXuoEDtpEemIf7eyjCwinw")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 
     /// <summary>
@@ -50,6 +53,7 @@ public interface ILegalPerson : IPartyIdentification196Choice, IIsoChoiceVariant
     [IsoId("_ePTTEIk6EemZteIrPMIV3g")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
+    [IsoSimpleType(IsoSimpleType.ISICIdentifier)]
     ISICIdentifier? ActivityIndicator { get; }
 
     /// <summary>

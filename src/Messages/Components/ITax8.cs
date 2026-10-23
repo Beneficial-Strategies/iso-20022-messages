@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax related to an investment fund order.
 /// </summary>
 [IsoId("_VSJNFNp-Ed-ak6NoX_4Aeg_611903999")]
+[IsoDisplayName(@"Tax")]
 public interface ITax8 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ITax8 : IIsoComponent
     [IsoId("_VSJNF9p-Ed-ak6NoX_4Aeg_611904051")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>

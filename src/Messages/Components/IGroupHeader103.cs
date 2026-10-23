@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics shared by all individual cheques included in the message.
 /// </summary>
 [IsoId("_cY2s8btmEeq_cfXrH83Rcw")]
+[IsoDisplayName(@"Group Header")]
 public interface IGroupHeader103 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGroupHeader103 : IIsoComponent
     [IsoId("_cZmT07tmEeq_cfXrH83Rcw")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IGroupHeader103 : IIsoComponent
     [IsoId("_cZmT1btmEeq_cfXrH83Rcw")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IGroupHeader103 : IIsoComponent
     [IsoId("_cZmT27tmEeq_cfXrH83Rcw")]
     [DisplayName("Number Of Cheques")]
     [IsoXmlTag("NbOfChqs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText NumberOfCheques { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface IGroupHeader103 : IIsoComponent
     [IsoId("_cZmT3btmEeq_cfXrH83Rcw")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 }

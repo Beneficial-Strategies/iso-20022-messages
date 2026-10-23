@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice;
 /// </summary>
 [IsoId("_0_ysALLnEeavNMum-T1eEA")]
 [IsoXmlTag("OutrghtInvstmt")]
+[IsoDisplayName(@"Outright Investment")]
 public interface IOutrightInvestment : IInvestment1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IOutrightInvestment : IInvestment1Choice, IIsoChoiceVariant
     [IsoId("_RK0CoK_7EeaE9YROwd69hA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier Identification { get; }
 
     /// <summary>

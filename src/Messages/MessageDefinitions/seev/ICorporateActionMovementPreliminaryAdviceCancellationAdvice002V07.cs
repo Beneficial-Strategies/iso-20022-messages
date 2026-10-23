@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.seev;
     "CorpActnMvmntPrlimryAdvcCxlAdvc",
     "urn:iso:std:iso:20022:tech:xsd:seev.044.002.07"
 )]
+[Description(@"Scope|An account servicer sends the CorporateActionMovementPreliminaryAdviceCancellationAdvice message to an account owner or its designated agent to cancel a previously announced CorporateActionMovementPreliminaryAdvice.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),|using the relevant elements in the business application header (BAH).")]
+[IsoDisplayName(@"Corporate Action Movement Preliminary Advice Cancellation Advice 002 V")]
 public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V07 : IOuterRecord
 {
     /// <summary>
@@ -63,6 +65,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V
     [IsoId("_u3NnfZwuEeazcsnODTksnQ")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification104Choice> IssuerAgent { get; }
 
     /// <summary>
@@ -71,6 +74,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V
     [IsoId("_u3Nnf5wuEeazcsnODTksnQ")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification104Choice> PayingAgent { get; }
 
     /// <summary>
@@ -79,6 +83,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V
     [IsoId("_u3NngZwuEeazcsnODTksnQ")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification104Choice> SubPayingAgent { get; }
 
     /// <summary>
@@ -95,6 +100,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V
     [IsoId("_u3NnhZwuEeazcsnODTksnQ")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification104Choice> ResellingAgent { get; }
 
     /// <summary>
@@ -119,6 +125,7 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V
     [IsoId("_u3Nni5wuEeazcsnODTksnQ")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification104Choice> SolicitationAgent { get; }
 
     /// <summary>
@@ -135,5 +142,6 @@ public interface ICorporateActionMovementPreliminaryAdviceCancellationAdvice002V
     [IsoId("_u3Nnj5wuEeazcsnODTksnQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

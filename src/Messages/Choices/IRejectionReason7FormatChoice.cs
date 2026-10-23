@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the reason of a rejection cancellation request.
 /// </summary>
 [IsoId("_Rofl2Np-Ed-ak6NoX_4Aeg_-1503733328")]
+[IsoDisplayName(@"Rejection Reason 7 Format Choice")]
 public interface IRejectionReason7FormatChoice : IIsoChoice { }

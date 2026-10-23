@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a financial institution.
 /// </summary>
 [IsoId("_56x2kUmwEeaw890XtoVB-Q")]
+[IsoDisplayName(@"Financial Institution Identification")]
 public interface IFinancialInstitutionIdentification10 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IFinancialInstitutionIdentification10 : IIsoComponent
     [IsoId("_D6-JIUmxEeaw890XtoVB-Q")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 }

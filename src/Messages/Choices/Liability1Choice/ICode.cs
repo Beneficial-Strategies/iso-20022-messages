@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Liability1Choice;
 /// Liability expressed as a code.
 /// </summary>
 [IsoId("_gHJNoCDMEeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ILiability1Choice, IIsoChoiceVariant
 {
     /// <summary>

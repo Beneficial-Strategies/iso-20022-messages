@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressItem1Choice;
 /// </summary>
 [IsoId("_u_O2MKswEeayv9XxdmMwKQ")]
 [IsoXmlTag("Strtgy")]
+[IsoDisplayName(@"Strategy")]
 public interface IStrategy : IStressItem1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IStrategy : IStressItem1Choice, IIsoChoiceVariant
     [IsoId("_y-9zcKs2Eeayv9XxdmMwKQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

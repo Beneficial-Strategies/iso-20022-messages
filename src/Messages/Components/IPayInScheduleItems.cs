@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.
 /// </summary>
 [IsoId("_SU5Y2dp-Ed-ak6NoX_4Aeg_-437790811")]
+[IsoDisplayName(@"Pay In Schedule Items")]
+[Obsolete]
 public interface IPayInScheduleItems : IIsoComponent
 {
     /// <summary>

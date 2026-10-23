@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// and the services to be used with this message.
 /// </summary>
 [IsoId("_a91QkQ03EeqUVL7sB4m7NA")]
+[IsoDisplayName(@"Message Status Response")]
 public interface IMessageStatusResponse3 : IIsoComponent
 {
     /// <summary>
@@ -50,5 +51,6 @@ public interface IMessageStatusResponse3 : IIsoComponent
     [IsoId("_bJpfCQ03EeqUVL7sB4m7NA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

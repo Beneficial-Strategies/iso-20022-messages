@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money due to a party as compensation for a service.
 /// </summary>
 [IsoId("_2BohoRt9EeOqSdXzJ0oydA")]
+[IsoDisplayName(@"Commission")]
 public interface ICommission17 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,8 @@ public interface ICommission17 : IIsoComponent
     [IsoId("_2aLkkRt9EeOqSdXzJ0oydA")]
     [DisplayName("Commercial Agreement Reference")]
     [IsoXmlTag("ComrclAgrmtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CommercialAgreementReference { get; }
 
     /// <summary>

@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Plan that allows investors to schedule periodical investments or divestments, according to pre-defined criteria.
 /// </summary>
 [IsoId("_SsJ5oRRdEeOKWo1NF21OVw")]
+[IsoDisplayName(@"Investment Plan")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IInvestmentPlan8 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface IInvestmentPlan8 : IIsoComponent
     [IsoId("_TSjyVRRdEeOKWo1NF21OVw")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IInvestmentPlan8 : IIsoComponent
     [IsoId("_TSjyVxRdEeOKWo1NF21OVw")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EndDate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IInvestmentPlan8 : IIsoComponent
     [IsoId("_TSjyWxRdEeOKWo1NF21OVw")]
     [DisplayName("Gross Amount Indicator")]
     [IsoXmlTag("GrssAmtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? GrossAmountIndicator { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IInvestmentPlan8 : IIsoComponent
     [IsoId("_TSjyXxRdEeOKWo1NF21OVw")]
     [DisplayName("Initial Number Of Instalments")]
     [IsoXmlTag("InitlNbOfInstlmts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? InitialNumberOfInstalments { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface IInvestmentPlan8 : IIsoComponent
     [IsoId("_TSjyYRRdEeOKWo1NF21OVw")]
     [DisplayName("Total Number Of Instalments")]
     [IsoXmlTag("TtlNbOfInstlmts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TotalNumberOfInstalments { get; }
 
     /// <summary>
@@ -89,6 +96,9 @@ public interface IInvestmentPlan8 : IIsoComponent
     [IsoId("_TSjyZRRdEeOKWo1NF21OVw")]
     [DisplayName("Security Details")]
     [IsoXmlTag("SctyDtls")]
+    [MinLength(1)]
+    [MaxLength(50)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRepartition2> SecurityDetails { get; }
 
     /// <summary>
@@ -97,6 +107,9 @@ public interface IInvestmentPlan8 : IIsoComponent
     [IsoId("_TSjyZxRdEeOKWo1NF21OVw")]
     [DisplayName("Modified Cash Settlement")]
     [IsoXmlTag("ModfdCshSttlm")]
+    [MinLength(0)]
+    [MaxLength(8)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestmentFundCashSettlementInformation8> ModifiedCashSettlement { get; }
 
     /// <summary>
@@ -105,6 +118,8 @@ public interface IInvestmentPlan8 : IIsoComponent
     [IsoId("_TSjyaRRdEeOKWo1NF21OVw")]
     [DisplayName("Contract Reference")]
     [IsoXmlTag("CtrctRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ContractReference { get; }
 
     /// <summary>
@@ -113,6 +128,8 @@ public interface IInvestmentPlan8 : IIsoComponent
     [IsoId("_TSjyaxRdEeOKWo1NF21OVw")]
     [DisplayName("Related Contract Reference")]
     [IsoXmlTag("RltdCtrctRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RelatedContractReference { get; }
 
     /// <summary>
@@ -121,6 +138,8 @@ public interface IInvestmentPlan8 : IIsoComponent
     [IsoId("_TSjybRRdEeOKWo1NF21OVw")]
     [DisplayName("Product Identification")]
     [IsoXmlTag("PdctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProductIdentification { get; }
 
     /// <summary>
@@ -129,6 +148,8 @@ public interface IInvestmentPlan8 : IIsoComponent
     [IsoId("_TSjybxRdEeOKWo1NF21OVw")]
     [DisplayName("SLA Charge And Commission Reference")]
     [IsoXmlTag("SLAChrgAndComssnRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SLAChargeAndCommissionReference { get; }
 
     /// <summary>

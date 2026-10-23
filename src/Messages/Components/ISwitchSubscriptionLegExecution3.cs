@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Execution of the subscription part, in a switch between investment funds or investment fund classes.
 /// </summary>
 [IsoId("_SKUggNp-Ed-ak6NoX_4Aeg_-815364317")]
+[IsoDisplayName(@"Switch Subscription Leg Execution")]
 public interface ISwitchSubscriptionLegExecution3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISwitchSubscriptionLegExecution3 : IIsoComponent
     [IsoId("_SKUggdp-Ed-ak6NoX_4Aeg_-815364292")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISwitchSubscriptionLegExecution3 : IIsoComponent
     [IsoId("_SKUggtp-Ed-ak6NoX_4Aeg_-815364275")]
     [DisplayName("Leg Execution Identification")]
     [IsoXmlTag("LegExctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LegExecutionIdentification { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface ISwitchSubscriptionLegExecution3 : IIsoComponent
     [IsoId("_SKdqctp-Ed-ak6NoX_4Aeg_-815363828")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CumDividendIndicator { get; }
 
     /// <summary>
@@ -161,6 +167,7 @@ public interface ISwitchSubscriptionLegExecution3 : IIsoComponent
     [IsoId("_SKnbcdp-Ed-ak6NoX_4Aeg_-815362786")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalDeliveryIndicator { get; }
 
     /// <summary>
@@ -177,6 +184,8 @@ public interface ISwitchSubscriptionLegExecution3 : IIsoComponent
     [IsoId("_SKnbc9p-Ed-ak6NoX_4Aeg_29539493")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? NonStandardSettlementInformation { get; }
 
     /// <summary>

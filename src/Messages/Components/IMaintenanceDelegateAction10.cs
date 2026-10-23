@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Maintenance Delegate Action10.
 /// </summary>
 [IsoId("_QoOzsaE5Ee-MRKYsaX6JDg")]
+[IsoDisplayName(@"Maintenance Delegate Action10")]
 public interface IMaintenanceDelegateAction10 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface IMaintenanceDelegateAction10 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max3000Binary> AdditionalInformation { get; }
 
     /// <summary>
@@ -65,5 +67,6 @@ public interface IMaintenanceDelegateAction10 : IIsoComponent
     /// </summary>
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITMSAction13> Action { get; }
 }

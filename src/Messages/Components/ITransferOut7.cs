@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a transfer out transaction.
 /// </summary>
 [IsoId("_RWwlIfpeEeCPwaG9zjUPNQ")]
+[IsoDisplayName(@"Transfer Out")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ITransferOut7 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITransferOut7 : IIsoComponent
     [IsoId("_RWwlJ_peEeCPwaG9zjUPNQ")]
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransfer12> TransferDetails { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface ITransferOut7 : IIsoComponent
     [IsoId("_RWwlN_peEeCPwaG9zjUPNQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

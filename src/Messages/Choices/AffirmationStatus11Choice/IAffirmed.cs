@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationStatus11Choice;
 /// </summary>
 [IsoId("_XzM-0Qd3Ee2fOITqoTnSLQ")]
 [IsoXmlTag("Affrmd")]
+[IsoDisplayName(@"Affirmed")]
 public interface IAffirmed : IAffirmationStatus11Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IAffirmed : IAffirmationStatus11Choice, IIsoChoiceVariant
     [IsoId("_RA3_Wzp5EeWVrPy0StzzSg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

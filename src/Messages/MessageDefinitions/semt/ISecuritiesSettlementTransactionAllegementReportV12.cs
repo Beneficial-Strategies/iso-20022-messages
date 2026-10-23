@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesSttlmTxAllgmtRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.019.001.12"
 )]
+[IsoDisplayName(@"Securities Settlement Transaction Allegement Report V12")]
 public interface ISecuritiesSettlementTransactionAllegementReportV12 : IOuterRecord
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface ISecuritiesSettlementTransactionAllegementReportV12 : IOuterRec
     /// </summary>
     [DisplayName("Allegement Details")]
     [IsoXmlTag("AllgmtDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesTradeDetails152> AllegementDetails { get; }
 }

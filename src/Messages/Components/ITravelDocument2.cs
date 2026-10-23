@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of travel document used for identification and/or authentication of the customer.
 /// </summary>
 [IsoId("_nTBeERyvEey6gI8SKlv7rg")]
+[IsoDisplayName(@"Travel Document")]
 public interface ITravelDocument2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ITravelDocument2 : IIsoComponent
     [IsoId("_nYdXsRyvEey6gI8SKlv7rg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Identification { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface ITravelDocument2 : IIsoComponent
     [IsoId("_nYdXsxyvEey6gI8SKlv7rg")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Assigner { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ITravelDocument2 : IIsoComponent
     [IsoId("_nYdXtRyvEey6gI8SKlv7rg")]
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IssuanceDate { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ITravelDocument2 : IIsoComponent
     [IsoId("_nYdXtxyvEey6gI8SKlv7rg")]
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpirationDate { get; }
 
     /// <summary>

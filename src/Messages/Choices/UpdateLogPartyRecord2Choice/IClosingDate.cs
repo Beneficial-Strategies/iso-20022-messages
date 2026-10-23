@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice;
 /// <summary>
 /// Closing Date.
 /// </summary>
+[IsoDisplayName(@"Closing Date")]
 public interface IClosingDate : IUpdateLogPartyRecord2Choice, IIsoChoiceVariant
 {
     /// <summary>

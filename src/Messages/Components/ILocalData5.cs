@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains text fields in the local language.
 /// </summary>
 [IsoId("_BD1sscW8EeuhguwJmlgagQ")]
+[IsoDisplayName(@"Local Data")]
 public interface ILocalData5 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ILocalData5 : IIsoComponent
     [IsoId("_BIoGE8W8EeuhguwJmlgagQ")]
     [DisplayName("Common Name")]
     [IsoXmlTag("CmonNm")]
+    [IsoSimpleType(IsoSimpleType.Max280Text)]
+    [StringLength(280, MinimumLength = 1)]
     Max280Text? CommonName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ILocalData5 : IIsoComponent
     [IsoId("_3_5Z0CB6Eey8XKHwKquEQw")]
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? LegalCorporateName { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface ILocalData5 : IIsoComponent
     [IsoId("_kaTCIMrZEeuQjLd-KKZrCg")]
     [DisplayName("Additional Address Information")]
     [IsoXmlTag("AddtlAdrInf")]
+    [IsoSimpleType(IsoSimpleType.Max512Text)]
+    [StringLength(512, MinimumLength = 1)]
     Max512Text? AdditionalAddressInformation { get; }
 
     /// <summary>
@@ -57,5 +64,6 @@ public interface ILocalData5 : IIsoComponent
     [IsoId("_s1OrEcXLEeumGdYElfgmbw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

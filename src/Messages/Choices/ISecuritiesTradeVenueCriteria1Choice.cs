@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Criteria for the trade venue identification.
 /// </summary>
 [IsoId("_a5LOAx3ZEeWNp95x0ENf8w")]
+[IsoDisplayName(@"Securities Trade Venue Criteria 1 Choice")]
 public interface ISecuritiesTradeVenueCriteria1Choice : IIsoChoice { }

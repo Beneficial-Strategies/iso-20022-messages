@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the date.
 /// </summary>
 [IsoId("_Quh399p-Ed-ak6NoX_4Aeg_-2023072430")]
+[IsoDisplayName(@"Date Code 1 Choice")]
 public interface IDateCode1Choice : IIsoChoice { }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party23Choice;
 /// </summary>
 [IsoId("_BkkfcWW8EeSHcOWXSsMhqw")]
 [IsoXmlTag("Org")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation : IParty23Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOrganisation : IParty23Choice, IIsoChoiceVariant
     [IsoId("_xflo4QhFEeSUPbC7DbLJpQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IOrganisation : IParty23Choice, IIsoChoiceVariant
     [IsoId("_xflo5QhFEeSUPbC7DbLJpQ")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Purpose { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface IOrganisation : IParty23Choice, IIsoChoiceVariant
     [IsoId("_xflo6whFEeSUPbC7DbLJpQ")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 
     /// <summary>
@@ -66,6 +72,7 @@ public interface IOrganisation : IParty23Choice, IIsoChoiceVariant
     [IsoId("_xflo7QhFEeSUPbC7DbLJpQ")]
     [DisplayName("Tax Identification")]
     [IsoXmlTag("TaxId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxIdentification2> TaxIdentification { get; }
 
     /// <summary>
@@ -74,6 +81,8 @@ public interface IOrganisation : IParty23Choice, IIsoChoiceVariant
     [IsoId("_xflo7whFEeSUPbC7DbLJpQ")]
     [DisplayName("National Registration Number")]
     [IsoXmlTag("NtlRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NationalRegistrationNumber { get; }
 
     /// <summary>
@@ -82,6 +91,9 @@ public interface IOrganisation : IParty23Choice, IIsoChoiceVariant
     [IsoId("_xflo8QhFEeSUPbC7DbLJpQ")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
+    [MinLength(1)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress3> PostalAddress { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification37Choice;
 /// Index name where the underlying is an index.
 /// </summary>
 [IsoId("_PDXK9TLlEeu9CrLaMVTofw")]
+[IsoDisplayName(@"Index")]
 public interface IIndex : ISecurityIdentification37Choice, IIsoChoiceVariant
 {
     /// <summary>

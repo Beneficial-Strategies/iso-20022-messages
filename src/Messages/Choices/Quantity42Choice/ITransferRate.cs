@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity42Choice;
 /// Quantity of securities to be transferred as a percentage of the holding.
 /// </summary>
 [IsoId("_Shu0w4fwEeevKP8c-ilVhA")]
+[IsoDisplayName(@"Transfer Rate")]
 public interface ITransferRate : IQuantity42Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ITransferRate : IQuantity42Choice, IIsoChoiceVariant
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("TrfRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

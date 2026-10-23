@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the financial instrument.
 /// </summary>
 [IsoId("_7cAW8LVXEeadLcJesEbkTQ")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument59 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancialInstrument59 : IIsoComponent
     [IsoId("_9iE2ILVYEeadLcJesEbkTQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier Identification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IFinancialInstrument59 : IIsoComponent
     [IsoId("_DnQrsLVZEeadLcJesEbkTQ")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Issuer { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IFinancialInstrument59 : IIsoComponent
     [IsoId("_Hr6M4LVZEeadLcJesEbkTQ")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoSimpleType(IsoSimpleType.SNA2008SectorIdentifier)]
     SNA2008SectorIdentifier? Sector { get; }
 }

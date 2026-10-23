@@ -21,6 +21,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctMndtMntncAmdmntReq",
     "urn:iso:std:iso:20022:tech:xsd:acmt.018.001.01"
 )]
+[Description(@"Scope|The AccountMandateMaintenanceAmendmentRequest message is sent from an organisation to a financial institution as part of the account maintenance process. It is sent in response to a request from the financial institution to send additional information. This update is only about mandate information.|Usage|This message should only be sent in response to a request from the financial institution. This update is only about mandate information. The organisation will specify under the Mandate tag the complete information as it should be in the financial institutions records after processing the update request. It is not possible to update the account characteristics or organisation information with this message.|It is possible to request to update the mandate information of several accounts, if these accounts must have exactly the same mandates.|This message could be sent together with other related documents.")]
+[IsoDisplayName(@"Account Mandate Maintenance Amendment Request V")]
 public interface IAccountMandateMaintenanceAmendmentRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -53,6 +55,7 @@ public interface IAccountMandateMaintenanceAmendmentRequestV01 : IOuterRecord
     [IsoId("_rHnVAtE9Ed-BzquC8wXy7w_604759008")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountForAction1> AccountIdentification { get; }
 
     /// <summary>
@@ -69,6 +72,7 @@ public interface IAccountMandateMaintenanceAmendmentRequestV01 : IOuterRecord
     [IsoId("_rHnVBNE9Ed-BzquC8wXy7w_142996449")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisationIdentification6> OrganisationIdentification { get; }
 
     /// <summary>
@@ -77,6 +81,7 @@ public interface IAccountMandateMaintenanceAmendmentRequestV01 : IOuterRecord
     [IsoId("_rHnVBdE9Ed-BzquC8wXy7w_-1737493661")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOperationMandate1> Mandate { get; }
 
     /// <summary>
@@ -85,5 +90,6 @@ public interface IAccountMandateMaintenanceAmendmentRequestV01 : IOuterRecord
     [IsoId("_rHnVBtE9Ed-BzquC8wXy7w_629134464")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature1> DigitalSignature { get; }
 }

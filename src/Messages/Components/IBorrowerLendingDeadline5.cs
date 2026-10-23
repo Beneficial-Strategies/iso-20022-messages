@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Stock lending deadline assigned to a borrower of the stock.
 /// </summary>
 [IsoId("_a5bfp7XDEeiTob_PrFFUxA")]
+[IsoDisplayName(@"Borrower Lending Deadline")]
 public interface IBorrowerLendingDeadline5 : IIsoComponent
 {
     /// <summary>

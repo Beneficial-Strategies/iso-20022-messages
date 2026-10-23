@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the original notification, to which the cancellation advice refers.
 /// </summary>
 [IsoId("_cUu40R77EeSxevWRRWxNAg")]
+[IsoDisplayName(@"Original Notification")]
 public interface IOriginalNotification8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalNotification8 : IIsoComponent
     [IsoId("_cltUEx77EeSxevWRRWxNAg")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IOriginalNotification8 : IIsoComponent
     [IsoId("_cltUFR77EeSxevWRRWxNAg")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IOriginalNotification8 : IIsoComponent
     [IsoId("_cltUFx77EeSxevWRRWxNAg")]
     [DisplayName("Original Notification Identification")]
     [IsoXmlTag("OrgnlNtfctnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalNotificationIdentification { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IOriginalNotification8 : IIsoComponent
     [IsoId("_cltUGR77EeSxevWRRWxNAg")]
     [DisplayName("Notification Cancellation")]
     [IsoXmlTag("NtfctnCxl")]
+    [IsoSimpleType(IsoSimpleType.GroupCancellationIndicator)]
     GroupCancellationIndicator? NotificationCancellation { get; }
 
     /// <summary>
@@ -49,5 +56,6 @@ public interface IOriginalNotification8 : IIsoComponent
     [IsoId("_cltUGx77EeSxevWRRWxNAg")]
     [DisplayName("Original Notification Reference")]
     [IsoXmlTag("OrgnlNtfctnRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalNotificationReference6> OriginalNotificationReference { get; }
 }

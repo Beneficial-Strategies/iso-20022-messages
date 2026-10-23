@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_bfzgR22PEei3KuUgpx7Xcw")]
 [IsoMessage("acmt.010.001.03", "AcctReqAck", "urn:iso:std:iso:20022:tech:xsd:acmt.010.001.03")]
+[Description(@"The AccountRequestAcknowledgement message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation. It is sent after the request has been validated from an authentication and authorisation point of view. The business content has not yet been validated at this stage.")]
+[IsoDisplayName(@"Account Request Acknowledgement V")]
 public interface IAccountRequestAcknowledgementV03 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +38,7 @@ public interface IAccountRequestAcknowledgementV03 : IOuterRecord
     [IsoId("_bfzgTW2PEei3KuUgpx7Xcw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountForAction1> AccountIdentification { get; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public interface IAccountRequestAcknowledgementV03 : IOuterRecord
     [IsoId("_bfzgU22PEei3KuUgpx7Xcw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndSignature3> DigitalSignature { get; }
 
     /// <summary>
@@ -68,5 +72,6 @@ public interface IAccountRequestAcknowledgementV03 : IOuterRecord
     [IsoId("_bfzgVW2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

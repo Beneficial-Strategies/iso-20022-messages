@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the intra-position movement.
 /// </summary>
 [IsoId("_65XLC_fUEeiNZp_PtLohLw")]
+[IsoDisplayName(@"Intra Position Details")]
 public interface IIntraPositionDetails50 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IIntraPositionDetails50 : IIsoComponent
     [IsoId("_65XLD_fUEeiNZp_PtLohLw")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? PoolIdentification { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface IIntraPositionDetails50 : IIsoComponent
     [IsoId("_65XLQffUEeiNZp_PtLohLw")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? AcknowledgedStatusTimeStamp { get; }
 
     /// <summary>

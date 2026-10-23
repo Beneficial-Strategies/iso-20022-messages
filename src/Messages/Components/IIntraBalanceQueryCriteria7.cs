@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria based on which information is included.
 /// </summary>
 [IsoId("_sJDt5Tp6EemwKdP955WBJQ")]
+[IsoDisplayName(@"Intra Balance Query Criteria")]
 public interface IIntraBalanceQueryCriteria7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IIntraBalanceQueryCriteria7 : IIsoComponent
     [IsoId("_sTfcQTp6EemwKdP955WBJQ")]
     [DisplayName("Cancellation Request Identification")]
     [IsoXmlTag("CxlReqId")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> CancellationRequestIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IIntraBalanceQueryCriteria7 : IIsoComponent
     [IsoId("_sTfcSTp6EemwKdP955WBJQ")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICancellationProcessingStatus9Choice> ProcessingStatus { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IIntraBalanceQueryCriteria7 : IIsoComponent
     [IsoId("_sTfcSzp6EemwKdP955WBJQ")]
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentificationSearchCriteria2Choice> CashAccount { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IIntraBalanceQueryCriteria7 : IIsoComponent
     [IsoId("_sTfcTTp6EemwKdP955WBJQ")]
     [DisplayName("Cash Account Owner")]
     [IsoXmlTag("CshAcctOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> CashAccountOwner { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IIntraBalanceQueryCriteria7 : IIsoComponent
     [IsoId("_sTfcTzp6EemwKdP955WBJQ")]
     [DisplayName("Message Originator")]
     [IsoXmlTag("MsgOrgtr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISystemPartyIdentification8> MessageOriginator { get; }
 
     /// <summary>

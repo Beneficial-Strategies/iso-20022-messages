@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.tsin;
     "PtyRegnAndGrntNtfctn",
     "urn:iso:std:iso:20022:tech:xsd:tsin.011.001.01"
 )]
+[Description(@"The PartyRegistrationAndGuaranteeNotification message is sent by a factoring client or a financial service to a trade partner and, optionally, to an interested party in order to notify the status of a requested financial service agreement. The trade partner is given information to explain the consequences of a financial service agreement, for instance, the trade partner must pay the financial institution and must use the electronic address to inform it and pay it using the bank account given.|The message may reference related messages and may include referenced data.|The message can carry digital signatures if required by context.")]
+[IsoDisplayName(@"Party Registration And Guarantee Notification V")]
 public interface IPartyRegistrationAndGuaranteeNotificationV01 : IOuterRecord
 {
     /// <summary>
@@ -34,6 +36,7 @@ public interface IPartyRegistrationAndGuaranteeNotificationV01 : IOuterRecord
     [IsoId("_OTgzNDg2-AOSNFX-8224506")]
     [DisplayName("Notification List")]
     [IsoXmlTag("NtfctnList")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancingAgreementList1> NotificationList { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface IPartyRegistrationAndGuaranteeNotificationV01 : IOuterRecord
     [IsoId("_OTgzNDg3-AOSNFX-8224506")]
     [DisplayName("Notification Count")]
     [IsoXmlTag("NtfctnCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? NotificationCount { get; }
 
     /// <summary>
@@ -50,6 +54,7 @@ public interface IPartyRegistrationAndGuaranteeNotificationV01 : IOuterRecord
     [IsoId("_OTgzNDg4-AOSNFX-8224506")]
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? ItemCount { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface IPartyRegistrationAndGuaranteeNotificationV01 : IOuterRecord
     [IsoId("_OTgzNDg5-AOSNFX-8224506")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -66,5 +72,6 @@ public interface IPartyRegistrationAndGuaranteeNotificationV01 : IOuterRecord
     [IsoId("_OTgzNDkw-AOSNFX-8224506")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncapsulatedBusinessMessage1> AttachedMessage { get; }
 }

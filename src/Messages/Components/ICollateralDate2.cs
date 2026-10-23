@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Dates related to the triparty collateral instruction or transactions.
 /// </summary>
 [IsoId("_qxz5MRInEeyZaPkaPAzTvQ")]
+[IsoDisplayName(@"Collateral Date")]
 public interface ICollateralDate2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICollateralDate2 : IIsoComponent
     [IsoId("_rIKjtxInEeyZaPkaPAzTvQ")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TradeDate { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface ICollateralDate2 : IIsoComponent
     [IsoId("_rIKjuxInEeyZaPkaPAzTvQ")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SettlementDate { get; }
 }

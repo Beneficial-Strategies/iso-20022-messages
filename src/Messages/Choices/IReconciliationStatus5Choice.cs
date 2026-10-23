@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indication whether the reconciliation is required.
 /// </summary>
 [IsoId("_CxSDKf_oEemm3skPVSMJQg")]
+[IsoDisplayName(@"Reconciliation Status 5 Choice")]
 public interface IReconciliationStatus5Choice : IIsoChoice { }

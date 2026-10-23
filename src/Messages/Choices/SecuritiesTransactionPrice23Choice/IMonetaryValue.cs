@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice23Choi
 /// <summary>
 /// Monetary Value.
 /// </summary>
+[IsoDisplayName(@"Monetary Value")]
 public interface IMonetaryValue : ISecuritiesTransactionPrice23Choice, IIsoChoiceVariant
 {
     /// <summary>

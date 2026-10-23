@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Tax voucher details.
 /// </summary>
 [IsoId("_VWACAajzEfCG_LQaXOxwew")]
+[IsoDisplayName(@"Tax Voucher6")]
 public interface ITaxVoucher6 : IIsoComponent
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party28Choice;
 /// </summary>
 [IsoId("_cOVCc9nSEeS--7IJLPC9lw")]
 [IsoXmlTag("Pty")]
+[IsoDisplayName(@"Party")]
 public interface IParty : IParty28Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IParty : IParty28Choice, IIsoChoiceVariant
     [IsoId("_kCMZA9LPEeSdq5yU2aaSNw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Name { get; }
 
     /// <summary>

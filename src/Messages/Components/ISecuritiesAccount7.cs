@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the account identification and the account owner.
 /// </summary>
 [IsoId("_QUmVBdp-Ed-ak6NoX_4Aeg_-1140481020")]
+[IsoDisplayName(@"Securities Account")]
 public interface ISecuritiesAccount7 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ISecuritiesAccount7 : IIsoComponent
     [IsoId("_QUmVB9p-Ed-ak6NoX_4Aeg_-887436481")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AccountIdentification { get; }
 }

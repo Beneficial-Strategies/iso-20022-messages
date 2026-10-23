@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of information related to the cancellation request, such as actors involved and identification of the original multiple invoice financing request to which the cancellation request is referring.
 /// </summary>
 [IsoId("_TiiQo9p-Ed-ak6NoX_4Aeg_1653900933")]
+[IsoDisplayName(@"Cancellation Request Information")]
 public interface ICancellationRequestInformation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICancellationRequestInformation1 : IIsoComponent
     [IsoId("_TiiQpNp-Ed-ak6NoX_4Aeg_1653900935")]
     [DisplayName("Original Group Identification")]
     [IsoXmlTag("OrgnlGrpId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalGroupIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICancellationRequestInformation1 : IIsoComponent
     [IsoId("_TiiQpdp-Ed-ak6NoX_4Aeg_1653900951")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ICancellationRequestInformation1 : IIsoComponent
     [IsoId("_TiiQptp-Ed-ak6NoX_4Aeg_1653900968")]
     [DisplayName("Number Of Invoice Requests")]
     [IsoXmlTag("NbOfInvcReqs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? NumberOfInvoiceRequests { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface ICancellationRequestInformation1 : IIsoComponent
     [IsoId("_TiiQqNp-Ed-ak6NoX_4Aeg_-96892245")]
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text CancellationReason { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains text fields in the local language.
 /// </summary>
 [IsoId("_TPWQUcW7EeuhguwJmlgagQ")]
+[IsoDisplayName(@"Local Data")]
 public interface ILocalData4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ILocalData4 : IIsoComponent
     [IsoId("_TT8cc8W7EeuhguwJmlgagQ")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ShortName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ILocalData4 : IIsoComponent
     [IsoId("_Dq42wCB6Eey8XKHwKquEQw")]
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? LegalCorporateName { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ILocalData4 : IIsoComponent
     [IsoId("_aT8UesW7EeuhguwJmlgagQ")]
     [DisplayName("Name And Location")]
     [IsoXmlTag("NmAndLctn")]
+    [IsoSimpleType(IsoSimpleType.Max200Text)]
+    [StringLength(200, MinimumLength = 1)]
     Max200Text? NameAndLocation { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface ILocalData4 : IIsoComponent
     [IsoId("_75FwdMosEeuuJ571wNLKkA")]
     [DisplayName("Additional Address Information")]
     [IsoXmlTag("AddtlAdrInf")]
+    [IsoSimpleType(IsoSimpleType.Max512Text)]
+    [StringLength(512, MinimumLength = 1)]
     Max512Text? AdditionalAddressInformation { get; }
 
     /// <summary>
@@ -65,6 +74,8 @@ public interface ILocalData4 : IIsoComponent
     [IsoId("_fKYT0cotEeuuJ571wNLKkA")]
     [DisplayName("Additional Contact Information")]
     [IsoXmlTag("AddtlCtctInf")]
+    [IsoSimpleType(IsoSimpleType.Max512Text)]
+    [StringLength(512, MinimumLength = 1)]
     Max512Text? AdditionalContactInformation { get; }
 
     /// <summary>
@@ -73,5 +84,6 @@ public interface ILocalData4 : IIsoComponent
     [IsoId("_tZ10AcXLEeumGdYElfgmbw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

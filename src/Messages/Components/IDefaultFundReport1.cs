@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the calculation of the default fund and the collateral that has been posted by the clearing member.
 /// </summary>
 [IsoId("_-ddILaMOEeCojJW5vEuTEQ_1402285716")]
+[IsoDisplayName(@"Default Fund Report")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IDefaultFundReport1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,7 @@ public interface IDefaultFundReport1 : IIsoComponent
     [IsoId("_-ddILqMOEeCojJW5vEuTEQ_1576502363")]
     [DisplayName("Default Fund Calculation")]
     [IsoXmlTag("DfltFndClctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDefaultFund1> DefaultFundCalculation { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IDefaultFundReport1 : IIsoComponent
     [IsoId("_-ddIL6MOEeCojJW5vEuTEQ_-1115881016")]
     [DisplayName("Collateral Description")]
     [IsoXmlTag("CollDesc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateral3> CollateralDescription { get; }
 
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the option type.
 /// </summary>
 [IsoId("_AbgFstokEeC60axPepSq7g_934276367")]
+[IsoDisplayName(@"Option Type 4 Choice")]
 public interface IOptionType4Choice : IIsoChoice { }

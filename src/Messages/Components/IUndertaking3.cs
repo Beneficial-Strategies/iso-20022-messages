@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Independent undertaking, such as a demand guarantee or standby letter of credit, that provides financial assurance, to be honoured on the presentation of documents that comply with its terms and conditions.
 /// </summary>
 [IsoId("_90kuMnltEeG7BsjMvd1mEw_-642295687")]
+[IsoDisplayName(@"Undertaking")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IUndertaking3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_90kuM3ltEeG7BsjMvd1mEw_1282240890")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_90ufMHltEeG7BsjMvd1mEw_-1105882178")]
     [DisplayName("Applicant")]
     [IsoXmlTag("Applcnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification43> Applicant { get; }
 
     /// <summary>
@@ -65,6 +70,7 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_90ufMnltEeG7BsjMvd1mEw_1504245767")]
     [DisplayName("Beneficiary")]
     [IsoXmlTag("Bnfcry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification43> Beneficiary { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_90ufM3ltEeG7BsjMvd1mEw_-776484199")]
     [DisplayName("Date Of Issuance")]
     [IsoXmlTag("DtOfIssnc")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate DateOfIssuance { get; }
 
     /// <summary>
@@ -121,6 +128,7 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_903pI3ltEeG7BsjMvd1mEw_-1282634856")]
     [DisplayName("Confirmation Indicator")]
     [IsoXmlTag("ConfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ConfirmationIndicator { get; }
 
     /// <summary>
@@ -137,6 +145,7 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_91BaIHltEeG7BsjMvd1mEw_-1201686871")]
     [DisplayName("Additional Party")]
     [IsoXmlTag("AddtlPty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyAndType1> AdditionalParty { get; }
 
     /// <summary>
@@ -153,6 +162,7 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_91BaInltEeG7BsjMvd1mEw_575458194")]
     [DisplayName("Underlying Transaction")]
     [IsoXmlTag("UndrlygTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnderlyingTradeTransaction1> UnderlyingTransaction { get; }
 
     /// <summary>
@@ -169,6 +179,7 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_91BaJHltEeG7BsjMvd1mEw_1083323567")]
     [DisplayName("Undertaking Terms And Conditions")]
     [IsoXmlTag("UdrtkgTermsAndConds")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INarrative1> UndertakingTermsAndConditions { get; }
 
     /// <summary>
@@ -177,6 +188,7 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_91LLIHltEeG7BsjMvd1mEw_-1758524165")]
     [DisplayName("Multiple Demand Indicator")]
     [IsoXmlTag("MltplDmndInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? MultipleDemandIndicator { get; }
 
     /// <summary>
@@ -185,6 +197,7 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_91LLIXltEeG7BsjMvd1mEw_-1433406658")]
     [DisplayName("Partial Demand Indicator")]
     [IsoXmlTag("PrtlDmndInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PartialDemandIndicator { get; }
 
     /// <summary>
@@ -209,6 +222,7 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_91LLJHltEeG7BsjMvd1mEw_1235192092")]
     [DisplayName("Automatic Amount Variation")]
     [IsoXmlTag("AutomtcAmtVartn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAutomaticVariation1> AutomaticAmountVariation { get; }
 
     /// <summary>
@@ -225,6 +239,7 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_91UVEHltEeG7BsjMvd1mEw_-737334082")]
     [DisplayName("Transfer Indicator")]
     [IsoXmlTag("TrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? TransferIndicator { get; }
 
     /// <summary>
@@ -233,6 +248,7 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_91UVEXltEeG7BsjMvd1mEw_-1334688304")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument9> EnclosedFile { get; }
 
     /// <summary>
@@ -241,6 +257,10 @@ public interface IUndertaking3 : IIsoComponent
     [IsoId("_91UVEnltEeG7BsjMvd1mEw_-1357279647")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AdditionalInformation { get; }
 
     /// <summary>

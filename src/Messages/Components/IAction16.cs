@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Action16.
 /// </summary>
 [IsoId("_iMYJgXHFEe60F8I8TAMKmg")]
+[IsoDisplayName(@"Action16")]
 public interface IAction16 : IIsoComponent
 {
     /// <summary>
@@ -86,6 +87,7 @@ public interface IAction16 : IIsoComponent
     /// </summary>
     [DisplayName("Content")]
     [IsoXmlTag("Cntt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> Content { get; }
 
     /// <summary>

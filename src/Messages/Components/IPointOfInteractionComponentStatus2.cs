@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status of a POI component (Point of Interaction).
 /// </summary>
 [IsoId("_y3Kq4WiwEeS87LmvcA55sg")]
+[IsoDisplayName(@"Point Of Interaction Component Status")]
 public interface IPointOfInteractionComponentStatus2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPointOfInteractionComponentStatus2 : IIsoComponent
     [IsoId("_zEWLQWiwEeS87LmvcA55sg")]
     [DisplayName("Version Number")]
     [IsoXmlTag("VrsnNb")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? VersionNumber { get; }
 
     /// <summary>

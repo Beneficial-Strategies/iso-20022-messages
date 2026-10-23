@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the identification of the issuer of a security.
 /// </summary>
 [IsoId("_F_G3Z8guEeuGrNSsxk3B0A")]
+[IsoDisplayName(@"Security Issuer")]
 public interface ISecurityIssuer4 : IIsoComponent
 {
     /// <summary>

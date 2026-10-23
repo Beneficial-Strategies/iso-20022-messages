@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Cassette3.
 /// </summary>
 [IsoId("_5Q4ogaDlEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Cassette3")]
 public interface IATMCassette3 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,7 @@ public interface IATMCassette3 : IIsoComponent
     /// </summary>
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ATMNoteType1Code> SubType { get; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public interface IATMCassette3 : IIsoComponent
     /// </summary>
     [DisplayName("Media Counters")]
     [IsoXmlTag("MdiaCntrs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCassetteCounters6> MediaCounters { get; }
 
     /// <summary>

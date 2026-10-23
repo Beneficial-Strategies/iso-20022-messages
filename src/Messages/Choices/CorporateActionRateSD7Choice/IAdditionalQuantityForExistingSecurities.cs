@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionRateSD7Choice;
 /// Quantity of additional securities for a given quantity of underlying securities where underlying securities are not exchanged or debited, for example, 1 for 1: 1 new equity credited for every 1 underlying equity = 2 resulting equities.
 /// </summary>
 [IsoId("__QZZMcOTEeeAG4VQMmSqTA")]
+[IsoDisplayName(@"Additional Quantity For Existing Securities")]
 public interface IAdditionalQuantityForExistingSecurities
     : ICorporateActionRateSD7Choice,
         IIsoChoiceVariant

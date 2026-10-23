@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a date code and a time.
 /// </summary>
 [IsoId("_ctczB5KQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Date Code And Time Format")]
 public interface IDateCodeAndTimeFormat4 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IDateCodeAndTimeFormat4 : IIsoComponent
     [IsoId("_ctczEZKQEeWHWpTQn1FFVg")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
+    [IsoSimpleType(IsoSimpleType.ISOTime)]
     ISOTime Time { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between buyer and seller.
 /// </summary>
 [IsoId("_tllw7SqDEeyR9JrVGfaMKw")]
+[IsoDisplayName(@"Counterparty 15 Choice")]
 public interface ICounterparty15Choice : IIsoChoice { }

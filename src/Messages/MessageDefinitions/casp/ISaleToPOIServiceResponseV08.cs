@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.casp;
     "SaleToPOISvcRspn",
     "urn:iso:std:iso:20022:tech:xsd:casp.002.001.08"
 )]
+[IsoDisplayName(@"Sale To POI Service Response V08")]
 public interface ISaleToPOIServiceResponseV08 : IOuterRecord
 {
     /// <summary>

@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a code and proprietary format for taxable income per share calculated.</summary>
 [IsoId("2f01d364-57cd-42cd-a23a-b2d99d8eb3ce")]
+[IsoDisplayName(@"Taxable Income Per Share Calculated 3 Choice")]
 public interface ITaxableIncomePerShareCalculated3Choice : IIsoChoice { }

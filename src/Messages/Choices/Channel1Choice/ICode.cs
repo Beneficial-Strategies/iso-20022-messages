@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Channel1Choice;
 /// Submission channel.
 /// </summary>
 [IsoId("_93Z_wXltEeG7BsjMvd1mEw_1810755502")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChannel1Choice, IIsoChoiceVariant
 {
     /// <summary>

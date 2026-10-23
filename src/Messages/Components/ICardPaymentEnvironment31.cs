@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of the diagnostic exchange.
 /// </summary>
 [IsoId("_1GvAoVOZEeO1RfnvbrvgKg")]
+[IsoDisplayName(@"Card Payment Environment")]
 public interface ICardPaymentEnvironment31 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardPaymentEnvironment31 : IIsoComponent
     [IsoId("_-gygQFOZEeO1RfnvbrvgKg")]
     [DisplayName("Acquirer Available")]
     [IsoXmlTag("AcqrrAvlbl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AcquirerAvailable { get; }
 
     /// <summary>

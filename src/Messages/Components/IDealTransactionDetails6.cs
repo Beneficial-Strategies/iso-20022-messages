@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the triparty collateral transaction deal.
 /// </summary>
 [IsoId("_lpi_4RIcEeyLzJfz3xPQNA")]
+[IsoDisplayName(@"Deal Transaction Details")]
 public interface IDealTransactionDetails6 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDealTransactionDetails6 : IIsoComponent
     [IsoId("_mAfgRRIcEeyLzJfz3xPQNA")]
     [DisplayName("Minimum Notice Period")]
     [IsoXmlTag("MinNtcePrd")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? MinimumNoticePeriod { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface IDealTransactionDetails6 : IIsoComponent
     [IsoId("_mAfgTxIcEeyLzJfz3xPQNA")]
     [DisplayName("Spread")]
     [IsoXmlTag("Sprd")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Spread { get; }
 
     /// <summary>

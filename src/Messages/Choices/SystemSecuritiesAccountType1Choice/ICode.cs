@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemSecuritiesAccountType1Choi
 /// System securities account type, in a coded form.
 /// </summary>
 [IsoId("_i0Z6YDp0Eemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISystemSecuritiesAccountType1Choice, IIsoChoiceVariant
 {
     /// <summary>

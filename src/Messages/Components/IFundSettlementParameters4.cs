@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security.
 /// </summary>
 [IsoId("_QVV76dp-Ed-ak6NoX_4Aeg_1594715500")]
+[IsoDisplayName(@"Fund Settlement Parameters")]
 public interface IFundSettlementParameters4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFundSettlementParameters4 : IIsoComponent
     [IsoId("_QVfs4Np-Ed-ak6NoX_4Aeg_1594715795")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? SettlementDate { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface IFundSettlementParameters4 : IIsoComponent
     [IsoId("_QVfs49p-Ed-ak6NoX_4Aeg_1594715553")]
     [DisplayName("Securities Settlement System Identification")]
     [IsoXmlTag("SctiesSttlmSysId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecuritiesSettlementSystemIdentification { get; }
 
     /// <summary>

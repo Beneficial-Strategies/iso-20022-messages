@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains additional characteristics of addendum data.
 /// </summary>
 [IsoId("_IocXk_JZEeiJn9rM2Znz2w")]
+[IsoDisplayName(@"Additional Characteristics")]
 public interface IAdditionalCharacteristics1 : IIsoComponent
 {
     /// <summary>

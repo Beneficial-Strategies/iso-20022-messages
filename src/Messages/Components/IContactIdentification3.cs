@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information needed to contact a physical person.
 /// </summary>
 [IsoId("_QDTwsdp-Ed-ak6NoX_4Aeg_-1939165929")]
+[IsoDisplayName(@"Contact Identification")]
 public interface IContactIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IContactIdentification3 : IIsoComponent
     [IsoId("_QDTwstp-Ed-ak6NoX_4Aeg_-1827416739")]
     [DisplayName("BIC")]
     [IsoXmlTag("BIC")]
+    [IsoSimpleType(IsoSimpleType.BICIdentifier)]
     BICIdentifier BIC { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IContactIdentification3 : IIsoComponent
     [IsoId("_QDTws9p-Ed-ak6NoX_4Aeg_-1939165898")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Name { get; }
 
     /// <summary>
@@ -41,6 +45,8 @@ public interface IContactIdentification3 : IIsoComponent
     [IsoId("_QDTwtdp-Ed-ak6NoX_4Aeg_-1939165838")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? GivenName { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IContactIdentification3 : IIsoComponent
     [IsoId("_QDTwttp-Ed-ak6NoX_4Aeg_-1939165662")]
     [DisplayName("Role")]
     [IsoXmlTag("Role")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Role { get; }
 
     /// <summary>
@@ -57,6 +65,7 @@ public interface IContactIdentification3 : IIsoComponent
     [IsoId("_QDTwt9p-Ed-ak6NoX_4Aeg_-1939165684")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -65,6 +74,7 @@ public interface IContactIdentification3 : IIsoComponent
     [IsoId("_QDTwuNp-Ed-ak6NoX_4Aeg_-1939165715")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -73,5 +83,7 @@ public interface IContactIdentification3 : IIsoComponent
     [IsoId("_QDdhsNp-Ed-ak6NoX_4Aeg_-1939165776")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 }

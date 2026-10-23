@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.tsin;
 /// </summary>
 [IsoId("_BU_0In1LEeCF8NjrBemJWQ_-1866907401")]
 [IsoMessage("tsin.004.001.01", "FinInvc", "urn:iso:std:iso:20022:tech:xsd:tsin.004.001.01")]
+[Description(@"Scope|The FinancialInvoice message is used to support the provision of financial and related services where there is a requirement to exchange invoice information.|Usage|While the prime function of the FinancialInvoice message is as a request from the seller to the buyer for payment, the FinancialInvoice message can also serve to evidence an invoice in support of a financial service such as invoice factoring, letters of credit, and bank payment obligations, to enable Web based services such as electronic bill payment and presentment, and as the basis to transfer invoice information via third parties such as e-invoicing service providers.|A consequence of the receipt of an invoice by the buyer is that it acts as a trigger for the use of related messages that are already defined in ISO 20022, notably where the information contained in the Financial Invoice enables payment for the goods or services received, and/or is provided in support of a request for invoice financing. While certain of these related messages, such as the CreditTransfer and PaymentInitiation messages, are shown in the sequence diagram they are out of scope. They are shown only to illustrate a given scenario and to place the invoice in the context of the financial banking processes that might be conducted between different financial institutions.|The use of self-billing by the buyer to the seller, where the buyer acts as the invoice issuer or the process of handling an incorrect invoice, is not in scope.")]
+[IsoDisplayName(@"Financial Invoice V")]
 public interface IFinancialInvoiceV01 : IOuterRecord
 {
     /// <summary>
@@ -57,5 +59,6 @@ public interface IFinancialInvoiceV01 : IOuterRecord
     [IsoId("_BU_0J31LEeCF8NjrBemJWQ_-1744265877")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItem10> LineItem { get; }
 }

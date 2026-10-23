@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specify the ISIN(s) and / or LEI(s) that are present in a basket.
 /// </summary>
 [IsoId("_a46r4PBqEeWTAY6i--T_aA")]
+[IsoDisplayName(@"Financial Instrument")]
 public interface IFinancialInstrument53 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IFinancialInstrument53 : IIsoComponent
     [IsoId("_a46r4fBqEeWTAY6i--T_aA")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ISINOct2015Identifier> ISIN { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IFinancialInstrument53 : IIsoComponent
     [IsoId("_a46r4vBqEeWTAY6i--T_aA")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<LEIIdentifier> LEI { get; }
 }

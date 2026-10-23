@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference of the business message envelope.
 /// </summary>
 [IsoId("_QhajIK9aEeyk7opzt6Qlaw")]
+[IsoDisplayName(@"Reference")]
 public interface IReference22 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IReference22 : IIsoComponent
     [IsoId("_ft3fMK9aEeyk7opzt6Qlaw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IReference22 : IIsoComponent
     [IsoId("_SQnacK9bEeyk7opzt6Qlaw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

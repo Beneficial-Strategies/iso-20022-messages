@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// </summary>
 [IsoId("_mJeVLQM-Ee2nqoJcXIhTdw")]
 [IsoMessage("fxtr.014.001.05", "FXTradInstr", "urn:iso:std:iso:20022:tech:xsd:fxtr.014.001.05")]
+[Description(@"Scope||The ForeignExchangeTradeInstruction message is sent by a participant to a central settlement system to notify the creation of the foreign exchange trade agreed by both trading parties.||Usage||The ForeignExchangeTradeInstruction message is sent from a participant to a central settlement system to advise of the creation of a foreign exchange trade.")]
+[IsoDisplayName(@"Foreign Exchange Trade Instruction V")]
 public interface IForeignExchangeTradeInstructionV05 : IOuterRecord
 {
     /// <summary>
@@ -103,5 +105,6 @@ public interface IForeignExchangeTradeInstructionV05 : IOuterRecord
     [IsoId("_mJeVQwM-Ee2nqoJcXIhTdw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

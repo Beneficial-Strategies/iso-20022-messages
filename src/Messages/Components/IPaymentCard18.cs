@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Electronic money product that provides the cardholder with a portable and specialised computer device, which typically contains a microprocessor.
 /// </summary>
 [IsoId("_slWAQSC3EeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Payment Card")]
 public interface IPaymentCard18 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPaymentCard18 : IIsoComponent
     [IsoId("_tBBPoyC3EeWJd9HF2tO7BA")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Number { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPaymentCard18 : IIsoComponent
     [IsoId("_tBBPpSC3EeWJd9HF2tO7BA")]
     [DisplayName("Holder Name")]
     [IsoXmlTag("HldrNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text HolderName { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IPaymentCard18 : IIsoComponent
     [IsoId("_tBBPpyC3EeWJd9HF2tO7BA")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? StartDate { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IPaymentCard18 : IIsoComponent
     [IsoId("_tBBPqSC3EeWJd9HF2tO7BA")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth ExpiryDate { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface IPaymentCard18 : IIsoComponent
     [IsoId("_tBBPqyC3EeWJd9HF2tO7BA")]
     [DisplayName("Card Issuer Name")]
     [IsoXmlTag("CardIssrNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardIssuerName { get; }
 
     /// <summary>
@@ -73,6 +82,8 @@ public interface IPaymentCard18 : IIsoComponent
     [IsoId("_tBBPryC3EeWJd9HF2tO7BA")]
     [DisplayName("Security Code")]
     [IsoXmlTag("SctyCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecurityCode { get; }
 
     /// <summary>
@@ -81,5 +92,7 @@ public interface IPaymentCard18 : IIsoComponent
     [IsoId("_tBBPsSC3EeWJd9HF2tO7BA")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max3Text)]
+    [StringLength(3, MinimumLength = 1)]
     Max3Text? SequenceNumber { get; }
 }

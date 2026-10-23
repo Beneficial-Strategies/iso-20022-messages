@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information about mergers.
 /// </summary>
 [IsoId("_IY-XYFPaEeG1qPPaW9KJvg")]
+[IsoDisplayName(@"Merger Details Type")]
 public interface IMergerDetailsType1 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IMergerDetailsType1 : IIsoComponent
     [IsoId("_DPO70GHPEeGknP6xAc4fKw")]
     [DisplayName("Counterparty Details")]
     [IsoXmlTag("CtrPtyDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICounterpartyDetailsType1> CounterpartyDetails { get; }
 
     /// <summary>
@@ -53,5 +55,6 @@ public interface IMergerDetailsType1 : IIsoComponent
     [IsoId("_2NisQFPaEeG1qPPaW9KJvg")]
     [DisplayName("Share Unit Quantity Of New Company")]
     [IsoXmlTag("ShrUnitQtyOfNewCpny")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? ShareUnitQuantityOfNewCompany { get; }
 }

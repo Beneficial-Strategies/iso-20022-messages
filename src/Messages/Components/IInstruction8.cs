@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction8.
 /// </summary>
 [IsoId("_6bbY0Y-9Ee-COKgew96POA")]
+[IsoDisplayName(@"Instruction8")]
 public interface IInstruction8 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,7 @@ public interface IInstruction8 : IIsoComponent
     /// </summary>
     [DisplayName("Meeting Attendee")]
     [IsoXmlTag("MtgAttndee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson41> MeetingAttendee { get; }
 
     /// <summary>

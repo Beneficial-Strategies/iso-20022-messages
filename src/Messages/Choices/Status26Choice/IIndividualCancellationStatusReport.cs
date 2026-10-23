@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status26Choice;
 /// </summary>
 [IsoId("_n7iik0grEeaD2L_hzZaE0w")]
 [IsoXmlTag("IndvCxlStsRpt")]
+[IsoDisplayName(@"Individual Cancellation Status Report")]
 public interface IIndividualCancellationStatusReport : IStatus26Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IIndividualCancellationStatusReport : IStatus26Choice, IIsoChoi
     [IsoId("_KFFh8zbtEead9bDRE_1DAQ")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IIndividualCancellationStatusReport : IStatus26Choice, IIsoChoi
     [IsoId("_KFFh9TbtEead9bDRE_1DAQ")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface IIndividualCancellationStatusReport : IStatus26Choice, IIsoChoi
     [IsoId("_KFFh9zbtEead9bDRE_1DAQ")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -42,6 +49,8 @@ public interface IIndividualCancellationStatusReport : IStatus26Choice, IIsoChoi
     [IsoId("_KFFh-TbtEead9bDRE_1DAQ")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CancellationReference { get; }
 
     /// <summary>

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CtrctRegnClsrReq",
     "urn:iso:std:iso:20022:tech:xsd:auth.020.001.03"
 )]
+[Description(@"The ContractRegistrationClosureRequest message is sent by the reporting party to the registration agent to close the registered contract subject to currency control.")]
+[IsoDisplayName(@"Contract Registration Closure Request V")]
 public interface IContractRegistrationClosureRequestV03 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +34,7 @@ public interface IContractRegistrationClosureRequestV03 : IOuterRecord
     [IsoId("_Nz8ajR3pEeuiRvbpCaJe6A")]
     [DisplayName("Registered Contract Closure")]
     [IsoXmlTag("RegdCtrctClsr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegisteredContract15> RegisteredContractClosure { get; }
 
     /// <summary>
@@ -40,5 +43,6 @@ public interface IContractRegistrationClosureRequestV03 : IOuterRecord
     [IsoId("_Nz8alR3pEeuiRvbpCaJe6A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

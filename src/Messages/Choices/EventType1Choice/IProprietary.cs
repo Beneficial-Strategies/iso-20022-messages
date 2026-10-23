@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventType1Choice;
 /// Type of the event, in a free text form.
 /// </summary>
 [IsoId("_71MAMKMgEeCJ6YNENx4h-w_1849878046")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IEventType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IEventType1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

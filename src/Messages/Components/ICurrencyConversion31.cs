@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency Conversion31.
 /// </summary>
 [IsoId("__HDc0ZFFEe6reqfAp4CunQ")]
+[IsoDisplayName(@"Currency Conversion31")]
 public interface ICurrencyConversion31 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface ICurrencyConversion31 : IIsoComponent
     /// </summary>
     [DisplayName("Conversion Details")]
     [IsoXmlTag("ConvsDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICurrencyConversion29> ConversionDetails { get; }
 }

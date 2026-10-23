@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficiaryCertificationType9Cho
 /// Beneficial owner certification type expressed in a coded form.
 /// </summary>
 [IsoId("_UQaTEfiyEeSjz7lzcp5lWQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBeneficiaryCertificationType9Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// </summary>
 [IsoId("_Xx1LEYZHEe-6cOl7zMpJaA")]
 [IsoMessage("setr.027.001.05", "SctiesTradConf", "urn:iso:std:iso:20022:tech:xsd:setr.027.001.05")]
+[Description(@"SCOPE|Sent by an executing party to an instructing party directly or through Central Matching Utility (CMU) to provide trade confirmation on a per-account basis based on instructions provided by the instructing party in the SecuritiesAllocationInstruction message.||It may also be used to provide trade confirmation on the trade level from an executing party or an instructing party to the custodian or an affirming party directly or through CMU.||The instructing party is typically the investment manager or an intermediary system/vendor communicating on behalf of the investment manager or of other categories of investors.|The executing party is typically the broker/dealer or an intermediary system/vendor communicating on behalf of the broker/dealer.|The custodian or the affirming party is typically the custodian, trustee, financial institution, intermediary system/vendor communicating on behalf of them, or their agent.||USAGE|Initiator: In local matching, the initiator of this message is always the executing party. In central matching the initiator may be either the executing party or instructing party.|Respondent: instructing party, a custodian or an affirming party responds with SecuritiesTradeConfirmationResponse (accept or reject) message.")]
+[IsoDisplayName(@"Securities Trade Confirmation V05")]
 public interface ISecuritiesTradeConfirmationV05 : IOuterRecord
 {
     /// <summary>
@@ -44,6 +46,7 @@ public interface ISecuritiesTradeConfirmationV05 : IOuterRecord
     /// </summary>
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages76> References { get; }
 
     /// <summary>
@@ -72,6 +75,7 @@ public interface ISecuritiesTradeConfirmationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Underlying Financial Instrument")]
     [IsoXmlTag("UndrlygFinInstrm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IUnderlyingFinancialInstrument7> UnderlyingFinancialInstrument { get; }
 
     /// <summary>
@@ -86,6 +90,7 @@ public interface ISecuritiesTradeConfirmationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Confirmation Parties")]
     [IsoXmlTag("ConfPties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IConfirmationParties6> ConfirmationParties { get; }
 
     /// <summary>
@@ -142,6 +147,7 @@ public interface ISecuritiesTradeConfirmationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Other Amounts")]
     [IsoXmlTag("OthrAmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherAmounts16> OtherAmounts { get; }
 
     /// <summary>
@@ -149,6 +155,7 @@ public interface ISecuritiesTradeConfirmationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Other Prices")]
     [IsoXmlTag("OthrPrics")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherPrices5> OtherPrices { get; }
 
     /// <summary>
@@ -178,5 +185,6 @@ public interface ISecuritiesTradeConfirmationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

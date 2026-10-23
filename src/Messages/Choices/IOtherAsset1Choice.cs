@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a type of other asset.
 /// </summary>
 [IsoId("_F-8BEEyJEeir2sRRVd9XhA")]
+[IsoDisplayName(@"Other Asset 1 Choice")]
 public interface IOtherAsset1Choice : IIsoChoice { }

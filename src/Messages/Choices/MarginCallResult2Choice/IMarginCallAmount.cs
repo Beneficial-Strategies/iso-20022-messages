@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginCallResult2Choice;
 /// </summary>
 [IsoId("_9boCQaMPEeCojJW5vEuTEQ_377211286")]
 [IsoXmlTag("MrgnCallAmt")]
+[IsoDisplayName(@"Margin Call Amount")]
 public interface IMarginCallAmount : IMarginCallResult2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,5 +35,7 @@ public interface IMarginCallAmount : IMarginCallResult2Choice, IIsoChoiceVariant
     [IsoId("_UlvaFdp-Ed-ak6NoX_4Aeg_903687993")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalInformation { get; }
 }

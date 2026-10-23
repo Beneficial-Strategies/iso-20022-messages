@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity5Choice;
 /// </summary>
 [IsoId("_owQISbtIEeiLRYqS-r-R-A")]
 [IsoXmlTag("OffclEcnmcSttstcs")]
+[IsoDisplayName(@"Official Economic Statistics")]
 public interface IOfficialEconomicStatistics : IAssetClassCommodity5Choice, IIsoChoiceVariant
 {
     /// <summary>

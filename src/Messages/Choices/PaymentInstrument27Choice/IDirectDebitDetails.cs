@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument27Choice;
 /// <summary>
 /// Direct Debit Details.
 /// </summary>
+[IsoDisplayName(@"Direct Debit Details")]
 public interface IDirectDebitDetails : IPaymentInstrument27Choice, IIsoChoiceVariant
 {
     /// <summary>

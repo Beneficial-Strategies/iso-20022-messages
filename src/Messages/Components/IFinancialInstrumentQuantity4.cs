@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Quantity of a security.
 /// </summary>
 [IsoId("_WNJcx9p-Ed-ak6NoX_4Aeg_-1314429173")]
+[IsoDisplayName(@"Financial Instrument Quantity")]
 public interface IFinancialInstrumentQuantity4 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,6 @@ public interface IFinancialInstrumentQuantity4 : IIsoComponent
     [IsoId("_WNJcyNp-Ed-ak6NoX_4Aeg_-1314429142")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
     RestrictedFINDecimalNumber Unit { get; }
 }

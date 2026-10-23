@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Hong Kong Bank Code - identifies Hong Kong financial institutions on the Hong Kong local clearing system.
 /// </summary>
 [IsoId("_VwSCgbNIEeejueAciesPMA")]
+[IsoDisplayName(@"Hong Kong Bank Code")]
 public interface IHongKongBankCode : IClearingSystemMemberIdentification4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IHongKongBankCode : IClearingSystemMemberIdentification4Choice,
     /// Hong Kong Bank Code. Identifies Hong Kong financial institutions on the Hong Kong local clearing system.
     /// </summary>
     [IsoXmlTag("HKNCC")]
+    [IsoSimpleType(IsoSimpleType.HongKongBankIdentifier)]
     HongKongBankIdentifier Value { get; }
 }

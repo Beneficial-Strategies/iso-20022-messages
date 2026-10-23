@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the option rights.
 /// </summary>
 [IsoId("_PwmrYZEjEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Option Right 2 Choice")]
 public interface IOptionRight2Choice : IIsoChoice { }

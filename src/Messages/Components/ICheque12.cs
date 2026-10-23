@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of characteristics related to a cheque instruction, such as cheque type or cheque number.
 /// </summary>
 [IsoId("_AtvYwf8REemYYvJytExgzA")]
+[IsoDisplayName(@"Cheque")]
 public interface ICheque12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICheque12 : IIsoComponent
     [IsoId("_BS7wgf8REemYYvJytExgzA")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Number { get; }
 
     /// <summary>

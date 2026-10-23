@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice3Choic
 /// Indicates that price is expressed as a yield.
 /// </summary>
 [IsoId("_rdXYBUDWEeWOL-OsSq2h6w")]
+[IsoDisplayName(@"Yield")]
 public interface IYield : ISecuritiesTransactionPrice3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IYield : ISecuritiesTransactionPrice3Choice, IIsoChoiceVariant
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("Yld")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

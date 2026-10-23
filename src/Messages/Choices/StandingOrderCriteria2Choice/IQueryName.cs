@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria2Choice;
 /// Recalls the criteria (search and return criteria) defined in a preceding query.
 /// </summary>
 [IsoId("_i8ykQZlPEee-Zps0fZQaFQ")]
+[IsoDisplayName(@"Query Name")]
 public interface IQueryName : IStandingOrderCriteria2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IQueryName : IStandingOrderCriteria2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("QryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

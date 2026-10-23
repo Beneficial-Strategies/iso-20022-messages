@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.colr;
 /// </summary>
 [IsoId("_f5lIsVnMEeSPgY23yCMQSQ")]
 [IsoMessage("colr.008.001.03", "CollPrpslRspn", "urn:iso:std:iso:20022:tech:xsd:colr.008.001.03")]
+[Description(@"Scope|This CollateralProposalResponse message is sent by the collateral taker or its collateral manager to the collateral giver or its collateral manager to either accept or reject the collateral which has been proposed for the margin call. This message applies to both initial and counter proposals. If the collateral proposal is rejected then a new collateral proposal must be made.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|The CollateralProposalResponse message can be sent in response to a previously received CollateralProposal message in order to accept or reject the collateral that has been proposed to cover the margin call.")]
+[IsoDisplayName(@"Collateral Proposal Response V")]
 public interface ICollateralProposalResponseV03 : IOuterRecord
 {
     /// <summary>
@@ -26,6 +28,8 @@ public interface ICollateralProposalResponseV03 : IOuterRecord
     [IsoId("_f5lIs1nMEeSPgY23yCMQSQ")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -50,5 +54,6 @@ public interface ICollateralProposalResponseV03 : IOuterRecord
     [IsoId("_f5lIuVnMEeSPgY23yCMQSQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

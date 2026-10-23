@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines the criteria used to search for an account.
 /// </summary>
 [IsoId("_Aj9XsTpuEemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Collateral Value Search Criteria")]
 public interface ICollateralValueSearchCriteria3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICollateralValueSearchCriteria3 : IIsoComponent
     [IsoId("_Au-79TpuEemk2e6qGBk8IQ")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ActiveOrHistoricCurrencyCode> Currency { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ICollateralValueSearchCriteria3 : IIsoComponent
     [IsoId("_Au-7-zpuEemk2e6qGBk8IQ")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityIdentification19> FinancialInstrumentIdentification { get; }
 
     /// <summary>

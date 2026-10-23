@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the reason of a rejection of an election amendment request.
 /// </summary>
 [IsoId("_Roovwtp-Ed-ak6NoX_4Aeg_520363786")]
+[IsoDisplayName(@"Rejection Reason 8 Format Choice")]
 public interface IRejectionReason8FormatChoice : IIsoChoice { }

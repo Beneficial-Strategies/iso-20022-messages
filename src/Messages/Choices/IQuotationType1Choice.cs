@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a type of quotation
 /// </summary>
 [IsoId("_QPU_sNK4EeihtcVwfFPNlg")]
+[IsoDisplayName(@"Quotation Type 1 Choice")]
 public interface IQuotationType1Choice : IIsoChoice { }

@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus4Choice;
 
 /// <summary>Provides information about the accepted with warning status.</summary>
 [IsoId("_MVTd4KUfEfCnE_wCEfCqTA")]
+[IsoDisplayName(@"Accepted With Warning Status")]
 public interface IAcceptedWithWarningStatus : INotificationAdviceStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

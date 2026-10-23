@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Obligations of a legal entity or other financial construct that must be met in cash and the resources such legal entity of financial construct has available to meet those obligations.
 /// </summary>
 [IsoId("_IW-vwLbxEeaqL_M7XFD7PQ")]
+[IsoDisplayName(@"Liquidity Required And Available")]
 public interface ILiquidityRequiredAndAvailable1 : IIsoComponent
 {
     /// <summary>

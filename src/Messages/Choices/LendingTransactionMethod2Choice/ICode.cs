@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LendingTransactionMethod2Choice;
 /// Lending transaction method expressed as a ISO20022 code.
 /// </summary>
 [IsoId("_2cgUcZEjEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ILendingTransactionMethod2Choice, IIsoChoiceVariant
 {
     /// <summary>

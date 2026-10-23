@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of fraudulent case.
 /// </summary>
 [IsoId("_08BmYcZdEeiCDcGzDHI_9Q")]
+[IsoDisplayName(@"Fraud Case Details")]
 public interface IFraudCaseDetails1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFraudCaseDetails1 : IIsoComponent
     [IsoId("_EVHQQsZeEeiCDcGzDHI_9Q")]
     [DisplayName("Market Segment")]
     [IsoXmlTag("MktSgmt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MarketSegment { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IFraudCaseDetails1 : IIsoComponent
     [IsoId("_EVHQQ8ZeEeiCDcGzDHI_9Q")]
     [DisplayName("Locator Number")]
     [IsoXmlTag("LctrNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? LocatorNumber { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IFraudCaseDetails1 : IIsoComponent
     [IsoId("_EVHQRMZeEeiCDcGzDHI_9Q")]
     [DisplayName("Case Reference")]
     [IsoXmlTag("CaseRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CaseReference { get; }
 
     /// <summary>
@@ -44,5 +51,6 @@ public interface IFraudCaseDetails1 : IIsoComponent
     [IsoId("_EVHQRcZeEeiCDcGzDHI_9Q")]
     [DisplayName("Arrest Indicator")]
     [IsoXmlTag("ArrstInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ArrestIndicator { get; }
 }

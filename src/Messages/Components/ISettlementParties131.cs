@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Chain of parties involved in the settlement of a transaction.
 /// </summary>
 [IsoId("f13e2d50-e9a8-4f0e-9fa7-6c05f877f4ae")]
+[IsoDisplayName(@"Settlement Parties131")]
 public interface ISettlementParties131 : IIsoComponent
 {
     /// <summary>

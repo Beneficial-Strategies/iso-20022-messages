@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the kind of modification request for party reference data.
 /// </summary>
 [IsoId("_xtxKwYv-Eei289CGNqs21g")]
+[IsoDisplayName(@"System Party Modification")]
 public interface ISystemPartyModification2 : IIsoComponent
 {
     /// <summary>

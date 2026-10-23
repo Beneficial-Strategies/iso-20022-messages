@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides corporate action option details about total instructed balance.
 /// </summary>
 [IsoId("_D3XZp_fQEeiNZp_PtLohLw")]
+[IsoDisplayName(@"Instructed Corporate Action Option")]
 public interface IInstructedCorporateActionOption11 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IInstructedCorporateActionOption11 : IIsoComponent
     [IsoId("_D3XZqffQEeiNZp_PtLohLw")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText? OptionNumber { get; }
 
     /// <summary>
@@ -97,5 +99,6 @@ public interface IInstructedCorporateActionOption11 : IIsoComponent
     [IsoId("_D3XZ1ffQEeiNZp_PtLohLw")]
     [DisplayName("Option Instruction Details")]
     [IsoXmlTag("OptnInstrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOptionInstructionDetails2> OptionInstructionDetails { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a ratio: amount price per financial instrument quantity.
 /// </summary>
 [IsoId("_pi0o_zi7Eeydid5dcNPKvg")]
+[IsoDisplayName(@"Amount Price Per Financial Instrument Quantity")]
 public interface IAmountPricePerFinancialInstrumentQuantity11 : IIsoComponent
 {
     /// <summary>

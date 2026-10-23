@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Characteristics3.
 /// </summary>
 [IsoId("_8ZJrkYShEe6odei_lsRKtw")]
+[IsoDisplayName(@"Transaction Characteristics3")]
 public interface ITransactionCharacteristics3 : IIsoComponent
 {
     /// <summary>
@@ -30,6 +31,7 @@ public interface ITransactionCharacteristics3 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Attribute")]
     [IsoXmlTag("TxAttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<TransactionAttribute2Code> TransactionAttribute { get; }
 
     /// <summary>
@@ -37,6 +39,7 @@ public interface ITransactionCharacteristics3 : IIsoComponent
     /// </summary>
     [DisplayName("Other Transaction Attribute")]
     [IsoXmlTag("OthrTxAttr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> OtherTransactionAttribute { get; }
 
     /// <summary>
@@ -51,6 +54,7 @@ public interface ITransactionCharacteristics3 : IIsoComponent
     /// </summary>
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISO8583MessageReasonCode> MessageReason { get; }
 
     /// <summary>
@@ -58,6 +62,7 @@ public interface ITransactionCharacteristics3 : IIsoComponent
     /// </summary>
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max256Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -72,5 +77,6 @@ public interface ITransactionCharacteristics3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

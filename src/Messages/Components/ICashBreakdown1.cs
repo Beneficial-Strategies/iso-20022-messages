@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Amount of money defined in cash notes and or cash coins.
 /// </summary>
 [IsoId("_UzKpJEFVEfCGo6pGJ7j7Eg")]
+[IsoDisplayName(@"Cash Breakdown1")]
 public interface ICashBreakdown1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICashBreakdown1 : IIsoComponent
     [IsoId("_UzKpJUFVEfCGo6pGJ7j7Eg")]
     [DisplayName("Note Details")]
     [IsoXmlTag("NoteDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashNote1> NoteDetails { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICashBreakdown1 : IIsoComponent
     [IsoId("_UzKpJkFVEfCGo6pGJ7j7Eg")]
     [DisplayName("Coin Details")]
     [IsoXmlTag("CoinDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashCoin1> CoinDetails { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DataFormat1Choice;
 /// Specification of data in free text form.
 /// </summary>
 [IsoId("_Uys4B9p-Ed-ak6NoX_4Aeg_1454264623")]
+[IsoDisplayName(@"Unstructured")]
 public interface IUnstructured : IDataFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IUnstructured : IDataFormat1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 140 characters.
     /// </summary>
     [IsoXmlTag("Ustrd")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Value { get; }
 }

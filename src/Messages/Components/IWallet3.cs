@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Wallet3.
 /// </summary>
 [IsoId("_mtLxgW9wEe6DxcrvCrq6hQ")]
+[IsoDisplayName(@"Wallet3")]
 public interface IWallet3 : IIsoComponent
 {
     /// <summary>
@@ -142,5 +143,6 @@ public interface IWallet3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the members of a system.
 /// </summary>
 [IsoId("_jEyVlZlCEee-Zps0fZQaFQ")]
+[IsoDisplayName(@"Member")]
 public interface IMember4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMember4 : IIsoComponent
     [IsoId("_jNHLIZlCEee-Zps0fZQaFQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IMember4 : IIsoComponent
     [IsoId("_jNHLI5lCEee-Zps0fZQaFQ")]
     [DisplayName("Return Address")]
     [IsoXmlTag("RtrAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMemberIdentification2Choice> ReturnAddress { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IMember4 : IIsoComponent
     [IsoId("_jNHLJZlCEee-Zps0fZQaFQ")]
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashAccount24> Account { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IMember4 : IIsoComponent
     [IsoId("_jNHLK5lCEee-Zps0fZQaFQ")]
     [DisplayName("Contact Reference")]
     [IsoXmlTag("CtctRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentificationAndAddress1> ContactReference { get; }
 
     /// <summary>

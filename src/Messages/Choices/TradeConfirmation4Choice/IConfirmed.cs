@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeConfirmation4Choice;
 /// <summary>
 /// Confirmed.
 /// </summary>
+[IsoDisplayName(@"Confirmed")]
 public interface IConfirmed : ITradeConfirmation4Choice, IIsoChoiceVariant
 {
     /// <summary>

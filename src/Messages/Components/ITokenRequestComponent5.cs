@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Token Request Component5.
 /// </summary>
 [IsoId("_vF-mAaEtEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"Token Request Component5")]
 public interface ITokenRequestComponent5 : IIsoComponent
 {
     /// <summary>

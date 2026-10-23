@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the details of the status.
 /// </summary>
 [IsoId("_VPaCAPH9Eeaz_YGUGLjP6A")]
+[IsoDisplayName(@"Status Detail")]
 public interface IStatusDetail1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IStatusDetail1 : IIsoComponent
     [IsoId("_g_8Q0fH9Eeaz_YGUGLjP6A")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? Status { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IStatusDetail1 : IIsoComponent
     [IsoId("_YID0sfH-Eeaz_YGUGLjP6A")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text StatusReason { get; }
 
     /// <summary>
@@ -57,5 +62,7 @@ public interface IStatusDetail1 : IIsoComponent
     [IsoId("_uUdG8En5EeexwKvkdw4OGA")]
     [DisplayName("Comment")]
     [IsoXmlTag("Cmnt")]
+    [IsoSimpleType(IsoSimpleType.Max20000Text)]
+    [StringLength(20000, MinimumLength = 1)]
     Max20000Text? Comment { get; }
 }

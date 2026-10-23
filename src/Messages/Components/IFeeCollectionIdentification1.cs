@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the dispute
 /// </summary>
 [IsoId("_JCpSISxNEeyg-aG5nXcnfg")]
+[IsoDisplayName(@"Fee Collection Identification")]
 public interface IFeeCollectionIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFeeCollectionIdentification1 : IIsoComponent
     [IsoId("_JI5EESxNEeyg-aG5nXcnfg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Type { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IFeeCollectionIdentification1 : IIsoComponent
     [IsoId("_JI5EEyxNEeyg-aG5nXcnfg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text Identification { get; }
 }

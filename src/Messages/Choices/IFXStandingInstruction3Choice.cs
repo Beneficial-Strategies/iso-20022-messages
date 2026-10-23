@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the FX Standing Instruction information.
 /// </summary>
 [IsoId("_Aamt1NokEeC60axPepSq7g_1602416385")]
+[IsoDisplayName(@"FX Standing Instruction 3 Choice")]
 public interface IFXStandingInstruction3Choice : IIsoChoice { }

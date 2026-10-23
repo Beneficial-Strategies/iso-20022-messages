@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Underlying Transaction32.
 /// </summary>
 [IsoId("_9PyU4TEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Underlying Transaction32")]
 public interface IUnderlyingTransaction32 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IUnderlyingTransaction32 : IIsoComponent
     /// </summary>
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOriginalPaymentInstruction48> OriginalPaymentInformationAndStatus { get; }
 
     /// <summary>
@@ -30,5 +32,6 @@ public interface IUnderlyingTransaction32 : IIsoComponent
     /// </summary>
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction152> TransactionInformationAndStatus { get; }
 }

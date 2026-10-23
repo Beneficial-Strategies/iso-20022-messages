@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Position/transaction reporting under the local regulation.
 /// </summary>
 [IsoId("_bN4vcRLBEeqctpBfTmLJnw")]
+[IsoDisplayName(@"Trade Data 17 Choice")]
 public interface ITradeData17Choice : IIsoChoice { }

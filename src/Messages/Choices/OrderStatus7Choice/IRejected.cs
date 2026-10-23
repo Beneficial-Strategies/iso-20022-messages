@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus7Choice;
 
 /// <summary>Status of the switch order is rejected.</summary>
 [IsoId("5597f78a-e863-4e81-ac60-aacd9a8812b0")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IOrderStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 /// </summary>
 [IsoId("_oaXu8K_6EeaE9YROwd69hA")]
 [IsoXmlTag("Gold")]
+[IsoDisplayName(@"Gold")]
 public interface IGold : IAssetHolding1Choice, IIsoChoiceVariant
 {
     /// <summary>

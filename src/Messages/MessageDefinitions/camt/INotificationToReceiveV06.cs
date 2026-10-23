@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_yaKCEW42EeiU9cctagi5ow")]
 [IsoMessage("camt.057.001.06", "NtfctnToRcv", "urn:iso:std:iso:20022:tech:xsd:camt.057.001.06")]
+[Description(@"Scope|The NotificationToReceive message is sent by an account owner or by a party acting on the account owner's behalf to one of the account owner's account servicing institutions. It is an advance notice that the account servicing institution will receive funds to be credited to the account of the account owner.|Usage|The NotificationToReceive message is used to advise the account servicing institution of funds that the account owner expects to have credited to its account. The message can be used in either a direct or a relay scenario.")]
+[IsoDisplayName(@"Notification To Receive V")]
 public interface INotificationToReceiveV06 : IOuterRecord
 {
     /// <summary>
@@ -39,5 +41,6 @@ public interface INotificationToReceiveV06 : IOuterRecord
     [IsoId("_yaKCF242EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

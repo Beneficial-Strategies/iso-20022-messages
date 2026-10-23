@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SolicitationFeeRateFormat10Choic
 /// </summary>
 [IsoId("_ctoZSZKQEeWHWpTQn1FFVg")]
 [IsoXmlTag("Amt")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount : ISolicitationFeeRateFormat10Choice, IIsoChoiceVariant
 {
     /// <summary>

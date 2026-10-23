@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus35Cho
 /// </summary>
 [IsoId("_iE4OmffZEeiNZp_PtLohLw")]
 [IsoXmlTag("ModReqd")]
+[IsoDisplayName(@"Modification Requested")]
 public interface IModificationRequested : IInstructionProcessingStatus35Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IModificationRequested : IInstructionProcessingStatus35Choice, 
     [IsoId("_ceme5ZKQEeWHWpTQn1FFVg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
+    [StringLength(210, MinimumLength = 1)]
     RestrictedFINXMax210Text? AdditionalReasonInformation { get; }
 }

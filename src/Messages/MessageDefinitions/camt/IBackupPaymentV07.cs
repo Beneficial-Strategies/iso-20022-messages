@@ -24,6 +24,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_jwlbMRbvEeiyVv5j1vf1VQ")]
 [IsoMessage("camt.023.001.07", "BckpPmt", "urn:iso:std:iso:20022:tech:xsd:camt.023.001.07")]
+[Description(@"Scope|The BackupPayment message is sent by a member to the transaction administrator.|It is used to request a liquidity transfer from the member to another participant in the system when the user is in recovery mode.|Usage|Under very specific circumstances, the transaction administrator can accept direct input of transactions as part of its cash management functionalities. This possibility is available only when a declared incident has been reported to the transaction administrator This could be the case, for example, when the internal systems of the member are having problems sending out payments or when the continuity of the whole system is put at risk.|The purpose of the BackupPayment message is to prevent the consequences of a specific failure affecting not only the member experiencing problems but also its counterparties. Members can therefore input transactions directly in order to ensure the stability of the system and smooth exchanges.|At any time during the operating hours of the system, and under the agreed circumstances, the member can request a backup payment to be effected.|The member can request the transfer by identifying the following elements:|- party (account owner) that will receive the funds|- the financial institution that will receive the funds on behalf of the account owner|Based on the criteria received within the BackupPayment message, the transaction administrator will execute or reject the requested funds transfer.|The transaction administrator may send a Receipt message as a reply to the BackupPayment request.|To verify the outcome of the request, the member may submit a GetTransaction or GetAccount message with the appropriate search criteria.")]
+[IsoDisplayName(@"Backup Payment V")]
 public interface IBackupPaymentV07 : IOuterRecord
 {
     /// <summary>
@@ -88,5 +90,6 @@ public interface IBackupPaymentV07 : IOuterRecord
     [IsoId("_jwlbQRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

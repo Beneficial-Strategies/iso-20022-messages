@@ -13,6 +13,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_eii_URnXEeKKXqHkeUjBbw")]
 [IsoMessage("camt.063.001.02", "PayInEvtAck", "urn:iso:std:iso:20022:tech:xsd:camt.063.001.02")]
+[Description(@"The PayInEventAcknowledgement message is sent by a participant of a central system to the central system to confirm a PayInSchedule or a PayInCall has been received.|")]
+[IsoDisplayName(@"Pay In Event Acknowledgement V")]
 public interface IPayInEventAcknowledgementV02 : IOuterRecord
 {
     /// <summary>
@@ -21,6 +23,8 @@ public interface IPayInEventAcknowledgementV02 : IOuterRecord
     [IsoId("_1VTQczp7EeKXK8qRvydwAw")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -29,6 +33,7 @@ public interface IPayInEventAcknowledgementV02 : IOuterRecord
     [IsoId("_SY6S7R3bEeKXIbeXfdPzuw")]
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? SettlementSessionIdentifier { get; }
 
     /// <summary>
@@ -45,5 +50,6 @@ public interface IPayInEventAcknowledgementV02 : IOuterRecord
     [IsoId("_Cu8KTy53EeKwTrPDLMbLxA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

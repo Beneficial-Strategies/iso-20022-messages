@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to a fee collection response message.
 /// </summary>
 [IsoId("_JA1Z0YaBEeuSbct6WWD-Ng")]
+[IsoDisplayName(@"Fee Collection Response")]
 public interface IFeeCollectionResponse2 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IFeeCollectionResponse2 : IIsoComponent
     [IsoId("_JGA0yYaBEeuSbct6WWD-Ng")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

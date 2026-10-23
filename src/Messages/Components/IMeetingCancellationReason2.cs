@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason for cancelling a meeting.
 /// </summary>
 [IsoId("_RCMa19p-Ed-ak6NoX_4Aeg_1000768570")]
+[IsoDisplayName(@"Meeting Cancellation Reason")]
 public interface IMeetingCancellationReason2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IMeetingCancellationReason2 : IIsoComponent
     [IsoId("_RCWL0Np-Ed-ak6NoX_4Aeg_1000768631")]
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? CancellationReason { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the format under which the payment that generated the entry was transmitted.
 /// </summary>
 [IsoId("_RIwV1Np-Ed-ak6NoX_4Aeg_1623377139")]
+[IsoDisplayName(@"Payment Origin 1 Choice")]
 public interface IPaymentOrigin1Choice : IIsoChoice { }

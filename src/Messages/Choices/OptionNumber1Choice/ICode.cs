@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionNumber1Choice;
 /// Code identifying special corporate action option numbers.
 /// </summary>
 [IsoId("_Q1O849p-Ed-ak6NoX_4Aeg_474199627")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IOptionNumber1Choice, IIsoChoiceVariant
 {
     /// <summary>

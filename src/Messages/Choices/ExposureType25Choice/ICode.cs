@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExposureType25Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IExposureType25Choice, IIsoChoiceVariant
 {
     /// <summary>

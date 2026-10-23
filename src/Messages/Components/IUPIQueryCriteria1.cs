@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification through a unique product identifier.
 /// </summary>
 [IsoId("_4iN1MJNkEeytjZlcgApf6A")]
+[IsoDisplayName(@"UPI Query Criteria")]
 public interface IUPIQueryCriteria1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IUPIQueryCriteria1 : IIsoComponent
     [IsoId("_Ab3SAJNlEeytjZlcgApf6A")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max52Text> Identifier { get; }
 
     /// <summary>

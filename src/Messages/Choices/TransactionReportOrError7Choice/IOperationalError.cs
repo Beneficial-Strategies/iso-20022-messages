@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionReportOrError7Choice;
 /// <summary>
 /// Operational Error.
 /// </summary>
+[IsoDisplayName(@"Operational Error")]
 public interface IOperationalError : ITransactionReportOrError7Choice, IIsoChoiceVariant
 {
     /// <summary>

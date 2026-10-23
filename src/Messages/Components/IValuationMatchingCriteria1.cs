@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Compares information related to both sides of a contract valuation.
 /// </summary>
 [IsoId("_L1MIEExTEeywvc16MwOPfw")]
+[IsoDisplayName(@"Valuation Matching Criteria")]
 public interface IValuationMatchingCriteria1 : IIsoComponent
 {
     /// <summary>

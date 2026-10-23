@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConfirmationStatus1Choice;
 /// </summary>
 [IsoId("_1BFlFEhCEea8pJjypp-yMQ")]
 [IsoXmlTag("AmdmntRjctd")]
+[IsoDisplayName(@"Amendment Rejected")]
 public interface IAmendmentRejected : IConfirmationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IAmendmentRejected : IConfirmationStatus1Choice, IIsoChoiceVari
     [IsoId("__OYdI3ZxEeaN2c674jyTxQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

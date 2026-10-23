@@ -26,6 +26,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "CtdyStmtOfHldgsV02",
     "urn:iso:std:iso:20022:tech:xsd:semt.002.001.02"
 )]
+[Description(@"Scope|An account servicer, for example, a transfer agent sends the CustodyStatementOfHoldings message to the account owner, for example, a fund manager or an account owner's designated agent to provide detailed holdings of the portfolio at a specified moment in time.|The message provides, at a moment in time, the quantity and identification of the financial instruments that the account servicer holds for the account owner. The message can also include availability and the location of holdings to facilitate trading and minimise settlement issues.|The message reports all information per financial instrument, ie, when a financial instrument is held at multiple places of safekeeping, the total holdings for all locations can be provided.|Usage|The CustodyStatementOfHoldings message is used to provide detailed quantity and availability information for financial instrument holdings of a portfolio. The message should be sent at a frequency agreed bi-laterally between the account servicer and the account owner.|This message can be also be used to report where the financial instruments are safe-kept, physically or notionally. If a security is held in more than one safekeeping place, this can also be indicated.|This message can reflect all outstanding holding information or may only contain changes since the previously sent statement.|The CustodyStatementOfHoldings message can only be used to list the holdings of a single (master) account. However, it is possible to break down these holdings into one or several sub-accounts. Therefore, this message can be used to either specify holdings at|- the main account level, or,|- the sub-account level.")]
+[IsoDisplayName(@"Custody Statement Of Holdings V")]
 public interface ICustodyStatementOfHoldingsV02 : IOuterRecord
 {
     /// <summary>
@@ -42,6 +44,7 @@ public interface ICustodyStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_Magh_9FSEd-BzquC8wXy7w_1153922222")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference2> PreviousReference { get; }
 
     /// <summary>
@@ -50,6 +53,7 @@ public interface ICustodyStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_Mapr4NFSEd-BzquC8wXy7w_1153922204")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference2> RelatedReference { get; }
 
     /// <summary>
@@ -82,6 +86,7 @@ public interface ICustodyStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_Mapr5NFSEd-BzquC8wXy7w_1153922402")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateBalanceInformation4> BalanceForAccount { get; }
 
     /// <summary>
@@ -90,6 +95,7 @@ public interface ICustodyStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_Mapr5dFSEd-BzquC8wXy7w_1153922324")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISubAccountIdentification5> SubAccountDetails { get; }
 
     /// <summary>
@@ -106,5 +112,6 @@ public interface ICustodyStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_Mapr59FSEd-BzquC8wXy7w_1153922437")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

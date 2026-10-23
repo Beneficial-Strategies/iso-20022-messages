@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of an entity involved in an activity.
 /// </summary>
 [IsoId("_5TKl_5NLEeWGlc8L7oPDIg")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification103 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IPartyIdentification103 : IIsoComponent
     [IsoId("_5TKmCZNLEeWGlc8L7oPDIg")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface IPartyIdentification103 : IIsoComponent
     [IsoId("_5TKmG5NLEeWGlc8L7oPDIg")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? ProcessingIdentification { get; }
 
     /// <summary>

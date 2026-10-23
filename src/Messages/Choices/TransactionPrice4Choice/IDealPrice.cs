@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionPrice4Choice;
 /// </summary>
 [IsoId("_-XasI7TUEee_k7HqaUKERA")]
 [IsoXmlTag("DealPric")]
+[IsoDisplayName(@"Deal Price")]
 public interface IDealPrice : ITransactionPrice4Choice, IIsoChoiceVariant
 {
     /// <summary>

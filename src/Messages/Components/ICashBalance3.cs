@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to define the balance details.
 /// </summary>
 [IsoId("_SYxMM9p-Ed-ak6NoX_4Aeg_142613119")]
+[IsoDisplayName(@"Cash Balance")]
 public interface ICashBalance3 : IIsoComponent
 {
     /// <summary>
@@ -57,5 +58,6 @@ public interface ICashBalance3 : IIsoComponent
     [IsoId("_SY69MNp-Ed-ak6NoX_4Aeg_142613605")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalanceAvailability2> Availability { get; }
 }

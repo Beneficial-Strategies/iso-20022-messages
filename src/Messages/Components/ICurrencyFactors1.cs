@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Currency specific Factors.
 /// </summary>
 [IsoId("_SvDFDAEcEeCQm6a_G2yO_w_737045003")]
+[IsoDisplayName(@"Currency Factors")]
 public interface ICurrencyFactors1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICurrencyFactors1 : IIsoComponent
     [IsoId("_SvM2AAEcEeCQm6a_G2yO_w_-1119940583")]
     [DisplayName("Volatility Margin")]
     [IsoXmlTag("VoltlyMrgn")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate VolatilityMargin { get; }
 
     /// <summary>

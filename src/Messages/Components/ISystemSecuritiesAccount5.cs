@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the account within a system to or from which a securities entry is made. It holds information generic or market specific attributes such as opening or closing date, and defines the default setting for the  holding of settlement instructions involving positions related to the account.
 /// </summary>
 [IsoId("_8IwThzp0Eemk2e6qGBk8IQ")]
+[IsoDisplayName(@"System Securities Account")]
 public interface ISystemSecuritiesAccount5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISystemSecuritiesAccount5 : IIsoComponent
     [IsoId("_8VuYgTp0Eemk2e6qGBk8IQ")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ClosingDate { get; }
 
     /// <summary>
@@ -28,6 +30,7 @@ public interface ISystemSecuritiesAccount5 : IIsoComponent
     [IsoId("_8VuYgzp0Eemk2e6qGBk8IQ")]
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? HoldIndicator { get; }
 
     /// <summary>
@@ -36,6 +39,7 @@ public interface ISystemSecuritiesAccount5 : IIsoComponent
     [IsoId("_8VuYhTp0Eemk2e6qGBk8IQ")]
     [DisplayName("Negative Position")]
     [IsoXmlTag("NegPos")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? NegativePosition { get; }
 
     /// <summary>
@@ -44,6 +48,7 @@ public interface ISystemSecuritiesAccount5 : IIsoComponent
     [IsoId("_8VuYhzp0Eemk2e6qGBk8IQ")]
     [DisplayName("End Investor Flag")]
     [IsoXmlTag("EndInvstrFlg")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? EndInvestorFlag { get; }
 
     /// <summary>
@@ -52,5 +57,6 @@ public interface ISystemSecuritiesAccount5 : IIsoComponent
     [IsoId("_8VuYiTp0Eemk2e6qGBk8IQ")]
     [DisplayName("Pricing Scheme")]
     [IsoXmlTag("PricgSchme")]
+    [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
     Exact4AlphaNumericText? PricingScheme { get; }
 }

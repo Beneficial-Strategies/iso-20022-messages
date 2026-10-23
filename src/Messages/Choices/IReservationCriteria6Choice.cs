@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reservation Criteria6Choice.
 /// </summary>
 [IsoId("_zsubhTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Reservation Criteria6Choice")]
 public interface IReservationCriteria6Choice : IIsoChoice { }

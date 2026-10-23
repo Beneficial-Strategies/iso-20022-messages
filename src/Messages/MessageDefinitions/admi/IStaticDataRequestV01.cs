@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// </summary>
 [IsoId("_sVqYsGtdEeCY4-KZ9JEyUQ_114633584")]
 [IsoMessage("admi.009.001.01", "StatcDataReq", "urn:iso:std:iso:20022:tech:xsd:admi.009.001.01")]
+[IsoDisplayName(@"Static Data Request V01")]
 public interface IStaticDataRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IStaticDataRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     IMessageIdentification MessageIdentification { get; }
 
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Status of a system and the period of time during which the status is valid.
 /// </summary>
 [IsoId("_1Y_TsYpbEeiaB-4Hjqs8aw")]
+[IsoDisplayName(@"System Status 3 Choice")]
 public interface ISystemStatus3Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a payment against a commercial invoice.
 /// </summary>
 [IsoId("_TK73gRrYEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Report Line")]
 public interface IReportLine6 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IReportLine6 : IIsoComponent
     [IsoId("_Ti7gwxrYEeOVR9VN6fAMUg")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdjustment6> Adjustment { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IReportLine6 : IIsoComponent
     [IsoId("_Ti7gxxrYEeOVR9VN6fAMUg")]
     [DisplayName("Breakdown By Purchase Order")]
     [IsoXmlTag("BrkdwnByPurchsOrdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReportLine7> BreakdownByPurchaseOrder { get; }
 }

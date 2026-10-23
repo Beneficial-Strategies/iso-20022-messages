@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Debtor Activation Cancellation3.
 /// </summary>
 [IsoId("_5eRjYTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Debtor Activation Cancellation3")]
 public interface IDebtorActivationCancellation3 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IDebtorActivationCancellation3 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

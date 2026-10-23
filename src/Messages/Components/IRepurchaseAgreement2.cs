@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Agreement between two parties to sell a financial instrument or set of financial instruments and repurchase at an agreed later date.
 /// </summary>
 [IsoId("_onOhMbJVEeaYqc4G3TTwhA")]
+[IsoDisplayName(@"Repurchase Agreement")]
 public interface IRepurchaseAgreement2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IRepurchaseAgreement2 : IIsoComponent
     [IsoId("_oxf3gbJVEeaYqc4G3TTwhA")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IRepurchaseAgreement2 : IIsoComponent
     [IsoId("_oxf3hbJVEeaYqc4G3TTwhA")]
     [DisplayName("Counterparty")]
     [IsoXmlTag("CtrPty")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Counterparty { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface IRepurchaseAgreement2 : IIsoComponent
     [IsoId("_63_i0LJVEeaYqc4G3TTwhA")]
     [DisplayName("Triparty Agent Identification")]
     [IsoXmlTag("TrptyAgtId")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? TripartyAgentIdentification { get; }
 }

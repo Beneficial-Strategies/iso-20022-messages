@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to a token request or response.
 /// </summary>
 [IsoId("__Dw-0U7VEeyGi9JAv6wq7Q")]
+[IsoDisplayName(@"Token Request Component")]
 public interface ITokenRequestComponent2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITokenRequestComponent2 : IIsoComponent
     [IsoId("__J2_wU7VEeyGi9JAv6wq7Q")]
     [DisplayName("Transaction Sequence Counter")]
     [IsoXmlTag("TxSeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Max9NumericText)]
     Max9NumericText TransactionSequenceCounter { get; }
 
     /// <summary>

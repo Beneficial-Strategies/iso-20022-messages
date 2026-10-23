@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details related to a credit transfer mandate signed between the creditor and the debtor.
 /// </summary>
 [IsoId("_EVj2MclqEem0vqvvoqYsqQ")]
+[IsoDisplayName(@"Credit Transfer Mandate Data")]
 public interface ICreditTransferMandateData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICreditTransferMandateData1 : IIsoComponent
     [IsoId("_EgIuh8lqEem0vqvvoqYsqQ")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICreditTransferMandateData1 : IIsoComponent
     [IsoId("_EgIuiclqEem0vqvvoqYsqQ")]
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfSignature { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICreditTransferMandateData1 : IIsoComponent
     [IsoId("_MBcj0MlqEem0vqvvoqYsqQ")]
     [DisplayName("Date Of Verification")]
     [IsoXmlTag("DtOfVrfctn")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DateOfVerification { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ICreditTransferMandateData1 : IIsoComponent
     [IsoId("_EgIuj8lqEem0vqvvoqYsqQ")]
     [DisplayName("Electronic Signature")]
     [IsoXmlTag("ElctrncSgntr")]
+    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
     Max10KBinary? ElectronicSignature { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ICreditTransferMandateData1 : IIsoComponent
     [IsoId("_EgIukclqEem0vqvvoqYsqQ")]
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FirstPaymentDate { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ICreditTransferMandateData1 : IIsoComponent
     [IsoId("_EgIuk8lqEem0vqvvoqYsqQ")]
     [DisplayName("Final Payment Date")]
     [IsoXmlTag("FnlPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FinalPaymentDate { get; }
 
     /// <summary>

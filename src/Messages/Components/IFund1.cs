@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about an investment fund.
 /// </summary>
 [IsoId("_pEbB0QcxEeSuMrNEGTimoA")]
+[IsoDisplayName(@"Fund")]
 public interface IFund1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFund1 : IIsoComponent
     [IsoId("_pUqPF1-KEeS7xuKaq75oiQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IFund1 : IIsoComponent
     [IsoId("_pUqPGF-KEeS7xuKaq75oiQ")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 
     /// <summary>
@@ -97,6 +101,7 @@ public interface IFund1 : IIsoComponent
     [IsoId("_2qUxoQdDEeSyIPzOZ6VzBQ")]
     [DisplayName("Estimated Percentage Of Fund Total NAV")]
     [IsoXmlTag("EstmtdPctgOfFndTtlNAV")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? EstimatedPercentageOfFundTotalNAV { get; }
 
     /// <summary>
@@ -105,6 +110,7 @@ public interface IFund1 : IIsoComponent
     [IsoId("_wzHsEF-HEeS7xuKaq75oiQ")]
     [DisplayName("Estimated Cash In Forecast Details")]
     [IsoXmlTag("EstmtdCshInFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashInOutForecast7> EstimatedCashInForecastDetails { get; }
 
     /// <summary>
@@ -113,6 +119,7 @@ public interface IFund1 : IIsoComponent
     [IsoId("_wzHsEV-HEeS7xuKaq75oiQ")]
     [DisplayName("Estimated Cash Out Forecast Details")]
     [IsoXmlTag("EstmtdCshOutFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashInOutForecast7> EstimatedCashOutForecastDetails { get; }
 
     /// <summary>
@@ -121,5 +128,6 @@ public interface IFund1 : IIsoComponent
     [IsoId("_wzHsEl-HEeS7xuKaq75oiQ")]
     [DisplayName("Estimated Net Cash Forecast Details")]
     [IsoXmlTag("EstmtdNetCshFcstDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INetCashForecast5> EstimatedNetCashForecastDetails { get; }
 }

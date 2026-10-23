@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice;
 /// </summary>
 [IsoId("_x4XDnQarEe2phaVG0lYKTw")]
 [IsoXmlTag("SttlmInstrSnt")]
+[IsoDisplayName(@"Settlement Instruction Sent")]
 public interface ISettlementInstructionSent : IProcessingStatus98Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface ISettlementInstructionSent : IProcessingStatus98Choice, IIsoCho
     [IsoId("_RA3_Wzp5EeWVrPy0StzzSg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

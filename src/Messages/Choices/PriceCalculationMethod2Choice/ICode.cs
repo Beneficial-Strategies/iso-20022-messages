@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceCalculationMethod2Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IPriceCalculationMethod2Choice, IIsoChoiceVariant
 {
     /// <summary>

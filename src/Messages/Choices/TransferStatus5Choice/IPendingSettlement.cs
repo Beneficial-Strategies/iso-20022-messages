@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus5Choice;
 /// Status of the transfer is pending settlement.
 /// </summary>
 [IsoId("_WY1VQ-ijEeuLe8v4JEtDDg")]
+[IsoDisplayName(@"Pending Settlement")]
 public interface IPendingSettlement : ITransferStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Ratio expressed as a quotient of quantities.
 /// </summary>
 [IsoId("_WjNMUNp-Ed-ak6NoX_4Aeg_511377656")]
+[IsoDisplayName(@"Quantity To Quantity Ratio")]
 public interface IQuantityToQuantityRatio2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IQuantityToQuantityRatio2 : IIsoComponent
     [IsoId("_WjNMUdp-Ed-ak6NoX_4Aeg_2126904066")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty1")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
     RestrictedFINDecimalNumber Quantity1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IQuantityToQuantityRatio2 : IIsoComponent
     [IsoId("_WjNMUtp-Ed-ak6NoX_4Aeg_-1402106980")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty2")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
     RestrictedFINDecimalNumber Quantity2 { get; }
 }

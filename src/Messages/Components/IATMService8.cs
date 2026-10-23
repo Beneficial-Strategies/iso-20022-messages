@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context in which the transaction is performed.
 /// </summary>
 [IsoId("_P9q4EYrAEeSgLpgNvMAP2g")]
+[IsoDisplayName(@"ATM Service")]
 public interface IATMService8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMService8 : IIsoComponent
     [IsoId("_QKVbEYrAEeSgLpgNvMAP2g")]
     [DisplayName("Service Reference")]
     [IsoXmlTag("SvcRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ServiceReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMService8 : IIsoComponent
     [IsoId("_QKVbE4rAEeSgLpgNvMAP2g")]
     [DisplayName("ATM Service Code")]
     [IsoXmlTag("ATMSvcCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ATMServiceCode { get; }
 
     /// <summary>

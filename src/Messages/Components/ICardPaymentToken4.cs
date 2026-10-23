@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Payment token information.
 /// </summary>
 [IsoId("_OY-lIXr8EeSZrs_hiwNOWA")]
+[IsoDisplayName(@"Card Payment Token")]
 public interface ICardPaymentToken4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICardPaymentToken4 : IIsoComponent
     [IsoId("_dLnTAHr8EeSZrs_hiwNOWA")]
     [DisplayName("Token")]
     [IsoXmlTag("Tkn")]
+    [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
     Min8Max28NumericText? Token { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ICardPaymentToken4 : IIsoComponent
     [IsoId("_ibR10Hr8EeSZrs_hiwNOWA")]
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
     Min2Max3NumericText? CardSequenceNumber { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICardPaymentToken4 : IIsoComponent
     [IsoId("_n1I2cHr8EeSZrs_hiwNOWA")]
     [DisplayName("Token Expiry Date")]
     [IsoXmlTag("TknXpryDt")]
+    [IsoSimpleType(IsoSimpleType.Max10Text)]
+    [StringLength(10, MinimumLength = 1)]
     Max10Text? TokenExpiryDate { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ICardPaymentToken4 : IIsoComponent
     [IsoId("_OlsLcXr8EeSZrs_hiwNOWA")]
     [DisplayName("Token Characteristic")]
     [IsoXmlTag("TknChrtc")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> TokenCharacteristic { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ICardPaymentToken4 : IIsoComponent
     [IsoId("_OlsLdXr8EeSZrs_hiwNOWA")]
     [DisplayName("Token Assurance Level")]
     [IsoXmlTag("TknAssrncLvl")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TokenAssuranceLevel { get; }
 
     /// <summary>
@@ -65,5 +72,6 @@ public interface ICardPaymentToken4 : IIsoComponent
     [IsoId("_vM3R8Hr8EeSZrs_hiwNOWA")]
     [DisplayName("Token Assurance Data")]
     [IsoXmlTag("TknAssrncData")]
+    [IsoSimpleType(IsoSimpleType.Max500Binary)]
     Max500Binary? TokenAssuranceData { get; }
 }

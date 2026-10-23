@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of market in which a trade transaction has been executed.
 /// </summary>
 [IsoId("_xU1ak2wsEeWLq_lbZ2Mhyw")]
+[IsoDisplayName(@"Place Of Trade Identification")]
 public interface IPlaceOfTradeIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPlaceOfTradeIdentification1 : IIsoComponent
     [IsoId("_xU1alWwsEeWLq_lbZ2Mhyw")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 }

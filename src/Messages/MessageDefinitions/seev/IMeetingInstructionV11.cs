@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_ezLAgajGEfCzuLlmLrhIvA")]
 [IsoMessage("seev.004.001.11", "MtgInstr", "urn:iso:std:iso:20022:tech:xsd:seev.004.001.11")]
+[IsoDisplayName(@"Meeting Instruction V11")]
 public interface IMeetingInstructionV11 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IMeetingInstructionV11 : IOuterRecord
     /// </summary>
     [DisplayName("Meeting Instruction Identification")]
     [IsoXmlTag("MtgInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MeetingInstructionIdentification { get; }
 
     /// <summary>
@@ -46,6 +49,7 @@ public interface IMeetingInstructionV11 : IOuterRecord
     /// </summary>
     [DisplayName("Instruction Cancellation Request Identification")]
     [IsoXmlTag("InstrCxlReqId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingInstructionCancellation1> InstructionCancellationRequestIdentification { get; }
 
     /// <summary>
@@ -53,6 +57,7 @@ public interface IMeetingInstructionV11 : IOuterRecord
     /// </summary>
     [DisplayName("Cancelled Instruction Identification")]
     [IsoXmlTag("CancInstrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IMeetingInstructionIdentification1> CancelledInstructionIdentification { get; }
 
     /// <summary>
@@ -60,6 +65,7 @@ public interface IMeetingInstructionV11 : IOuterRecord
     /// </summary>
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentIdentification32> OtherDocumentIdentification { get; }
 
     /// <summary>
@@ -67,6 +73,7 @@ public interface IMeetingInstructionV11 : IOuterRecord
     /// </summary>
     [DisplayName("Instruction")]
     [IsoXmlTag("Instr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstruction9> Instruction { get; }
 
     /// <summary>
@@ -74,5 +81,6 @@ public interface IMeetingInstructionV11 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

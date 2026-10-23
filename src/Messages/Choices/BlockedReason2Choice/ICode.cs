@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockedReason2Choice;
 /// Reason expressed as a code.
 /// </summary>
 [IsoId("_P2OO0Vr3Eea4y99eritluQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBlockedReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

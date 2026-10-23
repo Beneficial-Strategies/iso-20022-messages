@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Signed quantity of security formats.
 /// </summary>
 [IsoId("_Q0of9Np-Ed-ak6NoX_4Aeg_-761434658")]
+[IsoDisplayName(@"Signed Quantity Format")]
 public interface ISignedQuantityFormat1 : IIsoComponent
 {
     /// <summary>

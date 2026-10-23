@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a settlement party by a choice between a BIC or a name and address or a party identification.
 /// </summary>
 [IsoId("_4CRAsSjaEeK1Sbo8NpBROA")]
+[IsoDisplayName(@"Settlement Parties")]
 public interface ISettlementParties29 : IIsoComponent
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate4Choice;
 /// </summary>
 [IsoId("_c4CjZUjwEeaVLL5QKJ4f-A")]
 [IsoXmlTag("OrgnlMndt")]
+[IsoDisplayName(@"Original Mandate")]
 public interface IOriginalMandate : IOriginalMandate4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOriginalMandate : IOriginalMandate4Choice, IIsoChoiceVariant
     [IsoId("_dBASJ0jwEeaVLL5QKJ4f-A")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MandateIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IOriginalMandate : IOriginalMandate4Choice, IIsoChoiceVariant
     [IsoId("_dBASKUjwEeaVLL5QKJ4f-A")]
     [DisplayName("Mandate Request Identification")]
     [IsoXmlTag("MndtReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateRequestIdentification { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface IOriginalMandate : IOriginalMandate4Choice, IIsoChoiceVariant
     [IsoId("_Zx4UIGn0EearR-CA7eRZXQ")]
     [DisplayName("Tracking Indicator")]
     [IsoXmlTag("TrckgInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator TrackingIndicator { get; }
 
     /// <summary>
@@ -178,6 +184,8 @@ public interface IOriginalMandate : IOriginalMandate4Choice, IIsoChoiceVariant
     [IsoId("_OHvTIGnyEearR-CA7eRZXQ")]
     [DisplayName("Mandate Reference")]
     [IsoXmlTag("MndtRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateReference { get; }
 
     /// <summary>
@@ -186,5 +194,6 @@ public interface IOriginalMandate : IOriginalMandate4Choice, IIsoChoiceVariant
     [IsoId("_dBASR0jwEeaVLL5QKJ4f-A")]
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReferredMandateDocument1> ReferredDocument { get; }
 }

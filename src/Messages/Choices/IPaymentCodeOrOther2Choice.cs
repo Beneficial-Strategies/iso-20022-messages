@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a payment term in a coded or free format.
 /// </summary>
 [IsoId("_RfD1sRVgEeOrY9qSHVspCA")]
+[IsoDisplayName(@"Payment Code Or Other 2 Choice")]
 public interface IPaymentCodeOrOther2Choice : IIsoChoice { }

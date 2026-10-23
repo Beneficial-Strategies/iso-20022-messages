@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateAndDateTime1Choice;
 /// Numeric representation of the day of the month and year.
 /// </summary>
 [IsoId("_Axs_MdokEeC60axPepSq7g_-1702730755")]
+[IsoDisplayName(@"Date")]
 public interface IDate : IDateAndDateTime1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IDate : IDateAndDateTime1Choice, IIsoChoiceVariant
     /// A particular point in the progression of time in a calendar year expressed in the YYYY-MM-DD format. This representation is defined in &quot;XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004&quot; which is aligned with ISO 8601.
     /// </summary>
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Value { get; }
 }

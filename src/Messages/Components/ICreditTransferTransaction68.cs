@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Credit Transfer Transaction68.
 /// </summary>
 [IsoId("_YBCB3T3JEe-thIfLZ94a1w")]
+[IsoDisplayName(@"Credit Transfer Transaction68")]
 public interface ICreditTransferTransaction68 : IIsoComponent
 {
     /// <summary>
@@ -191,6 +192,7 @@ public interface ICreditTransferTransaction68 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent3> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -198,6 +200,7 @@ public interface ICreditTransferTransaction68 : IIsoComponent
     /// </summary>
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>

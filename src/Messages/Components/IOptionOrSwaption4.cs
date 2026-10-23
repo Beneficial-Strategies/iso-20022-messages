@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Option or swaption related attributes.
 /// </summary>
 [IsoId("_5YqYgagAEeW_OId9wS8dsQ")]
+[IsoDisplayName(@"Option Or Swaption")]
 public interface IOptionOrSwaption4 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IOptionOrSwaption4 : IIsoComponent
     [IsoId("_5xdTB6gAEeW_OId9wS8dsQ")]
     [DisplayName("Option Exercise Style")]
     [IsoXmlTag("OptnExrcStyle")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<OptionStyle6Code> OptionExerciseStyle { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IOptionOrSwaption4 : IIsoComponent
     [IsoId("_5xdTCagAEeW_OId9wS8dsQ")]
     [DisplayName("Maturity Date Of Underlying")]
     [IsoXmlTag("MtrtyDtOfUndrlyg")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDateOfUnderlying { get; }
 }

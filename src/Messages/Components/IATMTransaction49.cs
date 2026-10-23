@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Transaction49.
 /// </summary>
 [IsoId("_tMMWsaEpEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Transaction49")]
 public interface IATMTransaction49 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface IATMTransaction49 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDetailedAmount13> AdditionalCharge { get; }
 
     /// <summary>
@@ -100,6 +102,7 @@ public interface IATMTransaction49 : IIsoComponent
     /// </summary>
     [DisplayName("Mix")]
     [IsoXmlTag("Mix")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMMediaMix1> Mix { get; }
 
     /// <summary>
@@ -121,6 +124,7 @@ public interface IATMTransaction49 : IIsoComponent
     /// </summary>
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 
     /// <summary>
@@ -128,5 +132,6 @@ public interface IATMTransaction49 : IIsoComponent
     /// </summary>
     [DisplayName("Account Information")]
     [IsoXmlTag("AcctInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardAccount18> AccountInformation { get; }
 }

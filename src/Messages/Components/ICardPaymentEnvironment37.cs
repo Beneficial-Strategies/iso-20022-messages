@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Environment of the transaction.
 /// </summary>
 [IsoId("_iRX8QWl_EeSxgrJ0GX4SQQ")]
+[IsoDisplayName(@"Card Payment Environment")]
 public interface ICardPaymentEnvironment37 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface ICardPaymentEnvironment37 : IIsoComponent
     [IsoId("_ielR12l_EeSxgrJ0GX4SQQ")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPointOfInteractionComponent5> POIComponent { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Signed amount in a given numeric currency
 /// </summary>
 [IsoId("_0qRtJPGhEeiGNursv3uE_g")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount7 : IIsoComponent
 {
     /// <summary>

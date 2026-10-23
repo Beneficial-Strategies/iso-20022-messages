@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a propylene derivative of type recovered paper.
 /// </summary>
 [IsoId("_SDINwbv9EeiLRYqS-r-R-A")]
+[IsoDisplayName(@"Polypropylene Commodity Other")]
 public interface IPolypropyleneCommodityOther1 : IIsoComponent
 {
     /// <summary>

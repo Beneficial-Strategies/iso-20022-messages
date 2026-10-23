@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason21Choice;
 
 /// <summary>Specifies the denied reason.</summary>
 [IsoId("5fd4ea92-28c9-4a79-8141-db80a7690861")]
+[IsoDisplayName(@"Denied Reason")]
 public interface IDeniedReason : IReason21Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifier of a token provider requestor.
 /// </summary>
 [IsoId("_PxXUcGkhEeSTIuB9A-QJ6g")]
+[IsoDisplayName(@"Payment Token Identifiers")]
 public interface IPaymentTokenIdentifiers1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentTokenIdentifiers1 : IIsoComponent
     [IsoId("_XWGRMGkhEeSTIuB9A-QJ6g")]
     [DisplayName("Provider Identification")]
     [IsoXmlTag("PrvdrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text ProviderIdentification { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IPaymentTokenIdentifiers1 : IIsoComponent
     [IsoId("_eIqKIGkhEeSTIuB9A-QJ6g")]
     [DisplayName("Requestor Identification")]
     [IsoXmlTag("RqstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RequestorIdentification { get; }
 }

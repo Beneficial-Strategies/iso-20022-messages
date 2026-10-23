@@ -10,4 +10,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 ///  買付予定株式数.
 /// </summary>
 [IsoId("_X3C-0zFzEeGKkIZzgd38VA")]
+[IsoDisplayName(@"Planned Quantity 1 Choice")]
 public interface IPlannedQuantity1Choice : IIsoChoice { }

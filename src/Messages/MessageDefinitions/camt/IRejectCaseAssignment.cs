@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_PxiCwtE_Ed-BzquC8wXy7w_-313128527")]
 [IsoMessage("camt.031.001.01", "camt.031.001.01", "urn:iso:std:iso:20022:tech:xsd:camt.031.001.01")]
+[Description(@"Scope|The Reject Case Assignment message is sent by a case assignee to a case creator or case assigner to reject a case given to him.|Usage|The Reject Case Assignment message is used to notify the case creator or case assigner the rejection of an assignment by the case assignee in a:|- request to cancel payment case|- request to modify payment case|- unable to apply case|- claim non receipt case|Rejecting a case assignment occurs when the case assignee is unable to trace the original payment instruction or when the case assignee is unable, or does not have authority, to process the assigned case.|The Reject Case Assignment message covers one and only one case at a time. If the case assignee needs to reject several case assignments, then multiple Reject Case Assignment messages must be sent.|The Reject Case Assignment message must be forwarded by all subsequent case assignee(s) until it reaches the case assigner.|The Reject Case Assignment message must not be used in place of a Resolution Of Investigation or Case Status Report message.")]
+[IsoDisplayName(@"Reject Case Assignment")]
 public interface IRejectCaseAssignment : IOuterRecord
 {
     /// <summary>

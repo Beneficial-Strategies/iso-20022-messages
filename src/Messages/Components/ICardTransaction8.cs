@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Card transaction for which the authorisation has been requested.
 /// </summary>
 [IsoId("_02pT8Xu3EeS2Z_kGi7H1VQ")]
+[IsoDisplayName(@"Card Transaction")]
 public interface ICardTransaction8 : IIsoComponent
 {
     /// <summary>
@@ -35,6 +36,7 @@ public interface ICardTransaction8 : IIsoComponent
     [IsoId("_1Ddn9Xu3EeS2Z_kGi7H1VQ")]
     [DisplayName("Acceptor Transaction Date Time")]
     [IsoXmlTag("AccptrTxDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime AcceptorTransactionDateTime { get; }
 
     /// <summary>
@@ -43,6 +45,8 @@ public interface ICardTransaction8 : IIsoComponent
     [IsoId("_1Ddn93u3EeS2Z_kGi7H1VQ")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InitiatorTransactionIdentification { get; }
 
     /// <summary>
@@ -51,6 +55,8 @@ public interface ICardTransaction8 : IIsoComponent
     [IsoId("_1Ddn-Xu3EeS2Z_kGi7H1VQ")]
     [DisplayName("Transaction Life Cycle Identification")]
     [IsoXmlTag("TxLifeCyclId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionLifeCycleIdentification { get; }
 
     /// <summary>
@@ -60,6 +66,7 @@ public interface ICardTransaction8 : IIsoComponent
     [IsoId("_1Ddn-3u3EeS2Z_kGi7H1VQ")]
     [DisplayName("Transaction Life Cycle Sequence Number")]
     [IsoXmlTag("TxLifeCyclSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TransactionLifeCycleSequenceNumber { get; }
 
     /// <summary>
@@ -68,6 +75,7 @@ public interface ICardTransaction8 : IIsoComponent
     [IsoId("_FOLEQIIUEeSvPp7yXrNQIw")]
     [DisplayName("Transaction Life Cycle Sequence Counter")]
     [IsoXmlTag("TxLifeCyclSeqCntr")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? TransactionLifeCycleSequenceCounter { get; }
 
     /// <summary>

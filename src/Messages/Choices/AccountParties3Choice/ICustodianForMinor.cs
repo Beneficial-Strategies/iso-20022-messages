@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties3Choice;
 /// </summary>
 [IsoId("_4R171RRNEeOKWo1NF21OVw")]
 [IsoXmlTag("CtdnForMnr")]
+[IsoDisplayName(@"Custodian For Minor")]
 public interface ICustodianForMinor : IAccountParties3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface ICustodianForMinor : IAccountParties3Choice, IIsoChoiceVariant
     [IsoId("_JwaZlxRQEeOKWo1NF21OVw")]
     [DisplayName("Ownership Beneficiary Rate")]
     [IsoXmlTag("OwnrshBnfcryRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OwnershipBeneficiaryRate { get; }
 
     /// <summary>
@@ -42,6 +44,8 @@ public interface ICustodianForMinor : IAccountParties3Choice, IIsoChoiceVariant
     [IsoId("_JwaZmRRQEeOKWo1NF21OVw")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientIdentification { get; }
 
     /// <summary>
@@ -50,6 +54,7 @@ public interface ICustodianForMinor : IAccountParties3Choice, IIsoChoiceVariant
     [IsoId("_JwaZmxRQEeOKWo1NF21OVw")]
     [DisplayName("Fiscal Exemption")]
     [IsoXmlTag("FsclXmptn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FiscalExemption { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface ICustodianForMinor : IAccountParties3Choice, IIsoChoiceVariant
     [IsoId("_JwaZnRRQEeOKWo1NF21OVw")]
     [DisplayName("Signatory Right Indicator")]
     [IsoXmlTag("SgntryRghtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SignatoryRightIndicator { get; }
 
     /// <summary>
@@ -66,6 +72,9 @@ public interface ICustodianForMinor : IAccountParties3Choice, IIsoChoiceVariant
     [IsoId("_JwaZnxRQEeOKWo1NF21OVw")]
     [DisplayName("Modified Investor Profile Validation")]
     [IsoXmlTag("ModfdInvstrPrflVldtn")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope19> ModifiedInvestorProfileValidation { get; }
 
     /// <summary>

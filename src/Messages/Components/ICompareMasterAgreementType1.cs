@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a master agreement type.
 /// </summary>
 [IsoId("_qF8XgExYEeywvc16MwOPfw")]
+[IsoDisplayName(@"Compare Master Agreement Type")]
 public interface ICompareMasterAgreementType1 : IIsoComponent
 {
     /// <summary>

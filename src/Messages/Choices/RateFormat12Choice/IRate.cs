@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat12Choice;
 /// Value is expressed as a rate.
 /// </summary>
 [IsoId("_uT61USqiEeObprHJy8Zrxg")]
+[IsoDisplayName(@"Rate")]
 public interface IRate : IRateFormat12Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IRate : IRateFormat12Choice, IIsoChoiceVariant
     /// Rate expressed as a decimal, for example, 0.7 is 7/10 and 70% with 13 fractional digits maximum and 14 total digits.
     /// </summary>
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.BaseOne14Rate)]
     BaseOne14Rate Value { get; }
 }

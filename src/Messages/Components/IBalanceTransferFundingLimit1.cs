@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Maximum value that the new bank will pay to the old bank when the closing balance on the old bank is negative.
 /// </summary>
 [IsoId("_x14swQ2aEeSNWNtJlXOAhg")]
+[IsoDisplayName(@"Balance Transfer Funding Limit")]
 public interface IBalanceTransferFundingLimit1 : IIsoComponent
 {
     /// <summary>

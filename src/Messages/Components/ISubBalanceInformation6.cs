@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Net position of a segregated holding of a single security within the overall position held in the securities account, eg, sub-balance per status.
 /// </summary>
 [IsoId("_QYU-d9p-Ed-ak6NoX_4Aeg_1429230934")]
+[IsoDisplayName(@"Sub Balance Information")]
 public interface ISubBalanceInformation6 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface ISubBalanceInformation6 : IIsoComponent
     [IsoId("_QYU-etp-Ed-ak6NoX_4Aeg_432158581")]
     [DisplayName("Sub Balance Additional Details")]
     [IsoXmlTag("SubBalAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SubBalanceAdditionalDetails { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface ISubBalanceInformation6 : IIsoComponent
     [IsoId("_QYeIYNp-Ed-ak6NoX_4Aeg_-564913772")]
     [DisplayName("Additional Balance Breakdown Details")]
     [IsoXmlTag("AddtlBalBrkdwnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBalanceInformation6> AdditionalBalanceBreakdownDetails { get; }
 }

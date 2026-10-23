@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the transportation of goods by air.
 /// </summary>
 [IsoId("_St7j49p-Ed-ak6NoX_4Aeg_1854659956")]
+[IsoDisplayName(@"Transport By Air")]
 public interface ITransportByAir3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransportByAir3 : IIsoComponent
     [IsoId("_St7j5Np-Ed-ak6NoX_4Aeg_1854660080")]
     [DisplayName("Departure Airport")]
     [IsoXmlTag("DprtureAirprt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAirportName1Choice> DepartureAirport { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITransportByAir3 : IIsoComponent
     [IsoId("_St7j5dp-Ed-ak6NoX_4Aeg_1854660141")]
     [DisplayName("Destination Airport")]
     [IsoXmlTag("DstnAirprt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAirportName1Choice> DestinationAirport { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface ITransportByAir3 : IIsoComponent
     [IsoId("_St7j5tp-Ed-ak6NoX_4Aeg_1854659987")]
     [DisplayName("Air Carrier Name")]
     [IsoXmlTag("AirCrrierNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AirCarrierName { get; }
 }

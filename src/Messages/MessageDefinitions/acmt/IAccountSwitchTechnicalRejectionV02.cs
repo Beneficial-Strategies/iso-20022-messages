@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctSwtchTechRjctn",
     "urn:iso:std:iso:20022:tech:xsd:acmt.037.001.02"
 )]
+[Description(@"The AccountSwitchTechnicalRejection message is sent by the account switch servicer to the new account servicer when it has not been able to validate a previously sent message.")]
+[IsoDisplayName(@"Account Switch Technical Rejection V")]
 public interface IAccountSwitchTechnicalRejectionV02 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface IAccountSwitchTechnicalRejectionV02 : IOuterRecord
     [IsoId("_7HT_lW42EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

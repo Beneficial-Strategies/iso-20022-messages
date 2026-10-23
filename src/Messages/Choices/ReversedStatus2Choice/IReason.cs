@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReversedStatus2Choice;
 /// Reason for the reversal status.
 /// </summary>
 [IsoId("_bUFeIyY5EeW_ZNn8gbfY7Q")]
+[IsoDisplayName(@"Reason")]
 public interface IReason : IReversedStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IReason : IReversedStatus2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 350 characters.
     /// </summary>
     [IsoXmlTag("Rsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Value { get; }
 }

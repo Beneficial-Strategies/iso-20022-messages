@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// </summary>
 [IsoId("_yJhSqYv-Eei289CGNqs21g")]
 [IsoXmlTag("PtyAdr")]
+[IsoDisplayName(@"Party Address")]
 public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("_qBGoyYv4Eei289CGNqs21g")]
     [DisplayName("Department")]
     [IsoXmlTag("Dept")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Department { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("_qBGoyov4Eei289CGNqs21g")]
     [DisplayName("Sub Department")]
     [IsoXmlTag("SubDept")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? SubDepartment { get; }
 
     /// <summary>
@@ -42,6 +47,8 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("__Coc5RisEeiNm9ItaZcR2A")]
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? StreetName { get; }
 
     /// <summary>
@@ -50,6 +57,8 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("__Coc5xisEeiNm9ItaZcR2A")]
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? BuildingNumber { get; }
 
     /// <summary>
@@ -58,6 +67,8 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("_qBGoy4v4Eei289CGNqs21g")]
     [DisplayName("Building Name")]
     [IsoXmlTag("BldgNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BuildingName { get; }
 
     /// <summary>
@@ -66,6 +77,8 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("_qBGozIv4Eei289CGNqs21g")]
     [DisplayName("Floor")]
     [IsoXmlTag("Flr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Floor { get; }
 
     /// <summary>
@@ -74,6 +87,8 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("_qBGozYv4Eei289CGNqs21g")]
     [DisplayName("Post Box")]
     [IsoXmlTag("PstBx")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? PostBox { get; }
 
     /// <summary>
@@ -82,6 +97,8 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("_qBGozov4Eei289CGNqs21g")]
     [DisplayName("Room")]
     [IsoXmlTag("Room")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Room { get; }
 
     /// <summary>
@@ -90,6 +107,8 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("__Coc6RisEeiNm9ItaZcR2A")]
     [DisplayName("Post Code")]
     [IsoXmlTag("PstCd")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? PostCode { get; }
 
     /// <summary>
@@ -98,6 +117,8 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("__Coc6xisEeiNm9ItaZcR2A")]
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TownName { get; }
 
     /// <summary>
@@ -106,6 +127,8 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("_qBGoz4v4Eei289CGNqs21g")]
     [DisplayName("Town Location Name")]
     [IsoXmlTag("TwnLctnNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TownLocationName { get; }
 
     /// <summary>
@@ -114,6 +137,8 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("_qBGo0Iv4Eei289CGNqs21g")]
     [DisplayName("District Name")]
     [IsoXmlTag("DstrctNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DistrictName { get; }
 
     /// <summary>
@@ -122,6 +147,8 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("__Coc7RisEeiNm9ItaZcR2A")]
     [DisplayName("Country Sub Division")]
     [IsoXmlTag("CtrySubDvsn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CountrySubDivision { get; }
 
     /// <summary>
@@ -138,6 +165,11 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("_qBGo0Yv4Eei289CGNqs21g")]
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [MinLength(0)]
+    [MaxLength(7)]
+    [StringLength(70, MinimumLength = 1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AddressLine { get; }
 
     /// <summary>
@@ -146,5 +178,6 @@ public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVari
     [IsoId("_DcD7QBitEeiNm9ItaZcR2A")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidFrom { get; }
 }

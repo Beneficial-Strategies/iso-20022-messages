@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason why the transaction was generated.
 /// </summary>
 [IsoId("_OcpIOTqeEeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Generated Reason")]
 public interface IGeneratedReason5 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IGeneratedReason5 : IIsoComponent
     [IsoId("_O8oP1TqeEeWyoP0PbocV1Q")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

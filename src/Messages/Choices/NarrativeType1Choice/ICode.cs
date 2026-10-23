@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NarrativeType1Choice;
 /// Type of narrative.
 /// </summary>
 [IsoId("_93HE03ltEeG7BsjMvd1mEw_2098352159")]
+[IsoDisplayName(@"Code")]
 public interface ICode : INarrativeType1Choice, IIsoChoiceVariant
 {
     /// <summary>

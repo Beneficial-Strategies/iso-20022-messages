@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionOption1FormatChoi
 /// Option type expressed as a code.
 /// </summary>
 [IsoId("_RlgjQdp-Ed-ak6NoX_4Aeg_-1093032102")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICorporateActionOption1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

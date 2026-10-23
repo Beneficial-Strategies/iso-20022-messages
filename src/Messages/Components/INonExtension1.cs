@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Non-extension information.
 /// </summary>
 [IsoId("_95ylZXltEeG7BsjMvd1mEw_856781964")]
+[IsoDisplayName(@"Non Extension")]
 public interface INonExtension1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INonExtension1 : IIsoComponent
     [IsoId("_95ylZnltEeG7BsjMvd1mEw_1991021937")]
     [DisplayName("Notification Period")]
     [IsoXmlTag("NtfctnPrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number? NotificationPeriod { get; }
 
     /// <summary>
@@ -41,6 +43,8 @@ public interface INonExtension1 : IIsoComponent
     [IsoId("_958WYnltEeG7BsjMvd1mEw_829191387")]
     [DisplayName("Notification Recipient Name")]
     [IsoXmlTag("NtfctnRcptNm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? NotificationRecipientName { get; }
 
     /// <summary>

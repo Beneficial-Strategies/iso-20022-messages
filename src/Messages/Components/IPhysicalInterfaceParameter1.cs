@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration parameters for physical interface.
 /// </summary>
 [IsoId("_jVcYQNqfEeearpaEPXv9UA")]
+[IsoDisplayName(@"Physical Interface Parameter")]
 public interface IPhysicalInterfaceParameter1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPhysicalInterfaceParameter1 : IIsoComponent
     [IsoId("_-ROCMNqfEeearpaEPXv9UA")]
     [DisplayName("Interface Name")]
     [IsoXmlTag("IntrfcNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text InterfaceName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPhysicalInterfaceParameter1 : IIsoComponent
     [IsoId("_SCt2wNqgEeearpaEPXv9UA")]
     [DisplayName("User Name")]
     [IsoXmlTag("UsrNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? UserName { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IPhysicalInterfaceParameter1 : IIsoComponent
     [IsoId("_ZFeH0NqgEeearpaEPXv9UA")]
     [DisplayName("Access Code")]
     [IsoXmlTag("AccsCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Binary)]
     Max35Binary? AccessCode { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface IPhysicalInterfaceParameter1 : IIsoComponent
     [IsoId("_f-XSQNqgEeearpaEPXv9UA")]
     [DisplayName("Security Profile")]
     [IsoXmlTag("SctyPrfl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SecurityProfile { get; }
 
     /// <summary>
@@ -57,5 +65,6 @@ public interface IPhysicalInterfaceParameter1 : IIsoComponent
     [IsoId("_qB5zwNqgEeearpaEPXv9UA")]
     [DisplayName("Additional Parameters")]
     [IsoXmlTag("AddtlParams")]
+    [IsoSimpleType(IsoSimpleType.Max2KBinary)]
     Max2KBinary? AdditionalParameters { get; }
 }

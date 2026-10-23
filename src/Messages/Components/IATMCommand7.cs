@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Maintenance command to perform on an ATM.
 /// </summary>
 [IsoId("_W_3jIa2BEeWMg5rOByfExw")]
+[IsoDisplayName(@"ATM Command")]
 public interface IATMCommand7 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IATMCommand7 : IIsoComponent
     [IsoId("_XMiGJa2BEeWMg5rOByfExw")]
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? DateTime { get; }
 
     /// <summary>

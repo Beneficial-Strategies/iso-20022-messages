@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code and a proprietary code for the reason the collateral message has been cancelled.
 /// </summary>
 [IsoId("_QmogONp-Ed-ak6NoX_4Aeg_-847110751")]
+[IsoDisplayName(@"Collateral Cancellation Type 1 Choice")]
 public interface ICollateralCancellationType1Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parties used for acting parties that apply either to the whole message or to individual sides.
 /// </summary>
 [IsoId("_AS2gANokEeC60axPepSq7g_2012095591")]
+[IsoDisplayName(@"Confirmation Party Details")]
 public interface IConfirmationPartyDetails5 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IConfirmationPartyDetails5 : IIsoComponent
     [IsoId("_ATARAtokEeC60axPepSq7g_17950885")]
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProcessingIdentification { get; }
 
     /// <summary>
@@ -49,5 +52,6 @@ public interface IConfirmationPartyDetails5 : IIsoComponent
     [IsoId("_ATJa8NokEeC60axPepSq7g_2077001085")]
     [DisplayName("Investor Protection Association Membership")]
     [IsoXmlTag("InvstrPrtcnAssoctnMmbsh")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? InvestorProtectionAssociationMembership { get; }
 }

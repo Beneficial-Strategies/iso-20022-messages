@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice;
 
 /// <summary>Belgian identifier.</summary>
 [IsoId("638ff3aa-692c-47da-b721-d3d0fd0d3e0c")]
+[IsoDisplayName(@"Belgian")]
 public interface IBelgian : ISecurityIdentification46Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

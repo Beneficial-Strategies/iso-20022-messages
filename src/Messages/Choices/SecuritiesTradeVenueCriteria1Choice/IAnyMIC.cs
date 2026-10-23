@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTradeVenueCriteria1Cho
 /// Result of the query should include all trades where this filed was populated with a MIC code (but not the trades with ‘XOFF’ or ‘XXXX’).
 /// </summary>
 [IsoId("_ph_4kB3ZEeWNp95x0ENf8w")]
+[IsoDisplayName(@"Any MIC")]
 public interface IAnyMIC : ISecuritiesTradeVenueCriteria1Choice, IIsoChoiceVariant
 {
     /// <summary>

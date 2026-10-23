@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Can be used when replying to a query; can also be used when canceling or amending.
 /// </summary>
 [IsoId("_NorCwciBEei73Ywzx0CAAg")]
+[IsoDisplayName(@"Business Application Header")]
 public interface IBusinessApplicationHeader5 : IIsoComponent
 {
     /// <summary>
@@ -44,6 +45,8 @@ public interface IBusinessApplicationHeader5 : IIsoComponent
     [IsoId("_N0t6t8iBEei73Ywzx0CAAg")]
     [DisplayName("Business Message Identifier")]
     [IsoXmlTag("BizMsgIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text BusinessMessageIdentifier { get; }
 
     /// <summary>
@@ -54,6 +57,8 @@ public interface IBusinessApplicationHeader5 : IIsoComponent
     [IsoId("_N0t6uciBEei73Ywzx0CAAg")]
     [DisplayName("Message Definition Identifier")]
     [IsoXmlTag("MsgDefIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageDefinitionIdentifier { get; }
 
     /// <summary>
@@ -64,6 +69,8 @@ public interface IBusinessApplicationHeader5 : IIsoComponent
     [IsoId("_N0t6u8iBEei73Ywzx0CAAg")]
     [DisplayName("Business Service")]
     [IsoXmlTag("BizSvc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? BusinessService { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IBusinessApplicationHeader5 : IIsoComponent
     [IsoId("_N0t6vciBEei73Ywzx0CAAg")]
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime CreationDate { get; }
 
     /// <summary>
@@ -93,6 +101,7 @@ public interface IBusinessApplicationHeader5 : IIsoComponent
     [IsoId("_N0t6wciBEei73Ywzx0CAAg")]
     [DisplayName("Possible Duplicate")]
     [IsoXmlTag("PssblDplct")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PossibleDuplicate { get; }
 
     /// <summary>

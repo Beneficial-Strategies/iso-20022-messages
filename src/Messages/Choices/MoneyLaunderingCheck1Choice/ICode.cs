@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MoneyLaunderingCheck1Choice;
 /// Money laundering status expressed as a code.
 /// </summary>
 [IsoId("_PZS2KBdDEeK5g-3oYI0_9Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMoneyLaunderingCheck1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an amount and a coefficient.
 /// </summary>
 [IsoId("_Muj3AWejEeqY_MU7lK4HCA")]
+[IsoDisplayName(@"AmountOrCoefficientPrice2Choice")]
 public interface IAmountOrCoefficientPrice2Choice : IIsoChoice { }

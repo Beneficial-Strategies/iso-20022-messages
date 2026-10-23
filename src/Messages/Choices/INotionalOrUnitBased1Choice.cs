@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the financial instrument unit basis.
 /// </summary>
 [IsoId("_jltcEJ9VEeqxTNfi5y7ywQ")]
+[IsoDisplayName(@"Notional Or Unit Based 1 Choice")]
 public interface INotionalOrUnitBased1Choice : IIsoChoice { }

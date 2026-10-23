@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Collateral taker&apos;s answer to the collateral giver instruction.
 /// </summary>
 [IsoId("_cIPBMLzcEeivTd4NUfCi2g")]
+[IsoDisplayName(@"Response Status 9 Choice")]
 public interface IResponseStatus9Choice : IIsoChoice { }

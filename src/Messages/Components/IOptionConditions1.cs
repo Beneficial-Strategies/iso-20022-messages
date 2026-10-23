@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Conditions to be met by the holder.
 /// </summary>
 [IsoId("_Y41SoA7zEeuZI5Sr_GAcuA")]
+[IsoDisplayName(@"Option Conditions")]
 public interface IOptionConditions1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IOptionConditions1 : IIsoComponent
     [IsoId("_ogHwkA7zEeuZI5Sr_GAcuA")]
     [DisplayName("Condition Number")]
     [IsoXmlTag("CondNb")]
+    [IsoSimpleType(IsoSimpleType.Max1Number)]
     Max1Number ConditionNumber { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IOptionConditions1 : IIsoComponent
     [IsoId("_Dj-YcA70EeuZI5Sr_GAcuA")]
     [DisplayName("Condition Text")]
     [IsoXmlTag("CondTxt")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax520Text)]
+    [StringLength(520, MinimumLength = 1)]
     RestrictedFINXMax520Text ConditionText { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IOptionConditions1 : IIsoComponent
     [IsoId("_NpNjEA70EeuZI5Sr_GAcuA")]
     [DisplayName("Condition Required Flag")]
     [IsoXmlTag("CondReqrdFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator ConditionRequiredFlag { get; }
 }

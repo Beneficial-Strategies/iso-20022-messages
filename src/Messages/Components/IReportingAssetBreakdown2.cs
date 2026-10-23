@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reporting Asset Breakdown2.
 /// </summary>
 [IsoId("_gDSccU2HEe-TXNruDFfwPA")]
+[IsoDisplayName(@"Reporting Asset Breakdown2")]
 public interface IReportingAssetBreakdown2 : IIsoComponent
 {
     /// <summary>

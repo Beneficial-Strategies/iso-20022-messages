@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_O_nm9VW-EeeiG_nL4vgKnQ")]
 [IsoMessage("caad.002.001.01", "BtchMgmtRspn", "urn:iso:std:iso:20022:tech:xsd:caad.002.001.01")]
+[Description(@"The BatchManagementResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a BatchManagementInitiation message.")]
+[IsoDisplayName(@"Batch Management Response V")]
 public interface IBatchManagementResponseV01 : IOuterRecord
 {
     /// <summary>

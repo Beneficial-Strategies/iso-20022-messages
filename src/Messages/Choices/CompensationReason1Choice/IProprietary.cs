@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CompensationReason1Choice;
 /// Reason for the payment compensation, in a proprietary form.
 /// </summary>
 [IsoId("_d3NU0IjYEeeDW7_wB-eK_g")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ICompensationReason1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : ICompensationReason1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Quantity expressed as a number and its details.
 /// </summary>
 [IsoId("_BdzxQa5yEeeMy7TnJ3e__g")]
+[IsoDisplayName(@"Unit")]
 public interface IUnit10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IUnit10 : IIsoComponent
     [IsoId("_Bsiw0a5yEeeMy7TnJ3e__g")]
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber UnitsNumber { get; }
 
     /// <summary>

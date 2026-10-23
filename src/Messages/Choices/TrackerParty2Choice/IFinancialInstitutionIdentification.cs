@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrackerParty2Choice;
 /// </summary>
 [IsoId("_5THNEWOTEeq5Ar_w98FvsA")]
 [IsoXmlTag("FinInstnId")]
+[IsoDisplayName(@"Financial Institution Identification")]
 public interface IFinancialInstitutionIdentification : ITrackerParty2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IFinancialInstitutionIdentification : ITrackerParty2Choice, IIs
     [IsoId("_R1aeMWOUEeq5Ar_w98FvsA")]
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
+    [IsoSimpleType(IsoSimpleType.BICFIDec2014Identifier)]
     BICFIDec2014Identifier? BICFI { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface IFinancialInstitutionIdentification : ITrackerParty2Choice, IIs
     [IsoId("_R1aeNWOUEeq5Ar_w98FvsA")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 
     /// <summary>

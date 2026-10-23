@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties10Choice;
 /// </summary>
 [IsoId("_xFUDJUNMEeamLdeYEZm56w")]
 [IsoXmlTag("Nmnee")]
+[IsoDisplayName(@"Nominee")]
 public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_v6xipUNMEeamLdeYEZm56w")]
     [DisplayName("Investor Profile Validation")]
     [IsoXmlTag("InvstrPrflVldtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyProfileInformation5> InvestorProfileValidation { get; }
 
     /// <summary>
@@ -50,6 +52,8 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_v6xiqUNMEeamLdeYEZm56w")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientIdentification { get; }
 
     /// <summary>
@@ -58,6 +62,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_v6xiq0NMEeamLdeYEZm56w")]
     [DisplayName("Fiscal Exemption")]
     [IsoXmlTag("FsclXmptn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FiscalExemption { get; }
 
     /// <summary>
@@ -66,6 +71,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_v6xirUNMEeamLdeYEZm56w")]
     [DisplayName("Signatory Right Indicator")]
     [IsoXmlTag("SgntryRghtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SignatoryRightIndicator { get; }
 
     /// <summary>
@@ -82,6 +88,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_v6xisUNMEeamLdeYEZm56w")]
     [DisplayName("Notification")]
     [IsoXmlTag("Ntfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INotification2> Notification { get; }
 
     /// <summary>
@@ -90,6 +97,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_v6xis0NMEeamLdeYEZm56w")]
     [DisplayName("FATCA Form Type")]
     [IsoXmlTag("FATCAFormTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFATCAForm1Choice> FATCAFormType { get; }
 
     /// <summary>
@@ -98,6 +106,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_v6xitUNMEeamLdeYEZm56w")]
     [DisplayName("FATCA Status")]
     [IsoXmlTag("FATCASts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFATCAStatus2> FATCAStatus { get; }
 
     /// <summary>
@@ -106,6 +115,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_gK8zkGBzEeaHEJD5P6-ccw")]
     [DisplayName("FATCA Reporting Date")]
     [IsoXmlTag("FATCARptgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FATCAReportingDate { get; }
 
     /// <summary>
@@ -114,6 +124,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_VJSksUNuEeaS-NnwLNvMPg")]
     [DisplayName("CRS Form Type")]
     [IsoXmlTag("CRSFormTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICRSForm1Choice> CRSFormType { get; }
 
     /// <summary>
@@ -122,6 +133,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_fdnugENeEeamLdeYEZm56w")]
     [DisplayName("CRS Status")]
     [IsoXmlTag("CRSSts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICRSStatus4> CRSStatus { get; }
 
     /// <summary>
@@ -130,6 +142,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_kdKrYXXXEeaH0fB6yD0LBA")]
     [DisplayName("CRS Reporting Date")]
     [IsoXmlTag("CRSRptgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CRSReportingDate { get; }
 
     /// <summary>
@@ -138,6 +151,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_v6xit0NMEeamLdeYEZm56w")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification82> OtherIdentification { get; }
 
     /// <summary>
@@ -154,6 +168,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_v6xiu0NMEeamLdeYEZm56w")]
     [DisplayName("Tax Reporting")]
     [IsoXmlTag("TaxRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxReporting2> TaxReporting { get; }
 
     /// <summary>
@@ -218,6 +233,8 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_v6xizUNMEeamLdeYEZm56w")]
     [DisplayName("Electronic Mailing Service Reference")]
     [IsoXmlTag("ElctrncMlngSvcRef")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? ElectronicMailingServiceReference { get; }
 
     /// <summary>
@@ -226,6 +243,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_v6xiz0NMEeamLdeYEZm56w")]
     [DisplayName("Primary Communication Address")]
     [IsoXmlTag("PmryComAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommunicationAddress6> PrimaryCommunicationAddress { get; }
 
     /// <summary>
@@ -234,6 +252,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_v6xi0UNMEeamLdeYEZm56w")]
     [DisplayName("Secondary Communication Address")]
     [IsoXmlTag("ScndryComAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommunicationAddress6> SecondaryCommunicationAddress { get; }
 
     /// <summary>
@@ -258,6 +277,7 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_v6xi10NMEeamLdeYEZm56w")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditiononalInformation12> AdditionalInformation { get; }
 
     /// <summary>
@@ -267,5 +287,6 @@ public interface INominee : IAccountParties10Choice, IIsoChoiceVariant
     [IsoId("_esEVYUzYEea8fovz_9xSTQ")]
     [DisplayName("Controlling Party")]
     [IsoXmlTag("CtrlgPty")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ControllingParty { get; }
 }

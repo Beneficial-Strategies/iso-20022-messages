@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument7Choice;
 /// </summary>
 [IsoId("_VKiwR9p-Ed-ak6NoX_4Aeg_-1553198084")]
 [IsoXmlTag("CdtTrfDtls")]
+[IsoDisplayName(@"Credit Transfer Details")]
 public interface ICreditTransferDetails : IPaymentInstrument7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICreditTransferDetails : IPaymentInstrument7Choice, IIsoChoiceV
     [IsoId("_VRiwJdp-Ed-ak6NoX_4Aeg_-1711379630")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Reference { get; }
 
     /// <summary>

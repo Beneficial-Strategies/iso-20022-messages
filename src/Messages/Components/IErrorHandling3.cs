@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the error resulting from the processing of a request.
 /// </summary>
 [IsoId("_RY_xSdp-Ed-ak6NoX_4Aeg_-917396675")]
+[IsoDisplayName(@"Error Handling")]
 public interface IErrorHandling3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IErrorHandling3 : IIsoComponent
     [IsoId("_RZI7MNp-Ed-ak6NoX_4Aeg_-917396614")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? Description { get; }
 }

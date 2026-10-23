@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Debtor Activation Cancellation Reason3.
 /// </summary>
 [IsoId("_5go66TEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Debtor Activation Cancellation Reason3")]
 public interface IDebtorActivationCancellationReason3 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IDebtorActivationCancellationReason3 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max105Text> AdditionalInformation { get; }
 }

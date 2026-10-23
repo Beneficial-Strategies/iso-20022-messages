@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party2Choice;
 /// </summary>
 [IsoId("_RCDQ4tp-Ed-ak6NoX_4Aeg_-1657924072")]
 [IsoXmlTag("PrvtId")]
+[IsoDisplayName(@"Private Identification")]
 public interface IPrivateIdentification : IParty2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IPrivateIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QED-pNp-Ed-ak6NoX_4Aeg_-1604713254")]
     [DisplayName("Drivers License Number")]
     [IsoXmlTag("DrvrsLicNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text DriversLicenseNumber { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IPrivateIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QED-pdp-Ed-ak6NoX_4Aeg_140421516")]
     [DisplayName("Customer Number")]
     [IsoXmlTag("CstmrNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CustomerNumber { get; }
 
     /// <summary>
@@ -34,6 +39,8 @@ public interface IPrivateIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QED-ptp-Ed-ak6NoX_4Aeg_-1604712929")]
     [DisplayName("Social Security Number")]
     [IsoXmlTag("SclSctyNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SocialSecurityNumber { get; }
 
     /// <summary>
@@ -42,6 +49,8 @@ public interface IPrivateIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QED-p9p-Ed-ak6NoX_4Aeg_-1604712869")]
     [DisplayName("Alien Registration Number")]
     [IsoXmlTag("AlnRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text AlienRegistrationNumber { get; }
 
     /// <summary>
@@ -50,6 +59,8 @@ public interface IPrivateIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QED-qNp-Ed-ak6NoX_4Aeg_-1604712809")]
     [DisplayName("Passport Number")]
     [IsoXmlTag("PsptNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text PassportNumber { get; }
 
     /// <summary>
@@ -58,6 +69,8 @@ public interface IPrivateIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QED-qdp-Ed-ak6NoX_4Aeg_-1604712757")]
     [DisplayName("Tax Identification Number")]
     [IsoXmlTag("TaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TaxIdentificationNumber { get; }
 
     /// <summary>
@@ -66,6 +79,8 @@ public interface IPrivateIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QED-qtp-Ed-ak6NoX_4Aeg_-1604712462")]
     [DisplayName("Identity Card Number")]
     [IsoXmlTag("IdntyCardNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IdentityCardNumber { get; }
 
     /// <summary>
@@ -74,6 +89,8 @@ public interface IPrivateIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QED-q9p-Ed-ak6NoX_4Aeg_-1604712402")]
     [DisplayName("Employer Identification Number")]
     [IsoXmlTag("MplyrIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text EmployerIdentificationNumber { get; }
 
     /// <summary>
@@ -98,5 +115,7 @@ public interface IPrivateIdentification : IParty2Choice, IIsoChoiceVariant
     [IsoId("_QENIktp-Ed-ak6NoX_4Aeg_-495106709")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

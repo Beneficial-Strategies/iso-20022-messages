@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed Statistics Per Counterparty19.
 /// </summary>
 [IsoId("_l21NhfreEe2mU4Wi2q3MzQ")]
+[IsoDisplayName(@"Detailed Statistics Per Counterparty19")]
 public interface IDetailedStatisticsPerCounterparty19 : IIsoComponent
 {
     /// <summary>
@@ -72,5 +73,6 @@ public interface IDetailedStatisticsPerCounterparty19 : IIsoComponent
     /// </summary>
     [DisplayName("Rejection Statistics")]
     [IsoXmlTag("RjctnSttstcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectionStatistics9> RejectionStatistics { get; }
 }

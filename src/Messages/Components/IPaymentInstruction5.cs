@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.
 /// </summary>
 [IsoId("_PfG3eNp-Ed-ak6NoX_4Aeg_403375874")]
+[IsoDisplayName(@"Payment Instruction")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IPaymentInstruction5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IPaymentInstruction5 : IIsoComponent
     [IsoId("_PfG3edp-Ed-ak6NoX_4Aeg_843707405")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -42,6 +46,7 @@ public interface IPaymentInstruction5 : IIsoComponent
     [IsoId("_Pf_oQNp-Ed-ak6NoX_4Aeg_2005716198")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate RequestedExecutionDate { get; }
 
     /// <summary>
@@ -90,5 +95,6 @@ public interface IPaymentInstruction5 : IIsoComponent
     [IsoId("_Pf_oRtp-Ed-ak6NoX_4Aeg_-1609470423")]
     [DisplayName("Credit Transfer Transaction")]
     [IsoXmlTag("CdtTrfTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICreditTransferTransactionInformation14> CreditTransferTransaction { get; }
 }

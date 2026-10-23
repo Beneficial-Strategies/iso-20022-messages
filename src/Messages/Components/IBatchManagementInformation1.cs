@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Elements of identification of a batch management transaction.
 /// </summary>
 [IsoId("_A7J8gEBbEeepk8PtnyIgsg")]
+[IsoDisplayName(@"Batch Management Information")]
 public interface IBatchManagementInformation1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IBatchManagementInformation1 : IIsoComponent
     [IsoId("_NBPkkEBbEeepk8PtnyIgsg")]
     [DisplayName("Collection Identification")]
     [IsoXmlTag("ColltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CollectionIdentification { get; }
 
     /// <summary>
@@ -27,6 +30,8 @@ public interface IBatchManagementInformation1 : IIsoComponent
     [IsoId("_QZUToEBbEeepk8PtnyIgsg")]
     [DisplayName("Batch Identification")]
     [IsoXmlTag("BtchId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text BatchIdentification { get; }
 
     /// <summary>
@@ -37,6 +42,7 @@ public interface IBatchManagementInformation1 : IIsoComponent
     [IsoId("_aLfYUEBbEeepk8PtnyIgsg")]
     [DisplayName("Message Sequence Number")]
     [IsoXmlTag("MsgSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? MessageSequenceNumber { get; }
 
     /// <summary>
@@ -45,5 +51,6 @@ public interface IBatchManagementInformation1 : IIsoComponent
     [IsoId("_0gZPgEBbEeepk8PtnyIgsg")]
     [DisplayName("Message Checksum Input Value")]
     [IsoXmlTag("MsgChcksmInptVal")]
+    [IsoSimpleType(IsoSimpleType.Max140Binary)]
     Max140Binary? MessageChecksumInputValue { get; }
 }

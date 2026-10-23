@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of meeting type classification.
 /// </summary>
 [IsoId("_edv9767NEemG7MmivSuE5g")]
+[IsoDisplayName(@"Meeting Type Classification 2 Choice")]
 public interface IMeetingTypeClassification2Choice : IIsoChoice { }

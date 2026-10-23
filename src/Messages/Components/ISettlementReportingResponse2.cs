@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the  settlement response message.
 /// </summary>
 [IsoId("_KfS0QYwFEeugeuahCxXQ-Q")]
+[IsoDisplayName(@"Settlement Reporting Response")]
 public interface ISettlementReportingResponse2 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ISettlementReportingResponse2 : IIsoComponent
     [IsoId("_KkHp6YwFEeugeuahCxXQ-Q")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProtectedData1> ProtectedData { get; }
 
     /// <summary>
@@ -57,5 +59,6 @@ public interface ISettlementReportingResponse2 : IIsoComponent
     [IsoId("_KkHp64wFEeugeuahCxXQ-Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

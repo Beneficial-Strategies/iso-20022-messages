@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification37Choice;
 /// Country in which a person resides (the place of a person&apos;s home). In the case of a company, it is the country from which the affairs of that company are directed.
 /// </summary>
 [IsoId("_7H6pyeaPEd-q8fx_Zl_34A")]
+[IsoDisplayName(@"Country")]
 public interface ICountry : IPartyIdentification37Choice, IIsoChoiceVariant
 {
     /// <summary>

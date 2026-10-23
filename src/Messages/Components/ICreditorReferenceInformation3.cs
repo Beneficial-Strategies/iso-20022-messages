@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference information provided by the creditor to allow the identification of the underlying documents.
 /// </summary>
 [IsoId("_7u-CcTEsEe6GxLzpkVnWYg")]
+[Description(@"Reference information provided by the creditor to allow the identification of the underlying documents.")]
+[IsoDisplayName(@"Creditor Reference Information3")]
 public interface ICreditorReferenceInformation3 : IIsoComponent
 {
     /// <summary>

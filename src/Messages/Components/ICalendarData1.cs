@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes information needed to identify a change for a static data, the time when it was performed and the user requesting the change and approving it.
 /// </summary>
 [IsoId("_dVcQ04m7Eeipw6hHPgB4Sw")]
+[IsoDisplayName(@"Calendar Data")]
 public interface ICalendarData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICalendarData1 : IIsoComponent
     [IsoId("_-zQEYom7Eeipw6hHPgB4Sw")]
     [DisplayName("System Date")]
     [IsoXmlTag("SysDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate SystemDate { get; }
 
     /// <summary>

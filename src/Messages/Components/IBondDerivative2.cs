@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transparency calculation specific details on a bond derivative.
 /// </summary>
 [IsoId("_s736gWlJEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Bond Derivative")]
 public interface IBondDerivative2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IBondDerivative2 : IIsoComponent
     [IsoId("_tFkCAWlJEeaLAKoEUNsD9g")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Issuer { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IBondDerivative2 : IIsoComponent
     [IsoId("_tFkCA2lJEeaLAKoEUNsD9g")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? MaturityDate { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IBondDerivative2 : IIsoComponent
     [IsoId("_zoY10GlJEeaLAKoEUNsD9g")]
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? IssuanceDate { get; }
 }

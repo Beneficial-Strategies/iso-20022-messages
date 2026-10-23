@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Element containing all information needed for a card initiating direct debit.
 /// </summary>
 [IsoId("_IHGYQdgyEeipBO1pkKK6zg")]
+[IsoDisplayName(@"Card Direct Debit")]
 public interface ICardDirectDebit2 : IIsoComponent
 {
     /// <summary>

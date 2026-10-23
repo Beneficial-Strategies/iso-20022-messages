@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberOrPercentage2Choice;
 /// <summary>
 /// Threshold Number.
 /// </summary>
+[IsoDisplayName(@"Threshold Number")]
 public interface IThresholdNumber : INumberOrPercentage2Choice, IIsoChoiceVariant
 {
     /// <summary>

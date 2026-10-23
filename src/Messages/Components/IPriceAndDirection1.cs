@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Price and an indication of whether it is a increase or a decrease.
 /// </summary>
 [IsoId("_m-cPtfNBEeCuA5Tr22BnwA_127397945")]
+[IsoDisplayName(@"Price And Direction")]
 public interface IPriceAndDirection1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPriceAndDirection1 : IIsoComponent
     [IsoId("_m-lZoPNBEeCuA5Tr22BnwA_1917918061")]
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
+    [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
     PlusOrMinusIndicator? Sign { get; }
 }

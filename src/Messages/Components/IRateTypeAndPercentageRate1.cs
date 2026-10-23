@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the value expressed as a rate type and a percentage rate.
 /// </summary>
 [IsoId("_uI7O4CeEEeOXAt_43VmZGw")]
+[IsoDisplayName(@"Rate Type And Percentage Rate")]
 public interface IRateTypeAndPercentageRate1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IRateTypeAndPercentageRate1 : IIsoComponent
     [IsoId("_91nxQCeEEeOXAt_43VmZGw")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Rate { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification8Choice;
 /// </summary>
 [IsoId("_Q7fV6tp-Ed-ak6NoX_4Aeg_1364553234")]
 [IsoXmlTag("NmAndAdr")]
+[IsoDisplayName(@"Name And Address")]
 public interface INameAndAddress : IPartyIdentification8Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface INameAndAddress : IPartyIdentification8Choice, IIsoChoiceVarian
     [IsoId("_PZvPQdp-Ed-ak6NoX_4Aeg_-611452364")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Name { get; }
 
     /// <summary>
@@ -34,5 +37,10 @@ public interface INameAndAddress : IPartyIdentification8Choice, IIsoChoiceVarian
     [IsoId("_PZvPQ9p-Ed-ak6NoX_4Aeg_-106286787")]
     [DisplayName("Alternative Identifier")]
     [IsoXmlTag("AltrntvIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [StringLength(35, MinimumLength = 1)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> AlternativeIdentifier { get; }
 }

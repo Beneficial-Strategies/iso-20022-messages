@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the net positions details.
 /// </summary>
 [IsoId("_Hkd7wS6aEeSQQqw1BT_aMg")]
+[IsoDisplayName(@"Net Position")]
 public interface INetPosition3 : IIsoComponent
 {
     /// <summary>
@@ -121,6 +122,7 @@ public interface INetPosition3 : IIsoComponent
     [IsoId("_H3p9nS6aEeSQQqw1BT_aMg")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TradeDate { get; }
 
     /// <summary>
@@ -137,5 +139,6 @@ public interface INetPosition3 : IIsoComponent
     [IsoId("_H3p9oS6aEeSQQqw1BT_aMg")]
     [DisplayName("Trade Leg Details")]
     [IsoXmlTag("TradLegDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeLeg10> TradeLegDetails { get; }
 }

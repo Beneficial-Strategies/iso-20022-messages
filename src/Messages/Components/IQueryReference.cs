@@ -9,12 +9,15 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Gives the name and the reference of the query.
 /// </summary>
 [IsoId("_RIAu89p-Ed-ak6NoX_4Aeg_-1267402499")]
+[IsoDisplayName(@"Query Reference")]
 public interface IQueryReference : IIsoComponent
 {
     /// <summary>
     /// Unique and unambiguous identification of the query.
     /// </summary>
     [IsoXmlTag("QryRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 
     /// <summary>
@@ -23,5 +26,7 @@ public interface IQueryReference : IIsoComponent
     [IsoId("_RIAu9dp-Ed-ak6NoX_4Aeg_-1267402498")]
     [DisplayName("Query Name")]
     [IsoXmlTag("QryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryName { get; }
 }

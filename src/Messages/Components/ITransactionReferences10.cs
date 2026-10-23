@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the underlying transaction.
 /// </summary>
 [IsoId("848b7f50-1917-499a-9240-034cbc9fd1c1")]
+[IsoDisplayName(@"Transaction References10")]
 public interface ITransactionReferences10 : IIsoComponent
 {
     /// <summary>
@@ -137,5 +138,6 @@ public interface ITransactionReferences10 : IIsoComponent
     [IsoId("608d933d-5282-4a91-881e-1edff93ca389")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IProprietaryReference1> Proprietary { get; }
 }

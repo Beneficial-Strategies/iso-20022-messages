@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Query criteria on a trade transaction.
 /// </summary>
 [IsoId("_noB-MWE3Ee2S65ml6YCOtA")]
+[IsoDisplayName(@"Trade Query Criteria")]
 public interface ITradeQueryCriteria13 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ITradeQueryCriteria13 : IIsoComponent
     [IsoId("_np18E2E3Ee2S65ml6YCOtA")]
     [DisplayName("Trade Life Cycle History")]
     [IsoXmlTag("TradLifeCyclHstry")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator TradeLifeCycleHistory { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface ITradeQueryCriteria13 : IIsoComponent
     [IsoId("_np18FWE3Ee2S65ml6YCOtA")]
     [DisplayName("Outstanding Trade Indicator")]
     [IsoXmlTag("OutsdngTradInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator OutstandingTradeIndicator { get; }
 
     /// <summary>

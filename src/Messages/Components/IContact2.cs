@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of a contact person.
 /// </summary>
 [IsoId("_DZOUkVyuEeeve7Je9cXtkQ")]
+[IsoDisplayName(@"Contact")]
 public interface IContact2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContact2 : IIsoComponent
     [IsoId("_DkrWoVyuEeeve7Je9cXtkQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? Name { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IContact2 : IIsoComponent
     [IsoId("_gNEyB45UEeeiH8xEoW101w")]
     [DisplayName("Home Phone Number")]
     [IsoXmlTag("HomePhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? HomePhoneNumber { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IContact2 : IIsoComponent
     [IsoId("_gNEyCI5UEeeiH8xEoW101w")]
     [DisplayName("Business Phone Number")]
     [IsoXmlTag("BizPhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? BusinessPhoneNumber { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface IContact2 : IIsoComponent
     [IsoId("_gNEyCY5UEeeiH8xEoW101w")]
     [DisplayName("Mobile Phone Number")]
     [IsoXmlTag("MobPhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? MobilePhoneNumber { get; }
 
     /// <summary>
@@ -49,6 +55,7 @@ public interface IContact2 : IIsoComponent
     [IsoId("_gNEyCo5UEeeiH8xEoW101w")]
     [DisplayName("Other Phone Number")]
     [IsoXmlTag("OthrPhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? OtherPhoneNumber { get; }
 
     /// <summary>
@@ -57,6 +64,8 @@ public interface IContact2 : IIsoComponent
     [IsoId("_gNEyC45UEeeiH8xEoW101w")]
     [DisplayName("Personal Email Address")]
     [IsoXmlTag("PrsnlEmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? PersonalEmailAddress { get; }
 
     /// <summary>
@@ -65,6 +74,8 @@ public interface IContact2 : IIsoComponent
     [IsoId("_gNEyDI5UEeeiH8xEoW101w")]
     [DisplayName("Business Email Address")]
     [IsoXmlTag("BizEmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? BusinessEmailAddress { get; }
 
     /// <summary>
@@ -73,6 +84,8 @@ public interface IContact2 : IIsoComponent
     [IsoId("_gNEyDY5UEeeiH8xEoW101w")]
     [DisplayName("Other Email Address")]
     [IsoXmlTag("OthrEmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? OtherEmailAddress { get; }
 
     /// <summary>
@@ -81,6 +94,7 @@ public interface IContact2 : IIsoComponent
     [IsoId("_DkrWo1yuEeeve7Je9cXtkQ")]
     [DisplayName("Home Fax Number")]
     [IsoXmlTag("HomeFaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? HomeFaxNumber { get; }
 
     /// <summary>
@@ -89,6 +103,7 @@ public interface IContact2 : IIsoComponent
     [IsoId("_wAu4AI5UEeeiH8xEoW101w")]
     [DisplayName("Business Fax Number")]
     [IsoXmlTag("BizFaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? BusinessFaxNumber { get; }
 
     /// <summary>
@@ -97,6 +112,8 @@ public interface IContact2 : IIsoComponent
     [IsoId("_DkrWqVyuEeeve7Je9cXtkQ")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? URLAddress { get; }
 
     /// <summary>

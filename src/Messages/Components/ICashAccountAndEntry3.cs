@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.
 /// </summary>
 [IsoId("_XO_0I249EeiU9cctagi5ow")]
+[IsoDisplayName(@"Cash Account And Entry")]
 public interface ICashAccountAndEntry3 : IIsoComponent
 {
     /// <summary>

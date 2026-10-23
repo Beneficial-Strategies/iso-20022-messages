@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat76Choice;
 /// <summary>
 /// Amount Price Per Amount.
 /// </summary>
+[IsoDisplayName(@"Amount Price Per Amount")]
 public interface IAmountPricePerAmount : IPriceFormat76Choice, IIsoChoiceVariant
 {
     /// <summary>

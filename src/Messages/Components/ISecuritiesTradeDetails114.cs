@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the securities trade.
 /// </summary>
 [IsoId("_IPijEAn-Eeqvb4kQR8No8g")]
+[IsoDisplayName(@"Securities Trade Details")]
 public interface ISecuritiesTradeDetails114 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISecuritiesTradeDetails114 : IIsoComponent
     [IsoId("_IPijHAn-Eeqvb4kQR8No8g")]
     [DisplayName("Notification Sender Transaction Identification")]
     [IsoXmlTag("NtfctnSndrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? NotificationSenderTransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ISecuritiesTradeDetails114 : IIsoComponent
     [IsoId("_IPijJAn-Eeqvb4kQR8No8g")]
     [DisplayName("Notification Receiver Transaction Identification")]
     [IsoXmlTag("NtfctnRcvrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? NotificationReceiverTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ISecuritiesTradeDetails114 : IIsoComponent
     [IsoId("_IPijLAn-Eeqvb4kQR8No8g")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(16, MinimumLength = 1)]
     RestrictedFINXMax16Text? CommonIdentification { get; }
 
     /// <summary>
@@ -81,6 +88,7 @@ public interface ISecuritiesTradeDetails114 : IIsoComponent
     [IsoId("_IPijVgn-Eeqvb4kQR8No8g")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? NumberOfDaysAccrued { get; }
 
     /// <summary>
@@ -105,6 +113,7 @@ public interface ISecuritiesTradeDetails114 : IIsoComponent
     [IsoId("_IPijbgn-Eeqvb4kQR8No8g")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IReporting8Choice> Reporting { get; }
 
     /// <summary>
@@ -169,5 +178,6 @@ public interface ISecuritiesTradeDetails114 : IIsoComponent
     [IsoId("_IPijrgn-Eeqvb4kQR8No8g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

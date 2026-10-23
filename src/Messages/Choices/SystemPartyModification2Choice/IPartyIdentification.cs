@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// </summary>
 [IsoId("_yJhSo4v-Eei289CGNqs21g")]
 [IsoXmlTag("PtyId")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IPartyIdentification : ISystemPartyModification2Choice, IIsoCho
     [IsoId("_-AKB0b10Eeiut6mmSKzDFQ")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValidFrom { get; }
 
     /// <summary>

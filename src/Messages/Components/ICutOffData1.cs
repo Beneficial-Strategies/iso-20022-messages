@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the new, current and previous cut offs for a netting cut off held at the central system.
 /// </summary>
 [IsoId("_dxXmUJXXEeaYkf5FCqYMeA")]
+[IsoDisplayName(@"Cut Off Data")]
 public interface ICutOffData1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface ICutOffData1 : IIsoComponent
     [IsoId("_dNmEkJntEeaKH-pm9fIa8w")]
     [DisplayName("Netting Cut Off Details")]
     [IsoXmlTag("NetgCutOffDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INettingCutOff1> NettingCutOffDetails { get; }
 }

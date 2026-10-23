@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Registered Contract20.
 /// </summary>
 [IsoId("_7NxLETEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Registered Contract20")]
 public interface IRegisteredContract20 : IIsoComponent
 {
     /// <summary>
@@ -51,6 +52,7 @@ public interface IRegisteredContract20 : IIsoComponent
     /// </summary>
     [DisplayName("Contract Balance")]
     [IsoXmlTag("CtrctBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContractBalance1> ContractBalance { get; }
 
     /// <summary>
@@ -79,6 +81,7 @@ public interface IRegisteredContract20 : IIsoComponent
     /// </summary>
     [DisplayName("Registered Contract Journal")]
     [IsoXmlTag("RegdCtrctJrnl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegisteredContractJournal3> RegisteredContractJournal { get; }
 
     /// <summary>
@@ -86,6 +89,7 @@ public interface IRegisteredContract20 : IIsoComponent
     /// </summary>
     [DisplayName("Amendment")]
     [IsoXmlTag("Amdmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegisteredContractAmendment1> Amendment { get; }
 
     /// <summary>
@@ -135,5 +139,6 @@ public interface IRegisteredContract20 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

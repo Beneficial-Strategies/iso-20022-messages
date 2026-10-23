@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdjustmentType1Choice;
 /// Specifies a type of adjustment not present in the code list.
 /// </summary>
 [IsoId("_X_NUQBrXEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Other Adjustment Type")]
 public interface IOtherAdjustmentType : IAdjustmentType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOtherAdjustmentType : IAdjustmentType1Choice, IIsoChoiceVarian
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("OthrAdjstmntTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice;
 /// </summary>
 [IsoId("_fbqi0SJDEe2zWP9pqvmqdw")]
 [IsoXmlTag("SchdlPrd")]
+[IsoDisplayName(@"Schedule Period")]
 public interface ISchedulePeriod : IQuantityOrTerm1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ISchedulePeriod : IQuantityOrTerm1Choice, IIsoChoiceVariant
     [IsoId("_-ZlMgSJDEe2zWP9pqvmqdw")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
+    [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
     LongFraction19DecimalNumber Quantity { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface ISchedulePeriod : IQuantityOrTerm1Choice, IIsoChoiceVariant
     [IsoId("_2INzQSJDEe2zWP9pqvmqdw")]
     [DisplayName("Unadjusted Effective Date")]
     [IsoXmlTag("UadjstdFctvDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate UnadjustedEffectiveDate { get; }
 
     /// <summary>
@@ -42,5 +45,6 @@ public interface ISchedulePeriod : IQuantityOrTerm1Choice, IIsoChoiceVariant
     [IsoId("_2INzQyJDEe2zWP9pqvmqdw")]
     [DisplayName("Unadjusted End Date")]
     [IsoXmlTag("UadjstdEndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? UnadjustedEndDate { get; }
 }

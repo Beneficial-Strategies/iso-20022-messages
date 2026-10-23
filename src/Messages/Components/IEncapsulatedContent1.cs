@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to authenticate.
 /// </summary>
 [IsoId("_SwiSywEcEeCQm6a_G2yO_w_1932848830")]
+[IsoDisplayName(@"Encapsulated Content")]
 public interface IEncapsulatedContent1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IEncapsulatedContent1 : IIsoComponent
     [IsoId("_SwiSzQEcEeCQm6a_G2yO_w_1303832263")]
     [DisplayName("Content")]
     [IsoXmlTag("Cntt")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? Content { get; }
 }

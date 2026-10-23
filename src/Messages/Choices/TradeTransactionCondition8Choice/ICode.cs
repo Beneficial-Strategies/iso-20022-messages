@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionCondition8Choice
 /// Trade condition expressed as a code.
 /// </summary>
 [IsoId("_P2iDk0c9EeaBWtcfqEyXyw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ITradeTransactionCondition8Choice, IIsoChoiceVariant
 {
     /// <summary>

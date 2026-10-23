@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Element containing the signature.
 /// </summary>
 [IsoId("_Aa2d8cPzEfCTf8R2j0RpdQ")]
+[IsoDisplayName(@"ATMSignature3Choice")]
 public interface IATMSignature3Choice : IIsoChoice { }

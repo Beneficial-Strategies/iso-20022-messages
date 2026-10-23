@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction14C
 
 /// <summary>Completed card payment transaction to be captured.</summary>
 [IsoId("_tKIfVbYJEfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Completion")]
 public interface ICompletion : ICardPaymentDataSetTransaction14Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

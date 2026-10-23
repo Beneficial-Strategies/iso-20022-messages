@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the mandate, which is being accepted.
 /// </summary>
 [IsoId("_1f7egTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Mandate Acceptance8")]
 public interface IMandateAcceptance8 : IIsoComponent
 {
     /// <summary>
@@ -37,5 +38,6 @@ public interface IMandateAcceptance8 : IIsoComponent
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "DerivsTradStatRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.107.001.01"
 )]
+[Description(@"The DerivativesTradeStateReport is sent by the trade repository (TR) to the other trade repository (TR) or the authority or made available to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, containing latest state of the transaction.")]
+[IsoDisplayName(@"Derivatives Trade State Report V")]
 public interface IDerivativesTradeStateReportV01 : IOuterRecord
 {
     /// <summary>
@@ -40,5 +42,6 @@ public interface IDerivativesTradeStateReportV01 : IOuterRecord
     [IsoId("_pVW9rWmFEe2DRvVJM2Qy-g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

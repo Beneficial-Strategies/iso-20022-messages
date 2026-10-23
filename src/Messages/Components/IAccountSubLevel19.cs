@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account and holding of the next sub-level (Level 9).
 /// </summary>
 [IsoId("_tyPfYVjCEea1XpTdyimpLA")]
+[IsoDisplayName(@"Account Sub Level")]
 public interface IAccountSubLevel19 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IAccountSubLevel19 : IIsoComponent
     [IsoId("_uLiJJ1jCEea1XpTdyimpLA")]
     [DisplayName("Beneficial Owner")]
     [IsoXmlTag("BnfclOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBeneficialOwner2> BeneficialOwner { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IAccountSubLevel19 : IIsoComponent
     [IsoId("_w2LxgVjCEea1XpTdyimpLA")]
     [DisplayName("Balance Details")]
     [IsoXmlTag("BalDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAggregateHoldingBalance3> BalanceDetails { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface IAccountSubLevel19 : IIsoComponent
     [IsoId("_uLiJLVjCEea1XpTdyimpLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

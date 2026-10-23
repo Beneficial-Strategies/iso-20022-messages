@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action event.
 /// </summary>
 [IsoId("_SFIFId24Ed-KAqAOGQOnnw")]
+[IsoDisplayName(@"Corporate Action")]
 public interface ICorporateAction5 : IIsoComponent
 {
     /// <summary>
@@ -57,6 +58,7 @@ public interface ICorporateAction5 : IIsoComponent
     [IsoId("_SFR2K924Ed-KAqAOGQOnnw")]
     [DisplayName("Interest Accrued Number Of Days")]
     [IsoXmlTag("IntrstAcrdNbOfDays")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
     Max3Number? InterestAccruedNumberOfDays { get; }
 
     /// <summary>
@@ -65,6 +67,7 @@ public interface ICorporateAction5 : IIsoComponent
     [IsoId("_SFR2Ld24Ed-KAqAOGQOnnw")]
     [DisplayName("Coupon Number")]
     [IsoXmlTag("CpnNb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIdentificationFormat1Choice> CouponNumber { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ICorporateAction5 : IIsoComponent
     [IsoId("_SFR2L924Ed-KAqAOGQOnnw")]
     [DisplayName("Certification Required Indicator")]
     [IsoXmlTag("CertfctnReqrdInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? CertificationRequiredIndicator { get; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public interface ICorporateAction5 : IIsoComponent
     [IsoId("_SFR2Md24Ed-KAqAOGQOnnw")]
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChargesAppliedIndicator { get; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public interface ICorporateAction5 : IIsoComponent
     [IsoId("_SFR2M924Ed-KAqAOGQOnnw")]
     [DisplayName("Restriction Indicator")]
     [IsoXmlTag("RstrctnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? RestrictionIndicator { get; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public interface ICorporateAction5 : IIsoComponent
     [IsoId("_SFR2Nd24Ed-KAqAOGQOnnw")]
     [DisplayName("Accrued Interest Indicator")]
     [IsoXmlTag("AcrdIntrstInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AccruedInterestIndicator { get; }
 
     /// <summary>
@@ -129,6 +136,7 @@ public interface ICorporateAction5 : IIsoComponent
     [IsoId("_SFR2Pd24Ed-KAqAOGQOnnw")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOfferTypeFormat1Choice> OfferType { get; }
 
     /// <summary>
@@ -145,6 +153,7 @@ public interface ICorporateAction5 : IIsoComponent
     [IsoId("_SFR2Qd24Ed-KAqAOGQOnnw")]
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionEventStageFormat3Choice> EventStage { get; }
 
     /// <summary>
@@ -153,6 +162,7 @@ public interface ICorporateAction5 : IIsoComponent
     [IsoId("_SFR2Q924Ed-KAqAOGQOnnw")]
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalBusinessProcessFormat1Choice> AdditionalBusinessProcessIndicator { get; }
 
     /// <summary>
@@ -161,6 +171,7 @@ public interface ICorporateAction5 : IIsoComponent
     [IsoId("_SFR2Rd24Ed-KAqAOGQOnnw")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionChangeTypeFormat1Choice> ChangeType { get; }
 
     /// <summary>
@@ -217,6 +228,8 @@ public interface ICorporateAction5 : IIsoComponent
     [IsoId("_SFR2U924Ed-KAqAOGQOnnw")]
     [DisplayName("New Place Of Incorporation")]
     [IsoXmlTag("NewPlcOfIncorprtn")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? NewPlaceOfIncorporation { get; }
 
     /// <summary>

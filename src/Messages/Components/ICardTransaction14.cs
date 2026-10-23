@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Key exchange transaction.
 /// </summary>
 [IsoId("_lhtygXvREeS2PZh7wUMQog")]
+[IsoDisplayName(@"Card Transaction")]
 public interface ICardTransaction14 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardTransaction14 : IIsoComponent
     [IsoId("_eXsAMISiEeScnfYByhaIWA")]
     [DisplayName("Initiator Date Time")]
     [IsoXmlTag("InitrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime InitiatorDateTime { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICardTransaction14 : IIsoComponent
     [IsoId("__taDUHvREeS2PZh7wUMQog")]
     [DisplayName("Key Verification")]
     [IsoXmlTag("KeyVrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IKEKIdentifier3> KeyVerification { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ICardTransaction14 : IIsoComponent
     [IsoId("_lurQd3vREeS2PZh7wUMQog")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICryptographicKey6> Key { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Delivering Parties And Account21.
 /// </summary>
 [IsoId("_3SHE_ZIOEe-HRNGM304Vlw")]
+[IsoDisplayName(@"Delivering Parties And Account21")]
 public interface IDeliveringPartiesAndAccount21 : IIsoComponent
 {
     /// <summary>

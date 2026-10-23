@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPaymentType1Choice;
 /// Type of payment instrument expressed as a code.
 /// </summary>
 [IsoId("_AuoZYF8yEeicg40_9gK9vQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IFundPaymentType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reason for the complete status.
 /// </summary>
 [IsoId("_U0V2yNp-Ed-ak6NoX_4Aeg_-1275943610")]
+[IsoDisplayName(@"Transfer Cancellation Complete Reason")]
 public interface ITransferCancellationCompleteReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ITransferCancellationCompleteReason1 : IIsoComponent
     [IsoId("_U0fAsdp-Ed-ak6NoX_4Aeg_551704444")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

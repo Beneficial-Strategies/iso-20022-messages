@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about a redemption multiple order.
 /// </summary>
 [IsoId("_RO291dp-Ed-ak6NoX_4Aeg_-632605196")]
+[IsoDisplayName(@"Redemption Multiple Order Instruction")]
 public interface IRedemptionMultipleOrderInstruction2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,9 @@ public interface IRedemptionMultipleOrderInstruction2 : IIsoComponent
     [IsoId("_RO2919p-Ed-ak6NoX_4Aeg_-632605134")]
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntermediary8> RelatedPartyDetails { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IRedemptionMultipleOrderInstruction2 : IIsoComponent
     [IsoId("_RO292Np-Ed-ak6NoX_4Aeg_-632605169")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

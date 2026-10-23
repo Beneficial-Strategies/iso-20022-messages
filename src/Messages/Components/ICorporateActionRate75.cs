@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies rate details.
 /// </summary>
 [IsoId("_ckBxjZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Corporate Action Rate")]
 public interface ICorporateActionRate75 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ICorporateActionRate75 : IIsoComponent
     [IsoId("_ckBxrZKQEeWHWpTQn1FFVg")]
     [DisplayName("Fiscal Stamp")]
     [IsoXmlTag("FsclStmp")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? FiscalStamp { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ICorporateActionRate75 : IIsoComponent
     [IsoId("_ckBxr5KQEeWHWpTQn1FFVg")]
     [DisplayName("Applicable Rate")]
     [IsoXmlTag("AplblRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? ApplicableRate { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ICorporateActionRate75 : IIsoComponent
     [IsoId("_ckBxsZKQEeWHWpTQn1FFVg")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCreditRateFormat9Choice> TaxCreditRate { get; }
 
     /// <summary>
@@ -73,5 +77,6 @@ public interface ICorporateActionRate75 : IIsoComponent
     [IsoId("_ckBxs5KQEeWHWpTQn1FFVg")]
     [DisplayName("Financial Transaction Tax Rate")]
     [IsoXmlTag("FinTxTaxRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? FinancialTransactionTaxRate { get; }
 }

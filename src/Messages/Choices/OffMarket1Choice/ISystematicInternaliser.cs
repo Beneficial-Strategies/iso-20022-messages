@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OffMarket1Choice;
 /// Provides the BIC code of the systematic internaliser.
 /// </summary>
 [IsoId("_TCpPotp-Ed-ak6NoX_4Aeg_-1823256758")]
+[IsoDisplayName(@"Systematic Internaliser")]
 public interface ISystematicInternaliser : IOffMarket1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface ISystematicInternaliser : IOffMarket1Choice, IIsoChoiceVariant
     /// Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
     /// </summary>
     [IsoXmlTag("SystmtcIntlr")]
+    [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     AnyBICIdentifier Value { get; }
 }

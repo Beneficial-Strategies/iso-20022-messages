@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledReason10Choice;
 /// Standard code to specify the reason why the instruction is cancelled.
 /// </summary>
 [IsoId("_ce-6BZKQEeWHWpTQn1FFVg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICancelledReason10Choice, IIsoChoiceVariant
 {
     /// <summary>

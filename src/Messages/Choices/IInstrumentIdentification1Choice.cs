@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between different instrument identification schemes.
 /// </summary>
 [IsoId("_vWHmMAbSEeqrW7Meu5r3kQ")]
+[IsoDisplayName(@"Instrument Identification 1 Choice")]
 public interface IInstrumentIdentification1Choice : IIsoChoice { }

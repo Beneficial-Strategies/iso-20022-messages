@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus6Choice;
 /// </summary>
 [IsoId("_UVMcqtp-Ed-ak6NoX_4Aeg_555852666")]
 [IsoXmlTag("CxlReqd")]
+[IsoDisplayName(@"Cancellation Requested")]
 public interface ICancellationRequested : IProcessingStatus6Choice, IIsoChoiceVariant
 {
     /// <summary>

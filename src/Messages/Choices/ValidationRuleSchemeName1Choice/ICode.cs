@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ValidationRuleSchemeName1Choice;
 /// Name of the identification scheme, in a coded form as published in an external list.
 /// </summary>
 [IsoId("_kAjWZNjGEeSD0e0ybx5L5Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IValidationRuleSchemeName1Choice, IIsoChoiceVariant
 {
     /// <summary>

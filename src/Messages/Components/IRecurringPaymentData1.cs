@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains detail information of the recurring payment.
 /// </summary>
 [IsoId("_9qTQ8F5wEfCoP_h9uwd39Q")]
+[IsoDisplayName(@"Recurring Payment Data1")]
 public interface IRecurringPaymentData1 : IIsoComponent
 {
     /// <summary>
@@ -73,6 +74,7 @@ public interface IRecurringPaymentData1 : IIsoComponent
     [IsoId("_xX-fgl53EfCoP_h9uwd39Q")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -81,5 +83,6 @@ public interface IRecurringPaymentData1 : IIsoComponent
     [IsoId("_xX-fg153EfCoP_h9uwd39Q")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

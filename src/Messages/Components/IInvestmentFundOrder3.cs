@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reference of an order.
 /// </summary>
 [IsoId("_TSb_Itp-Ed-ak6NoX_4Aeg_673719361")]
+[IsoDisplayName(@"Investment Fund Order")]
 public interface IInvestmentFundOrder3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IInvestmentFundOrder3 : IIsoComponent
     [IsoId("_TSb_I9p-Ed-ak6NoX_4Aeg_236458425")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IInvestmentFundOrder3 : IIsoComponent
     [IsoId("_TSb_JNp-Ed-ak6NoX_4Aeg_673719387")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OrderReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IInvestmentFundOrder3 : IIsoComponent
     [IsoId("_TSb_Jdp-Ed-ak6NoX_4Aeg_673719421")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientReference { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IInvestmentFundOrder3 : IIsoComponent
     [IsoId("_TSb_Jtp-Ed-ak6NoX_4Aeg_673719481")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DealReference { get; }
 
     /// <summary>

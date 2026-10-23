@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Reservation Identification4.
 /// </summary>
 [IsoId("_0vVvETEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Reservation Identification4")]
 public interface IReservationIdentification4 : IIsoComponent
 {
     /// <summary>

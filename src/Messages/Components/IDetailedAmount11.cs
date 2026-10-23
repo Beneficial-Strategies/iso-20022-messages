@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fees between acquirer and issuer.
 /// </summary>
 [IsoId("_YbLAAYKVEeSIRfXNMHH5mQ")]
+[IsoDisplayName(@"Detailed Amount")]
 public interface IDetailedAmount11 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IDetailedAmount11 : IIsoComponent
     [IsoId("_YpdTo4KVEeSIRfXNMHH5mQ")]
     [DisplayName("Additional Type")]
     [IsoXmlTag("AddtlTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdditionalType { get; }
 
     /// <summary>

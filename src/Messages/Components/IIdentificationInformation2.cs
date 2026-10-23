@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the details of the identification information.
 /// </summary>
 [IsoId("_tpQTY1kyEeGeoaLUQk__nA_1045933986")]
+[IsoDisplayName(@"Identification Information")]
 public interface IIdentificationInformation2 : IIsoComponent
 {
     /// <summary>

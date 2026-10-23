@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Compares information related to both sides of a loan.
 /// </summary>
 [IsoId("_bHPnAKxaEem81-uIvTF5rQ")]
+[IsoDisplayName(@"Counterparty Matching Criteria")]
 public interface ICounterpartyMatchingCriteria1 : IIsoComponent
 {
     /// <summary>

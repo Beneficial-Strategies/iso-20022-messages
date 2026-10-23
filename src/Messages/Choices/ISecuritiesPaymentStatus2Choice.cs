@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the status of payment of a security at a particular time.
 /// </summary>
 [IsoId("_QvHt0Np-Ed-ak6NoX_4Aeg_919791537")]
+[IsoDisplayName(@"Securities Payment Status 2 Choice")]
 public interface ISecuritiesPaymentStatus2Choice : IIsoChoice { }

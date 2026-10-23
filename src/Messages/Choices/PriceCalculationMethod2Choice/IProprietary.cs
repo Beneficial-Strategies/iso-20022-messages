@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceCalculationMethod2Choice;
 /// <summary>
 /// Proprietary.
 /// </summary>
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IPriceCalculationMethod2Choice, IIsoChoiceVariant
 {
     /// <summary>

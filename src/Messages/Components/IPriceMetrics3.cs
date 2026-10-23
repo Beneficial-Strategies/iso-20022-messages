@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Numeric variables consisting in interest rates, lending fees or haircuts, calculated as weighted averages.
 /// </summary>
 [IsoId("_rpb5cc-nEeufOvGsyZiDWA")]
+[IsoDisplayName(@"Price Metrics")]
 public interface IPriceMetrics3 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IPriceMetrics3 : IIsoComponent
     [IsoId("_rsBTZc-nEeufOvGsyZiDWA")]
     [DisplayName("Lending Fee")]
     [IsoXmlTag("LndgFee")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? LendingFee { get; }
 }

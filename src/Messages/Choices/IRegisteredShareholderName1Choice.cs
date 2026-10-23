@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of individual or organisation name and address.
 /// </summary>
 [IsoId("_ijIuEFxYEeWvPv3PXpS3fw")]
+[IsoDisplayName(@"Registered Shareholder Name 1 Choice")]
 public interface IRegisteredShareholderName1Choice : IIsoChoice { }

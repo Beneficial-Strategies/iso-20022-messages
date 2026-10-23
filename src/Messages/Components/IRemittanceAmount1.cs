@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Nature of the amount and currency on a document referred to in the remittance section, typically either the original amount due/payable or the amount actually remitted for the referenced document.
 /// </summary>
 [IsoId("_QGJCSNp-Ed-ak6NoX_4Aeg_-903711790")]
+[IsoDisplayName(@"Remittance Amount")]
 public interface IRemittanceAmount1 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface IRemittanceAmount1 : IIsoComponent
     [IsoId("_QGSzQtp-Ed-ak6NoX_4Aeg_1253864295")]
     [DisplayName("Adjustment Amount And Reason")]
     [IsoXmlTag("AdjstmntAmtAndRsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentAdjustment1> AdjustmentAmountAndReason { get; }
 
     /// <summary>

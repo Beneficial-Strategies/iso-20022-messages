@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the restriction or limitation status.
 /// </summary>
 [IsoId("_UWN50CFnEeW9XJWqfgXIIA")]
+[IsoDisplayName(@"Restriction Status 1 Choice")]
 public interface IRestrictionStatus1Choice : IIsoChoice { }

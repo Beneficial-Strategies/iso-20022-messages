@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityIndustrialPro
 /// </summary>
 [IsoId("_OTrSERZZEe2QNcZTDeoKnQ")]
 [IsoXmlTag("Cnstrctn")]
+[IsoDisplayName(@"Construction")]
 public interface IConstruction : IAssetClassCommodityIndustrialProduct2Choice, IIsoChoiceVariant
 {
     /// <summary>

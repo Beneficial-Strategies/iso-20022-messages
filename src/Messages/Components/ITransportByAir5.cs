@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the transportation of goods by air.
 /// </summary>
 [IsoId("_Em4MoRriEeOVR9VN6fAMUg")]
+[IsoDisplayName(@"Transport By Air")]
 public interface ITransportByAir5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITransportByAir5 : IIsoComponent
     [IsoId("_E-k68RriEeOVR9VN6fAMUg")]
     [DisplayName("Departure Airport")]
     [IsoXmlTag("DprtureAirprt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAirportName1Choice> DepartureAirport { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ITransportByAir5 : IIsoComponent
     [IsoId("_E-k68xriEeOVR9VN6fAMUg")]
     [DisplayName("Destination Airport")]
     [IsoXmlTag("DstnAirprt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAirportName1Choice> DestinationAirport { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ITransportByAir5 : IIsoComponent
     [IsoId("_E-k69xriEeOVR9VN6fAMUg")]
     [DisplayName("Air Carrier Name")]
     [IsoXmlTag("AirCrrierNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? AirCarrierName { get; }
 
     /// <summary>
@@ -49,6 +54,8 @@ public interface ITransportByAir5 : IIsoComponent
     [IsoId("_E-k6-xriEeOVR9VN6fAMUg")]
     [DisplayName("Carrier Agent Name")]
     [IsoXmlTag("CrrierAgtNm")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? CarrierAgentName { get; }
 
     /// <summary>

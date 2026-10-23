@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus34Choice;
 
 /// <summary>Settlement status expressed as a proprietary status and reason.</summary>
 [IsoId("_XtOaA-SkEe-qVZLXW4RRBw")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : ISettlementStatus34Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

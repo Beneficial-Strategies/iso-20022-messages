@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details specific to the individual transaction(s) included in the message.
 /// </summary>
 [IsoId("_7h-8oGcJEeKAGeP1fbluEg")]
+[IsoDisplayName(@"Credit Transfer Transaction")]
 public interface ICreditTransferTransaction9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICreditTransferTransaction9 : IIsoComponent
     [IsoId("_grK1Z2cKEeKAGeP1fbluEg")]
     [DisplayName("Credit Identification")]
     [IsoXmlTag("CdtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text CreditIdentification { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface ICreditTransferTransaction9 : IIsoComponent
     [IsoId("_ntdMZ2cKEeKAGeP1fbluEg")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
+    [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
     BatchBookingIndicator? BatchBooking { get; }
 
     /// <summary>
@@ -50,6 +54,7 @@ public interface ICreditTransferTransaction9 : IIsoComponent
     [IsoId("_sl4692cKEeKAGeP1fbluEg")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -162,6 +167,7 @@ public interface ICreditTransferTransaction9 : IIsoComponent
     [IsoId("_7iAxiGcJEeKAGeP1fbluEg")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent2> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -170,6 +176,7 @@ public interface ICreditTransferTransaction9 : IIsoComponent
     [IsoId("_7iAKfGcJEeKAGeP1fbluEg")]
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDirectDebitTransactionInformation15> DirectDebitTransactionInformation { get; }
 
     /// <summary>
@@ -178,5 +185,6 @@ public interface ICreditTransferTransaction9 : IIsoComponent
     [IsoId("_7iBYgmcJEeKAGeP1fbluEg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the conditions that apply to the offer.
 /// </summary>
 [IsoId("_Rm2nEtp-Ed-ak6NoX_4Aeg_-1842379446")]
+[IsoDisplayName(@"Offer Type 1 Format Choice")]
 public interface IOfferType1FormatChoice : IIsoChoice { }

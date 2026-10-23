@@ -14,6 +14,8 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// </summary>
 [IsoId("_gT3Y4S5EEeunNvJlR_vCbg")]
 [IsoMessage("caaa.005.001.10", "AccptrCxlReq", "urn:iso:std:iso:20022:tech:xsd:caaa.005.001.10")]
+[Description(@"The AcceptorCancellationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to request the cancellation of a successfully completed transaction. Cancellation should only occur before the transaction has been cleared.||")]
+[IsoDisplayName(@"Acceptor Cancellation Request V")]
 public interface IAcceptorCancellationRequestV10 : IOuterRecord
 {
     /// <summary>

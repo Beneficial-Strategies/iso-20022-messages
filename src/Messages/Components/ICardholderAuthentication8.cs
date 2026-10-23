@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to the authentication of the card and the cardholder.
 /// </summary>
 [IsoId("_UV3EwYoaEeSirOZJBRz_nA")]
+[IsoDisplayName(@"Cardholder Authentication")]
 public interface ICardholderAuthentication8 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ICardholderAuthentication8 : IIsoComponent
     [IsoId("_bqLxgIobEeSirOZJBRz_nA")]
     [DisplayName("Token Requested")]
     [IsoXmlTag("TknReqd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TokenRequested { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface ICardholderAuthentication8 : IIsoComponent
     [IsoId("_UjTq44oaEeSirOZJBRz_nA")]
     [DisplayName("Authentication Value")]
     [IsoXmlTag("AuthntcnVal")]
+    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
     Max5000Binary? AuthenticationValue { get; }
 
     /// <summary>

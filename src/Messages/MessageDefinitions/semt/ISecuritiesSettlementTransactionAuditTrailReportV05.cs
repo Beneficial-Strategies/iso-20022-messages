@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.semt;
     "SctiesSttlmTxAudtTrlRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.022.001.05"
 )]
+[Description(@"Scope|This message is sent by the Market Infrastructure to the CSD to advise of the history of all the statuses, modifications, replacement and cancellation of a specific transaction during its whole life cycle when the instructing party is a direct participant to the Settlement Infrastructure.||Usage|The message may also be used to: |- re-send a message sent by the market infrastructure to the direct participant,|- provide a third party with a copy of a message being sent by the market infrastructure for information,|- re-send to a third party a copy of a message being sent by the market infrastructure for information using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Settlement Transaction Audit Trail Report V")]
 public interface ISecuritiesSettlementTransactionAuditTrailReportV05 : IOuterRecord
 {
     /// <summary>
@@ -39,6 +41,8 @@ public interface ISecuritiesSettlementTransactionAuditTrailReportV05 : IOuterRec
     [IsoId("_gsUWGyp0EeyR9JrVGfaMKw")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? QueryReference { get; }
 
     /// <summary>
@@ -79,5 +83,6 @@ public interface ISecuritiesSettlementTransactionAuditTrailReportV05 : IOuterRec
     [IsoId("_gsUWIyp0EeyR9JrVGfaMKw")]
     [DisplayName("Status Trail")]
     [IsoXmlTag("StsTrl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IStatusTrail10> StatusTrail { get; }
 }

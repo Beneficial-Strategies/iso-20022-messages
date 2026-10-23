@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the elements related to the interest amount calculation.
 /// </summary>
 [IsoId("_AFlH0StNEeyOa655cLd-DQ")]
+[IsoDisplayName(@"Interest Amount")]
 public interface IInterestAmount4 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IInterestAmount4 : IIsoComponent
     [IsoId("_Ad3sCStNEeyOa655cLd-DQ")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValueDate { get; }
 
     /// <summary>
@@ -73,6 +75,7 @@ public interface IInterestAmount4 : IIsoComponent
     [IsoId("_Ad3sEStNEeyOa655cLd-DQ")]
     [DisplayName("Applied Withholding Tax")]
     [IsoXmlTag("ApldWhldgTax")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? AppliedWithholdingTax { get; }
 
     /// <summary>
@@ -121,6 +124,8 @@ public interface IInterestAmount4 : IIsoComponent
     [IsoId("_Ad3sHStNEeyOa655cLd-DQ")]
     [DisplayName("Standard Settlement Instructions")]
     [IsoXmlTag("StdSttlmInstrs")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? StandardSettlementInstructions { get; }
 
     /// <summary>
@@ -129,6 +134,8 @@ public interface IInterestAmount4 : IIsoComponent
     [IsoId("_Ad3sHytNEeyOa655cLd-DQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalInformation { get; }
 
     /// <summary>

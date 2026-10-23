@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies possible agreement clauses related to invoice financing.
 /// </summary>
 [IsoId("_RX8oZdp-Ed-ak6NoX_4Aeg_1393986563")]
+[IsoDisplayName(@"Agreement Clauses")]
 public interface IAgreementClauses1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAgreementClauses1 : IIsoComponent
     [IsoId("_RX8oZtp-Ed-ak6NoX_4Aeg_1897307883")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? Description { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IAgreementClauses1 : IIsoComponent
     [IsoId("_RX8oZ9p-Ed-ak6NoX_4Aeg_-35889760")]
     [DisplayName("Document URL")]
     [IsoXmlTag("DocURL")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? DocumentURL { get; }
 }

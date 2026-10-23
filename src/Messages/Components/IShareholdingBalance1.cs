@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides detailed shareholding balance information for an account.
 /// </summary>
 [IsoId("_lprEMDttEemIf7eyjCwinw")]
+[IsoDisplayName(@"Shareholding Balance")]
 public interface IShareholdingBalance1 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IShareholdingBalance1 : IIsoComponent
     [IsoId("_ssY78D6BEemPvNTzinB5Vw")]
     [DisplayName("Third Party")]
     [IsoXmlTag("ThrdPty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification218> ThirdParty { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface IShareholdingBalance1 : IIsoComponent
     [IsoId("_4CPcET6QEemPvNTzinB5Vw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

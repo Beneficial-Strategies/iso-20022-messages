@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice;
 
 /// <summary>Specifies the addendum initiation message.</summary>
 [IsoId("_kNBjkW7-EfC68Y4jZPNEug")]
+[IsoDisplayName(@"Addendum Initiation")]
 public interface IAddendumInitiation : IRecordMessage2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

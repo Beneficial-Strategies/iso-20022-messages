@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instructs the POI (Point Of Interaction) how to contact the host of the terminal management system (TMS), to initiate the maintenance of the terminal.
 /// </summary>
 [IsoId("_TGSgXAEcEeCQm6a_G2yO_w_-983555179")]
+[IsoDisplayName(@"TMS Trigger")]
 public interface ITMSTrigger1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITMSTrigger1 : IIsoComponent
     [IsoId("_TGSgXgEcEeCQm6a_G2yO_w_-579683190")]
     [DisplayName("TMS Identification")]
     [IsoXmlTag("TMSId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TMSIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface ITMSTrigger1 : IIsoComponent
     [IsoId("_TGSgXwEcEeCQm6a_G2yO_w_-1677507172")]
     [DisplayName("TMS Contact Date Time")]
     [IsoXmlTag("TMSCtctDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? TMSContactDateTime { get; }
 }

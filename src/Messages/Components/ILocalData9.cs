@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains text fields in the local language.
 /// </summary>
 [IsoId("_TWMJsTNMEeylu6lH-gut-A")]
+[IsoDisplayName(@"Local Data")]
 public interface ILocalData9 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface ILocalData9 : IIsoComponent
     [IsoId("_fXKBMDNMEeylu6lH-gut-A")]
     [DisplayName("Text Message")]
     [IsoXmlTag("TxtMsg")]
+    [IsoSimpleType(IsoSimpleType.Max40KText)]
+    [StringLength(40000, MinimumLength = 1)]
     Max40KText TextMessage { get; }
 }

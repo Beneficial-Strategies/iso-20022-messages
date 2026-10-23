@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the EU capital gain.
 /// </summary>
 [IsoId("_VMU49tp-Ed-ak6NoX_4Aeg_-2038636441")]
+[IsoDisplayName(@"EU Capital Gain")]
 public interface IEUCapitalGain1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IEUCapitalGain1 : IIsoComponent
     [IsoId("_VMU4-Np-Ed-ak6NoX_4Aeg_-1998002817")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

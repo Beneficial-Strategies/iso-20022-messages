@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Print Response message.
 /// </summary>
 [IsoId("_Ty4bQN7HEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Device Print Response")]
 public interface IDevicePrintResponse1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAssetType1Choice;
 /// Type of cash expressed as a code.
 /// </summary>
 [IsoId("_1JOBIEyIEeir2sRRVd9XhA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICashAssetType1Choice, IIsoChoiceVariant
 {
     /// <summary>

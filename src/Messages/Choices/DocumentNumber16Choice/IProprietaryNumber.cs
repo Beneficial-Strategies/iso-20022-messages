@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber16Choice;
 /// </summary>
 [IsoId("_6GW815NLEeWGlc8L7oPDIg")]
 [IsoXmlTag("PrtryNb")]
+[IsoDisplayName(@"Proprietary Number")]
 public interface IProprietaryNumber : IDocumentNumber16Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IProprietaryNumber : IDocumentNumber16Choice, IIsoChoiceVariant
     [IsoId("_6GW85ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -26,6 +29,8 @@ public interface IProprietaryNumber : IDocumentNumber16Choice, IIsoChoiceVariant
     [IsoId("_6GW855NLEeWGlc8L7oPDIg")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText Issuer { get; }
 
     /// <summary>
@@ -34,5 +39,7 @@ public interface IProprietaryNumber : IDocumentNumber16Choice, IIsoChoiceVariant
     [IsoId("_6GW86ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
+    [StringLength(4, MinimumLength = 1)]
     Max4AlphaNumericText? SchemeName { get; }
 }

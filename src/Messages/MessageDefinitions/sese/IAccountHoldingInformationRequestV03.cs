@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("__cvtERXeEeOocOqSQt5Jbw")]
 [IsoMessage("sese.019.001.03", "AcctHldgInfReq", "urn:iso:std:iso:20022:tech:xsd:sese.019.001.03")]
+[Description(@"Scope|An instructing party, for example, a (new) plan manager (Transferee) sends the AccountHoldingInformationRequest message to the executing party, for example, a (old) plan manager (Transferor), on behalf of the initiating party, for example, an investor (client), to request information about financial instruments held on behalf of the client.|Usage|The AccountHoldingInformationRequest message is used to request information about one or more ISA or portfolio products held in a client's account for which it intends to instruct a transfer at a later time.")]
+[IsoDisplayName(@"Account Holding Information Request V")]
 public interface IAccountHoldingInformationRequestV03 : IOuterRecord
 {
     /// <summary>
@@ -79,6 +81,7 @@ public interface IAccountHoldingInformationRequestV03 : IOuterRecord
     [IsoId("__cvtKRXeEeOocOqSQt5Jbw")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPerson8> OtherIndividualInvestor { get; }
 
     /// <summary>
@@ -103,6 +106,7 @@ public interface IAccountHoldingInformationRequestV03 : IOuterRecord
     [IsoId("__cvtLxXeEeOocOqSQt5Jbw")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation4> OtherCorporateInvestor { get; }
 
     /// <summary>
@@ -135,6 +139,7 @@ public interface IAccountHoldingInformationRequestV03 : IOuterRecord
     [IsoId("__cvtNxXeEeOocOqSQt5Jbw")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IISATransfer15> ProductTransfer { get; }
 
     /// <summary>
@@ -151,5 +156,6 @@ public interface IAccountHoldingInformationRequestV03 : IOuterRecord
     [IsoId("__cvtORXeEeOocOqSQt5Jbw")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

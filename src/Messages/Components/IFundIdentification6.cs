@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Fund Identification6.
 /// </summary>
 [IsoId("_usoBEXfaEe2I4Iip2NEM0A")]
+[IsoDisplayName(@"Fund Identification6")]
 public interface IFundIdentification6 : IIsoComponent
 {
     /// <summary>

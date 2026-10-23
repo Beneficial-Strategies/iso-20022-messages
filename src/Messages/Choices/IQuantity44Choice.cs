@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of quantity of assets.
 /// </summary>
 [IsoId("_Qfjh0U3WEeidB49bWZiS0g")]
+[IsoDisplayName(@"Quantity 44 Choice")]
 public interface IQuantity44Choice : IIsoChoice { }

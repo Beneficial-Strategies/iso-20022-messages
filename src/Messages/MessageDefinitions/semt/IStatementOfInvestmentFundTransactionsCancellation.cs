@@ -17,6 +17,8 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("_MX-LWNFSEd-BzquC8wXy7w_953864526")]
 [IsoMessage("semt.007.001.01", "semt.007.001.01", "urn:iso:std:iso:20022:tech:xsd:semt.007.001.01")]
+[Description(@"Scope|The StatementOfInvestmentFundTransactionsCancellation message is sent by an account servicer to the account owner or the account owner's designated agent. The account servicer may be a fund administrator or fund intermediary, trustee or registrar, etc.|This message is used to cancel a previously sent StatementOfInvestmentFundTransactions message.|Usage|The StatementOfInvestmentFundTransactionsCancellation message is sent by an account servicer to the account owner to cancel a previously sent StatementOfInvestmentFundTransactions message.|This message must contain the reference of the message to be cancelled. This message may also contain all the details of the message to be cancelled, but this is not recommended.")]
+[IsoDisplayName(@"Statement Of Investment Fund Transactions Cancellation")]
 public interface IStatementOfInvestmentFundTransactionsCancellation : IOuterRecord
 {
     /// <summary>

@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument99Choice;
 /// <summary>
 /// Strategy Instruments.
 /// </summary>
+[IsoDisplayName(@"Strategy Instruments")]
 public interface IStrategyInstruments : IFinancialInstrument99Choice, IIsoChoiceVariant
 {
     /// <summary>

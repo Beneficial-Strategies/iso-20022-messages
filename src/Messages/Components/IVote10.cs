@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Vote expressed for one resolution.
 /// </summary>
 [IsoId("_Y98Lt64cEemG7MmivSuE5g")]
+[IsoDisplayName(@"Vote")]
 public interface IVote10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IVote10 : IIsoComponent
     [IsoId("_ZRuqYa4cEemG7MmivSuE5g")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text IssuerLabel { get; }
 
     /// <summary>

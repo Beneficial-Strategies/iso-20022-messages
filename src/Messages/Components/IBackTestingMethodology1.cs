@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the characteristics of a backtesting methodology used to test the performance of a risk model.
 /// </summary>
 [IsoId("_4TLUQLC2EeaSl6vJk5Bd8w")]
+[IsoDisplayName(@"Back Testing Methodology")]
 public interface IBackTestingMethodology1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IBackTestingMethodology1 : IIsoComponent
     [IsoId("_N9vjQLC3EeaSl6vJk5Bd8w")]
     [DisplayName("Model Confidence Level")]
     [IsoXmlTag("MdlCnfdncLvl")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate ModelConfidenceLevel { get; }
 
     /// <summary>
@@ -33,6 +35,7 @@ public interface IBackTestingMethodology1 : IIsoComponent
     [IsoId("_1WtGoLC3EeaSl6vJk5Bd8w")]
     [DisplayName("Variation Margin Clean Indicator")]
     [IsoXmlTag("VartnMrgnCleanInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator VariationMarginCleanIndicator { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IBackTestingMethodology1 : IIsoComponent
     [IsoId("_n56ysMBgEeak3I7j2hsibw")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max2000Text)]
+    [StringLength(2000, MinimumLength = 1)]
     Max2000Text? Description { get; }
 }

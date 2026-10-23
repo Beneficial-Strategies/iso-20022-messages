@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains transaction details.
 /// </summary>
 [IsoId("_gfNI4VBQEeedyPuM0kK2EQ")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction97 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface ITransaction97 : IIsoComponent
     [IsoId("_r8gBWUQhEeiO2efj8UFv0A")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Exact4NumericText> MessageReason { get; }
 
     /// <summary>
@@ -27,6 +29,7 @@ public interface ITransaction97 : IIsoComponent
     [IsoId("_Yv04UIUgEeiERvym7bJ-Ew")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> AlternateMessageReason { get; }
 
     /// <summary>
@@ -59,6 +62,7 @@ public interface ITransaction97 : IIsoComponent
     [IsoId("_q8EXsfF7EeiGNursv3uE_g")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee1> AdditionalFees { get; }
 
     /// <summary>
@@ -75,5 +79,6 @@ public interface ITransaction97 : IIsoComponent
     [IsoId("_utsCsRqmEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the investor capacity.
 /// </summary>
 [IsoId("_QsvIN9p-Ed-ak6NoX_4Aeg_-1479062235")]
+[IsoDisplayName(@"Investor Capacity 1 Choice")]
 public interface IInvestorCapacity1Choice : IIsoChoice { }

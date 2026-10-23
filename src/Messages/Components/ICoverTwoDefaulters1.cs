@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the two largest assumed defaulting entities under a particular scenario.
 /// </summary>
 [IsoId("_hs1wsLJPEeaYqc4G3TTwhA")]
+[IsoDisplayName(@"Cover Two Defaulters")]
 public interface ICoverTwoDefaulters1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICoverTwoDefaulters1 : IIsoComponent
     [IsoId("_mgMyALJPEeaYqc4G3TTwhA")]
     [DisplayName("Cover 1 Identification")]
     [IsoXmlTag("Cover1Id")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Cover1Identification { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICoverTwoDefaulters1 : IIsoComponent
     [IsoId("_ox2EgLJPEeaYqc4G3TTwhA")]
     [DisplayName("Cover 2 Identification")]
     [IsoXmlTag("Cover2Id")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Cover2Identification { get; }
 }

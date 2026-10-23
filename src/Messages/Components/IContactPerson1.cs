@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains information about the contact responsible for the transaction identified in the message.
 /// </summary>
 [IsoId("_QDnStdp-Ed-ak6NoX_4Aeg_-2124213178")]
+[IsoDisplayName(@"Contact Person")]
 public interface IContactPerson1 : IIsoComponent
 {
     /// <summary>

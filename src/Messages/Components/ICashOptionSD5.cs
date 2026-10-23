@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action option cash movement details.
 /// </summary>
 [IsoId("_1fvcIjL3EeKU9IrkkToqcw_-1926320982")]
+[IsoDisplayName(@"Cash Option SD")]
 public interface ICashOptionSD5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICashOptionSD5 : IIsoComponent
     [IsoId("_1fvcIzL3EeKU9IrkkToqcw_-962139710")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICashOptionSD5 : IIsoComponent
     [IsoId("_1fvcJDL3EeKU9IrkkToqcw_1452521946")]
     [DisplayName("Payout Number")]
     [IsoXmlTag("PyoutNb")]
+    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
     Exact3NumericText PayoutNumber { get; }
 
     /// <summary>
@@ -49,5 +53,6 @@ public interface ICashOptionSD5 : IIsoComponent
     [IsoId("_1f4mEDL3EeKU9IrkkToqcw_836812695")]
     [DisplayName("Maximum Withholding Tax Percentage")]
     [IsoXmlTag("MaxWhldgTaxPctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? MaximumWithholdingTaxPercentage { get; }
 }

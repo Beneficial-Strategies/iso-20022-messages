@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data captured from on board diagnostic systems
 /// </summary>
 [IsoId("_9D_nY9kGEeizh_fAW7LywQ")]
+[IsoDisplayName(@"On Board Diagnostics")]
 public interface IOnBoardDiagnostics1 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_u84Q0NkIEeizh_fAW7LywQ")]
     [DisplayName("Engine Idle Time")]
     [IsoXmlTag("NgnIdleTm")]
+    [IsoSimpleType(IsoSimpleType.Max10NumberFraction2)]
     Max10NumberFraction2? EngineIdleTime { get; }
 
     /// <summary>
@@ -27,6 +29,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_wPuYwNkIEeizh_fAW7LywQ")]
     [DisplayName("Engine Total Idle Time")]
     [IsoXmlTag("NgnTtlIdleTm")]
+    [IsoSimpleType(IsoSimpleType.Max10NumberFraction2)]
     Max10NumberFraction2? EngineTotalIdleTime { get; }
 
     /// <summary>
@@ -35,6 +38,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_R21uwNkIEeizh_fAW7LywQ")]
     [DisplayName("Engine Hours")]
     [IsoXmlTag("NgnHrs")]
+    [IsoSimpleType(IsoSimpleType.Max10NumberFraction2)]
     Max10NumberFraction2? EngineHours { get; }
 
     /// <summary>
@@ -44,6 +48,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_qG2WANkIEeizh_fAW7LywQ")]
     [DisplayName("Engine Total Time")]
     [IsoXmlTag("NgnTtlTm")]
+    [IsoSimpleType(IsoSimpleType.Max6NumberFraction2)]
     Max6NumberFraction2? EngineTotalTime { get; }
 
     /// <summary>
@@ -52,6 +57,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_mjVzANkIEeizh_fAW7LywQ")]
     [DisplayName("Engine Load")]
     [IsoXmlTag("NgnLd")]
+    [IsoSimpleType(IsoSimpleType.Max12NumericText)]
     Max12NumericText? EngineLoad { get; }
 
     /// <summary>
@@ -60,6 +66,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_kxxuwNkIEeizh_fAW7LywQ")]
     [DisplayName("Engine RPM")]
     [IsoXmlTag("NgnRPM")]
+    [IsoSimpleType(IsoSimpleType.Max5NumericText)]
     Max5NumericText? EngineRPM { get; }
 
     /// <summary>
@@ -68,6 +75,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_oVyBANkIEeizh_fAW7LywQ")]
     [DisplayName("Engine Oil Temperature")]
     [IsoXmlTag("NgnOilTmprtr")]
+    [IsoSimpleType(IsoSimpleType.Max6NumberFraction2)]
     Max6NumberFraction2? EngineOilTemperature { get; }
 
     /// <summary>
@@ -76,6 +84,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_x5PUQNkIEeizh_fAW7LywQ")]
     [DisplayName("Engine Oil Pressure")]
     [IsoXmlTag("NgnOilPrssr")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? EngineOilPressure { get; }
 
     /// <summary>
@@ -84,6 +93,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_z4z_UNkIEeizh_fAW7LywQ")]
     [DisplayName("Engine Oil Life Remaining")]
     [IsoXmlTag("NgnOilLifeRmng")]
+    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
     Max3NumericText? EngineOilLifeRemaining { get; }
 
     /// <summary>
@@ -92,6 +102,8 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_h77jANkIEeizh_fAW7LywQ")]
     [DisplayName("Check Engine Warning Status")]
     [IsoXmlTag("ChckNgnWrngSts")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CheckEngineWarningStatus { get; }
 
     /// <summary>
@@ -100,6 +112,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_TvYkwNkIEeizh_fAW7LywQ")]
     [DisplayName("Fuel Tank Level Start")]
     [IsoXmlTag("FuelTankLvlStart")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? FuelTankLevelStart { get; }
 
     /// <summary>
@@ -108,6 +121,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_Vz3lANkIEeizh_fAW7LywQ")]
     [DisplayName("Fuel Gauge Level")]
     [IsoXmlTag("FuelGaugeLvl")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? FuelGaugeLevel { get; }
 
     /// <summary>
@@ -116,6 +130,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_jYVPkNkIEeizh_fAW7LywQ")]
     [DisplayName("Fuel Economy")]
     [IsoXmlTag("FuelEcnmy")]
+    [IsoSimpleType(IsoSimpleType.Max6NumberFraction2)]
     Max6NumberFraction2? FuelEconomy { get; }
 
     /// <summary>
@@ -124,6 +139,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_0T3D8f2kEeiS2rs-hXBB5Q")]
     [DisplayName("Refrigeration Hours")]
     [IsoXmlTag("RfrgrtnHrs")]
+    [IsoSimpleType(IsoSimpleType.Max10NumberFraction2)]
     Max10NumberFraction2? RefrigerationHours { get; }
 
     /// <summary>
@@ -132,6 +148,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_OTQTQNkIEeizh_fAW7LywQ")]
     [DisplayName("Refrigeration Temperature")]
     [IsoXmlTag("RfrgrtnTmprtr")]
+    [IsoSimpleType(IsoSimpleType.Max6NumberFraction2)]
     Max6NumberFraction2? RefrigerationTemperature { get; }
 
     /// <summary>
@@ -140,6 +157,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_Z8DiYNkIEeizh_fAW7LywQ")]
     [DisplayName("Coolant Temperature")]
     [IsoXmlTag("CoolntTmprtr")]
+    [IsoSimpleType(IsoSimpleType.Max6NumberFraction2)]
     Max6NumberFraction2? CoolantTemperature { get; }
 
     /// <summary>
@@ -148,6 +166,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_YdD00NkIEeizh_fAW7LywQ")]
     [DisplayName("Battery Voltage")]
     [IsoXmlTag("BttryVltg")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? BatteryVoltage { get; }
 
     /// <summary>
@@ -156,6 +175,7 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_r8khgNkIEeizh_fAW7LywQ")]
     [DisplayName("Hard Braking")]
     [IsoXmlTag("HardBrakg")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? HardBraking { get; }
 
     /// <summary>
@@ -164,5 +184,6 @@ public interface IOnBoardDiagnostics1 : IIsoComponent
     [IsoId("_tgqxgNkIEeizh_fAW7LywQ")]
     [DisplayName("Hard Acceleration")]
     [IsoXmlTag("HardAcclrtn")]
+    [IsoSimpleType(IsoSimpleType.Max4NumericText)]
     Max4NumericText? HardAcceleration { get; }
 }

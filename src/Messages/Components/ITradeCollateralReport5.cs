@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of collateral agreement between counterparties.
 /// </summary>
 [IsoId("_J0zaIVfVEeqqKf65rDYWYw")]
+[IsoDisplayName(@"Trade Collateral Report")]
 public interface ITradeCollateralReport5 : IIsoComponent
 {
     /// <summary>
@@ -98,6 +99,7 @@ public interface ITradeCollateralReport5 : IIsoComponent
     [IsoId("_7wjdEorpEeq91phomTRDDA")]
     [DisplayName("Counterparty Rating Trigger Indicator")]
     [IsoXmlTag("CtrPtyRatgTrggrInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CounterpartyRatingTriggerIndicator { get; }
 
     /// <summary>
@@ -107,5 +109,6 @@ public interface ITradeCollateralReport5 : IIsoComponent
     [IsoId("_7wjdE4rpEeq91phomTRDDA")]
     [DisplayName("Counterparty Rating Threshold Indicator")]
     [IsoXmlTag("CtrPtyRatgThrshldInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CounterpartyRatingThresholdIndicator { get; }
 }

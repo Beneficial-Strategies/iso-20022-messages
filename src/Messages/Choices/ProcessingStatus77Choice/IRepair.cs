@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus77Choice;
 /// Instruction/request is accepted but in repair.
 /// </summary>
 [IsoId("_AYE5mffZEeiNZp_PtLohLw")]
+[IsoDisplayName(@"Repair")]
 public interface IRepair : IProcessingStatus77Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

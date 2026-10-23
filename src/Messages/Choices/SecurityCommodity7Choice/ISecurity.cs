@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityCommodity7Choice;
 /// </summary>
 [IsoId("_Ul6y8cgyEeuGrNSsxk3B0A")]
 [IsoXmlTag("Scty")]
+[IsoDisplayName(@"Security")]
 public interface ISecurity : ISecurityCommodity7Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -82,6 +83,7 @@ public interface ISecurity : ISecurityCommodity7Choice, IIsoChoiceVariant
     [IsoId("_A4HkM8K3EeuFNp8LZAnorg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICompareSecuritiesLendingType3> Type { get; }
 
     /// <summary>

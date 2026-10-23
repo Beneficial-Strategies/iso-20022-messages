@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus14Cho
 /// The transaction was created by the account servicer or a third party. It was not instructed directly by the account owner.
 /// </summary>
 [IsoId("_EsWwASRhEeO8sskhVI3IDA")]
+[IsoDisplayName(@"Generated")]
 public interface IGenerated : IInstructionProcessingStatus14Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

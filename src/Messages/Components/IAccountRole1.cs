@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the party and owner type.
 /// </summary>
 [IsoId("_l5A6kC_9EeOKib24wnHaFg")]
+[IsoDisplayName(@"Account Role")]
 public interface IAccountRole1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IAccountRole1 : IIsoComponent
     [IsoId("_vT_nQC_9EeOKib24wnHaFg")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface IAccountRole1 : IIsoComponent
     [IsoId("_1cJRQC_9EeOKib24wnHaFg")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EndDate { get; }
 }

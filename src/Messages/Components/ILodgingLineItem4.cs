@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Lodging line item details.
 /// </summary>
 [IsoId("_6lyhoUh4EfCMZJtj4J7UGQ")]
+[IsoDisplayName(@"Lodging Line Item4")]
 public interface ILodgingLineItem4 : IIsoComponent
 {
     /// <summary>
@@ -89,6 +90,7 @@ public interface ILodgingLineItem4 : IIsoComponent
     [IsoId("_6psxU0h4EfCMZJtj4J7UGQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax44> Tax { get; }
 
     /// <summary>
@@ -97,6 +99,7 @@ public interface ILodgingLineItem4 : IIsoComponent
     [IsoId("_3uoHQkh4EfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -105,5 +108,6 @@ public interface ILodgingLineItem4 : IIsoComponent
     [IsoId("_3uoHQ0h4EfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 }

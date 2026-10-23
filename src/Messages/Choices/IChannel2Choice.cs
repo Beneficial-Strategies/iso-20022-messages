@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies a channel type.
 /// </summary>
 [IsoId("_1zp30Bg2EeKnW4lR85q-0A")]
+[IsoDisplayName(@"Channel 2 Choice")]
 public interface IChannel2Choice : IIsoChoice { }

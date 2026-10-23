@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification Reference16Choice.
 /// </summary>
 [IsoId("_Qs7-O4cGEe-6cOl7zMpJaA")]
+[IsoDisplayName(@"Identification Reference16Choice")]
 public interface IIdentificationReference16Choice : IIsoChoice { }

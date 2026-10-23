@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Assessment of securities credit and investment risk.
 /// </summary>
 [IsoId("_S1iAuNp-Ed-ak6NoX_4Aeg_-610008315")]
+[IsoDisplayName(@"Rating")]
 public interface IRating1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRating1 : IIsoComponent
     [IsoId("_S1iAudp-Ed-ak6NoX_4Aeg_-1436888380")]
     [DisplayName("Rating Scheme")]
     [IsoXmlTag("RatgSchme")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RatingScheme { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IRating1 : IIsoComponent
     [IsoId("_S1iAutp-Ed-ak6NoX_4Aeg_-1436888328")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime ValueDate { get; }
 
     /// <summary>
@@ -33,5 +37,6 @@ public interface IRating1 : IIsoComponent
     [IsoId("_S1iAu9p-Ed-ak6NoX_4Aeg_-1436888268")]
     [DisplayName("Value Identification")]
     [IsoXmlTag("ValId")]
+    [IsoSimpleType(IsoSimpleType.RatingValueIdentifier)]
     RatingValueIdentifier ValueIdentification { get; }
 }

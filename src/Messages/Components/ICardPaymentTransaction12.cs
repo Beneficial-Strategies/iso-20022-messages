@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction information in the authorisation response.
 /// </summary>
 [IsoId("_j_2lYR0gEeK5OKMB21JFBg")]
+[IsoDisplayName(@"Card Payment Transaction")]
 public interface ICardPaymentTransaction12 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICardPaymentTransaction12 : IIsoComponent
     [IsoId("_kLwTZR0gEeK5OKMB21JFBg")]
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RecipientTransactionIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface ICardPaymentTransaction12 : IIsoComponent
     [IsoId("_kLwTaR0gEeK5OKMB21JFBg")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface ICardPaymentTransaction12 : IIsoComponent
     [IsoId("_kLwTbR0gEeK5OKMB21JFBg")]
     [DisplayName("Interchange Data")]
     [IsoXmlTag("IntrchngData")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InterchangeData { get; }
 
     /// <summary>

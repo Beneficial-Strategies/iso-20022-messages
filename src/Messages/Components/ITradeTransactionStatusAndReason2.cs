@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the transaction with a trade reference and provides its status. If the status is rejected, a reason for this status must be given.
 /// </summary>
 [IsoId("_RXgjh9p-Ed-ak6NoX_4Aeg_587723747")]
+[IsoDisplayName(@"Trade Transaction Status And Reason")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ITradeTransactionStatusAndReason2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface ITradeTransactionStatusAndReason2 : IIsoComponent
     [IsoId("_RXgjiNp-Ed-ak6NoX_4Aeg_851724068")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RelatedReference { get; }
 
     /// <summary>
@@ -25,6 +29,8 @@ public interface ITradeTransactionStatusAndReason2 : IIsoComponent
     [IsoId("_RXgjidp-Ed-ak6NoX_4Aeg_987608632")]
     [DisplayName("Trade Reference")]
     [IsoXmlTag("TradRef")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text TradeReference { get; }
 
     /// <summary>
@@ -41,5 +47,8 @@ public interface ITradeTransactionStatusAndReason2 : IIsoComponent
     [IsoId("_RXptcNp-Ed-ak6NoX_4Aeg_587724102")]
     [DisplayName("Rejected")]
     [IsoXmlTag("Rjctd")]
+    [MinLength(1)]
+    [MaxLength(100)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRejectedCancellationStatusReason1Choice> Rejected { get; }
 }

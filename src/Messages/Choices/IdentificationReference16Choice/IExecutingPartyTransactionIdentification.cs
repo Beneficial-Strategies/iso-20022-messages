@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference16Choice;
 /// <summary>
 /// Executing Party Transaction Identification.
 /// </summary>
+[IsoDisplayName(@"Executing Party Transaction Identification")]
 public interface IExecutingPartyTransactionIdentification
     : IIdentificationReference16Choice,
         IIsoChoiceVariant

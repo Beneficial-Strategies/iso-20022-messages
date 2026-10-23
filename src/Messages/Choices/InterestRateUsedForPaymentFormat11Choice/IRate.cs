@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
 /// <summary>
 /// Rate.
 /// </summary>
+[IsoDisplayName(@"Rate")]
 public interface IRate : IInterestRateUsedForPaymentFormat11Choice, IIsoChoiceVariant
 {
     /// <summary>

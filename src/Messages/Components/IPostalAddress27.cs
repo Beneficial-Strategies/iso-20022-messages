@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Postal Address27.
 /// </summary>
 [IsoId("_vvaRYTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Postal Address27")]
 public interface IPostalAddress27 : IIsoComponent
 {
     /// <summary>
@@ -135,5 +136,6 @@ public interface IPostalAddress27 : IIsoComponent
     /// </summary>
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AddressLine { get; }
 }

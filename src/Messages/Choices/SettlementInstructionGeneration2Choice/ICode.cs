@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementInstructionGeneration2
 /// Settlement instruction generation expressed as a ISO20022 code.
 /// </summary>
 [IsoId("_gquKwZCBEeakHoV5BVecAQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlementInstructionGeneration2Choice, IIsoChoiceVariant
 {
     /// <summary>

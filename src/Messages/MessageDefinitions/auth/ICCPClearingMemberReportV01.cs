@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_yw5rkeUTEem3X-64-NKdqg")]
 [IsoMessage("auth.054.001.01", "CCPClrMmbRpt", "urn:iso:std:iso:20022:tech:xsd:auth.054.001.01")]
+[Description(@"The CCPClearingMemberReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the central counterparties clearing members and their clients, and the related account structures.")]
+[IsoDisplayName(@"CCP Clearing Member Report V")]
 public interface ICCPClearingMemberReportV01 : IOuterRecord
 {
     /// <summary>
@@ -20,6 +22,7 @@ public interface ICCPClearingMemberReportV01 : IOuterRecord
     [IsoId("_yw5rmeUTEem3X-64-NKdqg")]
     [DisplayName("Clearing Member")]
     [IsoXmlTag("ClrMmb")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IClearingMember1> ClearingMember { get; }
 
     /// <summary>
@@ -28,5 +31,6 @@ public interface ICCPClearingMemberReportV01 : IOuterRecord
     [IsoId("_yw5rm-UTEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

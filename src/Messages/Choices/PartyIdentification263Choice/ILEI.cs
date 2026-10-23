@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification263Choice;
 
 /// <summary>Legal Entity Identifier of the party.</summary>
 [IsoId("_GNgo0a3pEfCN-rGCydxGUA")]
+[IsoDisplayName(@"LEI")]
 public interface ILEI : IPartyIdentification263Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

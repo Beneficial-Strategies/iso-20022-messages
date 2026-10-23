@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides reasons of rejecting transactions.
 /// </summary>
 [IsoId("_oYN5QU2UEe2bQ-Ksk8mwQg")]
+[IsoDisplayName(@"Rejection Reason")]
 public interface IRejectionReason70 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRejectionReason70 : IIsoComponent
     [IsoId("_oZjWAU2UEe2bQ-Ksk8mwQg")]
     [DisplayName("Message Report Identification")]
     [IsoXmlTag("MsgRptId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text MessageReportIdentification { get; }
 
     /// <summary>

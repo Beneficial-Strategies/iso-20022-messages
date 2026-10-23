@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityRange1Choice;
 
 /// <summary>Specifies the not equal quantity.</summary>
 [IsoId("_jtRfFO5NEeCisYr99QEiWA_-267876901")]
+[IsoDisplayName(@"Not Equal Quantity")]
 public interface INotEqualQuantity : IQuantityRange1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

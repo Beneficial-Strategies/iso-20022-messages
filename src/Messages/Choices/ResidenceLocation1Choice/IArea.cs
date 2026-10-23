@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResidenceLocation1Choice;
 /// Specifies the account owner&apos;s resident geographical region or area.
 /// </summary>
 [IsoId("_6QsqlJqlEeGSON8vddiWzQ_218234211")]
+[IsoDisplayName(@"Area")]
 public interface IArea : IResidenceLocation1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IArea : IResidenceLocation1Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Area")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

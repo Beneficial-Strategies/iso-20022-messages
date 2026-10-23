@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the tax amount(s) of tax record.
 /// </summary>
 [IsoId("_yeA_Fa9fEeen6L7OP7lnvg")]
+[IsoDisplayName(@"Tax Amount")]
 public interface ITaxAmount2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ITaxAmount2 : IIsoComponent
     [IsoId("_yv3kA69fEeen6L7OP7lnvg")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? Rate { get; }
 
     /// <summary>
@@ -41,5 +43,6 @@ public interface ITaxAmount2 : IIsoComponent
     [IsoId("_yv3kCa9fEeen6L7OP7lnvg")]
     [DisplayName("Details")]
     [IsoXmlTag("Dtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxRecordDetails2> Details { get; }
 }

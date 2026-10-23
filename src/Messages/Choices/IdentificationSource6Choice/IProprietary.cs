@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource6Choice;
 
 /// <summary>Unique and unambiguous identification source using a proprietary identification scheme.</summary>
 [IsoId("3f962c98-e0be-447a-8528-56e8508a79d8")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IIdentificationSource6Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

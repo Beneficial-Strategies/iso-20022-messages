@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Year in which an ISA plan is issued.
 /// </summary>
 [IsoId("_1AA5BbNBEeewUI7-Tnew9A")]
+[IsoDisplayName(@"ISA Years Of Issue")]
 public interface IISAYearsOfIssue7 : IIsoComponent
 {
     /// <summary>

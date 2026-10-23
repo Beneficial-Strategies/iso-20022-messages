@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason why the instruction or request has a pending processing status.
 /// </summary>
 [IsoId("_sHBPATq1EeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Pending Processing Reason")]
 public interface IPendingProcessingReason10 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IPendingProcessingReason10 : IIsoComponent
     [IsoId("_snJgiTq1EeWyoP0PbocV1Q")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

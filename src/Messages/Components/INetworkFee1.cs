@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Network Fee1.
 /// </summary>
 [IsoId("__8vqgIVwEe-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Network Fee1")]
 public interface INetworkFee1 : IIsoComponent
 {
     /// <summary>

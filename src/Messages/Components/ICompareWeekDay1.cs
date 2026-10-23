@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a week day.
 /// </summary>
 [IsoId("_OdXOkE6gEeyEpI66tm807w")]
+[IsoDisplayName(@"Compare Week Day")]
 public interface ICompareWeekDay1 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the values used to calculate positions.
 /// </summary>
 [IsoId("_0w3kQQ1MEeqV4s5SpzR1dQ")]
+[IsoDisplayName(@"Position Set")]
 public interface IPositionSet5 : IIsoComponent
 {
     /// <summary>

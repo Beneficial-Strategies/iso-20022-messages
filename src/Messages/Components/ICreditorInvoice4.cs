@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the identification attribtues of an invoice which are required by the creditor for the activation of the debtor.
 /// </summary>
 [IsoId("_zyspBeH5Eeqbls7Gk4-ckA")]
+[IsoDisplayName(@"Creditor Invoice")]
 public interface ICreditorInvoice4 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICreditorInvoice4 : IIsoComponent
     [IsoId("_zz-bYeH5Eeqbls7Gk4-ckA")]
     [DisplayName("Limited Presentment Indicator")]
     [IsoXmlTag("LtdPresntmntInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? LimitedPresentmentIndicator { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface ICreditorInvoice4 : IIsoComponent
     [IsoId("_zz-bZeH5Eeqbls7Gk4-ckA")]
     [DisplayName("Contract Format Type")]
     [IsoXmlTag("CtrctFrmtTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentFormat2Choice> ContractFormatType { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface ICreditorInvoice4 : IIsoComponent
     [IsoId("_zz-bZ-H5Eeqbls7Gk4-ckA")]
     [DisplayName("Contract Reference Type")]
     [IsoXmlTag("CtrctRefTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentType1Choice> ContractReferenceType { get; }
 
     /// <summary>
@@ -50,6 +54,8 @@ public interface ICreditorInvoice4 : IIsoComponent
     [IsoId("_zz-baeH5Eeqbls7Gk4-ckA")]
     [DisplayName("Creditor Instruction")]
     [IsoXmlTag("CdtrInstr")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text? CreditorInstruction { get; }
 
     /// <summary>

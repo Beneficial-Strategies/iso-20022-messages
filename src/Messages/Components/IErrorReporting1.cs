@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed description of an error.
 /// </summary>
 [IsoId("_KNibIIPeEeS-ibzJaEIoIQ")]
+[IsoDisplayName(@"Error Reporting")]
 public interface IErrorReporting1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IErrorReporting1 : IIsoComponent
     [IsoId("_aqeusIPeEeS-ibzJaEIoIQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Type { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IErrorReporting1 : IIsoComponent
     [IsoId("_kWXlMIPeEeS-ibzJaEIoIQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text Description { get; }
 }

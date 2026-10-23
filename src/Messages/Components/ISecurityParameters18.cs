@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters related to the security of software application and application protocol.
 /// </summary>
 [IsoId("_ryErUbZ5EfCUZfsQO4rYeA")]
+[IsoDisplayName(@"Security Parameters18")]
 public interface ISecurityParameters18 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ISecurityParameters18 : IIsoComponent
     [IsoId("_ryErXbZ5EfCUZfsQO4rYeA")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max5000Binary> Certificate { get; }
 
     /// <summary>

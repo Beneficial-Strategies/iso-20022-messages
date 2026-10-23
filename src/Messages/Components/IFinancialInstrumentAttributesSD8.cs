@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding underlying security details.
 /// </summary>
 [IsoId("_Z4b8UV2qEeOb__BffbPEig")]
+[IsoDisplayName(@"Financial Instrument Attributes SD")]
 public interface IFinancialInstrumentAttributesSD8 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IFinancialInstrumentAttributesSD8 : IIsoComponent
     [IsoId("_aRumEV2qEeOb__BffbPEig")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text PlaceAndName { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IFinancialInstrumentAttributesSD8 : IIsoComponent
     [IsoId("_aRumM12qEeOb__BffbPEig")]
     [DisplayName("Security Eligibility Indicator")]
     [IsoXmlTag("SctyElgbltyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SecurityEligibilityIndicator { get; }
 
     /// <summary>
@@ -65,6 +69,8 @@ public interface IFinancialInstrumentAttributesSD8 : IIsoComponent
     [IsoId("_aRumO12qEeOb__BffbPEig")]
     [DisplayName("Ticker Symbol")]
     [IsoXmlTag("TckrSymb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TickerSymbol { get; }
 
     /// <summary>

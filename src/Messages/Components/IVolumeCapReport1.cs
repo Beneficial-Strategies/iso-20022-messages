@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Double volume cap report.
 /// </summary>
 [IsoId("_AE700CohEeW8U9pZarPocw")]
+[IsoDisplayName(@"Volume Cap Report")]
 public interface IVolumeCapReport1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IVolumeCapReport1 : IIsoComponent
     [IsoId("_Uc9EUORREeW25oRYRCmhTA")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
+    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     MICIdentifier? TradingVenue { get; }
 
     /// <summary>
@@ -33,5 +35,6 @@ public interface IVolumeCapReport1 : IIsoComponent
     [IsoId("_Jl8K8OJCEeWWKb0jFHxViQ")]
     [DisplayName("Instrument Report")]
     [IsoXmlTag("InstrmRpt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IVolumeCapReport2> InstrumentReport { get; }
 }

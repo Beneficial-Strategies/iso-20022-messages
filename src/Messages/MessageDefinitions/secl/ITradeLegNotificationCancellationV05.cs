@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.secl;
     "TradLegNtfctnCxl",
     "urn:iso:std:iso:20022:tech:xsd:secl.002.001.05"
 )]
+[IsoDisplayName(@"Trade Leg Notification Cancellation V05")]
 public interface ITradeLegNotificationCancellationV05 : IOuterRecord
 {
     /// <summary>
@@ -78,5 +79,6 @@ public interface ITradeLegNotificationCancellationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

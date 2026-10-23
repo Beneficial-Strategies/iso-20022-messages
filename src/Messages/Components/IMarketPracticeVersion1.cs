@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the implementation and version.
 /// </summary>
 [IsoId("_FaNY0RUVEeOIaq8KyCdIDQ")]
+[IsoDisplayName(@"Market Practice Version")]
 public interface IMarketPracticeVersion1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IMarketPracticeVersion1 : IIsoComponent
     [IsoId("_W9gQcBUVEeOIaq8KyCdIDQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Name { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IMarketPracticeVersion1 : IIsoComponent
     [IsoId("_hDqoIBUVEeOIaq8KyCdIDQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? Date { get; }
 
     /// <summary>
@@ -33,5 +37,7 @@ public interface IMarketPracticeVersion1 : IIsoComponent
     [IsoId("_mP4OUBUVEeOIaq8KyCdIDQ")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Number { get; }
 }

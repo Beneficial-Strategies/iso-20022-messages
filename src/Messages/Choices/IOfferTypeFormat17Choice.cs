@@ -7,4 +7,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a standard code or proprietary code to specify the type of offer.</summary>
 [IsoId("d321b6c5-e4b1-4dfe-8f99-38aab0b140db")]
+[IsoDisplayName(@"Offer Type Format 17 Choice")]
 public interface IOfferTypeFormat17Choice : IIsoChoice { }

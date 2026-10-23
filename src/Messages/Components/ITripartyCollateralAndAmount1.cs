@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Triparty Collateral And Amount1.
 /// </summary>
 [IsoId("_HHKmAChKEe2H2s7qerne1w")]
+[IsoDisplayName(@"Triparty Collateral And Amount1")]
 public interface ITripartyCollateralAndAmount1 : IIsoComponent
 {
     /// <summary>

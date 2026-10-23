@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies additional information about the processed instruction.
 /// </summary>
 [IsoId("_O9sLkTq5EeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Acknowledgement Reason")]
 public interface IAcknowledgementReason12 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IAcknowledgementReason12 : IIsoComponent
     [IsoId("_Pea6CTq5EeWyoP0PbocV1Q")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

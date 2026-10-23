@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification38Choice;
 /// <summary>
 /// ISIN.
 /// </summary>
+[IsoDisplayName(@"ISIN")]
 public interface IISIN : ISecurityIdentification38Choice, IIsoChoiceVariant
 {
     /// <summary>

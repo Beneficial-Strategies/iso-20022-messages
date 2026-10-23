@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit Search Criteria7.
 /// </summary>
 [IsoId("_zYNkFzEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Limit Search Criteria7")]
 public interface ILimitSearchCriteria7 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface ILimitSearchCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Bilateral Limit Counterparty Identification")]
     [IsoXmlTag("BilLmtCtrPtyId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBranchAndFinancialInstitutionIdentification8> BilateralLimitCounterpartyIdentification { get; }
 
     /// <summary>
@@ -30,6 +32,7 @@ public interface ILimitSearchCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Default Limit Type")]
     [IsoXmlTag("DfltLmtTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILimitType1Choice> DefaultLimitType { get; }
 
     /// <summary>
@@ -37,6 +40,7 @@ public interface ILimitSearchCriteria7 : IIsoComponent
     /// </summary>
     [DisplayName("Current Limit Type")]
     [IsoXmlTag("CurLmtTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILimitType1Choice> CurrentLimitType { get; }
 
     /// <summary>

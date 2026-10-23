@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the method of transmission.
 /// </summary>
 [IsoId("_WBqvcQgqEeSUG-8hqXsVMQ")]
+[IsoDisplayName(@"Communication Method 3 Choice")]
 public interface ICommunicationMethod3Choice : IIsoChoice { }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between specification of the data in structured or free text format.
 /// </summary>
 [IsoId("_Uys4Bdp-Ed-ak6NoX_4Aeg_1324048594")]
+[IsoDisplayName(@"Data Format 1 Choice")]
 public interface IDataFormat1Choice : IIsoChoice { }

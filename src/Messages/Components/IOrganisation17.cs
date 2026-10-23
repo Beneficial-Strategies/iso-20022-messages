@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.
 /// </summary>
 [IsoId("_LhHFEQjKEeS5F6qHcKOrew")]
+[IsoDisplayName(@"Organisation")]
 public interface IOrganisation17 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrganisation17 : IIsoComponent
     [IsoId("_L7TGsQjKEeS5F6qHcKOrew")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IOrganisation17 : IIsoComponent
     [IsoId("_L7TGtQjKEeS5F6qHcKOrew")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Purpose { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IOrganisation17 : IIsoComponent
     [IsoId("_L7TGuwjKEeS5F6qHcKOrew")]
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RegistrationDate { get; }
 
     /// <summary>
@@ -73,6 +79,8 @@ public interface IOrganisation17 : IIsoComponent
     [IsoId("_L7TGvwjKEeS5F6qHcKOrew")]
     [DisplayName("National Registration Number")]
     [IsoXmlTag("NtlRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NationalRegistrationNumber { get; }
 
     /// <summary>
@@ -81,6 +89,9 @@ public interface IOrganisation17 : IIsoComponent
     [IsoId("_L7TGwQjKEeS5F6qHcKOrew")]
     [DisplayName("Modified Postal Address")]
     [IsoXmlTag("ModfdPstlAdr")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope1> ModifiedPostalAddress { get; }
 
     /// <summary>

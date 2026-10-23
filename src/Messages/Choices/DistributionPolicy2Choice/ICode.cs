@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DistributionPolicy2Choice;
 /// Distribution policy expressed as an ISO 20022 code.
 /// </summary>
 [IsoId("_HzKCoeLaEeWFtOV72FbX9w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IDistributionPolicy2Choice, IIsoChoiceVariant
 {
     /// <summary>

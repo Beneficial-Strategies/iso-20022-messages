@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// TimeFrame elements that define a period as number of days after an activity.
 /// </summary>
 [IsoId("_UAew6dp-Ed-ak6NoX_4Aeg_1996622705")]
+[IsoDisplayName(@"Time Frame 4 Choice")]
 public interface ITimeFrame4Choice : IIsoChoice { }

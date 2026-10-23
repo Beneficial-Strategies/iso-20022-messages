@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of identification of a party. The party can be identified by providing a BIC or a MIC or a proprietary code.
 /// </summary>
 [IsoId("_QReIh9p-Ed-ak6NoX_4Aeg_-60481643")]
+[IsoDisplayName(@"Party Identification 11 Choice")]
 public interface IPartyIdentification11Choice : IIsoChoice { }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InitialAmount1Choice;
 /// Number of pre-paid instalment periods at the time the investment plan is created.
 /// </summary>
 [IsoId("_XuNrcSDaEeWCLu74WLgP4w")]
+[IsoDisplayName(@"Initial Number Of Instalments")]
 public interface IInitialNumberOfInstalments : IInitialAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IInitialNumberOfInstalments : IInitialAmount1Choice, IIsoChoice
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("InitlNbOfInstlmts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

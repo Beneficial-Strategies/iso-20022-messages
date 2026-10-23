@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the demand withdrawal notification.
 /// </summary>
 [IsoId("_-Br9JnltEeG7BsjMvd1mEw_1678341433")]
+[IsoDisplayName(@"Undertaking Demand Withdrawal")]
 public interface IUndertakingDemandWithdrawal1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IUndertakingDemandWithdrawal1 : IIsoComponent
     [IsoId("_-Br9KHltEeG7BsjMvd1mEw_-1462957369")]
     [DisplayName("Advising Party Reference Number")]
     [IsoXmlTag("AdvsgPtyRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AdvisingPartyReferenceNumber { get; }
 
     /// <summary>
@@ -41,5 +44,7 @@ public interface IUndertakingDemandWithdrawal1 : IIsoComponent
     [IsoId("_-B1uIXltEeG7BsjMvd1mEw_1834937574")]
     [DisplayName("Confirmer Reference Number")]
     [IsoXmlTag("CnfrmrRefNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ConfirmerReferenceNumber { get; }
 }

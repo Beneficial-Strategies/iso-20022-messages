@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication device number or electronic address used for communication.
 /// </summary>
 [IsoId("_tuV6EWIfEeeA54RzO_9yOw")]
+[IsoDisplayName(@"Communication Address")]
 public interface ICommunicationAddress7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICommunicationAddress7 : IIsoComponent
     [IsoId("_t7AdE2IfEeeA54RzO_9yOw")]
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? Email { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICommunicationAddress7 : IIsoComponent
     [IsoId("_t7AdFWIfEeeA54RzO_9yOw")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? PhoneNumber { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface ICommunicationAddress7 : IIsoComponent
     [IsoId("_t7AdF2IfEeeA54RzO_9yOw")]
     [DisplayName("Mobile Number")]
     [IsoXmlTag("MobNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? MobileNumber { get; }
 
     /// <summary>
@@ -41,6 +46,7 @@ public interface ICommunicationAddress7 : IIsoComponent
     [IsoId("_t7AdGWIfEeeA54RzO_9yOw")]
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber? FaxNumber { get; }
 
     /// <summary>
@@ -49,6 +55,8 @@ public interface ICommunicationAddress7 : IIsoComponent
     [IsoId("_t7AdG2IfEeeA54RzO_9yOw")]
     [DisplayName("Telex Address")]
     [IsoXmlTag("TlxAdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TelexAddress { get; }
 
     /// <summary>
@@ -57,5 +65,7 @@ public interface ICommunicationAddress7 : IIsoComponent
     [IsoId("_t7AdHWIfEeeA54RzO_9yOw")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text? URLAddress { get; }
 }

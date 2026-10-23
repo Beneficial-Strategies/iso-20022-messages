@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Extract of trade data for an investment fund switch order.
 /// </summary>
 [IsoId("_SNctANp-Ed-ak6NoX_4Aeg_1967045110")]
+[IsoDisplayName(@"Fund Order Data")]
 public interface IFundOrderData2 : IIsoComponent
 {
     /// <summary>

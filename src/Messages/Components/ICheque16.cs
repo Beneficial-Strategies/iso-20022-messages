@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Characteristics of a cheque instruction, such as cheque type or cheque number.
 /// </summary>
 [IsoId("__Pad0V6HEe26aImdqMavcg")]
+[IsoDisplayName(@"Cheque")]
 public interface ICheque16 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ICheque16 : IIsoComponent
     [IsoId("__pfKt16HEe26aImdqMavcg")]
     [DisplayName("Cheque Number")]
     [IsoXmlTag("ChqNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ChequeNumber { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ICheque16 : IIsoComponent
     [IsoId("__pfKwV6HEe26aImdqMavcg")]
     [DisplayName("Cheque Maturity Date")]
     [IsoXmlTag("ChqMtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ChequeMaturityDate { get; }
 
     /// <summary>
@@ -73,6 +77,8 @@ public interface ICheque16 : IIsoComponent
     [IsoId("__pfKw16HEe26aImdqMavcg")]
     [DisplayName("Forms Code")]
     [IsoXmlTag("FrmsCd")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? FormsCode { get; }
 
     /// <summary>
@@ -81,6 +87,10 @@ public interface ICheque16 : IIsoComponent
     [IsoId("__pfKxV6HEe26aImdqMavcg")]
     [DisplayName("Memo Field")]
     [IsoXmlTag("MemoFld")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> MemoField { get; }
 
     /// <summary>
@@ -89,6 +99,8 @@ public interface ICheque16 : IIsoComponent
     [IsoId("__pfKx16HEe26aImdqMavcg")]
     [DisplayName("Regional Clearing Zone")]
     [IsoXmlTag("RgnlClrZone")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegionalClearingZone { get; }
 
     /// <summary>
@@ -97,6 +109,8 @@ public interface ICheque16 : IIsoComponent
     [IsoId("__pfKyV6HEe26aImdqMavcg")]
     [DisplayName("Print Location")]
     [IsoXmlTag("PrtLctn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PrintLocation { get; }
 
     /// <summary>
@@ -105,5 +119,9 @@ public interface ICheque16 : IIsoComponent
     [IsoId("__pfKy16HEe26aImdqMavcg")]
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [MinLength(0)]
+    [MaxLength(5)]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<string> Signature { get; }
 }

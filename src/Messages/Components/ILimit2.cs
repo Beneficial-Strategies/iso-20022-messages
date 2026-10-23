@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the minimum value of entries to be reported in the requested message.
 /// </summary>
 [IsoId("_SZgzG9p-Ed-ak6NoX_4Aeg_-701424478")]
+[IsoDisplayName(@"Limit")]
 public interface ILimit2 : IIsoComponent
 {
     /// <summary>

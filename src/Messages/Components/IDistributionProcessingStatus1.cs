@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the processing status of a global movement.
 /// </summary>
 [IsoId("_RlXZVdp-Ed-ak6NoX_4Aeg_-2044015905")]
+[IsoDisplayName(@"Distribution Processing Status")]
 public interface IDistributionProcessingStatus1 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IDistributionProcessingStatus1 : IIsoComponent
     [IsoId("_RlXZV9p-Ed-ak6NoX_4Aeg_-1653366071")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? AdditionalInformation { get; }
 }

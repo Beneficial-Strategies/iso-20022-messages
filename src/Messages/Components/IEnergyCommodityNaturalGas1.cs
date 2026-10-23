@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an energy derivative of type natural gas.
 /// </summary>
 [IsoId("_MdPQZA2oEeW72qLtWESimw")]
+[IsoDisplayName(@"Energy Commodity Natural Gas")]
 public interface IEnergyCommodityNaturalGas1 : IIsoComponent
 {
     /// <summary>

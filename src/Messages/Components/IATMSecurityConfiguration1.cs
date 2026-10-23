@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Configuration parameters in use by the security device.
 /// </summary>
 [IsoId("_4FKwEIr6EeSvuOJS0mmL0g")]
+[IsoDisplayName(@"ATM Security Configuration")]
 public interface IATMSecurityConfiguration1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IATMSecurityConfiguration1 : IIsoComponent
     [IsoId("_gRAscIr8EeSvuOJS0mmL0g")]
     [DisplayName("MAC Algorithm")]
     [IsoXmlTag("MACAlgo")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Algorithm12Code> MACAlgorithm { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IATMSecurityConfiguration1 : IIsoComponent
     [IsoId("_kEKN8Ir8EeSvuOJS0mmL0g")]
     [DisplayName("Digest Algorithm")]
     [IsoXmlTag("DgstAlgo")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Algorithm11Code> DigestAlgorithm { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface IATMSecurityConfiguration1 : IIsoComponent
     [IsoId("_KGeSAIr-EeSvuOJS0mmL0g")]
     [DisplayName("Message Protection")]
     [IsoXmlTag("MsgPrtcn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<MessageProtection1Code> MessageProtection { get; }
 }

@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_ThLiq9b6Eeq_l4BJLVUF2Q")]
 [IsoMessage("camt.103.001.02", "CretRsvatn", "urn:iso:std:iso:20022:tech:xsd:camt.103.001.02")]
+[Description(@"Scope|The CreateReservation message is used to request for the creation of one particular reservation by the member and managed by the transaction administrator.|Usage|Based on the criteria defined in the CreateReservation message, the transaction administrator will execute or reject the requested creation and respond with a Receipt message as a reply to the request.")]
+[IsoDisplayName(@"Create Reservation V")]
 public interface ICreateReservationV02 : IOuterRecord
 {
     /// <summary>
@@ -47,5 +49,6 @@ public interface ICreateReservationV02 : IOuterRecord
     [IsoId("_ThMwu9b6Eeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

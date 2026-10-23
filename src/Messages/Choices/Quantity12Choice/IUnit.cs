@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity12Choice;
 /// Quantity of assets to be transferred.
 /// </summary>
 [IsoId("_t8mOFPsrEeCUd_EZYqZ_Uw")]
+[IsoDisplayName(@"Unit")]
 public interface IUnit : IQuantity12Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IUnit : IQuantity12Choice, IIsoChoiceVariant
     /// Number of objects represented as a decimal number, for example 0.75 or 45.6.
     /// </summary>
     [IsoXmlTag("Unit")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 }

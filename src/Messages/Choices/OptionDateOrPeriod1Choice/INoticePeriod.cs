@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionDateOrPeriod1Choice;
 /// Number of calendar days that the holder of the instrument/issuer of the instrument will give to the issuer/holder of the instrument before exercising the put/call option.
 /// </summary>
 [IsoId("_FBT62TU7EeWITbq5W8H-2w")]
+[IsoDisplayName(@"Notice Period")]
 public interface INoticePeriod : IOptionDateOrPeriod1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface INoticePeriod : IOptionDateOrPeriod1Choice, IIsoChoiceVariant
     /// Number of objects represented as an integer.
     /// </summary>
     [IsoXmlTag("NtcePrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number Value { get; }
 }

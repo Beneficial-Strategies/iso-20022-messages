@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Withdrawal transaction for which the completion is sent.
 /// </summary>
 [IsoId("_dgqpUa4TEeWZgJQOa6iKCQ")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction20 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IATMTransaction20 : IIsoComponent
     [IsoId("_dsJgla4TEeWZgJQOa6iKCQ")]
     [DisplayName("Incident")]
     [IsoXmlTag("Incdnt")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<FailureReason7Code> Incident { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IATMTransaction20 : IIsoComponent
     [IsoId("_dsJgl64TEeWZgJQOa6iKCQ")]
     [DisplayName("Incident Detail")]
     [IsoXmlTag("IncdntDtl")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> IncidentDetail { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IATMTransaction20 : IIsoComponent
     [IsoId("_dsJgma4TEeWZgJQOa6iKCQ")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -57,6 +62,7 @@ public interface IATMTransaction20 : IIsoComponent
     [IsoId("_dsJgm64TEeWZgJQOa6iKCQ")]
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RequestedReceipt { get; }
 
     /// <summary>
@@ -65,6 +71,7 @@ public interface IATMTransaction20 : IIsoComponent
     [IsoId("_dsJgna4TEeWZgJQOa6iKCQ")]
     [DisplayName("Receipt Printed")]
     [IsoXmlTag("RctPrtd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? ReceiptPrinted { get; }
 
     /// <summary>
@@ -73,6 +80,7 @@ public interface IATMTransaction20 : IIsoComponent
     [IsoId("_AG02gPysEeWVMqALyuondw")]
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CustomerConsent { get; }
 
     /// <summary>
@@ -89,5 +97,6 @@ public interface IATMTransaction20 : IIsoComponent
     [IsoId("_dsJgo64TEeWZgJQOa6iKCQ")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

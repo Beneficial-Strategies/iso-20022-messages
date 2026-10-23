@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details specific to the individual direct debit transaction(s) included in the message.
 /// </summary>
 [IsoId("_hGoh4SHIEeK1OvoXgbVMNg")]
+[IsoDisplayName(@"Direct Debit Transaction Information")]
 public interface IDirectDebitTransactionInformation13 : IIsoComponent
 {
     /// <summary>
@@ -105,6 +106,8 @@ public interface IDirectDebitTransactionInformation13 : IIsoComponent
     [IsoId("_hb8DwSHIEeK1OvoXgbVMNg")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -121,6 +124,9 @@ public interface IDirectDebitTransactionInformation13 : IIsoComponent
     [IsoId("_hb8DySHIEeK1OvoXgbVMNg")]
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting3> RegulatoryReporting { get; }
 
     /// <summary>
@@ -137,6 +143,9 @@ public interface IDirectDebitTransactionInformation13 : IIsoComponent
     [IsoId("_hb8D0SHIEeK1OvoXgbVMNg")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation2> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -153,5 +162,6 @@ public interface IDirectDebitTransactionInformation13 : IIsoComponent
     [IsoId("_mEBo-iHIEeK1OvoXgbVMNg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Breakdown of cash movements into a fund as a result of investment funds transactions, eg, subscriptions or switch-in.
 /// </summary>
 [IsoId("_SjM6m9p-Ed-ak6NoX_4Aeg_-1373036480")]
+[IsoDisplayName(@"Fund Cash In Breakdown")]
 public interface IFundCashInBreakdown2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IFundCashInBreakdown2 : IIsoComponent
     [IsoId("_SjWrkNp-Ed-ak6NoX_4Aeg_-1364727255")]
     [DisplayName("New Amount Indicator")]
     [IsoXmlTag("NewAmtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? NewAmountIndicator { get; }
 
     /// <summary>
@@ -49,6 +51,8 @@ public interface IFundCashInBreakdown2 : IIsoComponent
     [IsoId("_SjWrktp-Ed-ak6NoX_4Aeg_-1118608528")]
     [DisplayName("Extended Investment Fund Transaction In Type")]
     [IsoXmlTag("XtndedInvstmtFndTxInTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedInvestmentFundTransactionInType { get; }
 
     /// <summary>
@@ -65,6 +69,8 @@ public interface IFundCashInBreakdown2 : IIsoComponent
     [IsoId("_SjWrlNp-Ed-ak6NoX_4Aeg_-1850633433")]
     [DisplayName("Extended Original Order Quantity Type")]
     [IsoXmlTag("XtndedOrgnlOrdrQtyTp")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedOriginalOrderQuantityType { get; }
 
     /// <summary>
@@ -73,6 +79,7 @@ public interface IFundCashInBreakdown2 : IIsoComponent
     [IsoId("_SjWrldp-Ed-ak6NoX_4Aeg_1648566786")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge16> ChargeDetails { get; }
 
     /// <summary>
@@ -81,5 +88,6 @@ public interface IFundCashInBreakdown2 : IIsoComponent
     [IsoId("_SjWrltp-Ed-ak6NoX_4Aeg_-1363801795")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission9> CommissionDetails { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the customer in a transfer of money.
 /// </summary>
 [IsoId("_M8YtEKd1EeuEcqP2FGAFaA")]
+[IsoDisplayName(@"Customer")]
 public interface ICustomer7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICustomer7 : IIsoComponent
     [IsoId("_NCiYYad1EeuEcqP2FGAFaA")]
     [DisplayName("Customer Identification")]
     [IsoXmlTag("CstmrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CustomerIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface ICustomer7 : IIsoComponent
     [IsoId("_wUjUgKd1EeuEcqP2FGAFaA")]
     [DisplayName("Customer Designation")]
     [IsoXmlTag("CstmrDsgnt")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? CustomerDesignation { get; }
 
     /// <summary>
@@ -57,6 +61,7 @@ public interface ICustomer7 : IIsoComponent
     [IsoId("_NCiYZ6d1EeuEcqP2FGAFaA")]
     [DisplayName("Credentials")]
     [IsoXmlTag("Crdntls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICredentials2> Credentials { get; }
 
     /// <summary>
@@ -81,6 +86,7 @@ public interface ICustomer7 : IIsoComponent
     [IsoId("_NCiYa6d1EeuEcqP2FGAFaA")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DateOfBirth { get; }
 
     /// <summary>
@@ -97,5 +103,6 @@ public interface ICustomer7 : IIsoComponent
     [IsoId("_NCiYaad1EeuEcqP2FGAFaA")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

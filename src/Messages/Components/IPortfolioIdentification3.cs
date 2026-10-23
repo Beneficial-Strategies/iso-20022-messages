@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the portfolio if the collateral is reported on a portfolio basis.
 /// </summary>
 [IsoId("_B0ZF0TIDEe2fXedS_ucFOA")]
+[IsoDisplayName(@"Portfolio Identification")]
 public interface IPortfolioIdentification3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPortfolioIdentification3 : IIsoComponent
     [IsoId("_B1XWMTIDEe2fXedS_ucFOA")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Code { get; }
 
     /// <summary>
@@ -26,5 +29,6 @@ public interface IPortfolioIdentification3 : IIsoComponent
     [IsoId("_B1X9QTIDEe2fXedS_ucFOA")]
     [DisplayName("Portfolio Transaction Exemption")]
     [IsoXmlTag("PrtflTxXmptn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? PortfolioTransactionExemption { get; }
 }

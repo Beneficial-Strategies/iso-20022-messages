@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "SctiesTradConfStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:setr.044.001.01"
 )]
+[Description(@"Scope|This message is sent from Central Matching Utility (CMU) to an executing party or an instructing party to advise the status of the SecuritiesTradeConfirmation message previously sent by the party. The status may be a processing, pending processing, affirmed or disaffirmed, cancel or replacement by an instructing party, a custodian or an affirming party, internal matching, and/or matching status.|The instructing party is typically the investment manager or an intermediary system/vendor communicating on behalf of the investment manager or of other categories of investors. The executing party is typically the broker/dealer or an intermediary system/vendor communicating on behalf of the broker/dealer.|The ISO 20022 Business Application Header must be used|Usage|Initiator: In central matching the Initiator is the Central Matching Utility.|Respondent: no response is needed by the recipient of the message.")]
+[IsoDisplayName(@"Securities Trade Confirmation Status Advice V")]
 public interface ISecuritiesTradeConfirmationStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -38,6 +40,7 @@ public interface ISecuritiesTradeConfirmationStatusAdviceV01 : IOuterRecord
     [IsoId("_R0gNh-QXEeCGktPI9k4Dlw_1063314509")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILinkages18> References { get; }
 
     /// <summary>
@@ -102,6 +105,7 @@ public interface ISecuritiesTradeConfirmationStatusAdviceV01 : IOuterRecord
     [IsoId("_R0zvgeQXEeCGktPI9k4Dlw_660966103")]
     [DisplayName("Confirmation Parties")]
     [IsoXmlTag("ConfPties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IConfirmationParties4> ConfirmationParties { get; }
 
     /// <summary>
@@ -126,5 +130,6 @@ public interface ISecuritiesTradeConfirmationStatusAdviceV01 : IOuterRecord
     [IsoId("_R0zvhOQXEeCGktPI9k4Dlw_1454821028")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

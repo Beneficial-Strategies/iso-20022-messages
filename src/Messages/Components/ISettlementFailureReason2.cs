@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the reason for the settlement fails as defined in the relevant regulation.
 /// </summary>
 [IsoId("_QHUzx76YEemHTLTzJg7M-A")]
+[IsoDisplayName(@"Settlement Failure Reason")]
 public interface ISettlementFailureReason2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ISettlementFailureReason2 : IIsoComponent
     [IsoId("_QMoKg76YEemHTLTzJg7M-A")]
     [DisplayName("Main Reasons")]
     [IsoXmlTag("MainRsns")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text MainReasons { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface ISettlementFailureReason2 : IIsoComponent
     [IsoId("_QMoKhb6YEemHTLTzJg7M-A")]
     [DisplayName("Efficiency Improvement")]
     [IsoXmlTag("EffcncyImprvmt")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text EfficiencyImprovement { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus68Choice;
 /// Provides the status of an instruction.
 /// </summary>
 [IsoId("_TMjAEeFWEeWIA4E9cYSxxQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProcessingStatus68Choice, IIsoChoiceVariant
 {
     /// <summary>

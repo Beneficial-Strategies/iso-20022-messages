@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of an agricultural derivative of type dairy.
 /// </summary>
 [IsoId("_9tSF8Fq9EeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Agricultural Commodity Dairy")]
 public interface IAgriculturalCommodityDairy1 : IIsoComponent
 {
     /// <summary>

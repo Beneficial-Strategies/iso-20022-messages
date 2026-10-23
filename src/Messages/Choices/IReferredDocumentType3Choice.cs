@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of the document referred in the remittance information.
 /// </summary>
 [IsoId("_XxL1Jx77EeSxevWRRWxNAg")]
+[IsoDisplayName(@"Referred Document Type 3 Choice")]
 public interface IReferredDocumentType3Choice : IIsoChoice { }

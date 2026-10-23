@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Report information about securities account reference data.
 /// </summary>
 [IsoId("_A6gAtTp0Eemk2e6qGBk8IQ")]
+[IsoDisplayName(@"Securities Account Audit Trail Report")]
 public interface ISecuritiesAccountAuditTrailReport3 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies a percentage together with a period of time. For overlapping periods, the maximum of all applicable elements at a given date is the result.
 /// </summary>
 [IsoId("_OTgzMzg0-AOSNFX-8224502")]
+[IsoDisplayName(@"Percentage And Period")]
 public interface IPercentageAndPeriod1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPercentageAndPeriod1 : IIsoComponent
     [IsoId("_OTgzMzg1-AOSNFX-8224502")]
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
+    [IsoSimpleType(IsoSimpleType.PercentageBoundedRate)]
     PercentageBoundedRate Percentage { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IPercentageAndPeriod1 : IIsoComponent
     [IsoId("_OTgzMzg2-AOSNFX-8224502")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? StartDate { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IPercentageAndPeriod1 : IIsoComponent
     [IsoId("_OThzMzg2-AOSNFX-8224502")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? EndDate { get; }
 }

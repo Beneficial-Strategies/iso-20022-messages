@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Processing Result27.
 /// </summary>
 [IsoId("_vDnbYZgJEe6OBt2eQPMPsQ")]
+[IsoDisplayName(@"Processing Result27")]
 public interface IProcessingResult27 : IIsoComponent
 {
     /// <summary>
@@ -86,6 +87,7 @@ public interface IProcessingResult27 : IIsoComponent
     /// </summary>
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAction16> Action { get; }
 
     /// <summary>
@@ -93,5 +95,6 @@ public interface IProcessingResult27 : IIsoComponent
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalInformation { get; }
 }

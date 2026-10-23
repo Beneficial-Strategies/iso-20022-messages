@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to a requested Loyalty program or account.
 /// </summary>
 [IsoId("_6K8t8NuIEeiB5uLfkg9ZJA")]
+[IsoDisplayName(@"Loyalty Account Request")]
 public interface ILoyaltyAccountRequest1 : IIsoComponent
 {
     /// <summary>

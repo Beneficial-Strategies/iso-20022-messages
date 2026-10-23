@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PreviousYearChoice;
 /// Selection ot the entirety of the investment plans.
 /// </summary>
 [IsoId("_Rb-Mwtp-Ed-ak6NoX_4Aeg_-602919807")]
+[IsoDisplayName(@"All Previous Years")]
 public interface IAllPreviousYears : IPreviousYearChoice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IAllPreviousYears : IPreviousYearChoice, IIsoChoiceVariant
     /// Indicates that the investment plan issued during all the previous years have to be transferred.
     /// </summary>
     [IsoXmlTag("AllPrvsYrs")]
+    [IsoSimpleType(IsoSimpleType.PreviousAll)]
     PreviousAll Value { get; }
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared16Choice;
 /// </summary>
 [IsoId("_gKmIUcg4Eeu4ecZgAYuz5w")]
 [IsoXmlTag("Clrd")]
+[IsoDisplayName(@"Cleared")]
 public interface ICleared : ICleared16Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface ICleared : ICleared16Choice, IIsoChoiceVariant
     [IsoId("_gMBrtcg4Eeu4ecZgAYuz5w")]
     [DisplayName("Clearing Date Time")]
     [IsoXmlTag("ClrDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? ClearingDateTime { get; }
 
     /// <summary>
@@ -34,6 +36,8 @@ public interface ICleared : ICleared16Choice, IIsoChoiceVariant
     [IsoId("_gMBrt8g4Eeu4ecZgAYuz5w")]
     [DisplayName("Report Tracking Number")]
     [IsoXmlTag("RptTrckgNb")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? ReportTrackingNumber { get; }
 
     /// <summary>
@@ -42,5 +46,7 @@ public interface ICleared : ICleared16Choice, IIsoChoiceVariant
     [IsoId("_gMBrucg4Eeu4ecZgAYuz5w")]
     [DisplayName("Portfolio Code")]
     [IsoXmlTag("PrtflCd")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text? PortfolioCode { get; }
 }

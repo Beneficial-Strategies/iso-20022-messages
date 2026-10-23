@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LetterOfGuarantee3Choice;
 /// Specifies whether physical settlement may be executed using a letter of guarantee or if the physical certificates should be used.
 /// </summary>
 [IsoId("_AY9vEtokEeC60axPepSq7g_-1780486835")]
+[IsoDisplayName(@"Indicator")]
 public interface IIndicator : ILetterOfGuarantee3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IIndicator : ILetterOfGuarantee3Choice, IIsoChoiceVariant
     /// Indicates a &quot;Yes&quot; or &quot;No&quot; type of answer for an element.
     /// </summary>
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Value { get; }
 }

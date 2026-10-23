@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation4Choice;
 /// <summary>
 /// LEI.
 /// </summary>
+[IsoDisplayName(@"LEI")]
 public interface ILEI : IPersonOrOrganisation4Choice, IIsoChoiceVariant
 {
     /// <summary>

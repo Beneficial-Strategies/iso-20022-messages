@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Profile of the customer with the allowed services and restrictions.
 /// </summary>
 [IsoId("_el4xkYqzEeSIDtZ76p6McQ")]
+[IsoDisplayName(@"ATM Customer Profile")]
 public interface IATMCustomerProfile3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IATMCustomerProfile3 : IIsoComponent
     [IsoId("_eyuTsYqzEeSIDtZ76p6McQ")]
     [DisplayName("Profile Reference")]
     [IsoXmlTag("PrflRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ProfileReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IATMCustomerProfile3 : IIsoComponent
     [IsoId("_eyuTs4qzEeSIDtZ76p6McQ")]
     [DisplayName("Customer Identification")]
     [IsoXmlTag("CstmrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CustomerIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IATMCustomerProfile3 : IIsoComponent
     [IsoId("_4iZ98IqzEeSIDtZ76p6McQ")]
     [DisplayName("Profile Description")]
     [IsoXmlTag("PrflDesc")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? ProfileDescription { get; }
 
     /// <summary>
@@ -41,5 +48,6 @@ public interface IATMCustomerProfile3 : IIsoComponent
     [IsoId("_ShKmAIq0EeSIDtZ76p6McQ")]
     [DisplayName("Allowed Services")]
     [IsoXmlTag("AllwdSvcs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMService7> AllowedServices { get; }
 }

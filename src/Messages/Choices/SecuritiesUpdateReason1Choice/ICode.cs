@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesUpdateReason1Choice;
 /// Update reason, as published in an external code set.
 /// </summary>
 [IsoId("_EjynMpI8EeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISecuritiesUpdateReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

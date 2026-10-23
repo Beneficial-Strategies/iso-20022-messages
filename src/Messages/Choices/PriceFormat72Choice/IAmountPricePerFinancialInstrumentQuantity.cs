@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat72Choice;
 /// <summary>
 /// Amount Price Per Financial Instrument Quantity.
 /// </summary>
+[IsoDisplayName(@"Amount Price Per Financial Instrument Quantity")]
 public interface IAmountPricePerFinancialInstrumentQuantity
     : IPriceFormat72Choice,
         IIsoChoiceVariant

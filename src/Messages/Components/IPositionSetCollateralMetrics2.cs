@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Position Set Collateral Metrics2.
 /// </summary>
 [IsoId("_Hj5tURc0Ee6tpciIp9JEYw")]
+[IsoDisplayName(@"Position Set Collateral Metrics2")]
 public interface IPositionSetCollateralMetrics2 : IIsoComponent
 {
     /// <summary>

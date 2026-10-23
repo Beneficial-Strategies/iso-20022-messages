@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the status reason of the instruction.
 /// </summary>
 [IsoId("_kpLGou5NEeCisYr99QEiWA_743644615")]
+[IsoDisplayName(@"Status Reason Information")]
 public interface IStatusReasonInformation10 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,7 @@ public interface IStatusReasonInformation10 : IIsoComponent
     [IsoId("_kpLGpO5NEeCisYr99QEiWA_-693026204")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? AdditionalInformation { get; }
 }

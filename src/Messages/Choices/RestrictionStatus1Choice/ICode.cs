@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RestrictionStatus1Choice;
 /// Status of the restriction expressed as a code.
 /// </summary>
 [IsoId("_cMXWsCFnEeW9XJWqfgXIIA")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IRestrictionStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

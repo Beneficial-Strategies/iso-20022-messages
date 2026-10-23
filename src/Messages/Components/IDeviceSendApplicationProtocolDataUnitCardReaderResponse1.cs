@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Content of the Card Reader Application Protocol Data Unit Response message.
 /// </summary>
 [IsoId("_W5rM4N6iEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Device Send Application Protocol Data Unit Card Reader Response")]
 public interface IDeviceSendApplicationProtocolDataUnitCardReaderResponse1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDeviceSendApplicationProtocolDataUnitCardReaderResponse1 : IIs
     [IsoId("_yAfMsN6jEeiwsev40qZGEQ")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
+    [IsoSimpleType(IsoSimpleType.Min1Max256Binary)]
     Min1Max256Binary? Data { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface IDeviceSendApplicationProtocolDataUnitCardReaderResponse1 : IIs
     [IsoId("_BQhBMN6kEeiwsev40qZGEQ")]
     [DisplayName("Card Status")]
     [IsoXmlTag("CardSts")]
+    [IsoSimpleType(IsoSimpleType.Min1Max256Binary)]
     Min1Max256Binary CardStatus { get; }
 }

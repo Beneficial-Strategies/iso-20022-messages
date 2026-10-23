@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDate2Choice;
 /// Date in ISO format.
 /// </summary>
 [IsoId("_QurB6Np-Ed-ak6NoX_4Aeg_305887537")]
+[IsoDisplayName(@"Date")]
 public interface IDate : ISettlementDate2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

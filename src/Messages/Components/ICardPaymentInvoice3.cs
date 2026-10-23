@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Detailed invoice data.
 /// </summary>
 [IsoId("_OEJH4eWiEeevU7McUP3D1w")]
+[IsoDisplayName(@"Card Payment Invoice")]
 public interface ICardPaymentInvoice3 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface ICardPaymentInvoice3 : IIsoComponent
     [IsoId("_ONGPl-WiEeevU7McUP3D1w")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILineItem17> LineItem { get; }
 }

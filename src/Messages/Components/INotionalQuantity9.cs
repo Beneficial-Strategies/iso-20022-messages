@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates the reference quantity of the transaction and the schedule applicable to the quantity computation.
 /// </summary>
 [IsoId("_XES6ISJBEe2zWP9pqvmqdw")]
+[IsoDisplayName(@"Notional Quantity")]
 public interface INotionalQuantity9 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INotionalQuantity9 : IIsoComponent
     [IsoId("_XFM5ESJBEe2zWP9pqvmqdw")]
     [DisplayName("Total Quantity")]
     [IsoXmlTag("TtlQty")]
+    [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
     LongFraction19DecimalNumber? TotalQuantity { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Description of the financial instrument.
 /// </summary>
 [IsoId("_DeW-8WSDEeKFfdK0gKYFLQ")]
+[IsoDisplayName(@"Financial Instrument Attributes")]
 public interface IFinancialInstrumentAttributes46 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IFinancialInstrumentAttributes46 : IIsoComponent
     [IsoId("_D3_nA2SDEeKFfdK0gKYFLQ")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? Quantity { get; }
 
     /// <summary>

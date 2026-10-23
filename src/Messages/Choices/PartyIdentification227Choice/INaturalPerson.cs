@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification227Choice;
 /// </summary>
 [IsoId("_B1TxNK-mEemJ1NnLPsTFaw")]
 [IsoXmlTag("NtrlPrsn")]
+[IsoDisplayName(@"Natural Person")]
 public interface INaturalPerson : IPartyIdentification227Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface INaturalPerson : IPartyIdentification227Choice, IIsoChoiceVaria
     [IsoId("_VybPpbIGEemux5trsZcCpw")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 
     /// <summary>

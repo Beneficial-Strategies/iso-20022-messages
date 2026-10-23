@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status40Choice;
 
 /// <summary>Status expressed as switch order details report.</summary>
 [IsoId("0e70bb2b-0724-484d-ac26-d52f1a47d17d")]
+[IsoDisplayName(@"Switch Order Details Report")]
 public interface ISwitchOrderDetailsReport : IStatus40Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

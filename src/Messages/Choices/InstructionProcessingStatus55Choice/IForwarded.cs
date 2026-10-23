@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus55Cho
 /// <summary>
 /// Forwarded.
 /// </summary>
+[IsoDisplayName(@"Forwarded")]
 public interface IForwarded : IInstructionProcessingStatus55Choice, IIsoChoiceVariant
 {
     /// <summary>

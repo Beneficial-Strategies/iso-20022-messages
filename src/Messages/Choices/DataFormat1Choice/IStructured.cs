@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DataFormat1Choice;
 /// </summary>
 [IsoId("_Uys4Btp-Ed-ak6NoX_4Aeg_1723007680")]
 [IsoXmlTag("Strd")]
+[IsoDisplayName(@"Structured")]
 public interface IStructured : IDataFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IStructured : IDataFormat1Choice, IIsoChoiceVariant
     [IsoId("_VC8TdNp-Ed-ak6NoX_4Aeg_704057909")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text SchemeName { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IStructured : IDataFormat1Choice, IIsoChoiceVariant
     [IsoId("_VC8Tddp-Ed-ak6NoX_4Aeg_704057910")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

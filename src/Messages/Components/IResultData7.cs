@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of the processing.
 /// </summary>
 [IsoId("_ms_0QahNEeuOaMA1YOy5YQ")]
+[IsoDisplayName(@"Result Data")]
 public interface IResultData7 : IIsoComponent
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IResultData7 : IIsoComponent
     [IsoId("_myQuw6hNEeuOaMA1YOy5YQ")]
     [DisplayName("Other Result")]
     [IsoXmlTag("OthrRslt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherResult { get; }
 
     /// <summary>
@@ -42,6 +45,8 @@ public interface IResultData7 : IIsoComponent
     [IsoId("_myQux6hNEeuOaMA1YOy5YQ")]
     [DisplayName("Other Result Details")]
     [IsoXmlTag("OthrRsltDtls")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherResultDetails { get; }
 
     /// <summary>
@@ -50,6 +55,7 @@ public interface IResultData7 : IIsoComponent
     [IsoId("_1LCyMKhNEeuOaMA1YOy5YQ")]
     [DisplayName("Temporary Secure Card Data Reuse Permitted")]
     [IsoXmlTag("TempScrCardDataReusePrtd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? TemporarySecureCardDataReusePermitted { get; }
 
     /// <summary>
@@ -58,5 +64,6 @@ public interface IResultData7 : IIsoComponent
     [IsoId("_myQuyahNEeuOaMA1YOy5YQ")]
     [DisplayName("Additional Result Information")]
     [IsoXmlTag("AddtlRsltInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalResultInformation { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instruction, initiated by the creditor, to debit a debtor&apos;s account in favour of the creditor. A direct debit can be pre-authorised or not. In most countries, authorisation is in the form of a mandate between the debtor and creditor.
 /// </summary>
 [IsoId("_QdGJudp-Ed-ak6NoX_4Aeg_1879697")]
+[IsoDisplayName(@"Direct Debit Mandate")]
 public interface IDirectDebitMandate4 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IDirectDebitMandate4 : IIsoComponent
     [IsoId("_QdGJvNp-Ed-ak6NoX_4Aeg_1879799")]
     [DisplayName("Debtor Tax Identification Number")]
     [IsoXmlTag("DbtrTaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DebtorTaxIdentificationNumber { get; }
 
     /// <summary>
@@ -41,6 +44,8 @@ public interface IDirectDebitMandate4 : IIsoComponent
     [IsoId("_QdGJvdp-Ed-ak6NoX_4Aeg_1879817")]
     [DisplayName("Debtor National Registration Number")]
     [IsoXmlTag("DbtrNtlRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DebtorNationalRegistrationNumber { get; }
 
     /// <summary>
@@ -89,6 +94,8 @@ public interface IDirectDebitMandate4 : IIsoComponent
     [IsoId("_QdPTpNp-Ed-ak6NoX_4Aeg_1880224")]
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegistrationIdentification { get; }
 
     /// <summary>
@@ -97,5 +104,7 @@ public interface IDirectDebitMandate4 : IIsoComponent
     [IsoId("_QdPTpdp-Ed-ak6NoX_4Aeg_1880249")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the original group, to which the message refers.
 /// </summary>
 [IsoId("_Iup9rXL_EeidQ_AAdEzxQA")]
+[IsoDisplayName(@"Original Group Header")]
 public interface IOriginalGroupHeader18 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalGroupHeader18 : IIsoComponent
     [IsoId("_I5-c03L_EeidQ_AAdEzxQA")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalGroupHeader18 : IIsoComponent
     [IsoId("_I5-c1XL_EeidQ_AAdEzxQA")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OriginalMessageNameIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IOriginalGroupHeader18 : IIsoComponent
     [IsoId("_I5-c13L_EeidQ_AAdEzxQA")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? OriginalCreationDateTime { get; }
 
     /// <summary>
@@ -41,5 +47,6 @@ public interface IOriginalGroupHeader18 : IIsoComponent
     [IsoId("_I5-c2XL_EeidQ_AAdEzxQA")]
     [DisplayName("Return Reason Information")]
     [IsoXmlTag("RtrRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReturnReason6> ReturnReasonInformation { get; }
 }

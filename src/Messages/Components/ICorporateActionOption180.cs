@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the corporate action option.
 /// </summary>
 [IsoId("_6HnzQe34Eeqc-LCjwLsUVg")]
+[IsoDisplayName(@"Corporate Action Option")]
 public interface ICorporateActionOption180 : IIsoComponent
 {
     /// <summary>
@@ -49,6 +50,7 @@ public interface ICorporateActionOption180 : IIsoComponent
     [IsoId("_6vMwwe34Eeqc-LCjwLsUVg")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICorporateActionChangeTypeFormat6Choice> ChangeType { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ICorporateActionOption180 : IIsoComponent
     [IsoId("_6vMwye34Eeqc-LCjwLsUVg")]
     [DisplayName("Eligible For Collateral Indicator")]
     [IsoXmlTag("ElgblForCollInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? EligibleForCollateralIndicator { get; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public interface ICorporateActionOption180 : IIsoComponent
     [IsoId("_eXg2AO5_Eeqc-LCjwLsUVg")]
     [DisplayName("Solicitation Dealer Fee Indicator")]
     [IsoXmlTag("SlctnDealrFeeInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SolicitationDealerFeeIndicator { get; }
 
     /// <summary>
@@ -137,6 +141,8 @@ public interface ICorporateActionOption180 : IIsoComponent
     [IsoId("_6vMxEe34Eeqc-LCjwLsUVg")]
     [DisplayName("Shareholder Number")]
     [IsoXmlTag("ShrhldrNb")]
+    [IsoSimpleType(IsoSimpleType.Max25Text)]
+    [StringLength(25, MinimumLength = 1)]
     Max25Text? ShareholderNumber { get; }
 
     /// <summary>

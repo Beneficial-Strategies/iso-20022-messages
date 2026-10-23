@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides reference information to the original message.
 /// </summary>
 [IsoId("_BSviu24-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Original Transaction Reference")]
 public interface IOriginalTransactionReference30 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOriginalTransactionReference30 : IIsoComponent
     [IsoId("_BcbqM24-EeiU9cctagi5ow")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IOriginalTransactionReference30 : IIsoComponent
     [IsoId("_BcbqNW4-EeiU9cctagi5ow")]
     [DisplayName("Message Name Identification")]
     [IsoXmlTag("MsgNmId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MessageNameIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IOriginalTransactionReference30 : IIsoComponent
     [IsoId("_BcbqN24-EeiU9cctagi5ow")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? CreationDateTime { get; }
 
     /// <summary>
@@ -41,5 +47,6 @@ public interface IOriginalTransactionReference30 : IIsoComponent
     [IsoId("_BcbqOW4-EeiU9cctagi5ow")]
     [DisplayName("Original Transaction")]
     [IsoXmlTag("OrgnlTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentIdentification5> OriginalTransaction { get; }
 }

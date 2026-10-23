@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Result of the captured set of transactions.
 /// </summary>
 [IsoId("_PbyDIXIuEe299ZbWCkdR_w")]
+[IsoDisplayName(@"Card Payment Data Set")]
 public interface ICardPaymentDataSet33 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface ICardPaymentDataSet33 : IIsoComponent
     [IsoId("_Pi3ilXIuEe299ZbWCkdR_w")]
     [DisplayName("Remove Data Set")]
     [IsoXmlTag("RmvDataSet")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator RemoveDataSet { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface ICardPaymentDataSet33 : IIsoComponent
     [IsoId("_Pi3imXIuEe299ZbWCkdR_w")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransactionTotals12> TransactionTotals { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface ICardPaymentDataSet33 : IIsoComponent
     [IsoId("_Pi3im3IuEe299ZbWCkdR_w")]
     [DisplayName("Rejected Transaction")]
     [IsoXmlTag("RjctdTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet32> RejectedTransaction { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface ICardPaymentDataSet33 : IIsoComponent
     [IsoId("_Pi3inXIuEe299ZbWCkdR_w")]
     [DisplayName("Suspended Transaction")]
     [IsoXmlTag("SspdTx")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet32> SuspendedTransaction { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface ICardPaymentDataSet33 : IIsoComponent
     [IsoId("_Pi3in3IuEe299ZbWCkdR_w")]
     [DisplayName("Resumed Approval")]
     [IsoXmlTag("RsmdApprvl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet32> ResumedApproval { get; }
 
     /// <summary>
@@ -81,5 +87,6 @@ public interface ICardPaymentDataSet33 : IIsoComponent
     [IsoId("_Pi3ioXIuEe299ZbWCkdR_w")]
     [DisplayName("Resumed Rejection")]
     [IsoXmlTag("RsmdRjctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardPaymentDataSet32> ResumedRejection { get; }
 }

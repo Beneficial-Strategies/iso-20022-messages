@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the tranches defined for the loan contract.
 /// </summary>
 [IsoId("_3sV2tNNDEeSDLevdaFPXHw")]
+[IsoDisplayName(@"Loan Contract Tranche")]
 public interface ILoanContractTranche1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ILoanContractTranche1 : IIsoComponent
     [IsoId("_3sV2tdNDEeSDLevdaFPXHw")]
     [DisplayName("Tranche Number")]
     [IsoXmlTag("TrchNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number TrancheNumber { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ILoanContractTranche1 : IIsoComponent
     [IsoId("_FdOzsNNEEeSDLevdaFPXHw")]
     [DisplayName("Expected Date")]
     [IsoXmlTag("XpctdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ExpectedDate { get; }
 
     /// <summary>
@@ -41,6 +44,7 @@ public interface ILoanContractTranche1 : IIsoComponent
     [IsoId("_mz8FotOEEeSQ_-lmj1tzfw")]
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? DueDate { get; }
 
     /// <summary>
@@ -49,6 +53,7 @@ public interface ILoanContractTranche1 : IIsoComponent
     [IsoId("_8Ty5cdOEEeSQ_-lmj1tzfw")]
     [DisplayName("Duration Code")]
     [IsoXmlTag("DrtnCd")]
+    [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
     Exact1NumericText? DurationCode { get; }
 
     /// <summary>
@@ -57,5 +62,6 @@ public interface ILoanContractTranche1 : IIsoComponent
     [IsoId("_3sV2ttNDEeSDLevdaFPXHw")]
     [DisplayName("Last Tranche Indicator")]
     [IsoXmlTag("LastTrchInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? LastTrancheIndicator { get; }
 }

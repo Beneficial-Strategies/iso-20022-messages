@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Limit Query5.
 /// </summary>
 [IsoId("_zRf4ETEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Limit Query5")]
 public interface ILimitQuery5 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingDenied3Choice;
 /// Specifies the execution of a matching denial process.
 /// </summary>
 [IsoId("_Z5MpATt4EeW638lNyHKv7A")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IMatchingDenied3Choice, IIsoChoiceVariant
 {
     /// <summary>

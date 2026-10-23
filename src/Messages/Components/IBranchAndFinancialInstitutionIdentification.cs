@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Organisation established primarily to provide financial services.
 /// </summary>
 [IsoId("_TFnrI9p-Ed-ak6NoX_4Aeg_-701861729")]
+[IsoDisplayName(@"Branch And Financial Institution Identification")]
 public interface IBranchAndFinancialInstitutionIdentification : IIsoComponent
 {
     /// <summary>

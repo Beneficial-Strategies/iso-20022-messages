@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Numerical representation of the net increases and decreases in an account at a specific point in time. A cash balance is calculated from a sum of cash credits minus a sum of cash debits.
 /// </summary>
 [IsoId("_SXbvdNp-Ed-ak6NoX_4Aeg_1496666102")]
+[IsoDisplayName(@"Pay In Call Item")]
 public interface IPayInCallItem : IIsoComponent
 {
     /// <summary>

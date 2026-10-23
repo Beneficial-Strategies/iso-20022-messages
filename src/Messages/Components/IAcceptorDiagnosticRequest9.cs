@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Diagnostic request from an acceptor.
 /// </summary>
 [IsoId("_4-EsAS5IEeunNvJlR_vCbg")]
+[IsoDisplayName(@"Acceptor Diagnostic Request")]
 public interface IAcceptorDiagnosticRequest9 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IAcceptorDiagnosticRequest9 : IIsoComponent
     [IsoId("_5MYNwy5IEeunNvJlR_vCbg")]
     [DisplayName("Acquirer Availability Requested")]
     [IsoXmlTag("AcqrrAvlbtyReqd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? AcquirerAvailabilityRequested { get; }
 }

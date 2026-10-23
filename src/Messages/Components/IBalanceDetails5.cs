@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Balance related details for a portfolio.
 /// </summary>
 [IsoId("_m9_jw_NBEeCuA5Tr22BnwA_-1587495854")]
+[IsoDisplayName(@"Balance Details")]
 public interface IBalanceDetails5 : IIsoComponent
 {
     /// <summary>
@@ -41,5 +42,6 @@ public interface IBalanceDetails5 : IIsoComponent
     [IsoId("_m-ItsfNBEeCuA5Tr22BnwA_1949015826")]
     [DisplayName("Detailed Balance")]
     [IsoXmlTag("DtldBal")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceDetails6> DetailedBalance { get; }
 }

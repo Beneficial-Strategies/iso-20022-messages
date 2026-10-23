@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentOrSubClassIdentificati
 /// </summary>
 [IsoId("_BSnWYaaUEeqZmriXpMtonA")]
 [IsoXmlTag("ISINAndSubClss")]
+[IsoDisplayName(@"ISIN And Sub Class")]
 public interface IISINAndSubClass : IInstrumentOrSubClassIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IISINAndSubClass : IInstrumentOrSubClassIdentification2Choice, 
     [IsoId("_GWXkIaaUEeqZmriXpMtonA")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
     ISINOct2015Identifier ISIN { get; }
 
     /// <summary>

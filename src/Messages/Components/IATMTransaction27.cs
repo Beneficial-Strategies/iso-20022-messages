@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction for which the exception is sent.
 /// </summary>
 [IsoId("_KIj5ca5FEeWCgYcWSNgX5g")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction27 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IATMTransaction27 : IIsoComponent
     [IsoId("_KTvOta5FEeWCgYcWSNgX5g")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface IATMTransaction27 : IIsoComponent
     [IsoId("_fA9EoK5FEeWCgYcWSNgX5g")]
     [DisplayName("Exception")]
     [IsoXmlTag("Xcptn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<FailureReason8Code> Exception { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface IATMTransaction27 : IIsoComponent
     [IsoId("_57VncK5FEeWCgYcWSNgX5g")]
     [DisplayName("Exception Detail")]
     [IsoXmlTag("XcptnDtl")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> ExceptionDetail { get; }
 
     /// <summary>

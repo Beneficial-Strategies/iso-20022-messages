@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Settlement details to determine whether payment is a credit or debit.
 /// </summary>
 [IsoId("_Po-0AcQAEemsic1bQcEtLA")]
+[IsoDisplayName(@"Settlement Method 3 Choice")]
 public interface ISettlementMethod3Choice : IIsoChoice { }

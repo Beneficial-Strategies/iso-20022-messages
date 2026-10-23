@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 /// </summary>
 [IsoId("_9iijAHltEeG7BsjMvd1mEw_2131850524")]
 [IsoMessage("tsrv.016.001.01", "DmndRfslNtfctn", "urn:iso:std:iso:20022:tech:xsd:tsrv.016.001.01")]
+[Description(@"The DemandRefusalNotification message is sent to the beneficiary or presenter by the party obligated on the undertaking and to whom a demand for payment has been made, either directly or via one or more advising parties. It notifies the beneficiary or presenter that the demand has been refused.")]
+[IsoDisplayName(@"Demand Refusal Notification V")]
 public interface IDemandRefusalNotificationV01 : IOuterRecord
 {
     /// <summary>
@@ -20,6 +22,7 @@ public interface IDemandRefusalNotificationV01 : IOuterRecord
     [IsoId("_9iijAXltEeG7BsjMvd1mEw_1591105840")]
     [DisplayName("Demand Refusal Notification Details")]
     [IsoXmlTag("DmndRfslNtfctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDemandRefusal1> DemandRefusalNotificationDetails { get; }
 
     /// <summary>

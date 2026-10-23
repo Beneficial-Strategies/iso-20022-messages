@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 /// </summary>
 [IsoId("_STu1waFFEe-MRKYsaX6JDg")]
 [IsoMessage("catp.009.001.03", "ATMCmpltnAck", "urn:iso:std:iso:20022:tech:xsd:catp.009.001.03")]
+[IsoDisplayName(@"ATM Completion Acknowledgement V03")]
 public interface IATMCompletionAcknowledgementV03 : IOuterRecord
 {
     /// <summary>

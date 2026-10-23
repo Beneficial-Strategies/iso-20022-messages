@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Unique and unambiguous way to identify an organisation.
 /// </summary>
 [IsoId("_gEEbUeEpEemRzcIkmUETeA")]
+[IsoDisplayName(@"Organisation Identification")]
 public interface IOrganisationIdentification37 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IOrganisationIdentification37 : IIsoComponent
     [IsoId("_gSyz0-EpEemRzcIkmUETeA")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
+    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     AnyBICDec2014Identifier? AnyBIC { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface IOrganisationIdentification37 : IIsoComponent
     [IsoId("_gSyz1eEpEemRzcIkmUETeA")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LEI { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IOrganisationIdentification37 : IIsoComponent
     [IsoId("_hfVfceEpEemRzcIkmUETeA")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface IOrganisationIdentification37 : IIsoComponent
     [IsoId("_gSyz1-EpEemRzcIkmUETeA")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericOrganisationIdentification1> Other { get; }
 }

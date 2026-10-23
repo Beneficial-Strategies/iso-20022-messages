@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionType1Choice;
 /// </summary>
 [IsoId("_RCWL1tp-Ed-ak6NoX_4Aeg_2114144001")]
 [IsoXmlTag("InstrCxlId")]
+[IsoDisplayName(@"Instruction Cancellation Identification")]
 public interface IInstructionCancellationIdentification : IInstructionType1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,5 +19,7 @@ public interface IInstructionCancellationIdentification : IInstructionType1Choic
     [IsoId("_Q6vvANp-Ed-ak6NoX_4Aeg_1505878618")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 }

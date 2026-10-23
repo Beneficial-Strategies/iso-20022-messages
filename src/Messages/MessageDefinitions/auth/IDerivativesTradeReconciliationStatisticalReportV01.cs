@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "DerivsTradRcncltnSttstclRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.091.001.01"
 )]
+[Description(@"The DerivativesTradeReportReconciliationStatisticalReport message is sent by the trade repositories to the supervisory authority system, to report cumulative information within the reference period for the reconciliation status of the reported and outstanding derivatives.")]
+[IsoDisplayName(@"Derivatives Trade Reconciliation Statistical Report V")]
 public interface IDerivativesTradeReconciliationStatisticalReportV01 : IOuterRecord
 {
     /// <summary>
@@ -32,5 +34,6 @@ public interface IDerivativesTradeReconciliationStatisticalReportV01 : IOuterRec
     [IsoId("_wdKwOxWsEeqvRcdYcNYAVw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains the meta data for netting cut off update request: message identification, request servicer and a request type.
 /// </summary>
 [IsoId("_CnJABQN1Ee2-vqzwMUAewg")]
+[IsoDisplayName(@"Request Data")]
 public interface IRequestData2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IRequestData2 : IIsoComponent
     [IsoId("_CswfwQN1Ee2-vqzwMUAewg")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text MessageIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IRequestData2 : IIsoComponent
     [IsoId("_CswfwwN1Ee2-vqzwMUAewg")]
     [DisplayName("Request Type")]
     [IsoXmlTag("ReqTp")]
+    [IsoSimpleType(IsoSimpleType.Max4Text)]
+    [StringLength(4, MinimumLength = 1)]
     Max4Text RequestType { get; }
 
     /// <summary>
@@ -33,6 +38,7 @@ public interface IRequestData2 : IIsoComponent
     [IsoId("_CswfxQN1Ee2-vqzwMUAewg")]
     [DisplayName("Requested Activation Date")]
     [IsoXmlTag("ReqdActvtnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate RequestedActivationDate { get; }
 
     /// <summary>
@@ -57,5 +63,7 @@ public interface IRequestData2 : IIsoComponent
     [IsoId("_CswfywN1Ee2-vqzwMUAewg")]
     [DisplayName("Net Service Type")]
     [IsoXmlTag("NetSvcTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? NetServiceType { get; }
 }

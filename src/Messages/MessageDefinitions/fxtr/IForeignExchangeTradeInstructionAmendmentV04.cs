@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.fxtr;
     "FXTradInstrAmdmnt",
     "urn:iso:std:iso:20022:tech:xsd:fxtr.015.001.04"
 )]
+[Description(@"Scope||The ForeignExchangeTradeInstructionAmendment message is sent by a participant to a central settlement system to notify the amendment of the foreign exchange trade previously confirmed by the sender.||Usage||The ForeignExchangeTradeInstructionAmendment message is sent from a participant to a central settlement system to advise of the update of a previously sent notification. The ""Related Reference"" must be used to link it to the previous notification.")]
+[IsoDisplayName(@"Foreign Exchange Trade Instruction Amendment V")]
 public interface IForeignExchangeTradeInstructionAmendmentV04 : IOuterRecord
 {
     /// <summary>
@@ -107,5 +109,6 @@ public interface IForeignExchangeTradeInstructionAmendmentV04 : IOuterRecord
     [IsoId("_orEmDZRyEeak6e8_Fc5fQg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

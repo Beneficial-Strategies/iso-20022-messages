@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentification2Choice;
 /// Description of the market when no Market Identifier Code is available.
 /// </summary>
 [IsoId("_XK10Etp-Ed-ak6NoX_4Aeg_1009207657")]
+[IsoDisplayName(@"Description")]
 public interface IDescription : IMarketIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IDescription : IMarketIdentification2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 30 characters. It has a pattern that disables the use of characters that is not part of the character set X, that is, that is not a-z A-Z / - ? : ( ) . , ‘ + , and disable the use of slash &quot;/&quot; at the beginning and end of line and double slash &quot;//&quot; within the line.
     /// </summary>
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
+    [StringLength(30, MinimumLength = 1)]
     RestrictedFINXMax30Text Value { get; }
 }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// </summary>
 [IsoId("_R3M1EzEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("acmt.023.001.04", "IdVrfctnReq", "urn:iso:std:iso:20022:tech:xsd:acmt.023.001.04")]
+[IsoDisplayName(@"Identification Verification Request V04")]
 public interface IIdentificationVerificationRequestV04 : IOuterRecord
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IIdentificationVerificationRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIdentificationVerification5> Verification { get; }
 
     /// <summary>
@@ -32,5 +34,6 @@ public interface IIdentificationVerificationRequestV04 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

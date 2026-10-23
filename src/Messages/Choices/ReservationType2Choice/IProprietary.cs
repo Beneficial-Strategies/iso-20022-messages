@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationType2Choice;
 /// Liquidity transfer request type, in a proprietary form.
 /// </summary>
 [IsoId("_5xhOIxUNEeusI4XK3oQSyg")]
+[IsoDisplayName(@"Proprietary")]
 public interface IProprietary : IReservationType2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IProprietary : IReservationType2Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Prtry")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

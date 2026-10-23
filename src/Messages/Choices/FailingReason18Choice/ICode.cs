@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingReason18Choice;
 /// <summary>
 /// Code.
 /// </summary>
+[IsoDisplayName(@"Code")]
 public interface ICode : IFailingReason18Choice, IIsoChoiceVariant
 {
     /// <summary>

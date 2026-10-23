@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficiaryCertificationType1Cho
 /// Standard code to specify the type of certification required.
 /// </summary>
 [IsoId("_Q0CqFtp-Ed-ak6NoX_4Aeg_-41633414")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBeneficiaryCertificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

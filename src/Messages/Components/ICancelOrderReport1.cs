@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Cancel Order Report1.
 /// </summary>
 [IsoId("_8nSgMGsYEe25qph5Y8_eYQ")]
+[IsoDisplayName(@"Cancel Order Report1")]
 public interface ICancelOrderReport1 : IIsoComponent
 {
     /// <summary>

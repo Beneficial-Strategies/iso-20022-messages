@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provide further details specific to the individual transaction(s) included in the message.
 /// </summary>
 [IsoId("_g4Cd4dcZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Credit Transfer Transaction")]
 public interface ICreditTransferTransaction56 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ICreditTransferTransaction56 : IIsoComponent
     [IsoId("_g5eod9cZEeqRFcf2R4bPBw")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -268,6 +270,7 @@ public interface ICreditTransferTransaction56 : IIsoComponent
     [IsoId("_g5fPftcZEeqRFcf2R4bPBw")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForCreditorAgent3> InstructionForCreditorAgent { get; }
 
     /// <summary>
@@ -276,6 +279,7 @@ public interface ICreditTransferTransaction56 : IIsoComponent
     [IsoId("_g5fPgNcZEeqRFcf2R4bPBw")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
 
     /// <summary>
@@ -308,5 +312,6 @@ public interface ICreditTransferTransaction56 : IIsoComponent
     [IsoId("_g5fPiNcZEeqRFcf2R4bPBw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

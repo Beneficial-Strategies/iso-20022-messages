@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Indicates whether transaction is reported for the first time.
 /// </summary>
 [IsoId("_zvSsgcg3EeuGrNSsxk3B0A")]
+[IsoDisplayName(@"Trade New Transaction")]
 public interface ITradeNewTransaction13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITradeNewTransaction13 : IIsoComponent
     [IsoId("_zwwsEcg3EeuGrNSsxk3B0A")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -57,5 +60,6 @@ public interface ITradeNewTransaction13 : IIsoComponent
     [IsoId("_zwwsG8g3EeuGrNSsxk3B0A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

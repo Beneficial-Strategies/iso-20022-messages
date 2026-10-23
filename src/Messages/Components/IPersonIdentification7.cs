@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of unique and unambiguous ways to identify a person.
 /// </summary>
 [IsoId("_De5uQS_mEeO4w-IWHJMI9g")]
+[IsoDisplayName(@"Person Identification")]
 public interface IPersonIdentification7 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPersonIdentification7 : IIsoComponent
     [IsoId("_apyOkC_oEeO4w-IWHJMI9g")]
     [DisplayName("Drivers License Number")]
     [IsoXmlTag("DrvrsLicNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DriversLicenseNumber { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPersonIdentification7 : IIsoComponent
     [IsoId("_kk_zIC_rEeO4w-IWHJMI9g")]
     [DisplayName("Customer Number")]
     [IsoXmlTag("CstmrNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CustomerNumber { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPersonIdentification7 : IIsoComponent
     [IsoId("_v1poAC_rEeO4w-IWHJMI9g")]
     [DisplayName("Social Security Number")]
     [IsoXmlTag("SclSctyNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SocialSecurityNumber { get; }
 
     /// <summary>
@@ -41,6 +48,8 @@ public interface IPersonIdentification7 : IIsoComponent
     [IsoId("_4QqFcC_rEeO4w-IWHJMI9g")]
     [DisplayName("Alien Registration Number")]
     [IsoXmlTag("AlnRegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? AlienRegistrationNumber { get; }
 
     /// <summary>
@@ -49,6 +58,8 @@ public interface IPersonIdentification7 : IIsoComponent
     [IsoId("_9W60oC_rEeO4w-IWHJMI9g")]
     [DisplayName("Passport Number")]
     [IsoXmlTag("PsptNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PassportNumber { get; }
 
     /// <summary>
@@ -57,6 +68,8 @@ public interface IPersonIdentification7 : IIsoComponent
     [IsoId("_Go-O0C_sEeO4w-IWHJMI9g")]
     [DisplayName("Tax Identification Number")]
     [IsoXmlTag("TaxIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TaxIdentificationNumber { get; }
 
     /// <summary>
@@ -65,6 +78,8 @@ public interface IPersonIdentification7 : IIsoComponent
     [IsoId("_Lx6ekC_sEeO4w-IWHJMI9g")]
     [DisplayName("Identity Card Number")]
     [IsoXmlTag("IdntyCardNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? IdentityCardNumber { get; }
 
     /// <summary>
@@ -73,6 +88,8 @@ public interface IPersonIdentification7 : IIsoComponent
     [IsoId("_Qic1YC_sEeO4w-IWHJMI9g")]
     [DisplayName("Employer Identification Number")]
     [IsoXmlTag("MplyrIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EmployerIdentificationNumber { get; }
 
     /// <summary>
@@ -81,6 +98,8 @@ public interface IPersonIdentification7 : IIsoComponent
     [IsoId("_WV728C_sEeO4w-IWHJMI9g")]
     [DisplayName("Employee Identification Number")]
     [IsoXmlTag("MplyeeIdNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EmployeeIdentificationNumber { get; }
 
     /// <summary>
@@ -89,6 +108,8 @@ public interface IPersonIdentification7 : IIsoComponent
     [IsoId("_T1UacEtuEeOC3MFxIpMwug")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max256Text)]
+    [StringLength(256, MinimumLength = 1)]
     Max256Text? EmailAddress { get; }
 
     /// <summary>
@@ -105,5 +126,6 @@ public interface IPersonIdentification7 : IIsoComponent
     [IsoId("_DtoGxS_mEeO4w-IWHJMI9g")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification4> Other { get; }
 }

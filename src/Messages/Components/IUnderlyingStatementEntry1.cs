@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements used to provide information on the underlying statement entry.
 /// </summary>
 [IsoId("_T9DpcNp-Ed-ak6NoX_4Aeg_1694596688")]
+[IsoDisplayName(@"Underlying Statement Entry")]
 public interface IUnderlyingStatementEntry1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IUnderlyingStatementEntry1 : IIsoComponent
     [IsoId("_T9Dpctp-Ed-ak6NoX_4Aeg_1694596697")]
     [DisplayName("Original Statement Identification")]
     [IsoXmlTag("OrgnlStmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalStatementIdentification { get; }
 
     /// <summary>
@@ -33,5 +36,7 @@ public interface IUnderlyingStatementEntry1 : IIsoComponent
     [IsoId("_T9Dpc9p-Ed-ak6NoX_4Aeg_1694596718")]
     [DisplayName("Original Entry Identification")]
     [IsoXmlTag("OrgnlNtryId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEntryIdentification { get; }
 }

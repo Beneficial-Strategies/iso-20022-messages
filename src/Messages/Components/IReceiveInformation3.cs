@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parameters applied to the settlement of a security transfer.
 /// </summary>
 [IsoId("_QWYdsdp-Ed-ak6NoX_4Aeg_271578271")]
+[IsoDisplayName(@"Receive Information")]
 public interface IReceiveInformation3 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface IReceiveInformation3 : IIsoComponent
     [IsoId("_QWYds9p-Ed-ak6NoX_4Aeg_-1171433122")]
     [DisplayName("Stamp Duty Indicator")]
     [IsoXmlTag("StmpDtyInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator StampDutyIndicator { get; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public interface IReceiveInformation3 : IIsoComponent
     [IsoId("_QWYdttp-Ed-ak6NoX_4Aeg_-60967180")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharge20> ChargeDetails { get; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public interface IReceiveInformation3 : IIsoComponent
     [IsoId("_QWYdt9p-Ed-ak6NoX_4Aeg_1366796826")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommission12> CommissionDetails { get; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public interface IReceiveInformation3 : IIsoComponent
     [IsoId("_QWYduNp-Ed-ak6NoX_4Aeg_1371413516")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITax15> TaxDetails { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface IReceiveInformation3 : IIsoComponent
     [IsoId("_QWiOsNp-Ed-ak6NoX_4Aeg_271578296")]
     [DisplayName("Physical Transfer Indicator")]
     [IsoXmlTag("PhysTrfInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator PhysicalTransferIndicator { get; }
 
     /// <summary>

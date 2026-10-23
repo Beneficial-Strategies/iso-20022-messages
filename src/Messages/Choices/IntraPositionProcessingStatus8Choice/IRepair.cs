@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus8Ch
 /// Instruction/Request is accepted but in repair.
 /// </summary>
 [IsoId("_65NaKffUEeiNZp_PtLohLw")]
+[IsoDisplayName(@"Repair")]
 public interface IRepair : IIntraPositionProcessingStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

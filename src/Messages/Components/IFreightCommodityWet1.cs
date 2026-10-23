@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Defines commodity sub-product attributes of a freight derivative of type wet.
 /// </summary>
 [IsoId("_zyaAIFrcEeWN79Bl6BUd3g")]
+[IsoDisplayName(@"Freight Commodity Wet")]
 public interface IFreightCommodityWet1 : IIsoComponent
 {
     /// <summary>

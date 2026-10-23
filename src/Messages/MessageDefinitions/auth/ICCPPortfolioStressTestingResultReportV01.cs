@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.auth;
     "CCPPrtflStrssTstgRsltRpt",
     "urn:iso:std:iso:20022:tech:xsd:auth.058.001.01"
 )]
+[Description(@"The CCPPortfolioStressTestingResultReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the results of the stress testing carried out by the central counterparty on clearing member positions.")]
+[IsoDisplayName(@"CCP Portfolio Stress Testing Result Report V")]
 public interface ICCPPortfolioStressTestingResultReportV01 : IOuterRecord
 {
     /// <summary>
@@ -24,6 +26,7 @@ public interface ICCPPortfolioStressTestingResultReportV01 : IOuterRecord
     [IsoId("_YI3SeeUSEem3X-64-NKdqg")]
     [DisplayName("Scenario Stress Test Result")]
     [IsoXmlTag("ScnroStrssTstRslt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IScenarioStressTestResult1> ScenarioStressTestResult { get; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public interface ICCPPortfolioStressTestingResultReportV01 : IOuterRecord
     [IsoId("_YI3Se-USEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Rejected Status11.
 /// </summary>
 [IsoId("__DbpoYWAEe-ufOxNNkEXmg")]
+[IsoDisplayName(@"Rejected Status11")]
 public interface IRejectedStatus11 : IIsoComponent
 {
     /// <summary>

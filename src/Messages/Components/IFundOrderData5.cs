@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Extract of trade data for an investment fund order.
 /// </summary>
 [IsoId("_JSDipTbtEead9bDRE_1DAQ")]
+[IsoDisplayName(@"Fund Order Data")]
 public interface IFundOrderData5 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,7 @@ public interface IFundOrderData5 : IIsoComponent
     [IsoId("_JrNCVTbtEead9bDRE_1DAQ")]
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? UnitsNumber { get; }
 
     /// <summary>
@@ -63,6 +65,7 @@ public interface IFundOrderData5 : IIsoComponent
     [IsoId("_JrNCWzbtEead9bDRE_1DAQ")]
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? HoldingsRedemptionRate { get; }
 
     /// <summary>

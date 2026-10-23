@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information on the remittance advice.
 /// </summary>
 [IsoId("_duvyIaMDEeKl_NvHIICqIw")]
+[IsoDisplayName(@"Remittance Location")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IRemittanceLocation3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IRemittanceLocation3 : IIsoComponent
     [IsoId("_d5UqdaMDEeKl_NvHIICqIw")]
     [DisplayName("Remittance Identification")]
     [IsoXmlTag("RmtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RemittanceIdentification { get; }
 
     /// <summary>
@@ -25,6 +29,7 @@ public interface IRemittanceLocation3 : IIsoComponent
     [IsoId("_mM_w0KMDEeKl_NvHIICqIw")]
     [DisplayName("Remittance Location Details")]
     [IsoXmlTag("RmtLctnDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocationDetails1> RemittanceLocationDetails { get; }
 
     /// <summary>

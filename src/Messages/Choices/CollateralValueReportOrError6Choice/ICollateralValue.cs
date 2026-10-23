@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError6Cho
 /// </summary>
 [IsoId("_EP0oozpyEemk2e6qGBk8IQ")]
 [IsoXmlTag("CollVal")]
+[IsoDisplayName(@"Collateral Value")]
 public interface ICollateralValue : ICollateralValueReportOrError6Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICollateralValue : ICollateralValueReportOrError6Choice, IIsoCh
     [IsoId("_EbS40TpyEemk2e6qGBk8IQ")]
     [DisplayName("Data Access Time")]
     [IsoXmlTag("DataAccsTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime DataAccessTime { get; }
 
     /// <summary>
@@ -42,5 +44,6 @@ public interface ICollateralValue : ICollateralValueReportOrError6Choice, IIsoCh
     [IsoId("_EbS41zpyEemk2e6qGBk8IQ")]
     [DisplayName("Securities")]
     [IsoXmlTag("Scties")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecurityCharacteristics3> Securities { get; }
 }

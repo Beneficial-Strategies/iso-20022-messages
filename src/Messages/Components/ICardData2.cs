@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Non-protected sensitive data associated with the card or payment token performing the transaction.
 /// </summary>
 [IsoId("_77QEcVaJEeeFltjJxERUxw")]
+[IsoDisplayName(@"Card Data")]
 public interface ICardData2 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ICardData2 : IIsoComponent
     [IsoId("_8HdUcVaJEeeFltjJxERUxw")]
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
+    [IsoSimpleType(IsoSimpleType.Max19NumericText)]
     Max19NumericText? PAN { get; }
 
     /// <summary>
@@ -27,6 +29,7 @@ public interface ICardData2 : IIsoComponent
     [IsoId("_8HdUc1aJEeeFltjJxERUxw")]
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
     Min2Max3NumericText? CardSequenceNumber { get; }
 
     /// <summary>
@@ -38,6 +41,8 @@ public interface ICardData2 : IIsoComponent
     [IsoId("_zClc8fGpEeiGNursv3uE_g")]
     [DisplayName("Payment Account Reference")]
     [IsoXmlTag("PmtAcctRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentAccountReference { get; }
 
     /// <summary>
@@ -46,5 +51,7 @@ public interface ICardData2 : IIsoComponent
     [IsoId("_SjR2gZaQEemfCcEf5rVTyg")]
     [DisplayName("Card Portfolio Identifier")]
     [IsoXmlTag("CardPrtflIdr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CardPortfolioIdentifier { get; }
 }

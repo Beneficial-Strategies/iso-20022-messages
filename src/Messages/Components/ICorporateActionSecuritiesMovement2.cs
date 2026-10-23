@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about the securities movement resulting from the election instruction.
 /// </summary>
 [IsoId("_UIYIoNp-Ed-ak6NoX_4Aeg_-758299282")]
+[IsoDisplayName(@"Corporate Action Securities Movement")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface ICorporateActionSecuritiesMovement2 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +35,8 @@ public interface ICorporateActionSecuritiesMovement2 : IIsoComponent
     [IsoId("_UIYIo9p-Ed-ak6NoX_4Aeg_-266143599")]
     [DisplayName("Posting Identification")]
     [IsoXmlTag("PstngId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PostingIdentification { get; }
 
     /// <summary>
@@ -49,5 +53,8 @@ public interface ICorporateActionSecuritiesMovement2 : IIsoComponent
     [IsoId("_UIYIpdp-Ed-ak6NoX_4Aeg_1796783257")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISecuritiesAccount9> AccountDetails { get; }
 }

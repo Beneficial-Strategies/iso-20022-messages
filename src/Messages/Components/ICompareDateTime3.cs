@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a date and time.
 /// </summary>
 [IsoId("_vvGj4a5hEeuo-IflVgGqiA")]
+[IsoDisplayName(@"Compare Date Time")]
 public interface ICompareDateTime3 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICompareDateTime3 : IIsoComponent
     [IsoId("_v-wJca5hEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? Value1 { get; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public interface ICompareDateTime3 : IIsoComponent
     [IsoId("_v-wJc65hEeuo-IflVgGqiA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? Value2 { get; }
 }

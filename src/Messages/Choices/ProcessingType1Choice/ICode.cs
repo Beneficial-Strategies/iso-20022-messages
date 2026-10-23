@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingType1Choice;
 /// Type of processing restrictions, in a coded form.
 /// </summary>
 [IsoId("_705FQ6MgEeCJ6YNENx4h-w_-423447016")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProcessingType1Choice, IIsoChoiceVariant
 {
     /// <summary>

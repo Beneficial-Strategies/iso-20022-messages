@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Retrieval Fulfilment Instructions3.
 /// </summary>
 [IsoId("_NRcA0YVyEe6odei_lsRKtw")]
+[IsoDisplayName(@"Retrieval Fulfilment Instructions3")]
 public interface IRetrievalFulfilmentInstructions3 : IIsoComponent
 {
     /// <summary>
@@ -16,6 +17,7 @@ public interface IRetrievalFulfilmentInstructions3 : IIsoComponent
     /// </summary>
     [DisplayName("Requested Method")]
     [IsoXmlTag("ReqdMtd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> RequestedMethod { get; }
 
     /// <summary>
@@ -23,6 +25,7 @@ public interface IRetrievalFulfilmentInstructions3 : IIsoComponent
     /// </summary>
     [DisplayName("Established Method")]
     [IsoXmlTag("EstblishdMtd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<Max35Text> EstablishedMethod { get; }
 
     /// <summary>
@@ -58,6 +61,7 @@ public interface IRetrievalFulfilmentInstructions3 : IIsoComponent
     /// </summary>
     [DisplayName("Target")]
     [IsoXmlTag("Trgt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<UserInterface8Code> Target { get; }
 
     /// <summary>

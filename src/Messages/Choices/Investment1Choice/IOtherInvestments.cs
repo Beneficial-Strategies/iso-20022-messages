@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice;
 /// </summary>
 [IsoId("_MRa04LLnEeavNMum-T1eEA")]
 [IsoXmlTag("OthrInvstmts")]
+[IsoDisplayName(@"Other Investments")]
 public interface IOtherInvestments : IInvestment1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IOtherInvestments : IInvestment1Choice, IIsoChoiceVariant
     [IsoId("_YaCMgLLnEeavNMum-T1eEA")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Description { get; }
 
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Totals Set2.
 /// </summary>
 [IsoId("_7yAJQZ9XEe-nbM0aSPcoiQ")]
+[IsoDisplayName(@"Transaction Totals Set2")]
 public interface ITransactionTotalsSet2 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface ITransactionTotalsSet2 : IIsoComponent
     /// </summary>
     [DisplayName("Sponsored Merchant")]
     [IsoXmlTag("SpnsrdMrchnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisation26> SponsoredMerchant { get; }
 
     /// <summary>
@@ -93,5 +95,6 @@ public interface ITransactionTotalsSet2 : IIsoComponent
     /// </summary>
     [DisplayName("Loyalty Transaction Total")]
     [IsoXmlTag("LltyTxTtl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoyaltyTransactionTotals1> LoyaltyTransactionTotal { get; }
 }

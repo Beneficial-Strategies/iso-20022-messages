@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional action to perform.
 /// </summary>
 [IsoId("_rz-88EXVEeegp_DADCe7HQ")]
+[IsoDisplayName(@"Additional Action")]
 public interface IAdditionalAction1 : IIsoComponent
 {
     /// <summary>
@@ -33,6 +34,8 @@ public interface IAdditionalAction1 : IIsoComponent
     [IsoId("_Hk9cMFKdEeeFcfYfFkVztg")]
     [DisplayName("Other Destination")]
     [IsoXmlTag("OthrDstn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherDestination { get; }
 
     /// <summary>
@@ -49,6 +52,8 @@ public interface IAdditionalAction1 : IIsoComponent
     [IsoId("_W88S0FKdEeeFcfYfFkVztg")]
     [DisplayName("Other Destination Type")]
     [IsoXmlTag("OthrDstnTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherDestinationType { get; }
 
     /// <summary>
@@ -57,6 +62,8 @@ public interface IAdditionalAction1 : IIsoComponent
     [IsoId("_aK9bUEXWEeegp_DADCe7HQ")]
     [DisplayName("Destination Address")]
     [IsoXmlTag("DstnAdr")]
+    [IsoSimpleType(IsoSimpleType.Max70Text)]
+    [StringLength(70, MinimumLength = 1)]
     Max70Text? DestinationAddress { get; }
 
     /// <summary>
@@ -73,6 +80,8 @@ public interface IAdditionalAction1 : IIsoComponent
     [IsoId("_kIV9IFKdEeeFcfYfFkVztg")]
     [DisplayName("Other Format")]
     [IsoXmlTag("OthrFrmt")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherFormat { get; }
 
     /// <summary>

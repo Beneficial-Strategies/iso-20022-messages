@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the clearing of the contract.
 /// </summary>
 [IsoId("_BIv4sexYEemioJdkOVFBdw")]
+[IsoDisplayName(@"Trade Clearing")]
 public interface ITradeClearing5 : IIsoComponent
 {
     /// <summary>
@@ -34,5 +35,6 @@ public interface ITradeClearing5 : IIsoComponent
     [IsoId("_BT5_1exYEemioJdkOVFBdw")]
     [DisplayName("Intra Group")]
     [IsoXmlTag("IntraGrp")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? IntraGroup { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Location on the Earth specified by two numbers representing vertical and horizontal position.
 /// </summary>
 [IsoId("_O80mgIn5EeShMpas3885ww")]
+[IsoDisplayName(@"Geographic Coordinates")]
 public interface IGeographicCoordinates1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IGeographicCoordinates1 : IIsoComponent
     [IsoId("_WtE2wIn5EeShMpas3885ww")]
     [DisplayName("Latitude")]
     [IsoXmlTag("Lat")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text Latitude { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IGeographicCoordinates1 : IIsoComponent
     [IsoId("_a-iE4In5EeShMpas3885ww")]
     [DisplayName("Longitude")]
     [IsoXmlTag("Long")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text Longitude { get; }
 }

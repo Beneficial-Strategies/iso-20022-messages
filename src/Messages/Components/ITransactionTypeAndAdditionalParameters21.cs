@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Type And Additional Parameters21.
 /// </summary>
 [IsoId("_AD08MYVsEe-Pv9KR9bv9IA")]
+[IsoDisplayName(@"Transaction Type And Additional Parameters21")]
 public interface ITransactionTypeAndAdditionalParameters21 : IIsoComponent
 {
     /// <summary>

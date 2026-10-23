@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData1Choice;
 /// </summary>
 [IsoId("_CXmpZ1RtEe23M4WgERMsYw")]
 [IsoXmlTag("Initn")]
+[IsoDisplayName(@"Initiation")]
 public interface IInitiation : IUnderlyingData1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IInitiation : IUnderlyingData1Choice, IIsoChoiceVariant
     [IsoId("_37wvV3fIEe2A6pitLvwC_g")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalPaymentInformationIdentification { get; }
 
     /// <summary>
@@ -34,6 +37,8 @@ public interface IInitiation : IUnderlyingData1Choice, IIsoChoiceVariant
     [IsoId("_37wvWXfIEe2A6pitLvwC_g")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -42,6 +47,8 @@ public interface IInitiation : IUnderlyingData1Choice, IIsoChoiceVariant
     [IsoId("_37wvW3fIEe2A6pitLvwC_g")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -50,6 +57,7 @@ public interface IInitiation : IUnderlyingData1Choice, IIsoChoiceVariant
     [IsoId("_37wvXXfIEe2A6pitLvwC_g")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? OriginalUETR { get; }
 
     /// <summary>
@@ -74,6 +82,7 @@ public interface IInitiation : IUnderlyingData1Choice, IIsoChoiceVariant
     [IsoId("_37wvY3fIEe2A6pitLvwC_g")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 
     /// <summary>

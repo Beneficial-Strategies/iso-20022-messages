@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction Report8.
 /// </summary>
 [IsoId("_1wbYqTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Transaction Report8")]
 public interface ITransactionReport8 : IIsoComponent
 {
     /// <summary>

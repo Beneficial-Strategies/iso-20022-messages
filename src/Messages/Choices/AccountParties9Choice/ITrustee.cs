@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties9Choice;
 /// </summary>
 [IsoId("_PfIHlSCBEeWhHbfCMWc1cw")]
 [IsoXmlTag("Trstee")]
+[IsoDisplayName(@"Trustee")]
 public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -34,6 +35,7 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_Nv_sTyCBEeWhHbfCMWc1cw")]
     [DisplayName("Modified Investor Profile Validation")]
     [IsoXmlTag("ModfdInvstrPrflVldtn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IModificationScope27> ModifiedInvestorProfileValidation { get; }
 
     /// <summary>
@@ -42,6 +44,7 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_Nv_sRyCBEeWhHbfCMWc1cw")]
     [DisplayName("Ownership Beneficiary Rate")]
     [IsoXmlTag("OwnrshBnfcryRate")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate? OwnershipBeneficiaryRate { get; }
 
     /// <summary>
@@ -50,6 +53,8 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_Nv_sSSCBEeWhHbfCMWc1cw")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ClientIdentification { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_Nv_sSyCBEeWhHbfCMWc1cw")]
     [DisplayName("Fiscal Exemption")]
     [IsoXmlTag("FsclXmptn")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FiscalExemption { get; }
 
     /// <summary>
@@ -66,6 +72,7 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_Nv_sTSCBEeWhHbfCMWc1cw")]
     [DisplayName("Signatory Right Indicator")]
     [IsoXmlTag("SgntryRghtInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SignatoryRightIndicator { get; }
 
     /// <summary>
@@ -82,6 +89,7 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_Nv_sUyCBEeWhHbfCMWc1cw")]
     [DisplayName("Notification")]
     [IsoXmlTag("Ntfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INotification2> Notification { get; }
 
     /// <summary>
@@ -90,6 +98,7 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_Nv_sVSCBEeWhHbfCMWc1cw")]
     [DisplayName("FATCA Form Type")]
     [IsoXmlTag("FATCAFormTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFATCAForm1Choice> FATCAFormType { get; }
 
     /// <summary>
@@ -98,6 +107,7 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_Nv_sVyCBEeWhHbfCMWc1cw")]
     [DisplayName("FATCA Status")]
     [IsoXmlTag("FATCASts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFATCAStatus2> FATCAStatus { get; }
 
     /// <summary>
@@ -106,6 +116,7 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_lNqiuyCkEeWJd9HF2tO7BA")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification82> OtherIdentification { get; }
 
     /// <summary>
@@ -122,6 +133,7 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_lNqivCCkEeWJd9HF2tO7BA")]
     [DisplayName("Tax Reporting")]
     [IsoXmlTag("TaxRptg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxReporting1> TaxReporting { get; }
 
     /// <summary>
@@ -186,6 +198,8 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_vcrh4SFIEeWgV9SQSyaAog")]
     [DisplayName("Electronic Mailing Service Reference")]
     [IsoXmlTag("ElctrncMlngSvcRef")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? ElectronicMailingServiceReference { get; }
 
     /// <summary>
@@ -194,6 +208,7 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_X0XAw1xkEeWvPv3PXpS3fw")]
     [DisplayName("Primary Communication Address")]
     [IsoXmlTag("PmryComAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommunicationAddress6> PrimaryCommunicationAddress { get; }
 
     /// <summary>
@@ -202,6 +217,7 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_X0XAxFxkEeWvPv3PXpS3fw")]
     [DisplayName("Secondary Communication Address")]
     [IsoXmlTag("ScndryComAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommunicationAddress6> SecondaryCommunicationAddress { get; }
 
     /// <summary>
@@ -226,5 +242,6 @@ public interface ITrustee : IAccountParties9Choice, IIsoChoiceVariant
     [IsoId("_6Ea-UYkfEeWFCoSYeBm65Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountRestrictions1> AdditionalInformation { get; }
 }

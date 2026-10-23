@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Certificate information provided for a given corporate action instruction.
 /// </summary>
 [IsoId("_OBTl0MViEeeprYdSN88o0Q")]
+[IsoDisplayName(@"Corporate Action Certificate SD")]
 public interface ICorporateActionCertificateSD1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionCertificateSD1 : IIsoComponent
     [IsoId("_HsduNMVjEeeprYdSN88o0Q")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
+    [IsoSimpleType(IsoSimpleType.Max15AlphaNumericText)]
+    [StringLength(15, MinimumLength = 1)]
     Max15AlphaNumericText CertificateNumber { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ICorporateActionCertificateSD1 : IIsoComponent
     [IsoId("_kj2zcMVnEeeprYdSN88o0Q")]
     [DisplayName("Certificate Sequence Number")]
     [IsoXmlTag("CertSeqNb")]
+    [IsoSimpleType(IsoSimpleType.Max15AlphaNumericText)]
+    [StringLength(15, MinimumLength = 1)]
     Max15AlphaNumericText? CertificateSequenceNumber { get; }
 
     /// <summary>
@@ -33,5 +38,6 @@ public interface ICorporateActionCertificateSD1 : IIsoComponent
     [IsoId("_uY8pQMVnEeeprYdSN88o0Q")]
     [DisplayName("Certificate Registration Name")]
     [IsoXmlTag("CertRegnNm")]
+    [IsoSimpleType(IsoSimpleType.Max30Text)]
     Max30Text? CertificateRegistrationName { get; }
 }

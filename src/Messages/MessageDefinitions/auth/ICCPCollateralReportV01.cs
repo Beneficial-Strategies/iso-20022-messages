@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_5aP-IeUTEem3X-64-NKdqg")]
 [IsoMessage("auth.067.001.01", "CCPCollRpt", "urn:iso:std:iso:20022:tech:xsd:auth.067.001.01")]
+[Description(@"The CCPCollateralReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the collateral posted by clearing members at the central counterparty.")]
+[IsoDisplayName(@"CCP Collateral Report V")]
 public interface ICCPCollateralReportV01 : IOuterRecord
 {
     /// <summary>
@@ -20,6 +22,7 @@ public interface ICCPCollateralReportV01 : IOuterRecord
     [IsoId("_5aP-KeUTEem3X-64-NKdqg")]
     [DisplayName("Collateral Account Owner")]
     [IsoXmlTag("CollAcctOwnr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICollateralAccount4> CollateralAccountOwner { get; }
 
     /// <summary>
@@ -28,5 +31,6 @@ public interface ICCPCollateralReportV01 : IOuterRecord
     [IsoId("_5aP-K-UTEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

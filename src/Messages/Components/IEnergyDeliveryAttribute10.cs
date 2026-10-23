@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to energy derivatives attributes.
 /// </summary>
 [IsoId("_iIa_kQzwEe2YoLD-1vFj0g")]
+[IsoDisplayName(@"Energy Delivery Attribute")]
 public interface IEnergyDeliveryAttribute10 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IEnergyDeliveryAttribute10 : IIsoComponent
     [IsoId("_iJWMoQzwEe2YoLD-1vFj0g")]
     [DisplayName("Delivery Interval")]
     [IsoXmlTag("DlvryIntrvl")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITimePeriodDetails1> DeliveryInterval { get; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public interface IEnergyDeliveryAttribute10 : IIsoComponent
     [IsoId("_iJWMqQzwEe2YoLD-1vFj0g")]
     [DisplayName("Week Day")]
     [IsoXmlTag("WkDay")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<WeekDay3Code> WeekDay { get; }
 
     /// <summary>

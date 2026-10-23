@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Ordering criteria for the transaction report.
 /// </summary>
 [IsoId("_1C028N6QEeiwsev40qZGEQ")]
+[IsoDisplayName(@"Criteria Order")]
 public interface ICriteriaOrder1 : IIsoComponent
 {
     /// <summary>
@@ -17,5 +18,7 @@ public interface ICriteriaOrder1 : IIsoComponent
     [IsoId("_DdfwwN6REeiwsev40qZGEQ")]
     [DisplayName("Target")]
     [IsoXmlTag("Trgt")]
+    [IsoSimpleType(IsoSimpleType.Max500Text)]
+    [StringLength(500, MinimumLength = 1)]
     Max500Text Target { get; }
 }

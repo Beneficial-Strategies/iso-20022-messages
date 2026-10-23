@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the old and new values for a technical address identification.
 /// </summary>
 [IsoId("_pAXiM2jSEeiRg5NzP0jkQg")]
+[IsoDisplayName(@"Update Log Technical Address")]
 public interface IUpdateLogTechnicalAddress1 : IIsoComponent
 {
     /// <summary>

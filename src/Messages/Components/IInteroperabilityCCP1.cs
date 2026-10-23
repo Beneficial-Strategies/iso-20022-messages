@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Interoperability CCP1.
 /// </summary>
 [IsoId("_CX1PMFnFEe21_Ij7nUB3IA")]
+[IsoDisplayName(@"Interoperability CCP1")]
 public interface IInteroperabilityCCP1 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IInteroperabilityCCP1 : IIsoComponent
     /// </summary>
     [DisplayName("Total Initial Margin")]
     [IsoXmlTag("TtlInitlMrgn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveCurrencyAndAmount> TotalInitialMargin { get; }
 
     /// <summary>
@@ -37,6 +39,7 @@ public interface IInteroperabilityCCP1 : IIsoComponent
     /// </summary>
     [DisplayName("Gross Notional Amount")]
     [IsoXmlTag("GrssNtnlAmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ActiveCurrencyAnd24Amount> GrossNotionalAmount { get; }
 
     /// <summary>
@@ -44,5 +47,6 @@ public interface IInteroperabilityCCP1 : IIsoComponent
     /// </summary>
     [DisplayName("Asset Holding")]
     [IsoXmlTag("AsstHldg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAssetHolding3> AssetHolding { get; }
 }

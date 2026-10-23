@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data to be present in a dispute.
 /// </summary>
 [IsoId("_k5AXMENiEeiut6dbx3wnBg")]
+[IsoDisplayName(@"Dispute Data")]
 public interface IDisputeData1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IDisputeData1 : IIsoComponent
     [IsoId("_21nGsENiEeiut6dbx3wnBg")]
     [DisplayName("Presentment Cycle")]
     [IsoXmlTag("PresntmntCycl")]
+    [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
     Exact1NumericText? PresentmentCycle { get; }
 
     /// <summary>
@@ -25,6 +27,8 @@ public interface IDisputeData1 : IIsoComponent
     [IsoId("_dBw4sENjEeiut6dbx3wnBg")]
     [DisplayName("Dispute Condition")]
     [IsoXmlTag("DsptCond")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DisputeCondition { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IDisputeData1 : IIsoComponent
     [IsoId("_2aqaoENjEeiut6dbx3wnBg")]
     [DisplayName("Dispute Status")]
     [IsoXmlTag("DsptSts")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DisputeStatus { get; }
 
     /// <summary>
@@ -41,6 +47,7 @@ public interface IDisputeData1 : IIsoComponent
     [IsoId("_MZfCYENkEeiut6dbx3wnBg")]
     [DisplayName("Partial Dispute")]
     [IsoXmlTag("PrtlDspt")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? PartialDispute { get; }
 
     /// <summary>
@@ -49,6 +56,7 @@ public interface IDisputeData1 : IIsoComponent
     [IsoId("_qnBp9UNiEeiut6dbx3wnBg")]
     [DisplayName("Dispute Reference")]
     [IsoXmlTag("DsptRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDisputeReference1> DisputeReference { get; }
 
     /// <summary>
@@ -57,6 +65,8 @@ public interface IDisputeData1 : IIsoComponent
     [IsoId("_qnBp-UNiEeiut6dbx3wnBg")]
     [DisplayName("Documentation Status")]
     [IsoXmlTag("DcmnttnSts")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? DocumentationStatus { get; }
 
     /// <summary>
@@ -65,6 +75,8 @@ public interface IDisputeData1 : IIsoComponent
     [IsoId("_33w1UENkEeiut6dbx3wnBg")]
     [DisplayName("Additional Dispute Data")]
     [IsoXmlTag("AddtlDsptData")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? AdditionalDisputeData { get; }
 
     /// <summary>
@@ -73,6 +85,7 @@ public interface IDisputeData1 : IIsoComponent
     [IsoId("_ChtPgENlEeiut6dbx3wnBg")]
     [DisplayName("Dispute Reject Reason")]
     [IsoXmlTag("DsptRjctRsn")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max35Text> DisputeRejectReason { get; }
 
     /// <summary>
@@ -81,5 +94,7 @@ public interface IDisputeData1 : IIsoComponent
     [IsoId("_xWWa4JKaEempjNUC7bi_Ng")]
     [DisplayName("Chargeback Eligibility")]
     [IsoXmlTag("ChrgbckElgblty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ChargebackEligibility { get; }
 }

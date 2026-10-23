@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.acmt;
     "AcctSwtchReqBalTrf",
     "urn:iso:std:iso:20022:tech:xsd:acmt.031.001.03"
 )]
+[Description(@"The AccountSwitchRequestBalanceTransfer message is sent by the new account servicer to the account servicer which previously held the account to request the transfer of the closing balance. This may be addressed to the new account or an alternate account nominated by the new account servicer. ")]
+[IsoDisplayName(@"Account Switch Request Balance Transfer V")]
 public interface IAccountSwitchRequestBalanceTransferV03 : IOuterRecord
 {
     /// <summary>
@@ -57,6 +59,7 @@ public interface IAccountSwitchRequestBalanceTransferV03 : IOuterRecord
     [IsoId("_Lv10w8P_Eemsic1bQcEtLA")]
     [DisplayName("Balance Transfer")]
     [IsoXmlTag("BalTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBalanceTransfer3> BalanceTransfer { get; }
 
     /// <summary>
@@ -65,5 +68,6 @@ public interface IAccountSwitchRequestBalanceTransferV03 : IOuterRecord
     [IsoId("_Lv10xcP_Eemsic1bQcEtLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

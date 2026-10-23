@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ISAPortfolio1Choice;
 /// </summary>
 [IsoId("_Ku_xm_pfEeCLMa5EIHtDrg")]
 [IsoXmlTag("ISA")]
+[IsoDisplayName(@"ISA")]
 public interface IISA : IISAPortfolio1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -27,6 +28,7 @@ public interface IISA : IISAPortfolio1Choice, IIsoChoiceVariant
     [IsoId("_3gENZEXfEeGY6MkiuzuPOA_271903704")]
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator CashComponentIndicator { get; }
 
     /// <summary>

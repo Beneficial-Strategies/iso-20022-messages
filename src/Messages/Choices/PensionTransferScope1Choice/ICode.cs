@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PensionTransferScope1Choice;
 /// Type of pension policy, plan or scheme transfer scope expressed as a code.
 /// </summary>
 [IsoId("_X3xmkE4YEeiQHa-q1Uephw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPensionTransferScope1Choice, IIsoChoiceVariant
 {
     /// <summary>

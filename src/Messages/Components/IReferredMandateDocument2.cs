@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Referred Mandate Document2.
 /// </summary>
 [IsoId("_O661sTE0Ee62xuUQ2zyZww")]
+[IsoDisplayName(@"Referred Mandate Document2")]
 public interface IReferredMandateDocument2 : IIsoComponent
 {
     /// <summary>

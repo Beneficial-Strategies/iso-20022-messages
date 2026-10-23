@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the security instrument by its name and typical characteristics.
 /// </summary>
 [IsoId("_rjd7YZ3CEeuwmdq0KtnICg")]
+[IsoDisplayName(@"Security Instrument Description")]
 public interface ISecurityInstrumentDescription19 : IIsoComponent
 {
     /// <summary>

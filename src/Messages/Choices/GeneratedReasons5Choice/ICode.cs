@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneratedReasons5Choice;
 /// Specifies the reason why the transaction was generated.
 /// </summary>
 [IsoId("_OcpIMTqeEeWyoP0PbocV1Q")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IGeneratedReasons5Choice, IIsoChoiceVariant
 {
     /// <summary>

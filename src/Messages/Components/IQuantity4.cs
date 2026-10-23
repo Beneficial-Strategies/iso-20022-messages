@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the quantity of a product in a trade transaction.
 /// </summary>
 [IsoId("_SqpmZdp-Ed-ak6NoX_4Aeg_-972518664")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
+[IsoDisplayName(@"Quantity")]
 public interface IQuantity4 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +27,8 @@ public interface IQuantity4 : IIsoComponent
     [IsoId("_SqpmZ9p-Ed-ak6NoX_4Aeg_-972518480")]
     [DisplayName("Other Unit Of Measure")]
     [IsoXmlTag("OthrUnitOfMeasr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text OtherUnitOfMeasure { get; }
 
     /// <summary>
@@ -33,6 +37,7 @@ public interface IQuantity4 : IIsoComponent
     [IsoId("_SqpmaNp-Ed-ak6NoX_4Aeg_-972518633")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber Value { get; }
 
     /// <summary>
@@ -41,5 +46,6 @@ public interface IQuantity4 : IIsoComponent
     [IsoId("_Sqpmadp-Ed-ak6NoX_4Aeg_-972518541")]
     [DisplayName("Factor")]
     [IsoXmlTag("Fctr")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? Factor { get; }
 }

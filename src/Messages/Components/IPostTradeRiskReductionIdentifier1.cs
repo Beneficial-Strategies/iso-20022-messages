@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about an post trade risk reduction identifier.
 /// </summary>
 [IsoId("_LUHs4D1hEeyA3eIPELln4g")]
+[IsoDisplayName(@"Post Trade Risk Reduction Identifier")]
 public interface IPostTradeRiskReductionIdentifier1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IPostTradeRiskReductionIdentifier1 : IIsoComponent
     [IsoId("_-UxsID1hEeyA3eIPELln4g")]
     [DisplayName("Structurer")]
     [IsoXmlTag("Strr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Structurer { get; }
 
     /// <summary>
@@ -25,5 +27,7 @@ public interface IPostTradeRiskReductionIdentifier1 : IIsoComponent
     [IsoId("_GT9wQD1iEeyA3eIPELln4g")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max52Text)]
+    [StringLength(52, MinimumLength = 1)]
     Max52Text Identification { get; }
 }

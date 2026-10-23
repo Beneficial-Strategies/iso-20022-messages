@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType35Choice;
 /// </summary>
 [IsoId("_QOJ0MZJKEeuAlLVx8pyt3w")]
 [IsoXmlTag("Add")]
+[IsoDisplayName(@"Add")]
 public interface IAdd : IUpdateType35Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface IAdd : IUpdateType35Choice, IIsoChoiceVariant
     [IsoId("_QKNvYZJKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Type")]
     [IsoXmlTag("FinInstrmTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument97> FinancialInstrumentType { get; }
 
     /// <summary>
@@ -26,6 +28,7 @@ public interface IAdd : IUpdateType35Choice, IIsoChoiceVariant
     [IsoId("_QKNvY5JKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Attributes")]
     [IsoXmlTag("FinInstrmAttrbts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICommonFinancialInstrumentAttributes12> FinancialInstrumentAttributes { get; }
 
     /// <summary>
@@ -34,5 +37,6 @@ public interface IAdd : IUpdateType35Choice, IIsoChoiceVariant
     [IsoId("_QKNvZZJKEeuAlLVx8pyt3w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

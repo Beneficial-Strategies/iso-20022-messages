@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRate1Choice;
 /// The value of the rate is not specified, eg, the rate is unknown.
 /// </summary>
 [IsoId("_UPh5gNp-Ed-ak6NoX_4Aeg_2035314621")]
+[IsoDisplayName(@"Not Specified Rate")]
 public interface INotSpecifiedRate : INetDividendRate1Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

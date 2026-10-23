@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// KEK9.
 /// </summary>
 [IsoId("_SLvo8Y-JEe6oobnCtR50kw")]
+[IsoDisplayName(@"KEK9")]
 public interface IKEK9 : IIsoComponent
 {
     /// <summary>

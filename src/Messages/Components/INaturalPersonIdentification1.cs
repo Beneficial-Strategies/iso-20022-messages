@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification number and identification type of a natural person.
 /// </summary>
 [IsoId("_BInyYId6EemJ1cSJJmVYRQ")]
+[IsoDisplayName(@"Natural Person Identification")]
 public interface INaturalPersonIdentification1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INaturalPersonIdentification1 : IIsoComponent
     [IsoId("_I3BBcId6EemJ1cSJJmVYRQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>

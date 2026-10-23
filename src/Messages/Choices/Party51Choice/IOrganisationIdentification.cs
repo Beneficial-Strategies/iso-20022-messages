@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party51Choice;
 /// <summary>
 /// Organisation Identification.
 /// </summary>
+[IsoDisplayName(@"Organisation Identification")]
 public interface IOrganisationIdentification : IParty51Choice, IIsoChoiceVariant
 {
     /// <summary>

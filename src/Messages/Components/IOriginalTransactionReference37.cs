@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Key elements used to refer the original transaction.
 /// </summary>
 [IsoId("_chXYr9cZEeqRFcf2R4bPBw")]
+[IsoDisplayName(@"Original Transaction Reference")]
 public interface IOriginalTransactionReference37 : IIsoComponent
 {
     /// <summary>
@@ -84,6 +85,7 @@ public interface IOriginalTransactionReference37 : IIsoComponent
     [IsoId("_cmZpn9cZEeqRFcf2R4bPBw")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocument12> EnclosedFile { get; }
 
     /// <summary>

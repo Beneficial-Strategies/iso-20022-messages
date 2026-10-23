@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specification of the query criteria.
 /// </summary>
 [IsoId("_F3jKq24-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Standing Order Query")]
 public interface IStandingOrderQuery3 : IIsoComponent
 {
     /// <summary>

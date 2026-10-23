@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the identification of the reported party through the location and the name or the sector.
 /// </summary>
 [IsoId("_v6TEUYInEeWA9fc11zJf1Q")]
+[IsoDisplayName(@"Reported Party Identification")]
 public interface IReportedPartyIdentification1 : IIsoComponent
 {
     /// <summary>

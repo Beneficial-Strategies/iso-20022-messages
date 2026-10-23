@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Official identification of an organisation (legal entity) in a specific register.
 /// </summary>
 [IsoId("_QP1JwNp-Ed-ak6NoX_4Aeg_-158801686")]
+[IsoDisplayName(@"Organisation Identification")]
 public interface IOrganisationIdentification5 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IOrganisationIdentification5 : IIsoComponent
     [IsoId("_QP1Jwdp-Ed-ak6NoX_4Aeg_-1308997280")]
     [DisplayName("Registration Number")]
     [IsoXmlTag("RegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text RegistrationNumber { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IOrganisationIdentification5 : IIsoComponent
     [IsoId("_QP1Jwtp-Ed-ak6NoX_4Aeg_-1209035067")]
     [DisplayName("Register Name")]
     [IsoXmlTag("RegrNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? RegisterName { get; }
 }

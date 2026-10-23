@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further means of referencing a payment transaction.
 /// </summary>
 [IsoId("_s_075FkyEeGeoaLUQk__nA_287447596")]
+[IsoDisplayName(@"Notification Item")]
 public interface INotificationItem4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INotificationItem4 : IIsoComponent
     [IsoId("_s_-F0FkyEeGeoaLUQk__nA_-722313353")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface INotificationItem4 : IIsoComponent
     [IsoId("_s_-F0VkyEeGeoaLUQk__nA_-619127387")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? EndToEndIdentification { get; }
 
     /// <summary>
@@ -73,6 +78,7 @@ public interface INotificationItem4 : IIsoComponent
     [IsoId("_tAaxw1kyEeGeoaLUQk__nA_1323436045")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ExpectedValueDate { get; }
 
     /// <summary>

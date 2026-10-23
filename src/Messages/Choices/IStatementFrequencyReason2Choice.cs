@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the statement frequency.
 /// </summary>
 [IsoId("_rq-6sSDAEeWPMvNwVtiMsA")]
+[IsoDisplayName(@"Statement Frequency Reason 2 Choice")]
 public interface IStatementFrequencyReason2Choice : IIsoChoice { }

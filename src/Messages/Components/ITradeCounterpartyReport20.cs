@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to parties in the contract.
 /// </summary>
 [IsoId("_tqiloQz1Ee2YoLD-1vFj0g")]
+[IsoDisplayName(@"Trade Counterparty Report")]
 public interface ITradeCounterpartyReport20 : IIsoComponent
 {
     /// <summary>
@@ -58,6 +59,9 @@ public interface ITradeCounterpartyReport20 : IIsoComponent
     [IsoId("_trQXWwz1Ee2YoLD-1vFj0g")]
     [DisplayName("Beneficiary")]
     [IsoXmlTag("Bnfcry")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPartyIdentification248Choice> Beneficiary { get; }
 
     /// <summary>
@@ -75,6 +79,9 @@ public interface ITradeCounterpartyReport20 : IIsoComponent
     [IsoId("_U9tDoBZlEe27wrM4RUjLog")]
     [DisplayName("Execution Agent")]
     [IsoXmlTag("ExctnAgt")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrganisationIdentification15Choice> ExecutionAgent { get; }
 
     /// <summary>
@@ -83,5 +90,6 @@ public interface ITradeCounterpartyReport20 : IIsoComponent
     [IsoId("_NnAawCR6Ee2VuKUpJ7HXPg")]
     [DisplayName("Relationship Record")]
     [IsoXmlTag("RltshRcrd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeCounterpartyRelationshipRecord1> RelationshipRecord { get; }
 }

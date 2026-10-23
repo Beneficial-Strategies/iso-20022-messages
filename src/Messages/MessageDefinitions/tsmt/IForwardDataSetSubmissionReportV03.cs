@@ -20,6 +20,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "FwdDataSetSubmissnRpt",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.017.001.03"
 )]
+[Description(@"Scope|The ForwardDataSetSubmissionReport message is sent by the matching application to the counterparty(ies) of the submitter of data sets.|This message is used to pass on information related to the purchasing agreement(s) covered by the transaction(s) referred to in the message.|Usage|The ForwardDataSetSubmission message can be sent by the matching application to forward the details of a DataSetSubmission message that it has obtained.")]
+[IsoDisplayName(@"Forward Data Set Submission Report V")]
 public interface IForwardDataSetSubmissionReportV03 : IOuterRecord
 {
     /// <summary>
@@ -36,6 +38,7 @@ public interface IForwardDataSetSubmissionReportV03 : IOuterRecord
     [IsoId("_oioFMNE8Ed-BzquC8wXy7w_403320811")]
     [DisplayName("Related Transaction References")]
     [IsoXmlTag("RltdTxRefs")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDataSetSubmissionReferences4> RelatedTransactionReferences { get; }
 
     /// <summary>
@@ -100,6 +103,7 @@ public interface IForwardDataSetSubmissionReportV03 : IOuterRecord
     [IsoId("_oixPINE8Ed-BzquC8wXy7w_1650995885")]
     [DisplayName("Certificate Data Set")]
     [IsoXmlTag("CertDataSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICertificateDataSet1> CertificateDataSet { get; }
 
     /// <summary>
@@ -108,6 +112,7 @@ public interface IForwardDataSetSubmissionReportV03 : IOuterRecord
     [IsoId("_oixPIdE8Ed-BzquC8wXy7w_1469713115")]
     [DisplayName("Other Certificate Data Set")]
     [IsoXmlTag("OthrCertDataSet")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOtherCertificateDataSet1> OtherCertificateDataSet { get; }
 
     /// <summary>

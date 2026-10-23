@@ -23,6 +23,8 @@ namespace BeneficialStrategies.Iso20022.tsmt;
     "InitlBaselnSubmissn",
     "urn:iso:std:iso:20022:tech:xsd:tsmt.019.001.03"
 )]
+[Description(@"Scope|The InitialBaselineSubmission message is sent by the initiator of a transaction to the matching application.|This message is used to initiate a transaction.|Usage|The InitialBaselineSubmission message can be sent by a party to register a transaction in the matching application. The message can be submitted with either lodge or push-through instruction.|When the push-through instruction is present, the matching application acknowledges the receipt of the message to the sender by sending an Acknowledgement message, stores the submitted information and informs the counterparty about the registration of the transaction by sending a FullPushThroughReport message. With the BaselineReSubmission message the counterparty responds with matching baseline information in order to establish the transaction (baseline).|When the lodge instruction is present, the matching application acknowledges the receipt of the message to the sender by sending an Acknowledgement message and stores the submitted information. No matching of the submitted baseline data with other baseline information will take place. For example the submission of an InitialBaselineSubmission message containing a lodge instruction establishes the transaction (baseline) in the matching application.|The InitialBaselineSubmission message consists of data which relates to the purchasing agreement covered by the transaction, for example line item details, shipping details.")]
+[IsoDisplayName(@"Initial Baseline Submission V")]
 public interface IInitialBaselineSubmissionV03 : IOuterRecord
 {
     /// <summary>
@@ -63,6 +65,7 @@ public interface IInitialBaselineSubmissionV03 : IOuterRecord
     [IsoId("_p4TetNE8Ed-BzquC8wXy7w_-1224817819")]
     [DisplayName("Buyer Contact Person")]
     [IsoXmlTag("BuyrCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification1> BuyerContactPerson { get; }
 
     /// <summary>
@@ -71,6 +74,7 @@ public interface IInitialBaselineSubmissionV03 : IOuterRecord
     [IsoId("_p4TetdE8Ed-BzquC8wXy7w_-1224817896")]
     [DisplayName("Seller Contact Person")]
     [IsoXmlTag("SellrCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification1> SellerContactPerson { get; }
 
     /// <summary>
@@ -79,6 +83,7 @@ public interface IInitialBaselineSubmissionV03 : IOuterRecord
     [IsoId("_p4TettE8Ed-BzquC8wXy7w_-1224817416")]
     [DisplayName("Buyer Bank Contact Person")]
     [IsoXmlTag("BuyrBkCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification1> BuyerBankContactPerson { get; }
 
     /// <summary>
@@ -87,6 +92,7 @@ public interface IInitialBaselineSubmissionV03 : IOuterRecord
     [IsoId("_p4Tet9E8Ed-BzquC8wXy7w_-1224817493")]
     [DisplayName("Seller Bank Contact Person")]
     [IsoXmlTag("SellrBkCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification1> SellerBankContactPerson { get; }
 
     /// <summary>
@@ -95,5 +101,6 @@ public interface IInitialBaselineSubmissionV03 : IOuterRecord
     [IsoId("_p4dPsNE8Ed-BzquC8wXy7w_1151862285")]
     [DisplayName("Other Bank Contact Person")]
     [IsoXmlTag("OthrBkCtctPrsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IContactIdentification3> OtherBankContactPerson { get; }
 }

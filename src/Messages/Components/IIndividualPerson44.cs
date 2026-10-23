@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Individual Person44.
 /// </summary>
 [IsoId("_3atwVTEyEe6g-ffJsqGiSA")]
+[IsoDisplayName(@"Individual Person44")]
 public interface IIndividualPerson44 : IIsoComponent
 {
     /// <summary>
@@ -23,6 +24,7 @@ public interface IIndividualPerson44 : IIsoComponent
     /// </summary>
     [DisplayName("Previous Name")]
     [IsoXmlTag("PrvsNm")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIndividualPersonNameLong2> PreviousName { get; }
 
     /// <summary>
@@ -93,6 +95,7 @@ public interface IIndividualPerson44 : IIsoComponent
     /// </summary>
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPostalAddress27> PostalAddress { get; }
 
     /// <summary>
@@ -100,6 +103,7 @@ public interface IIndividualPerson44 : IIsoComponent
     /// </summary>
     [DisplayName("Citizenship Information")]
     [IsoXmlTag("CtznshInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICitizenshipInformation1> CitizenshipInformation { get; }
 
     /// <summary>
@@ -121,6 +125,7 @@ public interface IIndividualPerson44 : IIsoComponent
     /// </summary>
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IGenericIdentification44> OtherIdentification { get; }
 
     /// <summary>
@@ -128,5 +133,6 @@ public interface IIndividualPerson44 : IIsoComponent
     /// </summary>
     [DisplayName("Other Details")]
     [IsoXmlTag("OthrDtls")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITransferInstruction1> OtherDetails { get; }
 }

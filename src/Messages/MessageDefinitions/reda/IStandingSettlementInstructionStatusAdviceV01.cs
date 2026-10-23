@@ -15,6 +15,8 @@ namespace BeneficialStrategies.Iso20022.reda;
     "StgSttlmInstrStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:reda.058.001.01"
 )]
+[Description(@"Scope|The receiver of a StandingSettlementInstruction message sends the StandingSettlementInstructionStatusAdvice message to the instructing party (sender of the StandingSettlementInstruction message) to provide the status of a previously received StandingSettlementInstruction, StandingSettlementInstructionCancellation or StandingSettlementInstructionDeletion message.||Usage|The StandingSettlementInstructionStatusAdvice message is used to report one of the following statuses:|- a received status, or, |- an accepted status, or,|- a rejected status, or,|- a pending processing status, or,|- a proprietary status.")]
+[IsoDisplayName(@"Standing Settlement Instruction Status Advice V01")]
 public interface IStandingSettlementInstructionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
@@ -31,6 +33,8 @@ public interface IStandingSettlementInstructionStatusAdviceV01 : IOuterRecord
     [IsoId("_QP7bYfXrEeKpFY1yaoww4A")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
+    [MinLength(1)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAccountIdentification26> AccountIdentification { get; }
 
     /// <summary>
@@ -71,5 +75,6 @@ public interface IStandingSettlementInstructionStatusAdviceV01 : IOuterRecord
     [IsoId("_1jvlQfXtEeKpFY1yaoww4A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

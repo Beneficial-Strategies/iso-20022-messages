@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesLendingType3Choice;
 /// Name of the identification scheme, in a coded form as published in an external list.
 /// </summary>
 [IsoId("_MZG3cMkcEeeiAIB1i4AlQw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISecuritiesLendingType3Choice, IIsoChoiceVariant
 {
     /// <summary>

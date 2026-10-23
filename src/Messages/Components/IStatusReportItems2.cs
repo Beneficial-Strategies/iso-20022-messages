@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Describes a transaction and its status.
 /// </summary>
 [IsoId("_Ra7q9tp-Ed-ak6NoX_4Aeg_-898612372")]
+[IsoDisplayName(@"Status Report Items")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public interface IStatusReportItems2 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +19,8 @@ public interface IStatusReportItems2 : IIsoComponent
     [IsoId("_Ra7q99p-Ed-ak6NoX_4Aeg_-898612370")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransactionIdentification { get; }
 
     /// <summary>
@@ -25,6 +29,9 @@ public interface IStatusReportItems2 : IIsoComponent
     [IsoId("_Ra7q-Np-Ed-ak6NoX_4Aeg_-898611970")]
     [DisplayName("Reported Entity")]
     [IsoXmlTag("RptdNtty")]
+    [MinLength(1)]
+    [MaxLength(2)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBICIdentification1> ReportedEntity { get; }
 
     /// <summary>
@@ -41,5 +48,7 @@ public interface IStatusReportItems2 : IIsoComponent
     [IsoId("_RbFb8dp-Ed-ak6NoX_4Aeg_-898612280")]
     [DisplayName("Sub Status")]
     [IsoXmlTag("SubSts")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SubStatus { get; }
 }

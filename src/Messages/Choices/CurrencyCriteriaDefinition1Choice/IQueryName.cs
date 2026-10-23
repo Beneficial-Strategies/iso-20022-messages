@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choic
 /// Recalls the criteria (search and return criteria) defined in a preceding query.
 /// </summary>
 [IsoId("_H5cuMZlZEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"Query Name")]
 public interface IQueryName : ICurrencyCriteriaDefinition1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IQueryName : ICurrencyCriteriaDefinition1Choice, IIsoChoiceVari
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("QryNm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

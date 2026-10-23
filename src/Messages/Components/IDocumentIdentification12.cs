@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about identification of the document.
 /// </summary>
 [IsoId("_ThMM0tp-Ed-ak6NoX_4Aeg_-727158599")]
+[IsoDisplayName(@"Document Identification")]
 public interface IDocumentIdentification12 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IDocumentIdentification12 : IIsoComponent
     [IsoId("_ThMM09p-Ed-ak6NoX_4Aeg_-726238455")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IDocumentIdentification12 : IIsoComponent
     [IsoId("_ThMM1tp-Ed-ak6NoX_4Aeg_-383609129")]
     [DisplayName("Change Instruction Indicator")]
     [IsoXmlTag("ChngInstrInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ChangeInstructionIndicator { get; }
 }

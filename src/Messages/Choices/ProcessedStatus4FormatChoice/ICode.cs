@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessedStatus4FormatChoice;
 /// Standard code to specify the processing status of the standing instruction cancellation request.
 /// </summary>
 [IsoId("_RnmN8Np-Ed-ak6NoX_4Aeg_-863903245")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IProcessedStatus4FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

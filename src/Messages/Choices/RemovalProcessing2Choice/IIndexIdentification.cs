@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemovalProcessing2Choice;
 /// </summary>
 [IsoId("__ioAQxIoEeyZaPkaPAzTvQ")]
 [IsoXmlTag("IndxId")]
+[IsoDisplayName(@"Index Identification")]
 public interface IIndexIdentification : IRemovalProcessing2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IIndexIdentification : IRemovalProcessing2Choice, IIsoChoiceVar
     [IsoId("_ARqNM9okEeC60axPepSq7g_-180972898")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -26,5 +29,7 @@ public interface IIndexIdentification : IRemovalProcessing2Choice, IIsoChoiceVar
     [IsoId("_ARqNNNokEeC60axPepSq7g_-1178045251")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Issuer { get; }
 }

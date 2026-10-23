@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// ATM Account Statement3.
 /// </summary>
 [IsoId("_6Q3v8aETEe-MRKYsaX6JDg")]
+[IsoDisplayName(@"ATM Account Statement3")]
 public interface IATMAccountStatement3 : IIsoComponent
 {
     /// <summary>
@@ -30,5 +31,6 @@ public interface IATMAccountStatement3 : IIsoComponent
     /// </summary>
     [DisplayName("Account Statement")]
     [IsoXmlTag("AcctStmt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMAccountStatement2> AccountStatement { get; }
 }

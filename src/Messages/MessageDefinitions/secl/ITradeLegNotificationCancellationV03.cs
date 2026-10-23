@@ -22,6 +22,8 @@ namespace BeneficialStrategies.Iso20022.secl;
     "TradLegNtfctnCxl",
     "urn:iso:std:iso:20022:tech:xsd:secl.002.001.03"
 )]
+[Description(@"Scope|The TradeLegNotificationCancellation message is sent by the central counterparty (CCP) to a clearing member to notify the cancellation of a TradeLegNotification message previously sent.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|The previously sent message must be the Trade Leg Notification message.")]
+[IsoDisplayName(@"Trade Leg Notification Cancellation V")]
 public interface ITradeLegNotificationCancellationV03 : IOuterRecord
 {
     /// <summary>
@@ -86,5 +88,6 @@ public interface ITradeLegNotificationCancellationV03 : IOuterRecord
     [IsoId("__kNJqy0lEeSRe9rElPHBfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

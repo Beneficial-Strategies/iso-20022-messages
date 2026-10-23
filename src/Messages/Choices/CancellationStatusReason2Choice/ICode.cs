@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatusReason2Choice;
 /// Reason for the cancellation status, in a coded form.
 /// </summary>
 [IsoId("_t4cl8FkyEeGeoaLUQk__nA_-347557160")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ICancellationStatusReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies two values to compare for a Product Identifier.
 /// </summary>
 [IsoId("_j6MgsWEaEe2P-L9DBerEgA")]
+[IsoDisplayName(@"Compare Unique Product Identifier")]
 public interface ICompareUniqueProductIdentifier2 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the issuer, as required by ASX.
 /// </summary>
 [IsoId("_uvhcJ299EeKuY41pq1-dog")]
+[IsoDisplayName(@"Issuer Attributes SD")]
 public interface IIssuerAttributesSD1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IIssuerAttributesSD1 : IIsoComponent
     [IsoId("_uvhcL299EeKuY41pq1-dog")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IIssuerAttributesSD1 : IIsoComponent
     [IsoId("_uvhcRW99EeKuY41pq1-dog")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
+    [StringLength(140, MinimumLength = 1)]
     RestrictedFINXMax140Text Name { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IIssuerAttributesSD1 : IIsoComponent
     [IsoId("_uvhcPm99EeKuY41pq1-dog")]
     [DisplayName("Other Registered Number Type")]
     [IsoXmlTag("OthrRegdNbTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherRegisteredNumberType { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IIssuerAttributesSD1 : IIsoComponent
     [IsoId("_uvhcOW99EeKuY41pq1-dog")]
     [DisplayName("Registration Number")]
     [IsoXmlTag("RegnNb")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text RegistrationNumber { get; }
 
     /// <summary>
@@ -57,5 +66,6 @@ public interface IIssuerAttributesSD1 : IIsoComponent
     [IsoId("_uvhcNG99EeKuY41pq1-dog")]
     [DisplayName("Issuer Identification")]
     [IsoXmlTag("IssrId")]
+    [IsoSimpleType(IsoSimpleType.Exact3UpperCaseAlphaNumericText)]
     Exact3UpperCaseAlphaNumericText IssuerIdentification { get; }
 }

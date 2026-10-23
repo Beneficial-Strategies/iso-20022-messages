@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification30Choice;
 /// Other identifier.
 /// </summary>
 [IsoId("_XSsHQHs9EeSTS7uHCe8FPQ")]
+[IsoDisplayName(@"Other")]
 public interface IOther : IAccountIdentification30Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IOther : IAccountIdentification30Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Othr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains amount details for a specific type of charge.
 /// </summary>
 [IsoId("_7-MslffJEei89sMSHxl1ew")]
+[IsoDisplayName(@"Amount")]
 public interface IAmount11 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAmount11 : IIsoComponent
     [IsoId("_7-PI0PfJEei89sMSHxl1ew")]
     [DisplayName("Other Type Of Charge")]
     [IsoXmlTag("OthrTpOfChrg")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherTypeOfCharge { get; }
 
     /// <summary>
@@ -41,5 +44,6 @@ public interface IAmount11 : IIsoComponent
     [IsoId("_7-PI0_fJEei89sMSHxl1ew")]
     [DisplayName("Credit Indicator")]
     [IsoXmlTag("CdtInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CreditIndicator { get; }
 }

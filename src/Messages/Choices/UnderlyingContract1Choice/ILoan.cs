@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract1Choice;
 /// </summary>
 [IsoId("_tf9isNLJEeSdq5yU2aaSNw")]
 [IsoXmlTag("Ln")]
+[IsoDisplayName(@"Loan")]
 public interface ILoan : IUnderlyingContract1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface ILoan : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_PSp2I9NDEeSDLevdaFPXHw")]
     [DisplayName("Buyer")]
     [IsoXmlTag("Buyr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty2> Buyer { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface ILoan : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_PSp2JNNDEeSDLevdaFPXHw")]
     [DisplayName("Seller")]
     [IsoXmlTag("Sellr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradeParty2> Seller { get; }
 
     /// <summary>
@@ -50,6 +53,7 @@ public interface ILoan : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_eSC7tNNFEeSDLevdaFPXHw")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate MaturityDate { get; }
 
     /// <summary>
@@ -58,6 +62,7 @@ public interface ILoan : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_eSC7tdNFEeSDLevdaFPXHw")]
     [DisplayName("Prolongation Flag")]
     [IsoXmlTag("PrlngtnFlg")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator ProlongationFlag { get; }
 
     /// <summary>
@@ -66,6 +71,7 @@ public interface ILoan : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_eSC7ttNFEeSDLevdaFPXHw")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate StartDate { get; }
 
     /// <summary>
@@ -90,6 +96,7 @@ public interface ILoan : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_xGFgUNODEeSQ_-lmj1tzfw")]
     [DisplayName("Duration Code")]
     [IsoXmlTag("DrtnCd")]
+    [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
     Exact1NumericText DurationCode { get; }
 
     /// <summary>
@@ -106,6 +113,7 @@ public interface ILoan : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_QOgk8tNEEeSDLevdaFPXHw")]
     [DisplayName("Tranche")]
     [IsoXmlTag("Trch")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ILoanContractTranche1> Tranche { get; }
 
     /// <summary>
@@ -130,6 +138,7 @@ public interface ILoan : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_qhLCcDm4EeWDb47rJ6ki4Q")]
     [DisplayName("Intra Company Loan")]
     [IsoXmlTag("IntraCpnyLn")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator IntraCompanyLoan { get; }
 
     /// <summary>
@@ -146,6 +155,7 @@ public interface ILoan : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_KEsEMNOKEeSQ_-lmj1tzfw")]
     [DisplayName("Syndicated Loan")]
     [IsoXmlTag("SndctdLn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISyndicatedLoan1> SyndicatedLoan { get; }
 
     /// <summary>
@@ -154,5 +164,6 @@ public interface ILoan : IUnderlyingContract1Choice, IIsoChoiceVariant
     [IsoId("_HKFzkdNDEeSDLevdaFPXHw")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IDocumentGeneralInformation3> Attachment { get; }
 }

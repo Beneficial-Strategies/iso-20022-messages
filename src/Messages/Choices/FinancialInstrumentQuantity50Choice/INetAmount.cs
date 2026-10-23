@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity50Cho
 
 /// <summary>Quantity expressed as a net amount of money.</summary>
 [IsoId("b342be83-12bf-4afc-ae13-c47d3d5bfafb")]
+[IsoDisplayName(@"Net Amount")]
 public interface INetAmount : IFinancialInstrumentQuantity50Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

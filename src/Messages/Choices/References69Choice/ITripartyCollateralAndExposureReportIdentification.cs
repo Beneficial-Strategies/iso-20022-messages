@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References69Choice;
 /// Unambiguous identification of the triparty collateral and exposure report to be cancelled.
 /// </summary>
 [IsoId("_OXngkAzYEeuUZuaHWzkTew")]
+[IsoDisplayName(@"Triparty Collateral And Exposure Report Identification")]
 public interface ITripartyCollateralAndExposureReportIdentification
     : IReferences69Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ITripartyCollateralAndExposureReportIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("TrptyCollAndXpsrRptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the interest rate derivative specific elements for interest rate derivatives as defined in the local regulation.
 /// </summary>
 [IsoId("_xJiqQWlIEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Interest Rate Derivative")]
 public interface IInterestRateDerivative5 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IInterestRateDerivative5 : IIsoComponent
     [IsoId("_xSfx92lIEeaLAKoEUNsD9g")]
     [DisplayName("Underlying Swap Maturity Date")]
     [IsoXmlTag("UndrlygSwpMtrtyDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? UnderlyingSwapMaturityDate { get; }
 
     /// <summary>

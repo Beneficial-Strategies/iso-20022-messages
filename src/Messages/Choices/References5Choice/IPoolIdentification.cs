@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References5Choice;
 /// Collective reference identifying a set of messages.
 /// </summary>
 [IsoId("_USqtEtp-Ed-ak6NoX_4Aeg_636237161")]
+[IsoDisplayName(@"Pool Identification")]
 public interface IPoolIdentification : IReferences5Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IPoolIdentification : IReferences5Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

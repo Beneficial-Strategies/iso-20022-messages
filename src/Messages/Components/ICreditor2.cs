@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about the creditor.
 /// </summary>
 [IsoId("_Urs4Itp-Ed-ak6NoX_4Aeg_1405520878")]
+[IsoDisplayName(@"Creditor")]
 public interface ICreditor2 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the clearing system identification.
 /// </summary>
 [IsoId("_TMVXJdp-Ed-ak6NoX_4Aeg_948374898")]
+[IsoDisplayName(@"Clearing System Identification 3 Choice")]
 public interface IClearingSystemIdentification3Choice : IIsoChoice { }

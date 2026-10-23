@@ -16,6 +16,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// </summary>
 [IsoId("_JusI0NE6Ed-BzquC8wXy7w_-1749353758")]
 [IsoMessage("sese.005.001.01", "sese.005.001.01", "urn:iso:std:iso:20022:tech:xsd:sese.005.001.01")]
+[Description(@"Scope|The TransferInInstruction message is sent by an instructing party, or an instructing party's designated agent, to the executing party.|This message is used to instruct the receipt of a financial instrument, free of payment, at a given date, from a specified party. This message may also be used to instruct the receipt of a financial instrument from an own account or from a third party.|Usage|The TransferInInstruction message is used by an instructing party to instruct the executing party to receive a financial instrument from another account, either owned by the instructing party or by a third party.")]
+[IsoDisplayName(@"Transfer In Instruction")]
 public interface ITransferInInstruction : IOuterRecord
 {
     /// <summary>
@@ -80,5 +82,6 @@ public interface ITransferInInstruction : IOuterRecord
     [IsoId("_Ju150NE6Ed-BzquC8wXy7w_1240894532")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IExtension1> Extension { get; }
 }

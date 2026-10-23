@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.cafr;
 /// </summary>
 [IsoId("_eCUWgROFEfC1ZfCQz0xB3g")]
 [IsoMessage("cafr.001.001.04", "FrdRptgInitn", "urn:iso:std:iso:20022:tech:xsd:cafr.001.001.04")]
+[IsoDisplayName(@"Fraud Reporting Initiation V04")]
 public interface IFraudReportingInitiationV04 : IOuterRecord
 {
     /// <summary>
@@ -130,6 +131,7 @@ public interface IFraudReportingInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Cardholder")]
     [IsoXmlTag("Crdhldr")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICardholder23> Cardholder { get; }
 
     /// <summary>
@@ -151,6 +153,7 @@ public interface IFraudReportingInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee4> AdditionalFee { get; }
 
     /// <summary>
@@ -165,6 +168,7 @@ public interface IFraudReportingInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncryptedData2> ProtectedData { get; }
 
     /// <summary>
@@ -172,6 +176,7 @@ public interface IFraudReportingInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> PrivateData { get; }
 
     /// <summary>
@@ -179,6 +184,7 @@ public interface IFraudReportingInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<ATICALaxProcessing> NationalData { get; }
 
     /// <summary>

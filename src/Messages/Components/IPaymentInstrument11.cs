@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instrument that has or represents monetary value and is used to process a payment instruction.
 /// </summary>
 [IsoId("_jKdmcRc2EeK5g-3oYI0_9Q")]
+[IsoDisplayName(@"Payment Instrument")]
 public interface IPaymentInstrument11 : IIsoComponent
 {
     /// <summary>

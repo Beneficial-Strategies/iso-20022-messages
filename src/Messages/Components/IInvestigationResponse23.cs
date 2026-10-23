@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details of the investigation response.
 /// </summary>
 [IsoId("9513563d-a3a4-4a7a-b2f5-d441d1d76af8")]
+[IsoDisplayName(@"Investigation Response23")]
 public interface IInvestigationResponse23 : IIsoComponent
 {
     /// <summary>
@@ -49,5 +50,6 @@ public interface IInvestigationResponse23 : IIsoComponent
     [IsoId("39d67578-0805-482a-972f-fc54f6566d4f")]
     [DisplayName("Investigation Data")]
     [IsoXmlTag("InvstgtnData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IInvestigationData18> InvestigationData { get; }
 }

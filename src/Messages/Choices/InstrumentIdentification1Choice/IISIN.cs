@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentIdentification1Choice;
 /// International Securities Identification Number (ISIN). A numbering system designed by the United Nation&apos;s International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.
 /// </summary>
 [IsoId("_uVOw8gbSEeqrW7Meu5r3kQ")]
+[IsoDisplayName(@"ISIN")]
 public interface IISIN : IInstrumentIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IISIN : IInstrumentIdentification1Choice, IIsoChoiceVariant
     /// International Securities Identification Number (ISIN). A numbering system designed by the United Nation&apos;s International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.
     /// </summary>
     [IsoXmlTag("ISIN")]
+    [IsoSimpleType(IsoSimpleType.ISIN2021Identifier)]
     ISIN2021Identifier Value { get; }
 }

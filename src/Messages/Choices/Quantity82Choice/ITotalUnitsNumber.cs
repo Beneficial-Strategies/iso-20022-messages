@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity82Choice;
 
 /// <summary>Specifies the total units number.</summary>
 [IsoId("9f2b4cc0-595f-4fb1-a54f-20fc6fc673c8")]
+[IsoDisplayName(@"Total Units Number")]
 public interface ITotalUnitsNumber : IQuantity82Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

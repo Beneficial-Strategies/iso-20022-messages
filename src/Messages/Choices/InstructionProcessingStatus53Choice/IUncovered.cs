@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus53Cho
 /// <summary>
 /// Uncovered.
 /// </summary>
+[IsoDisplayName(@"Uncovered")]
 public interface IUncovered : IInstructionProcessingStatus53Choice, IIsoChoiceVariant
 {
     /// <summary>

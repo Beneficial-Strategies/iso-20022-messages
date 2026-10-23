@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Trade Party Identification Query10Choice.
 /// </summary>
 [IsoId("_htrKUfrfEe2mU4Wi2q3MzQ")]
+[IsoDisplayName(@"Trade Party Identification Query10Choice")]
 public interface ITradePartyIdentificationQuery10Choice : IIsoChoice { }

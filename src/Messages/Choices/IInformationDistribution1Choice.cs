@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of how information is to be distributed.
 /// </summary>
 [IsoId("_9jvwACCUEeWJd9HF2tO7BA")]
+[IsoDisplayName(@"Information Distribution 1 Choice")]
 public interface IInformationDistribution1Choice : IIsoChoice { }

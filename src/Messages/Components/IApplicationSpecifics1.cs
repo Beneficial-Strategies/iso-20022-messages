@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Application specific information defined by the service provider.
 /// </summary>
 [IsoId("_jLluUe5NEeCisYr99QEiWA_17771453")]
+[IsoDisplayName(@"Application Specifics")]
 public interface IApplicationSpecifics1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IApplicationSpecifics1 : IIsoComponent
     [IsoId("_hdq1QWliEeGaMcKyqKNRfQ_64695608")]
     [DisplayName("System User")]
     [IsoXmlTag("SysUsr")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text? SystemUser { get; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public interface IApplicationSpecifics1 : IIsoComponent
     [IsoId("_jLluUu5NEeCisYr99QEiWA_1016478772")]
     [DisplayName("Total Number Of Documents")]
     [IsoXmlTag("TtlNbOfDocs")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number TotalNumberOfDocuments { get; }
 }

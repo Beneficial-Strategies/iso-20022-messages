@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification258Choice;
 /// <summary>
 /// Name And Address.
 /// </summary>
+[IsoDisplayName(@"Name And Address")]
 public interface INameAndAddress : IPartyIdentification258Choice, IIsoChoiceVariant
 {
     /// <summary>

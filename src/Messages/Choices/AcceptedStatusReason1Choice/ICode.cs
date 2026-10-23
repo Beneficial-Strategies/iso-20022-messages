@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedStatusReason1Choice;
 /// Reason for the status expressed as a code.
 /// </summary>
 [IsoId("_wdDRcWBlEeaR1OOiVxm3Gg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IAcceptedStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

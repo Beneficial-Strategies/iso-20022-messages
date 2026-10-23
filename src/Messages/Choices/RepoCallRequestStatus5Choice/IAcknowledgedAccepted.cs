@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepoCallRequestStatus5Choice;
 /// Instruction has been acknowledged by the account servicer.
 /// </summary>
 [IsoId("_fHQhN_7rEeCvPoRGOxRobQ")]
+[IsoDisplayName(@"Acknowledged Accepted")]
 public interface IAcknowledgedAccepted : IRepoCallRequestStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

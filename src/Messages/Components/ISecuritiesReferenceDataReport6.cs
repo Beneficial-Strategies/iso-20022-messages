@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details on the securities reference data for the required financial instruments.
 /// </summary>
 [IsoId("_K5JXMSX7EeigZbhgJcrASA")]
+[IsoDisplayName(@"Securities Reference Data Report")]
 public interface ISecuritiesReferenceDataReport6 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,8 @@ public interface ISecuritiesReferenceDataReport6 : IIsoComponent
     [IsoId("_LGQmJSX7EeigZbhgJcrASA")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TechnicalRecordIdentification { get; }
 
     /// <summary>
@@ -35,6 +38,7 @@ public interface ISecuritiesReferenceDataReport6 : IIsoComponent
     [IsoId("_LGQmKSX7EeigZbhgJcrASA")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier Issuer { get; }
 
     /// <summary>
@@ -43,6 +47,7 @@ public interface ISecuritiesReferenceDataReport6 : IIsoComponent
     [IsoId("_LGQmKyX7EeigZbhgJcrASA")]
     [DisplayName("Trading Venue Related Attributes")]
     [IsoXmlTag("TradgVnRltdAttrbts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITradingVenueAttributes1> TradingVenueRelatedAttributes { get; }
 
     /// <summary>

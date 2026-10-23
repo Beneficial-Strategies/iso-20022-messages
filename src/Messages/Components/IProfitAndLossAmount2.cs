@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Profit And Loss Amount2.
 /// </summary>
 [IsoId("_KhTLAYe5Ee-ZMOT1CLcLaw")]
+[IsoDisplayName(@"Profit And Loss Amount2")]
 public interface IProfitAndLossAmount2 : IIsoComponent
 {
     /// <summary>

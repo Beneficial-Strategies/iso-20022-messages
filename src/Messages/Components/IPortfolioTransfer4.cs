@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Type of product and assets to be transferred.
 /// </summary>
 [IsoId("_13HFwU3kEeiQHa-q1Uephw")]
+[IsoDisplayName(@"Portfolio Transfer")]
 public interface IPortfolioTransfer4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPortfolioTransfer4 : IIsoComponent
     [IsoId("_2I9qw03kEeiQHa-q1Uephw")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MasterReference { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPortfolioTransfer4 : IIsoComponent
     [IsoId("_2I9qx03kEeiQHa-q1Uephw")]
     [DisplayName("Transfer Instruction Reference")]
     [IsoXmlTag("TrfInstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferInstructionReference { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPortfolioTransfer4 : IIsoComponent
     [IsoId("_2I9qxU3kEeiQHa-q1Uephw")]
     [DisplayName("Transfer Confirmation Identification")]
     [IsoXmlTag("TrfConfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text TransferConfirmationIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface IPortfolioTransfer4 : IIsoComponent
     [IsoId("_2I9qz03kEeiQHa-q1Uephw")]
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ActualTransferDate { get; }
 
     /// <summary>
@@ -81,6 +89,7 @@ public interface IPortfolioTransfer4 : IIsoComponent
     [IsoId("_t5W-4aFQEei_VZq-6SQkuQ")]
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? TaxDate { get; }
 
     /// <summary>
@@ -97,6 +106,7 @@ public interface IPortfolioTransfer4 : IIsoComponent
     [IsoId("_2I9q103kEeiQHa-q1Uephw")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrument70> FinancialInstrumentAssetForTransfer { get; }
 
     /// <summary>
@@ -105,5 +115,6 @@ public interface IPortfolioTransfer4 : IIsoComponent
     [IsoId("_ZpTG8ZClEeiQvr1XXv37hw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalInformation15> AdditionalInformation { get; }
 }

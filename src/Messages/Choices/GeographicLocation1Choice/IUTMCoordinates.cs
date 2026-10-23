@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeographicLocation1Choice;
 /// </summary>
 [IsoId("_uiaUMIn5EeShMpas3885ww")]
 [IsoXmlTag("UTMCordints")]
+[IsoDisplayName(@"UTM Coordinates")]
 public interface IUTMCoordinates : IGeographicLocation1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface IUTMCoordinates : IGeographicLocation1Choice, IIsoChoiceVariant
     [IsoId("_4AW1UIn5EeShMpas3885ww")]
     [DisplayName("UTM Zone")]
     [IsoXmlTag("UTMZone")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text UTMZone { get; }
 
     /// <summary>
@@ -26,6 +29,7 @@ public interface IUTMCoordinates : IGeographicLocation1Choice, IIsoChoiceVariant
     [IsoId("_7o5CQIn5EeShMpas3885ww")]
     [DisplayName("UTM Eastward")]
     [IsoXmlTag("UTMEstwrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number UTMEastward { get; }
 
     /// <summary>
@@ -34,5 +38,6 @@ public interface IUTMCoordinates : IGeographicLocation1Choice, IIsoChoiceVariant
     [IsoId("_--JG0In5EeShMpas3885ww")]
     [DisplayName("UTM Northward")]
     [IsoXmlTag("UTMNrthwrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
     Number UTMNorthward { get; }
 }

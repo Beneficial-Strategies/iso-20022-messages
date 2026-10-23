@@ -29,6 +29,8 @@ namespace BeneficialStrategies.Iso20022.sese;
     "SctiesFincgStsAdvc",
     "urn:iso:std:iso:20022:tech:xsd:sese.034.001.06"
 )]
+[Description(@"Scope|An securities financing transaction account servicer sends a SecuritiesFinancingStatusAdvice to an account owner to advise the status of a securities financing transaction previously instructed by the account owner.|The status advice may be sent as a response to the request of the account owner or not.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure managing securities financing transactions on behalf of their participants|- an agent (sub-custodian) managing securities financing transactions on behalf of their global custodian customer, or|- a custodian managing securities financing transactions on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.")]
+[IsoDisplayName(@"Securities Financing Status Advice V")]
 public interface ISecuritiesFinancingStatusAdviceV06 : IOuterRecord
 {
     /// <summary>
@@ -93,5 +95,6 @@ public interface ISecuritiesFinancingStatusAdviceV06 : IOuterRecord
     [IsoId("_YSMXCwCTEeW_3KiG8SEjHA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details specific to the individual direct debit transaction(s) included in the message.
 /// </summary>
 [IsoId("_MHNOoRmHEeS15voCZPa1ZA")]
+[IsoDisplayName(@"Direct Debit Transaction Information")]
 public interface IDirectDebitTransactionInformation17 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface IDirectDebitTransactionInformation17 : IIsoComponent
     [IsoId("_MWiEMRmHEeS15voCZPa1ZA")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? InterbankSettlementDate { get; }
 
     /// <summary>
@@ -66,6 +68,7 @@ public interface IDirectDebitTransactionInformation17 : IIsoComponent
     [IsoId("_MWiENRmHEeS15voCZPa1ZA")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
+    [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     BaseOneRate? ExchangeRate { get; }
 
     /// <summary>
@@ -82,6 +85,7 @@ public interface IDirectDebitTransactionInformation17 : IIsoComponent
     [IsoId("_MWiEORmHEeS15voCZPa1ZA")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICharges2> ChargesInformation { get; }
 
     /// <summary>
@@ -90,6 +94,7 @@ public interface IDirectDebitTransactionInformation17 : IIsoComponent
     [IsoId("_MWiEOxmHEeS15voCZPa1ZA")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? RequestedCollectionDate { get; }
 
     /// <summary>
@@ -266,6 +271,9 @@ public interface IDirectDebitTransactionInformation17 : IIsoComponent
     [IsoId("_MWr1OxmHEeS15voCZPa1ZA")]
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRegulatoryReporting3> RegulatoryReporting { get; }
 
     /// <summary>
@@ -274,6 +282,9 @@ public interface IDirectDebitTransactionInformation17 : IIsoComponent
     [IsoId("_MWr1PRmHEeS15voCZPa1ZA")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IRemittanceLocation4> RelatedRemittanceInformation { get; }
 
     /// <summary>
@@ -290,5 +301,6 @@ public interface IDirectDebitTransactionInformation17 : IIsoComponent
     [IsoId("_MWr1QRmHEeS15voCZPa1ZA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

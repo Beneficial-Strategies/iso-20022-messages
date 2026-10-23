@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Account And Balance58.
 /// </summary>
 [IsoId("_5CBV5Y-9Ee-COKgew96POA")]
+[IsoDisplayName(@"Account And Balance58")]
 public interface IAccountAndBalance58 : IIsoComponent
 {
     /// <summary>

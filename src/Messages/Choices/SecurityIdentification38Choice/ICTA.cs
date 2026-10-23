@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification38Choice;
 /// <summary>
 /// CTA.
 /// </summary>
+[IsoDisplayName(@"CTA")]
 public interface ICTA : ISecurityIdentification38Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// </summary>
 [IsoId("_R3KYwTEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("pacs.007.001.13", "FIToFIPmtRvsl", "urn:iso:std:iso:20022:tech:xsd:pacs.007.001.13")]
+[IsoDisplayName(@"FI To FI Payment Reversal V13")]
 public interface IFIToFIPaymentReversalV13 : IOuterRecord
 {
     /// <summary>
@@ -32,6 +33,7 @@ public interface IFIToFIPaymentReversalV13 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentTransaction149> TransactionInformation { get; }
 
     /// <summary>
@@ -39,5 +41,6 @@ public interface IFIToFIPaymentReversalV13 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

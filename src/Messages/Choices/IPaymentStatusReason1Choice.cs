@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for the status of the payment transaction.
 /// </summary>
 [IsoId("_QKoAqdEdEei798TPbKJMuw")]
+[IsoDisplayName(@"Payment Status Reason 1 Choice")]
 public interface IPaymentStatusReason1Choice : IIsoChoice { }

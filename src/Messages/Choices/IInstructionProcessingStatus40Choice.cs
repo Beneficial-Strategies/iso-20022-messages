@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between different instruction processing statuses.
 /// </summary>
 [IsoId("_abidwe6BEeqc-LCjwLsUVg")]
+[IsoDisplayName(@"Instruction Processing Status 40 Choice")]
 public interface IInstructionProcessingStatus40Choice : IIsoChoice { }

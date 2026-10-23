@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Additional information.
 /// </summary>
 [IsoId("_ho71Md1BEeqW_oCeEFhoHw")]
+[IsoDisplayName(@"Additional Information")]
 public interface IAdditionalInformation25 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IAdditionalInformation25 : IIsoComponent
     [IsoId("_h9nrw91BEeqW_oCeEFhoHw")]
     [DisplayName("Query")]
     [IsoXmlTag("Qry")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text Query { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IAdditionalInformation25 : IIsoComponent
     [IsoId("_t-VEkN1BEeqW_oCeEFhoHw")]
     [DisplayName("Query Reason")]
     [IsoXmlTag("QryRsn")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? QueryReason { get; }
 
     /// <summary>

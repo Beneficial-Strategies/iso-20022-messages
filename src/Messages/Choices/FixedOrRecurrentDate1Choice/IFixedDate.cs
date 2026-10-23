@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FixedOrRecurrentDate1Choice;
 /// Date on which the variation is triggered.
 /// </summary>
 [IsoId("_98U8AHltEeG7BsjMvd1mEw_-1492206303")]
+[IsoDisplayName(@"Fixed Date")]
 public interface IFixedDate : IFixedOrRecurrentDate1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IFixedDate : IFixedOrRecurrentDate1Choice, IIsoChoiceVariant
     /// A particular point in the progression of time in a calendar year expressed in the YYYY-MM-DD format. This representation is defined in &quot;XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004&quot; which is aligned with ISO 8601.
     /// </summary>
     [IsoXmlTag("FxdDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate Value { get; }
 }

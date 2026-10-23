@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the chain of collateral parties on the instruction side.
 /// </summary>
 [IsoId("_YHwsTSs-EeySlt9bF77XfA")]
+[IsoDisplayName(@"Collateral Parties")]
 public interface ICollateralParties9 : IIsoComponent
 {
     /// <summary>

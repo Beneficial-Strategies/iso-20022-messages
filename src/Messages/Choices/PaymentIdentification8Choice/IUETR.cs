@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification8Choice;
 /// <summary>
 /// UETR.
 /// </summary>
+[IsoDisplayName(@"UETR")]
 public interface IUETR : IPaymentIdentification8Choice, IIsoChoiceVariant
 {
     /// <summary>

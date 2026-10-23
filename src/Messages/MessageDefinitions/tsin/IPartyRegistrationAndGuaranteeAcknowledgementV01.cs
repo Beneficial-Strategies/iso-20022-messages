@@ -18,6 +18,8 @@ namespace BeneficialStrategies.Iso20022.tsin;
     "PtyRegnAndGrntAck",
     "urn:iso:std:iso:20022:tech:xsd:tsin.012.001.01"
 )]
+[Description(@"The message PartyManagementPaymentAcknowledgement is sent from a trade partner to any partner requested through a PartyManagementPaymentAcknowledgemenNotification message to acknowledge the notified factoring service agreement. Depending on legal contexts, the acknowledgement may be required in order for the financial service agreement to become effective.|The message references related messages and may include referenced data.|The message can carry digital signatures if required by context.")]
+[IsoDisplayName(@"Party Registration And Guarantee Acknowledgement V")]
 public interface IPartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRecord
 {
     /// <summary>
@@ -34,6 +36,7 @@ public interface IPartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNDkz-AOSNFX-8224507")]
     [DisplayName("Acknowledgement List")]
     [IsoXmlTag("AckList")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancingAgreementList1> AcknowledgementList { get; }
 
     /// <summary>
@@ -42,6 +45,7 @@ public interface IPartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNDk0-AOSNFX-8224507")]
     [DisplayName("Acknowledgement Count")]
     [IsoXmlTag("AckCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText AcknowledgementCount { get; }
 
     /// <summary>
@@ -50,6 +54,7 @@ public interface IPartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNDk1-AOSNFX-8224507")]
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? ItemCount { get; }
 
     /// <summary>
@@ -58,6 +63,7 @@ public interface IPartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNDk2-AOSNFX-8224507")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ControlSum { get; }
 
     /// <summary>
@@ -66,5 +72,6 @@ public interface IPartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNDk3-AOSNFX-8224507")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEncapsulatedBusinessMessage1> AttachedMessage { get; }
 }

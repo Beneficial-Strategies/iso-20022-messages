@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the update of securities.
 /// </summary>
 [IsoId("_20ciUJI7EeuAlLVx8pyt3w")]
+[IsoDisplayName(@"Securities Update Reason 1 Choice")]
 public interface ISecuritiesUpdateReason1Choice : IIsoChoice { }

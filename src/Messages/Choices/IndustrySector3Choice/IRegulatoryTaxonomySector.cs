@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndustrySector3Choice;
 /// <summary>
 /// Regulatory Taxonomy Sector.
 /// </summary>
+[IsoDisplayName(@"Regulatory Taxonomy Sector")]
 public interface IRegulatoryTaxonomySector : IIndustrySector3Choice, IIsoChoiceVariant
 {
     /// <summary>

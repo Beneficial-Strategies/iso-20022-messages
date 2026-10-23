@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status of the transfer cancellation is complete.
 /// </summary>
 [IsoId("_RQf8mdp-Ed-ak6NoX_4Aeg_2013423795")]
+[IsoDisplayName(@"Transfer Cancellation Complete Status And Reason")]
 public interface ITransferCancellationCompleteStatusAndReason1 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface ITransferCancellationCompleteStatusAndReason1 : IIsoComponent
     [IsoId("_RQptkNp-Ed-ak6NoX_4Aeg_2013423813")]
     [DisplayName("Extended Reason")]
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedReason { get; }
 
     /// <summary>

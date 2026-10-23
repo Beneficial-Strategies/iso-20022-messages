@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice;
 /// <summary>
 /// Other C10.
 /// </summary>
+[IsoDisplayName(@"Other C10")]
 public interface IOtherC10 : IAssetClassCommodity7Choice, IIsoChoiceVariant
 {
     /// <summary>

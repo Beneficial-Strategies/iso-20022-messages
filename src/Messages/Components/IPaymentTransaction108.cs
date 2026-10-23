@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides further details on the reference and status on the original transactions, included in the original instruction, to which the reversal message applies.
 /// </summary>
 [IsoId("_YNljSW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"Payment Transaction")]
 public interface IPaymentTransaction108 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPaymentTransaction108 : IIsoComponent
     [IsoId("_YWrN8W49EeiU9cctagi5ow")]
     [DisplayName("Reversal Identification")]
     [IsoXmlTag("RvslId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReversalIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface IPaymentTransaction108 : IIsoComponent
     [IsoId("_YWrN8249EeiU9cctagi5ow")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalInstructionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface IPaymentTransaction108 : IIsoComponent
     [IsoId("_YWrN9W49EeiU9cctagi5ow")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OriginalEndToEndIdentification { get; }
 
     /// <summary>
@@ -41,6 +48,7 @@ public interface IPaymentTransaction108 : IIsoComponent
     [IsoId("_K6hdMXrfEeidVZmeoasaWQ")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
+    [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
     UUIDv4Identifier? OriginalUETR { get; }
 
     /// <summary>
@@ -75,6 +83,7 @@ public interface IPaymentTransaction108 : IIsoComponent
     [IsoId("_YWrN_W49EeiU9cctagi5ow")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IPaymentReversalReason9> ReversalReasonInformation { get; }
 
     /// <summary>
@@ -91,5 +100,6 @@ public interface IPaymentTransaction108 : IIsoComponent
     [IsoId("_YWrOAW49EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

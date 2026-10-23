@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Original Item Reference7.
 /// </summary>
 [IsoId("_8kfVMTEsEe6GxLzpkVnWYg")]
+[IsoDisplayName(@"Original Item Reference7")]
 public interface IOriginalItemReference7 : IIsoComponent
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PremiumQuote1Choice;
 /// Premium calculation is based on a percentage of the put amount.
 /// </summary>
 [IsoId("_TMLmIdp-Ed-ak6NoX_4Aeg_-1553826065")]
+[IsoDisplayName(@"Percentage Of Put Amount")]
 public interface IPercentageOfPutAmount : IPremiumQuote1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IPercentageOfPutAmount : IPremiumQuote1Choice, IIsoChoiceVarian
     /// Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
     [IsoXmlTag("PctgOfPutAmt")]
+    [IsoSimpleType(IsoSimpleType.PercentageRate)]
     PercentageRate Value { get; }
 }

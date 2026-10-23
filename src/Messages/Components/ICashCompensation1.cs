@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides details about the cash compensation such as the fees and the total settlement amount.
 /// </summary>
 [IsoId("_UokEmtp-Ed-ak6NoX_4Aeg_-1006073827")]
+[IsoDisplayName(@"Cash Compensation")]
 public interface ICashCompensation1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ICashCompensation1 : IIsoComponent
     [IsoId("_Uot1kNp-Ed-ak6NoX_4Aeg_1587929881")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? ValueDate { get; }
 }

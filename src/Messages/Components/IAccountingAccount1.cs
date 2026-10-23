@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specific trade account for recording debits and credits to general accounting, cost accounting or budget accounting.
 /// </summary>
 [IsoId("_SmtBUAEcEeCQm6a_G2yO_w_1620788765")]
+[IsoDisplayName(@"Accounting Account")]
 public interface IAccountingAccount1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IAccountingAccount1 : IIsoComponent
     [IsoId("_SmtBUQEcEeCQm6a_G2yO_w_-842530775")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Identification { get; }
 
     /// <summary>
@@ -25,5 +28,7 @@ public interface IAccountingAccount1 : IIsoComponent
     [IsoId("_SmtBUgEcEeCQm6a_G2yO_w_1034412203")]
     [DisplayName("Cost Reference Pattern")]
     [IsoXmlTag("CostRefPttrn")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? CostReferencePattern { get; }
 }

@@ -25,6 +25,8 @@ namespace BeneficialStrategies.Iso20022.setr;
     "SwtchOrdrConfCxlInstrV01",
     "urn:iso:std:iso:20022:tech:xsd:setr.055.001.01"
 )]
+[Description(@"Scope|An executing party, for example, a transfer agent, sends the SwitchOrderConfirmationCancellationInstruction message to the instructing party, for example, an investment manager or its authorised representative to amend a previously sent SwitchOrderConfirmation message.|Usage|The SwitchOrderConfirmationCancellationInstruction message is used to cancel a previously sent SwitchOrderConfirmation.|The amendment indicator element is used to specify whether the switch order confirmation cancellation is to be followed by a switch order confirmation amendment.|There are two ways to specify the switch order confirmation cancellation. Either:|- the business references, for example, OrderReference, DealReference, of the switch order confirmation are quoted, or,|- all the details of the switch order confirmation (this includes the OrderReference and DealReference) are quoted, but this is not recommended.|The message identification of the SwitchOrderConfirmation message may also be quoted in PreviousReference.|It is also possible to instruct the cancellation of the confirmation message by quoting its message identification in PreviousReference, but this is not recommended.")]
+[IsoDisplayName(@"Switch Order Confirmation Cancellation Instruction V")]
 public interface ISwitchOrderConfirmationCancellationInstructionV01 : IOuterRecord
 {
     /// <summary>
@@ -49,6 +51,7 @@ public interface ISwitchOrderConfirmationCancellationInstructionV01 : IOuterReco
     [IsoId("_64W70dE7Ed-BzquC8wXy7w_1790540438")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalReference3> PreviousReference { get; }
 
     /// <summary>

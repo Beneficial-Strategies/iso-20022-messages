@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies the old and new values for a market specific attribute.
 /// </summary>
 [IsoId("_8g_CI2jSEeiRg5NzP0jkQg")]
+[IsoDisplayName(@"Update Log Market Specific Attribute")]
 public interface IUpdateLogMarketSpecificAttribute1 : IIsoComponent
 {
     /// <summary>

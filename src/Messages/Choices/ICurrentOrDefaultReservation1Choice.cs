@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Current or default reservation set by the member and managed by the transaction administrator.
 /// </summary>
 [IsoId("_8IjoJKMgEeCJ6YNENx4h-w_-1597699286")]
+[IsoDisplayName(@"Current Or Default Reservation 1 Choice")]
 public interface ICurrentOrDefaultReservation1Choice : IIsoChoice { }

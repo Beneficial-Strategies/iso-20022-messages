@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between formats to express the corporate event type.
 /// </summary>
 [IsoId("_-lkSYgVSEeqjd8n6wD9JVw")]
+[IsoDisplayName(@"Corporate Action Event Type 96 Choice")]
 public interface ICorporateActionEventType96Choice : IIsoChoice { }

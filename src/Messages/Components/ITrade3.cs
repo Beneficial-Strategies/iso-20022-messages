@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Details of the foreign exchange trade including Spot\Forward\NDF that is captured.
 /// </summary>
 [IsoId("_IWV_wA2MEeSw7Op2IIeBeQ")]
+[IsoDisplayName(@"Trade")]
 public interface ITrade3 : IIsoComponent
 {
     /// <summary>
@@ -41,6 +42,7 @@ public interface ITrade3 : IIsoComponent
     [IsoId("_zqtBsQ2MEeSw7Op2IIeBeQ")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate SettlementDate { get; }
 
     /// <summary>
@@ -57,6 +59,7 @@ public interface ITrade3 : IIsoComponent
     [IsoId("_N8HR8YaMEeSzIqahkBT6cQ")]
     [DisplayName("Forward Points")]
     [IsoXmlTag("FwdPts")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ForwardPoints { get; }
 
     /// <summary>
@@ -73,6 +76,7 @@ public interface ITrade3 : IIsoComponent
     [IsoId("_zV_V9A2MEeSw7Op2IIeBeQ")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ValueDate { get; }
 
     /// <summary>
@@ -105,6 +109,7 @@ public interface ITrade3 : IIsoComponent
     [IsoId("_YuYQwESYEeS6cOLECtYLrA")]
     [DisplayName("Fixing Date")]
     [IsoXmlTag("FxgDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? FixingDate { get; }
 
     /// <summary>
@@ -113,6 +118,7 @@ public interface ITrade3 : IIsoComponent
     [IsoId("_r_EfUESNEeS6cOLECtYLrA")]
     [DisplayName("Option Indicator")]
     [IsoXmlTag("OptnInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OptionIndicator { get; }
 
     /// <summary>
@@ -121,6 +127,7 @@ public interface ITrade3 : IIsoComponent
     [IsoId("_o6Tt0ESNEeS6cOLECtYLrA")]
     [DisplayName("Delta Indicator")]
     [IsoXmlTag("DltaInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DeltaIndicator { get; }
 
     /// <summary>
@@ -129,5 +136,6 @@ public interface ITrade3 : IIsoComponent
     [IsoId("_CP330YaNEeSzIqahkBT6cQ")]
     [DisplayName("Associated Trade Reference")]
     [IsoXmlTag("AssoctdTradRef")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> AssociatedTradeReference { get; }
 }

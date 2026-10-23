@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationReason6Choice
 /// Standard code to specify the reason why a cancellation request sent for the related instruction is pending.
 /// </summary>
 [IsoId("_86aToZwtEeazcsnODTksnQ")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IPendingCancellationReason6Choice, IIsoChoiceVariant
 {
     /// <summary>

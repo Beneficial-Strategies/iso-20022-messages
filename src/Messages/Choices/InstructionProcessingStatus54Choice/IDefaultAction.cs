@@ -8,6 +8,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus54Cho
 /// <summary>
 /// Default Action.
 /// </summary>
+[IsoDisplayName(@"Default Action")]
 public interface IDefaultAction : IInstructionProcessingStatus54Choice, IIsoChoiceVariant
 {
     /// <summary>

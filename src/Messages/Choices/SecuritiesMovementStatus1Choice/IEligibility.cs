@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice;
 /// </summary>
 [IsoId("_mZ3l8OCzEei2UYJ62ws-Fw")]
 [IsoXmlTag("Elgblty")]
+[IsoDisplayName(@"Eligibility")]
 public interface IEligibility : ISecuritiesMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,5 +27,7 @@ public interface IEligibility : ISecuritiesMovementStatus1Choice, IIsoChoiceVari
     [IsoId("_RA3_Wzp5EeWVrPy0StzzSg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(210, MinimumLength = 1)]
     Max210Text? AdditionalReasonInformation { get; }
 }

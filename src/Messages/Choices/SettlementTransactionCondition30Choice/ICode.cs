@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionCondition30
 /// Settlement condition expressed as a code.
 /// </summary>
 [IsoId("_1wpf00c8EeaBWtcfqEyXyw")]
+[IsoDisplayName(@"Code")]
 public interface ICode : ISettlementTransactionCondition30Choice, IIsoChoiceVariant
 {
     /// <summary>

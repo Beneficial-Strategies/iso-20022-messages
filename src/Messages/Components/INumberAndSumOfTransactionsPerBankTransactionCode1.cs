@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Set of elements providing the total sum of entries per bank transaction code.
 /// </summary>
 [IsoId("_RU-M49p-Ed-ak6NoX_4Aeg_-1159458700")]
+[IsoDisplayName(@"Number And Sum Of Transactions Per Bank Transaction Code")]
 public interface INumberAndSumOfTransactionsPerBankTransactionCode1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface INumberAndSumOfTransactionsPerBankTransactionCode1 : IIsoCompon
     [IsoId("_RU-M5Np-Ed-ak6NoX_4Aeg_-1158538669")]
     [DisplayName("Number Of Entries")]
     [IsoXmlTag("NbOfNtries")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     Max15NumericText? NumberOfEntries { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface INumberAndSumOfTransactionsPerBankTransactionCode1 : IIsoCompon
     [IsoId("_RU-M5dp-Ed-ak6NoX_4Aeg_-1158538591")]
     [DisplayName("Sum")]
     [IsoXmlTag("Sum")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? Sum { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface INumberAndSumOfTransactionsPerBankTransactionCode1 : IIsoCompon
     [IsoId("_RU-M5tp-Ed-ak6NoX_4Aeg_1319749819")]
     [DisplayName("Total Net Entry Amount")]
     [IsoXmlTag("TtlNetNtryAmt")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? TotalNetEntryAmount { get; }
 
     /// <summary>
@@ -57,5 +61,6 @@ public interface INumberAndSumOfTransactionsPerBankTransactionCode1 : IIsoCompon
     [IsoId("_RVH94Np-Ed-ak6NoX_4Aeg_1922475023")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ICashBalanceAvailability1> Availability { get; }
 }

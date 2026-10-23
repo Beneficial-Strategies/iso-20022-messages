@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice;
 /// </summary>
 [IsoId("_iZO6B6idEeWHO_l3hf2rlA")]
 [IsoXmlTag("OthrColl")]
+[IsoDisplayName(@"Other Collateral")]
 public interface IOtherCollateral : ISecuredCollateral2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,7 @@ public interface IOtherCollateral : ISecuredCollateral2Choice, IIsoChoiceVariant
     [IsoId("_oPGhM6idEeWHO_l3hf2rlA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
+    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
     CFIOct2015Identifier Type { get; }
 
     /// <summary>
@@ -34,6 +36,7 @@ public interface IOtherCollateral : ISecuredCollateral2Choice, IIsoChoiceVariant
     [IsoId("_oPGhNaidEeWHO_l3hf2rlA")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoSimpleType(IsoSimpleType.SNA2008SectorIdentifier)]
     SNA2008SectorIdentifier Sector { get; }
 
     /// <summary>

@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.reda;
     "ElgblSctiesCreReq",
     "urn:iso:std:iso:20022:tech:xsd:reda.025.001.01"
 )]
+[IsoDisplayName(@"Eligible Securities Creation Request V01")]
 public interface IEligibleSecuritiesCreationRequestV01 : IOuterRecord
 {
     /// <summary>
@@ -29,6 +30,7 @@ public interface IEligibleSecuritiesCreationRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Eligible Security")]
     [IsoXmlTag("ElgblScty")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IEligibleSecurity5> EligibleSecurity { get; }
 
     /// <summary>
@@ -36,5 +38,6 @@ public interface IEligibleSecuritiesCreationRequestV01 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

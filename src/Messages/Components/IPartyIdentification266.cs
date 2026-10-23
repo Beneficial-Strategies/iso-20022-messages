@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of a party. The party can be identified by providing the party&apos;s name and optionally, the BIC, account number, address, clearing system identification or LEI can also be provided.
 /// </summary>
 [IsoId("_BdWGVwN1Ee2-vqzwMUAewg")]
+[IsoDisplayName(@"Party Identification")]
 public interface IPartyIdentification266 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IPartyIdentification266 : IIsoComponent
     [IsoId("_BjNdwwN1Ee2-vqzwMUAewg")]
     [DisplayName("Party Name")]
     [IsoXmlTag("PtyNm")]
+    [IsoSimpleType(IsoSimpleType.Max34Text)]
+    [StringLength(34, MinimumLength = 1)]
     Max34Text? PartyName { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPartyIdentification266 : IIsoComponent
     [IsoId("_BjNdxwN1Ee2-vqzwMUAewg")]
     [DisplayName("Account Number")]
     [IsoXmlTag("AcctNb")]
+    [IsoSimpleType(IsoSimpleType.Max34Text)]
+    [StringLength(34, MinimumLength = 1)]
     Max34Text? AccountNumber { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPartyIdentification266 : IIsoComponent
     [IsoId("_BjNdyQN1Ee2-vqzwMUAewg")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
+    [IsoSimpleType(IsoSimpleType.Max105Text)]
+    [StringLength(105, MinimumLength = 1)]
     Max105Text? Address { get; }
 
     /// <summary>
@@ -57,5 +64,6 @@ public interface IPartyIdentification266 : IIsoComponent
     [IsoId("_BjNdzQN1Ee2-vqzwMUAewg")]
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
+    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     LEIIdentifier? LegalEntityIdentifier { get; }
 }

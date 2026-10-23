@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingSubServiceQualifier1Choic
 /// Specifies the contents of the sub service qualifier, in a coded form.
 /// </summary>
 [IsoId("_6PphwZqlEeGSON8vddiWzQ_-1237515416")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IBillingSubServiceQualifier1Choice, IIsoChoiceVariant
 {
     /// <summary>

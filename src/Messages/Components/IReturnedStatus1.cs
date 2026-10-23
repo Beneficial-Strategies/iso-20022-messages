@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Instructed units are returned or partially returned to the instructing party.
 /// </summary>
 [IsoId("_r9uog473EfCbNJ3GwkFTcw")]
+[IsoDisplayName(@"Returned Status1")]
 public interface IReturnedStatus1 : IIsoComponent
 {
     /// <summary>

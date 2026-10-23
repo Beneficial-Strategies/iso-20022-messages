@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of proprietary or domestic identification scheme that uniquely identifies a security.
 /// </summary>
 [IsoId("_XKZIItp-Ed-ak6NoX_4Aeg_-2009895273")]
+[IsoDisplayName(@"Identification Source 2 Choice")]
 public interface IIdentificationSource2Choice : IIsoChoice { }

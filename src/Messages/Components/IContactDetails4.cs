@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Communication device number or electronic address used for communication.
 /// </summary>
 [IsoId("_TVX6Ae3mEeaWjpoyrnG6Rw")]
+[IsoDisplayName(@"Contact Details")]
 public interface IContactDetails4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface IContactDetails4 : IIsoComponent
     [IsoId("_TiBO5e3mEeaWjpoyrnG6Rw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Name { get; }
 
     /// <summary>
@@ -25,6 +28,7 @@ public interface IContactDetails4 : IIsoComponent
     [IsoId("_TiBO5-3mEeaWjpoyrnG6Rw")]
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
+    [IsoSimpleType(IsoSimpleType.PhoneNumber)]
     PhoneNumber PhoneNumber { get; }
 
     /// <summary>
@@ -33,6 +37,8 @@ public interface IContactDetails4 : IIsoComponent
     [IsoId("_TiBO7e3mEeaWjpoyrnG6Rw")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
+    [IsoSimpleType(IsoSimpleType.Max2048Text)]
+    [StringLength(2048, MinimumLength = 1)]
     Max2048Text EmailAddress { get; }
 
     /// <summary>
@@ -41,5 +47,7 @@ public interface IContactDetails4 : IIsoComponent
     [IsoId("_TiBO7-3mEeaWjpoyrnG6Rw")]
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(140, MinimumLength = 1)]
     Max140Text Function { get; }
 }

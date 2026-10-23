@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identification of the reconciliation period between the acquirer and the issuer or their respective agents.
 /// </summary>
 [IsoId("_18UEUXsvEeSTS7uHCe8FPQ")]
+[IsoDisplayName(@"Transaction Identifier")]
 public interface ITransactionIdentifier2 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ITransactionIdentifier2 : IIsoComponent
     [IsoId("_Ai_vIHswEeSTS7uHCe8FPQ")]
     [DisplayName("Reconciliation Date")]
     [IsoXmlTag("RcncltnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate ReconciliationDate { get; }
 
     /// <summary>
@@ -27,5 +29,7 @@ public interface ITransactionIdentifier2 : IIsoComponent
     [IsoId("_Hn8YkHswEeSTS7uHCe8FPQ")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 }

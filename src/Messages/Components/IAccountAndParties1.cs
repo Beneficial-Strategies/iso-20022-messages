@@ -9,6 +9,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the account as the search criteria for the financial institution to do the investigation.
 /// </summary>
 [IsoId("_06D5001FEeGAs6v-iSb2RQ")]
+[IsoDisplayName(@"Account And Parties")]
+[Obsolete(@"Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public interface IAccountAndParties1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +35,6 @@ public interface IAccountAndParties1 : IIsoComponent
     [IsoId("_EcwSUUyvEeGcV5yVhSZuNw")]
     [DisplayName("Authority Request Type")]
     [IsoXmlTag("AuthrtyReqTp")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAuthorityRequestType1> AuthorityRequestType { get; }
 }

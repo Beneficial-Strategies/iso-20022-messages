@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Parties used for acting parties that apply either to the whole message or to individual sides.
 /// </summary>
 [IsoId("_WPktUwasEe2phaVG0lYKTw")]
+[IsoDisplayName(@"Confirmation Parties")]
 public interface IConfirmationParties7 : IIsoComponent
 {
     /// <summary>

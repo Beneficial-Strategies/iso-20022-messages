@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Search for a system and a member of a system.
 /// </summary>
 [IsoId("_-HV9wW49EeiU9cctagi5ow")]
+[IsoDisplayName(@"System Search")]
 public interface ISystemSearch4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISystemSearch4 : IIsoComponent
     [IsoId("_-RLPI249EeiU9cctagi5ow")]
     [DisplayName("System Identification")]
     [IsoXmlTag("SysId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IClearingSystemIdentification3Choice> SystemIdentification { get; }
 
     /// <summary>
@@ -25,6 +27,7 @@ public interface ISystemSearch4 : IIsoComponent
     [IsoId("_-RLPJW49EeiU9cctagi5ow")]
     [DisplayName("Member Identification")]
     [IsoXmlTag("MmbId")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBranchAndFinancialInstitutionIdentification6> MemberIdentification { get; }
 
     /// <summary>

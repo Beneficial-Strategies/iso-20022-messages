@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Context of the card payment transaction
 /// </summary>
 [IsoId("_XjPhoUP_EeiFlYmBVFSxUw")]
+[IsoDisplayName(@"Transaction Context")]
 public interface ITransactionContext4 : IIsoComponent
 {
     /// <summary>
@@ -19,6 +20,7 @@ public interface ITransactionContext4 : IIsoComponent
     [IsoId("_XvcKkUP_EeiFlYmBVFSxUw")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
+    [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
     Exact4NumericText? MerchantCategoryCode { get; }
 
     /// <summary>
@@ -30,6 +32,7 @@ public interface ITransactionContext4 : IIsoComponent
     [IsoId("_jXFoMWzeEemD24gVaMSpeA")]
     [DisplayName("Deferred Delivery Indicator")]
     [IsoXmlTag("DfrrdDlvryInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? DeferredDeliveryIndicator { get; }
 
     /// <summary>
@@ -71,5 +74,6 @@ public interface ITransactionContext4 : IIsoComponent
     [IsoId("_XvcKnUP_EeiFlYmBVFSxUw")]
     [DisplayName("Capture Date")]
     [IsoXmlTag("CaptrDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
     ISODate? CaptureDate { get; }
 }

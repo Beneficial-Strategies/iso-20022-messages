@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides information about a movement that failed the settlement.
 /// </summary>
 [IsoId("_UIrqo9p-Ed-ak6NoX_4Aeg_2140472900")]
+[IsoDisplayName(@"Failed Movement")]
 public interface IFailedMovement1 : IIsoComponent
 {
     /// <summary>

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.
 /// </summary>
 [IsoId("_GBYcFW4-EeiU9cctagi5ow")]
+[IsoDisplayName(@"Standing Order Criteria 3 Choice")]
 public interface IStandingOrderCriteria3Choice : IIsoChoice { }

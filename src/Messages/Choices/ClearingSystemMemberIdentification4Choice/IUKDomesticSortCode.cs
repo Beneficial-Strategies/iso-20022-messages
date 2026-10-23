@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// United Kingdom (UK) Sort Code - identifies British financial institutions on the British national clearing systems. The sort code is assigned by the Association for Payments and Clearing Services (APACS).
 /// </summary>
 [IsoId("_VwSCZ7NIEeejueAciesPMA")]
+[IsoDisplayName(@"UK Domestic Sort Code")]
 public interface IUKDomesticSortCode : IClearingSystemMemberIdentification4Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,6 @@ public interface IUKDomesticSortCode : IClearingSystemMemberIdentification4Choic
     /// United Kingdom (UK) Sort Code. Identifies British financial institutions on the British national clearing systems. The sort code is assigned by the Association for Payments and Clearing Services (APACS).
     /// </summary>
     [IsoXmlTag("GBSC")]
+    [IsoSimpleType(IsoSimpleType.UKDomesticSortCodeIdentifier)]
     UKDomesticSortCodeIdentifier Value { get; }
 }

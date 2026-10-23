@@ -12,6 +12,8 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// </summary>
 [IsoId("_myaAh1B5Ee2KGNXAcFL5RA")]
 [IsoMessage("supl.033.001.03", "DTCCCACSSD1", "urn:iso:std:iso:20022:tech:xsd:supl.033.001.03")]
+[Description(@"The DTCCCACSSD1 message extends ISO corporate action Instruction Cancellation Request Status Advice (CACS) message with DTCC corporate action elements not covered in the standard message.")]
+[IsoDisplayName(@"DTCCCACSSD 1 V")]
 public interface IDTCCCACSSD1V03 : IOuterRecord
 {
     /// <summary>

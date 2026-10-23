@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transparency calculation specific details for an commodity derivatives.
 /// </summary>
 [IsoId("_zeGjUWlHEeaLAKoEUNsD9g")]
+[IsoDisplayName(@"Commodity Derivate")]
 public interface ICommodityDerivate4 : IIsoComponent
 {
     /// <summary>

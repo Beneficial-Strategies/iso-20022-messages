@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Data related to a component of the POI.
 /// </summary>
 [IsoId("_LYLC4H1DEeCF8NjrBemJWQ_1913950683")]
+[IsoDisplayName(@"Point Of Interaction Component")]
 public interface IPointOfInteractionComponent2 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,8 @@ public interface IPointOfInteractionComponent2 : IIsoComponent
     [IsoId("_LYUz4H1DEeCF8NjrBemJWQ_803039264")]
     [DisplayName("Manufacturer Identification")]
     [IsoXmlTag("ManfctrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ManufacturerIdentification { get; }
 
     /// <summary>
@@ -33,6 +36,8 @@ public interface IPointOfInteractionComponent2 : IIsoComponent
     [IsoId("_LYUz4X1DEeCF8NjrBemJWQ_-194033089")]
     [DisplayName("Model")]
     [IsoXmlTag("Mdl")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? Model { get; }
 
     /// <summary>
@@ -41,6 +46,8 @@ public interface IPointOfInteractionComponent2 : IIsoComponent
     [IsoId("_LYUz4n1DEeCF8NjrBemJWQ_-1191105442")]
     [DisplayName("Version Number")]
     [IsoXmlTag("VrsnNb")]
+    [IsoSimpleType(IsoSimpleType.Max16Text)]
+    [StringLength(16, MinimumLength = 1)]
     Max16Text? VersionNumber { get; }
 
     /// <summary>
@@ -49,6 +56,8 @@ public interface IPointOfInteractionComponent2 : IIsoComponent
     [IsoId("_LYUz431DEeCF8NjrBemJWQ_2106789501")]
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SerialNumber { get; }
 
     /// <summary>
@@ -58,5 +67,6 @@ public interface IPointOfInteractionComponent2 : IIsoComponent
     [IsoId("_LYUz5H1DEeCF8NjrBemJWQ_1109717148")]
     [DisplayName("Approval Number")]
     [IsoXmlTag("ApprvlNb")]
+    [IsoList(IsoListKind.SimpleValue)]
     IEnumerable<Max70Text> ApprovalNumber { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Assumed obligations that are required to be met in cash under a hypothetical stress scenario.
 /// </summary>
 [IsoId("_yh7egLJPEeaYqc4G3TTwhA")]
+[IsoDisplayName(@"Stress Liquid Resource Requirement")]
 public interface IStressLiquidResourceRequirement1 : IIsoComponent
 {
     /// <summary>

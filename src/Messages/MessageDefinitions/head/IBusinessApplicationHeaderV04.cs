@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.head;
 /// </summary>
 [IsoId("_R2558TEZEe6kQ-WGAhcVPQ")]
 [IsoMessage("head.001.001.04", "AppHdr", "urn:iso:std:iso:20022:tech:xsd:head.001.001.04")]
+[IsoDisplayName(@"Business Application Header V04")]
 public interface IBusinessApplicationHeaderV04 : IOuterRecord
 {
     /// <summary>
@@ -109,5 +110,6 @@ public interface IBusinessApplicationHeaderV04 : IOuterRecord
     /// </summary>
     [DisplayName("Related")]
     [IsoXmlTag("Rltd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IBusinessApplicationHeader8> Related { get; }
 }

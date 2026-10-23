@@ -19,6 +19,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_Rc5pwzm_EeWENZE2jGFgGw")]
 [IsoMessage("seev.038.001.04", "CorpActnNrrtv", "urn:iso:std:iso:20022:tech:xsd:seev.038.001.04")]
+[Description(@"Scope|The CorporateActionNarrative message is sent between an account servicer and an account owner or its designated agent to cater for tax reclaims, restrictions, documentation requirements. This message is bi-directional.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),|using the relevant elements in the business application header (BAH).")]
+[IsoDisplayName(@"Corporate Action Narrative V")]
 public interface ICorporateActionNarrativeV04 : IOuterRecord
 {
     /// <summary>
@@ -59,5 +61,6 @@ public interface ICorporateActionNarrativeV04 : IOuterRecord
     [IsoId("_Rc5p0Tm_EeWENZE2jGFgGw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

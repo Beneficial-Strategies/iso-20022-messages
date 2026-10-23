@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides additional information regarding corporate action option details.
 /// </summary>
 [IsoId("_eEjNwQ7sEeuZI5Sr_GAcuA")]
+[IsoDisplayName(@"Corporate Action Option SD")]
 public interface ICorporateActionOptionSD14 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_eZ-rMQ7sEeuZI5Sr_GAcuA")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(350, MinimumLength = 1)]
     Max350Text? PlaceAndName { get; }
 
     /// <summary>
@@ -33,6 +36,7 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_eZ-rOw7sEeuZI5Sr_GAcuA")]
     [DisplayName("Default Option Flag")]
     [IsoXmlTag("DfltOptnFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? DefaultOptionFlag { get; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_eZ-rSQ7sEeuZI5Sr_GAcuA")]
     [DisplayName("Optional Dividend Supplementary Data Required Flag")]
     [IsoXmlTag("OptnlDvddSplmtryDataReqrdFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OptionalDividendSupplementaryDataRequiredFlag { get; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_eZ-rSw7sEeuZI5Sr_GAcuA")]
     [DisplayName("Oversubscription Charge Flag")]
     [IsoXmlTag("OvrsbcptChrgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? OversubscriptionChargeFlag { get; }
 
     /// <summary>
@@ -57,6 +63,7 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_eZ-rTQ7sEeuZI5Sr_GAcuA")]
     [DisplayName("Protect Charge Flag")]
     [IsoXmlTag("PrtctChrgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? ProtectChargeFlag { get; }
 
     /// <summary>
@@ -65,6 +72,7 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_eZ-rTw7sEeuZI5Sr_GAcuA")]
     [DisplayName("Step Up Charge Flag")]
     [IsoXmlTag("StepUpChrgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? StepUpChargeFlag { get; }
 
     /// <summary>
@@ -73,6 +81,7 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_eZ-rUQ7sEeuZI5Sr_GAcuA")]
     [DisplayName("Subscription Charge Flag")]
     [IsoXmlTag("SbcptChrgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? SubscriptionChargeFlag { get; }
 
     /// <summary>
@@ -81,6 +90,7 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_s6LlQA7sEeuZI5Sr_GAcuA")]
     [DisplayName("Back End Odd Lot Quantity Flag")]
     [IsoXmlTag("BckEndOddLotQtyFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? BackEndOddLotQuantityFlag { get; }
 
     /// <summary>
@@ -89,6 +99,7 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_KMmWcA7tEeuZI5Sr_GAcuA")]
     [DisplayName("Front End Odd Lot Quantity Flag")]
     [IsoXmlTag("FrntEndOddLotQtyFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FrontEndOddLotQuantityFlag { get; }
 
     /// <summary>
@@ -97,6 +108,7 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_FExrkA7uEeuZI5Sr_GAcuA")]
     [DisplayName("Full Condition Flag")]
     [IsoXmlTag("FullCondFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator? FullConditionFlag { get; }
 
     /// <summary>
@@ -105,6 +117,7 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_eZ-rUw7sEeuZI5Sr_GAcuA")]
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
     Exact32AlphaNumericText? RDPReferenceNumber { get; }
 
     /// <summary>
@@ -113,6 +126,7 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_eZ-rVQ7sEeuZI5Sr_GAcuA")]
     [DisplayName("Number Of Conditions")]
     [IsoXmlTag("NbOfConds")]
+    [IsoSimpleType(IsoSimpleType.Max2NumericText)]
     Max2NumericText? NumberOfConditions { get; }
 
     /// <summary>
@@ -121,6 +135,9 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_eZ-rVw7sEeuZI5Sr_GAcuA")]
     [DisplayName("Tax Category")]
     [IsoXmlTag("TaxCtgy")]
+    [MinLength(0)]
+    [MaxLength(99)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ITaxCategory1> TaxCategory { get; }
 
     /// <summary>
@@ -137,6 +154,7 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_eZ-rWw7sEeuZI5Sr_GAcuA")]
     [DisplayName("Proration Fraction")]
     [IsoXmlTag("PrratnFrctn")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     DecimalNumber? ProrationFraction { get; }
 
     /// <summary>
@@ -145,5 +163,8 @@ public interface ICorporateActionOptionSD14 : IIsoComponent
     [IsoId("_tMDJoA7yEeuZI5Sr_GAcuA")]
     [DisplayName("Option Conditions")]
     [IsoXmlTag("OptnConds")]
+    [MinLength(0)]
+    [MaxLength(6)]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOptionConditions1> OptionConditions { get; }
 }

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Sub-class of non-equity instruments sharing common characteristics according to criteria defined as per local regulation.
 /// </summary>
 [IsoId("_POi7M6aTEeqZmriXpMtonA")]
+[IsoDisplayName(@"Non Equity Sub Class")]
 public interface INonEquitySubClass1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface INonEquitySubClass1 : IIsoComponent
     [IsoId("_MOvhwKcNEeqV1IdfYLo35g")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? Description { get; }
 
     /// <summary>
@@ -25,5 +28,6 @@ public interface INonEquitySubClass1 : IIsoComponent
     [IsoId("_POi7NKaTEeqZmriXpMtonA")]
     [DisplayName("Segmentation Criteria")]
     [IsoXmlTag("SgmttnCrit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<INonEquitySubClassSegmentationCriterion1> SegmentationCriteria { get; }
 }

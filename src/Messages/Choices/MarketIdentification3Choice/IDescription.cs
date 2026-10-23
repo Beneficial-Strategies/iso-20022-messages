@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentification3Choice;
 /// Description of the market when no Market Identifier Code is available.
 /// </summary>
 [IsoId("_AcinhNokEeC60axPepSq7g_-718413102")]
+[IsoDisplayName(@"Description")]
 public interface IDescription : IMarketIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -16,5 +17,7 @@ public interface IDescription : IMarketIdentification3Choice, IIsoChoiceVariant
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("Desc")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

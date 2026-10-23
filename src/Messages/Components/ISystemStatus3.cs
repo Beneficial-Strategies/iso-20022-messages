@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Status of a system and the period of time during which the status is valid.
 /// </summary>
 [IsoId("_xCzJx5lcEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"System Status")]
 public interface ISystemStatus3 : IIsoComponent
 {
     /// <summary>

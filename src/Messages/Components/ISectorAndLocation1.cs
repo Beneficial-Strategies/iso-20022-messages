@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the identification of the reported party through the sector and the location.
 /// </summary>
 [IsoId("_RsV18JfdEeSfnc-VXAEapg")]
+[IsoDisplayName(@"Sector And Location")]
 public interface ISectorAndLocation1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ISectorAndLocation1 : IIsoComponent
     [IsoId("_oLh_0JfdEeSfnc-VXAEapg")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
+    [IsoSimpleType(IsoSimpleType.SNA2008SectorIdentifier)]
     SNA2008SectorIdentifier Sector { get; }
 
     /// <summary>

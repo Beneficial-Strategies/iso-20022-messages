@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indication whether a derivative contract is tranched.
 /// </summary>
 [IsoId("_mq05QQ06EeuJ1fOEB4bQXA")]
+[IsoDisplayName(@"Tranche Indicator 3 Choice")]
 public interface ITrancheIndicator3Choice : IIsoChoice { }

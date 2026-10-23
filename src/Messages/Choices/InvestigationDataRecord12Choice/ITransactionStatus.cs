@@ -7,6 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord12Choice;
 
 /// <summary>Provides the status of a payment that has not yet debited or credited an account.</summary>
 [IsoId("9060ef9e-db1a-4f60-aef1-9d675907c4ab")]
+[IsoDisplayName(@"Transaction Status")]
 public interface ITransactionStatus : IInvestigationDataRecord12Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

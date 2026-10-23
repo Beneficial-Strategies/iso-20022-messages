@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference11Choice;
 /// Unambiguous identification of the cancellation request as known by the instructing party.
 /// </summary>
 [IsoId("_Ad4rUdokEeC60axPepSq7g_2123239220")]
+[IsoDisplayName(@"Cancellation Request Identification")]
 public interface ICancellationRequestIdentification
     : IIdentificationReference11Choice,
         IIsoChoiceVariant
@@ -18,5 +19,7 @@ public interface ICancellationRequestIdentification
     /// Specifies a character string with a maximum length of 35 characters.
     /// </summary>
     [IsoXmlTag("CxlReqId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text Value { get; }
 }

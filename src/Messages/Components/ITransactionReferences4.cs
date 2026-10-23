@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Identifies the underlying transaction.
 /// </summary>
 [IsoId("_PgZ3gaFrEeKHbozT2UhHKA")]
+[IsoDisplayName(@"Transaction References")]
 public interface ITransactionReferences4 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,8 @@ public interface ITransactionReferences4 : IIsoComponent
     [IsoId("_Pp7m_aFrEeKHbozT2UhHKA")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? PaymentInformationIdentification { get; }
 
     /// <summary>
@@ -25,6 +28,8 @@ public interface ITransactionReferences4 : IIsoComponent
     [IsoId("_Pp7nAaFrEeKHbozT2UhHKA")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? InstructionIdentification { get; }
 
     /// <summary>
@@ -33,6 +38,8 @@ public interface ITransactionReferences4 : IIsoComponent
     [IsoId("_Pp7nBaFrEeKHbozT2UhHKA")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text EndToEndIdentification { get; }
 
     /// <summary>
@@ -43,6 +50,8 @@ public interface ITransactionReferences4 : IIsoComponent
     [IsoId("_WIDAAIeQEeOKkp7Gfg7E_Q")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionIdentification { get; }
 
     /// <summary>
@@ -51,6 +60,8 @@ public interface ITransactionReferences4 : IIsoComponent
     [IsoId("_Pp7nDaFrEeKHbozT2UhHKA")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? MandateIdentification { get; }
 
     /// <summary>

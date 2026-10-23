@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Contains transaction details.
 /// </summary>
 [IsoId("_2nbm4UQJEeiFlYmBVFSxUw")]
+[IsoDisplayName(@"Transaction")]
 public interface ITransaction86 : IIsoComponent
 {
     /// <summary>
@@ -18,6 +19,7 @@ public interface ITransaction86 : IIsoComponent
     [IsoId("_2y4o8UQJEeiFlYmBVFSxUw")]
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
+    [IsoSimpleType(IsoSimpleType.Exact2AlphaNumericText)]
     Exact2AlphaNumericText TransactionType { get; }
 
     /// <summary>
@@ -26,6 +28,8 @@ public interface ITransaction86 : IIsoComponent
     [IsoId("_buvXURqkEeqH1IQNpbVpEw")]
     [DisplayName("Transaction Sub Type")]
     [IsoXmlTag("TxSubTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? TransactionSubType { get; }
 
     /// <summary>
@@ -44,6 +48,8 @@ public interface ITransaction86 : IIsoComponent
     [IsoId("_2y4o90QJEeiFlYmBVFSxUw")]
     [DisplayName("Other Transaction Attribute")]
     [IsoXmlTag("OthrTxAttr")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? OtherTransactionAttribute { get; }
 
     /// <summary>
@@ -52,6 +58,7 @@ public interface ITransaction86 : IIsoComponent
     [IsoId("_2y4o-UQJEeiFlYmBVFSxUw")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISpecialProgrammeQualification1> SpecialProgrammeQualification { get; }
 
     /// <summary>
@@ -77,6 +84,7 @@ public interface ITransaction86 : IIsoComponent
     [IsoId("_2y4o_0QJEeiFlYmBVFSxUw")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalAmounts1> AdditionalAmounts { get; }
 
     /// <summary>
@@ -85,6 +93,7 @@ public interface ITransaction86 : IIsoComponent
     [IsoId("_2y4pAUQJEeiFlYmBVFSxUw")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee1> AdditionalFees { get; }
 
     /// <summary>
@@ -93,6 +102,7 @@ public interface ITransaction86 : IIsoComponent
     [IsoId("_2y4pA0QJEeiFlYmBVFSxUw")]
     [DisplayName("Original Additional Fees")]
     [IsoXmlTag("OrgnlAddtlFees")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalFee1> OriginalAdditionalFees { get; }
 
     /// <summary>
@@ -117,6 +127,8 @@ public interface ITransaction86 : IIsoComponent
     [IsoId("_2y4pE0QJEeiFlYmBVFSxUw")]
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
+    [IsoSimpleType(IsoSimpleType.Max1000Text)]
+    [StringLength(1000, MinimumLength = 1)]
     Max1000Text? TransactionDescription { get; }
 
     /// <summary>
@@ -125,5 +137,6 @@ public interface ITransaction86 : IIsoComponent
     [IsoId("_Eedc0RqmEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IAdditionalData1> AdditionalData { get; }
 }

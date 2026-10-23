@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Credit Transfer Context1.
 /// </summary>
 [IsoId("_UC-MAJ2mEe-4seDr3Li2Ew")]
+[IsoDisplayName(@"Credit Transfer Context1")]
 public interface ICreditTransferContext1 : IIsoComponent
 {
     /// <summary>

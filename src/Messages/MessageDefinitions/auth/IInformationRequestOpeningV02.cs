@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_bf9Rj22PEei3KuUgpx7Xcw")]
 [IsoMessage("auth.001.001.02", "InfReqOpng", "urn:iso:std:iso:20022:tech:xsd:auth.001.001.02")]
+[IsoDisplayName(@"Information Request Opening V02")]
 public interface IInformationRequestOpeningV02 : IOuterRecord
 {
     /// <summary>
@@ -60,5 +61,6 @@ public interface IInformationRequestOpeningV02 : IOuterRecord
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<ISupplementaryData1> SupplementaryData { get; }
 }

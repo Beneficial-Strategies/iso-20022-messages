@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Transaction has an origin and a destination in the same country and is made in the currency of that country.
 /// </summary>
 [IsoId("_SZgzFdp-Ed-ak6NoX_4Aeg_74971843")]
+[IsoDisplayName(@"Credit Line")]
 public interface ICreditLine1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface ICreditLine1 : IIsoComponent
     [IsoId("_SZgzFtp-Ed-ak6NoX_4Aeg_160859924")]
     [DisplayName("Included")]
     [IsoXmlTag("Incl")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator Included { get; }
 
     /// <summary>

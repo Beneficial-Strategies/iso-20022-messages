@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Provides the securities market transaction report related header details.
 /// </summary>
 [IsoId("_Xt9fc8v5EeSxLrW9hropkQ")]
+[IsoDisplayName(@"Securities Market Report Header")]
 public interface ISecuritiesMarketReportHeader1 : IIsoComponent
 {
     /// <summary>
@@ -33,5 +34,6 @@ public interface ISecuritiesMarketReportHeader1 : IIsoComponent
     [IsoId("_g6lmcL4BEeWvRsMSLyTf-A")]
     [DisplayName("Submission Date Time")]
     [IsoXmlTag("SubmissnDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
     ISODateTime? SubmissionDateTime { get; }
 }

@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reporting Requirement3Choice.
 /// </summary>
 [IsoId("_x7R5Ma-8Ee69JssYImngCA")]
+[IsoDisplayName(@"Reporting Requirement3Choice")]
 public interface IReportingRequirement3Choice : IIsoChoice { }

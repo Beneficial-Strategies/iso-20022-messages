@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation2Choi
 /// </summary>
 [IsoId("_Bxla0W4-EeiU9cctagi5ow")]
 [IsoXmlTag("Cur")]
+[IsoDisplayName(@"Current")]
 public interface ICurrent : ICurrentOrDefaultReservation2Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -18,6 +19,8 @@ public interface ICurrent : ICurrentOrDefaultReservation2Choice, IIsoChoiceVaria
     [IsoId("_B6-nY24-EeiU9cctagi5ow")]
     [DisplayName("Reservation Identification")]
     [IsoXmlTag("RsvatnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReservationIdentification { get; }
 
     /// <summary>

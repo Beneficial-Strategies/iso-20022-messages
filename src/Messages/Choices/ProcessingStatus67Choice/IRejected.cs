@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus67Choice;
 /// Instruction or request has been rejected for further processing.
 /// </summary>
 [IsoId("_XD6lIeFUEeWIA4E9cYSxxQ")]
+[IsoDisplayName(@"Rejected")]
 public interface IRejected : IProcessingStatus67Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

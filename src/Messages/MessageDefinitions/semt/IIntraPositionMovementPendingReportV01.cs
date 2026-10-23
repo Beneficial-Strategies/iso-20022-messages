@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.semt;
     "IntraPosMvmntPdgRpt",
     "urn:iso:std:iso:20022:tech:xsd:semt.034.001.01"
 )]
+[IsoDisplayName(@"Intra Position Movement Pending Report V01")]
 public interface IIntraPositionMovementPendingReportV01 : IOuterRecord
 {
     /// <summary>
@@ -50,5 +51,6 @@ public interface IIntraPositionMovementPendingReportV01 : IOuterRecord
     /// </summary>
     [DisplayName("Movements")]
     [IsoXmlTag("Mvmnts")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IIntraPositionPending11> Movements { get; }
 }

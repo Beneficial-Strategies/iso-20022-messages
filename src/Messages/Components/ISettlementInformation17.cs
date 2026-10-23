@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Settlement of the securities in a securities transaction, that is, the instruction to deliver or receive securities, involving the payment of an amount of money or not.
 /// </summary>
 [IsoId("_dqcAheLxEeWOD7aAy2fAcA")]
+[IsoDisplayName(@"Settlement Information")]
 public interface ISettlementInformation17 : IIsoComponent
 {
     /// <summary>
@@ -25,6 +26,7 @@ public interface ISettlementInformation17 : IIsoComponent
     [IsoId("_dzhEA-LxEeWOD7aAy2fAcA")]
     [DisplayName("Contract Settlement Month")]
     [IsoXmlTag("CtrctSttlmMnth")]
+    [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
     ISOYearMonth? ContractSettlementMonth { get; }
 
     /// <summary>
@@ -49,5 +51,6 @@ public interface ISettlementInformation17 : IIsoComponent
     [IsoId("_dzhED-LxEeWOD7aAy2fAcA")]
     [DisplayName("Deviating Settlement Unit")]
     [IsoXmlTag("DevtgSttlmUnit")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IFinancialInstrumentQuantity1Choice> DeviatingSettlementUnit { get; }
 }

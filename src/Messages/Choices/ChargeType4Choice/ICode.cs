@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType4Choice;
 /// Type of charge expressed as a code.
 /// </summary>
 [IsoId("_wTqbsQatEeS3lpTattq7hg")]
+[IsoDisplayName(@"Code")]
 public interface ICode : IChargeType4Choice, IIsoChoiceVariant
 {
     /// <summary>

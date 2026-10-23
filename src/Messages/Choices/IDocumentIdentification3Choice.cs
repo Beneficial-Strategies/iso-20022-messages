@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a document identification provided either by the account owner or by the account servicer.
 /// </summary>
 [IsoId("_E5kPkTnaEeWLJsP1cO-amg")]
+[IsoDisplayName(@"Document Identification 3 Choice")]
 public interface IDocumentIdentification3Choice : IIsoChoice { }

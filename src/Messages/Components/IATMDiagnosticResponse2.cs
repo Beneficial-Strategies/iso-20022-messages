@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information related to the response of a diagnostic from an ATM manager.
 /// </summary>
 [IsoId("_qaE6Aa46EeWRfYPBaeOY8w")]
+[IsoDisplayName(@"ATM Diagnostic Response")]
 public interface IATMDiagnosticResponse2 : IIsoComponent
 {
     /// <summary>
@@ -25,5 +26,6 @@ public interface IATMDiagnosticResponse2 : IIsoComponent
     [IsoId("_qlQPQ646EeWRfYPBaeOY8w")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMCommand7> Command { get; }
 }

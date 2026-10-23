@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification2Choic
 /// Indicates that the trade was executed off -exchange.
 /// </summary>
 [IsoId("_TCfeptp-Ed-ak6NoX_4Aeg_-1421688662")]
+[IsoDisplayName(@"Off Market")]
 public interface IOffMarket : IPlaceOfTradeIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>

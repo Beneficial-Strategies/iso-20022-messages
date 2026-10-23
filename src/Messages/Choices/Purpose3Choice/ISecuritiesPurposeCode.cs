@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Purpose3Choice;
 /// Underlying reason for the SSI instruction, expressed as a code.
 /// </summary>
 [IsoId("_KU6yQyUOEeOgKIHGINc2Uw")]
+[IsoDisplayName(@"Securities Purpose Code")]
 public interface ISecuritiesPurposeCode : IPurpose3Choice, IIsoChoiceVariant
 {
     /// <summary>

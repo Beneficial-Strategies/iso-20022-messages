@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Specifies whether all remaining assets in a portfolio not listed for transfer should be liquidated and transferred as cash
 /// </summary>
 [IsoId("_7JSJsJP8EemyZbjY08A1Vw")]
+[IsoDisplayName(@"All Other Cash")]
 public interface IAllOtherCash1 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IAllOtherCash1 : IIsoComponent
     [IsoId("_AUwJAZP9EemyZbjY08A1Vw")]
     [DisplayName("Indicator")]
     [IsoXmlTag("Ind")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
     YesNoIndicator Indicator { get; }
 
     /// <summary>

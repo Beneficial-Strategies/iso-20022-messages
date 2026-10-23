@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Withdrawal transaction for which an authorisation is requested.
 /// </summary>
 [IsoId("_0xerYa15EeWMg5rOByfExw")]
+[IsoDisplayName(@"ATM Transaction")]
 public interface IATMTransaction13 : IIsoComponent
 {
     /// <summary>
@@ -17,6 +18,7 @@ public interface IATMTransaction13 : IIsoComponent
     [IsoId("_09P2ga15EeWMg5rOByfExw")]
     [DisplayName("Cash Dispensed")]
     [IsoXmlTag("CshDspnsd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? CashDispensed { get; }
 
     /// <summary>
@@ -33,6 +35,8 @@ public interface IATMTransaction13 : IIsoComponent
     [IsoId("_09P2ha15EeWMg5rOByfExw")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? ReconciliationIdentification { get; }
 
     /// <summary>
@@ -81,6 +85,8 @@ public interface IATMTransaction13 : IIsoComponent
     [IsoId("_09P2ka15EeWMg5rOByfExw")]
     [DisplayName("Selected Mix Type")]
     [IsoXmlTag("SelctdMixTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(35, MinimumLength = 1)]
     Max35Text? SelectedMixType { get; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public interface IATMTransaction13 : IIsoComponent
     [IsoId("_09P2k615EeWMg5rOByfExw")]
     [DisplayName("Selected Mix")]
     [IsoXmlTag("SelctdMix")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IATMMediaMix1> SelectedMix { get; }
 
     /// <summary>
@@ -97,6 +104,7 @@ public interface IATMTransaction13 : IIsoComponent
     [IsoId("_09P2la15EeWMg5rOByfExw")]
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     TrueFalseIndicator? RequestedReceipt { get; }
 
     /// <summary>
@@ -105,5 +113,6 @@ public interface IATMTransaction13 : IIsoComponent
     [IsoId("_09P2l615EeWMg5rOByfExw")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
+    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
     Max10000Binary? ICCRelatedData { get; }
 }

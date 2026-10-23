@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice;
 /// </summary>
 [IsoId("_o1CqqRwkEeOIveEnnb_1-A")]
 [IsoXmlTag("PdgSttlm")]
+[IsoDisplayName(@"Pending Settlement")]
 public interface IPendingSettlement : ITransferStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>
@@ -26,6 +27,8 @@ public interface IPendingSettlement : ITransferStatus1Choice, IIsoChoiceVariant
     [IsoId("_RRPjeNp-Ed-ak6NoX_4Aeg_1820827730")]
     [DisplayName("Extended Reason")]
     [IsoXmlTag("XtndedRsn")]
+    [IsoSimpleType(IsoSimpleType.Extended350Code)]
+    [StringLength(350, MinimumLength = 1)]
     Extended350Code ExtendedReason { get; }
 
     /// <summary>

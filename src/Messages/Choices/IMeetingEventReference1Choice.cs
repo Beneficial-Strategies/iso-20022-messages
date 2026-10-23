@@ -9,4 +9,5 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a meeting event identification or a meeting event official identification.
 /// </summary>
 [IsoId("__b3CGa7rEemG7MmivSuE5g")]
+[IsoDisplayName(@"Meeting Event Reference 1 Choice")]
 public interface IMeetingEventReference1Choice : IIsoChoice { }

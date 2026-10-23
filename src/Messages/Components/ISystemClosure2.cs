@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Information about inactivity of a system.
 /// </summary>
 [IsoId("_xkRfK5lcEeeE1Ya-LgRsuQ")]
+[IsoDisplayName(@"System Closure")]
 public interface ISystemClosure2 : IIsoComponent
 {
     /// <summary>

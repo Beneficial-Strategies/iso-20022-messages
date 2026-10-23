@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// Order Identification2.
 /// </summary>
 [IsoId("_7DweURATEe6N57R8Wekj-w")]
+[IsoDisplayName(@"Order Identification2")]
 public interface IOrderIdentification2 : IIsoComponent
 {
     /// <summary>
@@ -79,6 +80,7 @@ public interface IOrderIdentification2 : IIsoComponent
     /// </summary>
     [DisplayName("Order Restriction")]
     [IsoXmlTag("OrdrRstrctn")]
+    [IsoList(IsoListKind.Value)]
     IEnumerable<IOrderRestriction1Choice> OrderRestriction { get; }
 
     /// <summary>
