@@ -25,7 +25,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <!-- Only to show that the interfaces can be built by the Factory; the package itself does not use it. -->
-    <PackageReference Include="BeneficialStrategies.Iso20022.Factory" Version="[1.0.0-alpha, 1.1.0)" />
+    <PackageReference Include="BeneficialStrategies.Iso20022.Factory" Version="[1.0.0, 1.1.0)" />
   </ItemGroup>
 
   <ItemGroup>

@@ -18,14 +18,6 @@ Because the interface is the contract and the implementation is interchangeable,
 
 Everything else in this family implements this package or builds on it; it is the nucleus of the implementation of the standard.
 
-## Install
-
-```
-dotnet add package BeneficialStrategies.Iso20022.Messages --prerelease
-```
-
-The package depends only on [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives) (the types of the members: `Max35Text`, the code sets, the amounts), and targets netstandard2.0 (.NET Framework 4.6.1+, Mono, Unity), net8.0 and net10.0. The package is in alpha, so the command asks for a prerelease version. Three examples follow, each a step further, each using nothing but this package.
-
 ## How to use
 
 ### Your own class
@@ -108,7 +100,7 @@ Try the [project](https://github.com/Beneficial-Strategies/iso-20022-messages/tr
 ## More
 
 * Documentation, release notes and issues: https://github.com/Beneficial-Strategies/iso-20022-messages
-* License: MIT. Status: alpha.
+* License: MIT. Status: stable.
 
 ### Where the objects come from
 
