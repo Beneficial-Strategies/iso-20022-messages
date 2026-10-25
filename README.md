@@ -18,10 +18,6 @@ Because the interface is the contract and the implementation is interchangeable,
 
 Everything else in this family implements this package or builds on it; it is the nucleus of the implementation of the standard.
 
-## The package
-
-The package depends only on [BeneficialStrategies.Iso20022.Primitives](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives) (the types of the members: `Max35Text`, the code sets, the amounts), and targets netstandard2.0 (.NET Framework 4.6.1+, Mono, Unity), net8.0 and net10.0. Three examples follow, each a step further, each using nothing but this package.
-
 ## How to use
 
 ### Your own class
